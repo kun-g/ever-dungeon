@@ -6,10 +6,11 @@ rm -r build
 mkdir build
 echo '===== Compiling ====='
 cd ../cheer
+cp src/*.js $CurrentPWD/build
 gulp compile
 cp js/*.js $CurrentPWD/build
 cd -
-cp src/*.js ./build
+#cp src/*.js ./build
 
 echo '===== Updating black box ====='
 SOURCES=(
