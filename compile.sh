@@ -29,9 +29,9 @@ DST_BOX="blackbox/"
 for itm in ${SOURCES[*]}
 do
   cp -f build/${itm} ${DST_BOX}${itm}
-  sed -ig "s/require(/requires(/g" ${DST_BOX}${itm}
-  sed -ig "s/var\ dbLib/\/\/var\ dbLib/g" ${DST_BOX}${itm}
-  sed -ig "s/dbWrapper'/serializer'/g" ${DST_BOX}${itm}
-  sed -ig "s/\.DBWrapper/\.Serializer/g" ${DST_BOX}${itm}
+  sed -i "s/require(/requires(/g" ${DST_BOX}${itm}
+  sed -i "s/var\ dbLib/\/\/var\ dbLib/g" ${DST_BOX}${itm}
+  sed -i "s/dbWrapper'/serializer'/g" ${DST_BOX}${itm}
+  sed -i "s/\.DBWrapper/\.Serializer/g" ${DST_BOX}${itm}
 #  sed -ig 's/exports\.fileVersion = -1/exports\.fileVersion = '$CurrentVersion'/g' ${DST_BOX}${itm}
 done
