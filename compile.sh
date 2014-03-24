@@ -36,3 +36,6 @@ do
   sed -i "s/\.DBWrapper/\.Serializer/g" ${DST_BOX}${itm}
 #  sed -ig 's/exports\.fileVersion = -1/exports\.fileVersion = '$CurrentVersion'/g' ${DST_BOX}${itm}
 done
+
+cp data/table/*.json build/
+cp data/stable/*.json build/
