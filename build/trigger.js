@@ -1,5 +1,63 @@
 (function() {
-  var TriggerManager, bindVariable, branch, calculate, conditionCheck, doAction, doLoop, getTypeof, getVar, parse;
+  var TriggerManager, bindVariable, branch, calculate, conditionCheck, doAction, doGetProperty, doLoop, getTypeof, getVar, parse;
+
+  doGetProperty = function(obj, key) {
+    var k, properties, _i, _len;
+    properties = key.split('.');
+    for (_i = 0, _len = properties.length; _i < _len; _i++) {
+      k = properties[_i];
+      if (obj != null) {
+        obj = obj[k];
+      } else {
+        return void 0;
+      }
+    }
+    return obj;
+  };
+
+  exports.doGetProperty = doGetProperty;
+
+  conditionCheck = function(conditionFormular, variables, cmd) {
+    var c, k;
+    if (getTypeof(conditionFormular) !== 'Boolean') {
+      return false;
+    }
+    if (conditionFormular === true) {
+      return true;
+    }
+    if (conditionFormular === false) {
+      return false;
+    }
+    for (k in conditionFormular) {
+      c = conditionFormular[k];
+      switch (k) {
+        case '>':
+          return parse(c[0], variables, cmd) > parse(c[1], variables, cmd);
+        case '<':
+          return parse(c[0], variables, cmd) < parse(c[1], variables, cmd);
+        case '==':
+          return parse(c[0], variables, cmd) === parse(c[1], variables, cmd);
+        case '!=':
+          return parse(c[0], variables, cmd) !== parse(c[1], variables, cmd);
+        case '<=':
+          return parse(c[0], variables, cmd) <= parse(c[1], variables, cmd);
+        case '>=':
+          return parse(c[0], variables, cmd) >= parse(c[1], variables, cmd);
+        case 'or':
+          return parse(c, variables, cmd).some(function(x) {
+            return parse(x, variables, cmd);
+          });
+        case 'and':
+          return parse(c, variables, cmd).every(function(x) {
+            return parse(x, variables, cmd);
+          });
+        case 'not':
+          return !parse(c, variables, cmd);
+      }
+    }
+  };
+
+  exports.conditionCheck = conditionCheck;
 
   parse = function(expr, variable, cmd) {
     if (Array.isArray(expr)) {
@@ -34,10 +92,7 @@
     if (expr === true || expr === false) {
       return 'Boolean';
     }
-    if (typeof expr !== 'object') {
-      return 'Undefined';
-    }
-    if (Array.isArray(expr)) {
+    if (!(typeof expr === 'object' || Array.isArray(expr))) {
       return 'Undefined';
     }
     if (expr.type != null) {
@@ -119,14 +174,13 @@
   };
 
   doAction = function(actions, variables, cmd) {
-    var a, act, env, k, v, _i, _len, _results;
+    var a, act, env, k, v, _i, _len;
     if (!Array.isArray(actions)) {
       actions = [actions];
     }
     if (cmd != null) {
       env = cmd.getEnvironment();
     }
-    _results = [];
     for (_i = 0, _len = actions.length; _i < _len; _i++) {
       act = actions[_i];
       if (act.trigger != null) {
@@ -134,18 +188,18 @@
       }
       switch (act.type) {
         case 'deleteVariable':
-          _results.push(delete variables[act.name]);
+          delete variables[act.name];
           break;
+        case 'getProperty':
+          return doGetProperty(variables, act.key);
         case 'newVariable':
-          _results.push(variables[act.name] = parse(act.value, variables, cmd));
-          break;
+          variables[act.name] = parse(act.value, variables, cmd);
+          return variables[act.name];
         case 'modifyVariable':
           if (variables[act.name] != null) {
-            _results.push(variables[act.name] = parse(act.value, variables, cmd));
+            variables[act.name] = parse(act.value, variables, cmd);
           } else if (env.variable(act.name) != null) {
-            _results.push(env.variable(act.name, parse(act.value, variables, cmd)));
-          } else {
-            _results.push(void 0);
+            return env.variable(act.name, parse(act.value, variables, cmd));
           }
           break;
         default:
@@ -155,48 +209,8 @@
             a[k] = parse(v, variables, cmd);
           }
           if (env != null) {
-            _results.push(env.doAction(a, variables, cmd));
-          } else {
-            _results.push(void 0);
+            return env.doAction(a, variables, cmd);
           }
-      }
-    }
-    return _results;
-  };
-
-  conditionCheck = function(conditionFormular, variables, cmd) {
-    var c, k;
-    if (conditionFormular === true) {
-      return true;
-    }
-    if (conditionFormular === false) {
-      return false;
-    }
-    for (k in conditionFormular) {
-      c = conditionFormular[k];
-      switch (k) {
-        case '>':
-          return parse(c[0], variables, cmd) > parse(c[1], variables, cmd);
-        case '<':
-          return parse(c[0], variables, cmd) < parse(c[1], variables, cmd);
-        case '==':
-          return parse(c[0], variables, cmd) === parse(c[1], variables, cmd);
-        case '!=':
-          return parse(c[0], variables, cmd) !== parse(c[1], variables, cmd);
-        case '<=':
-          return parse(c[0], variables, cmd) <= parse(c[1], variables, cmd);
-        case '>=':
-          return parse(c[0], variables, cmd) >= parse(c[1], variables, cmd);
-        case 'or':
-          return parse(c, variables, cmd).some(function(x) {
-            return parse(x, variables, cmd);
-          });
-        case 'and':
-          return parse(c, variables, cmd).every(function(x) {
-            return parse(x, variables, cmd);
-          });
-        case 'not':
-          return !parse(c, variables, cmd);
       }
     }
   };
@@ -235,7 +249,8 @@
   };
 
   TriggerManager = (function() {
-    function TriggerManager() {
+    function TriggerManager(config) {
+      this.config = config;
       this.triggers = {};
       this.events = {};
     }
@@ -273,7 +288,7 @@
 
     TriggerManager.prototype.installTrigger = function(name, variables, cmd) {
       var cfg, e, _i, _len, _ref, _results;
-      cfg = queryTable(TABLE_TRIGGER, name);
+      cfg = this.config[name];
       if (cfg == null) {
         throw Error('Unconfigured trigger:' + name);
       }
@@ -319,7 +334,7 @@
       if (!((trigger != null) && trigger.enable)) {
         return false;
       }
-      cfg = queryTable(TABLE_TRIGGER, name);
+      cfg = this.config[name];
       if ((cfg.condition != null) && !parse(cfg.condition, trigger.variables, cmd)) {
         return false;
       }

@@ -553,7 +553,7 @@
           }
         }
       };
-      this.triggerManager = new TriggerManager();
+      this.triggerManager = new TriggerManager(queryTable(TABLE_TRIGGER));
       if (data == null) {
         return false;
       }
@@ -1159,7 +1159,7 @@
 
     Dungeon.prototype.onReplayMissMatch = function() {
       if (this.replayMode) {
-        throw 'ReplayFailed';
+        throw Error('ReplayFailed');
       }
     };
 
@@ -1580,25 +1580,23 @@
           }
         });
       }
-      monsterCount = objectConfig.reduce(((function(_this) {
-        return function(r, l) {
-          var count;
-          count = 1;
-          if (l.count != null) {
-            count = l.count;
-          }
-          if (l.boss != null) {
-            r.boss += count;
-          }
-          if (l.elite != null) {
-            r.elite += count;
-          }
-          if (l.soldier != null) {
-            r.soldier += count;
-          }
-          return r;
-        };
-      })(this)), {
+      monsterCount = objectConfig.reduce((function(r, l) {
+        var count;
+        count = 1;
+        if (l.count != null) {
+          count = l.count;
+        }
+        if (l.boss != null) {
+          r.boss += count;
+        }
+        if (l.elite != null) {
+          r.elite += count;
+        }
+        if (l.soldier != null) {
+          r.soldier += count;
+        }
+        return r;
+      }), {
         soldier: 0,
         elite: 0,
         boss: 0

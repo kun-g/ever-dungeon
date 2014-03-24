@@ -360,7 +360,7 @@
     Player.prototype.updateStageStatus = function() {
       var ret, s, _i, _len, _ref7;
       ret = [];
-      _ref7 = updateStageStatus(this.stage, this.abIndex);
+      _ref7 = updateStageStatus(this.stage, this, this.abIndex);
       for (_i = 0, _len = _ref7.length; _i < _len; _i++) {
         s = _ref7[_i];
         ret = ret.concat(this.changeStage(s, STAGE_STATE_ACTIVE));
@@ -370,7 +370,7 @@
 
     Player.prototype.updateQuestStatus = function() {
       var q, _i, _len, _ref7, _results;
-      _ref7 = updateQuestStatus(this.quests);
+      _ref7 = updateQuestStatus(this.quests, this, this.abIndex);
       _results = [];
       for (_i = 0, _len = _ref7.length; _i < _len; _i++) {
         q = _ref7[_i];

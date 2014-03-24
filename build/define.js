@@ -149,6 +149,7 @@ function readHandlerGenerator(item) {
       try {
         var tmp = JSON.parse(String(data));
         if (item.func) tmp = item.func(tmp);
+        tmp = prepareForABtest(tmp);
         gConfigTable[item.name] = tmp;
         return cb(null);
       } catch (error) {
@@ -202,28 +203,30 @@ initStageConfig = function (cfg) {
   return ret;
 };
 
-initQuestConfig = function (cfg) {
+prepareForABtest = function (cfg) {
   var ret = [];
+  var maxABIndex = 0;
   cfg.forEach(function (c, index) {
+    if (c.abtest && c.abtest.length > maxABIndex) maxABIndex = c.abtest.length;
     ret[index] = c;
   });
-  ret.forEach(function (c, index) {
-    if (c.prev) {
-      c.prev.forEach(function (p) {
-        if (ret[p]) {
-          if (ret[p].next) {
-            ret[p].next.push(index);
-          } else {
-            ret[p].next = [index];
-          }
+  if (maxABIndex > 0) {
+    ret = [];
+    for (var i = 0; i < maxABIndex; i++) {
+      ret.push(cfg.map( function (e) {
+        if (e.abtest) {
+          return e.abtest[i % e.abtest.length];
+        } else {
+          return e;
         }
-      });
-    } else {
-      c.prev = [];
+      }));
     }
-  });
+  } else {
+    ret = [ret];
+  }
   return ret;
 };
+
 varifyDungeonConfig = function (cfg) {
   cfg.forEach(function (dungeon, dungeonID) {
     if (dungeon.prize) {
@@ -242,28 +245,24 @@ varifyDungeonConfig = function (cfg) {
 
 initGlobalConfig = function (callback) {
   queryTable = function (type, index, abIndex) {
-    if (gConfigTable[type]) {
-      if (index == null) {
-        return gConfigTable[type];
-      } else {
-        var tb = gConfigTable[type][index];
-        if (tb && tb.abtest) {
-          if (abIndex) {
-            return tb.abtest[abIndex%tb.abtest.length];
-          } else {
-            return tb.abtest[0];
-          }
-        } else {
-          return tb;
-        }
-      }
+    var cfg = gConfigTable[type];
+    if (!cfg) return null;
+    if (abIndex != null) {
+      cfg = cfg[abIndex % cfg.length];
+    } else {
+      cfg = cfg[0];
     }
-    return null;
+
+    if (index == null) {
+      return cfg;
+    } else {
+      return cfg[index];
+    }
   };
   var configTable = [
     {name:TABLE_ROLE}, {name:TABLE_LEVEL}, {name:TABLE_VERSION},
-    {name:TABLE_ITEM}, {name:TABLE_CARD}, {name:TABLE_DUNGEON, func: varifyDungeonConfig},
-    {name:TABLE_STAGE, func: initStageConfig}, {name:TABLE_QUEST, func: initQuestConfig},
+    {name:TABLE_ITEM}, {name:TABLE_CARD}, {name:TABLE_DUNGEON, func:varifyDungeonConfig},
+    {name:TABLE_STAGE, func: initStageConfig}, {name:TABLE_QUEST},
     {name:TABLE_UPGRADE}, {name:TABLE_ENHANCE}, {name: TABLE_CONFIG}, {name: TABLE_VIP},
     {name:TABLE_SKILL}, {name:TABLE_CAMPAIGN}, {name: TABLE_DROP}, {name: TABLE_TRIGGER}
   ];
@@ -386,13 +385,15 @@ selectElementFromWeightArray = function (array, randNumber) {
 
 logLevel = 0;
 
-updateStageStatus = function (stageStatus, abindex) {
+updateStageStatus = function (stageStatus, player, abindex) {
   if (!stageStatus) return [];
   var stageConfig = queryTable(TABLE_STAGE);
   var ret = [];
   for (var sid = 0; sid < stageConfig.length; sid++) {
+    var triggerLib = require('./trigger');
     var stage = queryTable(TABLE_STAGE, sid, abindex);
-    var unlockable = stage.prev.reduce(function (r, l) {
+    var unlockable = triggerLib.conditionCheck(stage.cond, player);
+    unlockable = unlockable && stage.prev.reduce(function (r, l) {
       return stageStatus[l] && stageStatus[l].state === STAGE_STATE_PASSED && r;
     }, true);
     if (unlockable && stageStatus[sid] == null) ret.push(sid);
@@ -400,12 +401,14 @@ updateStageStatus = function (stageStatus, abindex) {
   return ret;
 };
 
-updateQuestStatus = function (questStatus) {
+updateQuestStatus = function (questStatus, player, abindex) {
   if (!questStatus) return [];
   var questConfig = queryTable(TABLE_QUEST);
   var ret = [];
   questConfig.forEach(function (quest, qid) {
-    var unlockable = quest.prev.reduce(function (r, l) {
+    var triggerLib = require('./trigger');
+    var unlockable = triggerLib.conditionCheck(quest.cond, player);
+    unlockable = unlockable && quest.prev.reduce(function (r, l) {
       return questStatus[l] && questStatus[l].complete && r;
     }, true);
     if (unlockable && (typeof questStatus[qid] == 'undefined' || questStatus[qid] === null)) ret.push(qid);

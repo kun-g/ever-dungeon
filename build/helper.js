@@ -1,7 +1,30 @@
 (function() {
-  var actCampaign, currentTime, diffDate, initCampaign, moment;
+  var actCampaign, conditionCheck, currentTime, diffDate, initCampaign, moment, updateLockStatus;
 
   moment = require('moment');
+
+  conditionCheck = require('./trigger').conditionCheck;
+
+  updateLockStatus = function(curStatus, target, config) {
+    var cfg, id, ret, unlockable;
+    if (!curStatus) {
+      return [];
+    }
+    ret = [];
+    for (id in config) {
+      cfg = config[id];
+      unlockable = true;
+      if (cfg.cond != null) {
+        unlockable = unlockable && conditionCheck(cfg.cond, target);
+      }
+      if (unlockable && (curStatus[id] == null)) {
+        ret.push(+id);
+      }
+    }
+    return ret;
+  };
+
+  exports.updateLockStatus = updateLockStatus;
 
   currentTime = function(needObject) {
     var obj;
