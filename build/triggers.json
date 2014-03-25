@@ -57,6 +57,11 @@
       {"type": "modifyVariable", "name": "flag", "value": false}
     ]
   },
+  "dungeon:no.reward.no.result": {
+    "description": "无地下城奖励",
+    "triggerEvent": ["onClaimResult"],
+    "action": [ {"type": "modifyEnvVariable", "name": "win", "value": 2} ]
+  },
 
 
   "X": [
