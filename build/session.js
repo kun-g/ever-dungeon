@@ -1,7 +1,5 @@
 (function() {
-  var STATE_ACTIVE, STATE_INACTIVE, STATE_INVALID, STATE_NEW, Session, dbLib, destroySession, loadSession, logoutSession, newSession, upgradeSession;
-
-  dbLib = require('./db');
+  var STATE_ACTIVE, STATE_INACTIVE, STATE_INVALID, STATE_NEW, Session, destroySession, gMemSession, logoutSession, newSession;
 
   STATE_NEW = 'new';
 
@@ -11,18 +9,28 @@
 
   STATE_INVALID = 'invalid';
 
+  gMemSession = [];
+
   newSession = function() {
-    return {
+    var tmp;
+    tmp = {
       state: STATE_NEW,
-      type: 'Bare'
+      type: 'Memory'
     };
+    gMemSession.push(tmp);
+    tmp.id = gMemSession.length - 1;
+    return tmp;
   };
 
-  loadSession = function(sessionID, callback) {
-    return dbLib.loadSessionInfo(sessionID, callback);
-  };
+  exports.newSession = newSession;
 
-  upgradeSession = function() {};
+  exports.varifySession = function(sessionID, callback) {
+    if (gMemSession[sessionID]) {
+      return callback();
+    } else {
+      return callback(false);
+    }
+  };
 
   destroySession = function() {};
 
