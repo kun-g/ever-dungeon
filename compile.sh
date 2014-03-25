@@ -2,8 +2,6 @@
 
 CurrentPWD=`pwd`
 
-rm -r build
-mkdir build
 echo '===== Compiling ====='
 cd ../cheer
 cp src/*.js $CurrentPWD/build
