@@ -1,5 +1,7 @@
 (function() {
-  var STATE_ACTIVE, STATE_INACTIVE, STATE_INVALID, STATE_NEW, Session, destroySession, gMemSession, logoutSession, newSession;
+  var STATE_ACTIVE, STATE_INACTIVE, STATE_INVALID, STATE_NEW, Session, dbLib, destroySession, gMemSession, logoutSession, newSession;
+
+  dbLib = require('./db');
 
   STATE_NEW = 'new';
 
