@@ -139,6 +139,7 @@ lua_createSessionInfo = " \
   local id = redis.call('INCR', 'SessionCounter'); \
   local key = 'Session.'..id; \
   redis.call('hset', key, 'create_date', date, id); \
+  redis.call('expire', key, 6000); \
   return id;";
 
 exports.updateSessionInfo = function (session, obj, handler) {
@@ -387,7 +388,7 @@ exports.initializeDB = function (cfg) {
   });
 
   dbClient.script('load', lua_createSessionInfo, function (err, sha) {
-    newSessionInfo = function (handler) {
+    exports.newSessionInfo = function (handler) {
       dbClient.evalsha(sha, 0, (new Date()).valueOf(), function (err, ret) {
         if (handler) { handler(err, ret); }
       });
