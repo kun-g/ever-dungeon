@@ -389,7 +389,7 @@ exports.initializeDB = function (cfg) {
 
   dbClient.script('load', lua_createSessionInfo, function (err, sha) {
     exports.newSessionInfo = function (handler) {
-      dbClient.evalsha(sha, 0, prefix, (new Date()).valueOf(),
+      dbClient.evalsha(sha, 0, dbPrefix, (new Date()).valueOf(),
         queryTable(TABLE_VERSION, 'bin_version'),
         queryTable(TABLE_VERSION, 'resource_version'),
         function (err, ret) {
