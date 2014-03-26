@@ -549,6 +549,7 @@
     },
     RPC_Reconnect: {
       id: 104,
+      args: ['pid', 'string'],
       func: function(arg, player, handler, rpcID, socket) {
         return async.waterfall([
           function(cbb) {
