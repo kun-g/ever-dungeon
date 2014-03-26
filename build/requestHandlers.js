@@ -112,10 +112,10 @@
       func: function(arg, player, handle, rpcID, socket) {
         switch (arg.stp) {
           case 'AppStore':
-            throw 'AppStore Payment';
+            throw Error('AppStore Payment');
             break;
           case 'PP25':
-            throw 'PP25 Payment';
+            throw Error('PP25 Payment');
         }
       },
       args: ['pid', 'string', 'rep', 'string'],
