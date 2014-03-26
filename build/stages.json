@@ -306,8 +306,9 @@
                 "hidden":false,
                 "dungeon": 8,
                 "cond":
-                { "and": [
-                    { "==": [ { "type": "getProperty", "key": "stage.7.state"}, 2 ] }
+                { "or": [
+                    { "==": [ { "type": "getProperty", "key": "stage.7.state"}, 2 ] },
+                    { "==": [ { "type": "getProperty", "key": "stage.103.state"}, 2 ] }
                 ]
                 }
 

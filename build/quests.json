@@ -18,6 +18,11 @@
                 "count":1
             }
         ],
+        "cond":
+        { "and": [
+            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+        ]
+        },
         "endDialogue":9
     },
     {
@@ -643,8 +648,9 @@
             }
         ],
         "cond":
-        { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.15.state"}, 2 ] }
+        { "or": [
+            { "==": [ { "type": "getProperty", "key": "quests.15.state"}, 2 ] },
+            { "==": [ { "type": "getProperty", "key": "quests.163.state"}, 2 ] }
         ]
         }
 
