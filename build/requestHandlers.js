@@ -547,6 +547,62 @@
       args: [],
       needPid: true
     },
+    RPC_Reconnect: {
+      id: 104,
+      func: function(arg, player, handler, rpcID, socket) {
+        return async.waterfall([
+          function(cbb) {
+            return dbLib.loadSessionInfo(arg.PID, cbb);
+          }, function(sessionInfo, cbb) {
+            if (!sessionInfo) {
+              return cbb(Error(RET_SessionOutOfDate));
+            } else {
+              return cbb(null, sessionInfo);
+            }
+          }, function(info, cbb) {
+            if (info.bin_version !== queryTable(TABLE_VERSION, 'bin_version') || info.resource_version !== queryTable(TABLE_VERSION, 'resource_version')) {
+              return cbb(Error(RET_NewVersionArrived));
+            } else {
+              return cbb(null, info.player);
+            }
+          }, function(playerName, cbb) {
+            return dbLib.loadPlayer(playerName, cbb);
+          }, function(p, cbb) {
+            if (!p || p.runtimeID !== arg.PID) {
+              return cbb(Error(RET_SessionOutOfDate));
+            } else {
+              return cbb(null, p);
+            }
+          }, function(p, cbb) {
+            p.onReconnect(socket);
+            p.socket = socket;
+            socket.player = p;
+            socket.playerName = p.name;
+            gPlayerDB[p.name] = p;
+            return p.updateFriendInfo(cbb);
+          }
+        ], function(err, result) {
+          if (err && err.message !== RET_OK) {
+            return handler([
+              {
+                REQ: rpcID,
+                RET: err.message
+              }, {
+                NTF: Event_ExpiredPID,
+                err: err.message
+              }
+            ]);
+          } else {
+            return handler([
+              {
+                REQ: rpcID,
+                RET: RET_OK
+              }
+            ]);
+          }
+        });
+      }
+    },
     RPC_SubmitDailyQuest: {
       id: 29,
       func: function(arg, player, handler, rpcID, socket) {
