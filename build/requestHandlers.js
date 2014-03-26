@@ -562,7 +562,7 @@
             }
           }, function(info, cbb) {
             console.log(info.bin_version !== queryTable(TABLE_VERSION, 'bin_version'), info.resource_version !== queryTable(TABLE_VERSION, 'resource_version'), info, queryTable(TABLE_VERSION, 'bin_version'), queryTable(TABLE_VERSION, 'resource_version'));
-            if (info.bin_version !== queryTable(TABLE_VERSION, 'bin_version') || info.resource_version !== queryTable(TABLE_VERSION, 'resource_version')) {
+            if (info.bin_version !== queryTable(TABLE_VERSION, 'bin_version') || +info.resource_version !== +queryTable(TABLE_VERSION, 'resource_version')) {
               return cbb(Error(RET_NewVersionArrived));
             } else {
               return cbb(null, info.player);
