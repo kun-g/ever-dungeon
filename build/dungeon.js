@@ -3389,7 +3389,7 @@
     }
     env.variable('src', src);
     env.variable('tar', tar);
-    return env.onEvent(evt, this);
+    return env.onEvent(evt, cmd);
   };
 
   exports.DungeonEnvironment = DungeonEnvironment;
