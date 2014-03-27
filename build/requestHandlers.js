@@ -251,7 +251,8 @@
               return dbLib.newSessionInfo(function(err, session) {
                 if (socket != null) {
                   socket.session = {
-                    pendingLogin: arg
+                    pendingLogin: arg,
+                    id: session
                   };
                 }
                 dbLib.updateSessionInfo(session, {
@@ -283,7 +284,7 @@
               case RET_AccountHaveNoHero:
                 ret = {
                   arg: {
-                    pid: socket.session
+                    pid: socket.session.id
                   }
                 };
                 break;
