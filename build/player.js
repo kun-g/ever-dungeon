@@ -2098,7 +2098,7 @@
     };
 
     Player.prototype.onCampaign = function(state, data) {
-      var config, level, o, r, reward, rmb, _i, _len, _ref10, _ref11, _ref12, _ref7, _ref8, _ref9, _results;
+      var config, level, o, r, reward, rmb, _i, _len, _ref10, _ref11, _ref12, _ref13, _ref7, _ref8, _ref9, _results;
       reward = [];
       switch (state) {
         case 'Friend':
@@ -2138,9 +2138,10 @@
               lv: level
             });
           }
+          _ref10 = this.getCampaignConfig('FirstCharge'), config = _ref10.config, level = _ref10.level;
           break;
         case 'Level':
-          _ref10 = this.getCampaignConfig('LevelUp'), config = _ref10.config, level = _ref10.level;
+          _ref11 = this.getCampaignConfig('LevelUp'), config = _ref11.config, level = _ref11.level;
           if ((config != null) && (level != null) && this.createHero().level >= level.count) {
             if (this.getCampaignState('LevelUp') != null) {
               this.setCampaignState('LevelUp', this.getCampaignState('LevelUp') + 1);
@@ -2154,7 +2155,7 @@
           }
           break;
         case 'Stage':
-          _ref11 = this.getCampaignConfig('Stage'), config = _ref11.config, level = _ref11.level;
+          _ref12 = this.getCampaignConfig('Stage'), config = _ref12.config, level = _ref12.level;
           if ((config != null) && (level != null) && data === level.count) {
             this.setCampaignState('Stage', this.getCampaignState('Stage') + 1);
             reward.push({
@@ -2164,7 +2165,7 @@
           }
           break;
         case 'BattleForce':
-          _ref12 = this.getCampaignConfig('BattleForce'), config = _ref12.config, level = _ref12.level;
+          _ref13 = this.getCampaignConfig('BattleForce'), config = _ref13.config, level = _ref13.level;
           if ((config != null) && (level != null) && this.createHero().calculatePower() >= level.count) {
             this.setCampaignState('BattleForce', this.getCampaignState('BattleForce') + 1);
             reward.push({

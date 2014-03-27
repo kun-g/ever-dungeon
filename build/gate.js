@@ -45,7 +45,6 @@
     });
     appNet.backends = servers.map(function(s, id) {
       return {
-        socket: net.connect(s.ip, s.port),
         ip: s.ip,
         port: s.port,
         alive: false
@@ -79,9 +78,7 @@
     appNet.currIndex = 0;
     appNet.aliveConnections = [];
     appNet.server.listen(port, console.log);
-    return appNet.server.on('error', function(e) {
-      return console.log(e);
-    });
+    return appNet.server.on('error', console.log);
   };
 
   startTcpServer([

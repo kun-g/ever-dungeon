@@ -25,7 +25,7 @@
     "description": "第一层开始时的对话",
     "triggerEvent": ["onEnterLevel"],
     "condition": { "and": [ {"==": ["currentLevel", 0]} ] },
-    "action": [{"type":"tutorial","tutorialId":3}]
+    "action": [{"type":"tutorial","tutorialId":0}]
   },
   "stage0-1:FirstMonster": {
     "description": "第一次遇到怪物时的对话",
@@ -33,10 +33,30 @@
     "triggerEvent": ["onMonsterShow"],
     "condition": { "and": [ "v_flag" ] },
     "action": [
-      {"type": "tutorial", "tutorialId":4},
+      {"type": "tutorial", "tutorialId":1},
       {"type": "modifyVariable", "name": "flag", "value": false}
     ]
   },
+    "stage0-1:Firstbaoxiang": {
+        "description": "第一次遇到宝箱的对话",
+        "variable": {"v_flag": true},
+        "triggerEvent": ["onMonsterShow"],
+        "condition": { "and": [ "v_flag",{ "==": [ { "type": "getProperty", "key": "monster.id"},149 ] } ] },
+        "action": [
+            {"type": "tutorial", "tutorialId":2},
+            {"type": "modifyVariable", "name": "flag", "value": false}
+        ]
+    },
+    "stage0-1:FirstBoss": {
+        "description": "第一次遇到怪物时的对话",
+        "variable": {"v_flag": true},
+        "triggerEvent": ["Kill"],
+        "condition": { "and": [ "v_flag",{ "==": [ { "type": "getProperty", "key": "tar.id"},22 ] } ] },
+        "action": [
+            {"type": "tutorial", "tutorialId":3},
+            {"type": "modifyVariable", "name": "flag", "value": false}
+        ]
+    },
   "stage0-1:FirstExit": {
     "description": "第一次发现出口时的对话",
     "variable": {"v_flag": true},
