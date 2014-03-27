@@ -82,8 +82,8 @@
     }), 3000);
     appNet.currIndex = 0;
     appNet.aliveConnections = [];
-    appNet.listen(port);
-    return appNet.on('error', function(e) {
+    appNet.server.listen(port);
+    return appNet.server.on('error', function(e) {
       return logError({
         type: 'Server Error',
         error: e
