@@ -12,7 +12,6 @@
     appNet = {};
     appNet.server = net.createServer(function(c) {
       var decoder, encoder;
-      console.log('New Connection', c.remoteAddress);
       appNet.aliveConnections.push(c);
       c.connectionIndex = appNet.aliveConnections.length - 1;
       c.pendingRequest = new Buffer(0);
@@ -33,7 +32,12 @@
       c.server.pipe(c);
       decoder.on('request', function(request) {
         if (request) {
-          console.log(request);
+          if (request.CMD === 101) {
+            console.log({
+              request: request,
+              ip: c.remoteAddress
+            });
+          }
           return encoder.writeObject(request);
         } else {
           return c.destroy();
