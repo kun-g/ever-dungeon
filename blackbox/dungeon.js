@@ -2228,8 +2228,11 @@
   dungeonCSConfig = {
     EnterDungeon: {
       callback: function(env) {
-        return this.routine({
+        this.routine({
           id: 'EnterLevel'
+        });
+        return this.routine({
+          id: 'UpdateLockStatues'
         });
       },
       output: function(env) {

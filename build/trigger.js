@@ -174,7 +174,7 @@
   };
 
   doAction = function(actions, variables, cmd) {
-    var a, act, env, k, local, v, _i, _len;
+    var a, act, c, env, k, local, v, _i, _len;
     if (!Array.isArray(actions)) {
       actions = [actions];
     }
@@ -205,6 +205,15 @@
           } else if (env.variable(act.name) != null) {
             return env.variable(act.name, parse(act.value, variables, cmd));
           }
+          break;
+        case 'delay':
+          c = {
+            id: 'Delay'
+          };
+          if (a.delay != null) {
+            c.delay = a.delay;
+          }
+          cmd = cmd.next(c);
           break;
         default:
           a = {};
