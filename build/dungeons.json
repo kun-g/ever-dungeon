@@ -19225,6 +19225,7 @@
             "layout":[0,0,0,0,0,2,2,2,2,0,19,9,13,29,4,9,12,14,12,4,8,6,3,10,4,0,1,1,1,0]
         }
     ],
+    "triggers": ["stage0-1:FirstBoss","stage0-1:Introduction","stage0-1:FirstMonster","stage0-1:Firstbaoxiang"],
     "collectId":153001,
     "prizeWxp":0,
     "prizeGold": 100,

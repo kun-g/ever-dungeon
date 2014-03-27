@@ -1777,7 +1777,7 @@
         case 'tutorial':
           return typeof cmd.routine === "function" ? cmd.routine({
             id: 'Tutorial',
-            dialogId: act.tutorialId
+            tutorialId: act.tutorialId
           }) : void 0;
         case 'modifyEnvVariable':
           return this.variable(act.name, act.value);
