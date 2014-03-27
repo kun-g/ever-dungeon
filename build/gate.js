@@ -39,17 +39,12 @@
         }
       });
       return c.on('error', function(error) {
-        logError({
-          type: 'Socket Error',
-          address: c.remoteAddress,
-          error: error
-        });
+        console.log(error);
         return c.destroy();
       });
     });
     appNet.backends = servers.map(function(s, id) {
       return {
-        socket: net.connect(s.ip, s.port),
         ip: s.ip,
         port: s.port,
         alive: false
@@ -82,13 +77,8 @@
     }), 3000);
     appNet.currIndex = 0;
     appNet.aliveConnections = [];
-    appNet.server.listen(port);
-    return appNet.server.on('error', function(e) {
-      return logError({
-        type: 'Server Error',
-        error: e
-      });
-    });
+    appNet.server.listen(port, console.log);
+    return appNet.server.on('error', console.log);
   };
 
   startTcpServer([

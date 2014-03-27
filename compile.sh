@@ -3,13 +3,15 @@
 CurrentPWD=`pwd`
 
 echo '===== Compiling ====='
-cd ../cheer
+cd server
+git pull
 gulp compile
 cp js/*.js $CurrentPWD/build
-cp src/*.js $CurrentPWD/build
 cp package.json $CurrentPWD/build
-cd -
-#cp src/*.js ./build
+cd ../data
+git pull
+
+cd ..
 
 echo '===== Updating black box ====='
 SOURCES=(
