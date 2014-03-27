@@ -1774,6 +1774,11 @@
             id: 'Dialog',
             dialogId: act.dialogId
           }) : void 0;
+        case 'tutorial':
+          return typeof cmd.routine === "function" ? cmd.routine({
+            id: 'Tutorial',
+            dialogId: act.tutorialId
+          }) : void 0;
         case 'modifyEnvVariable':
           return this.variable(act.name, act.value);
       }
@@ -2242,7 +2247,6 @@
             });
           }
         }
-        console.log(newPosition);
         env.moveHeroes(newPosition);
         _ref9 = env.getMonsters();
         for (_l = 0, _len1 = _ref9.length; _l < _len1; _l++) {
@@ -2384,6 +2388,8 @@
         });
         block = env.getBlock(env.variable('block'));
         if (block.getType() === Block_Npc || block.getType() === Block_Enemy) {
+          env.variable('monster', e);
+          env.onEvent('onMonsterShow', this);
           e = block.getRef(-1);
           if ((e != null ? e.isVisible : void 0) !== true) {
             e.isVisible = true;
@@ -2792,6 +2798,16 @@
           {
             id: ACT_Dialog,
             did: env.variable('dialogId')
+          }
+        ];
+      }
+    },
+    Tutorial: {
+      output: function(env) {
+        return [
+          {
+            id: ACT_Tutorial,
+            tid: env.variable('tutorialId')
           }
         ];
       }
@@ -3353,7 +3369,7 @@
   };
 
   onEvent = function(evt, cmd, src, tar) {
-    var env, m, _i, _j, _len, _len1, _ref6, _ref7, _results;
+    var env, m, _i, _j, _len, _len1, _ref6, _ref7;
     env = cmd.getEnvironment();
     if (src) {
       src.onEvent('on' + evt, cmd);
@@ -3366,13 +3382,14 @@
     if (tar) {
       tar.onEvent('onBe' + evt, cmd);
       _ref7 = env.getTeammateOf(tar);
-      _results = [];
       for (_j = 0, _len1 = _ref7.length; _j < _len1; _j++) {
         m = _ref7[_j];
-        _results.push(m.onEvent('onTeammateBe' + evt, cmd));
+        m.onEvent('onTeammateBe' + evt, cmd);
       }
-      return _results;
     }
+    env.variable('src', src);
+    env.variable('tar', tar);
+    return env.onEvent(evt, this);
   };
 
   exports.DungeonEnvironment = DungeonEnvironment;

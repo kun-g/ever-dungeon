@@ -25,7 +25,7 @@
     "description": "第一层开始时的对话",
     "triggerEvent": ["onEnterLevel"],
     "condition": { "and": [ {"==": ["currentLevel", 0]} ] },
-    "action": [{"type":"dialog","dialogId":0}]
+    "action": [{"type":"tutorial","tutorialId":3}]
   },
   "stage0-1:FirstMonster": {
     "description": "第一次遇到怪物时的对话",
@@ -33,7 +33,7 @@
     "triggerEvent": ["onMonsterShow"],
     "condition": { "and": [ "v_flag" ] },
     "action": [
-      {"type": "dialog", "dialogId":0},
+      {"type": "tutorial", "tutorialId":4},
       {"type": "modifyVariable", "name": "flag", "value": false}
     ]
   },

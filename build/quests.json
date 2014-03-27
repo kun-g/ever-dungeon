@@ -112,7 +112,8 @@
             ]
             }
             ,
-            "endDialogue":11
+
+            "endDialogue":30
         }]},
     {
         "questId":2,
@@ -4696,7 +4697,7 @@
         ]
         }
         ,
-        "endDialogue":18
+        "endDialogue":27
     },
     {
         "questId":155,
@@ -4722,7 +4723,7 @@
         ]
         }
         ,
-        "endDialogue":17
+        "endDialogue":31
     },
     {
         "questId":156,
@@ -4764,8 +4765,8 @@
         { "and": [
             { "==": [ { "type": "getProperty", "key": "quests.155.state"}, 2 ] }
         ]
-        }
-
+        },
+        "startDialogue" :34
 
     },
     {
@@ -4845,7 +4846,8 @@
         ]
         }
         ,
-        "startDialogue":12
+        "startDialogue":35
+
     },
     {
         "questId":159,
@@ -4889,7 +4891,7 @@
         ]
         }
         ,
-        "startDialogue":23
+        "startDialogue":42
 
     },
     {
@@ -4912,8 +4914,6 @@
             { "==": [ { "type": "getProperty", "key": "quests.159.state"}, 2 ] }
         ]
         }
-        ,
-        "endDialogue":19
     },
     {
         "questId":161,
@@ -4947,8 +4947,6 @@
             { "==": [ { "type": "getProperty", "key": "quests.160.state"}, 2 ] }
         ]
         }
-        ,
-        "startDialogue":22
     },
     {
         "questId":162,
@@ -4972,7 +4970,8 @@
         ]
         }
         ,
-        "endDialogue":20
+        "startDialogue":46,
+        "endDialogue":47
     },
     {
         "questId":163,
@@ -5003,38 +5002,6 @@
         "cond":
         { "and": [
             { "==": [ { "type": "getProperty", "key": "quests.162.state"}, 2 ] }
-        ]
-        }
-        ,
-
-        "endDialogue":21
-    },
-    {
-        "questId":164,
-        "title":"武器锻造学徒",
-        "desc":"在【多姆洞穴IV】发现卡姆矿石结晶，不过被黏糊糊史莱姆吞下去了，趁被它消化前，赶紧去夺过来！",
-        "objects":[
-            {
-                "type":0,
-                "label":"击倒黏糊糊史莱姆【BOSS】",
-                "count":1 ,
-                "collect":164001
-            }
-        ],
-        "prize":[
-            {
-                "type":0,
-                "value":496,
-                "count":1
-            },
-            {
-                "type":3,
-                "count":50
-            }
-        ],
-        "cond":
-        { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
         ]
         }
 

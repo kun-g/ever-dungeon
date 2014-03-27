@@ -174,7 +174,7 @@
   };
 
   doAction = function(actions, variables, cmd) {
-    var a, act, env, k, v, _i, _len;
+    var a, act, env, k, local, v, _i, _len;
     if (!Array.isArray(actions)) {
       actions = [actions];
     }
@@ -191,7 +191,11 @@
           delete variables[act.name];
           break;
         case 'getProperty':
-          return doGetProperty(variables, act.key);
+          local = doGetProperty(variables, act.key);
+          if ((local == null) && (env != null)) {
+            return doGetProperty(env.variable(), act.key);
+          }
+          return local;
         case 'newVariable':
           variables[act.name] = parse(act.value, variables, cmd);
           return variables[act.name];

@@ -1516,6 +1516,7 @@
                 "team": 1,
                 "hidden":false,
                 "dungeon": 92,
+                "tutorial":2,
                 "cond":
                 { "and": [
                     { "==": [ { "type": "getProperty", "key": "stage.104.state"}, 2 ] }
@@ -1550,6 +1551,7 @@
                 "team": 1,
                 "hidden":false,
                 "dungeon": 94,
+                "tutorial":4,
                 "teammate": [
                 {
                     "class" : 164,
@@ -1571,6 +1573,7 @@
                 "team": 2,
                 "hidden":false,
                 "dungeon":95,
+                "tutorial":6,
                 "cond":
                 { "and": [
                     { "==": [ { "type": "getProperty", "key": "stage.106.state"}, 2 ] }
@@ -1584,6 +1587,7 @@
                 "team": 2,
                 "hidden":false,
                 "dungeon": 96,
+                "tutorial":7,
                 "cond":
                 { "and": [
                     { "==": [ { "type": "getProperty", "key": "stage.99.state"}, 2 ] }
@@ -1610,6 +1614,7 @@
                 "team": 3,
                 "hidden":false,
                 "dungeon": 98,
+                "tutorial":8,
                 "cond":
                 { "and": [
                     { "==": [ { "type": "getProperty", "key": "stage.101.state"}, 2 ] }
@@ -1641,7 +1646,8 @@
             "cost": 0,
             "team": 1,
             "hidden":false,
-            "dungeon": 91
+            "dungeon": 91,
+            "tutorial":1
         },
         {
             "stageId": 105,
@@ -1649,6 +1655,7 @@
             "team": 1,
             "hidden":false,
             "dungeon": 99,
+            "tutorial":3,
             "teammate": [
                 {
                     "class" : 131,
@@ -1671,6 +1678,7 @@
             "team": 1,
             "hidden":false,
             "dungeon": 100,
+            "tutorial":5,
             "teammate": [
                 {
                     "class" : 132,

@@ -248,10 +248,16 @@
                 return player.saveDB(cb);
               });
             } else {
-              if (socket != null) {
-                socket.pendingLogin = arg;
-              }
-              return cb(Error(RET_AccountHaveNoHero));
+              return dbLib.newSessionInfo(function(err, session) {
+                if (socket != null) {
+                  socket.session = session;
+                  socket.pendingLogin = arg;
+                }
+                dbLib.updateSessionInfo(session, {
+                  pendingLogin: arg
+                }, function() {});
+                return cb(Error(RET_AccountHaveNoHero));
+              });
             }
           }
         ], function(err, result) {
@@ -276,7 +282,7 @@
               case RET_AccountHaveNoHero:
                 ret = {
                   arg: {
-                    pid: 0
+                    pid: socket.session
                   }
                 };
                 break;
@@ -294,20 +300,14 @@
     RPC_Register: {
       id: 101,
       func: function(arg, dummy, handle, rpcID, socket) {
-        var name, passport, passportType;
-        if ((socket != null ? socket.pendingLogin : void 0) == null) {
-          return handle([
-            {
-              REQ: rpcID,
-              RET: RET_Issue38
-            }
-          ]);
-        }
+        var name;
         name = arg.nam;
-        passportType = socket.pendingLogin.tp;
-        passport = socket.pendingLogin.id;
         return async.waterfall([
           function(cb) {
+            if (socket.pendingLogin) {
+              return cb(null, socket.pendingLogin.tp, socket.pendingLogin.id);
+            }
+          }, function(passportType, cb) {
             return dbLib.loadPassport(passportType, passport, false, cb);
           }, function(account, cb) {
             return dbLib.createNewPlayer(account, gServerName, name, cb);
@@ -561,7 +561,6 @@
               return cbb(null, sessionInfo);
             }
           }, function(info, cbb) {
-            console.log(info.bin_version !== queryTable(TABLE_VERSION, 'bin_version'), info.resource_version !== queryTable(TABLE_VERSION, 'resource_version'), info, queryTable(TABLE_VERSION, 'bin_version'), queryTable(TABLE_VERSION, 'resource_version'));
             if (info.bin_version !== queryTable(TABLE_VERSION, 'bin_version') || +info.resource_version !== +queryTable(TABLE_VERSION, 'resource_version')) {
               return cbb(Error(RET_NewVersionArrived));
             } else {
