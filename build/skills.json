@@ -1957,5 +1957,26 @@
                 {"type":"shock","delay":1.6,"range":20,"time":8}
             ]
         }
+    },
+    {
+        "skillId": 81,
+        "label":"启程",
+        "config": {
+            "triggerCondition": [
+                {"type":"event", "event":"onEnterLevel" }
+            ],
+            "targetSelection": {
+                "pool": "Self"
+            },
+            "action":[
+                {"type": "whiteScreen","time":0,"mode":0},
+                {"type": "kill"},
+                {"type": "delay","delay":1},
+                {"type":"dialog","dialogId":18},
+                {"type": "whiteScreen","time":2,"mode":1},
+                {"type": "delay","delay":2},
+                {"type":"tutorial","tutorialId":0}
+            ]
+        }
     }
 ]

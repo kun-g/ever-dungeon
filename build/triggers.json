@@ -27,8 +27,9 @@
     "condition": { "and": [ {"==": ["currentLevel", 0]} ] },
     "action": [
         {"type": "whiteScreen","time":0,"mode":0},
+        {"type": "delay","delay":1},
         {"type":"dialog","dialogId":18},
-        {"type": "whiteScreen","time":1,"mode":1},
+        {"type": "whiteScreen","time":2,"mode":1},
         {"type": "delay","delay":2},
         {"type":"tutorial","tutorialId":0}]
   },

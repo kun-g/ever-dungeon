@@ -6356,5 +6356,42 @@
                 "level": 1
             }
         ]
+    },
+    {
+        "classId": 168,
+        "className": "导演0",
+        "classType": 1,
+        "avatar": "avatar.ccbi",
+        "property":
+        {
+            "health": 1,
+            "attack": 3,
+            "critical": 4,
+            "strong": 6,
+            "accuracy": 15,
+            "reactivity": -15,
+            "speed": 4,
+            "counterAttack": false,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty":
+        {
+            "balance": 0.1,
+            "health": 1,
+            "attack": 0,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "skill": [
+            {
+
+                "id": 81,
+                "level": 1
+            }
+        ]
     }
 ]

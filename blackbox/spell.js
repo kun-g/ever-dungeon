@@ -1017,6 +1017,14 @@
               }
             }
             break;
+          case 'tutorial':
+            if (typeof cmd.routine === "function") {
+              cmd.routine({
+                id: 'Tutorial',
+                tutorialId: act.tutorialId
+              });
+            }
+            break;
           case 'playEffect':
             if (a.pos === 'self') {
               if (typeof cmd.routine === "function") {
