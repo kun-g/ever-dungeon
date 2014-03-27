@@ -47,7 +47,7 @@
         "description": "第一次遇到宝箱的对话",
         "variable": {"v_flag": true},
         "triggerEvent": ["onMonsterShow"],
-        "condition": { "and": [ "v_flag",{ "==": [ { "type": "getProperty", "key": "monster.id"},149 ] } ] },
+        "condition": { "and": [ "v_flag",{ "==": [ { "type": "getProperty", "key": "monster.id"},169 ] } ] },
         "action": [
             {"type": "tutorial", "tutorialId":2},
             {"type": "modifyVariable", "name": "v_flag", "value": false}
@@ -67,7 +67,7 @@
         "description": "第一次遇到怪物时的对话",
         "variable": {"v_flag": true},
         "triggerEvent": ["Kill"],
-        "condition": { "and": [ "v_flag",{ "==": [ { "type": "getProperty", "key": "tar.id"},149 ] } ] },
+        "condition": { "and": [ "v_flag",{ "==": [ { "type": "getProperty", "key": "tar.id"},169 ] } ] },
         "action": [
             {"type": "tutorial", "tutorialId":9},
             {"type": "modifyVariable", "name": "v_flag", "value": false}

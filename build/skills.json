@@ -1979,5 +1979,29 @@
                 {"type":"tutorial","tutorialId":0}
             ]
         }
+    },
+    {
+        "skillId": 82,
+        "label": "宝箱",
+        "config": {
+            "triggerCondition": [
+                { "type": "event", "event": "onBeActivate" }
+            ],
+            "targetSelection":{
+                "pool":"Self",
+                "filter": ["Alive", "Visible"]
+            },
+            "action": [
+                { "type": "dropItem", "dropList": [
+
+                    {"weight":5, "item":7}
+
+                ]
+                },
+                {"type":"playAction","motion":1,"pos":"self"},
+                {"type":"delay"},
+                {"type":"kill"}
+            ]
+        }
     }
 ]
