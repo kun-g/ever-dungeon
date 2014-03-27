@@ -1021,7 +1021,7 @@
             if (typeof cmd.routine === "function") {
               cmd.routine({
                 id: 'Tutorial',
-                tutorialId: act.tutorialId
+                tutorialId: a.tutorialId
               });
             }
             break;

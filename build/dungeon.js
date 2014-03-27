@@ -2425,9 +2425,9 @@
         });
         block = env.getBlock(env.variable('block'));
         if (block.getType() === Block_Npc || block.getType() === Block_Enemy) {
+          e = block.getRef(-1);
           env.variable('monster', e);
           env.onEvent('onMonsterShow', this);
-          e = block.getRef(-1);
           if ((e != null ? e.isVisible : void 0) !== true) {
             e.isVisible = true;
           }
