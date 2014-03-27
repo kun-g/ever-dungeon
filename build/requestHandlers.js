@@ -250,8 +250,9 @@
             } else {
               return dbLib.newSessionInfo(function(err, session) {
                 if (socket != null) {
-                  socket.session = session;
-                  socket.pendingLogin = arg;
+                  socket.session = {
+                    pendingLogin: arg
+                  };
                 }
                 dbLib.updateSessionInfo(session, {
                   pendingLogin: arg
@@ -304,10 +305,10 @@
         name = arg.nam;
         return async.waterfall([
           function(cb) {
-            if (socket.pendingLogin) {
-              return cb(null, socket.pendingLogin.tp, socket.pendingLogin.id);
-            }
-          }, function(passportType, cb) {
+            var pendingLogin;
+            pendingLogin = socket.session.pendingLogin;
+            return cb(null, pendingLogin.tp, pendingLogin.id);
+          }, function(passportType, passport, cb) {
             return dbLib.loadPassport(passportType, passport, false, cb);
           }, function(account, cb) {
             return dbLib.createNewPlayer(account, gServerName, name, cb);
@@ -558,6 +559,7 @@
             if (!sessionInfo) {
               return cbb(Error(RET_SessionOutOfDate));
             } else {
+              socket.session = sessionInfo;
               return cbb(null, sessionInfo);
             }
           }, function(info, cbb) {
