@@ -210,8 +210,8 @@
           c = {
             id: 'Delay'
           };
-          if (a.delay != null) {
-            c.delay = a.delay;
+          if (act.delay != null) {
+            c.delay = act.delay;
           }
           cmd = cmd.next(c);
           break;

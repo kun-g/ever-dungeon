@@ -1768,7 +1768,7 @@
     };
 
     DungeonEnvironment.prototype.doAction = function(act, variables, cmd) {
-      var a, c;
+      var a;
       a = act;
       switch (a.type) {
         case 'dialog':
@@ -1815,14 +1815,6 @@
             id: 'SoundEffect',
             sound: a.sound
           });
-        case 'delay':
-          c = {
-            id: 'Delay'
-          };
-          if (a.delay != null) {
-            c.delay = a.delay;
-          }
-          return cmd = cmd.next(c);
       }
     };
 
