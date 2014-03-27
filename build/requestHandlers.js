@@ -341,7 +341,7 @@
               }
             ]);
           } else {
-            return exports.route.RPC_Login.func(socket.pendingLogin, dummy, handle, rpcID, socket, true);
+            return exports.route.RPC_Login.func(socket.session.pendingLogin, dummy, handle, rpcID, socket, true);
           }
         });
       },
