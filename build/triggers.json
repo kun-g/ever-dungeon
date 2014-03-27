@@ -25,7 +25,12 @@
     "description": "第一层开始时的对话",
     "triggerEvent": ["onEnterLevel"],
     "condition": { "and": [ {"==": ["currentLevel", 0]} ] },
-    "action": [{"type":"tutorial","tutorialId":0}]
+    "action": [
+        {"type": "whiteScreen","time":0,"mode":0},
+        {"type":"dialog","dialogId":18},
+        {"type": "whiteScreen","time":1,"mode":1},
+        {"type": "delay","delay":2},
+        {"type":"tutorial","tutorialId":0}]
   },
   "stage0-1:FirstMonster": {
     "description": "第一次遇到怪物时的对话",

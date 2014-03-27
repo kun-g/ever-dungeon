@@ -1768,7 +1768,9 @@
     };
 
     DungeonEnvironment.prototype.doAction = function(act, variables, cmd) {
-      switch (act.type) {
+      var a, c;
+      a = act;
+      switch (a.type) {
         case 'dialog':
           return typeof cmd.routine === "function" ? cmd.routine({
             id: 'Dialog',
@@ -1780,7 +1782,47 @@
             tutorialId: act.tutorialId
           }) : void 0;
         case 'modifyEnvVariable':
-          return this.variable(act.name, act.value);
+          return this.variable(a.name, a.value);
+        case 'shock':
+          return typeof cmd.routine === "function" ? cmd.routine({
+            id: 'Shock',
+            time: a.time,
+            delay: a.delay,
+            range: a.range
+          }) : void 0;
+        case 'blink':
+          return typeof cmd.routine === "function" ? cmd.routine({
+            id: 'Blink',
+            time: a.time,
+            delay: a.delay,
+            color: a.color
+          }) : void 0;
+        case 'changeBGM':
+          return cmd.routine({
+            id: 'ChangeBGM',
+            music: a.music,
+            repeat: a.repeat
+          });
+        case 'whiteScreen':
+          return cmd.routine({
+            id: 'WhiteScreen',
+            mode: a.mode,
+            time: a.time,
+            color: a.color
+          });
+        case 'playSound':
+          return cmd.routine({
+            id: 'SoundEffect',
+            sound: a.sound
+          });
+        case 'delay':
+          c = {
+            id: 'Delay'
+          };
+          if (a.delay != null) {
+            c.delay = a.delay;
+          }
+          return cmd = cmd.next(c);
       }
     };
 

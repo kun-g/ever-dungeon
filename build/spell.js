@@ -922,6 +922,12 @@
               block: a.block
             });
             break;
+          case 'playSound':
+            cmd.routine({
+              id: 'SoundEffect',
+              sound: a.sound
+            });
+            break;
           case 'chainBlock':
             _ref = a.source;
             for (_o = 0, _len6 = _ref.length; _o < _len6; _o++) {
@@ -935,12 +941,6 @@
             break;
           case 'castSpell':
             this.castSpell(a.spell, (_ref1 = a.level) != null ? _ref1 : 1, cmd);
-            break;
-          case 'playSound':
-            cmd.routine({
-              id: 'SoundEffect',
-              sound: a.sound
-            });
             break;
           case 'heal':
             if (a.self) {
