@@ -34,7 +34,7 @@
     "condition": { "and": [ "v_flag" ] },
     "action": [
       {"type": "tutorial", "tutorialId":1},
-      {"type": "modifyVariable", "name": "flag", "value": false}
+      {"type": "modifyVariable", "name": "v_flag", "value": false}
     ]
   },
     "stage0-1:Firstbaoxiang": {
@@ -44,7 +44,7 @@
         "condition": { "and": [ "v_flag",{ "==": [ { "type": "getProperty", "key": "monster.id"},149 ] } ] },
         "action": [
             {"type": "tutorial", "tutorialId":2},
-            {"type": "modifyVariable", "name": "flag", "value": false}
+            {"type": "modifyVariable", "name": "v_flag", "value": false}
         ]
     },
     "stage0-1:FirstBoss": {
@@ -54,7 +54,7 @@
         "condition": { "and": [ "v_flag",{ "==": [ { "type": "getProperty", "key": "tar.id"},22 ] } ] },
         "action": [
             {"type": "tutorial", "tutorialId":3},
-            {"type": "modifyVariable", "name": "flag", "value": false}
+            {"type": "modifyVariable", "name": "v_flag", "value": false}
         ]
     },
   "stage0-1:FirstExit": {
@@ -64,7 +64,7 @@
     "condition": { "and": [ "v_flag" ] },
     "action": [
       {"type": "dialog", "dialogId":0},
-      {"type": "modifyVariable", "name": "flag", "value": false}
+      {"type": "modifyVariable", "name": "v_flag", "value": false}
     ]
   },
   "stage0-1:FirstItem": {

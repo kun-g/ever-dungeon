@@ -569,7 +569,7 @@
         }
         ret = [];
         if (this.stage[stage].state !== state) {
-          if ((stg.tutorial != null) && state === STAGE_STATE_ACTIVE) {
+          if ((stg.tutorial != null) && state === STAGE_STATE_PASSED) {
             this.tutorialStage = stg.tutorial;
             ret.push({
               NTF: Event_TutorialInfo,
