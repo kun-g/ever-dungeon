@@ -39,11 +39,7 @@
         }
       });
       return c.on('error', function(error) {
-        logError({
-          type: 'Socket Error',
-          address: c.remoteAddress,
-          error: error
-        });
+        console.log(error);
         return c.destroy();
       });
     });
@@ -82,12 +78,9 @@
     }), 3000);
     appNet.currIndex = 0;
     appNet.aliveConnections = [];
-    appNet.server.listen(port);
+    appNet.server.listen(port, console.log);
     return appNet.server.on('error', function(e) {
-      return logError({
-        type: 'Server Error',
-        error: e
-      });
+      return console.log(e);
     });
   };
 
