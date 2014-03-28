@@ -34,7 +34,6 @@
             if (result.ErrorCode === '1') {
               return callback(null);
             } else {
-              console.log(chunk);
               return callback(Error(RET_LoginFailed));
             }
           });
@@ -124,7 +123,6 @@
     RPC_Login: {
       id: 100,
       func: function(arg, dummy, handle, rpcID, socket, registerFlag) {
-        console.log(arg);
         return async.waterfall([
           function(cb) {
             var current, limit, _ref;
@@ -251,9 +249,7 @@
             } else {
               return dbLib.newSessionInfo(function(err, session) {
                 if (socket != null) {
-                  socket.session = {
-                    id: session
-                  };
+                  socket.session = arg;
                 }
                 dbLib.updateSessionInfo(session, arg, function() {});
                 return cb(Error(RET_AccountHaveNoHero));

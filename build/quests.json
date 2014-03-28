@@ -20,7 +20,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         },
         "endDialogue":9
@@ -65,7 +65,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.0.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.0.complete"}, true ] }
         ]
         }
         ,
@@ -108,7 +108,7 @@
             ],
             "cond":
             { "and": [
-                { "==": [ { "type": "getProperty", "key": "quests.0.state"}, 2 ] }
+                { "==": [ { "type": "getProperty", "key": "quests.0.complete"}, true ] }
             ]
             }
             ,
@@ -153,7 +153,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.1.complete"}, true ] }
         ]
         }
         ,
@@ -188,7 +188,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
 
@@ -231,7 +231,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.2.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.2.complete"}, true ] }
         ]
         }
         ,
@@ -266,7 +266,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
 
@@ -291,7 +291,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
 
@@ -316,7 +316,7 @@
     ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
 
@@ -350,7 +350,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
 
@@ -390,7 +390,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.4.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.4.complete"}, true ] }
         ]
         }
 
@@ -424,7 +424,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
 
@@ -454,7 +454,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
 
@@ -483,7 +483,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.9.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.9.complete"}, true ] }
         ]
         }
 
@@ -517,7 +517,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.12.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.12.complete"}, true ] }
         ]
         }
         ,
@@ -547,7 +547,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
 
@@ -580,7 +580,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.13.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.13.complete"}, true ] }
         ]
         }
         ,
@@ -621,7 +621,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
 
@@ -650,8 +650,8 @@
         ],
         "cond":
         { "or": [
-            { "==": [ { "type": "getProperty", "key": "quests.15.state"}, 2 ] },
-            { "==": [ { "type": "getProperty", "key": "quests.163.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.15.complete"}, true ] },
+            { "==": [ { "type": "getProperty", "key": "quests.163.complete"}, true ] }
         ]
         }
 
@@ -681,7 +681,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.17.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.17.complete"}, true ] }
         ]
         }
 
@@ -710,7 +710,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.17.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.17.complete"}, true ] }
         ]
         }
 
@@ -740,7 +740,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.19.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.19.complete"}, true ] }
         ]
         }
 
@@ -769,7 +769,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.19.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.19.complete"}, true ] }
         ]
         }
 
@@ -795,7 +795,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.21.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.21.complete"}, true ] }
         ]
         }
 
@@ -824,7 +824,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.21.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.21.complete"}, true ] }
         ]
         }
 
@@ -854,7 +854,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.23.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.23.complete"}, true ] }
         ]
         }
 
@@ -883,7 +883,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.23.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.23.complete"}, true ] }
         ]
         }
 
@@ -912,7 +912,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.23.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.23.complete"}, true ] }
         ]
         }
 
@@ -937,7 +937,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.25.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.25.complete"}, true ] }
         ]
         }
 
@@ -966,7 +966,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.26.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.26.complete"}, true ] }
         ]
         }
 
@@ -995,7 +995,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.26.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.26.complete"}, true ] }
         ]
         }
 
@@ -1028,7 +1028,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.29.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.29.complete"}, true ] }
         ]
         }
 
@@ -1068,7 +1068,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.30.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.30.complete"}, true ] }
         ]
         }
 
@@ -1098,7 +1098,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.30.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.30.complete"}, true ] }
         ]
         }
 
@@ -1128,7 +1128,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.32.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.32.complete"}, true ] }
         ]
         }
 
@@ -1153,7 +1153,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.32.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.32.complete"}, true ] }
         ]
         }
 
@@ -1179,7 +1179,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.33.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.33.complete"}, true ] }
         ]
         }
 
@@ -1208,7 +1208,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.34.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.34.complete"}, true ] }
         ]
         }
 
@@ -1234,7 +1234,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.34.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.34.complete"}, true ] }
         ]
         }
 
@@ -1263,7 +1263,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.37.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.37.complete"}, true ] }
         ]
         }
 
@@ -1311,7 +1311,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.37.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.37.complete"}, true ] }
         ]
         }
 
@@ -1345,7 +1345,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.37.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.37.complete"}, true ] }
         ]
         }
 
@@ -1370,7 +1370,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.37.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.37.complete"}, true ] }
         ]
         }
 
@@ -1399,7 +1399,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.38.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.38.complete"}, true ] }
         ]
         }
 
@@ -1433,7 +1433,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.42.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.42.complete"}, true ] }
         ]
         }
 
@@ -1458,7 +1458,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.41.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.41.complete"}, true ] }
         ]
         }
 
@@ -1488,7 +1488,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.44.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.44.complete"}, true ] }
         ]
         }
 
@@ -1513,7 +1513,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.44.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.44.complete"}, true ] }
         ]
         }
 
@@ -1546,7 +1546,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.46.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.46.complete"}, true ] }
         ]
         }
 
@@ -1586,7 +1586,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.47.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.47.complete"}, true ] }
         ]
         }
 
@@ -1616,7 +1616,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.47.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.47.complete"}, true ] }
         ]
         }
 
@@ -1641,7 +1641,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.49.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.49.complete"}, true ] }
         ]
         }
 
@@ -1675,7 +1675,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.50.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.50.complete"}, true ] }
         ]
         }
 
@@ -1700,7 +1700,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.49.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.49.complete"}, true ] }
         ]
         }
 
@@ -1730,7 +1730,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.52.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.52.complete"}, true ] }
         ]
         }
 
@@ -1755,7 +1755,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.52.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.52.complete"}, true ] }
         ]
         }
 
@@ -1780,7 +1780,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.54.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.54.complete"}, true ] }
         ]
         }
 
@@ -1814,7 +1814,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.54.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.54.complete"}, true ] }
         ]
         }
 
@@ -1843,7 +1843,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.53.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.53.complete"}, true ] }
         ]
         }
 
@@ -1868,7 +1868,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.57.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.57.complete"}, true ] }
         ]
         }
 
@@ -1893,7 +1893,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.58.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.58.complete"}, true ] }
         ]
         }
 
@@ -1918,7 +1918,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.57.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.57.complete"}, true ] }
         ]
         }
 
@@ -1947,7 +1947,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.60.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.60.complete"}, true ] }
         ]
         }
 
@@ -1981,7 +1981,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.60.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.60.complete"}, true ] }
         ]
         }
 
@@ -2014,7 +2014,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.62.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.62.complete"}, true ] }
         ]
         }
 
@@ -2060,7 +2060,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.63.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.63.complete"}, true ] }
         ]
         }
 
@@ -2085,7 +2085,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.63.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.63.complete"}, true ] }
         ]
         }
 
@@ -2119,7 +2119,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.65.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.65.complete"}, true ] }
         ]
         }
 
@@ -2144,7 +2144,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.65.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.65.complete"}, true ] }
         ]
         }
 
@@ -2178,7 +2178,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.67.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.67.complete"}, true ] }
         ]
         }
 
@@ -2207,7 +2207,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.67.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.67.complete"}, true ] }
         ]
         }
 
@@ -2232,7 +2232,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.69.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.69.complete"}, true ] }
         ]
         }
 
@@ -2262,7 +2262,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.69.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.69.complete"}, true ] }
         ]
         }
 
@@ -2291,7 +2291,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.71.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.71.complete"}, true ] }
         ]
         }
 
@@ -2317,7 +2317,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.72.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.72.complete"}, true ] }
         ]
         }
 
@@ -2342,7 +2342,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.73.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.73.complete"}, true ] }
         ]
         }
 
@@ -2375,7 +2375,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.74.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.74.complete"}, true ] }
         ]
         }
 
@@ -2415,7 +2415,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.75.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.75.complete"}, true ] }
         ]
         }
 
@@ -2440,7 +2440,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.75.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.75.complete"}, true ] }
         ]
         }
 
@@ -2474,7 +2474,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.77.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.77.complete"}, true ] }
         ]
         }
 
@@ -2499,7 +2499,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.77.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.77.complete"}, true ] }
         ]
         }
 
@@ -2524,7 +2524,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.79.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.79.complete"}, true ] }
         ]
         }
 
@@ -2553,7 +2553,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.77.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.77.complete"}, true ] }
         ]
         }
 
@@ -2578,7 +2578,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.80.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.80.complete"}, true ] }
         ]
         }
 
@@ -2603,7 +2603,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.81.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.81.complete"}, true ] }
         ]
         }
 
@@ -2637,7 +2637,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.83.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.83.complete"}, true ] }
         ]
         }
 
@@ -2666,7 +2666,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.83.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.83.complete"}, true ] }
         ]
         }
 
@@ -2691,7 +2691,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.85.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.85.complete"}, true ] }
         ]
         }
 
@@ -2716,7 +2716,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.85.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.85.complete"}, true ] }
         ]
         }
 
@@ -2741,7 +2741,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.86.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.86.complete"}, true ] }
         ]
         }
 
@@ -2772,7 +2772,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.88.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.88.complete"}, true ] }
         ]
         }
 
@@ -2805,7 +2805,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.87.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.87.complete"}, true ] }
         ]
         }
 
@@ -2857,7 +2857,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.90.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.90.complete"}, true ] }
         ]
         }
 
@@ -2886,7 +2886,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.90.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.90.complete"}, true ] }
         ]
         }
 
@@ -2928,7 +2928,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.92.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.92.complete"}, true ] }
         ]
         }
 
@@ -2959,7 +2959,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.93.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.93.complete"}, true ] }
         ]
         }
 
@@ -2984,7 +2984,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.93.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.93.complete"}, true ] }
         ]
         }
 
@@ -3013,7 +3013,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.95.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.95.complete"}, true ] }
         ]
         }
 
@@ -3042,7 +3042,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.93.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.93.complete"}, true ] }
         ]
         }
 
@@ -3067,7 +3067,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.97.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.97.complete"}, true ] }
         ]
         }
 
@@ -3092,7 +3092,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.97.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.97.complete"}, true ] }
         ]
         }
 
@@ -3133,7 +3133,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.99.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.99.complete"}, true ] }
         ]
         }
 
@@ -3158,7 +3158,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.99.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.99.complete"}, true ] }
         ]
         }
 
@@ -3183,7 +3183,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.101.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.101.complete"}, true ] }
         ]
         }
 
@@ -3216,7 +3216,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.102.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.102.complete"}, true ] }
         ]
         }
 
@@ -3241,7 +3241,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.103.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.103.complete"}, true ] }
         ]
         }
 
@@ -3275,7 +3275,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.104.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.104.complete"}, true ] }
         ]
         }
 
@@ -3300,7 +3300,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.104.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.104.complete"}, true ] }
         ]
         }
 
@@ -3342,7 +3342,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.106.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.106.complete"}, true ] }
         ]
         }
 
@@ -3371,7 +3371,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.107.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.107.complete"}, true ] }
         ]
         }
 
@@ -3400,7 +3400,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.106.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.106.complete"}, true ] }
         ]
         }
 
@@ -3425,7 +3425,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.109.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.109.complete"}, true ] }
         ]
         }
 
@@ -3454,7 +3454,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.110.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.110.complete"}, true ] }
         ]
         }
 
@@ -3479,7 +3479,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.111.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.111.complete"}, true ] }
         ]
         }
 
@@ -3508,7 +3508,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.60.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.60.complete"}, true ] }
         ]
         }
 
@@ -3542,7 +3542,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.110.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.110.complete"}, true ] }
         ]
         }
 
@@ -3575,7 +3575,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.112.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.112.complete"}, true ] }
         ]
         }
 
@@ -3600,7 +3600,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.115.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.115.complete"}, true ] }
         ]
         }
 
@@ -3634,7 +3634,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.115.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.115.complete"}, true ] }
         ]
         }
 
@@ -3668,7 +3668,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.117.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.117.complete"}, true ] }
         ]
         }
 
@@ -3697,7 +3697,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.117.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.117.complete"}, true ] }
         ]
         }
 
@@ -3722,7 +3722,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.119.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.119.complete"}, true ] }
         ]
         }
 
@@ -3752,7 +3752,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.120.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.120.complete"}, true ] }
         ]
         }
 
@@ -3781,7 +3781,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.121.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.121.complete"}, true ] }
         ]
         }
 
@@ -3806,7 +3806,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.122.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.122.complete"}, true ] }
         ]
         }
 
@@ -3839,7 +3839,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.123.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.123.complete"}, true ] }
         ]
         }
 
@@ -3885,7 +3885,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.120.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.120.complete"}, true ] }
         ]
         }
 
@@ -3919,7 +3919,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.121.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.121.complete"}, true ] }
         ]
         }
 
@@ -3948,7 +3948,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.123.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.123.complete"}, true ] }
         ]
         }
 
@@ -3957,7 +3957,7 @@
         "questId":128,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
         ,
@@ -3988,7 +3988,7 @@
         "questId":129,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
         ,
@@ -4019,7 +4019,7 @@
         "questId":130,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
         ,
@@ -4050,7 +4050,7 @@
         "questId":131,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
         ,
@@ -4077,7 +4077,7 @@
         "questId":132,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
         ,
@@ -4104,7 +4104,7 @@
         "questId":133,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
         ,
@@ -4131,7 +4131,7 @@
         "questId":134,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
         ,
@@ -4158,7 +4158,7 @@
         "questId":135,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         },
         "hidden": true,
@@ -4184,7 +4184,7 @@
         "questId":136,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         },
         "hidden": true,
@@ -4210,7 +4210,7 @@
         "questId":137,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
         ,
@@ -4237,7 +4237,7 @@
         "questId":138,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
         ,
@@ -4264,7 +4264,7 @@
         "questId":139,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
         ,
@@ -4291,7 +4291,7 @@
         "questId":140,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
         ,
@@ -4318,7 +4318,7 @@
         "questId":141,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
         ,
@@ -4345,7 +4345,7 @@
         "questId":142,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
         ,
@@ -4372,7 +4372,7 @@
         "questId":143,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
         ,
@@ -4399,7 +4399,7 @@
         "questId":144,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
         ,
@@ -4426,7 +4426,7 @@
         "questId":145,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
         ,
@@ -4453,7 +4453,7 @@
         "questId":146,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
         ,
@@ -4480,7 +4480,7 @@
         "questId":147,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
         ,
@@ -4507,7 +4507,7 @@
         "questId":148,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
         ,
@@ -4534,7 +4534,7 @@
         "questId":149,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
         ,
@@ -4561,7 +4561,7 @@
         "questId":150,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
         ,
@@ -4588,7 +4588,7 @@
         "questId":151,
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
         ,
@@ -4629,7 +4629,7 @@
         },{ "type":5, "func": "setFlag", "flag": "daily", "value": true } ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.-1.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
         ]
         }
 
@@ -4693,7 +4693,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.153.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.153.complete"}, true ] }
         ]
         }
         ,
@@ -4719,7 +4719,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.154.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.154.complete"}, true ] }
         ]
         }
         ,
@@ -4763,7 +4763,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.155.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.155.complete"}, true ] }
         ]
         },
         "startDialogue" :34
@@ -4807,7 +4807,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.156.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.156.complete"}, true ] }
         ]
         }
 
@@ -4842,7 +4842,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.157.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.157.complete"}, true ] }
         ]
         }
         ,
@@ -4887,7 +4887,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.158.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.158.complete"}, true ] }
         ]
         }
         ,
@@ -4911,7 +4911,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.159.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.159.complete"}, true ] }
         ]
         }
     },
@@ -4944,7 +4944,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.160.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.160.complete"}, true ] }
         ]
         }
     },
@@ -4966,7 +4966,7 @@
     },{ "type":5, "func": "setFlag", "flag": "daily", "value": true } ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.161.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.161.complete"}, true ] }
         ]
         }
         ,
@@ -5001,7 +5001,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.162.state"}, 2 ] }
+            { "==": [ { "type": "getProperty", "key": "quests.162.complete"}, true ] }
         ]
         }
 
