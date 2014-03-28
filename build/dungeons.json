@@ -19241,26 +19241,9 @@
     {
 
         "dungeonId": 92,
-        "levelCount" :6 ,
+        "levelCount" :3 ,
         "rank": 1,
         "levels" :[
-            {
-                "objects" :[
-                    {
-                        "id": 3,
-                        "count":4
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 4 ,
-                        "count":3
-
-                    }
-                ]
-            },
             {
                 "objects" :[
                     {
@@ -19296,46 +19279,6 @@
                         "id": 22,
                         "count":1,
                         "keyed":true
-                    }
-                ]
-            },
-            {
-                "objects" :[
-                    {
-                        "id": 3,
-                        "count":2
-                    },
-                    {
-                        "id": 4 ,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 5,
-                        "count":3
-                    }
-                ]
-            },
-            {
-                "objects" :[
-                    {
-                        "id": 3,
-                        "count":2
-                    },
-                    {
-                        "id": 4 ,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 5,
-                        "count":4
                     }
                 ]
             },
