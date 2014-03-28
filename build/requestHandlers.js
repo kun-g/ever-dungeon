@@ -567,10 +567,14 @@
             if (info.bin_version !== queryTable(TABLE_VERSION, 'bin_version') || +info.resource_version !== +queryTable(TABLE_VERSION, 'resource_version')) {
               return cbb(Error(RET_NewVersionArrived));
             } else {
-              return cbb(null, info.player);
+              return cbb(null, info);
             }
-          }, function(playerName, cbb) {
-            return dbLib.loadPlayer(playerName, cbb);
+          }, function(session, cbb) {
+            if (session.player) {
+              return dbLib.loadPlayer(playerName, cbb);
+            } else {
+              return cb(Error(RET_OK));
+            }
           }, function(p, cbb) {
             if (!p || p.runtimeID !== arg.PID) {
               return cbb(Error(RET_SessionOutOfDate));
@@ -591,9 +595,6 @@
               {
                 REQ: rpcID,
                 RET: err.message
-              }, {
-                NTF: Event_ExpiredPID,
-                err: err.message
               }
             ]);
           } else {
