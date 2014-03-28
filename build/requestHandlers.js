@@ -251,13 +251,10 @@
               return dbLib.newSessionInfo(function(err, session) {
                 if (socket != null) {
                   socket.session = {
-                    pendingLogin: arg,
                     id: session
                   };
                 }
-                dbLib.updateSessionInfo(session, {
-                  pendingLogin: arg
-                }, function() {});
+                dbLib.updateSessionInfo(session, arg, function() {});
                 return cb(Error(RET_AccountHaveNoHero));
               });
             }
@@ -307,7 +304,7 @@
         return async.waterfall([
           function(cb) {
             var pendingLogin;
-            pendingLogin = socket.session.pendingLogin;
+            pendingLogin = socket.session;
             return cb(null, pendingLogin.tp, pendingLogin.id);
           }, function(passportType, passport, cb) {
             return dbLib.loadPassport(passportType, passport, false, cb);
@@ -571,7 +568,7 @@
             }
           }, function(session, cbb) {
             if (session.player) {
-              return dbLib.loadPlayer(playerName, cbb);
+              return dbLib.loadPlayer(session.player, cbb);
             } else {
               return cb(Error(RET_OK));
             }
