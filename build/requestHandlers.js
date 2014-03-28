@@ -124,6 +124,7 @@
     RPC_Login: {
       id: 100,
       func: function(arg, dummy, handle, rpcID, socket, registerFlag) {
+        console.log(arg);
         return async.waterfall([
           function(cb) {
             var current, limit, _ref;
@@ -143,7 +144,7 @@
               }
             }
           }, function(cb) {
-            if (arg.rv !== queryTable(TABLE_VERSION, 'resource_version')) {
+            if (+arg.rv !== queryTable(TABLE_VERSION, 'resource_version')) {
               return cb(Error(RET_ResourceVersionNotMatch));
             } else {
               return cb(null);
@@ -338,7 +339,7 @@
               }
             ]);
           } else {
-            return exports.route.RPC_Login.func(socket.session.pendingLogin, dummy, handle, rpcID, socket, true);
+            return exports.route.RPC_Login.func(socket.session, dummy, handle, rpcID, socket, true);
           }
         });
       },
@@ -570,7 +571,7 @@
             if (session.player) {
               return dbLib.loadPlayer(session.player, cbb);
             } else {
-              return cb(Error(RET_OK));
+              return cbb(Error(RET_OK));
             }
           }, function(p, cbb) {
             if (!p || p.runtimeID !== arg.PID) {
