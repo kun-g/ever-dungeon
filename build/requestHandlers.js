@@ -250,6 +250,7 @@
               return dbLib.newSessionInfo(function(err, session) {
                 if (socket != null) {
                   socket.session = arg;
+                  socket.session.sid = session;
                 }
                 dbLib.updateSessionInfo(session, arg, function() {});
                 return cb(Error(RET_AccountHaveNoHero));
@@ -278,7 +279,7 @@
               case RET_AccountHaveNoHero:
                 ret = {
                   arg: {
-                    pid: socket.session.id
+                    pid: socket.session.sid
                   }
                 };
                 break;
