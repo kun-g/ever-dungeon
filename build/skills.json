@@ -1857,7 +1857,7 @@
             {"type":"changeBGM"},
             {"type": "delay"},
             {"type":"playSound","sound":"dragon.mp3"},
-            {"type":"dialog","dialogId":3},
+            {"type":"dialog","dialogId":43},
             {"type": "delay","delay":1},
             {"type":"shock","delay":0,"range":20,"time":0.9},
             {"type": "delay","delay":0.3},
@@ -1909,7 +1909,7 @@
             {"type":"shock","delay":5.2,"range":10,"time":0.3},
             {"type":"changeBGM","music":"boss.mp3"},
             {"type": "delay"},
-            {"type":"dialog","dialogId":4}
+            {"type":"dialog","dialogId":44}
         ]
     }},
     {
@@ -1924,14 +1924,12 @@
         },
         "action":[
             {"type": "modifyVar", "x": "damage", "formular": {"environment":{"c":0}}},
-            {"type": "delay","delay":0.3},
             {"type": "delay","delay":2},
             {"type":"castSpell","spell":40},
             {"type": "delay","delay":3},
-            {"type":"castSpell","spell":41},
-            {"type": "delay","delay":3},
-            {"type":"castSpell","spell":42},
+            {"type":"castSpell","spell":80},
             {"type": "whiteScreen","time":3,"mode":0,"color":1},
+            {"type":"dialog","dialogId":45},
             {"type": "delay","delay":2},
             {"type": "kill"},
             {"type": "delay","delay":0.3},

@@ -4695,8 +4695,7 @@
         { "and": [
             { "==": [ { "type": "getProperty", "key": "quests.153.complete"}, true ] }
         ]
-        },
-        "startdialogue":27
+        }
     },
     {
         "questId":155,
@@ -4721,8 +4720,6 @@
             { "==": [ { "type": "getProperty", "key": "quests.154.complete"}, true ] }
         ]
         }
-        ,
-        "endDialogue":31
     },
     {
         "questId":156,
@@ -4764,9 +4761,7 @@
         { "and": [
             { "==": [ { "type": "getProperty", "key": "quests.155.complete"}, true ] }
         ]
-        },
-        "startDialogue" :34
-
+        }
     },
     {
         "questId":157,
@@ -4857,7 +4852,7 @@
                 "type":0,
                 "label":"再次击败不死心的哥布林投矛手",
                 "collect":159001,
-                "count":15
+                "count":1
             }
         ],
         "prize":[
