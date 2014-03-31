@@ -324,6 +324,7 @@ exports.getFriendList = getFriendList;
 
 var channelConfig = {};
 publish = function (channel, message, cb) {
+  console.log(channel)
   if (publisher) publisher.publish(channel, JSON.stringify(message), cb);
 };
 exports.publish = publish;

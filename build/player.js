@@ -2061,10 +2061,15 @@
     };
 
     Player.prototype.getCampaignConfig = function(campaignName) {
-      var cfg;
+      var cfg, _base;
       cfg = queryTable(TABLE_CAMPAIGN, campaignName, this.abIndex);
       if (cfg != null) {
         if ((cfg.date != null) && moment(cfg.date).format('YYYYMMDD') - moment().format('YYYYMMDD') < 0) {
+          return {
+            config: null
+          };
+        }
+        if (typeof (_base = this.getCampaignState(campaignName)) === "function" ? _base(nd(this.getCampaignState(campaignName) === false)) : void 0) {
           return {
             config: null
           };
@@ -2139,6 +2144,16 @@
             });
           }
           _ref10 = this.getCampaignConfig('FirstCharge'), config = _ref10.config, level = _ref10.level;
+          if ((config != null) && (level != null)) {
+            rmb = data;
+            if (level[rmb] != null) {
+              reward.push({
+                cfg: config,
+                lv: level[rmb]
+              });
+              this.setCampaignState('FirstCharge', false);
+            }
+          }
           break;
         case 'Level':
           _ref11 = this.getCampaignConfig('LevelUp'), config = _ref11.config, level = _ref11.level;

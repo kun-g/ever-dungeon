@@ -4884,9 +4884,6 @@
             { "==": [ { "type": "getProperty", "key": "quests.158.complete"}, true ] }
         ]
         }
-        ,
-        "startDialogue":42
-
     },
     {
         "questId":160,
@@ -4901,6 +4898,10 @@
             }
         ],
         "prize":[
+            {
+                "type":1,
+                "count":200
+            }
 
         ],
         "cond":
@@ -4981,12 +4982,31 @@
         ],
         "prize":[
             {
-                "type":2,
-                "count":100
-            },
-            {
                 "type":1,
                 "count":400
+            },
+            {
+                "type":0,
+                "value":568,
+                "count":1,
+                "classLimit":[1]
+            },
+            {
+                "type":0,
+                "value":571,
+                "count":1,
+                "classLimit":[2]
+            },
+            {
+                "type":0,
+                "value":564,
+                "count":1,
+                "classLimit":[0]
+            },
+            {
+                "type":0,
+                "value":558,
+                "count":20
             },
             {
                 "type":3,
