@@ -1902,7 +1902,7 @@
             {"type": "delay","delay":1},
             {"type":"playSound","sound":"dragon.mp3"},
             {"type": "delay","delay":8},
-            {"type":"createMonster","count":1,"monsterID":166,"pos":12},
+            {"type":"createMonster","count":1,"monsterID":166,"pos":12,"collectID":161001},
             {"type":"shock","delay":0.8,"range":10,"time":0.3},
             {"type":"shock","delay":3,"range":10,"time":0.3},
             {"type":"shock","delay":4.7,"range":10,"time":0.3},
