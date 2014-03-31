@@ -1615,7 +1615,7 @@
                 "team": 3,
                 "hidden":false,
                 "dungeon": 98,
-                "tutorial":8,
+                "tutorial":9,
                 "cond":
                 { "and": [
                     { "==": [ { "type": "getProperty", "key": "stage.101.state"}, 2 ] }
@@ -1702,6 +1702,7 @@
             "team": 1,
             "hidden":false,
             "dungeon": 101,
+            "tutorial":8,
             "teammate": [
                 {
                     "class" : 131,

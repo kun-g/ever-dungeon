@@ -749,7 +749,7 @@
     };
 
     Wizard.prototype.doAction = function(thisSpell, actions, level, target, cmd) {
-      var a, c, cfg, delay, env, formular, formularResult, h, modifications, pos, property, spellID, src, t, val, variables, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _ref3, _ref4, _s, _t, _u, _v;
+      var a, c, cfg, delay, env, formular, formularResult, h, modifications, pos, property, spellID, src, t, val, variables, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _ref3, _ref4, _s, _t, _u, _v, _w;
       if (actions == null) {
         return false;
       }
@@ -1026,48 +1026,75 @@
             }
             break;
           case 'playEffect':
-            if (a.pos === 'self') {
-              if (typeof cmd.routine === "function") {
-                cmd.routine({
-                  id: 'Effect',
-                  delay: delay,
-                  effect: a.effect,
-                  pos: this.pos
-                });
-              }
-            } else if (a.pos === 'target') {
-              for (_t = 0, _len11 = target.length; _t < _len11; _t++) {
-                t = target[_t];
+            if (a.pos != null) {
+              if (a.pos === 'self') {
                 if (typeof cmd.routine === "function") {
                   cmd.routine({
                     id: 'Effect',
                     delay: delay,
                     effect: a.effect,
-                    pos: t.pos
+                    pos: this.pos
                   });
                 }
-              }
-            } else if (typeof a.pos === 'number') {
-              if (typeof cmd.routine === "function") {
-                cmd.routine({
-                  id: 'Effect',
-                  delay: delay,
-                  effect: a.effect,
-                  pos: a.pos
-                });
-              }
-            } else if (Array.isArray(a.pos)) {
-              _ref2 = a.pos;
-              for (_u = 0, _len12 = _ref2.length; _u < _len12; _u++) {
-                pos = _ref2[_u];
+              } else if (a.pos === 'target') {
+                for (_t = 0, _len11 = target.length; _t < _len11; _t++) {
+                  t = target[_t];
+                  if (typeof cmd.routine === "function") {
+                    cmd.routine({
+                      id: 'Effect',
+                      delay: delay,
+                      effect: a.effect,
+                      pos: t.pos
+                    });
+                  }
+                }
+              } else if (typeof a.pos === 'number') {
                 if (typeof cmd.routine === "function") {
                   cmd.routine({
                     id: 'Effect',
                     delay: delay,
                     effect: a.effect,
-                    pos: pos
+                    pos: a.pos
                   });
                 }
+              } else if (Array.isArray(a.pos)) {
+                _ref2 = a.pos;
+                for (_u = 0, _len12 = _ref2.length; _u < _len12; _u++) {
+                  pos = _ref2[_u];
+                  if (typeof cmd.routine === "function") {
+                    cmd.routine({
+                      id: 'Effect',
+                      delay: delay,
+                      effect: a.effect,
+                      pos: pos
+                    });
+                  }
+                }
+              }
+            } else {
+              switch (a.act) {
+                case 'self':
+                  if (typeof cmd.routine === "function") {
+                    cmd.routine({
+                      id: 'Effect',
+                      delay: delay,
+                      effect: a.effect,
+                      act: this.ref
+                    });
+                  }
+                  break;
+                case 'target':
+                  for (_v = 0, _len13 = target.length; _v < _len13; _v++) {
+                    t = target[_v];
+                    if (typeof cmd.routine === "function") {
+                      cmd.routine({
+                        id: 'Effect',
+                        delay: delay,
+                        effect: a.effect,
+                        act: t.ref
+                      });
+                    }
+                  }
               }
             }
             break;
@@ -1110,8 +1137,8 @@
             } else {
               _buffType = ['RoleBuff', 'HealthBuff', 'AttackBuff'];
             }
-            for (_v = 0, _len13 = target.length; _v < _len13; _v++) {
-              h = target[_v];
+            for (_w = 0, _len14 = target.length; _w < _len14; _w++) {
+              h = target[_w];
               _ref4 = h.wSpellDB;
               for (spellID in _ref4) {
                 thisSpell = _ref4[spellID];

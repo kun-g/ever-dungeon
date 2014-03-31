@@ -502,6 +502,7 @@
     function Dungeon(data) {
       var cfg, k, t, v, _i, _len, _ref6;
       Dungeon.__super__.constructor.apply(this, arguments);
+      this.effectCounter = 0;
       this.killingInfo = [];
       this.currentLevel = -1;
       this.cardStack = CardStack(5);
@@ -1964,6 +1965,10 @@
       }
     };
 
+    DungeonEnvironment.prototype.incrEffectCount = function() {
+      return this.dungeon.effectCounter++;
+    };
+
     DungeonEnvironment.prototype.aquireCard = function(id) {
       var _ref6;
       return (_ref6 = this.dungeon) != null ? _ref6.aquireCard(id) : void 0;
@@ -2485,6 +2490,10 @@
         if (e.effect != null) {
           eEv.eff = e.effect;
         }
+        if (getBasicInfo(e)) {
+          eEv.role = getBasicInfo(e);
+        }
+        console.log(eEv);
         return [eEv];
       }
     },
@@ -2989,7 +2998,6 @@
       }
     },
     Casting: {
-      callback: function(env) {},
       output: function(env) {
         var delay, info, ret, spell, src, t, tar, _i, _len;
         src = env.variable('caster');
@@ -3019,14 +3027,25 @@
     },
     Effect: {
       output: function(env) {
-        return [
-          {
-            id: ACT_EFFECT,
-            dey: env.variable('delay'),
-            eff: env.variable('effect'),
-            pos: env.variable('pos')
-          }
-        ];
+        if (env.variable('pos') != null) {
+          return [
+            {
+              id: ACT_EFFECT,
+              dey: env.variable('delay'),
+              eff: env.variable('effect'),
+              pos: env.variable('pos')
+            }
+          ];
+        } else {
+          return [
+            {
+              id: ACT_EFFECT,
+              dey: env.variable('delay'),
+              eff: env.variable('effect'),
+              act: env.variable('act')
+            }
+          ];
+        }
       }
     },
     CastSpell: {

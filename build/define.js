@@ -91,11 +91,16 @@ isNameValid = function(name) {
 grabAndTranslate = function (data, translateTable) {
   if (data == null || translateTable == null) return {};
   var ret = {};
+  var flag = false;
 
   for (var k in translateTable) {
-    if (data[k] != null) ret[translateTable[k]] = data[k];
+    if (data[k] != null) {
+      ret[translateTable[k]] = data[k];
+      flag = true;
+    }
   }
 
+  if (!flag) return null;
   return ret;
 };
 
@@ -141,10 +146,11 @@ getBasicInfo = function (hero) {
 };
 
 var gConfigTable = {};
-function readHandlerGenerator(item) {
+function readHandlerGenerator(path, item) {
   return function (cb) {
     var fs = require('fs');
-    fs.readFile(item.name+'.json', function (err, data) {
+    if (!path) { path = ''; }
+    fs.readFile(path+item.name+'.json', function (err, data) {
       if (err) return cb(err);
       try {
         var tmp = JSON.parse(String(data));
@@ -159,7 +165,7 @@ function readHandlerGenerator(item) {
       }
     });
   };
-} 
+}
 
 initStageConfig = function (cfg) {
   var ret = [];
@@ -244,7 +250,7 @@ varifyDungeonConfig = function (cfg) {
   return cfg;
 };
 
-initGlobalConfig = function (callback) {
+initGlobalConfig = function (path, callback) {
   queryTable = function (type, index, abIndex) {
     var cfg = gConfigTable[type];
     if (!cfg) return null;
@@ -267,7 +273,7 @@ initGlobalConfig = function (callback) {
     {name:TABLE_UPGRADE}, {name:TABLE_ENHANCE}, {name: TABLE_CONFIG}, {name: TABLE_VIP},
     {name:TABLE_SKILL}, {name:TABLE_CAMPAIGN}, {name: TABLE_DROP}, {name: TABLE_TRIGGER}
   ];
-  var jobs = configTable.map(function (j) { return readHandlerGenerator(j); });
+  var jobs = configTable.map(function (j) { return readHandlerGenerator(path, j); });
   var async = require('async');
   async.parallel(jobs, callback);
 };
