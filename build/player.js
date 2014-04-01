@@ -1261,7 +1261,7 @@
       gems = {};
       gemIndex = queryTable(TABLE_CONFIG, 'Global_Enhancement_GEM_Index', this.abIndex);
       prize = [];
-      for (i = _i = 1, _ref7 = Math.floor(count * 0.8); 1 <= _ref7 ? _i <= _ref7 : _i >= _ref7; i = 1 <= _ref7 ? ++_i : --_i) {
+      for (i = _i = 1, _ref7 = Math.floor(count * 0.5); 1 <= _ref7 ? _i <= _ref7 : _i >= _ref7; i = 1 <= _ref7 ? ++_i : --_i) {
         r = rand() % gemIndex.length;
         if (gems[r] == null) {
           gems[r] = {
@@ -1274,6 +1274,11 @@
         gems[r].count++;
       }
       retPrize = this.claimPrize(gems);
+      logInfo({
+        xx: 'TransformGem',
+        gems: gems,
+        retPrize: retPrize
+      });
       if (retPrize) {
         ret = this.doAction({
           id: 'ItemChange',

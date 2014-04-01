@@ -1043,7 +1043,7 @@
               {"type":"castSpell","spell":42},
               {"type": "whiteScreen","time":3,"mode":0,"color":1},
               {"type": "delay","delay":2},
-              {"type": "kill"},
+              {"type": "collect","collectID":1000},
               {"type": "delay","delay":0.3},
               {"type": "endDungeon","result":2}
           ]
@@ -1071,7 +1071,7 @@
                     {"type":"castSpell","spell":42},
                     {"type": "whiteScreen","time":5,"mode":0,"color":1},
                     {"type":"dialog","dialogId":7},
-                    {"type": "kill"},
+                    {"type": "collect","collectID":1000},
                     {"type": "delay","delay":0.3},
                     {"type": "endDungeon","result":2}
                 ]
@@ -1902,7 +1902,7 @@
             {"type": "delay","delay":1},
             {"type":"playSound","sound":"dragon.mp3"},
             {"type": "delay","delay":8},
-            {"type":"createMonster","count":1,"monsterID":166,"pos":12,"collectID":161001},
+            {"type":"createMonster","count":1,"monsterID":166,"pos":12},
             {"type":"shock","delay":0.8,"range":10,"time":0.3},
             {"type":"shock","delay":3,"range":10,"time":0.3},
             {"type":"shock","delay":4.7,"range":10,"time":0.3},
@@ -1931,7 +1931,7 @@
             {"type": "whiteScreen","time":4,"mode":0,"color":1},
             {"type":"dialog","dialogId":45},
             {"type": "delay","delay":2},
-            {"type": "kill"},
+            {"type": "collect","collectID":161001},
             {"type": "delay","delay":0.3},
             {"type": "endDungeon","result":2}
         ]

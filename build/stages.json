@@ -309,7 +309,7 @@
                 "cond":
                 { "or": [
                     { "==": [ { "type": "getProperty", "key": "stage.7.state"}, 2 ] },
-                    { "==": [ { "type": "getProperty", "key": "stage.103.state"}, 2 ] }
+                    { "==": [ { "type": "getProperty", "key": "stage.102.state"}, 2 ] }
                 ]
                 }
 

@@ -1149,6 +1149,12 @@
               }
             }
             break;
+          case 'collect':
+            cmd.routine({
+              id: 'CollectID',
+              collectID: a.collectID
+            });
+            break;
           case 'createMonster':
             c = {
               id: 'CreateObject',

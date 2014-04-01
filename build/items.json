@@ -13856,23 +13856,23 @@
     "effecta": [
         {
             "part": "chest",
-            "file": "ff1-chest.ccbi"
+            "file": "ff1-chest-c.ccbi"
         },
         {
             "part": "righthand",
-            "file": "ff1-righthand.ccbi"
+            "file": "ff1-righthand-c.ccbi"
         },
         {
             "part": "lefthand",
-            "file": "ff1-lefthand.ccbi"
+            "file": "ff1-lefthand-c.ccbi"
         },
         {
             "part": "leftleg",
-            "file": "ff1-leftleg.ccbi"
+            "file": "ff1-leftleg-c.ccbi"
         },
         {
             "part": "rightleg",
-            "file": "ff1-rightleg.ccbi"
+            "file": "ff1-rightleg-c.ccbi"
         }
     ]
     },
@@ -13919,7 +13919,7 @@
         "effecta": [
             {
                 "part": "helmet",
-                "file": "ff1-helmet.ccbi"
+                "file": "ff1-helmet-c.ccbi"
             }
         ]
     },
@@ -15117,7 +15117,7 @@
         "classId":611,
         "label": "法师翅膀",
         "category": 1,
-        "subcategory": 15,
+        "subcategory": 16,
         "storeOnly":true,
         "description": "光明的意思是会发光的，不是透明的的⋯⋯",
         "effecta": [
