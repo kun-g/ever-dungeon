@@ -1022,7 +1022,7 @@
             this.quests[qid].counters[i] = this.createHero().level;
             break;
           case QUEST_TYPE_POWER:
-            this.quests[qid].counters[i] = this.battleForce;
+            this.quests[qid].counters[i] = this.createHero().calculatePower();
         }
         if (this.quests[qid].counters[i] > objective.count) {
           _results.push(this.quests[qid].counters[i] = objective.count);
@@ -2488,7 +2488,7 @@
           reward.push({
             type: PRIZETYPE_ITEM,
             value: queryTable(TABLE_CONFIG, 'Global_Material_ID')[item.quality],
-            count: 1 + rand() % 2
+            count: 2 + rand() % 2
           });
         }
         reward = reward.filter(function(e) {
