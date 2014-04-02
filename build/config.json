@@ -27,7 +27,8 @@
     {"minimum" : 8, "delta" : 8},
     {"minimum" : 9, "delta" : 9}
   ],
-  "Global_Enhancement_GEM_Index" : [3, 4, 5, 26, 27, 392, 393],
+    "Global_Material_ID" : [558, 559, 560, 561, 562],
+    "Global_Enhancement_GEM_Index" : [3, 4, 5, 26, 27, 392, 393],
   "Auth_API_Server": "10.4.2.185",
   "DB_Config_Local" : {
     "Account": { "IP": "localhost", "PORT": 6379},
