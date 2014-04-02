@@ -176,5 +176,57 @@
         ]
       }
     ]
-  }
+  },
+    "FirstCharge": {
+        "show": true,
+        "title": "首充翻倍大行动",
+        "banner":"event-banner-wzydr.png",
+        "description":"首次充值即可获得宝石翻倍的奖励，充多少送多少，妈妈再也不用担心我的宝石了！",
+        "mailTitle": "《首充翻倍大行动》活动奖励",
+        "mailBody": "恭喜你完成活动，点击领取活动奖励！",
+        "date": "2014/05/10",
+        "dateDescription": "截止日期2014年5月10日24时",
+        "objective": {
+            "6": {
+                "award": [
+                    {"type":2,"count":60}
+                ]
+            },
+            "12": {
+                "award": [
+                    {"type":2,"count":130}
+                ]
+            },
+            "30": {
+                "award": [
+                    {"type":0,"count":330}
+                ]
+            },
+            "68": {
+                "award": [
+                    {"type":0,"count":760}
+                ]
+            },
+            "128": {
+                "award": [
+                    {"type":0,"count":1460}
+                ]
+            },
+            "198": {
+                "award": [
+                    {"type":0,"count":2260}
+                ]
+            },
+            "328": {
+                "award": [
+                    {"type":0,"count":3760}
+                ]
+            },
+            "648": {
+                "award": [
+                    {"type":0,"count":7480}
+                ]
+            }
+        }
+    }
 }
