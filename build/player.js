@@ -943,10 +943,10 @@
       if (!((quest != null) && (this.quests[qid] != null) && !this.quests[qid].complete)) {
         return RET_Unknown;
       }
+      this.checkQuestStatues(qid);
       if (!this.isQuestAchieved(qid)) {
         return RET_Unknown;
       }
-      this.checkQuestStatues(qid);
       prize = this.claimPrize(quest.prize.filter((function(_this) {
         return function(e) {
           return isClassMatch(_this.hero["class"], e.classLimit);
