@@ -13975,23 +13975,23 @@
         "effecta": [
             {
                 "part": "chest",
-                "file": "fm1-chest.ccbi"
+                "file": "fm1-chest-c.ccbi"
             },
             {
                 "part": "righthand",
-                "file": "fm1-righthand.ccbi"
+                "file": "fm1-righthand-c.ccbi"
             },
             {
                 "part": "lefthand",
-                "file": "fm1-lefthand.ccbi"
+                "file": "fm1-lefthand-c.ccbi"
             },
             {
                 "part": "leftleg",
-                "file": "fm1-leftleg.ccbi"
+                "file": "fm1-leftleg-c.ccbi"
             },
             {
                 "part": "rightleg",
-                "file": "fm1-rightleg.ccbi"
+                "file": "fm1-rightleg-c.ccbi"
             }
         ]
     },
@@ -14068,45 +14068,45 @@
         "effectf": [
             {
                 "part": "chest",
-                "file": "ff1-chest.ccbi"
+                "file": "ff1-chest-c.ccbi"
             },
             {
                 "part": "righthand",
-                "file": "ff1-righthand.ccbi"
+                "file": "ff1-righthand-c.ccbi"
             },
             {
                 "part": "lefthand",
-                "file": "ff1-lefthand.ccbi"
+                "file": "ff1-lefthand-c.ccbi"
             },
             {
                 "part": "leftleg",
-                "file": "ff1-leftleg.ccbi"
+                "file": "ff1-leftleg-c.ccbi"
             },
             {
                 "part": "rightleg",
-                "file": "ff1-rightleg.ccbi"
+                "file": "ff1-rightleg-c.ccbi"
             }
         ],
         "effectm": [
             {
                 "part": "chest",
-                "file": "fm1-chest.ccbi"
+                "file": "fm1-chest-c.ccbi"
             },
             {
                 "part": "righthand",
-                "file": "fm1-righthand.ccbi"
+                "file": "fm1-righthand-c.ccbi"
             },
             {
                 "part": "lefthand",
-                "file": "fm1-lefthand.ccbi"
+                "file": "fm1-lefthand-c.ccbi"
             },
             {
                 "part": "leftleg",
-                "file": "fm1-leftleg.ccbi"
+                "file": "fm1-leftleg-c.ccbi"
             },
             {
                 "part": "rightleg",
-                "file": "fm1-rightleg.ccbi"
+                "file": "fm1-rightleg-c.ccbi"
             }
         ],
         "basic_properties":
@@ -14128,13 +14128,13 @@
         "effectf": [
             {
                 "part": "helmet",
-                "file": "ff1-helmet.ccbi"
+                "file": "ff1-helmet-c.ccbi"
             }
         ],
         "effectm": [
             {
                 "part": "helmet",
-                "file": "fm1-helmet.ccbi"
+                "file": "fm1-helmet-c.ccbi"
             }
         ],
         "basic_properties":
