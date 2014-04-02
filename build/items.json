@@ -15187,5 +15187,83 @@
                 "file": "rfasion-helmet1.ccbi"
             }
         ]
+    },
+    {
+        "classId":614,
+        "label": "荣誉套装",
+        "iconf": "rfasion-female1-cloth.png",
+        "iconm": "rfasion-male1-cloth.png",
+        "category": 1,
+        "storeOnly": true,
+        "subcategory": 12,
+        "sellprice": 1500,
+        "description": "兼顾外形与力量，是荣誉的象征。",
+        "effectf": [
+            {
+                "part": "chest",
+                "file": "ff1-chest.ccbi"
+            },
+            {
+                "part": "righthand",
+                "file": "ff1-righthand.ccbi"
+            },
+            {
+                "part": "lefthand",
+                "file": "ff1-lefthand.ccbi"
+            },
+            {
+                "part": "leftleg",
+                "file": "ff1-leftleg.ccbi"
+            },
+            {
+                "part": "rightleg",
+                "file": "ff1-rightleg.ccbi"
+            }
+        ],
+        "effectm": [
+            {
+                "part": "chest",
+                "file": "fm1-chest.ccbi"
+            },
+            {
+                "part": "righthand",
+                "file": "fm1-righthand.ccbi"
+            },
+            {
+                "part": "lefthand",
+                "file": "fm1-lefthand.ccbi"
+            },
+            {
+                "part": "leftleg",
+                "file": "fm1-leftleg.ccbi"
+            },
+            {
+                "part": "rightleg",
+                "file": "fm1-rightleg.ccbi"
+            }
+        ]
+    },
+    {
+        "classId":615,
+        "label": "荣誉头冠",
+        "iconf": "rfasion-female1-helmet.png",
+        "iconm": "rfasion-male1-helmet.png",
+        "category": 1,
+        "storeOnly": true,
+        "subcategory": 13,
+        "sellprice": 500,
+        "description": "荣誉的象征，并且拥有专注力量的祝福。",
+        "effectf": [
+            {
+                "part": "helmet",
+                "file": "ff1-helmet.ccbi"
+            }
+        ],
+        "effectm": [
+            {
+                "part": "helmet",
+                "file": "fm1-helmet.ccbi"
+            }
+        ]
     }
 ]

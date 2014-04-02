@@ -11,6 +11,8 @@
   {"id":531, "price": {"type": "diamond", "amount": 75}, "category":[{"id": 0, "index": 9}]},
   {"id":532, "price": {"type": "diamond", "amount": 225},"category":[{"id": 0, "index": 10}]},
   {"id":533, "price": {"type": "diamond", "amount": 450},"category":[{"id": 0, "index": 11}]},
-  {"id":550, "limit": {"vip": 1, "count": 1}, "price": {"type": "diamond", "amount": 100},"category":[{"id": 1, "index": 0}]},
-  {"id":553, "limit": {"vip": 2, "count": 1}, "price": {"type": "diamond", "amount": 300},"category":[{"id": 1, "index": 1}]}
+    {"id":615, "price": {"type": "diamond", "amount": 280},"category":[{"id": 1, "index": 0}]},
+    {"id":614, "price": {"type": "diamond", "amount": 880},"category":[{"id": 1, "index": 1}]},
+  {"id":550, "limit": {"vip": 1, "count": 1}, "price": {"type": "diamond", "amount": 100},"category":[{"id": 2, "index": 0}]},
+  {"id":553, "limit": {"vip": 2, "count": 1}, "price": {"type": "diamond", "amount": 300},"category":[{"id": 2, "index": 1}]}
 ]
