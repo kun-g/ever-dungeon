@@ -145,6 +145,9 @@
         this.purchasedCount = {};
       }
       this.lastLogin = currentTime();
+      if (diffDate(this.creationDate) > 0) {
+        this.tutorialStage = 1000;
+      }
       if (!this.infiniteTimer || !moment().isSame(this.infiniteTimer, 'week')) {
         this.attrSave('infiniteTimer', currentTime());
         _ref7 = this.stage;

@@ -5156,7 +5156,7 @@
         }
     },
     {
-        "questId":167,
+        "questId":168,
         "title":"冒险征途的里程碑V",
         "desc":"将角色升至10级",
         "objects":[
@@ -5194,12 +5194,12 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.166.complete"}, true ] }
+            { "==": [ { "type": "getProperty", "key": "quests.167.complete"}, true ] }
         ]
         }
     },
     {
-        "questId":168,
+        "questId":169,
         "title":"突破天际的战斗力I",
         "desc":"将角色战斗力提升至300以上",
         "objects":[
@@ -5217,7 +5217,7 @@
         ]
     },
     {
-        "questId":169,
+        "questId":170,
         "title":"突破天际的战斗力II",
         "desc":"将角色战斗力提升至500以上",
         "objects":[
@@ -5245,12 +5245,12 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.168.complete"}, true ] }
+            { "==": [ { "type": "getProperty", "key": "quests.169.complete"}, true ] }
         ]
         }
     },
     {
-        "questId":170,
+        "questId":171,
         "title":"突破天际的战斗力III",
         "desc":"将角色战斗力提升至800以上",
         "objects":[
@@ -5278,12 +5278,12 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.169.complete"}, true ] }
+            { "==": [ { "type": "getProperty", "key": "quests.170.complete"}, true ] }
         ]
         }
     },
     {
-        "questId":171,
+        "questId":172,
         "title":"突破天际的战斗力IV",
         "desc":"将角色战斗力提升至1300以上",
         "objects":[
@@ -5311,12 +5311,12 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.170.complete"}, true ] }
+            { "==": [ { "type": "getProperty", "key": "quests.171.complete"}, true ] }
         ]
         }
     },
     {
-        "questId":172,
+        "questId":173,
         "title":"突破天际的战斗力V",
         "desc":"将角色战斗力提升至1500以上",
         "objects":[
@@ -5344,12 +5344,12 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.171.complete"}, true ] }
+            { "==": [ { "type": "getProperty", "key": "quests.172.complete"}, true ] }
         ]
         }
     },
     {
-        "questId":173,
+        "questId":174,
         "title":"突破天际的战斗力V",
         "desc":"将角色战斗力提升至2000以上",
         "objects":[
@@ -5377,12 +5377,12 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.172.complete"}, true ] }
+            { "==": [ { "type": "getProperty", "key": "quests.173.complete"}, true ] }
         ]
         }
     },
     {
-        "questId":174,
+        "questId":175,
         "title":"突破天际的战斗力V",
         "desc":"将角色战斗力提升至2500以上",
         "objects":[
@@ -5410,12 +5410,12 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.173.complete"}, true ] }
+            { "==": [ { "type": "getProperty", "key": "quests.174.complete"}, true ] }
         ]
         }
     },
     {
-        "questId":175,
+        "questId":176,
         "title":"突破天际的战斗力V",
         "desc":"将角色战斗力提升至3000以上",
         "objects":[
@@ -5448,7 +5448,7 @@
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.174.complete"}, true ] }
+            { "==": [ { "type": "getProperty", "key": "quests.175.complete"}, true ] }
         ]
         }
     }
