@@ -1152,7 +1152,7 @@
           case 'collect':
             cmd.routine({
               id: 'CollectID',
-              collectID: a.collectID
+              collectId: a.collectID
             });
             break;
           case 'createMonster':

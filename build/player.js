@@ -946,7 +946,7 @@
       if (!this.isQuestAchieved(qid)) {
         return RET_Unknown;
       }
-      this.checkQuestStatues();
+      this.checkQuestStatues(qid);
       prize = this.claimPrize(quest.prize.filter((function(_this) {
         return function(e) {
           return isClassMatch(_this.hero["class"], e.classLimit);
