@@ -1340,6 +1340,12 @@
         slot: slot,
         id: recipe.id
       });
+      if (newItem.rank >= 8) {
+        dbLib.broadcastEvent(BROADCAST_CRAFT, {
+          who: this.name,
+          what: newItem.id
+        });
+      }
       return {
         out: {
           type: PRIZETYPE_ITEM,
