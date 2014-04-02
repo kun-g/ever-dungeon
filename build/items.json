@@ -15153,20 +15153,20 @@
     },
     {
         "classId":612,
-        "label": "努力头带",
-        "iconf": "rfasion-helmet2-male.png",
-        "iconm": "rfasion-helmet2-female.png",
+        "label": "天际尊冠",
+        "iconm": "irfasion-helmet2-male.png",
+        "iconf": "irfasion-helmet2-female.png",
         "category": 1,
         "storeOnly": true,
         "subcategory": 13,
-        "description": "将职业练至10级的身份证明。",
-        "effectf": [
+        "description": "战斗力突破天际的身份证明。",
+        "effectm": [
             {
                 "part": "helmet",
                 "file": "rfasion-helmet2-male.ccbi"
             }
         ],
-        "effectm": [
+        "effectf": [
             {
                 "part": "helmet",
                 "file": "rfasion-helmet2-female.ccbi"
@@ -15175,12 +15175,12 @@
     },
     {
         "classId":613,
-        "label": "天际尊冠",
-        "icon": "rfasion-helmet1.png",
+        "label": "努力头带",
+        "icon": "irfasion-helmet1.png",
         "category": 1,
         "storeOnly": true,
         "subcategory": 13,
-        "description": "战斗力突破天际的身份证明。",
+        "description": "将职业练至10级的身份证明。",
         "effecta": [
             {
                 "part": "helmet",
