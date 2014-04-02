@@ -3427,6 +3427,8 @@
   onEvent = function(evt, cmd, src, tar) {
     var env, m, _i, _j, _len, _len1, _ref6, _ref7;
     env = cmd.getEnvironment();
+    env.variable('src', src);
+    env.variable('tar', tar);
     if (src) {
       src.onEvent('on' + evt, cmd);
       _ref6 = env.getTeammateOf(src);
@@ -3443,8 +3445,6 @@
         m.onEvent('onTeammateBe' + evt, cmd);
       }
     }
-    env.variable('src', src);
-    env.variable('tar', tar);
     return env.onEvent(evt, cmd);
   };
 

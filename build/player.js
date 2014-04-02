@@ -1273,12 +1273,7 @@
         }
         gems[r].count++;
       }
-      retPrize = this.claimPrize(gems);
-      logInfo({
-        xx: 'TransformGem',
-        gems: gems,
-        retPrize: retPrize
-      });
+      retPrize = this.claimPrize(prize);
       if (retPrize) {
         ret = this.doAction({
           id: 'ItemChange',
