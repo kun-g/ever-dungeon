@@ -16,9 +16,6 @@
       c.connectionIndex = appNet.aliveConnections.length - 1;
       c.pendingRequest = new Buffer(0);
       c.on('end', function() {
-        var name;
-        require("./router").peerOffline(c);
-        name = c.playerName;
         return delete appNet.aliveConnections[c.connectionIndex];
       });
       decoder = new SimpleProtocolDecoder();
