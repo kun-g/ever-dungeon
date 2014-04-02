@@ -85,9 +85,9 @@
     "description": "玩家凡注册之日起一周内冲到8级即可获得丰厚奖励。",
       "mailTitle": "《冲级大行动》奖励",
       "mailBody": "恭喜你完成冲击活动，点击领取奖励！",
-      "date": "2014/02/28",
+      "date": "2014/05/28",
       "timeLimit": 604800,
-      "dateDescription": "截止日期为2014年2月28日24时",
+      "dateDescription": "截止日期为2014年5月28日24时",
     "level": [
       {
         "count": 8,
