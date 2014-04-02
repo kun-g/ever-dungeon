@@ -995,15 +995,15 @@
     };
 
     Player.prototype.checkQuestStatues = function(qid) {
-      var i, objective, quest, _i, _len, _ref7, _results;
+      var i, objective, quest, _ref7, _results;
       quest = queryTable(TABLE_QUEST, qid, this.abIndex);
       if (!((this.quests[qid] != null) && quest)) {
         return false;
       }
       _ref7 = quest.objects;
       _results = [];
-      for (objective = _i = 0, _len = _ref7.length; _i < _len; objective = ++_i) {
-        i = _ref7[objective];
+      for (i in _ref7) {
+        objective = _ref7[i];
         switch (objective.type) {
           case QUEST_TYPE_GOLD:
             this.quests[qid].counters[i] = this.gold;
