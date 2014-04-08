@@ -4655,7 +4655,7 @@
     ],
         "cond":
         { "and": [
-            { "<": [ { "type": "getProperty", "key": "tutotialStage"}, 1000 ] }
+            { "<": [ { "type": "getProperty", "key": "tutorialStage"}, 1000 ] }
         ]
         }
 

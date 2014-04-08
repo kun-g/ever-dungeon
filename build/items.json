@@ -14303,7 +14303,7 @@
         "description": "记录了制作初阶长靴的方法",
         "quality":1,
 
-        "erecipTarget":104,
+        "recipeTarget":104,
         "recipeIngredient":[
             {
                 "item":558,
