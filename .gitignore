@@ -1,1 +1,10 @@
 node_modules
+npm-debug.log
+
+js
+.coverdata
+.coverrun
+
+session.vim
+
+coverage.html
