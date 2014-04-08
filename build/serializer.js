@@ -120,6 +120,7 @@
 
     Serializer.prototype.dumpChanged = function() {
       var key, ret, val, _ref;
+      return this.dump();
       ret = null;
       _ref = this.s_attr_dirtyFlag;
       for (key in _ref) {
