@@ -497,7 +497,6 @@
   Dungeon = (function() {
     function Dungeon(data) {
       var cfg, k, t, v, _i, _len, _ref5;
-      Dungeon.__super__.constructor.apply(this, arguments);
       this.effectCounter = 0;
       this.killingInfo = [];
       this.currentLevel = -1;
