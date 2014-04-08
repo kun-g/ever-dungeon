@@ -68,7 +68,11 @@
       this.attrSave('purchasedCount', {});
       this.attrSave('lastLogin', currentTime());
       this.attrSave('creationDate', now.valueOf());
-      this.versionControl('dummyVersion', ['isNewPlayer', 'loginStreak', 'accountID']);
+      this.attrSave('isNewPlayer', false);
+      this.attrSave('loginStreak', {
+        count: 0
+      });
+      this.attrSave('accountID', -1);
     }
 
     Player.prototype.logout = function(reason) {
@@ -136,11 +140,6 @@
 
     Player.prototype.onLogin = function() {
       var dis, flag, ret, s, _i, _len, _ref7;
-      if (this.loginStreak == null) {
-        this.attrSave('loginStreak', {
-          count: 0
-        });
-      }
       if (diffDate(this.lastLogin) > 0) {
         this.purchasedCount = {};
       }
