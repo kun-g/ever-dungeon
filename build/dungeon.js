@@ -1,5 +1,5 @@
 (function() {
-  var Bag, Block, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Level, Serializer, TriggerManager, Wizard, calcInfiniteRank, calcInfiniteX, changeSeed, compete, createUnit, createUnits, criticalFormula, dungeonCSConfig, filterObject, flagShowRand, genUnitInfo, hitFormula, onEvent, parse, privateRand, registerConstructor, seed_random, speedFormula, _ref, _ref1, _ref2, _ref3, _ref4, _ref5,
+  var Bag, Block, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Level, TriggerManager, Wizard, calcInfiniteRank, calcInfiniteX, changeSeed, compete, createUnit, createUnits, criticalFormula, dungeonCSConfig, filterObject, flagShowRand, genUnitInfo, hitFormula, onEvent, parse, privateRand, seed_random, speedFormula, _ref, _ref1, _ref2, _ref3, _ref4,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -7,19 +7,17 @@
 
   Wizard = require('./spell').Wizard;
 
-  _ref = require('./serializer'), Serializer = _ref.Serializer, registerConstructor = _ref.registerConstructor;
-
   DBWrapper = require('./dbWrapper').DBWrapper;
 
-  _ref1 = require('./unit'), createUnit = _ref1.createUnit, Hero = _ref1.Hero;
+  _ref = require('./unit'), createUnit = _ref.createUnit, Hero = _ref.Hero;
 
-  _ref2 = require('./item'), Item = _ref2.Item, Card = _ref2.Card;
+  _ref1 = require('./item'), Item = _ref1.Item, Card = _ref1.Card;
 
-  _ref3 = require('./commandStream'), CommandStream = _ref3.CommandStream, Environment = _ref3.Environment;
+  _ref2 = require('./commandStream'), CommandStream = _ref2.CommandStream, Environment = _ref2.Environment;
 
-  _ref4 = require('./container'), Bag = _ref4.Bag, CardStack = _ref4.CardStack;
+  _ref3 = require('./container'), Bag = _ref3.Bag, CardStack = _ref3.CardStack;
 
-  _ref5 = require('./trigger'), parse = _ref5.parse, TriggerManager = _ref5.TriggerManager;
+  _ref4 = require('./trigger'), parse = _ref4.parse, TriggerManager = _ref4.TriggerManager;
 
   seed_random = require('./seed-random');
 
@@ -114,7 +112,7 @@
   };
 
   filterObject = function(objects, filters, env) {
-    var a, f, o, p, result, t, tmp, x, y, _i, _j, _k, _len, _len1, _len2, _ref6, _ref7, _ref8;
+    var a, f, o, p, result, t, tmp, x, y, _i, _j, _k, _len, _len1, _len2, _ref5, _ref6, _ref7;
     if (!Array.isArray(filters)) {
       filters = [filters];
     }
@@ -311,10 +309,10 @@
             }
             x = t.pos % Dungeon_Width;
             y = (t.pos - x) / Dungeon_Width;
-            _ref6 = f.anchor;
-            for (_k = 0, _len2 = _ref6.length; _k < _len2; _k++) {
-              a = _ref6[_k];
-              if ((0 <= (_ref7 = a.x + x) && _ref7 < Dungeon_Width) && (0 <= (_ref8 = a.y + y) && _ref8 < Dungeon_Height)) {
+            _ref5 = f.anchor;
+            for (_k = 0, _len2 = _ref5.length; _k < _len2; _k++) {
+              a = _ref5[_k];
+              if ((0 <= (_ref6 = a.x + x) && _ref6 < Dungeon_Width) && (0 <= (_ref7 = a.y + y) && _ref7 < Dungeon_Height)) {
                 result.push(env.getBlock(a.x + x + (a.y + y) * Dungeon_Width));
               }
             }
@@ -325,7 +323,7 @@
   };
 
   createUnits = function(rules, randFunc) {
-    var cfg, globalRule, i, l, levelConfig, levelRule, placeUnit, r, rand, result, rule, selectFromPool, selectPos, translateRule, _i, _j, _k, _len, _len1, _len2, _ref6, _ref7, _ref8;
+    var cfg, globalRule, i, l, levelConfig, levelRule, placeUnit, r, rand, result, rule, selectFromPool, selectPos, translateRule, _i, _j, _k, _len, _len1, _len2, _ref5, _ref6, _ref7;
     rand = function(mod) {
       var r;
       if (mod == null) {
@@ -360,9 +358,9 @@
       });
     };
     levelRule = [];
-    _ref6 = rules.levels;
-    for (_i = 0, _len = _ref6.length; _i < _len; _i++) {
-      l = _ref6[_i];
+    _ref5 = rules.levels;
+    for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+      l = _ref5[_i];
       levelRule.push(translateRule(l));
     }
     globalRule = translateRule(rules.global);
@@ -391,9 +389,9 @@
       levelConfig.push(cfg);
     }
     selectFromPool = function(poolID, count) {
-      var _k, _ref7, _results;
+      var _k, _ref6, _results;
       _results = [];
-      for (i = _k = 0, _ref7 = count - 1; 0 <= _ref7 ? _k <= _ref7 : _k >= _ref7; i = 0 <= _ref7 ? ++_k : --_k) {
+      for (i = _k = 0, _ref6 = count - 1; 0 <= _ref6 ? _k <= _ref6 : _k >= _ref6; i = 0 <= _ref6 ? ++_k : --_k) {
         _results.push(selectElementFromWeightArray(rules.pool[poolID], rand()));
       }
       return _results;
@@ -409,14 +407,14 @@
       return -1;
     };
     placeUnit = function(lRule, lConfig) {
-      var count, idList, result, _k, _len2, _ref7;
+      var count, idList, result, _k, _len2, _ref6;
       result = [];
       for (_k = 0, _len2 = lRule.length; _k < _len2; _k++) {
         r = lRule[_k];
         if (!((r.id != null) || (r.pool != null))) {
           continue;
         }
-        count = (_ref7 = r.count) != null ? _ref7 : 1;
+        count = (_ref6 = r.count) != null ? _ref6 : 1;
         if (count + lConfig.total > lConfig.limit) {
           count = lConfig.total - lConfig.limit + count;
         }
@@ -431,7 +429,7 @@
           count = 1;
         }
         idList.forEach(function(c) {
-          var k, u, v, _ref8, _ref9;
+          var k, u, v, _ref7, _ref8;
           u = {
             id: c.id,
             property: {},
@@ -445,15 +443,15 @@
               u.pos = selectPos(r.pos, lConfig);
             }
           }
-          _ref8 = lConfig.property;
-          for (k in _ref8) {
-            v = _ref8[k];
+          _ref7 = lConfig.property;
+          for (k in _ref7) {
+            v = _ref7[k];
             u.property[k] = v;
           }
           if (r.property) {
-            _ref9 = r.property;
-            for (k in _ref9) {
-              v = _ref9[k];
+            _ref8 = r.property;
+            for (k in _ref8) {
+              v = _ref8[k];
               u.property[k] = v;
             }
           }
@@ -473,12 +471,12 @@
       cfg = levelConfig.filter(function(c) {
         return c.total < c.limit;
       });
-      if (((_ref7 = rule.levels) != null ? _ref7.from : void 0) != null) {
+      if (((_ref6 = rule.levels) != null ? _ref6.from : void 0) != null) {
         cfg = cfg.filter(function(c) {
           return c.id > rule.levels.from;
         });
       }
-      if (((_ref8 = rule.levels) != null ? _ref8.to : void 0) != null) {
+      if (((_ref7 = rule.levels) != null ? _ref7.to : void 0) != null) {
         cfg = cfg.filter(function(c) {
           return c.id < rule.levels.to;
         });
@@ -500,7 +498,7 @@
     __extends(Dungeon, _super);
 
     function Dungeon(data) {
-      var cfg, k, t, v, _i, _len, _ref6;
+      var cfg, k, t, v, _i, _len, _ref5;
       Dungeon.__super__.constructor.apply(this, arguments);
       this.effectCounter = 0;
       this.killingInfo = [];
@@ -565,9 +563,9 @@
       }
       cfg = this.getConfig();
       if (cfg.triggers) {
-        _ref6 = cfg.triggers;
-        for (_i = 0, _len = _ref6.length; _i < _len; _i++) {
-          t = _ref6[_i];
+        _ref5 = cfg.triggers;
+        for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+          t = _ref5[_i];
           this.triggerManager.installTrigger(t, {}, this);
         }
       }
@@ -639,7 +637,7 @@
     };
 
     Dungeon.prototype.initialize = function() {
-      var cfg, infiniteLevel, _ref6, _ref7, _ref8;
+      var cfg, infiniteLevel, _ref5, _ref6, _ref7;
       this.speedCompete = compete(speedFormula, this);
       this.hitCompete = compete(hitFormula, this);
       this.criticalCompete = compete(criticalFormula, this);
@@ -658,9 +656,9 @@
         this.changeSeed();
       }
       cfg = this.getConfig();
-      this.goldRate = (_ref6 = cfg.goldRate) != null ? _ref6 : 1;
-      this.xpRate = (_ref7 = cfg.xpRate) != null ? _ref7 : 1;
-      this.wxpRate = (_ref8 = cfg.wxpRate) != null ? _ref8 : 1;
+      this.goldRate = (_ref5 = cfg.goldRate) != null ? _ref5 : 1;
+      this.xpRate = (_ref6 = cfg.xpRate) != null ? _ref6 : 1;
+      this.wxpRate = (_ref7 = cfg.wxpRate) != null ? _ref7 : 1;
       if (this.baseRank == null) {
         this.baseRank = 0;
       }
@@ -737,7 +735,7 @@
     };
 
     Dungeon.prototype.generateReward = function(result) {
-      var cfg, iPrize, p, percentage, reward, _i, _len, _ref6;
+      var cfg, iPrize, p, percentage, reward, _i, _len, _ref5;
       if (this.reward != null) {
         return false;
       }
@@ -795,9 +793,9 @@
       });
       reward.quests = this.quests;
       if ((this.infiniteLevel != null) && cfg.infinityPrize) {
-        _ref6 = cfg.infinityPrize;
-        for (_i = 0, _len = _ref6.length; _i < _len; _i++) {
-          p = _ref6[_i];
+        _ref5 = cfg.infinityPrize;
+        for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+          p = _ref5[_i];
           if (p.level === this.infiniteLevel) {
             iPrize = p;
           }
@@ -837,8 +835,8 @@
     };
 
     Dungeon.prototype.getMonsters = function() {
-      var _ref6;
-      return (_ref6 = this.level) != null ? _ref6.getMonsters().filter(function(o) {
+      var _ref5;
+      return (_ref5 = this.level) != null ? _ref5.getMonsters().filter(function(o) {
         return o.health > 0;
       }) : void 0;
     };
@@ -870,35 +868,35 @@
     };
 
     Dungeon.prototype.getEntrance = function() {
-      var _ref6;
-      return (_ref6 = this.level) != null ? _ref6.entrance : void 0;
+      var _ref5;
+      return (_ref5 = this.level) != null ? _ref5.entrance : void 0;
     };
 
     Dungeon.prototype.getExit = function() {
-      var _ref6;
-      return (_ref6 = this.level) != null ? _ref6.exit : void 0;
+      var _ref5;
+      return (_ref5 = this.level) != null ? _ref5.exit : void 0;
     };
 
     Dungeon.prototype.moveHeroes = function(positions) {
-      var k, obj, p, _ref6, _ref7, _ref8, _results;
+      var k, obj, p, _ref5, _ref6, _ref7, _results;
       _results = [];
       for (k in positions) {
         p = positions[k];
-        if (!((this.heroes[k] != null) && (((_ref6 = this.level) != null ? _ref6.blocks[p] : void 0) != null))) {
+        if (!((this.heroes[k] != null) && (((_ref5 = this.level) != null ? _ref5.blocks[p] : void 0) != null))) {
           continue;
         }
         obj = this.heroes[k];
-        if ((_ref7 = this.level.blocks[obj.pos]) != null) {
-          _ref7.removeRef(obj);
+        if ((_ref6 = this.level.blocks[obj.pos]) != null) {
+          _ref6.removeRef(obj);
         }
         obj.pos = p;
-        _results.push((_ref8 = this.level.blocks[obj.pos]) != null ? _ref8.addRef(obj) : void 0);
+        _results.push((_ref7 = this.level.blocks[obj.pos]) != null ? _ref7.addRef(obj) : void 0);
       }
       return _results;
     };
 
     Dungeon.prototype.explore = function(tar) {
-      var access, i, n, nx, ny, _i, _ref6;
+      var access, i, n, nx, ny, _i, _ref5;
       if (this.level.blocks[tar].explored) {
         return 0;
       }
@@ -926,7 +924,7 @@
             nx--;
         }
         n = nx + ny * DG_LEVELWIDTH;
-        if ((_ref6 = this.level.blocks[n]) != null ? _ref6.explored : void 0) {
+        if ((_ref5 = this.level.blocks[n]) != null ? _ref5.explored : void 0) {
           return 1;
         }
       }
@@ -935,20 +933,20 @@
     };
 
     Dungeon.prototype.getRank = function() {
-      var _ref6;
-      return (_ref6 = this.level) != null ? _ref6.rank : void 0;
+      var _ref5;
+      return (_ref5 = this.level) != null ? _ref5.rank : void 0;
     };
 
     Dungeon.prototype.getUnitAtBlock = function(block) {
-      var _ref6;
-      if (((_ref6 = this.level) != null ? _ref6.blocks[block] : void 0) != null) {
+      var _ref5;
+      if (((_ref5 = this.level) != null ? _ref5.blocks[block] : void 0) != null) {
         return this.level.blocks[block].getRef(-1);
       }
     };
 
     Dungeon.prototype.doAction = function(req) {
-      var action, arg, cmd, _ref6;
-      cmd = (_ref6 = req != null ? req.CMD : void 0) != null ? _ref6 : req != null ? req.CNF : void 0;
+      var action, arg, cmd, _ref5;
+      cmd = (_ref5 = req != null ? req.CMD : void 0) != null ? _ref5 : req != null ? req.CNF : void 0;
       switch (cmd) {
         case RPC_GameStartDungeon:
           action = DUNGEON_ACTION_ENTER_DUNGEON;
@@ -1249,8 +1247,6 @@
 
   })(DBWrapper);
 
-  registerConstructor(Dungeon);
-
   exports.Dungeon = Dungeon;
 
   Block = (function(_super) {
@@ -1276,16 +1272,16 @@
     };
 
     Block.prototype.getRef = function(index) {
-      var o, _i, _len, _ref6;
+      var o, _i, _len, _ref5;
       if (index == null) {
         return this.refList;
       }
       if (index !== -1) {
         return this.refList[index];
       }
-      _ref6 = this.refList;
-      for (_i = 0, _len = _ref6.length; _i < _len; _i++) {
-        o = _ref6[_i];
+      _ref5 = this.refList;
+      for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+        o = _ref5[_i];
         if (o.health > 0) {
           return o;
         }
@@ -1339,7 +1335,7 @@
     };
 
     Level.prototype.generateBlockLayout = function(config) {
-      var blocks, close, closeCount, e, i, j, k, n, neighbor, neighborCount, ninclose, ninopen, nx, ny, open, openCount, p, x, xx, xy, z, zx, zy, _i, _j, _k, _l, _ref6, _ref7, _ref8, _results, _results1;
+      var blocks, close, closeCount, e, i, j, k, n, neighbor, neighborCount, ninclose, ninopen, nx, ny, open, openCount, p, x, xx, xy, z, zx, zy, _i, _j, _k, _l, _ref5, _ref6, _ref7, _results, _results1;
       blocks = this.createBlocks();
       for (i in blocks) {
         e = blocks[i];
@@ -1347,7 +1343,7 @@
       }
       if ((config != null ? config.layout : void 0) != null) {
         _results = [];
-        for (k = _i = 0, _ref6 = DG_BLOCKCOUNT - 1; 0 <= _ref6 ? _i <= _ref6 : _i >= _ref6; k = 0 <= _ref6 ? ++_i : --_i) {
+        for (k = _i = 0, _ref5 = DG_BLOCKCOUNT - 1; 0 <= _ref5 ? _i <= _ref5 : _i >= _ref5; k = 0 <= _ref5 ? ++_i : --_i) {
           blocks[k].passable = [true, true, true, true];
           if (config.layout[k] & 1) {
             blocks[k].passable[UP] = false;
@@ -1406,7 +1402,7 @@
             }
             n = nx + ny * DG_LEVELWIDTH;
             ninclose = false;
-            for (j = _k = 0, _ref7 = closeCount - 1; 0 <= _ref7 ? _k <= _ref7 : _k >= _ref7; j = 0 <= _ref7 ? ++_k : --_k) {
+            for (j = _k = 0, _ref6 = closeCount - 1; 0 <= _ref6 ? _k <= _ref6 : _k >= _ref6; j = 0 <= _ref6 ? ++_k : --_k) {
               if (close[j] === n) {
                 ninclose = true;
                 break;
@@ -1416,7 +1412,7 @@
               neighbor[neighborCount++] = n;
             } else {
               ninopen = false;
-              for (j = _l = 0, _ref8 = openCount - 1; 0 <= _ref8 ? _l <= _ref8 : _l >= _ref8; j = 0 <= _ref8 ? ++_l : --_l) {
+              for (j = _l = 0, _ref7 = openCount - 1; 0 <= _ref7 ? _l <= _ref7 : _l >= _ref7; j = 0 <= _ref7 ? ++_l : --_l) {
                 if (open[j] === n) {
                   ninopen = true;
                   break;
@@ -1476,8 +1472,8 @@
     };
 
     Level.prototype.lockUp = function(isLock) {
-      var _ref6;
-      return (_ref6 = this.blocks[this.exit]) != null ? _ref6.tileType = isLock ? Block_LockedExit : Block_Exit : void 0;
+      var _ref5;
+      return (_ref5 = this.blocks[this.exit]) != null ? _ref5.tileType = isLock ? Block_LockedExit : Block_Exit : void 0;
     };
 
     Level.prototype.createObject = function(id, pos, keyed, collectId, effect) {
@@ -1506,9 +1502,9 @@
     Level.prototype.placeObjects = function(id, count, keyed, collectId) {
       var i, indexes, pos, _i, _results;
       indexes = (function() {
-        var _i, _ref6, _results;
+        var _i, _ref5, _results;
         _results = [];
-        for (i = _i = 0, _ref6 = DG_BLOCKCOUNT - 1; 0 <= _ref6 ? _i <= _ref6 : _i >= _ref6; i = 0 <= _ref6 ? ++_i : --_i) {
+        for (i = _i = 0, _ref5 = DG_BLOCKCOUNT - 1; 0 <= _ref5 ? _i <= _ref5 : _i >= _ref5; i = 0 <= _ref5 ? ++_i : --_i) {
           if (this.blocks[i].getType() === Block_Empty) {
             _results.push(i);
           }
@@ -1552,7 +1548,7 @@
     };
 
     Level.prototype.placeMapObjects = function(config, quests, pool) {
-      var c, fillupMonster, monsterConfig, monsterCount, o, objectConfig, that, _i, _j, _k, _len, _len1, _len2, _ref6, _results;
+      var c, fillupMonster, monsterConfig, monsterCount, o, objectConfig, that, _i, _j, _k, _len, _len1, _len2, _ref5, _results;
       this.objects = [];
       if (config == null) {
         return false;
@@ -1602,10 +1598,10 @@
       });
       that = this;
       fillupMonster = function(cfg) {
-        var i, m, _i, _ref6, _ref7, _results;
+        var i, m, _i, _ref5, _ref6, _results;
         if (config[cfg.targetCounter] && monsterCount[cfg.counter] < config[cfg.targetCounter]) {
           _results = [];
-          for (i = _i = _ref6 = monsterCount[cfg.counter], _ref7 = config[cfg.targetCounter]; _ref6 <= _ref7 ? _i <= _ref7 : _i >= _ref7; i = _ref6 <= _ref7 ? ++_i : --_i) {
+          for (i = _i = _ref5 = monsterCount[cfg.counter], _ref6 = config[cfg.targetCounter]; _ref5 <= _ref6 ? _i <= _ref6 : _i >= _ref6; i = _ref5 <= _ref6 ? ++_i : --_i) {
             m = selectElementFromWeightArray(pool[cfg.pool], that.rand());
             objectConfig.push({
               id: m.id,
@@ -1650,7 +1646,7 @@
       for (_k = 0, _len2 = objectConfig.length; _k < _len2; _k++) {
         o = objectConfig[_k];
         if (o.pos == null) {
-          _results.push(this.placeObjects(o.id, (_ref6 = o.count) != null ? _ref6 : 1, o.keyed, o.collectId));
+          _results.push(this.placeObjects(o.id, (_ref5 = o.count) != null ? _ref5 : 1, o.keyed, o.collectId));
         } else {
           _results.push(void 0);
         }
@@ -1665,12 +1661,12 @@
     };
 
     Level.prototype.print = function() {
-      var b, e, i, row, str, strUp, up, x, y, _i, _j, _k, _len, _ref6, _ref7, _results;
+      var b, e, i, row, str, strUp, up, x, y, _i, _j, _k, _len, _ref5, _ref6, _results;
       _results = [];
-      for (y = _i = 0, _ref6 = Dungeon_Height - 1; 0 <= _ref6 ? _i <= _ref6 : _i >= _ref6; y = 0 <= _ref6 ? ++_i : --_i) {
+      for (y = _i = 0, _ref5 = Dungeon_Height - 1; 0 <= _ref5 ? _i <= _ref5 : _i >= _ref5; y = 0 <= _ref5 ? ++_i : --_i) {
         up = [];
         row = [];
-        for (x = _j = 0, _ref7 = Dungeon_Width - 1; 0 <= _ref7 ? _j <= _ref7 : _j >= _ref7; x = 0 <= _ref7 ? ++_j : --_j) {
+        for (x = _j = 0, _ref6 = Dungeon_Width - 1; 0 <= _ref6 ? _j <= _ref6 : _j >= _ref6; x = 0 <= _ref6 ? ++_j : --_j) {
           b = this.blocks[Dungeon_Width * y + x];
           if (Dungeon_Width * y + x === this.entrance || (this.entrance.indexOf != null) && this.entrance.indexOf(Dungeon_Width * y + x) !== -1) {
             row.push('E');
@@ -1832,13 +1828,13 @@
     };
 
     DungeonEnvironment.prototype.getTeammateOf = function(wizard) {
-      var _ref6;
-      return (_ref6 = this.dungeon) != null ? _ref6.getTeammateOf(wizard) : void 0;
+      var _ref5;
+      return (_ref5 = this.dungeon) != null ? _ref5.getTeammateOf(wizard) : void 0;
     };
 
     DungeonEnvironment.prototype.getEnemyOf = function(wizard) {
-      var _ref6;
-      return (_ref6 = this.dungeon) != null ? _ref6.getEnemyOf(wizard) : void 0;
+      var _ref5;
+      return (_ref5 = this.dungeon) != null ? _ref5.getEnemyOf(wizard) : void 0;
     };
 
     DungeonEnvironment.prototype.getCardStack = function() {
@@ -1859,7 +1855,7 @@
     };
 
     DungeonEnvironment.prototype.isEntranceExplored = function() {
-      var e, entrance, _i, _len, _ref6, _ref7;
+      var e, entrance, _i, _len, _ref5, _ref6;
       entrance = this.dungeon.getEntrance();
       if (Array.isArray(entrance)) {
         for (_i = 0, _len = entrance.length; _i < _len; _i++) {
@@ -1870,33 +1866,33 @@
         }
         return true;
       } else {
-        return (_ref6 = this.dungeon) != null ? (_ref7 = _ref6.level) != null ? _ref7.blocks[entrance].explored : void 0 : void 0;
+        return (_ref5 = this.dungeon) != null ? (_ref6 = _ref5.level) != null ? _ref6.blocks[entrance].explored : void 0 : void 0;
       }
     };
 
     DungeonEnvironment.prototype.getAliveHeroes = function() {
-      var _ref6;
-      return (_ref6 = this.dungeon) != null ? _ref6.getAliveHeroes() : void 0;
+      var _ref5;
+      return (_ref5 = this.dungeon) != null ? _ref5.getAliveHeroes() : void 0;
     };
 
     DungeonEnvironment.prototype.getHeroes = function() {
-      var _ref6;
-      return (_ref6 = this.dungeon) != null ? _ref6.getHeroes() : void 0;
+      var _ref5;
+      return (_ref5 = this.dungeon) != null ? _ref5.getHeroes() : void 0;
     };
 
     DungeonEnvironment.prototype.getMonsters = function() {
-      var _ref6;
-      return (_ref6 = this.dungeon) != null ? _ref6.getMonsters() : void 0;
+      var _ref5;
+      return (_ref5 = this.dungeon) != null ? _ref5.getMonsters() : void 0;
     };
 
     DungeonEnvironment.prototype.getObjects = function() {
-      var _ref6, _ref7;
-      return (_ref6 = this.dungeon) != null ? (_ref7 = _ref6.level) != null ? _ref7.objects : void 0 : void 0;
+      var _ref5, _ref6;
+      return (_ref5 = this.dungeon) != null ? (_ref6 = _ref5.level) != null ? _ref6.objects : void 0 : void 0;
     };
 
     DungeonEnvironment.prototype.getBlock = function(id) {
-      var _ref6;
-      if (((_ref6 = this.dungeon) != null ? _ref6.level : void 0) == null) {
+      var _ref5;
+      if (((_ref5 = this.dungeon) != null ? _ref5.level : void 0) == null) {
         return [];
       }
       if (id == null) {
@@ -1906,38 +1902,50 @@
     };
 
     DungeonEnvironment.prototype.initiateHeroes = function(data) {
-      var _ref6;
-      return (_ref6 = this.dungeon) != null ? _ref6.initiateHeroes(data) : void 0;
+      var _ref5;
+      return (_ref5 = this.dungeon) != null ? _ref5.initiateHeroes(data) : void 0;
     };
 
     DungeonEnvironment.prototype.incrReviveCount = function() {
-      var _ref6;
-      return (_ref6 = this.dungeon) != null ? _ref6.reviveCount++ : void 0;
+      var _ref5;
+      return (_ref5 = this.dungeon) != null ? _ref5.reviveCount++ : void 0;
     };
 
     DungeonEnvironment.prototype.getInitialData = function() {
-      var _ref6;
-      return (_ref6 = this.dungeon) != null ? _ref6.getInitialData() : void 0;
+      var _ref5;
+      return (_ref5 = this.dungeon) != null ? _ref5.getInitialData() : void 0;
     };
 
     DungeonEnvironment.prototype.getEntrance = function() {
-      var _ref6;
-      return (_ref6 = this.dungeon) != null ? _ref6.getEntrance() : void 0;
+      var _ref5;
+      return (_ref5 = this.dungeon) != null ? _ref5.getEntrance() : void 0;
     };
 
     DungeonEnvironment.prototype.getExit = function() {
-      var _ref6;
-      return (_ref6 = this.dungeon) != null ? _ref6.getExit() : void 0;
+      var _ref5;
+      return (_ref5 = this.dungeon) != null ? _ref5.getExit() : void 0;
     };
 
     DungeonEnvironment.prototype.lockUp = function(flag) {
-      var _ref6, _ref7;
-      return (_ref6 = this.dungeon) != null ? (_ref7 = _ref6.level) != null ? _ref7.lockUp(flag) : void 0 : void 0;
+      var _ref5, _ref6;
+      return (_ref5 = this.dungeon) != null ? (_ref6 = _ref5.level) != null ? _ref6.lockUp(flag) : void 0 : void 0;
     };
 
     DungeonEnvironment.prototype.exploreBlock = function(block) {
-      var _ref6;
-      return (_ref6 = this.dungeon) != null ? _ref6.explore(block) : void 0;
+      var _ref5;
+      return (_ref5 = this.dungeon) != null ? _ref5.explore(block) : void 0;
+    };
+
+    DungeonEnvironment.prototype.newFaction = function(name) {
+      return this.dungeon.newFaction(name);
+    };
+
+    DungeonEnvironment.prototype.factionAttack = function(src, dst, flag) {
+      return this.dungeon.factionAttack(src, dst, flag);
+    };
+
+    DungeonEnvironment.prototype.factionHeal = function(src, dst, flag) {
+      return this.dungeon.factionHeal(src, dst, flag);
     };
 
     DungeonEnvironment.prototype.getObjectAtBlock = function(block) {
@@ -1945,13 +1953,13 @@
     };
 
     DungeonEnvironment.prototype.getCurrentLevel = function() {
-      var _ref6;
-      return (_ref6 = this.dungeon) != null ? _ref6.currentLevel : void 0;
+      var _ref5;
+      return (_ref5 = this.dungeon) != null ? _ref5.currentLevel : void 0;
     };
 
     DungeonEnvironment.prototype.moveHeroes = function(positions) {
-      var _ref6;
-      return (_ref6 = this.dungeon) != null ? _ref6.moveHeroes(positions) : void 0;
+      var _ref5;
+      return (_ref5 = this.dungeon) != null ? _ref5.moveHeroes(positions) : void 0;
     };
 
     DungeonEnvironment.prototype.compete = function(type, a, b) {
@@ -1970,28 +1978,28 @@
     };
 
     DungeonEnvironment.prototype.aquireCard = function(id) {
-      var _ref6;
-      return (_ref6 = this.dungeon) != null ? _ref6.aquireCard(id) : void 0;
+      var _ref5;
+      return (_ref5 = this.dungeon) != null ? _ref5.aquireCard(id) : void 0;
     };
 
     DungeonEnvironment.prototype.costCard = function(slot, count) {
-      var _ref6;
-      return (_ref6 = this.dungeon) != null ? _ref6.costCard(slot, count) : void 0;
+      var _ref5;
+      return (_ref5 = this.dungeon) != null ? _ref5.costCard(slot, count) : void 0;
     };
 
     DungeonEnvironment.prototype.getCard = function(slot) {
-      var _ref6;
-      return (_ref6 = this.dungeon) != null ? _ref6.getCard(slot) : void 0;
+      var _ref5;
+      return (_ref5 = this.dungeon) != null ? _ref5.getCard(slot) : void 0;
     };
 
     DungeonEnvironment.prototype.getQuests = function() {
-      var _ref6;
-      return (_ref6 = this.dungeon) != null ? _ref6.quests : void 0;
+      var _ref5;
+      return (_ref5 = this.dungeon) != null ? _ref5.quests : void 0;
     };
 
     DungeonEnvironment.prototype.nextLevel = function() {
-      var _ref6;
-      return (_ref6 = this.dungeon) != null ? _ref6.nextLevel() : void 0;
+      var _ref5;
+      return (_ref5 = this.dungeon) != null ? _ref5.nextLevel() : void 0;
     };
 
     DungeonEnvironment.prototype.isDungeonFinished = function() {
@@ -1999,8 +2007,8 @@
     };
 
     DungeonEnvironment.prototype.createObject = function(classID, pos, withkey, collectId, effect) {
-      var _ref6, _ref7;
-      return (_ref6 = this.dungeon) != null ? (_ref7 = _ref6.level) != null ? _ref7.createObject(classID, pos, withkey, collectId, effect) : void 0 : void 0;
+      var _ref5, _ref6;
+      return (_ref5 = this.dungeon) != null ? (_ref6 = _ref5.level) != null ? _ref6.createObject(classID, pos, withkey, collectId, effect) : void 0 : void 0;
     };
 
     DungeonEnvironment.prototype.useItem = function(spell, level, cmd) {
@@ -2008,13 +2016,13 @@
     };
 
     DungeonEnvironment.prototype.generateReward = function(win) {
-      var _ref6;
-      return (_ref6 = this.dungeon) != null ? _ref6.generateReward(win) : void 0;
+      var _ref5;
+      return (_ref5 = this.dungeon) != null ? _ref5.generateReward(win) : void 0;
     };
 
     DungeonEnvironment.prototype.getReviveCount = function() {
-      var _ref6;
-      return (_ref6 = this.dungeon) != null ? _ref6.revive : void 0;
+      var _ref5;
+      return (_ref5 = this.dungeon) != null ? _ref5.revive : void 0;
     };
 
     DungeonEnvironment.prototype.createSpellMsg = function(actor, spell, delay) {
@@ -2056,13 +2064,13 @@
     };
 
     DungeonEnvironment.prototype.notifyTurnEvent = function(isBegin, turnType, src, tar, cmd) {
-      var allEvent, basicEvent, e, tailString, turnEvent, _i, _len, _ref6;
+      var allEvent, basicEvent, e, tailString, turnEvent, _i, _len, _ref5;
       tailString = isBegin ? 'Begin' : 'End';
       allEvent = 'on' + turnType + 'Turn' + tailString;
       turnEvent = 'onTurn' + tailString;
-      _ref6 = this.getMonsters().concat(this.getHeroes()).concat(this.getBlock());
-      for (_i = 0, _len = _ref6.length; _i < _len; _i++) {
-        e = _ref6[_i];
+      _ref5 = this.getMonsters().concat(this.getHeroes()).concat(this.getBlock());
+      for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+        e = _ref5[_i];
         e.onEvent(allEvent, cmd);
         e.onEvent(turnEvent, cmd);
       }
@@ -2152,7 +2160,7 @@
     };
 
     DungeonEnvironment.prototype.translateDungeonAction = function(cmd) {
-      var currentPace, i, routine, _ref6;
+      var currentPace, i, routine, _ref5;
       if (cmd == null) {
         return [];
       }
@@ -2160,9 +2168,9 @@
       if (currentPace == null) {
         currentPace = [];
       }
-      _ref6 = cmd.cmdRoutine;
-      for (i in _ref6) {
-        routine = _ref6[i];
+      _ref5 = cmd.cmdRoutine;
+      for (i in _ref5) {
+        routine = _ref5[i];
         currentPace = this.mergeFirstPace(currentPace, this.translateDungeonAction(routine));
       }
       return this.pacelize(currentPace).concat(this.translateDungeonAction(cmd.nextCMD));
@@ -2233,11 +2241,11 @@
         });
       },
       output: function(env) {
-        var c, ev, _i, _len, _ref6;
+        var c, ev, _i, _len, _ref5;
         ev = [];
-        _ref6 = env.getCardStack();
-        for (_i = 0, _len = _ref6.length; _i < _len; _i++) {
-          c = _ref6[_i];
+        _ref5 = env.getCardStack();
+        for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+          c = _ref5[_i];
           if (c != null) {
             ev.push({
               id: ACT_DROPITEM,
@@ -2252,19 +2260,19 @@
     },
     EnterLevel: {
       callback: function(env) {
-        var e, entrance, i, monster, newPosition, _i, _j, _k, _l, _len, _len1, _ref6, _ref7, _ref8, _ref9;
+        var e, entrance, i, monster, newPosition, _i, _j, _k, _l, _len, _len1, _ref5, _ref6, _ref7, _ref8;
         entrance = env.getEntrance();
         env.onEvent('onEnterLevel', this);
         if (Array.isArray(entrance)) {
           newPosition = entrance;
-          for (i = _i = _ref6 = newPosition.length, _ref7 = env.getHeroes().length - 1; _ref6 <= _ref7 ? _i <= _ref7 : _i >= _ref7; i = _ref6 <= _ref7 ? ++_i : --_i) {
+          for (i = _i = _ref5 = newPosition.length, _ref6 = env.getHeroes().length - 1; _ref5 <= _ref6 ? _i <= _ref6 : _i >= _ref6; i = _ref5 <= _ref6 ? ++_i : --_i) {
             newPosition.push(entrance[0]);
           }
         } else {
           newPosition = [entrance, entrance, entrance];
         }
         if (env.isEntranceExplored()) {
-          for (e = _j = 0, _ref8 = DG_BLOCKCOUNT - 1; 0 <= _ref8 ? _j <= _ref8 : _j >= _ref8; e = 0 <= _ref8 ? ++_j : --_j) {
+          for (e = _j = 0, _ref7 = DG_BLOCKCOUNT - 1; 0 <= _ref7 ? _j <= _ref7 : _j >= _ref7; e = 0 <= _ref7 ? ++_j : --_j) {
             if (env.getBlock(e).explored) {
               this.routine({
                 id: 'OpenBlock',
@@ -2290,9 +2298,9 @@
           }
         }
         env.moveHeroes(newPosition);
-        _ref9 = env.getMonsters();
-        for (_l = 0, _len1 = _ref9.length; _l < _len1; _l++) {
-          monster = _ref9[_l];
+        _ref8 = env.getMonsters();
+        for (_l = 0, _len1 = _ref8.length; _l < _len1; _l++) {
+          monster = _ref8[_l];
           monster.onEvent('onEnterLevel', this);
         }
         return this.routine({
@@ -2300,31 +2308,31 @@
         });
       },
       output: function(env) {
-        var ev, h, heroInfo, positions, ret, _ref6, _ref7, _ref8, _ref9;
+        var ev, h, heroInfo, positions, ret, _ref5, _ref6, _ref7, _ref8;
         ev = {
           id: ACT_EnterLevel,
           "lvl": env.getCurrentLevel()
         };
         positions = (function() {
-          var _i, _len, _ref6, _results;
-          _ref6 = env.getHeroes();
+          var _i, _len, _ref5, _results;
+          _ref5 = env.getHeroes();
           _results = [];
-          for (_i = 0, _len = _ref6.length; _i < _len; _i++) {
-            h = _ref6[_i];
+          for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+            h = _ref5[_i];
             _results.push(h.pos);
           }
           return _results;
         })();
-        if (((_ref6 = env.getHeroes()[0]) != null ? _ref6.health : void 0) > 0) {
+        if (((_ref5 = env.getHeroes()[0]) != null ? _ref5.health : void 0) > 0) {
           ev.pos = positions[0];
         }
-        if (((_ref7 = env.getHeroes()[1]) != null ? _ref7.health : void 0) > 0) {
+        if (((_ref6 = env.getHeroes()[1]) != null ? _ref6.health : void 0) > 0) {
           ev.pos1 = positions[1];
         }
-        if (((_ref8 = env.getHeroes()[2]) != null ? _ref8.health : void 0) > 0) {
+        if (((_ref7 = env.getHeroes()[2]) != null ? _ref7.health : void 0) > 0) {
           ev.pos2 = positions[2];
         }
-        if (((_ref9 = env.getHeroes()[3]) != null ? _ref9.health : void 0) > 0) {
+        if (((_ref8 = env.getHeroes()[3]) != null ? _ref8.health : void 0) > 0) {
           ev.pos3 = positions[3];
         }
         heroInfo = env.getAliveHeroes().filter(function(e) {
@@ -2352,7 +2360,7 @@
     },
     ExploreBlock: {
       callback: function(env) {
-        var block, positions, res, _ref6;
+        var block, positions, res, _ref5;
         block = env.variable('block');
         res = env.exploreBlock(block);
         env.variable('exploreResult', res);
@@ -2361,7 +2369,7 @@
             id: 'OpenBlock',
             block: block
           });
-          positions = (_ref6 = env.variable('positions')) != null ? _ref6 : [block, block, block];
+          positions = (_ref5 = env.variable('positions')) != null ? _ref5 : [block, block, block];
           return env.moveHeroes(positions);
         }
       },
@@ -2407,11 +2415,11 @@
     },
     TickSpell: {
       callback: function(env) {
-        var h, _i, _len, _ref6, _results;
-        _ref6 = env.getHeroes().concat(env.getMonsters());
+        var h, _i, _len, _ref5, _results;
+        _ref5 = env.getHeroes().concat(env.getMonsters());
         _results = [];
-        for (_i = 0, _len = _ref6.length; _i < _len; _i++) {
-          h = _ref6[_i];
+        for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+          h = _ref5[_i];
           _results.push(h.tickSpell(env.variable('tickType'), this));
         }
         return _results;
@@ -2431,6 +2439,7 @@
         block = env.getBlock(env.variable('block'));
         if (block.getType() === Block_Npc || block.getType() === Block_Enemy) {
           e = block.getRef(-1);
+          e.onEvent('Show', this);
           env.variable('monster', e);
           env.onEvent('onMonsterShow', this);
           if ((e != null ? e.isVisible : void 0) !== true) {
@@ -2445,7 +2454,7 @@
     },
     BlockInfo: {
       output: function(env) {
-        var block, blockEv, passable, pos, _i, _len, _ref6;
+        var block, blockEv, passable, pos, _i, _len, _ref5;
         pos = env.variable('block');
         block = env.getBlock(pos);
         blockEv = {
@@ -2457,9 +2466,9 @@
         if (block.proxy != null) {
           blockEv.trs = block.proxy;
         }
-        _ref6 = block.passable;
-        for (_i = 0, _len = _ref6.length; _i < _len; _i++) {
-          passable = _ref6[_i];
+        _ref5 = block.passable;
+        for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+          passable = _ref5[_i];
           if (passable) {
             blockEv.pas += '1';
           } else {
@@ -2493,7 +2502,6 @@
         if (getBasicInfo(e)) {
           eEv.role = getBasicInfo(e);
         }
-        console.log(eEv);
         return [eEv];
       }
     },
@@ -2706,25 +2714,25 @@
     },
     Revive: {
       callback: function(env) {
-        var p, _i, _len, _ref6, _ref7, _results;
+        var p, _i, _len, _ref5, _ref6, _results;
         env.initiateHeroes(env.getInitialData().team);
         env.incrReviveCount();
-        _ref6 = env.getAliveHeroes();
+        _ref5 = env.getAliveHeroes();
         _results = [];
-        for (_i = 0, _len = _ref6.length; _i < _len; _i++) {
-          p = _ref6[_i];
-          _results.push(p.pos = (_ref7 = env.getEntrance()[0]) != null ? _ref7 : env.getEntrance());
+        for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+          p = _ref5[_i];
+          _results.push(p.pos = (_ref6 = env.getEntrance()[0]) != null ? _ref6 : env.getEntrance());
         }
         return _results;
       },
       output: function(env) {
         var p, ret;
         ret = (function() {
-          var _i, _len, _ref6, _results;
-          _ref6 = env.getAliveHeroes();
+          var _i, _len, _ref5, _results;
+          _ref5 = env.getAliveHeroes();
           _results = [];
-          for (_i = 0, _len = _ref6.length; _i < _len; _i++) {
-            p = _ref6[_i];
+          for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+            p = _ref5[_i];
             _results.push({
               id: ACT_Enemy,
               pos: p.pos,
@@ -3064,11 +3072,11 @@
     },
     Resurrect: {
       callback: function(env) {
-        var t, _i, _len, _ref6, _results;
-        _ref6 = env.variable('tar');
+        var t, _i, _len, _ref5, _results;
+        _ref5 = env.variable('tar');
         _results = [];
-        for (_i = 0, _len = _ref6.length; _i < _len; _i++) {
-          t = _ref6[_i];
+        for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+          t = _ref5[_i];
           if (t.maxHP) {
             _results.push(t.health = Math.ceil(t.maxHP * 0.2));
           }
@@ -3076,11 +3084,11 @@
         return _results;
       },
       output: function(env) {
-        var t, _i, _len, _ref6, _results;
-        _ref6 = env.variable('tar');
+        var t, _i, _len, _ref5, _results;
+        _ref5 = env.variable('tar');
         _results = [];
-        for (_i = 0, _len = _ref6.length; _i < _len; _i++) {
-          t = _ref6[_i];
+        for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+          t = _ref5[_i];
           _results.push({
             id: ACT_UnitInfo,
             ref: t.ref,
@@ -3092,7 +3100,7 @@
     },
     CostCard: {
       callback: function(env) {
-        var c, card, h, i, indexes, ret, slot, _i, _len, _ref6, _ref7;
+        var c, card, h, i, indexes, ret, slot, _i, _len, _ref5, _ref6;
         slot = env.variable('slot');
         card = env.variable('card');
         if (env.variable('randCost')) {
@@ -3107,9 +3115,9 @@
           });
           slot = env.randMember(indexes);
         } else if (card != null) {
-          _ref6 = env.getCardStack();
-          for (i in _ref6) {
-            c = _ref6[i];
+          _ref5 = env.getCardStack();
+          for (i in _ref5) {
+            c = _ref5[i];
             if ((c != null ? c.classId : void 0) === card) {
               slot = i;
             }
@@ -3119,9 +3127,9 @@
           return this.suicide();
         }
         env.variable('costCard', true);
-        _ref7 = env.getHeroes();
-        for (_i = 0, _len = _ref7.length; _i < _len; _i++) {
-          h = _ref7[_i];
+        _ref6 = env.getHeroes();
+        for (_i = 0, _len = _ref6.length; _i < _len; _i++) {
+          h = _ref6[_i];
           h.onEvent('onCostCard', this);
         }
         if (!env.variable('costCard')) {
@@ -3149,7 +3157,7 @@
     },
     CreateObject: {
       callback: function(env) {
-        var availableSlot, count, p, pos, _i, _j, _k, _l, _len, _len1, _len2, _len3, _ref6, _results;
+        var availableSlot, count, p, pos, _i, _j, _k, _l, _len, _len1, _len2, _len3, _ref5, _results;
         pos = env.variable('pos');
         if (pos == null) {
           availableSlot = env.getBlock().filter(function(e) {
@@ -3189,10 +3197,10 @@
           p = pos[_k];
           env.getBlock(p).effect = env.variable('effect');
         }
-        _ref6 = env.variable('pos');
+        _ref5 = env.variable('pos');
         _results = [];
-        for (_l = 0, _len3 = _ref6.length; _l < _len3; _l++) {
-          p = _ref6[_l];
+        for (_l = 0, _len3 = _ref5.length; _l < _len3; _l++) {
+          p = _ref5[_l];
           _results.push(this.routine({
             id: 'OpenBlock',
             block: p
@@ -3225,10 +3233,10 @@
     },
     Damage: {
       callback: function(env) {
-        var damageType, isRange, _ref6;
+        var damageType, isRange, _ref5;
         damageType = env.variable('damageType');
         isRange = env.variable('isRange');
-        if (!(((_ref6 = env.variable('tar')) != null ? _ref6.health : void 0) > 0)) {
+        if (!(((_ref5 = env.variable('tar')) != null ? _ref5.health : void 0) > 0)) {
           return this.suicide();
         }
         if (damageType === 'Physical') {
@@ -3310,18 +3318,18 @@
     },
     CollectID: {
       callback: function(env) {
-        var collectId, i, objective, qid, quest, questInfo, _ref6, _ref7;
+        var collectId, i, objective, qid, quest, questInfo, _ref5, _ref6;
         collectId = env.variable('collectId');
         questInfo = [];
-        _ref6 = env.getQuests();
-        for (qid in _ref6) {
-          quest = _ref6[qid];
+        _ref5 = env.getQuests();
+        for (qid in _ref5) {
+          quest = _ref5[qid];
           if ((quest != null ? quest.counters : void 0) == null) {
             continue;
           }
-          _ref7 = queryTable(TABLE_QUEST, qid, this.abIndex).objects;
-          for (i in _ref7) {
-            objective = _ref7[i];
+          _ref6 = queryTable(TABLE_QUEST, qid, this.abIndex).objects;
+          for (i in _ref6) {
+            objective = _ref6[i];
             if (!(objective.type === QUEST_TYPE_NPC && objective.collect === collectId)) {
               continue;
             }
@@ -3339,11 +3347,11 @@
         return env.variable('questInfo', questInfo);
       },
       output: function(env) {
-        var e, _i, _len, _ref6, _results;
-        _ref6 = env.variable('questInfo');
+        var e, _i, _len, _ref5, _results;
+        _ref5 = env.variable('questInfo');
         _results = [];
-        for (_i = 0, _len = _ref6.length; _i < _len; _i++) {
-          e = _ref6[_i];
+        for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+          e = _ref5[_i];
           _results.push({
             id: ACT_Event,
             event: e
@@ -3425,23 +3433,23 @@
   };
 
   onEvent = function(evt, cmd, src, tar) {
-    var env, m, _i, _j, _len, _len1, _ref6, _ref7;
+    var env, m, _i, _j, _len, _len1, _ref5, _ref6;
     env = cmd.getEnvironment();
     env.variable('src', src);
     env.variable('tar', tar);
     if (src) {
       src.onEvent('on' + evt, cmd);
-      _ref6 = env.getTeammateOf(src);
-      for (_i = 0, _len = _ref6.length; _i < _len; _i++) {
-        m = _ref6[_i];
+      _ref5 = env.getTeammateOf(src);
+      for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+        m = _ref5[_i];
         m.onEvent('onTeammate' + evt, cmd);
       }
     }
     if (tar) {
       tar.onEvent('onBe' + evt, cmd);
-      _ref7 = env.getTeammateOf(tar);
-      for (_j = 0, _len1 = _ref7.length; _j < _len1; _j++) {
-        m = _ref7[_j];
+      _ref6 = env.getTeammateOf(tar);
+      for (_j = 0, _len1 = _ref6.length; _j < _len1; _j++) {
+        m = _ref6[_j];
         m.onEvent('onTeammateBe' + evt, cmd);
       }
     }

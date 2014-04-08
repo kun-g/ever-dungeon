@@ -11628,7 +11628,7 @@
         "subcategory":8,
         "description": "能够强化命中属性的宝石",
         "stack":99,
-        "sellprice": 400
+        "sellprice": 300
     },
     {
         "classId": 393,
@@ -11638,7 +11638,7 @@
         "subcategory":9,
         "description": "能够强化反应属性的宝石",
         "stack":99,
-        "sellprice": 400
+        "sellprice": 300
     },
     {
         "classId": 394,
@@ -14400,7 +14400,7 @@
     {
         "classId": 569,
         "label": "初阶魔法书图纸",
-        "icon": "pmage-subwaepon1.png",
+        "icon": "pmage-subweapon1.png",
         "category": 3,
         "description": "记录了制作初阶魔法书的方法",
         "quality":1,
@@ -14588,7 +14588,7 @@
     {
         "classId": 580,
         "label": "见习魔法书图纸",
-        "icon": "pmage-subwaepon2.png",
+        "icon": "pmage-subweapon2.png",
         "category": 3,
         "description": "记录了制作见习魔法书的方法",
         "quality":2,
@@ -14792,7 +14792,7 @@
     {
         "classId": 592,
         "label": "金边魔法书图纸",
-        "icon": "pmage-subwaepon3.png",
+        "icon": "pmage-subweapon3.png",
         "category": 3,
         "description": "记录了制作金边魔法书的方法",
         "quality":3,
@@ -14996,7 +14996,7 @@
     {
         "classId": 604,
         "label": "古旧魔法书图纸",
-        "icon": "pmage-subwaepon4.png",
+        "icon": "pmage-subweapon4.png",
         "category": 3,
         "description": "记录了制作古旧魔法书的方法",
         "quality":4,

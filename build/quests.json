@@ -4652,7 +4652,12 @@
             "value":25,
             "count":1
         }
-    ]
+    ],
+        "cond":
+        { "and": [
+            { "<": [ { "type": "getProperty", "key": "tutotialStage"}, 1000 ] }
+        ]
+        }
 
 },
     {

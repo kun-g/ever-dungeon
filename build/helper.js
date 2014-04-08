@@ -1,30 +1,128 @@
 (function() {
-  var actCampaign, conditionCheck, currentTime, diffDate, initCampaign, moment, updateLockStatus;
+  var actCampaign, conditionCheck, currentTime, diffDate, initCampaign, moment, tap, tapObject, updateLockStatus;
 
   moment = require('moment');
 
   conditionCheck = require('./trigger').conditionCheck;
 
-  updateLockStatus = function(curStatus, target, config) {
-    var cfg, id, ret, unlockable;
-    if (!curStatus) {
-      return [];
+  tap = function(obj, key, callback) {
+    var theCB;
+    if (obj.reactDB == null) {
+      Object.defineProperty(obj, 'reactDB', {
+        enumerable: false,
+        configurable: false,
+        value: {}
+      });
     }
-    ret = [];
-    for (id in config) {
-      cfg = config[id];
-      unlockable = true;
-      if (cfg.cond != null) {
-        unlockable = unlockable && conditionCheck(cfg.cond, target);
+    if (obj.reactDB[key] == null) {
+      obj.reactDB[key] = {
+        value: obj[key],
+        hooks: [callback]
+      };
+      theCB = function(val) {
+        var cb, _i, _len, _ref;
+        _ref = obj.reactDB[key].hooks;
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+          cb = _ref[_i];
+          if (cb != null) {
+            cb(key, val);
+          }
+        }
+        return obj.reactDB[key].value = val;
+      };
+      Object.defineProperty(obj, key, {
+        get: function() {
+          return obj.reactDB[key].value;
+        },
+        set: theCB,
+        enumerable: true,
+        configurable: true
+      });
+      if (typeof obj[key] === 'object') {
+        return tapObject(obj[key], theCB);
       }
-      if (unlockable && (curStatus[id] == null)) {
-        ret.push(+id);
-      }
+    } else {
+      return obj.reactDB[key].hooks.push(callback);
     }
-    return ret;
   };
 
-  exports.updateLockStatus = updateLockStatus;
+  tapObject = function(obj, callback) {
+    var config, k, tabNewProperty, theCallback, v;
+    theCallback = function() {
+      return callback(obj);
+    };
+    tabNewProperty = function(key, val) {
+      obj[key] = val;
+      tap(obj, key, theCallback);
+      return callback(obj);
+    };
+    for (k in obj) {
+      v = obj[k];
+      tap(obj, k, theCallback);
+    }
+    config = {
+      value: tabNewProperty,
+      enumerable: false,
+      configurable: false,
+      writable: false
+    };
+    Object.defineProperty(obj, 'newProperty', config);
+    if (Array.isArray(obj)) {
+      return Object.defineProperty(obj, 'push', {
+        value: function(val) {
+          return this.newProperty(this.length, val);
+        }
+      });
+    }
+  };
+
+  exports.tap = tap;
+
+  exports.initLeaderboard = function(config) {
+    var cfg, generateHandler, k, key, localConfig, v;
+    localConfig = {};
+    generateHandler = function(dbKey, cfg) {
+      return function(name, value) {
+        return require('./dbWrapper').updateLeaderboard(dbKey, name, value);
+      };
+    };
+    for (key in config) {
+      cfg = config[key];
+      localConfig[key] = {
+        func: generateHandler(key, cfg)
+      };
+      for (k in cfg) {
+        v = cfg[k];
+        localConfig[key][k] = v;
+      }
+    }
+    exports.assignLeaderboard = function(player) {
+      var obj, tmp, _ref, _results;
+      _results = [];
+      for (k in config) {
+        v = config[k];
+        if (!(player.type === v.type)) {
+          continue;
+        }
+        tmp = v.key.split('.');
+        key = tmp.pop();
+        obj = player;
+        if (tmp.length) {
+          obj = (_ref = require('./trigger').doGetProperty(player, tmp.join('.'))) != null ? _ref : player;
+        }
+        if (obj[key] == null) {
+          obj[key] = v.initialValue;
+        }
+        _results.push(tap(obj, key, function(dummy, value) {
+          return localConfig[k].func(player.name, value);
+        }));
+      }
+      return _results;
+    };
+    return exports.getPositionOnLeaderboard = function(board, name, cb) {
+      return require('./dbWrapper').getPositionOnLeaderboard(board, name, localConfig[board].reverse, cb);
+    };
+  };
 
   currentTime = function(needObject) {
     var obj;
@@ -50,23 +148,6 @@
   };
 
   exports.diffDate = diffDate;
-
-  exports.calculateTotalItemXP = function(item) {
-    var cfg, i, levelTable, upgrade, xp;
-    if (item.xp == null) {
-      return 0;
-    }
-    levelTable = [0, 1, 2, 3, 4];
-    upgrade = queryTable(TABLE_UPGRADE);
-    xp = item.xp;
-    for (i in upgrade) {
-      cfg = upgrade[i];
-      if ((levelTable[item.quality] <= i && i < item.rank)) {
-        xp += cfg.xp;
-      }
-    }
-    return xp;
-  };
 
   initCampaign = function(me, allCampaign, abIndex) {
     var diamondCount, e, evt, flag, goldCount, key, quest, ret, _ref;
@@ -270,7 +351,7 @@
         ret = [];
         break;
       default:
-        throw 'WrongCampainStatus' + me[key].status;
+        throw Error('WrongCampainStatus' + me[key].status);
     }
     if (handler) {
       return handler(null, ret);
@@ -327,6 +408,44 @@
       "steps": 4,
       "quest": [128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151]
     }
+  };
+
+  updateLockStatus = function(curStatus, target, config) {
+    var cfg, id, ret, unlockable;
+    if (!curStatus) {
+      return [];
+    }
+    ret = [];
+    for (id in config) {
+      cfg = config[id];
+      unlockable = true;
+      if (cfg.cond != null) {
+        unlockable = unlockable && conditionCheck(cfg.cond, target);
+      }
+      if (unlockable && (curStatus[id] == null)) {
+        ret.push(+id);
+      }
+    }
+    return ret;
+  };
+
+  exports.updateLockStatus = updateLockStatus;
+
+  exports.calculateTotalItemXP = function(item) {
+    var cfg, i, levelTable, upgrade, xp;
+    if (item.xp == null) {
+      return 0;
+    }
+    levelTable = [0, 1, 2, 3, 4];
+    upgrade = queryTable(TABLE_UPGRADE);
+    xp = item.xp;
+    for (i in upgrade) {
+      cfg = upgrade[i];
+      if ((levelTable[item.quality] <= i && i < item.rank)) {
+        xp += cfg.xp;
+      }
+    }
+    return xp;
   };
 
 }).call(this);

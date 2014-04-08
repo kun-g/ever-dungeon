@@ -807,17 +807,17 @@
     }
   },
   { "skillId": 34,
-      "label":"盗窃",
+      "label":"先制攻击",
       "config": {
           "triggerCondition": [
-              {"type":"event","event":"onPhysicaDamage"}
+              {"type":"event","event":"onShow"}
           ],
           "targetSelection":{
               "pool":"Target",
               "filter": ["Alive"]
           },
           "action": [
-              {"type": "costCard"}
+              {"type": "attack"}
           ]
       }
 

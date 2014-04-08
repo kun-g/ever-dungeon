@@ -1,5 +1,5 @@
 (function() {
-  var DBWrapper, Serializer, async, dbLib, gLoadingRecord, getPlayerHero, mercenaryAdd, mercenaryDel, mercenaryDemote, mercenaryGet, mercenaryKeyList, moment, registerConstructor, _ref,
+  var DBWrapper, Serializer, async, dbLib, gLoadingRecord, getPlayerHero, makeDBKey, mercenaryAdd, mercenaryDel, mercenaryDemote, mercenaryGet, mercenaryKeyList, moment, registerConstructor, _ref,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -275,6 +275,25 @@
   exports.updateMercenaryMember = function(preBattleForce, battleForce, member, handler) {
     mercenaryDel(preBattleForce, member);
     return mercenaryAdd(battleForce, member, handler);
+  };
+
+  makeDBKey = function(keys, prefix) {
+    prefix = prefix != null ? prefix : dbPrefix;
+    return [prefix].concat(keys).join(dbSeparator);
+  };
+
+  exports.updateLeaderboard = function(board, member, score, callback) {
+    return dbClient.zadd(makeDBKey([LeaderboardPrefix, board]), score, member, callback);
+  };
+
+  exports.getPositionOnLeaderboard = function(board, member, rev, callback) {
+    var key;
+    key = makeDBKey([LeaderboardPrefix, board]);
+    if (rev) {
+      return dbClient.zrevrank(key, member, callback);
+    } else {
+      return dbClient.zrank(key, member, callback);
+    }
   };
 
 }).call(this);
