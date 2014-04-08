@@ -2590,24 +2590,6 @@
             cid: e.id,
             stc: e.count
           };
-          if (e.xp === NaN) {
-            console.error({
-              action: 'syncBag',
-              type: 'NaN',
-              name: _this.name,
-              slot: index,
-              item: e
-            });
-          }
-          if (e.xp === NaN) {
-            console.log({
-              action: 'syncBag',
-              type: 'NaN',
-              name: _this.name,
-              slot: index,
-              item: e
-            });
-          }
           if (e.xp != null) {
             ret.xp = e.xp;
           }
