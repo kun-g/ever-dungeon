@@ -1,11 +1,13 @@
 (function() {
-  var Hero, Monster, Npc, Unit, Wizard, createUnit, flagCreation,
+  var Hero, Monster, Npc, Serializer, Unit, Wizard, createUnit, flagCreation, registerConstructor, _ref,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
   require('./define');
 
   Wizard = require('./spell').Wizard;
+
+  _ref = require('./serializer'), Serializer = _ref.Serializer, registerConstructor = _ref.registerConstructor;
 
   flagCreation = false;
 
@@ -28,18 +30,18 @@
     };
 
     Unit.prototype.getActiveSpell = function() {
-      var roleConfig, _ref;
+      var roleConfig, _ref1;
       if (this["class"] != null) {
         roleConfig = queryTable(TABLE_ROLE, this["class"]);
       }
-      if ((roleConfig != null ? (_ref = roleConfig.property) != null ? _ref.activeSpell : void 0 : void 0) == null) {
+      if ((roleConfig != null ? (_ref1 = roleConfig.property) != null ? _ref1.activeSpell : void 0 : void 0) == null) {
         return -1;
       }
       return roleConfig.property.activeSpell;
     };
 
     Unit.prototype.levelUp = function() {
-      var cfg, data, lvConfig, roleConfig, s, _i, _len, _ref, _ref1, _results;
+      var cfg, data, lvConfig, roleConfig, s, _i, _len, _ref1, _ref2, _results;
       if (this["class"] != null) {
         roleConfig = queryTable(TABLE_ROLE, this["class"]);
       }
@@ -49,13 +51,13 @@
       lvConfig = queryTable(TABLE_LEVEL, roleConfig.levelId);
       cfg = lvConfig.levelData;
       _results = [];
-      while (((_ref1 = cfg[this.level]) != null ? _ref1.xp : void 0) <= this.xp) {
+      while (((_ref2 = cfg[this.level]) != null ? _ref2.xp : void 0) <= this.xp) {
         data = cfg[this.level];
         this.modifyProperty(data.property);
         if (data.skill != null) {
-          _ref = data.skill;
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            s = _ref[_i];
+          _ref1 = data.skill;
+          for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
+            s = _ref1[_i];
             this.installSpell(s.id, s.level);
           }
         }
@@ -70,7 +72,7 @@
     };
 
     Unit.prototype.initWithConfig = function(roleConfig) {
-      var k, s, v, xproperty, _i, _len, _ref, _ref1, _results;
+      var k, s, v, xproperty, _i, _len, _ref1, _ref2, _results;
       if (roleConfig == null) {
         return false;
       }
@@ -90,9 +92,9 @@
         this.health = Math.ceil(this.health * this.rank);
         this.attack = Math.ceil(this.attack * this.rank);
         xproperty = {};
-        _ref = roleConfig.xproperty;
-        for (k in _ref) {
-          v = _ref[k];
+        _ref1 = roleConfig.xproperty;
+        for (k in _ref1) {
+          v = _ref1[k];
           xproperty[k] = Math.ceil(v * this.rank);
         }
         this.modifyProperty(xproperty);
@@ -104,10 +106,10 @@
         }
       }
       if (roleConfig.skill != null) {
-        _ref1 = roleConfig.skill;
+        _ref2 = roleConfig.skill;
         _results = [];
-        for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-          s = _ref1[_i];
+        for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
+          s = _ref2[_i];
           _results.push(this.installSpell(s.id, s.level));
         }
         return _results;
@@ -132,14 +134,14 @@
     };
 
     Unit.prototype.gearUp = function() {
-      var e, enhance, enhancement, equipment, k, _ref, _results;
+      var e, enhance, enhancement, equipment, k, _ref1, _results;
       if (this.equipment == null) {
         return false;
       }
-      _ref = this.equipment;
+      _ref1 = this.equipment;
       _results = [];
-      for (k in _ref) {
-        e = _ref[k];
+      for (k in _ref1) {
+        e = _ref1[k];
         if (!(queryTable(TABLE_ITEM, e.cid) != null)) {
           continue;
         }
@@ -152,13 +154,13 @@
         }
         if (e.eh != null) {
           _results.push((function() {
-            var _i, _len, _ref1, _ref2, _results1;
-            _ref1 = e.eh;
+            var _i, _len, _ref2, _ref3, _results1;
+            _ref2 = e.eh;
             _results1 = [];
-            for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-              enhancement = _ref1[_i];
+            for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
+              enhancement = _ref2[_i];
               enhance = queryTable(TABLE_ENHANCE, enhancement.id);
-              if ((enhance != null ? (_ref2 = enhance.property) != null ? _ref2[enhancement.level] : void 0 : void 0) == null) {
+              if ((enhance != null ? (_ref3 = enhance.property) != null ? _ref3[enhancement.level] : void 0 : void 0) == null) {
                 continue;
               }
               this.modifyProperty(enhance.property[enhancement.level]);
@@ -337,6 +339,10 @@
         return new Npc(config);
     }
   };
+
+  registerConstructor(Hero);
+
+  registerConstructor(Monster);
 
   exports.createUnit = createUnit;
 
