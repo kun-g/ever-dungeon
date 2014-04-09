@@ -445,10 +445,9 @@
         return false;
       }
       if (this.hero != null) {
-        this.heroBase[this.hero["class"]] = this.hero;
         this.hero = this.heroBase[hClass];
       } else {
-        this.attrSave('hero', this.heroBase[hClass]);
+        this.hero = this.heroBase[hClass];
       }
       this.hero.equipment = {};
       return this.hero.vip = this.vipLevel();

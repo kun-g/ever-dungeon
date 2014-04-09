@@ -1,5 +1,7 @@
 (function() {
-  var Serializer, g_attr_constructorTable, generateMonitor, objectlize, registerConstructor;
+  var Serializer, g_attr_constructorTable, generateMonitor, objectlize, registerConstructor, tap;
+
+  tap = require('./helper').tap;
 
   generateMonitor = function(obj) {
     return function(key, val) {
@@ -30,6 +32,7 @@
       if (!(this.s_attr_to_save.indexOf(key) === -1 && (val != null))) {
         return false;
       }
+      this[key] = val;
       tap(this, key, this.s_attr_monitor);
       this[key] = val;
       return this.s_attr_to_save.push(key);
@@ -101,20 +104,21 @@
         v = data[k];
         if (v != null) {
           if (v._constructor_ != null) {
-            this.attrSave(k, objectlize(v));
+            this[k] = objectlize(v);
           } else if (Array.isArray(v)) {
-            this.attrSave(k, v.map(function(e) {
+            this[k] = v.map(function(e) {
               if ((e != null ? e._constructor_ : void 0) != null) {
                 return objectlize(e);
               } else {
                 return e;
               }
-            }));
+            });
           } else {
-            this.attrSave(k, v);
+            this[k] = v;
           }
         }
       }
+      this.dumpChanged();
       return this;
     };
 
