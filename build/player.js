@@ -47,7 +47,9 @@
       this.attrSave('inventoryVersion', 0);
       this.versionControl('inventoryVersion', ['gold', 'diamond', 'inventory', 'equipment']);
       this.attrSave('heroBase', {});
-      this.versionControl('heroVersion', ['hero', 'heroBase']);
+      this.attrSave('heroIndex', -1);
+      this.attrSave('hero', {});
+      this.versionControl('heroVersion', ['heroIndex', 'hero', 'heroBase']);
       this.attrSave('stage', []);
       this.attrSave('stageVersion', 0);
       this.versionControl('stageVersion', 'stage');
@@ -68,7 +70,11 @@
       this.attrSave('purchasedCount', {});
       this.attrSave('lastLogin', currentTime());
       this.attrSave('creationDate', now.valueOf());
-      this.versionControl('dummyVersion', ['isNewPlayer', 'loginStreak', 'accountID']);
+      this.attrSave('isNewPlayer', false);
+      this.attrSave('loginStreak', {
+        count: 0
+      });
+      this.attrSave('accountID', -1);
     }
 
     Player.prototype.logout = function(reason) {
@@ -136,11 +142,6 @@
 
     Player.prototype.onLogin = function() {
       var dis, flag, ret, s, _i, _len, _ref7;
-      if (this.loginStreak == null) {
-        this.attrSave('loginStreak', {
-          count: 0
-        });
-      }
       if (diffDate(this.lastLogin) > 0) {
         this.purchasedCount = {};
       }
@@ -2591,24 +2592,6 @@
             cid: e.id,
             stc: e.count
           };
-          if (e.xp === NaN) {
-            console.error({
-              action: 'syncBag',
-              type: 'NaN',
-              name: _this.name,
-              slot: index,
-              item: e
-            });
-          }
-          if (e.xp === NaN) {
-            console.log({
-              action: 'syncBag',
-              type: 'NaN',
-              name: _this.name,
-              slot: index,
-              item: e
-            });
-          }
           if (e.xp != null) {
             ret.xp = e.xp;
           }

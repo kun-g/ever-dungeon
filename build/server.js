@@ -18,7 +18,7 @@ Server.prototype.shutDown = function () {
     this.tcpServer.net.close();
     clearInterval(this.tcpServer.tcpInterval);
     this.tcpServer.net.aliveConnections.forEach(function (c) {
-      if (c.pendingRequest.length == 0) c.end();
+      if (c.pendingRequest.length === 0) c.end();
     });
   }
 }
