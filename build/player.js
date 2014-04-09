@@ -75,6 +75,8 @@
         count: 0
       });
       this.attrSave('accountID', -1);
+      this.attrSave('campaignState', {});
+      this.attrSave('infiniteTimer', currentTime());
     }
 
     Player.prototype.logout = function(reason) {
@@ -149,8 +151,8 @@
       if (diffDate(this.creationDate) > 0) {
         this.tutorialStage = 1000;
       }
-      if (!this.infiniteTimer || !moment().isSame(this.infiniteTimer, 'week')) {
-        this.attrSave('infiniteTimer', currentTime());
+      if (!moment().isSame(this.infiniteTimer, 'week')) {
+        this.infiniteTimer = currentTime();
         _ref7 = this.stage;
         for (_i = 0, _len = _ref7.length; _i < _len; _i++) {
           s = _ref7[_i];
@@ -2050,9 +2052,6 @@
     };
 
     Player.prototype.getCampaignState = function(campaignName) {
-      if (this.campaignState == null) {
-        this.attrSave('campaignState', {});
-      }
       if (this.campaignState[campaignName] == null) {
         if (campaignName === 'Charge') {
           this.campaignState[campaignName] = {};
@@ -2064,9 +2063,6 @@
     };
 
     Player.prototype.setCampaignState = function(campaignName, val) {
-      if (this.campaignState == null) {
-        this.attrSave('campaignState', {});
-      }
       return this.campaignState[campaignName] = val;
     };
 
