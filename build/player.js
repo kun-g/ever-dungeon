@@ -68,11 +68,7 @@
       this.attrSave('purchasedCount', {});
       this.attrSave('lastLogin', currentTime());
       this.attrSave('creationDate', now.valueOf());
-      this.attrSave('isNewPlayer', false);
-      this.attrSave('loginStreak', {
-        count: 0
-      });
-      this.attrSave('accountID', -1);
+      this.versionControl('dummyVersion', ['isNewPlayer', 'loginStreak', 'accountID']);
     }
 
     Player.prototype.logout = function(reason) {
@@ -140,6 +136,11 @@
 
     Player.prototype.onLogin = function() {
       var dis, flag, ret, s, _i, _len, _ref7;
+      if (this.loginStreak == null) {
+        this.attrSave('loginStreak', {
+          count: 0
+        });
+      }
       if (diffDate(this.lastLogin) > 0) {
         this.purchasedCount = {};
       }
@@ -2590,6 +2591,24 @@
             cid: e.id,
             stc: e.count
           };
+          if (e.xp === NaN) {
+            console.error({
+              action: 'syncBag',
+              type: 'NaN',
+              name: _this.name,
+              slot: index,
+              item: e
+            });
+          }
+          if (e.xp === NaN) {
+            console.log({
+              action: 'syncBag',
+              type: 'NaN',
+              name: _this.name,
+              slot: index,
+              item: e
+            });
+          }
           if (e.xp != null) {
             ret.xp = e.xp;
           }
