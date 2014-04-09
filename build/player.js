@@ -35,6 +35,7 @@
     function Player(name) {
       var now;
       Player.__super__.constructor.apply(this, arguments);
+      this.setDBKeyName(playerPrefix + name);
       if (name != null) {
         this.attrSave('name', name);
       }

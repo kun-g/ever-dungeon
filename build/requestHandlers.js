@@ -261,6 +261,7 @@
           }
         ], function(err, result) {
           var ret;
+          console.log(err);
           if (err) {
             switch (+err.message) {
               case RET_AppVersionNotMatch:
