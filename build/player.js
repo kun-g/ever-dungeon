@@ -427,7 +427,7 @@
         }
         heroData.xp = 0;
         heroData.equipment = [];
-        this.heroBase[heroData["class"]] = heroData;
+        this.heroBase.newProperty(heroData["class"], heroData);
         this.switchHero(heroData["class"]);
         return this.createHero();
       } else if (this.hero) {
@@ -452,16 +452,17 @@
     };
 
     Player.prototype.switchHero = function(hClass) {
+      var k, v, _ref7;
       if (this.heroBase[hClass] == null) {
         return false;
       }
-      if (this.hero != null) {
-        this.hero = this.heroBase[hClass];
-      } else {
-        this.hero = this.heroBase[hClass];
+      _ref7 = this.heroBase[hClass];
+      for (k in _ref7) {
+        v = _ref7[k];
+        this.hero.newProperty(k, JSON.parse(JSON.stringify(v)));
       }
-      this.hero.equipment = {};
-      return this.hero.vip = this.vipLevel();
+      this.hero.newProperty('equipment', {});
+      return this.hero.newProperty('vip', this.vipLevel());
     };
 
     Player.prototype.addMoney = function(type, point) {
