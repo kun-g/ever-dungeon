@@ -1,13 +1,12 @@
 (function() {
   var actCampaign, conditionCheck, currentTime, diffDate, initCampaign, moment, tap, tapObject, updateLockStatus;
 
+  moment = require('moment');
+
   conditionCheck = require('./trigger').conditionCheck;
 
   tap = function(obj, key, callback) {
     var theCB;
-    if (typeof obj[key] === 'function') {
-      return false;
-    }
     if (obj.reactDB == null) {
       Object.defineProperty(obj, 'reactDB', {
         enumerable: false,
@@ -49,9 +48,6 @@
 
   tapObject = function(obj, callback) {
     var config, k, tabNewProperty, theCallback, v;
-    if (obj == null) {
-      return false;
-    }
     theCallback = function() {
       return callback(obj);
     };
@@ -128,7 +124,26 @@
     };
   };
 
-  moment = require('moment');
+  updateLockStatus = function(curStatus, target, config) {
+    var cfg, id, ret, unlockable;
+    if (!curStatus) {
+      return [];
+    }
+    ret = [];
+    for (id in config) {
+      cfg = config[id];
+      unlockable = true;
+      if (cfg.cond != null) {
+        unlockable = unlockable && conditionCheck(cfg.cond, target);
+      }
+      if (unlockable && (curStatus[id] == null)) {
+        ret.push(+id);
+      }
+    }
+    return ret;
+  };
+
+  exports.updateLockStatus = updateLockStatus;
 
   currentTime = function(needObject) {
     var obj;
@@ -142,11 +157,7 @@
 
   exports.currentTime = currentTime;
 
-  diffDate = function(date, today, flag) {
-    var duration;
-    if (flag == null) {
-      flag = 'day';
-    }
+  diffDate = function(date, today) {
     if (!date) {
       return null;
     }
@@ -154,24 +165,27 @@
       date = moment(date).zone("+08:00").startOf('day');
     }
     today = moment(today).zone("+08:00").startOf('day');
-    duration = moment.duration(today.diff(date));
-    switch (flag) {
-      case 'second':
-        return duration.asSeconds();
-      case 'minite':
-        return duration.asMinites();
-      case 'hour':
-        return duration.asHours();
-      case 'day':
-        return duration.asDays();
-      case 'month':
-        return duration.asMonths();
-      case 'year':
-        return duration.asYears();
-    }
+    return moment.duration(today.diff(date)).asDays();
   };
 
   exports.diffDate = diffDate;
+
+  exports.calculateTotalItemXP = function(item) {
+    var cfg, i, levelTable, upgrade, xp;
+    if (item.xp == null) {
+      return 0;
+    }
+    levelTable = [0, 1, 2, 3, 4];
+    upgrade = queryTable(TABLE_UPGRADE);
+    xp = item.xp;
+    for (i in upgrade) {
+      cfg = upgrade[i];
+      if ((levelTable[item.quality] <= i && i < item.rank)) {
+        xp += cfg.xp;
+      }
+    }
+    return xp;
+  };
 
   initCampaign = function(me, allCampaign, abIndex) {
     var diamondCount, e, evt, flag, goldCount, key, quest, ret, _ref;
@@ -432,44 +446,6 @@
       "steps": 4,
       "quest": [128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151]
     }
-  };
-
-  updateLockStatus = function(curStatus, target, config) {
-    var cfg, id, ret, unlockable;
-    if (!curStatus) {
-      return [];
-    }
-    ret = [];
-    for (id in config) {
-      cfg = config[id];
-      unlockable = true;
-      if (cfg.cond != null) {
-        unlockable = unlockable && conditionCheck(cfg.cond, target);
-      }
-      if (unlockable && (curStatus[id] == null)) {
-        ret.push(+id);
-      }
-    }
-    return ret;
-  };
-
-  exports.updateLockStatus = updateLockStatus;
-
-  exports.calculateTotalItemXP = function(item) {
-    var cfg, i, levelTable, upgrade, xp;
-    if (item.xp == null) {
-      return 0;
-    }
-    levelTable = [0, 1, 2, 3, 4];
-    upgrade = queryTable(TABLE_UPGRADE);
-    xp = item.xp;
-    for (i in upgrade) {
-      cfg = upgrade[i];
-      if ((levelTable[item.quality] <= i && i < item.rank)) {
-        xp += cfg.xp;
-      }
-    }
-    return xp;
   };
 
 }).call(this);

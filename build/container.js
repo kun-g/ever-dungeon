@@ -14,15 +14,13 @@
   Bag = (function(_super) {
     __extends(Bag, _super);
 
-    function Bag(data) {
-      var cfg;
-      cfg = {
-        container: [],
-        limit: 0,
-        type: 0,
-        stackType: 0
-      };
-      Bag.__super__.constructor.call(this, data, cfg, {});
+    function Bag(type, limit, stackType) {
+      Bag.__super__.constructor.apply(this, arguments);
+      this.attrSave('container', []);
+      this.attrSave('version', 0);
+      this.attrSave('limit', limit);
+      this.attrSave('type', type);
+      this.attrSave('stackType', stackType);
     }
 
     Bag.prototype.validate = function() {
@@ -139,11 +137,10 @@
             } else {
               tmpCount = left > stack ? stack : left;
               if (count === 1) {
-                bag.newProperty(e, item);
+                bag[e] = item;
               } else {
                 constructor = item.getConstructor();
-                tmp = new constructor(item.dump().save);
-                bag.newProperty(e, tmp);
+                bag[e] = new constructor(item);
               }
             }
             bag[e].count = tmpCount;
@@ -178,6 +175,7 @@
           return false;
         }
       }
+      this.version += 1;
       return ret;
     };
 
@@ -266,6 +264,7 @@
           });
         }
       }
+      this.version += 1;
       return ret;
     };
 
@@ -291,7 +290,7 @@
       var bag, that;
       bag = this.container;
       that = this;
-      return ret.forEach(function(e) {
+      ret.forEach(function(e) {
         if (e.opration === 'add') {
           return that.remove(null, e.delta, e.slot, false);
         } else {
@@ -299,6 +298,7 @@
           return bag[e.slot].count = e.oldAmount;
         }
       });
+      return this.version -= 1;
     };
 
     Bag.prototype.map = function(func) {
@@ -320,23 +320,11 @@
   CONTAINER_TYPE_FURANCE = 2;
 
   CardStack = function(count) {
-    var bag;
-    bag = new Bag({
-      type: CONTAINER_TYPE_CARD_STACK,
-      limit: count,
-      stackType: STACK_TYPE_SINGLE_STACK
-    });
-    return bag;
+    return new Bag(CONTAINER_TYPE_CARD_STACK, count, STACK_TYPE_SINGLE_STACK);
   };
 
   PlayerBag = function(count) {
-    var bag;
-    bag = new Bag({
-      type: CONTAINER_TYPE_BAG,
-      limit: count,
-      stackType: STACK_TYPE_MULTIPLE_STACK
-    });
-    return bag;
+    return new Bag(CONTAINER_TYPE_BAG, count, STACK_TYPE_MULTIPLE_STACK);
   };
 
   exports.Bag = PlayerBag;

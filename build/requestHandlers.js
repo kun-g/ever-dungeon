@@ -1,5 +1,5 @@
 (function() {
-  var Player, async, dbLib, dbWrapperLib, http, loadPlayer, loginBy, moment, wrapReceipt;
+  var async, dbLib, dbWrapperLib, http, loadPlayer, loginBy, moment, wrapReceipt;
 
   require('./define');
 
@@ -12,8 +12,6 @@
   http = require('http');
 
   moment = require('moment');
-
-  Player = require('./player').Player;
 
   loginBy = function(passportType, passport, token, callback) {
     var appID, appKey, options, path, req, sign;
@@ -310,10 +308,7 @@
             return dbLib.loadPassport(passportType, passport, false, cb);
           }, function(account, cb) {
             return dbLib.createNewPlayer(account, gServerName, name, cb);
-          }, function(_, cb) {
-            var player;
-            player = new Player();
-            player.setName(name);
+          }, function(player, cb) {
             player.initialize();
             player.createHero({
               name: name,

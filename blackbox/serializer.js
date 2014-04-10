@@ -1,7 +1,5 @@
 (function() {
-  var Serializer, g_attr_constructorTable, generateMonitor, objectlize, registerConstructor, tap;
-
-  tap = requires('./helper').tap;
+  var Serializer, g_attr_constructorTable, generateMonitor, objectlize, registerConstructor;
 
   generateMonitor = function(obj) {
     return function(key, val) {
@@ -10,11 +8,7 @@
   };
 
   Serializer = (function() {
-    function Serializer(data, cfg, versionCfg) {
-      var k, v;
-      if (versionCfg == null) {
-        versionCfg = {};
-      }
+    function Serializer() {
       this.s_attr_to_save = [];
       this.s_attr_dirtyFlag = {};
       this.s_attr_monitor = generateMonitor(this);
@@ -30,58 +24,36 @@
         enumerable: false,
         writable: false
       });
-      for (k in cfg) {
-        v = cfg[k];
-        if (data && (data[k] != null)) {
-          if (data[k]._constructor_) {
-            this.attrSave(k, objectlize(data[k]), true);
-          } else {
-            this.attrSave(k, data[k], true);
-          }
-        } else {
-          this.attrSave(k, cfg[k]);
-        }
-      }
-      for (k in versionCfg) {
-        v = versionCfg[k];
-        if (data && (data[k] != null)) {
-          this.attrSave(k, data[k], true);
-        } else {
-          this.attrSave(k, 1);
-        }
-        this.versionControl(k, v);
-      }
     }
 
-    Serializer.prototype.attrSave = function(key, val, restoreFlag) {
-      if (restoreFlag == null) {
-        restoreFlag = false;
-      }
-      if (!(this.s_attr_to_save.indexOf(key) === -1 && (val != null))) {
+    Serializer.prototype.attrSave = function(key, val) {
+      if (this.s_attr_to_save.indexOf(key) !== -1) {
         return false;
       }
       this[key] = val;
       tap(this, key, this.s_attr_monitor);
-      if (!restoreFlag) {
-        this[key] = val;
-      }
       return this.s_attr_to_save.push(key);
     };
 
     Serializer.prototype.versionControl = function(versionKey, keys) {
-      var key, ver, versionIncr, _i, _len, _ref, _results;
+      var key, ver, versionIncr, _i, _j, _len, _len1, _ref, _results;
       if (!Array.isArray(keys)) {
         keys = [keys];
       }
+      for (_i = 0, _len = keys.length; _i < _len; _i++) {
+        key = keys[_i];
+        this.attrSave(key);
+      }
       ver = (_ref = this[versionKey]) != null ? _ref : 1;
+      this.attrSave(versionKey, ver);
       versionIncr = (function(_this) {
         return function() {
           return _this[versionKey]++;
         };
       })(this);
       _results = [];
-      for (_i = 0, _len = keys.length; _i < _len; _i++) {
-        key = keys[_i];
+      for (_j = 0, _len1 = keys.length; _j < _len1; _j++) {
+        key = keys[_j];
         _results.push(tap(this, key, versionIncr));
       }
       return _results;
@@ -127,27 +99,22 @@
       }
       for (k in data) {
         v = data[k];
-        if (!(v != null)) {
-          continue;
-        }
-        this.s_attr_to_save = this.s_attr_to_save.filter(function(e) {
-          return e !== k;
-        });
-        if (v._constructor_ != null) {
-          this.attrSave(k, objectlize(v), true);
-        } else if (Array.isArray(v)) {
-          this.attrSave(k, v.map(function(e) {
-            if ((e != null ? e._constructor_ : void 0) != null) {
-              return objectlize(e);
-            } else {
-              return e;
-            }
-          }), true);
-        } else {
-          this.attrSave(k, v, true);
+        if (v != null) {
+          if (v._constructor_ != null) {
+            this.attrSave(k, objectlize(v));
+          } else if (Array.isArray(v)) {
+            this.attrSave(k, v.map(function(e) {
+              if ((e != null ? e._constructor_ : void 0) != null) {
+                return objectlize(e);
+              } else {
+                return e;
+              }
+            }));
+          } else {
+            this.attrSave(k, v);
+          }
         }
       }
-      this.s_attr_dirtyFlag = {};
       return this;
     };
 
@@ -193,7 +160,8 @@
     if (!g_attr_constructorTable[data._constructor_]) {
       throw 'No constructor:' + data._constructor_;
     }
-    o = new g_attr_constructorTable[data._constructor_](data.save);
+    o = new g_attr_constructorTable[data._constructor_]();
+    o.restore(data.save);
     if (o.initialize != null) {
       o.initialize();
     }

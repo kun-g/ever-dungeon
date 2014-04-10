@@ -33,17 +33,13 @@
     DBWrapper.prototype.save = function(handler) {
       var data, k, v;
       data = this.dumpChanged();
-      if (data) {
+      if (data != null) {
         for (k in data) {
           v = data[k];
           if (typeof v === 'object') {
             data[k] = JSON.stringify(v);
           }
         }
-        logInfo({
-          info: 'Saving',
-          data: data
-        });
         return dbClient.hmset(this.getDBKeyName(), data, (function(_this) {
           return function(err, e) {
             if (handler != null) {

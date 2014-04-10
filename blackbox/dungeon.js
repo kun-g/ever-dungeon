@@ -80,7 +80,7 @@
     if (seed == null) {
       seed = rand();
     }
-    this.randSeed = seed;
+    this.attrSave('randSeed', seed);
     randomFunc = seed_random.seedrandom(seed);
     this.random = function() {
       var ret;
@@ -494,14 +494,17 @@
 
   exports.createUnits = createUnits;
 
-  Dungeon = (function() {
+  Dungeon = (function(_super) {
+    __extends(Dungeon, _super);
+
     function Dungeon(data) {
       var cfg, k, t, v, _i, _len, _ref5;
+      Dungeon.__super__.constructor.apply(this, arguments);
       this.effectCounter = 0;
       this.killingInfo = [];
       this.currentLevel = -1;
       this.cardStack = CardStack(5);
-      this.actionLog = [];
+      this.attrSave('actionLog', []);
       this.revive = 0;
       this.factionDB = {
         hero: {
@@ -553,7 +556,7 @@
       }
       for (k in data) {
         v = data[k];
-        this[k] = v;
+        this.attrSave(k, v);
       }
       if (this.initialQuests != null) {
         this.quests = deepCopy(this.initialQuests);
@@ -806,7 +809,7 @@
         }
         reward.infinityPrize = iPrize;
       }
-      return this.reward = reward;
+      return this.attrSave('reward', reward);
     };
 
     Dungeon.prototype.getInitialInfo = function() {
@@ -1198,11 +1201,11 @@
           if (m.gold != null) {
             r.gold += m.gold;
           }
-          if (m.wxp != null) {
-            r.wxp += m.wxp;
-          }
           if (m.exp != null) {
             r.exp += m.exp;
+          }
+          if (m.wxp != null) {
+            r.wxp += m.wxp;
           }
           return r;
         }), {
@@ -1242,7 +1245,7 @@
 
     return Dungeon;
 
-  })();
+  })(DBWrapper);
 
   exports.Dungeon = Dungeon;
 
