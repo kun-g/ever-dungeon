@@ -312,7 +312,8 @@
             return dbLib.createNewPlayer(account, gServerName, name, cb);
           }, function(_, cb) {
             var player;
-            player = new Player(name);
+            player = new Player();
+            player.setName(name);
             player.initialize();
             player.createHero({
               name: name,

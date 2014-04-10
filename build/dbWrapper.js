@@ -40,7 +40,7 @@
             data[k] = JSON.stringify(v);
           }
         }
-        logInfo(data);
+        logInfo('Savvvvvvvv', data);
         return dbClient.hmset(this.getDBKeyName(), data, (function(_this) {
           return function(err, e) {
             if (handler != null) {
