@@ -942,15 +942,6 @@
           case 'castSpell':
             this.castSpell(a.spell, (_ref1 = a.level) != null ? _ref1 : 1, cmd);
             break;
-          case 'newFaction':
-            env.newFaction(a.name);
-            break;
-          case 'factionAttack':
-            env.factionAttack(a.src, a.tar, a.flag);
-            break;
-          case 'factionHeal':
-            env.factionHeal(a.src, a.tar, a.flag);
-            break;
           case 'heal':
             if (a.self) {
               if (typeof cmd.routine === "function") {

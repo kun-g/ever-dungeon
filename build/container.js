@@ -14,20 +14,14 @@
   Bag = (function(_super) {
     __extends(Bag, _super);
 
-    function Bag() {
+    function Bag(type, limit, stackType) {
       Bag.__super__.constructor.apply(this, arguments);
       this.attrSave('container', []);
       this.attrSave('version', 0);
-      this.attrSave('limit', 0);
-      this.attrSave('type', 0);
-      this.attrSave('stackType', 0);
+      this.attrSave('limit', limit);
+      this.attrSave('type', type);
+      this.attrSave('stackType', stackType);
     }
-
-    Bag.prototype.init = function(type, limit, stackType) {
-      this.type = type;
-      this.limit = limit;
-      return this.stackType = stackType;
-    };
 
     Bag.prototype.validate = function() {
       return this.container.map((function(_this) {
@@ -326,17 +320,11 @@
   CONTAINER_TYPE_FURANCE = 2;
 
   CardStack = function(count) {
-    var bag;
-    bag = new Bag();
-    bag.init(CONTAINER_TYPE_CARD_STACK, count, STACK_TYPE_SINGLE_STACK);
-    return bag;
+    return new Bag(CONTAINER_TYPE_CARD_STACK, count, STACK_TYPE_SINGLE_STACK);
   };
 
   PlayerBag = function(count) {
-    var bag;
-    bag = new Bag();
-    bag.init(CONTAINER_TYPE_BAG, count, STACK_TYPE_MULTIPLE_STACK);
-    return bag;
+    return new Bag(CONTAINER_TYPE_BAG, count, STACK_TYPE_MULTIPLE_STACK);
   };
 
   exports.Bag = PlayerBag;

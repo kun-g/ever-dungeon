@@ -1,5 +1,5 @@
 (function() {
-  var Player, async, dbLib, dbWrapperLib, http, loadPlayer, loginBy, moment, wrapReceipt;
+  var async, dbLib, dbWrapperLib, http, loadPlayer, loginBy, moment, wrapReceipt;
 
   require('./define');
 
@@ -12,8 +12,6 @@
   http = require('http');
 
   moment = require('moment');
-
-  Player = require('./player').Player;
 
   loginBy = function(passportType, passport, token, callback) {
     var appID, appKey, options, path, req, sign;
@@ -195,6 +193,7 @@
               ev.push({
                 NTF: Event_PlayerInfo,
                 arg: {
+                  aid: player.accountID,
                   vip: player.vipLevel(),
                   rmb: player.rmb
                 }
@@ -261,7 +260,6 @@
           }
         ], function(err, result) {
           var ret;
-          console.log(err);
           if (err) {
             switch (+err.message) {
               case RET_AppVersionNotMatch:
@@ -311,9 +309,7 @@
             return dbLib.loadPassport(passportType, passport, false, cb);
           }, function(account, cb) {
             return dbLib.createNewPlayer(account, gServerName, name, cb);
-          }, function(_, cb) {
-            var player;
-            player = new Player(name);
+          }, function(player, cb) {
             player.initialize();
             player.createHero({
               name: name,
