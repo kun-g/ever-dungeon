@@ -49,6 +49,9 @@
 
   tapObject = function(obj, callback) {
     var config, k, tabNewProperty, theCallback, v;
+    if (obj == null) {
+      return false;
+    }
     theCallback = function() {
       return callback(obj);
     };

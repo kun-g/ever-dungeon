@@ -1,5 +1,7 @@
 (function() {
-  var Serializer, g_attr_constructorTable, generateMonitor, objectlize, registerConstructor;
+  var Serializer, g_attr_constructorTable, generateMonitor, objectlize, registerConstructor, tap;
+
+  tap = require('./helper').tap;
 
   generateMonitor = function(obj) {
     return function(key, val) {
@@ -67,24 +69,19 @@
     };
 
     Serializer.prototype.versionControl = function(versionKey, keys) {
-      var key, ver, versionIncr, _i, _j, _len, _len1, _ref, _results;
+      var key, ver, versionIncr, _i, _len, _ref, _results;
       if (!Array.isArray(keys)) {
         keys = [keys];
       }
-      for (_i = 0, _len = keys.length; _i < _len; _i++) {
-        key = keys[_i];
-        this.attrSave(key);
-      }
       ver = (_ref = this[versionKey]) != null ? _ref : 1;
-      this.attrSave(versionKey, ver);
       versionIncr = (function(_this) {
         return function() {
           return _this[versionKey]++;
         };
       })(this);
       _results = [];
-      for (_j = 0, _len1 = keys.length; _j < _len1; _j++) {
-        key = keys[_j];
+      for (_i = 0, _len = keys.length; _i < _len; _i++) {
+        key = keys[_i];
         _results.push(tap(this, key, versionIncr));
       }
       return _results;
