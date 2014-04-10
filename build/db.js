@@ -119,14 +119,7 @@ function createNewPlayer (account, server, name, handle) {
           cb(null);
         }
       }
-    ],
-    function (err, results) {
-      if (err) {
-        if (handle) handle(err);
-      } else {
-        loadPlayer(name, handle);
-      }
-    });
+    ], handle);
 }
 exports.createNewPlayer = createNewPlayer;
 
@@ -367,6 +360,8 @@ exports.initializeDB = function (cfg) {
   friendPrefix = dbPrefix + 'friend' + dbSeparator;
   sharedPrefix = dbPrefix + 'shared' + dbSeparator;
   limitsPrefix = dbPrefix + 'limits' + dbSeparator;
+
+  LeaderboardPrefix = 'Leaderboard';
 
   sessionPrefix = dbPrefix + 'Session';
 

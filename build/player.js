@@ -32,44 +32,61 @@
   Player = (function(_super) {
     __extends(Player, _super);
 
-    function Player(name) {
-      var now;
-      Player.__super__.constructor.apply(this, arguments);
-      if (name != null) {
-        this.attrSave('name', name);
-      }
-      this.attrSave('questTableVersion', -1);
-      this.attrSave('stageTableVersion', -1);
-      this.attrSave('inventory', Bag(InitialBagSize));
-      this.attrSave('gold', 0);
-      this.attrSave('diamond', 0);
-      this.attrSave('equipment', {});
-      this.attrSave('inventoryVersion', 0);
-      this.versionControl('inventoryVersion', ['gold', 'diamond', 'inventory', 'equipment']);
-      this.attrSave('heroBase', {});
-      this.versionControl('heroVersion', ['hero', 'heroBase']);
-      this.attrSave('stage', []);
-      this.attrSave('stageVersion', 0);
-      this.versionControl('stageVersion', 'stage');
-      this.attrSave('quests', {});
-      this.attrSave('questsVersion', 0);
-      this.versionControl('questVersion', 'quests');
+    function Player(data) {
+      var cfg, now, versionCfg;
       now = new Date();
-      this.attrSave('energy', ENERGY_MAX);
-      this.attrSave('energyTime', now.valueOf());
-      this.versionControl('energyVersion', ['energy', 'energyTime']);
-      this.attrSave('flags', {});
-      this.attrSave('mercenary', []);
-      this.attrSave('dungeonData', null);
-      this.attrSave('runtimeID', -1);
-      this.attrSave('rmb', 0);
-      this.attrSave('spendedDiamond', 0);
-      this.attrSave('tutorialStage', 0);
-      this.attrSave('purchasedCount', {});
-      this.attrSave('lastLogin', currentTime());
-      this.attrSave('creationDate', now.valueOf());
-      this.versionControl('dummyVersion', ['isNewPlayer', 'loginStreak', 'accountID']);
+      cfg = {
+        dbKeyName: '',
+        name: '',
+        questTableVersion: -1,
+        stageTableVersion: -1,
+        inventory: Bag(InitialBagSize),
+        gold: 0,
+        diamond: 0,
+        equipment: {},
+        inventoryVersion: 0,
+        heroBase: {},
+        heroIndex: -1,
+        hero: {},
+        stage: [],
+        stageVersion: 0,
+        quests: {},
+        questsVersion: 0,
+        energy: ENERGY_MAX,
+        energyTime: now.valueOf(),
+        flags: {},
+        mercenary: [],
+        dungeonData: null,
+        runtimeID: -1,
+        rmb: 0,
+        spendedDiamond: 0,
+        tutorialStage: 0,
+        purchasedCount: {},
+        lastLogin: currentTime(),
+        creationDate: now.valueOf(),
+        isNewPlayer: true,
+        loginStreak: {
+          count: 0,
+          date: currentTime()
+        },
+        accountID: -1,
+        campaignState: {},
+        infiniteTimer: currentTime()
+      };
+      versionCfg = {
+        inventoryVersion: ['gold', 'diamond', 'inventory', 'equipment'],
+        heroVersion: ['heroIndex', 'hero', 'heroBase'],
+        stageVersion: 'stage',
+        questVersion: 'quests',
+        energyVersion: ['energy', 'energyTime']
+      };
+      Player.__super__.constructor.call(this, data, cfg, versionCfg);
     }
+
+    Player.prototype.setName = function(name) {
+      this.name = name;
+      return this.dbKeyName = playerPrefix + this.name;
+    };
 
     Player.prototype.logout = function(reason) {
       if (this.socket) {
@@ -136,11 +153,6 @@
 
     Player.prototype.onLogin = function() {
       var dis, flag, ret, s, _i, _len, _ref7;
-      if (this.loginStreak == null) {
-        this.attrSave('loginStreak', {
-          count: 0
-        });
-      }
       if (diffDate(this.lastLogin) > 0) {
         this.purchasedCount = {};
       }
@@ -148,8 +160,8 @@
       if (diffDate(this.creationDate) > 0) {
         this.tutorialStage = 1000;
       }
-      if (!this.infiniteTimer || !moment().isSame(this.infiniteTimer, 'week')) {
-        this.attrSave('infiniteTimer', currentTime());
+      if (!moment().isSame(this.infiniteTimer, 'week')) {
+        this.infiniteTimer = currentTime();
         _ref7 = this.stage;
         for (_i = 0, _len = _ref7.length; _i < _len; _i++) {
           s = _ref7[_i];
@@ -276,7 +288,7 @@
     };
 
     Player.prototype.handlePayment = function(payment, handle) {
-      var myReceipt, myUnwrap;
+      var myReceipt;
       this.log('handlePayment', {
         payment: payment
       });
@@ -287,13 +299,6 @@
         case 'PP25':
         case 'ND91':
           myReceipt = payment.receipt;
-          switch (payment.paymentType) {
-            case 'PP25':
-              myUnwrap = unwrapReceipt;
-              break;
-            case 'ND91':
-              myUnwrap = unwrapReceipt91;
-          }
           return async.waterfall([
             function(cb) {
               return dbWrapper.getReceipt(myReceipt, function(err, receipt) {
@@ -307,7 +312,7 @@
               return function(receipt, cb) {
                 var cfg, productList, rec, ret;
                 productList = queryTable(TABLE_CONFIG, 'Product_List');
-                rec = myUnwrap(myReceipt);
+                rec = unwrapReceipt(myReceipt);
                 cfg = productList[rec.productID];
                 ret = [
                   {
@@ -451,10 +456,9 @@
         return false;
       }
       if (this.hero != null) {
-        this.heroBase[this.hero["class"]] = this.hero;
         this.hero = this.heroBase[hClass];
       } else {
-        this.attrSave('hero', this.heroBase[hClass]);
+        this.hero = this.heroBase[hClass];
       }
       this.hero.equipment = {};
       return this.hero.vip = this.vipLevel();
@@ -1220,7 +1224,6 @@
     };
 
     Player.prototype.aquireItem = function(item, count, allOrFail) {
-      this.inventoryVersion++;
       return this.doAction({
         id: 'AquireItem',
         item: item,
@@ -2057,9 +2060,6 @@
     };
 
     Player.prototype.getCampaignState = function(campaignName) {
-      if (this.campaignState == null) {
-        this.attrSave('campaignState', {});
-      }
       if (this.campaignState[campaignName] == null) {
         if (campaignName === 'Charge') {
           this.campaignState[campaignName] = {};
@@ -2071,9 +2071,6 @@
     };
 
     Player.prototype.setCampaignState = function(campaignName, val) {
-      if (this.campaignState == null) {
-        this.attrSave('campaignState', {});
-      }
       return this.campaignState[campaignName] = val;
     };
 
@@ -2598,24 +2595,6 @@
             cid: e.id,
             stc: e.count
           };
-          if (e.xp === NaN) {
-            console.error({
-              action: 'syncBag',
-              type: 'NaN',
-              name: _this.name,
-              slot: index,
-              item: e
-            });
-          }
-          if (e.xp === NaN) {
-            console.log({
-              action: 'syncBag',
-              type: 'NaN',
-              name: _this.name,
-              slot: index,
-              item: e
-            });
-          }
           if (e.xp != null) {
             ret.xp = e.xp;
           }
