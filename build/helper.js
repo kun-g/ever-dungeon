@@ -76,13 +76,15 @@
       configurable: false,
       writable: false
     };
-    Object.defineProperty(obj, 'newProperty', config);
-    if (Array.isArray(obj)) {
-      return Object.defineProperty(obj, 'push', {
-        value: function(val) {
-          return this.newProperty(this.length, val);
-        }
-      });
+    if (!obj.reactDB) {
+      Object.defineProperty(obj, 'newProperty', config);
+      if (Array.isArray(obj)) {
+        return Object.defineProperty(obj, 'push', {
+          value: function(val) {
+            return this.newProperty(this.length, val);
+          }
+        });
+      }
     }
   };
 
