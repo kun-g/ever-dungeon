@@ -76,7 +76,7 @@
       configurable: false,
       writable: false
     };
-    if (!obj.reactDB) {
+    if (obj.newProperty == null) {
       Object.defineProperty(obj, 'newProperty', config);
       if (Array.isArray(obj)) {
         return Object.defineProperty(obj, 'push', {
