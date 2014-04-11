@@ -10,16 +10,24 @@
   Item = (function(_super) {
     __extends(Item, _super);
 
-    function Item(id) {
-      Item.__super__.constructor.apply(this, arguments);
-      this.attrSave('slot', []);
-      this.attrSave('count', 1);
-      if ((id != null) && typeof id === 'object') {
-        id = id.id;
+    function Item(data) {
+      var cfg;
+      if (typeof data === 'number') {
+        data = {
+          id: data
+        };
       }
-      if (id != null) {
-        this.attrSave('id', id);
+      cfg = {
+        slot: [],
+        count: 1,
+        id: data.id
+      };
+      this.id = data.id;
+      if (this.getConfig().category === ITEM_EQUIPMENT) {
+        cfg.xp = 0;
+        cfg.enhancement = [];
       }
+      Item.__super__.constructor.call(this, data, cfg, {});
       if (this.id != null) {
         this.initialize();
       }
@@ -38,16 +46,7 @@
 
     Item.prototype.initialize = function() {
       if (this.id != null) {
-        this.restore(this.getConfig());
-      }
-      if (this.id != null) {
-        this.attrSave('id', this.id);
-      }
-      if (this.category === ITEM_EQUIPMENT && (this.xp == null)) {
-        this.attrSave('xp', 0);
-      }
-      if (this.category === ITEM_EQUIPMENT && (this.enhancement == null)) {
-        return this.attrSave('enhancement', []);
+        return this.restore(this.getConfig());
       }
     };
 

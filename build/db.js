@@ -119,14 +119,7 @@ function createNewPlayer (account, server, name, handle) {
           cb(null);
         }
       }
-    ],
-    function (err, results) {
-      if (err) {
-        if (handle) handle(err);
-      } else {
-        loadPlayer(name, handle);
-      }
-    });
+    ], handle);
 }
 exports.createNewPlayer = createNewPlayer;
 
@@ -198,25 +191,46 @@ function tryToRegisterName (name, callback) {
   dbClient.sadd(PlayerNameSet, name, function (err, ret) {
     if (err == null && ret == 0) err = new Error(RET_NameTaken);
     callback(err);
-  }); 
+  });
 }
-
 function loadPlayer(name, handler) {
   var playerLib = require('./player');
-  var p = new playerLib.Player(name); 
-  p.setDBKeyName(playerPrefix+name);
+  var p = new playerLib.Player();
+  p.setName(name);
   p.load(function (err, result) {
-    p = result;
-    if (err == null) {
-      if (result) {
-        p.initialize();
-      } else {
-        p = null;
-      }
+    if (result) {
+      console.log(p.inventory.container[0])
+      p.initialize();
+    } else {
+      p = null;
     }
     if (handler) handler(err, p);
   });
 }
+/*
+function loadPlayer(name, handler) {
+  var playerLib = require('./player');
+  var dbKeyName = playerPrefix+name;
+  dbClient.hgetall(dbKeyName, function (err, result) {
+    var p = null;
+    if (result) {
+      attributes = {};
+      for (var k in result) {
+        var v = result[k];
+        try {
+          attributes[k] = JSON.parse(v);
+        } catch (error) {
+          attributes[k] = v;
+        }
+      }
+      p = new playerLib.Player(attributes);
+      p.setName(name);
+      p.initialize();
+    }
+    if (handler) handler(err, p);
+  });
+}
+*/
 exports.loadPlayer = loadPlayer;
  
 ////////////// Player Manipulation //////////////

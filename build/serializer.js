@@ -1,5 +1,7 @@
 (function() {
-  var Serializer, g_attr_constructorTable, generateMonitor, objectlize, registerConstructor;
+  var Serializer, g_attr_constructorTable, generateMonitor, objectlize, registerConstructor, tap;
+
+  tap = require('./helper').tap;
 
   generateMonitor = function(obj) {
     return function(key, val) {
@@ -8,7 +10,11 @@
   };
 
   Serializer = (function() {
-    function Serializer() {
+    function Serializer(data, cfg, versionCfg) {
+      var flags, k, v;
+      if (versionCfg == null) {
+        versionCfg = {};
+      }
       this.s_attr_to_save = [];
       this.s_attr_dirtyFlag = {};
       this.s_attr_monitor = generateMonitor(this);
@@ -24,36 +30,50 @@
         enumerable: false,
         writable: false
       });
+      this.restore(data);
+      flags = {};
+      for (k in cfg) {
+        v = cfg[k];
+        if (!(this[k] == null)) {
+          continue;
+        }
+        this[k] = v;
+        flags[k] = true;
+      }
+      for (k in versionCfg) {
+        v = versionCfg[k];
+        this.versionControl(k, v);
+      }
+      for (k in cfg) {
+        v = cfg[k];
+        this.attrSave(k, flags[k]);
+      }
     }
 
-    Serializer.prototype.attrSave = function(key, val) {
+    Serializer.prototype.attrSave = function(key, restoreFlag) {
+      if (restoreFlag == null) {
+        restoreFlag = false;
+      }
       if (this.s_attr_to_save.indexOf(key) !== -1) {
         return false;
       }
-      this[key] = val;
-      tap(this, key, this.s_attr_monitor);
+      tap(this, key, this.s_attr_monitor, restoreFlag);
       return this.s_attr_to_save.push(key);
     };
 
     Serializer.prototype.versionControl = function(versionKey, keys) {
-      var key, ver, versionIncr, _i, _j, _len, _len1, _ref, _results;
+      var key, versionIncr, _i, _len, _results;
       if (!Array.isArray(keys)) {
         keys = [keys];
       }
-      for (_i = 0, _len = keys.length; _i < _len; _i++) {
-        key = keys[_i];
-        this.attrSave(key);
-      }
-      ver = (_ref = this[versionKey]) != null ? _ref : 1;
-      this.attrSave(versionKey, ver);
       versionIncr = (function(_this) {
         return function() {
           return _this[versionKey]++;
         };
       })(this);
       _results = [];
-      for (_j = 0, _len1 = keys.length; _j < _len1; _j++) {
-        key = keys[_j];
+      for (_i = 0, _len = keys.length; _i < _len; _i++) {
+        key = keys[_i];
         _results.push(tap(this, key, versionIncr));
       }
       return _results;
@@ -101,17 +121,17 @@
         v = data[k];
         if (v != null) {
           if (v._constructor_ != null) {
-            this.attrSave(k, objectlize(v));
+            this[k] = objectlize(v);
           } else if (Array.isArray(v)) {
-            this.attrSave(k, v.map(function(e) {
+            this[k] = v.map(function(e) {
               if ((e != null ? e._constructor_ : void 0) != null) {
                 return objectlize(e);
               } else {
                 return e;
               }
-            }));
+            });
           } else {
-            this.attrSave(k, v);
+            this[k] = v;
           }
         }
       }
@@ -124,6 +144,7 @@
       _ref = this.s_attr_dirtyFlag;
       for (key in _ref) {
         val = _ref[key];
+        console.log('Key', key, this[key]);
         if (ret == null) {
           ret = {};
         }
@@ -160,8 +181,8 @@
     if (!g_attr_constructorTable[data._constructor_]) {
       throw 'No constructor:' + data._constructor_;
     }
-    o = new g_attr_constructorTable[data._constructor_]();
-    o.restore(data.save);
+    console.log(data._constructor_, data.save);
+    o = new g_attr_constructorTable[data._constructor_](data.save);
     if (o.initialize != null) {
       o.initialize();
     }
