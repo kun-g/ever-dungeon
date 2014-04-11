@@ -192,7 +192,7 @@
         return [];
       }
       if (me.flags == null) {
-        me.attrSave('flags', {});
+        me.flags = {};
       }
       if ((e.flag != null) && !me.flags[e.flag]) {
         delete me[key];
@@ -203,7 +203,8 @@
       }
       flag = false;
       if (me[key] == null) {
-        me.attrSave(key, {});
+        me.newProperty(key, {});
+        me.attrSave(key, true);
         flag = true;
       }
       if (e.daily) {

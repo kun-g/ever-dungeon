@@ -179,9 +179,6 @@
               ev.push(player.notifyVersions());
               ev.push(player.syncEnergy());
               ev.push(player.syncFlags());
-              if (player.abIndex == null) {
-                player.attrSave('abIndex', rand());
-              }
               ev.push({
                 NTF: Event_ABIndex,
                 arg: {
