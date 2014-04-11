@@ -616,10 +616,6 @@
             }
           });
         }
-        this.log('stage', {
-          operation: operation,
-          stage: stage
-        });
         return ret;
       }
     };

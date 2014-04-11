@@ -144,7 +144,6 @@
       _ref = this.s_attr_dirtyFlag;
       for (key in _ref) {
         val = _ref[key];
-        console.log('Key', key, this[key]);
         if (ret == null) {
           ret = {};
         }
@@ -181,7 +180,6 @@
     if (!g_attr_constructorTable[data._constructor_]) {
       throw 'No constructor:' + data._constructor_;
     }
-    console.log(data._constructor_, data.save);
     o = new g_attr_constructorTable[data._constructor_](data.save);
     if (o.initialize != null) {
       o.initialize();
