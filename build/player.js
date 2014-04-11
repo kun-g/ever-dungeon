@@ -409,8 +409,7 @@
 
     Player.prototype.releaseDungeon = function() {
       delete this.dungeon;
-      this.dungeonData = {};
-      return dbLib.removeDungeon(this.name);
+      return this.dungeonData = {};
     };
 
     Player.prototype.getPurchasedCount = function(id) {
@@ -658,7 +657,7 @@
       return async.waterfall([
         (function(_this) {
           return function(cb) {
-            if (_this.dungeonData) {
+            if (_this.dungeonData.stage != null) {
               return cb('OK');
             } else {
               return cb();
