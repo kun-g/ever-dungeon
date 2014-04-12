@@ -1,7 +1,7 @@
 (function() {
   var Serializer, g_attr_constructorTable, generateMonitor, objectlize, registerConstructor, tap;
 
-  tap = require('./helper').tap;
+  tap = require('./define').tap;
 
   generateMonitor = function(obj) {
     return function(key, val) {

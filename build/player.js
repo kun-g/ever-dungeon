@@ -472,7 +472,7 @@
         v = _ref7[k];
         this.hero.newProperty(k, JSON.parse(JSON.stringify(v)));
       }
-      this.hero.newProperty('equipment', {});
+      this.hero.newProperty('equipment', []);
       return this.hero.newProperty('vip', this.vipLevel());
     };
 
