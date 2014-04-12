@@ -487,7 +487,6 @@
       if (type === 'diamond') {
         this.costedDiamond += point;
       }
-      this.inventoryVersion++;
       return this[type];
     };
 
@@ -797,7 +796,7 @@
         return [];
       }
       quest = queryTable(TABLE_QUEST, qid, this.abIndex);
-      this.quests[qid] = {
+      this.quests.newProperty(qid, {
         counters: (function() {
           var _i, _len, _ref7, _results;
           _ref7 = quest.objects;
@@ -808,8 +807,7 @@
           }
           return _results;
         })()
-      };
-      this.questsVersion++;
+      });
       this.onEvent('gold');
       this.onEvent('diamond');
       this.onEvent('item');
@@ -1010,9 +1008,9 @@
       this.log('claimQuest', {
         id: qid
       });
-      this.quests[qid] = {
+      this.quests.newProperty(qid, {
         complete: true
-      };
+      });
       return ret.concat(this.updateQuestStatus());
     };
 
@@ -1097,7 +1095,6 @@
         slot: slot,
         id: item.id
       });
-      this.inventoryVersion++;
       switch (item.category) {
         case ITEM_USE:
           switch (item.subcategory) {
@@ -1199,7 +1196,7 @@
                 sta: 0
               });
             }
-            this.equipment[item.subcategory] = slot;
+            this.equipment.newProperty(item.subcategory, slot);
             tmp.sta = 1;
           }
           ret.arg.itm.push(tmp);
@@ -1241,7 +1238,6 @@
     };
 
     Player.prototype.removeItemById = function(id, count, allorfail) {
-      this.inventoryVersion++;
       return this.doAction({
         id: 'RemoveItem',
         item: id,
@@ -1251,7 +1247,6 @@
     };
 
     Player.prototype.removeItem = function(item, count, slot) {
-      this.inventoryVersion++;
       return this.doAction({
         id: 'RemoveItem',
         item: item,
@@ -1420,7 +1415,6 @@
           delete this.equipment[k];
         }
       }
-      this.inventoryVersion++;
       this.addGold(-cost);
       ret = this.removeItem(null, 1, slot);
       newItem = new Item(item.upgradeTarget);
@@ -1508,7 +1502,6 @@
           minIndex = i;
         }
       }
-      this.inventoryVersion++;
       level = 0;
       enhanceID = -1;
       maxLevel++;
