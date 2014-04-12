@@ -205,7 +205,7 @@
       }
       flag = false;
       if (me[key] == null) {
-        me.newProperty(key, {});
+        me[key] = {};
         me.attrSave(key, true);
         flag = true;
       }
