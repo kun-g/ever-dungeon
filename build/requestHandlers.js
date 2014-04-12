@@ -441,10 +441,10 @@
                 } else {
                   status = 'Replay Failed';
                   result.RET = RET_Unknown;
-                  player.saveDB(function() {
-                    return player.releaseDungeon();
-                  });
                 }
+                player.saveDB(function() {
+                  return player.releaseDungeon();
+                });
               }
             }
           } else {
