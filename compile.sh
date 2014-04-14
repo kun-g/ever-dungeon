@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-while [ $CurrentBranch = "master" ]; do
+while [ "$CurrentBranch" = "master" ]; do
   read -p "Do you wish to update the MASTER branch(YES/NO):" yn
   case $yn in
     [YES]* ) break;;
