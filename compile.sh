@@ -24,7 +24,10 @@ cp js/*.js $CurrentPWD/build
 cp package.json $CurrentPWD/build
 cd ../data
 echo $0 $1
-#git pull
+if [ $1 = "all" ]
+then
+	git pull
+fi
 
 cd ..
 
