@@ -67,7 +67,7 @@ then
 elif [ $CurrentBranch = master ]
 then
   CDNVersionBucket='drhu'
-  RemoteRepo='deploy'
+  RemoteRepo='deploy0'
   UpdateUrl='http://drhu.qiniudn.com'
   ServerConfiguration='Master'
   ServerID=1
