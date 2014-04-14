@@ -458,7 +458,7 @@
         }
         heroData.equipment = equip;
         heroData.vip = this.vipLevel();
-        hero.equipment = equip;
+        this.hero.equipment = equip;
         return new Hero(heroData);
       } else {
         throw 'NoHero';
