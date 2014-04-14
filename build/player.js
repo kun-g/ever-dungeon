@@ -34,6 +34,7 @@
 
     function Player(data) {
       var cfg, now, versionCfg;
+      this.type = 'player';
       now = new Date();
       cfg = {
         dbKeyName: '',

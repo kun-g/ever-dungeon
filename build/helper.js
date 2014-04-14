@@ -125,6 +125,7 @@
         if (obj[key] == null) {
           obj[key] = v.initialValue;
         }
+        localConfig[k].func(player.name, obj[key]);
         _results.push(tap(obj, key, function(dummy, value) {
           return localConfig[k].func(player.name, value);
         }));
