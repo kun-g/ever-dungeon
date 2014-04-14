@@ -23,7 +23,7 @@ gulp compile
 cp js/*.js $CurrentPWD/build
 cp package.json $CurrentPWD/build
 cd ../data
-if [ $1 = "all" ]
+if [ "$1" = "all" ]
 then
 	echo "Fetching table"
 	git pull
