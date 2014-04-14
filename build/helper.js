@@ -129,9 +129,9 @@
         });
       });
     };
-    return exports.getPositionOnLeaderboard = function(board, name, cb) {
+    return exports.getPositionOnLeaderboard = function(board, name, from, to, cb) {
       cfg = localConfig[board];
-      return require('./dbWrapper').getPositionOnLeaderboard(cfg.name, name, cfg.reverse, cb);
+      return require('./db').queryLeaderboard(cfg.name, name, from, to, cb);
     };
   };
 
