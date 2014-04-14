@@ -1,9 +1,11 @@
 (function() {
-  var Player, async, dbLib, dbWrapperLib, http, loadPlayer, loginBy, moment, wrapReceipt;
+  var Player, async, dbLib, dbWrapperLib, helperLib, http, loadPlayer, loginBy, moment, wrapReceipt;
 
   require('./define');
 
   dbLib = require('./db');
+
+  helperLib = require('./helper');
 
   dbWrapperLib = require('./dbWrapper');
 
@@ -603,6 +605,23 @@
           }
         });
       }
+    },
+    RPC_QueryLeaderboard: {
+      id: 30,
+      func: function(arg, player, handler, rpcID, socket) {
+        return dbLib.queryLeaderboard(arg.typ, player.name, arg.src, arg.src + arg.cnt, function(err, result) {
+          var ret;
+          ret = {
+            REQ: rpcID,
+            RET_OK: RET_OK
+          };
+          ret.me = result.position;
+          ret.lst = result.board;
+          return handler([ret]);
+        });
+      },
+      args: [],
+      needPid: true
     },
     RPC_SubmitDailyQuest: {
       id: 29,

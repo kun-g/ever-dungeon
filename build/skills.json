@@ -41,7 +41,8 @@
         { "type": "event", "event": "onBePhysicalDamage" },
         { "type": "event", "event": "onBePhysicalRangeDamage" },
           { "type": "event", "event": "onBeSpellDamage" },
-          { "type": "event", "event": "onBeSpellRangeDamage" }
+          { "type": "event", "event": "onBeSpellRangeDamage" },
+          { "type": "targetMutex", "mutex": "reinforce" }
       ],
       "availableCondition": [
         { "type": "effectCount" }
