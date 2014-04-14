@@ -1,5 +1,5 @@
 (function() {
-  var Player, async, dbLib, dbWrapperLib, helperLib, http, loadPlayer, loginBy, moment, wrapReceipt;
+  var DBWrapper, Player, addMercenaryMember, async, dbLib, getMercenaryMember, getPlayerHero, helperLib, http, loadPlayer, loginBy, moment, updateMercenaryMember, wrapReceipt, _ref;
 
   require('./define');
 
@@ -7,7 +7,7 @@
 
   helperLib = require('./helper');
 
-  dbWrapperLib = require('./dbWrapper');
+  _ref = require('./dbWrapper'), DBWrapper = _ref.DBWrapper, getMercenaryMember = _ref.getMercenaryMember, updateMercenaryMember = _ref.updateMercenaryMember, addMercenaryMember = _ref.addMercenaryMember, getPlayerHero = _ref.getPlayerHero;
 
   async = require('async');
 
@@ -129,7 +129,7 @@
       func: function(arg, dummy, handle, rpcID, socket, registerFlag) {
         return async.waterfall([
           function(cb) {
-            var current, limit, _ref;
+            var current, limit, _ref1;
             if (arg.bv == null) {
               cb(Error(RET_AppVersionNotMatch));
               return logError({
@@ -139,7 +139,7 @@
             } else {
               current = queryTable(TABLE_VERSION, 'bin_version');
               limit = queryTable(TABLE_VERSION, 'bin_version_need');
-              if (!((limit <= (_ref = arg.bv) && _ref <= current))) {
+              if (!((limit <= (_ref1 = arg.bv) && _ref1 <= current))) {
                 return cb(Error(RET_AppVersionNotMatch));
               } else {
                 return cb(null);
