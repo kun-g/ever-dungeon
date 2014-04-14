@@ -78,6 +78,8 @@
           return doLoop(expr, variable, cmd);
         case 'Action':
           return doAction(expr, variable, cmd);
+        case 'Time':
+          return moment(expr.time);
         default:
           return getVar(expr, variable, cmd);
       }
@@ -136,6 +138,9 @@
         case '~':
           return 'Formular';
       }
+    }
+    if (expr.time) {
+      return 'Time';
     }
     return 'Undefined';
   };

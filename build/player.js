@@ -278,6 +278,7 @@
       if (this.isNewPlayer) {
         this.isNewPlayer = false;
       }
+      helperLib.assignLeaderboard(this);
       this.inventory.validate();
       if (this.hero != null) {
         this.updateMercenaryInfo();
