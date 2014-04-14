@@ -1490,8 +1490,8 @@
     },
     {
         "chapterId": 13,
-        "idx": 12,
-        "style": "map-dungeon13",
+        "idx": 0,
+        "style": "map-dungeon1",
         "title":"dungeonname1.png",
         "label":"多姆洞穴",
         "desc":"似乎是天然形成的洞穴，出没着一些危险的\n野生怪物，让不少旅人有去无回。",

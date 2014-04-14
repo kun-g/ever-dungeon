@@ -374,9 +374,8 @@
                 "value":455,
                 "count":1},
             {
-                "type":0,
-                "value":28,
-                "count":4},
+                "type":1,
+                "count":2000},
             {
                 "type":0,
                 "value":538,
