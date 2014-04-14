@@ -13,7 +13,7 @@ gulp compile
 cp js/*.js $CurrentPWD/build
 cp package.json $CurrentPWD/build
 cd ../data
-git pull
+#git pull
 
 cd ..
 

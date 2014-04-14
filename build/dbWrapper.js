@@ -290,12 +290,12 @@
   };
 
   exports.updateLeaderboard = function(board, member, score, callback) {
-    return dbClient.zadd(makeDBKey([LeaderboardPrefix, board]), score, member, callback);
+    return dbClient.zadd(makeDBKey([board], LeaderboardPrefix), score, member, callback);
   };
 
   exports.getPositionOnLeaderboard = function(board, member, rev, callback) {
     var key;
-    key = makeDBKey([LeaderboardPrefix, board]);
+    key = makeDBKey([board], LeaderboardPrefix);
     if (rev) {
       return dbClient.zrevrank(key, member, callback);
     } else {

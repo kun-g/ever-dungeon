@@ -101,7 +101,7 @@
     for (key in config) {
       cfg = config[key];
       localConfig[key] = {
-        func: generateHandler(key, cfg)
+        func: generateHandler(cfg.name, cfg)
       };
       for (k in cfg) {
         v = cfg[k];
