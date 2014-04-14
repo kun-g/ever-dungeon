@@ -615,7 +615,7 @@
             REQ: rpcID,
             RET: RET_OK
           };
-          console.log(result);
+          console.log(err, result);
           if (arg.me != null) {
             ret.me = result.position;
           }
