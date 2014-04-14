@@ -613,11 +613,19 @@
           var ret;
           ret = {
             REQ: rpcID,
-            RET_OK: RET_OK
+            RET: RET_OK
           };
-          ret.me = result.position;
-          ret.lst = result.board;
-          return handler([ret]);
+          if (result.position != null) {
+            ret.me = result.position;
+          }
+          if (result.board != null) {
+            return async.map(result.board, getPlayerHero, function(err, result) {
+              ret.lst = result.map(getBasicInfo);
+              return handler([ret]);
+            });
+          } else {
+            return handler([ret]);
+          }
         });
       },
       args: [],

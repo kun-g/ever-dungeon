@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 while [ $CurrentBranch = "master" ]; do
   read -p "Do you wish to update the MASTER branch(YES/NO):" yn
   case $yn in
@@ -22,7 +23,8 @@ gulp compile
 cp js/*.js $CurrentPWD/build
 cp package.json $CurrentPWD/build
 cd ../data
-git pull
+echo $0 $1
+#git pull
 
 cd ..
 
