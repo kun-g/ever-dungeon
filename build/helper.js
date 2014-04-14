@@ -203,6 +203,7 @@
         delete me[key];
       }
       flag = false;
+      console.log(key, me[key], me.flags);
       if (me[key] == null) {
         me[key] = {};
         me.attrSave(key, true);

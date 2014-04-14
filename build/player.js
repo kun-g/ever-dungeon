@@ -164,7 +164,7 @@
         this.purchasedCount = {};
       }
       this.lastLogin = currentTime();
-      if (diffDate(this.creationDate) > 0) {
+      if (diffDate(this.creationDate) > 7) {
         this.tutorialStage = 1000;
       }
       if (!moment().isSame(this.infiniteTimer, 'week')) {

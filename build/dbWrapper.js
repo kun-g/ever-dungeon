@@ -171,7 +171,6 @@
         try {
           vip = playerLib.getVip(rmb);
           hero = JSON.parse(hero);
-          console.log(hero.equipment);
           hero.vipLevel = +vip.level;
           return hero.blueStar = +blueStar;
         } catch (_error) {
@@ -237,7 +236,6 @@
             return cb(null, list);
           } else {
             selectedName = mList[rand() % mList.length];
-            console.log(selectedName, battleForce);
             return getPlayerHero(selectedName, function(err, hero) {
               if (hero) {
                 return cb(new Error('Done'), hero);
