@@ -92,7 +92,7 @@
 
   exports.initLeaderboard = function(config) {
     var cfg, generateHandler, k, key, localConfig, v;
-    localConfig = {};
+    localConfig = [];
     generateHandler = function(dbKey, cfg) {
       return function(name, value) {
         return require('./dbWrapper').updateLeaderboard(dbKey, name, value);
@@ -109,12 +109,10 @@
       }
     }
     exports.assignLeaderboard = function(player) {
-      var obj, tmp, _ref, _results;
-      _results = [];
-      for (k in config) {
-        v = config[k];
-        if (!(player.type === v.type)) {
-          continue;
+      return localConfig.forEach(function(v) {
+        var obj, tmp, _ref;
+        if (player.type !== v.type) {
+          return false;
         }
         tmp = v.key.split('.');
         key = tmp.pop();
@@ -125,15 +123,15 @@
         if (obj[key] == null) {
           obj[key] = v.initialValue;
         }
-        localConfig[k].func(player.name, obj[key]);
-        _results.push(tap(obj, key, function(dummy, value) {
-          return localConfig[k].func(player.name, value);
-        }));
-      }
-      return _results;
+        v.func(player.name, obj[key]);
+        return tap(obj, key, function(dummy, value) {
+          return v.func(player.name, value);
+        });
+      });
     };
     return exports.getPositionOnLeaderboard = function(board, name, cb) {
-      return require('./dbWrapper').getPositionOnLeaderboard(board, name, localConfig[board].reverse, cb);
+      cfg = localConfig[board];
+      return require('./dbWrapper').getPositionOnLeaderboard(cfg.name, name, cfg.reverse, cb);
     };
   };
 
