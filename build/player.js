@@ -41,6 +41,7 @@
         name: '',
         questTableVersion: -1,
         stageTableVersion: -1,
+        event_daily: {},
         inventory: Bag(InitialBagSize),
         gold: 0,
         diamond: 0,
