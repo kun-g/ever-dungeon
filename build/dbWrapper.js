@@ -45,7 +45,6 @@
           info: 'Saving',
           data: data
         });
-        return;
         return dbClient.hmset(this.getDBKeyName(), data, (function(_this) {
           return function(err, e) {
             if (handler != null) {
