@@ -427,7 +427,7 @@
     };
 
     Player.prototype.createHero = function(heroData) {
-      var bag, e, equip, i, k, v, _ref7, _ref8;
+      var bag, e, equip, hero, i, k, v, _ref7, _ref8;
       if (heroData != null) {
         if (this.heroBase[heroData["class"]] != null) {
           return null;
@@ -458,8 +458,9 @@
         }
         heroData.equipment = equip;
         heroData.vip = this.vipLevel();
-        this.hero.equipment = equip;
-        return new Hero(heroData);
+        hero = new Hero(heroData);
+        this.battleForce = hero.calculatePower();
+        return hero;
       } else {
         throw 'NoHero';
       }
