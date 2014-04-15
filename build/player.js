@@ -934,7 +934,7 @@
             case PRIZETYPE_FUNCTION:
               switch (p.func) {
                 case "setFlag":
-                  this.flags[p.flag] = p.value;
+                  this.flags.newProperty(p.flag, p.value);
                   ret = ret.concat(this.syncFlags(true)).concat(this.syncEvent());
               }
           }
