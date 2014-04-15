@@ -565,8 +565,8 @@
       this.stageVersion++;
       if (stg) {
         chapter = stg.chapter;
-        if (!this.stage[stage]) {
-          this.stage[stage] = {};
+        if (this.stage[stage] == null) {
+          this.stage.newProperty(stage, {});
         }
         flag = false;
         arg = {

@@ -192,10 +192,7 @@
         delete me[key];
         return [];
       }
-      if (me.flags == null) {
-        me.flags = {};
-      }
-      if ((e.flag != null) && !me.flags[e.flag]) {
+      if ((e.flag != null) && (me.flags[e.flag] == null)) {
         delete me[key];
         return [];
       }
@@ -211,30 +208,30 @@
       }
       if (e.daily) {
         if (!me[key].date || diffDate(me[key].date, currentTime()) !== 0) {
-          me[key].status = 'Ready';
-          me[key].date = currentTime();
+          me[key].newProperty('status', 'Ready');
+          me[key].newProperty('date', currentTime());
           flag = true;
           if (key === 'event_daily') {
-            me[key].rank = me.battleForce / 24 - 3;
+            me[key].newProperty('rank', me.battleForce / 24 - 3);
             if (me[key].rank < 1) {
               me[key].rank = 1;
             }
-            me[key].reward = [
+            me[key].newProperty('reward', [
               {
                 type: PRIZETYPE_GOLD,
                 count: Math.floor(me[key].rank * 18)
               }
-            ];
+            ]);
           }
         }
       }
       if (e.quest && Array.isArray(e.quest) && (me[key].quest == null)) {
-        me[key].quest = shuffle(e.quest, Math.random()).slice(0, e.steps);
-        me[key].step = 0;
+        me[key].newProperty('quest', shuffle(e.quest, Math.random()).slice(0, e.steps));
+        me[key].newProperty('step', 0);
         goldCount = Math.ceil(me[key].rank * 6);
         diamondCount = Math.ceil(me[key].rank / 10);
         goldCount = Math.floor(me[key].rank * 6);
-        me[key].stepPrize = [
+        me[key].newProperty('stepPrize', [
           [
             {
               type: PRIZETYPE_GOLD,
@@ -284,7 +281,7 @@
               count: 1
             }
           ]
-        ];
+        ]);
       }
       quest = me[key].quest;
       if (Array.isArray(quest)) {
