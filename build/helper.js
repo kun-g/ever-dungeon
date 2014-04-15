@@ -181,7 +181,7 @@
   exports.diffDate = diffDate;
 
   initCampaign = function(me, allCampaign, abIndex) {
-    var diamondCount, e, evt, flag, goldCount, key, quest, ret, _ref;
+    var diamondCount, e, evt, goldCount, key, quest, ret;
     ret = [];
     for (key in allCampaign) {
       e = allCampaign[key];
@@ -189,28 +189,19 @@
         continue;
       }
       if ((e.prev != null) && (me[e.prev] != null) && me[e.prev].status !== 'Done') {
-        delete me[key];
         return [];
       }
       if ((e.flag != null) && (me.flags[e.flag] == null)) {
-        delete me[key];
         return [];
       }
-      if (e.daily && (((_ref = me[key]) != null ? _ref.date : void 0) != null) && diffDate(me[key].date, currentTime()) !== 0) {
-        delete me[key];
-      }
-      flag = false;
-      console.log(key, me[key], me.flags);
       if (me[key] == null) {
         me[key] = {};
         me.attrSave(key, true);
-        flag = true;
       }
       if (e.daily) {
         if (!me[key].date || diffDate(me[key].date, currentTime()) !== 0) {
-          me[key].newProperty('status', 'Ready');
+          me[key].newProperty('status', 'Init');
           me[key].newProperty('date', currentTime());
-          flag = true;
           if (key === 'event_daily') {
             me[key].newProperty('rank', me.battleForce / 24 - 3);
             if (me[key].rank < 1) {
@@ -225,7 +216,7 @@
           }
         }
       }
-      if (e.quest && Array.isArray(e.quest) && (me[key].quest == null)) {
+      if (e.quest && Array.isArray(e.quest) && me[key].status === 'Init') {
         me[key].newProperty('quest', shuffle(e.quest, Math.random()).slice(0, e.steps));
         me[key].newProperty('step', 0);
         goldCount = Math.ceil(me[key].rank * 6);
@@ -308,6 +299,9 @@
             }
             return ret.concat(initCampaign(me, allCampaign, abIndex));
           }
+          break;
+        case 'Init':
+          me[key].status = 'Ready';
           break;
         case 'Ready':
           if (quest != null) {
