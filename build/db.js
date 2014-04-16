@@ -139,7 +139,7 @@ var lua_fetchMessage = " \
     local msg = redis.call('get', messagePrefix..v); \
     if msg then \
       msg = cjson.decode(msg); \
-      if msg.type == 201 && msg.src == 0 then \
+      if msg.type == 201 and msg.src == 0 then \
         reward[#reward+1] = msg; \
       else \
         result[#result+1] = msg; \
