@@ -68,8 +68,7 @@
         creationDate: now.valueOf(),
         isNewPlayer: true,
         loginStreak: {
-          count: 0,
-          date: currentTime()
+          count: 0
         },
         accountID: -1,
         campaignState: {},

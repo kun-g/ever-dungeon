@@ -473,7 +473,6 @@ exports.initializeDB = function (cfg) {
   dbClient.script('load', lua_fetchMessage, function (err, sha) {
     exports.fetchMessage = function (name, handler) {
       dbClient.evalsha(sha, 0, dbPrefix, name, function (err, ret) {
-        console.log(name, err, ret);
         if (handler) { handler(err, JSON.parse(ret)); }
       });
     };
