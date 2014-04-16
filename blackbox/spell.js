@@ -863,13 +863,22 @@
             }
             break;
           case 'kill':
-            for (_n = 0, _len5 = target.length; _n < _len5; _n++) {
-              t = target[_n];
+            if (a.self) {
               if (typeof cmd.routine === "function") {
                 cmd.routine({
                   id: 'Kill',
-                  tar: t
+                  tar: this
                 });
+              }
+            } else {
+              for (_n = 0, _len5 = target.length; _n < _len5; _n++) {
+                t = target[_n];
+                if (typeof cmd.routine === "function") {
+                  cmd.routine({
+                    id: 'Kill',
+                    tar: t
+                  });
+                }
               }
             }
             break;
