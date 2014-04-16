@@ -71,23 +71,6 @@ lua_createPassportWithAccount = " \
     return uid; \
   end";
 
-//function createPassportWithAccount (type, id, handler) {
-//  acc = -1;
-//  async.waterfall([
-//      function (cb) { accountDBClient.incr(CurrentAccountID, cb); },
-//      function (account, cb) {
-//        acc = account;
-//        async.parallel([
-//            function (cb) { accountDBClient.set(makeDBKey([passportPrefix, type, id, 'account']), account, cb); },
-//            function (cb) { accountDBClient.hset(makeDBKey([accPrefix, account]), 'creation_date', (new Date()).valueOf(), cb); }
-//          ], cb);
-//      }], function (err, result) {
-//        if (handler) {
-//          handler(err, acc);
-//        }
-//      });
-//}
-
 exports.loadAccount = function (id, handler) { accountDBClient.hgetall(makeDBKey([accPrefix, id]), handler); };
 exports.getPlayerNameByID = function (id, serverName, cb)  { accountDBClient.hget(makeDBKey([accPrefix, id]), serverName, cb); };
 // TODO: creation after creation
