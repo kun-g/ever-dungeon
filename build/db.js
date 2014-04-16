@@ -174,7 +174,11 @@ var lua_fetchMessage = " \
     end \
     result[#result+1] = msg; \
   end \
-  return cjson.encode(result);";
+  if #result > 0 then \
+    return cjson.encode(result); \
+  else \
+    return '[]'; \
+  end";
 
 //   dbClient.smembers(playerMessagePrefix+name, function (err, ids) {
 //     async.map(
