@@ -63,7 +63,7 @@
         var s;
         if (!e.alive) {
           console.log('Connect', e);
-          s = net.connect(e, function() {
+          s = net.connect(e.port, e.ip, function() {
             e.alive = true;
             return cb(null, e);
           });
