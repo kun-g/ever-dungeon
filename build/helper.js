@@ -113,7 +113,7 @@
     }
     dbLib = require('./db');
     dbLib.getServerConfig('Leaderboard', function(err, arg) {
-      if (cfg) {
+      if (arg) {
         srvCfg = JSON.parse(arg);
       }
       for (key in config) {
@@ -204,7 +204,27 @@
     }
     date = moment(date).zone("+08:00");
     today = moment(today).zone("+08:00");
-    return date < today;
+    if (rule.weekday != null) {
+      date = date.weekday(rule.weekday);
+    } else if (rule.monthday != null) {
+      date = date.date(rule.monthday);
+    }
+    if (rule.month) {
+      date = date.month(rule.month);
+    }
+    if (rule.day) {
+      date = date.day(rule.day);
+    }
+    if (rule.hour) {
+      date = date.hour(rule.hour);
+    }
+    if (rule.minute) {
+      date = date.minute(rule.minute);
+    }
+    if (rule.second) {
+      date = date.second(rule.second);
+    }
+    return date <= today;
   };
 
   exports.matchDate = matchDate;

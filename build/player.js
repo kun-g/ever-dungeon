@@ -296,7 +296,7 @@
     };
 
     Player.prototype.handlePayment = function(payment, handle) {
-      var myReceipt;
+      var myReceipt, myUnwrap;
       this.log('handlePayment', {
         payment: payment
       });
@@ -307,6 +307,13 @@
         case 'PP25':
         case 'ND91':
           myReceipt = payment.receipt;
+          switch (payment.paymentType) {
+            case 'PP25':
+              myUnwrap = unwrapReceipt;
+              break;
+            case 'ND91':
+              myUnwrap = unwrapReceipt91;
+          }
           return async.waterfall([
             function(cb) {
               return dbWrapper.getReceipt(myReceipt, function(err, receipt) {
@@ -320,7 +327,7 @@
               return function(receipt, cb) {
                 var cfg, productList, rec, ret;
                 productList = queryTable(TABLE_CONFIG, 'Product_List');
-                rec = unwrapReceipt(myReceipt);
+                rec = myUnwrap(myReceipt);
                 cfg = productList[rec.productID];
                 ret = [
                   {

@@ -61,16 +61,19 @@
     setInterval((function() {
       return async.map(appNet.backends, function(e, cb) {
         var s;
-        s = net.connect(e, function() {
-          e.alive = true;
-          s.destroy();
-          return cb(null, e);
-        });
-        return s.on('error', function() {
-          e.alive = false;
-          s.destroy();
-          return cb(null, e);
-        });
+        if (!e.alive) {
+          console.log('Connect', e);
+          s = net.connect(e, function() {
+            e.alive = true;
+            s.destroy();
+            return cb(null, e);
+          });
+          return s.on('error', function() {
+            e.alive = false;
+            s.destroy();
+            return cb(null, e);
+          });
+        }
       }, function(err, result) {
         return appNet.aliveServers = result.filter(function(e) {
           return e.alive;

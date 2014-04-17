@@ -194,6 +194,7 @@
               ev.push({
                 NTF: Event_PlayerInfo,
                 arg: {
+                  aid: player.accountID,
                   vip: player.vipLevel(),
                   rmb: player.rmb
                 }
