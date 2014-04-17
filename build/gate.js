@@ -88,7 +88,7 @@
 
   startTcpServer([
     {
-      ip: 'localhost',
+      ip: '10.4.4.188',
       port: 7756
     }
   ], 7757);
