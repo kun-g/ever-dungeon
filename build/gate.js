@@ -56,15 +56,15 @@
       var server;
       server = appNet.aliveServers[appNet.currIndex];
       appNet.currIndex = appNet.currIndex + 1 % appNet.aliveServers.length;
-      return net.connect(server);
+      return net.connect(server.port, server.ip);
     };
     setInterval((function() {
       return async.map(appNet.backends, function(e, cb) {
         var s;
         if (!e.alive) {
-          console.log('Connect', e);
           s = net.connect(e.port, e.ip, function() {
             e.alive = true;
+            s.destroy();
             return cb(null, e);
           });
           return s.on('error', function(err) {
