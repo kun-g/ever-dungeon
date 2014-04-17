@@ -65,10 +65,10 @@
           console.log('Connect', e);
           s = net.connect(e, function() {
             e.alive = true;
-            s.destroy();
             return cb(null, e);
           });
-          return s.on('error', function() {
+          return s.on('error', function(err) {
+            console.log('Error', err, e);
             e.alive = false;
             s.destroy();
             return cb(null, e);
