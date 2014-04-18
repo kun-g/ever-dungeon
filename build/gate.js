@@ -56,24 +56,21 @@
       var server;
       server = appNet.aliveServers[appNet.currIndex];
       appNet.currIndex = appNet.currIndex + 1 % appNet.aliveServers.length;
-      return net.connect(server.port, server.ip);
+      return net.connect(server);
     };
     setInterval((function() {
       return async.map(appNet.backends, function(e, cb) {
         var s;
-        if (!e.alive) {
-          s = net.connect(e.port, e.ip, function() {
-            e.alive = true;
-            s.destroy();
-            return cb(null, e);
-          });
-          return s.on('error', function(err) {
-            console.log('Error', err, e);
-            e.alive = false;
-            s.destroy();
-            return cb(null, e);
-          });
-        }
+        s = net.connect(e, function() {
+          e.alive = true;
+          s.destroy();
+          return cb(null, e);
+        });
+        return s.on('error', function() {
+          e.alive = false;
+          s.destroy();
+          return cb(null, e);
+        });
       }, function(err, result) {
         return appNet.aliveServers = result.filter(function(e) {
           return e.alive;
@@ -88,7 +85,7 @@
 
   startTcpServer([
     {
-      ip: '10.4.4.188',
+      ip: 'localhost',
       port: 7756
     }
   ], 7757);

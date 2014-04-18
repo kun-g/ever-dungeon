@@ -521,3 +521,14 @@ exports.getServerConfig = function (key, handler) {
 exports.setServerConfig = function (key, value, handler) {
   dbClient.hset("ServerConfig", key, value, handler);
 };
+
+exports.fetchGlobalPrize = function (handler) {
+  dbClient.get("GlobalPrize", function (err, result) {
+    if (result) result = JSON.parse(result);
+    handler(err, result);
+  });
+}
+
+exports.setGlobalPrize = function (prize, handler) {
+  dbClient.get("ServerConfig", JSON.stringify(prize), handler);
+}
