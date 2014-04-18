@@ -194,6 +194,7 @@
               ev.push({
                 NTF: Event_PlayerInfo,
                 arg: {
+                  aid: player.accountID,
                   vip: player.vipLevel(),
                   rmb: player.rmb
                 }
@@ -609,7 +610,7 @@
     RPC_QueryLeaderboard: {
       id: 30,
       func: function(arg, player, handler, rpcID, socket) {
-        return helperLib.getPositionOnLeaderboard(arg.typ, player.name, arg.src, arg.src + arg.cnt, function(err, result) {
+        return helperLib.getPositionOnLeaderboard(arg.typ, player.name, arg.src, arg.src + arg.cnt - 1, function(err, result) {
           var ret;
           ret = {
             REQ: rpcID,

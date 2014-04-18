@@ -1,7 +1,9 @@
 (function() {
-  var actCampaign, conditionCheck, currentTime, diffDate, initCampaign, moment, tap, tapObject, updateLockStatus;
+  var actCampaign, conditionCheck, currentTime, diffDate, initCampaign, matchDate, moment, tap, tapObject, updateLockStatus;
 
   conditionCheck = require('./trigger').conditionCheck;
+
+  moment = require('moment');
 
   tap = function(obj, key, callback, invokeFlag) {
     var theCB;
@@ -91,8 +93,9 @@
   exports.tap = tap;
 
   exports.initLeaderboard = function(config) {
-    var cfg, generateHandler, k, key, localConfig, v;
+    var cfg, dbLib, generateHandler, k, key, localConfig, srvCfg, tickLeaderboard, v;
     localConfig = [];
+    srvCfg = {};
     generateHandler = function(dbKey, cfg) {
       return function(name, value) {
         return require('./dbWrapper').updateLeaderboard(dbKey, name, value);
@@ -108,6 +111,19 @@
         localConfig[key][k] = v;
       }
     }
+    dbLib = require('./db');
+    dbLib.getServerConfig('Leaderboard', function(err, arg) {
+      if (arg) {
+        srvCfg = JSON.parse(arg);
+      }
+      for (key in config) {
+        cfg = config[key];
+        if (!srvCfg[cfg.name]) {
+          srvCfg[cfg.name] = currentTime();
+        }
+      }
+      return dbLib.setServerConfig('Leaderboard', JSON.stringify(srvCfg));
+    });
     exports.assignLeaderboard = function(player) {
       return localConfig.forEach(function(v) {
         var obj, tmp, _ref;
@@ -129,13 +145,15 @@
         });
       });
     };
+    tickLeaderboard = function(board) {
+      return cfg = localConfig[board];
+    };
     return exports.getPositionOnLeaderboard = function(board, name, from, to, cb) {
+      tickLeaderboard(board);
       cfg = localConfig[board];
       return require('./db').queryLeaderboard(cfg.name, name, from, to, cb);
     };
   };
-
-  moment = require('moment');
 
   currentTime = function(needObject) {
     var obj;
@@ -179,6 +197,37 @@
   };
 
   exports.diffDate = diffDate;
+
+  matchDate = function(date, today, rule) {
+    if (!date) {
+      return false;
+    }
+    date = moment(date).zone("+08:00");
+    today = moment(today).zone("+08:00");
+    if (rule.weekday != null) {
+      date = date.weekday(rule.weekday);
+    } else if (rule.monthday != null) {
+      date = date.date(rule.monthday);
+    }
+    if (rule.month) {
+      date = date.month(rule.month);
+    }
+    if (rule.day) {
+      date = date.day(rule.day);
+    }
+    if (rule.hour) {
+      date = date.hour(rule.hour);
+    }
+    if (rule.minute) {
+      date = date.minute(rule.minute);
+    }
+    if (rule.second) {
+      date = date.second(rule.second);
+    }
+    return date <= today;
+  };
+
+  exports.matchDate = matchDate;
 
   initCampaign = function(me, allCampaign, abIndex) {
     var diamondCount, e, evt, goldCount, key, quest, ret;
