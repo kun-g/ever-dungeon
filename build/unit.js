@@ -275,6 +275,7 @@
       if (cfg != null) {
         this.initWithConfig(cfg);
       }
+      this.faction = 'monster';
       if (flagCreation) {
         return console.log('Monster ', JSON.stringify(this));
       }
@@ -312,8 +313,9 @@
         cfg = queryTable(TABLE_ROLE, this.id);
       }
       if (cfg != null) {
-        return this.initWithConfig(cfg);
+        this.initWithConfig(cfg);
       }
+      return this.faction = 'npc';
     };
 
     return Npc;
