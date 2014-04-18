@@ -88,7 +88,9 @@ function createNewPlayer (account, server, name, handle) {
           cb(null);
         }
       }
-    ], handle);
+    ], function (err, result) {
+      handle(err, account);
+    });
 }
 exports.createNewPlayer = createNewPlayer;
 
