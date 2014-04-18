@@ -98,7 +98,7 @@
 
   exports.updateReceipt = function(receipt, state, handler) {
     var dbKey;
-    dbKey = makeDBKey([ReceiptPrefix, receipt]);
+    dbKey = makeDBKey([receipt], ReceiptPrefix);
     return accountDBClient.hgetall(dbKey, function(err, ret) {
       if (err) {
         return handler(err);
@@ -112,7 +112,7 @@
 
   exports.getReceipt = function(receipt, handler) {
     var dbKey;
-    dbKey = makeDBKey([ReceiptPrefix, receipt]);
+    dbKey = makeDBKey([receipt], ReceiptPrefix);
     return accountDBClient.hgetall(dbKey, handler);
   };
 

@@ -108,7 +108,7 @@ lua_createNewPlayer = " \
     local x = redis.call('hmset', key, 'accountID', account, 'name', name, 'isNewPlayer', 'true'); \
     local y = redis.call('hset', limitsKey, 'blueStar', 8); \
     local z = redis.call('hmset', sharedKey, 'blueStar', 0, 'contactLimit', 20); \
-    return 'OK'; \
+    return account; \
   end";
 
 lua_createSessionInfo = " \
@@ -521,14 +521,3 @@ exports.getServerConfig = function (key, handler) {
 exports.setServerConfig = function (key, value, handler) {
   dbClient.hset("ServerConfig", key, value, handler);
 };
-
-exports.fetchGlobalPrize = function (handler) {
-  dbClient.get("GlobalPrize", function (err, result) {
-    if (result) result = JSON.parse(result);
-    handler(err, result);
-  });
-}
-
-exports.setGlobalPrize = function (prize, handler) {
-  dbClient.get("ServerConfig", JSON.stringify(prize), handler);
-}

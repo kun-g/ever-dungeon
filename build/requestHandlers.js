@@ -310,10 +310,11 @@
             return dbLib.loadPassport(passportType, passport, false, cb);
           }, function(account, cb) {
             return dbLib.createNewPlayer(account, gServerName, name, cb);
-          }, function(_, cb) {
+          }, function(account, cb) {
             var player;
             player = new Player();
             player.setName(name);
+            player.accountID = account;
             player.initialize();
             player.createHero({
               name: name,
