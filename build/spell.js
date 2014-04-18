@@ -1,7 +1,9 @@
 (function() {
-  var Wizard, calcFormular, getLevelConfig, getProperty, getSpellConfig, plusThemAll;
+  var Wizard, calcFormular, getLevelConfig, getProperty, getSpellConfig, plusThemAll, triggerLib;
 
   require('./define');
+
+  triggerLib = require('./trigger');
 
   getSpellConfig = function(spellID) {
     var cfg;
@@ -489,7 +491,7 @@
     };
 
     Wizard.prototype.selectTarget = function(cfg, cmd) {
-      var a, b, blocks, count, env, filter, m, p, pool, t, tmp, x, y, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2, _ref3, _ref4;
+      var b, blocks, env, pool;
       if (!((cfg.targetSelection != null) && cfg.targetSelection.pool)) {
         return [];
       }
@@ -500,43 +502,19 @@
         env = cmd.getEnvironment();
       }
       switch (cfg.targetSelection.pool) {
-        case 'Enemy':
-          pool = env.getEnemyOf(this);
+        case 'self':
+          pool = [this];
           break;
-        case 'Team':
-          pool = env.getTeammateOf(this).concat(this);
-          break;
-        case 'Teammate':
-          pool = env.getTeammateOf(this);
-          break;
-        case 'Self':
-          pool = this;
-          break;
-        case 'Target':
+        case 'target':
           pool = env.variable('tar');
           break;
-        case 'Source':
-        case 'Attacker':
+        case 'source':
           pool = env.variable('src');
           break;
-        case 'SamePosition':
-          pool = env.getBlock(this.pos).getRef();
+        case 'objects':
+          pool = env.getObjects();
           break;
-        case 'RoleID':
-          pool = (function() {
-            var _i, _len, _ref, _results;
-            _ref = env.getObjects();
-            _results = [];
-            for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-              m = _ref[_i];
-              if (m.id === cfg.targetSelection.roleID) {
-                _results.push(m);
-              }
-            }
-            return _results;
-          })();
-          break;
-        case 'Block':
+        case 'blocks':
           blocks = cfg.targetSelection.blocks;
           pool = blocks != null ? (function() {
             var _i, _len, _results;
@@ -548,119 +526,8 @@
             return _results;
           })() : env.getBlock();
       }
-      if (pool == null) {
-        pool = [];
-      }
-      if (!Array.isArray(pool)) {
-        pool = [pool];
-      }
       if ((cfg.targetSelection.filter != null) && pool.length > 0) {
-        _ref = cfg.targetSelection.filter;
-        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-          filter = _ref[_i];
-          switch (filter) {
-            case 'Alive':
-              pool = (function() {
-                var _j, _len1, _results;
-                _results = [];
-                for (_j = 0, _len1 = pool.length; _j < _len1; _j++) {
-                  p = pool[_j];
-                  if (p.health > 0) {
-                    _results.push(p);
-                  }
-                }
-                return _results;
-              })();
-              break;
-            case 'Visible':
-              pool = (function() {
-                var _j, _len1, _results;
-                _results = [];
-                for (_j = 0, _len1 = pool.length; _j < _len1; _j++) {
-                  p = pool[_j];
-                  if (p.isVisible) {
-                    _results.push(p);
-                  }
-                }
-                return _results;
-              })();
-              break;
-            case 'Hero':
-              pool = (function() {
-                var _j, _len1, _results;
-                _results = [];
-                for (_j = 0, _len1 = pool.length; _j < _len1; _j++) {
-                  p = pool[_j];
-                  if (p.isHero()) {
-                    _results.push(p);
-                  }
-                }
-                return _results;
-              })();
-              break;
-            case 'Monster':
-              pool = (function() {
-                var _j, _len1, _results;
-                _results = [];
-                for (_j = 0, _len1 = pool.length; _j < _len1; _j++) {
-                  p = pool[_j];
-                  if (!p.isHero()) {
-                    _results.push(p);
-                  }
-                }
-                return _results;
-              })();
-              break;
-            case 'SameBlock':
-              pool = (function() {
-                var _j, _len1, _results;
-                _results = [];
-                for (_j = 0, _len1 = pool.length; _j < _len1; _j++) {
-                  p = pool[_j];
-                  if (p.pos === this.pos) {
-                    _results.push(p);
-                  }
-                }
-                return _results;
-              }).call(this);
-          }
-        }
-      }
-      count = (_ref1 = cfg.targetSelection.count) != null ? _ref1 : 1;
-      if ((cfg.targetSelection.method != null) && pool.length > 0) {
-        switch (cfg.targetSelection.method) {
-          case 'Rand':
-            pool = env.randMember(pool, count);
-            if (!Array.isArray(pool)) {
-              pool = [pool];
-            }
-            break;
-          case 'LowHealth':
-            pool = [
-              pool.sort(function(a, b) {
-                return a.health - b.health;
-              })[0]
-            ];
-        }
-      }
-      if (cfg.targetSelection.anchor && (env != null)) {
-        tmp = pool;
-        pool = [];
-        for (_j = 0, _len1 = tmp.length; _j < _len1; _j++) {
-          t = tmp[_j];
-          if (!t.isBlock) {
-            t = env.getBlock(t.pos);
-          }
-          x = t.pos % Dungeon_Width;
-          y = (t.pos - x) / Dungeon_Width;
-          _ref2 = cfg.targetSelection.anchor;
-          for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
-            a = _ref2[_k];
-            if ((0 <= (_ref3 = a.x + x) && _ref3 < Dungeon_Width) && (0 <= (_ref4 = a.y + y) && _ref4 < Dungeon_Height)) {
-              pool.push(env.getBlock(a.x + x + (a.y + y) * Dungeon_Width));
-            }
-          }
-        }
+        pool = triggerLib.filterObject(this, pool, cfg.targetSelection.filter, env);
       }
       return pool;
     };

@@ -1,9 +1,6 @@
 [
     {
         "chapterId": 0,
-        "posX": 4,
-        "posY": 8,
-        "gid": 6,
         "hidden":true,
         "title":"dungeonname0.png",
         "desc":"非常隐蔽的地洞，难以被察觉，其中偶尔会\n有怪物的身影出现。",
