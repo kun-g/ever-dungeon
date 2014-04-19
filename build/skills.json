@@ -1999,7 +1999,7 @@
             ],
             "targetSelection": {
                 "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"same-faction"} ]
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"} ]
             },
             "action":[
                 {"type": "damage", "formular": {"src":{"strong":0.5}}},

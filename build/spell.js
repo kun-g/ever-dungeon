@@ -523,6 +523,9 @@
       if ((cfg.targetSelection.filter != null) && pool.length > 0) {
         pool = triggerLib.filterObject(this, pool, cfg.targetSelection.filter, env);
       }
+      if (!Array.isArray(pool)) {
+        throw 'OOOO';
+      }
       return pool;
     };
 
