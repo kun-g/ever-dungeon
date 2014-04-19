@@ -2004,7 +2004,7 @@
             "action":[
                 {"type": "damage", "formular": {"src":{"strong":0.5}}},
                 {"type": "playEffect"},
-                {"type":"delay","delay":2},
+                {"type":"delay"},
                 {"type": "kill","self":true}
             ],
             "levelConfig":[
@@ -2031,7 +2031,7 @@
           "action":[
             {"type": "heal", "formular": {"src":{"strong":0.5}, "c":5}},
             {"type": "playEffect","effect":3,"pos":"target"} ,
-              {"type":"delay","delay":2},
+              {"type":"delay"},
               {"type": "kill","self":true}
           ]
           }
