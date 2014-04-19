@@ -142,12 +142,12 @@
             _results = [];
             for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
               p = result[_j];
-              if (p.ref !== this.ref) {
+              if (p.ref !== me.ref) {
                 _results.push(p);
               }
             }
             return _results;
-          }).call(this);
+          })();
           break;
         case 'same-block':
           result = (function() {
@@ -155,12 +155,12 @@
             _results = [];
             for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
               p = result[_j];
-              if (p.pos === this.pos) {
+              if (p.pos === me.pos) {
                 _results.push(p);
               }
             }
             return _results;
-          }).call(this);
+          })();
           break;
         case 'sort':
           result.sort(function(a, b) {
