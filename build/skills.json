@@ -2026,7 +2026,7 @@
             ],
             "targetSelection": {
                 "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"same-faction"} ]
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"} ]
           },
           "action":[
             {"type": "heal", "formular": {"src":{"strong":0.5}, "c":5}},
@@ -2082,8 +2082,8 @@
                 {"type" :"event","event": "onShow"}
             ],
             "targetSelection": {
-                "pool": "Teammate",
-                "filter": ["alive", "visible"]
+                "pool": "objects",
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"} ]
             },
             "action":[
                 { "type": "installSpell", "spell": 88},
@@ -2122,7 +2122,7 @@
             ],
             "targetSelection": {
                 "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"same-faction"} ]
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"} ]
             },
             "action":[
                 { "type": "installSpell", "spell": 90} ,
@@ -2161,7 +2161,7 @@
             ],
             "targetSelection": {
                 "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"same-faction"} ]
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"} ]
             },
             "action":[
                 { "type": "installSpell", "spell": 92} ,
@@ -2199,7 +2199,7 @@
             ],
             "targetSelection": {
                 "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"same-faction"} ]
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"} ]
             },
             "action":[
                 { "type": "installSpell", "spell": 94},
@@ -2240,7 +2240,7 @@
             ,
             "targetSelection": {
                 "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"same-faction"} ]
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"} ]
             },
             "action":[
                 { "type": "installSpell", "spell": 96}  ,
@@ -2285,7 +2285,7 @@
             ],
             "targetSelection": {
                 "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"same-faction"} ]
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"} ]
             },
             "action":[
                 { "type": "installSpell", "spell": 98}  ,
@@ -2305,8 +2305,8 @@
                    { "type": "event", "event": "onBeSpellRangeDamage" }
             ],
             "targetSelection": {
-                "pool": "self",
-                "filter": [{"type":"alive"},{"type":"visible"}]
+                "pool": "objects",
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"} ]
             },
 
             "buffType":"RoleBuff",
@@ -2333,7 +2333,7 @@
             ],
             "targetSelection": {
                 "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"same-faction"} ]
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"} ]
             },
             "action":[
                 {"type":"clearDebuff"},

@@ -6631,6 +6631,7 @@
     {
         "classId": 170,
         "className": "我方全体回血",
+        "faction":"npch",
         "classType": 2,
         "avatar": "effect-smzq.ccbi",
             "property":
@@ -6647,12 +6648,12 @@
             {
                 "id": 84,
                 "level": 1
-              },
-                {"id":85}
+              }
         ]
     },
       {       "classId": 171,
                "className": "敌方全体回血",
+          "faction":"npcm",
           "classType": 2,
           "avatar": "effect-xc.ccbi",
                  "property":
@@ -6668,12 +6669,12 @@
                      {
                      "id": 84,
                      "level": 1
-                            },
-                      {"id":86}
+                            }
                       ]
     },
     {              "classId": 172,
                 "className": "我方全体掉血",
+        "faction":"npch",
                 "classType": 2,
                 "avatar": "effect-bomb.ccbi",
                 "property":
@@ -6689,12 +6690,12 @@
                 {
                 "id": 83,
                 "level": 1
-         },
-                {"id":85}
+         }
         ]
      },
     {              "classId": 173,
         "className": "敌方全体掉血",
+        "faction":"npcm",
         "classType": 2,
         "avatar": "effect-sszg.ccbi",
         "property":
@@ -6710,12 +6711,12 @@
             {
                 "id": 83,
                 "level": 2
-            },
-            {"id":86}
+            }
         ]
     },
     {              "classId": 174,
                 "className": "我方全体攻击加速",
+        "faction":"npch",
                 "classType": 2,
                 "avatar": "effect-js-1.ccbi",
                 "property":
@@ -6726,12 +6727,12 @@
                     {
                         "id": 87
 
-            },
-                       {"id":85}
+            }
         ]
     },
     {              "classId": 175,
         "className": "敌方全体攻击加速",
+        "faction":"npcm",
         "classType": 2,
         "avatar": "effect-js-2.ccbi",
         "property":
@@ -6742,12 +6743,12 @@
             {
                 "id": 87
 
-            },
-            {"id":86}
+            }
         ]
     },
     {   "classId": 176,
         "className": "我方全体攻击上升",
+        "faction":"npch",
         "classType": 2,
         "avatar": "effect-ll-1.ccbi",
         "property":
@@ -6758,12 +6759,12 @@
             {
                 "id": 89
 
-            },
-            {"id":85}
+            }
         ]
     },
     {   "classId": 177,
         "className": "敌方全体攻击上升",
+        "faction":"npcm",
         "classType": 2,
         "avatar": "effect-ll-2.ccbi",
         "property":
@@ -6774,12 +6775,12 @@
             {
                 "id": 89
 
-            },
-            {"id":86}
+            }
         ]
     },
     {              "classId": 178,
                     "className": "我方全体攻击降低",
+        "faction":"npch",
                     "classType": 2,
                     "avatar": "effect-xr-1.ccbi",
                     "property":
@@ -6790,12 +6791,12 @@
                         {
                             "id": 91
 
-                        },
-                        {"id":85}
+                        }
         ]
     },
     {              "classId": 179,
                     "className": "敌方全体攻击降低",
+        "faction":"npcm",
                     "classType": 2,
                     "avatar": "effect-xr-2x.ccbi",
                     "property":
@@ -6806,12 +6807,12 @@
                         {
                             "id": 91
 
-                        },
-                        {"id":86}
+                        }
                     ]
     },
     {              "classId": 179,
                     "className": "我方全体持续掉血",
+        "faction":"npch",
                     "classType": 2,
                     "avatar": "effect-gas.ccbi",
                     "property":
@@ -6822,13 +6823,13 @@
                         {
                             "id": 93
 
-                        },
-                        {"id":85}
+                        }
         ]
     },
     {
         "classId": 180,
         "className": "我方全体无敌",
+        "faction":"npch",
         "classType": 2,
         "avatar": "effect-wd-1.ccbi",
         "property":
@@ -6839,13 +6840,13 @@
             {
                 "id": 95
 
-            },
-            {"id":85}
+            }
         ]
     },
     {
         "classId": 181,
         "className": "敌方全体无敌",
+        "faction":"npcm",
         "classType": 2,
         "avatar": "effect-wd-2.ccbi",
         "property":
@@ -6856,13 +6857,13 @@
             {
                 "id": 95
 
-            },
-            {"id":86}
+            }
         ]
     },
     {
         "classId": 182,
         "className": "我方全体攻击吸收",
+        "faction":"npch",
         "classType": 2,
         "avatar": "effect-xssh-1.ccbi",
         "property":
@@ -6873,13 +6874,13 @@
             {
                 "id": 97
 
-            },
-            {"id":85}
+            }
         ]
     },
     {
         "classId": 183,
         "className": "敌方全体攻击吸收",
+        "faction":"npcm",
         "classType": 2,
         "avatar": "effect-xssh-2.ccbi",
         "property":
@@ -6890,13 +6891,13 @@
             {
                 "id": 97
 
-            },
-            {"id":86}
+            }
         ]
     },
     {
         "classId": 184,
         "className": "清除我方所有buff",
+        "faction":"npcm",
         "classType": 2,
         "avatar": "effect-buffclean.ccbi",
         "property":
@@ -6907,8 +6908,7 @@
             {
                 "id": 99
 
-            },
-            {"id":85}
+            }
         ]
     }
 
