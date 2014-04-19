@@ -5,6 +5,8 @@
 
   require('./define');
 
+  require('./shared');
+
   Wizard = require('./spell').Wizard;
 
   DBWrapper = require('./dbWrapper').DBWrapper;

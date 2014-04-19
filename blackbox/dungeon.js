@@ -5,6 +5,8 @@
 
   requires('./define');
 
+  requires('./shared');
+
   Wizard = requires('./spell').Wizard;
 
   DBWrapper = requires('./serializer').Serializer;
