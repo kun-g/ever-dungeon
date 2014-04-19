@@ -1594,7 +1594,10 @@
       if (!((factionDB != null) && (factionDB[src] != null) && (factionDB[src][tar] != null))) {
         return false;
       }
-      return factionDB[src][tar];
+      if (flag != null) {
+        return factionDB[src][tar][flag];
+      }
+      return factionDB[src][tar][flag];
     };
 
     DungeonEnvironment.prototype.isEntranceExplored = function() {
