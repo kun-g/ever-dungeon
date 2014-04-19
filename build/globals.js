@@ -58,6 +58,18 @@ Request_Stastics = 28;
 RPC_ClaimLoginStreakReward = 300;
 
 unwrapReceipt = function(receipt) {
+  var name, productID, serverID, time, tunnel, _ref;
+  _ref = receipt.split('@'), name = _ref[0], serverID = _ref[1], time = _ref[2], productID = _ref[3], tunnel = _ref[4];
+  return {
+    name: name,
+    serverID: serverID,
+    time: time,
+    productID: productID,
+    tunnel: tunnel
+  };
+};
+
+unwrapReceipt91 = function(receipt) {
   var id = receipt.slice(0, 8),
       productID = receipt.slice(8, 10),
       serverID = receipt.slice(10, 12),
@@ -129,6 +141,6 @@ md5Hash = function (data) {
 };
 
 isClassMatch = function (myClass, classLimit) {
-  if (!classLimit) return true;
+  if (classLimit == null) return true;
   return classLimit.reduce(function (r, l) { return r || myClass === l; }, false);
 };

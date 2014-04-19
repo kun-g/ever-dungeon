@@ -1,7 +1,9 @@
 (function() {
-  var Wizard, calcFormular, getLevelConfig, getProperty, getSpellConfig, plusThemAll;
+  var Wizard, calcFormular, getLevelConfig, getProperty, getSpellConfig, plusThemAll, triggerLib;
 
   requires('./define');
+
+  triggerLib = requires('./trigger');
 
   getSpellConfig = function(spellID) {
     var cfg;

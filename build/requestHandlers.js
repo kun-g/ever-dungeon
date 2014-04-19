@@ -1,5 +1,5 @@
 (function() {
-  var DBWrapper, Player, addMercenaryMember, async, dbLib, getMercenaryMember, getPlayerHero, helperLib, http, https, loadPlayer, loginBy, moment, updateMercenaryMember, wrapReceipt, _ref;
+  var DBWrapper, Player, addMercenaryMember, async, dbLib, getMercenaryMember, getPlayerHero, helperLib, http, loadPlayer, loginBy, moment, updateMercenaryMember, wrapReceipt, _ref;
 
   require('./define');
 
@@ -12,8 +12,6 @@
   async = require('async');
 
   http = require('http');
-
-  https = require('https');
 
   moment = require('moment');
 
@@ -89,7 +87,6 @@
       case LOGIN_ACCOUNT_TYPE_TG:
         return dbLib.loadAuth(passport, token, callback);
       case LOGIN_ACCOUNT_TYPE_AD:
-      case LOGIN_ACCOUNT_TYPE_GAMECENTER:
         return callback(null);
       default:
         return callback(Error(RET_Issue33));
@@ -529,67 +526,24 @@
       args: ['stg'],
       needPid: true
     },
-    RPC_VerifyPayment: {
-      func: function(arg, player, handler, rpcID, socket) {
-        var options, req;
-        logInfo({
-          action: 'VerifyPayment',
-          type: 'Apple',
-          arg: arg
-        });
-        switch (arg.type) {
-          case 'AppStore':
-            options = {
-              hostname: 'buy.itunes.apple.com',
-              port: 443,
-              path: '/verifyReceipt',
-              method: 'POST'
-            };
-            return req = https.request(options, function(res) {
-              res.setEncoding('utf8');
-              return res.on('data', function(chunk) {
-                var receipt, result;
-                result = JSON.parse(chunk);
-                logInfo({
-                  action: 'VerifyPayment',
-                  type: 'Apple',
-                  code: result
-                });
-                if (result.status !== 0 || result.original_transaction_id) {
-                  return handler([
-                    {
-                      REQ: rpcID,
-                      RET: RET_Unknown
-                    }
-                  ]);
-                }
-                receipt = arg.receipt;
-                return player.handlePayment({
-                  paymentType: 'AppStore',
-                  receipt: receipt
-                }, handler);
-              });
-            }).on('error', function(e) {
-              return logError({
-                action: 'VerifyPayment',
-                type: 'Apple',
-                error: e
-              });
-            });
-        }
-      }
-    },
     RPC_BindSubAuth: {
-      id: 105,
       func: function(arg, player, handler, rpcID, socket) {
-        return dbLib.bindAuth(player.accountID, arg.typ, arg.id, arg.pass, function(err, account) {
-          return handler([
-            {
-              REQ: rpcID,
-              RET: RET_OK,
-              account: account
-            }
-          ]);
+        return dbLib.bindAuth(player.accountID, arg.id, arg.pass, function(err) {
+          if (err) {
+            return handler([
+              {
+                REQ: rpcID,
+                RET: err
+              }
+            ]);
+          } else {
+            return handler([
+              {
+                REQ: rpcID,
+                RET: RET_OK
+              }
+            ]);
+          }
         });
       },
       args: [],
