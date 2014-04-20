@@ -1,7 +1,7 @@
 #!/bin/bash
 
-
 CurrentBranch=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
+
 while [ "$CurrentBranch" = "master" ]; do
   read -p "Do you wish to update the MASTER branch(YES/NO):" yn
   case $yn in
@@ -14,15 +14,16 @@ done
 VersionFile="build/version.json"
 ConfigFile="build/config.json"
 
-
 CurrentPWD=`pwd`
 
 echo '===== Compiling ====='
 cd server
+SubModuleServer=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
 gulp compile
 cp js/*.js $CurrentPWD/build
 cp package.json $CurrentPWD/build
 cd ../data
+SubModuleData=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
 if [ "$1" = "all" ]
 then
 	echo "Fetching table"
@@ -95,6 +96,7 @@ sed -ig 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
 
 # Commit
 echo '===== Commit the changes ====='
-git commit -am 'Commit changes branch:'$CurrentBranch' @ '$CurrentVersion
+echo 'Commit changes branch:'$CurrentBranch @ $CurrentVersion  Server: $SubModuleServer Table: $SubModuleData
+git commit -am "Commit changes branch:"$CurrentBranch" @ "$CurrentVersion" Server:"$SubModuleServer" Table:"$SubModuleData
 
 git push $RemoteRepo

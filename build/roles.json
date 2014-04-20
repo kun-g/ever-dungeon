@@ -2,6 +2,7 @@
     {
         "classId": 0,
         "className": "战士",
+        "faction":"hero",
         "classType": 0,
         "avatar": "avatar.ccbi",
         "emblem": [
@@ -33,6 +34,7 @@
     {
         "classId": 1,
         "className": "法师",
+        "faction":"hero",
         "classType": 0,
         "avatar": "avatar.ccbi",
         "emblem": [
@@ -64,6 +66,7 @@
     {
         "classId": 2,
         "className": "牧师",
+        "faction":"hero",
         "classType": 0,
         "avatar": "avatar.ccbi",
         "emblem": [
@@ -95,6 +98,7 @@
     {
         "classId": 3,
         "className": "蝙蝠",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-bat1.ccbi",
         "property":
@@ -130,6 +134,7 @@
     {
         "classId": 4,
         "className": "蜘蛛",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-spider1.ccbi",
         "property":
@@ -171,6 +176,7 @@
     {
         "classId": 5,
         "className": "土狼",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-wolf2.ccbi",
         "collectId":3001,
@@ -207,6 +213,7 @@
     {
         "classId": 6,
         "className": "史莱姆",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-slime1.ccbi",
         "property":
@@ -249,6 +256,7 @@
     {
         "classId": 7,
         "className": "哥布林",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-goblin1.ccbi",
         "collectId":6001,
@@ -285,6 +293,7 @@
     {
         "classId": 8,
         "className": "哥布林投矛手",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-goblin2.ccbi",
         "property":
@@ -335,6 +344,7 @@
     {
         "classId": 9,
         "className": "山贼",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-robber1.ccbi",
         "property":
@@ -370,6 +380,7 @@
     {
         "classId": 10,
         "className": "盗贼",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-thief1.ccbi",
         "property":
@@ -410,6 +421,7 @@
     {
         "classId": 11,
         "className": "山贼头目",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-robber3.ccbi",
         "property":
@@ -455,6 +467,7 @@
     {
         "classId": 12,
         "className": "流浪剑士",
+        "faction":"monster",
         "collectId":66001,
         "classType": 1,
         "avatar": "enemy-sword2.ccbi",
@@ -497,6 +510,7 @@
     {
         "classId": 13,
         "className": "游侠",
+        "faction":"monster",
         "classType": 1,
         "collectId":40001,
         "avatar": "enemy-archer1.ccbi",
@@ -541,6 +555,7 @@
     {
         "classId": 14,
         "className": "兽人",
+        "faction":"monster",
         "classType": 1,
         "collectId":20001,
         "avatar": "enemy-orcs2.ccbi",
@@ -577,6 +592,7 @@
     {
         "classId": 15,
         "className": "狼骑",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-wolf1.ccbi",
         "property":
@@ -616,6 +632,7 @@
     {
         "classId": 16,
         "className": "兽人投矛手",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-orcs1.ccbi",
         "property":
@@ -660,6 +677,7 @@
     {
         "classId": 17,
         "className": "食人魔",
+        "faction":"monster",
         "classType": 1,
         "collectId":36001,
         "avatar": "enemy-ogre1.ccbi",
@@ -699,6 +717,7 @@
     {
         "classId": 18,
         "className": "骷髅兵",
+        "faction":"monster",
         "classType": 1,
         "collectId":51001,
         "avatar": "enemy-skeleton1.ccbi",
@@ -729,6 +748,7 @@
     {
         "classId": 19,
         "className": "小史莱姆",
+        "faction":"monster",
         "classType": 1,
         "animSpawn":"spell-5",
         "avatar": "enemy-slime2.ccbi",
@@ -763,6 +783,7 @@
     {
         "classId": 20,
         "className": "Boss蝙蝠",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-bat1.ccbi",
         "property":
@@ -799,6 +820,7 @@
     {
         "classId": 21,
         "className": "Boss蜘蛛",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-spider1.ccbi",
         "property":
@@ -841,6 +863,7 @@
     {
         "classId": 22,
         "className": "Boss土狼",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-wolf2.ccbi",
         "property":
@@ -877,6 +900,7 @@
     {
         "classId":23,
         "className": "Boss史莱姆",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-slime1.ccbi",
         "property":
@@ -918,6 +942,7 @@
     {
         "classId": 24,
         "className": "Boss哥布林",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-goblin1.ccbi",
         "property":
@@ -954,6 +979,7 @@
     {
         "classId": 25,
         "className": "Boss哥布林投矛手",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-goblin2.ccbi",
         "property":
@@ -992,6 +1018,11 @@
             {
                 "id": 28,
                 "level": 1
+            },
+            {
+
+                "id": 37,
+                "level": 2
             }
         ],
         "soundSpawn": "gebulintou.mp3",
@@ -1003,6 +1034,7 @@
     {
         "classId": 26,
         "className": "Boss山贼",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-robber1.ccbi",
         "property":
@@ -1039,6 +1071,7 @@
     {
         "classId": 27,
         "className": "Boss盗贼",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-thief1.ccbi",
         "property":
@@ -1080,6 +1113,7 @@
     {
         "classId": 28,
         "className": "Boss山贼头目",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-robber2.ccbi",
         "property":
@@ -1127,6 +1161,7 @@
     {
         "classId": 29,
         "className": "Boss流浪剑士",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-sword2.ccbi",
         "property":
@@ -1168,6 +1203,7 @@
     {
         "classId": 30,
         "className": "Boss游侠",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-archer1.ccbi",
         "property":
@@ -1214,6 +1250,7 @@
     {
         "classId": 31,
         "className": "Boss兽人",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-orcs2.ccbi",
         "property":
@@ -1251,6 +1288,7 @@
     {
         "classId": 32,
         "className": "Boss狼骑",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-wolf1.ccbi",
         "property":
@@ -1282,6 +1320,11 @@
 
                 "id": 32,
                 "level": 2
+            },
+            {
+
+                "id": 37,
+                "level": 2
             }
         ],
         "scale":1.2,
@@ -1294,6 +1337,7 @@
     {
         "classId": 33,
         "className": "Boss兽人投矛手",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-orcs1.ccbi",
         "property":
@@ -1341,6 +1385,7 @@
     {
         "classId": 34,
         "className": "Boss食人魔",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-ogre1.ccbi",
         "property":
@@ -1381,6 +1426,7 @@
     {
         "classId": 35,
         "className": "蝙蝠2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-bat12.ccbi",
         "property":
@@ -1416,6 +1462,7 @@
     {
         "classId": 36,
         "className": "蜘蛛2",
+        "faction":"monster",
         "classType": 1,
         "collectId":25001,
         "avatar": "enemy-spider12.ccbi",
@@ -1459,6 +1506,7 @@
     {
         "classId": 37,
         "className": "土狼2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-wolf22.ccbi",
         "collectId":28001,
@@ -1495,6 +1543,7 @@
     {
         "classId": 38,
         "className": "史莱姆2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-slime12.ccbi",
         "property":
@@ -1538,6 +1587,7 @@
     {
         "classId": 39,
         "className": "哥布林2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-goblin12.ccbi",
         "property":
@@ -1573,6 +1623,7 @@
     {
         "classId": 40,
         "className": "哥布林投矛手2",
+        "faction":"monster",
         "collectId":61001,
         "classType": 1,
         "avatar": "enemy-goblin22.ccbi",
@@ -1627,6 +1678,7 @@
     {
         "classId": 41,
         "className": "山贼2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-robber12.ccbi",
         "property":
@@ -1663,6 +1715,7 @@
     {
         "classId": 42,
         "className": "盗贼2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-thief12.ccbi",
         "property":
@@ -1704,6 +1757,7 @@
     {
         "classId": 43,
         "className": "山贼头目2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-robber32.ccbi",
         "property":
@@ -1751,6 +1805,7 @@
     {
         "classId": 44,
         "className": "流浪剑士2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-sword22.ccbi",
         "property":
@@ -1793,6 +1848,7 @@
     {
         "classId": 45,
         "className": "游侠2",
+        "faction":"monster",
         "collectId":68001,
         "classType": 1,
         "avatar": "enemy-archer12.ccbi",
@@ -1839,6 +1895,7 @@
     {
         "classId": 46,
         "className": "兽人2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-orcs22.ccbi",
         "property":
@@ -1874,6 +1931,7 @@
     {
         "classId": 47,
         "className": "狼骑2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-wolf12.ccbi",
         "property":
@@ -1914,6 +1972,7 @@
     {
         "classId": 48,
         "className": "兽人投矛手2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-orcs12.ccbi",
         "property":
@@ -1960,6 +2019,7 @@
     {
         "classId": 49,
         "className": "食人魔2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-ogre12.ccbi",
         "property":
@@ -1999,6 +2059,7 @@
     {
         "classId":50,
         "className": "骷髅兵2",
+        "faction":"monster",
         "collectId":84001,
         "classType": 1,
         "avatar": "enemy-skeleton12.ccbi",
@@ -2029,6 +2090,7 @@
     {
         "classId": 51,
         "className": "小史莱姆2",
+        "faction":"monster",
         "classType": 1,
         "animSpawn":"spell-5",
         "avatar": "enemy-slime22.ccbi",
@@ -2063,6 +2125,7 @@
     {
         "classId": 52,
         "className": "Boss蝙蝠2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-bat12.ccbi",
         "property":
@@ -2099,6 +2162,7 @@
     {
         "classId": 53,
         "className": "Boss蜘蛛2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-spider12.ccbi",
         "property":
@@ -2142,6 +2206,7 @@
     {
         "classId": 54,
         "className": "Boss土狼2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-wolf22.ccbi",
         "property":
@@ -2178,6 +2243,7 @@
     {
         "classId": 55,
         "className": "Boss史莱姆2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-slime12.ccbi",
         "property":
@@ -2220,6 +2286,7 @@
     {
         "classId": 56,
         "className": "Boss哥布林2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-goblin12.ccbi",
         "property":
@@ -2256,6 +2323,7 @@
     {
         "classId": 57,
         "className": "Boss哥布林投矛手2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-goblin22.ccbi",
         "property":
@@ -2308,6 +2376,7 @@
     {
         "classId": 58,
         "className": "Boss山贼2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-robber12.ccbi",
         "property":
@@ -2344,6 +2413,7 @@
     {
         "classId": 59,
         "className": "Boss盗贼2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-thief12.ccbi",
         "property":
@@ -2386,6 +2456,7 @@
     {
         "classId": 60,
         "className": "Boss山贼头目2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-robber22.ccbi",
         "property":
@@ -2433,6 +2504,7 @@
     {
         "classId": 61,
         "className": "Boss流浪剑士2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-sword22.ccbi",
         "property":
@@ -2474,6 +2546,7 @@
     {
         "classId": 62,
         "className": "Boss游侠2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-archer12.ccbi",
         "property":
@@ -2520,6 +2593,7 @@
     {
         "classId": 63,
         "className": "Boss兽人2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-orcs22.ccbi",
         "property":
@@ -2556,6 +2630,7 @@
     {
         "classId": 64,
         "className": "Boss狼骑2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-wolf12.ccbi",
         "property":
@@ -2599,6 +2674,7 @@
     {
         "classId": 65,
         "className": "Boss兽人投矛手2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-orcs12.ccbi",
         "property":
@@ -2646,6 +2722,7 @@
     {
         "classId": 66,
         "className": "Boss食人魔2",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-ogre12.ccbi",
         "property":
@@ -2686,6 +2763,7 @@
     {
         "classId": 67,
         "className": "蝙蝠3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-bat13.ccbi",
         "property":
@@ -2721,6 +2799,7 @@
     {
         "classId": 68,
         "className": "蜘蛛3",
+        "faction":"monster",
         "classType": 1,
         "collectId":96001,
         "avatar": "enemy-spider13.ccbi",
@@ -2764,6 +2843,7 @@
     {
         "classId": 69,
         "className": "土狼3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-wolf23.ccbi",
         "property":
@@ -2799,6 +2879,7 @@
     {
         "classId": 70,
         "className": "史莱姆3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-slime13.ccbi",
         "property":
@@ -2842,6 +2923,7 @@
     {
         "classId": 71,
         "className": "哥布林3",
+        "faction":"monster",
         "collectId":78001,
         "classType": 1,
         "avatar": "enemy-goblin13.ccbi",
@@ -2878,6 +2960,7 @@
     {
         "classId": 72,
         "className": "哥布林投矛手3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-goblin23.ccbi",
         "property":
@@ -2931,6 +3014,7 @@
     {
         "classId": 73,
         "className": "山贼3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-robber13.ccbi",
         "property":
@@ -2966,6 +3050,7 @@
     {
         "classId": 74,
         "className": "盗贼3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-thief13.ccbi",
         "property":
@@ -3007,6 +3092,7 @@
     {
         "classId": 75,
         "className": "山贼头目3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-robber33.ccbi",
         "property":
@@ -3054,6 +3140,7 @@
     {
         "classId": 76,
         "className": "流浪剑士3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-sword23.ccbi",
         "property":
@@ -3096,6 +3183,7 @@
     {
         "classId": 77,
         "className": "游侠3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-archer13.ccbi",
         "property":
@@ -3141,6 +3229,7 @@
     {
         "classId": 78,
         "className": "兽人3",
+        "faction":"monster",
         "collectId":118001,
         "classType": 1,
         "avatar": "enemy-orcs23.ccbi",
@@ -3177,6 +3266,7 @@
     {
         "classId": 79,
         "className": "狼骑3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-wolf13.ccbi",
         "property":
@@ -3217,6 +3307,7 @@
     {
         "classId": 80,
         "className": "兽人投矛手3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-orcs13.ccbi",
         "property":
@@ -3263,6 +3354,7 @@
     {
         "classId": 81,
         "className": "食人魔3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-ogre13.ccbi",
         "property":
@@ -3302,6 +3394,7 @@
     {
         "classId": 82,
         "className": "骷髅兵3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-skeleton13.ccbi",
         "property":{
@@ -3331,6 +3424,7 @@
     {
         "classId": 83,
         "className": "小史莱姆3",
+        "faction":"monster",
         "classType": 1,
         "animSpawn":"spell-5",
         "avatar": "enemy-slime23.ccbi",
@@ -3365,6 +3459,7 @@
     {
         "classId": 84,
         "className": "Boss蝙蝠3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-bat13.ccbi",
         "property":
@@ -3401,6 +3496,7 @@
     {
         "classId": 85,
         "className": "Boss蜘蛛3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-spider13.ccbi",
         "property":
@@ -3444,6 +3540,7 @@
     {
         "classId": 86,
         "className": "Boss土狼3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-wolf23.ccbi",
         "property":
@@ -3480,6 +3577,7 @@
     {
         "classId": 87,
         "className": "Boss史莱姆3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-slime13.ccbi",
         "property":
@@ -3522,6 +3620,7 @@
     {
         "classId": 88,
         "className": "Boss哥布林3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-goblin13.ccbi",
         "property":
@@ -3558,6 +3657,7 @@
     {
         "classId": 89,
         "className": "Boss哥布林投矛手3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-goblin23.ccbi",
         "property":
@@ -3610,6 +3710,7 @@
     {
         "classId": 90,
         "className": "Boss山贼3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-robber13.ccbi",
         "property":
@@ -3646,6 +3747,7 @@
     {
         "classId": 91,
         "className": "Boss盗贼3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-thief13.ccbi",
         "property":
@@ -3688,6 +3790,7 @@
     {
         "classId": 92,
         "className": "Boss山贼头目3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-robber23.ccbi",
         "property":
@@ -3735,6 +3838,7 @@
     {
         "classId": 93,
         "className": "Boss流浪剑士3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-sword23.ccbi",
         "property":
@@ -3777,6 +3881,7 @@
     {
         "classId": 94,
         "className": "Boss游侠3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-archer13.ccbi",
         "property":
@@ -3823,6 +3928,7 @@
     {
         "classId": 95,
         "className": "Boss兽人3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-orcs23.ccbi",
         "property":
@@ -3859,6 +3965,7 @@
     {
         "classId": 96,
         "className": "Boss狼骑3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-wolf13.ccbi",
         "property":
@@ -3902,6 +4009,7 @@
     {
         "classId": 97,
         "className": "Boss兽人投矛手3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-orcs13.ccbi",
         "property":
@@ -3949,6 +4057,7 @@
     {
         "classId": 98,
         "className": "Boss食人魔3",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-ogre13.ccbi",
         "property":
@@ -3989,6 +4098,7 @@
     {
         "classId": 99,
         "className": "蝙蝠4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-bat14.ccbi",
         "property":
@@ -4024,6 +4134,7 @@
     {
         "classId": 100,
         "className": "蜘蛛4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-spider14.ccbi",
         "property":
@@ -4066,6 +4177,7 @@
     {
         "classId": 101,
         "className": "土狼4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-wolf24.ccbi",
         "property":
@@ -4101,6 +4213,7 @@
     {
         "classId": 103,
         "className": "史莱姆4",
+        "faction":"monster",
         "classType": 1,
          "collectId":105001,
         "avatar": "enemy-slime14.ccbi",
@@ -4145,6 +4258,7 @@
     {
         "classId": 103,
         "className": "哥布林4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-goblin14.ccbi",
         "property":
@@ -4180,6 +4294,7 @@
     {
         "classId": 104,
         "className": "哥布林投矛手4",
+        "faction":"monster",
         "classType": 1,
         "collectId":114001,
         "avatar": "enemy-goblin24.ccbi",
@@ -4234,6 +4349,7 @@
     {
         "classId": 105,
         "className": "山贼4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-robber14.ccbi",
         "property":
@@ -4269,6 +4385,7 @@
     {
         "classId": 106,
         "className": "盗贼4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-thief14.ccbi",
         "property":
@@ -4310,6 +4427,7 @@
     {
         "classId": 107,
         "className": "山贼头目4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-robber34.ccbi",
         "property":
@@ -4357,6 +4475,7 @@
     {
         "classId": 108,
         "className": "流浪剑士4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-sword24.ccbi",
         "property":
@@ -4399,6 +4518,7 @@
     {
         "classId": 109,
         "className": "游侠4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-archer14.ccbi",
         "property":
@@ -4444,6 +4564,7 @@
     {
         "classId": 110,
         "className": "兽人4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-orcs24.ccbi",
         "property":
@@ -4479,6 +4600,7 @@
     {
         "classId": 111,
         "className": "狼骑4",
+        "faction":"monster",
         "classType": 1,
         "collectId":126001,
         "avatar": "enemy-wolf14.ccbi",
@@ -4520,6 +4642,7 @@
     {
         "classId": 112,
         "className": "兽人投矛手4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-orcs14.ccbi",
         "property":
@@ -4566,6 +4689,7 @@
     {
         "classId": 113,
         "className": "食人魔4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-ogre14.ccbi",
         "property":
@@ -4605,6 +4729,7 @@
     {
         "classId": 114,
         "className": "骷髅兵4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-skeleton14.ccbi",
         "property":{
@@ -4634,6 +4759,7 @@
     {
         "classId": 115,
         "className": "小史莱姆4",
+        "faction":"monster",
         "classType": 1,
         "animSpawn":"spell-5",
         "avatar": "enemy-slime24.ccbi",
@@ -4668,6 +4794,7 @@
     {
         "classId": 116,
         "className": "Boss蝙蝠4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-bat14.ccbi",
         "property":
@@ -4704,6 +4831,7 @@
     {
         "classId": 117,
         "className": "Boss蜘蛛4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-spider14.ccbi",
         "property":
@@ -4747,6 +4875,7 @@
     {
         "classId": 118,
         "className": "Boss土狼4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-wolf24.ccbi",
         "property":
@@ -4783,6 +4912,7 @@
     {
         "classId": 119,
         "className": "Boss史莱姆4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-slime14.ccbi",
         "property":
@@ -4825,6 +4955,7 @@
     {
         "classId": 120,
         "className": "Boss哥布林4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-goblin14.ccbi",
         "property":
@@ -4861,6 +4992,7 @@
     {
         "classId": 121,
         "className": "Boss哥布林投矛手4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-goblin24.ccbi",
         "property":
@@ -4913,6 +5045,7 @@
     {
         "classId": 122,
         "className": "Boss山贼4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-robber14.ccbi",
         "property":
@@ -4949,6 +5082,7 @@
     {
         "classId": 123,
         "className": "Boss盗贼4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-thief14.ccbi",
         "property":
@@ -4991,6 +5125,7 @@
     {
         "classId": 124,
         "className": "Boss山贼头目4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-robber24.ccbi",
         "property":
@@ -5038,6 +5173,7 @@
     {
         "classId": 125,
         "className": "Boss流浪剑士4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-sword24.ccbi",
         "property":
@@ -5079,6 +5215,7 @@
     {
         "classId": 126,
         "className": "Boss游侠4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-archer14.ccbi",
         "property":
@@ -5125,6 +5262,7 @@
     {
         "classId": 127,
         "className": "Boss兽人4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-orcs24.ccbi",
         "property":
@@ -5161,6 +5299,7 @@
     {
         "classId": 128,
         "className": "Boss狼骑4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-wolf14.ccbi",
         "property":
@@ -5204,6 +5343,7 @@
     {
         "classId": 129,
         "className": "Boss兽人投矛手4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-orcs14.ccbi",
         "property":
@@ -5251,6 +5391,7 @@
     {
         "classId": 130,
         "className": "Boss食人魔4",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-ogre14.ccbi",
         "property":
@@ -5291,6 +5432,7 @@
     {
         "classId": 131,
         "className": "战士+",
+        "faction":"hero",
         "classType": 0,
         "avatar": "avatar.ccbi",
         "property":
@@ -5333,6 +5475,7 @@
     {
         "classId": 132,
         "className": "法师+",
+        "faction":"hero",
         "classType": 0,
         "avatar": "avatar.ccbi",
         "property":
@@ -5376,6 +5519,7 @@
       {
         "classId": 133,
         "className": "龙",
+        "faction":"monster",
         "classType": 1,
         "bossFlag":true,
         "avatar": "enemy-dragon.ccbi",
@@ -5422,6 +5566,7 @@
       {
         "classId": 133,
         "className": "龙",
+        "faction":"monster",
         "classType": 1,
         "bossFlag":true,
         "avatar": "enemy-dragon.ccbi",
@@ -5470,6 +5615,7 @@
     {
         "classId": 134,
         "className": "导演",
+        "faction":"monster",
         "classType": 1,
         "avatar": "avatar.ccbi",
         "property":
@@ -5507,6 +5653,7 @@
     {
         "classId": 135,
         "className": "食人魔怪",
+        "faction":"monster",
         "classType": 1,
         "bossFlag":true,
         "avatar": "enemy-ogreboss.ccbi",
@@ -5556,6 +5703,7 @@
     {
         "classId": 136,
         "className": "史莱姆之王",
+        "faction":"monster",
         "classType": 1,
         "bossFlag":true,
         "avatar": "enemy-slimeboss.ccbi",
@@ -5606,6 +5754,7 @@
     {
         "classId": 137,
         "className": "游侠头领",
+        "faction":"monster",
         "classType": 1,
         "bossFlag":true,
         "avatar": "enemy-archerboss.ccbi",
@@ -5657,6 +5806,7 @@
     {
         "classId": 138,
         "className": "狂暴哥布林",
+        "faction":"monster",
         "classType": 1,
         "bossFlag":true,
         "avatar": "enemy-goblinboss.ccbi",
@@ -5711,6 +5861,7 @@
     {
         "classId": 139,
         "className": "狼王",
+        "faction":"monster",
         "classType": 1,
         "bossFlag":true,
         "avatar": "enemy-wolfboss.ccbi",
@@ -5769,6 +5920,7 @@
     {
         "classId": 140,
         "className": "剑圣",
+        "faction":"monster",
         "classType": 1,
         "bossFlag":true,
         "avatar": "enemy-swordboss.ccbi",
@@ -5822,6 +5974,7 @@
     {
         "classId": 141,
         "className": "小伙伴战士",
+        "faction":"npc",
         "classType": 2,
         "avatar": "npc-warrior.ccbi",
         "property":
@@ -5838,6 +5991,7 @@
     {
         "classId": 142,
         "className": "小伙伴法师",
+        "faction":"npc",
         "classType": 2,
         "avatar": "npc-mage.ccbi",
         "property":
@@ -5854,6 +6008,7 @@
     {
         "classId": 143,
         "className": "小伙伴牧师",
+        "faction":"npc",
         "classType": 2,
         "avatar": "npc-priest.ccbi",
         "property":
@@ -5870,6 +6025,7 @@
     {
         "classId": 144,
         "className": "矿石1",
+        "faction":"npc",
         "classType": 2,
         "avatar": "npc-crystal1.ccbi",
         "property":
@@ -5886,6 +6042,7 @@
     {
         "classId": 145,
         "className": "矿石2",
+        "faction":"npc",
         "classType": 2,
         "avatar": "npc-crystal2.ccbi",
         "property":
@@ -5902,6 +6059,7 @@
     {
         "classId": 146,
         "className": "村姑1",
+        "faction":"npc",
         "classType": 2,
         "avatar": "npc-woman.ccbi",
         "property":
@@ -5918,6 +6076,7 @@
     {
         "classId": 147,
         "className": "草药1",
+        "faction":"npc",
         "classType": 2,
         "avatar": "npc-herbs1.ccbi",
         "property":
@@ -5934,6 +6093,7 @@
     {
         "classId": 148,
         "className": "游侠头领分身",
+        "faction":"monster",
         "classType": 1,
         "avatar": "enemy-archerboss.ccbi",
         "hideHealth":true,
@@ -5972,6 +6132,7 @@
     {
         "classId": 149,
         "className": "宝箱",
+        "faction":"npc",
         "classType": 2,
         "avatar": "enemy-treasurebox.ccbi",
         "property":
@@ -6008,6 +6169,7 @@
     {
         "classId": 150,
         "className": "任务宝箱",
+        "faction":"npc",
         "classType": 2,
         "avatar": "npc-treasurebox.ccbi",
         "property":
@@ -6024,6 +6186,7 @@
     {
         "classId": 151,
         "className": "矿石3",
+        "faction":"npc",
         "classType": 2,
         "avatar": "npc-crystal3.ccbi",
         "property":
@@ -6040,6 +6203,7 @@
     {
         "classId": 152,
         "className": "矿石4",
+        "faction":"npc",
         "classType": 2,
         "avatar": "npc-crystal4.ccbi",
         "property":
@@ -6056,6 +6220,7 @@
     {
         "classId": 153,
         "className": "村姑2",
+        "faction":"npc",
         "classType": 2,
         "avatar": "npc-woman2.ccbi",
         "property":
@@ -6072,6 +6237,7 @@
     {
         "classId": 154,
         "className": "村姑3",
+        "faction":"npc",
         "classType": 2,
         "avatar": "npc-woman3.ccbi",
         "property":
@@ -6088,6 +6254,7 @@
     {
         "classId": 155,
         "className": "村姑4",
+        "faction":"npc",
         "classType": 2,
         "avatar": "npc-woman4.ccbi",
         "property":
@@ -6104,6 +6271,7 @@
     {
         "classId": 156,
         "className": "村夫1",
+        "faction":"npc",
         "classType": 2,
         "avatar": "npc-man.ccbi",
         "property":
@@ -6120,6 +6288,7 @@
     {
         "classId": 157,
         "className": "村夫2",
+        "faction":"npc",
         "classType": 2,
         "avatar": "npc-man2.ccbi",
         "property":
@@ -6136,6 +6305,7 @@
     {
         "classId": 158,
         "className": "考古学家",
+        "faction":"npc",
         "classType": 2,
         "avatar": "npc-archaeologist.ccbi",
         "property":
@@ -6152,6 +6322,7 @@
     {
         "classId": 159,
         "className": "草药2",
+        "faction":"npc",
         "classType": 2,
         "avatar": "npc-herbs2.ccbi",
         "property":
@@ -6168,6 +6339,7 @@
     {
         "classId": 160,
         "className": "草药3",
+        "faction":"npc",
         "classType": 2,
         "avatar": "npc-herbs3.ccbi",
         "property":
@@ -6184,6 +6356,7 @@
     {
         "classId": 161,
         "className": "草药4",
+        "faction":"npc",
         "classType": 2,
         "avatar": "npc-herbs4.ccbi",
         "property":
@@ -6200,6 +6373,7 @@
     {
         "classId": 162,
         "className": "小小哥布林",
+        "faction":"npc",
         "classType": 2,
         "avatar": "enemy-goblin1.ccbi",
         "property":
@@ -6217,6 +6391,7 @@
     {
         "classId": 163,
         "className": "牧师+npc",
+        "faction":"npc",
         "classType": 2,
         "avatar": "avatar.ccbi",
         "property":
@@ -6244,6 +6419,7 @@
     {
         "classId": 164,
         "className": "牧师+",
+        "faction":"hero",
         "classType": 0,
         "avatar": "avatar.ccbi",
         "property":
@@ -6278,6 +6454,7 @@
     {
         "classId": 165,
         "className": "村长",
+        "faction":"npc",
         "classType": 2,
         "avatar": "npc-village.ccbi",
         "property":
@@ -6294,6 +6471,7 @@
     {
     "classId": 166,
     "className": "龙",
+        "faction":"monster",
     "classType": 1,
     "bossFlag":true,
     "avatar": "enemy-dragon.ccbi",
@@ -6340,6 +6518,7 @@
     {
         "classId": 167,
         "className": "导演",
+        "faction":"monster",
         "classType": 1,
         "avatar": "avatar.ccbi",
         "property":
@@ -6377,6 +6556,7 @@
     {
         "classId": 168,
         "className": "导演0",
+        "faction":"monster",
         "classType": 1,
         "avatar": "avatar.ccbi",
         "property":
@@ -6414,6 +6594,7 @@
     {
         "classId": 169,
         "className": "宝箱X",
+        "faction":"npc",
         "classType": 2,
         "avatar": "enemy-treasurebox.ccbi",
         "property":
@@ -6446,5 +6627,293 @@
                 "level": 1
             }
         ]
+    },
+    {
+        "classId": 170,
+        "className": "我方全体回血",
+        "faction":"npch",
+        "classType": 2,
+        "avatar": "effect-smzq.ccbi",
+            "property":
+            {
+                "health": 5,
+                "strong": 0
+            },
+            "xproperty":
+            {
+                "strong": 0.8
+
+        },
+        "skill": [
+            {
+                "id": 84,
+                "level": 1
+              }
+        ]
+    },
+      {       "classId": 171,
+               "className": "敌方全体回血",
+          "faction":"npcm",
+          "classType": 2,
+          "avatar": "effect-xc.ccbi",
+                 "property":
+                    {
+                    "health": 5,
+                        "strong": 0
+                    },
+                    "xproperty":
+                 {
+              "strong": 0.8
+                     },
+                  "skill": [
+                     {
+                     "id": 84,
+                     "level": 1
+                            }
+                      ]
+    },
+    {              "classId": 172,
+                "className": "我方全体掉血",
+        "faction":"npch",
+                "classType": 2,
+                "avatar": "effect-bomb.ccbi",
+                "property":
+                {
+                "health": 5,
+                    "strong": 0
+                    },
+                    "xproperty":
+                    {
+                    "strong": 0.8
+                },
+                "skill": [
+                {
+                "id": 83,
+                "level": 1
+         }
+        ]
+     },
+    {              "classId": 173,
+        "className": "敌方全体掉血",
+        "faction":"npcm",
+        "classType": 2,
+        "avatar": "effect-sszg.ccbi",
+        "property":
+        {
+            "health": 5,
+            "strong": 0
+        },
+        "xproperty":
+        {
+            "strong": 0.8
+        },
+        "skill": [
+            {
+                "id": 83,
+                "level": 2
+            }
+        ]
+    },
+    {              "classId": 174,
+                "className": "我方全体攻击加速",
+        "faction":"npch",
+                "classType": 2,
+                "avatar": "effect-js-1.ccbi",
+                "property":
+                {
+                    "health": 5
+                },
+                "skill": [
+                    {
+                        "id": 87
+
+            }
+        ]
+    },
+    {              "classId": 175,
+        "className": "敌方全体攻击加速",
+        "faction":"npcm",
+        "classType": 2,
+        "avatar": "effect-js-2.ccbi",
+        "property":
+        {
+            "health": 5
+        },
+        "skill": [
+            {
+                "id": 87
+
+            }
+        ]
+    },
+    {   "classId": 176,
+        "className": "我方全体攻击上升",
+        "faction":"npch",
+        "classType": 2,
+        "avatar": "effect-ll-1.ccbi",
+        "property":
+        {
+            "health": 5
+        },
+        "skill": [
+            {
+                "id": 89
+
+            }
+        ]
+    },
+    {   "classId": 177,
+        "className": "敌方全体攻击上升",
+        "faction":"npcm",
+        "classType": 2,
+        "avatar": "effect-ll-2.ccbi",
+        "property":
+        {
+            "health": 5
+        },
+        "skill": [
+            {
+                "id": 89
+
+            }
+        ]
+    },
+    {              "classId": 178,
+                    "className": "我方全体攻击降低",
+        "faction":"npch",
+                    "classType": 2,
+                    "avatar": "effect-xr-1.ccbi",
+                    "property":
+                    {
+                        "health": 5
+                    },
+                    "skill": [
+                        {
+                            "id": 91
+
+                        }
+        ]
+    },
+    {              "classId": 179,
+                    "className": "敌方全体攻击降低",
+        "faction":"npcm",
+                    "classType": 2,
+                    "avatar": "effect-xr-2x.ccbi",
+                    "property":
+                    {
+                        "health": 5
+                    },
+                    "skill": [
+                        {
+                            "id": 91
+
+                        }
+                    ]
+    },
+    {              "classId": 179,
+                    "className": "我方全体持续掉血",
+        "faction":"npch",
+                    "classType": 2,
+                    "avatar": "effect-gas.ccbi",
+                    "property":
+                    {
+                        "health": 5
+                    },
+                    "skill": [
+                        {
+                            "id": 93
+
+                        }
+        ]
+    },
+    {
+        "classId": 180,
+        "className": "我方全体无敌",
+        "faction":"npch",
+        "classType": 2,
+        "avatar": "effect-wd-1.ccbi",
+        "property":
+        {
+            "health": 5
+        },
+        "skill": [
+            {
+                "id": 95
+
+            }
+        ]
+    },
+    {
+        "classId": 181,
+        "className": "敌方全体无敌",
+        "faction":"npcm",
+        "classType": 2,
+        "avatar": "effect-wd-2.ccbi",
+        "property":
+        {
+            "health": 5
+        },
+        "skill": [
+            {
+                "id": 95
+
+            }
+        ]
+    },
+    {
+        "classId": 182,
+        "className": "我方全体攻击吸收",
+        "faction":"npch",
+        "classType": 2,
+        "avatar": "effect-xssh-1.ccbi",
+        "property":
+        {
+            "health": 5
+        },
+        "skill": [
+            {
+                "id": 97
+
+            }
+        ]
+    },
+    {
+        "classId": 183,
+        "className": "敌方全体攻击吸收",
+        "faction":"npcm",
+        "classType": 2,
+        "avatar": "effect-xssh-2.ccbi",
+        "property":
+        {
+            "health": 5
+        },
+        "skill": [
+            {
+                "id": 97
+
+            }
+        ]
+    },
+    {
+        "classId": 184,
+        "className": "清除我方所有buff",
+        "faction":"npcm",
+        "classType": 2,
+        "avatar": "effect-buffclean.ccbi",
+        "property":
+        {
+            "health": 5
+        },
+        "skill": [
+            {
+                "id": 99
+
+            }
+        ]
     }
+
+
+
 ]
+
+
