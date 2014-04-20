@@ -25,7 +25,6 @@ TABLE_VIP = "vip";
 TABLE_TRIGGER = "triggers";
 TABLE_BROADCAST = "broadcast";
 TABLE_LEADBOARD = "leadboard";
-TABLE_FACTION = "faction";
 
 /*** GAME CONSTANTS ***/
 ItemId_RevivePotion = 540;
@@ -203,6 +202,7 @@ LOGIN_ACCOUNT_TYPE_AD = 1;
 LOGIN_ACCOUNT_TYPE_PP =  2;
 LOGIN_ACCOUNT_TYPE_91 =  3;
 LOGIN_ACCOUNT_TYPE_KY =  4;
+LOGIN_ACCOUNT_TYPE_GAMECENTER =  5;
 
 Max_tutorialStage = 3;
 

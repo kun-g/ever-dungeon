@@ -1,7 +1,7 @@
 #!/bin/bash
 
-
 CurrentBranch=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
+
 while [ "$CurrentBranch" = "master" ]; do
   read -p "Do you wish to update the MASTER branch(YES/NO):" yn
   case $yn in
@@ -13,7 +13,6 @@ done
 
 VersionFile="build/version.json"
 ConfigFile="build/config.json"
-
 
 CurrentPWD=`pwd`
 
