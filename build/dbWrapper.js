@@ -291,6 +291,10 @@
     return dbClient.zadd(makeDBKey([board], LeaderboardPrefix), score, member, callback);
   };
 
+  exports.removeLeaderboard = function(board, callback) {
+    return dbClient.del(makeDBKey([board], LeaderboardPrefix), callback);
+  };
+
   exports.getPositionOnLeaderboard = function(board, member, rev, callback) {
     var key;
     key = makeDBKey([board], LeaderboardPrefix);
