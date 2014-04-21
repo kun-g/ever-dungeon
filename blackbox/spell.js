@@ -615,7 +615,7 @@
     };
 
     Wizard.prototype.doAction = function(thisSpell, actions, level, target, cmd) {
-      var a, c, cfg, delay, env, formular, formularResult, h, modifications, pos, property, spellID, src, t, val, variables, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _ref3, _ref4, _s, _t, _u, _v, _w, _x;
+      var a, c, cfg, delay, effect, env, formular, formularResult, h, modifications, pos, property, spellID, src, t, val, variables, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _ref3, _s, _t, _u, _v, _w, _x;
       if (actions == null) {
         return false;
       }
@@ -916,46 +916,47 @@
             }
             break;
           case 'playEffect':
-            if (a.pos != null) {
-              if (a.pos === 'self') {
+            effect = getProperty(a.effect, level.effect);
+            pos = getProperty(a.pos, level.pos);
+            if (pos != null) {
+              if (pos === 'self') {
                 if (typeof cmd.routine === "function") {
                   cmd.routine({
                     id: 'Effect',
                     delay: delay,
-                    effect: a.effect,
+                    effect: effect,
                     pos: this.pos
                   });
                 }
-              } else if (a.pos === 'target') {
+              } else if (pos === 'target') {
                 for (_u = 0, _len12 = target.length; _u < _len12; _u++) {
                   t = target[_u];
                   if (typeof cmd.routine === "function") {
                     cmd.routine({
                       id: 'Effect',
                       delay: delay,
-                      effect: a.effect,
+                      effect: effect,
                       pos: t.pos
                     });
                   }
                 }
-              } else if (typeof a.pos === 'number') {
+              } else if (typeof pos === 'number') {
                 if (typeof cmd.routine === "function") {
                   cmd.routine({
                     id: 'Effect',
                     delay: delay,
-                    effect: a.effect,
-                    pos: a.pos
+                    effect: effect,
+                    pos: pos
                   });
                 }
-              } else if (Array.isArray(a.pos)) {
-                _ref2 = a.pos;
-                for (_v = 0, _len13 = _ref2.length; _v < _len13; _v++) {
-                  pos = _ref2[_v];
+              } else if (Array.isArray(pos)) {
+                for (_v = 0, _len13 = pos.length; _v < _len13; _v++) {
+                  pos = pos[_v];
                   if (typeof cmd.routine === "function") {
                     cmd.routine({
                       id: 'Effect',
                       delay: delay,
-                      effect: a.effect,
+                      effect: effect,
                       pos: pos
                     });
                   }
@@ -968,7 +969,7 @@
                     cmd.routine({
                       id: 'Effect',
                       delay: delay,
-                      effect: a.effect,
+                      effect: effect,
                       act: this.ref
                     });
                   }
@@ -980,7 +981,7 @@
                       cmd.routine({
                         id: 'Effect',
                         delay: delay,
-                        effect: a.effect,
+                        effect: effect,
                         act: t.ref
                       });
                     }
@@ -1013,9 +1014,9 @@
             }
             break;
           case 'resetProperty':
-            _ref3 = thisSpell.modifications;
-            for (property in _ref3) {
-              val = _ref3[property];
+            _ref2 = thisSpell.modifications;
+            for (property in _ref2) {
+              val = _ref2[property];
               this[property] -= val;
             }
             delete thisSpell.modifications;
@@ -1029,9 +1030,9 @@
             }
             for (_x = 0, _len15 = target.length; _x < _len15; _x++) {
               h = target[_x];
-              _ref4 = h.wSpellDB;
-              for (spellID in _ref4) {
-                thisSpell = _ref4[spellID];
+              _ref3 = h.wSpellDB;
+              for (spellID in _ref3) {
+                thisSpell = _ref3[spellID];
                 cfg = getSpellConfig(spellID);
                 if (_buffType.indexOf(cfg.buffType) !== -1) {
                   h.removeSpell(spellID, cmd);
