@@ -33,11 +33,9 @@ exports.bindAuth = function (account, type, id, pass, handler) {
   accountDBClient.get(key, function (err, acc) {
     console.log('Acc', acc, account);
     if (acc != null) {
-      accountDBClient.set(key, acc, function () {
-        handler(null, acc);
-      });
+      handler(null, acc);
     } else {
-      handler(null, account);
+      accountDBClient.set(key, account, function () { handler(null, account); });
     }
   });
 };
