@@ -346,13 +346,31 @@
     };
 
     Player.prototype.handlePayment = function(payment, handle) {
-      var myReceipt;
+      var myReceipt, postResult;
       this.log('handlePayment', {
         payment: payment
       });
+      postResult = (function(_this) {
+        return function(error, result) {
+          if (error) {
+            logError({
+              name: _this.name,
+              receipt: myReceipt,
+              type: 'handlePayment',
+              error: error,
+              result: result
+            });
+            return handle(null, []);
+          } else {
+            return handle(null, result);
+          }
+        };
+      })(this);
       switch (payment.paymentType) {
         case 'AppStore':
-          return this.handleReceipt(payment, 'AppStore', handle);
+          return this.handleReceipt(payment, 'AppStore', (function(_this) {
+            return function(error, result) {};
+          })(this));
         case 'PP25':
         case 'ND91':
           myReceipt = payment.receipt;
@@ -370,22 +388,7 @@
                 return _this.handleReceipt(payment, tunnel, cb);
               };
             })(this)
-          ], (function(_this) {
-            return function(error, result) {
-              if (error) {
-                logError({
-                  name: _this.name,
-                  receipt: myReceipt,
-                  type: 'handlePayment',
-                  error: error,
-                  result: result
-                });
-                return handle(null, []);
-              } else {
-                return handle(null, result);
-              }
-            };
-          })(this));
+          ], postResult);
       }
     };
 

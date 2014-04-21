@@ -2667,7 +2667,7 @@
     Kill: {
       callback: function(env) {
         env.variable('tar').health = 0;
-        if (env.variable('tar').isVisible) {
+        if (!env.variable('tar').isVisible) {
           env.variable('tar').dead = true;
         }
         return this.routine({
