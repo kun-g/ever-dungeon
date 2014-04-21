@@ -582,7 +582,8 @@
                 logInfo({
                   action: 'VerifyPayment',
                   type: 'Apple',
-                  code: result
+                  code: result,
+                  receipt: arg.bill
                 });
                 if (result.status !== 0 || result.original_transaction_id) {
                   return handler([
@@ -592,7 +593,7 @@
                     }
                   ]);
                 }
-                receipt = arg.receipt;
+                receipt = arg.bill;
                 return player.handlePayment({
                   paymentType: 'AppStore',
                   receipt: receipt
@@ -602,7 +603,8 @@
               logError({
                 action: 'VerifyPayment',
                 type: 'Apple',
-                error: e
+                error: e,
+                rep: arg.rep
               });
               return handler([
                 {
