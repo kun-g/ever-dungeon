@@ -22,26 +22,30 @@ exports.verifyAuth = function (id, token, handler) {
     }
   });
 };
-exports.bindAuth = function (account, type, id, pass, handler) {
-  //var acc = { account: account };
-  //if (pass) {
-  //  acc.salt = Math.random();
-  //  acc.pass = md5Hash(acc.salt+pass);
-  //}
-  var key = makeDBKey([passportPrefix, type, id, 'account']);
-  console.log('Key', key);
-  accountDBClient.get(key, function (err, acc) {
-    console.log('Acc', acc, account);
-    if (acc != null) {
-      accountDBClient.set(key, acc, function () {
-        handler(null, acc);
-      });
-    } else {
-      handler(null, account);
-    }
-  });
+exports.bindAuth = function (account, id, pass, handler) {
+  var salt = Math.random();
+  pass = md5Hash(salt+pass);
+  async.series([
+      function (cb) { nameValidation(id, cb); },
+      function (cb) { 
+        accountDBClient.exists(makeDBKey([authPrefix, id]), function (err, result) {
+          if (result == 0) {
+            cb(null);
+          } else {
+            cb(RET_NameTaken);
+          }
+        });
+      },
+      function (cb) {
+        accountDBClient.hmset(makeDBKey([authPrefix, id]), 
+            {
+              account: account,
+              pass: pass,
+              salt: salt
+            },
+            cb);
+      }], handler);
 };
-
 exports.loadPassport = function (type, id, createOnFail, handler) {
   accountDBClient.get(makeDBKey([passportPrefix, type, id, 'account']), function (err, ret) {
     if (ret) {
@@ -51,7 +55,7 @@ exports.loadPassport = function (type, id, createOnFail, handler) {
     } else if (createOnFail) {
       createPassportWithAccount(type, id, handler);
     } else {
-      handler(err, ret);
+      logError({action: 'LoadPassport', error: 'NoPassport', type: type, id: id});
     }
   });
 };

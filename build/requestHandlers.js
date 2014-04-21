@@ -1,5 +1,5 @@
 (function() {
-  var DBWrapper, Player, addMercenaryMember, async, dbLib, getMercenaryMember, getPlayerHero, helperLib, http, https, loadPlayer, loginBy, moment, updateMercenaryMember, wrapReceipt, _ref;
+  var DBWrapper, Player, addMercenaryMember, async, dbLib, getMercenaryMember, getPlayerHero, helperLib, http, loadPlayer, loginBy, moment, updateMercenaryMember, wrapReceipt, _ref;
 
   require('./define');
 
@@ -12,8 +12,6 @@
   async = require('async');
 
   http = require('http');
-
-  https = require('https');
 
   moment = require('moment');
 
@@ -38,34 +36,6 @@
               code: result
             });
             if (result.ErrorCode === '1') {
-              return callback(null);
-            } else {
-              return callback(Error(RET_LoginFailed));
-            }
-          });
-        }).on('error', function(e) {
-          return logError({
-            action: 'login',
-            type: LOGIN_ACCOUNT_TYPE_91,
-            error: e
-          });
-        });
-      case LOGIN_ACCOUNT_TYPE_KY:
-        appID = '112988';
-        appKey = 'd30d9f0f53e2654274505e25c27913fe709eb1ad6265e5c5';
-        sign = md5Hash(token + appKey);
-        path = 'http://service.sj.91.com/usercenter/AP.aspx?tokenKey=' + token + '&sign=' + sign;
-        return http.get(path, function(res) {
-          res.setEncoding('utf8');
-          return res.on('data', function(chunk) {
-            var result;
-            result = JSON.parse(chunk);
-            logInfo({
-              action: 'login',
-              type: LOGIN_ACCOUNT_TYPE_91,
-              code: result
-            });
-            if (result.code === 0) {
               return callback(null);
             } else {
               return callback(Error(RET_LoginFailed));
@@ -117,7 +87,6 @@
       case LOGIN_ACCOUNT_TYPE_TG:
         return dbLib.loadAuth(passport, token, callback);
       case LOGIN_ACCOUNT_TYPE_AD:
-      case LOGIN_ACCOUNT_TYPE_GAMECENTER:
         return callback(null);
       default:
         return callback(Error(RET_Issue33));
@@ -141,6 +110,20 @@
   };
 
   exports.route = {
+    RPC_ChargeDiamond: {
+      id: 15,
+      func: function(arg, player, handle, rpcID, socket) {
+        switch (arg.stp) {
+          case 'AppStore':
+            throw Error('AppStore Payment');
+            break;
+          case 'PP25':
+            throw Error('PP25 Payment');
+        }
+      },
+      args: ['pid', 'string', 'rep', 'string'],
+      needPid: true
+    },
     RPC_Login: {
       id: 100,
       func: function(arg, dummy, handle, rpcID, socket, registerFlag) {
@@ -543,94 +526,24 @@
       args: ['stg'],
       needPid: true
     },
-    RPC_ChargeDiamond: {
-      id: 15,
-      func: function(arg, player, handle, rpcID, socket) {
-        switch (arg.stp) {
-          case 'AppStore':
-            throw Error('AppStore Payment');
-            break;
-          case 'PP25':
-            throw Error('PP25 Payment');
-        }
-      },
-      args: ['pid', 'string', 'rep', 'string'],
-      needPid: true
-    },
-    RPC_VerifyPayment: {
-      id: 15,
-      func: function(arg, player, handler, rpcID, socket) {
-        var options, req;
-        logInfo({
-          action: 'VerifyPayment',
-          type: 'Apple',
-          arg: arg
-        });
-        switch (arg.stp) {
-          case 'AppStore':
-            options = {
-              hostname: 'buy.itunes.apple.com',
-              port: 443,
-              path: '/verifyReceipt',
-              method: 'POST'
-            };
-            req = https.request(options, function(res) {
-              res.setEncoding('utf8');
-              return res.on('data', function(chunk) {
-                var receipt, result;
-                result = JSON.parse(chunk);
-                logInfo({
-                  action: 'VerifyPayment',
-                  type: 'Apple',
-                  code: result
-                });
-                if (result.status !== 0 || result.original_transaction_id) {
-                  return handler([
-                    {
-                      REQ: rpcID,
-                      RET: RET_Unknown
-                    }
-                  ]);
-                }
-                receipt = arg.receipt;
-                return player.handlePayment({
-                  paymentType: 'AppStore',
-                  receipt: receipt
-                }, handler);
-              });
-            }).on('error', function(e) {
-              logError({
-                action: 'VerifyPayment',
-                type: 'Apple',
-                error: e
-              });
-              return handler([
-                {
-                  REQ: rpcID,
-                  RET: RET_InvalidPaymentInfo
-                }
-              ]);
-            });
-            req.write(JSON.stringify({
-              "receipt-data": arg.rep
-            }));
-            return req.end();
-        }
-      },
-      args: [],
-      needPid: true
-    },
     RPC_BindSubAuth: {
-      id: 105,
       func: function(arg, player, handler, rpcID, socket) {
-        return dbLib.bindAuth(player.accountID, arg.typ, arg.id, arg.pass, function(err, account) {
-          return handler([
-            {
-              REQ: rpcID,
-              RET: RET_OK,
-              aid: account
-            }
-          ]);
+        return dbLib.bindAuth(player.accountID, arg.id, arg.pass, function(err) {
+          if (err) {
+            return handler([
+              {
+                REQ: rpcID,
+                RET: err
+              }
+            ]);
+          } else {
+            return handler([
+              {
+                REQ: rpcID,
+                RET: RET_OK
+              }
+            ]);
+          }
         });
       },
       args: [],
