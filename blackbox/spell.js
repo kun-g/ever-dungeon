@@ -494,10 +494,9 @@
       if (cmd != null) {
         env = cmd.getEnvironment();
       }
-      pool = [];
       switch (cfg.targetSelection.pool) {
         case 'self':
-          pool = [this];
+          pool = this;
           break;
         case 'target':
           pool = env.variable('tar');
@@ -523,8 +522,11 @@
       if ((cfg.targetSelection.filter != null) && pool.length > 0) {
         pool = triggerLib.filterObject(this, pool, cfg.targetSelection.filter, env);
       }
+      if (pool == null) {
+        pool = [];
+      }
       if (!Array.isArray(pool)) {
-        throw 'OOOO';
+        pool = [pool];
       }
       return pool;
     };
