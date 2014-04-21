@@ -29,10 +29,10 @@ exports.bindAuth = function (account, type, id, pass, handler) {
   //  acc.pass = md5Hash(acc.salt+pass);
   //}
   var key = makeDBKey([passportPrefix, type, id, 'account']);
-  accountDBClient.get(key, function (err, account) {
-    if (account != null) {
-      accountDBClient.set(key, account, function () {
-        handler(null, account);
+  accountDBClient.get(key, function (err, acc) {
+    if (acc != null) {
+      accountDBClient.set(key, acc, function () {
+        handler(null, acc);
       });
     } else {
       handler(null, account);

@@ -295,48 +295,53 @@
       return this.loadDungeon();
     };
 
-    Player.prototype.handleReceipt = function(myReceipt, tunnel, cb) {
-      var cfg, productList, rec, ret;
+    Player.prototype.handleReceipt = function(payment, tunnel, cb) {
+      var cfg, productList, rec, receipt, ret;
       productList = queryTable(TABLE_CONFIG, 'Product_List');
+      receipt = payment.receipt;
       rec = unwrapReceipt(myReceipt);
       cfg = productList[rec.productID];
-      ret = [
-        {
-          NTF: Event_InventoryUpdateItem,
-          arg: {
-            dim: this.addDiamond(cfg.diamond)
-          }
-        }
-      ];
-      this.rmb += cfg.rmb;
-      this.onCampaign('RMB', cfg.rmb);
       this.log('charge', {
         rmb: cfg.rmb,
         diamond: cfg.diamond,
         tunnel: tunnel,
         action: 'charge',
-        product: rec.productID,
+        match: cfg.rmb === payment.rmb || tunnel === 'AppStore',
         receipt: myReceipt
       });
-      ret.push({
-        NTF: Event_PlayerInfo,
-        arg: {
-          rmb: this.rmb
-        }
-      });
-      ret.push({
-        NTF: Event_RoleUpdate,
-        arg: {
-          act: {
-            vip: this.vipLevel()
+      if (cfg.rmb === payment.rmb || tunnel === 'AppStore') {
+        ret = [
+          {
+            NTF: Event_InventoryUpdateItem,
+            arg: {
+              dim: this.addDiamond(cfg.diamond)
+            }
           }
-        }
-      });
-      postPaymentInfo(this.createHero().level, myReceipt, payment.paymentType);
-      dbWrapper.updateReceipt(myReceipt, RECEIPT_STATE_CLAIMED, function(err) {
-        return cb(err, ret);
-      });
-      return this.saveDB();
+        ];
+        this.rmb += cfg.rmb;
+        this.onCampaign('RMB', cfg.rmb);
+        ret.push({
+          NTF: Event_PlayerInfo,
+          arg: {
+            rmb: this.rmb
+          }
+        });
+        ret.push({
+          NTF: Event_RoleUpdate,
+          arg: {
+            act: {
+              vip: this.vipLevel()
+            }
+          }
+        });
+        postPaymentInfo(this.createHero().level, myReceipt, payment.paymentType);
+        this.saveDB();
+        return dbWrapper.updateReceipt(myReceipt, RECEIPT_STATE_CLAIMED, function(err) {
+          return cb(err, ret);
+        });
+      } else {
+        return cb(Error(RET_InvalidPaymentInfo));
+      }
     };
 
     Player.prototype.handlePayment = function(payment, handle) {
@@ -346,7 +351,7 @@
       });
       switch (payment.paymentType) {
         case 'AppStore':
-          return this.handleReceipt(payment.receipt, 'AppleStore', cb);
+          return this.handleReceipt(payment, 'AppleStore', cb);
         case 'PP25':
         case 'ND91':
           myReceipt = payment.receipt;
@@ -361,7 +366,7 @@
               });
             }, (function(_this) {
               return function(receipt, tunnel, cb) {
-                return _this.handleReceipt(receipt, tunnel, cb);
+                return _this.handleReceipt(payment, tunnel, cb);
               };
             })(this)
           ], (function(_this) {
