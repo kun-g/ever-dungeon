@@ -569,7 +569,7 @@
         switch (arg.stp) {
           case 'AppStore':
             options = {
-              hostname: 'buy.itunes.apple.com',
+              hostname: 'sandbox.itunes.apple.com',
               port: 443,
               path: '/verifyReceipt',
               method: 'POST'
