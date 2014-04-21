@@ -141,20 +141,6 @@
   };
 
   exports.route = {
-    RPC_ChargeDiamond: {
-      id: 15,
-      func: function(arg, player, handle, rpcID, socket) {
-        switch (arg.stp) {
-          case 'AppStore':
-            throw Error('AppStore Payment');
-            break;
-          case 'PP25':
-            throw Error('PP25 Payment');
-        }
-      },
-      args: ['pid', 'string', 'rep', 'string'],
-      needPid: true
-    },
     RPC_Login: {
       id: 100,
       func: function(arg, dummy, handle, rpcID, socket, registerFlag) {
@@ -557,7 +543,22 @@
       args: ['stg'],
       needPid: true
     },
+    RPC_ChargeDiamond: {
+      id: 15,
+      func: function(arg, player, handle, rpcID, socket) {
+        switch (arg.stp) {
+          case 'AppStore':
+            throw Error('AppStore Payment');
+            break;
+          case 'PP25':
+            throw Error('PP25 Payment');
+        }
+      },
+      args: ['pid', 'string', 'rep', 'string'],
+      needPid: true
+    },
     RPC_VerifyPayment: {
+      id: 15,
       func: function(arg, player, handler, rpcID, socket) {
         var options, req;
         logInfo({
@@ -565,7 +566,7 @@
           type: 'Apple',
           arg: arg
         });
-        switch (arg.type) {
+        switch (arg.stp) {
           case 'AppStore':
             options = {
               hostname: 'buy.itunes.apple.com',
@@ -605,7 +606,9 @@
               });
             });
         }
-      }
+      },
+      args: [],
+      needPid: true
     },
     RPC_BindSubAuth: {
       id: 105,

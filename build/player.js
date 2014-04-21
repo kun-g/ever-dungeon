@@ -296,20 +296,24 @@
     };
 
     Player.prototype.handleReceipt = function(payment, tunnel, cb) {
-      var cfg, productList, rec, receipt, ret;
+      var cfg, flag, productList, rec, receipt, ret;
       productList = queryTable(TABLE_CONFIG, 'Product_List');
       receipt = payment.receipt;
       rec = unwrapReceipt(myReceipt);
       cfg = productList[rec.productID];
+      flag = cfg.rmb === payment.rmb;
+      if (tunnel === 'AppStore') {
+        flag = rec.productID === rec.productID;
+      }
       this.log('charge', {
         rmb: cfg.rmb,
         diamond: cfg.diamond,
         tunnel: tunnel,
         action: 'charge',
-        match: cfg.rmb === payment.rmb || tunnel === 'AppStore',
+        match: flag,
         receipt: myReceipt
       });
-      if (cfg.rmb === payment.rmb || tunnel === 'AppStore') {
+      if (flag) {
         ret = [
           {
             NTF: Event_InventoryUpdateItem,
