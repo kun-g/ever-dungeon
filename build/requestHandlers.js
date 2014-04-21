@@ -599,7 +599,17 @@
                   productID: result.product_id,
                   receipt: receipt
                 }, function(err, result) {
-                  return handle(result);
+                  var ret;
+                  ret = RET_OK;
+                  if (err != null) {
+                    ret = err.message;
+                  }
+                  return handler([
+                    {
+                      REQ: rpcID,
+                      RET: ret
+                    }
+                  ].concat(result));
                 });
               });
             }).on('error', function(e) {
