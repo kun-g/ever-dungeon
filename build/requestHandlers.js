@@ -574,7 +574,7 @@
               path: '/verifyReceipt',
               method: 'POST'
             };
-            return req = https.request(options, function(res) {
+            req = https.request(options, function(res) {
               res.setEncoding('utf8');
               return res.on('data', function(chunk) {
                 var receipt, result;
@@ -599,12 +599,22 @@
                 }, handler);
               });
             }).on('error', function(e) {
-              return logError({
+              logError({
                 action: 'VerifyPayment',
                 type: 'Apple',
                 error: e
               });
+              return handler([
+                {
+                  REQ: rpcID,
+                  RET: RET_InvalidPaymentInfo
+                }
+              ]);
             });
+            req.write(JSON.stringify({
+              "receipt-data": arg.rep
+            }));
+            return req.end();
         }
       },
       args: [],
