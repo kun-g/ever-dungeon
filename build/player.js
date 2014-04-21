@@ -2090,7 +2090,7 @@
     };
 
     Player.prototype.getCampaignConfig = function(campaignName) {
-      var cfg, _base;
+      var cfg;
       cfg = queryTable(TABLE_CAMPAIGN, campaignName, this.abIndex);
       if (cfg != null) {
         if ((cfg.date != null) && moment(cfg.date).format('YYYYMMDD') - moment().format('YYYYMMDD') < 0) {
@@ -2098,7 +2098,7 @@
             config: null
           };
         }
-        if (typeof (_base = this.getCampaignState(campaignName)) === "function" ? _base(nd(this.getCampaignState(campaignName) === false)) : void 0) {
+        if ((this.getCampaignState(campaignName) != null) && this.getCampaignState(campaignName) === false) {
           return {
             config: null
           };
