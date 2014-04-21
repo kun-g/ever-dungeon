@@ -141,6 +141,20 @@
   };
 
   exports.route = {
+    RPC_ChargeDiamond: {
+      id: 15,
+      func: function(arg, player, handle, rpcID, socket) {
+        switch (arg.stp) {
+          case 'AppStore':
+            throw Error('AppStore Payment');
+            break;
+          case 'PP25':
+            throw Error('PP25 Payment');
+        }
+      },
+      args: ['pid', 'string', 'rep', 'string'],
+      needPid: true
+    },
     RPC_Login: {
       id: 100,
       func: function(arg, dummy, handle, rpcID, socket, registerFlag) {
@@ -543,22 +557,7 @@
       args: ['stg'],
       needPid: true
     },
-    RPC_ChargeDiamond: {
-      id: 15,
-      func: function(arg, player, handle, rpcID, socket) {
-        switch (arg.stp) {
-          case 'AppStore':
-            throw Error('AppStore Payment');
-            break;
-          case 'PP25':
-            throw Error('PP25 Payment');
-        }
-      },
-      args: ['pid', 'string', 'rep', 'string'],
-      needPid: true
-    },
     RPC_VerifyPayment: {
-      id: 15,
       func: function(arg, player, handler, rpcID, socket) {
         var options, req;
         logInfo({
@@ -566,15 +565,15 @@
           type: 'Apple',
           arg: arg
         });
-        switch (arg.stp) {
+        switch (arg.type) {
           case 'AppStore':
             options = {
-              hostname: 'sandbox.itunes.apple.com',
+              hostname: 'buy.itunes.apple.com',
               port: 443,
               path: '/verifyReceipt',
               method: 'POST'
             };
-            req = https.request(options, function(res) {
+            return req = https.request(options, function(res) {
               res.setEncoding('utf8');
               return res.on('data', function(chunk) {
                 var receipt, result;
@@ -582,8 +581,7 @@
                 logInfo({
                   action: 'VerifyPayment',
                   type: 'Apple',
-                  code: result,
-                  receipt: arg.bill
+                  code: result
                 });
                 if (result.status !== 0 || result.original_transaction_id) {
                   return handler([
@@ -593,67 +591,37 @@
                     }
                   ]);
                 }
-                receipt = arg.bill;
+                receipt = arg.receipt;
                 return player.handlePayment({
                   paymentType: 'AppStore',
-                  productID: result.product_id,
                   receipt: receipt
-                }, function(err, result) {
-                  var ret;
-                  ret = RET_OK;
-                  if (err != null) {
-                    ret = err.message;
-                  }
-                  return handler([
-                    {
-                      REQ: rpcID,
-                      RET: ret
-                    }
-                  ].concat(result));
-                });
+                }, handler);
               });
             }).on('error', function(e) {
-              logError({
+              return logError({
                 action: 'VerifyPayment',
                 type: 'Apple',
-                error: e,
-                rep: arg.rep
+                error: e
               });
-              return handler([
-                {
-                  REQ: rpcID,
-                  RET: RET_InvalidPaymentInfo
-                }
-              ]);
             });
-            req.write(JSON.stringify({
-              "receipt-data": arg.rep
-            }));
-            return req.end();
         }
-      },
-      args: [],
-      needPid: true
+      }
     },
     RPC_BindSubAuth: {
       id: 105,
       func: function(arg, player, handler, rpcID, socket) {
-        var account;
-        account = -1;
-        if (player) {
-          account = player.accountID;
-        }
-        return dbLib.bindAuth(account, arg.typ, arg.id, arg.pass, function(err, account) {
+        return dbLib.bindAuth(player.accountID, arg.typ, arg.id, arg.pass, function(err, account) {
           return handler([
             {
               REQ: rpcID,
               RET: RET_OK,
-              aid: account
+              account: account
             }
           ]);
         });
       },
-      args: []
+      args: [],
+      needPid: true
     },
     RPC_Reconnect: {
       id: 104,

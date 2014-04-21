@@ -295,80 +295,58 @@
       return this.loadDungeon();
     };
 
-    Player.prototype.handleReceipt = function(payment, tunnel, cb) {
-      var cfg, flag, myReceipt, productList, rec, ret;
+    Player.prototype.handleReceipt = function(myReceipt, tunnel, cb) {
+      var cfg, productList, rec, ret;
       productList = queryTable(TABLE_CONFIG, 'Product_List');
-      myReceipt = payment.receipt;
       rec = unwrapReceipt(myReceipt);
       cfg = productList[rec.productID];
-      flag = true;
+      ret = [
+        {
+          NTF: Event_InventoryUpdateItem,
+          arg: {
+            dim: this.addDiamond(cfg.diamond)
+          }
+        }
+      ];
+      this.rmb += cfg.rmb;
+      this.onCampaign('RMB', cfg.rmb);
       this.log('charge', {
         rmb: cfg.rmb,
         diamond: cfg.diamond,
         tunnel: tunnel,
         action: 'charge',
-        match: flag,
+        product: rec.productID,
         receipt: myReceipt
       });
-      if (flag) {
-        ret = [
-          {
-            NTF: Event_InventoryUpdateItem,
-            arg: {
-              dim: this.addDiamond(cfg.diamond)
-            }
+      ret.push({
+        NTF: Event_PlayerInfo,
+        arg: {
+          rmb: this.rmb
+        }
+      });
+      ret.push({
+        NTF: Event_RoleUpdate,
+        arg: {
+          act: {
+            vip: this.vipLevel()
           }
-        ];
-        this.rmb += cfg.rmb;
-        this.onCampaign('RMB', cfg.rmb);
-        ret.push({
-          NTF: Event_PlayerInfo,
-          arg: {
-            rmb: this.rmb
-          }
-        });
-        ret.push({
-          NTF: Event_RoleUpdate,
-          arg: {
-            act: {
-              vip: this.vipLevel()
-            }
-          }
-        });
-        postPaymentInfo(this.createHero().level, myReceipt, payment.paymentType);
-        this.saveDB();
-        return dbWrapper.updateReceipt(myReceipt, RECEIPT_STATE_CLAIMED, function(err) {
-          return cb(err, ret);
-        });
-      } else {
-        return cb(Error(RET_InvalidPaymentInfo));
-      }
+        }
+      });
+      postPaymentInfo(this.createHero().level, myReceipt, payment.paymentType);
+      dbWrapper.updateReceipt(myReceipt, RECEIPT_STATE_CLAIMED, function(err) {
+        return cb(err, ret);
+      });
+      return this.saveDB();
     };
 
     Player.prototype.handlePayment = function(payment, handle) {
-      var myReceipt, postResult;
+      var myReceipt;
       this.log('handlePayment', {
         payment: payment
       });
-      postResult = (function(_this) {
-        return function(error, result) {
-          if (error) {
-            logError({
-              name: _this.name,
-              receipt: myReceipt,
-              type: 'handlePayment',
-              error: error,
-              result: result
-            });
-            return handle(null, []);
-          } else {
-            return handle(null, result);
-          }
-        };
-      })(this);
       switch (payment.paymentType) {
         case 'AppStore':
-          return this.handleReceipt(payment, 'AppStore', postResult);
+          return this.handleReceipt(payment.receipt, 'AppleStore', cb);
         case 'PP25':
         case 'ND91':
           myReceipt = payment.receipt;
@@ -383,10 +361,25 @@
               });
             }, (function(_this) {
               return function(receipt, tunnel, cb) {
-                return _this.handleReceipt(payment, tunnel, cb);
+                return _this.handleReceipt(receipt, tunnel, cb);
               };
             })(this)
-          ], postResult);
+          ], (function(_this) {
+            return function(error, result) {
+              if (error) {
+                logError({
+                  name: _this.name,
+                  receipt: myReceipt,
+                  type: 'handlePayment',
+                  error: error,
+                  result: result
+                });
+                return handle(null, []);
+              } else {
+                return handle(null, result);
+              }
+            };
+          })(this));
       }
     };
 
@@ -2077,9 +2070,9 @@
     Player.prototype.getCampaignState = function(campaignName) {
       if (this.campaignState[campaignName] == null) {
         if (campaignName === 'Charge') {
-          this.campaignState.newProperty(campaignName, {});
+          this.campaignState[campaignName] = {};
         } else {
-          this.campaignState.newProperty(campaignName, 0);
+          this.campaignState[campaignName] = 0;
         }
       }
       return this.campaignState[campaignName];
@@ -2090,7 +2083,7 @@
     };
 
     Player.prototype.getCampaignConfig = function(campaignName) {
-      var cfg;
+      var cfg, _base;
       cfg = queryTable(TABLE_CAMPAIGN, campaignName, this.abIndex);
       if (cfg != null) {
         if ((cfg.date != null) && moment(cfg.date).format('YYYYMMDD') - moment().format('YYYYMMDD') < 0) {
@@ -2098,7 +2091,7 @@
             config: null
           };
         }
-        if ((this.getCampaignState(campaignName) != null) && this.getCampaignState(campaignName) === false) {
+        if (typeof (_base = this.getCampaignState(campaignName)) === "function" ? _base(nd(this.getCampaignState(campaignName) === false)) : void 0) {
           return {
             config: null
           };
