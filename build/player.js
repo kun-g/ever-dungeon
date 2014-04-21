@@ -295,77 +295,82 @@
       return this.loadDungeon();
     };
 
+    Player.prototype.handleReceipt = function(payment, tunnel, cb) {
+      var cfg, flag, productList, rec, receipt, ret;
+      productList = queryTable(TABLE_CONFIG, 'Product_List');
+      receipt = payment.receipt;
+      rec = unwrapReceipt(myReceipt);
+      cfg = productList[rec.productID];
+      flag = cfg.rmb === payment.rmb;
+      if (tunnel === 'AppStore') {
+        flag = rec.productID === rec.productID;
+      }
+      this.log('charge', {
+        rmb: cfg.rmb,
+        diamond: cfg.diamond,
+        tunnel: tunnel,
+        action: 'charge',
+        match: flag,
+        receipt: myReceipt
+      });
+      if (flag) {
+        ret = [
+          {
+            NTF: Event_InventoryUpdateItem,
+            arg: {
+              dim: this.addDiamond(cfg.diamond)
+            }
+          }
+        ];
+        this.rmb += cfg.rmb;
+        this.onCampaign('RMB', cfg.rmb);
+        ret.push({
+          NTF: Event_PlayerInfo,
+          arg: {
+            rmb: this.rmb
+          }
+        });
+        ret.push({
+          NTF: Event_RoleUpdate,
+          arg: {
+            act: {
+              vip: this.vipLevel()
+            }
+          }
+        });
+        postPaymentInfo(this.createHero().level, myReceipt, payment.paymentType);
+        this.saveDB();
+        return dbWrapper.updateReceipt(myReceipt, RECEIPT_STATE_CLAIMED, function(err) {
+          return cb(err, ret);
+        });
+      } else {
+        return cb(Error(RET_InvalidPaymentInfo));
+      }
+    };
+
     Player.prototype.handlePayment = function(payment, handle) {
-      var myReceipt, myUnwrap;
+      var myReceipt;
       this.log('handlePayment', {
         payment: payment
       });
       switch (payment.paymentType) {
         case 'AppStore':
-          throw 'AppStore Payment';
-          break;
+          return this.handleReceipt(payment, 'AppleStore', cb);
         case 'PP25':
         case 'ND91':
           myReceipt = payment.receipt;
-          switch (payment.paymentType) {
-            case 'PP25':
-              myUnwrap = unwrapReceipt;
-              break;
-            case 'ND91':
-              myUnwrap = unwrapReceipt91;
-          }
           return async.waterfall([
             function(cb) {
               return dbWrapper.getReceipt(myReceipt, function(err, receipt) {
                 if ((receipt != null) && receipt.state !== RECEIPT_STATE_DELIVERED) {
                   return cb(Error(RET_Issue37));
                 } else {
-                  return cb(null, receipt);
+                  return cb(null, myReceipt, paymentType);
                 }
               });
             }, (function(_this) {
-              return function(receipt, cb) {
-                var cfg, productList, rec, ret;
-                productList = queryTable(TABLE_CONFIG, 'Product_List');
-                rec = myUnwrap(myReceipt);
-                cfg = productList[rec.productID];
-                ret = [
-                  {
-                    NTF: Event_InventoryUpdateItem,
-                    arg: {
-                      dim: _this.addDiamond(cfg.diamond)
-                    }
-                  }
-                ];
-                _this.rmb += cfg.rmb;
-                _this.onCampaign('RMB', cfg.rmb);
-                _this.log('charge', {
-                  rmb: cfg.rmb,
-                  diamond: cfg.diamond,
-                  tunnel: 'PP',
-                  action: 'charge',
-                  product: rec.pid,
-                  receipt: myReceipt
-                });
-                ret.push({
-                  NTF: Event_PlayerInfo,
-                  arg: {
-                    rmb: _this.rmb
-                  }
-                });
-                ret.push({
-                  NTF: Event_RoleUpdate,
-                  arg: {
-                    act: {
-                      vip: _this.vipLevel()
-                    }
-                  }
-                });
-                postPaymentInfo(_this.createHero().level, myReceipt, payment.paymentType);
-                dbWrapper.updateReceipt(myReceipt, RECEIPT_STATE_CLAIMED, function(err) {
-                  return cb(err, ret);
-                });
-                return _this.saveDB();
+              return function(receipt, tunnel, cb) {
+                return _this.handleReceipt(payment, tunnel, cb);
               };
             })(this)
           ], (function(_this) {
