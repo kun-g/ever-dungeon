@@ -296,15 +296,11 @@
     };
 
     Player.prototype.handleReceipt = function(payment, tunnel, cb) {
-      var cfg, flag, myReceipt, productList, rec, ret;
+      var cfg, myReceipt, productList, rec, ret;
       productList = queryTable(TABLE_CONFIG, 'Product_List');
       myReceipt = payment.receipt;
       rec = unwrapReceipt(myReceipt);
       cfg = productList[rec.productID];
-      flag = cfg.rmb === payment.rmb;
-      if (tunnel === 'AppStore') {
-        flag = rec.productID === rec.productID;
-      }
       this.log('charge', {
         rmb: cfg.rmb,
         diamond: cfg.diamond,
@@ -355,7 +351,7 @@
       });
       switch (payment.paymentType) {
         case 'AppStore':
-          return this.handleReceipt(payment, 'AppleStore', handle);
+          return this.handleReceipt(payment, 'AppStore', handle);
         case 'PP25':
         case 'ND91':
           myReceipt = payment.receipt;

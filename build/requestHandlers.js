@@ -596,6 +596,7 @@
                 receipt = arg.bill;
                 return player.handlePayment({
                   paymentType: 'AppStore',
+                  productID: result.product_id,
                   receipt: receipt
                 }, handler);
               });
