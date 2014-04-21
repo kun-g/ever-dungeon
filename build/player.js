@@ -368,9 +368,7 @@
       })(this);
       switch (payment.paymentType) {
         case 'AppStore':
-          return this.handleReceipt(payment, 'AppStore', (function(_this) {
-            return function(error, result) {};
-          })(this));
+          return this.handleReceipt(payment, 'AppStore', postResult);
         case 'PP25':
         case 'ND91':
           myReceipt = payment.receipt;
