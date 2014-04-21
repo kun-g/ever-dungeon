@@ -23,13 +23,15 @@ exports.verifyAuth = function (id, token, handler) {
   });
 };
 exports.bindAuth = function (account, type, id, pass, handler) {
-  var acc = { account: account };
+  //var acc = { account: account };
   //if (pass) {
   //  acc.salt = Math.random();
   //  acc.pass = md5Hash(acc.salt+pass);
   //}
   var key = makeDBKey([passportPrefix, type, id, 'account']);
+  console.log('Key', key);
   accountDBClient.get(key, function (err, acc) {
+    console.log('Acc', acc, account);
     if (acc != null) {
       accountDBClient.set(key, acc, function () {
         handler(null, acc);
