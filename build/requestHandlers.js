@@ -598,7 +598,9 @@
                   paymentType: 'AppStore',
                   productID: result.product_id,
                   receipt: receipt
-                }, handler);
+                }, function(err, result) {
+                  return handle(result);
+                });
               });
             }).on('error', function(e) {
               logError({
