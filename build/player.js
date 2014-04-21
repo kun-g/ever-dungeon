@@ -2077,9 +2077,9 @@
     Player.prototype.getCampaignState = function(campaignName) {
       if (this.campaignState[campaignName] == null) {
         if (campaignName === 'Charge') {
-          this.campaignState[campaignName] = {};
+          this.campaignState.newProperty(campaignName, {});
         } else {
-          this.campaignState[campaignName] = 0;
+          this.campaignState.newProperty(campaignName, 0);
         }
       }
       return this.campaignState[campaignName];
