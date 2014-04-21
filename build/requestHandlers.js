@@ -638,7 +638,12 @@
     RPC_BindSubAuth: {
       id: 105,
       func: function(arg, player, handler, rpcID, socket) {
-        return dbLib.bindAuth(player.accountID, arg.typ, arg.id, arg.pass, function(err, account) {
+        var account;
+        account = -1;
+        if (player) {
+          account = player.accountID;
+        }
+        return dbLib.bindAuth(account, arg.typ, arg.id, arg.pass, function(err, account) {
           return handler([
             {
               REQ: rpcID,

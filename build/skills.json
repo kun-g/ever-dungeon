@@ -1996,17 +1996,17 @@
             ],
             "targetSelection": {
                 "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"} ]
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
             },
             "action":[
                 {"type": "damage", "formular": {"src":{"strong":0.5}}},
                 {"type": "playEffect"},
+                {"type":"playAction","motion":1,"pos":"self"},
                 {"type":"delay"},
-                {"type": "kill","self":true},
-                {"type": "playEffect","effect":10,"pos":"target"}
+                {"type":"kill"}
             ],
             "levelConfig":[
-                {"effect":9,"pos":"target"},
+                {"effect":10,"pos":"target"},
                 {"effect":34,"pos":"target"}
             ]
       }
@@ -2021,13 +2021,14 @@
             ],
             "targetSelection": {
                 "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"} ]
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
           },
           "action":[
             {"type": "heal", "formular": {"src":{"strong":0.5}, "c":5}},
             {"type": "playEffect","effect":19,"pos":"target"} ,
+              {"type":"playAction","motion":1,"pos":"self"},
               {"type":"delay"},
-              {"type": "kill","self":true}
+              {"type":"kill"}
           ]
           }
       },
@@ -2075,13 +2076,14 @@
             ],
             "targetSelection": {
                 "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"} ]
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
             },
             "action":[
                 { "type": "installSpell", "spell": 88},
                 {"type": "playEffect","effect":37,"pos":"target"} ,
+                {"type":"playAction","motion":1,"pos":"self"},
                 {"type":"delay"},
-                {"type": "kill","self":true}
+                {"type":"kill"}
 
             ]
         }
@@ -2111,13 +2113,14 @@
             ],
             "targetSelection": {
                 "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"} ]
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
             },
             "action":[
                 { "type": "installSpell", "spell": 90} ,
                 {"type": "playEffect","effect":13,"pos":"target"} ,
+                {"type":"playAction","motion":1,"pos":"self"},
                 {"type":"delay"},
-                {"type": "kill","self":true}
+                {"type":"kill"}
 
             ]
         }
@@ -2147,14 +2150,14 @@
             ],
             "targetSelection": {
                 "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"} ]
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
             },
             "action":[
                 { "type": "installSpell", "spell": 92} ,
+                {"type": "playEffect","effect":38,"pos":"target"},
+                {"type":"playAction","motion":1,"pos":"self"},
                 {"type":"delay"},
-                {"type": "kill","self":true},
-                {"type": "playEffect","effect":38,"pos":"target"}
-
+                {"type":"kill"}
             ]
         }
     },
@@ -2183,13 +2186,14 @@
             ],
             "targetSelection": {
                 "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"} ]
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
             },
             "action":[
                 { "type": "installSpell", "spell": 94},
+                {"type": "playEffect","effect":36,"pos":"target"},
+                {"type":"playAction","motion":1,"pos":"self"},
                 {"type":"delay"},
-                {"type": "kill","self":true},
-                {"type": "playEffect","effect":36,"pos":"target"}
+                {"type":"kill"}
 
             ]
         }
@@ -2225,13 +2229,14 @@
             ,
             "targetSelection": {
                 "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"} ]
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
             },
             "action":[
                 { "type": "installSpell", "spell": 96}  ,
+               {"type": "playEffect","effect":39,"pos":"target"},
+                {"type":"playAction","motion":1,"pos":"self"},
                 {"type":"delay"},
-                {"type": "kill","self":true},
-                {"type": "playEffect","effect":39,"pos":"target"}
+                {"type":"kill"}
 
 
             ]
@@ -2268,13 +2273,14 @@
             ],
             "targetSelection": {
                 "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"} ]
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
             },
             "action":[
                 { "type": "installSpell", "spell": 98}  ,
+               {"type": "playEffect","effect":40,"pos":"target"},
+                {"type":"playAction","motion":1,"pos":"self"},
                 {"type":"delay"},
-                {"type": "kill","self":true},
-                {"type": "playEffect","effect":40,"pos":"target"}
+                {"type":"kill"}
 
             ]
         }
@@ -2314,14 +2320,15 @@
             ],
             "targetSelection": {
                 "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"} ]
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
             },
             "action":[
                 {"type":"clearDebuff"},
                 {"type":"clearBuff"} ,
+                {"type": "playEffect","effect":41,"pos":"target"},
+                {"type":"playAction","motion":1,"pos":"self"},
                 {"type":"delay"},
-                {"type": "kill","self":true},
-                {"type": "playEffect","effect":41,"pos":"target"}
+                {"type":"kill"}
              ]
 
             }

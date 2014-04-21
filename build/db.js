@@ -29,13 +29,13 @@ exports.bindAuth = function (account, type, id, pass, handler) {
   //  acc.pass = md5Hash(acc.salt+pass);
   //}
   var key = makeDBKey([passportPrefix, type, id, 'account']);
-  console.log('Key', key);
   accountDBClient.get(key, function (err, acc) {
-    console.log('Acc', acc, account);
     if (acc != null) {
       handler(null, acc);
-    } else {
+    } else if (acc != -1) {
       accountDBClient.set(key, account, function () { handler(null, account); });
+    } else {
+     handler(null, account);
     }
   });
 };
