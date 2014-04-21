@@ -1651,7 +1651,7 @@
       this.dungeon.initiateHeroes(data);
       heroes = this.dungeon.getAliveHeroes();
       objects = this.dungeon.level.objects;
-      return this.dungeon.level.objects = heroes.concat(objects.slice(hereoes.length, objects.length));
+      return this.dungeon.level.objects = heroes.concat(objects.slice(heroes.length, objects.length));
     };
 
     DungeonEnvironment.prototype.incrReviveCount = function() {
