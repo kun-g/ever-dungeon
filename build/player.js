@@ -296,11 +296,12 @@
     };
 
     Player.prototype.handleReceipt = function(payment, tunnel, cb) {
-      var cfg, myReceipt, productList, rec, ret;
+      var cfg, flag, myReceipt, productList, rec, ret;
       productList = queryTable(TABLE_CONFIG, 'Product_List');
       myReceipt = payment.receipt;
       rec = unwrapReceipt(myReceipt);
       cfg = productList[rec.productID];
+      flag = true;
       this.log('charge', {
         rmb: cfg.rmb,
         diamond: cfg.diamond,
