@@ -296,9 +296,9 @@
     };
 
     Player.prototype.handleReceipt = function(payment, tunnel, cb) {
-      var cfg, flag, productList, rec, receipt, ret;
+      var cfg, flag, myReceipt, productList, rec, ret;
       productList = queryTable(TABLE_CONFIG, 'Product_List');
-      receipt = payment.receipt;
+      myReceipt = payment.receipt;
       rec = unwrapReceipt(myReceipt);
       cfg = productList[rec.productID];
       flag = cfg.rmb === payment.rmb;

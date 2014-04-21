@@ -2230,7 +2230,7 @@
       output: function(env) {
         var e, eEv;
         e = env.variable('unit');
-        if (!(e.health > 0)) {
+        if (e.dead) {
           return [];
         }
         eEv = {
@@ -2667,6 +2667,9 @@
     Kill: {
       callback: function(env) {
         env.variable('tar').health = 0;
+        if (env.variable('tar').isVisible) {
+          env.variable('tar').dead = true;
+        }
         return this.routine({
           id: 'Dead',
           tar: env.variable('tar')
