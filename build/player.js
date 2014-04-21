@@ -355,7 +355,7 @@
       });
       switch (payment.paymentType) {
         case 'AppStore':
-          return this.handleReceipt(payment, 'AppleStore', cb);
+          return this.handleReceipt(payment, 'AppleStore', handle);
         case 'PP25':
         case 'ND91':
           myReceipt = payment.receipt;
