@@ -653,8 +653,7 @@
           ]);
         });
       },
-      args: [],
-      needPid: true
+      args: []
     },
     RPC_Reconnect: {
       id: 104,
