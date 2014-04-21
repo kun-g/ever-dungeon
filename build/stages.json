@@ -1498,9 +1498,9 @@
             {
                 "stageId": 96,
                 "cost": 15,
-                "team": 1,
+                "team": 3,
                 "hidden":false,
-                "dungeon": 92,
+                "dungeon": 97,
                 "tutorial":2,
                 "cond":
                 { "and": [
