@@ -157,7 +157,6 @@ function paymentHandler (request, response) {
       '-----END PUBLIC KEY-----';
     // appKey = 'yh3SljbeMwGzu0w0wF10TYJ30r49XOxv'
     var data = new Buffer(0);
-    var result = 'failed';
     request.on('data', function (chunk) { data = Buffer.concat([data, chunk]); });
     request.on('end', function (chunk) {
       data = 'pay?'+data.toString();
@@ -181,16 +180,18 @@ function paymentHandler (request, response) {
 
             if (err) {
               logError({action: 'AcceptPayment', error:err, receipt: receipt, info: info});
+              response.end('failed');
             } else {
               logInfo({action: 'AcceptPayment', receipt: receipt, info: info});
-              result = 'success';
-              console.log('Sucess!!')
+              response.end('success');
             }
           });
+        } else {
+          response.end('failed');
         }
+      } else {
+        response.end('failed');
       }
-      console.log('Result', result)
-      response.end(result);
       data = null;
     });
     request.on('error', function (err) {

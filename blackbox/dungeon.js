@@ -1,11 +1,9 @@
 (function() {
-  var Bag, Block, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Level, TriggerManager, Wizard, calcInfiniteRank, calcInfiniteX, changeSeed, compete, createUnit, createUnits, criticalFormula, dungeonCSConfig, flagShowRand, genUnitInfo, hitFormula, onEvent, parse, privateRand, seed_random, speedFormula, _ref, _ref1, _ref2, _ref3, _ref4,
+  var Bag, Block, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Level, TriggerManager, Wizard, calcInfiniteRank, calcInfiniteX, changeSeed, compete, createUnit, createUnits, criticalFormula, dungeonCSConfig, filterObject, flagShowRand, genUnitInfo, hitFormula, onEvent, parse, privateRand, seed_random, speedFormula, _ref, _ref1, _ref2, _ref3, _ref4,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
   requires('./define');
-
-  requires('./shared');
 
   Wizard = requires('./spell').Wizard;
 
@@ -111,6 +109,217 @@
     var x;
     x = calcInfiniteX(infiniteLevel);
     return Math.ceil(0.1 * x * x + 0.1 * x + 1);
+  };
+
+  filterObject = function(objects, filters, env) {
+    var a, f, o, p, result, t, tmp, x, y, _i, _j, _k, _len, _len1, _len2, _ref5, _ref6, _ref7;
+    if (!Array.isArray(filters)) {
+      filters = [filters];
+    }
+    result = (function() {
+      var _i, _len, _results;
+      _results = [];
+      for (_i = 0, _len = objects.length; _i < _len; _i++) {
+        o = objects[_i];
+        _results.push(o);
+      }
+      return _results;
+    })();
+    for (_i = 0, _len = filters.length; _i < _len; _i++) {
+      f = filters[_i];
+      switch (f.type) {
+        case 'same-faction':
+          result = (function() {
+            var _j, _len1, _results;
+            _results = [];
+            for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
+              o = result[_j];
+              if (o.faction === f.faction) {
+                _results.push(o);
+              }
+            }
+            return _results;
+          })();
+          break;
+        case 'different-faction':
+          result = (function() {
+            var _j, _len1, _results;
+            _results = [];
+            for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
+              o = result[_j];
+              if (o.faction !== f.faction) {
+                _results.push(o);
+              }
+            }
+            return _results;
+          })();
+          break;
+        case 'target-faction-with-flag':
+          result = (function() {
+            var _j, _len1, _results;
+            _results = [];
+            for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
+              o = result[_j];
+              if (env.getFactionConfig(f.faction, o.faction, f.flag)) {
+                _results.push(o);
+              }
+            }
+            return _results;
+          })();
+          break;
+        case 'target-faction-without-flag':
+          result = (function() {
+            var _j, _len1, _results;
+            _results = [];
+            for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
+              o = result[_j];
+              if (!env.getFactionConfig(f.faction, o.faction, f.flag)) {
+                _results.push(o);
+              }
+            }
+            return _results;
+          })();
+          break;
+        case 'source-faction-with-flag':
+          result = (function() {
+            var _j, _len1, _results;
+            _results = [];
+            for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
+              o = result[_j];
+              if (env.getFactionConfig(o.faction, f.faction, f.flag)) {
+                _results.push(o);
+              }
+            }
+            return _results;
+          })();
+          break;
+        case 'source-faction-without-flag':
+          result = (function() {
+            var _j, _len1, _results;
+            _results = [];
+            for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
+              o = result[_j];
+              if (!env.getFactionConfig(o.faction, f.faction, f.flag)) {
+                _results.push(o);
+              }
+            }
+            return _results;
+          })();
+          break;
+        case 'role-id':
+          result = (function() {
+            var _j, _len1, _results;
+            _results = [];
+            for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
+              o = result[_j];
+              if (o.roleID === f.roleID) {
+                _results.push(o);
+              }
+            }
+            return _results;
+          })();
+          break;
+        case 'alive':
+          result = (function() {
+            var _j, _len1, _results;
+            _results = [];
+            for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
+              p = result[_j];
+              if (p.health > 0) {
+                _results.push(p);
+              }
+            }
+            return _results;
+          })();
+          break;
+        case 'visible':
+          result = (function() {
+            var _j, _len1, _results;
+            _results = [];
+            for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
+              p = result[_j];
+              if (p.isVisible) {
+                _results.push(p);
+              }
+            }
+            return _results;
+          })();
+          break;
+        case 'is-hero':
+          result = (function() {
+            var _j, _len1, _results;
+            _results = [];
+            for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
+              p = result[_j];
+              if (p.isHero()) {
+                _results.push(p);
+              }
+            }
+            return _results;
+          })();
+          break;
+        case 'is-monster':
+          result = (function() {
+            var _j, _len1, _results;
+            _results = [];
+            for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
+              p = result[_j];
+              if (!p.isHero()) {
+                _results.push(p);
+              }
+            }
+            return _results;
+          })();
+          break;
+        case 'same-block':
+          result = (function() {
+            var _j, _len1, _results;
+            _results = [];
+            for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
+              p = result[_j];
+              if (p.pos === this.pos) {
+                _results.push(p);
+              }
+            }
+            return _results;
+          }).call(this);
+          break;
+        case 'sort':
+          result.sort(function(a, b) {
+            if (f.reverse) {
+              return b[f.by] - a[f.by];
+            } else {
+              return a[f.by] - b[f.by];
+            }
+          });
+          break;
+        case 'count':
+          result = result.slice(0, f.count);
+          break;
+        case 'shuffle':
+          result = shuffle(result, env.rand());
+          break;
+        case 'anchor':
+          tmp = result;
+          result = [];
+          for (_j = 0, _len1 = tmp.length; _j < _len1; _j++) {
+            t = tmp[_j];
+            if (!t.isBlock) {
+              t = env.getBlock(t.pos);
+            }
+            x = t.pos % Dungeon_Width;
+            y = (t.pos - x) / Dungeon_Width;
+            _ref5 = f.anchor;
+            for (_k = 0, _len2 = _ref5.length; _k < _len2; _k++) {
+              a = _ref5[_k];
+              if ((0 <= (_ref6 = a.x + x) && _ref6 < Dungeon_Width) && (0 <= (_ref7 = a.y + y) && _ref7 < Dungeon_Height)) {
+                result.push(env.getBlock(a.x + x + (a.y + y) * Dungeon_Width));
+              }
+            }
+          }
+      }
+    }
+    return result;
   };
 
   createUnits = function(rules, randFunc) {
@@ -281,6 +490,8 @@
     return result;
   };
 
+  exports.filterObject = filterObject;
+
   exports.createUnits = createUnits;
 
   Dungeon = (function() {
@@ -292,7 +503,50 @@
       this.cardStack = CardStack(5);
       this.actionLog = [];
       this.revive = 0;
-      this.factionDB = queryTable(TABLE_FACTION);
+      this.factionDB = {
+        hero: {
+          hero: {
+            attackable: false,
+            healable: true
+          },
+          monster: {
+            attackable: true,
+            healable: false
+          },
+          npc: {
+            attackable: false,
+            healable: false
+          }
+        },
+        monster: {
+          hero: {
+            attackable: true,
+            healable: false
+          },
+          monster: {
+            attackable: false,
+            healable: true
+          },
+          npc: {
+            attackable: false,
+            healable: false
+          }
+        },
+        npc: {
+          hero: {
+            attackable: false,
+            healable: false
+          },
+          npc: {
+            attackable: false,
+            healable: true
+          },
+          monster: {
+            attackable: false,
+            healable: false
+          }
+        }
+      };
       this.triggerManager = new TriggerManager(queryTable(TABLE_TRIGGER));
       if (data == null) {
         return false;
@@ -1052,7 +1306,6 @@
     }
 
     Level.prototype.init = function(lvConfig, baseRank, heroes, quests, soldierPool, elitePool, bossPool) {
-      this.objects = this.objects.concat(heroes);
       this.rank = baseRank;
       if (lvConfig.rank != null) {
         this.rank += lvConfig.rank;
@@ -1064,6 +1317,7 @@
         elite: elitePool,
         boss: bossPool
       });
+      this.objects = this.objects.concat(heroes);
       return this.entrance;
     };
 
@@ -1292,6 +1546,7 @@
 
     Level.prototype.placeMapObjects = function(config, quests, pool) {
       var c, fillupMonster, monsterConfig, monsterCount, o, objectConfig, that, _i, _j, _k, _len, _len1, _len2, _ref5, _results;
+      this.objects = [];
       if (config == null) {
         return false;
       }
@@ -1593,10 +1848,7 @@
       if (!((factionDB != null) && (factionDB[src] != null) && (factionDB[src][tar] != null))) {
         return false;
       }
-      if (flag != null) {
-        return factionDB[src][tar][flag];
-      }
-      return factionDB[src][tar][flag];
+      return factionDB[src][tar];
     };
 
     DungeonEnvironment.prototype.isEntranceExplored = function() {
@@ -1647,11 +1899,8 @@
     };
 
     DungeonEnvironment.prototype.initiateHeroes = function(data) {
-      var heroes, objects;
-      this.dungeon.initiateHeroes(data);
-      heroes = this.dungeon.getAliveHeroes();
-      objects = this.dungeon.level.objects;
-      return this.dungeon.level.objects = heroes.concat(objects.slice(heroes.length, objects.length));
+      var _ref5;
+      return (_ref5 = this.dungeon) != null ? _ref5.initiateHeroes(data) : void 0;
     };
 
     DungeonEnvironment.prototype.incrReviveCount = function() {
@@ -2187,7 +2436,7 @@
         block = env.getBlock(env.variable('block'));
         if (block.getType() === Block_Npc || block.getType() === Block_Enemy) {
           e = block.getRef(-1);
-          e.onEvent('onShow', this);
+          e.onEvent('Show', this);
           env.variable('monster', e);
           env.onEvent('onMonsterShow', this);
           if ((e != null ? e.isVisible : void 0) !== true) {
@@ -2230,7 +2479,7 @@
       output: function(env) {
         var e, eEv;
         e = env.variable('unit');
-        if (e.dead) {
+        if (!(e.health > 0)) {
           return [];
         }
         eEv = {
@@ -2667,9 +2916,6 @@
     Kill: {
       callback: function(env) {
         env.variable('tar').health = 0;
-        if (!env.variable('tar').isVisible) {
-          env.variable('tar').dead = true;
-        }
         return this.routine({
           id: 'Dead',
           tar: env.variable('tar')
