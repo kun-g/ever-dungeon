@@ -2002,7 +2002,7 @@
                 {"type": "damage", "formular": {"src":{"strong":0.5}}},
                 {"type": "playEffect"},
                 {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":1.0},
+                {"type":"delay","delay":2.35},
                 {"type":"kill","self": true}
             ],
             "levelConfig":[
@@ -2027,7 +2027,7 @@
             {"type": "heal", "formular": {"src":{"strong":0.5}, "c":5}},
             {"type": "playEffect","effect":19,"pos":"target"} ,
               {"type":"playAction","motion":1,"pos":"self"},
-              {"type":"delay","delay":1.0},
+              {"type":"delay","delay":1.85},
               {"type":"kill","self": true}
           ]
           }
@@ -2082,7 +2082,7 @@
                 { "type": "installSpell", "spell": 88},
                 {"type": "playEffect","effect":37,"pos":"target"} ,
                 {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":1.0},
+                {"type":"delay","delay":1.85},
                 {"type":"kill","self": true}
 
             ]
@@ -2119,7 +2119,7 @@
                 { "type": "installSpell", "spell": 90} ,
                 {"type": "playEffect","effect":13,"pos":"target"} ,
                 {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":1.0},
+                {"type":"delay","delay":1.85},
                 {"type":"kill","self": true}
 
             ]
@@ -2156,7 +2156,7 @@
                 { "type": "installSpell", "spell": 92} ,
                 {"type": "playEffect","effect":38,"pos":"target"},
                 {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":1.0},
+                {"type":"delay","delay":1.85},
                 {"type":"kill","self": true}
             ]
         }
@@ -2192,7 +2192,7 @@
                 { "type": "installSpell", "spell": 94},
                 {"type": "playEffect","effect":36,"pos":"target"},
                 {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":1.0},
+                {"type":"delay","delay":2.35},
                 {"type":"kill","self": true}
 
             ]
@@ -2224,9 +2224,9 @@
         "label":"无敌",
         "desc":"我方全体无敌",
         "config":{
-            "triggerCondition":
+            "triggerCondition":[
                 {"type" :"event","event": "onShow"}
-            ,
+            ],
             "targetSelection": {
                 "pool": "objects",
                 "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
@@ -2235,7 +2235,7 @@
                 { "type": "installSpell", "spell": 96}  ,
                {"type": "playEffect","effect":39,"pos":"target"},
                 {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":1.0},
+                {"type":"delay","delay":1.85},
                 {"type":"kill", "self": true}
             ]
         }
@@ -2277,7 +2277,7 @@
                 { "type": "installSpell", "spell": 98}  ,
                {"type": "playEffect","effect":40,"pos":"target"},
                 {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":1.0},
+                {"type":"delay","delay":1.85},
                 {"type":"kill","self": true}
 
             ]
@@ -2325,7 +2325,7 @@
                 {"type":"clearBuff"} ,
                 {"type": "playEffect","effect":41,"pos":"target"},
                 {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":1.0},
+                {"type":"delay","delay":1.85},
                 {"type":"kill","self": true}
              ]
 
