@@ -2003,6 +2003,7 @@
                 {"type": "playEffect"},
                 {"type":"playAction","motion":1,"pos":"self"},
                 {"type":"delay","delay":2.35},
+                {"type":"delay"},
                 {"type":"kill","self": true}
             ],
             "levelConfig":[
@@ -2028,6 +2029,7 @@
             {"type": "playEffect","effect":19,"pos":"target"} ,
               {"type":"playAction","motion":1,"pos":"self"},
               {"type":"delay","delay":1.85},
+              {"type":"delay"},
               {"type":"kill","self": true}
           ]
           }
@@ -2083,6 +2085,7 @@
                 {"type": "playEffect","effect":37,"pos":"target"} ,
                 {"type":"playAction","motion":1,"pos":"self"},
                 {"type":"delay","delay":1.85},
+                {"type":"delay"},
                 {"type":"kill","self": true}
 
             ]
@@ -2120,6 +2123,7 @@
                 {"type": "playEffect","effect":13,"pos":"target"} ,
                 {"type":"playAction","motion":1,"pos":"self"},
                 {"type":"delay","delay":1.85},
+                {"type":"delay"},
                 {"type":"kill","self": true}
 
             ]
@@ -2157,6 +2161,7 @@
                 {"type": "playEffect","effect":38,"pos":"target"},
                 {"type":"playAction","motion":1,"pos":"self"},
                 {"type":"delay","delay":1.85},
+                {"type":"delay"},
                 {"type":"kill","self": true}
             ]
         }
@@ -2193,6 +2198,7 @@
                 {"type": "playEffect","effect":36,"pos":"target"},
                 {"type":"playAction","motion":1,"pos":"self"},
                 {"type":"delay","delay":2.35},
+                {"type":"delay"},
                 {"type":"kill","self": true}
 
             ]
@@ -2236,6 +2242,7 @@
                {"type": "playEffect","effect":39,"pos":"target"},
                 {"type":"playAction","motion":1,"pos":"self"},
                 {"type":"delay","delay":1.85},
+                {"type":"delay"},
                 {"type":"kill", "self": true}
             ]
         }
@@ -2278,6 +2285,7 @@
                {"type": "playEffect","effect":40,"pos":"target"},
                 {"type":"playAction","motion":1,"pos":"self"},
                 {"type":"delay","delay":1.85},
+                {"type":"delay"},
                 {"type":"kill","self": true}
 
             ]
@@ -2326,6 +2334,7 @@
                 {"type": "playEffect","effect":41,"pos":"target"},
                 {"type":"playAction","motion":1,"pos":"self"},
                 {"type":"delay","delay":1.85},
+                {"type":"delay"},
                 {"type":"kill","self": true}
              ]
 
