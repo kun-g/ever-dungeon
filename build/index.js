@@ -126,6 +126,7 @@ function paymentHandler (request, response) {
       logError({action: 'AcceptPayment', error: 'SignMissmatch', info: out, sign: sign});
       response.end('{"ErrorCode": "5", "ErrorDesc": "Fail"}');
     }
+    b = null;
   } else if (request.url.substr(0, 4) === '/kyp') {
     var kyKey = '-----BEGIN PUBLIC KEY-----\n' +
       'MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDhELQrtgj6aE81F8o74lOFg7l6\n'+
