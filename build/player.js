@@ -371,6 +371,7 @@
           return this.handleReceipt(payment, 'AppStore', postResult);
         case 'PP25':
         case 'ND91':
+        case 'KY':
           myReceipt = payment.receipt;
           return async.waterfall([
             function(cb) {
