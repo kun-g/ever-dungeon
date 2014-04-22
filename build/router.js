@@ -40,12 +40,14 @@ function dispatchCommand (routeTable, req, socket, retValHandler) {
   var player = socket.player;
   if (player != null || !handler.needPid) {
     try {
+      logInfo({ type : 'pendingRequest', req : req });
       handler.func(req.arg, player, retValHandler, req.REQ, socket, false, req);
     } catch (err) {
       logError({
         type : 'Handler Failed',
         error_message : err.message,
         stack : err.stack,
+        err: err,
         req : req
       });
     }
