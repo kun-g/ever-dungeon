@@ -19,8 +19,10 @@
 
   Player = require('./player').Player;
 
-  loginBy = function(passportType, passport, token, callback) {
-    var appID, appKey, options, path, req, sign;
+  loginBy = function(arg, token, callback) {
+    var appID, appKey, options, passport, passportType, path, req, sign;
+    passportType = arg.tp;
+    passport = arg.id;
     switch (passportType) {
       case LOGIN_ACCOUNT_TYPE_91:
         appID = '112988';
@@ -51,10 +53,10 @@
           });
         });
       case LOGIN_ACCOUNT_TYPE_KY:
-        appID = '112988';
-        appKey = 'd30d9f0f53e2654274505e25c27913fe709eb1ad6265e5c5';
+        appID = '4032';
+        appKey = 'yh3SljbeMwGzu0w0wF10TYJ30r49XOxv';
         sign = md5Hash(token + appKey);
-        path = 'http://service.sj.91.com/usercenter/AP.aspx?tokenKey=' + token + '&sign=' + sign;
+        path = 'http://f_signin.bppstore.com/loginCheck.php?tokenKey=' + token + '&sign=' + sign;
         return http.get(path, function(res) {
           res.setEncoding('utf8');
           return res.on('data', function(chunk) {
@@ -62,10 +64,11 @@
             result = JSON.parse(chunk);
             logInfo({
               action: 'login',
-              type: LOGIN_ACCOUNT_TYPE_91,
+              type: LOGIN_ACCOUNT_TYPE_KY,
               code: result
             });
             if (result.code === 0) {
+              arg.id = result.data.guid;
               return callback(null);
             } else {
               return callback(Error(RET_LoginFailed));
@@ -172,7 +175,7 @@
             if (registerFlag) {
               return cb(null);
             } else {
-              return loginBy(arg.tp, arg.id, arg.tk, cb);
+              return loginBy(arg, arg.tk, cb);
             }
           }, function(cb) {
             return loadPlayer(arg.tp, arg.id, cb);
