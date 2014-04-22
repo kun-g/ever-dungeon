@@ -30,11 +30,11 @@
   "Global_Material_ID" : [558, 559, 560, 561, 562],
   "Global_Enhancement_GEM_Index" : [3, 4, 5, 26, 27, 392, 393],
   "Auth_API_Server": "10.4.2.185",
-  "GateConfig_Develop": [
+  "Gate_Config_Develop": [
     {"ip": "localhost", "port": 7756},
     {"ip": "localhost", "port": 7758}
   ],
-  "GateConfig_Master": [
+  "Gate_Config_Master": [
     {"ip": "10.4.4.188", "port": 7756},
     {"ip": "10.4.2.185", "port": 7756}
   ],
