@@ -10,7 +10,7 @@
   net = require('net');
 
   initGlobalConfig(null, function() {
-    var gServerID, gServerName, startTcpServer;
+    var gServerConfig, gServerID, startTcpServer;
     startTcpServer = function(servers, port) {
       var appNet;
       appNet = {};
@@ -98,9 +98,9 @@
       appNet.server.listen(port, console.log);
       return appNet.server.on('error', console.log);
     };
-    gServerName = queryTable(TABLE_CONFIG, 'ServerName');
     gServerID = queryTable(TABLE_CONFIG, 'ServerID');
-    return startTcpServer(queryTable(TABLE_CONFIG, 'Gate_Config_' + gServerName), 7757);
+    gServerConfig = queryTable(TABLE_CONFIG, 'ServerConfig')[gServerID];
+    return startTcpServer(queryTable(TABLE_CONFIG, gServerConfig.Gate), 7757);
   });
 
 }).call(this);
