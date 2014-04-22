@@ -179,22 +179,24 @@ function paymentHandler (request, response) {
               dbWrapper.updateReceipt(receipt, RECEIPT_STATE_DELIVERED, function () {});
             }, serverName);
 
-            if (err === null) {
+            if (err) {
+              logError({action: 'AcceptPayment', error:err, receipt: receipt, info: info});
+            } else {
               logInfo({action: 'AcceptPayment', receipt: receipt, info: info});
               result = 'success';
-            } else {
-              logError({action: 'AcceptPayment', error:err, receipt: receipt, info: info});
+              console.log('Sucess!!')
             }
           });
         }
       }
+      console.log('Result', result)
       response.end(result);
       data = null;
     });
     request.on('error', function (err) {
       logError({action: 'AcceptPayment', error:err, data: data});
       data = null;
-      response.end('fail');
+      response.end('failed');
     });
   }
 }
