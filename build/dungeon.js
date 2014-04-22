@@ -1052,6 +1052,7 @@
     }
 
     Level.prototype.init = function(lvConfig, baseRank, heroes, quests, soldierPool, elitePool, bossPool) {
+      this.objects = this.objects.concat(heroes);
       this.rank = baseRank;
       if (lvConfig.rank != null) {
         this.rank += lvConfig.rank;
@@ -1063,7 +1064,6 @@
         elite: elitePool,
         boss: bossPool
       });
-      this.objects = this.objects.concat(heroes);
       return this.entrance;
     };
 
@@ -1292,7 +1292,6 @@
 
     Level.prototype.placeMapObjects = function(config, quests, pool) {
       var c, fillupMonster, monsterConfig, monsterCount, o, objectConfig, that, _i, _j, _k, _len, _len1, _len2, _ref5, _results;
-      this.objects = [];
       if (config == null) {
         return false;
       }
@@ -1648,8 +1647,11 @@
     };
 
     DungeonEnvironment.prototype.initiateHeroes = function(data) {
-      var _ref5;
-      return (_ref5 = this.dungeon) != null ? _ref5.initiateHeroes(data) : void 0;
+      var heroes, objects;
+      this.dungeon.initiateHeroes(data);
+      heroes = this.dungeon.getAliveHeroes();
+      objects = this.dungeon.level.objects;
+      return this.dungeon.level.objects = heroes.concat(objects.slice(heroes.length, objects.length));
     };
 
     DungeonEnvironment.prototype.incrReviveCount = function() {
@@ -2228,7 +2230,7 @@
       output: function(env) {
         var e, eEv;
         e = env.variable('unit');
-        if (!(e.health > 0)) {
+        if (e.dead) {
           return [];
         }
         eEv = {
@@ -2665,6 +2667,9 @@
     Kill: {
       callback: function(env) {
         env.variable('tar').health = 0;
+        if (!env.variable('tar').isVisible) {
+          env.variable('tar').dead = true;
+        }
         return this.routine({
           id: 'Dead',
           tar: env.variable('tar')
