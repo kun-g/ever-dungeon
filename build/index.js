@@ -165,32 +165,15 @@ function paymentHandler (request, response) {
         info = urlLib.parse('pay?'+info, true).query;
         if (info.payresult == 0) {
           var receipt = info.dealseq;
-          var receiptInfo = unwrapReceipt(receipt);
-          var cfg = queryTable(TABLE_CONFIG, 'ServerConfig');
-          if (!cfg[receiptInfo.serverID]) {
-            logError({action: 'AcceptPayment', error: 'InvalidServerID', receipt: receipt});
-            return response.end('failed');
-          }
-          var serverName = cfg[receiptInfo.serverID].Name;
-          dbWrapper.updateReceipt(receipt, RECEIPT_STATE_AUTHORIZED, function () {
-            dbLib.getPlayerNameByID(receiptInfo.id, serverName, function (err, name) {
-              dbLib.deliverMessage(name, {
-                type: MESSAGE_TYPE_ChargeDiamond,
-                paymentType: 'KY',
-                receipt: receipt
-              }, function (err, messageID) {
-                dbWrapper.updateReceipt(receipt, RECEIPT_STATE_DELIVERED, function () {});
-              }, serverName);
-
-              if (err) {
-                logError({action: 'AcceptPayment', error:err, receipt: receipt, info: info});
-                response.end('failed');
-              } else {
-                logInfo({action: 'AcceptPayment', receipt: receipt, info: info});
-                //response.end('success');
-                response.end('failed');
-              }
-            });
+          deliverReceipt(receipt, 'KY', function (err) {
+            if (err) {
+              logError({action: 'AcceptPayment', error: err, receipt: receipt});
+              response.end('failed');
+            } else {
+              logInfo({action: 'AcceptPayment', receipt: receipt, info: info});
+              //response.end('success');
+              response.end('failed');
+            }
           });
         } else {
           response.end('failed');
@@ -206,6 +189,25 @@ function paymentHandler (request, response) {
       response.end('failed');
     });
   }
+}
+
+function deliverReceipt (receipt, tunnel, cb) {
+  var receiptInfo = unwrapReceipt(receipt);
+  var cfg = queryTable(TABLE_CONFIG, 'ServerConfig');
+  if (!cfg[receiptInfo.serverID]) {
+    return cb(Error( 'InvalidServerID' ));
+  }
+  var serverName = cfg[receiptInfo.serverID].Name;
+  var message = {
+          type: MESSAGE_TYPE_ChargeDiamond,
+          paymentType: tunnel,
+          receipt: receipt
+        };
+  async.waterfall([
+    function (cb) { dbWrapper.updateReceipt(receipt, RECEIPT_STATE_AUTHORIZED, cb); },
+    function (cb) { dbLib.getPlayerNameByID(receiptInfo.id, serverName, cb); },
+    function (name, cb) { dbLib.deliverMessage(name, message, function () {}, serverName); }
+  ], cb);
 }
 
 if (config) {
