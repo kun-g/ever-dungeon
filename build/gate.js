@@ -100,7 +100,7 @@
     };
     gServerID = queryTable(TABLE_CONFIG, 'ServerID');
     gServerConfig = queryTable(TABLE_CONFIG, 'ServerConfig')[gServerID];
-    return startTcpServer(queryTable(TABLE_CONFIG, gServerConfig.Gate), 7757);
+    return startTcpServer(gServerConfig.Gate, 7757);
   });
 
 }).call(this);
