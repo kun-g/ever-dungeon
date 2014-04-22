@@ -28,7 +28,7 @@
         c.pipe(decoder);
         c.decoder = decoder;
         c.encoder = encoder;
-        c.server = appNet.createConnection();
+        c.server = appNet.createConnection(c);
         encoder.pipe(c.server);
         c.server.pipe(c);
         decoder.on('request', function(request) {
@@ -56,11 +56,20 @@
           alive: false
         };
       });
-      appNet.createConnection = function() {
-        var server;
+      appNet.createConnection = function(socket) {
+        var c, server;
         server = appNet.aliveServers[appNet.currIndex];
         appNet.currIndex = appNet.currIndex + 1 % appNet.aliveServers.length;
-        return net.connect(server.port, server.ip);
+        c = net.connect(server.port, server.ip);
+        c.on('error', function(err) {
+          c.destroy();
+          return socket.destroy();
+        });
+        c.on('end', function(err) {
+          c.destroy();
+          return socket.destroy();
+        });
+        return c;
       };
       setInterval((function() {
         return async.map(appNet.backends, function(e, cb) {

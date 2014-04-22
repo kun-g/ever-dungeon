@@ -45,7 +45,7 @@
     "Subscriber": { "IP": "localhost", "PORT": 6379}
   },
   "DB_Config_Develop" : {
-    "Account": { "IP": "10.4.4.188", "PORT": 6380 },
+    "Account": { "IP": "localhost", "PORT": 6379 },
     "Role": { "IP": "localhost", "PORT": 6379},
     "Publisher": { "IP": "localhost", "PORT": 6379},
     "Subscriber": { "IP": "localhost", "PORT": 6379}
