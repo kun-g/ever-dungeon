@@ -519,6 +519,12 @@
             return _results;
           })() : env.getBlock();
       }
+      if (pool == null) {
+        pool = [];
+      }
+      if (!Array.isArray(pool)) {
+        pool = [pool];
+      }
       if ((cfg.targetSelection.filter != null) && pool.length > 0) {
         pool = triggerLib.filterObject(this, pool, cfg.targetSelection.filter, env);
       }
