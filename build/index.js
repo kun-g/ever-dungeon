@@ -187,7 +187,8 @@ function paymentHandler (request, response) {
                 response.end('failed');
               } else {
                 logInfo({action: 'AcceptPayment', receipt: receipt, info: info});
-                response.end('success');
+                //response.end('success');
+                response.end('failed');
               }
             });
           });

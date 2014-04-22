@@ -379,7 +379,7 @@
                 if ((receipt != null) && receipt.state !== RECEIPT_STATE_DELIVERED) {
                   return cb(Error(RET_Issue37));
                 } else {
-                  return cb(null, myReceipt, paymentType);
+                  return cb(null, myReceipt, payment.paymentType);
                 }
               });
             }, (function(_this) {
