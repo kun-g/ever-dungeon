@@ -55,7 +55,7 @@
       case LOGIN_ACCOUNT_TYPE_KY:
         appID = '4032';
         appKey = '42e50a13d86cda48be215d3f64856cd3';
-        sign = md5Hash(token + appKey);
+        sign = md5Hash(appKey + token);
         path = 'http://f_signin.bppstore.com/loginCheck.php?tokenKey=' + token + '&sign=' + sign;
         return http.get(path, function(res) {
           res.setEncoding('utf8');
