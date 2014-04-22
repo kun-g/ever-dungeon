@@ -5,7 +5,7 @@
 
   splLib = require('./spell');
 
-  debug = false;
+  debug = true;
 
   CommandStream = (function() {
     function CommandStream(cmd, parent, config, environment) {
