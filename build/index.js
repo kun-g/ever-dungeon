@@ -164,7 +164,7 @@ if (config) {
           logError({action: 'AcceptPayment', error: 'SignMissmatch', info: out, sign: sign});
           response.end('{"ErrorCode": "5", "ErrorDesc": "Fail"}');
         }
-      } else if (request.url.substr(0, 5) === '/kyp') {
+      } else if (request.url.substr(0, 4) === '/kyp') {
         var kyKey = '-----BEGIN PUBLIC KEY-----\n' +
           'MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDhELQrtgj6aE81F8o74lOFg7l6\n'+
           'bUZqe4VQe0MURr0G0zh/hY/KIIxoYfYWBQMwONy0vV23O5XKJDpAJUBHs92mJdB3\n'+
@@ -181,7 +181,8 @@ if (config) {
             var cipher = rsaLib.createPublicKey(kyKey);
             var info = cipher.publicDecrypt(new Buffer(out.notify_data, 'base64'), null, 'utf8');
             info = JSON.parse(info);
-            if (out.payresult === 0) {
+            info = urlLib.parse('pay?'+info, true).query;
+            if (info.payresult === 0) {
               var receipt = info.dealseq;
               var receiptInfo = unwrapReceipt(receipt);
               var serverName = 'Master'; //TODO:多服的情况?
