@@ -75,19 +75,19 @@
         return async.map(appNet.backends, function(e, cb) {
           var s;
           if (!e.alive) {
-            s = net.connect(e.port, e.ip, function() {
+            s = net.connect(e.port, e.ip);
+            s.on('connect', function() {
+              console.log('Connection On', e);
               e.alive = true;
-              cb(null, e);
-              return s.on('end', function(err) {
-                console.log('Connection Lost', e);
-                e.alive = false;
-                return s.destroy();
-              });
+              return cb(null, e);
+            });
+            s.on('end', function(err) {
+              console.log('Connection Lost', e);
+              return e.alive = false;
             });
             s.on('error', function(err) {
               console.log('Connection Error', e);
               e.alive = false;
-              s.destroy();
               return cb(null, e);
             });
             return s = null;
