@@ -102,7 +102,7 @@
           err: reason
         });
       }
-      return this.socket = null;
+      return this.onDisconnect();
     };
 
     Player.prototype.onReconnect = function(socket) {
@@ -131,6 +131,9 @@
     };
 
     Player.prototype.onDisconnect = function() {
+      gPlayerDB[this.name] = null;
+      this.socket = null;
+      gPlayerDB[this.name] = null;
       return delete this.messages;
     };
 

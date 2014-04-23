@@ -17,7 +17,7 @@
   initGlobalConfig(null, function() {
     var gServerConfig, gServerID, startTcpServer;
     startTcpServer = function(servers, port) {
-      var appNet, getAliveConnection;
+      var appNet, getAliveConnection, updateBackendStatus;
       appNet = {};
       appNet.server = net.createServer(function(c) {
         c.decoder = new SimpleProtocolDecoder();
@@ -90,7 +90,7 @@
         }
         return c;
       };
-      setInterval((function() {
+      updateBackendStatus = function() {
         return appNet.backends.forEach(function(e) {
           var s;
           if (!e.alive) {
@@ -109,10 +109,12 @@
             return s = null;
           }
         });
-      }), 10000);
+      };
       appNet.currIndex = 0;
       appNet.server.listen(port, console.log);
-      return appNet.server.on('error', console.log);
+      appNet.server.on('error', console.log);
+      updateBackendStatus();
+      return setInterval(updateBackendStatus, 10000);
     };
     gServerID = queryTable(TABLE_CONFIG, 'ServerID');
     gServerConfig = queryTable(TABLE_CONFIG, 'ServerConfig')[gServerID];
