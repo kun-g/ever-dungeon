@@ -182,8 +182,7 @@
           }, function(cb) {
             return loadPlayer(arg.tp, arg.id, cb);
           }, function(player, cb) {
-            var ev, time;
-            logInfo(tmp.end());
+            var ev, time, v1;
             if (player) {
               player.log('login', {
                 type: arg.tp,
@@ -200,6 +199,7 @@
               gPlayerDB[player.name] = player;
               time = Math.floor((new Date()).valueOf() / 1000);
               ev = [];
+              v1 = new memwatch.HeapDiff();
               player.updateMercenaryInfo(true);
               ev.push(player.notifyVersions());
               ev.push(player.syncEnergy());
@@ -229,6 +229,10 @@
                     vip: player.vipLevel()
                   }
                 }
+              });
+              logWarn({
+                Step: 'All',
+                info: v1.end()
               });
               return async.parallel([
                 function(cb) {
@@ -269,6 +273,10 @@
                   loginInfo.arg.tut = player.tutorialStage;
                 }
                 handle([loginInfo].concat(ev));
+                logWarn({
+                  Step: 'All',
+                  info: tmp.end()
+                });
                 return player.saveDB(cb);
               });
             } else {
