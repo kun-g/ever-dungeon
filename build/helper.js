@@ -53,6 +53,7 @@
             v.value = null;
             v.hooks = null;
           }
+          obj.reactDB = null;
           return obj = null;
         }
       });
