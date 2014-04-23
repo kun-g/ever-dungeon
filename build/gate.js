@@ -23,7 +23,7 @@
         c.decoder = new SimpleProtocolDecoder();
         c.encoder = new SimpleProtocolEncoder();
         c.encoder.setFlag('size');
-        c.pipe(decoder);
+        c.pipe(c.decoder);
         c.server = appNet.createConnection(c);
         if (c.server == null) {
           return;
