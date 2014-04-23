@@ -70,10 +70,13 @@
         hooks: [callback]
       };
       theCB = function(val) {
-        var cb, _i, _len, _ref;
-        _ref = obj.reactDB[key].hooks;
-        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-          cb = _ref[_i];
+        var cb, _i, _len, _ref, _ref1, _ref2;
+        if (((_ref = obj.reactDB) != null ? (_ref1 = _ref[key]) != null ? _ref1.hooks : void 0 : void 0) == null) {
+          return null;
+        }
+        _ref2 = obj.reactDB[key].hooks;
+        for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
+          cb = _ref2[_i];
           if (cb != null) {
             cb(key, val);
           }

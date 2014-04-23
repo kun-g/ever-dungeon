@@ -193,6 +193,7 @@
               }
               if (gPlayerDB[player.name]) {
                 gPlayerDB[player.name].logout(RET_LoginByAnotherDevice);
+                delete gPlayerDB[player.name];
               }
               gPlayerDB[player.name] = player;
               time = Math.floor((new Date()).valueOf() / 1000);

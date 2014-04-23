@@ -58,6 +58,7 @@ var config = {
         var info = JSON.parse(message);
         if (gPlayerDB[info.player] && gPlayerDB[info.player].runtimeID !== info.session) {
           gPlayerDB[info.player].logout(RET_LoginByAnotherDevice);
+          delete gPlayerDB[info.player]
         }
       } catch (err) {
         logError({type: 'loginSubscribe', error:err});
