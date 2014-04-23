@@ -85,7 +85,17 @@ function paymentHandler (request, response) {
         info = JSON.parse(info);
         if (out.order_id === info.order_id && out.amount === info.amount) {
           var receipt = info.billno;
-          deliverReceipt(receipt, 'PP25', function (err) {
+          var receiptInfo = unwrapReceipt(receipt);
+          var serverName = 'Master'; //TODO:多服的情况?
+          dbWrapper.updateReceipt(receipt, RECEIPT_STATE_AUTHORIZED, function (err) {
+            dbLib.deliverMessage(receiptInfo.name, {
+              type: MESSAGE_TYPE_ChargeDiamond,
+              paymentType: 'PP25',
+              receipt: receipt
+            }, function (err, messageID) {
+              dbWrapper.updateReceipt(receipt, RECEIPT_STATE_DELIVERED, function () {});
+            }, serverName);
+
             if (err === null) {
               logInfo({action: 'AcceptPayment', receipt: receipt, info: info});
               return response.end('success');
@@ -96,7 +106,7 @@ function paymentHandler (request, response) {
           });
         }
       }
-      data = null;
+      data = new Buffer(0);
     });
     request.on('error', function (err) {
       logError({action: 'AcceptPayment', error:err, data: data});
@@ -113,14 +123,25 @@ function paymentHandler (request, response) {
     sign = md5Hash(b.toString('binary', 0, len));
     if (sign === out.Sign) {
       var receipt = out.CooOrderSerial;
-      deliverReceipt(receipt, 'ND91', function (err) {
-        if (err === null) {
-          logInfo({action: 'AcceptPayment', receipt: receipt, info: out});
-          return response.end('{"ErrorCode": "1", "ErrorDesc": "OK"}');
-        } else {
-          logError({action: 'AcceptPayment', error:err, info: out, receiptInfo: receiptInfo});
-          return response.end('{"ErrorCode": "0", "ErrorDesc": "Fail"}');
-        }
+      var receiptInfo = unwrapReceipt(receipt);
+      var serverName = 'Master'; //TODO:多服的情况?
+      dbWrapper.updateReceipt(receipt, RECEIPT_STATE_AUTHORIZED, function (err) {
+        dbLib.getPlayerNameByID(receiptInfo.id, serverName, function (err, name) {
+          dbLib.deliverMessage(name, {
+            type: MESSAGE_TYPE_ChargeDiamond,
+            paymentType: 'ND91',
+            receipt: receipt
+          }, function (err, messageID) {
+            dbWrapper.updateReceipt(receipt, RECEIPT_STATE_DELIVERED, function () {});
+          }, serverName);
+          if (err === null) {
+            logInfo({action: 'AcceptPayment', receipt: receipt, info: out, receiptInfo: receiptInfo, name: name});
+            return response.end('{"ErrorCode": "1", "ErrorDesc": "OK"}');
+          } else {
+            logError({action: 'AcceptPayment', error:err, info: out, receiptInfo: receiptInfo, name: name});
+            return response.end('{"ErrorCode": "0", "ErrorDesc": "Fail"}');
+          }
+        });
       });
     } else {
       logError({action: 'AcceptPayment', error: 'SignMissmatch', info: out, sign: sign});
@@ -144,14 +165,31 @@ function paymentHandler (request, response) {
         info = urlLib.parse('pay?'+info, true).query;
         if (info.payresult == 0) {
           var receipt = info.dealseq;
-          deliverReceipt(receipt, 'KY', function (err) {
-            if (err) {
-              logError({action: 'AcceptPayment', error: err, receipt: receipt});
-              response.end('failed');
-            } else {
-              logInfo({action: 'AcceptPayment', receipt: receipt, info: info});
-              response.end('success');
-            }
+          var receiptInfo = unwrapReceipt(receipt);
+          var cfg = queryTable(TABLE_CONFIG, 'ServerConfig');
+          if (!cfg[receiptInfo.serverID]) {
+            logError({action: 'AcceptPayment', error: 'InvalidServerID', receipt: receipt});
+            return response.end('failed');
+          }
+          var serverName = cfg[receiptInfo.serverID].Name;
+          dbWrapper.updateReceipt(receipt, RECEIPT_STATE_AUTHORIZED, function () {
+            dbLib.getPlayerNameByID(receiptInfo.id, serverName, function (err, name) {
+              dbLib.deliverMessage(name, {
+                type: MESSAGE_TYPE_ChargeDiamond,
+                paymentType: 'KY',
+                receipt: receipt
+              }, function (err, messageID) {
+                dbWrapper.updateReceipt(receipt, RECEIPT_STATE_DELIVERED, function () {});
+              }, serverName);
+
+              if (err) {
+                logError({action: 'AcceptPayment', error:err, receipt: receipt, info: info});
+                response.end('failed');
+              } else {
+                logInfo({action: 'AcceptPayment', receipt: receipt, info: info});
+                response.end('success');
+              }
+            });
           });
         } else {
           response.end('failed');
@@ -167,25 +205,6 @@ function paymentHandler (request, response) {
       response.end('failed');
     });
   }
-}
-
-function deliverReceipt (receipt, tunnel, cb) {
-  var receiptInfo = unwrapReceipt(receipt);
-  var cfg = queryTable(TABLE_CONFIG, 'ServerConfig');
-  if (!cfg[receiptInfo.serverID]) {
-    return cb(Error( 'InvalidServerID' ));
-  }
-  var serverName = cfg[receiptInfo.serverID].Name;
-  var message = {
-          type: MESSAGE_TYPE_ChargeDiamond,
-          paymentType: tunnel,
-          receipt: receipt
-        };
-  async.waterfall([
-    function (cb) { dbWrapper.updateReceipt(receipt, RECEIPT_STATE_AUTHORIZED, cb); },
-    function (_, cb) { dbLib.getPlayerNameByID(receiptInfo.id, serverName, cb); },
-    function (name, cb) { dbLib.deliverMessage(name, message, function () {}, serverName); }
-  ], cb);
 }
 
 if (config) {
@@ -206,7 +225,7 @@ if (config) {
     rsaLib = require('ursa');
 
     paymentServer = require('http').createServer(wrapCallback(paymentHandler));
-    paymentServer.listen(80);
+    paymentServer.listen(6499);
   });
 } else {
   throw 'No config';

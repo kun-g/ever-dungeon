@@ -13,7 +13,7 @@
         "spellDelay": 0.3
       },
       "targetSelection": {
-        "pool": "self"
+        "pool": "Self"
       },
       "triggerCondition": [
         { "type": "countDown", "cd": 10 }
@@ -72,12 +72,12 @@
         "targetDelay": 0
       },
       "targetSelection": {
-        "pool": "target",
-        "filter": [{"type":"alive"},{"type":"visible"}]
+        "pool": "Target",
+        "filter": ["Alive", "Visible"]
       },
       "triggerCondition": [
         { "type": "event", "event": "onTeammateBePhysicalDamage" },
-        { "type": "event", "event": "onTeammateBePhysicalRangeDamage" },
+          { "type": "event", "event": "onTeammateBePhysicalRangeDamage" },
         { "type": "chance", "chance": 0.45 },
         { "type": "targetMutex", "mutex": "reinforce" },
           {"type":"alive"}
@@ -108,8 +108,8 @@
         { "type": "event", "event": "onBeHeal" }
       ],
       "targetSelection": {
-        "pool": "self",
-          "filter": [{"type":"alive"},{"type":"visible"}]
+        "pool": "Self",
+          "filter": ["Alive", "Visible"]
       },
       "action": [
         { "type": "modifyVar", "x": "hp" }
@@ -139,7 +139,7 @@
         { "type": "chance", "chance": 0.15}
       ],
         "targetSelection": {
-            "pool": "target"
+            "pool": "Target"
         },
       "action": [
         { "type": "modifyVar", "x": "damage", "formular": {"src": {"health":0.3,"attack":1}} },
@@ -165,8 +165,9 @@
         { "type": "countDown", "cd": 10 }
       ],
       "targetSelection": {
-        "pool": "objects",
-        "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"},{"type":"shuffle"},{"type":"count","count":1}]
+        "pool": "Enemy",
+        "filter": ["Alive", "Visible"],
+        "method": "Rand"
       },
       "action": [
         { "type": "damage","damageType":"Spell","isRange":true }
@@ -194,11 +195,11 @@
         "type": "event", "event": "onCriticalDamage"
       }],
       "targetSelection": {
-          "pool": "objects",
-          "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"}]
+        "pool": "Enemy",
+        "filter": ["Alive", "Visible"]
       },
       "action": [
-        {"type": "damage","damageType":"Spell","isRange":true,"formular": {"src":{"attack":0.2},"c":15}},
+        {"type": "damage","damageType":"Spell","isRange":true,"formular": {"src":{"attack":0.7},"c":15}},
           {"type": "playEffect","effect":4,"pos":"self"}
       ]
     }
@@ -224,8 +225,8 @@
         { "type": "damage","damageType":"Spell" }
       ],
       "targetSelection": {
-        "pool": "source",
-          "filter": [{"type":"alive"},{"type":"visible"}]
+        "pool": "Attacker",
+        "filter": ["Alive", "Visible"]
       },
       "levelConfig":[
         {"formular": {"src":{"attack":0.2},"c":2}},
@@ -252,8 +253,9 @@
         { "type": "countDown", "cd": 10 }
       ],
       "targetSelection": {
-         "pool": "objects",
-          "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"sort","by":"health","reverse":true},{"type":"count","count":1}]
+        "pool": "Team",
+        "filter": ["Alive", "Visible"],
+        "method": "LowHealth"
       },
       "action": [
         { "type": "heal" }
@@ -284,8 +286,9 @@
         { "type": "heal"}
       ],
       "targetSelection": {
-          "pool": "objects",
-          "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"sort","by":"health","reverse":true},{"type":"count","count":1}]
+        "pool": "Team",
+        "filter": ["Alive", "Visible"],
+        "method": "LowHealth"
       },
       "levelConfig" : [
         { "formular":{"src":{"accuracy":0.1},"c": 3} },
@@ -317,8 +320,8 @@
             {"type": "installSpell", "spell": 14 }
       ],
       "targetSelection": {
-          "pool": "objects",
-          "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"}]
+        "pool": "Team",
+        "filter": ["Alive", "Visible"]
       },
       "levelConfig" : [
         { "level": 1 }, { "level": 2 }, { "level": 3 }
@@ -346,8 +349,8 @@
         { "type": "targetMutex", "mutex": "lightOfMiracel" }
       ],
       "targetSelection": {
-        "pool": "target",
-          "filter": [{"type":"alive"},{"type":"visible"}]
+        "pool": "Target",
+        "filter": ["Alive", "Visible"]
       },
       "action": [
         {"type": "heal", "formular": {"environment":{"damage":1}}},
@@ -363,7 +366,7 @@
     "desc":"法师每次攻击能够增加自身暴击值，直至造成暴击后清空。",
     "slotId": 1,
     "config":{
-      "targetSelection": { "pool": "self" },
+      "targetSelection": { "pool": "Self" },
       "triggerCondition": [
           { "type": "event", "event": "onCriticalDamage", "count": 1 }
       ],
@@ -393,8 +396,8 @@
         "targetDelay": 0
       },
       "targetSelection": {
-          "pool": "target",
-          "filter": [{"type":"alive"},{"type":"visible"}]
+        "pool": "Target",
+        "filter": ["Alive", "Visible"]
       },
       "triggerCondition": [
           { "type": "event", "event": "onTeammateBePhysicalDamage" },
@@ -444,8 +447,9 @@
         {"type" :"card", "id": 0}
       ],
       "targetSelection": {
-          "pool": "objects",
-          "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"sort","by":"health","reverse":true},{"type":"count","count":1}]
+        "pool": "Teammate",
+        "filter": ["Alive", "Visible"],
+        "method": "LowHealth"
       },
       "action":[
         {"type": "heal", "formular": {"tar":{"strong":1}, "c":5}},
@@ -465,8 +469,8 @@
         {"type" :"card", "id": 1}
       ],
       "targetSelection": {
-          "pool": "objects",
-          "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"}]
+        "pool": "Team",
+        "filter": ["Alive", "Visible"]
       },
       "action":[
         {"type": "clearDebuff"},
@@ -488,7 +492,7 @@
         {"type" :"event", "event": "onBeKill"}
       ],
       "targetSelection": {
-        "pool": "target"
+        "pool": "Target"
       },
       "action":[
         {"type": "resurrect"},
@@ -508,8 +512,8 @@
         {"type" :"card", "id": 5}
       ],
       "targetSelection": {
-          "pool": "objects",
-          "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"}]
+        "pool": "Team",
+        "filter": ["Alive"]
       },
       "action":[
         {"type": "costCard", "card":5},
@@ -529,8 +533,8 @@
         {"type" :"card", "id": 6}
       ],
       "targetSelection": {
-          "pool": "objects",
-          "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"}]
+        "pool": "Team",
+        "filter": ["Alive"]
       },
       "action":[
         {"type": "costCard", "card":6},
@@ -550,8 +554,8 @@
         {"type" :"card", "id": 7}
       ],
       "targetSelection": {
-          "pool": "objects",
-          "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"}]
+        "pool": "Team",
+        "filter": ["Alive"]
       },
       "action":[
         {"type": "costCard", "card":7},
@@ -571,8 +575,8 @@
         {"type" :"card", "id": 8}
       ],
       "targetSelection": {
-          "pool": "objects",
-          "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"}]
+        "pool": "Team",
+        "filter": ["Alive"]
       },
       "action":[
         {"type": "costCard", "card":8},
@@ -650,8 +654,9 @@
               {"type" :"event", "event":"onMoveTurnEnd" }
           ],
           "targetSelection": {
-              "pool": "objects",
-              "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"},{"type":"shuffle"},{"type":"count","count":1}]
+              "pool": "Enemy",
+              "filter": ["Alive","Visible"],
+              "method": "Rand"
           },
           "action":[
               {"type": "rangeAttack"}
@@ -666,7 +671,7 @@
             {"type":"event", "event":"onEnterLevel" }
         ],
         "targetSelection": {
-            "pool": "self"
+            "pool": "Self"
         },
         "action": [
                 {"type": "showUp"}
@@ -685,8 +690,8 @@
               {"type":"alive"}
           ],
           "targetSelection":{
-              "pool":"self",
-              "filter": [{"type":"alive"}]
+              "pool":"Self",
+              "filter": ["Alive"]
           },
           "action": [
               {"type": "delay"},
@@ -713,8 +718,8 @@
               { "type": "chance", "chance": 0.3 }
           ],
           "targetSelection":{
-              "pool":"target",
-              "filter": [{"type":"alive"}]
+              "pool":"Target",
+              "filter": ["Alive"]
           },
           "action": [
                   {"type": "installSpell","spell": 30}
@@ -745,7 +750,7 @@
                 {"type":"event","event":"onBeKill"}
                 ],
             "targetSelection":{
-                "pool":"self"
+                "pool":"Self"
             },
             "action": [{"type": "createMonster","effect":21,"randomPos":true}] ,
             "levelConfig" : [
@@ -767,7 +772,7 @@
               {"type":"event","event":"onBeKill"}
           ],
           "targetSelection":{
-              "pool":"self"
+              "pool":"Self"
           },
           "action": [{"type": "createMonster"}] ,
           "levelConfig" : [
@@ -809,8 +814,8 @@
               {"type":"event","event":"onShow"}
           ],
           "targetSelection":{
-              "pool": "objects",
-              "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"},{"type":"shuffle"},{"type":"count","count":1}]
+              "pool":"Target",
+              "filter": ["Alive"]
           },
           "action": [
               {"type": "attack"}
@@ -829,9 +834,10 @@
               {"type" :"event", "event":"onTurnEnd","eventCount":3,"reset":true }
            ],
           "targetSelection": {
-              "pool": "blocks",
+              "pool": "Block",
               "blocks":[15,16,17,18,19,20,21,22,23,24,25,26,27,28,29],
-              "filter": [{"type":"shuffle"},{"type":"count","count":8}]
+              "count":8,
+              "method": "Rand"
           },
           "action":[
               {"type":"installSpell", "spell": 36,"delay":{"base":1.6,"range":3}},
@@ -846,8 +852,8 @@
               {"type": "playEffect","effect":18,"pos":"self"}
           ],
           "targetSelection": {
-              "pool": "objects",
-              "filter": [{"type":"same-block"},{"type":"same-faction","faction":"hero"},{"type":"alive"},{"type":"visible"}]
+              "pool": "SamePosition",
+              "filter": ["Hero"]
           },
           "availableCondition": [
               { "type": "event", "event": "onTurnEnd" }
@@ -855,17 +861,18 @@
       }
   },
   { "skillId": 37,
-      "label":"boss光环",
+      "label":"治愈龟",
       "config": {
           "triggerCondition": [
-              { "type": "event","event":"onEnterLevel" }
+              { "type": "countDown", "cd": 8 }
           ],
           "targetSelection": {
-              "pool": "self",
-              "filter": [{"type":"alive"}]
+              "pool": "RoleId",
+              "filter": ["Alive", "Visible"],
+              "roleId": 600
           },
           "action": [
-              {"type": "playEffect","effect":35,"pos":"self"}
+              { "type": "heal","formular": {"c": 10}}
           ]
       }
   },
@@ -879,7 +886,7 @@
               {"type":"event", "event":"onEnterLevel" }
           ],
           "targetSelection": {
-              "pool": "self"
+              "pool": "Self"
           },
           "action": [
               {"type": "delay","delay":0.3},
@@ -951,7 +958,7 @@
                     {"type":"event", "event":"onEnterLevel" }
                 ],
                 "targetSelection": {
-                    "pool": "self"
+                    "pool": "Self"
                 },
                 "action": [
                     {"type": "delay","delay":0.3},
@@ -1024,7 +1031,7 @@
               {"type" :"event", "event":"onBeDeathStrike"}
           ],
           "targetSelection": {
-              "pool": "self"
+              "pool": "Self"
           },
           "action":[
               {"type": "modifyVar", "x": "damage", "formular": {"environment":{"c":0}}},
@@ -1049,7 +1056,7 @@
                     {"type" :"event", "event":"onBeDeathStrike"}
                 ],
                 "targetSelection": {
-                    "pool": "self"
+                    "pool": "Self"
                 },
                 "action":[
                     {"type": "modifyVar", "x": "damage", "formular": {"environment":{"c":0}}},
@@ -1080,7 +1087,7 @@
               "spellAction": 3
           },
           "targetSelection": {
-              "pool": "self"
+              "pool": "Self"
           },
           "action":[
               {"type": "blink","delay":0.6,"time":0.08},
@@ -1097,9 +1104,10 @@
 
           },
           "targetSelection": {
-              "pool": "blocks",
+              "pool": "Block",
               "blocks":[15,16,17,18,19,20,21,22,23,24,25,26,27,28,29],
-              "filter": [{"type":"shuffle"},{"type":"count","count":8}]
+              "count":8,
+              "method": "Rand"
           },
           "action":[
               {"type":"installSpell", "spell": 44,"delay":{"base":1.6,"range":5}},
@@ -1122,8 +1130,8 @@
 
           ],
           "targetSelection": {
-              "pool": "objects",
-              "filter": [{"type":"alive"},{"type":"visible"}]
+              "pool": "Enemy",
+              "filter": ["Alive", "Visible"]
           },
           "action":[
               {"type": "damage","damageType":"Spell","isRange":true,"delay":3.6,"formular": {"c":50}},
@@ -1149,7 +1157,7 @@
               { "type": "event", "event": "onBeDeathStrike" }
           ],
           "targetSelection": {
-              "pool": "target"
+              "pool": "Target"
           },
           "action": [
               { "type": "modifyVar", "x": "damage", "formular": {"environment": {"damage":0}} }
@@ -1164,7 +1172,7 @@
               {"type":"shock","delay":0.5,"range":20,"time":0.3}
           ],
           "targetSelection": {
-              "pool": "blocks"
+              "pool": "SamePosition"
           },
           "availableCondition": [
               { "type": "event", "event": "onTurnEnd" }
@@ -1186,7 +1194,7 @@
               {"type":"event","event":"onBattleTurnEnd"}
           ],
           "targetSelection": {
-              "pool": "self"
+              "pool": "Self"
           },
           "buffType":"RoleBuff"
       }
@@ -1225,7 +1233,7 @@
               {"type" :"event", "event":"onBeDeathStrike"}
           ],
           "targetSelection": {
-              "pool": "self"
+              "pool": "Self"
           },
           "availableCondition": [
               { "type": "effectCount","count":1 }
@@ -1245,8 +1253,8 @@
               { "type": "event", "event": "onBeActivate" }
           ],
           "targetSelection":{
-              "pool":"self",
-              "filter": [{"type":"alive"},{"type": "visible"}]
+              "pool":"Self",
+              "filter": ["Alive", "Visible"]
           },
           "action": [
               { "type": "dropItem", "dropList": [
@@ -1320,8 +1328,9 @@
                 {"type":"visible"}
             ],
             "targetSelection": {
-                "pool": "blocks",
-                "filter": [{"type":"shuffle"},{"type":"count","count":5}]
+                "pool": "Block",
+                "count":5,
+                "method": "Rand"
             },
             "action":[
                 {"type":"installSpell", "spell": 52,"delay":{"base":0,"range":1}}
@@ -1337,8 +1346,8 @@
                 {"type" :"event", "event":"onTurnEnd","eventCount":2 }
                 ],
             "targetSelection": {
-                "pool": "objects",
-                "filter": [{"type":"same-block"},{"type":"same-faction","faction":"hero"},{"type":"alive"},{"type":"visible"}]
+                "pool": "SamePosition",
+                "filter": ["Hero"]
             },
             "availableCondition": [
                 { "type": "effectCount", "count":1}
@@ -1359,7 +1368,7 @@
                 {"type" :"event", "event":"onTurnEnd" }
             ],
             "targetSelection":{
-                "pool":"self"
+                "pool":"Self"
             },
             "action": [{"type": "createMonster","objectCount":1,"effect":21,"randomPos":true,"monsterID":13}]
         }
@@ -1376,8 +1385,8 @@
                 {"type":"alive"}
             ],
             "targetSelection":{
-                "pool":"objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"role","roleID":148}]
+                "pool":"RoleID","roleID": 148,
+                "filter": ["Alive", "Visible"]
             },
             "action": [
                 {"type":"kill"},
@@ -1394,7 +1403,7 @@
                 {"type":"event", "event":"onEnterLevel" }
             ],
             "targetSelection": {
-                "pool": "self"
+                "pool": "Self"
             },
             "action": [
                 {"type":"changeBGM","music":"boss.mp3"}
@@ -1429,8 +1438,8 @@
                 {"type":"visible"}
             ],
             "targetSelection":{
-                "pool":"objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"role","roleID":19}]
+                "pool":"RoleID","roleID":19,
+                "filter": ["Alive", "Visible"]
 
             },
             "action": [
@@ -1466,9 +1475,10 @@
                 {"type":"property","property":"health","from":150}
             ],
             "targetSelection": {
-                "pool": "blocks",
-                "filter": [{"type":"shuffle"},{"type":"count","count":1}],
-                "anchor":[{"x":1,"y":0},{"x":-1,"y":0},{"x":0,"y":-1},{"x":0,"y":1},{"x":0,"y":0}]
+                "pool": "Block",
+                "count":1,
+                "anchor":[{"x":1,"y":0},{"x":-1,"y":0},{"x":0,"y":-1},{"x":0,"y":1},{"x":0,"y":0}],
+                "method": "Rand"
             },
             "action":[
                 {"type":"installSpell", "spell": 60,"delay":{"base":0.3}}
@@ -1485,8 +1495,8 @@
                 {"type" :"event", "event":"onTurnEnd","eventCount":2 }
             ],
             "targetSelection": {
-                "pool": "objects",
-                "filter": [{"type":"same-block"},{"type":"same-faction","faction":"hero"},{"type":"alive"},{"type":"visible"}]
+                "pool": "SamePosition",
+                "filter": ["Hero"]
             },
             "availableCondition": [
                 { "type": "effectCount", "count":1}
@@ -1510,9 +1520,10 @@
                 {"type":"property","property":"health","to":150}
             ],
             "targetSelection": {
-                "pool": "blocks",
-                "filter": [{"type":"shuffle"},{"type":"count","count":3}],
-                "anchor":[{"x":1,"y":0},{"x":-1,"y":0},{"x":0,"y":-1},{"x":0,"y":1},{"x":0,"y":0}]
+                "pool": "Block",
+                "count":3,
+                "anchor":[{"x":1,"y":0},{"x":-1,"y":0},{"x":0,"y":-1},{"x":0,"y":1},{"x":0,"y":0}],
+                "method": "Rand"
             },
             "action":[
                 {"type":"installSpell", "spell": 60,"delay":{"base":0.3}}
@@ -1549,8 +1560,8 @@
                 {"type":"visible"}
             ],
             "targetSelection":{
-                "pool":"objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"role","roleID":69}]
+                "pool":"RoleID","roleID":69,
+                "filter": ["Alive", "Visible"]
 
             },
             "action": [
@@ -1565,7 +1576,7 @@
         "label":"狼王蓄力",
         "slotId": 1,
         "config":{
-            "targetSelection": { "pool": "self" },
+            "targetSelection": { "pool": "Self" },
             "triggerCondition": [
                 { "type": "event", "event": "onBeEndBattleTurn", "count": 1 },
                 {"type":"visible"}
@@ -1588,7 +1599,7 @@
                 { "type": "setProperty","modifications": {"critical":{"c":5}}},
                 { "type": "setProperty","modifications": {"attack":{"c":2}}}
             ],
-            "targetSelection":{ "pool":"self" },
+            "targetSelection":{ "pool":"Self" },
             "uninstallAction": [
                 { "type": "resetProperty" }
             ],
@@ -1609,8 +1620,8 @@
                 { "type": "chance", "chance": 1.3 }
             ],
             "targetSelection":{
-                "pool":"target",
-                "filter": [{"type":"alive"}]
+                "pool":"Target",
+                "filter": ["Alive"]
             },
             "action": [
                 {"type": "installSpell","spell": 67},
@@ -1640,8 +1651,8 @@
                 {"type": "damage","damageType":"Bleed","formular": {"src":{"c":10}}}
             ],
             "targetSelection":
-            { "pool":"self",
-                "filter": [{"type":"alive"}]},
+            { "pool":"Self",
+                "filter": ["Alive"]},
             "buffType":"HealthDebuff",
             "triggerCondition":[
                 { "type": "event", "event": "onBattleTurnEnd"},
@@ -1665,8 +1676,8 @@
                 {"type":"visible"}
             ],
             "targetSelection": {
-                "pool": "blocks",
-                "filter": [{"type":"count","count":1}],
+                "pool": "Self",
+                "count":1,
                 "anchor":[{"x":1,"y":0},{"x":-1,"y":0},{"x":0,"y":-1},{"x":0,"y":1},{"x":1,"y":1},{"x":-1,"y":1},{"x":-1,"y":-1},{"x":1,"y":-1}]
             },
             "action":[
@@ -1684,8 +1695,8 @@
                 {"type" :"event", "event":"onTurnEnd","eventCount":2 }
             ],
             "targetSelection": {
-                "pool": "objects",
-                "filter": [{"type":"same-block"},{"type":"same-faction","faction":"hero"},{"type":"alive"},{"type":"visible"}]
+                "pool": "SamePosition",
+                "filter": ["Hero"]
             },
             "availableCondition": [
                 { "type": "effectCount", "count":1}
@@ -1709,8 +1720,8 @@
                 {"type":"visible"}
             ],
             "targetSelection":{
-                "pool":"self",
-                "filter": [{"type":"alive"},{"type":"visible"}]
+                "pool":"Self",
+                "filter": ["Alive", "Visible"]
             },
             "action": [
                 {"type": "heal","self":true,"formular": {"c":60}}
@@ -1727,8 +1738,8 @@
                 {"type":"visible"}
             ],
             "targetSelection":{
-                "pool":"self",
-                "filter": [{"type":"alive"},{"type":"visible"}]
+                "pool":"Self",
+                "filter": ["Alive", "Visible"]
             },
             "action": [
                 {"type": "installSpell", "spell": 73},
@@ -1764,8 +1775,8 @@
         "label":"npc激活",
         "config": {
         "targetSelection":{
-            "pool":"self",
-            "filter": [{"type":"alive"},{"type":"visible"}]
+            "pool":"Self",
+            "filter": ["Alive", "Visible"]
         },
         "triggerCondition": [
                 { "type": "event", "event": "onBeActivate" }
@@ -1781,8 +1792,8 @@
         "label":"游侠分身",
         "config": {
             "targetSelection":{
-                "pool":"self",
-                "filter": [{"type":"alive"},{"type":"visible"}]
+                "pool":"Self",
+                "filter": ["Alive", "Visible"]
             },
         "triggerCondition": [
             { "type": "event", "event": "onBeDamage" }
@@ -1823,8 +1834,9 @@
                 { "type": "heal","formular":{"c": 3}}
             ],
             "targetSelection": {
-                "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"sort","by":"health","reverse":true},{"type":"count","count":1}]
+                "pool": "Team",
+                "filter": ["Alive", "Visible"],
+                "method": "LowHealth"
             }
         }
     },
@@ -1836,7 +1848,7 @@
             {"type":"event", "event":"onEnterLevel" }
         ],
         "targetSelection": {
-            "pool": "self"
+            "pool": "Self"
         },
         "action": [
             {"type": "delay","delay":0.3},
@@ -1908,7 +1920,7 @@
             {"type" :"event", "event":"onBeDeathStrike"}
         ],
         "targetSelection": {
-            "pool": "self"
+            "pool": "Self"
         },
         "action":[
             {"type": "modifyVar", "x": "damage", "formular": {"environment":{"c":0}}},
@@ -1932,9 +1944,10 @@
                 "spellAction":2
             },
             "targetSelection": {
-                "pool": "blocks",
+                "pool": "Block",
                 "blocks":[15,16,17,18,19,20,21,22,23,24,25,26,27,28,29],
-                "filter": [{"type":"shuffle"},{"type":"count","count":38}]
+                "count":28,
+                "method": "Rand"
             },
             "action":[
                 {"type":"installSpell", "spell": 44,"delay":{"base":1.6,"range":5}},
@@ -1950,7 +1963,7 @@
                 {"type":"event", "event":"onEnterLevel" }
             ],
             "targetSelection": {
-                "pool": "self"
+                "pool": "Self"
             },
             "action":[
                 {"type": "whiteScreen","time":0.1,"mode":0},
@@ -1969,11 +1982,11 @@
         "label": "宝箱",
         "config": {
             "triggerCondition": [
-                { "type": "event", "event": "onBeActivate"}
+                { "type": "event", "event": "onBeActivate" }
             ],
             "targetSelection":{
-                "pool":"self",
-                "filter": [{"type":"alive"},{"type":"visible"}]
+                "pool":"Self",
+                "filter": ["Alive", "Visible"]
             },
             "action": [
                 { "type": "dropItem", "dropList": [
@@ -1985,609 +1998,5 @@
                 {"type":"kill"}
             ]
         }
-    },
-    {
-        "skillId":83,
-        "label":"扣除生命值",
-        "desc":"我方全体掉血",
-        "config": {
-               "triggerCondition": [
-                {"type" :"event","event": "onShow"}
-            ],
-            "targetSelection": {
-                "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
-            },
-            "action":[
-                {"type": "damage", "formular": {"src":{"strong":0.5}}},
-                {"type": "playEffect"},
-                {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":2.35},
-                {"type":"delay"},
-                {"type":"kill","self": true}
-            ],
-            "levelConfig":[
-                {"effect":10,"pos":"target"},
-                {"effect":34,"pos":"target"}
-            ]
-      }
-    },
-      {
-          "skillId":84,
-          "label":"全体生命值",
-          "desc":"全体回血",
-          "config": {
-             "triggerCondition": [
-              {"type" :"event","event": "onShow"}
-            ],
-            "targetSelection": {
-                "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
-          },
-          "action":[
-            {"type": "heal", "formular": {"src":{"strong":0.5}, "c":5}},
-            {"type": "playEffect","effect":19,"pos":"target"} ,
-              {"type":"playAction","motion":1,"pos":"self"},
-              {"type":"delay","delay":1.85},
-              {"type":"delay"},
-              {"type":"kill","self": true}
-          ]
-          }
-      },
-    {
-        "skillId":85,
-        "label":"转换阵营",
-        "desc":"我方阵营",
-        "config": {
-            "triggerCondition": [
-                {"type" :"event","event": "onEnterLevel"}
-            ],
-            "targetSelection": {
-                "pool": "self",
-                "filter": [{"type":"alive"}]
-            },
-            "action":[
-                {"type":"changeFaction","name":"hero"}
-            ]
-        }
-    },
-    {
-        "skillId":86,
-        "label":"转换阵营",
-        "desc":"敌方阵营",
-        "config": {
-            "triggerCondition": [
-                {"type" :"event","event": "onEnterLevel"}
-            ],
-            "targetSelection": {
-                "pool": "self",
-                "filter": [{"type":"alive"}]
-            },
-            "action":[
-                {"type":"changeFaction","name":"monster"}
-            ]
-        }
-    },
-    {
-        "skillId": 87,
-        "label":"全体加速",
-        "desc":"我方全体攻击加速",
-        "config": {
-               "triggerCondition": [
-                {"type" :"event","event": "onShow"}
-            ],
-            "targetSelection": {
-                "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
-            },
-            "action":[
-                { "type": "installSpell", "spell": 88},
-                {"type": "playEffect","effect":37,"pos":"target"} ,
-                {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":1.85},
-                {"type":"delay"},
-                {"type":"kill","self": true}
-
-            ]
-        }
-    },
-    {
-        "skillId":88,
-        "config": {
-            "installAction":[
-                { "type": "setProperty",  "modifications": {"speed":{"src":{"speed":3},"c":20}} }
-            ],
-            "uninstallAction": [
-                { "type": "resetProperty" }
-            ],
-            "buffType":"RoleBuff",
-            "availableCondition": [
-                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 }
-            ]
-        }
-    },
-    {
-        "skillId": 89,
-        "label":"上升攻击力",
-        "desc":"我方全体攻击上升",
-        "config": {
-               "triggerCondition": [
-                {"type" :"event","event": "onShow"}
-            ],
-            "targetSelection": {
-                "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
-            },
-            "action":[
-                { "type": "installSpell", "spell": 90} ,
-                {"type": "playEffect","effect":13,"pos":"target"} ,
-                {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":1.85},
-                {"type":"delay"},
-                {"type":"kill","self": true}
-
-            ]
-        }
-    },
-    {
-        "skillId":90,
-        "config": {
-            "installAction":[
-                { "type": "setProperty","modifications": {"attack":{"src":{"attack":1}}} }
-            ],
-            "uninstallAction": [
-                { "type": "resetProperty" }
-            ],
-            "buffType":"RoleBuff",
-            "availableCondition": [
-                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 }
-            ]
-        }
-    },
-    {
-        "skillId": 91,
-        "label":"降低攻击力",
-        "desc":"我方全体攻击降低",
-        "config": {
-              "triggerCondition": [
-                {"type" :"event","event": "onShow"}
-            ],
-            "targetSelection": {
-                "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
-            },
-            "action":[
-                { "type": "installSpell", "spell": 92} ,
-                {"type": "playEffect","effect":38,"pos":"target"},
-                {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":1.85},
-                {"type":"delay"},
-                {"type":"kill","self": true}
-            ]
-        }
-    },
-    {
-        "skillId":92,
-        "config": {
-            "installAction":[
-                { "type": "setProperty","modifications": {"attack":{"src":{"attack":-0.5}}} }
-            ],
-            "uninstallAction": [
-                { "type": "resetProperty" }
-            ],
-            "buffType":"RoleDebuff",
-            "availableCondition": [
-                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 }
-            ]
-        }
-    },
-    {
-        "skillId": 93,
-        "label":"中毒",
-        "desc":"我方全体持续掉血",
-        "config": {
-           "triggerCondition": [
-                {"type" :"event","event": "onShow"}
-            ],
-            "targetSelection": {
-                "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
-            },
-            "action":[
-                { "type": "installSpell", "spell": 94},
-                {"type": "playEffect","effect":36,"pos":"target"},
-                {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":2.35},
-                {"type":"delay"},
-                {"type":"kill","self": true}
-
-            ]
-        }
-    },
-    {
-        "skillId": 94,
-            "config": {
-            "action":[
-                {"type": "damage","damageType":"poison","formular": {"src":{"health":0.1}}}
-            ],
-            "targetSelection":
-            { 
-              "pool":"self",
-                "filter": [{"type":"alive"}]
-            },
-            "buffType":"HealthDebuff",
-            "triggerCondition":[
-                { "type": "event", "event": "onBattleTurnEnd"},
-                { "type": "event", "event": "onMoveTurnEnd"}
-            ],
-            "availableCondition": [
-                { "type": "effectCount", "count":3}
-            ]
-            }
-    },
-    {
-        "skillId": 95,
-        "label":"无敌",
-        "desc":"我方全体无敌",
-        "config":{
-            "triggerCondition":[
-                {"type" :"event","event": "onShow"}
-            ],
-            "targetSelection": {
-                "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
-            },
-            "action":[
-                { "type": "installSpell", "spell": 96}  ,
-               {"type": "playEffect","effect":39,"pos":"target"},
-                {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":1.85},
-                {"type":"delay"},
-                {"type":"kill", "self": true}
-            ]
-        }
-    },
-    {
-        "skillId": 96,
-        "config": {
-            "action":[
-                {"type": "ignoreHurt" }
-            ],
-            "targetSelection":
-            { "pool":"self",
-              "filter": [{"type":"alive"}]},
-            "buffType":"RoleBuff",
-            "triggerCondition": [
-                { "type": "event", "event": "onBePhysicalDamage" },
-                { "type": "event", "event": "onBePhysicalRangeDamage" },
-                { "type": "event", "event": "onBeSpellDamage" },
-                { "type": "event", "event": "onBeSpellRangeDamage" }
-            ],
-                "availableCondition": [
-                { "type": "effectCount", "count":2}
-            ]
-        }
-    },
-    {
-        "skillId": 97,
-        "label":"攻击吸收",
-        "desc":"我方全体攻击吸收",
-        "config": {
-             "triggerCondition": [
-                {"type" :"event","event": "onShow"}
-            ],
-            "targetSelection": {
-                "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
-            },
-            "action":[
-                { "type": "installSpell", "spell": 98}  ,
-               {"type": "playEffect","effect":40,"pos":"target"},
-                {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":1.85},
-                {"type":"delay"},
-                {"type":"kill","self": true}
-
-            ]
-        }
-    },
-    {
-        "skillId": 98,
-        "config": {
-           "triggerCondition": [
-                   { "type": "event", "event": "onBePhysicalDamage" },
-                   { "type": "event", "event": "onBePhysicalRangeDamage" },
-                   { "type": "event", "event": "onBeSpellDamage" },
-                   { "type": "event", "event": "onBeSpellRangeDamage" }
-            ],
-            "targetSelection": {
-                "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"} ]
-            },
-
-            "buffType":"RoleBuff",
-            "action": [
-                {"type": "ignoreHurt"},
-                {"type": "heal", "formular": {"environment":{"damage":1}}}
-            ],
-            "availableCondition": [
-                { "type": "effectCount", "count":1}
-           ]
-
-        }
-    },
-    {
-        "skillId": 99,
-        "label":"清除buff",
-        "desc":"清除我方所有buff",
-        "config": {
-         "triggerCondition": [
-                {"type" :"event","event": "onShow"}
-            ],
-            "targetSelection": {
-                "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
-            },
-            "action":[
-                {"type":"clearDebuff"},
-                {"type":"clearBuff"} ,
-                {"type": "playEffect","effect":41,"pos":"target"},
-                {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":1.85},
-                {"type":"delay"},
-                {"type":"kill","self": true}
-             ]
-
-            }
-
-    },
-    {
-        "skillId": 100,
-        "config": {
-            "targetSelection": {
-                "pool": "self",
-                "filter": [{"type":"alive"},{"type":"visible"}]
-            },
-            "installAction": [
-                {"type": "kill"}
-            ],
-            "availableCondition": [
-                { "type": "event", "event": "onTurnEnd", "eventCount": 1 }
-                ]
-        }
-    },
-    {
-        "skillId":101,
-        "label":"火元素",
-        "desc":"死后自爆",
-        "slotId": 0,
-        "config": {
-
-            "triggerCondition": [
-                {"type" :"event","event": "onkill"}
-            ],
-            "targetSelection": {
-                "pool": "Enemy",
-                "filter": ["alive", "visible"]
-            },
-            "action":[
-                {"type": "damage", "formular": {"src":{"strong":0.5}}},
-                {"type": "playEffect"},
-                {"type":"delay"}
-           ]
-        }
-    },
-       {"skillId":102,
-        "label":"元素",
-        "desc":"死后降低命中",
-        "slotId": 0,
-        "config": {
-                "triggerCondition": [
-                {"type" :"event","event": "onkill"}
-            ],
-            "targetSelection": {
-                "pool": "Enemy",
-                "filter": ["alive", "visible"]
-            },
-            "action":[
-                { "type": "installSpell", "spell": 103}
-               ]
-             }
-    },
-        {
-        "skillId":103,
-        "config": {
-            "installAction":[
-                { "type": "setProperty",  "modifications": {"accuracy":{"src":{"accuracy":1},"c":40}} }
-            ],
-            "uninstallAction": [
-                { "type": "resetProperty" }
-            ],
-            "buffType":"DeBuff",
-            "availableCondition": [
-                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 }
-            ]
-        }
-    },
-    {
-        "skillId": 104,
-        "label":"元素",
-        "desc":"死后全体攻击减速",
-        "slotId": 0,
-        "config": {
-                "triggerCondition": [
-                {"type" :"event","event": "onKill"}
-            ],
-            "targetSelection": {
-                "pool": "Enemy",
-                "filter": ["alive", "visible"]
-            },
-            "action":[
-                { "type": "installSpell", "spell": 105}
-              ]
-           }
-    },
-    {
-        "skillId":105,
-        "config": {
-            "installAction":[
-                { "type": "setProperty",  "modifications": {"speed":{"src":{"speed":3},"c":20}} }
-            ],
-            "uninstallAction": [
-                { "type": "resetProperty" }
-            ],
-            "buffType":"DeBuff",
-            "availableCondition": [
-                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 }
-            ]
-        }
-    },
-    {
-        "skillId": 106,
-        "label":"盾兵",
-        "icon": "待定",
-        "desc":"可以替其他怪物抵挡伤害（援护）。",
-        "slotId": 0 ,
-        "config": {
-            "basic" : {
-                "spellAction":4,
-                "spellEffect": 9,
-                "targetEffect": 1 ,
-                "spellDelay": 0,
-                "targetDelay": 0
-            },
-            "targetSelection": {
-                "pool": "Target",
-                "filter": ["alive", "visible"]
-            },
-            "triggerCondition": [
-                { "type": "event", "event": "onTeammateBePhysicalDamage" },
-                { "type": "event", "event": "onTeammateBePhysicalRangeDamage" },
-                { "type": "chance", "chance": 0.45 },
-                { "type": "targetMutex", "mutex": "reinforce" },
-                {"type":"alive"}
-            ],
-            "action": [
-                {"type": "modifyVar", "x": "damage" },
-                {"type": "setTargetMutex", "mutex": "reinforce", "count": 1 },
-                {"type": "setMyMutex", "mutex": "reinforce", "count": 1 },
-                {"type": "replaceTar" },
-                {"type": "ignoreHurt" }
-            ],
-            "levelConfig": [
-                { "formular": {"environment": {"damage":0.8}} },
-                { "formular": {"environment": {"damage":0.7}} },
-                { "formular": {"environment": {"damage":0.5}} }
-            ]
-        }
-    },
-    {
-        "skillId": 107,
-        "label":"回避",
-        "desc":"回避提高",
-        "slotId": 0,
-        "config": {
-            "triggerCondition": [
-                { "type": "event", "event": "onBeEndBattleTurn", "count": 1 },
-                {"type":"visible"}
-            ],
-            "targetSelection": {
-                "pool": "Self",
-                "filter": ["alive", "visible"]
-            },
-            "action":[
-                { "type": "installSpell", "spell": 108}
-            ]
-        }
-    },
-    {
-        "skillId": 108,
-        "config": {
-            "installAction":[
-                { "type": "setProperty",  "modifications": {"reactivity":{"src":{"reactivity":1},"c":40}} }
-            ],
-            "uninstallAction": [
-                { "type": "resetProperty" }
-            ],
-            "buffType":"RoleBuff",
-            "availableCondition": [
-                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 }
-            ]
-        }
-    },
-
-    {
-        "skillId": 109,
-        "label":"降低攻击力",
-        "desc":"降低玩家攻击力",
-        "slotId": 0,
-        "config": {
-            "triggerCondition": [
-                { "type": "event", "event": "onBeEndBattleTurn", "count": 1 },
-                {"type":"visible"}
-            ],
-            "targetSelection": {
-                "pool": "Enemy",
-                "filter": ["alive", "visible"]
-            },
-            "action":[
-                { "type": "installSpell", "spell": 110} ,
-                {"type":"delay"}
-
-            ]
-        }
-    },
-    {
-        "skillId":110,
-        "config": {
-            "installAction":[
-                { "type": "setProperty","modifications": {"attack":{"src":{"attack":-0.5}}} }
-            ],
-            "uninstallAction": [
-                { "type": "resetProperty" }
-            ],
-            "buffType":"RoleDebuff",
-            "availableCondition": [
-                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 }
-            ]
-        }
-    },
-    {"skillId": 111,
-        "label":"食人魔自身加速",
-        "desc":"攻击加速",
-        "slotId": 0,
-        "config": {
-            "triggerCondition": [
-                { "type": "event", "event": "onBeEndBattleTurn", "count": 1 },
-                {"type":"visible"}
-            ],
-            "targetSelection": {
-                "pool": "Self",
-                "filter": ["alive", "visible"]
-            },
-            "action":[
-                { "type": "installSpell", "spell": 112}
-           ]
-        }
-    },
-    {
-        "skillId":113,
-        "config": {
-            "installAction":[
-                { "type": "setProperty",  "modifications": {"speed":{"src":{"speed":3},"c":20}} }
-            ],
-            "uninstallAction": [
-                { "type": "resetProperty" }
-            ],
-            "buffType":"RoleBuff",
-            "availableCondition": [
-                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 }
-            ]
-        }
     }
-
-
-
-
-
 ]

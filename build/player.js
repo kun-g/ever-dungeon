@@ -371,7 +371,6 @@
           return this.handleReceipt(payment, 'AppStore', postResult);
         case 'PP25':
         case 'ND91':
-        case 'KY':
           myReceipt = payment.receipt;
           return async.waterfall([
             function(cb) {
@@ -379,7 +378,7 @@
                 if ((receipt != null) && receipt.state !== RECEIPT_STATE_DELIVERED) {
                   return cb(Error(RET_Issue37));
                 } else {
-                  return cb(null, myReceipt, payment.paymentType);
+                  return cb(null, myReceipt, paymentType);
                 }
               });
             }, (function(_this) {

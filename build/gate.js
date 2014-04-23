@@ -78,15 +78,10 @@
             s = net.connect(e.port, e.ip, function() {
               e.alive = true;
               s.destroy();
-              cb(null, e);
-              return s.on('end', function(err) {
-                console.log('Connection Error', e);
-                e.alive = false;
-                return s.destroy();
-              });
+              return cb(null, e);
             });
             return s.on('error', function(err) {
-              console.log('Connection Error', e);
+              console.log('Error', err, e);
               e.alive = false;
               s.destroy();
               return cb(null, e);
@@ -97,7 +92,7 @@
             return e.alive;
           });
         });
-      }), 10000);
+      }), 3000);
       appNet.currIndex = 0;
       appNet.aliveConnections = [];
       appNet.server.listen(port, console.log);
