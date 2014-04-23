@@ -267,7 +267,8 @@
                   loginInfo.arg.tut = player.tutorialStage;
                 }
                 handle([loginInfo].concat(ev));
-                return player.saveDB(cb);
+                player.saveDB(cb);
+                return player = null;
               });
             } else {
               return dbLib.newSessionInfo(function(err, session) {
