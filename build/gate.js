@@ -29,6 +29,9 @@
         c.decoder = decoder;
         c.encoder = encoder;
         c.server = appNet.createConnection(c);
+        if (c.server == null) {
+          return;
+        }
         encoder.pipe(c.server);
         c.server.pipe(c);
         decoder.on('request', function(request) {
@@ -61,11 +64,11 @@
         count = appNet.backends.length;
         servers = appNet.backends;
         for (i = _i = 1; 1 <= count ? _i <= count : _i >= count; i = 1 <= count ? ++_i : --_i) {
-          if (!servers[i + appNet.currIndex % servers.length].alive) {
+          if (!servers[(i + appNet.currIndex) % servers.length].alive) {
             continue;
           }
-          appNet.currIndex = appNet.currIndex + 1 % appNet.aliveServers.length;
-          return servers[i + appNet.currIndex % servers.length];
+          appNet.currIndex = (appNet.currIndex + 1) % appNet.aliveServers.length;
+          return servers[(i + appNet.currIndex) % servers.length];
         }
         return null;
       };
