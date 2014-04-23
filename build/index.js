@@ -1,4 +1,5 @@
 //require('strong-agent').profile();
+require('webkit-devtools-agent');
 require('v8-profiler');
 require('nodetime').profile({
   accountKey: 'c82d52d81e9ed18e8550b58bf36f49d47e50a792', 
@@ -17,6 +18,7 @@ domain.on('error', function (err) {
 playerCounter = 0;
 var tmp = new memwatch.HeapDiff();
 memwatch.on('leak', function (info) {
+  logWarn(info);
   var diff = tmp.end();
   diff.change.details = diff.change.details.sort( function (a, b) {
     return b.size_bytes - a.size_bytes;

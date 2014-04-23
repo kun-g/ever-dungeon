@@ -236,7 +236,6 @@ function tryToRegisterName (name, callback) {
 }
 
 function loadPlayer(name, handler) {
-  var playerLib = require('./player');
   var dbKeyName = playerPrefix+name;
   dbClient.hgetall(dbKeyName, function (err, result) {
     var p = null;
@@ -250,11 +249,12 @@ function loadPlayer(name, handler) {
           attributes[k] = v;
         }
       }
+      var playerLib = require('./player');
       p = new playerLib.Player(attributes);
-      //p.setName(name);
       p.initialize();
     }
     if (handler) handler(err, p);
+    p = null;
   });
 }
 

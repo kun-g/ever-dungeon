@@ -80,6 +80,8 @@ Server.prototype.startTcpServer = function (config) {
       });
       c.destroy();
       c = null;
+      c.decoder = null;
+      c.encoder = null;
     });
   });
   appNet.aliveConnections = [];
