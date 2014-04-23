@@ -21,7 +21,7 @@ Server.prototype.shutDown = function () {
       if (c.pendingRequest.length == 0) c.end();
     });
   }
-}
+};
 Server.prototype.startTcpServer = function (config) {
   if (config == null || config.handler == null || config.port == null) {
     throw 'No handler';
@@ -37,8 +37,9 @@ Server.prototype.startTcpServer = function (config) {
     c.on('timeout', function () { c.end(); });
     c.on('end', function () {
       require("./router").peerOffline(c);
-      var name = c.playerName;
+      delete appNet.aliveConnections[c.connectionIndex];
       if (c.player) {
+        var name = c.playerName;
         c.player.onDisconnect();
         c.player.socket = null;
 
@@ -50,22 +51,23 @@ Server.prototype.startTcpServer = function (config) {
           maxRecv: c.decoder.maxBytes,
           name: name
         });
-      };
-      delete appNet.aliveConnections[c.connectionIndex];
+        c.player = null;
+        c.encoder = null;
+        c.decoder = null;
+        c = null;
+      }
     });
-    var decoder = new parseLib.SimpleProtocolDecoder();
-    var encoder = new parseLib.SimpleProtocolEncoder();
-    encoder.pipe(c);
-    encoder.setFlag('size');
+    c.decoder = new parseLib.SimpleProtocolDecoder();
+    c.encoder = new parseLib.SimpleProtocolEncoder();
+    c.encoder.pipe(c);
+    c.encoder.setFlag('size');
     //encoder.setFlag('messagePack');
-    c.pipe(decoder);
-    c.decoder = decoder;
-    c.encoder = encoder;
-    decoder.on('request', function (request) {
+    c.pipe(c.decoder);
+    c.decoder.on('request', function (request) {
       if (!request) c.destroy();
       require("./router").route(handler, request, c, function (ret) { 
         if (ret) {
-          encoder.writeObject(ret);
+          c.encoder.writeObject(ret);
         }
       });
     });
@@ -77,6 +79,7 @@ Server.prototype.startTcpServer = function (config) {
         error : error
       });
       c.destroy();
+      c = null;
     });
   });
   appNet.aliveConnections = [];
@@ -121,24 +124,5 @@ Server.prototype.startTcpServer = function (config) {
     dbLib.publish('ServerInfo', me.serverInfo);
   }, 3000);
 };
-/*
-c = net.connect({ip: 'localhost', port: 7760});
-var decoder = new parseLib.SimpleProtocolDecoder();
-var encoder = new parseLib.SimpleProtocolEncoder();
-encoder.pipe(c);
-encoder.setFlag('size');
-c.pipe(decoder);
-decoder.on('request', function (request) {
-  console.log(request);
-});
-c.decoder = decoder;
-c.encoder = encoder;
-encoder.writeObject({CMD: 'get', key: '测试'});
-*/
-
-
-
-
-
 
 exports.Server = Server;

@@ -145,8 +145,11 @@
         });
       });
     };
-    tickLeaderboard = function(board) {
-      return cfg = localConfig[board];
+    tickLeaderboard = function(board, cb) {
+      cfg = localConfig[board];
+      if (cfg.resetTime && matchDate(srvCfg[cfg.name], currentTime(), cfg.resetTime)) {
+        return require('./dbWrapper').removeLeaderboard(cfg.name, cb);
+      }
     };
     return exports.getPositionOnLeaderboard = function(board, name, from, to, cb) {
       tickLeaderboard(board);
@@ -199,6 +202,7 @@
   exports.diffDate = diffDate;
 
   matchDate = function(date, today, rule) {
+    var _ref, _ref1, _ref2;
     if (!date) {
       return false;
     }
@@ -215,15 +219,9 @@
     if (rule.day) {
       date = date.day(rule.day);
     }
-    if (rule.hour) {
-      date = date.hour(rule.hour);
-    }
-    if (rule.minute) {
-      date = date.minute(rule.minute);
-    }
-    if (rule.second) {
-      date = date.second(rule.second);
-    }
+    date = date.hour((_ref = rule.hour) != null ? _ref : 0);
+    date = date.minute((_ref1 = rule.minute) != null ? _ref1 : 0);
+    date = date.second((_ref2 = rule.second) != null ? _ref2 : 0);
     return date <= today;
   };
 
