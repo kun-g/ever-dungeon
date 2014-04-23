@@ -14,6 +14,12 @@ domain.on('error', function (err) {
   console.log("UnhandledError", err.message, err.stack);
 });
 
+var tmp = new memwatch.HeapDiff();
+memwatch.on('leak', function (info) {
+  logWarn({Step: 'All', info: tmp.end()});
+  tmp = new memwatch.HeapDiff();
+});
+
 var srvLib = require("./server");
 gServer = new srvLib.Server();
 exports.server = gServer;
