@@ -104,7 +104,6 @@
       }
       this.onDisconnect();
       dbLib.unsubscribe(PlayerChannelPrefix + this.name);
-      console.log('Destroy', this.name);
       return this.destroy();
     };
 
@@ -2086,6 +2085,9 @@
     };
 
     Player.prototype.getCampaignState = function(campaignName) {
+      if (!this.campaignState) {
+        return null;
+      }
       if (this.campaignState[campaignName] == null) {
         if (campaignName === 'Charge') {
           this.campaignState.newProperty(campaignName, {});
