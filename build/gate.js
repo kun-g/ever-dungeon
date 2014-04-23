@@ -21,7 +21,6 @@
       appNet = {};
       appNet.server = net.createServer(function(c) {
         var decoder, encoder;
-        c.pendingRequest = new Buffer(10240);
         decoder = new SimpleProtocolDecoder();
         encoder = new SimpleProtocolEncoder();
         encoder.setFlag('size');
@@ -44,12 +43,14 @@
             }
             return encoder.writeObject(request);
           } else {
-            return c.destroy();
+            c.destroy();
+            return c = null;
           }
         });
         return c.on('error', function(error) {
           console.log(error);
-          return c.destroy();
+          c.destroy();
+          return c = null;
         });
       });
       appNet.backends = servers.map(function(s, id) {
