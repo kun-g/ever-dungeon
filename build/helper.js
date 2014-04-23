@@ -10,13 +10,11 @@
     if (!obj) {
       return false;
     }
-    console.log('destroyReactDB');
     for (k in obj) {
       v = obj[k];
       if (!(typeof v === 'object')) {
         continue;
       }
-      console.log('destroyReactDB', k);
       destroyReactDB(v);
       delete obj[k];
     }
