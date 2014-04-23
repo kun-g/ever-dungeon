@@ -247,6 +247,7 @@
                 }
               ], function(err, result) {
                 var loginInfo;
+                playerCounter++;
                 result = result.reduce((function(r, l) {
                   return r.concat(l);
                 }), []);

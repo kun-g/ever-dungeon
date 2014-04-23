@@ -14,13 +14,15 @@ domain.on('error', function (err) {
   console.log("UnhandledError", err.message, err.stack);
 });
 
+playerCounter = 0;
 var tmp = new memwatch.HeapDiff();
 memwatch.on('leak', function (info) {
   var diff = tmp.end();
   diff.change.details = diff.change.details.sort( function (a, b) {
-    return a.size_bytes - a.size_bytes;
+    return b.size_bytes - a.size_bytes;
   });
   logWarn(diff);
+  console.log( playerCounter );
   tmp = new memwatch.HeapDiff();
 });
 
