@@ -9,7 +9,7 @@ dbLib = require('./db');
 dbWrapper = require('./dbWrapper');
 http = require('http');
 var domain = require('domain').create();
-
+memwatch = require('memwatch');
 domain.on('error', function (err) {
   console.log("UnhandledError", err.message, err.stack);
 });

@@ -147,6 +147,8 @@
     RPC_Login: {
       id: 100,
       func: function(arg, dummy, handle, rpcID, socket, registerFlag) {
+        var tmp;
+        tmp = new memwatch.HeapDiff();
         return async.waterfall([
           function(cb) {
             var current, limit, _ref1;
@@ -181,6 +183,7 @@
             return loadPlayer(arg.tp, arg.id, cb);
           }, function(player, cb) {
             var ev, time;
+            logInfo(tmp.end());
             if (player) {
               player.log('login', {
                 type: arg.tp,
