@@ -79,9 +79,9 @@ Server.prototype.startTcpServer = function (config) {
         error : error
       });
       c.destroy();
-      c = null;
       c.decoder = null;
       c.encoder = null;
+      c = null;
     });
   });
   appNet.aliveConnections = [];
