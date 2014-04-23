@@ -50,10 +50,10 @@ Server.prototype.startTcpServer = function (config) {
           maxRecv: c.decoder.maxBytes,
           name: name
         });
-        c = null;
         c.player = null;
         c.encoder = null;
         c.decoder = null;
+        c = null;
       }
       delete appNet.aliveConnections[c.connectionIndex];
     });
