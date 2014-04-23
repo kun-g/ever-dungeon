@@ -9,19 +9,19 @@
 
   net = require('net');
 
+  require('nodetime').profile({
+    accountKey: 'c82d52d81e9ed18e8550b58bf36f49d47e50a792',
+    appName: 'Gate'
+  });
+
   initGlobalConfig(null, function() {
     var gServerConfig, gServerID, startTcpServer;
     startTcpServer = function(servers, port) {
-      var appNet;
+      var appNet, getAliveConnection;
       appNet = {};
       appNet.server = net.createServer(function(c) {
         var decoder, encoder;
-        appNet.aliveConnections.push(c);
-        c.connectionIndex = appNet.aliveConnections.length - 1;
         c.pendingRequest = new Buffer(0);
-        c.on('end', function() {
-          return delete appNet.aliveConnections[c.connectionIndex];
-        });
         decoder = new SimpleProtocolDecoder();
         encoder = new SimpleProtocolEncoder();
         encoder.setFlag('size');
@@ -56,50 +56,53 @@
           alive: false
         };
       });
+      getAliveConnection = function() {
+        var count, i, _i;
+        count = appNet.backends.length;
+        servers = appNet.backends;
+        for (i = _i = 1; 1 <= count ? _i <= count : _i >= count; i = 1 <= count ? ++_i : --_i) {
+          if (!servers[i + appNet.currIndex % servers.length].alive) {
+            continue;
+          }
+          appNet.currIndex = appNet.currIndex + 1 % appNet.aliveServers.length;
+          return servers[i + appNet.currIndex % servers.length];
+        }
+        return null;
+      };
       appNet.createConnection = function(socket) {
         var c, server;
-        server = appNet.aliveServers[appNet.currIndex];
-        appNet.currIndex = appNet.currIndex + 1 % appNet.aliveServers.length;
+        server = getAliveConnection();
         c = net.connect(server.port, server.ip);
         c.on('error', function(err) {
           c.destroy();
-          return socket.destroy();
+          socket.destroy();
+          return c = null;
         });
         c.on('end', function(err) {
           c.destroy();
-          return socket.destroy();
+          socket.destroy();
+          return c = null;
         });
         return c;
       };
       setInterval((function() {
-        return async.map(appNet.backends, function(e, cb) {
+        return appNet.backends.forEach(function(e) {
           var s;
           if (!e.alive) {
             s = net.connect(e.port, e.ip);
             s.on('connect', function() {
-              console.log('Connection On', e);
               e.alive = true;
-              return cb(null, e);
+              return console.log('Connection On', e);
             });
             s.on('end', function(err) {
-              console.log('Connection Lost', e);
-              return e.alive = false;
-            });
-            s.on('error', function(err) {
-              console.log('Connection Error', e);
               e.alive = false;
-              return cb(null, e);
+              return console.log('Connection Lost', e);
             });
             return s = null;
           }
-        }, function(err, result) {
-          return appNet.aliveServers = result.filter(function(e) {
-            return e.alive;
-          });
         });
       }), 10000);
       appNet.currIndex = 0;
-      appNet.aliveConnections = [];
       appNet.server.listen(port, console.log);
       return appNet.server.on('error', console.log);
     };
