@@ -488,7 +488,7 @@
       if (!((cfg.targetSelection != null) && cfg.targetSelection.pool)) {
         return [];
       }
-      if (!(cfg.targetSelection.pool === 'Self' || (cmd != null))) {
+      if (!(cfg.targetSelection.pool === 'self' || (cmd != null))) {
         return [];
       }
       if (cmd != null) {

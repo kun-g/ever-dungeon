@@ -20,20 +20,17 @@
       var appNet, getAliveConnection;
       appNet = {};
       appNet.server = net.createServer(function(c) {
-        var decoder, encoder;
-        decoder = new SimpleProtocolDecoder();
-        encoder = new SimpleProtocolEncoder();
-        encoder.setFlag('size');
+        c.decoder = new SimpleProtocolDecoder();
+        c.encoder = new SimpleProtocolEncoder();
+        c.encoder.setFlag('size');
         c.pipe(decoder);
-        c.decoder = decoder;
-        c.encoder = encoder;
         c.server = appNet.createConnection(c);
         if (c.server == null) {
           return;
         }
-        encoder.pipe(c.server);
+        c.encoder.pipe(c.server);
         c.server.pipe(c);
-        decoder.on('request', function(request) {
+        c.decoder.on('request', function(request) {
           if (request) {
             if (request.CMD === 101) {
               console.log({
@@ -41,14 +38,13 @@
                 ip: c.remoteAddress
               });
             }
-            return encoder.writeObject(request);
+            return c.encoder.writeObject(request);
           } else {
             c.destroy();
             return c = null;
           }
         });
         return c.on('error', function(error) {
-          console.log(error);
           c.destroy();
           return c = null;
         });
@@ -61,15 +57,16 @@
         };
       });
       getAliveConnection = function() {
-        var count, i, _i;
+        var count, i, server, _i;
         count = appNet.backends.length;
         servers = appNet.backends;
         for (i = _i = 1; 1 <= count ? _i <= count : _i >= count; i = 1 <= count ? ++_i : --_i) {
           if (!servers[(i + appNet.currIndex) % count].alive) {
             continue;
           }
+          server = servers[(i + appNet.currIndex) % count];
           appNet.currIndex = (appNet.currIndex + 1) % count;
-          return servers[(i + appNet.currIndex) % count];
+          return server;
         }
         return null;
       };
