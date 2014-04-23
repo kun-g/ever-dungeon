@@ -21,6 +21,9 @@
     _results = [];
     for (k in obj) {
       v = obj[k];
+      if (!(typeof v === 'object')) {
+        continue;
+      }
       console.log('destroyReactDB', k);
       destroyReactDB(v);
       _results.push(obj[k] = null);
