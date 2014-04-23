@@ -101,6 +101,9 @@
               e.alive = true;
               return console.log('Connection On', e);
             });
+            s.on('error', function(err) {
+              return e.alive = false;
+            });
             s.on('end', function(err) {
               e.alive = false;
               return console.log('Connection Lost', e);
