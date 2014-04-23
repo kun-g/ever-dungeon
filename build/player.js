@@ -103,7 +103,8 @@
         });
       }
       this.onDisconnect();
-      return dbLib.unsubscribe(PlayerChannelPrefix + this.name);
+      dbLib.unsubscribe(PlayerChannelPrefix + this.name);
+      return this.destroy();
     };
 
     Player.prototype.onReconnect = function(socket) {
