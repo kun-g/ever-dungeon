@@ -7,6 +7,7 @@
 
   destroyReactDB = function(obj) {
     var k, v, _results;
+    console.log('destroyReactDB');
     if (obj.destroyReactDB) {
       obj.destroyReactDB();
     }
@@ -20,6 +21,7 @@
     _results = [];
     for (k in obj) {
       v = obj[k];
+      console.log('destroyReactDB', k);
       destroyReactDB(v);
       _results.push(obj[k] = null);
     }
