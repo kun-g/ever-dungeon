@@ -1,9 +1,31 @@
 (function() {
-  var actCampaign, conditionCheck, currentTime, diffDate, initCampaign, matchDate, moment, tap, tapObject, updateLockStatus;
+  var actCampaign, conditionCheck, currentTime, destroyReactDB, diffDate, initCampaign, matchDate, moment, tap, tapObject, updateLockStatus;
 
   conditionCheck = require('./trigger').conditionCheck;
 
   moment = require('moment');
+
+  destroyReactDB = function(obj) {
+    var k, v, _results;
+    if (obj.destroyReactDB) {
+      obj.destroyReactDB();
+    }
+    if (obj.newProperty) {
+      obj.newProperty = null;
+    }
+    if (obj.push) {
+      obj.push = null;
+    }
+    _results = [];
+    for (k in obj) {
+      v = obj[k];
+      destroyReactDB(v);
+      _results.push(obj[k] = null);
+    }
+    return _results;
+  };
+
+  exports.destroyReactDB = destroyReactDB;
 
   tap = function(obj, key, callback, invokeFlag) {
     var theCB;
@@ -16,8 +38,22 @@
     if (obj.reactDB == null) {
       Object.defineProperty(obj, 'reactDB', {
         enumerable: false,
-        configurable: false,
+        configurable: true,
         value: {}
+      });
+      Object.defineProperty(obj, 'destroyReactDB', {
+        enumerable: false,
+        configurable: true,
+        value: function() {
+          var k, v, _ref;
+          _ref = obj.reactDB;
+          for (k in _ref) {
+            v = _ref[k];
+            v.value = null;
+            v.hooks = null;
+          }
+          return obj = null;
+        }
       });
     }
     if (obj.reactDB[key] == null) {
@@ -75,7 +111,7 @@
     config = {
       value: tabNewProperty,
       enumerable: false,
-      configurable: false,
+      configurable: true,
       writable: false
     };
     if (obj.newProperty == null) {

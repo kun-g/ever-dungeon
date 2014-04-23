@@ -363,11 +363,14 @@ publishPlayerChannel = function (name, message, cb) {
 };
 exports.publishPlayerChannel = publishPlayerChannel;
 
+exports.unsubscribe = function (channel) {
+  subscriber.unsubscribe(channel);
+  channelConfig[channel] = null;
+}
 exports.subscribe = function (channel, callback) {
   if (subscriber) subscriber.subscribe(channel);
   if (channelConfig[channel] == null) channelConfig[channel] = [];
   channelConfig[channel].push(callback);
-  subscriber.subscribe(channel);
 };
 
 dbSeparator = '.';

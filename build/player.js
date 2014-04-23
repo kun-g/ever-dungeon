@@ -102,7 +102,8 @@
           err: reason
         });
       }
-      return this.onDisconnect();
+      this.onDisconnect();
+      return dbLib.unsubscribe(PlayerChannelPrefix + this.name);
     };
 
     Player.prototype.onReconnect = function(socket) {
