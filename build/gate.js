@@ -72,17 +72,21 @@
       appNet.createConnection = function(socket) {
         var c, server;
         server = getAliveConnection();
-        c = net.connect(server.port, server.ip);
-        c.on('error', function(err) {
-          c.destroy();
+        if (server != null) {
+          c = net.connect(server.port, server.ip);
+          c.on('error', function(err) {
+            c.destroy();
+            socket.destroy();
+            return c = null;
+          });
+          c.on('end', function(err) {
+            c.destroy();
+            socket.destroy();
+            return c = null;
+          });
+        } else {
           socket.destroy();
-          return c = null;
-        });
-        c.on('end', function(err) {
-          c.destroy();
-          socket.destroy();
-          return c = null;
-        });
+        }
         return c;
       };
       setInterval((function() {
