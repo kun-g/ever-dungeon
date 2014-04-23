@@ -167,6 +167,9 @@
 
     Player.prototype.onLogin = function() {
       var dis, flag, ret, s, _i, _len, _ref7;
+      if (!this.lastLogin) {
+        return [];
+      }
       if (diffDate(this.lastLogin) > 0) {
         this.purchasedCount = {};
       }
