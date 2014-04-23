@@ -6,11 +6,20 @@
   moment = require('moment');
 
   destroyReactDB = function(obj) {
-    var k, v, _results;
+    var k, v;
     if (!obj) {
       return false;
     }
     console.log('destroyReactDB');
+    for (k in obj) {
+      v = obj[k];
+      if (!(typeof v === 'object')) {
+        continue;
+      }
+      console.log('destroyReactDB', k);
+      destroyReactDB(v);
+      delete obj[k];
+    }
     if (obj.destroyReactDB) {
       obj.destroyReactDB();
     }
@@ -20,18 +29,7 @@
     if (obj.push) {
       obj.push = null;
     }
-    obj.destroyReactDB = null;
-    _results = [];
-    for (k in obj) {
-      v = obj[k];
-      if (!(typeof v === 'object')) {
-        continue;
-      }
-      console.log('destroyReactDB', k);
-      destroyReactDB(v);
-      _results.push(delete obj[k]);
-    }
-    return _results;
+    return obj.destroyReactDB = null;
   };
 
   exports.destroyReactDB = destroyReactDB;
