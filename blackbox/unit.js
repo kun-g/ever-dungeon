@@ -83,6 +83,7 @@
       if (roleConfig.property != null) {
         this.modifyProperty(roleConfig.property);
       }
+      this.faction = roleConfig.faction;
       if (flagCreation) {
         console.log('Property ', JSON.stringify(roleConfig.property));
       }
@@ -275,7 +276,6 @@
       if (cfg != null) {
         this.initWithConfig(cfg);
       }
-      this.faction = 'monster';
       if (flagCreation) {
         return console.log('Monster ', JSON.stringify(this));
       }
@@ -313,9 +313,8 @@
         cfg = queryTable(TABLE_ROLE, this.id);
       }
       if (cfg != null) {
-        this.initWithConfig(cfg);
+        return this.initWithConfig(cfg);
       }
-      return this.faction = 'npc';
     };
 
     return Npc;
