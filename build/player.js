@@ -96,12 +96,13 @@
     };
 
     Player.prototype.logout = function(reason) {
-      if (this.socket) {
-        return this.socket.encoder.writeObject({
+      if (this.socket && this.socket.encoder) {
+        this.socket.encoder.writeObject({
           NTF: Event_ExpiredPID,
           err: reason
         });
       }
+      return this.socket = null;
     };
 
     Player.prototype.onReconnect = function(socket) {
