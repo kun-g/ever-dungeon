@@ -21,7 +21,7 @@
       appNet = {};
       appNet.server = net.createServer(function(c) {
         var decoder, encoder;
-        c.pendingRequest = new Buffer(0);
+        c.pendingRequest = new Buffer(10240);
         decoder = new SimpleProtocolDecoder();
         encoder = new SimpleProtocolEncoder();
         encoder.setFlag('size');
@@ -64,11 +64,11 @@
         count = appNet.backends.length;
         servers = appNet.backends;
         for (i = _i = 1; 1 <= count ? _i <= count : _i >= count; i = 1 <= count ? ++_i : --_i) {
-          if (!servers[(i + appNet.currIndex) % servers.length].alive) {
+          if (!servers[(i + appNet.currIndex) % count].alive) {
             continue;
           }
-          appNet.currIndex = (appNet.currIndex + 1) % appNet.aliveServers.length;
-          return servers[(i + appNet.currIndex) % servers.length];
+          appNet.currIndex = (appNet.currIndex + 1) % count;
+          return servers[(i + appNet.currIndex) % count];
         }
         return null;
       };
