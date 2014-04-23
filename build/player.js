@@ -104,7 +104,8 @@
       }
       this.onDisconnect();
       dbLib.unsubscribe(PlayerChannelPrefix + this.name);
-      return this.destroy();
+      this.destroy();
+      return this.destroied = true;
     };
 
     Player.prototype.onReconnect = function(socket) {
