@@ -16,6 +16,7 @@
     if (obj.push) {
       obj.push = null;
     }
+    obj.destroyReactDB = null;
     _results = [];
     for (k in obj) {
       v = obj[k];
