@@ -16,7 +16,11 @@ domain.on('error', function (err) {
 
 var tmp = new memwatch.HeapDiff();
 memwatch.on('leak', function (info) {
-  logWarn({Step: 'All', info: tmp.end()});
+  var diff = tmp.end();
+  diff.change.details = diff.change.details.sort( function (a, b) {
+    return a.size_bytes - a.size_bytes;
+  });
+  logWarn(diff);
   tmp = new memwatch.HeapDiff();
 });
 
