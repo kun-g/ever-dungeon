@@ -471,15 +471,19 @@
             });
           }
         }
-        this.hero = {
-          xp: this.xp,
-          name: this.name,
-          "class": this.hero["class"],
-          gender: this.hero.gender,
-          hairStyle: this.hero.hairStyle,
-          hairColor: this.hero.hairColor,
-          equipment: equip
-        };
+        if (this.hero.wSpellDB) {
+          this.hero = {
+            xp: this.hero.xp,
+            name: this.name,
+            "class": this.hero["class"],
+            gender: this.hero.gender,
+            hairStyle: this.hero.hairStyle,
+            hairColor: this.hero.hairColor,
+            equipment: equip
+          };
+        } else {
+          this.hero.newProperty('equipment', equip);
+        }
         hero = new Hero(this.hero);
         this.battleForce = hero.calculatePower();
         return hero;
