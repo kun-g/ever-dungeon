@@ -471,6 +471,7 @@
         heroData.vip = this.vipLevel();
         hero = new Hero(heroData);
         this.battleForce = hero.calculatePower();
+        this.hero = hero;
         return hero;
       } else {
         throw 'NoHero';
@@ -1345,7 +1346,7 @@
           ret: RET_NotEnoughGold
         };
       }
-      retRM = this.inventory.removeById(recipe.recipeIngredient, true);
+      retRM = this.inventory.removeById(recipe.recipeIngredient, 1, true);
       if (!retRM) {
         return {
           ret: RET_InsufficientIngredient
