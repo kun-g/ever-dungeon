@@ -2194,6 +2194,7 @@
         "label":"中毒",
         "desc":"我方全体持续掉血",
         "config": {
+            "basic" : {
             "buffEffect": 37
         },
             "triggerCondition": [
@@ -2242,6 +2243,7 @@
         "label":"无敌",
         "desc":"我方全体无敌",
         "config":{
+            "basic" : {
             "buffEffect": 37
         },
             "triggerCondition":[
@@ -2288,6 +2290,7 @@
         "label":"攻击吸收",
         "desc":"我方全体攻击吸收",
         "config": {
+            "basic" : {
                 "buffEffect": 37
                 },
              "triggerCondition": [
