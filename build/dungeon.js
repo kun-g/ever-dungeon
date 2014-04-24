@@ -1791,8 +1791,8 @@
         }
         ret.push(ev);
       }
-      console.log('createSpellMsg', spell);
       if (spell.buffEffect != null) {
+        console.log('createSpellMsg', spell);
         delay = delay;
         if (spell.delay != null) {
           delay += spell.delay;
@@ -1803,7 +1803,7 @@
           dey: delay,
           eff: bid
         };
-        ev.sid = actor.isBlock ? actor.pos * 100 + bid : actor.ref * 1000 + bid;
+        ev.sid = actor.isBlock ? (actor.pos + 1) * 100 + bid : (actor.ref + 1) * 1000 + bid;
         if (actor.isBlock) {
           ev.pos = +actor.pos;
         } else {
@@ -2179,12 +2179,13 @@
             ret = [ret];
           }
           actor = env.variable('wizard');
+          bid = env.variable('effect');
           ev = {
             id: ACT_EFFECT,
-            eff: env.variable('effect')
+            eff: bid,
+            rmf: true
           };
-          bid = env.variable('effect');
-          ev.sid = actor.isBlock ? actor.pos * 100 + bid : actor.ref * 1000 + bid;
+          ev.sid = actor.isBlock ? (actor.pos + 1) * 100 + bid : (actor.ref + 1) * 1000 + bid;
           if (actor.isBlock) {
             ev.pos = +actor.pos;
           } else {
