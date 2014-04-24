@@ -2218,7 +2218,7 @@
         "skillId": 94,
             "config": {
                 "basic" : {
-                    "buffEffect": 37
+                    "buffEffect": 36
                 },
             "action":[
                 {"type": "damage","damageType":"poison","formular": {"src":{"health":0.1}}},
@@ -2267,7 +2267,7 @@
         "skillId": 96,
         "config": {
             "basic" : {
-                "buffEffect": 37
+                "buffEffect": 39
             },
             "action":[
                 {"type": "ignoreHurt" }
@@ -2316,7 +2316,7 @@
         "skillId": 98,
         "config": {
             "basic" : {
-                "buffEffect": 37
+                "buffEffect": 40
             },
            "triggerCondition": [
                    { "type": "event", "event": "onBePhysicalDamage" },
