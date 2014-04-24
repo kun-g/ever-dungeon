@@ -1774,7 +1774,7 @@
     };
 
     DungeonEnvironment.prototype.createSpellMsg = function(actor, spell, delay) {
-      var ev, ret;
+      var bid, ev, ret;
       if (!((actor != null) && (spell != null))) {
         return [];
       }
@@ -1789,6 +1789,20 @@
         } else {
           ev.act = actor.ref;
         }
+        ret.push(ev);
+      }
+      if (spell.buffEffect != null) {
+        delay = delay;
+        if (spell.delay != null) {
+          delay += spell.delay;
+        }
+        bid = spell.buffEffect;
+        ev = {
+          id: ACT_EFFECT,
+          dey: delay,
+          eff: bid
+        };
+        ev.sid = actor.isBlock ? actor.pos * 100 + bid : actor.ref * 1000 + bid;
         ret.push(ev);
       }
       if (spell.effect != null) {
@@ -2152,8 +2166,16 @@
     },
     SpellState: {
       output: function(env) {
-        var ret;
-        ret = genUnitInfo(env.variable('wizard'), false, env.variable('state'));
+        var ev, ret;
+        ret = [genUnitInfo(env.variable('wizard'), false, env.variable('state'))];
+        if (env.variable('effect') != null) {
+          ev = {
+            id: ACT_EFFECT,
+            eff: env.variable('effect')
+          };
+          ev.sid = actor.isBlock ? actor.pos * 100 + bid : actor.ref * 1000 + bid;
+          ret.push(ev);
+        }
         if (ret != null) {
           return [ret];
         } else {
