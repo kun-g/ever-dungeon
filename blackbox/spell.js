@@ -153,11 +153,15 @@
     Wizard.prototype.calcEffectState = function(spellID) {
       var cfg, _ref;
       cfg = getSpellConfig(spellID);
-      console.log('calcEffectState', cfg);
       if ((((_ref = cfg.basic) != null ? _ref.buffEffect : void 0) != null) && !this.wSpellDB[spellID]) {
-        return cfg.basic.buffEffect;
+        return {
+          id: cfg.basic.buffEffect
+        };
       } else {
-        return null;
+        return {
+          id: cfg.basic.buffEffect,
+          uninstall: true
+        };
       }
     };
 

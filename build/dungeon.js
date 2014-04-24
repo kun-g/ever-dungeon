@@ -1774,7 +1774,7 @@
     };
 
     DungeonEnvironment.prototype.createSpellMsg = function(actor, spell, delay) {
-      var bid, ev, ret;
+      var ev, ret;
       if (!((actor != null) && (spell != null))) {
         return [];
       }
@@ -1784,26 +1784,6 @@
           id: ACT_SPELL,
           spl: spell.motion
         };
-        if (actor.isBlock) {
-          ev.pos = +actor.pos;
-        } else {
-          ev.act = actor.ref;
-        }
-        ret.push(ev);
-      }
-      if (spell.buffEffect != null) {
-        console.log('createSpellMsg', spell);
-        delay = delay;
-        if (spell.delay != null) {
-          delay += spell.delay;
-        }
-        bid = spell.buffEffect;
-        ev = {
-          id: ACT_EFFECT,
-          dey: delay,
-          eff: bid
-        };
-        ev.sid = actor.isBlock ? (actor.pos + 1) * 100 + bid : (actor.ref + 1) * 1000 + bid;
         if (actor.isBlock) {
           ev.pos = +actor.pos;
         } else {
@@ -2172,19 +2152,22 @@
     },
     SpellState: {
       output: function(env) {
-        var actor, bid, ev, ret;
+        var actor, bid, effect, ev, ret;
         ret = genUnitInfo(env.variable('wizard'), false, env.variable('state'));
         if (env.variable('effect') != null) {
+          effect = env.variable('effect');
           if (ret != null) {
             ret = [ret];
           }
+          bid = effect.id;
           actor = env.variable('wizard');
-          bid = env.variable('effect');
           ev = {
             id: ACT_EFFECT,
-            eff: bid,
-            rmf: true
+            eff: bid
           };
+          if (effect.uninstall) {
+            ev.rmf = true;
+          }
           ev.sid = actor.isBlock ? (actor.pos + 1) * 100 + bid : (actor.ref + 1) * 1000 + bid;
           if (actor.isBlock) {
             ev.pos = +actor.pos;
@@ -2806,8 +2789,7 @@
           ret = env.createSpellMsg(src, {
             motion: spell.spellAction,
             delay: spell.spellDelay,
-            effect: spell.spellEffect,
-            buffEffect: spell.buffEffect
+            effect: spell.spellEffect
           }, delay);
         }
         if (tar != null) {
