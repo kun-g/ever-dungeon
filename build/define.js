@@ -25,7 +25,6 @@ initServer = function () {
   var pid = process.pid;
   async = require('async');
   print = function (type, log) {
-    if (type != 'Warn') return ;
     if (log == null) {
       log = type;
       type = null;
@@ -254,7 +253,7 @@ initGlobalConfig = function (path, callback) {
     }
   };
   var configTable = [{name:TABLE_LEADBOARD},
-    {name:TABLE_ROLE}, {name:TABLE_LEVEL}, {name:TABLE_VERSION}, {name:TABLE_FACTION},
+    {name:TABLE_ROLE}, {name:TABLE_LEVEL}, {name:TABLE_VERSION},
     {name:TABLE_ITEM}, {name:TABLE_CARD}, {name:TABLE_DUNGEON, func:varifyDungeonConfig},
     {name:TABLE_STAGE, func: initStageConfig}, {name:TABLE_QUEST},
     {name:TABLE_UPGRADE}, {name:TABLE_ENHANCE}, {name: TABLE_CONFIG}, {name: TABLE_VIP},

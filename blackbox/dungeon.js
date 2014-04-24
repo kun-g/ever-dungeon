@@ -1804,6 +1804,11 @@
           eff: bid
         };
         ev.sid = actor.isBlock ? actor.pos * 100 + bid : actor.ref * 1000 + bid;
+        if (actor.isBlock) {
+          ev.pos = +actor.pos;
+        } else {
+          ev.act = actor.ref;
+        }
         ret.push(ev);
       }
       if (spell.effect != null) {
@@ -2167,14 +2172,20 @@
     },
     SpellState: {
       output: function(env) {
-        var ev, ret;
+        var actor, ev, ret;
         ret = [genUnitInfo(env.variable('wizard'), false, env.variable('state'))];
         if (env.variable('effect') != null) {
+          actor = env.variable('wizard');
           ev = {
             id: ACT_EFFECT,
             eff: env.variable('effect')
           };
           ev.sid = actor.isBlock ? actor.pos * 100 + bid : actor.ref * 1000 + bid;
+          if (actor.isBlock) {
+            ev.pos = +actor.pos;
+          } else {
+            ev.act = actor.ref;
+          }
           ret.push(ev);
         }
         if (ret != null) {
