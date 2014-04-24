@@ -2790,14 +2790,16 @@
           ret = env.createSpellMsg(src, {
             motion: spell.spellAction,
             delay: spell.spellDelay,
-            effect: spell.spellEffect
+            effect: spell.spellEffect,
+            buffEffect: spell.buffEffect
           }, delay);
         }
         if (tar != null) {
           info = {
             motion: spell.targetAction,
             delay: spell.targetDelay,
-            effect: spell.targetEffect
+            effect: spell.targetEffect,
+            buffEffect: spell.buffEffect
           };
           for (_i = 0, _len = tar.length; _i < _len; _i++) {
             t = tar[_i];
