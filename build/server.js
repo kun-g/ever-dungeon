@@ -23,7 +23,7 @@ Server.prototype.shutDown = function () {
   }
 };
 
-function destroySocket (appNet, c) {
+function destroySocket (c) {
   if (c.player) {
     console.log('DestroySocket');
     var name = c.playerName;
@@ -77,7 +77,7 @@ Server.prototype.startTcpServer = function (config) {
     c.decoder.on('request', function (request) {
       if (!request) c.destroy();
       require("./router").route(handler, request, c, function (ret) { 
-        if (ret) {
+        if (ret && c) {
           c.encoder.writeObject(ret);
         }
       });
