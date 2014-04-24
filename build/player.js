@@ -96,12 +96,16 @@
     };
 
     Player.prototype.logout = function(reason) {
-      if (this.socket) {
-        return this.socket.encoder.writeObject({
+      if (this.socket && this.socket.encoder) {
+        this.socket.encoder.writeObject({
           NTF: Event_ExpiredPID,
           err: reason
         });
       }
+      this.onDisconnect();
+      dbLib.unsubscribe(PlayerChannelPrefix + this.name);
+      this.destroy();
+      return this.destroied = true;
     };
 
     Player.prototype.onReconnect = function(socket) {
@@ -130,6 +134,9 @@
     };
 
     Player.prototype.onDisconnect = function() {
+      gPlayerDB[this.name] = null;
+      this.socket = null;
+      gPlayerDB[this.name] = null;
       return delete this.messages;
     };
 
@@ -160,6 +167,9 @@
 
     Player.prototype.onLogin = function() {
       var dis, flag, ret, s, _i, _len, _ref7;
+      if (!this.lastLogin) {
+        return [];
+      }
       if (diffDate(this.lastLogin) > 0) {
         this.purchasedCount = {};
       }
@@ -2077,6 +2087,9 @@
     };
 
     Player.prototype.getCampaignState = function(campaignName) {
+      if (!this.campaignState) {
+        return null;
+      }
       if (this.campaignState[campaignName] == null) {
         if (campaignName === 'Charge') {
           this.campaignState.newProperty(campaignName, {});
