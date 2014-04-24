@@ -2152,10 +2152,32 @@
     },
     SpellState: {
       output: function(env) {
-        var ret;
+        var actor, bid, effect, ev, ret;
         ret = genUnitInfo(env.variable('wizard'), false, env.variable('state'));
+        if (env.variable('effect') != null) {
+          effect = env.variable('effect');
+          if (ret != null) {
+            ret = [ret];
+          }
+          bid = effect.id;
+          actor = env.variable('wizard');
+          ev = {
+            id: ACT_EFFECT,
+            eff: bid
+          };
+          if (effect.uninstall) {
+            ev.rmf = true;
+          }
+          ev.sid = actor.isBlock ? (actor.pos + 1) * 100 + bid : (actor.ref + 1) * 1000 + bid;
+          if (actor.isBlock) {
+            ev.pos = +actor.pos;
+          } else {
+            ev.act = actor.ref;
+          }
+          ret.push(ev);
+        }
         if (ret != null) {
-          return [ret];
+          return ret;
         } else {
           return [];
         }

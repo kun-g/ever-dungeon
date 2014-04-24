@@ -1999,10 +1999,13 @@
                 "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
             },
             "action":[
+                {"type":"delay"},
+                {"type":"playAction","motion":1,"pos":"self"},
+                {"type":"delay","delay":0.8},
                 {"type": "damage", "formular": {"src":{"strong":0.5}}},
                 {"type": "playEffect"},
-                {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":1.2},
+                {"type": "blink","delay":0.3,"time":0.08},
+                {"type":"shock","delay":0.3,"range":5,"time":0.2},
                 {"type":"delay"},
                 {"type":"kill","self": true}
             ],
@@ -2025,10 +2028,11 @@
                 "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
           },
           "action":[
+              {"type":"delay"},
+              {"type":"playAction","motion":1,"pos":"self"},
+              {"type":"delay","delay":1.0},
             {"type": "heal", "formular": {"src":{"strong":0.5}, "c":5}},
             {"type": "playEffect","effect":19,"pos":"target"} ,
-              {"type":"playAction","motion":1,"pos":"self"},
-              {"type":"delay","delay":1.2},
               {"type":"delay"},
               {"type":"kill","self": true}
           ]
@@ -2073,7 +2077,8 @@
         "label":"全体加速",
         "desc":"我方全体攻击加速",
         "config": {
-               "triggerCondition": [
+
+                 "triggerCondition": [
                 {"type" :"event","event": "onShow"}
             ],
             "targetSelection": {
@@ -2081,10 +2086,11 @@
                 "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
             },
             "action":[
+                {"type":"delay"},
+                {"type":"playAction","motion":1,"pos":"self"},
+                {"type":"delay","delay":1.0},
                 { "type": "installSpell", "spell": 88},
                 {"type": "playEffect","effect":37,"pos":"target"} ,
-                {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":1.2},
                 {"type":"delay"},
                 {"type":"kill","self": true}
 
@@ -2119,10 +2125,11 @@
                 "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
             },
             "action":[
+                {"type":"delay"},
+                {"type":"playAction","motion":1,"pos":"self"},
+                {"type":"delay","delay":1.0},
                 { "type": "installSpell", "spell": 90} ,
                 {"type": "playEffect","effect":13,"pos":"target"} ,
-                {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":1.2},
                 {"type":"delay"},
                 {"type":"kill","self": true}
 
@@ -2157,10 +2164,11 @@
                 "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
             },
             "action":[
+                {"type":"delay"},
+                {"type":"playAction","motion":1,"pos":"self"},
+                {"type":"delay","delay":1.0},
                 { "type": "installSpell", "spell": 92} ,
                 {"type": "playEffect","effect":38,"pos":"target"},
-                {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":1.2},
                 {"type":"delay"},
                 {"type":"kill","self": true}
             ]
@@ -2186,7 +2194,8 @@
         "label":"中毒",
         "desc":"我方全体持续掉血",
         "config": {
-           "triggerCondition": [
+
+            "triggerCondition": [
                 {"type" :"event","event": "onShow"}
             ],
             "targetSelection": {
@@ -2194,10 +2203,11 @@
                 "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
             },
             "action":[
+                {"type":"delay"},
+                {"type":"playAction","motion":1,"pos":"self"},
+                {"type":"delay","delay":1.0},
                 { "type": "installSpell", "spell": 94},
                 {"type": "playEffect","effect":36,"pos":"target"},
-                {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":1.2},
                 {"type":"delay"},
                 {"type":"kill","self": true}
 
@@ -2207,8 +2217,12 @@
     {
         "skillId": 94,
             "config": {
+                "basic" : {
+                    "buffEffect": 37
+                },
             "action":[
-                {"type": "damage","damageType":"poison","formular": {"src":{"health":0.1}}}
+                {"type": "damage","damageType":"poison","formular": {"src":{"health":0.1}}},
+                {"type": "playEffect","effect":36,"pos":"target"}
             ],
             "targetSelection":
             { 
@@ -2230,6 +2244,7 @@
         "label":"无敌",
         "desc":"我方全体无敌",
         "config":{
+
             "triggerCondition":[
                 {"type" :"event","event": "onShow"}
             ],
@@ -2238,10 +2253,11 @@
                 "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
             },
             "action":[
+                {"type":"delay"},
+                {"type":"playAction","motion":1,"pos":"self"},
+                {"type":"delay","delay":1.0},
                 { "type": "installSpell", "spell": 96}  ,
                {"type": "playEffect","effect":39,"pos":"target"},
-                {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":1.2},
                 {"type":"delay"},
                 {"type":"kill", "self": true}
             ]
@@ -2250,6 +2266,9 @@
     {
         "skillId": 96,
         "config": {
+            "basic" : {
+                "buffEffect": 37
+            },
             "action":[
                 {"type": "ignoreHurt" }
             ],
@@ -2273,6 +2292,7 @@
         "label":"攻击吸收",
         "desc":"我方全体攻击吸收",
         "config": {
+
              "triggerCondition": [
                 {"type" :"event","event": "onShow"}
             ],
@@ -2281,10 +2301,11 @@
                 "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
             },
             "action":[
+                {"type":"delay"},
+                {"type":"playAction","motion":1,"pos":"self"},
+                {"type":"delay","delay":1.0},
                 { "type": "installSpell", "spell": 98}  ,
                {"type": "playEffect","effect":40,"pos":"target"},
-                {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":1.2},
                 {"type":"delay"},
                 {"type":"kill","self": true}
 
@@ -2294,6 +2315,9 @@
     {
         "skillId": 98,
         "config": {
+            "basic" : {
+                "buffEffect": 37
+            },
            "triggerCondition": [
                    { "type": "event", "event": "onBePhysicalDamage" },
                    { "type": "event", "event": "onBePhysicalRangeDamage" },
@@ -2329,11 +2353,12 @@
                 "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
             },
             "action":[
+                {"type":"delay"},
+                {"type":"playAction","motion":1,"pos":"self"},
+                {"type":"delay","delay":1.0},
                 {"type":"clearDebuff"},
                 {"type":"clearBuff"} ,
                 {"type": "playEffect","effect":41,"pos":"target"},
-                {"type":"playAction","motion":1,"pos":"self"},
-                {"type":"delay","delay":1.2},
                 {"type":"delay"},
                 {"type":"kill","self": true}
              ]

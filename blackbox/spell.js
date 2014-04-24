@@ -95,7 +95,7 @@
       this.setupTriggerCondition(spellID, cfg.triggerCondition, levelConfig, cmd);
       this.setupAvailableCondition(spellID, cfg.availableCondition, levelConfig, cmd);
       this.doAction(this.wSpellDB[spellID], cfg.installAction, levelConfig, this.selectTarget(cfg, cmd), cmd);
-      return this.spellStateChanged(cmd);
+      return this.spellStateChanged(spellID, cmd);
     };
 
     Wizard.prototype.setupAvailableCondition = function(spellID, conditions, level, cmd) {
@@ -150,14 +150,34 @@
       return _results;
     };
 
-    Wizard.prototype.spellStateChanged = function(cmd) {
+    Wizard.prototype.calcEffectState = function(spellID) {
+      var cfg, _ref;
+      cfg = getSpellConfig(spellID);
+      if (((_ref = cfg.basic) != null ? _ref.buffEffect : void 0) != null) {
+        if (this.wSpellDB[spellID]) {
+          return {
+            id: cfg.basic.buffEffect
+          };
+        } else {
+          return {
+            id: cfg.basic.buffEffect,
+            uninstall: true
+          };
+        }
+      } else {
+        return null;
+      }
+    };
+
+    Wizard.prototype.spellStateChanged = function(spellID, cmd) {
       if (cmd == null) {
         return false;
       }
       return typeof cmd.routine === "function" ? cmd.routine({
         id: 'SpellState',
         wizard: this,
-        state: this.calcBuffState()
+        state: this.calcBuffState(),
+        effect: this.calcEffectState(spellID)
       }) : void 0;
     };
 
@@ -186,7 +206,7 @@
         this.doAction(this.wSpellDB[spellID], cfg.uninstallAction, {}, this.selectTarget(cfg, cmd), cmd);
       }
       delete this.wSpellDB[spellID];
-      return this.spellStateChanged(cmd);
+      return this.spellStateChanged(spellID, cmd);
     };
 
     Wizard.prototype.installTrigger = function(spellID, event) {
