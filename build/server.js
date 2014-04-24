@@ -24,8 +24,8 @@ Server.prototype.shutDown = function () {
 };
 
 function destroySocket (appNet, c) {
-  delete appNet.aliveConnections[c.connectionIndex];
   if (c.player) {
+    console.log('DestroySocket');
     var name = c.playerName;
     c.player.onDisconnect();
     c.player.socket = null;
@@ -41,6 +41,7 @@ function destroySocket (appNet, c) {
     c.player = null;
     c.encoder = null;
     c.decoder = null;
+    c.pendingRequest = null;
     c.destroy();
   }
 }
@@ -57,13 +58,14 @@ Server.prototype.startTcpServer = function (config) {
     c.connectionIndex = appNet.aliveConnections.length - 1;
     c.pendingRequest = new Buffer(0);
     if (config.timeout) c.setTimeout(config.timeout);
-    c.on('timeout', function () { c.end(); });
     c.on('end', function () {
-      destroySocket(appNet, c);
+      destroySocket(c);
+      delete appNet.aliveConnections[c.connectionIndex];
       c = null;
     });
     c.on('error', function () {
-      destroySocket(appNet, c);
+      destroySocket(c);
+      delete appNet.aliveConnections[c.connectionIndex];
       c = null;
     });
     c.decoder = new parseLib.SimpleProtocolDecoder();
@@ -103,7 +105,7 @@ Server.prototype.startTcpServer = function (config) {
     appNet.aliveConnections = appNet.aliveConnections
       .filter(function (c) {return c!=null;})
       .map(function (c, i) { c.connectionIndex = i; return c;});
-  }, 1000);
+  }, 100000);
   this.tcpServer = {
     net : appNet,
     tcpInterval : tcpInterval
