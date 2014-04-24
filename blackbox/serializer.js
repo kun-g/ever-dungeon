@@ -1,7 +1,9 @@
 (function() {
-  var Serializer, g_attr_constructorTable, generateMonitor, objectlize, registerConstructor, tap;
+  var Serializer, destroyReactDB, g_attr_constructorTable, generateMonitor, objectlize, registerConstructor, tap;
 
-  tap = requires('./define').tap;
+  destroyReactDB = requires('./helper').destroyReactDB;
+
+  tap = requires('./helper').tap;
 
   generateMonitor = function(obj) {
     return function(key, val) {
@@ -49,6 +51,11 @@
         this.attrSave(k, flags[k]);
       }
     }
+
+    Serializer.prototype.destroy = function() {
+      this.s_attr_monitor = null;
+      return destroyReactDB(this);
+    };
 
     Serializer.prototype.attrSave = function(key, restoreFlag) {
       if (restoreFlag == null) {
