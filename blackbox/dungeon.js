@@ -1791,6 +1791,7 @@
         }
         ret.push(ev);
       }
+      console.log('createSpellMsg', spell);
       if (spell.buffEffect != null) {
         delay = delay;
         if (spell.delay != null) {

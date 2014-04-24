@@ -153,6 +153,7 @@
     Wizard.prototype.calcEffectState = function(spellID) {
       var cfg, _ref;
       cfg = getSpellConfig(spellID);
+      console.log('calcEffectState', cfg);
       if (((_ref = cfg.basic) != null ? _ref.buffEffect : void 0) != null) {
         return cfg.basic.buffEffect;
       } else {
