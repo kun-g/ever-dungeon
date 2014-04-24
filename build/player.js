@@ -102,10 +102,7 @@
           err: reason
         });
       }
-      this.onDisconnect();
-      dbLib.unsubscribe(PlayerChannelPrefix + this.name);
-      this.destroy();
-      return this.destroied = true;
+      return this.socket = null;
     };
 
     Player.prototype.onReconnect = function(socket) {
@@ -134,9 +131,6 @@
     };
 
     Player.prototype.onDisconnect = function() {
-      gPlayerDB[this.name] = null;
-      this.socket = null;
-      gPlayerDB[this.name] = null;
       return delete this.messages;
     };
 
@@ -167,9 +161,6 @@
 
     Player.prototype.onLogin = function() {
       var dis, flag, ret, s, _i, _len, _ref7;
-      if (!this.lastLogin) {
-        return [];
-      }
       if (diffDate(this.lastLogin) > 0) {
         this.purchasedCount = {};
       }
@@ -2086,9 +2077,6 @@
     };
 
     Player.prototype.getCampaignState = function(campaignName) {
-      if (!this.campaignState) {
-        return null;
-      }
       if (this.campaignState[campaignName] == null) {
         if (campaignName === 'Charge') {
           this.campaignState.newProperty(campaignName, {});

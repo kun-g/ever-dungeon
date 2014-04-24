@@ -49,10 +49,27 @@ initServer = function () {
   };
 };
 
-logError = function(log) { print('Error', log); };
-logInfo = function(log) { print('Info', log); };
-logUser = function(log) { print('User', log); };
-logWarn = function(log) { print('Warn', log); };
+logError = function(log) {
+  print('Error', log);
+};
+logInfo = function(log) {
+  if (logLevel < 1)
+    print('Info', log);
+};
+logUser = function(log) {
+  if (logLevel < 1)
+    print('User', log);
+};
+logWarn = function(log) {
+  if (logLevel < 2)
+    print('Warn', log);
+};
+logDungeon = function(log) {
+  print('DebugDungeon', log);
+};
+logCommandStream = function(log) {
+  print('DebugCommandStream', log);
+};
 
 rand = function() {
   return Math.floor(Math.random()*1000000);

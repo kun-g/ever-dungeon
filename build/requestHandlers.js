@@ -193,7 +193,6 @@
               }
               if (gPlayerDB[player.name]) {
                 gPlayerDB[player.name].logout(RET_LoginByAnotherDevice);
-                delete gPlayerDB[player.name];
               }
               gPlayerDB[player.name] = player;
               time = Math.floor((new Date()).valueOf() / 1000);
@@ -248,10 +247,6 @@
                 }
               ], function(err, result) {
                 var loginInfo;
-                if (player.destroied) {
-                  return [];
-                }
-                playerCounter++;
                 result = result.reduce((function(r, l) {
                   return r.concat(l);
                 }), []);
@@ -271,8 +266,7 @@
                   loginInfo.arg.tut = player.tutorialStage;
                 }
                 handle([loginInfo].concat(ev));
-                player.saveDB(cb);
-                return player = null;
+                return player.saveDB(cb);
               });
             } else {
               return dbLib.newSessionInfo(function(err, session) {

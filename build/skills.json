@@ -2077,10 +2077,8 @@
         "label":"全体加速",
         "desc":"我方全体攻击加速",
         "config": {
-            "basic" : {
-                 "buffEffect": 37
-            },
-               "triggerCondition": [
+
+                 "triggerCondition": [
                 {"type" :"event","event": "onShow"}
             ],
             "targetSelection": {
@@ -2196,7 +2194,9 @@
         "label":"中毒",
         "desc":"我方全体持续掉血",
         "config": {
-           "triggerCondition": [
+            "buffEffect": 37
+        },
+            "triggerCondition": [
                 {"type" :"event","event": "onShow"}
             ],
             "targetSelection": {
@@ -2242,6 +2242,8 @@
         "label":"无敌",
         "desc":"我方全体无敌",
         "config":{
+            "buffEffect": 37
+        },
             "triggerCondition":[
                 {"type" :"event","event": "onShow"}
             ],
@@ -2286,6 +2288,8 @@
         "label":"攻击吸收",
         "desc":"我方全体攻击吸收",
         "config": {
+                "buffEffect": 37
+                },
              "triggerCondition": [
                 {"type" :"event","event": "onShow"}
             ],

@@ -17,20 +17,23 @@
   initGlobalConfig(null, function() {
     var gServerConfig, gServerID, startTcpServer;
     startTcpServer = function(servers, port) {
-      var appNet, getAliveConnection, updateBackendStatus;
+      var appNet, getAliveConnection;
       appNet = {};
       appNet.server = net.createServer(function(c) {
-        c.decoder = new SimpleProtocolDecoder();
-        c.encoder = new SimpleProtocolEncoder();
-        c.encoder.setFlag('size');
-        c.pipe(c.decoder);
+        var decoder, encoder;
+        decoder = new SimpleProtocolDecoder();
+        encoder = new SimpleProtocolEncoder();
+        encoder.setFlag('size');
+        c.pipe(decoder);
+        c.decoder = decoder;
+        c.encoder = encoder;
         c.server = appNet.createConnection(c);
         if (c.server == null) {
           return;
         }
-        c.encoder.pipe(c.server);
+        encoder.pipe(c.server);
         c.server.pipe(c);
-        c.decoder.on('request', function(request) {
+        decoder.on('request', function(request) {
           if (request) {
             if (request.CMD === 101) {
               console.log({
@@ -38,13 +41,14 @@
                 ip: c.remoteAddress
               });
             }
-            return c.encoder.writeObject(request);
+            return encoder.writeObject(request);
           } else {
             c.destroy();
             return c = null;
           }
         });
         return c.on('error', function(error) {
+          console.log(error);
           c.destroy();
           return c = null;
         });
@@ -57,16 +61,15 @@
         };
       });
       getAliveConnection = function() {
-        var count, i, server, _i;
+        var count, i, _i;
         count = appNet.backends.length;
         servers = appNet.backends;
         for (i = _i = 1; 1 <= count ? _i <= count : _i >= count; i = 1 <= count ? ++_i : --_i) {
           if (!servers[(i + appNet.currIndex) % count].alive) {
             continue;
           }
-          server = servers[(i + appNet.currIndex) % count];
           appNet.currIndex = (appNet.currIndex + 1) % count;
-          return server;
+          return servers[(i + appNet.currIndex) % count];
         }
         return null;
       };
@@ -90,7 +93,7 @@
         }
         return c;
       };
-      updateBackendStatus = function() {
+      setInterval((function() {
         return appNet.backends.forEach(function(e) {
           var s;
           if (!e.alive) {
@@ -109,12 +112,10 @@
             return s = null;
           }
         });
-      };
+      }), 10000);
       appNet.currIndex = 0;
       appNet.server.listen(port, console.log);
-      appNet.server.on('error', console.log);
-      updateBackendStatus();
-      return setInterval(updateBackendStatus, 10000);
+      return appNet.server.on('error', console.log);
     };
     gServerID = queryTable(TABLE_CONFIG, 'ServerID');
     gServerConfig = queryTable(TABLE_CONFIG, 'ServerConfig')[gServerID];
