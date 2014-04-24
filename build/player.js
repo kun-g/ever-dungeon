@@ -482,6 +482,7 @@
             hairColor: this.hero.hairColor,
             equipment: equip
           };
+          this.save();
         } else {
           this.hero.newProperty('equipment', equip);
         }
