@@ -2172,7 +2172,7 @@
     },
     SpellState: {
       output: function(env) {
-        var actor, ev, ret;
+        var actor, bid, ev, ret;
         ret = genUnitInfo(env.variable('wizard'), false, env.variable('state'));
         if (env.variable('effect') != null) {
           if (ret != null) {
@@ -2183,6 +2183,7 @@
             id: ACT_EFFECT,
             eff: env.variable('effect')
           };
+          bid = env.variable('effect');
           ev.sid = actor.isBlock ? actor.pos * 100 + bid : actor.ref * 1000 + bid;
           if (actor.isBlock) {
             ev.pos = +actor.pos;
