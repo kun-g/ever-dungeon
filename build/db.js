@@ -22,24 +22,30 @@ exports.verifyAuth = function (id, token, handler) {
     }
   });
 };
-exports.bindAuth = function (account, type, id, pass, handler) {
-  //var acc = { account: account };
-  //if (pass) {
-  //  acc.salt = Math.random();
-  //  acc.pass = md5Hash(acc.salt+pass);
-  //}
-  var key = makeDBKey([passportPrefix, type, id, 'account']);
-  accountDBClient.get(key, function (err, acc) {
-    if (acc != null) {
-      handler(null, acc);
-    } else if (acc != -1) {
-      accountDBClient.set(key, account, function () { handler(null, account); });
-    } else {
-     handler(null, account);
-    }
-  });
+exports.bindAuth = function (account, id, pass, handler) {
+  var salt = Math.random();
+  pass = md5Hash(salt+pass);
+  async.series([
+      function (cb) { nameValidation(id, cb); },
+      function (cb) { 
+        accountDBClient.exists(makeDBKey([authPrefix, id]), function (err, result) {
+          if (result == 0) {
+            cb(null);
+          } else {
+            cb(RET_NameTaken);
+          }
+        });
+      },
+      function (cb) {
+        accountDBClient.hmset(makeDBKey([authPrefix, id]), 
+            {
+              account: account,
+              pass: pass,
+              salt: salt
+            },
+            cb);
+      }], handler);
 };
-
 exports.loadPassport = function (type, id, createOnFail, handler) {
   accountDBClient.get(makeDBKey([passportPrefix, type, id, 'account']), function (err, ret) {
     if (ret) {
@@ -49,10 +55,21 @@ exports.loadPassport = function (type, id, createOnFail, handler) {
     } else if (createOnFail) {
       createPassportWithAccount(type, id, handler);
     } else {
-      handler(err, ret);
+      logError({action: 'LoadPassport', error: 'NoPassport', type: type, id: id});
     }
   });
 };
+lua_createPassportWithAccount = " \
+  local type, id, date = ARGV[1], ARGV[2], ARGV[3]; \
+  local key = 'Passport.'..type..'.'..id..'.account'; \
+  if redis.call('EXISTS', key)==1 then \
+    return {err='PassportExists'}; \
+  else \
+    local uid = redis.call('INCR', 'CurrentUID'); \
+    redis.call('set', key, uid); \
+    redis.call('hset', 'Account.'..uid, 'create_date', date); \
+    return uid; \
+  end";
 
 exports.loadAccount = function (id, handler) { accountDBClient.hgetall(makeDBKey([accPrefix, id]), handler); };
 exports.getPlayerNameByID = function (id, serverName, cb)  { accountDBClient.hget(makeDBKey([accPrefix, id]), serverName, cb); };
@@ -80,18 +97,6 @@ exports.createNewPlayer = createNewPlayer;
 exports.loadSessionInfo = function (session, handler) {
   dbClient.hgetall(makeDBKey([sessionPrefix, session]), handler);
 };
-
-lua_createPassportWithAccount = " \
-  local type, id, date = ARGV[1], ARGV[2], ARGV[3]; \
-  local key = 'Passport.'..type..'.'..id..'.account'; \
-  if redis.call('EXISTS', key)==1 then \
-    return {err='PassportExists'}; \
-  else \
-    local uid = redis.call('INCR', 'CurrentUID'); \
-    redis.call('set', key, uid); \
-    redis.call('hset', 'Account.'..uid, 'create_date', date); \
-    return uid; \
-  end";
 
 lua_createNewPlayer = " \
   local prefix, name, account = ARGV[1], ARGV[2], ARGV[3]; \
@@ -121,7 +126,7 @@ lua_queryLeaderboard = " \
   local prefix = 'Leaderboard.'; \
   local board, name, from, to = ARGV[1], ARGV[2], ARGV[3], ARGV[4]; \
   local key = prefix..board; \
-  local rank = redis.call('ZREVRANK', key, name); \
+  local rank = redis.call('ZRANK', key, name); \
   local board = redis.call('zrevrange', key, from, to); \
   return {rank, board};";
 
@@ -234,13 +239,29 @@ function tryToRegisterName (name, callback) {
     callback(err);
   });
 }
+/*
+function loadPlayer(name, handler) {
+  var playerLib = require('./player');
+  var p = new playerLib.Player();
+  p.setName(name);
+  p.load(function (err, result) {
+    if (result) {
+      p.initialize();
+    } else {
+      p = null;
+    }
+    if (handler) handler(err, p);
+  });
+}
+*/
 
 function loadPlayer(name, handler) {
+  var playerLib = require('./player');
   var dbKeyName = playerPrefix+name;
   dbClient.hgetall(dbKeyName, function (err, result) {
     var p = null;
     if (result) {
-      var attributes = {};
+      attributes = {};
       for (var k in result) {
         var v = result[k];
         try {
@@ -249,12 +270,11 @@ function loadPlayer(name, handler) {
           attributes[k] = v;
         }
       }
-      var playerLib = require('./player');
       p = new playerLib.Player(attributes);
+      //p.setName(name);
       p.initialize();
     }
     if (handler) handler(err, p);
-    p = null;
   });
 }
 
@@ -363,14 +383,11 @@ publishPlayerChannel = function (name, message, cb) {
 };
 exports.publishPlayerChannel = publishPlayerChannel;
 
-exports.unsubscribe = function (channel) {
-  subscriber.unsubscribe(channel);
-  channelConfig[channel] = null;
-}
 exports.subscribe = function (channel, callback) {
   if (subscriber) subscriber.subscribe(channel);
   if (channelConfig[channel] == null) channelConfig[channel] = [];
   channelConfig[channel].push(callback);
+  subscriber.subscribe(channel);
 };
 
 dbSeparator = '.';

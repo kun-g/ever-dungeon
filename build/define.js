@@ -25,7 +25,6 @@ initServer = function () {
   var pid = process.pid;
   async = require('async');
   print = function (type, log) {
-    if (type != 'Warn') return ;
     if (log == null) {
       log = type;
       type = null;
@@ -50,10 +49,27 @@ initServer = function () {
   };
 };
 
-logError = function(log) { print('Error', log); };
-logInfo = function(log) { print('Info', log); };
-logUser = function(log) { print('User', log); };
-logWarn = function(log) { print('Warn', log); };
+logError = function(log) {
+  print('Error', log);
+};
+logInfo = function(log) {
+  if (logLevel < 1)
+    print('Info', log);
+};
+logUser = function(log) {
+  if (logLevel < 1)
+    print('User', log);
+};
+logWarn = function(log) {
+  if (logLevel < 2)
+    print('Warn', log);
+};
+logDungeon = function(log) {
+  print('DebugDungeon', log);
+};
+logCommandStream = function(log) {
+  print('DebugCommandStream', log);
+};
 
 rand = function() {
   return Math.floor(Math.random()*1000000);
@@ -254,7 +270,7 @@ initGlobalConfig = function (path, callback) {
     }
   };
   var configTable = [{name:TABLE_LEADBOARD},
-    {name:TABLE_ROLE}, {name:TABLE_LEVEL}, {name:TABLE_VERSION},
+    {name:TABLE_ROLE}, {name:TABLE_LEVEL}, {name:TABLE_VERSION}, {name:TABLE_FACTION},
     {name:TABLE_ITEM}, {name:TABLE_CARD}, {name:TABLE_DUNGEON, func:varifyDungeonConfig},
     {name:TABLE_STAGE, func: initStageConfig}, {name:TABLE_QUEST},
     {name:TABLE_UPGRADE}, {name:TABLE_ENHANCE}, {name: TABLE_CONFIG}, {name: TABLE_VIP},
@@ -532,6 +548,8 @@ Event_UpdateStoreInfo = 10;
 Event_Fail = 11;
 Event_UpdateQuest = 19;
 
+exports.fileVersion = -1;
+
 tap = function(obj, key, callback, invokeFlag) {
   var theCB;
   if (invokeFlag == null) {
@@ -618,5 +636,3 @@ tapObject = function(obj, callback) {
 };
 exports.tap = tap;
 exports.tapObject = tapObject;
-
-exports.fileVersion = -1;
