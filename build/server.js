@@ -41,7 +41,7 @@ function destroySocket (appNet, c) {
     c.player = null;
     c.encoder = null;
     c.decoder = null;
-    c = null;
+    c.destroy();
   }
 }
 
@@ -58,8 +58,14 @@ Server.prototype.startTcpServer = function (config) {
     c.pendingRequest = new Buffer(0);
     if (config.timeout) c.setTimeout(config.timeout);
     c.on('timeout', function () { c.end(); });
-    c.on('end', function () { destroySocket(appNet, c); });
-    c.on('error', function () { destroySocket(appNet, c); });
+    c.on('end', function () {
+      destroySocket(appNet, c);
+      c = null;
+    });
+    c.on('error', function () {
+      destroySocket(appNet, c);
+      c = null;
+    });
     c.decoder = new parseLib.SimpleProtocolDecoder();
     c.encoder = new parseLib.SimpleProtocolEncoder();
     c.encoder.pipe(c);
