@@ -25,9 +25,12 @@ Server.prototype.shutDown = function () {
 
 destroyCount = 0;
 connectCount = 0;
+tryCount = 0;
 function destroySocket (c) {
+  tryCount ++;
   if (c.player) {
-    console.log('DestroySocket', destroyCount++);
+    destroyCount++;
+    console.log('DestroySocket', destroyCount, tryCount);
     var name = c.playerName;
     c.player.onDisconnect();
     c.player.socket = null;
