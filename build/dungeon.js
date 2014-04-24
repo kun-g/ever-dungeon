@@ -2173,8 +2173,11 @@
     SpellState: {
       output: function(env) {
         var actor, ev, ret;
-        ret = [genUnitInfo(env.variable('wizard'), false, env.variable('state'))];
+        ret = genUnitInfo(env.variable('wizard'), false, env.variable('state'));
         if (env.variable('effect') != null) {
+          if (ret != null) {
+            ret = [ret];
+          }
           actor = env.variable('wizard');
           ev = {
             id: ACT_EFFECT,
@@ -2189,7 +2192,7 @@
           ret.push(ev);
         }
         if (ret != null) {
-          return [ret];
+          return ret;
         } else {
           return [];
         }

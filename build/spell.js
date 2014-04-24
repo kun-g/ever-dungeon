@@ -161,7 +161,7 @@
       }
     };
 
-    Wizard.prototype.spellStateChanged = function(cmd) {
+    Wizard.prototype.spellStateChanged = function(spellID, cmd) {
       if (cmd == null) {
         return false;
       }
@@ -169,7 +169,7 @@
         id: 'SpellState',
         wizard: this,
         state: this.calcBuffState(),
-        effect: this.calcEffectState()
+        effect: this.calcEffectState(spellID)
       }) : void 0;
     };
 
