@@ -251,7 +251,6 @@
                 if (player.destroied) {
                   return [];
                 }
-                playerCounter++;
                 result = result.reduce((function(r, l) {
                   return r.concat(l);
                 }), []);
