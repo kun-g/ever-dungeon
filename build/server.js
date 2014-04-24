@@ -22,6 +22,30 @@ Server.prototype.shutDown = function () {
     });
   }
 };
+
+function destroySocket (c) {
+  if (c.player) {
+    var name = c.playerName;
+    c.player.onDisconnect();
+    c.player.socket = null;
+
+    logUser({
+      action: 'ioSize',
+      send: c.encoder.totalBytes,
+      recv: c.decoder.totalBytes,
+      maxSend: c.encoder.maxBytes,
+      maxRecv: c.decoder.maxBytes,
+      name: name
+    });
+  } else {
+    c.player = null;
+    c.encoder = null;
+    c.decoder = null;
+    c.pendingRequest = null;
+    c.destroy();
+  }
+}
+
 Server.prototype.startTcpServer = function (config) {
   if (config == null || config.handler == null || config.port == null) {
     throw 'No handler';
@@ -34,28 +58,15 @@ Server.prototype.startTcpServer = function (config) {
     c.connectionIndex = appNet.aliveConnections.length - 1;
     c.pendingRequest = new Buffer(0);
     if (config.timeout) c.setTimeout(config.timeout);
-    c.on('timeout', function () { c.end(); });
     c.on('end', function () {
-      require("./router").peerOffline(c);
+      destroySocket(c);
       delete appNet.aliveConnections[c.connectionIndex];
-      if (c.player) {
-        var name = c.playerName;
-        c.player.onDisconnect();
-        c.player.socket = null;
-
-        logUser({
-          action: 'ioSize',
-          send: c.encoder.totalBytes,
-          recv: c.decoder.totalBytes,
-          maxSend: c.encoder.maxBytes,
-          maxRecv: c.decoder.maxBytes,
-          name: name
-        });
-        c.player = null;
-        c.encoder = null;
-        c.decoder = null;
-        c = null;
-      }
+      c = null;
+    });
+    c.on('error', function () {
+      destroySocket(c);
+      delete appNet.aliveConnections[c.connectionIndex];
+      c = null;
     });
     c.decoder = new parseLib.SimpleProtocolDecoder();
     c.encoder = new parseLib.SimpleProtocolEncoder();
@@ -66,21 +77,12 @@ Server.prototype.startTcpServer = function (config) {
     c.decoder.on('request', function (request) {
       if (!request) c.destroy();
       require("./router").route(handler, request, c, function (ret) { 
-        if (ret) {
+        if (ret && c) {
           c.encoder.writeObject(ret);
         }
       });
     });
 
-    c.on('error', function (error) {
-      logError({
-        type : 'Socket Error',
-        address : c.remoteAddress,
-        error : error
-      });
-      c.destroy();
-      c = null;
-    });
   });
   appNet.aliveConnections = [];
   appNet.listen(config.port, function () {
@@ -103,7 +105,7 @@ Server.prototype.startTcpServer = function (config) {
     appNet.aliveConnections = appNet.aliveConnections
       .filter(function (c) {return c!=null;})
       .map(function (c, i) { c.connectionIndex = i; return c;});
-  }, 1000);
+  }, 100000);
   this.tcpServer = {
     net : appNet,
     tcpInterval : tcpInterval

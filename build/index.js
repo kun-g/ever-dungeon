@@ -9,10 +9,23 @@ dbLib = require('./db');
 dbWrapper = require('./dbWrapper');
 http = require('http');
 var domain = require('domain').create();
-
 domain.on('error', function (err) {
   console.log("UnhandledError", err.message, err.stack);
 });
+
+playerCounter = 0;
+//memwatch = require('memwatch');
+//var tmp = new memwatch.HeapDiff();
+//memwatch.on('leak', function (info) {
+//  logWarn(info);
+//  var diff = tmp.end();
+//  diff.change.details = diff.change.details.sort( function (a, b) {
+//    return b.size_bytes - a.size_bytes;
+//  });
+//  logWarn(diff);
+//  console.log( playerCounter );
+//  tmp = new memwatch.HeapDiff();
+//});
 
 var srvLib = require("./server");
 gServer = new srvLib.Server();
@@ -43,6 +56,7 @@ var config = {
         var info = JSON.parse(message);
         if (gPlayerDB[info.player] && gPlayerDB[info.player].runtimeID !== info.session) {
           gPlayerDB[info.player].logout(RET_LoginByAnotherDevice);
+          delete gPlayerDB[info.player]
         }
       } catch (err) {
         logError({type: 'loginSubscribe', error:err});
