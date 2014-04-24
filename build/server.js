@@ -23,9 +23,11 @@ Server.prototype.shutDown = function () {
   }
 };
 
+destroyCount = 0;
+connectCount = 0;
 function destroySocket (c) {
   if (c.player) {
-    console.log('DestroySocket');
+    console.log('DestroySocket', destroyCount++);
     var name = c.playerName;
     c.player.onDisconnect();
     c.player.socket = null;
@@ -54,6 +56,7 @@ Server.prototype.startTcpServer = function (config) {
   var handler = config.handler;
   var appNet = net.createServer(function (c) {
     //console.log('New Connection', c.remoteAddress)
+    console.log('Connected', connectCount++);
     appNet.aliveConnections.push(c);
     c.connectionIndex = appNet.aliveConnections.length - 1;
     c.pendingRequest = new Buffer(0);
