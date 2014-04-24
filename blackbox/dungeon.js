@@ -2814,8 +2814,7 @@
           info = {
             motion: spell.targetAction,
             delay: spell.targetDelay,
-            effect: spell.targetEffect,
-            buffEffect: spell.buffEffect
+            effect: spell.targetEffect
           };
           for (_i = 0, _len = tar.length; _i < _len; _i++) {
             t = tar[_i];
