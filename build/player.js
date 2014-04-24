@@ -471,6 +471,7 @@
             });
           }
         }
+        console.log(this.hero);
         if (this.hero.wSpellDB) {
           this.hero = {
             xp: this.hero.xp,
