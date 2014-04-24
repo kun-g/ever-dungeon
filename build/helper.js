@@ -83,6 +83,10 @@
       };
       Object.defineProperty(obj, key, {
         get: function() {
+          var _ref;
+          if ((obj != null ? (_ref = obj.reactDB) != null ? _ref[key] : void 0 : void 0) == null) {
+            return null;
+          }
           return obj.reactDB[key].value;
         },
         set: theCB,
