@@ -448,7 +448,7 @@
     };
 
     Player.prototype.createHero = function(heroData) {
-      var bag, e, equip, hero, i, k, v, _ref7, _ref8;
+      var bag, e, equip, hero, i, _ref7;
       if (heroData != null) {
         if (this.heroBase[heroData["class"]] != null) {
           return null;
@@ -471,15 +471,21 @@
             });
           }
         }
-        heroData = {};
-        _ref8 = this.hero;
-        for (k in _ref8) {
-          v = _ref8[k];
-          heroData[k] = v;
+        if (this.hero.wSpellDB) {
+          this.hero = {
+            xp: this.hero.xp,
+            name: this.name,
+            "class": this.hero["class"],
+            gender: this.hero.gender,
+            hairStyle: this.hero.hairStyle,
+            hairColor: this.hero.hairColor,
+            equipment: equip
+          };
+          this.save();
+        } else {
+          this.hero.newProperty('equipment', equip);
         }
-        heroData.equipment = equip;
-        heroData.vip = this.vipLevel();
-        hero = new Hero(heroData);
+        hero = new Hero(this.hero);
         this.battleForce = hero.calculatePower();
         return hero;
       } else {
@@ -1355,7 +1361,7 @@
           ret: RET_NotEnoughGold
         };
       }
-      retRM = this.inventory.removeById(recipe.recipeIngredient, true);
+      retRM = this.inventory.removeById(recipe.recipeIngredient, 1, true);
       if (!retRM) {
         return {
           ret: RET_InsufficientIngredient

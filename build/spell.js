@@ -641,7 +641,7 @@
     };
 
     Wizard.prototype.doAction = function(thisSpell, actions, level, target, cmd) {
-      var a, c, cfg, delay, effect, env, formular, formularResult, h, modifications, pos, property, spellID, src, t, val, variables, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _ref3, _s, _t, _u, _v, _w, _x;
+      var a, c, cfg, delay, effect, env, formular, formularResult, h, modifications, pos, property, spellID, src, t, val, variables, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len16, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _ref3, _s, _t, _u, _v, _w, _x, _y;
       if (actions == null) {
         return false;
       }
@@ -882,9 +882,15 @@
               }
             }
             break;
-          case 'installSpell':
+          case 'removeSpell':
             for (_r = 0, _len9 = target.length; _r < _len9; _r++) {
               t = target[_r];
+              t.removeSpell(a.spell, cmd);
+            }
+            break;
+          case 'installSpell':
+            for (_s = 0, _len10 = target.length; _s < _len10; _s++) {
+              t = target[_s];
               delay = 0;
               if (thisSpell != null) {
                 delay = thisSpell.delay;
@@ -896,8 +902,8 @@
             }
             break;
           case 'damage':
-            for (_s = 0, _len10 = target.length; _s < _len10; _s++) {
-              t = target[_s];
+            for (_t = 0, _len11 = target.length; _t < _len11; _t++) {
+              t = target[_t];
               if (typeof cmd.routine === "function") {
                 cmd.routine({
                   id: 'Damage',
@@ -921,8 +927,8 @@
                 });
               }
             } else if (a.pos === 'target') {
-              for (_t = 0, _len11 = target.length; _t < _len11; _t++) {
-                t = target[_t];
+              for (_u = 0, _len12 = target.length; _u < _len12; _u++) {
+                t = target[_u];
                 if (typeof cmd.routine === "function") {
                   cmd.routine({
                     id: 'SpellAction',
@@ -955,8 +961,8 @@
                   });
                 }
               } else if (pos === 'target') {
-                for (_u = 0, _len12 = target.length; _u < _len12; _u++) {
-                  t = target[_u];
+                for (_v = 0, _len13 = target.length; _v < _len13; _v++) {
+                  t = target[_v];
                   if (typeof cmd.routine === "function") {
                     cmd.routine({
                       id: 'Effect',
@@ -976,8 +982,8 @@
                   });
                 }
               } else if (Array.isArray(pos)) {
-                for (_v = 0, _len13 = pos.length; _v < _len13; _v++) {
-                  pos = pos[_v];
+                for (_w = 0, _len14 = pos.length; _w < _len14; _w++) {
+                  pos = pos[_w];
                   if (typeof cmd.routine === "function") {
                     cmd.routine({
                       id: 'Effect',
@@ -1001,8 +1007,8 @@
                   }
                   break;
                 case 'target':
-                  for (_w = 0, _len14 = target.length; _w < _len14; _w++) {
-                    t = target[_w];
+                  for (_x = 0, _len15 = target.length; _x < _len15; _x++) {
+                    t = target[_x];
                     if (typeof cmd.routine === "function") {
                       cmd.routine({
                         id: 'Effect',
@@ -1054,8 +1060,8 @@
             } else {
               _buffType = ['RoleBuff', 'HealthBuff', 'AttackBuff'];
             }
-            for (_x = 0, _len15 = target.length; _x < _len15; _x++) {
-              h = target[_x];
+            for (_y = 0, _len16 = target.length; _y < _len16; _y++) {
+              h = target[_y];
               _ref3 = h.wSpellDB;
               for (spellID in _ref3) {
                 thisSpell = _ref3[spellID];

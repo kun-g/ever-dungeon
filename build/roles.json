@@ -6633,6 +6633,7 @@
         "className": "我方全体回血",
         "faction":"npch",
         "classType": 2,
+        "effectDeath": -1,
         "avatar": "effect-smzq.ccbi",
             "property":
             {
@@ -6655,6 +6656,7 @@
                "className": "敌方全体回血",
           "faction":"npcm",
           "classType": 2,
+          "effectDeath": -1,
           "avatar": "effect-xc.ccbi",
                  "property":
                     {
@@ -6676,6 +6678,7 @@
                 "className": "我方全体掉血",
         "faction":"npch",
                 "classType": 2,
+        "effectDeath": -1,
                 "avatar": "effect-bomb.ccbi",
                 "property":
                 {
@@ -6697,6 +6700,7 @@
         "className": "敌方全体掉血",
         "faction":"npcm",
         "classType": 2,
+        "effectDeath": -1,
         "avatar": "effect-sszg.ccbi",
         "property":
         {
@@ -6718,6 +6722,7 @@
                 "className": "我方全体攻击加速",
         "faction":"npch",
                 "classType": 2,
+        "effectDeath": -1,
                 "avatar": "effect-js-1.ccbi",
                 "property":
                 {
@@ -6734,6 +6739,7 @@
         "className": "敌方全体攻击加速",
         "faction":"npcm",
         "classType": 2,
+        "effectDeath": -1,
         "avatar": "effect-js-2.ccbi",
         "property":
         {
@@ -6750,6 +6756,7 @@
         "className": "我方全体攻击上升",
         "faction":"npch",
         "classType": 2,
+        "effectDeath": -1,
         "avatar": "effect-ll-1.ccbi",
         "property":
         {
@@ -6766,6 +6773,7 @@
         "className": "敌方全体攻击上升",
         "faction":"npcm",
         "classType": 2,
+        "effectDeath": -1,
         "avatar": "effect-ll-2.ccbi",
         "property":
         {
@@ -6782,6 +6790,7 @@
                     "className": "我方全体攻击降低",
         "faction":"npch",
                     "classType": 2,
+        "effectDeath": -1,
                     "avatar": "effect-xr-1.ccbi",
                     "property":
                     {
@@ -6798,6 +6807,7 @@
                     "className": "敌方全体攻击降低",
         "faction":"npcm",
                     "classType": 2,
+        "effectDeath": -1,
                     "avatar": "effect-xr-2x.ccbi",
                     "property":
                     {
@@ -6814,6 +6824,7 @@
                     "className": "我方全体持续掉血",
         "faction":"npch",
                     "classType": 2,
+        "effectDeath": -1,
                     "avatar": "effect-gas.ccbi",
                     "property":
                     {
@@ -6831,6 +6842,7 @@
         "className": "我方全体无敌",
         "faction":"npch",
         "classType": 2,
+        "effectDeath": -1,
         "avatar": "effect-wd-1.ccbi",
         "property":
         {
@@ -6848,6 +6860,7 @@
         "className": "敌方全体无敌",
         "faction":"npcm",
         "classType": 2,
+        "effectDeath": -1,
         "avatar": "effect-wd-2.ccbi",
         "property":
         {
@@ -6865,6 +6878,7 @@
         "className": "我方全体攻击吸收",
         "faction":"npch",
         "classType": 2,
+        "effectDeath": -1,
         "avatar": "effect-xssh-1.ccbi",
         "property":
         {
@@ -6882,6 +6896,7 @@
         "className": "敌方全体攻击吸收",
         "faction":"npcm",
         "classType": 2,
+        "effectDeath": -1,
         "avatar": "effect-xssh-2.ccbi",
         "property":
         {
@@ -6899,6 +6914,7 @@
         "className": "清除我方所有buff",
         "faction":"npcm",
         "classType": 2,
+        "effectDeath": -1,
         "avatar": "effect-buffclean.ccbi",
         "property":
         {
