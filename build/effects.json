@@ -139,6 +139,45 @@
     {
         "effectId": 33,
         "file": "effect-priestrevie.ccbi"
+    },
+    {
+        "effectId": 34,
+        "file": "effect-sszg2.ccbi"
+    },
+    {
+        "effectId": 35,
+        "file": "effect-boss.ccbi" ,
+        "z":-1
+    },
+    {
+        "effectId": 36,
+        "file": "effect-zd.ccbi"
+    },
+    {
+        "effectId": 37,
+        "file": "effect-sdts2.ccbi"
+    },
+    {
+        "effectId": 38,
+        "file": "effect-gjxj.ccbi"
+    },
+    {
+        "effectId": 39,
+        "file": "effect-wd.ccbi"
+    },
+    {
+        "effectId": 40,
+        "file": "effect-xssh.ccbi"
+    },
+    {
+        "effectId": 41,
+        "file": "effect-hf.ccbi"
+    },
+    {
+        "effectId": 42,
+        "file": "effect-shield.ccbi"
     }
+
+
 
 ]
