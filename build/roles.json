@@ -6634,7 +6634,7 @@
         "faction":"npch",
         "classType": 2,
         "effectDeath": -1,
-        "flipFag":false,
+        "filpFlag":false,
         "avatar": "effect-smzq.ccbi",
             "property":
             {
@@ -6658,7 +6658,7 @@
           "faction":"npcm",
           "classType": 2,
           "effectDeath": -1,
-          "flipFag":false,
+          "filpFlag":false,
           "avatar": "effect-xc.ccbi",
                  "property":
                     {
@@ -6681,7 +6681,7 @@
         "faction":"npch",
                 "classType": 2,
         "effectDeath": -1,
-        "flipFag":false,
+        "filpFlag":false,
                 "avatar": "effect-bomb.ccbi",
                 "property":
                 {
@@ -6704,7 +6704,7 @@
         "faction":"npcm",
         "classType": 2,
         "effectDeath": -1,
-        "flipFag":false,
+        "filpFlag":false,
         "avatar": "effect-sszg.ccbi",
         "property":
         {
@@ -6727,7 +6727,7 @@
                 "faction":"npch",
                  "classType": 2,
                 "effectDeath": -1,
-                "flipFag":false,
+                "filpFlag":false,
                 "avatar": "effect-js-1.ccbi",
                 "property":
                 {
@@ -6745,7 +6745,7 @@
         "faction":"npcm",
         "classType": 2,
         "effectDeath": -1,
-        "flipFag":false,
+        "filpFlag":false,
         "avatar": "effect-js-2.ccbi",
         "property":
         {
@@ -6763,7 +6763,7 @@
         "faction":"npch",
         "classType": 2,
         "effectDeath": -1,
-        "flipFag":false,
+        "filpFlag":false,
         "avatar": "effect-ll-1.ccbi",
         "property":
         {
@@ -6781,7 +6781,7 @@
         "faction":"npcm",
         "classType": 2,
         "effectDeath": -1,
-        "flipFag":false,
+        "filpFlag":false,
         "avatar": "effect-ll-2.ccbi",
         "property":
         {
@@ -6799,8 +6799,8 @@
                     "faction":"npch",
                     "classType": 2,
                     "effectDeath": -1,
-                     "flipFag":false,
-                    "avatar": "effect-xr-1.ccbi",
+                     "filpFlag":false,
+                    "avatar": "effect-xr-2x.ccbi",
                     "property":
                     {
                         "health": 5
@@ -6817,8 +6817,8 @@
         "faction":"npcm",
                     "classType": 2,
                    "effectDeath": -1,
-                  "flipFag":false,
-                    "avatar": "effect-xr-2x.ccbi",
+                  "filpFlag":false,
+                    "avatar": "effect-xr-1.ccbi",
                     "property":
                     {
                         "health": 5
@@ -6835,7 +6835,7 @@
         "faction":"npch",
                     "classType": 2,
         "effectDeath": -1,
-        "flipFag":false,
+        "filpFlag":false,
                     "avatar": "effect-gas.ccbi",
                     "property":
                     {
@@ -6854,7 +6854,7 @@
         "faction":"npch",
         "classType": 2,
         "effectDeath": -1,
-        "flipFag":false,
+        "filpFlag":false,
         "avatar": "effect-wd-1.ccbi",
         "property":
         {
@@ -6873,7 +6873,7 @@
         "faction":"npcm",
         "classType": 2,
         "effectDeath": -1,
-        "flipFag":false,
+        "filpFlag":false,
         "avatar": "effect-wd-2.ccbi",
         "property":
         {
@@ -6892,7 +6892,7 @@
         "faction":"npch",
         "classType": 2,
         "effectDeath": -1,
-        "flipFag":false,
+        "filpFlag":false,
         "avatar": "effect-xssh-1.ccbi",
         "property":
         {
@@ -6911,7 +6911,7 @@
         "faction":"npcm",
         "classType": 2,
         "effectDeath": -1,
-        "flipFag":false,
+        "filpFlag":false,
         "avatar": "effect-xssh-2.ccbi",
         "property":
         {
@@ -6930,7 +6930,7 @@
         "faction":"npcm",
         "classType": 2,
         "effectDeath": -1,
-        "flipFag":false,
+        "filpFlag":false,
         "avatar": "effect-buffclean.ccbi",
         "property":
         {
