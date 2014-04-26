@@ -244,6 +244,7 @@ initGlobalConfig = function (path, callback) {
     if (e.func) gConfigTable[e.name] = e.func(gConfigTable[e.name]);
     gConfigTable[e.name] = prepareForABtest(gConfigTable[e.name]);
   });
+  callback();
 };
 
 showMeTheStack = function () {try {a = b;} catch (err) {console.log(err.stack);}};
