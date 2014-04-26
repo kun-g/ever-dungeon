@@ -106,6 +106,7 @@
       }
       this.onDisconnect();
       dbLib.unsubscribe(PlayerChannelPrefix + this.name);
+      this.destroy();
       return this.destroied = true;
     };
 
