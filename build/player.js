@@ -136,7 +136,6 @@
     };
 
     Player.prototype.onDisconnect = function() {
-      gPlayerDB[this.name] = null;
       this.socket = null;
       gPlayerDB[this.name] = null;
       return delete this.messages;
