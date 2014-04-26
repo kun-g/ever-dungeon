@@ -81,10 +81,17 @@
   "LevelUp": {
     "show": true,
       "banner":"event-banner-jncj.png",
+<<<<<<< HEAD
     "title": "冲级得礼包",
     "description": "玩家凡注册之日起一周内冲到6级即可获得丰厚奖励。",
       "mailTitle": "《冲级得礼包》奖励",
       "mailBody": "恭喜你完成冲级活动，点击领取奖励！",
+=======
+    "title": "冲击得礼包",
+    "description": "玩家凡注册之日起一周内冲到6级即可获得丰厚奖励。",
+      "mailTitle": "《冲击得礼包》奖励",
+      "mailBody": "恭喜你完成冲击活动，点击领取奖励！",
+>>>>>>> compile
       "date": "2014/05/05",
       "timeLimit": 604800,
       "dateDescription": "截止日期为2014年5月5日24时",

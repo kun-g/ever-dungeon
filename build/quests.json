@@ -4850,7 +4850,8 @@
         { "and": [
             { "==": [ { "type": "getProperty", "key": "quests.157.complete"}, true ] }
         ]
-        },
+        }
+        ,
         "startDialogue":35
 
     },
