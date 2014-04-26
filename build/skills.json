@@ -33,6 +33,7 @@
     "slotId": -1,
     "config": {
       "basic": {
+        "buffEffect": 42,
         "spellAction": 4,
         "spellEffect": 1,
         "spellDelay": 0.3
@@ -48,7 +49,8 @@
         { "type": "effectCount" }
       ],
       "action": [
-        { "type": "modifyVar", "x": "damage", "formular": {"environment": {"damage":0}} }
+        { "type": "modifyVar", "x": "damage", "formular": {"environment": {"damage":0}} },
+        {"type": "setMyMutex", "mutex": "dunqiang", "count": 1 }
       ],
       "levelConfig": [
         {"count": 1},
@@ -2282,7 +2284,8 @@
                 { "type": "event", "event": "onBePhysicalDamage" },
                 { "type": "event", "event": "onBePhysicalRangeDamage" },
                 { "type": "event", "event": "onBeSpellDamage" },
-                { "type": "event", "event": "onBeSpellRangeDamage" }
+                { "type": "event", "event": "onBeSpellRangeDamage" },
+                {"type": "targetMutex", "mutex": "dunqiang"}
             ],
                 "availableCondition": [
                 { "type": "effectCount", "count":2}
@@ -2326,7 +2329,8 @@
                    { "type": "event", "event": "onBePhysicalRangeDamage" },
                    { "type": "event", "event": "onBeSpellDamage" },
                    { "type": "event", "event": "onBeSpellRangeDamage" },
-               { "type": "targetMutex", "mutex": "reinforce" }
+               { "type": "targetMutex", "mutex": "reinforce" },
+               {"type": "targetMutex", "mutex": "dunqiang"}
             ],
             "targetSelection": {
                 "pool": "self",

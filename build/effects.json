@@ -172,6 +172,10 @@
     {
         "effectId": 41,
         "file": "effect-hf.ccbi"
+    },
+    {
+        "effectId": 42,
+        "file": "effect-shield.ccbi"
     }
 
 
