@@ -42,6 +42,9 @@
         questTableVersion: -1,
         stageTableVersion: -1,
         event_daily: {},
+        timestamp: {},
+        counters: {},
+        flags: {},
         inventory: Bag(InitialBagSize),
         gold: 0,
         diamond: 0,
@@ -56,7 +59,6 @@
         questsVersion: 0,
         energy: ENERGY_MAX,
         energyTime: now.valueOf(),
-        flags: {},
         mercenary: [],
         dungeonData: {},
         runtimeID: -1,
@@ -964,6 +966,10 @@
                 case "setFlag":
                   this.flags.newProperty(p.flag, p.value);
                   ret = ret.concat(this.syncFlags(true)).concat(this.syncEvent());
+                  break;
+                case "countUp":
+                  this.counters[p.counter]++;
+                  ret = ret.concat(this.syncCounters(true)).concat(this.syncEvent());
               }
           }
         }
