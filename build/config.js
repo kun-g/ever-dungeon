@@ -1,9 +1,5 @@
-{
-<<<<<<< HEAD
+exports.data = {
   "ServerID": "0",
-=======
-  "ServerID": "1",
->>>>>>> compile
   "ServerConfig": [
     {
       "ID": 0,
@@ -34,13 +30,8 @@
       ]
     }
   ],
-<<<<<<< HEAD
   "ServerName": "Develop",
   "ServerID": "0",
-=======
-  "ServerName": "Master",
-  "ServerID": "1",
->>>>>>> compile
   "PayMethod": "PP",
   "Enhance_Rate" : [1, 0.75, 0.70, 0.65, 0.6, 0.55, 0.50, 0.45, 0.40, 0.35],
   "Product_List": [
@@ -67,13 +58,8 @@
     {"minimum" : 8, "delta" : 8},
     {"minimum" : 9, "delta" : 9}
   ],
-<<<<<<< HEAD
 
     "Global_Material_ID" : [558, 559, 560, 561, 562],
     "Global_Enhancement_GEM_Index" : [3, 4, 5, 26, 27, 392, 393],
-=======
-  "Global_Material_ID" : [558, 559, 560, 561, 562],
-  "Global_Enhancement_GEM_Index" : [3, 4, 5, 26, 27, 392, 393],
->>>>>>> compile
   "Auth_API_Server": "10.4.2.185"
 }

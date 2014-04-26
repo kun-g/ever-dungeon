@@ -1,4 +1,4 @@
-[
+exports.data = [
   {"id":534, "price": {"type": "diamond", "amount": 5}, "category":[{"id": 0, "index": 0}]},
   {"id":535, "price": {"type": "diamond", "amount": 25}, "category":[{"id": 0, "index": 1}]},
   {"id":536, "price": {"type": "diamond", "amount": 75}, "category":[{"id": 0, "index": 2}]},

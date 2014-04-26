@@ -1,4 +1,4 @@
-[
+exports.data = [
     {
         "name":"battleforce",
         "key":"battleForce",

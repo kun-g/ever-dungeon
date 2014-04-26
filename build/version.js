@@ -1,13 +1,9 @@
-{
-          "resource_version": 85,
+exports.data = {
+          "resource_version": 102,
           "quest": "0.0.4",
           "stage": "0.1.3",
           "bin_version": "1.0.5",
           "bin_version_need": "1.0.4",
-<<<<<<< HEAD
           "url": "http://hotupdate.qiniudn.com",
-=======
-          "url": "http://drhu.qiniudn.com",
->>>>>>> compile
           "bin_url": "http://fir.im/rX4"
 }

@@ -1,4 +1,4 @@
-[
+exports.data = [
     {
         "dropId":0,
         "dropList":[
