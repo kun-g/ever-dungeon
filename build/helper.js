@@ -287,6 +287,8 @@
     };
   };
 
+  exports.genUtil = genCampaignUtil;
+
   initCampaign = function(me, allCampaign, abIndex) {
     var e, key, ret, util, _results;
     ret = [];

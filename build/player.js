@@ -1,5 +1,5 @@
 (function() {
-  var Bag, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Player, PlayerEnvironment, Serializer, addMercenaryMember, async, createItem, createUnit, currentTime, dbLib, diffDate, getMercenaryMember, getPlayerHero, getVip, helperLib, itemLib, moment, playerCSConfig, playerCommandStream, playerMessageFilter, registerConstructor, updateMercenaryMember, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6,
+  var Bag, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Player, PlayerEnvironment, Serializer, addMercenaryMember, async, createItem, createUnit, currentTime, dbLib, diffDate, genUtil, getMercenaryMember, getPlayerHero, getVip, helperLib, itemLib, moment, playerCSConfig, playerCommandStream, playerMessageFilter, registerConstructor, updateMercenaryMember, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -21,7 +21,7 @@
 
   _ref5 = require('./container'), Bag = _ref5.Bag, CardStack = _ref5.CardStack;
 
-  _ref6 = require('./helper'), diffDate = _ref6.diffDate, currentTime = _ref6.currentTime;
+  _ref6 = require('./helper'), diffDate = _ref6.diffDate, currentTime = _ref6.currentTime, genUtil = _ref6.genUtil;
 
   helperLib = require('./helper');
 
@@ -582,6 +582,9 @@
     Player.prototype.stageIsUnlockable = function(stage) {
       var stageConfig;
       stageConfig = queryTable(TABLE_STAGE, stage, this.abIndex);
+      if (stageConfig.condition) {
+        return stageConfig.condition(this, genUtil());
+      }
       if (stageConfig.event) {
         return (this[stageConfig.event] != null) && this[stageConfig.event].status === 'Ready';
       }
