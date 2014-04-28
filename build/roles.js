@@ -6634,7 +6634,7 @@ exports.data = [
         "faction":"npch",
         "classType": 2,
         "effectDeath": -1,
-        "filpFlag":false,
+        "flipFlag":false,
         "avatar": "effect-smzq.ccbi",
             "property":
             {
@@ -6658,7 +6658,7 @@ exports.data = [
           "faction":"npcm",
           "classType": 2,
           "effectDeath": -1,
-          "filpFlag":false,
+          "flipFlag":false,
           "avatar": "effect-xc.ccbi",
                  "property":
                     {
@@ -6681,7 +6681,7 @@ exports.data = [
         "faction":"npch",
                 "classType": 2,
         "effectDeath": -1,
-        "filpFlag":false,
+        "flipFlag":false,
                 "avatar": "effect-bomb.ccbi",
                 "property":
                 {
@@ -6704,16 +6704,16 @@ exports.data = [
         "faction":"npcm",
         "classType": 2,
         "effectDeath": -1,
-        "filpFlag":false,
+        "flipFlag":false,
         "avatar": "effect-sszg.ccbi",
         "property":
         {
             "health": 5,
-            "strong": 0
+            "strong": 4
         },
         "xproperty":
         {
-            "strong": 0.8
+            "strong": 2
         },
         "skill": [
             {
@@ -6727,7 +6727,7 @@ exports.data = [
                 "faction":"npch",
                  "classType": 2,
                 "effectDeath": -1,
-                "filpFlag":false,
+                "flipFlag":false,
                 "avatar": "effect-js-1.ccbi",
                 "property":
                 {
@@ -6745,7 +6745,7 @@ exports.data = [
         "faction":"npcm",
         "classType": 2,
         "effectDeath": -1,
-        "filpFlag":false,
+        "flipFlag":false,
         "avatar": "effect-js-2.ccbi",
         "property":
         {
@@ -6763,7 +6763,7 @@ exports.data = [
         "faction":"npch",
         "classType": 2,
         "effectDeath": -1,
-        "filpFlag":false,
+        "flipFlag":false,
         "avatar": "effect-ll-1.ccbi",
         "property":
         {
@@ -6781,7 +6781,7 @@ exports.data = [
         "faction":"npcm",
         "classType": 2,
         "effectDeath": -1,
-        "filpFlag":false,
+        "flipFlag":false,
         "avatar": "effect-ll-2.ccbi",
         "property":
         {
@@ -6799,7 +6799,7 @@ exports.data = [
                     "faction":"npch",
                     "classType": 2,
                     "effectDeath": -1,
-                     "filpFlag":false,
+                     "flipFlag":false,
                     "avatar": "effect-xr-2x.ccbi",
                     "property":
                     {
@@ -6817,7 +6817,7 @@ exports.data = [
         "faction":"npcm",
                     "classType": 2,
                    "effectDeath": -1,
-                  "filpFlag":false,
+                  "flipFlag":false,
                     "avatar": "effect-xr-1.ccbi",
                     "property":
                     {
@@ -6835,7 +6835,7 @@ exports.data = [
         "faction":"npch",
                     "classType": 2,
         "effectDeath": -1,
-        "filpFlag":false,
+        "flipFlag":false,
                     "avatar": "effect-gas.ccbi",
                     "property":
                     {
@@ -6854,7 +6854,7 @@ exports.data = [
         "faction":"npch",
         "classType": 2,
         "effectDeath": -1,
-        "filpFlag":false,
+        "flipFlag":false,
         "avatar": "effect-wd-1.ccbi",
         "property":
         {
@@ -6873,7 +6873,7 @@ exports.data = [
         "faction":"npcm",
         "classType": 2,
         "effectDeath": -1,
-        "filpFlag":false,
+        "flipFlag":false,
         "avatar": "effect-wd-2.ccbi",
         "property":
         {
@@ -6892,7 +6892,7 @@ exports.data = [
         "faction":"npch",
         "classType": 2,
         "effectDeath": -1,
-        "filpFlag":false,
+        "flipFlag":false,
         "avatar": "effect-xssh-1.ccbi",
         "property":
         {
@@ -6911,7 +6911,7 @@ exports.data = [
         "faction":"npcm",
         "classType": 2,
         "effectDeath": -1,
-        "filpFlag":false,
+        "flipFlag":false,
         "avatar": "effect-xssh-2.ccbi",
         "property":
         {
@@ -6930,7 +6930,7 @@ exports.data = [
         "faction":"npcm",
         "classType": 2,
         "effectDeath": -1,
-        "filpFlag":false,
+        "flipFlag":false,
         "avatar": "effect-buffclean.ccbi",
         "property":
         {

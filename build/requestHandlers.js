@@ -429,6 +429,7 @@
                 status = 'FileVersionConflict';
               }
             }
+            logInfo(player.dungeonData);
             initialData = player.dungeonData;
             if (result.RET === RET_OK && (initialData != null)) {
               replay = arg.rep;

@@ -46,7 +46,7 @@
 
     Item.prototype.initialize = function() {
       if (this.id != null) {
-        return this.restore(JSON.parse(JSON.stringify(this.getConfig())));
+        return this.restore(this.getConfig());
       }
     };
 

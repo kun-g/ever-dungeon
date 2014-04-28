@@ -70,7 +70,8 @@
     };
 
     Unit.prototype.initWithConfig = function(roleConfig) {
-      var k, s, v, xproperty, _i, _len, _ref, _ref1, _results;
+      var k, s, v, xproperty, _i, _len, _ref, _ref1, _ref2, _results;
+      this.roleID = (_ref = roleConfig.id) != null ? _ref : roleConfig["class"];
       if (roleConfig == null) {
         return false;
       }
@@ -91,9 +92,9 @@
         this.health = Math.ceil(this.health * this.rank);
         this.attack = Math.ceil(this.attack * this.rank);
         xproperty = {};
-        _ref = roleConfig.xproperty;
-        for (k in _ref) {
-          v = _ref[k];
+        _ref1 = roleConfig.xproperty;
+        for (k in _ref1) {
+          v = _ref1[k];
           xproperty[k] = Math.ceil(v * this.rank);
         }
         this.modifyProperty(xproperty);
@@ -105,10 +106,10 @@
         }
       }
       if (roleConfig.skill != null) {
-        _ref1 = roleConfig.skill;
+        _ref2 = roleConfig.skill;
         _results = [];
-        for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-          s = _ref1[_i];
+        for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
+          s = _ref2[_i];
           _results.push(this.installSpell(s.id, s.level));
         }
         return _results;
