@@ -12975,11 +12975,6 @@ exports.data = [
                         "item": 528
                     },
                     {
-                        "weight": 2,
-                        "id": 149,
-                        "count":2
-                    },
-                    {
                         "weight": 3,
                         "item": 527
                     }
