@@ -1,4 +1,4 @@
-{
+exports.data = {
   "VIP": {
     "requirement": [ 
       { "rmb": 0 },

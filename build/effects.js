@@ -1,4 +1,4 @@
-[
+exports.data = [
     {
         "effectId": 0,
         "file": "effect-lingting.ccbi"
@@ -172,6 +172,10 @@
     {
         "effectId": 41,
         "file": "effect-hf.ccbi"
+    },
+    {
+        "effectId": 42,
+        "file": "effect-shield.ccbi"
     }
 
 

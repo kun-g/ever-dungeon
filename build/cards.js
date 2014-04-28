@@ -1,4 +1,4 @@
-[
+exports.data = [
     {
 	"classId": 0,
 	"name": "草药",

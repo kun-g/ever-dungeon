@@ -1,4 +1,4 @@
-[
+exports.data = [
     {
         "upgradeId":0,
         "xp":0,

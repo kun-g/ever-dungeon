@@ -1,4 +1,4 @@
-[
+exports.data = [
 	{ "spellId": 0 },
 	{ "spellId": 1 },
 	{ "spellId": 2 },

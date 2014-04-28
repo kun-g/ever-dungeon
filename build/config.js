@@ -1,4 +1,4 @@
-{
+exports.data = {
   "ServerID": "0",
   "ServerConfig": [
     {

@@ -1,4 +1,4 @@
-{
+exports.data = {
   "test": {
     "description": "测试",
     "triggerEvent": ["onTestEvent"],

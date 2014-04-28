@@ -1,4 +1,4 @@
-[
+exports.data = [
     {
         "levelId": 0,
         "levelData":[

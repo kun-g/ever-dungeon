@@ -1,4 +1,4 @@
- {
+exports.data = {
   "hero": {
     "hero": { "attackable": false, "healable": true },
     "monster": { "attackable": true, "healable": false },

@@ -1,4 +1,4 @@
-[
+exports.data = [
     {
         "questId":0,
         "title":"劫后逢生",

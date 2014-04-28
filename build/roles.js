@@ -1,4 +1,4 @@
-[
+exports.data = [
     {
         "classId": 0,
         "className": "战士",
@@ -6634,6 +6634,7 @@
         "faction":"npch",
         "classType": 2,
         "effectDeath": -1,
+        "filpFlag":false,
         "avatar": "effect-smzq.ccbi",
             "property":
             {
@@ -6657,6 +6658,7 @@
           "faction":"npcm",
           "classType": 2,
           "effectDeath": -1,
+          "filpFlag":false,
           "avatar": "effect-xc.ccbi",
                  "property":
                     {
@@ -6679,6 +6681,7 @@
         "faction":"npch",
                 "classType": 2,
         "effectDeath": -1,
+        "filpFlag":false,
                 "avatar": "effect-bomb.ccbi",
                 "property":
                 {
@@ -6701,6 +6704,7 @@
         "faction":"npcm",
         "classType": 2,
         "effectDeath": -1,
+        "filpFlag":false,
         "avatar": "effect-sszg.ccbi",
         "property":
         {
@@ -6720,9 +6724,10 @@
     },
     {              "classId": 174,
                 "className": "我方全体攻击加速",
-        "faction":"npch",
-                "classType": 2,
-        "effectDeath": -1,
+                "faction":"npch",
+                 "classType": 2,
+                "effectDeath": -1,
+                "filpFlag":false,
                 "avatar": "effect-js-1.ccbi",
                 "property":
                 {
@@ -6740,6 +6745,7 @@
         "faction":"npcm",
         "classType": 2,
         "effectDeath": -1,
+        "filpFlag":false,
         "avatar": "effect-js-2.ccbi",
         "property":
         {
@@ -6757,6 +6763,7 @@
         "faction":"npch",
         "classType": 2,
         "effectDeath": -1,
+        "filpFlag":false,
         "avatar": "effect-ll-1.ccbi",
         "property":
         {
@@ -6774,6 +6781,7 @@
         "faction":"npcm",
         "classType": 2,
         "effectDeath": -1,
+        "filpFlag":false,
         "avatar": "effect-ll-2.ccbi",
         "property":
         {
@@ -6788,10 +6796,11 @@
     },
     {              "classId": 178,
                     "className": "我方全体攻击降低",
-        "faction":"npch",
+                    "faction":"npch",
                     "classType": 2,
-        "effectDeath": -1,
-                    "avatar": "effect-xr-1.ccbi",
+                    "effectDeath": -1,
+                     "filpFlag":false,
+                    "avatar": "effect-xr-2x.ccbi",
                     "property":
                     {
                         "health": 5
@@ -6807,8 +6816,9 @@
                     "className": "敌方全体攻击降低",
         "faction":"npcm",
                     "classType": 2,
-        "effectDeath": -1,
-                    "avatar": "effect-xr-2x.ccbi",
+                   "effectDeath": -1,
+                  "filpFlag":false,
+                    "avatar": "effect-xr-1.ccbi",
                     "property":
                     {
                         "health": 5
@@ -6825,6 +6835,7 @@
         "faction":"npch",
                     "classType": 2,
         "effectDeath": -1,
+        "filpFlag":false,
                     "avatar": "effect-gas.ccbi",
                     "property":
                     {
@@ -6843,6 +6854,7 @@
         "faction":"npch",
         "classType": 2,
         "effectDeath": -1,
+        "filpFlag":false,
         "avatar": "effect-wd-1.ccbi",
         "property":
         {
@@ -6861,6 +6873,7 @@
         "faction":"npcm",
         "classType": 2,
         "effectDeath": -1,
+        "filpFlag":false,
         "avatar": "effect-wd-2.ccbi",
         "property":
         {
@@ -6879,6 +6892,7 @@
         "faction":"npch",
         "classType": 2,
         "effectDeath": -1,
+        "filpFlag":false,
         "avatar": "effect-xssh-1.ccbi",
         "property":
         {
@@ -6897,6 +6911,7 @@
         "faction":"npcm",
         "classType": 2,
         "effectDeath": -1,
+        "filpFlag":false,
         "avatar": "effect-xssh-2.ccbi",
         "property":
         {
@@ -6915,6 +6930,7 @@
         "faction":"npcm",
         "classType": 2,
         "effectDeath": -1,
+        "filpFlag":false,
         "avatar": "effect-buffclean.ccbi",
         "property":
         {

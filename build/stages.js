@@ -1,4 +1,4 @@
-[
+var data = [
     {
         "chapterId": 0,
         "hidden":true,
@@ -1679,40 +1679,126 @@
                 { "==": [ { "type": "getProperty", "key": "stage.98.state"}, 2 ] }
             ]
             }
+        }
+      ],
+    },
+    {
+      "chapterId": 15,
+      "hidden": true,
+      "label":"HuoDong",
+      "stage":[
+        {
+          stageId: 107,
+          cost: 15,
+          team: 3,
+          hidden: true,
+          dungeon: 101,
+          description: "Weapon1",
+          condition: function (obj, util) {
+            return ( obj.counters.weapon < 2 ) &&
+              ( util.today.weekday() === 2 ||
+                util.today.weekday() === 4 ||
+                util.today.weekday() === 5 ||
+                util.today.weekday() === 0 );
+          },
+          initialAction: function (obj) {
+            obj.counters.weapon++;
+          }
         },
         {
-            "stageId": 107,
-            "cost": 0,
-            "team": 1,
-            "hidden":false,
-            "dungeon": 101,
-            "tutorial":8,
-            "teammate": [
-                {
-                    "class" : 131,
-                    "name" : "约书亚",
-                    "gender" : 1,
-                    "hairStyle" : 5,
-                    "hairColor" : 13,
-                    "xp" : 0
-                },
-                {
-                    "class" : 132,
-                    "name" : "凯瑟琳",
-                    "gender" : 0,
-                    "hairStyle" : 5,
-                    "hairColor" :3 ,
-                    "xp" : 0
-                }
-            ],
-            "cond":
-            { "and": [
-                { "==": [ { "type": "getProperty", "key": "stage.100.state"}, 2 ] }
-            ]
-            }
+          stageId: 108,
+          cost: 15,
+          team: 3,
+          hidden: true,
+          dungeon: 101,
+          description: "Weapon2",
+          condition: function (obj, util) {
+            return ( obj.counters.weapon < 2 ) &&
+              ( util.today.weekday() === 2 ||
+                util.today.weekday() === 4 ||
+                util.today.weekday() === 5 ||
+                util.today.weekday() === 0 );
+          },
+          initialAction: function (obj) {
+            obj.counters.weapon++;
+          }
+        },
+        {
+          stageId: 109,
+          cost: 15,
+          team: 3,
+          hidden: true,
+          dungeon: 101,
+          description: "Weapon3",
+          condition: function (obj, util) {
+            return ( obj.counters.weapon < 2 ) &&
+              ( util.today.weekday() === 2 ||
+                util.today.weekday() === 4 ||
+                util.today.weekday() === 5 ||
+                util.today.weekday() === 0 );
+          },
+          initialAction: function (obj) {
+            obj.counters.weapon++;
+          }
+        },
+        {
+          stageId: 110,
+          cost: 15,
+          team: 3,
+          hidden: true,
+          dungeon: 101,
+          description: "Enhance1",
+          condition: function (obj, util) {
+            return ( obj.counters.enhance < 2 ) &&
+              ( util.today.weekday() === 1 ||
+                util.today.weekday() === 3 ||
+                util.today.weekday() === 6 ||
+                util.today.weekday() === 0 );
+          },
+          initialAction: function (obj) {
+            obj.counters.enhance++;
+          }
+        },
+        {
+          stageId: 111,
+          cost: 15,
+          team: 3,
+          hidden: true,
+          dungeon: 101,
+          description: "Enhance2",
+          condition: function (obj, util) {
+            return ( obj.counters.enhance < 2 ) &&
+              ( util.today.weekday() === 1 ||
+                util.today.weekday() === 3 ||
+                util.today.weekday() === 6 ||
+                util.today.weekday() === 0 );
+          },
+          initialAction: function (obj) {
+            obj.counters.enhance++;
+          }
+        },
+        {
+          stageId: 112,
+          cost: 15,
+          team: 3,
+          hidden: true,
+          dungeon: 101,
+          description: "Enhance3",
+          condition: function (obj, util) {
+            return ( obj.counters.enhance < 2 ) &&
+              ( util.today.weekday() === 1 ||
+                util.today.weekday() === 3 ||
+                util.today.weekday() === 6 ||
+                util.today.weekday() === 0 );
+          },
+          initialAction: function (obj) {
+            obj.counters.enhance++;
+          }
         }
-    ]
+      ]
+  }
+];
+for (k in data) {
+  data[k].stageId = k;
 }
-]
-	
-		
+exports.data = data;

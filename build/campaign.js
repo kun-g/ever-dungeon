@@ -1,4 +1,4 @@
-{
+exports.data = {
   "Charge": {
     "show": true,
     "title": "充值就得奖",

@@ -1,4 +1,4 @@
-[
+exports.data = [
     {
         "enhanceId":0,
         "label":"攻击",
