@@ -30,7 +30,7 @@
         }
         c.encoder.pipe(c.server);
         c.server.pipe(c);
-        return c.decoder.on('request', function(request) {
+        c.decoder.on('request', function(request) {
           if (request) {
             if (request.CMD === 101) {
               console.log({
@@ -43,6 +43,10 @@
             c.destroy();
             return c = null;
           }
+        });
+        return c.on('error', function(error) {
+          c.destroy();
+          return c = null;
         });
       });
       appNet.backends = servers.map(function(s, id) {
@@ -67,25 +71,24 @@
         return null;
       };
       appNet.createConnection = function(socket) {
-        var nc, releaseSocket, server;
+        var c, server;
         server = getAliveConnection();
         if (server != null) {
-          nc = net.connect(server.port, server.ip);
+          c = net.connect(server.port, server.ip);
+          c.on('error', function(err) {
+            c.destroy();
+            socket.destroy();
+            return c = null;
+          });
+          c.on('end', function(err) {
+            c.destroy();
+            socket.destroy();
+            return c = null;
+          });
+        } else {
+          socket.destroy();
         }
-        releaseSocket = function() {
-          if (nc) {
-            nc.destroy();
-            nc = null;
-          }
-          return socket.destroy();
-        };
-        if (nc) {
-          nc.on('end', releaseSocket);
-          nc.on('error', releaseSocket);
-        }
-        socket.on('error', releaseSocket);
-        socket.on('end', releaseSocket);
-        return nc;
+        return c;
       };
       updateBackendStatus = function() {
         return appNet.backends.forEach(function(e) {
