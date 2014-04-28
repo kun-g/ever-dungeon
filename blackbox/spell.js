@@ -1,7 +1,9 @@
 (function() {
-  var Wizard, calcFormular, getLevelConfig, getProperty, getSpellConfig, plusThemAll;
+  var Wizard, calcFormular, getLevelConfig, getProperty, getSpellConfig, plusThemAll, triggerLib;
 
   requires('./define');
+
+  triggerLib = requires('./trigger');
 
   getSpellConfig = function(spellID) {
     var cfg;
@@ -70,13 +72,6 @@
       };
     }
 
-    Wizard.prototype.faction = function(newFaction) {
-      if (newFaction != null) {
-        this.faction = newFaction;
-      }
-      return this.faction;
-    };
-
     Wizard.prototype.installSpell = function(spellID, level, cmd, delay) {
       var cfg, levelConfig;
       if (delay == null) {
@@ -100,7 +95,7 @@
       this.setupTriggerCondition(spellID, cfg.triggerCondition, levelConfig, cmd);
       this.setupAvailableCondition(spellID, cfg.availableCondition, levelConfig, cmd);
       this.doAction(this.wSpellDB[spellID], cfg.installAction, levelConfig, this.selectTarget(cfg, cmd), cmd);
-      return this.spellStateChanged(cmd);
+      return this.spellStateChanged(spellID, cmd);
     };
 
     Wizard.prototype.setupAvailableCondition = function(spellID, conditions, level, cmd) {
@@ -155,14 +150,34 @@
       return _results;
     };
 
-    Wizard.prototype.spellStateChanged = function(cmd) {
+    Wizard.prototype.calcEffectState = function(spellID) {
+      var cfg, _ref;
+      cfg = getSpellConfig(spellID);
+      if (((_ref = cfg.basic) != null ? _ref.buffEffect : void 0) != null) {
+        if (this.wSpellDB[spellID]) {
+          return {
+            id: cfg.basic.buffEffect
+          };
+        } else {
+          return {
+            id: cfg.basic.buffEffect,
+            uninstall: true
+          };
+        }
+      } else {
+        return null;
+      }
+    };
+
+    Wizard.prototype.spellStateChanged = function(spellID, cmd) {
       if (cmd == null) {
         return false;
       }
       return typeof cmd.routine === "function" ? cmd.routine({
         id: 'SpellState',
         wizard: this,
-        state: this.calcBuffState()
+        state: this.calcBuffState(),
+        effect: this.calcEffectState(spellID)
       }) : void 0;
     };
 
@@ -191,7 +206,7 @@
         this.doAction(this.wSpellDB[spellID], cfg.uninstallAction, {}, this.selectTarget(cfg, cmd), cmd);
       }
       delete this.wSpellDB[spellID];
-      return this.spellStateChanged(cmd);
+      return this.spellStateChanged(spellID, cmd);
     };
 
     Wizard.prototype.installTrigger = function(spellID, event) {
@@ -489,54 +504,30 @@
     };
 
     Wizard.prototype.selectTarget = function(cfg, cmd) {
-      var a, b, blocks, count, env, filter, m, p, pool, t, tmp, x, y, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2, _ref3, _ref4;
+      var b, blocks, env, pool;
       if (!((cfg.targetSelection != null) && cfg.targetSelection.pool)) {
         return [];
       }
-      if (!(cfg.targetSelection.pool === 'Self' || (cmd != null))) {
+      if (!(cfg.targetSelection.pool === 'self' || (cmd != null))) {
         return [];
       }
       if (cmd != null) {
         env = cmd.getEnvironment();
       }
       switch (cfg.targetSelection.pool) {
-        case 'Enemy':
-          pool = env.getEnemyOf(this);
-          break;
-        case 'Team':
-          pool = env.getTeammateOf(this).concat(this);
-          break;
-        case 'Teammate':
-          pool = env.getTeammateOf(this);
-          break;
-        case 'Self':
+        case 'self':
           pool = this;
           break;
-        case 'Target':
+        case 'target':
           pool = env.variable('tar');
           break;
-        case 'Source':
-        case 'Attacker':
+        case 'source':
           pool = env.variable('src');
           break;
-        case 'SamePosition':
-          pool = env.getBlock(this.pos).getRef();
+        case 'objects':
+          pool = env.getObjects();
           break;
-        case 'RoleID':
-          pool = (function() {
-            var _i, _len, _ref, _results;
-            _ref = env.getObjects();
-            _results = [];
-            for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-              m = _ref[_i];
-              if (m.id === cfg.targetSelection.roleID) {
-                _results.push(m);
-              }
-            }
-            return _results;
-          })();
-          break;
-        case 'Block':
+        case 'blocks':
           blocks = cfg.targetSelection.blocks;
           pool = blocks != null ? (function() {
             var _i, _len, _results;
@@ -555,112 +546,13 @@
         pool = [pool];
       }
       if ((cfg.targetSelection.filter != null) && pool.length > 0) {
-        _ref = cfg.targetSelection.filter;
-        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-          filter = _ref[_i];
-          switch (filter) {
-            case 'Alive':
-              pool = (function() {
-                var _j, _len1, _results;
-                _results = [];
-                for (_j = 0, _len1 = pool.length; _j < _len1; _j++) {
-                  p = pool[_j];
-                  if (p.health > 0) {
-                    _results.push(p);
-                  }
-                }
-                return _results;
-              })();
-              break;
-            case 'Visible':
-              pool = (function() {
-                var _j, _len1, _results;
-                _results = [];
-                for (_j = 0, _len1 = pool.length; _j < _len1; _j++) {
-                  p = pool[_j];
-                  if (p.isVisible) {
-                    _results.push(p);
-                  }
-                }
-                return _results;
-              })();
-              break;
-            case 'Hero':
-              pool = (function() {
-                var _j, _len1, _results;
-                _results = [];
-                for (_j = 0, _len1 = pool.length; _j < _len1; _j++) {
-                  p = pool[_j];
-                  if (p.isHero()) {
-                    _results.push(p);
-                  }
-                }
-                return _results;
-              })();
-              break;
-            case 'Monster':
-              pool = (function() {
-                var _j, _len1, _results;
-                _results = [];
-                for (_j = 0, _len1 = pool.length; _j < _len1; _j++) {
-                  p = pool[_j];
-                  if (!p.isHero()) {
-                    _results.push(p);
-                  }
-                }
-                return _results;
-              })();
-              break;
-            case 'SameBlock':
-              pool = (function() {
-                var _j, _len1, _results;
-                _results = [];
-                for (_j = 0, _len1 = pool.length; _j < _len1; _j++) {
-                  p = pool[_j];
-                  if (p.pos === this.pos) {
-                    _results.push(p);
-                  }
-                }
-                return _results;
-              }).call(this);
-          }
-        }
+        pool = triggerLib.filterObject(this, pool, cfg.targetSelection.filter, env);
       }
-      count = (_ref1 = cfg.targetSelection.count) != null ? _ref1 : 1;
-      if ((cfg.targetSelection.method != null) && pool.length > 0) {
-        switch (cfg.targetSelection.method) {
-          case 'Rand':
-            pool = env.randMember(pool, count);
-            if (!Array.isArray(pool)) {
-              pool = [pool];
-            }
-            break;
-          case 'LowHealth':
-            pool = [
-              pool.sort(function(a, b) {
-                return a.health - b.health;
-              })[0]
-            ];
-        }
-      }
-      if (cfg.targetSelection.anchor && (env != null)) {
-        tmp = pool;
+      if (pool == null) {
         pool = [];
-        for (_j = 0, _len1 = tmp.length; _j < _len1; _j++) {
-          t = tmp[_j];
-          if (!t.isBlock) {
-            t = env.getBlock(t.pos);
-          }
-          x = t.pos % Dungeon_Width;
-          y = (t.pos - x) / Dungeon_Width;
-          _ref2 = cfg.targetSelection.anchor;
-          for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
-            a = _ref2[_k];
-            if ((0 <= (_ref3 = a.x + x) && _ref3 < Dungeon_Width) && (0 <= (_ref4 = a.y + y) && _ref4 < Dungeon_Height)) {
-              pool.push(env.getBlock(a.x + x + (a.y + y) * Dungeon_Width));
-            }
-          }
-        }
+      }
+      if (!Array.isArray(pool)) {
+        pool = [pool];
       }
       return pool;
     };
@@ -749,7 +641,7 @@
     };
 
     Wizard.prototype.doAction = function(thisSpell, actions, level, target, cmd) {
-      var a, c, cfg, delay, env, formular, formularResult, h, modifications, pos, property, spellID, src, t, val, variables, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _ref3, _ref4, _s, _t, _u, _v, _w;
+      var a, c, cfg, delay, effect, env, formular, formularResult, h, modifications, pos, property, spellID, src, t, val, variables, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len16, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _ref3, _s, _t, _u, _v, _w, _x, _y;
       if (actions == null) {
         return false;
       }
@@ -954,6 +846,12 @@
           case 'newFaction':
             env.newFaction(a.name);
             break;
+          case 'changeFaction':
+            for (_p = 0, _len7 = target.length; _p < _len7; _p++) {
+              t = target[_p];
+              t.faction = a.faction;
+            }
+            break;
           case 'factionAttack':
             env.factionAttack(a.src, a.tar, a.flag);
             break;
@@ -971,8 +869,8 @@
                 });
               }
             } else {
-              for (_p = 0, _len7 = target.length; _p < _len7; _p++) {
-                t = target[_p];
+              for (_q = 0, _len8 = target.length; _q < _len8; _q++) {
+                t = target[_q];
                 if (typeof cmd.routine === "function") {
                   cmd.routine({
                     id: 'Heal',
@@ -984,9 +882,15 @@
               }
             }
             break;
+          case 'removeSpell':
+            for (_r = 0, _len9 = target.length; _r < _len9; _r++) {
+              t = target[_r];
+              t.removeSpell(a.spell, cmd);
+            }
+            break;
           case 'installSpell':
-            for (_q = 0, _len8 = target.length; _q < _len8; _q++) {
-              t = target[_q];
+            for (_s = 0, _len10 = target.length; _s < _len10; _s++) {
+              t = target[_s];
               delay = 0;
               if (thisSpell != null) {
                 delay = thisSpell.delay;
@@ -998,8 +902,8 @@
             }
             break;
           case 'damage':
-            for (_r = 0, _len9 = target.length; _r < _len9; _r++) {
-              t = target[_r];
+            for (_t = 0, _len11 = target.length; _t < _len11; _t++) {
+              t = target[_t];
               if (typeof cmd.routine === "function") {
                 cmd.routine({
                   id: 'Damage',
@@ -1023,8 +927,8 @@
                 });
               }
             } else if (a.pos === 'target') {
-              for (_s = 0, _len10 = target.length; _s < _len10; _s++) {
-                t = target[_s];
+              for (_u = 0, _len12 = target.length; _u < _len12; _u++) {
+                t = target[_u];
                 if (typeof cmd.routine === "function") {
                   cmd.routine({
                     id: 'SpellAction',
@@ -1044,46 +948,47 @@
             }
             break;
           case 'playEffect':
-            if (a.pos != null) {
-              if (a.pos === 'self') {
+            effect = getProperty(a.effect, level.effect);
+            pos = getProperty(a.pos, level.pos);
+            if (pos != null) {
+              if (pos === 'self') {
                 if (typeof cmd.routine === "function") {
                   cmd.routine({
                     id: 'Effect',
                     delay: delay,
-                    effect: a.effect,
+                    effect: effect,
                     pos: this.pos
                   });
                 }
-              } else if (a.pos === 'target') {
-                for (_t = 0, _len11 = target.length; _t < _len11; _t++) {
-                  t = target[_t];
+              } else if (pos === 'target') {
+                for (_v = 0, _len13 = target.length; _v < _len13; _v++) {
+                  t = target[_v];
                   if (typeof cmd.routine === "function") {
                     cmd.routine({
                       id: 'Effect',
                       delay: delay,
-                      effect: a.effect,
+                      effect: effect,
                       pos: t.pos
                     });
                   }
                 }
-              } else if (typeof a.pos === 'number') {
+              } else if (typeof pos === 'number') {
                 if (typeof cmd.routine === "function") {
                   cmd.routine({
                     id: 'Effect',
                     delay: delay,
-                    effect: a.effect,
-                    pos: a.pos
+                    effect: effect,
+                    pos: pos
                   });
                 }
-              } else if (Array.isArray(a.pos)) {
-                _ref2 = a.pos;
-                for (_u = 0, _len12 = _ref2.length; _u < _len12; _u++) {
-                  pos = _ref2[_u];
+              } else if (Array.isArray(pos)) {
+                for (_w = 0, _len14 = pos.length; _w < _len14; _w++) {
+                  pos = pos[_w];
                   if (typeof cmd.routine === "function") {
                     cmd.routine({
                       id: 'Effect',
                       delay: delay,
-                      effect: a.effect,
+                      effect: effect,
                       pos: pos
                     });
                   }
@@ -1096,19 +1001,19 @@
                     cmd.routine({
                       id: 'Effect',
                       delay: delay,
-                      effect: a.effect,
+                      effect: effect,
                       act: this.ref
                     });
                   }
                   break;
                 case 'target':
-                  for (_v = 0, _len13 = target.length; _v < _len13; _v++) {
-                    t = target[_v];
+                  for (_x = 0, _len15 = target.length; _x < _len15; _x++) {
+                    t = target[_x];
                     if (typeof cmd.routine === "function") {
                       cmd.routine({
                         id: 'Effect',
                         delay: delay,
-                        effect: a.effect,
+                        effect: effect,
                         act: t.ref
                       });
                     }
@@ -1144,9 +1049,9 @@
             if (!thisSpell) {
               continue;
             }
-            _ref3 = thisSpell.modifications;
-            for (property in _ref3) {
-              val = _ref3[property];
+            _ref2 = thisSpell.modifications;
+            for (property in _ref2) {
+              val = _ref2[property];
               this[property] -= val;
             }
             delete thisSpell.modifications;
@@ -1158,11 +1063,11 @@
             } else {
               _buffType = ['RoleBuff', 'HealthBuff', 'AttackBuff'];
             }
-            for (_w = 0, _len14 = target.length; _w < _len14; _w++) {
-              h = target[_w];
-              _ref4 = h.wSpellDB;
-              for (spellID in _ref4) {
-                thisSpell = _ref4[spellID];
+            for (_y = 0, _len16 = target.length; _y < _len16; _y++) {
+              h = target[_y];
+              _ref3 = h.wSpellDB;
+              for (spellID in _ref3) {
+                thisSpell = _ref3[spellID];
                 cfg = getSpellConfig(spellID);
                 if (_buffType.indexOf(cfg.buffType) !== -1) {
                   h.removeSpell(spellID, cmd);
