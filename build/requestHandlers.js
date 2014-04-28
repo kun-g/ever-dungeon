@@ -254,7 +254,7 @@
                 result = result.reduce((function(r, l) {
                   return r.concat(l);
                 }), []);
-                ev = ev.concat(result).concat(player.onLogin()).concat(player.syncCampaign()).concat(player.syncEvent()).concat(player.syncEvent1());
+                ev = ev.concat(result).concat(player.onLogin()).concat(player.syncCampaign()).concat(player.syncEvent());
                 loginInfo = {
                   REQ: rpcID,
                   RET: RET_OK,
