@@ -1,9 +1,9 @@
 (function() {
   var Serializer, destroyReactDB, g_attr_constructorTable, generateMonitor, objectlize, registerConstructor, tap;
 
-  tap = requires('./define').tap;
+  destroyReactDB = requires('./helper').destroyReactDB;
 
-  destroyReactDB = requires('./define').destroyReactDB;
+  tap = requires('./helper').tap;
 
   generateMonitor = function(obj) {
     return function(key, val) {
