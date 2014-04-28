@@ -567,6 +567,7 @@
     },
     event_robbers: {
       storeType: "player",
+      id: 0,
       actived: 1,
       count: 5,
       canReset: function(obj, util) {
@@ -579,6 +580,7 @@
     },
     event_weapon: {
       storeType: "player",
+      id: 1,
       actived: 1,
       count: 5,
       canReset: function(obj, util) {
@@ -591,6 +593,7 @@
       stageID: 1024
     },
     event_enhance: {
+      id: 2,
       storeType: "player",
       actived: 1,
       count: 5,
