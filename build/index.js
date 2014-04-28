@@ -45,7 +45,7 @@ function initiateFluentLogger() {
 }
 
 var config = {
-  port: 7756, 
+  port: 7755, 
   type : 'Worker',
   handler: require("./commandHandlers").route,
   init : function () {
@@ -233,7 +233,7 @@ if (config) {
     rsaLib = require('ursa');
 
     paymentServer = require('http').createServer(wrapCallback(paymentHandler));
-    paymentServer.listen(6499);
+    //paymentServer.listen(6499);
   });
 } else {
   throw 'No config';
