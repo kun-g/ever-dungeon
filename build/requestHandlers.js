@@ -254,7 +254,7 @@
                 result = result.reduce((function(r, l) {
                   return r.concat(l);
                 }), []);
-                ev = ev.concat(result).concat(player.onLogin()).concat(player.syncCampaign()).concat(player.syncEvent());
+                ev = ev.concat(result).concat(player.onLogin()).concat(player.syncCampaign()).concat(player.syncEvent()).concat(player.syncEvent1());
                 loginInfo = {
                   REQ: rpcID,
                   RET: RET_OK,
@@ -429,6 +429,7 @@
                 status = 'FileVersionConflict';
               }
             }
+            logInfo(player.dungeonData);
             initialData = player.dungeonData;
             if (result.RET === RET_OK && (initialData != null)) {
               replay = arg.rep;

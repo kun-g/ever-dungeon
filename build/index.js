@@ -224,7 +224,6 @@ if (config) {
     gServerName = gServerConfig.Name;
     dbPrefix = gServerName+dbSeparator;
     dbLib.initializeDB(gServerConfig.DB);
-    dbLib.getGlobalPrize(function (err, prize) { gGlobalPrize = JSON.parse(prize); });
     require('./helper').initLeaderboard(queryTable(TABLE_LEADBOARD));
     domain.run(config.init);
 

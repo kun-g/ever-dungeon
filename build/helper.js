@@ -290,28 +290,30 @@
   exports.genUtil = genCampaignUtil;
 
   initCampaign = function(me, allCampaign, abIndex) {
-    var e, key, ret, util, _results;
+    var e, key, ret, util;
     ret = [];
     util = genCampaignUtil();
-    _results = [];
     for (key in allCampaign) {
       e = allCampaign[key];
       if (me.getType() === e.storeType) {
         if (key === 'event_daily') {
-          _results.push(ret = ret.concat(initDailyEvent(me, 'event_daily', e)));
+          ret = ret.concat(initDailyEvent(me, 'event_daily', e));
         } else {
           if (e.canReset(me, util)) {
             e.reset(me, util);
           }
-          if (!e.canProceed(me, util)) {
-            continue;
-          } else {
-            _results.push(void 0);
-          }
+          ret.push({
+            NTF: Event_BountyUpdate,
+            arg: {
+              bid: e.id,
+              sta: e.actived,
+              cnt: e.count
+            }
+          });
         }
       }
     }
-    return _results;
+    return ret;
   };
 
   initDailyEvent = function(me, key, e) {
@@ -522,8 +524,84 @@
       },
       "storeType": "player",
       "daily": true,
+      "reward": [
+        {
+          "prize": {
+            "type": 0,
+            "value": 33,
+            "count": 1
+          },
+          "weight": 1
+        }, {
+          "prize": {
+            "type": 0,
+            "value": 34,
+            "count": 1
+          },
+          "weight": 1
+        }, {
+          "prize": {
+            "type": 0,
+            "value": 35,
+            "count": 1
+          },
+          "weight": 1
+        }, {
+          "prize": {
+            "type": 0,
+            "value": 36,
+            "count": 1
+          },
+          "weight": 1
+        }, {
+          "prize": {
+            "type": 0,
+            "value": 37,
+            "count": 1
+          },
+          "weight": 1
+        }
+      ],
       "steps": 4,
       "quest": [128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151]
+    },
+    event_robbers: {
+      storeType: "player",
+      actived: 1,
+      count: 5,
+      canReset: function(obj, util) {
+        return !util.sameDay(obj.timestamp.robbers, util.today) && util.today.hour() >= 8;
+      },
+      reset: function(obj, util) {
+        obj.timestamp.robbers = util.currentTime();
+        return obj.counters.robbers = 0;
+      }
+    },
+    event_weapon: {
+      storeType: "player",
+      actived: 1,
+      count: 5,
+      canReset: function(obj, util) {
+        return !util.sameDay(obj.timestamp.weapon, util.today);
+      },
+      reset: function(obj, util) {
+        obj.timestamp.weapon = util.currentTime();
+        return obj.counters.weapon = 0;
+      },
+      stageID: 1024
+    },
+    event_enhance: {
+      storeType: "player",
+      actived: 1,
+      count: 5,
+      canReset: function(obj, util) {
+        return !util.sameDay(obj.timestamp.enhance, util.today);
+      },
+      reset: function(obj, util) {
+        obj.timestamp.enhance = util.currentTime();
+        return obj.counters.enhance = 0;
+      },
+      stageID: 1024
     }
   };
 

@@ -45,7 +45,6 @@
         timestamp: {},
         counters: {},
         flags: {},
-        globalPrizeFlag: {},
         inventory: Bag(InitialBagSize),
         gold: 0,
         diamond: 0,
