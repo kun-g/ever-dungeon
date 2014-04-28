@@ -1434,7 +1434,6 @@ exports.data = [
             "targetSelection":{
                 "pool":"objects",
                 "filter": [{"type":"alive"},{"type":"visible"},{"type":"role-id","roleID":19}]
-
             },
             "action": [
                 {"type":"playAction","motion":7,"pos":"self"},
@@ -1470,8 +1469,7 @@ exports.data = [
             ],
             "targetSelection": {
                 "pool": "blocks",
-                "filter": [{"type":"shuffle"},{"type":"count","count":1}],
-                "anchor":[{"x":1,"y":0},{"x":-1,"y":0},{"x":0,"y":-1},{"x":0,"y":1},{"x":0,"y":0}]
+                "filter": [{"type":"shuffle"},{"type":"count","count":1},{"type":"anchor", "anchor":[{"x":1,"y":0},{"x":-1,"y":0},{"x":0,"y":-1},{"x":0,"y":1},{"x":0,"y":0}]}]
             },
             "action":[
                 {"type":"installSpell", "spell": 60,"delay":{"base":0.3}}
@@ -1514,8 +1512,7 @@ exports.data = [
             ],
             "targetSelection": {
                 "pool": "blocks",
-                "filter": [{"type":"shuffle"},{"type":"count","count":3}],
-                "anchor":[{"x":1,"y":0},{"x":-1,"y":0},{"x":0,"y":-1},{"x":0,"y":1},{"x":0,"y":0}]
+                "filter": [{"type":"shuffle"},{"type":"count","count":3},{"type":"anchor", "anchor":[{"x":1,"y":0},{"x":-1,"y":0},{"x":0,"y":-1},{"x":0,"y":1},{"x":0,"y":0}]}]
             },
             "action":[
                 {"type":"installSpell", "spell": 60,"delay":{"base":0.3}}
@@ -2329,7 +2326,7 @@ exports.data = [
             ],
             "targetSelection": {
                 "pool": "self",
-                "filter": [{"type":"alive"}]}
+                "filter": [{"type":"alive"}]
             },
 
             "buffType":"RoleBuff",
@@ -2341,6 +2338,7 @@ exports.data = [
             "availableCondition": [
                 { "type": "effectCount", "count":1}
            ]
+    }
     },
     {
         "skillId": 99,
