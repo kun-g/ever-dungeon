@@ -11,8 +11,8 @@ while [ "$CurrentBranch" = "master" ]; do
   esac
 done
 
-VersionFile="build/version.json"
-ConfigFile="build/config.json"
+VersionFile="build/version.js"
+ConfigFile="build/config.js"
 
 CurrentPWD=`pwd`
 
@@ -21,7 +21,8 @@ cd server
 SubModuleServer=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
 gulp compile
 cp js/*.js $CurrentPWD/build
-cp package.json $CurrentPWD/build
+cp src/*.js $CurrentPWD/build
+cp package.js $CurrentPWD/build
 cd ../data
 SubModuleData=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
 if [ "$1" = "all" ]
@@ -57,8 +58,8 @@ do
 #  sed -ig 's/exports\.fileVersion = -1/exports\.fileVersion = '$CurrentVersion'/g' ${DST_BOX}${itm}
 done
 
-cp data/table/*.json build/
-cp data/stable/*.json build/
+cp data/table/*.js build/
+cp data/stable/*.js build/
 
 echo '===== Setting up variables ====='
 if [ $CurrentBranch = develop ]
