@@ -2993,13 +2993,14 @@
         return env.variable('tar').health += env.variable('hp');
       },
       output: function(env) {
+        var _ref5;
         return [
           {
             act: env.variable('tar').ref,
             id: ACT_POPHP,
             num: env.variable('hp'),
             flg: HP_RESULT_TYPE_HEAL,
-            dey: 0.3
+            dey: (_ref5 = env.variable('delay')) != null ? _ref5 : 0.3
           }
         ];
       }

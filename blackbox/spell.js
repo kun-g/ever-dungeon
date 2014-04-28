@@ -865,7 +865,8 @@
                   id: 'Heal',
                   src: this,
                   tar: this,
-                  hp: formularResult
+                  hp: formularResult,
+                  delay: delay
                 });
               }
             } else {
@@ -876,7 +877,8 @@
                     id: 'Heal',
                     src: this,
                     tar: t,
-                    hp: formularResult
+                    hp: formularResult,
+                    delay: delay
                   });
                 }
               }
