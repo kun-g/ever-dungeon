@@ -6830,7 +6830,7 @@ exports.data = [
                         }
                     ]
     },
-    {              "classId": 179,
+    {              "classId": 180,
                     "className": "我方全体持续掉血",
         "faction":"npch",
                     "classType": 2,
@@ -6849,7 +6849,7 @@ exports.data = [
         ]
     },
     {
-        "classId": 180,
+        "classId": 181,
         "className": "我方全体无敌",
         "faction":"npch",
         "classType": 2,
@@ -6868,7 +6868,7 @@ exports.data = [
         ]
     },
     {
-        "classId": 181,
+        "classId": 182,
         "className": "敌方全体无敌",
         "faction":"npcm",
         "classType": 2,
@@ -6887,7 +6887,7 @@ exports.data = [
         ]
     },
     {
-        "classId": 182,
+        "classId": 183,
         "className": "我方全体攻击吸收",
         "faction":"npch",
         "classType": 2,
@@ -6906,7 +6906,7 @@ exports.data = [
         ]
     },
     {
-        "classId": 183,
+        "classId": 184,
         "className": "敌方全体攻击吸收",
         "faction":"npcm",
         "classType": 2,
@@ -6925,13 +6925,13 @@ exports.data = [
         ]
     },
     {
-        "classId": 184,
+        "classId": 185,
         "className": "清除我方所有buff",
-        "faction":"npcm",
+        "faction":"npcmh",
         "classType": 2,
         "effectDeath": -1,
         "flipFlag":false,
-        "avatar": "effect-buffclean.ccbi",
+        "avatar": "effect-buffclear.ccbi",
         "property":
         {
             "health": 5

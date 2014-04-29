@@ -2140,7 +2140,7 @@ exports.data = [
             "uninstallAction": [
                 { "type": "resetProperty" }
             ],
-            "buffType":"RoleBuff",
+            "buffType":"AttackBuff",
             "availableCondition": [
                 { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 }
             ]
@@ -2158,6 +2158,7 @@ exports.data = [
                 "pool": "objects",
                 "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"} ]
             },
+
             "action":[
                 {"type":"delay"},
                 { "type": "installSpell", "spell": 92,"delay":1.8} ,
@@ -2177,7 +2178,7 @@ exports.data = [
             "uninstallAction": [
                 { "type": "resetProperty" }
             ],
-            "buffType":"RoleDebuff",
+            "buffType":"AttackDebuff",
             "availableCondition": [
                 { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 }
             ]
