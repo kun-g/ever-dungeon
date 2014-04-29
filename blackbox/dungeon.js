@@ -1363,6 +1363,21 @@
           pool: 'soldier',
           keyed: false
         }, {
+          counter: 'good',
+          targetCounter: 'goodCount',
+          pool: 'good',
+          keyed: false
+        }, {
+          counter: 'bad',
+          targetCounter: 'badCount',
+          pool: 'bad',
+          keyed: false
+        }, {
+          counter: 'normal',
+          targetCounter: 'normalCount',
+          pool: 'normal',
+          keyed: false
+        }, {
           counter: 'elite',
           targetCounter: 'eliteCount',
           pool: 'elite',
