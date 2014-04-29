@@ -16,7 +16,7 @@ Server.prototype.shutDown = function () {
   clearInterval(this.publishInterval);
   if (this.tcpServer) {
     this.tcpServer.net.close();
-    clearInterval(this.tcpServer.tcpInterval);
+    //clearInterval(this.tcpServer.tcpInterval); TODO
     this.tcpServer.net.aliveConnections.forEach(function (c) {
       if (c.pendingRequest.length == 0) c.end();
     });
@@ -101,14 +101,9 @@ Server.prototype.startTcpServer = function (config) {
       error : e
     });
   });
-  var tcpInterval = setInterval(function () {
-    appNet.aliveConnections = appNet.aliveConnections
-      .filter(function (c) {return c!=null;})
-      .map(function (c, i) { c.connectionIndex = i; return c;});
-  }, 100000);
   this.tcpServer = {
     net : appNet,
-    tcpInterval : tcpInterval
+    //tcpInterval : tcpInterval
   };
   this.serverInfo.port = config.port;
 
@@ -125,6 +120,7 @@ Server.prototype.startTcpServer = function (config) {
     if (me.tcpServer) me.serverInfo.connections = me.tcpServer.net.aliveConnections.length;
     dbLib.publish('ServerInfo', me.serverInfo);
   }, 3000);
+  return appNet;
 };
 
 exports.Server = Server;

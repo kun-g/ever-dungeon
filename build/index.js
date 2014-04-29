@@ -48,7 +48,16 @@ var config = {
   type : 'Worker',
   handler: require("./commandHandlers").route,
   init : function () {
-    gServer.startTcpServer(config);
+    var appNet = gServer.startTcpServer(config);
+
+    var tcpInterval = setInterval(function () {
+      appNet.aliveConnections = appNet.aliveConnections
+        .filter(function (c) {return c!==null;})
+        .map(function (c, i) { c.connectionIndex = i; return c;});
+        dbLib.getGlobalPrize(function (err, prize) {
+          gGlobalPrize = JSON.parse(prize);
+        });
+    }, 100000);
     gServer.serverInfo.type = config.type;
     serverType = config.type;
     dbLib.subscribe('login', function (message) {
@@ -56,7 +65,7 @@ var config = {
         var info = JSON.parse(message);
         if (gPlayerDB[info.player] && gPlayerDB[info.player].runtimeID !== info.session) {
           gPlayerDB[info.player].logout(RET_LoginByAnotherDevice);
-          delete gPlayerDB[info.player]
+          delete gPlayerDB[info.player];
         }
       } catch (err) {
         logError({type: 'loginSubscribe', error:err});
@@ -214,6 +223,7 @@ if (config) {
     gServerName = gServerConfig.Name;
     dbPrefix = gServerName+dbSeparator;
     dbLib.initializeDB(gServerConfig.DB);
+    dbLib.getGlobalPrize(function (err, prize) { gGlobalPrize = JSON.parse(prize); });
     require('./helper').initLeaderboard(queryTable(TABLE_LEADBOARD));
     domain.run(config.init);
 
