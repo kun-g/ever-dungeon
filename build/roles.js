@@ -1018,11 +1018,6 @@ exports.data = [
             {
                 "id": 28,
                 "level": 1
-            },
-            {
-
-                "id": 37,
-                "level": 2
             }
         ],
         "soundSpawn": "gebulintou.mp3",
@@ -1319,11 +1314,6 @@ exports.data = [
             {
 
                 "id": 32,
-                "level": 2
-            },
-            {
-
-                "id": 37,
                 "level": 2
             }
         ],
@@ -6927,7 +6917,7 @@ exports.data = [
     {
         "classId": 185,
         "className": "清除我方所有buff",
-        "faction":"npcmh",
+        "faction":"npch",
         "classType": 2,
         "effectDeath": -1,
         "flipFlag":false,
@@ -6942,6 +6932,113 @@ exports.data = [
 
             }
         ]
+    },
+    {
+        "classId": 186,
+        "className": "游侠头领教程",
+        "faction":"monster",
+        "classType": 1,
+        "bossFlag":true,
+        "avatar": "enemy-archerboss.ccbi",
+        "property":
+        {
+            "health": 1200,
+            "attack": 1,
+            "critical": 6,
+            "strong": 105,
+            "accuracy": 60,
+            "reactivity": -10,
+            "speed": 0,
+            "counterAttack":false,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty":
+        {
+            "balance": 0.1,
+            "health": 1,
+            "attack": 0,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "skill": [
+            {
+                "id": 114,
+                "level": 1
+            },
+            {
+                "id": 117,
+                "level": 1
+            },
+            {
+                "id": 116,
+                "level": 1
+            },
+            {
+                "id": 55,
+                "level": 1
+            }
+        ],
+        "soundWound":"liulangwound.mp3",
+        "soundDie":   "liulangdie.mp3"
+    },
+    {
+        "classId": 187,
+        "className": "狂暴哥布林教程",
+        "faction":"monster",
+        "classType": 1,
+        "bossFlag":true,
+        "avatar": "enemy-goblinboss.ccbi",
+        "property":
+        {
+            "health": 700,
+            "attack": 1,
+            "critical": 60,
+            "strong": 2000,
+            "accuracy": 10,
+            "reactivity": -20,
+            "speed": 0,
+            "counterAttack": false,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty":
+        {
+            "balance": 0.1,
+            "health": 1,
+            "attack": 0,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "skill": [
+            {
+                "id": 55,
+                "level": 1
+            },
+            {
+                "id": 28,
+                "level": 1
+            },
+            {
+                "id": 118,
+                "level": 1
+            },
+            {
+                "id": 119,
+                "level": 1
+            },
+            {
+                "id": 121,
+                "level": 1
+            }
+        ],
+        "soundDie":   "gebulindie.mp3"
     }
 
 
