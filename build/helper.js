@@ -290,28 +290,25 @@
   exports.genUtil = genCampaignUtil;
 
   initCampaign = function(me, allCampaign, abIndex) {
-    var e, key, ret, util, _results;
+    var e, key, ret, util;
     ret = [];
     util = genCampaignUtil();
-    _results = [];
     for (key in allCampaign) {
       e = allCampaign[key];
       if (me.getType() === e.storeType) {
         if (key === 'event_daily') {
-          _results.push(ret = ret.concat(initDailyEvent(me, 'event_daily', e)));
+          ret = ret.concat(initDailyEvent(me, 'event_daily', e));
         } else {
           if (e.canReset(me, util)) {
             e.reset(me, util);
           }
           if (!e.canProceed(me, util)) {
             continue;
-          } else {
-            _results.push(void 0);
           }
         }
       }
     }
-    return _results;
+    return ret;
   };
 
   initDailyEvent = function(me, key, e) {
