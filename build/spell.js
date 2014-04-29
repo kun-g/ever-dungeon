@@ -950,6 +950,9 @@
             }
             break;
           case 'playEffect':
+            if (env == null) {
+              continue;
+            }
             effect = getProperty(a.effect, level.effect);
             pos = getProperty(a.pos, level.pos);
             if (pos != null) {
