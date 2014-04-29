@@ -936,7 +936,7 @@
     };
 
     Dungeon.prototype.nextLevel = function() {
-      var bossPool, cfg, elitePool, lvConfig, quest, soldierPool;
+      var badPool, bossPool, cfg, elitePool, goodPool, lvConfig, normalPool, quest, soldierPool;
       if (this.level != null) {
         this.killingInfo[this.currentLevel] = this.level.getMonsters().filter(function(m) {
           return (m != null ? m.health : void 0) <= 0;
@@ -964,6 +964,9 @@
         soldierPool = cfg.soldierPool != null ? cfg.soldierPool : null;
         elitePool = cfg.elitePool != null ? cfg.elitePool : null;
         bossPool = cfg.bossPool != null ? cfg.bossPool : null;
+        goodPool = cfg.goodPool != null ? cfg.goodPool : null;
+        badPool = cfg.badPool != null ? cfg.badPool : null;
+        normalPool = cfg.normalPool != null ? cfg.normalPool : null;
         this.level = new Level();
         this.level.rand = (function(_this) {
           return function(r) {
@@ -982,7 +985,14 @@
           enumerable: false
         });
         quest = this.quests != null ? this.quests : [];
-        return this.level.init(lvConfig, this.baseRank, this.getHeroes(), quest, soldierPool, elitePool, bossPool);
+        return this.level.init(lvConfig, this.baseRank, this.getHeroes(), quest, {
+          soldier: soldierPool,
+          elite: elitePool,
+          boss: bossPool,
+          good: goodPool,
+          bad: badPool,
+          normal: normalPool
+        });
       }
     };
 
@@ -1051,7 +1061,7 @@
       this.ref = HEROTAG;
     }
 
-    Level.prototype.init = function(lvConfig, baseRank, heroes, quests, soldierPool, elitePool, bossPool) {
+    Level.prototype.init = function(lvConfig, baseRank, heroes, quests, pool) {
       this.objects = this.objects.concat(heroes);
       this.rank = baseRank;
       if (lvConfig.rank != null) {
@@ -1059,11 +1069,7 @@
       }
       this.generateBlockLayout(lvConfig);
       this.setupEnterAndExit(lvConfig);
-      this.placeMapObjects(lvConfig, quests, {
-        soldier: soldierPool,
-        elite: elitePool,
-        boss: bossPool
-      });
+      this.placeMapObjects(lvConfig, quests, pool);
       return this.entrance;
     };
 
@@ -1332,11 +1338,15 @@
         if (l.soldier != null) {
           r.soldier += count;
         }
+        if (l.normal != null) {
+          r.normal += count;
+        }
         return r;
       }), {
         soldier: 0,
         elite: 0,
-        boss: 0
+        boss: 0,
+        normal: 0
       });
       that = this;
       fillupMonster = function(cfg) {

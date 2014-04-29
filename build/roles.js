@@ -6942,7 +6942,7 @@ exports.data = [
         "avatar": "enemy-archerboss.ccbi",
         "property":
         {
-            "health": 1200,
+            "health": 120,
             "attack": 1,
             "critical": 6,
             "strong": 105,
@@ -6994,7 +6994,7 @@ exports.data = [
         "avatar": "enemy-goblinboss.ccbi",
         "property":
         {
-            "health": 700,
+            "health": 88,
             "attack": 1,
             "critical": 60,
             "strong": 2000,
