@@ -175,7 +175,7 @@ exports.data = [
         "rank": 1,
         "levels" :[
             {    
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                          "id": 3,
                          "count":4
@@ -192,7 +192,7 @@ exports.data = [
                 ]
             },
             {    
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":3
@@ -209,7 +209,7 @@ exports.data = [
                 ]
             },
             {    
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":2
@@ -230,7 +230,7 @@ exports.data = [
                 ]
             },
             {    
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":2
@@ -250,7 +250,7 @@ exports.data = [
                 ]
             },
             {    
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":2
@@ -270,7 +270,7 @@ exports.data = [
                 ]
             },
             {     
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":2
@@ -366,7 +366,7 @@ exports.data = [
         ],
         "levels" :[
             {    
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":3
@@ -386,7 +386,7 @@ exports.data = [
                 ]
             },
             {     
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":3
@@ -406,7 +406,7 @@ exports.data = [
                 ]
             },
             {    
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":2
@@ -431,7 +431,7 @@ exports.data = [
                 ]
             },
             {    
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -455,7 +455,7 @@ exports.data = [
                 ]
             },
             {    
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -479,7 +479,7 @@ exports.data = [
                 ]
             },
             {    
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -580,7 +580,7 @@ exports.data = [
         "rank": 4,
         "levels" :[
             {    
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":3
@@ -606,7 +606,7 @@ exports.data = [
                 ]
             },
             {     
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -636,7 +636,7 @@ exports.data = [
                 ]
             },
             {    
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -671,7 +671,7 @@ exports.data = [
                 ]
             },
             {    
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -705,7 +705,7 @@ exports.data = [
                 ]
             },
             {     
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -735,7 +735,7 @@ exports.data = [
                 ]
             },
             {    
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -836,7 +836,7 @@ exports.data = [
         "rank": 5,
         "levels" :[
             {    
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":2
@@ -876,7 +876,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -912,7 +912,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -959,7 +959,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -991,7 +991,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -1027,7 +1027,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -1139,7 +1139,7 @@ exports.data = [
         "rank": 6,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -1155,7 +1155,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -1167,7 +1167,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -1188,7 +1188,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -1208,7 +1208,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -1228,7 +1228,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -1320,7 +1320,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -1340,7 +1340,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -1356,7 +1356,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -1387,7 +1387,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -1407,7 +1407,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -1427,7 +1427,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -1541,7 +1541,7 @@ exports.data = [
         "rank": 9,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -1561,7 +1561,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -1577,7 +1577,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -1602,7 +1602,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -1618,7 +1618,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -1638,7 +1638,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -1754,7 +1754,7 @@ exports.data = [
         "collectId":17001,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 15,
                         "count":2
@@ -1778,7 +1778,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 6,
                         "count":2
@@ -1808,7 +1808,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 15,
                         "count":2
@@ -1833,7 +1833,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 15,
                         "count":2
@@ -1857,7 +1857,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 15,
                         "count":2
@@ -1881,7 +1881,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 34,
                         "count":1,
@@ -2006,7 +2006,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 15,
                         "count":2
@@ -2030,7 +2030,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 6,
                         "count":2
@@ -2054,7 +2054,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 15,
                         "count":1
@@ -2075,7 +2075,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 15,
                         "count":2
@@ -2099,7 +2099,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 15,
                         "count":2
@@ -2119,7 +2119,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 32,
                         "count":2,
@@ -2241,7 +2241,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 15,
                         "count":1
@@ -2267,7 +2267,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 6,
                         "count":2
@@ -2297,7 +2297,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 15,
                         "count":1
@@ -2332,7 +2332,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 15,
                         "count":2
@@ -2361,7 +2361,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 15,
                         "count":2
@@ -2391,7 +2391,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 33,
                         "count":2,
@@ -2519,7 +2519,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 15,
                         "count":1
@@ -2539,7 +2539,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 37,
                         "count":2
@@ -2565,7 +2565,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 15,
                         "count":1
@@ -2600,7 +2600,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 15,
                         "count":2
@@ -2630,7 +2630,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 15,
                         "count":2
@@ -2652,7 +2652,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 55,
                         "count":1,
@@ -2787,7 +2787,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 37 ,
                         "count":2
@@ -2807,7 +2807,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 37,
                         "count":3
@@ -2827,7 +2827,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 52 ,
                         "count":1,
@@ -2848,7 +2848,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 35,
                         "count":2
@@ -2868,7 +2868,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 35,
                         "count":2
@@ -2888,7 +2888,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 55,
                         "count":1,
@@ -3019,7 +3019,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 37 ,
                         "count":3
@@ -3035,7 +3035,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 37 ,
                         "count":2
@@ -3055,7 +3055,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 53 ,
                         "count":1,
@@ -3086,7 +3086,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 35,
                         "count":2
@@ -3106,7 +3106,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 35,
                         "count":2
@@ -3126,7 +3126,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 53,
                         "count":1,
@@ -3255,7 +3255,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 37,
                         "count":3
@@ -3275,7 +3275,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 35,
                         "count":2
@@ -3299,7 +3299,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 35,
                         "count":2
@@ -3324,7 +3324,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 35,
                         "count":2
@@ -3348,7 +3348,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 35,
                         "count":2
@@ -3364,7 +3364,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 35,
                         "count":2
@@ -3494,7 +3494,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 35,
                         "count":2
@@ -3514,7 +3514,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 35,
                         "count":2
@@ -3534,7 +3534,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 35,
                         "count":2
@@ -3559,7 +3559,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 35,
                         "count":2
@@ -3583,7 +3583,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 35,
                         "count":2
@@ -3607,7 +3607,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 35,
                         "count":2
@@ -3717,7 +3717,7 @@ exports.data = [
         "collectId":34001,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 37,
                         "count":3
@@ -3737,7 +3737,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2
@@ -3767,7 +3767,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2
@@ -3792,7 +3792,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2
@@ -3822,7 +3822,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":1
@@ -3846,7 +3846,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2
@@ -3955,7 +3955,7 @@ exports.data = [
         "collectId":37001,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 37,
                         "count":2
@@ -3979,7 +3979,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2
@@ -4013,7 +4013,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2
@@ -4044,7 +4044,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":1
@@ -4072,7 +4072,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2
@@ -4100,7 +4100,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2
@@ -4232,7 +4232,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 10,
                         "count":2
@@ -4262,7 +4262,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2
@@ -4296,7 +4296,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2
@@ -4338,7 +4338,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2
@@ -4366,7 +4366,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":1
@@ -4406,7 +4406,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2
@@ -4534,7 +4534,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2
@@ -4558,7 +4558,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2
@@ -4582,7 +4582,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2
@@ -4611,7 +4611,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2
@@ -4635,7 +4635,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2
@@ -4655,7 +4655,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2
@@ -4772,7 +4772,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 10,
                         "count":2
@@ -4793,7 +4793,7 @@ exports.data = [
             },
 
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2
@@ -4813,7 +4813,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":1
@@ -4848,7 +4848,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":1
@@ -4872,7 +4872,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2
@@ -4892,7 +4892,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2
@@ -5009,7 +5009,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 10,
                         "count":2
@@ -5033,7 +5033,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":1
@@ -5057,7 +5057,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":1
@@ -5090,7 +5090,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":1
@@ -5118,7 +5118,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":1
@@ -5142,7 +5142,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2
@@ -5265,7 +5265,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 10,
                         "count":2
@@ -5289,7 +5289,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":4
@@ -5313,7 +5313,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":5
@@ -5342,7 +5342,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":5
@@ -5370,7 +5370,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":4
@@ -5394,7 +5394,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":5
@@ -5507,7 +5507,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 10,
                         "count":2
@@ -5531,7 +5531,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":4
@@ -5564,7 +5564,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":5
@@ -5593,7 +5593,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":5
@@ -5621,7 +5621,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":4
@@ -5649,7 +5649,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":5
@@ -5774,7 +5774,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 10,
                         "count":2
@@ -5804,7 +5804,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":4
@@ -5838,7 +5838,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":5
@@ -5873,7 +5873,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":5
@@ -5907,7 +5907,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":4
@@ -5953,7 +5953,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":5
@@ -6085,7 +6085,7 @@ exports.data = [
         "collectId":57001,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 40,
                         "count":1
@@ -6115,7 +6115,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":4
@@ -6149,7 +6149,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":5
@@ -6180,7 +6180,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":4
@@ -6214,7 +6214,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":4
@@ -6248,7 +6248,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":5
@@ -6376,7 +6376,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 40,
                         "count":1
@@ -6400,7 +6400,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":4
@@ -6434,7 +6434,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":5
@@ -6463,7 +6463,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":4
@@ -6487,7 +6487,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":4
@@ -6515,7 +6515,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":5
@@ -6642,7 +6642,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":4
@@ -6670,7 +6670,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":4
@@ -6690,7 +6690,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":5
@@ -6719,7 +6719,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":4
@@ -6743,7 +6743,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":5
@@ -6767,7 +6767,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":5
@@ -6893,7 +6893,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 40,
                         "count":1
@@ -6917,7 +6917,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":4
@@ -6941,7 +6941,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":5
@@ -6971,7 +6971,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":4
@@ -6991,7 +6991,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":5
@@ -7019,7 +7019,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":5
@@ -7137,7 +7137,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 39,
                         "count":3
@@ -7157,7 +7157,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 39,
                         "count":3
@@ -7173,7 +7173,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 39,
                         "count":2
@@ -7198,7 +7198,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 39,
                         "count":2
@@ -7218,7 +7218,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 39,
                         "count":2
@@ -7242,7 +7242,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 39,
                         "count":2
@@ -7362,7 +7362,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 39,
                         "count":3
@@ -7386,7 +7386,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 39,
                         "count":3
@@ -7410,7 +7410,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 39,
                         "count":1
@@ -7436,7 +7436,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 39,
                         "count":2
@@ -7460,7 +7460,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 39,
                         "count":2
@@ -7488,7 +7488,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 39,
                         "count":2
@@ -7614,7 +7614,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 39,
                         "count":2
@@ -7654,7 +7654,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 39,
                         "count":1
@@ -7684,7 +7684,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 39,
                         "count":1
@@ -7716,7 +7716,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":2
@@ -7746,7 +7746,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":2
@@ -7782,7 +7782,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":2
@@ -7921,7 +7921,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":2
@@ -7941,7 +7941,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":1
@@ -7965,7 +7965,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":1
@@ -7986,7 +7986,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":2
@@ -8006,7 +8006,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":2
@@ -8034,7 +8034,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":2
@@ -8163,7 +8163,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":2
@@ -8191,7 +8191,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":1
@@ -8215,7 +8215,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":1
@@ -8240,7 +8240,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":2
@@ -8264,7 +8264,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":2
@@ -8288,7 +8288,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":2
@@ -8423,7 +8423,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":1
@@ -8451,7 +8451,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":1
@@ -8479,7 +8479,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":1
@@ -8508,7 +8508,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":2
@@ -8532,7 +8532,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":2
@@ -8556,7 +8556,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":2
@@ -8685,7 +8685,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":2
@@ -8713,7 +8713,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":1
@@ -8733,7 +8733,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":1
@@ -8762,7 +8762,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":2
@@ -8782,7 +8782,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":2
@@ -8806,7 +8806,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":2
@@ -8943,7 +8943,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -8963,7 +8963,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -8983,7 +8983,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -9004,7 +9004,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 46 ,
                         "count":2
@@ -9024,7 +9024,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 46 ,
                         "count":2
@@ -9044,7 +9044,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -9068,7 +9068,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 46 ,
                         "count":2
@@ -9192,7 +9192,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -9216,7 +9216,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -9246,7 +9246,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 46 ,
                         "count":2
@@ -9271,7 +9271,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -9299,7 +9299,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -9323,7 +9323,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id":65 ,
                         "count":2,
@@ -9456,7 +9456,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -9480,7 +9480,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":2
@@ -9504,7 +9504,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -9533,7 +9533,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -9557,7 +9557,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -9587,7 +9587,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 46 ,
                         "count":2
@@ -9717,7 +9717,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 50,
                         "count":5
@@ -9741,7 +9741,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -9769,7 +9769,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -9802,7 +9802,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 50,
                         "count":4
@@ -9822,7 +9822,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 50,
                         "count":3
@@ -9846,7 +9846,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 46 ,
                         "count":2
@@ -9979,7 +9979,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -10013,7 +10013,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -10047,7 +10047,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -10086,7 +10086,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 50,
                         "count":5
@@ -10116,7 +10116,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -10150,7 +10150,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 81 ,
                         "count":2
@@ -10286,7 +10286,7 @@ exports.data = [
         "collectId":87001,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 50,
                         "count":5
@@ -10310,7 +10310,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -10338,7 +10338,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -10382,7 +10382,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -10415,7 +10415,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -10448,7 +10448,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 81 ,
                         "count":2
@@ -10570,7 +10570,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 50,
                         "count":5
@@ -10594,7 +10594,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -10622,7 +10622,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -10655,7 +10655,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1
@@ -10683,7 +10683,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":2
@@ -10711,7 +10711,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 65,
                         "count":2,
@@ -10831,7 +10831,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 50,
                         "count":5
@@ -10851,7 +10851,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 50,
                         "count":5
@@ -10877,7 +10877,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 50,
                         "count":4
@@ -10898,7 +10898,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 50,
                         "count":4
@@ -10932,7 +10932,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 50,
                         "count":4
@@ -10966,7 +10966,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 50,
                         "count":4
@@ -11112,7 +11112,7 @@ exports.data = [
         "collectId":95001,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -11142,7 +11142,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -11162,7 +11162,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -11197,7 +11197,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -11219,7 +11219,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -11249,7 +11249,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 94 ,
                         "count":2,
@@ -11383,7 +11383,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -11403,7 +11403,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -11433,7 +11433,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -11468,7 +11468,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -11496,7 +11496,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -11522,7 +11522,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 61 ,
                         "count":1,
@@ -11660,7 +11660,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -11688,7 +11688,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -11716,7 +11716,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -11745,7 +11745,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 73,
                         "count":2
@@ -11773,7 +11773,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -11797,7 +11797,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 119 ,
                         "count":1,
@@ -11952,7 +11952,7 @@ exports.data = [
         "collectId":101001,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -11980,7 +11980,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -12008,7 +12008,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -12037,7 +12037,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -12061,7 +12061,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -12089,7 +12089,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 119 ,
                         "count":1,
@@ -12228,7 +12228,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -12256,7 +12256,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -12280,7 +12280,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -12309,7 +12309,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -12334,7 +12334,7 @@ exports.data = [
             },
 
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -12362,7 +12362,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 61 ,
                         "count":1,
@@ -12507,7 +12507,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -12535,7 +12535,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -12563,7 +12563,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -12592,7 +12592,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 73,
                         "count":2
@@ -12620,7 +12620,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2
@@ -12644,7 +12644,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 124 ,
                         "count":1,
@@ -12786,7 +12786,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -12810,7 +12810,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -12838,7 +12838,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -12867,7 +12867,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -12895,7 +12895,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -12919,7 +12919,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 124 ,
                         "count":1,
@@ -13058,7 +13058,7 @@ exports.data = [
         "collectId":106001,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -13088,7 +13088,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -13116,7 +13116,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -13145,7 +13145,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -13173,7 +13173,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -13201,7 +13201,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 124 ,
                         "count":1,
@@ -13339,7 +13339,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -13363,7 +13363,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -13383,7 +13383,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -13418,7 +13418,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 101 ,
                         "count":3
@@ -13442,7 +13442,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -13466,7 +13466,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 121 ,
                         "count":1,
@@ -13604,7 +13604,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -13638,7 +13638,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -13666,7 +13666,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -13699,7 +13699,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -13727,7 +13727,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -13751,7 +13751,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 121 ,
                         "count":1,
@@ -13890,7 +13890,7 @@ exports.data = [
         "collectId":111001,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -13914,7 +13914,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -13938,7 +13938,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -13967,7 +13967,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -13995,7 +13995,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -14029,7 +14029,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 121 ,
                         "count":1,
@@ -14168,7 +14168,7 @@ exports.data = [
         "collectId":112001,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -14188,7 +14188,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -14208,7 +14208,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -14237,7 +14237,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -14253,7 +14253,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -14277,7 +14277,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 121 ,
                         "count":1,
@@ -14394,7 +14394,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -14418,7 +14418,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -14442,7 +14442,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -14471,7 +14471,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -14491,7 +14491,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -14515,7 +14515,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 130 ,
                         "count":1,
@@ -14653,7 +14653,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 78,
                         "count":3
@@ -14679,7 +14679,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 78,
                         "count":2
@@ -14705,7 +14705,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 78,
                         "count":2
@@ -14726,7 +14726,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 101 ,
                         "count":3
@@ -14750,7 +14750,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 78,
                         "count":2
@@ -14774,7 +14774,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 128 ,
                         "count":1,
@@ -14910,7 +14910,7 @@ exports.data = [
         "collectId":119001,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 78,
                         "count":3
@@ -14930,7 +14930,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 78,
                         "count":3
@@ -14950,7 +14950,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 78,
                         "count":2
@@ -14975,7 +14975,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 78,
                         "count":2
@@ -14999,7 +14999,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 78,
                         "count":2
@@ -15023,7 +15023,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 128 ,
                         "count":1,
@@ -15157,7 +15157,7 @@ exports.data = [
         "collectId":120001,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 78,
                         "count":2
@@ -15181,7 +15181,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 78,
                         "count":2
@@ -15205,7 +15205,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 78,
                         "count":2
@@ -15230,7 +15230,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 78,
                         "count":2
@@ -15254,7 +15254,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 78,
                         "count":2
@@ -15278,7 +15278,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 130 ,
                         "count":1,
@@ -15407,7 +15407,7 @@ exports.data = [
         "collectId":121001,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 78,
                         "count":2
@@ -15431,7 +15431,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 78,
                         "count":2
@@ -15455,7 +15455,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 78,
                         "count":2
@@ -15486,7 +15486,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 78,
                         "count":2
@@ -15510,7 +15510,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 78,
                         "count":2
@@ -15534,7 +15534,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 130 ,
                         "count":1,
@@ -15663,7 +15663,7 @@ exports.data = [
         "collectId":122001,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 78,
                         "count":2
@@ -15687,7 +15687,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 78,
                         "count":2
@@ -15711,7 +15711,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 78,
                         "count":2
@@ -15742,7 +15742,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 110,
                         "count":2
@@ -15766,7 +15766,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 110,
                         "count":2
@@ -15790,7 +15790,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 127,
                         "count":2,
@@ -15920,7 +15920,7 @@ exports.data = [
         "collectId":123001,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 110,
                         "count":3
@@ -15946,7 +15946,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 110,
                         "count":2
@@ -15972,7 +15972,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 110,
                         "count":2
@@ -16009,7 +16009,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 111 ,
                         "count":3
@@ -16039,7 +16039,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 110,
                         "count":2
@@ -16063,7 +16063,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 130,
                         "count":2,
@@ -16190,7 +16190,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 110,
                         "count":2
@@ -16210,7 +16210,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 110,
                         "count":2
@@ -16226,7 +16226,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 110,
                         "count":2
@@ -16247,7 +16247,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 110,
                         "count":2
@@ -16271,7 +16271,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 110,
                         "count":2
@@ -16295,7 +16295,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 93,
                         "count":1,
@@ -16489,7 +16489,7 @@ exports.data = [
         "levels" :[
             {
                 "soldierCount":7,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                     }
@@ -16500,7 +16500,7 @@ exports.data = [
             },
             {
                 "soldierCount":7  ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -16513,7 +16513,7 @@ exports.data = [
             {
                 "soldierCount":6 ,
                 "bossCount":1 ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -16761,7 +16761,7 @@ exports.data = [
         "levels" :[
             {
                 "soldierCount":7 ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -16769,7 +16769,7 @@ exports.data = [
             },
             {
                 "soldierCount":7 ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -16781,7 +16781,7 @@ exports.data = [
             {
                 "soldierCount":6,
                 "eliteCount": 1 ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -17027,7 +17027,7 @@ exports.data = [
         "levels" :[
             {
                 "soldierCount":7  ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -17035,7 +17035,7 @@ exports.data = [
             },
             {
                 "soldierCount":7  ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -17043,7 +17043,7 @@ exports.data = [
             },
             {
                 "soldierCount":7  ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -17052,7 +17052,7 @@ exports.data = [
             {
                 "soldierCount":6,
                 "eliteCount": 1 ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -17295,7 +17295,7 @@ exports.data = [
         "levels" :[
             {
                 "soldierCount":7,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -17303,7 +17303,7 @@ exports.data = [
             },
             {
                 "soldierCount":7,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -17311,7 +17311,7 @@ exports.data = [
             },
             {
                 "soldierCount":7   ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -17578,7 +17578,7 @@ exports.data = [
         "levels" :[
             {
                 "soldierCount":7  ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -17586,7 +17586,7 @@ exports.data = [
             },
             {
                 "soldierCount":7 ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -17598,7 +17598,7 @@ exports.data = [
             {
                 "soldierCount":6,
                 "eliteCount": 2  ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -17846,7 +17846,7 @@ exports.data = [
         "levels" :[
             {
                 "soldierCount":7    ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -17854,7 +17854,7 @@ exports.data = [
             },
             {
                 "soldierCount":7  ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -17862,7 +17862,7 @@ exports.data = [
             },
             {
                 "soldierCount":7 ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -17871,7 +17871,7 @@ exports.data = [
             {
                 "soldierCount":6,
                 "eliteCount": 1  ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -18126,7 +18126,7 @@ exports.data = [
             },
             {
                 "soldierCount":7  ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -18134,7 +18134,7 @@ exports.data = [
             },
             {
                 "soldierCount":7 ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -18143,7 +18143,7 @@ exports.data = [
             {
                 "soldierCount":6,
                 "eliteCount": 1  ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -18403,7 +18403,7 @@ exports.data = [
         "levels" :[
             {
                 "soldierCount":7 ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -18411,7 +18411,7 @@ exports.data = [
             },
             {
                 "soldierCount":7 ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -18419,7 +18419,7 @@ exports.data = [
             },
             {
                 "soldierCount":7    ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -18684,7 +18684,7 @@ exports.data = [
             },
             {
                 "soldierCount":7 ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -18692,7 +18692,7 @@ exports.data = [
             },
             {
                 "soldierCount":7 ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -18701,7 +18701,7 @@ exports.data = [
             {
                 "soldierCount":6,
                 "eliteCount": 1,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -18979,7 +18979,7 @@ exports.data = [
         "levels" :[
             {
                 "soldierCount":7,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -18987,7 +18987,7 @@ exports.data = [
             },
             {
                 "soldierCount":7 ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -18999,7 +18999,7 @@ exports.data = [
             {
                 "soldierCount":6,
                 "eliteCount": 1  ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -19195,7 +19195,7 @@ exports.data = [
             },
             {
                 "soldierCount":7 ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -19203,7 +19203,7 @@ exports.data = [
             },
             {
                 "soldierCount":7 ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -19216,7 +19216,7 @@ exports.data = [
             {
                 "soldierCount":6 ,
                 "bossCount":1 ,
-                 "normalCount":2,"objects" :[ {
+                 "normalCount":1,"objects" :[ {
                     "id": 149,
                     "count":2
                 }
@@ -19314,7 +19314,7 @@ exports.data = [
         ],
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 140 ,
                         "count":1
@@ -19327,7 +19327,7 @@ exports.data = [
                 "rank": 20
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 139 ,
                         "count":1
@@ -19340,7 +19340,7 @@ exports.data = [
                 "rank": 20
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 138 ,
                         "count":1
@@ -19353,7 +19353,7 @@ exports.data = [
                 "rank": 20
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 137 ,
                         "count":1
@@ -19365,7 +19365,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 136 ,
                         "count":1
@@ -19378,7 +19378,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 135 ,
                         "count":1
@@ -19470,7 +19470,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3,
@@ -19492,7 +19492,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3,
@@ -19510,7 +19510,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2,
@@ -19543,7 +19543,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3,
@@ -19565,7 +19565,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2,
@@ -19587,7 +19587,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2,
@@ -19669,7 +19669,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 37 ,
                         "count":3
@@ -19697,7 +19697,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 37 ,
                         "count":2
@@ -19729,7 +19729,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 53 ,
                         "count":1,
@@ -19772,7 +19772,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 35,
                         "count":2
@@ -19804,7 +19804,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 35,
                         "count":2
@@ -19836,7 +19836,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 53,
                         "count":1,
@@ -19932,7 +19932,7 @@ exports.data = [
 
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 10,
                         "count":2
@@ -19954,7 +19954,7 @@ exports.data = [
             },
 
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2 ,
@@ -19975,7 +19975,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":1,
@@ -20011,7 +20011,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":1,
@@ -20036,7 +20036,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2,
@@ -20063,7 +20063,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 17,
                         "count":2,
@@ -20161,7 +20161,7 @@ exports.data = [
 
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":4,
@@ -20190,7 +20190,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":4,
@@ -20211,7 +20211,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":5,
@@ -20241,7 +20241,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":4,
@@ -20266,7 +20266,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":5,
@@ -20291,7 +20291,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 18,
                         "count":5,
@@ -20388,7 +20388,7 @@ exports.data = [
 
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":1,
@@ -20417,7 +20417,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":1,
@@ -20446,7 +20446,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":1,
@@ -20476,7 +20476,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":2,
@@ -20501,7 +20501,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":2,
@@ -20526,7 +20526,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 42,
                         "count":2,
@@ -20626,7 +20626,7 @@ exports.data = [
 
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 50,
                         "count":5
@@ -20650,7 +20650,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1,
@@ -20679,7 +20679,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1,
@@ -20724,7 +20724,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1,
@@ -20758,7 +20758,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 48,
                         "count":1,
@@ -20792,7 +20792,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 81 ,
                         "count":2
@@ -20891,7 +20891,7 @@ exports.data = [
 
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2,
@@ -20920,7 +20920,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2,
@@ -20945,7 +20945,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2,
@@ -20975,7 +20975,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2,
@@ -21001,7 +21001,7 @@ exports.data = [
             },
 
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 68,
                         "count":2,
@@ -21030,7 +21030,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 61 ,
                         "count":1,
@@ -21128,7 +21128,7 @@ exports.data = [
 
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -21155,7 +21155,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -21176,7 +21176,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -21212,7 +21212,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -21229,7 +21229,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 75,
                         "count":2
@@ -21260,7 +21260,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 121 ,
                         "count":1,
@@ -21338,7 +21338,7 @@ exports.data = [
         "rank": 1,
     "levels" :[
         {
-             "normalCount":2,"objects" :[
+             "normalCount":1,"objects" :[
                 {
                     "id": 3,
                     "count":4
@@ -21355,7 +21355,7 @@ exports.data = [
             ]
         },
         {
-             "normalCount":2,"objects" :[
+             "normalCount":1,"objects" :[
                 {
                     "id": 3,
                     "count":3
@@ -21372,7 +21372,7 @@ exports.data = [
             ]
         },
         {
-             "normalCount":2,"objects" :[
+             "normalCount":1,"objects" :[
                 {
                     "id": 3,
                     "count":2
@@ -21393,7 +21393,7 @@ exports.data = [
             ]
         },
         {
-             "normalCount":2,"objects" :[
+             "normalCount":1,"objects" :[
                 {
                     "id": 3,
                     "count":2
@@ -21413,7 +21413,7 @@ exports.data = [
             ]
         },
         {
-             "normalCount":2,"objects" :[
+             "normalCount":1,"objects" :[
                 {
                     "id": 3,
                     "count":2
@@ -21433,7 +21433,7 @@ exports.data = [
             ]
         },
         {
-             "normalCount":2,"objects" :[
+             "normalCount":1,"objects" :[
                 {
                     "id": 3,
                     "count":2
@@ -21533,7 +21533,7 @@ exports.data = [
 
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":3
@@ -21553,7 +21553,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":3
@@ -21573,7 +21573,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":2
@@ -21598,7 +21598,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -21622,7 +21622,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -21646,7 +21646,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -21749,7 +21749,7 @@ exports.data = [
         "rank": 2,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":3
@@ -21775,7 +21775,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -21805,7 +21805,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -21840,7 +21840,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -21874,7 +21874,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -21904,7 +21904,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -22007,7 +22007,7 @@ exports.data = [
         "rank": 2,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":2
@@ -22047,7 +22047,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -22083,7 +22083,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -22130,7 +22130,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -22162,7 +22162,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -22198,7 +22198,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -22311,7 +22311,7 @@ exports.data = [
         "rank": 2,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -22327,7 +22327,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -22339,7 +22339,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -22360,7 +22360,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -22380,7 +22380,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -22400,7 +22400,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -22493,7 +22493,7 @@ exports.data = [
 
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -22513,7 +22513,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -22529,7 +22529,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -22560,7 +22560,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -22580,7 +22580,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -22600,7 +22600,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -22715,7 +22715,7 @@ exports.data = [
         "rank": 8,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -22735,7 +22735,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -22751,7 +22751,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -22776,7 +22776,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -22792,7 +22792,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -22812,7 +22812,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -22975,7 +22975,7 @@ exports.data = [
         "rank": 1,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":3
@@ -22992,7 +22992,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":2
@@ -23013,7 +23013,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":2
@@ -23098,7 +23098,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":3
@@ -23118,7 +23118,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":3
@@ -23138,7 +23138,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":2
@@ -23164,7 +23164,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -23188,7 +23188,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -23212,7 +23212,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -23294,7 +23294,7 @@ exports.data = [
         "rank": 2,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":3
@@ -23315,7 +23315,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -23340,7 +23340,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -23370,7 +23370,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -23399,7 +23399,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -23424,7 +23424,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -23506,7 +23506,7 @@ exports.data = [
         "rank": 3,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":2
@@ -23537,7 +23537,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -23563,7 +23563,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -23595,7 +23595,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -23617,7 +23617,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -23643,7 +23643,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 3,
                         "count":1
@@ -23728,7 +23728,7 @@ exports.data = [
         "rank": 3,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -23744,7 +23744,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -23756,7 +23756,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -23777,7 +23777,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -23797,7 +23797,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -23817,7 +23817,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -23903,7 +23903,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -23923,7 +23923,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -23939,7 +23939,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -23965,7 +23965,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -23985,7 +23985,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -24005,7 +24005,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -24103,7 +24103,7 @@ exports.data = [
         "rank": 9,
         "levels" :[
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -24123,7 +24123,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":3
@@ -24139,7 +24139,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -24164,7 +24164,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -24180,7 +24180,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -24200,7 +24200,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":2,"objects" :[
+                 "normalCount":1,"objects" :[
                     {
                         "id": 5,
                         "count":2
@@ -24288,7 +24288,7 @@ exports.data = [
     ],
         "levels" :[
             {
-                 "normalCount":2,"objects" : [
+                 "normalCount":1,"objects" : [
                     {
                         "id": 7,
                         "count":2
@@ -24309,7 +24309,7 @@ exports.data = [
                 "rank": 8
             },
             {
-                 "normalCount":2,"objects" : [
+                 "normalCount":1,"objects" : [
                     {
                         "id": 75,
                         "count":2
@@ -24334,7 +24334,7 @@ exports.data = [
                 "rank":8
             },
             {
-                 "normalCount":2,"objects" : [
+                 "normalCount":1,"objects" : [
                     {
                         "id": 75,
                         "count":2
@@ -24355,7 +24355,7 @@ exports.data = [
                 "exit": 29
             },
             {
-                 "normalCount":2,"objects" : [
+                 "normalCount":1,"objects" : [
                     {
                         "id": 73,
                         "count":2
@@ -24422,7 +24422,7 @@ exports.data = [
          
         "levels" :[
             {
-                 "normalCount":2,"objects" : [
+                 "normalCount":1,"objects" : [
                     {
                         "id": 7,
                         "count":2
@@ -24443,7 +24443,7 @@ exports.data = [
                 "rank": 10
             },
             {
-                 "normalCount":2,"objects" : [
+                 "normalCount":1,"objects" : [
                     {
                         "id": 75,
                         "count":2
@@ -24468,7 +24468,7 @@ exports.data = [
                 "rank": 10
             },
             {
-                 "normalCount":2,"objects" : [
+                 "normalCount":1,"objects" : [
                     {
                         "id": 7,
                         "count":2
@@ -24489,7 +24489,7 @@ exports.data = [
                 "exit": 29
             },
             {
-                 "normalCount":2,"objects" : [
+                 "normalCount":1,"objects" : [
                     {
                         "id": 157,
                         "count":1,
