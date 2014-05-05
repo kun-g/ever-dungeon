@@ -222,7 +222,6 @@
           claim: flag
         }
       ];
-      ret = ret.concat(helperLib.initCampaign(this, helperLib.events));
       return ret;
     };
 
