@@ -428,6 +428,19 @@
           if (quest != null) {
             delete me.quests[quest];
           }
+          evt = {
+            NTF: Event_UpdateDailyQuest,
+            arg: {
+              stp: me.event_daily.step,
+              prz: me.event_daily.reward
+            }
+          };
+          if (me.event_daily.quest[me.event_daily.step] != null) {
+            evt.arg.qst = me.event_daily.quest[me.event_daily.step];
+          }
+          if (me.event_daily.stepPrize[me.event_daily.step] != null) {
+            evt.arg.cpz = me.event_daily.stepPrize[me.event_daily.step];
+          }
           return ret;
         }
         break;
@@ -472,7 +485,7 @@
 
   actCampaign = function(me, key, config, handler) {
     var prize, quest, ret, stage, _ref;
-    ret = initCampaign(me, config);
+    initCampaign(me, config);
     if (me[key] == null) {
       return [false, 'NoData'];
     }
