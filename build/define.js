@@ -236,7 +236,11 @@ initGlobalConfig = function (path, callback) {
     if (index == null) {
       return cfg;
     } else {
-      return JSON.parse(JSON.stringify(cfg[index])); //TODO: hotfix
+      if (cfg[index]) {
+        return JSON.parse(JSON.stringify(cfg[index])); //TODO: hotfix
+      } else {
+        return null;
+      }
     }
   };
   var configTable = [{name:TABLE_LEADBOARD}, {name: TABLE_STORE, func:initShop},
