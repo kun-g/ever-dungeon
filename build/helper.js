@@ -472,7 +472,6 @@
 
   actCampaign = function(me, key, config, handler) {
     var prize, quest, ret, stage, _ref;
-    initCampaign(me, config);
     if (me[key] == null) {
       return [false, 'NoData'];
     }
