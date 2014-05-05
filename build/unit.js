@@ -71,6 +71,7 @@
 
     Unit.prototype.initWithConfig = function(roleConfig) {
       var k, s, v, xproperty, _i, _len, _ref, _ref1, _results;
+      this.roleID = roleConfig.classId;
       if (roleConfig == null) {
         return false;
       }
@@ -83,6 +84,7 @@
       if (roleConfig.property != null) {
         this.modifyProperty(roleConfig.property);
       }
+      this.faction = roleConfig.faction;
       if (flagCreation) {
         console.log('Property ', JSON.stringify(roleConfig.property));
       }
@@ -275,7 +277,6 @@
       if (cfg != null) {
         this.initWithConfig(cfg);
       }
-      this.faction = 'monster';
       if (flagCreation) {
         return console.log('Monster ', JSON.stringify(this));
       }
@@ -313,9 +314,8 @@
         cfg = queryTable(TABLE_ROLE, this.id);
       }
       if (cfg != null) {
-        this.initWithConfig(cfg);
+        return this.initWithConfig(cfg);
       }
-      return this.faction = 'npc';
     };
 
     return Npc;

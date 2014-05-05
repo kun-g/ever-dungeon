@@ -104,7 +104,6 @@
       }
       this.onDisconnect();
       dbLib.unsubscribe(PlayerChannelPrefix + this.name);
-      this.destroy();
       return this.destroied = true;
     };
 
@@ -166,7 +165,7 @@
     };
 
     Player.prototype.onLogin = function() {
-      var dis, flag, ret, s, _i, _len, _ref7;
+      var dis, flag, key, prize, ret, s, _i, _len, _ref7;
       if (!this.lastLogin) {
         return [];
       }
@@ -176,6 +175,16 @@
       this.lastLogin = currentTime();
       if (diffDate(this.creationDate) > 7) {
         this.tutorialStage = 1000;
+      }
+      if (gGlobalPrize) {
+        for (key in gGlobalPrize) {
+          prize = gGlobalPrize[key];
+          if (!(!this.globalPrizeFlag[key])) {
+            continue;
+          }
+          dbLib.deliverMessage(this.name, prize);
+          this.globalPrizeFlag[key] = true;
+        }
       }
       if (!moment().isSame(this.infiniteTimer, 'week')) {
         this.infiniteTimer = currentTime();
@@ -210,6 +219,7 @@
           claim: flag
         }
       ];
+      ret = ret.concat(helperLib.initCampaign(this, helperLib.events));
       return ret;
     };
 
