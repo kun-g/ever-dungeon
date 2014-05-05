@@ -428,6 +428,7 @@
           if (quest != null) {
             delete me.quests[quest];
           }
+          return ret.concat(initDailyEvent(me, key, e));
         }
         break;
       case 'Init':
@@ -453,11 +454,10 @@
               evt.arg.cpz = me.event_daily.stepPrize[me.event_daily.step];
             }
             ret.push(evt);
-            return ret;
           }
         }
     }
-    return ret.concat(initDailyEvent(me, key, e));
+    return ret;
   };
 
   exports.initCampaign = initCampaign;
