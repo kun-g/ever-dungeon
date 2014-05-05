@@ -3,7 +3,7 @@ require('nodetime').profile({
   accountKey: 'c82d52d81e9ed18e8550b58bf36f49d47e50a792', 
   appName: 'DR'
 });
-var agent = require('webkit-devtools-agent');
+//var agent = require('webkit-devtools-agent');
 require('./define');
 dbLib = require('./db');
 dbWrapper = require('./dbWrapper');
@@ -48,7 +48,16 @@ var config = {
   type : 'Worker',
   handler: require("./commandHandlers").route,
   init : function () {
-    gServer.startTcpServer(config);
+    var appNet = gServer.startTcpServer(config);
+
+    var tcpInterval = setInterval(function () {
+      appNet.aliveConnections = appNet.aliveConnections
+        .filter(function (c) {return c!==null;})
+        .map(function (c, i) { c.connectionIndex = i; return c;});
+        dbLib.getGlobalPrize(function (err, prize) {
+          gGlobalPrize = JSON.parse(prize);
+        });
+    }, 100000);
     gServer.serverInfo.type = config.type;
     serverType = config.type;
     dbLib.subscribe('login', function (message) {
@@ -56,7 +65,7 @@ var config = {
         var info = JSON.parse(message);
         if (gPlayerDB[info.player] && gPlayerDB[info.player].runtimeID !== info.session) {
           gPlayerDB[info.player].logout(RET_LoginByAnotherDevice);
-          delete gPlayerDB[info.player]
+          delete gPlayerDB[info.player];
         }
       } catch (err) {
         logError({type: 'loginSubscribe', error:err});
