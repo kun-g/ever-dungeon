@@ -42,6 +42,7 @@
         questTableVersion: -1,
         stageTableVersion: -1,
         event_daily: {},
+        globalPrizeFlag: {},
         inventory: Bag(InitialBagSize),
         gold: 0,
         diamond: 0,
@@ -183,7 +184,7 @@
             continue;
           }
           dbLib.deliverMessage(this.name, prize);
-          this.globalPrizeFlag[key] = true;
+          this.globalPrizeFlag.newProperty(key, true);
         }
       }
       if (!moment().isSame(this.infiniteTimer, 'week')) {
