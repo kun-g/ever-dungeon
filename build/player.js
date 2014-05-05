@@ -177,7 +177,7 @@
       if (diffDate(this.creationDate) > 7) {
         this.tutorialStage = 1000;
       }
-      if (gGlobalPrize) {
+      if (typeof gGlobalPrize !== "undefined" && gGlobalPrize !== null) {
         for (key in gGlobalPrize) {
           prize = gGlobalPrize[key];
           if (!(!this.globalPrizeFlag[key])) {
