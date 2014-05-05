@@ -1,5 +1,206 @@
 (function() {
-  var TriggerManager, bindVariable, branch, calculate, conditionCheck, doAction, doGetProperty, doLoop, getTypeof, getVar, parse;
+  var TriggerManager, bindVariable, branch, calculate, conditionCheck, doAction, doGetProperty, doLoop, filterObject, getTypeof, getVar, parse;
+
+  filterObject = function(me, objects, filters, env) {
+    var a, f, o, p, result, srcFaction, t, tmp, x, y, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2, _ref3;
+    if (!Array.isArray(filters)) {
+      filters = [filters];
+    }
+    result = (function() {
+      var _i, _len, _results;
+      _results = [];
+      for (_i = 0, _len = objects.length; _i < _len; _i++) {
+        o = objects[_i];
+        _results.push(o);
+      }
+      return _results;
+    })();
+    for (_i = 0, _len = filters.length; _i < _len; _i++) {
+      f = filters[_i];
+      srcFaction = (_ref = me.faction) != null ? _ref : f.faction;
+      switch (f.type) {
+        case 'alive':
+          result = (function() {
+            var _j, _len1, _results;
+            _results = [];
+            for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
+              p = result[_j];
+              if (p.health > 0) {
+                _results.push(p);
+              }
+            }
+            return _results;
+          })();
+          break;
+        case 'same-faction':
+          result = (function() {
+            var _j, _len1, _results;
+            _results = [];
+            for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
+              o = result[_j];
+              if (o.faction === srcFaction) {
+                _results.push(o);
+              }
+            }
+            return _results;
+          })();
+          break;
+        case 'different-faction':
+          result = (function() {
+            var _j, _len1, _results;
+            _results = [];
+            for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
+              o = result[_j];
+              if (o.faction !== srcFaction) {
+                _results.push(o);
+              }
+            }
+            return _results;
+          })();
+          break;
+        case 'target-faction-with-flag':
+          result = (function() {
+            var _j, _len1, _results;
+            _results = [];
+            for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
+              o = result[_j];
+              if (env.getFactionConfig(srcFaction, o.faction, f.flag)) {
+                _results.push(o);
+              }
+            }
+            return _results;
+          })();
+          break;
+        case 'source-faction-with-flag':
+          result = (function() {
+            var _j, _len1, _results;
+            _results = [];
+            for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
+              o = result[_j];
+              if (env.getFactionConfig(o.faction, srcFaction, f.flag)) {
+                _results.push(o);
+              }
+            }
+            return _results;
+          })();
+          break;
+        case 'target-faction-without-flag':
+          result = (function() {
+            var _j, _len1, _results;
+            _results = [];
+            for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
+              o = result[_j];
+              if (!env.getFactionConfig(srcFaction, o.faction, f.flag)) {
+                _results.push(o);
+              }
+            }
+            return _results;
+          })();
+          break;
+        case 'source-faction-without-flag':
+          result = (function() {
+            var _j, _len1, _results;
+            _results = [];
+            for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
+              o = result[_j];
+              if (!env.getFactionConfig(o.faction, srcFaction, f.flag)) {
+                _results.push(o);
+              }
+            }
+            return _results;
+          })();
+          break;
+        case 'role-id':
+          result = (function() {
+            var _j, _len1, _results;
+            _results = [];
+            for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
+              o = result[_j];
+              if (o.roleID === f.roleID) {
+                _results.push(o);
+              }
+            }
+            return _results;
+          })();
+          break;
+        case 'visible':
+          result = (function() {
+            var _j, _len1, _results;
+            _results = [];
+            for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
+              p = result[_j];
+              if (p.isVisible) {
+                _results.push(p);
+              }
+            }
+            return _results;
+          })();
+          break;
+        case 'not-me':
+          result = (function() {
+            var _j, _len1, _results;
+            _results = [];
+            for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
+              p = result[_j];
+              if (p.ref !== me.ref) {
+                _results.push(p);
+              }
+            }
+            return _results;
+          })();
+          break;
+        case 'same-block':
+          result = (function() {
+            var _j, _len1, _results;
+            _results = [];
+            for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
+              p = result[_j];
+              if (p.pos === me.pos) {
+                _results.push(p);
+              }
+            }
+            return _results;
+          })();
+          break;
+        case 'sort':
+          result.sort(function(a, b) {
+            if (f.reverse) {
+              return b[f.by] - a[f.by];
+            } else {
+              return a[f.by] - b[f.by];
+            }
+          });
+          break;
+        case 'count':
+          result = result.slice(0, f.count);
+          break;
+        case 'shuffle':
+          result = shuffle(result, env.rand());
+          break;
+        case 'anchor':
+          tmp = result;
+          result = [];
+          for (_j = 0, _len1 = tmp.length; _j < _len1; _j++) {
+            t = tmp[_j];
+            if (!t.isBlock) {
+              t = env.getBlock(t.pos);
+            }
+            x = t.pos % Dungeon_Width;
+            y = (t.pos - x) / Dungeon_Width;
+            _ref1 = f.anchor;
+            for (_k = 0, _len2 = _ref1.length; _k < _len2; _k++) {
+              a = _ref1[_k];
+              if ((0 <= (_ref2 = a.x + x) && _ref2 < Dungeon_Width) && (0 <= (_ref3 = a.y + y) && _ref3 < Dungeon_Height)) {
+                result.push(env.getBlock(a.x + x + (a.y + y) * Dungeon_Width));
+              }
+            }
+          }
+      }
+    }
+    return result;
+  };
+
+  exports.filterObject = filterObject;
 
   doGetProperty = function(obj, key) {
     var k, properties, _i, _len;

@@ -1,5 +1,4 @@
 //require('strong-agent').profile();
-//require('v8-profiler');
 require('nodetime').profile({
   accountKey: 'c82d52d81e9ed18e8550b58bf36f49d47e50a792', 
   appName: 'DR'
@@ -45,7 +44,7 @@ function initiateFluentLogger() {
 }
 
 var config = {
-  port: 7755, 
+  port: 7756, 
   type : 'Worker',
   handler: require("./commandHandlers").route,
   init : function () {
@@ -234,7 +233,7 @@ if (config) {
     rsaLib = require('ursa');
 
     paymentServer = require('http').createServer(wrapCallback(paymentHandler));
-    //paymentServer.listen(6499);
+    paymentServer.listen(6499);
   });
 } else {
   throw 'No config';

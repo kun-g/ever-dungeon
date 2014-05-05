@@ -234,11 +234,11 @@ initGlobalConfig = function (path, callback) {
     if (index == null) {
       return cfg;
     } else {
-      return cfg[index];
+      return JSON.parse(JSON.stringify(cfg[index])); //TODO: hotfix
     }
   };
   var configTable = [{name:TABLE_LEADBOARD}, {name: TABLE_STORE, func:initShop},
-    {name:TABLE_ROLE}, {name:TABLE_LEVEL}, {name:TABLE_VERSION},
+    {name:TABLE_ROLE}, {name:TABLE_LEVEL}, {name:TABLE_VERSION}, {name:TABLE_FACTION},
     {name:TABLE_ITEM}, {name:TABLE_CARD}, {name:TABLE_DUNGEON, func:varifyDungeonConfig},
     {name:TABLE_STAGE, func: initStageConfig}, {name:TABLE_QUEST},
     {name:TABLE_UPGRADE}, {name:TABLE_ENHANCE}, {name: TABLE_CONFIG}, {name: TABLE_VIP},
@@ -247,6 +247,7 @@ initGlobalConfig = function (path, callback) {
   if (!path) path = "./";
   configTable.forEach(function (e) {
     gConfigTable[e.name] = requires(path+e.name).data;
+    if (!gConfigTable[e.name]) throw Error("Table not found"+e.name);
     if (e.func) gConfigTable[e.name] = e.func(gConfigTable[e.name]);
     gConfigTable[e.name] = prepareForABtest(gConfigTable[e.name]);
   });
@@ -520,6 +521,33 @@ Event_UpdateStoreInfo = 10;
 Event_Fail = 11;
 Event_UpdateQuest = 19;
 
+destroyReactDB = function(obj) {
+  var k, v;
+  if (!obj) {
+    return false;
+  }
+  for (k in obj) {
+    v = obj[k];
+    if (!(typeof v === 'object')) {
+      continue;
+    }
+    destroyReactDB(v);
+    delete obj[k];
+  }
+  if (obj.destroyReactDB) {
+    obj.destroyReactDB();
+  }
+  if (obj.newProperty) {
+    obj.newProperty = null;
+  }
+  if (obj.push) {
+    obj.push = null;
+  }
+  return obj.destroyReactDB = null;
+};
+
+exports.destroyReactDB = destroyReactDB;
+
 tap = function(obj, key, callback, invokeFlag) {
   var theCB;
   if (invokeFlag == null) {
@@ -531,8 +559,23 @@ tap = function(obj, key, callback, invokeFlag) {
   if (obj.reactDB == null) {
     Object.defineProperty(obj, 'reactDB', {
       enumerable: false,
-      configurable: false,
+      configurable: true,
       value: {}
+    });
+    Object.defineProperty(obj, 'destroyReactDB', {
+      enumerable: false,
+      configurable: true,
+      value: function() {
+        var k, v, _ref;
+        _ref = obj.reactDB;
+        for (k in _ref) {
+          v = _ref[k];
+          v.value = null;
+          v.hooks = null;
+        }
+        obj.reactDB = null;
+        return obj = null;
+      }
     });
   }
   if (obj.reactDB[key] == null) {
@@ -541,10 +584,13 @@ tap = function(obj, key, callback, invokeFlag) {
       hooks: [callback]
     };
     theCB = function(val) {
-      var cb, _i, _len, _ref;
-      _ref = obj.reactDB[key].hooks;
-      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-        cb = _ref[_i];
+      var cb, _i, _len, _ref, _ref1, _ref2;
+      if (((_ref = obj.reactDB) != null ? (_ref1 = _ref[key]) != null ? _ref1.hooks : void 0 : void 0) == null) {
+        return null;
+      }
+      _ref2 = obj.reactDB[key].hooks;
+      for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
+        cb = _ref2[_i];
         if (cb != null) {
           cb(key, val);
         }
@@ -590,7 +636,7 @@ tapObject = function(obj, callback) {
   config = {
     value: tabNewProperty,
     enumerable: false,
-    configurable: false,
+    configurable: true,
     writable: false
   };
   if (obj.newProperty == null) {

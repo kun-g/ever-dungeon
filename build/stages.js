@@ -1498,9 +1498,9 @@ var data = [
             {
                 "stageId": 96,
                 "cost": 15,
-                "team": 3,
+                "team": 1,
                 "hidden":false,
-                "dungeon": 97,
+                "dungeon": 92,
                 "tutorial":2,
                 "cond":
                 { "and": [
@@ -1679,8 +1679,39 @@ var data = [
                 { "==": [ { "type": "getProperty", "key": "stage.98.state"}, 2 ] }
             ]
             }
+        },
+        {
+            "stageId": 107,
+            "cost": 0,
+            "team": 1,
+            "hidden":false,
+            "dungeon": 101,
+            "tutorial":8,
+            "teammate": [
+                {
+                    "class" : 131,
+                    "name" : "约书亚",
+                    "gender" : 1,
+                    "hairStyle" : 5,
+                    "hairColor" : 13,
+                    "xp" : 0
+                },
+                {
+                    "class" : 132,
+                    "name" : "凯瑟琳",
+                    "gender" : 0,
+                    "hairStyle" : 5,
+                    "hairColor" :3 ,
+                    "xp" : 0
+                }
+            ],
+            "cond":
+            { "and": [
+                { "==": [ { "type": "getProperty", "key": "stage.100.state"}, 2 ] }
+            ]
+            }
         }
-      ],
+        ]
     },
     {
       "chapterId": 15,
@@ -1688,30 +1719,12 @@ var data = [
       "label":"HuoDong",
       "stage":[
         {
-          stageId: 107,
-          cost: 15,
-          team: 3,
-          hidden: true,
-          dungeon: 101,
-          description: "Weapon1",
-          condition: function (obj, util) {
-            return ( obj.counters.weapon < 2 ) &&
-              ( util.today.weekday() === 2 ||
-                util.today.weekday() === 4 ||
-                util.today.weekday() === 5 ||
-                util.today.weekday() === 0 );
-          },
-          initialAction: function (obj) {
-            obj.counters.weapon++;
-          }
-        },
-        {
           stageId: 108,
           cost: 15,
           team: 3,
           hidden: true,
-          dungeon: 101,
-          description: "Weapon2",
+          dungeon: 102,
+          description: "Weapon1",
           condition: function (obj, util) {
             return ( obj.counters.weapon < 2 ) &&
               ( util.today.weekday() === 2 ||
@@ -1728,8 +1741,8 @@ var data = [
           cost: 15,
           team: 3,
           hidden: true,
-          dungeon: 101,
-          description: "Weapon3",
+          dungeon: 103,
+          description: "Weapon2",
           condition: function (obj, util) {
             return ( obj.counters.weapon < 2 ) &&
               ( util.today.weekday() === 2 ||
@@ -1746,17 +1759,17 @@ var data = [
           cost: 15,
           team: 3,
           hidden: true,
-          dungeon: 101,
-          description: "Enhance1",
+          dungeon: 104,
+          description: "Weapon3",
           condition: function (obj, util) {
-            return ( obj.counters.enhance < 2 ) &&
-              ( util.today.weekday() === 1 ||
-                util.today.weekday() === 3 ||
-                util.today.weekday() === 6 ||
+            return ( obj.counters.weapon < 2 ) &&
+              ( util.today.weekday() === 2 ||
+                util.today.weekday() === 4 ||
+                util.today.weekday() === 5 ||
                 util.today.weekday() === 0 );
           },
           initialAction: function (obj) {
-            obj.counters.enhance++;
+            obj.counters.weapon++;
           }
         },
         {
@@ -1764,8 +1777,8 @@ var data = [
           cost: 15,
           team: 3,
           hidden: true,
-          dungeon: 101,
-          description: "Enhance2",
+          dungeon: 105,
+          description: "Enhance1",
           condition: function (obj, util) {
             return ( obj.counters.enhance < 2 ) &&
               ( util.today.weekday() === 1 ||
@@ -1782,7 +1795,25 @@ var data = [
           cost: 15,
           team: 3,
           hidden: true,
-          dungeon: 101,
+          dungeon: 106,
+          description: "Enhance2",
+          condition: function (obj, util) {
+            return ( obj.counters.enhance < 2 ) &&
+              ( util.today.weekday() === 1 ||
+                util.today.weekday() === 3 ||
+                util.today.weekday() === 6 ||
+                util.today.weekday() === 0 );
+          },
+          initialAction: function (obj) {
+            obj.counters.enhance++;
+          }
+        },
+        {
+          stageId: 113,
+          cost: 15,
+          team: 3,
+          hidden: true,
+          dungeon: 107,
           description: "Enhance3",
           condition: function (obj, util) {
             return ( obj.counters.enhance < 2 ) &&

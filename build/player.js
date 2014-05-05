@@ -42,6 +42,7 @@
         questTableVersion: -1,
         stageTableVersion: -1,
         event_daily: {},
+        globalPrizeFlag: {},
         timestamp: {},
         counters: {},
         flags: {},
@@ -107,7 +108,6 @@
       }
       this.onDisconnect();
       dbLib.unsubscribe(PlayerChannelPrefix + this.name);
-      this.destroy();
       return this.destroied = true;
     };
 
@@ -179,14 +179,14 @@
       if (diffDate(this.creationDate) > 7) {
         this.tutorialStage = 1000;
       }
-      if (gGlobalPrize) {
+      if (typeof gGlobalPrize !== "undefined" && gGlobalPrize !== null) {
         for (key in gGlobalPrize) {
           prize = gGlobalPrize[key];
           if (!(!this.globalPrizeFlag[key])) {
             continue;
           }
           dbLib.deliverMessage(this.name, prize);
-          this.globalPrizeFlag[key] = true;
+          this.globalPrizeFlag.newProperty(key, true);
         }
       }
       if (!moment().isSame(this.infiniteTimer, 'week')) {
@@ -222,6 +222,7 @@
           claim: flag
         }
       ];
+      ret = ret.concat(helperLib.initCampaign(this, helperLib.events));
       return ret;
     };
 
