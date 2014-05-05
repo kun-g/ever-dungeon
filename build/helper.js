@@ -440,21 +440,21 @@
             me[key].status = 'Complete';
           } else if (!me.quests[quest]) {
             ret = ret.concat(me.acceptQuest(quest));
-            evt = {
-              NTF: Event_UpdateDailyQuest,
-              arg: {
-                stp: me.event_daily.step,
-                prz: me.event_daily.reward
-              }
-            };
-            if (me.event_daily.quest[me.event_daily.step] != null) {
-              evt.arg.qst = me.event_daily.quest[me.event_daily.step];
-            }
-            if (me.event_daily.stepPrize[me.event_daily.step] != null) {
-              evt.arg.cpz = me.event_daily.stepPrize[me.event_daily.step];
-            }
-            ret.push(evt);
           }
+          evt = {
+            NTF: Event_UpdateDailyQuest,
+            arg: {
+              stp: me.event_daily.step,
+              prz: me.event_daily.reward
+            }
+          };
+          if (me.event_daily.quest[me.event_daily.step] != null) {
+            evt.arg.qst = me.event_daily.quest[me.event_daily.step];
+          }
+          if (me.event_daily.stepPrize[me.event_daily.step] != null) {
+            evt.arg.cpz = me.event_daily.stepPrize[me.event_daily.step];
+          }
+          ret.push(evt);
         }
     }
     return ret;
