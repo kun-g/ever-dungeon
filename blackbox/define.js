@@ -215,8 +215,10 @@ varifyDungeonConfig = function (cfg) {
 };
 
 function initShop (data) {
-  for (var k in data) {
-    gShop.addProduct(k, data[k]);
+  if (gShop) {
+    for (var k in data) {
+      gShop.addProduct(k, data[k]);
+    }
   }
 }
 
