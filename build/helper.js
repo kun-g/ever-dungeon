@@ -472,6 +472,7 @@
 
   actCampaign = function(me, key, config, handler) {
     var prize, quest, ret, stage, _ref;
+    ret = initCampaign(me, config);
     if (me[key] == null) {
       return [false, 'NoData'];
     }
@@ -496,12 +497,12 @@
             prize = config[key].reward;
           }
         }
-        ret = me.claimPrize(prize);
+        ret = ret.concat(me.claimPrize(prize));
         me[key].status = 'Claimed';
         ret = ret.concat(initCampaign(me, config));
         break;
       case 'Done':
-        ret = [];
+        ret = [].concat(ret);
         break;
       default:
         throw Error('WrongCampainStatus' + me[key].status);
