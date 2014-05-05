@@ -433,7 +433,7 @@
         break;
       case 'Init':
         me[key].status = 'Ready';
-        break;
+        return ret.concat(initDailyEvent(me, key, e));
       case 'Ready':
         if (quest != null) {
           if (me.isQuestAchieved(quest)) {
