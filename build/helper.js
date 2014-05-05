@@ -510,12 +510,12 @@
             prize = config[key].reward;
           }
         }
-        ret = ret.concat(me.claimPrize(prize));
+        ret = me.claimPrize(prize);
         me[key].status = 'Claimed';
         ret = ret.concat(initCampaign(me, config));
         break;
       case 'Done':
-        ret = [].concat(ret);
+        ret = [];
         break;
       default:
         throw Error('WrongCampainStatus' + me[key].status);
