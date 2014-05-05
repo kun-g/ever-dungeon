@@ -21,6 +21,7 @@ cd server
 SubModuleServer=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
 gulp compile
 cp js/*.js $CurrentPWD/build
+cp src/*.js $CurrentPWD/build
 cp package.json $CurrentPWD/build
 cd ../data
 SubModuleData=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
