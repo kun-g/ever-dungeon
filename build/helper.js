@@ -441,6 +441,7 @@
           if (me.event_daily.stepPrize[me.event_daily.step] != null) {
             evt.arg.cpz = me.event_daily.stepPrize[me.event_daily.step];
           }
+          ret.push(evt);
           return ret;
         }
         break;
