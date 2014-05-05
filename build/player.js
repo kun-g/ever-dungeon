@@ -907,7 +907,7 @@
             case PRIZETYPE_ITEM:
               ret = this.aquireItem(p.value, p.count, allOrFail);
               if (!(ret && ret.length > 0)) {
-                return false;
+                return [];
               }
               break;
             case PRIZETYPE_GOLD:
