@@ -1,5 +1,5 @@
 (function() {
-  var actCampaign, conditionCheck, currentTime, destroyReactDB, diffDate, initCampaign, matchDate, moment, tap, tapObject, updateLockStatus;
+  var actCampaign, conditionCheck, currentTime, destroyReactDB, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, tap, tapObject, updateLockStatus;
 
   conditionCheck = require('./trigger').conditionCheck;
 
@@ -51,6 +51,9 @@
         configurable: true,
         value: function() {
           var k, v, _ref;
+          if (!(obj != null ? obj.reactDB : void 0)) {
+            return null;
+          }
           _ref = obj.reactDB;
           for (k in _ref) {
             v = _ref[k];
@@ -83,6 +86,10 @@
       };
       Object.defineProperty(obj, key, {
         get: function() {
+          var _ref;
+          if ((obj != null ? (_ref = obj.reactDB) != null ? _ref[key] : void 0 : void 0) == null) {
+            return null;
+          }
           return obj.reactDB[key].value;
         },
         set: theCB,
@@ -272,138 +279,169 @@
 
   exports.matchDate = matchDate;
 
+  genCampaignUtil = function() {
+    return {
+      sameDay: diffDate,
+      currentTime: currentTime,
+      today: moment()
+    };
+  };
+
+  exports.genUtil = genCampaignUtil;
+
   initCampaign = function(me, allCampaign, abIndex) {
-    var diamondCount, e, evt, goldCount, key, quest, ret;
+    var e, key, ret, util;
     ret = [];
+    util = genCampaignUtil();
     for (key in allCampaign) {
       e = allCampaign[key];
-      if (!(me.getType() === e.storeType)) {
-        continue;
-      }
-      if ((e.prev != null) && (me[e.prev] != null) && me[e.prev].status !== 'Done') {
-        return [];
-      }
-      if ((e.flag != null) && (me.flags[e.flag] == null)) {
-        return [];
-      }
-      if (me[key] == null) {
-        me[key] = {};
-        me.attrSave(key, true);
-      }
-      if (e.daily) {
-        if (!me[key].date || diffDate(me[key].date, currentTime()) !== 0) {
-          me[key].newProperty('status', 'Init');
-          me[key].newProperty('date', currentTime());
-          if (key === 'event_daily') {
-            me[key].newProperty('rank', me.battleForce / 24 - 3);
-            if (me[key].rank < 1) {
-              me[key].rank = 1;
-            }
-            me[key].newProperty('reward', [
-              {
-                type: PRIZETYPE_GOLD,
-                count: Math.floor(me[key].rank * 18)
-              }
-            ]);
+      if (me.getType() === e.storeType) {
+        if (key === 'event_daily') {
+          ret = ret.concat(initDailyEvent(me, 'event_daily', e));
+        } else {
+          if (e.canReset(me, util)) {
+            e.reset(me, util);
           }
+          ret.push({
+            NTF: Event_BountyUpdate,
+            arg: {
+              bid: e.id,
+              sta: e.actived,
+              cnt: e.count
+            }
+          });
         }
       }
-      if (e.quest && Array.isArray(e.quest) && me[key].status === 'Init') {
-        me[key].newProperty('quest', shuffle(e.quest, Math.random()).slice(0, e.steps));
-        me[key].newProperty('step', 0);
-        goldCount = Math.ceil(me[key].rank * 6);
-        diamondCount = Math.ceil(me[key].rank / 10);
-        goldCount = Math.floor(me[key].rank * 6);
-        me[key].newProperty('stepPrize', [
-          [
+    }
+    return ret;
+  };
+
+  initDailyEvent = function(me, key, e) {
+    var diamondCount, evt, goldCount, quest, ret;
+    ret = [];
+    if ((e.prev != null) && (me[e.prev] != null) && me[e.prev].status !== 'Done') {
+      return [];
+    }
+    if ((e.flag != null) && (me.flags[e.flag] == null)) {
+      return [];
+    }
+    if (me[key] == null) {
+      me[key] = {};
+      me.attrSave(key, true);
+    }
+    if (e.daily) {
+      if (!me[key].date || diffDate(me[key].date, currentTime()) !== 0) {
+        me[key].newProperty('status', 'Init');
+        me[key].newProperty('date', currentTime());
+        if (key === 'event_daily') {
+          me[key].newProperty('rank', me.battleForce / 24 - 3);
+          if (me[key].rank < 1) {
+            me[key].rank = 1;
+          }
+          me[key].newProperty('reward', [
             {
               type: PRIZETYPE_GOLD,
-              count: goldCount
-            }, {
-              type: PRIZETYPE_ITEM,
-              value: 0,
-              count: diamondCount
+              count: Math.floor(me[key].rank * 18)
             }
-          ], [
-            {
-              type: PRIZETYPE_GOLD,
-              count: goldCount
-            }, {
-              type: PRIZETYPE_ITEM,
-              value: 0,
-              count: diamondCount
-            }, {
-              type: PRIZETYPE_ITEM,
-              value: 534,
-              count: 5
-            }
-          ], [
-            {
-              type: PRIZETYPE_GOLD,
-              count: goldCount
-            }, {
-              type: PRIZETYPE_ITEM,
-              value: 0,
-              count: diamondCount
-            }, {
-              type: PRIZETYPE_ITEM,
-              value: 535,
-              count: 2
-            }
-          ], [
-            {
-              type: PRIZETYPE_GOLD,
-              count: goldCount
-            }, {
-              type: PRIZETYPE_ITEM,
-              value: 0,
-              count: diamondCount
-            }, {
-              type: PRIZETYPE_ITEM,
-              value: 536,
-              count: 1
-            }
-          ]
-        ]);
+          ]);
+        }
       }
-      quest = me[key].quest;
-      if (Array.isArray(quest)) {
-        quest = quest[me[key].step];
-      }
-      switch (me[key].status) {
-        case 'Claimed':
+    }
+    if (e.quest && Array.isArray(e.quest) && me[key].status === 'Init') {
+      me[key].newProperty('quest', shuffle(e.quest, Math.random()).slice(0, e.steps));
+      me[key].newProperty('step', 0);
+      goldCount = Math.ceil(me[key].rank * 6);
+      diamondCount = Math.ceil(me[key].rank / 10);
+      goldCount = Math.floor(me[key].rank * 6);
+      me[key].newProperty('stepPrize', [
+        [
+          {
+            type: PRIZETYPE_GOLD,
+            count: goldCount
+          }, {
+            type: PRIZETYPE_ITEM,
+            value: 0,
+            count: diamondCount
+          }
+        ], [
+          {
+            type: PRIZETYPE_GOLD,
+            count: goldCount
+          }, {
+            type: PRIZETYPE_ITEM,
+            value: 0,
+            count: diamondCount
+          }, {
+            type: PRIZETYPE_ITEM,
+            value: 534,
+            count: 5
+          }
+        ], [
+          {
+            type: PRIZETYPE_GOLD,
+            count: goldCount
+          }, {
+            type: PRIZETYPE_ITEM,
+            value: 0,
+            count: diamondCount
+          }, {
+            type: PRIZETYPE_ITEM,
+            value: 535,
+            count: 2
+          }
+        ], [
+          {
+            type: PRIZETYPE_GOLD,
+            count: goldCount
+          }, {
+            type: PRIZETYPE_ITEM,
+            value: 0,
+            count: diamondCount
+          }, {
+            type: PRIZETYPE_ITEM,
+            value: 536,
+            count: 1
+          }
+        ]
+      ]);
+    }
+    quest = me[key].quest;
+    if (Array.isArray(quest)) {
+      quest = quest[me[key].step];
+    }
+    switch (me[key].status) {
+      case 'Claimed':
+        if (quest != null) {
+          delete me.quests[quest];
+        }
+        me[key].step++;
+        if (me[key].step === e.steps) {
+          me[key].status = 'Complete';
+        } else if (me[key].step > e.steps) {
+          me[key].status = 'Done';
+        } else {
+          me[key].status = 'Ready';
+          quest = me[key].quest;
+          if (Array.isArray(quest)) {
+            quest = quest[me[key].step];
+          }
           if (quest != null) {
             delete me.quests[quest];
           }
-          me[key].step++;
-          if (me[key].step === e.steps) {
+          return ret;
+        }
+        break;
+      case 'Init':
+        me[key].status = 'Ready';
+        break;
+      case 'Ready':
+        if (quest != null) {
+          if (me.isQuestAchieved(quest)) {
             me[key].status = 'Complete';
-          } else if (me[key].step > e.steps) {
-            me[key].status = 'Done';
-          } else {
-            me[key].status = 'Ready';
-            quest = me[key].quest;
-            if (Array.isArray(quest)) {
-              quest = quest[me[key].step];
-            }
-            if (quest != null) {
-              delete me.quests[quest];
-            }
-            return ret.concat(initCampaign(me, allCampaign, abIndex));
+          } else if (!me.quests[quest]) {
+            ret = ret.concat(me.acceptQuest(quest));
           }
-          break;
-        case 'Init':
-          me[key].status = 'Ready';
-          break;
-        case 'Ready':
-          if (quest != null) {
-            if (me.isQuestAchieved(quest)) {
-              me[key].status = 'Complete';
-            } else if (!me.quests[quest]) {
-              ret = ret.concat(me.acceptQuest(quest));
-            }
-          }
-      }
+        }
     }
     evt = {
       NTF: Event_UpdateDailyQuest,
@@ -481,6 +519,9 @@
   exports.events = {
     "event_daily": {
       "flag": "daily",
+      "resetTime": {
+        hour: 8
+      },
       "storeType": "player",
       "daily": true,
       "reward": [
@@ -523,6 +564,47 @@
       ],
       "steps": 4,
       "quest": [128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151]
+    },
+    event_robbers: {
+      storeType: "player",
+      id: 0,
+      actived: 1,
+      count: 5,
+      canReset: function(obj, util) {
+        return !util.sameDay(obj.timestamp.robbers, util.today) && util.today.hour() >= 8;
+      },
+      reset: function(obj, util) {
+        obj.timestamp.robbers = util.currentTime();
+        return obj.counters.robbers = 0;
+      }
+    },
+    event_weapon: {
+      storeType: "player",
+      id: 1,
+      actived: 1,
+      count: 5,
+      canReset: function(obj, util) {
+        return !util.sameDay(obj.timestamp.weapon, util.today);
+      },
+      reset: function(obj, util) {
+        obj.timestamp.weapon = util.currentTime();
+        return obj.counters.weapon = 0;
+      },
+      stageID: 1024
+    },
+    event_enhance: {
+      id: 2,
+      storeType: "player",
+      actived: 1,
+      count: 5,
+      canReset: function(obj, util) {
+        return !util.sameDay(obj.timestamp.enhance, util.today);
+      },
+      reset: function(obj, util) {
+        obj.timestamp.enhance = util.currentTime();
+        return obj.counters.enhance = 0;
+      },
+      stageID: 1024
     }
   };
 

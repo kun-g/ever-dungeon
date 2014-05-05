@@ -1051,6 +1051,9 @@
             }
             break;
           case 'resetProperty':
+            if (!thisSpell) {
+              continue;
+            }
             _ref2 = thisSpell.modifications;
             for (property in _ref2) {
               val = _ref2[property];
