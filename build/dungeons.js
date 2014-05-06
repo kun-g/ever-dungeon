@@ -22989,6 +22989,10 @@ exports.data = [
                         "id": 149,
                         "count":2
                     },
+                {
+                    "id": 188,
+                    "count":2
+                },
                     {
                         "id": 4 ,
                         "count":4
@@ -23005,6 +23009,10 @@ exports.data = [
                         "id": 4 ,
                         "count":4
                     },
+                {
+                    "id": 188,
+                    "count":2
+                },
                     {
                         "id": 149,
                         "count":2
@@ -23026,6 +23034,10 @@ exports.data = [
                         "id": 4 ,
                         "count":2
                     },
+                {
+                    "id": 188,
+                    "count":2
+                },
                     {
                         "id": 149,
                         "count":1
@@ -23051,8 +23063,8 @@ exports.data = [
             }
 
         ],
-        "prize":
-            [
+        "dropInfo":
+            [   5
             ],
         "prizeWxp":100,
         "prizeGold": 400,

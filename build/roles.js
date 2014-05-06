@@ -7039,10 +7039,54 @@ exports.data = [
             }
         ],
         "soundDie":   "gebulindie.mp3"
+    },
+    {
+        "classId": 188,
+        "className": "哥布林土豪",
+        "faction":"monster",
+        "classType": 1,
+        "avatar": "enemy-thgoblin1.ccbi",
+        "property":
+        {
+            "health": 1,
+            "attack": 0.12,
+            "critical": 2,
+            "strong": 2,
+            "accuracy": 15,
+            "reactivity": -20,
+            "speed": 0,
+            "counterAttack": false,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty":
+        {
+            "balance": 0.1,
+            "health": 1,
+            "attack": 0,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "skill": [
+            {
+                "id": 122,
+                "level": 1
+            },
+            {
+                "id": 28,
+                "level": 1
+            }
+        ],
+        "soundSpawn": "gebulintou.mp3",
+        "soundWound":"gebulinwound.mp3",
+        "soundAttack": "shouren.mp3",
+        "soundDie":   "gebulindie.mp3",
+        "effectAttack": 9 ,
+        "dropInfo":[5]
     }
-
-
-
 ]
 
 

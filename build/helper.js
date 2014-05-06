@@ -435,29 +435,27 @@
         me[key].status = 'Ready';
         return ret.concat(initDailyEvent(me, key, e));
       case 'Ready':
-      case 'Complete':
-      case 'Done':
         if (quest != null) {
           if (me.isQuestAchieved(quest)) {
             me[key].status = 'Complete';
           } else if (!me.quests[quest]) {
             ret = ret.concat(me.acceptQuest(quest));
           }
-        }
-        evt = {
-          NTF: Event_UpdateDailyQuest,
-          arg: {
-            stp: me.event_daily.step,
-            prz: me.event_daily.reward
+          evt = {
+            NTF: Event_UpdateDailyQuest,
+            arg: {
+              stp: me.event_daily.step,
+              prz: me.event_daily.reward
+            }
+          };
+          if (me.event_daily.quest[me.event_daily.step] != null) {
+            evt.arg.qst = me.event_daily.quest[me.event_daily.step];
           }
-        };
-        if (me.event_daily.quest[me.event_daily.step] != null) {
-          evt.arg.qst = me.event_daily.quest[me.event_daily.step];
+          if (me.event_daily.stepPrize[me.event_daily.step] != null) {
+            evt.arg.cpz = me.event_daily.stepPrize[me.event_daily.step];
+          }
+          ret.push(evt);
         }
-        if (me.event_daily.stepPrize[me.event_daily.step] != null) {
-          evt.arg.cpz = me.event_daily.stepPrize[me.event_daily.step];
-        }
-        ret.push(evt);
     }
     return ret;
   };
@@ -608,6 +606,55 @@
       },
       stageID: 1024
     }
+  };
+
+  exports.splicePrize = function(prize) {
+    var goldPrize, otherPrize, wxPrize, xpPrize;
+    goldPrize = {
+      type: PRIZETYPE_GOLD,
+      count: 0
+    };
+    xpPrize = {
+      type: PRIZETYPE_EXP,
+      count: 0
+    };
+    wxPrize = {
+      type: PRIZETYPE_WXP,
+      count: 0
+    };
+    otherPrize = [];
+    prize.forEach(function(p) {
+      switch (p.type) {
+        case PRIZETYPE_WXP:
+          return wxPrize.count += p.count;
+        case PRIZETYPE_EXP:
+          return xpPrize.count += p.count;
+        case PRIZETYPE_GOLD:
+          return goldPrize.count += p.count;
+        default:
+          return otherPrize.push(p);
+      }
+    });
+    return {
+      goldPrize: goldPrize,
+      xpPrize: xpPrize,
+      wxPrize: wxPrize,
+      otherPrize: otherPrize
+    };
+  };
+
+  exports.generatePrize = function(cfg) {
+    var reward;
+    if (cfg == null) {
+      return [];
+    }
+    return reward = cfg.filter(function(p) {
+      return Math.random() < p.rate;
+    }).map(function(g) {
+      var e;
+      e = selectElementFromWeightArray(g.prize, Math.random());
+      return e;
+    });
   };
 
   updateLockStatus = function(curStatus, target, config) {

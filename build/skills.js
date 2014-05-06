@@ -2307,7 +2307,7 @@ exports.data = [
         "skillId": 98,
         "config": {
             "basic" : {
-                "buffEffect": 39
+                "buffEffect": 40
             },
            "triggerCondition": [
                    { "type": "event", "event": "onBePhysicalDamage" },
@@ -2767,6 +2767,24 @@ exports.data = [
             },
             "action":[
                 {"type":"installSpell", "spell": 120,"delay":{"base":0.3}}
+            ]
+        }
+    },
+    {
+        "skillId": 122,
+        "label":"土豪哥布林逃跑",
+        "config": {
+            "triggerCondition": [
+                {"type": "countDown", "cd": 10 },
+                {"type":"visible"},
+                {"type" :"event", "event":"onTurnEnd" }
+            ],
+            "targetSelection": {
+                "pool": "self",
+                "filter": [{"type":"alive"},{"type":"visible"}]
+            },
+            "action":[
+                {"type":"kill", "cod": 1}
             ]
         }
     }
