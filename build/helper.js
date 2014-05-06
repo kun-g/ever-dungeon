@@ -650,9 +650,9 @@
     if (cfg == null) {
       return [];
     }
-    return reward = dropInfo.map(function(p) {
-      return cfg[p];
-    }).filter(function(p) {
+    return reward = dropInfo.reduce((function(r, p) {
+      return r.concat(cfg[p]);
+    }), []).filter(function(p) {
       return p && Math.random() < p.rate;
     }).map(function(g) {
       var e;
