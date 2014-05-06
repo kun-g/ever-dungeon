@@ -2772,7 +2772,26 @@ exports.data = [
     },
     {
         "skillId": 122,
-        "label":"土豪哥布林逃跑",
+        "label":"土豪哥布林现身",
+        "desc":"我方全体持续掉血",
+        "config": {
+
+            "triggerCondition": [
+                {"type" :"event","event": "onShow"}
+            ],
+            "targetSelection": {
+                "pool": "self",
+                "filter": [{"type":"alive"},{"type":"visible"} ]
+            },
+            "action":[
+                {"type": "installSpell", "spell": 123}
+
+            ]
+        }
+    },
+    {
+        "skillId": 123,
+        "label":"土豪哥布林逃跑2",
         "config": {
             "triggerCondition": [
                 {"type" :"event", "event":"onTurnEnd","eventCount":10,"reset":true },
