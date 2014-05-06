@@ -645,13 +645,15 @@
     };
   };
 
-  exports.generatePrize = function(cfg) {
+  exports.generatePrize = function(cfg, dropInfo) {
     var reward;
     if (cfg == null) {
       return [];
     }
-    return reward = cfg.filter(function(p) {
-      return Math.random() < p.rate;
+    return reward = dropInfo.map(function(p) {
+      return cfg[p];
+    }).filter(function(p) {
+      return p && Math.random() < p.rate;
     }).map(function(g) {
       var e;
       e = selectElementFromWeightArray(g.prize, Math.random());
