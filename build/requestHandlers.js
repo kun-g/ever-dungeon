@@ -421,7 +421,7 @@
         status = 'OK';
         fileList = ["define", "serializer", "spell", "unit", "container", "item", "seed-random", "commandStream", "dungeon", "trigger"];
         doVerify = function() {
-          var dungeon, err, f, rewardMsg, _i, _len;
+          var dungeon, err, f, _i, _len;
           if (player.dungeon) {
             for (_i = 0, _len = fileList.length; _i < _len; _i++) {
               f = fileList[_i];
@@ -442,7 +442,7 @@
                 status = 'Replay Failed';
                 dungeon.reward = null;
               } finally {
-                rewardMsg = player.claimDungeonAward();
+                evt = evt.concat(player.claimDungeonAward());
                 player.releaseDungeon();
                 player.saveDB();
               }
