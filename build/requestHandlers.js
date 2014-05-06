@@ -440,9 +440,9 @@
               } catch (_error) {
                 err = _error;
                 status = 'Replay Failed';
-                dungeon.reward = null;
+                dungeon.result = DUNGEON_RESULT_FAIL;
               } finally {
-                evt = evt.concat(player.claimDungeonAward());
+                evt = evt.concat(player.claimDungeonAward(dungeon));
                 player.releaseDungeon();
                 player.saveDB();
               }
