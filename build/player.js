@@ -1752,7 +1752,7 @@
     };
 
     Player.prototype.generateDungeonAward = function(dungeon) {
-      var cfg, dropInfo, gr, iPrize, infiniteLevel, p, percentage, prize, result, wr, xr, _i, _len, _ref10, _ref7, _ref8, _ref9;
+      var cfg, dropInfo, gr, iPrize, infiniteLevel, items, p, percentage, prize, result, wr, xr, _i, _len, _ref10, _ref7, _ref8, _ref9;
       result = dungeon.result;
       cfg = dungeon.getConfig();
       if (result === DUNGEON_RESULT_DONE || (cfg == null)) {
@@ -1765,9 +1765,30 @@
         return r;
       }), []);
       percentage = 1;
-      if (result !== DUNGEON_RESULT_WIN) {
+      if (result === DUNGEON_RESULT_WIN) {
         dbLib.incrBluestarBy(this.name, 1);
-        dropInfo = dropInfo.concat(cfg.dropInfo);
+        if (cfg.prize) {
+          items = cfg.prize.filter(function(p) {
+            return Math.random() < p.rate;
+          }).map(function(g) {
+            var e;
+            e = selectElementFromWeightArray(g.items, Math.random());
+            if (e) {
+              return {
+                type: PRIZETYPE_ITEM,
+                value: e.item,
+                count: 1
+              };
+            } else {
+              return {
+                type: PRIZETYPE_ITEM,
+                value: g[0],
+                count: 1
+              };
+            }
+          });
+        }
+      } else {
         percentage = (dungeon.currentLevel / cfg.levelCount) * 0.5;
       }
       gr = ((_ref7 = cfg.goldRate) != null ? _ref7 : 1) * percentage;
