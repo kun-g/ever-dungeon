@@ -674,7 +674,7 @@
       }
       ret = [].concat(this.dungeon.doAction(action));
       if (this.dungeon.result != null) {
-        ret = ret.concat(this.claimDungeonAward());
+        ret = ret.concat(this.claimDungeonAward(this.dungeon));
       }
       return ret;
     };
@@ -1751,14 +1751,14 @@
       }
     };
 
-    Player.prototype.generateDungeonAward = function() {
+    Player.prototype.generateDungeonAward = function(dungeon) {
       var cfg, dropInfo, gr, iPrize, infiniteLevel, p, percentage, prize, result, wr, xr, _i, _len, _ref10, _ref7, _ref8, _ref9;
-      result = this.dungeon.result;
-      cfg = this.dungeon.getConfig();
+      result = dungeon.result;
+      cfg = dungeon.getConfig();
       if (result === DUNGEON_RESULT_DONE || (cfg == null)) {
         return [];
       }
-      dropInfo = this.dungeon.killingInfo.reduce((function(r, e) {
+      dropInfo = dungeon.killingInfo.reduce((function(r, e) {
         if (e && e.dropInfo) {
           return r.concate(e.dropInfo);
         }
@@ -1768,7 +1768,7 @@
       if (result === DUNGEON_RESULT_WIN) {
         dbLib.incrBluestarBy(this.name, 1);
         dropInfo = dropInfo.concat(cfg.dropInfo);
-        percentage = (this.dungeon.currentLevel / cfg.levelCount) * 0.5;
+        percentage = (dungeon.currentLevel / cfg.levelCount) * 0.5;
       }
       gr = ((_ref7 = cfg.goldRate) != null ? _ref7 : 1) * percentage;
       xr = ((_ref8 = cfg.xpRate) != null ? _ref8 : 1) * percentage;
@@ -1792,7 +1792,7 @@
           count: Math.floor(wr * cfg.prizeWxp)
         });
       }
-      infiniteLevel = this.dungeon.infiniteLevel;
+      infiniteLevel = dungeon.infiniteLevel;
       if ((infiniteLevel != null) && cfg.infinityPrize && result === DUNGEON_RESULT_WIN) {
         _ref10 = cfg.infinityPrize;
         for (_i = 0, _len = _ref10.length; _i < _len; _i++) {
@@ -1820,14 +1820,14 @@
       return prize;
     };
 
-    Player.prototype.claimDungeonAward = function() {
+    Player.prototype.claimDungeonAward = function(dungeon) {
       var goldPrize, k, objective, offlineReward, otherPrize, prize, qid, qst, quest, quests, result, ret, rewardMessage, teammateRewardMessage, wxPrize, xpPrize, _ref7, _ref8;
-      if (this.dungeon == null) {
+      if (dungeon == null) {
         return [];
       }
       ret = [];
-      if (this.dungeon.revive > 0) {
-        ret = this.inventory.removeById(ItemId_RevivePotion, this.dungeon.revive, true);
+      if (dungeon.revive > 0) {
+        ret = this.inventory.removeById(ItemId_RevivePotion, dungeon.revive, true);
         if (!ret || ret.length === 0) {
           return {
             NTF: Event_DungeonReward,
@@ -1842,7 +1842,7 @@
           version: this.inventoryVersion
         });
       }
-      quests = this.dungeon.quests;
+      quests = dungeon.quests;
       if (quests) {
         for (qid in quests) {
           qst = quests[qid];
@@ -1859,20 +1859,20 @@
           }
         }
       }
-      prize = this.generateDungeonAward();
+      prize = this.generateDungeonAward(dungeon);
       _ref8 = helperLib.splicePrize(prize), goldPrize = _ref8.goldPrize, xpPrize = _ref8.xpPrize, wxPrize = _ref8.wxPrize, otherPrize = _ref8.otherPrize;
       rewardMessage = {
         NTF: Event_DungeonReward,
         arg: {
-          res: this.dungeon.result
+          res: dungeon.result
         }
       };
       if (prize.length > 0) {
         rewardMessage.arg.prize = prize;
       }
       ret = ret.concat([rewardMessage]);
-      if (this.dungeon.result !== DUNGEON_RESULT_FAIL) {
-        ret = ret.concat(this.completeStage(this.dungeon.stage));
+      if (dungeon.result !== DUNGEON_RESULT_FAIL) {
+        ret = ret.concat(this.completeStage(dungeon.stage));
       }
       ret = ret.concat(this.claimPrize(prize, false));
       offlineReward = [
@@ -1895,14 +1895,14 @@
           src: MESSAGE_REWARD_TYPE_OFFLINE,
           prize: offlineReward
         };
-        this.dungeon.team.forEach(function(name) {
+        dungeon.team.forEach(function(name) {
           if (name) {
             return dbLib.deliverMessage(name, teammateRewardMessage);
           }
         });
       }
       result = 'Lost';
-      if (this.dungeon.result === DUNGEON_RESULT_WIN) {
+      if (dungeon.result === DUNGEON_RESULT_WIN) {
         result = 'Win';
       }
       otherPrize.push(goldPrize);
@@ -1912,7 +1912,7 @@
         return !((e.count != null) && e.count === 0);
       });
       this.log('finishDungeon', {
-        stage: this.dungeon.getInitialData().stage,
+        stage: dungeon.getInitialData().stage,
         result: result,
         reward: prize
       });

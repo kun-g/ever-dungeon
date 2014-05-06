@@ -2775,7 +2775,7 @@ exports.data = [
         "label":"土豪哥布林逃跑",
         "config": {
             "triggerCondition": [
-                {"type": "countDown", "cd": 10 },
+                {"type" :"event", "event":"onTurnEnd","eventCount":10,"reset":true },
                 {"type":"visible"},
                 {"type" :"event", "event":"onTurnEnd" }
             ],
