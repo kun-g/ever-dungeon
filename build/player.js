@@ -1760,7 +1760,7 @@
       }
       dropInfo = dungeon.killingInfo.reduce((function(r, e) {
         if (e && e.dropInfo) {
-          return r.concate(e.dropInfo);
+          return r.concat(e.dropInfo);
         }
         return r;
       }), []);
