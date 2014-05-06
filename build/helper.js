@@ -435,6 +435,7 @@
         me[key].status = 'Ready';
         return ret.concat(initDailyEvent(me, key, e));
       case 'Ready':
+      case 'Complete':
         if (quest != null) {
           if (me.isQuestAchieved(quest)) {
             me[key].status = 'Complete';
