@@ -1765,7 +1765,7 @@
         return r;
       }), []);
       percentage = 1;
-      if (result === DUNGEON_RESULT_WIN) {
+      if (result !== DUNGEON_RESULT_WIN) {
         dbLib.incrBluestarBy(this.name, 1);
         dropInfo = dropInfo.concat(cfg.dropInfo);
         percentage = (dungeon.currentLevel / cfg.levelCount) * 0.5;

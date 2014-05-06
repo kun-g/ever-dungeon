@@ -859,15 +859,6 @@
 
     Dungeon.prototype.nextLevel = function() {
       var badPool, bossPool, cfg, elitePool, goodPool, lvConfig, normalPool, quest, soldierPool;
-      if (this.level != null) {
-        this.killingInfo[this.currentLevel] = this.level.getMonsters().filter(function(m) {
-          return (m != null ? m.health : void 0) <= 0 && ((m != null ? m.cod : void 0) == null);
-        }).map(function(m) {
-          return {
-            dropInfo: e.dropInfo
-          };
-        });
-      }
       this.currentLevel++;
       cfg = this.getConfig();
       if (this.currentLevel < cfg.levelCount) {
@@ -878,7 +869,7 @@
         goodPool = cfg.goodPool != null ? cfg.goodPool : null;
         badPool = cfg.badPool != null ? cfg.badPool : null;
         normalPool = cfg.normalPool != null ? cfg.normalPool : null;
-        this.level = new Level();
+        this.level = new Level(this.killingInfo);
         this.level.rand = (function(_this) {
           return function(r) {
             return _this.rand(r);
@@ -967,9 +958,10 @@
   })(Wizard);
 
   Level = (function() {
-    function Level() {
+    function Level(killingInfo) {
       this.objects = [];
       this.ref = HEROTAG;
+      this.killingInfo = killingInfo;
     }
 
     Level.prototype.init = function(lvConfig, baseRank, heroes, quests, pool) {
@@ -3081,8 +3073,10 @@
         if (env.getBlock(src.pos) && src.health <= 0) {
           env.getBlock(src.pos).removeRef(src);
         }
-        if (env.variable('tar').health <= 0) {
-          env.variable('tar').cod = env.variable('cod');
+        if (env.variable('tar').health <= 0 && (env.variable('cod') == null) && env.variable('tar').dropInfo) {
+          env.dungeon.killingInfo.push({
+            dropInfo: env.variable('tar').dropInfo
+          });
         }
         if (src.isVisible) {
           return this.routine({

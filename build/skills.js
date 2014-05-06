@@ -2773,7 +2773,7 @@ exports.data = [
     {
         "skillId": 122,
         "label":"土豪哥布林现身",
-        "desc":"我方全体持续掉血",
+        "desc":"onshow",
         "config": {
 
             "triggerCondition": [
@@ -2803,6 +2803,8 @@ exports.data = [
                 "filter": [{"type":"alive"},{"type":"visible"}]
             },
             "action":[
+                {"type":"playEffect","effect":4,"pos":"self"},
+                {"type":"delay"} ,
                 {"type":"kill", "cod": 1}
             ]
         }
