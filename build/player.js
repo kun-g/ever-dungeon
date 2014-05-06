@@ -1867,9 +1867,6 @@
           res: dungeon.result
         }
       };
-      if (prize.length > 0) {
-        rewardMessage.arg.prize = prize;
-      }
       ret = ret.concat([rewardMessage]);
       if (dungeon.result !== DUNGEON_RESULT_FAIL) {
         ret = ret.concat(this.completeStage(dungeon.stage));
@@ -1911,6 +1908,9 @@
       prize = otherPrize.filter(function(e) {
         return !((e.count != null) && e.count === 0);
       });
+      if (prize.length > 0) {
+        rewardMessage.arg.prize = prize;
+      }
       this.log('finishDungeon', {
         stage: dungeon.getInitialData().stage,
         result: result,
