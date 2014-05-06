@@ -1751,7 +1751,7 @@
       }
     };
 
-    Player.prototype.generateDungeonAward = function(reward) {
+    Player.prototype.generateDungeonAward = function() {
       var cfg, dropInfo, gr, iPrize, infiniteLevel, p, percentage, prize, result, wr, xr, _i, _len, _ref10, _ref7, _ref8, _ref9;
       result = this.dungeon.result;
       cfg = this.dungeon.getConfig();
@@ -1793,7 +1793,7 @@
         });
       }
       infiniteLevel = this.dungeon.infiniteLevel;
-      if ((infiniteLevel != null) && cfg.infinityPrize && reward.result === DUNGEON_RESULT_WIN) {
+      if ((infiniteLevel != null) && cfg.infinityPrize && result === DUNGEON_RESULT_WIN) {
         _ref10 = cfg.infinityPrize;
         for (_i = 0, _len = _ref10.length; _i < _len; _i++) {
           p = _ref10[_i];
