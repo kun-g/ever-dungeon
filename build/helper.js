@@ -290,7 +290,7 @@
   exports.genUtil = genCampaignUtil;
 
   initCampaign = function(me, allCampaign, abIndex) {
-    var e, key, ret, util;
+    var count, e, key, ret, util, _ref;
     ret = [];
     util = genCampaignUtil();
     for (key in allCampaign) {
@@ -302,12 +302,13 @@
           if (e.canReset(me, util)) {
             e.reset(me, util);
           }
+          count = (_ref = me.counters[key]) != null ? _ref : 0;
           ret.push({
             NTF: Event_BountyUpdate,
             arg: {
               bid: e.id,
               sta: e.actived,
-              cnt: e.count
+              cnt: e.count - count
             }
           });
         }
@@ -571,42 +572,14 @@
       storeType: "player",
       id: 0,
       actived: 1,
-      count: 5,
+      count: 3,
       canReset: function(obj, util) {
-        return !util.sameDay(obj.timestamp.robbers, util.today) && util.today.hour() >= 8;
+        return !util.sameDay(obj.timestamp.goblin, util.today) && util.today.hour() >= 8;
       },
       reset: function(obj, util) {
-        obj.timestamp.robbers = util.currentTime();
-        return obj.counters.robbers = 0;
+        obj.timestamp.goblin = util.currentTime();
+        return obj.counters.newProperty('goblin', 0);
       }
-    },
-    event_weapon: {
-      storeType: "player",
-      id: 1,
-      actived: 1,
-      count: 5,
-      canReset: function(obj, util) {
-        return !util.sameDay(obj.timestamp.weapon, util.today);
-      },
-      reset: function(obj, util) {
-        obj.timestamp.weapon = util.currentTime();
-        return obj.counters.weapon = 0;
-      },
-      stageID: 1024
-    },
-    event_enhance: {
-      id: 2,
-      storeType: "player",
-      actived: 1,
-      count: 5,
-      canReset: function(obj, util) {
-        return !util.sameDay(obj.timestamp.enhance, util.today);
-      },
-      reset: function(obj, util) {
-        obj.timestamp.enhance = util.currentTime();
-        return obj.counters.enhance = 0;
-      },
-      stageID: 1024
     }
   };
 
