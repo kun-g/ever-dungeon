@@ -1834,10 +1834,14 @@ var data = [
             dungeon: 102,
             description: "Goblin1",
             condition: function (obj, util) {
-              return obj.counters.goblin < 3;
+              return obj.counters.goblin < 3 || !obj.counters.goblin;
             },
             initialAction: function (obj) {
-              obj.counters.goblin++;
+              if (obj.counters.goblin) {
+                obj.counters.goblin++;
+              } else {
+                obj.counters.newProperty('goblin', 1);
+              }
             }
         },
         {
@@ -1848,10 +1852,14 @@ var data = [
             dungeon: 103,
             description: "Goblin2",
             condition: function (obj, util) {
-              return obj.counters.goblin < 3;
+              return obj.counters.goblin < 3 || !obj.counters.goblin;
             },
             initialAction: function (obj) {
-              obj.counters.goblin++;
+              if (obj.counters.goblin) {
+                obj.counters.goblin++;
+              } else {
+                obj.counters.newProperty('goblin', 1);
+              }
             }
         },
         {
@@ -1862,10 +1870,14 @@ var data = [
             dungeon: 104,
             description: "Goblin3",
             condition: function (obj, util) {
-              return obj.counters.goblin < 3;
+              return obj.counters.goblin < 3 || !obj.counters.goblin;
             },
             initialAction: function (obj) {
-              obj.counters.goblin++;
+              if (obj.counters.goblin) {
+                obj.counters.goblin++;
+              } else {
+                obj.counters.newProperty('goblin', 1);
+              }
             }
         }
       ]
