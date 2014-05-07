@@ -281,7 +281,7 @@
 
   genCampaignUtil = function() {
     return {
-      sameDay: diffDate,
+      diffDay: diffDate,
       currentTime: currentTime,
       today: moment()
     };
@@ -574,7 +574,7 @@
       actived: 1,
       count: 3,
       canReset: function(obj, util) {
-        return !util.sameDay(obj.timestamp.goblin, util.today) && util.today.hour() >= 8;
+        return !util.diffDay(obj.timestamp.goblin, util.today) && util.today.hour() >= 8;
       },
       reset: function(obj, util) {
         obj.timestamp.newProperty('goblin', util.currentTime());

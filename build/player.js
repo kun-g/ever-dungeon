@@ -807,7 +807,7 @@
           if (stageConfig.initialAction) {
             stageConfig.initialAction(_this, genUtil);
           }
-          if (stageConfig.eventID) {
+          if (stageConfig.eventName) {
             msg = _this.syncEvent();
           }
           _this.loadDungeon();
