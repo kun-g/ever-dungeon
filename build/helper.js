@@ -610,57 +610,6 @@
     }
   };
 
-  exports.splicePrize = function(prize) {
-    var goldPrize, otherPrize, wxPrize, xpPrize;
-    goldPrize = {
-      type: PRIZETYPE_GOLD,
-      count: 0
-    };
-    xpPrize = {
-      type: PRIZETYPE_EXP,
-      count: 0
-    };
-    wxPrize = {
-      type: PRIZETYPE_WXP,
-      count: 0
-    };
-    otherPrize = [];
-    prize.forEach(function(p) {
-      switch (p.type) {
-        case PRIZETYPE_WXP:
-          return wxPrize.count += p.count;
-        case PRIZETYPE_EXP:
-          return xpPrize.count += p.count;
-        case PRIZETYPE_GOLD:
-          return goldPrize.count += p.count;
-        default:
-          return otherPrize.push(p);
-      }
-    });
-    return {
-      goldPrize: goldPrize,
-      xpPrize: xpPrize,
-      wxPrize: wxPrize,
-      otherPrize: otherPrize
-    };
-  };
-
-  exports.generatePrize = function(cfg, dropInfo) {
-    var reward;
-    if (cfg == null) {
-      return [];
-    }
-    return reward = dropInfo.reduce((function(r, p) {
-      return r.concat(cfg[p]);
-    }), []).filter(function(p) {
-      return p && Math.random() < p.rate;
-    }).map(function(g) {
-      var e;
-      e = selectElementFromWeightArray(g.prize, Math.random());
-      return e;
-    });
-  };
-
   updateLockStatus = function(curStatus, target, config) {
     var cfg, id, ret, unlockable;
     if (!curStatus) {

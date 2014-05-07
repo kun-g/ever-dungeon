@@ -421,7 +421,7 @@
         status = 'OK';
         fileList = ["define", "serializer", "spell", "unit", "container", "item", "seed-random", "commandStream", "dungeon", "trigger"];
         doVerify = function() {
-          var dungeon, err, f, _i, _len;
+          var dungeon, err, f, fakeReward, rewardMsg, _i, _len;
           if (player.dungeon) {
             for (_i = 0, _len = fileList.length; _i < _len; _i++) {
               f = fileList[_i];
@@ -440,9 +440,37 @@
               } catch (_error) {
                 err = _error;
                 status = 'Replay Failed';
-                dungeon.result = DUNGEON_RESULT_FAIL;
+                dungeon.reward = null;
               } finally {
-                evt = evt.concat(player.claimDungeonAward(dungeon));
+                reward = dungeon.reward;
+                if (dungeon.stage === 0) {
+                  fakeReward = {
+                    gold: 0,
+                    exp: 0,
+                    wxp: 0,
+                    reviveCount: 0,
+                    result: 2,
+                    prizegold: 0,
+                    prizexp: 0,
+                    prizewxp: 0,
+                    blueStar: 0,
+                    team: [],
+                    quests: {
+                      '0': {
+                        counters: [1]
+                      }
+                    }
+                  };
+                  rewardMsg = player.claimDungeonAward(fakeReward);
+                  evt = evt.concat(rewardMsg);
+                  status = 'Faked';
+                } else if (reward) {
+                  rewardMsg = player.claimDungeonAward(reward);
+                  evt = evt.concat(rewardMsg);
+                } else {
+                  status = 'Replay Failed';
+                  result.RET = RET_Unknown;
+                }
                 player.releaseDungeon();
                 player.saveDB();
               }

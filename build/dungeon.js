@@ -477,6 +477,84 @@
       return this.cardStack.get(slot);
     };
 
+    Dungeon.prototype.generateReward = function(result) {
+      var cfg, iPrize, p, percentage, reward, _i, _len, _ref5;
+      if (this.reward != null) {
+        return false;
+      }
+      reward = {
+        gold: 0,
+        exp: 0,
+        wxp: 0,
+        reviveCount: this.revive
+      };
+      this.killingInfo.forEach(function(l) {
+        if (l.gold != null) {
+          reward.gold += l.gold;
+        }
+        if (l.exp != null) {
+          reward.exp += l.exp;
+        }
+        if (l.wxp != null) {
+          return reward.wxp += l.wxp;
+        }
+      });
+      cfg = this.getConfig();
+      if (result === DUNGEON_RESULT_WIN) {
+        percentage = 1;
+      } else {
+        percentage = (this.currentLevel / cfg.levelCount) * 0.5;
+      }
+      if (cfg.prizeGold != null) {
+        reward.gold += Math.floor(percentage * cfg.prizeGold);
+      }
+      if (cfg.prizeXp != null) {
+        reward.exp += Math.floor(percentage * cfg.prizeXp);
+      }
+      if (cfg.prizeWxp != null) {
+        reward.wxp += Math.floor(percentage * cfg.prizeWxp);
+      }
+      if (this.goldRate != null) {
+        reward.gold *= this.goldRate;
+      }
+      if (this.xpRate != null) {
+        reward.exp *= this.xpRate;
+      }
+      if (this.wxpRate != null) {
+        reward.wxp *= this.wxpRate;
+      }
+      reward.prize = cfg.prize;
+      reward.result = result;
+      reward.prizegold = cfg.prizeGold;
+      reward.prizexp = cfg.prizeXp;
+      reward.prizewxp = cfg.prizeWxp;
+      if (this.blueStar != null) {
+        reward.blueStar = this.blueStar;
+      }
+      reward.team = this.heroes.slice(1, this.heroes.length - 1).map(function(h) {
+        return h.name;
+      });
+      reward.quests = this.quests;
+      if ((this.infiniteLevel != null) && cfg.infinityPrize) {
+        _ref5 = cfg.infinityPrize;
+        for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+          p = _ref5[_i];
+          if (p.level === this.infiniteLevel) {
+            iPrize = p;
+          }
+        }
+        if (iPrize != null) {
+          iPrize = {
+            type: iPrize.type,
+            value: iPrize.value,
+            count: iPrize.count
+          };
+        }
+        reward.infinityPrize = iPrize;
+      }
+      return this.reward = reward;
+    };
+
     Dungeon.prototype.getInitialInfo = function() {
       return {
         syn: 0,
@@ -859,6 +937,26 @@
 
     Dungeon.prototype.nextLevel = function() {
       var badPool, bossPool, cfg, elitePool, goodPool, lvConfig, normalPool, quest, soldierPool;
+      if (this.level != null) {
+        this.killingInfo[this.currentLevel] = this.level.getMonsters().filter(function(m) {
+          return (m != null ? m.health : void 0) <= 0;
+        }).reduce((function(r, m) {
+          if (m.gold != null) {
+            r.gold += m.gold;
+          }
+          if (m.wxp != null) {
+            r.wxp += m.wxp;
+          }
+          if (m.exp != null) {
+            r.exp += m.exp;
+          }
+          return r;
+        }), {
+          gold: 0,
+          exp: 0,
+          wxp: 0
+        });
+      }
       this.currentLevel++;
       cfg = this.getConfig();
       if (this.currentLevel < cfg.levelCount) {
@@ -869,7 +967,7 @@
         goodPool = cfg.goodPool != null ? cfg.goodPool : null;
         badPool = cfg.badPool != null ? cfg.badPool : null;
         normalPool = cfg.normalPool != null ? cfg.normalPool : null;
-        this.level = new Level(this.killingInfo);
+        this.level = new Level();
         this.level.rand = (function(_this) {
           return function(r) {
             return _this.rand(r);
@@ -958,10 +1056,9 @@
   })(Wizard);
 
   Level = (function() {
-    function Level(killingInfo) {
+    function Level() {
       this.objects = [];
       this.ref = HEROTAG;
-      this.killingInfo = killingInfo;
     }
 
     Level.prototype.init = function(lvConfig, baseRank, heroes, quests, pool) {
@@ -1691,6 +1788,11 @@
       return this.dungeon.getDummyHero().castSpell(spell, level, cmd);
     };
 
+    DungeonEnvironment.prototype.generateReward = function(win) {
+      var _ref5;
+      return (_ref5 = this.dungeon) != null ? _ref5.generateReward(win) : void 0;
+    };
+
     DungeonEnvironment.prototype.getReviveCount = function() {
       var _ref5;
       return (_ref5 = this.dungeon) != null ? _ref5.revive : void 0;
@@ -2384,7 +2486,7 @@
     ClaimResult: {
       callback: function(env) {
         env.onEvent('onClaimResult', this);
-        return env.dungeon.result = env.variable('win');
+        return env.generateReward(env.variable('win'));
       },
       output: function(env) {
         return [
@@ -2617,8 +2719,7 @@
         }
         return this.routine({
           id: 'Dead',
-          tar: env.variable('tar'),
-          cod: env.variable('cod')
+          tar: env.variable('tar')
         });
       }
     },
@@ -3072,11 +3173,6 @@
         onEvent('Kill', this, killer, src);
         if (env.getBlock(src.pos) && src.health <= 0) {
           env.getBlock(src.pos).removeRef(src);
-        }
-        if (env.variable('tar').health <= 0 && (env.variable('cod') == null) && env.variable('tar').dropInfo) {
-          env.dungeon.killingInfo.push({
-            dropInfo: env.variable('tar').dropInfo
-          });
         }
         if (src.isVisible) {
           return this.routine({
