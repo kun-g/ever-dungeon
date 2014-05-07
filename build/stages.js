@@ -1825,7 +1825,28 @@ var data = [
           initialAction: function (obj) {
             obj.counters.enhance++;
           }
-        }
+        },
+          {
+              stageId: 114,
+              cost: 10,
+              team: 3,
+              hidden: true,
+              dungeon: 102
+          },
+          {
+              stageId: 115,
+              cost: 15,
+              team: 3,
+              hidden: true,
+              dungeon: 103
+          },
+          {
+              stageId: 116,
+              cost: 20,
+              team: 3,
+              hidden: true,
+              dungeon: 104
+          }
       ]
   }
 ];
