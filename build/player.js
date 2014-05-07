@@ -803,6 +803,9 @@
       ], (function(_this) {
         return function(err) {
           var ret;
+          if (stageConfig.initialAction) {
+            stageConfig.initialAction(_this, genUtil);
+          }
           _this.loadDungeon();
           _this.log('startDungeon', {
             dungeonData: _this.dungeonData,
