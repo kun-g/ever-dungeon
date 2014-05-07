@@ -834,7 +834,7 @@
             ret = RET_Unknown;
           }
           if (handler != null) {
-            return handler(err, ret);
+            return handler(err, ret, msg);
           }
         };
       })(this));

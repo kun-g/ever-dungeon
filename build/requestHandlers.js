@@ -494,7 +494,7 @@
                 REQ: rpcID,
                 RET: evEnter
               }
-            ].concat(evEnter.concat(extraMsg)));
+            ].concat(extraMsg));
           } else if (arg.initialDataOnly) {
             handler([
               {
@@ -516,7 +516,7 @@
                 REQ: rpcID,
                 RET: RET_OK
               }
-            ].concat(evEnter.concat(extraMsg)));
+            ].concat(extraMsg));
           }
           return player.saveDB();
         });
