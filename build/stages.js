@@ -1833,6 +1833,7 @@ var data = [
             hidden: true,
             dungeon: 102,
             description: "Goblin1",
+            eventName: "event_goblin",
             condition: function (obj, util) {
               return obj.counters.goblin < 3 || !obj.counters.goblin;
             },
@@ -1851,6 +1852,7 @@ var data = [
             hidden: true,
             dungeon: 103,
             description: "Goblin2",
+            eventName: "event_goblin",
             condition: function (obj, util) {
               return obj.counters.goblin < 3 || !obj.counters.goblin;
             },
@@ -1869,6 +1871,7 @@ var data = [
             hidden: true,
             dungeon: 104,
             description: "Goblin3",
+            eventName: "event_goblin",
             condition: function (obj, util) {
               return obj.counters.goblin < 3 || !obj.counters.goblin;
             },

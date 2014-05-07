@@ -802,9 +802,13 @@
         })(this)
       ], (function(_this) {
         return function(err) {
-          var ret;
+          var msg, ret;
+          msg = [];
           if (stageConfig.initialAction) {
             stageConfig.initialAction(_this, genUtil);
+          }
+          if (stageConfig.eventID) {
+            msg = _this.syncEvent();
           }
           _this.loadDungeon();
           _this.log('startDungeon', {

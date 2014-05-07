@@ -486,14 +486,15 @@
     RPC_GameStartDungeon: {
       id: 1,
       func: function(arg, player, handler, rpcID, socket) {
-        return player.startDungeon(+arg.stg, arg.initialDataOnly, function(err, evEnter) {
+        return player.startDungeon(+arg.stg, arg.initialDataOnly, function(err, evEnter, extraMsg) {
+          extraMsg = (extraMsg != null ? extraMsg : []).concat(player.syncEnergy());
           if (typeof evEnter === 'number') {
             handler([
               {
                 REQ: rpcID,
                 RET: evEnter
               }
-            ]);
+            ].concat(evEnter.concat(extraMsg)));
           } else if (arg.initialDataOnly) {
             handler([
               {
@@ -501,21 +502,21 @@
                 RET: RET_OK,
                 arg: evEnter
               }
-            ].concat(player.syncEnergy()));
+            ].concat(extraMsg));
           } else if (evEnter) {
             handler([
               {
                 REQ: rpcID,
                 RET: RET_OK
               }
-            ].concat(evEnter.concat(player.syncEnergy())));
+            ].concat(evEnter.concat(extraMsg)));
           } else {
             handler([
               {
                 REQ: rpcID,
                 RET: RET_OK
               }
-            ]);
+            ].concat(evEnter.concat(extraMsg)));
           }
           return player.saveDB();
         });
