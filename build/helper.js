@@ -577,7 +577,7 @@
         return !util.sameDay(obj.timestamp.goblin, util.today) && util.today.hour() >= 8;
       },
       reset: function(obj, util) {
-        obj.timestamp.goblin = util.currentTime();
+        obj.timestamp.newProperty('goblin', util.currentTime());
         return obj.counters.newProperty('goblin', 0);
       }
     }
