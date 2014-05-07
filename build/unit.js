@@ -85,6 +85,7 @@
         this.modifyProperty(roleConfig.property);
       }
       this.faction = roleConfig.faction;
+      this.dropInfo = roleConfig.dropInfo;
       if (flagCreation) {
         console.log('Property ', JSON.stringify(roleConfig.property));
       }
