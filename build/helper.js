@@ -281,7 +281,9 @@
 
   genCampaignUtil = function() {
     return {
-      diffDay: diffDate,
+      diffDay: function(date, today) {
+        return (date == null) || diffDate(date, null, 'day') !== 0;
+      },
       currentTime: currentTime,
       today: moment()
     };
