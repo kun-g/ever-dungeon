@@ -869,7 +869,7 @@
         goodPool = cfg.goodPool != null ? cfg.goodPool : null;
         badPool = cfg.badPool != null ? cfg.badPool : null;
         normalPool = cfg.normalPool != null ? cfg.normalPool : null;
-        this.level = new Level(this.killingInfo);
+        this.level = new Level();
         this.level.rand = (function(_this) {
           return function(r) {
             return _this.rand(r);
@@ -958,10 +958,9 @@
   })(Wizard);
 
   Level = (function() {
-    function Level(killingInfo) {
+    function Level() {
       this.objects = [];
       this.ref = HEROTAG;
-      this.killingInfo = killingInfo;
     }
 
     Level.prototype.init = function(lvConfig, baseRank, heroes, quests, pool) {
@@ -3060,7 +3059,7 @@
     },
     Dead: {
       callback: function(env) {
-        var killer, src;
+        var killer, src, v;
         killer = env.variable('killer');
         src = env.variable('tar');
         if (src.collectId != null) {
@@ -3073,6 +3072,8 @@
         if (env.getBlock(src.pos) && src.health <= 0) {
           env.getBlock(src.pos).removeRef(src);
         }
+        v = env.variable('tar');
+        console.log(v.roleID, v.dropInfo, v.health, env.variable('cod'));
         if (env.variable('tar').health <= 0 && (env.variable('cod') == null) && env.variable('tar').dropInfo) {
           env.dungeon.killingInfo.push({
             dropInfo: env.variable('tar').dropInfo
