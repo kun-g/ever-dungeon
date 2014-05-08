@@ -24834,7 +24834,7 @@ exports.data = [
     },
     {
         "dungeonId": 103,
-        "rank": 25,
+        "rank": 50,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -25048,7 +25048,7 @@ exports.data = [
     },
     {
         "dungeonId": 104,
-        "rank": 30,
+        "rank": 160,
         "levelCount" : 6,
         "normalPool":[
             {
