@@ -194,14 +194,14 @@ exports.data = [
       },
       "triggerCondition": [
           {"type": "event", "event": "onCriticalDamage" },
-          {"type": "chance", "chance": 0.5}
+          {"type": "chance", "chance": 0.8}
       ],
       "targetSelection": {
           "pool": "objects",
           "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"}]
       },
       "action": [
-        {"type": "damage","damageType":"Spell","isRange":true,"formular": {"src":{"attack":0.2},"c":15}},
+        {"type": "damage","damageType":"Spell","isRange":true,"formular": {"src":{"attack":0.3},"c":15}},
           {"type": "playEffect","effect":4,"pos":"self"}
       ]
     }
@@ -2808,6 +2808,31 @@ exports.data = [
                 {"type":"playEffect","effect":4,"pos":"self"},
                 {"type":"delay"} ,
                 {"type":"kill", "cod": 1}
+            ]
+        }
+    },
+    {
+        "skillId": 124,
+        "label":"普通传送",
+        "config": {
+            "triggerCondition": [
+                {"type":"event","event":"onBePhysicalDamage"},
+                {"type":"event","event":"onBePhysicalRangeDamage"},
+                {"type":"event","event":"onBeSpellDamage"},
+                {"type":"event","event":"onBeSpellRangeDamage"},
+                {"type":"alive"}
+            ],
+            "targetSelection":{
+                "pool":"self",
+                "filter": [{"type":"alive"}]
+            },
+            "action": [
+                {"type": "delay"},
+                {"type":"playEffect","effect":20,"pos":"self"},
+                {"type": "delay"},
+                {"type": "randTeleport"},
+                {"type": "delay"},
+                {"type":"playEffect","effect":21,"pos":"self"}
             ]
         }
     }
