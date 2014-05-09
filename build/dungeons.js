@@ -24590,6 +24590,701 @@ exports.data = [
         "wxpRate":1,
         "goldRate":0.3,
         "xpRate":1
+    },
+    {
+        "dungeonId": 102,
+        "rank": 10,
+        "levelCount" : 6,
+        "normalPool":[
+            {
+                "id":170,
+                "weight":3
+            },
+            {
+                "id":171,
+                "weight":3
+            },
+            {
+                "id":172,
+                "weight":3
+            },
+            {
+                "id":173,
+                "weight":3
+            },
+            {
+                "id":174,
+                "weight":3
+            },
+            {
+                "id":175,
+                "weight":3
+            },
+            {
+                "id":176,
+                "weight":3
+            },
+            {
+                "id":177,
+                "weight":3
+            },
+            {
+                "id":178,
+                "weight":3
+            },
+            {
+                "id":179,
+                "weight":3
+            }
+        ],
+
+        "levels" :[
+            {
+                "normalCount":1,"objects" :[
+                {
+                    "id": 39,
+                    "count":2
+                },
+                {
+                    "id":47 ,
+                    "count":1
+                },
+                {
+                    "id":188 ,
+                    "count":1
+                },
+                {
+                    "id": 149,
+                    "count":3
+                },
+                {
+                    "id": 12,
+                    "count":2
+                },
+                {
+                    "id": 69,
+                    "count":1
+                },
+                {
+                    "id": 45,
+                    "count":1
+                }
+            ]
+            },
+            {
+                "normalCount":1,"objects" :[
+                {
+                    "id": 39,
+                    "count":1
+                },
+                {
+                    "id": 47 ,
+                    "count":2
+                },
+                {
+                    "id":188 ,
+                    "count":1
+                },
+                {
+                    "id": 149,
+                    "count":3
+                },
+                {
+                    "id": 12,
+                    "count":2
+                },
+                {
+                    "id": 69,
+                    "count":1
+                }
+            ]
+            },
+            {
+                "normalCount":1,"objects" :[
+                {
+                    "id": 39,
+                    "count":1
+                },
+                {
+                    "id": 47 ,
+                    "count":1
+                },
+                {
+                    "id":188 ,
+                    "count":2
+                },
+                {
+                    "id": 12,
+                    "count":2
+                },
+                {
+                    "id":59,
+                    "count":1
+                },
+                {
+                    "id":62,
+                    "count":1
+                }
+            ]
+            },
+            {
+                "normalCount":1,"objects" :[
+                {
+                    "id": 42,
+                    "count":2
+                },
+                {
+                    "id":188 ,
+                    "count":2
+                },
+                {
+                    "id": 47 ,
+                    "count":1
+                },
+                {
+                    "id": 12,
+                    "count":2
+                },
+                {
+                    "id": 69,
+                    "count":1
+                },
+                {
+                    "id": 45,
+                    "count":1
+                }
+            ]
+            },
+            {
+                "normalCount":1,"objects" :[
+                {
+                    "id": 42,
+                    "count":2
+                },
+                {
+                    "id":188 ,
+                    "count":2
+                },
+                {
+                    "id": 47 ,
+                    "count":1
+                },
+                {
+                    "id": 12,
+                    "count":2
+                },
+                {
+                    "id": 69,
+                    "count":1
+                },
+                {
+                    "id": 45,
+                    "count":1
+                }
+            ]
+            },
+            {
+                "normalCount":1,"objects" :[
+                {
+                    "id": 42,
+                    "count":2
+                },
+                {
+                    "id": 149,
+                    "count":3
+                },
+                {
+                    "id": 47 ,
+                    "count":1
+                },
+                {
+                    "id": 12,
+                    "count":1
+                },
+                {
+                    "id": 69,
+                    "count":1
+                },
+                {
+                    "id": 60,
+                    "count":1
+                },
+                {
+                    "id": 45,
+                    "count":1
+                },
+                {
+                    "id": 66,
+                    "count":1
+                },
+                {
+                    "id":188 ,
+                    "count":1
+                }
+            ]
+            }
+        ],
+        "prize":[
+
+        ],
+        "prizeWxp":0,"prizeGold":0,
+        "prizeXp":0,
+        "wxpRate":1,"goldRate":0.2,
+        "xpRate":0.1
+    },
+    {
+        "dungeonId": 103,
+        "rank": 50,
+        "levelCount" : 6,
+        "normalPool":[
+            {
+                "id":170,
+                "weight":3
+            },
+            {
+                "id":171,
+                "weight":3
+            },
+            {
+                "id":172,
+                "weight":3
+            },
+            {
+                "id":173,
+                "weight":3
+            },
+            {
+                "id":174,
+                "weight":3
+            },
+            {
+                "id":175,
+                "weight":3
+            },
+            {
+                "id":176,
+                "weight":3
+            },
+            {
+                "id":177,
+                "weight":3
+            },
+            {
+                "id":178,
+                "weight":3
+            },
+            {
+                "id":179,
+                "weight":3
+            }
+        ],
+
+        "levels" :[
+            {
+                "normalCount":1,"objects" :[
+                {
+                    "id": 68,
+                    "count":2
+                },
+                {
+                    "id": 74 ,
+                    "count":2
+                },
+                {
+                    "id": 149,
+                    "count":2
+                },
+                {
+                    "id": 67,
+                    "count":2
+                },
+                {
+                    "id":189,
+                    "count":1
+                }
+            ]
+            },
+            {
+                "normalCount":1,"objects" :[
+                {
+                    "id": 68,
+                    "count":2
+                },
+                {
+                    "id": 74 ,
+                    "count":3
+                },
+                {
+                    "id":189,
+                    "count":2
+                },
+                {
+                    "id": 67,
+                    "count":2
+                },
+                {
+                    "id": 149,
+                    "count":2
+                },
+                {
+                    "id": 72,
+                    "count":1
+                }
+            ]
+            },
+            {
+                "normalCount":1,"objects" :[
+                {
+                    "id": 68,
+                    "count":2
+                },
+                {
+                    "id": 74,
+                    "count":1
+                },
+                {
+                    "id":189,
+                    "count":1
+                },
+                {
+                    "id": 67,
+                    "count":2
+                },
+                {
+                    "id": 72,
+                    "count":1
+                },
+                {
+                    "id": 149,
+                    "count":2
+                },
+                {
+                    "id": 92,
+                    "count":1,
+                    "keyed":true
+                }
+            ]
+            },
+            {
+                "normalCount":1,"objects" :[
+                {
+                    "id": 68,
+                    "count":3
+                },
+                {
+                    "id": 74,
+                    "count":3
+                },
+                {
+                    "id": 189 ,
+                    "count":1
+                },
+                {
+                    "id": 67,
+                    "count":2
+                }
+            ]
+            },
+            {
+                "normalCount":1,"objects" :[
+                {
+                    "id": 68,
+                    "count":2
+                },
+                {
+                    "id":189,
+                    "count":2
+                },
+                {
+                    "id": 74 ,
+                    "count":3
+                },
+                {
+                    "id": 149,
+                    "count":2
+                },
+                {
+                    "id": 67,
+                    "count":2
+                }
+            ]
+            },
+            {
+                "normalCount":1,"objects" :[
+                {
+                    "id": 189 ,
+                    "count":1
+                },
+                {
+                    "id": 68,
+                    "count":1
+                },
+                {
+                    "id": 74 ,
+                    "count":2
+                },
+                {
+                    "id": 67,
+                    "count":2
+                },
+                {
+                    "id": 149,
+                    "count":2
+                },
+                {
+                    "id": 72,
+                    "count":1
+                }
+            ]
+            }
+        ],
+        "prize":[
+
+        ],
+        "prizeWxp":0,"prizeGold":0,
+        "prizeXp":0,
+        "wxpRate":1,"goldRate":0.2,
+        "xpRate":0.1
+    },
+    {
+        "dungeonId": 104,
+        "rank": 160,
+        "levelCount" : 6,
+        "normalPool":[
+            {
+                "id":170,
+                "weight":3
+            },
+            {
+                "id":171,
+                "weight":3
+            },
+            {
+                "id":172,
+                "weight":3
+            },
+            {
+                "id":173,
+                "weight":3
+            },
+            {
+                "id":174,
+                "weight":3
+            },
+            {
+                "id":175,
+                "weight":3
+            },
+            {
+                "id":176,
+                "weight":3
+            },
+            {
+                "id":177,
+                "weight":3
+            },
+            {
+                "id":178,
+                "weight":3
+            },
+            {
+                "id":179,
+                "weight":3
+            }
+        ],
+
+        "levels" :[
+            {
+                "normalCount":1,"objects" :[
+                {
+                    "id": 42,
+                    "count":1
+                },
+                {
+                    "id": 43,
+                    "count":1
+                },
+                {
+                    "id": 49 ,
+                    "count":2
+                },
+                {
+                    "id": 12,
+                    "count":2
+                },                  {
+                    "id": 190,
+                    "count":1
+                },
+                {
+                    "id": 69,
+                    "count":1
+                },
+                {
+                    "id": 45,
+                    "count":1
+                }
+            ]
+            },
+            {
+                "normalCount":1,"objects" :[
+                {
+                    "id": 42,
+                    "count":1
+                },
+                {
+                    "id": 43,
+                    "count":1
+                },
+                {
+                    "id": 149 ,
+                    "count":2
+                },
+                {
+                    "id": 12,
+                    "count":2
+                },
+                {
+                    "id": 69,
+                    "count":1
+                },
+                {
+                    "id": 45,
+                    "count":1
+                },
+                {
+                    "id": 190,
+                    "count":1
+                }
+            ]
+            },
+            {
+                "normalCount":1,"objects" :[
+                {
+                    "id": 42,
+                    "count":1
+                },
+                {
+                    "id": 49 ,
+                    "count":2
+                },
+                {
+                    "id": 149,
+                    "count":3
+                },
+                {
+                    "id": 12,
+                    "count":2
+                },
+                {
+                    "id": 43,
+                    "count":1
+                },
+                {
+                    "id":63,
+                    "count":1
+                } ,
+                {
+                    "id": 190,
+                    "count":2
+                }
+            ]
+            },
+            {
+                "normalCount":1,"objects" :[
+                {
+                    "id": 42,
+                    "count":2
+                },
+                {
+                    "id": 43,
+                    "count":1
+                },
+                {
+                    "id": 47 ,
+                    "count":1
+                },
+                {
+                    "id": 190,
+                    "count":1
+                },
+                {
+                    "id": 12,
+                    "count":2
+                },
+                {
+                    "id": 69,
+                    "count":1
+                }
+            ]
+            },
+            {
+                "normalCount":1,"objects" :[
+                {
+                    "id": 42,
+                    "count":2
+                },
+                {
+                    "id": 43,
+                    "count":1
+                },
+                {
+                    "id": 47 ,
+                    "count":1
+                },
+                {
+                    "id": 12,
+                    "count":2
+                },
+                {
+                    "id": 190,
+                    "count":1
+                },
+                {
+                    "id": 69,
+                    "count":1
+                }
+            ]
+            },
+            {
+                "normalCount":1,"objects" :[
+                {
+                    "id": 42,
+                    "count":2
+                },
+                {
+                    "id": 47 ,
+                    "count":1
+                },
+                {
+                    "id": 12,
+                    "count":1
+                },
+                {
+                    "id": 43,
+                    "count":1
+                },
+                {
+                    "id": 149,
+                    "count":3
+                },
+                {
+                    "id": 69,
+                    "count":1
+                },
+                {
+                    "id": 190,
+                    "count":2
+                }
+            ]
+            }
+        ],
+        "prize":[
+
+        ],
+        "prizeWxp":0,"prizeGold":0,
+        "prizeXp":0,
+        "wxpRate":1,"goldRate":0.2,
+        "xpRate":0.1
     }
 
 ]

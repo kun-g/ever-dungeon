@@ -176,9 +176,6 @@
         this.purchasedCount = {};
       }
       this.lastLogin = currentTime();
-      if (diffDate(this.creationDate) > 7) {
-        this.tutorialStage = 1000;
-      }
       if (typeof gGlobalPrize !== "undefined" && gGlobalPrize !== null) {
         for (key in gGlobalPrize) {
           prize = gGlobalPrize[key];
@@ -676,8 +673,8 @@
         ];
       }
       ret = [].concat(this.dungeon.doAction(action));
-      if (this.dungeon.reward != null) {
-        ret = ret.concat(this.claimDungeonAward(this.dungeon.reward));
+      if (this.dungeon.result != null) {
+        ret = ret.concat(this.claimDungeonAward(this.dungeon));
       }
       return ret;
     };
@@ -805,7 +802,14 @@
         })(this)
       ], (function(_this) {
         return function(err) {
-          var ret;
+          var msg, ret;
+          msg = [];
+          if (stageConfig.initialAction) {
+            stageConfig.initialAction(_this, genUtil);
+          }
+          if (stageConfig.eventName) {
+            msg = _this.syncEvent();
+          }
           _this.loadDungeon();
           _this.log('startDungeon', {
             dungeonData: _this.dungeonData,
@@ -830,7 +834,7 @@
             ret = RET_Unknown;
           }
           if (handler != null) {
-            return handler(err, ret);
+            return handler(err, ret, msg);
           }
         };
       })(this));
@@ -1754,36 +1758,26 @@
       }
     };
 
-    Player.prototype.generateDungeonAward = function(reward) {
-      var items;
-      items = [];
-      if (reward.result === DUNGEON_RESULT_DONE) {
+    Player.prototype.generateDungeonAward = function(dungeon) {
+      var cfg, dropInfo, gr, iPrize, infiniteLevel, items, p, percentage, prize, result, wr, xr, _i, _len, _ref10, _ref7, _ref8, _ref9;
+      result = dungeon.result;
+      cfg = dungeon.getConfig();
+      if (result === DUNGEON_RESULT_DONE || (cfg == null)) {
         return [];
       }
-      if (reward.result === DUNGEON_RESULT_WIN) {
+      dropInfo = dungeon.killingInfo.reduce((function(r, e) {
+        if (e && e.dropInfo) {
+          return r.concat(e.dropInfo);
+        }
+        return r;
+      }), []);
+      percentage = 1;
+      if (result === DUNGEON_RESULT_WIN) {
         dbLib.incrBluestarBy(this.name, 1);
-        items = [];
-        if (reward.prize) {
-          items = reward.prize.filter(function(p) {
+        if (cfg.prize) {
+          items = cfg.prize.filter(function(p) {
             return Math.random() < p.rate;
-          }).map(wrapCallback(this, function(g) {
-            var dropTable, _ref7;
-            dropTable = (_ref7 = queryTable(TABLE_CONFIG, "Global_Item_Drop_Table", this.abIndex)) != null ? _ref7 : [];
-            g.items = g.items.concat(dropTable).filter((function(_this) {
-              return function(i) {
-                var itemConfig;
-                itemConfig = queryTable(TABLE_ITEM, i.item, _this.abIndex);
-                if (!itemConfig) {
-                  return false;
-                }
-                if (itemConfig.singleton) {
-                  return !_this.haveItem(i.item);
-                }
-                return true;
-              };
-            })(this));
-            return g;
-          })).map(function(g) {
+          }).map(function(g) {
             var e;
             e = selectElementFromWeightArray(g.items, Math.random());
             if (e) {
@@ -1793,11 +1787,6 @@
                 count: 1
               };
             } else {
-              logError({
-                type: 'QuickFix',
-                group: g,
-                reward: reward
-              });
               return {
                 type: PRIZETYPE_ITEM,
                 value: g[0],
@@ -1806,52 +1795,72 @@
             }
           });
         }
+      } else {
+        percentage = (dungeon.currentLevel / cfg.levelCount) * 0.5;
       }
-      if (reward.infinityPrize && reward.result === DUNGEON_RESULT_WIN) {
-        if (reward.infinityPrize.type === PRIZETYPE_GOLD) {
-          reward.gold += reward.infinityPrize.count;
-        } else {
-          items.push(reward.infinityPrize);
-        }
-      }
-      reward.gold += reward.gold * this.goldAdjust();
-      reward.exp += reward.exp * this.expAdjust();
-      reward.wxp += reward.wxp * this.wxpAdjust();
-      reward.gold = Math.ceil(reward.gold);
-      reward.exp = Math.ceil(reward.exp);
-      reward.wxp = Math.ceil(reward.wxp);
-      reward.item = items;
-      return [
-        {
-          type: PRIZETYPE_EXP,
-          count: reward.exp
-        }, {
+      gr = ((_ref7 = cfg.goldRate) != null ? _ref7 : 1) * percentage;
+      xr = ((_ref8 = cfg.xpRate) != null ? _ref8 : 1) * percentage;
+      wr = ((_ref9 = cfg.wxpRate) != null ? _ref9 : 1) * percentage;
+      prize = helperLib.generatePrize(queryTable(TABLE_DROP), dropInfo);
+      if (cfg.prizeGold) {
+        prize.push({
           type: PRIZETYPE_GOLD,
-          count: reward.gold
-        }, {
+          count: Math.floor(gr * cfg.prizeGold)
+        });
+      }
+      if (cfg.prizeXp) {
+        prize.push({
+          type: PRIZETYPE_EXP,
+          count: Math.floor(xr * cfg.prizeXp)
+        });
+      }
+      if (cfg.prizeWxp) {
+        prize.push({
           type: PRIZETYPE_WXP,
-          count: reward.wxp
+          count: Math.floor(wr * cfg.prizeWxp)
+        });
+      }
+      infiniteLevel = dungeon.infiniteLevel;
+      if ((infiniteLevel != null) && cfg.infinityPrize && result === DUNGEON_RESULT_WIN) {
+        _ref10 = cfg.infinityPrize;
+        for (_i = 0, _len = _ref10.length; _i < _len; _i++) {
+          p = _ref10[_i];
+          if (p.level === infiniteLevel) {
+            iPrize = p;
+          }
         }
-      ].concat(items);
+        if (iPrize != null) {
+          iPrize = {
+            type: iPrize.type,
+            value: iPrize.value,
+            count: iPrize.count
+          };
+        }
+        if (iPrize.type === PRIZETYPE_GOLD) {
+          prize.push({
+            type: PRIZETYPE_GOLD,
+            count: iPrize.count
+          });
+        } else {
+          prize.push(iPrize);
+        }
+      }
+      return prize;
     };
 
-    Player.prototype.claimDungeonAward = function(reward) {
-      var k, objective, offlineReward, prize, qid, qst, quest, result, ret, rewardMessage, teammateRewardMessage, _ref7, _ref8;
-      if (!((reward != null) && (this.dungeon != null))) {
-        player.saveDB(function() {
-          return player.releaseDungeon();
-        });
+    Player.prototype.claimDungeonAward = function(dungeon) {
+      var goldPrize, k, objective, offlineReward, otherPrize, prize, qid, qst, quest, quests, result, ret, rewardMessage, teammateRewardMessage, wxPrize, xpPrize, _ref7, _ref8;
+      if (dungeon == null) {
         return [];
       }
       ret = [];
-      if (reward.reviveCount > 0) {
-        ret = this.inventory.removeById(ItemId_RevivePotion, reward.reviveCount, true);
+      if (dungeon.revive > 0) {
+        ret = this.inventory.removeById(ItemId_RevivePotion, dungeon.revive, true);
         if (!ret || ret.length === 0) {
           return {
             NTF: Event_DungeonReward,
             arg: {
-              prize: prize,
-              res: 0
+              res: DUNGEON_RESULT_FAIL
             }
           };
         }
@@ -1861,90 +1870,81 @@
           version: this.inventoryVersion
         });
       }
-      if (reward.quests) {
-        _ref7 = reward.quests;
-        for (qid in _ref7) {
-          qst = _ref7[qid];
+      quests = dungeon.quests;
+      if (quests) {
+        for (qid in quests) {
+          qst = quests[qid];
           if (!(((qst != null ? qst.counters : void 0) != null) && this.quests[qid])) {
             continue;
           }
           quest = queryTable(TABLE_QUEST, qid, this.abIndex);
-          _ref8 = quest.objects;
-          for (k in _ref8) {
-            objective = _ref8[k];
+          _ref7 = quest.objects;
+          for (k in _ref7) {
+            objective = _ref7[k];
             if (objective.type === QUEST_TYPE_NPC && (qst.counters[k] != null) && (this.quests[qid].counters != null)) {
               this.quests[qid].counters[k] = qst.counters[k];
             }
           }
         }
-        this.questVersion++;
       }
-      prize = this.generateDungeonAward(reward);
-      prize = prize.filter(function(e) {
-        if ((e.count != null) && e.count === 0) {
-          return false;
-        }
-        return true;
-      });
+      prize = this.generateDungeonAward(dungeon);
+      _ref8 = helperLib.splicePrize(prize), goldPrize = _ref8.goldPrize, xpPrize = _ref8.xpPrize, wxPrize = _ref8.wxPrize, otherPrize = _ref8.otherPrize;
       rewardMessage = {
         NTF: Event_DungeonReward,
         arg: {
-          res: reward.result
+          res: dungeon.result
         }
       };
-      if (prize.length > 0) {
-        rewardMessage.arg.prize = prize;
-      }
       ret = ret.concat([rewardMessage]);
-      if (reward.result !== DUNGEON_RESULT_FAIL) {
-        ret = ret.concat(this.completeStage(this.dungeon.stage));
+      if (dungeon.result !== DUNGEON_RESULT_FAIL) {
+        ret = ret.concat(this.completeStage(dungeon.stage));
       }
-      ret = ret.concat(this.claimPrize(prize, false));
-      offlineReward = [];
-      if (reward.exp > 0) {
-        offlineReward.push({
+      offlineReward = [
+        {
           type: PRIZETYPE_EXP,
-          count: Math.ceil(TEAMMATE_REWARD_RATIO * reward.exp)
-        });
-      }
-      if (reward.gold > 0) {
-        offlineReward.push({
+          count: xpPrize.count * TEAMMATE_REWARD_RATIO
+        }, {
           type: PRIZETYPE_GOLD,
-          count: Math.ceil(TEAMMATE_REWARD_RATIO * reward.gold)
-        });
-      }
-      if (reward.wxp > 0) {
-        offlineReward.push({
+          count: goldPrize.count * TEAMMATE_REWARD_RATIO
+        }, {
           type: PRIZETYPE_WXP,
-          count: Math.ceil(TEAMMATE_REWARD_RATIO * reward.wxp)
-        });
-      }
+          count: wxPrize.count * TEAMMATE_REWARD_RATIO
+        }
+      ].filter(function(e) {
+        return e.count > 0;
+      });
       if (offlineReward.length > 0) {
         teammateRewardMessage = {
           type: MESSAGE_TYPE_SystemReward,
           src: MESSAGE_REWARD_TYPE_OFFLINE,
           prize: offlineReward
         };
-        reward.team.forEach(function(name) {
+        dungeon.team.forEach(function(name) {
           if (name) {
             return dbLib.deliverMessage(name, teammateRewardMessage);
           }
         });
       }
       result = 'Lost';
-      if (reward.result === DUNGEON_RESULT_WIN) {
+      if (dungeon.result === DUNGEON_RESULT_WIN) {
         result = 'Win';
       }
+      otherPrize.push(goldPrize);
+      otherPrize.push(xpPrize);
+      otherPrize.push(wxPrize);
+      prize = otherPrize.filter(function(e) {
+        return !((e.count != null) && e.count === 0);
+      });
+      if (prize.length > 0) {
+        rewardMessage.arg.prize = prize;
+      }
+      ret = ret.concat(this.claimPrize(prize, false));
       this.log('finishDungeon', {
-        stage: this.dungeon.getInitialData().stage,
+        stage: dungeon.getInitialData().stage,
         result: result,
         reward: prize
       });
-      this.saveDB((function(_this) {
-        return function() {
-          return _this.releaseDungeon();
-        };
-      })(this));
+      this.releaseDungeon();
       return ret;
     };
 

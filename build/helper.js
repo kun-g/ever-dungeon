@@ -281,7 +281,9 @@
 
   genCampaignUtil = function() {
     return {
-      sameDay: diffDate,
+      diffDay: function(date, today) {
+        return (date == null) || diffDate(date, today, 'day') !== 0;
+      },
       currentTime: currentTime,
       today: moment()
     };
@@ -290,7 +292,7 @@
   exports.genUtil = genCampaignUtil;
 
   initCampaign = function(me, allCampaign, abIndex) {
-    var e, key, ret, util;
+    var count, e, key, ret, util, _ref;
     ret = [];
     util = genCampaignUtil();
     for (key in allCampaign) {
@@ -302,12 +304,13 @@
           if (e.canReset(me, util)) {
             e.reset(me, util);
           }
+          count = (_ref = me.counters[key]) != null ? _ref : 0;
           ret.push({
             NTF: Event_BountyUpdate,
             arg: {
               bid: e.id,
               sta: e.actived,
-              cnt: e.count
+              cnt: e.count - count
             }
           });
         }
@@ -428,9 +431,8 @@
           if (quest != null) {
             delete me.quests[quest];
           }
-          return ret.concat(initDailyEvent(me, key, e));
         }
-        break;
+        return ret.concat(initDailyEvent(me, key, e));
       case 'Init':
         me[key].status = 'Ready';
         return ret.concat(initDailyEvent(me, key, e));
@@ -567,47 +569,70 @@
       "steps": 4,
       "quest": [128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151]
     },
-    event_robbers: {
+    goblin: {
       storeType: "player",
       id: 0,
       actived: 1,
-      count: 5,
+      count: 3,
       canReset: function(obj, util) {
-        return !util.sameDay(obj.timestamp.robbers, util.today) && util.today.hour() >= 8;
+        return util.diffDay(obj.timestamp.goblin, util.today) && util.today.hour() >= 8;
       },
       reset: function(obj, util) {
-        obj.timestamp.robbers = util.currentTime();
-        return obj.counters.robbers = 0;
+        obj.timestamp.newProperty('goblin', util.currentTime());
+        return obj.counters.newProperty('goblin', 0);
       }
-    },
-    event_weapon: {
-      storeType: "player",
-      id: 1,
-      actived: 1,
-      count: 5,
-      canReset: function(obj, util) {
-        return !util.sameDay(obj.timestamp.weapon, util.today);
-      },
-      reset: function(obj, util) {
-        obj.timestamp.weapon = util.currentTime();
-        return obj.counters.weapon = 0;
-      },
-      stageID: 1024
-    },
-    event_enhance: {
-      id: 2,
-      storeType: "player",
-      actived: 1,
-      count: 5,
-      canReset: function(obj, util) {
-        return !util.sameDay(obj.timestamp.enhance, util.today);
-      },
-      reset: function(obj, util) {
-        obj.timestamp.enhance = util.currentTime();
-        return obj.counters.enhance = 0;
-      },
-      stageID: 1024
     }
+  };
+
+  exports.splicePrize = function(prize) {
+    var goldPrize, otherPrize, wxPrize, xpPrize;
+    goldPrize = {
+      type: PRIZETYPE_GOLD,
+      count: 0
+    };
+    xpPrize = {
+      type: PRIZETYPE_EXP,
+      count: 0
+    };
+    wxPrize = {
+      type: PRIZETYPE_WXP,
+      count: 0
+    };
+    otherPrize = [];
+    prize.forEach(function(p) {
+      switch (p.type) {
+        case PRIZETYPE_WXP:
+          return wxPrize.count += p.count;
+        case PRIZETYPE_EXP:
+          return xpPrize.count += p.count;
+        case PRIZETYPE_GOLD:
+          return goldPrize.count += p.count;
+        default:
+          return otherPrize.push(p);
+      }
+    });
+    return {
+      goldPrize: goldPrize,
+      xpPrize: xpPrize,
+      wxPrize: wxPrize,
+      otherPrize: otherPrize
+    };
+  };
+
+  exports.generatePrize = function(cfg, dropInfo) {
+    var reward;
+    if (cfg == null) {
+      return [];
+    }
+    return reward = dropInfo.reduce((function(r, p) {
+      return r.concat(cfg[p]);
+    }), []).filter(function(p) {
+      return p && Math.random() < p.rate;
+    }).map(function(g) {
+      var e;
+      e = selectElementFromWeightArray(g.prize, Math.random());
+      return e;
+    });
   };
 
   updateLockStatus = function(curStatus, target, config) {

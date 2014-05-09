@@ -1093,7 +1093,7 @@ var data = [
 		"desc":"巫师掌控着的地盘，营地中驻扎着巫师手下\n的邪恶军团，是一支极具威胁的军队。",
 		"icon":"mapicon5.png",
 		"stage":[
-		    {
+    {
 				"stageId": 57,
 				"cost": 15,
 				"team": 3,
@@ -1107,7 +1107,7 @@ var data = [
 
             },
 			{
-			    "stageId": 58,
+        "stageId": 58,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -1207,7 +1207,7 @@ var data = [
 		"desc":"盘踞着未知力量的洞穴，据说这股力量来自\n遥远的上古，是人类无法探知的境地。",
 		"icon":"mapicon2.png",
 		"stage":[
-		    {
+    {
 				"stageId": 64,
 				"cost": 15,
 				"team": 3,
@@ -1825,6 +1825,63 @@ var data = [
           initialAction: function (obj) {
             obj.counters.enhance++;
           }
+        },
+        {
+            stageId: 114,
+            cost: 10,
+            team: 3,
+            hidden: true,
+            dungeon: 102,
+            description: "Goblin1",
+            eventName: "event_goblin",
+            condition: function (obj, util) {
+              return obj.counters.goblin < 3 || !obj.counters.goblin;
+            },
+            initialAction: function (obj) {
+              if (obj.counters.goblin) {
+                obj.counters.goblin++;
+              } else {
+                obj.counters.newProperty('goblin', 1);
+              }
+            }
+        },
+        {
+            stageId: 115,
+            cost: 15,
+            team: 3,
+            hidden: true,
+            dungeon: 103,
+            description: "Goblin2",
+            eventName: "event_goblin",
+            condition: function (obj, util) {
+              return obj.counters.goblin < 3 || !obj.counters.goblin;
+            },
+            initialAction: function (obj) {
+              if (obj.counters.goblin) {
+                obj.counters.goblin++;
+              } else {
+                obj.counters.newProperty('goblin', 1);
+              }
+            }
+        },
+        {
+            stageId: 116,
+            cost: 20,
+            team: 3,
+            hidden: true,
+            dungeon: 104,
+            description: "Goblin3",
+            eventName: "event_goblin",
+            condition: function (obj, util) {
+              return obj.counters.goblin < 3 || !obj.counters.goblin;
+            },
+            initialAction: function (obj) {
+              if (obj.counters.goblin) {
+                obj.counters.goblin++;
+              } else {
+                obj.counters.newProperty('goblin', 1);
+              }
+            }
         }
       ]
   }
