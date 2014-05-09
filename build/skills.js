@@ -2805,7 +2805,7 @@ exports.data = [
                 "filter": [{"type":"alive"},{"type":"visible"}]
             },
             "action":[
-                {"type":"playEffect","effect":4,"pos":"self"},
+                {"type":"playAction","motion":1,"pos":"self"},
                 {"type":"delay"} ,
                 {"type":"kill", "cod": 1}
             ]
@@ -2833,6 +2833,22 @@ exports.data = [
                 {"type": "randTeleport"},
                 {"type": "delay"},
                 {"type":"playEffect","effect":21,"pos":"self"}
+            ]
+        }
+    },
+    { "skillId": 125,
+        "label":"赏金怪提示",
+        "config": {
+            "triggerCondition": [
+                { "type": "event","event":"onShow" }
+            ],
+            "targetSelection": {
+                "pool": "self",
+                "filter": [{"type":"alive"}]
+            },
+            "action": [
+                {"type":"delay" },
+                {"type": "playEffect","effect":43,"pos":"self"}
             ]
         }
     }

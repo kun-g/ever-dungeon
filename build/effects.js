@@ -146,8 +146,7 @@ exports.data = [
     },
     {
         "effectId": 35,
-        "file": "effect-boss.ccbi" ,
-        "z":-1
+        "file": "effect-boss.ccbi"
     },
     {
         "effectId": 36,
@@ -176,8 +175,9 @@ exports.data = [
     {
         "effectId": 42,
         "file": "effect-shield.ccbi"
+    },
+    {
+        "effectId": 43,
+        "file": "effect-mission.ccbi"
     }
-
-
-
 ]

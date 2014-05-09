@@ -7078,6 +7078,10 @@ exports.data = [
             {
                 "id": 124,
                 "level": 1
+            },
+            {
+                "id": 125,
+                "level": 1
             }
         ],
         "soundSpawn": "gebulintou.mp3",
@@ -7125,6 +7129,10 @@ exports.data = [
             {
                 "id": 124,
                 "level": 1
+            } ,
+            {
+                "id": 125,
+                "level": 1
             }
         ],
         "soundSpawn": "gebulintou.mp3",
@@ -7171,6 +7179,10 @@ exports.data = [
             },
             {
                 "id": 124,
+                "level": 1
+            },
+            {
+                "id": 125,
                 "level": 1
             }
         ],
