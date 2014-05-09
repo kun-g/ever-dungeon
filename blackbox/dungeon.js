@@ -3059,7 +3059,7 @@
     },
     Dead: {
       callback: function(env) {
-        var killer, src, v;
+        var killer, src;
         killer = env.variable('killer');
         src = env.variable('tar');
         if (src.collectId != null) {
@@ -3072,8 +3072,6 @@
         if (env.getBlock(src.pos) && src.health <= 0) {
           env.getBlock(src.pos).removeRef(src);
         }
-        v = env.variable('tar');
-        console.log(v.roleID, v.dropInfo, v.health, env.variable('cod'));
         if (env.variable('tar').health <= 0 && (env.variable('cod') == null) && env.variable('tar').dropInfo) {
           env.dungeon.killingInfo.push({
             dropInfo: env.variable('tar').dropInfo
