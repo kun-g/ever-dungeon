@@ -431,9 +431,8 @@
           if (quest != null) {
             delete me.quests[quest];
           }
-          return ret.concat(initDailyEvent(me, key, e));
         }
-        break;
+        return ret.concat(initDailyEvent(me, key, e));
       case 'Init':
         me[key].status = 'Ready';
         return ret.concat(initDailyEvent(me, key, e));

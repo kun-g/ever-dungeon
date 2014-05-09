@@ -1899,7 +1899,6 @@
       if (dungeon.result !== DUNGEON_RESULT_FAIL) {
         ret = ret.concat(this.completeStage(dungeon.stage));
       }
-      ret = ret.concat(this.claimPrize(prize, false));
       offlineReward = [
         {
           type: PRIZETYPE_EXP,
@@ -1939,6 +1938,7 @@
       if (prize.length > 0) {
         rewardMessage.arg.prize = prize;
       }
+      ret = ret.concat(this.claimPrize(prize, false));
       this.log('finishDungeon', {
         stage: dungeon.getInitialData().stage,
         result: result,
