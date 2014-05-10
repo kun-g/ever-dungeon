@@ -1845,7 +1845,7 @@
           prize.push(iPrize);
         }
       }
-      return prize;
+      return prize.concat(items);
     };
 
     Player.prototype.claimDungeonAward = function(dungeon) {
