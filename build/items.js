@@ -7,7 +7,9 @@ exports.data = [
         "subcategory":0,
         "description": "随机强化生命、攻击、暴击、韧性、命中、反应、速度7项基础属性的宝石。",
         "stack":99,
-        "sellprice": 50
+        "sellprice": 50,
+        "stoneLv":1,
+        "synthesizeId": null
     },
     {
         "classId": 1,
@@ -17,7 +19,9 @@ exports.data = [
         "subcategory":1,
         "description": "随机强化吸血、暴击伤害、连击、反伤、击晕5项高阶属性的稀有宝石。",
         "stack":99,
-        "sellprice": 800
+        "sellprice": 800,
+        "stoneLv":2,
+        "synthesizeId": 2
     },
     {
         "classId": 2,
@@ -27,7 +31,9 @@ exports.data = [
         "subcategory":2,
         "description": "随机强化经验、熟练、金币3项特殊属性的宝石。",
         "stack":99,
-        "sellprice": 300
+        "sellprice": 300,
+        "stoneLv":3,
+        "synthesizeId": 3
     },
     {
         "classId": 3,
@@ -37,7 +43,9 @@ exports.data = [
         "subcategory":3,
         "description": "能够强化攻击属性的宝石。",
         "stack":99,
-        "sellprice": 300
+        "sellprice": 300,
+        "stoneLv":4,
+        "synthesizeId": 4
     },
     {
         "classId": 4,
@@ -47,7 +55,9 @@ exports.data = [
         "subcategory":4,
         "description": "能够强化生命属性的宝石。",
         "stack":99,
-        "sellprice": 300
+        "sellprice": 300,
+        "stoneLv":5,
+        "synthesizeId": 5
     },
     {
         "classId": 5,
@@ -1123,7 +1133,9 @@ exports.data = [
                 "health":22,
                 "strong":12
             },
-        "sellprice": 150
+        "sellprice": 150,
+        "enhanceId": 0,
+        "forgeId": 1
 
     },
     {
