@@ -1835,14 +1835,14 @@
             value: iPrize.value,
             count: iPrize.count
           };
-        }
-        if (iPrize.type === PRIZETYPE_GOLD) {
-          prize.push({
-            type: PRIZETYPE_GOLD,
-            count: iPrize.count
-          });
-        } else {
-          prize.push(iPrize);
+          if (iPrize.type === PRIZETYPE_GOLD) {
+            prize.push({
+              type: PRIZETYPE_GOLD,
+              count: iPrize.count
+            });
+          } else {
+            prize.push(iPrize);
+          }
         }
       }
       return prize.concat(items);
