@@ -2913,8 +2913,9 @@
       }
       cmd.print();
       ret = [];
-      if (cmd.output() != null) {
-        ret = cmd.output();
+      out = cmd.output();
+      if (out) {
+        ret = out;
       }
       _ref7 = cmd.cmdRoutine;
       for (i in _ref7) {
