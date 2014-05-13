@@ -4162,12 +4162,12 @@ exports.data = [
         ]
         },
         "hidden": true,
-        "title":"击败恶霸山贼",
-        "desc":"击杀大恶霸山贼。",
+        "title":"寻找被山贼捉走的村民",
+        "desc":"寻找被山贼捉走的村民",
         "objects":[
             {
                 "type":0,
-                "label":"打倒恶霸山贼",
+                "label":"找到村民",
                 "collect":135001,
                 "count":1
             }

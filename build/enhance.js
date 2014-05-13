@@ -1,65 +1,11 @@
 exports.data = [
-    {
-        "enhanceId":0,
-        "costList":[
-            0,0,0,0,0,0,0,0,
-            1,1,1,1,1,1,1,1,
-            2,2,2,2,2,2,2,2,
-            3,3,3,3,3,3,3,3
-        ],
-        "property":[
-            {
-                "attack":1,
-                "health":6,
-                "speed":2,
-                "critical":2,
-                "strong":2,
-                "accuracy":2,
-                "reactivity":2
-            },
-            {
-                "attack":2
-                //....
-            },
-            {"attack":3},
-            {"attack":5},
-            {"attack":7},
-            {"attack":9},
-            {"attack":12},
-            {"attack":15},
-            {"attack":18},
-            {"attack":22}
-        ]
-    },
-    {
-        "enhanceId":1,
-        "costList":[
-            0,0,0,0,0,0,0,0,
-            1,1,1,1,1,1,1,1,
-            2,2,2,2,2,2,2,2,
-            3,3,3,3,3,3,3,3
-        ],
-        "property":[
-            {
-                "attack":1,
-                "health":6,
-                "speed":2,
-                "critical":2,
-                "strong":2,
-                "accuracy":2,
-                "reactivity":2
-            },
-            {
-                "attack":2
-            },
-            {"attack":3},
-            {"attack":5},
-            {"attack":7},
-            {"attack":9},
-            {"attack":12},
-            {"attack":15},
-            {"attack":18},
-            {"attack":22}
-        ]
-    }
-];
+	{
+		"enhanceId": 0,
+		"costList": 3,
+		"property": [
+			{
+				"health": 6
+			}
+		]
+	}
+]

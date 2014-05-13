@@ -1437,7 +1437,7 @@
     };
 
     Player.prototype.levelUpItem = function(slot) {
-      var cost, eh, exp, item, k, newItem, ret, s, upConfig, _ref7, _ref8, _ref9;
+      var cost, eh, exp, item, k, newItem, ret, s, upConfig, _ref7;
       item = this.getItemAt(slot);
       if (item == null) {
         return {
@@ -1455,8 +1455,8 @@
           ret: RET_EquipCantUpgrade
         };
       }
-      exp = (_ref7 = item.upgradeXp) != null ? _ref7 : upConfig.xp;
-      cost = (_ref8 = item.upgradeCost) != null ? _ref8 : upConfig.cost;
+      exp = upConfig.xp;
+      cost = upConfig.cost;
       if (!((exp != null) && (cost != null))) {
         return {
           ret: RET_EquipCantUpgrade
@@ -1472,9 +1472,9 @@
           ret: RET_NotEnoughGold
         };
       }
-      _ref9 = this.equipment;
-      for (k in _ref9) {
-        s = _ref9[k];
+      _ref7 = this.equipment;
+      for (k in _ref7) {
+        s = _ref7[k];
         if (s === slot) {
           delete this.equipment[k];
         }
@@ -2898,22 +2898,6 @@
       this.player = player;
     }
 
-    PlayerEnvironment.prototype.aquireItem = function(item, count, allOrFail) {
-      var _ref7;
-      count = count != null ? count : 1;
-      item = createItem(item);
-      if (item == null) {
-        showMeTheStack();
-      }
-      if (item == null) {
-        return [];
-      }
-      return {
-        version: this.player.inventoryVersion,
-        ret: (_ref7 = this.player) != null ? _ref7.inventory.add(item, count, allOrFail) : void 0
-      };
-    };
-
     PlayerEnvironment.prototype.removeItem = function(item, count, slot, allorfail) {
       var _ref7;
       return {
@@ -2992,15 +2976,36 @@
         ];
       }
     },
+    UseItem: {
+      output: function(env) {
+        return env.player.useItem(env.variable('slot'));
+      }
+    },
     AquireItem: {
       callback: function(env) {
-        var ret, version, _ref7;
-        _ref7 = env.aquireItem(env.variable('item'), env.variable('count'), env.variable('allorfail')), ret = _ref7.ret, version = _ref7.version;
-        return this.routine({
+        var count, e, item, ret, _i, _len, _ref7, _results;
+        count = (_ref7 = env.variable('count')) != null ? _ref7 : 1;
+        item = createItem(env.variable('count'));
+        if (item == null) {
+          return showMeTheStack();
+        }
+        ret = env.player.inventory.add(item, count, env.variable('allorfail'));
+        this.routine({
           id: 'ItemChange',
           ret: ret,
-          version: version
+          version: this.player.inventoryVersion
         });
+        if (ret) {
+          _results = [];
+          for (_i = 0, _len = ret.length; _i < _len; _i++) {
+            e = ret[_i];
+            _results.push(this.next({
+              id: 'UseItem',
+              slot: e.slot
+            }));
+          }
+          return _results;
+        }
       }
     },
     RemoveItem: {
