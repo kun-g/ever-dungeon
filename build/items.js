@@ -1,4 +1,4 @@
-exports.data =[
+exports.data = [
 	{
 		"classId": 0,
 		"label": "七色宝石",
@@ -1749,12 +1749,12 @@ exports.data =[
 			"reactivity": 5,
 			"critical": 4
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "mage-rightleg5-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 81,
@@ -1779,14 +1779,14 @@ exports.data =[
 			"accuracy": 5,
 			"critical": 5
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "mage-lefthand5.ccbi"
 		},
 		"iconf": "emchest5.png",
-		"iconm": "emchest5-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "emchest5-2.png"
 	},
 	{
 		"classId": 82,
@@ -1868,12 +1868,12 @@ exports.data =[
 			"speed": 8,
 			"reactivity": 5
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "priest-rightleg5-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 85,
@@ -1898,14 +1898,14 @@ exports.data =[
 			"strong": 5,
 			"accuracy": 8
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "priest-lefthand5-2.ccbi"
 		},
 		"iconf": "epchest5.png",
-		"iconm": "epchest5-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "epchest5-2.png"
 	},
 	{
 		"classId": 86,
@@ -2049,10 +2049,10 @@ exports.data =[
 			"strong": 10,
 			"critical": 4
 		},
-		"iconf": "ewsubweapon5.png",
-		"iconm": "ewsubweapon5-2.png",
 		"storeOnly": true,
-		"autoUse": true
+		"autoUse": true,
+		"iconf": "ewsubweapon5.png",
+		"iconm": "ewsubweapon5-2.png"
 	},
 	{
 		"classId": 91,
@@ -2108,12 +2108,12 @@ exports.data =[
 			"reactivity": 6,
 			"critical": 6
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "mage-rightleg6-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 93,
@@ -2137,14 +2137,14 @@ exports.data =[
 			"accuracy": 6,
 			"critical": 5
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "mage-lefthand6.ccbi"
 		},
 		"iconf": "emchest6.png",
-		"iconm": "emchest6-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "emchest6-2.png"
 	},
 	{
 		"classId": 94,
@@ -2223,12 +2223,12 @@ exports.data =[
 			"speed": 11,
 			"reactivity": 7
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "priest-rightleg6-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 97,
@@ -2252,14 +2252,14 @@ exports.data =[
 			"strong": 6,
 			"accuracy": 10
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "priest-lefthand6-2.ccbi"
 		},
 		"iconf": "epchest6.png",
-		"iconm": "epchest6-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "epchest6-2.png"
 	},
 	{
 		"classId": 98,
@@ -2398,10 +2398,10 @@ exports.data =[
 			"strong": 12,
 			"critical": 6
 		},
-		"iconf": "ewsubweapon6.png",
-		"iconm": "ewsubweapon6-2.png",
 		"storeOnly": true,
-		"autoUse": true
+		"autoUse": true,
+		"iconf": "ewsubweapon6.png",
+		"iconm": "ewsubweapon6-2.png"
 	},
 	{
 		"classId": 103,
@@ -3460,12 +3460,12 @@ exports.data =[
 			"reactivity": 6,
 			"critical": 6
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "mage-rightleg5-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 141,
@@ -3490,14 +3490,14 @@ exports.data =[
 			"accuracy": 6,
 			"critical": 5
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "mage-lefthand5.ccbi"
 		},
 		"iconf": "emchest5.png",
-		"iconm": "emchest5-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "emchest5-2.png"
 	},
 	{
 		"classId": 142,
@@ -3579,12 +3579,12 @@ exports.data =[
 			"speed": 11,
 			"reactivity": 7
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "priest-rightleg5-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 145,
@@ -3609,14 +3609,14 @@ exports.data =[
 			"strong": 6,
 			"accuracy": 10
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "priest-lefthand5-2.ccbi"
 		},
 		"iconf": "epchest5.png",
-		"iconm": "epchest5-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "epchest5-2.png"
 	},
 	{
 		"classId": 146,
@@ -3760,10 +3760,10 @@ exports.data =[
 			"strong": 12,
 			"critical": 6
 		},
-		"iconf": "ewsubweapon5.png",
-		"iconm": "ewsubweapon5-2.png",
 		"storeOnly": true,
-		"autoUse": true
+		"autoUse": true,
+		"iconf": "ewsubweapon5.png",
+		"iconm": "ewsubweapon5-2.png"
 	},
 	{
 		"classId": 151,
@@ -3820,12 +3820,12 @@ exports.data =[
 			"reactivity": 8,
 			"critical": 8
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "mage-rightleg6-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 153,
@@ -3850,14 +3850,14 @@ exports.data =[
 			"accuracy": 8,
 			"critical": 7
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "mage-lefthand6.ccbi"
 		},
 		"iconf": "emchest6.png",
-		"iconm": "emchest6-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "emchest6-2.png"
 	},
 	{
 		"classId": 154,
@@ -3878,11 +3878,11 @@ exports.data =[
 		"quality": 1,
 		"rank": 6,
 		"upgradeTarget": 166,
+		"storeOnly": true,
+		"autoUse": true,
 		"basic_properties": {
 			"critical": 60
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 155,
@@ -3937,12 +3937,12 @@ exports.data =[
 			"speed": 14,
 			"reactivity": 8
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "priest-rightleg6-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 157,
@@ -3967,14 +3967,14 @@ exports.data =[
 			"strong": 8,
 			"accuracy": 12
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "priest-lefthand6-2.ccbi"
 		},
 		"iconf": "epchest6.png",
-		"iconm": "epchest6-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "epchest6-2.png"
 	},
 	{
 		"classId": 158,
@@ -4118,10 +4118,10 @@ exports.data =[
 			"strong": 16,
 			"critical": 7
 		},
-		"iconf": "ewsubweapon6.png",
-		"iconm": "ewsubweapon6-2.png",
 		"storeOnly": true,
-		"autoUse": true
+		"autoUse": true,
+		"iconf": "ewsubweapon6.png",
+		"iconm": "ewsubweapon6-2.png"
 	},
 	{
 		"classId": 163,
@@ -4177,12 +4177,12 @@ exports.data =[
 			"reactivity": 9,
 			"critical": 9
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "mage-rightleg7-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 165,
@@ -4206,14 +4206,14 @@ exports.data =[
 			"accuracy": 10,
 			"critical": 9
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "mage-lefthand7-2.ccbi"
 		},
 		"iconf": "emchest7.png",
-		"iconm": "emchest7-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "emchest7-2.png"
 	},
 	{
 		"classId": 166,
@@ -4292,12 +4292,12 @@ exports.data =[
 			"speed": 17,
 			"reactivity": 10
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "priest-rightleg7-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 169,
@@ -4321,14 +4321,14 @@ exports.data =[
 			"strong": 10,
 			"accuracy": 15
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "priest-lefthand7-2.ccbi"
 		},
 		"iconf": "epchest7.png",
-		"iconm": "epchest7-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "epchest7-2.png"
 	},
 	{
 		"classId": 170,
@@ -4467,10 +4467,10 @@ exports.data =[
 			"strong": 22,
 			"critical": 8
 		},
-		"iconf": "ewsubweapon7.png",
-		"iconm": "ewsubweapon7-2.png",
 		"storeOnly": true,
-		"autoUse": true
+		"autoUse": true,
+		"iconf": "ewsubweapon7.png",
+		"iconm": "ewsubweapon7-2.png"
 	},
 	{
 		"classId": 175,
@@ -5196,12 +5196,12 @@ exports.data =[
 			"reactivity": 8,
 			"critical": 8
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "mage-rightleg5-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 201,
@@ -5226,14 +5226,14 @@ exports.data =[
 			"accuracy": 8,
 			"critical": 7
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "mage-lefthand5.ccbi"
 		},
 		"iconf": "emchest5.png",
-		"iconm": "emchest5-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "emchest5-2.png"
 	},
 	{
 		"classId": 202,
@@ -5315,12 +5315,12 @@ exports.data =[
 			"speed": 14,
 			"reactivity": 8
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "priest-rightleg5-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 205,
@@ -5345,14 +5345,14 @@ exports.data =[
 			"strong": 8,
 			"accuracy": 12
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "priest-lefthand5-2.ccbi"
 		},
 		"iconf": "epchest5.png",
-		"iconm": "epchest5-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "epchest5-2.png"
 	},
 	{
 		"classId": 206,
@@ -5496,10 +5496,10 @@ exports.data =[
 			"strong": 16,
 			"critical": 7
 		},
-		"iconf": "ewsubweapon5.png",
-		"iconm": "ewsubweapon5-2.png",
 		"storeOnly": true,
-		"autoUse": true
+		"autoUse": true,
+		"iconf": "ewsubweapon5.png",
+		"iconm": "ewsubweapon5-2.png"
 	},
 	{
 		"classId": 211,
@@ -5556,12 +5556,12 @@ exports.data =[
 			"reactivity": 9,
 			"critical": 9
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "mage-rightleg6-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 213,
@@ -5586,14 +5586,14 @@ exports.data =[
 			"accuracy": 10,
 			"critical": 9
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "mage-lefthand6.ccbi"
 		},
 		"iconf": "emchest6.png",
-		"iconm": "emchest6-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "emchest6-2.png"
 	},
 	{
 		"classId": 214,
@@ -5675,12 +5675,12 @@ exports.data =[
 			"speed": 17,
 			"reactivity": 10
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "priest-rightleg6-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 217,
@@ -5705,14 +5705,14 @@ exports.data =[
 			"strong": 10,
 			"accuracy": 15
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "priest-lefthand6-2.ccbi"
 		},
 		"iconf": "epchest6.png",
-		"iconm": "epchest6-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "epchest6-2.png"
 	},
 	{
 		"classId": 218,
@@ -5856,10 +5856,10 @@ exports.data =[
 			"strong": 22,
 			"critical": 8
 		},
-		"iconf": "ewsubweapon6.png",
-		"iconm": "ewsubweapon6-2.png",
 		"storeOnly": true,
-		"autoUse": true
+		"autoUse": true,
+		"iconf": "ewsubweapon6.png",
+		"iconm": "ewsubweapon6-2.png"
 	},
 	{
 		"classId": 223,
@@ -5916,12 +5916,12 @@ exports.data =[
 			"reactivity": 11,
 			"critical": 11
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "mage-rightleg7-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 225,
@@ -5946,14 +5946,14 @@ exports.data =[
 			"accuracy": 11,
 			"critical": 11
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "mage-lefthand7-2.ccbi"
 		},
 		"iconf": "emchest7.png",
-		"iconm": "emchest7-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "emchest7-2.png"
 	},
 	{
 		"classId": 226,
@@ -6035,12 +6035,12 @@ exports.data =[
 			"speed": 21,
 			"reactivity": 11
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "priest-rightleg7-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 229,
@@ -6065,14 +6065,14 @@ exports.data =[
 			"strong": 12,
 			"accuracy": 18
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "priest-lefthand7-2.ccbi"
 		},
 		"iconf": "epchest7.png",
-		"iconm": "epchest7-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "epchest7-2.png"
 	},
 	{
 		"classId": 230,
@@ -6216,10 +6216,10 @@ exports.data =[
 			"strong": 30,
 			"critical": 9
 		},
-		"iconf": "ewsubweapon7.png",
-		"iconm": "ewsubweapon7-2.png",
 		"storeOnly": true,
-		"autoUse": true
+		"autoUse": true,
+		"iconf": "ewsubweapon7.png",
+		"iconm": "ewsubweapon7-2.png"
 	},
 	{
 		"classId": 235,
@@ -6275,12 +6275,12 @@ exports.data =[
 			"reactivity": 13,
 			"critical": 13
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "mage-rightleg8-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 237,
@@ -6304,14 +6304,14 @@ exports.data =[
 			"accuracy": 13,
 			"critical": 13
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "mage-lefthand8-2.ccbi"
 		},
 		"iconf": "emchest8.png",
-		"iconm": "emchest8-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "emchest8-2.png"
 	},
 	{
 		"classId": 238,
@@ -6390,12 +6390,12 @@ exports.data =[
 			"speed": 24,
 			"reactivity": 12
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "priest-rightleg8-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 241,
@@ -6419,14 +6419,14 @@ exports.data =[
 			"strong": 14,
 			"accuracy": 21
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "priest-lefthand8-2.ccbi"
 		},
 		"iconf": "epchest8.png",
-		"iconm": "epchest8-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "epchest8-2.png"
 	},
 	{
 		"classId": 242,
@@ -6952,12 +6952,12 @@ exports.data =[
 			"reactivity": 9,
 			"critical": 9
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "mage-rightleg5-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 261,
@@ -6982,14 +6982,14 @@ exports.data =[
 			"accuracy": 10,
 			"critical": 9
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "mage-lefthand5.ccbi"
 		},
 		"iconf": "emchest5.png",
-		"iconm": "emchest5-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "emchest5-2.png"
 	},
 	{
 		"classId": 262,
@@ -7071,12 +7071,12 @@ exports.data =[
 			"speed": 17,
 			"reactivity": 10
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "priest-rightleg5-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 265,
@@ -7101,14 +7101,14 @@ exports.data =[
 			"strong": 10,
 			"accuracy": 15
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "priest-lefthand5-2.ccbi"
 		},
 		"iconf": "epchest5.png",
-		"iconm": "epchest5-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "epchest5-2.png"
 	},
 	{
 		"classId": 266,
@@ -7252,10 +7252,10 @@ exports.data =[
 			"strong": 22,
 			"critical": 8
 		},
-		"iconf": "ewsubweapon5.png",
-		"iconm": "ewsubweapon5-2.png",
 		"storeOnly": true,
-		"autoUse": true
+		"autoUse": true,
+		"iconf": "ewsubweapon5.png",
+		"iconm": "ewsubweapon5-2.png"
 	},
 	{
 		"classId": 271,
@@ -7312,12 +7312,12 @@ exports.data =[
 			"reactivity": 11,
 			"critical": 11
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "mage-rightleg6-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 273,
@@ -7342,14 +7342,14 @@ exports.data =[
 			"accuracy": 11,
 			"critical": 11
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "mage-lefthand6.ccbi"
 		},
 		"iconf": "emchest6.png",
-		"iconm": "emchest6-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "emchest6-2.png"
 	},
 	{
 		"classId": 274,
@@ -7431,12 +7431,12 @@ exports.data =[
 			"speed": 21,
 			"reactivity": 11
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "priest-rightleg6-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 277,
@@ -7461,14 +7461,14 @@ exports.data =[
 			"strong": 12,
 			"accuracy": 18
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "priest-lefthand6-2.ccbi"
 		},
 		"iconf": "epchest6.png",
-		"iconm": "epchest6-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "epchest6-2.png"
 	},
 	{
 		"classId": 278,
@@ -7612,10 +7612,10 @@ exports.data =[
 			"strong": 30,
 			"critical": 9
 		},
-		"iconf": "ewsubweapon6.png",
-		"iconm": "ewsubweapon6-2.png",
 		"storeOnly": true,
-		"autoUse": true
+		"autoUse": true,
+		"iconf": "ewsubweapon6.png",
+		"iconm": "ewsubweapon6-2.png"
 	},
 	{
 		"classId": 283,
@@ -7672,12 +7672,12 @@ exports.data =[
 			"reactivity": 13,
 			"critical": 13
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "mage-rightleg7-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 285,
@@ -7702,14 +7702,14 @@ exports.data =[
 			"accuracy": 13,
 			"critical": 13
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "mage-lefthand7-2.ccbi"
 		},
 		"iconf": "emchest7.png",
-		"iconm": "emchest7-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "emchest7-2.png"
 	},
 	{
 		"classId": 286,
@@ -7791,12 +7791,12 @@ exports.data =[
 			"speed": 24,
 			"reactivity": 12
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "priest-rightleg7-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 289,
@@ -7821,14 +7821,14 @@ exports.data =[
 			"strong": 14,
 			"accuracy": 21
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "priest-lefthand7-2.ccbi"
 		},
 		"iconf": "epchest7.png",
-		"iconm": "epchest7-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "epchest7-2.png"
 	},
 	{
 		"classId": 290,
@@ -7972,10 +7972,10 @@ exports.data =[
 			"strong": 35,
 			"critical": 10
 		},
-		"iconf": "ewsubweapon7.png",
-		"iconm": "ewsubweapon7-2.png",
 		"storeOnly": true,
-		"autoUse": true
+		"autoUse": true,
+		"iconf": "ewsubweapon7.png",
+		"iconm": "ewsubweapon7-2.png"
 	},
 	{
 		"classId": 295,
@@ -8032,12 +8032,12 @@ exports.data =[
 			"reactivity": 14,
 			"critical": 15
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "mage-rightleg8-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 297,
@@ -8062,14 +8062,14 @@ exports.data =[
 			"accuracy": 14,
 			"critical": 15
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "mage-lefthand8-2.ccbi"
 		},
 		"iconf": "emchest8.png",
-		"iconm": "emchest8-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "emchest8-2.png"
 	},
 	{
 		"classId": 298,
@@ -8151,12 +8151,12 @@ exports.data =[
 			"speed": 27,
 			"reactivity": 14
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "priest-rightleg8-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 301,
@@ -8181,14 +8181,14 @@ exports.data =[
 			"strong": 16,
 			"accuracy": 25
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "priest-lefthand8-2.ccbi"
 		},
 		"iconf": "epchest8.png",
-		"iconm": "epchest8-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "epchest8-2.png"
 	},
 	{
 		"classId": 302,
@@ -8384,12 +8384,12 @@ exports.data =[
 			"reactivity": 17,
 			"critical": 17
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "mage-rightleg9-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 309,
@@ -8413,14 +8413,14 @@ exports.data =[
 			"accuracy": 17,
 			"critical": 16
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "mage-lefthand9-2.ccbi"
 		},
 		"iconf": "emchest9.png",
-		"iconm": "emchest9-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "emchest9-2.png"
 	},
 	{
 		"classId": 310,
@@ -8499,12 +8499,12 @@ exports.data =[
 			"speed": 32,
 			"reactivity": 16
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "priest-rightleg9-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 313,
@@ -8528,14 +8528,14 @@ exports.data =[
 			"strong": 18,
 			"accuracy": 30
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "priest-lefthand9-2.ccbi"
 		},
 		"iconf": "epchest9.png",
-		"iconm": "epchest9-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "epchest9-2.png"
 	},
 	{
 		"classId": 314,
@@ -8725,12 +8725,12 @@ exports.data =[
 			"reactivity": 11,
 			"critical": 11
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "mage-rightleg5-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 321,
@@ -8755,14 +8755,14 @@ exports.data =[
 			"accuracy": 11,
 			"critical": 11
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "mage-lefthand5.ccbi"
 		},
 		"iconf": "emchest5.png",
-		"iconm": "emchest5-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "emchest5-2.png"
 	},
 	{
 		"classId": 322,
@@ -8844,12 +8844,12 @@ exports.data =[
 			"speed": 21,
 			"reactivity": 11
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "priest-rightleg5-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 325,
@@ -8874,14 +8874,14 @@ exports.data =[
 			"strong": 12,
 			"accuracy": 18
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "priest-lefthand5-2.ccbi"
 		},
 		"iconf": "epchest5.png",
-		"iconm": "epchest5-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "epchest5-2.png"
 	},
 	{
 		"classId": 326,
@@ -9025,10 +9025,10 @@ exports.data =[
 			"strong": 30,
 			"critical": 9
 		},
-		"iconf": "ewsubweapon5.png",
-		"iconm": "ewsubweapon5-2.png",
 		"storeOnly": true,
-		"autoUse": true
+		"autoUse": true,
+		"iconf": "ewsubweapon5.png",
+		"iconm": "ewsubweapon5-2.png"
 	},
 	{
 		"classId": 331,
@@ -9085,12 +9085,12 @@ exports.data =[
 			"reactivity": 13,
 			"critical": 13
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "mage-rightleg6-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 333,
@@ -9115,14 +9115,14 @@ exports.data =[
 			"accuracy": 13,
 			"critical": 13
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "mage-lefthand6.ccbi"
 		},
 		"iconf": "emchest6.png",
-		"iconm": "emchest6-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "emchest6-2.png"
 	},
 	{
 		"classId": 334,
@@ -9204,12 +9204,12 @@ exports.data =[
 			"speed": 24,
 			"reactivity": 12
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "priest-rightleg6-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 337,
@@ -9234,14 +9234,14 @@ exports.data =[
 			"strong": 14,
 			"accuracy": 21
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "priest-lefthand6-2.ccbi"
 		},
 		"iconf": "epchest6.png",
-		"iconm": "epchest6-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "epchest6-2.png"
 	},
 	{
 		"classId": 338,
@@ -9385,10 +9385,10 @@ exports.data =[
 			"strong": 35,
 			"critical": 10
 		},
-		"iconf": "ewsubweapon6.png",
-		"iconm": "ewsubweapon6-2.png",
 		"storeOnly": true,
-		"autoUse": true
+		"autoUse": true,
+		"iconf": "ewsubweapon6.png",
+		"iconm": "ewsubweapon6-2.png"
 	},
 	{
 		"classId": 343,
@@ -9445,12 +9445,12 @@ exports.data =[
 			"reactivity": 14,
 			"critical": 15
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "mage-rightleg7-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 345,
@@ -9475,14 +9475,14 @@ exports.data =[
 			"accuracy": 14,
 			"critical": 15
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "mage-lefthand7-2.ccbi"
 		},
 		"iconf": "emchest7.png",
-		"iconm": "emchest7-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "emchest7-2.png"
 	},
 	{
 		"classId": 346,
@@ -9564,12 +9564,12 @@ exports.data =[
 			"speed": 27,
 			"reactivity": 14
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "priest-rightleg7-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 349,
@@ -9594,14 +9594,14 @@ exports.data =[
 			"strong": 16,
 			"accuracy": 25
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "priest-lefthand7-2.ccbi"
 		},
 		"iconf": "epchest7.png",
-		"iconm": "epchest7-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "epchest7-2.png"
 	},
 	{
 		"classId": 350,
@@ -9745,10 +9745,10 @@ exports.data =[
 			"strong": 40,
 			"critical": 12
 		},
-		"iconf": "ewsubweapon7.png",
-		"iconm": "ewsubweapon7-2.png",
 		"storeOnly": true,
-		"autoUse": true
+		"autoUse": true,
+		"iconf": "ewsubweapon7.png",
+		"iconm": "ewsubweapon7-2.png"
 	},
 	{
 		"classId": 355,
@@ -9805,12 +9805,12 @@ exports.data =[
 			"reactivity": 17,
 			"critical": 17
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "mage-rightleg8-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 357,
@@ -9835,14 +9835,14 @@ exports.data =[
 			"accuracy": 17,
 			"critical": 16
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "mage-lefthand8-2.ccbi"
 		},
 		"iconf": "emchest8.png",
-		"iconm": "emchest8-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "emchest8-2.png"
 	},
 	{
 		"classId": 358,
@@ -9924,12 +9924,12 @@ exports.data =[
 			"speed": 32,
 			"reactivity": 16
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "priest-rightleg8-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 361,
@@ -9954,14 +9954,14 @@ exports.data =[
 			"strong": 18,
 			"accuracy": 30
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "priest-lefthand8-2.ccbi"
 		},
 		"iconf": "epchest8.png",
-		"iconm": "epchest8-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "epchest8-2.png"
 	},
 	{
 		"classId": 362,
@@ -10158,12 +10158,12 @@ exports.data =[
 			"reactivity": 19,
 			"critical": 19
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "mage-rightleg9-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 369,
@@ -10188,14 +10188,14 @@ exports.data =[
 			"accuracy": 19,
 			"critical": 18
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "mage-lefthand9-2.ccbi"
 		},
 		"iconf": "emchest9.png",
-		"iconm": "emchest9-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "emchest9-2.png"
 	},
 	{
 		"classId": 370,
@@ -10277,12 +10277,12 @@ exports.data =[
 			"speed": 36,
 			"reactivity": 19
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "priest-rightleg9-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 373,
@@ -10307,14 +10307,14 @@ exports.data =[
 			"strong": 20,
 			"accuracy": 35
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "priest-lefthand9-2.ccbi"
 		},
 		"iconf": "epchest9.png",
-		"iconm": "epchest9-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "epchest9-2.png"
 	},
 	{
 		"classId": 374,
@@ -10509,12 +10509,12 @@ exports.data =[
 			"reactivity": 21,
 			"critical": 22
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "mage-rightleg10-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 381,
@@ -10538,14 +10538,14 @@ exports.data =[
 			"accuracy": 21,
 			"critical": 21
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "mage-lefthand10-2.ccbi"
 		},
 		"iconf": "emchest10.png",
-		"iconm": "emchest10-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "emchest10-2.png"
 	},
 	{
 		"classId": 382,
@@ -10624,12 +10624,12 @@ exports.data =[
 			"speed": 42,
 			"reactivity": 21
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "priest-rightleg10-2.ccbi"
-		},
-		"storeOnly": true,
-		"autoUse": true
+		}
 	},
 	{
 		"classId": 385,
@@ -10653,14 +10653,14 @@ exports.data =[
 			"strong": 22,
 			"accuracy": 39
 		},
+		"storeOnly": true,
+		"autoUse": true,
 		"effectm": {
 			"part": "lefthand",
 			"file": "priest-lefthand10-2.ccbi"
 		},
 		"iconf": "epchest10.png",
-		"iconm": "epchest10-2.png",
-		"storeOnly": true,
-		"autoUse": true
+		"iconm": "epchest10-2.png"
 	},
 	{
 		"classId": 386,
@@ -13014,9 +13014,9 @@ exports.data =[
 		"stack": 10,
 		"sellprice": 450,
 		"storeOnly": true,
+		"autoUse": true,
 		"function": "recoverEnergy",
-		"argument": 50,
-		"autoUse": true
+		"argument": 50
 	},
 	{
 		"classId": 539,
@@ -13028,9 +13028,9 @@ exports.data =[
 		"stack": 10,
 		"sellprice": 800,
 		"storeOnly": true,
+		"autoUse": true,
 		"function": "recoverEnergy",
-		"argument": 100,
-		"autoUse": true
+		"argument": 100
 	},
 	{
 		"classId": 540,
@@ -13052,9 +13052,9 @@ exports.data =[
 			"part": "rightleg",
 			"file": "ff1-rightleg-c.ccbi"
 		},
+		"storeOnly": true,
 		"iconf": "epchest9.png",
-		"iconm": "epchest9-2.png",
-		"storeOnly": true
+		"iconm": "epchest9-2.png"
 	},
 	{
 		"classId": 542,
@@ -13099,9 +13099,9 @@ exports.data =[
 				"file": "ff1-helmet-c.ccbi"
 			}
 		],
+		"storeOnly": true,
 		"iconf": "epchest9.png",
-		"iconm": "epchest9-2.png",
-		"storeOnly": true
+		"iconm": "epchest9-2.png"
 	},
 	{
 		"classId": 545,
@@ -13113,9 +13113,9 @@ exports.data =[
 			"part": "hair3",
 			"file": "avatar-7-hair3.ccbi"
 		},
+		"storeOnly": true,
 		"iconf": "epchest9.png",
-		"iconm": "epchest9-2.png",
-		"storeOnly": true
+		"iconm": "epchest9-2.png"
 	},
 	{
 		"classId": 546,
@@ -13127,9 +13127,9 @@ exports.data =[
 			"part": "brow",
 			"file": "avatar-2-brow.ccbi"
 		},
+		"storeOnly": true,
 		"iconf": "epchest9.png",
-		"iconm": "epchest9-2.png",
-		"storeOnly": true
+		"iconm": "epchest9-2.png"
 	},
 	{
 		"classId": 547,
@@ -13141,9 +13141,9 @@ exports.data =[
 			"part": "rightleg",
 			"file": "fm1-rightleg-c.ccbi"
 		},
+		"storeOnly": true,
 		"iconf": "epchest9.png",
-		"iconm": "epchest9-2.png",
-		"storeOnly": true
+		"iconm": "epchest9-2.png"
 	},
 	{
 		"classId": 548,
@@ -13157,9 +13157,9 @@ exports.data =[
 				"file": "avatar-7-hair-2.ccbi"
 			}
 		],
+		"storeOnly": true,
 		"iconf": "epchest9.png",
-		"iconm": "epchest9-2.png",
-		"storeOnly": true
+		"iconm": "epchest9-2.png"
 	},
 	{
 		"classId": 549,
@@ -13171,9 +13171,9 @@ exports.data =[
 			"part": "brow",
 			"file": "avatar-2-brow-2.ccbi"
 		},
+		"storeOnly": true,
 		"iconf": "epchest9.png",
-		"iconm": "epchest9-2.png",
-		"storeOnly": true
+		"iconm": "epchest9-2.png"
 	},
 	{
 		"classId": 550,
@@ -13205,13 +13205,13 @@ exports.data =[
 			"health": 30,
 			"attack": 8
 		},
+		"storeOnly": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "fm1-rightleg-c.ccbi"
 		},
 		"iconf": "rfasion-female1-cloth.png",
-		"iconm": "rfasion-male1-cloth.png",
-		"storeOnly": true
+		"iconm": "rfasion-male1-cloth.png"
 	},
 	{
 		"classId": 552,
@@ -13232,12 +13232,12 @@ exports.data =[
 				"file": "fm1-helmet-c.ccbi"
 			}
 		],
+		"storeOnly": true,
 		"basic_properties": {
 			"accuracy": 10
 		},
 		"iconf": "rfasion-female1-helmet.png",
-		"iconm": "rfasion-male1-helmet.png",
-		"storeOnly": true
+		"iconm": "rfasion-male1-helmet.png"
 	},
 	{
 		"classId": 553,
@@ -13266,9 +13266,9 @@ exports.data =[
 			"part": "rightleg",
 			"file": "ff2-rightleg.ccbi"
 		},
+		"storeOnly": true,
 		"iconf": "epchest9.png",
-		"iconm": "epchest9-2.png",
-		"storeOnly": true
+		"iconm": "epchest9-2.png"
 	},
 	{
 		"classId": 555,
@@ -13282,9 +13282,9 @@ exports.data =[
 				"file": "ff2-helmet.ccbi"
 			}
 		],
+		"storeOnly": true,
 		"iconf": "epchest9.png",
-		"iconm": "epchest9-2.png",
-		"storeOnly": true
+		"iconm": "epchest9-2.png"
 	},
 	{
 		"classId": 556,
@@ -13296,9 +13296,9 @@ exports.data =[
 			"part": "hair3",
 			"file": "avatar-8-hair3.ccbi"
 		},
+		"storeOnly": true,
 		"iconf": "epchest9.png",
-		"iconm": "epchest9-2.png",
-		"storeOnly": true
+		"iconm": "epchest9-2.png"
 	},
 	{
 		"classId": 557,
@@ -13310,9 +13310,9 @@ exports.data =[
 			"part": "brow",
 			"file": "avatar-2-brow.ccbi"
 		},
+		"storeOnly": true,
 		"iconf": "epchest9.png",
-		"iconm": "epchest9-2.png",
-		"storeOnly": true
+		"iconm": "epchest9-2.png"
 	},
 	{
 		"classId": 558,
@@ -14209,9 +14209,9 @@ exports.data =[
 				"file": "rfasion-helmet2-male.ccbi"
 			}
 		],
+		"storeOnly": true,
 		"iconf": "irfasion-helmet2-female.png",
-		"iconm": "irfasion-helmet2-male.png",
-		"storeOnly": true
+		"iconm": "irfasion-helmet2-male.png"
 	},
 	{
 		"classId": 613,
@@ -14239,13 +14239,13 @@ exports.data =[
 			"part": "rightleg",
 			"file": "ff1-rightleg.ccbi"
 		},
+		"storeOnly": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "fm1-rightleg.ccbi"
 		},
 		"iconf": "rfasion-female1-cloth.png",
-		"iconm": "rfasion-male1-cloth.png",
-		"storeOnly": true
+		"iconm": "rfasion-male1-cloth.png"
 	},
 	{
 		"classId": 615,
@@ -14266,9 +14266,9 @@ exports.data =[
 				"file": "fm1-helmet.ccbi"
 			}
 		],
+		"storeOnly": true,
 		"iconf": "rfasion-female1-helmet.png",
-		"iconm": "rfasion-male1-helmet.png",
-		"storeOnly": true
+		"iconm": "rfasion-male1-helmet.png"
 	},
 	{
 		"classId": 616,
@@ -14281,13 +14281,13 @@ exports.data =[
 			"part": "rightleg",
 			"file": "ff3-rightleg.ccbi"
 		},
+		"storeOnly": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "fm3-rightleg.ccbi"
 		},
 		"iconf": "rfasion-female3-cloth.png",
-		"iconm": "rfasion-male3-cloth.png",
-		"storeOnly": true
+		"iconm": "rfasion-male3-cloth.png"
 	},
 	{
 		"classId": 617,
@@ -14308,9 +14308,9 @@ exports.data =[
 				"file": "fm3-helmet.ccbi"
 			}
 		],
+		"storeOnly": true,
 		"iconf": "rfasion-female3-helmet.png",
-		"iconm": "rfasion-male3-helmet.png",
-		"storeOnly": true
+		"iconm": "rfasion-male3-helmet.png"
 	},
 	{
 		"classId": 618,
@@ -14323,13 +14323,13 @@ exports.data =[
 			"part": "rightleg",
 			"file": "ff4-rightleg.ccbi"
 		},
+		"storeOnly": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "fm4-rightleg.ccbi"
 		},
 		"iconf": "rfasion-female4-cloth.png",
-		"iconm": "rfasion-male4-cloth.png",
-		"storeOnly": true
+		"iconm": "rfasion-male4-cloth.png"
 	},
 	{
 		"classId": 619,
@@ -14350,9 +14350,9 @@ exports.data =[
 				"file": "fm4-helmet.ccbi"
 			}
 		],
+		"storeOnly": true,
 		"iconf": "rfasion-female4-helmet.png",
-		"iconm": "rfasion-male4-helmet.png",
-		"storeOnly": true
+		"iconm": "rfasion-male4-helmet.png"
 	},
 	{
 		"classId": 620,
@@ -14365,13 +14365,13 @@ exports.data =[
 			"part": "rightleg",
 			"file": "ff5-rightleg.ccbi"
 		},
+		"storeOnly": true,
 		"effectm": {
 			"part": "rightleg",
 			"file": "fm5-rightleg.ccbi"
 		},
 		"iconf": "rfasion-female5-cloth.png",
-		"iconm": "rfasion-male5-cloth.png",
-		"storeOnly": true
+		"iconm": "rfasion-male5-cloth.png"
 	},
 	{
 		"classId": 621,
@@ -14392,9 +14392,9 @@ exports.data =[
 				"file": "fm5-helmet.ccbi"
 			}
 		],
+		"storeOnly": true,
 		"iconf": "rfasion-female5-helmet.png",
-		"iconm": "rfasion-male5-helmet.png",
-		"storeOnly": true
+		"iconm": "rfasion-male5-helmet.png"
 	},
 	{
 		"classId": 622,
