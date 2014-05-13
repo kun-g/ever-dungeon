@@ -2907,7 +2907,7 @@
     };
 
     PlayerEnvironment.prototype.translateAction = function(cmd) {
-      var i, ret, routine, _ref7;
+      var i, out, ret, routine, _ref7;
       if (cmd == null) {
         return [];
       }
@@ -2919,8 +2919,9 @@
       _ref7 = cmd.cmdRoutine;
       for (i in _ref7) {
         routine = _ref7[i];
-        if ((routine != null ? routine.output() : void 0) != null) {
-          ret = ret.concat(routine.output());
+        out = routine != null ? routine.output() : void 0;
+        if (out != null) {
+          ret = ret.concat(out);
         }
       }
       return ret.concat(this.translateAction(cmd.nextCMD));
