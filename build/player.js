@@ -2978,7 +2978,7 @@
     },
     UseItem: {
       output: function(env) {
-        return env.player.useItem(env.variable('slot'));
+        return env.player.useItem(env.variable('slot')).ntf;
       }
     },
     AquireItem: {
