@@ -2908,10 +2908,10 @@
 
     PlayerEnvironment.prototype.translateAction = function(cmd) {
       var i, ret, routine, _ref7;
-      cmd.print();
       if (cmd == null) {
         return [];
       }
+      cmd.print();
       ret = [];
       if (cmd.output() != null) {
         ret = cmd.output();
