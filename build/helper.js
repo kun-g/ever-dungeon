@@ -692,12 +692,12 @@
 
   exports.initObserveration = function(obj) {
     obj.observers = {};
-    obj.installObserver(event)(function() {
+    obj.installObserver = function(event) {
       return obj.observers[event] = exports.observers[event];
-    });
-    obj.removeObserver(event)(function() {
+    };
+    obj.removeObserver = function(event) {
       return obj.observers[event] = null;
-    });
+    };
     return obj.notify = function(event, arg) {
       var ob;
       ob = obj.observers[event];
