@@ -295,6 +295,8 @@
           }
         };
       })(this)));
+      helperLib.initObserveration(this);
+      this.installObserver('heroxpChanged');
       if (this.isNewPlayer) {
         this.isNewPlayer = false;
       }
@@ -544,7 +546,7 @@
         prevLevel = this.createHero().level;
         this.hero.xp += point;
         currentLevel = this.createHero().level;
-        this.onEvent('heroxpChanged', {
+        this.notify('heroxpChanged', {
           xp: this.hero.xp,
           delta: point,
           prevLevel: prevLevel,
