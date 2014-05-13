@@ -2993,7 +2993,7 @@
         this.routine({
           id: 'ItemChange',
           ret: ret,
-          version: this.player.inventoryVersion
+          version: env.player.inventoryVersion
         });
         if (ret) {
           _results = [];
