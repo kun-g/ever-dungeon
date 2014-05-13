@@ -544,20 +544,12 @@
         prevLevel = this.createHero().level;
         this.hero.xp += point;
         currentLevel = this.createHero().level;
-        this.onEvent('experience');
-        if (prevLevel !== currentLevel) {
-          if (currentLevel === 10) {
-            dbLib.broadcastEvent(BROADCAST_PLAYER_LEVEL, {
-              who: this.name,
-              what: this.hero["class"]
-            });
-          }
-          this.onEvent('level');
-          this.log('levelChange', {
-            prevLevel: prevLevel,
-            newLevel: currentLevel
-          });
-        }
+        this.onEvent('heroxpChanged', {
+          xp: this.hero.xp,
+          delta: point,
+          prevLevel: prevLevel,
+          currentLevel: currentLevel
+        });
       }
       return this.hero.xp;
     };
@@ -1325,7 +1317,7 @@
           this.onEvent('Equipment');
           return {
             ret: RET_OK,
-            ntf: ret
+            ntf: [ret]
           };
       }
       logError({
@@ -3002,10 +2994,12 @@
           _results = [];
           for (_i = 0, _len = ret.length; _i < _len; _i++) {
             e = ret[_i];
-            _results.push(this.next({
-              id: 'UseItem',
-              slot: e.slot
-            }));
+            if (env.player.getItemAt(e.slot).autoUse) {
+              _results.push(this.next({
+                id: 'UseItem',
+                slot: e.slot
+              }));
+            }
           }
           return _results;
         }
