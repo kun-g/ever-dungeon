@@ -2985,7 +2985,7 @@
       callback: function(env) {
         var count, e, item, ret, _i, _len, _ref7, _results;
         count = (_ref7 = env.variable('count')) != null ? _ref7 : 1;
-        item = createItem(env.variable('count'));
+        item = createItem(env.variable('item'));
         if (item == null) {
           return showMeTheStack();
         }
