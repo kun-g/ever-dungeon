@@ -1541,7 +1541,7 @@
             lv: e.level
           };
         });
-        ret = ret.concat({
+        ret.res.push({
           NTF: Event_InventoryUpdateItem,
           arg: {
             syn: this.inventoryVersion,
