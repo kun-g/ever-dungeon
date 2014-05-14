@@ -1565,13 +1565,13 @@
           ret: RET_NeedReceipt
         };
       }
-      ret = this.claimCost(recipe.recipeCost);
+      ret = this.claimCost(recipe.forgeID);
       if (ret == null) {
         return {
           ret: RET_InsufficientIngredient
         };
       }
-      newItem = new Item(recipe.recipeTarget);
+      newItem = new Item(recipe.forgeTarget);
       ret = ret.concat(this.aquireItem(newItem));
       ret = ret.concat({
         NTF: Event_InventoryUpdateItem,
