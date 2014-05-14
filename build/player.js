@@ -1620,7 +1620,7 @@
         };
       }
       enhance = queryTable(TABLE_ENHANCE, equip.enhanceID);
-      ret = this.claimCost(enhance.cost[level + 1]);
+      ret = this.claimCost(enhance.costList[level + 1]);
       if (ret == null) {
         return {
           ret: RET_Unknown
