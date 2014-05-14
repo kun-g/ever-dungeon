@@ -398,6 +398,34 @@ exports.data = [
             { "type":0,"value":851,"count":4},
             { "type":0,"value":852,"count":4}
         ]
+    },
+    {
+        "costId":41,
+        "material":[
+            { "type": 1, "count":200},
+            { "type":0,"value":853,"count":5}
+        ]
+    } ,
+    {
+        "costId":42,
+        "material":[
+            { "type": 1, "count":200},
+            { "type":0,"value":854,"count":5}
+        ]
+    },
+    {
+        "costId":43,
+        "material":[
+            { "type": 1, "count":200},
+            { "type":0,"value":855,"count":5}
+        ]
+    } ,
+    {
+        "costId":44,
+        "material":[
+            { "type": 1, "count":200},
+            { "type":0,"value":856,"count":5}
+        ]
     }
 
 ]

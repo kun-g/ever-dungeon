@@ -24498,6 +24498,7 @@ exports.data = [
                         "id": 157,
                         "count":1,
                         "collectId":158001,
+                        "questOnly":true,
                         "keyed":true
                     },
                     {

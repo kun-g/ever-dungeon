@@ -1,4 +1,4 @@
-exports.data =[
+exports.data = [
 	{
 		"enhanceId": 0,
 		"costList": [
@@ -401,10 +401,10 @@ exports.data =[
 		],
 		"property": [
 			{
-				"attack": 1,
 				"critical": 1,
 				"accuracy": 1,
-				"speed": 1
+				"speed": 1,
+				"attack": 1
 			},
 			{
 				"health": 1,
@@ -435,9 +435,9 @@ exports.data =[
 			},
 			{
 				"health": 1,
-				"attack": 1,
 				"strong": 1,
-				"reactivity": 1
+				"reactivity": 1,
+				"attack": 1
 			},
 			{
 				"health": 3,
@@ -448,9 +448,9 @@ exports.data =[
 			},
 			{
 				"health": 3,
-				"attack": 1,
 				"strong": 2,
-				"reactivity": 2
+				"reactivity": 2,
+				"attack": 1
 			},
 			{
 				"health": 3,
@@ -461,25 +461,25 @@ exports.data =[
 			},
 			{
 				"health": 3,
-				"attack": 1,
 				"strong": 2,
+				"reactivity": 2,
+				"speed": 2,
+				"attack": 1
+			},
+			{
+				"health": 3,
+				"attack": 2,
+				"critical": 2,
+				"accuracy": 2,
 				"reactivity": 2,
 				"speed": 2
 			},
 			{
 				"health": 3,
-				"attack": 2,
-				"critical": 2,
+				"strong": 2,
 				"accuracy": 2,
 				"reactivity": 2,
-				"speed": 2
-			},
-			{
-				"health": 3,
-				"attack": 1,
-				"strong": 2,
-				"accuracy": 2,
-				"reactivity": 2
+				"attack": 1
 			},
 			{
 				"health": 3,
@@ -491,10 +491,10 @@ exports.data =[
 			},
 			{
 				"health": 3,
-				"attack": 1,
 				"critical": 2,
 				"strong": 2,
-				"reactivity": 2
+				"reactivity": 2,
+				"attack": 1
 			},
 			{
 				"health": 5,
@@ -791,14 +791,14 @@ exports.data =[
 			{
 				"health": 2,
 				"critical": 1,
-				"accuracy": 1,
-				"speed": 1
+				"speed": 1,
+				"accuracy": 1
 			},
 			{
 				"health": 1,
 				"strong": 1,
-				"accuracy": 1,
 				"reactivity": 1,
+				"accuracy": 1,
 				"speed": 1
 			},
 			{
@@ -810,9 +810,9 @@ exports.data =[
 			},
 			{
 				"health": 6,
-				"attack": 1,
 				"strong": 2,
-				"reactivity": 2
+				"reactivity": 2,
+				"attack": 1
 			},
 			{
 				"health": 6,
@@ -823,25 +823,25 @@ exports.data =[
 			},
 			{
 				"health": 6,
-				"attack": 1,
 				"strong": 2,
+				"reactivity": 2,
+				"speed": 2,
+				"attack": 1
+			},
+			{
+				"health": 6,
+				"attack": 1,
+				"critical": 2,
+				"accuracy": 2,
 				"reactivity": 2,
 				"speed": 2
 			},
 			{
 				"health": 6,
-				"attack": 1,
-				"critical": 2,
+				"strong": 2,
 				"accuracy": 2,
 				"reactivity": 2,
-				"speed": 2
-			},
-			{
-				"health": 6,
-				"attack": 1,
-				"strong": 2,
-				"accuracy": 2,
-				"reactivity": 2
+				"attack": 1
 			},
 			{
 				"health": 6,
@@ -853,10 +853,10 @@ exports.data =[
 			},
 			{
 				"health": 6,
-				"attack": 1,
 				"critical": 2,
 				"strong": 2,
-				"reactivity": 2
+				"reactivity": 2,
+				"attack": 1
 			},
 			{
 				"health": 8,
