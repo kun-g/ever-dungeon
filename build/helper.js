@@ -600,6 +600,9 @@
     };
     otherPrize = [];
     prize.forEach(function(p) {
+      if (p == null) {
+        return [];
+      }
       switch (p.type) {
         case PRIZETYPE_WXP:
           return wxPrize.count += p.count;
