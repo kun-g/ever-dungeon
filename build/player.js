@@ -867,12 +867,14 @@
       otherPrize = [];
       for (_i = 0, _len = prize.length; _i < _len; _i++) {
         p = prize[_i];
-        if (p.type === PRIZETYPE_ITEM) {
-          if (p.count > 0) {
-            itemPrize.push(p);
+        if (p != null) {
+          if (p.type === PRIZETYPE_ITEM) {
+            if (p.count > 0) {
+              itemPrize.push(p);
+            }
+          } else {
+            otherPrize.push(p);
           }
-        } else {
-          otherPrize.push(p);
         }
       }
       if (itemPrize.length > 1) {
