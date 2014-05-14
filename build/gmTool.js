@@ -61,11 +61,12 @@ var rewardMessage = {
     //{type: PRIZETYPE_EXP, count: 10000},
     //{type: PRIZETYPE_DIAMOND, count: 150}
     //{type: PRIZETYPE_WXP, count: 10000},
-    {type: PRIZETYPE_ITEM, value: 853, count: 100},
-    {type: PRIZETYPE_ITEM, value: 854, count: 100},
-    {type: PRIZETYPE_ITEM, value: 855, count: 100},
-    {type: PRIZETYPE_ITEM, value: 856, count: 100},
-    {type: PRIZETYPE_ITEM, value: 857, count: 100},
+    {type: PRIZETYPE_ITEM, value: 805, count: 100},
+    {type: PRIZETYPE_ITEM, value: 806, count: 100},
+    {type: PRIZETYPE_ITEM, value: 807, count: 100},
+    {type: PRIZETYPE_ITEM, value: 808, count: 100},
+    {type: PRIZETYPE_ITEM, value: 809, count: 100},
+    {type: PRIZETYPE_ITEM, value: 810, count: 100},
     //{type: PRIZETYPE_EXP, count: 1000000},
   ]
 };
