@@ -166,13 +166,6 @@
                   return r + i.level;
                 }), 0);
               }
-              item.enhancement = [
-                {
-                  id: item.enhanceID,
-                  level: lv
-                }
-              ];
-              console.log('Equiped', item.enhancement);
               cfg = require('./transfer').data;
               if (cfg[item.id]) {
                 p = cfg[item.id].filter((function(_this) {
@@ -182,6 +175,13 @@
                 })(this));
                 item.id = p[0].value;
               }
+              item.enhancement = [
+                {
+                  id: queryTable(TABLE_ITEM, item.id).enhanceID,
+                  level: lv
+                }
+              ];
+              console.log('Equiped', item.enhancement);
               continue;
             }
             this.sellItem(slot);
@@ -1535,7 +1535,6 @@
       newItem = new Item(item.upgradeTarget);
       newItem.enhancement = item.enhancement;
       ret = ret.concat(this.aquireItem(newItem));
-      ret = ret.concat(this.useItem(this.queryItemSlot(newItem)).ntf);
       eh = newItem.enhancement.map(function(e) {
         return {
           id: e.id,
