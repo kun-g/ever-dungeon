@@ -137,8 +137,7 @@
     };
 
     Player.prototype.migrate = function() {
-      var cfg, e, eSlot, item, lv, p, slot, x, _i, _len, _ref7, _ref8, _ref9;
-      console.log('Equiped', this.equipment);
+      var cfg, e, eSlot, ie, item, lv, p, slot, x, _ref7, _ref8, _ref9;
       _ref7 = this.equipment;
       for (x in _ref7) {
         e = _ref7[x];
@@ -150,8 +149,8 @@
         if (item != null) {
           if (item.transPrize != null) {
             _ref9 = this.equipment;
-            for (_i = 0, _len = _ref9.length; _i < _len; _i++) {
-              eSlot = _ref9[_i];
+            for (ie in _ref9) {
+              eSlot = _ref9[ie];
               if (!(eSlot === slot)) {
                 continue;
               }
@@ -1718,10 +1717,10 @@
     };
 
     Player.prototype.sellItem = function(slot) {
-      var e, item, ret, _i, _len, _ref7;
+      var e, i, item, ret, _ref7;
       _ref7 = this.equipment;
-      for (_i = 0, _len = _ref7.length; _i < _len; _i++) {
-        e = _ref7[_i];
+      for (i in _ref7) {
+        e = _ref7[i];
         if (e === slot) {
           return {
             ret: RET_Unknown
