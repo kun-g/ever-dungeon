@@ -75,10 +75,12 @@ dbLib.initializeDB({
   "Publisher": { "IP": ip, "PORT": port},
   "Subscriber": { "IP": ip, "PORT": port}
 });
-dbLib.loadPlayer('Doge', function (err, player) {
-  console.log(player.inventory.map(function(e) { return e.id; }));
-  player.migrate();
-  console.log(player.inventory.map(function(e) { return e.id; }));
+initGlobalConfig(function () {
+  dbLib.loadPlayer('Doge', function (err, player) {
+    console.log(player.inventory.map(function(e) { return e.id; }));
+    player.migrate();
+    console.log(player.inventory.map(function(e) { return e.id; }));
+  });
 });
 //async.map(players, function (playerName, cb) {
 //  dbLib.deliverMessage(playerName, rewardMessage, cb);
