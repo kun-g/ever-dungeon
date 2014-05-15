@@ -1902,13 +1902,13 @@
       offlineReward = [
         {
           type: PRIZETYPE_EXP,
-          count: xpPrize.count * TEAMMATE_REWARD_RATIO
+          count: Math.ceil(xpPrize.count * TEAMMATE_REWARD_RATIO)
         }, {
           type: PRIZETYPE_GOLD,
-          count: goldPrize.count * TEAMMATE_REWARD_RATIO
+          count: Math.ceil(goldPrize.count * TEAMMATE_REWARD_RATIO)
         }, {
           type: PRIZETYPE_WXP,
-          count: wxPrize.count * TEAMMATE_REWARD_RATIO
+          count: Math.ceil(wxPrize.count * TEAMMATE_REWARD_RATIO)
         }
       ].filter(function(e) {
         return e.count > 0;
