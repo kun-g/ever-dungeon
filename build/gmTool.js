@@ -84,12 +84,10 @@ initGlobalConfig(null, function () {
       var bag = player.inventory.filter( function (e) { return e; } )
                                 .map(
                                   function (e, i) { 
-                                    return {
-                                      equip: equipment.indexOf(i) != -1,
-                                      id: e.id,
-                                      name: e.label,
-                                      eh: e.enhancement
-                                    };
+                                    var ret = { id: e.id, name: e.label };
+                                    if (e.enhancement) ret.enhancement = enhancement;
+                                    if (equipment.indexOf(i) != -1) ret.equip = true;
+                                    return ret;
                                 });
       console.log(player.diamond, bag);
     }
