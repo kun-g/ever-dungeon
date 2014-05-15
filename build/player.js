@@ -160,9 +160,13 @@
           if (item.transPrize != null) {
             if (this.isEquiped(slot)) {
               console.log('Equiped', slot);
-              lv = item.enhancement.reduce((function(r, i) {
-                return r + i.level;
-              }), 0);
+              console.log(item);
+              lv = -1;
+              if (item.enhancement) {
+                lv = item.enhancement.reduce((function(r, i) {
+                  return r + i.level;
+                }), 0);
+              }
               item.enhancement = {
                 id: item.enhanceID,
                 level: lv
