@@ -7,8 +7,8 @@ require('./globals');
 //        'Doyle', '豆豆同学丶', '震北冥', '888666', '蛋町' ];
 players = ['jvf'];
 
-serverName = 'Develop';
-//serverName = 'Master';
+//serverName = 'Develop';
+serverName = 'Master';
 
 var config = {
   Develop: {
