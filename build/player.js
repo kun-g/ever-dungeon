@@ -169,6 +169,7 @@
 
     Player.prototype.migrate = function() {
       var cfg, eSlot, item, lv, p, slot, _i, _len, _ref7, _ref8;
+      console.log('Equiped', this.equipment);
       _ref7 = this.inventory.container;
       for (slot in _ref7) {
         item = _ref7[slot];
@@ -180,7 +181,6 @@
               if (!(eSlot === slot)) {
                 continue;
               }
-              console.log('Equiped', slot);
               lv = item.enhancement.reduce((function(r, i) {
                 return r + i.level;
               }), 0);
