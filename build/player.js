@@ -154,6 +154,7 @@
               if (!(eSlot === slot)) {
                 continue;
               }
+              console.log('Equiped', slot);
               lv = item.enhancement.reduce((function(r, i) {
                 return r + i.level;
               }), 0);
@@ -170,10 +171,9 @@
                 })(this));
                 item.id = p[0].value;
               }
+              continue;
             }
             this.sellItem(slot);
-          } else {
-
           }
         }
       }
