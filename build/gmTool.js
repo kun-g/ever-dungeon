@@ -89,7 +89,7 @@ initGlobalConfig(null, function () {
                                     if (equipment.indexOf(i) != -1) ret.equip = true;
                                     return ret;
                                 });
-      console.log(player.diamond, bag);
+      logInfo({ diamond: player.diamond, bag: bag});
     }
     showInventory();
     player.migrate();
