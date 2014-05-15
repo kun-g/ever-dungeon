@@ -140,14 +140,14 @@
       var cfg, equipment, i, item, lv, p, slot, _ref7;
       equipment = (function() {
         var _ref7, _results;
-        _ref7 = player.equipment;
+        _ref7 = this.equipment;
         _results = [];
         for (i in _ref7) {
           slot = _ref7[i];
           _results.push(slot);
         }
         return _results;
-      })();
+      }).call(this);
       _ref7 = this.inventory.container;
       for (slot in _ref7) {
         item = _ref7[slot];
