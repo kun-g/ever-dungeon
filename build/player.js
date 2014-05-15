@@ -132,8 +132,52 @@
       if (type && type === 'error') {
         return logError(msg);
       } else {
-        return logUser(msg);
+
       }
+    };
+
+    Player.prototype.migrate = function() {
+      var cfg, e, eSlot, item, lv, p, slot, _i, _j, _len, _len1, _ref7, _ref8, _ref9;
+      _ref7 = this.equipment;
+      for (_i = 0, _len = _ref7.length; _i < _len; _i++) {
+        e = _ref7[_i];
+        console.log('Equiped', e);
+      }
+      _ref8 = this.inventory.container;
+      for (slot in _ref8) {
+        item = _ref8[slot];
+        if (item != null) {
+          if (item.transPrize != null) {
+            _ref9 = this.equipment;
+            for (_j = 0, _len1 = _ref9.length; _j < _len1; _j++) {
+              eSlot = _ref9[_j];
+              if (!(eSlot === slot)) {
+                continue;
+              }
+              lv = item.enhancement.reduce((function(r, i) {
+                return r + i.level;
+              }), 0);
+              item.enhancement = {
+                id: item.enhanceID,
+                level: lv
+              };
+              cfg = require('./transfer').data;
+              if (cfg[item.id]) {
+                p = cfg[item.id].filter((function(_this) {
+                  return function(e) {
+                    return isClassMatch(_this.hero["class"], e.classLimit);
+                  };
+                })(this));
+                item.id = p[0].value;
+              }
+            }
+            this.sellItem(slot);
+          } else {
+
+          }
+        }
+      }
+      return this.syncBag(true);
     };
 
     Player.prototype.onDisconnect = function() {
@@ -165,46 +209,6 @@
 
     Player.prototype.syncEvent = function() {
       return helperLib.initCampaign(this, helperLib.events);
-    };
-
-    Player.prototype.migrate = function() {
-      var cfg, eSlot, item, lv, p, slot, _i, _len, _ref7, _ref8;
-      console.log('Equiped', this.equipment);
-      _ref7 = this.inventory.container;
-      for (slot in _ref7) {
-        item = _ref7[slot];
-        if (item != null) {
-          if (item.transPrize != null) {
-            _ref8 = this.equipment;
-            for (_i = 0, _len = _ref8.length; _i < _len; _i++) {
-              eSlot = _ref8[_i];
-              if (!(eSlot === slot)) {
-                continue;
-              }
-              lv = item.enhancement.reduce((function(r, i) {
-                return r + i.level;
-              }), 0);
-              item.enhancement = {
-                id: item.enhanceID,
-                level: lv
-              };
-              cfg = require('./transfer').data;
-              if (cfg[item.id]) {
-                p = cfg[item.id].filter((function(_this) {
-                  return function(e) {
-                    return isClassMatch(_this.hero["class"], e.classLimit);
-                  };
-                })(this));
-                item.id = p[0].value;
-              }
-            }
-            this.sellItem(slot);
-          } else {
-
-          }
-        }
-      }
-      return this.syncBag(true);
     };
 
     Player.prototype.onLogin = function() {
