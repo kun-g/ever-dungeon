@@ -148,7 +148,7 @@
         }
         return _results;
       }).call(this);
-      return equipment.indexOf(+slot);
+      return equipment.indexOf(+slot) !== -1;
     };
 
     Player.prototype.migrate = function() {
