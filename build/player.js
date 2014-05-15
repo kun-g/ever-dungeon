@@ -148,7 +148,6 @@
         }
         return _results;
       }).call(this);
-      console.log(slot, equipment, equipment.indexOf(+slot) !== -1);
       return equipment.indexOf(+slot) !== -1;
     };
 
@@ -160,7 +159,6 @@
         if (item != null) {
           if (item.transPrize != null) {
             if (this.isEquiped(slot)) {
-              console.log('Equiped', slot);
               console.log(item.id, item.label, item.enhancement);
               lv = -1;
               if (item.enhancement) {
@@ -174,6 +172,7 @@
                   level: lv
                 }
               ];
+              console.log('Equiped', item.enhancement);
               cfg = require('./transfer').data;
               if (cfg[item.id]) {
                 p = cfg[item.id].filter((function(_this) {
