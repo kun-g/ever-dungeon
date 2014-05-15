@@ -138,6 +138,7 @@
 
     Player.prototype.migrate = function() {
       var cfg, e, eSlot, item, lv, p, slot, _i, _j, _len, _len1, _ref7, _ref8, _ref9;
+      console.log('Equiped', this.equipment);
       _ref7 = this.equipment;
       for (_i = 0, _len = _ref7.length; _i < _len; _i++) {
         e = _ref7[_i];
