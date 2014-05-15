@@ -75,7 +75,8 @@ dbLib.initializeDB({
   "Publisher": { "IP": ip, "PORT": port},
   "Subscriber": { "IP": ip, "PORT": port}
 });
-initGlobalConfig(function () {
+initGlobalConfig(null, function () {
+  require('helper').initLeaderboard(queryTable(TABLE_LEADBOARD));
   dbLib.loadPlayer('Doge', function (err, player) {
     console.log(player.inventory.map(function(e) { return e.id; }));
     player.migrate();
