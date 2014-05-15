@@ -78,6 +78,7 @@ dbLib.initializeDB({
 initGlobalConfig(null, function () {
   require('./helper').initLeaderboard(queryTable(TABLE_LEADBOARD));
   initServer();
+  gServerID = -1;
   dbLib.loadPlayer('Doge', function (err, player) {
     function showInventory() {
       var bag = player.inventory.map(
@@ -85,7 +86,6 @@ initGlobalConfig(null, function () {
                                     if (!e) return null;
                                     var ret = { id: e.id, name: e.label };
                                     if (e.enhancement) ret.enhancement = e.enhancement;
-                                    console.log(e.enhancement)
                                     if (player.isEquiped(i)) ret.equip = true;
                                     return ret;
                                 })
