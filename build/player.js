@@ -154,7 +154,7 @@
         item = _ref7[slot];
         if (item != null) {
           if (item.transPrize != null) {
-            console.log('Slot', slot, equipment.indexOf(slot));
+            console.log('Slot', slot, equipment, equipment.indexOf(slot));
             if (equipment.indexOf(slot) !== -1) {
               console.log('Equiped', slot);
               lv = item.enhancement.reduce((function(r, i) {
