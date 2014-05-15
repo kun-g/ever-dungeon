@@ -167,10 +167,12 @@
                   return r + i.level;
                 }), 0);
               }
-              item.enhancement = {
-                id: item.enhanceID,
-                level: lv
-              };
+              item.enhancement = [
+                {
+                  id: item.enhanceID,
+                  level: lv
+                }
+              ];
               cfg = require('./transfer').data;
               if (cfg[item.id]) {
                 p = cfg[item.id].filter((function(_this) {
