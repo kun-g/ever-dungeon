@@ -167,6 +167,40 @@
       return helperLib.initCampaign(this, helperLib.events);
     };
 
+    Player.prototype.migrate = function() {
+      var cfg, item, lv, p, slot, _ref7;
+      _ref7 = this.inventory.container;
+      for (slot in _ref7) {
+        item = _ref7[slot];
+        if (item != null) {
+          if (item.transPrize != null) {
+            if (this.equipment.indexOf(slot) !== -1) {
+              lv = item.enhancement.reduce((function(r, i) {
+                return r + i.level;
+              }), 0);
+              item.enhancement = {
+                id: item.enhanceID,
+                level: lv
+              };
+              cfg = require('./transfer').data;
+              if (cfg[item.id]) {
+                p = cfg[item.id].filter((function(_this) {
+                  return function(e) {
+                    return isClassMatch(_this.hero["class"], e.classLimit);
+                  };
+                })(this));
+                item.id = p[0].value;
+              }
+            }
+            this.sellItem(slot);
+          } else {
+
+          }
+        }
+      }
+      return this.syncBag(true);
+    };
+
     Player.prototype.onLogin = function() {
       var dis, flag, key, prize, ret, s, _i, _len, _ref7;
       if (!this.lastLogin) {
@@ -212,6 +246,7 @@
         date: this.lastLogin
       });
       this.onCampaign('RMB');
+      this.migrate();
       ret = [
         {
           NTF: Event_CampaignLoginStreak,
@@ -867,14 +902,12 @@
       otherPrize = [];
       for (_i = 0, _len = prize.length; _i < _len; _i++) {
         p = prize[_i];
-        if (p != null) {
-          if (p.type === PRIZETYPE_ITEM) {
-            if (p.count > 0) {
-              itemPrize.push(p);
-            }
-          } else {
-            otherPrize.push(p);
+        if (p.type === PRIZETYPE_ITEM) {
+          if (p.count > 0) {
+            itemPrize.push(p);
           }
+        } else {
+          otherPrize.push(p);
         }
       }
       if (itemPrize.length > 1) {
@@ -1541,7 +1574,7 @@
             lv: e.level
           };
         });
-        ret.res.push({
+        ret = ret.concat({
           NTF: Event_InventoryUpdateItem,
           arg: {
             syn: this.inventoryVersion,
@@ -1565,13 +1598,13 @@
           ret: RET_NeedReceipt
         };
       }
-      ret = this.claimCost(recipe.forgeID);
+      ret = this.claimCost(recipe.recipeCost);
       if (ret == null) {
         return {
           ret: RET_InsufficientIngredient
         };
       }
-      newItem = new Item(recipe.forgeTarget);
+      newItem = new Item(recipe.recipeTarget);
       ret = ret.concat(this.aquireItem(newItem));
       ret = ret.concat({
         NTF: Event_InventoryUpdateItem,
@@ -1622,7 +1655,7 @@
         };
       }
       enhance = queryTable(TABLE_ENHANCE, equip.enhanceID);
-      ret = this.claimCost(enhance.costList[level + 1]);
+      ret = this.claimCost(enhance.cost[level + 1]);
       if (ret == null) {
         return {
           ret: RET_Unknown
@@ -1673,20 +1706,20 @@
     };
 
     Player.prototype.sellItem = function(slot) {
-      var item, k, ret, s, _ref7;
-      item = this.getItemAt(slot);
-      _ref7 = this.equipment;
-      for (k in _ref7) {
-        s = _ref7[k];
-        if (s === slot) {
-          return {
-            ret: RET_Unknown
-          };
-        }
+      var item, ret;
+      if (this.equipment.indexOf(slot) !== -1) {
+        return {
+          ret: RET_Unknown
+        };
       }
-      if (item != null ? item.sellprice : void 0) {
-        this.addGold(item.sellprice * item.count);
+      item = this.getItemAt(slot);
+      if ((item != null ? item.transPrize : void 0) || (item != null ? item.sellprice : void 0)) {
         ret = this.removeItem(null, null, slot);
+        if (item != null ? item.transPrize : void 0) {
+          ret = ret.concat(this.claimPrize(item.transPrize));
+        } else if (item != null ? item.sellprice : void 0) {
+          this.addGold(item.sellprice * item.count);
+        }
         this.log('sellItem', {
           itemId: item.id,
           price: item.sellprice,
