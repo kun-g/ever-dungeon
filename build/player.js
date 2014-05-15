@@ -168,13 +168,18 @@
     };
 
     Player.prototype.migrate = function() {
-      var cfg, item, lv, p, slot, _ref7;
+      var cfg, eSlot, item, lv, p, slot, _i, _len, _ref7, _ref8;
       _ref7 = this.inventory.container;
       for (slot in _ref7) {
         item = _ref7[slot];
         if (item != null) {
           if (item.transPrize != null) {
-            if (this.equipment.indexOf(slot) !== -1) {
+            _ref8 = this.equipment;
+            for (_i = 0, _len = _ref8.length; _i < _len; _i++) {
+              eSlot = _ref8[_i];
+              if (!(eSlot === slot)) {
+                continue;
+              }
               lv = item.enhancement.reduce((function(r, i) {
                 return r + i.level;
               }), 0);
