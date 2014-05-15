@@ -181,7 +181,6 @@
                   level: lv
                 }
               ];
-              console.log('Equiped', item.enhancement);
               continue;
             }
             this.sellItem(slot);
