@@ -80,9 +80,10 @@ initGlobalConfig(null, function () {
   dbLib.loadPlayer('Doge', function (err, player) {
     function showInventory() {
       var bag = player.inventory.filter( function (e) { return e; } )
-                                .map( function (e) { return {
+                                .map(
+                                  function (e) { return {
                                     id: e.id,
-                                    name: e.name,
+                                    name: e.label,
                                     eh: e.enhancement
                                   };
                                 });
