@@ -85,7 +85,7 @@ initGlobalConfig(null, function () {
       var bag = player.inventory.map(
                                   function (e, i) { 
                                     if (!e) return null;
-                                    var ret = { id: e.id, name: e.label };
+                                    var ret = { id: e.id, name: e.label, slot: i };
                                     if (e.enhancement) {
                                       ret.enhancement = JSON.parse(JSON.stringify(e.enhancement));
                                     }
