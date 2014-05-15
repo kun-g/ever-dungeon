@@ -79,7 +79,8 @@ initGlobalConfig(null, function () {
   require('./helper').initLeaderboard(queryTable(TABLE_LEADBOARD));
   initServer();
   gServerID = -1;
-  dbLib.loadPlayer('Doge', function (err, player) {
+  //dbLib.loadPlayer('Doge', function (err, player) {
+  dbLib.loadPlayer('天走卢克', function (err, player) {
     function showInventory() {
       var bag = player.inventory.map(
                                   function (e, i) { 
