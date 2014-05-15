@@ -1,5 +1,5 @@
 (function() {
-  var actCampaign, conditionCheck, currentTime, destroyReactDB, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, tap, tapObject, updateLockStatus;
+  var actCampaign, conditionCheck, currentTime, dbLib, destroyReactDB, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, tap, tapObject, updateLockStatus;
 
   conditionCheck = require('./trigger').conditionCheck;
 
@@ -144,8 +144,10 @@
 
   exports.tap = tap;
 
+  dbLib = require('./db');
+
   exports.initLeaderboard = function(config) {
-    var cfg, dbLib, generateHandler, k, key, localConfig, srvCfg, tickLeaderboard, v;
+    var cfg, generateHandler, k, key, localConfig, srvCfg, tickLeaderboard, v;
     localConfig = [];
     srvCfg = {};
     generateHandler = function(dbKey, cfg) {
@@ -163,7 +165,6 @@
         localConfig[key][k] = v;
       }
     }
-    dbLib = require('./db');
     dbLib.getServerConfig('Leaderboard', function(err, arg) {
       if (arg) {
         srvCfg = JSON.parse(arg);
@@ -674,6 +675,36 @@
       }
     }
     return xp;
+  };
+
+  exports.observers = {
+    heroxpChanged: function(obj, arg) {
+      if (arg.prevLevel !== arg.currentLevel) {
+        if (arg.currentLevel === 10) {
+          return dbLib.broadcastEvent(BROADCAST_PLAYER_LEVEL, {
+            who: obj.name,
+            what: obj.hero["class"]
+          });
+        }
+      }
+    }
+  };
+
+  exports.initObserveration = function(obj) {
+    obj.observers = {};
+    obj.installObserver = function(event) {
+      return obj.observers[event] = exports.observers[event];
+    };
+    obj.removeObserver = function(event) {
+      return obj.observers[event] = null;
+    };
+    return obj.notify = function(event, arg) {
+      var ob;
+      ob = obj.observers[event];
+      if (ob) {
+        return ob(obj, arg);
+      }
+    };
   };
 
 }).call(this);
