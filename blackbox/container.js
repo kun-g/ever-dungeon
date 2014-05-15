@@ -51,7 +51,7 @@
               action: 'clearSlot',
               index: index
             });
-            _this.container.removeItemAt(index);
+            _this.removeItemAt(index);
           }
           return item;
         };
