@@ -137,14 +137,14 @@
     };
 
     Player.prototype.isEquiped = function(slot) {
-      var equipment, i;
+      var e, equipment, i;
       equipment = (function() {
         var _ref7, _results;
         _ref7 = this.equipment;
         _results = [];
         for (i in _ref7) {
-          slot = _ref7[i];
-          _results.push(slot);
+          e = _ref7[i];
+          _results.push(e);
         }
         return _results;
       }).call(this);
