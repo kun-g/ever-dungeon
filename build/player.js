@@ -1712,11 +1712,15 @@
     };
 
     Player.prototype.sellItem = function(slot) {
-      var item, ret;
-      if (this.equipment.indexOf(slot) !== -1) {
-        return {
-          ret: RET_Unknown
-        };
+      var e, item, ret, _i, _len, _ref7;
+      _ref7 = this.equipment;
+      for (_i = 0, _len = _ref7.length; _i < _len; _i++) {
+        e = _ref7[_i];
+        if (e === slot) {
+          return {
+            ret: RET_Unknown
+          };
+        }
       }
       item = this.getItemAt(slot);
       if ((item != null ? item.transPrize : void 0) || (item != null ? item.sellprice : void 0)) {

@@ -76,11 +76,12 @@ dbLib.initializeDB({
   "Subscriber": { "IP": ip, "PORT": port}
 });
 initGlobalConfig(null, function () {
-  require('helper').initLeaderboard(queryTable(TABLE_LEADBOARD));
+  require('./helper').initLeaderboard(queryTable(TABLE_LEADBOARD));
   dbLib.loadPlayer('Doge', function (err, player) {
-    console.log(player.inventory.map(function(e) { return e.id; }));
+    function getID(e) { if (e) return e.id; else return -1; }
+    console.log(player.diamond, player.inventory.map(getID));
     player.migrate();
-    console.log(player.inventory.map(function(e) { return e.id; }));
+    console.log(player.diamond, player.inventory.map(getID));
   });
 });
 //async.map(players, function (playerName, cb) {
