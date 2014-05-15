@@ -175,7 +175,7 @@
                 item.id = p[0].value;
               }
               enhanceID = queryTable(TABLE_ITEM, item.id).enhanceID;
-              if (enhanceID != null) {
+              if ((enhanceID != null) && lv >= 0) {
                 item.enhancement = [
                   {
                     id: enhanceID,
