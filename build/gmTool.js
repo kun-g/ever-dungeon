@@ -79,17 +79,16 @@ initGlobalConfig(null, function () {
   require('./helper').initLeaderboard(queryTable(TABLE_LEADBOARD));
   dbLib.loadPlayer('Doge', function (err, player) {
     function showInventory() {
-      var equipment = [];
-      for (var i in player.equipment) equipment.push(player.equipment[i]);
-      var bag = player.inventory.filter( function (e) { return e; } )
-                                .map(
+      var bag = player.inventory.map(
                                   function (e, i) { 
+                                    if (!e) return null;
                                     var ret = { id: e.id, name: e.label };
                                     if (e.enhancement) ret.enhancement = e.enhancement;
                                     console.log(e.enhancement)
-                                    if (equipment.indexOf(i) != -1) ret.equip = true;
+                                    if (player.isEquiped(i)) ret.equip = true;
                                     return ret;
-                                });
+                                })
+                                .filter( function (e) { return e; } );
       logInfo({ diamond: player.diamond, bag: bag});
     }
     showInventory();

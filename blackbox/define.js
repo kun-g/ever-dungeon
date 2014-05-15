@@ -42,7 +42,7 @@ initServer = function () {
     }
     if (logger == null || process.stdout.isTTY || type === 'Error') {
       var util = requires('util');
-      var config = {depth : 11};
+      var config = {depth : 12};
       //if (process.stdout.isTTY) config.colors = true;
       console.log(util.inspect(log, config));
     }

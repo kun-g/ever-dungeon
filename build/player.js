@@ -159,7 +159,6 @@
         if (item != null) {
           if (item.transPrize != null) {
             if (this.isEquiped(slot)) {
-              console.log(item.id, item.label, item.enhancement);
               lv = -1;
               if (item.enhancement && item.enhancement.length > 0) {
                 lv = item.enhancement.reduce((function(r, i) {
