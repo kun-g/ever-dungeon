@@ -136,8 +136,8 @@
       }
     };
 
-    Player.prototype.migrate = function() {
-      var cfg, equipment, i, item, lv, p, slot, _ref7;
+    Player.prototype.isEquiped = function(slot) {
+      var equipment, i;
       equipment = (function() {
         var _ref7, _results;
         _ref7 = this.equipment;
@@ -148,14 +148,17 @@
         }
         return _results;
       }).call(this);
-      console.log(equipment);
+      return equipment.indexOf(+slot);
+    };
+
+    Player.prototype.migrate = function() {
+      var cfg, item, lv, p, slot, _ref7;
       _ref7 = this.inventory.container;
       for (slot in _ref7) {
         item = _ref7[slot];
         if (item != null) {
           if (item.transPrize != null) {
-            console.log('Slot', slot, equipment, equipment.indexOf(+slot));
-            if (equipment.indexOf(slot) !== -1) {
+            if (this.isEquiped(slot)) {
               console.log('Equiped', slot);
               lv = item.enhancement.reduce((function(r, i) {
                 return r + i.level;
@@ -1719,15 +1722,11 @@
     };
 
     Player.prototype.sellItem = function(slot) {
-      var e, i, item, ret, _ref7;
-      _ref7 = this.equipment;
-      for (i in _ref7) {
-        e = _ref7[i];
-        if (e === slot) {
-          return {
-            ret: RET_Unknown
-          };
-        }
+      var item, ret;
+      if (this.isEquiped(slot)) {
+        return {
+          ret: RET_Unknown
+        };
       }
       item = this.getItemAt(slot);
       if ((item != null ? item.transPrize : void 0) || (item != null ? item.sellprice : void 0)) {
