@@ -161,7 +161,7 @@
             if (this.isEquiped(slot)) {
               console.log(item.id, item.label, item.enhancement);
               lv = -1;
-              if (item.enhancement) {
+              if (item.enhancement && item.enhancement.length > 0) {
                 lv = item.enhancement.reduce((function(r, i) {
                   return r + i.level;
                 }), 0);
