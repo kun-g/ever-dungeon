@@ -148,12 +148,13 @@
         }
         return _results;
       }).call(this);
+      console.log(equipment);
       _ref7 = this.inventory.container;
       for (slot in _ref7) {
         item = _ref7[slot];
         if (item != null) {
           if (item.transPrize != null) {
-            console.log('Slot', slot);
+            console.log('Slot', slot, equipment.indexOf(slot));
             if (equipment.indexOf(slot) !== -1) {
               console.log('Equiped', slot);
               lv = item.enhancement.reduce((function(r, i) {
