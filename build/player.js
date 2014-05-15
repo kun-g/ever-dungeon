@@ -2950,7 +2950,6 @@
       if (cmd == null) {
         return [];
       }
-      cmd.print();
       ret = [];
       out = cmd.output();
       if (out) {

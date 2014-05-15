@@ -78,10 +78,14 @@ dbLib.initializeDB({
 initGlobalConfig(null, function () {
   require('./helper').initLeaderboard(queryTable(TABLE_LEADBOARD));
   dbLib.loadPlayer('Doge', function (err, player) {
-    function getID(e) { if (e) return e.id; else return -1; }
-    console.log(player.diamond, player.inventory.map(getID));
+    function showInventory() {
+      var bag = player.inventory.filter( function (e) { return e; } )
+                                .map( function (e) { return e.id; } );
+      console.log(player.diamond, bag);
+    }
+    showInventory();
     player.migrate();
-    console.log(player.diamond, player.inventory.map(getID));
+    showInventory();
   });
 });
 //async.map(players, function (playerName, cb) {
