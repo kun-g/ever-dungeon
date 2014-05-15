@@ -148,6 +148,7 @@
         }
         return _results;
       }).call(this);
+      console.log(slot, equipment, equipment.indexOf(+slot) !== -1);
       return equipment.indexOf(+slot) !== -1;
     };
 
