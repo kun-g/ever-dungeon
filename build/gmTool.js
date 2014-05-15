@@ -85,7 +85,9 @@ initGlobalConfig(null, function () {
                                   function (e, i) { 
                                     if (!e) return null;
                                     var ret = { id: e.id, name: e.label };
-                                    if (e.enhancement) ret.enhancement = e.enhancement;
+                                    if (e.enhancement) {
+                                      ret.enhancement = JSON.parse(JSON.stringify(e.enhancement));
+                                    }
                                     if (player.isEquiped(i)) ret.equip = true;
                                     return ret;
                                 })
