@@ -152,7 +152,7 @@
     };
 
     Player.prototype.migrate = function() {
-      var cfg, item, lv, p, slot, _ref7;
+      var cfg, enhanceID, item, lv, p, slot, _ref7;
       _ref7 = this.inventory.container;
       for (slot in _ref7) {
         item = _ref7[slot];
@@ -174,12 +174,15 @@
                 })(this));
                 item.id = p[0].value;
               }
-              item.enhancement = [
-                {
-                  id: queryTable(TABLE_ITEM, item.id).enhanceID,
-                  level: lv
-                }
-              ];
+              enhanceID = queryTable(TABLE_ITEM, item.id).enhanceID;
+              if (enhanceID != null) {
+                item.enhancement = [
+                  {
+                    id: enhanceID,
+                    level: lv
+                  }
+                ];
+              }
               continue;
             }
             this.sellItem(slot);
