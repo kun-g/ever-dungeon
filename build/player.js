@@ -180,6 +180,7 @@
               if (!(eSlot === slot)) {
                 continue;
               }
+              console.log('Equiped', slot);
               lv = item.enhancement.reduce((function(r, i) {
                 return r + i.level;
               }), 0);
