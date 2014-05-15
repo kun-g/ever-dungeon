@@ -77,6 +77,7 @@ dbLib.initializeDB({
 });
 initGlobalConfig(null, function () {
   require('./helper').initLeaderboard(queryTable(TABLE_LEADBOARD));
+  initServer();
   dbLib.loadPlayer('Doge', function (err, player) {
     function showInventory() {
       var bag = player.inventory.map(
