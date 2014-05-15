@@ -85,7 +85,7 @@ initGlobalConfig(null, function () {
                                 .map(
                                   function (e, i) { 
                                     var ret = { id: e.id, name: e.label };
-                                    if (e.enhancement) ret.enhancement = enhancement;
+                                    if (e.enhancement) ret.enhancement = e.enhancement;
                                     if (equipment.indexOf(i) != -1) ret.equip = true;
                                     return ret;
                                 });
