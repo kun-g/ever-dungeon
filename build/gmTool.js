@@ -80,7 +80,8 @@ initGlobalConfig(null, function () {
   initServer();
   gServerID = -1;
   //dbLib.loadPlayer('Doge', function (err, player) {
-  dbClient.keys("*player*", function (err, list) {
+  dbClient.keys("Develop.player.*", function (err, list) {
+    list = list.map( function (e) { return e.slice('Develop.player.'.length); } );
     console.log(list);
   });
   //dbLib.loadPlayer('天走卢克', function (err, player) {
