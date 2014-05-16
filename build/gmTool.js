@@ -82,28 +82,29 @@ initGlobalConfig(null, function () {
   //dbLib.loadPlayer('Doge', function (err, player) {
   dbClient.keys("Develop.player.*", function (err, list) {
     list = list.map( function (e) { return e.slice('Develop.player.'.length); } );
-    console.log(list);
+    list.forEach( function (name) {
+      dbLib.loadPlayer(name, function (err, player) {
+        function showInventory() {
+          var bag = player.inventory.map(
+            function (e, i) { 
+              if (!e) return null;
+              var ret = { id: e.id, name: e.label, slot: i };
+              if (e.enhancement) {
+                ret.enhancement = JSON.parse(JSON.stringify(e.enhancement));
+              }
+              if (player.isEquiped(i)) ret.equip = true;
+              return ret;
+            })
+          .filter( function (e) { return e; } );
+          logInfo({ diamond: player.diamond, bag: bag});
+        }
+        //showInventory();
+        player.migrate();
+        //showInventory();
+        player.save();
+      });
+    });
   });
-  //dbLib.loadPlayer('天走卢克', function (err, player) {
-  //  function showInventory() {
-  //    var bag = player.inventory.map(
-  //                                function (e, i) { 
-  //                                  if (!e) return null;
-  //                                  var ret = { id: e.id, name: e.label, slot: i };
-  //                                  if (e.enhancement) {
-  //                                    ret.enhancement = JSON.parse(JSON.stringify(e.enhancement));
-  //                                  }
-  //                                  if (player.isEquiped(i)) ret.equip = true;
-  //                                  return ret;
-  //                              })
-  //                              .filter( function (e) { return e; } );
-  //    logInfo({ diamond: player.diamond, bag: bag});
-  //  }
-  //  showInventory();
-  //  player.migrate();
-  //  showInventory();
-  //  player.save();
-  //});
 });
 //async.map(players, function (playerName, cb) {
 //  dbLib.deliverMessage(playerName, rewardMessage, cb);
