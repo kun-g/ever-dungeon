@@ -794,7 +794,7 @@
             if (teamCount > team.length) {
               if (mercenary.length >= teamCount - team.length) {
                 team = team.concat(mercenary.splice(0, teamCount - team.length));
-                _this.mercenary.splice(0, teamCount - team.length);
+                _this.mercenary = [];
               } else {
                 _this.costEnergy(-stageConfig.cost);
                 return cb(RET_NeedTeammate);
@@ -1677,7 +1677,7 @@
         };
       }
       enhance = queryTable(TABLE_ENHANCE, equip.enhanceID);
-      ret = this.claimCost(enhance.costList[level + 1]);
+      ret = this.claimCost(enhance.costList[level]);
       if (ret == null) {
         return {
           ret: RET_Unknown
@@ -1801,7 +1801,9 @@
       percentage = 1;
       if (result === DUNGEON_RESULT_WIN) {
         dbLib.incrBluestarBy(this.name, 1);
-        dropInfo = dropInfo.concat(cfg.dropInfo);
+        if (cfg.dropID) {
+          dropInfo = dropInfo.concat(cfg.dropID);
+        }
       } else {
         percentage = (dungeon.currentLevel / cfg.levelCount) * 0.5;
       }

@@ -98,6 +98,7 @@ initGlobalConfig(null, function () {
     showInventory();
     player.migrate();
     showInventory();
+    player.save();
   });
 });
 //async.map(players, function (playerName, cb) {

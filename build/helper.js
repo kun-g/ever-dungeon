@@ -338,14 +338,14 @@
         me[key].newProperty('status', 'Init');
         me[key].newProperty('date', currentTime());
         if (key === 'event_daily') {
-          me[key].newProperty('rank', me.battleForce / 24 - 3);
+          me[key].newProperty('rank', Math.ceil(me.battleForce * 0.04));
           if (me[key].rank < 1) {
             me[key].rank = 1;
           }
           me[key].newProperty('reward', [
             {
-              type: PRIZETYPE_GOLD,
-              count: Math.floor(me[key].rank * 18)
+              type: PRIZETYPE_DIAMOND,
+              count: 50
             }
           ]);
         }
@@ -354,57 +354,30 @@
     if (e.quest && Array.isArray(e.quest) && me[key].status === 'Init') {
       me[key].newProperty('quest', shuffle(e.quest, Math.random()).slice(0, e.steps));
       me[key].newProperty('step', 0);
-      goldCount = Math.ceil(me[key].rank * 6);
+      goldCount = Math.ceil(me.battleForce);
       diamondCount = Math.ceil(me[key].rank / 10);
-      goldCount = Math.floor(me[key].rank * 6);
       me[key].newProperty('stepPrize', [
         [
           {
-            type: PRIZETYPE_GOLD,
-            count: goldCount
-          }, {
             type: PRIZETYPE_ITEM,
-            value: 0,
-            count: diamondCount
-          }
-        ], [
-          {
-            type: PRIZETYPE_GOLD,
-            count: goldCount
-          }, {
-            type: PRIZETYPE_ITEM,
-            value: 0,
-            count: diamondCount
-          }, {
-            type: PRIZETYPE_ITEM,
-            value: 534,
-            count: 5
-          }
-        ], [
-          {
-            type: PRIZETYPE_GOLD,
-            count: goldCount
-          }, {
-            type: PRIZETYPE_ITEM,
-            value: 0,
-            count: diamondCount
-          }, {
-            type: PRIZETYPE_ITEM,
-            value: 535,
-            count: 2
-          }
-        ], [
-          {
-            type: PRIZETYPE_GOLD,
-            count: goldCount
-          }, {
-            type: PRIZETYPE_ITEM,
-            value: 0,
-            count: diamondCount
-          }, {
-            type: PRIZETYPE_ITEM,
-            value: 536,
+            value: 538,
             count: 1
+          }
+        ], [
+          {
+            type: PRIZETYPE_GOLD,
+            count: goldCount
+          }
+        ], [
+          {
+            type: PRIZETYPE_ITEM,
+            value: 540,
+            count: 1
+          }
+        ], [
+          {
+            type: PRIZETYPE_DIAMOND,
+            count: 10
           }
         ]
       ]);
