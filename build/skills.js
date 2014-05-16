@@ -50,7 +50,7 @@ exports.data = [
       ],
       "action": [
         { "type": "modifyVar", "x": "damage", "formular": {"environment": {"damage":0}} },
-        {"type": "setMyMutex", "mutex": "dunqiang", "count": 1 }
+          {"type": "setMyMutex", "mutex": "reinforce", "count": 1 }
       ],
       "levelConfig": [
         {"count": 1},
@@ -194,14 +194,14 @@ exports.data = [
       },
       "triggerCondition": [
           {"type": "event", "event": "onCriticalDamage" },
-          {"type": "chance", "chance": 0.5}
+          {"type": "chance", "chance": 0.8}
       ],
       "targetSelection": {
           "pool": "objects",
           "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"}]
       },
       "action": [
-        {"type": "damage","damageType":"Spell","isRange":true,"formular": {"src":{"attack":0.2},"c":15}},
+        {"type": "damage","damageType":"Spell","isRange":true,"formular": {"src":{"attack":0.3},"c":15}},
           {"type": "playEffect","effect":4,"pos":"self"}
       ]
     }
@@ -1115,24 +1115,20 @@ exports.data = [
       "skillId": 42,
       "label":"龙息",
       "config": {
-          "basic" : {
-          "spellAction":2,
-          "targetEffect": 10 ,
-          "targetDelay": 3.6
-      },
           "triggerCondition": [
               {"type": "countDown", "cd": 6 },
               {"type" :"event", "event":"onTurnEnd" }
-
           ],
           "targetSelection": {
               "pool": "objects",
-              "filter": [{"type":"alive"},{"type":"visible"}]
+              "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"}]
           },
           "action":[
               {"type": "damage","damageType":"Spell","isRange":true,"delay":3.6,"formular": {"c":50}},
               {"type": "blink","delay":1.7,"time":0.08},
-              {"type":"shock","delay":1.6,"range":20,"time":2}
+              {"type": "playEffect","effect":10,"pos":"target","delay":3.6} ,
+              {"type":"shock","delay":1.6,"range":20,"time":2},
+              {"type":"playAction","motion":2,"pos":"self"}
           ]
       }
   },
@@ -1186,7 +1182,7 @@ exports.data = [
               { "type": "setProperty",  "modifications": {"attack":{"c":4}} }
           ],
           "triggerCondition": [
-              {"type": "property", "property":"health","to": 60 },
+              {"type": "property", "property":"health","to": 30 },
               {"type":"event","event":"onBattleTurnEnd"}
           ],
           "targetSelection": {
@@ -1587,7 +1583,7 @@ exports.data = [
             "action":[
                 {"type": "playEffect","effect":28,"pos":"self"},
                 { "type": "setProperty","modifications": {"critical":{"c":5}}},
-                { "type": "setProperty","modifications": {"attack":{"c":2}}}
+                { "type": "setProperty","modifications": {"attack":{"c":10}}}
             ],
             "targetSelection":{ "pool":"self" },
             "uninstallAction": [
@@ -2276,8 +2272,7 @@ exports.data = [
                 { "type": "event", "event": "onBeSpellDamage" },
                 { "type": "event", "event": "onBeSpellRangeDamage" },
                 { "type": "targetMutex", "mutex": "reinforce" },
-                { "type": "targetMutex", "mutex": "lightOfMiracel" },
-                {"type": "targetMutex", "mutex": "dunqiang"}
+                { "type": "targetMutex", "mutex": "lightOfMiracel" }
             ],
                 "availableCondition": [
                 { "type": "effectCount", "count":1}
@@ -2312,7 +2307,7 @@ exports.data = [
         "skillId": 98,
         "config": {
             "basic" : {
-                "buffEffect": 39
+                "buffEffect": 40
             },
            "triggerCondition": [
                    { "type": "event", "event": "onBePhysicalDamage" },
@@ -2320,9 +2315,8 @@ exports.data = [
                    { "type": "event", "event": "onBeSpellDamage" },
                    { "type": "event", "event": "onBeSpellRangeDamage" },
                { "type": "targetMutex", "mutex": "reinforce" },
-               { "type": "targetMutex", "mutex": "lightOfMiracel" },
-               {"type": "targetMutex", "mutex": "dunqiang"}
-            ],
+               { "type": "targetMutex", "mutex": "lightOfMiracel" }
+           ],
             "targetSelection": {
                 "pool": "self",
                 "filter": [{"type":"alive"}]
@@ -2709,7 +2703,7 @@ exports.data = [
                 {"type":"visible"},
                 {"type" :"event", "event":"onTurnEnd" }
             ],
-            "action": [{"type": "createMonster","objectCount":2,"effect":21,"randomPos":true,"monsterID":7}]
+            "action": [{"type": "createMonster","objectCount":1,"effect":21,"randomPos":true,"monsterID":7}]
         }
     },
     {
@@ -2750,7 +2744,7 @@ exports.data = [
                 { "type": "effectCount", "count":1}
             ],
             "action":[
-                {"type": "damage","damageType":"Spell","isRange":true,"delay":0.4,"formular": {"c":10}},
+                {"type": "damage","damageType":"Physical","isRange":true,"delay":0.4,"formular": {"c":10}},
                 {"type": "playEffect","effect":30,"pos":"self"}
             ]
         }
@@ -2773,6 +2767,88 @@ exports.data = [
             },
             "action":[
                 {"type":"installSpell", "spell": 120,"delay":{"base":0.3}}
+            ]
+        }
+    },
+    {
+        "skillId": 122,
+        "label":"土豪哥布林现身",
+        "desc":"onshow",
+        "config": {
+
+            "triggerCondition": [
+                {"type" :"event","event": "onShow"}
+            ],
+            "targetSelection": {
+                "pool": "self",
+                "filter": [{"type":"alive"}]
+            },
+            "action":[
+                {"type":"delay"} ,
+                {"type":"playEffect","effect":4,"pos":"self"},
+                {"type": "installSpell", "spell": 123}
+
+            ]
+        }
+    },
+    {
+        "skillId": 123,
+        "label":"土豪哥布林逃跑2",
+        "config": {
+            "triggerCondition": [
+                {"type" :"event", "event":"onTurnEnd","eventCount":10,"reset":true },
+                {"type":"visible"},
+                {"type" :"event", "event":"onTurnEnd" }
+            ],
+            "targetSelection": {
+                "pool": "self",
+                "filter": [{"type":"alive"},{"type":"visible"}]
+            },
+            "action":[
+                {"type":"playAction","motion":1,"pos":"self"},
+                {"type":"delay"} ,
+                {"type":"kill", "cod": 1}
+            ]
+        }
+    },
+    {
+        "skillId": 124,
+        "label":"普通传送",
+        "config": {
+            "triggerCondition": [
+                {"type":"event","event":"onBePhysicalDamage"},
+                {"type":"event","event":"onBePhysicalRangeDamage"},
+                {"type":"event","event":"onBeSpellDamage"},
+                {"type":"event","event":"onBeSpellRangeDamage"},
+                {"type":"alive"}
+            ],
+            "targetSelection":{
+                "pool":"self",
+                "filter": [{"type":"alive"}]
+            },
+            "action": [
+                {"type": "delay"},
+                {"type":"playEffect","effect":20,"pos":"self"},
+                {"type": "delay"},
+                {"type": "randTeleport"},
+                {"type": "delay"},
+                {"type":"playEffect","effect":21,"pos":"self"}
+            ]
+        }
+    },
+    { "skillId": 125,
+        "label":"赏金怪提示",
+        "config": {
+            "triggerCondition": [
+                { "type": "event","event":"onShow" }
+            ],
+            "targetSelection": {
+                "pool": "self",
+                "filter": [{"type":"alive"}]
+            },
+            "action": [
+                {"type":"delay" },
+                {"type": "playEffect","effect":43,"pos":"self"}
             ]
         }
     }

@@ -127,10 +127,9 @@ exports.data = {
         {
             "count": 100,
             "award": [
-                {"type":2, "count":100 },
-                {"type":0,"value":534,"count":3},
-                {"type":0,"value":535,"count":2},
-                {"type":0,"value":536,"count":1}
+                {"type":2, "count":300 },
+                {"type":0,"value":540,"count":3},
+                {"type":0,"value":539,"count":1}
             ]
         }
     ]

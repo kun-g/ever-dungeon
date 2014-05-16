@@ -64,7 +64,7 @@
             _results = [];
             for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
               o = result[_j];
-              if (env != null ? env.getFactionConfig(srcFaction, o.faction, f.flag) : void 0) {
+              if (env.getFactionConfig(srcFaction, o.faction, f.flag)) {
                 _results.push(o);
               }
             }
@@ -77,7 +77,7 @@
             _results = [];
             for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
               o = result[_j];
-              if (env != null ? env.getFactionConfig(o.faction, srcFaction, f.flag) : void 0) {
+              if (env.getFactionConfig(o.faction, srcFaction, f.flag)) {
                 _results.push(o);
               }
             }
@@ -90,7 +90,7 @@
             _results = [];
             for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
               o = result[_j];
-              if (!(env != null ? env.getFactionConfig(srcFaction, o.faction, f.flag) : void 0)) {
+              if (!env.getFactionConfig(srcFaction, o.faction, f.flag)) {
                 _results.push(o);
               }
             }
@@ -103,7 +103,7 @@
             _results = [];
             for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
               o = result[_j];
-              if (!(env != null ? env.getFactionConfig(o.faction, srcFaction, f.flag) : void 0)) {
+              if (!env.getFactionConfig(o.faction, srcFaction, f.flag)) {
                 _results.push(o);
               }
             }
@@ -175,16 +175,13 @@
           result = result.slice(0, f.count);
           break;
         case 'shuffle':
-          result = shuffle(result, env != null ? env.rand() : void 0);
+          result = shuffle(result, env.rand());
           break;
         case 'anchor':
           tmp = result;
           result = [];
           for (_j = 0, _len1 = tmp.length; _j < _len1; _j++) {
             t = tmp[_j];
-            if (!(env != null)) {
-              continue;
-            }
             if (!t.isBlock) {
               t = env.getBlock(t.pos);
             }

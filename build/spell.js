@@ -759,7 +759,8 @@
               if (typeof cmd.routine === "function") {
                 cmd.routine({
                   id: 'Kill',
-                  tar: this
+                  tar: this,
+                  cod: a.cod
                 });
               }
             } else {
@@ -768,7 +769,8 @@
                 if (typeof cmd.routine === "function") {
                   cmd.routine({
                     id: 'Kill',
-                    tar: t
+                    tar: t,
+                    cod: a.cod
                   });
                 }
               }

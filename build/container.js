@@ -46,6 +46,13 @@
             });
             item.slot[_this.type] = index;
           }
+          if (item.id == null) {
+            logInfo({
+              action: 'clearSlot',
+              index: index
+            });
+            _this.removeItemAt(index);
+          }
           return item;
         };
       })(this));
