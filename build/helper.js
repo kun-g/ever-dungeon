@@ -560,7 +560,9 @@
     },
     monthCard: {
       storeType: "player",
-      actived: 1,
+      actived: function(obj, util) {
+        return obj.flags.monthCard;
+      },
       count: 1,
       canReset: function(obj, util) {
         return util.diffDay(obj.timestamp.monthCard, util.today) && util.today.hour() >= 8;

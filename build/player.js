@@ -322,7 +322,6 @@
     };
 
     Player.prototype.initialize = function() {
-      var prize;
       dbLib.subscribe(PlayerChannelPrefix + this.name, wrapCallback(this, (function(_this) {
         return function(msg) {
           var err;
@@ -356,12 +355,6 @@
       this.installObserver('heroxpChanged');
       if (this.isNewPlayer) {
         this.isNewPlayer = false;
-        prize = queryTable(TABLE_CONFIG, 'InitialEquipment');
-        this.claimPrize(prize.filter((function(_this) {
-          return function(e) {
-            return isClassMatch(_this.hero["class"], e.classLimit);
-          };
-        })(this)));
       }
       helperLib.assignLeaderboard(this);
       this.inventory.validate();
@@ -380,53 +373,47 @@
     };
 
     Player.prototype.handleReceipt = function(payment, tunnel, cb) {
-      var cfg, flag, myReceipt, productList, rec, ret;
+      var cfg, myReceipt, productList, rec, ret;
       productList = queryTable(TABLE_CONFIG, 'Product_List');
       myReceipt = payment.receipt;
       rec = unwrapReceipt(myReceipt);
       cfg = productList[rec.productID];
-      flag = true;
       this.log('charge', {
         rmb: cfg.rmb,
         diamond: cfg.diamond,
         tunnel: tunnel,
         action: 'charge',
-        match: flag,
         receipt: myReceipt
       });
-      if (flag) {
-        ret = [
-          {
-            NTF: Event_InventoryUpdateItem,
-            arg: {
-              dim: this.addDiamond(cfg.diamond)
-            }
-          }
-        ];
-        this.rmb += cfg.rmb;
-        this.onCampaign('RMB', cfg.rmb);
-        ret.push({
-          NTF: Event_PlayerInfo,
+      ret = [
+        {
+          NTF: Event_InventoryUpdateItem,
           arg: {
-            rmb: this.rmb
+            dim: this.addDiamond(cfg.diamond)
           }
-        });
-        ret.push({
-          NTF: Event_RoleUpdate,
-          arg: {
-            act: {
-              vip: this.vipLevel()
-            }
+        }
+      ];
+      this.rmb += cfg.rmb;
+      this.onCampaign('RMB', cfg.rmb);
+      ret.push({
+        NTF: Event_PlayerInfo,
+        arg: {
+          rmb: this.rmb
+        }
+      });
+      ret.push({
+        NTF: Event_RoleUpdate,
+        arg: {
+          act: {
+            vip: this.vipLevel()
           }
-        });
-        postPaymentInfo(this.createHero().level, myReceipt, payment.paymentType);
-        this.saveDB();
-        return dbWrapper.updateReceipt(myReceipt, RECEIPT_STATE_CLAIMED, function(err) {
-          return cb(err, ret);
-        });
-      } else {
-        return cb(Error(RET_InvalidPaymentInfo));
-      }
+        }
+      });
+      postPaymentInfo(this.createHero().level, myReceipt, payment.paymentType);
+      this.saveDB();
+      return dbWrapper.updateReceipt(myReceipt, RECEIPT_STATE_CLAIMED, function(err) {
+        return cb(err, ret);
+      });
     };
 
     Player.prototype.handlePayment = function(payment, handle) {
