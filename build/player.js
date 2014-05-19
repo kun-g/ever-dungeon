@@ -322,6 +322,7 @@
     };
 
     Player.prototype.initialize = function() {
+      var prize;
       dbLib.subscribe(PlayerChannelPrefix + this.name, wrapCallback(this, (function(_this) {
         return function(msg) {
           var err;
@@ -355,7 +356,12 @@
       this.installObserver('heroxpChanged');
       if (this.isNewPlayer) {
         this.isNewPlayer = false;
-        this.claimPrize(queryTable(TABLE_CONFIG, 'InitialEquipment'));
+        prize = queryTable(TABLE_CONFIG, 'InitialEquipment');
+        this.claimPrize(prize.filter((function(_this) {
+          return function(e) {
+            return isClassMatch(_this.hero["class"], e.classLimit);
+          };
+        })(this)));
       }
       helperLib.assignLeaderboard(this);
       this.inventory.validate();

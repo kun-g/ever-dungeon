@@ -4891,5 +4891,37 @@ exports.data = [
             { "==": [ { "type": "getProperty", "key": "quests.175.complete"}, true ] }
         ]
         }
+    },
+    {
+        questId: 177,
+        title: "月卡",
+        desc: "月卡",
+        objects: [
+            {
+              func: function (obj) {
+                return obj.flags.monthCard && obj.counters.monthCard < 28;
+              }
+            }
+        ],
+        bare: true,
+        prize: [ { "type":1, "count": 10000 } ],
+        cond: false
+    },
+    {
+        questId: 178,
+        title: "签到",
+        desc: "签到奖励:钱",
+        objects: [
+            { func: function (obj) { return obj.loginStreak.count === 0; } }
+        ],
+        prize: [ { "type":1, "count":10000 } ],
+        subObjectives: [
+          {
+            objective: { func: function (obj) { return obj.vipLevel() > 0; } },
+            prize: [ { "type":1, "count":10000 } ]
+          }
+        ],
+        bare: true,
+        cond: false
     }
-]
+];

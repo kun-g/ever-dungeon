@@ -306,14 +306,16 @@
             e.reset(me, util);
           }
           count = (_ref = me.counters[key]) != null ? _ref : 0;
-          ret.push({
-            NTF: Event_BountyUpdate,
-            arg: {
-              bid: e.id,
-              sta: e.actived,
-              cnt: e.count - count
-            }
-          });
+          if (e.id != null) {
+            ret.push({
+              NTF: Event_BountyUpdate,
+              arg: {
+                bid: e.id,
+                sta: e.actived,
+                cnt: e.count - count
+              }
+            });
+          }
         }
       }
     }
@@ -554,6 +556,18 @@
       reset: function(obj, util) {
         obj.timestamp.newProperty('goblin', util.currentTime());
         return obj.counters.newProperty('goblin', 0);
+      }
+    },
+    monthCard: {
+      storeType: "player",
+      actived: 1,
+      count: 1,
+      canReset: function(obj, util) {
+        return util.diffDay(obj.timestamp.monthCard, util.today) && util.today.hour() >= 8;
+      },
+      reset: function(obj, util) {
+        obj.timestamp.newProperty('monthCard', util.currentTime());
+        return obj.counters.newProperty('monthCard', 0);
       }
     }
   };
