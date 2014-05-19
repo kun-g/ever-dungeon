@@ -355,6 +355,7 @@
       this.installObserver('heroxpChanged');
       if (this.isNewPlayer) {
         this.isNewPlayer = false;
+        this.claimPrize(queryTable(TABLE_CONFIG, 'InitialEquipment'));
       }
       helperLib.assignLeaderboard(this);
       this.inventory.validate();
