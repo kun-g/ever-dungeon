@@ -1,4 +1,4 @@
-exports.data =[
+exports.data = [
 	{
 		"classId": 0,
 		"className": "战士",
@@ -315,10 +315,20 @@ exports.data =[
 		"soundAttack": "shouren.mp3",
 		"soundDie": "gebulindie.mp3",
 		"effectAttack": 9,
-		"skill": {
-			"id": 28,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 26,
+				"level": 1
+			},
+			{
+				"id": 27,
+				"level": 1
+			},
+			{
+				"id": 28,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 9,
@@ -426,10 +436,16 @@ exports.data =[
 		"soundAttack": "shanzeitoumuattack.mp3",
 		"soundDie": "shanzeitoumudie.mp3",
 		"effectAttack": 8,
-		"skill": {
-			"id": 48,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 48,
+				"level": 1
+			},
+			{
+				"id": 48,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 12,
@@ -503,10 +519,16 @@ exports.data =[
 		"soundDie": "youxiadie.mp3",
 		"effectAttack": 9,
 		"collectId": 40001,
-		"skill": {
-			"id": 27,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 26,
+				"level": 1
+			},
+			{
+				"id": 27,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 14,
@@ -615,10 +637,16 @@ exports.data =[
 		"soundAttack": "shourenattack.mp3",
 		"soundDie": "shourendie.mp3",
 		"effectAttack": 9,
-		"skill": {
-			"id": 26,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 27,
+				"level": 1
+			},
+			{
+				"id": 26,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 17,
@@ -947,10 +975,20 @@ exports.data =[
 		"soundDie": "gebulindie.mp3",
 		"effectAttack": 9,
 		"scale": 1.2,
-		"skill": {
-			"id": 28,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 26,
+				"level": 1
+			},
+			{
+				"id": 27,
+				"level": 1
+			},
+			{
+				"id": 28,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 26,
@@ -1061,10 +1099,16 @@ exports.data =[
 		"soundDie": "shanzeitoumudie.mp3",
 		"effectAttack": 8,
 		"scale": 1.2,
-		"skill": {
-			"id": 48,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 48,
+				"level": 1
+			},
+			{
+				"id": 48,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 29,
@@ -1138,10 +1182,16 @@ exports.data =[
 		"soundDie": "youxiadie.mp3",
 		"effectAttack": 9,
 		"scale": 1.2,
-		"skill": {
-			"id": 27,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 26,
+				"level": 1
+			},
+			{
+				"id": 27,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 31,
@@ -1252,10 +1302,16 @@ exports.data =[
 		"soundDie": "shourendie.mp3",
 		"effectAttack": 9,
 		"scale": 1.2,
-		"skill": {
-			"id": 27,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 26,
+				"level": 1
+			},
+			{
+				"id": 27,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 34,
@@ -1515,10 +1571,20 @@ exports.data =[
 		"soundDie": "gebulindie.mp3",
 		"effectAttack": 9,
 		"collectId": 61001,
-		"skill": {
-			"id": 28,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 26,
+				"level": 1
+			},
+			{
+				"id": 27,
+				"level": 1
+			},
+			{
+				"id": 28,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 41,
@@ -1626,10 +1692,16 @@ exports.data =[
 		"soundAttack": "shanzeitoumuattack.mp3",
 		"soundDie": "shanzeitoumudie.mp3",
 		"effectAttack": 8,
-		"skill": {
-			"id": 48,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 48,
+				"level": 1
+			},
+			{
+				"id": 48,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 44,
@@ -1702,10 +1774,16 @@ exports.data =[
 		"soundDie": "youxiadie.mp3",
 		"effectAttack": 9,
 		"collectId": 68001,
-		"skill": {
-			"id": 27,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 26,
+				"level": 1
+			},
+			{
+				"id": 27,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 46,
@@ -1813,10 +1891,16 @@ exports.data =[
 		"soundAttack": "shourenattack.mp3",
 		"soundDie": "shourendie.mp3",
 		"effectAttack": 9,
-		"skill": {
-			"id": 27,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 26,
+				"level": 1
+			},
+			{
+				"id": 27,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 49,
@@ -2144,10 +2228,20 @@ exports.data =[
 		"soundDie": "gebulindie.mp3",
 		"effectAttack": 9,
 		"scale": 1.2,
-		"skill": {
-			"id": 28,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 26,
+				"level": 1
+			},
+			{
+				"id": 27,
+				"level": 1
+			},
+			{
+				"id": 28,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 58,
@@ -2258,10 +2352,16 @@ exports.data =[
 		"soundDie": "shanzeitoumudie.mp3",
 		"effectAttack": 8,
 		"scale": 1.2,
-		"skill": {
-			"id": 48,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 48,
+				"level": 1
+			},
+			{
+				"id": 48,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 61,
@@ -2335,10 +2435,16 @@ exports.data =[
 		"soundDie": "youxiadie.mp3",
 		"effectAttack": 9,
 		"scale": 1.2,
-		"skill": {
-			"id": 27,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 26,
+				"level": 1
+			},
+			{
+				"id": 27,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 63,
@@ -2449,10 +2555,16 @@ exports.data =[
 		"soundDie": "shourendie.mp3",
 		"effectAttack": 9,
 		"scale": 1.2,
-		"skill": {
-			"id": 27,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 26,
+				"level": 1
+			},
+			{
+				"id": 27,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 66,
@@ -2711,10 +2823,20 @@ exports.data =[
 		"soundAttack": "shouren.mp3",
 		"soundDie": "gebulindie.mp3",
 		"effectAttack": 9,
-		"skill": {
-			"id": 28,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 26,
+				"level": 1
+			},
+			{
+				"id": 27,
+				"level": 1
+			},
+			{
+				"id": 28,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 73,
@@ -2822,10 +2944,16 @@ exports.data =[
 		"soundAttack": "shanzeitoumuattack.mp3",
 		"soundDie": "shanzeitoumudie.mp3",
 		"effectAttack": 8,
-		"skill": {
-			"id": 48,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 48,
+				"level": 1
+			},
+			{
+				"id": 48,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 76,
@@ -2897,10 +3025,16 @@ exports.data =[
 		"soundWound": "youxiawound.mp3",
 		"soundDie": "youxiadie.mp3",
 		"effectAttack": 9,
-		"skill": {
-			"id": 27,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 26,
+				"level": 1
+			},
+			{
+				"id": 27,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 78,
@@ -3009,10 +3143,16 @@ exports.data =[
 		"soundAttack": "shourenattack.mp3",
 		"soundDie": "shourendie.mp3",
 		"effectAttack": 9,
-		"skill": {
-			"id": 27,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 26,
+				"level": 1
+			},
+			{
+				"id": 27,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 81,
@@ -3339,10 +3479,20 @@ exports.data =[
 		"soundDie": "gebulindie.mp3",
 		"effectAttack": 9,
 		"scale": 1.2,
-		"skill": {
-			"id": 28,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 26,
+				"level": 1
+			},
+			{
+				"id": 27,
+				"level": 1
+			},
+			{
+				"id": 28,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 90,
@@ -3453,10 +3603,16 @@ exports.data =[
 		"soundDie": "shanzeitoumudie.mp3",
 		"effectAttack": 8,
 		"scale": 1.2,
-		"skill": {
-			"id": 48,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 48,
+				"level": 1
+			},
+			{
+				"id": 48,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 93,
@@ -3530,10 +3686,16 @@ exports.data =[
 		"soundDie": "youxiadie.mp3",
 		"effectAttack": 9,
 		"scale": 1.2,
-		"skill": {
-			"id": 27,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 26,
+				"level": 1
+			},
+			{
+				"id": 27,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 95,
@@ -3644,10 +3806,16 @@ exports.data =[
 		"soundDie": "shourendie.mp3",
 		"effectAttack": 9,
 		"scale": 1.2,
-		"skill": {
-			"id": 27,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 26,
+				"level": 1
+			},
+			{
+				"id": 27,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 98,
@@ -3906,10 +4074,20 @@ exports.data =[
 		"soundDie": "gebulindie.mp3",
 		"effectAttack": 9,
 		"collectId": 114001,
-		"skill": {
-			"id": 28,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 26,
+				"level": 1
+			},
+			{
+				"id": 27,
+				"level": 1
+			},
+			{
+				"id": 28,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 105,
@@ -4017,10 +4195,16 @@ exports.data =[
 		"soundAttack": "shanzeitoumuattack.mp3",
 		"soundDie": "shanzeitoumudie.mp3",
 		"effectAttack": 8,
-		"skill": {
-			"id": 48,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 48,
+				"level": 1
+			},
+			{
+				"id": 48,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 108,
@@ -4092,10 +4276,16 @@ exports.data =[
 		"soundWound": "youxiawound.mp3",
 		"soundDie": "youxiadie.mp3",
 		"effectAttack": 9,
-		"skill": {
-			"id": 27,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 26,
+				"level": 1
+			},
+			{
+				"id": 27,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 110,
@@ -4204,10 +4394,16 @@ exports.data =[
 		"soundAttack": "shourenattack.mp3",
 		"soundDie": "shourendie.mp3",
 		"effectAttack": 9,
-		"skill": {
-			"id": 27,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 26,
+				"level": 1
+			},
+			{
+				"id": 27,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 113,
@@ -4534,10 +4730,20 @@ exports.data =[
 		"soundDie": "gebulindie.mp3",
 		"effectAttack": 9,
 		"scale": 1.2,
-		"skill": {
-			"id": 28,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 26,
+				"level": 1
+			},
+			{
+				"id": 27,
+				"level": 1
+			},
+			{
+				"id": 28,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 122,
@@ -4648,10 +4854,16 @@ exports.data =[
 		"soundDie": "shanzeitoumudie.mp3",
 		"effectAttack": 8,
 		"scale": 1.2,
-		"skill": {
-			"id": 48,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 48,
+				"level": 1
+			},
+			{
+				"id": 48,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 125,
@@ -4725,10 +4937,16 @@ exports.data =[
 		"soundDie": "youxiadie.mp3",
 		"effectAttack": 9,
 		"scale": 1.2,
-		"skill": {
-			"id": 27,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 26,
+				"level": 1
+			},
+			{
+				"id": 27,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 127,
@@ -4839,10 +5057,16 @@ exports.data =[
 		"soundDie": "shourendie.mp3",
 		"effectAttack": 9,
 		"scale": 1.2,
-		"skill": {
-			"id": 27,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 26,
+				"level": 1
+			},
+			{
+				"id": 27,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 130,
@@ -4913,10 +5137,16 @@ exports.data =[
 			549,
 			611
 		],
-		"skill": {
-			"id": 13,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 4,
+				"level": 1
+			},
+			{
+				"id": 13,
+				"level": 1
+			}
+		]
 	},
 	{
 		"classId": 132,
@@ -4946,57 +5176,110 @@ exports.data =[
 			383,
 			611
 		],
-		"skill": {
-			"id": 6,
-			"level": 1
-		}
+		"skill": [
+			{
+				"id": 43,
+				"level": 1
+			},
+			{
+				"id": 6,
+				"level": 1
+			}
+		]
 	},
 	{
-		"abtest": {
-			"classId": 133,
-			"className": "龙",
-			"faction": "monster",
-			"classType": 1,
-			"bossFlag": true,
-			"avatar": "enemy-dragon.ccbi",
-			"animSpawn": "open",
-			"property": {
-				"health": 18,
-				"attack": 3,
-				"critical": 4,
-				"strong": 600,
-				"accuracy": 40,
-				"reactivity": -1000,
-				"speed": 4,
-				"counterAttack": false,
-				"exp": 0,
-				"gold": 0
-			},
-			"xproperty": {
-				"balance": 0.1,
-				"health": 1,
-				"attack": 0,
-				"critical": 1,
-				"strong": 1,
-				"accuracy": 1,
-				"reactivity": 1,
-				"speed": 1
-			},
-			"skill": [
-				{
-					"id": 39,
-					"level": 1
+		"abtest": [
+			{
+				"classId": 133,
+				"className": "龙",
+				"faction": "monster",
+				"classType": 1,
+				"bossFlag": true,
+				"avatar": "enemy-dragon.ccbi",
+				"animSpawn": "open",
+				"property": {
+					"health": 40,
+					"attack": 3,
+					"critical": 4,
+					"strong": 600,
+					"accuracy": 40,
+					"reactivity": -1000,
+					"speed": 4,
+					"counterAttack": false,
+					"exp": 0,
+					"gold": 0
 				},
-				{
-					"id": 35,
-					"level": 1
+				"xproperty": {
+					"balance": 0.1,
+					"health": 1,
+					"attack": 0,
+					"critical": 1,
+					"strong": 1,
+					"accuracy": 1,
+					"reactivity": 1,
+					"speed": 1
 				},
-				{
-					"id": 42,
-					"level": 1
-				}
-			]
-		}
+				"skill": [
+					{
+						"id": 39,
+						"level": 1
+					},
+					{
+						"id": 35,
+						"level": 1
+					},
+					{
+						"id": 42,
+						"level": 1
+					}
+				]
+			},
+			{
+				"classId": 133,
+				"className": "龙",
+				"faction": "monster",
+				"classType": 1,
+				"bossFlag": true,
+				"avatar": "enemy-dragon.ccbi",
+				"animSpawn": "open",
+				"property": {
+					"health": 18,
+					"attack": 3,
+					"critical": 4,
+					"strong": 600,
+					"accuracy": 40,
+					"reactivity": -1000,
+					"speed": 4,
+					"counterAttack": false,
+					"exp": 0,
+					"gold": 0
+				},
+				"xproperty": {
+					"balance": 0.1,
+					"health": 1,
+					"attack": 0,
+					"critical": 1,
+					"strong": 1,
+					"accuracy": 1,
+					"reactivity": 1,
+					"speed": 1
+				},
+				"skill": [
+					{
+						"id": 39,
+						"level": 1
+					},
+					{
+						"id": 35,
+						"level": 1
+					},
+					{
+						"id": 42,
+						"level": 1
+					}
+				]
+			}
+		]
 	},
 	{
 		"classId": 134,
@@ -5066,10 +5349,20 @@ exports.data =[
 		"soundAttack": "shirenmo.mp3",
 		"effectAttack": 9,
 		"scale": 1.2,
-		"skill": {
-			"id": 55,
-			"level": 1
-		},
+		"skill": [
+			{
+				"id": 45,
+				"level": 1
+			},
+			{
+				"id": 47,
+				"level": 1
+			},
+			{
+				"id": 55,
+				"level": 1
+			}
+		],
 		"bossFlag": true
 	},
 	{
@@ -5106,10 +5399,20 @@ exports.data =[
 		"soundDie": "shilaimudie.mp3",
 		"effectAttack": 9,
 		"scale": 1.2,
-		"skill": {
-			"id": 57,
-			"level": 1
-		},
+		"skill": [
+			{
+				"id": 55,
+				"level": 1
+			},
+			{
+				"id": 56,
+				"level": 1
+			},
+			{
+				"id": 57,
+				"level": 1
+			}
+		],
 		"bossFlag": true
 	},
 	{
@@ -5143,10 +5446,24 @@ exports.data =[
 		"soundWound": "liulangwound.mp3",
 		"soundDie": "liulangdie.mp3",
 		"scale": 1.2,
-		"skill": {
-			"id": 55,
-			"level": 1
-		},
+		"skill": [
+			{
+				"id": 51,
+				"level": 1
+			},
+			{
+				"id": 53,
+				"level": 1
+			},
+			{
+				"id": 54,
+				"level": 1
+			},
+			{
+				"id": 55,
+				"level": 1
+			}
+		],
 		"bossFlag": true
 	},
 	{
@@ -5179,10 +5496,28 @@ exports.data =[
 		},
 		"soundDie": "gebulindie.mp3",
 		"scale": 1.2,
-		"skill": {
-			"id": 61,
-			"level": 1
-		},
+		"skill": [
+			{
+				"id": 55,
+				"level": 1
+			},
+			{
+				"id": 28,
+				"level": 1
+			},
+			{
+				"id": 58,
+				"level": 1
+			},
+			{
+				"id": 59,
+				"level": 1
+			},
+			{
+				"id": 61,
+				"level": 1
+			}
+		],
 		"bossFlag": true
 	},
 	{
@@ -5219,10 +5554,28 @@ exports.data =[
 		"soundDie": "tulangdie.mp3",
 		"effectAttack": 31,
 		"scale": 1.2,
-		"skill": {
-			"id": 55,
-			"level": 1
-		},
+		"skill": [
+			{
+				"id": 62,
+				"level": 1
+			},
+			{
+				"id": 63,
+				"level": 1
+			},
+			{
+				"id": 64,
+				"level": 1
+			},
+			{
+				"id": 66,
+				"level": 1
+			},
+			{
+				"id": 55,
+				"level": 1
+			}
+		],
 		"bossFlag": true
 	},
 	{
@@ -5258,10 +5611,24 @@ exports.data =[
 		"soundDie": "liulangdie.mp3",
 		"effectAttack": 8,
 		"scale": 1.2,
-		"skill": {
-			"id": 55,
-			"level": 1
-		},
+		"skill": [
+			{
+				"id": 69,
+				"level": 1
+			},
+			{
+				"id": 71,
+				"level": 1
+			},
+			{
+				"id": 72,
+				"level": 1
+			},
+			{
+				"id": 55,
+				"level": 1
+			}
+		],
 		"bossFlag": true
 	},
 	{
@@ -5758,10 +6125,20 @@ exports.data =[
 			"reactivity": 1,
 			"speed": 1
 		},
-		"skill": {
-			"id": 42,
-			"level": 1
-		},
+		"skill": [
+			{
+				"id": 79,
+				"level": 1
+			},
+			{
+				"id": 35,
+				"level": 1
+			},
+			{
+				"id": 42,
+				"level": 1
+			}
+		],
 		"animSpawn": "open",
 		"bossFlag": true
 	},
@@ -6192,10 +6569,24 @@ exports.data =[
 		},
 		"soundWound": "liulangwound.mp3",
 		"soundDie": "liulangdie.mp3",
-		"skill": {
-			"id": 55,
-			"level": 1
-		},
+		"skill": [
+			{
+				"id": 114,
+				"level": 1
+			},
+			{
+				"id": 117,
+				"level": 1
+			},
+			{
+				"id": 116,
+				"level": 1
+			},
+			{
+				"id": 55,
+				"level": 1
+			}
+		],
 		"bossFlag": true
 	},
 	{
@@ -6227,10 +6618,28 @@ exports.data =[
 			"speed": 1
 		},
 		"soundDie": "gebulindie.mp3",
-		"skill": {
-			"id": 121,
-			"level": 1
-		},
+		"skill": [
+			{
+				"id": 55,
+				"level": 1
+			},
+			{
+				"id": 28,
+				"level": 1
+			},
+			{
+				"id": 118,
+				"level": 1
+			},
+			{
+				"id": 119,
+				"level": 1
+			},
+			{
+				"id": 121,
+				"level": 1
+			}
+		],
 		"bossFlag": true
 	},
 	{
@@ -6266,10 +6675,20 @@ exports.data =[
 		"soundAttack": "shouren.mp3",
 		"soundDie": "gebulindie.mp3",
 		"effectAttack": 9,
-		"skill": {
-			"id": 125,
-			"level": 1
-		},
+		"skill": [
+			{
+				"id": 122,
+				"level": 1
+			},
+			{
+				"id": 124,
+				"level": 1
+			},
+			{
+				"id": 125,
+				"level": 1
+			}
+		],
 		"dropInfo": [
 			5
 		]
@@ -6307,10 +6726,20 @@ exports.data =[
 		"soundAttack": "shouren.mp3",
 		"soundDie": "gebulindie.mp3",
 		"effectAttack": 9,
-		"skill": {
-			"id": 125,
-			"level": 1
-		},
+		"skill": [
+			{
+				"id": 122,
+				"level": 1
+			},
+			{
+				"id": 124,
+				"level": 1
+			},
+			{
+				"id": 125,
+				"level": 1
+			}
+		],
 		"dropInfo": [
 			6
 		]
@@ -6348,10 +6777,20 @@ exports.data =[
 		"soundAttack": "shouren.mp3",
 		"soundDie": "gebulindie.mp3",
 		"effectAttack": 9,
-		"skill": {
-			"id": 125,
-			"level": 1
-		},
+		"skill": [
+			{
+				"id": 122,
+				"level": 1
+			},
+			{
+				"id": 124,
+				"level": 1
+			},
+			{
+				"id": 125,
+				"level": 1
+			}
+		],
 		"dropInfo": [
 			7
 		]
