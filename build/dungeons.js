@@ -295,10 +295,7 @@ exports.data = [
                 ]
             }         
         ],
-        "prize":
-            [
-                8
-            ],
+        "dropID": [ 8 ],
         "prizeWxp":100,
         "prizeGold": 400,
         "prizeXp":200,
@@ -490,10 +487,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
-            [
-               9
-            ],
+        "dropID": [ 9 ],
         "prizeWxp":100,
         "prizeGold": 400,
         "prizeXp":200,
@@ -726,7 +720,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "dropID":
             [
                 10
             ],
@@ -1010,7 +1004,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "dropID":
             [
                 11
             ],
@@ -1171,7 +1165,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "dropID":
             [
                 12
             ],
@@ -1363,7 +1357,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "dropID":
             [
                13
             ],
@@ -1561,7 +1555,7 @@ exports.data = [
                 "exit": 29
             }
         ],
-        "prize":
+        "dropID":
             [
                 14
             ],
@@ -1771,7 +1765,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             15
         ],
         "prizeWxp":170,
@@ -1961,7 +1955,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             16
         ],
         "prizeWxp":170,
@@ -2194,7 +2188,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             17
             ] ,
         "prizeWxp":170,
@@ -2409,7 +2403,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             18
         ],
         "prizeWxp":170,
@@ -2598,7 +2592,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             19
         ],
         "prizeWxp":170,"prizeGold": 680,
@@ -2788,7 +2782,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             20
         ],
         "prizeWxp":170,"prizeGold": 680,
@@ -2991,7 +2985,7 @@ exports.data = [
                 "entrance":0
             }
         ],
-        "prize":[
+        "dropID":[
             21
         ],
         "prizeWxp":170,"prizeGold":680,
@@ -3179,7 +3173,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             22
         ],
         "prizeWxp":235,"prizeGold": 940,
@@ -3383,7 +3377,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             23
         ],
         "prizeWxp":235,"prizeGold": 940,
@@ -3619,7 +3613,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             24
         ],
         "prizeWxp":10,"prizeGold": 81,
@@ -3887,7 +3881,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             25
         ],
         "prizeWxp":235,"prizeGold": 940,
@@ -4091,7 +4085,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             26
         ],
         "prizeWxp":235,"prizeGold": 940,
@@ -4294,7 +4288,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             27
         ],
         "prizeWxp":235,"prizeGold":940,
@@ -4524,7 +4518,7 @@ exports.data = [
                 "entrance":0
             }
         ],
-        "prize":[
+        "dropID":[
             28
         ],
         "prizeWxp":235,"prizeGold": 940,
@@ -4728,7 +4722,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             29
         ],
         "prizeWxp":300,"prizeGold": 1200,
@@ -4949,7 +4943,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
            30
         ],
         "prizeWxp":300,"prizeGold": 1200,
@@ -5221,7 +5215,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             31
         ],
         "prizeWxp":300,"prizeGold": 1200,
@@ -5475,7 +5469,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             32
         ],
         "prizeWxp":300,"prizeGold": 1200,
@@ -5697,7 +5691,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             33
         ],
         "prizeWxp":300,"prizeGold": 1200,
@@ -5911,7 +5905,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             34
         ],
         "prizeWxp":300,"prizeGold": 1200,
@@ -6133,7 +6127,7 @@ exports.data = [
                 "entrance":0
             }
         ],
-        "prize":[
+        "dropID":[
             35
         ],
         "prizeWxp":300,"prizeGold": 1200,
@@ -6321,7 +6315,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             36
         ],
         "prizeWxp":368,"prizeGold":1450,
@@ -6534,7 +6528,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             37
         ],
         "prizeWxp":368,"prizeGold":1450,
@@ -6803,7 +6797,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             38
         ],
         "prizeWxp":368,"prizeGold":1450,
@@ -7008,7 +7002,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
            39
         ],
         "prizeWxp":368,"prizeGold":1450,
@@ -7230,7 +7224,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
            40
         ],
         "prizeWxp":368,"prizeGold":1450,
@@ -7454,7 +7448,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             41
         ],
         "prizeWxp":368,"prizeGold":1450,
@@ -7672,7 +7666,7 @@ exports.data = [
                 "entrance":0
             }
         ],
-        "prize":[
+        "dropID":[
             42
         ],
         "prizeWxp":368,"prizeGold":1450,
@@ -7880,7 +7874,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             43
         ],
         "prizeWxp":435,"prizeGold":1740,
@@ -8103,7 +8097,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             44
         ],
         "prizeWxp":435,"prizeGold":1740,
@@ -8321,7 +8315,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             45
         ],
         "prizeWxp":435,"prizeGold":1740,
@@ -8542,7 +8536,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             46
         ],
         "prizeWxp":435,"prizeGold":1740,
@@ -8806,7 +8800,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             47
         ],
         "prizeWxp":435,"prizeGold":1740,
@@ -9066,7 +9060,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             48
         ],
         "prizeWxp":435,"prizeGold":1740,
@@ -9302,7 +9296,7 @@ exports.data = [
                 "entrance":0
             }
         ],
-        "prize":[
+        "dropID":[
             49
         ],
         "prizeWxp":435,"prizeGold":1740,
@@ -9530,7 +9524,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             50
 
         ],
@@ -9752,7 +9746,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             51
         ],
         "prizeWxp":500,"prizeGold":2000,
@@ -9978,7 +9972,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             52
         ],
         "prizeWxp":500,"prizeGold":2000,
@@ -10213,7 +10207,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             53
         ],
         "prizeWxp":500,"prizeGold":2000,
@@ -10438,7 +10432,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
            54
         ],
         "prizeWxp":500,"prizeGold":2000,
@@ -10667,7 +10661,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             55
         ],
         "prizeWxp":500,"prizeGold":2000,
@@ -10895,7 +10889,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
            56
         ],
         "prizeWxp":500,"prizeGold":2000,
@@ -11115,7 +11109,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             57
         ],
         "prizeWxp":570,"prizeGold":2260,
@@ -11346,7 +11340,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
            58
         ],
         "prizeWxp":570,"prizeGold":2260,
@@ -11560,7 +11554,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             59
         ],
         "prizeWxp":570,"prizeGold":2260,
@@ -11794,7 +11788,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             60
         ],
         "prizeWxp":570,"prizeGold":2260,
@@ -12021,7 +12015,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             61
         ],
         "prizeWxp":570,"prizeGold":2260,
@@ -12214,7 +12208,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
            62
         ],
         "prizeWxp":570,"prizeGold":2260,
@@ -12422,7 +12416,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
            63
         ],
         "prizeWxp":570,"prizeGold":2260,
@@ -12636,7 +12630,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
            64
         ],
         "prizeWxp":630,"prizeGold":2520,
@@ -12841,7 +12835,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             65
         ],
         "prizeWxp":630,"prizeGold":2520,
@@ -13049,7 +13043,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             66
         ],
         "prizeWxp":630,"prizeGold":2520,
@@ -13263,7 +13257,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             67
         ],
         "prizeWxp":630,"prizeGold":2520,
@@ -13478,7 +13472,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             68
         ],
         "prizeWxp":630,"prizeGold":2520,
@@ -13711,7 +13705,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             69
         ],
         "prizeWxp":630,"prizeGold":2520,
@@ -13903,7 +13897,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
             70
         ],
         "prizeWxp":630,"prizeGold":2520,
@@ -14057,7 +14051,7 @@ exports.data = [
             }
 
         ],
-        "prize":
+        "dropID":
             [
                 71
             ],
@@ -14323,7 +14317,7 @@ exports.data = [
             }
 
         ],
-        "prize":
+        "dropID":
             [
                 72
             ],
@@ -14581,7 +14575,7 @@ exports.data = [
             }
 
         ],
-        "prize":
+        "dropID":
             [
                 73
             ],
@@ -14644,7 +14638,6 @@ exports.data = [
                 },
                 {
                     "level":35,
-                    "type":0,
                     "type":1,
                     "count": 4500
                 },
@@ -14831,7 +14824,7 @@ exports.data = [
             }
 
         ],
-        "prize":
+        "dropID":
             [
                 74
             ],
@@ -15097,7 +15090,7 @@ exports.data = [
             }
 
         ],
-        "prize":
+        "dropID":
             [
                 75
             ],
@@ -15352,7 +15345,7 @@ exports.data = [
             }
 
         ],
-        "prize":
+        "dropID":
             [
                 76
             ],
@@ -15686,7 +15679,7 @@ exports.data = [
                     "count": 30
                 }
             ],
-        "prize":
+        "dropID":
             [
                 77
             ],
@@ -15852,7 +15845,7 @@ exports.data = [
             }
 
         ],
-        "prize":
+        "dropID":
             [
                 78
             ],
@@ -16098,7 +16091,7 @@ exports.data = [
             }
 
         ],
-        "prize":
+        "dropID":
             [
                 79
             ],
@@ -16364,7 +16357,7 @@ exports.data = [
             }
 
         ],
-        "prize":
+        "prize"://TODO
             [
                 {
                     "rate": 0.2,
@@ -16577,7 +16570,7 @@ exports.data = [
             }
 
         ],
-        "prize":
+        "prize"://TODO:
             [
                 {
                     "rate": 0.2,
@@ -16744,7 +16737,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "prize"://TODO:
             [
                 {
                     "rate": 0.8,
@@ -16963,7 +16956,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "dropID":
             [
             ],
         "prizeWxp":0,"prizeGold": 0,
@@ -17227,7 +17220,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
         ],
         "prizeWxp":0,"prizeGold": 0,
         "prizeXp":0,
@@ -17455,7 +17448,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
 
         ],
         "prizeWxp":0,"prizeGold":0,
@@ -17682,7 +17675,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
 
         ],
         "prizeWxp":0,"prizeGold": 0,
@@ -17920,7 +17913,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
 
         ],
         "prizeWxp":0,"prizeGold":0,
@@ -18185,7 +18178,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
 
         ],
         "prizeWxp":0,"prizeGold":0,
@@ -18422,7 +18415,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
 
         ],
         "prizeWxp":0,"prizeGold":0,
@@ -18640,7 +18633,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
 
         ],
         "prizeWxp":0,"prizeGold":0,
@@ -18814,7 +18807,7 @@ exports.data = [
             ]
         }
     ],
-    "prize":
+    "prize"://TODO:
         [
             {
                 "rate": 0.8,
@@ -19029,7 +19022,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "prize"://TODO:
             [
                 {
                     "rate": 0.8,
@@ -19287,7 +19280,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "prize"://TODO:
             [
                 {
                     "rate": 0.8,
@@ -19593,7 +19586,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "prize"://TODO:
             [
                 {
                     "rate": 0.8,
@@ -19775,7 +19768,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "prize"://TODO:
             [
                 {
                     "rate": 0.8,
@@ -19988,7 +19981,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "prize"://TODO:
             [
                 {
                     "rate": 0.8,
@@ -20208,7 +20201,7 @@ exports.data = [
                 "exit": 29
             }
         ],
-        "prize":
+        "prize"://TODO:
             [
                 {
                     "rate": 0.8,
@@ -20280,7 +20273,7 @@ exports.data = [
     "triggers": ["stage0-1:FirstBoss","stage0-1:FirstMonster","stage0-1:Firstbaoxiang","stage0-1:FirstCard"],
     "collectId":153001,
     "prizeWxp":0,
-        "prize":[
+    "dropID":[
          71
     ],
     "prizeGold": 100,
@@ -20403,7 +20396,7 @@ exports.data = [
             }
 
         ],
-        "prize":
+        "dropID":
             [ 8
             ],
         "prizeWxp":100,
@@ -20598,7 +20591,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "dropID":
             [
                   9
             ],
@@ -20810,7 +20803,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "dropID":
             [
                 10
             ],
@@ -21035,7 +21028,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "dropID":
             [     11
             ],
         "prizeWxp":100,"prizeGold": 400,
@@ -21195,7 +21188,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "dropID":
             [
                 12
             ],
@@ -21380,7 +21373,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "dropID":
             [
                 13
             ],
@@ -21565,8 +21558,7 @@ exports.data = [
                 "exit": 29
             }
         ],
-        "prize":
-           14,
+        "dropID":[ 14 ],
         "prizeWxp":100,
         "prizeGold": 400,
         "prizeXp":200,
@@ -21699,9 +21691,7 @@ exports.data = [
                 "rank": 8
             }
         ],
-        "prize":[
-           71
-        ],
+        "dropID":[ 71 ],
         "prizeWxp":100,
         "prizeGold": 400,
         "prizeXp":200,
@@ -21811,7 +21801,7 @@ exports.data = [
                         "pos":12
                     }
                 ],
-                "prize":[
+            "dropID":[
                   71
             ],
                 "rank": 10,
@@ -21842,7 +21832,7 @@ exports.data = [
                 ],
                 "rank": 10
             }
-        ], "prize":[   71
+        ], "dropID":[   71
 
     ],
         "prizeWxp":100,
@@ -22153,7 +22143,7 @@ exports.data = [
             ]
             }
         ],
-        "prize":[
+        "dropID":[
 
         ],
         "prizeWxp":0,"prizeGold":0,
@@ -22367,7 +22357,7 @@ exports.data = [
             ]
             }
         ],
-        "prize":[
+        "dropID":[
 
         ],
         "prizeWxp":0,"prizeGold":0,
@@ -22379,241 +22369,69 @@ exports.data = [
         "dungeonId": 104,
         "rank": 250,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
+        pool: {
+          normalTrap:[
+              { "id":170, "weight":3 },
+              { "id":171, "weight":3 },
+              { "id":172, "weight":3 },
+              { "id":173, "weight":3 },
+              { "id":174, "weight":3 },
+              { "id":175, "weight":3 },
+              { "id":176, "weight":3 },
+              { "id":177, "weight":3 },
+              { "id":178, "weight":3 },
+              { "id":179, "weight":3 }
+          ]
+        },
+        global: [
+          {id: 190, count: 10},
+          {pool: 'normalTrap', from: 2, to: 5} 
         ],
-
-        "levels" :[
-            {
-                "normalCount":1,"objects" :[
-                {
-                    "id": 42,
-                    "count":1
-                },
-                {
-                    "id": 43,
-                    "count":1
-                },
-                {
-                    "id": 49 ,
-                    "count":2
-                },
-                {
-                    "id": 12,
-                    "count":2
-                },                  {
-                    "id": 190,
-                    "count":1
-                },
-                {
-                    "id": 69,
-                    "count":1
-                },
-                {
-                    "id": 45,
-                    "count":1
-                }
-            ]
-            },
-            {
-                "normalCount":1,"objects" :[
-                {
-                    "id": 42,
-                    "count":1
-                },
-                {
-                    "id": 43,
-                    "count":1
-                },
-                {
-                    "id": 149 ,
-                    "count":2
-                },
-                {
-                    "id": 12,
-                    "count":2
-                },
-                {
-                    "id": 69,
-                    "count":1
-                },
-                {
-                    "id": 45,
-                    "count":1
-                },
-                {
-                    "id": 190,
-                    "count":1
-                }
-            ]
-            },
-            {
-                "normalCount":1,"objects" :[
-                {
-                    "id": 42,
-                    "count":1
-                },
-                {
-                    "id": 49 ,
-                    "count":2
-                },
-                {
-                    "id": 149,
-                    "count":3
-                },
-                {
-                    "id": 12,
-                    "count":2
-                },
-                {
-                    "id": 43,
-                    "count":1
-                },
-                {
-                    "id":63,
-                    "count":1
-                } ,
-                {
-                    "id": 190,
-                    "count":2
-                }
-            ]
-            },
-            {
-                "normalCount":1,"objects" :[
-                {
-                    "id": 42,
-                    "count":2
-                },
-                {
-                    "id": 43,
-                    "count":1
-                },
-                {
-                    "id": 47 ,
-                    "count":1
-                },
-                {
-                    "id": 190,
-                    "count":1
-                },
-                {
-                    "id": 12,
-                    "count":2
-                },
-                {
-                    "id": 69,
-                    "count":1
-                }
-            ]
-            },
-            {
-                "normalCount":1,"objects" :[
-                {
-                    "id": 42,
-                    "count":2
-                },
-                {
-                    "id": 43,
-                    "count":1
-                },
-                {
-                    "id": 47 ,
-                    "count":1
-                },
-                {
-                    "id": 12,
-                    "count":2
-                },
-                {
-                    "id": 190,
-                    "count":1
-                },
-                {
-                    "id": 69,
-                    "count":1
-                }
-            ]
-            },
-            {
-                "normalCount":1,"objects" :[
-                {
-                    "id": 42,
-                    "count":2
-                },
-                {
-                    "id": 47 ,
-                    "count":1
-                },
-                {
-                    "id": 12,
-                    "count":1
-                },
-                {
-                    "id": 43,
-                    "count":1
-                },
-                {
-                    "id": 149,
-                    "count":3
-                },
-                {
-                    "id": 69,
-                    "count":1
-                },
-                {
-                    "id": 190,
-                    "count":2
-                }
-            ]
-            }
+        levels: [
+          [
+              { "id": 49 , "count":2 },
+              { "id": 42, "count":1 }, { "id": 43, "count":1 },
+              { "id": 12, "count":2 },
+              { "id": 69, "count":1 },
+              { "id": 45, "count":1 }
+          ],
+          [
+              { "id": 42, "count":1 }, { "id": 43, "count":1 },
+              { "id": 149 , "count":2 },
+              { "id": 12, "count":2 },
+              { "id": 69, "count":1 },
+              { "id": 45, "count":1 }
+          ],
+          [
+              { "id": 49 , "count":2 },
+              { "id": 42, "count":1 }, { "id": 43, "count":1 },
+              { "id": 149, "count":3 },
+              { "id": 12, "count":2 },
+              { "id":63, "count":1 }
+          ],
+          [
+              { "id": 42, "count":2 }, { "id": 43, "count":1 },
+              { "id": 47 , "count":1 },
+              { "id": 12, "count":2 },
+              { "id": 69, "count":1 }
+          ],
+          [
+              { "id": 42, "count":2 }, { "id": 43, "count":1 },
+              { "id": 47 , "count":1 },
+              { "id": 12, "count":2 },
+              { "id": 69, "count":1 }
+          ],
+          [
+              { "id": 42, "count":2 }, { "id": 43, "count":1 },
+              { "id": 47 , "count":1 },
+              { "id": 12, "count":1 },
+              { "id": 149, "count":3 },
+              { "id": 69, "count":1 }
+          ]
         ],
-        "prize":[
-
-        ],
-        "prizeWxp":0,"prizeGold":0,
-        "prizeXp":0,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "dropID":[ ],
+        "prizeWxp":0,"prizeGold":0, "prizeXp":0,
+        "wxpRate":1,"goldRate":0.2, "xpRate":0.1
     }
 
-]
+];

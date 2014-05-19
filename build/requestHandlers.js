@@ -117,8 +117,6 @@
         });
         req.write(token);
         return req.end();
-      case LOGIN_ACCOUNT_TYPE_TG:
-        return dbLib.loadAuth(passport, token, callback);
       case LOGIN_ACCOUNT_TYPE_AD:
       case LOGIN_ACCOUNT_TYPE_GAMECENTER:
         return callback(null);
