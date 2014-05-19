@@ -224,7 +224,7 @@
     };
 
     Player.prototype.onLogin = function() {
-      var dis, flag, key, prize, ret, s, _i, _len, _ref7;
+      var flag, key, prize, ret, s, _i, _len, _ref7;
       if (!this.lastLogin) {
         return [];
       }
@@ -252,20 +252,10 @@
           }
         }
       }
-      flag = true;
-      if (this.loginStreak.date) {
-        dis = diffDate(this.loginStreak.date);
-        if (dis === 0) {
-          flag = false;
-        } else if (dis > 1) {
-          this.loginStreak.count = 0;
-        }
-      } else {
+      if (this.loginStreak.date && diffDate(this.loginStreak.date, 'month') !== 0) {
         this.loginStreak.count = 0;
       }
-      if (this.loginStreak.count >= queryTable(TABLE_CAMPAIGN, 'LoginStreak').level.length) {
-        this.loginStreak.count = 0;
-      }
+      flag = this.loginStreak.date && diffDate(this.loginStreak.date) === 0;
       this.log('onLogin', {
         loginStreak: this.loginStreak,
         date: this.lastLogin
@@ -275,7 +265,7 @@
         {
           NTF: Event_CampaignLoginStreak,
           day: this.loginStreak.count,
-          claim: flag
+          claim: !flag
         }
       ];
       return ret;
