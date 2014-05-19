@@ -1664,9 +1664,9 @@
     };
 
     Player.prototype.enhanceItem = function(itemSlot) {
-      var eh, enhance, equip, level, ret;
+      var eh, enhance, equip, level, ret, _ref7;
       equip = this.getItemAt(itemSlot);
-      if (equip.enhancement[0] == null) {
+      if (((_ref7 = equip.enhancement) != null ? _ref7[0] : void 0) == null) {
         equip.enhancement[0] = {
           id: equip.enhanceID,
           level: -1
