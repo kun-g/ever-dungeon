@@ -263,6 +263,9 @@
       } else {
         this.loginStreak.count = 0;
       }
+      if (this.loginStreak.count >= queryTable(TABLE_CAMPAIGN, 'LoginStreak').level.length) {
+        this.loginStreak.count = 0;
+      }
       this.log('onLogin', {
         loginStreak: this.loginStreak,
         date: this.lastLogin
@@ -298,11 +301,18 @@
         date: currentTime()
       });
       reward = queryTable(TABLE_CAMPAIGN, 'LoginStreak', this.abIndex).level[this.loginStreak.count].award;
-      ret = this.claimPrize(reward);
-      this.loginStreak.count += 1;
-      if (this.loginStreak.count >= queryTable(TABLE_CAMPAIGN, 'LoginStreak').level.length) {
-        this.loginStreak.count = 0;
+      if (!Array.isArray(reward)) {
+        reward = [reward];
       }
+      ret = this.claimPrize(reward.filter((function(_this) {
+        return function(e) {
+          if (e.vipLimit == null) {
+            return true;
+          }
+          return _this.vipLevel() >= _this.vipLimit;
+        };
+      })(this)));
+      this.loginStreak.count += 1;
       return {
         ret: RET_OK,
         res: ret
