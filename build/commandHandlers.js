@@ -222,7 +222,7 @@ function handler_doBuyEnergy(arg, player, handler, rpcID) {
       if (x > 5) x = 5;
       diamondCost = 30*x + 50;
       break;
-    case FEATURE_FRIEND_STROAGE: diamondCost = +arg.tar break;
+    case FEATURE_FRIEND_STROAGE: diamondCost = +arg.tar; break;
   }
   var evt = [];
   var product = '';
