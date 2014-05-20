@@ -114,7 +114,7 @@
   };
 
   createUnits = function(rules, randFunc) {
-    var cfg, filterLevels, globalRule, i, l, levelConfig, levelRule, placeUnit, r, rand, result, rule, selectFromPool, selectPos, translateRule, _i, _j, _k, _len, _len1, _len2, _ref5;
+    var cfg, globalRule, i, l, levelConfig, levelRule, placeUnit, r, rand, result, rule, selectFromPool, selectPos, translateRule, _i, _j, _k, _len, _len1, _len2, _ref5, _ref6, _ref7;
     rand = function(mod) {
       var r;
       if (mod == null) {
@@ -152,7 +152,7 @@
     _ref5 = rules.levels;
     for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
       l = _ref5[_i];
-      levelRule.push(translateRule(l.objects));
+      levelRule.push(translateRule(l));
     }
     globalRule = translateRule(rules.global);
     levelConfig = [];
@@ -197,7 +197,7 @@
       }
       return -1;
     };
-    placeUnit = function(lRule, lConfig, single) {
+    placeUnit = function(lRule, lConfig) {
       var count, idList, result, _k, _len2, _ref6;
       result = [];
       for (_k = 0, _len2 = lRule.length; _k < _len2; _k++) {
@@ -206,9 +206,6 @@
           continue;
         }
         count = (_ref6 = r.count) != null ? _ref6 : 1;
-        if (single) {
-          count = 1;
-        }
         if (count + lConfig.total > lConfig.limit) {
           count = lConfig.total - lConfig.limit + count;
         }
@@ -236,7 +233,6 @@
             if (Array.isArray(r.pos)) {
               u.pos = selectPos(r.pos, lConfig);
             }
-            lConfig.takenPos[r.pos] = true;
           }
           _ref7 = lConfig.property;
           for (k in _ref7) {
@@ -263,33 +259,24 @@
     }
     for (_k = 0, _len2 = globalRule.length; _k < _len2; _k++) {
       rule = globalRule[_k];
-      i = 0;
-      filterLevels = function() {
-        var _ref6, _ref7;
-        cfg = levelConfig.filter(function(c) {
-          return c.total < c.limit;
+      cfg = levelConfig.filter(function(c) {
+        return c.total < c.limit;
+      });
+      if (((_ref6 = rule.levels) != null ? _ref6.from : void 0) != null) {
+        cfg = cfg.filter(function(c) {
+          return c.id > rule.levels.from;
         });
-        if (((_ref6 = rule.levels) != null ? _ref6.from : void 0) != null) {
-          cfg = cfg.filter(function(c) {
-            return c.id > rule.levels.from;
-          });
-        }
-        if (((_ref7 = rule.levels) != null ? _ref7.to : void 0) != null) {
-          cfg = cfg.filter(function(c) {
-            return c.id < rule.levels.to;
-          });
-        }
-        return cfg;
-      };
-      while (i < rule.count) {
-        cfg = filterLevels();
-        if (cfg.length <= 0) {
-          break;
-        }
-        cfg = cfg[rand() % cfg.length];
-        result[cfg.id] = result[cfg.id].concat(placeUnit([rule], cfg, true));
-        i++;
       }
+      if (((_ref7 = rule.levels) != null ? _ref7.to : void 0) != null) {
+        cfg = cfg.filter(function(c) {
+          return c.id < rule.levels.to;
+        });
+      }
+      if (cfg.length <= 0) {
+        continue;
+      }
+      cfg = cfg[rand() % cfg.length];
+      result[cfg.id] = result[cfg.id].concat(placeUnit([rule], cfg));
     }
     return result;
   };
@@ -675,7 +662,7 @@
     };
 
     Dungeon.prototype.act = function(action, arg, replayMode, showResult, randNumber) {
-      var cmd, hero, r, ret;
+      var aliveHeroes, cmd, hero, r, ret;
       if (replayMode == null) {
         replayMode = false;
       }
@@ -704,6 +691,14 @@
         });
       }
       ret = [];
+      aliveHeroes = this.getAliveHeroes().filter(function(h) {
+        return h != null;
+      }).sort(function(a, b) {
+        return a.order - b.order;
+      });
+      if ((aliveHeroes != null ? aliveHeroes.length : void 0) > 0) {
+        hero = aliveHeroes[0];
+      }
       switch (action) {
         case DUNGEON_ACTION_ENTER_DUNGEON:
           ret.push({
@@ -803,7 +798,8 @@
           cmd.next({
             id: 'ExploreBlock',
             block: arg.b,
-            positions: arg.p
+            positions: arg.p,
+            src: hero
           }).next({
             id: 'EndTurn',
             type: 'Move',
@@ -1212,52 +1208,126 @@
     };
 
     Level.prototype.placeMapObjects = function(config, quests, pool) {
-      var arrCollectID, c, cfg, o, q, qid, qst, _i, _j, _k, _len, _len1, _len2, _ref5, _ref6, _ref7, _results;
+      var c, fillupMonster, monsterConfig, monsterCount, o, objectConfig, that, _i, _j, _k, _len, _len1, _len2, _ref5, _results;
       if (config == null) {
         return false;
       }
-      cfg = createUnits(config, (function(_this) {
-        return function() {
-          return _this.rand;
-        };
-      })(this));
-      arrCollectID = [];
-      for (qid in quests) {
-        qst = quests[qid];
-        q = queryTable(TABLE_QUEST, qid, this.abIndex);
-        _ref5 = q.objects;
-        for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
-          o = _ref5[_i];
-          arrCollectID.push(o.collectId);
-        }
-      }
-      cfg = cfg.map(function(level) {
-        return level.filter(function(e) {
-          if (e.property.questOnly) {
-            return arrCollectID.indexOf(e.property.collectId);
+      objectConfig = [];
+      if (config.objects != null) {
+        objectConfig = config.objects.filter(function(o) {
+          var q, qid, qst, ret;
+          if (o.questOnly) {
+            ret = false;
+            for (qid in quests) {
+              qst = quests[qid];
+              q = queryTable(TABLE_QUEST, qid, this.abIndex);
+              ret = q.objects.reduce((function(r, l) {
+                return r || l.collect === o.collectId;
+              }), false);
+              if (ret) {
+                return ret;
+              }
+            }
+            return false;
           } else {
             return true;
           }
         });
-      });
-      for (_j = 0, _len1 = cfg.length; _j < _len1; _j++) {
-        o = cfg[_j];
-        if (!(((_ref6 = o.property) != null ? _ref6.pos : void 0) != null)) {
-          continue;
+      }
+      monsterCount = objectConfig.reduce((function(r, l) {
+        var count;
+        count = 1;
+        if (l.count != null) {
+          count = l.count;
         }
-        c = o.property;
-        this.createObject(o.id, c.pos, c.keyed, c.collectId);
+        if (l.boss != null) {
+          r.boss += count;
+        }
+        if (l.elite != null) {
+          r.elite += count;
+        }
+        if (l.soldier != null) {
+          r.soldier += count;
+        }
+        if (l.normal != null) {
+          r.normal += count;
+        }
+        return r;
+      }), {
+        soldier: 0,
+        elite: 0,
+        boss: 0,
+        normal: 0
+      });
+      that = this;
+      fillupMonster = function(cfg) {
+        var i, m, _i, _ref5, _ref6, _results;
+        if (config[cfg.targetCounter] && monsterCount[cfg.counter] < config[cfg.targetCounter]) {
+          _results = [];
+          for (i = _i = _ref5 = monsterCount[cfg.counter], _ref6 = config[cfg.targetCounter]; _ref5 <= _ref6 ? _i <= _ref6 : _i >= _ref6; i = _ref5 <= _ref6 ? ++_i : --_i) {
+            m = selectElementFromWeightArray(pool[cfg.pool], that.rand());
+            objectConfig.push({
+              id: m.id,
+              count: 1,
+              collectId: m.collectId,
+              keyed: cfg.keyed
+            });
+            _results.push(monsterCount[cfg.counter] += 1);
+          }
+          return _results;
+        }
+      };
+      monsterConfig = [
+        {
+          counter: 'soldier',
+          targetCounter: 'soldierCount',
+          pool: 'soldier',
+          keyed: false
+        }, {
+          counter: 'good',
+          targetCounter: 'goodCount',
+          pool: 'good',
+          keyed: false
+        }, {
+          counter: 'bad',
+          targetCounter: 'badCount',
+          pool: 'bad',
+          keyed: false
+        }, {
+          counter: 'normal',
+          targetCounter: 'normalCount',
+          pool: 'normal',
+          keyed: false
+        }, {
+          counter: 'elite',
+          targetCounter: 'eliteCount',
+          pool: 'elite',
+          keyed: true
+        }, {
+          counter: 'boss',
+          targetCounter: 'bossCount',
+          pool: 'boss',
+          keyed: true
+        }
+      ];
+      for (_i = 0, _len = monsterConfig.length; _i < _len; _i++) {
+        c = monsterConfig[_i];
+        fillupMonster(c);
+      }
+      for (_j = 0, _len1 = objectConfig.length; _j < _len1; _j++) {
+        o = objectConfig[_j];
+        if (o.pos != null) {
+          this.createObject(o.id, o.pos, o.keyed, o.collectId);
+        }
       }
       _results = [];
-      for (_k = 0, _len2 = cfg.length; _k < _len2; _k++) {
-        o = cfg[_k];
-        if (!((o.property == null) || (property.pos == null))) {
-          continue;
+      for (_k = 0, _len2 = objectConfig.length; _k < _len2; _k++) {
+        o = objectConfig[_k];
+        if (o.pos == null) {
+          _results.push(this.placeObjects(o.id, (_ref5 = o.count) != null ? _ref5 : 1, o.keyed, o.collectId));
+        } else {
+          _results.push(void 0);
         }
-        c = (_ref7 = o.property) != null ? _ref7 : {
-          count: 1
-        };
-        _results.push(this.placeObjects(o.id, c.count, c.keyed, c.collectId));
       }
       return _results;
     };
@@ -2074,8 +2144,9 @@
             id: 'UnitInfo',
             unit: e
           });
-          e.onEvent('onShow', this);
           env.variable('monster', e);
+          env.variable('tar', e);
+          e.onEvent('onShow', this);
           env.onEvent('onMonsterShow', this);
           if ((e != null ? e.isVisible : void 0) !== true) {
             return e.isVisible = true;
