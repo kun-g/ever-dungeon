@@ -224,7 +224,7 @@
     };
 
     Player.prototype.onLogin = function() {
-      var flag, key, prize, ret, s, _i, _len, _ref7;
+      var dis, flag, key, prize, ret, s, _i, _len, _ref7;
       if (!this.lastLogin) {
         return [];
       }
@@ -252,10 +252,17 @@
           }
         }
       }
-      if (this.loginStreak.date && diffDate(this.loginStreak.date, 'month') !== 0) {
+      flag = true;
+      if (this.loginStreak.date) {
+        dis = diffDate(this.loginStreak.date);
+        if (dis === 0) {
+          flag = false;
+        } else if (dis > 1) {
+          this.loginStreak.count = 0;
+        }
+      } else {
         this.loginStreak.count = 0;
       }
-      flag = this.loginStreak.date && diffDate(this.loginStreak.date) === 0;
       this.log('onLogin', {
         loginStreak: this.loginStreak,
         date: this.lastLogin
@@ -265,7 +272,7 @@
         {
           NTF: Event_CampaignLoginStreak,
           day: this.loginStreak.count,
-          claim: !flag
+          claim: flag
         }
       ];
       return ret;
@@ -291,18 +298,11 @@
         date: currentTime()
       });
       reward = queryTable(TABLE_CAMPAIGN, 'LoginStreak', this.abIndex).level[this.loginStreak.count].award;
-      if (!Array.isArray(reward)) {
-        reward = [reward];
-      }
-      ret = this.claimPrize(reward.filter((function(_this) {
-        return function(e) {
-          if (e.vipLimit == null) {
-            return true;
-          }
-          return _this.vipLevel() >= _this.vipLimit;
-        };
-      })(this)));
+      ret = this.claimPrize(reward);
       this.loginStreak.count += 1;
+      if (this.loginStreak.count >= queryTable(TABLE_CAMPAIGN, 'LoginStreak').level.length) {
+        this.loginStreak.count = 0;
+      }
       return {
         ret: RET_OK,
         res: ret
@@ -373,47 +373,53 @@
     };
 
     Player.prototype.handleReceipt = function(payment, tunnel, cb) {
-      var cfg, myReceipt, productList, rec, ret;
+      var cfg, flag, myReceipt, productList, rec, ret;
       productList = queryTable(TABLE_CONFIG, 'Product_List');
       myReceipt = payment.receipt;
       rec = unwrapReceipt(myReceipt);
       cfg = productList[rec.productID];
+      flag = true;
       this.log('charge', {
         rmb: cfg.rmb,
         diamond: cfg.diamond,
         tunnel: tunnel,
         action: 'charge',
+        match: flag,
         receipt: myReceipt
       });
-      ret = [
-        {
-          NTF: Event_InventoryUpdateItem,
+      if (flag) {
+        ret = [
+          {
+            NTF: Event_InventoryUpdateItem,
+            arg: {
+              dim: this.addDiamond(cfg.diamond)
+            }
+          }
+        ];
+        this.rmb += cfg.rmb;
+        this.onCampaign('RMB', cfg.rmb);
+        ret.push({
+          NTF: Event_PlayerInfo,
           arg: {
-            dim: this.addDiamond(cfg.diamond)
+            rmb: this.rmb
           }
-        }
-      ];
-      this.rmb += cfg.rmb;
-      this.onCampaign('RMB', cfg.rmb);
-      ret.push({
-        NTF: Event_PlayerInfo,
-        arg: {
-          rmb: this.rmb
-        }
-      });
-      ret.push({
-        NTF: Event_RoleUpdate,
-        arg: {
-          act: {
-            vip: this.vipLevel()
+        });
+        ret.push({
+          NTF: Event_RoleUpdate,
+          arg: {
+            act: {
+              vip: this.vipLevel()
+            }
           }
-        }
-      });
-      postPaymentInfo(this.createHero().level, myReceipt, payment.paymentType);
-      this.saveDB();
-      return dbWrapper.updateReceipt(myReceipt, RECEIPT_STATE_CLAIMED, function(err) {
-        return cb(err, ret);
-      });
+        });
+        postPaymentInfo(this.createHero().level, myReceipt, payment.paymentType);
+        this.saveDB();
+        return dbWrapper.updateReceipt(myReceipt, RECEIPT_STATE_CLAIMED, function(err) {
+          return cb(err, ret);
+        });
+      } else {
+        return cb(Error(RET_InvalidPaymentInfo));
+      }
     };
 
     Player.prototype.handlePayment = function(payment, handle) {
@@ -540,7 +546,8 @@
             gender: this.hero.gender,
             hairStyle: this.hero.hairStyle,
             hairColor: this.hero.hairColor,
-            equipment: equip
+            equipment: equip,
+            equipSlot: this.equipment
           };
           this.save();
         } else {
@@ -555,17 +562,24 @@
     };
 
     Player.prototype.switchHero = function(hClass) {
-      var k, v, _ref7;
+      var k, v, _ref7, _ref8, _results;
       if (this.heroBase[hClass] == null) {
         return false;
       }
-      _ref7 = this.heroBase[hClass];
-      for (k in _ref7) {
-        v = _ref7[k];
-        this.hero.newProperty(k, JSON.parse(JSON.stringify(v)));
+      if (this.hero != null) {
+        _ref7 = this.hero;
+        for (k in _ref7) {
+          v = _ref7[k];
+          this.heroBase[this.hero["class"]].newProperty(k, JSON.parse(JSON.stringify(v)));
+        }
       }
-      this.hero.newProperty('equipment', []);
-      return this.hero.newProperty('vip', this.vipLevel());
+      _ref8 = this.heroBase[hClass];
+      _results = [];
+      for (k in _ref8) {
+        v = _ref8[k];
+        _results.push(this.hero.newProperty(k, JSON.parse(JSON.stringify(v))));
+      }
+      return _results;
     };
 
     Player.prototype.addMoney = function(type, point) {
@@ -1651,9 +1665,9 @@
     };
 
     Player.prototype.enhanceItem = function(itemSlot) {
-      var eh, enhance, equip, level, ret, _ref7;
+      var eh, enhance, equip, level, ret;
       equip = this.getItemAt(itemSlot);
-      if (((_ref7 = equip.enhancement) != null ? _ref7[0] : void 0) == null) {
+      if (equip.enhancement[0] == null) {
         equip.enhancement[0] = {
           id: equip.enhanceID,
           level: -1
@@ -1905,13 +1919,13 @@
       offlineReward = [
         {
           type: PRIZETYPE_EXP,
-          count: xpPrize.count * TEAMMATE_REWARD_RATIO
+          count: Math.ceil(xpPrize.count * TEAMMATE_REWARD_RATIO)
         }, {
           type: PRIZETYPE_GOLD,
-          count: goldPrize.count * TEAMMATE_REWARD_RATIO
+          count: Math.ceil(goldPrize.count * TEAMMATE_REWARD_RATIO)
         }, {
           type: PRIZETYPE_WXP,
-          count: wxPrize.count * TEAMMATE_REWARD_RATIO
+          count: Math.ceil(wxPrize.count * TEAMMATE_REWARD_RATIO)
         }
       ].filter(function(e) {
         return e.count > 0;
@@ -1922,9 +1936,9 @@
           src: MESSAGE_REWARD_TYPE_OFFLINE,
           prize: offlineReward
         };
-        dungeon.team.forEach(function(name) {
-          if (name) {
-            return dbLib.deliverMessage(name, teammateRewardMessage);
+        dungeon.team.forEach(function(m) {
+          if (m) {
+            return dbLib.deliverMessage(m.nam, teammateRewardMessage);
           }
         });
       }

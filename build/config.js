@@ -46,7 +46,7 @@ exports.data = {
   ],
     "InitialEquipment":[
         {"type":0,
-        "value":662,
+        "value":622,
         "count":1,
         classLimit:[0]},
         {"type":0,
