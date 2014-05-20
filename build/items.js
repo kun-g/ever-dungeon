@@ -27596,5 +27596,41 @@ exports.data =[
 		"sellprice": 250,
 		"quality": 4,
 		"synthesizeID": 44
-	}
+	},
+    {
+        "classId": 858,
+        "label": "努力之书",
+        "icon": "item-slds.png",
+        "category": 0,
+        "subcategory": 3,
+        "description": "记录着前人们努力成果的书，能让装备迅速积累熟练度。",
+        "stack": 99,
+        "sellprice": 150,
+        "quality": 0,
+        "wxp":400
+    },
+    {
+        "classId": 859,
+        "label": "加强努力之书",
+        "icon": "item-slds2.png",
+        "category": 0,
+        "subcategory": 3,
+        "description": "加强版的努力之书，能够大幅增加装备熟练度。",
+        "stack": 99,
+        "sellprice": 350,
+        "quality": 1,
+        "wxp":1000
+    },
+    {
+        "classId": 860,
+        "label": "严苛努力之书",
+        "icon": "item-slds3.png",
+        "category": 0,
+        "subcategory": 3,
+        "description": "严苛努力的成果之书，拥有巨大的熟练度蕴含其中。",
+        "stack": 99,
+        "sellprice": 650,
+        "quality": 2,
+        "wxp":1800
+    }
 ]
