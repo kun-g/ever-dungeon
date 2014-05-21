@@ -79,6 +79,7 @@ initGlobalConfig(null, function () {
   require('./helper').initLeaderboard(queryTable(TABLE_LEADBOARD));
   initServer();
   gServerID = -1;
+  count = 0;
   dbClient.keys("Master.player.*", function (err, list) {
     list = list.map( function (e) { return e.slice('Master.player.'.length); } );
     async.mapSeries(list,
@@ -103,6 +104,7 @@ initGlobalConfig(null, function () {
             console.log(name);
             player.save(cb);
           } else {
+            console.log(count++);
             cb();
           }
           player = null;
