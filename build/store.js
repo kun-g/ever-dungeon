@@ -6,6 +6,11 @@ exports.data = [
     {"id":858, "price": {"type": "diamond", "amount": 20},"category":[{"id": 0, "index": 4}]},
     {"id":859, "price": {"type": "diamond", "amount": 45}, "category":[{"id": 0, "index": 5}]},
     {"id":860, "price": {"type": "diamond", "amount": 75}, "category":[{"id": 0, "index": 6}]},
+    {"id":853, "price": {"type": "diamond", "amount": 5},"category":[{"id": 0, "index": 7}]},
+    {"id":854, "price": {"type": "diamond", "amount": 15},"category":[{"id": 0, "index": 8}]},
+    {"id":855, "price": {"type": "diamond", "amount": 30},"category":[{"id": 0, "index": 9}]},
+    {"id":856, "price": {"type": "diamond", "amount": 60},"category":[{"id": 0, "index": 10}]},
+    {"id":857, "price": {"type": "diamond", "amount": 100},"category":[{"id": 0, "index": 58}]},
     {"id":615, "price": {"type": "diamond", "amount": 280},"category":[{"id": 1, "index": 0}]},
     {"id":614, "price": {"type": "diamond", "amount": 880},"category":[{"id": 1, "index": 1}]},
     {"id":617, "price": {"type": "diamond", "amount": 180},"category":[{"id": 1, "index": 2}]},
@@ -66,9 +71,4 @@ exports.data = [
     {"id":849, "price": {"type": "diamond", "amount": 70},"category":[{"id": 3, "index": 50}]},
     {"id":850, "price": {"type": "diamond", "amount": 70},"category":[{"id": 3, "index": 51}]},
     {"id":851, "price": {"type": "diamond", "amount": 70},"category":[{"id": 3, "index": 52}]},
-    {"id":852, "price": {"type": "diamond", "amount": 70},"category":[{"id": 3, "index": 53}]},
-    {"id":853, "price": {"type": "diamond", "amount": 5},"category":[{"id": 3, "index": 54}]},
-    {"id":854, "price": {"type": "diamond", "amount": 15},"category":[{"id": 3, "index": 55}]},
-    {"id":855, "price": {"type": "diamond", "amount": 30},"category":[{"id": 3, "index": 56}]},
-    {"id":856, "price": {"type": "diamond", "amount": 60},"category":[{"id": 3, "index": 57}]},
-    {"id":857, "price": {"type": "diamond", "amount": 100},"category":[{"id": 3, "index": 58}]}]
+    {"id":852, "price": {"type": "diamond", "amount": 70},"category":[{"id": 3, "index": 53}]}]
