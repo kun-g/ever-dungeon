@@ -1001,7 +1001,7 @@
                 NTF: Event_InventoryUpdateItem,
                 arg: {
                   syn: this.inventoryVersion,
-                  god: this.addGold(p.count)
+                  god: this.addGold(-p.count)
                 }
               });
               break;
@@ -1010,7 +1010,7 @@
                 NTF: Event_InventoryUpdateItem,
                 arg: {
                   syn: this.inventoryVersion,
-                  dim: this.addDiamond(p.count)
+                  dim: this.addDiamond(-p.count)
                 }
               });
           }
