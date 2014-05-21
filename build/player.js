@@ -602,7 +602,7 @@
       if (point + this[type] < 0) {
         return false;
       }
-      this[type] += point;
+      this[type] = Math.floor(this[type] + point);
       if (type === 'diamond') {
         this.costedDiamond += point;
       }
