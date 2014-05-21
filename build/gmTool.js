@@ -105,7 +105,6 @@ initGlobalConfig(null, function () {
           } else {
             cb();
           }
-          player.destroy();
           player = null;
           //showInventory();
         });
