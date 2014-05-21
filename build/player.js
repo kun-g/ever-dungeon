@@ -160,7 +160,7 @@
         if (!(item != null)) {
           continue;
         }
-        console.log('X', slot);
+        console.log('X', slot, item.id);
         if (item.transPrize != null) {
           flag = true;
           if (this.isEquiped(slot)) {
