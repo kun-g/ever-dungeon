@@ -662,7 +662,7 @@
     };
 
     Dungeon.prototype.act = function(action, arg, replayMode, showResult, randNumber) {
-      var cmd, hero, r, ret;
+      var aliveHeroes, cmd, hero, r, ret;
       if (replayMode == null) {
         replayMode = false;
       }
@@ -691,6 +691,14 @@
         });
       }
       ret = [];
+      aliveHeroes = this.getAliveHeroes().filter(function(h) {
+        return h != null;
+      }).sort(function(a, b) {
+        return a.order - b.order;
+      });
+      if ((aliveHeroes != null ? aliveHeroes.length : void 0) > 0) {
+        hero = aliveHeroes[0];
+      }
       switch (action) {
         case DUNGEON_ACTION_ENTER_DUNGEON:
           ret.push({
@@ -790,7 +798,8 @@
           cmd.next({
             id: 'ExploreBlock',
             block: arg.b,
-            positions: arg.p
+            positions: arg.p,
+            src: hero
           }).next({
             id: 'EndTurn',
             type: 'Move',
@@ -2135,8 +2144,9 @@
             id: 'UnitInfo',
             unit: e
           });
-          e.onEvent('onShow', this);
           env.variable('monster', e);
+          env.variable('tar', e);
+          e.onEvent('onShow', this);
           env.onEvent('onMonsterShow', this);
           if ((e != null ? e.isVisible : void 0) !== true) {
             return e.isVisible = true;

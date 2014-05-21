@@ -295,29 +295,7 @@ exports.data = [
                 ]
             }         
         ],
-        "prize":
-            [
-                {
-                    "rate": 0.8,
-                    "items":
-                        [
-                            {
-                                "weight": 2,
-                                "item": 525
-                            }
-                        ]
-                },
-                {
-                    "rate": 0.2,
-                    "items":
-                        [
-                            {
-                                "weight": 2,
-                                "item": 526
-                            }
-                        ]
-                }
-            ],
+        "dropID": [ 8 ],
         "prizeWxp":100,
         "prizeGold": 400,
         "prizeXp":200,
@@ -328,7 +306,7 @@ exports.data = [
     },
     {
         "dungeonId": 2,
-        "rank": 2,
+        "rank": 1,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -509,30 +487,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
-            [
-                {
-                    "rate": 0.8,
-                    "items":
-                        [
-                            {
-                                "weight": 2,
-                                "item": 525
-                            }
-                        ]
-
-                },
-                {
-                    "rate": 0.2,
-                    "items":
-                        [
-                            {
-                                "weight": 2,
-                                "item": 526
-                            }
-                        ]
-                }
-            ],
+        "dropID": [ 9 ],
         "prizeWxp":100,
         "prizeGold": 400,
         "prizeXp":200,
@@ -577,7 +532,7 @@ exports.data = [
                 "weight":5
             }
         ],
-        "rank": 4,
+        "rank": 2,
         "levels" :[
             {    
                  "normalCount":1,"objects" :[
@@ -765,29 +720,9 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "dropID":
             [
-                {
-                    "rate": 0.8,
-                    "items":
-                        [
-                            {
-                                "weight": 2,
-                                "item": 525
-                            }
-                        ]
-
-                },
-                {
-                    "rate": 0.2,
-                    "items":
-                        [
-                            {
-                                "weight": 2,
-                                "item": 526
-                            }
-                        ]
-                }
+                10
             ],
         "prizeWxp":100,
         "prizeGold": 400,
@@ -833,7 +768,7 @@ exports.data = [
                 "weight":5
             }
         ],
-        "rank": 5,
+        "rank": 3,
         "levels" :[
             {    
                  "normalCount":1,"objects" :[
@@ -1069,29 +1004,9 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "dropID":
             [
-                {
-                    "rate": 0.8,
-                    "items":
-                        [
-                            {
-                                "weight": 2,
-                                "item": 525
-                            }
-                        ]
-
-                },
-                {
-                    "rate": 0.2,
-                    "items":
-                        [
-                            {
-                                "weight": 2,
-                                "item": 526
-                            }
-                        ]
-                }
+                11
             ],
         "prizeWxp":100,"prizeGold": 400,
         "prizeXp":208,
@@ -1136,7 +1051,7 @@ exports.data = [
             }
         ],
          
-        "rank": 6,
+        "rank": 4,
         "levels" :[
             {
                  "normalCount":1,"objects" :[
@@ -1250,29 +1165,9 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "dropID":
             [
-                {
-                    "rate": 0.8,
-                    "items":
-                        [
-                            {
-                                "weight": 2,
-                                "item": 525
-                            }
-                        ]
-
-                },
-                {
-                    "rate": 0.2,
-                    "items":
-                        [
-                            {
-                                "weight": 2,
-                                "item": 526
-                            }
-                        ]
-                }
+                12
             ],
         "prizeWxp":100,"prizeGold": 400,
         "prizeXp":200,
@@ -1281,7 +1176,7 @@ exports.data = [
     },
     {
         "dungeonId": 6,
-        "rank": 7,
+        "rank": 4,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -1462,29 +1357,9 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "dropID":
             [
-                {
-                    "rate": 0.8,
-                    "items":
-                        [
-                            {
-                                "weight": 2,
-                                "item": 525
-                            }
-                        ]
-
-                },
-                {
-                    "rate": 0.2,
-                    "items":
-                        [
-                            {
-                                "weight": 2,
-                                "item": 526
-                            }
-                        ]
-                }
+               13
             ],
         "prizeWxp":100,"prizeGold": 400,
         "prizeXp":200,
@@ -1538,7 +1413,7 @@ exports.data = [
     }
     ],
          
-        "rank": 9,
+        "rank": 5,
         "levels" :[
             {
                  "normalCount":1,"objects" :[
@@ -1680,29 +1555,9 @@ exports.data = [
                 "exit": 29
             }
         ],
-        "prize":
+        "dropID":
             [
-                {
-                    "rate": 0.8,
-                    "items":
-                        [
-                            {
-                                "weight": 2,
-                                "item": 525
-                            }
-                        ]
-
-                },
-                {
-                    "rate": 0.2,
-                    "items":
-                        [
-                            {
-                                "weight": 2,
-                                "item": 526
-                            }
-                        ]
-                }
+                14
             ],
         "prizeWxp":100,
         "prizeGold": 400,
@@ -1910,53 +1765,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.5,
-                "items":
-                    [
-                        {
-                            "weight": 2,
-                            "item": 526
-                        }
-                    ]
-            } ,
-            {
-                "rate": 0.8,
-                "items":
-                    [
-                        {
-                            "weight": 2,
-                            "item": 564
-                        } ,
-                        {
-                            "weight": 2,
-                            "item": 568
-                        },
-                        {
-                            "weight": 2,
-                            "item": 571
-                        }
-                    ]
-            }
+        "dropID":[
+            15
         ],
         "prizeWxp":170,
         "prizeGold":680,
@@ -1967,7 +1777,7 @@ exports.data = [
     },
     {
         "dungeonId": 9,
-        "rank": 8,
+        "rank": 6,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -2145,53 +1955,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.5,
-                "items":
-                    [
-                        {
-                            "weight": 2,
-                            "item": 526
-                        }
-                    ]
-            } ,
-            {
-                "rate": 0.8,
-                "items":
-                    [
-                        {
-                            "weight": 2,
-                            "item": 565
-                        } ,
-                        {
-                            "weight": 2,
-                            "item": 569
-                        },
-                        {
-                            "weight": 2,
-                            "item": 572
-                        }
-                    ]
-            }
+        "dropID":[
+            16
         ],
         "prizeWxp":170,
         "prizeGold": 680,
@@ -2202,7 +1967,7 @@ exports.data = [
     },
     {
         "dungeonId": 10,
-        "rank": 9,
+        "rank": 7,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -2423,54 +2188,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.5,
-                "items":
-                    [
-                        {
-                            "weight": 2,
-                            "item": 526
-                        }
-                    ]
-            },
-            {
-                "rate": 0.8,
-                "items":
-                    [
-                        {
-                            "weight": 2,
-                            "item": 566
-                        } ,
-                        {
-                            "weight": 2,
-                            "item": 570
-                        },
-                        {
-                            "weight": 2,
-                            "item": 573
-                        }
-
-                    ]
-            }
+        "dropID":[
+            17
             ] ,
         "prizeWxp":170,
         "prizeGold": 680,
@@ -2480,7 +2199,7 @@ exports.data = [
     },
     {
         "dungeonId": 11,
-        "rank": 13,
+        "rank": 7,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -2684,53 +2403,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.5,
-                "items":
-                    [
-                        {
-                            "weight": 2,
-                            "item": 526
-                        }
-                    ]
-            },
-            {
-                "rate": 0.8,
-                "items":
-                    [
-                        {
-                            "weight": 2,
-                            "item": 567
-                        } ,
-                        {
-                            "weight": 2,
-                            "item": 563
-                        },
-                        {
-                            "weight": 2,
-                            "item": 574
-                        }
-                    ]
-            }
+        "dropID":[
+            18
         ],
         "prizeWxp":170,
         "prizeGold": 680,
@@ -2740,7 +2414,7 @@ exports.data = [
     },
     {
         "dungeonId": 12,
-        "rank": 15,
+        "rank": 7,
         "levelCount" :6,
         "normalPool":[
         {
@@ -2918,52 +2592,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.5,
-                "items":
-                    [
-                        {
-                            "weight": 2,
-                            "item": 526
-                        }
-                    ]
-            } ,
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 564
-                    } ,
-                    {
-                        "weight": 2,
-                        "item": 568
-                    },
-                    {
-                        "weight": 2,
-                        "item": 571
-                    }
-                ]
-            }
+        "dropID":[
+            19
         ],
         "prizeWxp":170,"prizeGold": 680,
         "prizeXp":340,
@@ -2972,7 +2602,7 @@ exports.data = [
     },
     {
         "dungeonId": 13,
-        "rank": 16,
+        "rank": 8,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -3152,53 +2782,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.5,
-                "items":
-                    [
-                        {
-                            "weight": 2,
-                            "item": 526
-                        }
-                    ]
-            } ,
-            {
-                "rate": 0.8,
-                "items":
-                    [
-                        {
-                            "weight": 2,
-                            "item": 565
-                        } ,
-                        {
-                            "weight": 2,
-                            "item": 569
-                        },
-                        {
-                            "weight": 2,
-                            "item": 572
-                        }
-                    ]
-            }
+        "dropID":[
+            20
         ],
         "prizeWxp":170,"prizeGold": 680,
         "prizeXp":340,
@@ -3208,7 +2793,7 @@ exports.data = [
     },
     {
         "dungeonId": 14,
-        "rank": 20,
+        "rank": 8,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -3400,53 +2985,8 @@ exports.data = [
                 "entrance":0
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.5,
-                "items":
-                    [
-                        {
-                            "weight": 2,
-                            "item": 526
-                        }
-                    ]
-            } ,
-            {
-                "rate": 0.8,
-                "items":
-                    [
-                        {
-                            "weight": 2,
-                            "item": 566
-                        },
-                        {
-                            "weight": 2,
-                            "item": 570
-                        },
-                        {
-                            "weight": 2,
-                            "item": 573
-                        }
-                    ]
-            }
+        "dropID":[
+            21
         ],
         "prizeWxp":170,"prizeGold":680,
         "prizeXp":340,
@@ -3455,7 +2995,7 @@ exports.data = [
     },
     {
         "dungeonId": 15,
-        "rank": 15,
+        "rank": 14,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -3633,42 +3173,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    }
-                ]
-            } ,
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 567
-                    },
-                    {
-                        "weight": 2,
-                        "item": 563
-                    },
-                    {
-                        "weight": 2,
-                        "item": 574
-                    }
-                ]
-            }
+        "dropID":[
+            22
         ],
         "prizeWxp":235,"prizeGold": 940,
         "prizeXp":470,
@@ -3677,7 +3183,7 @@ exports.data = [
     },
     {
         "dungeonId": 16,
-        "rank": 17,
+        "rank": 15,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -3871,42 +3377,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    }
-                ]
-            } ,
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 564
-                    },
-                    {
-                        "weight": 2,
-                        "item": 568
-                    },
-                    {
-                        "weight": 2,
-                        "item": 571
-                    }
-                ]
-            }
+        "dropID":[
+            23
         ],
         "prizeWxp":235,"prizeGold": 940,
         "prizeXp":470,
@@ -3915,7 +3387,7 @@ exports.data = [
     },
     {
         "dungeonId": 17,
-        "rank": 20,
+        "rank": 17,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -4141,42 +3613,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    }
-                ]
-            },
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 565
-                    },
-                    {
-                        "weight": 2,
-                        "item": 569
-                    },
-                    {
-                        "weight": 2,
-                        "item": 572
-                    }
-                ]
-            }
+        "dropID":[
+            24
         ],
         "prizeWxp":10,"prizeGold": 81,
         "prizeXp":81,
@@ -4185,7 +3623,7 @@ exports.data = [
     },
     {
         "dungeonId": 18,
-        "rank": 22,
+        "rank": 18,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -4443,42 +3881,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    }
-                ]
-            } ,
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 566
-                    },
-                    {
-                        "weight": 2,
-                        "item": 570
-                    },
-                    {
-                        "weight": 2,
-                        "item": 573
-                    }
-                ]
-            }
+        "dropID":[
+            25
         ],
         "prizeWxp":235,"prizeGold": 940,
         "prizeXp":470,
@@ -4487,7 +3891,7 @@ exports.data = [
     },
     {
         "dungeonId": 19,
-        "rank": 25,
+        "rank": 20,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -4681,42 +4085,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    }
-                ]
-            } ,
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 567
-                    },
-                    {
-                        "weight": 2,
-                        "item": 563
-                    },
-                    {
-                        "weight": 2,
-                        "item": 574
-                    }
-                ]
-            }
+        "dropID":[
+            26
         ],
         "prizeWxp":235,"prizeGold": 940,
         "prizeXp":470,
@@ -4725,7 +4095,7 @@ exports.data = [
     },
     {
         "dungeonId": 20,
-        "rank": 27,
+        "rank": 21,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -4918,42 +4288,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    }
-                ]
-            } ,
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 564
-                    },
-                    {
-                        "weight": 2,
-                        "item": 568
-                    },
-                    {
-                        "weight": 2,
-                        "item": 571
-                    }
-                ]
-            }
+        "dropID":[
+            27
         ],
         "prizeWxp":235,"prizeGold":940,
         "prizeXp":470,
@@ -4962,7 +4298,7 @@ exports.data = [
     },
     {
         "dungeonId": 21,
-        "rank": 31,
+        "rank": 22,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -5182,42 +4518,8 @@ exports.data = [
                 "entrance":0
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    }
-                ]
-            },
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 565
-                    },
-                    {
-                        "weight": 2,
-                        "item": 569
-                    },
-                    {
-                        "weight": 2,
-                        "item": 572
-                    }
-                ]
-            }
+        "dropID":[
+            28
         ],
         "prizeWxp":235,"prizeGold": 940,
         "prizeXp":470,
@@ -5226,7 +4528,7 @@ exports.data = [
     },
     {
         "dungeonId": 22,
-        "rank": 25,
+        "rank": 34,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -5420,46 +4722,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    }
-                ]
-            },
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 566
-                    },
-                    {
-                        "weight": 2,
-                        "item": 570
-                    },
-                    {
-                        "weight": 2,
-                        "item": 573
-                    }
-                ]
-            }
+        "dropID":[
+            29
         ],
         "prizeWxp":300,"prizeGold": 1200,
         "prizeXp":600,
@@ -5468,7 +4732,7 @@ exports.data = [
     },
     {
         "dungeonId": 23,
-        "rank": 27,
+        "rank": 35,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -5679,46 +4943,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    }
-                ]
-            },
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 567
-                    },
-                    {
-                        "weight": 2,
-                        "item": 563
-                    },
-                    {
-                        "weight": 2,
-                        "item": 574
-                    }
-                ]
-            }
+        "dropID":[
+           30
         ],
         "prizeWxp":300,"prizeGold": 1200,
         "prizeXp":600,
@@ -5727,7 +4953,7 @@ exports.data = [
     },
     {
         "dungeonId": 24,
-        "rank": 33,
+        "rank": 39,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -5989,46 +5215,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    }
-                ]
-            } ,
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 564
-                    },
-                    {
-                        "weight": 2,
-                        "item": 568
-                    },
-                    {
-                        "weight": 2,
-                        "item": 571
-                    }
-                ]
-            }
+        "dropID":[
+            31
         ],
         "prizeWxp":300,"prizeGold": 1200,
         "prizeXp":600,
@@ -6037,7 +5225,7 @@ exports.data = [
     },
     {
         "dungeonId": 25,
-        "rank": 36,
+        "rank": 45,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -6281,46 +5469,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    }
-                ]
-            },
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 565
-                    },
-                    {
-                        "weight": 2,
-                        "item": 569
-                    },
-                    {
-                        "weight": 2,
-                        "item": 572
-                    }
-                ]
-            }
+        "dropID":[
+            32
         ],
         "prizeWxp":300,"prizeGold": 1200,
         "prizeXp":600,
@@ -6329,7 +5479,7 @@ exports.data = [
     },
     {
         "dungeonId": 26,
-        "rank": 39,
+        "rank": 49,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -6541,51 +5691,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "id": 149,
-                        "count":3
-                    },
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    }
-                ]
-            },
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 566
-                    },
-                    {
-                        "weight": 2,
-                        "item": 570
-                    },
-                    {
-                        "weight": 2,
-                        "item": 573
-                    }
-                ]
-            }
+        "dropID":[
+            33
         ],
         "prizeWxp":300,"prizeGold": 1200,
         "prizeXp":600,
@@ -6594,7 +5701,7 @@ exports.data = [
     },
     {
         "dungeonId": 27,
-        "rank": 42,
+        "rank": 54,
         "collectId":62001,
         "levelCount" : 6,
         "normalPool":[
@@ -6798,46 +5905,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    }
-                ]
-            },
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 567
-                    },
-                    {
-                        "weight": 2,
-                        "item": 563
-                    },
-                    {
-                        "weight": 2,
-                        "item": 574
-                    }
-                ]
-            }
+        "dropID":[
+            34
         ],
         "prizeWxp":300,"prizeGold": 1200,
         "prizeXp":600,
@@ -6846,7 +5915,7 @@ exports.data = [
     },
     {
         "dungeonId": 28,
-        "rank": 45,
+        "rank": 58,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -7058,29 +6127,8 @@ exports.data = [
                 "entrance":0
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 525
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    }
-                ]
-            }
+        "dropID":[
+            35
         ],
         "prizeWxp":300,"prizeGold": 1200,
         "prizeXp":600,
@@ -7090,7 +6138,7 @@ exports.data = [
     {
         "dungeonId": 29,
         "collectId":65001,
-        "rank": 39,
+        "rank": 70,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -7267,46 +6315,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 3,
-                        "item": 526
-                    },
-                    {
-                        "weight": 1,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 575
-                    },
-                    {
-                        "weight": 2,
-                        "item": 579
-                    },
-                    {
-                        "weight": 2,
-                        "item": 583
-                    }
-                ]
-            }
+        "dropID":[
+            36
         ],
         "prizeWxp":368,"prizeGold":1450,
         "prizeXp":735,
@@ -7315,7 +6325,7 @@ exports.data = [
     },
     {
         "dungeonId": 30,
-        "rank": 42,
+        "rank": 76,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -7518,46 +6528,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 3,
-                        "item": 526
-                    },
-                    {
-                        "weight": 1,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 576
-                    },
-                    {
-                        "weight": 2,
-                        "item": 580
-                    },
-                    {
-                        "weight": 2,
-                        "item": 584
-                    }
-                ]
-            }
+        "dropID":[
+            37
         ],
         "prizeWxp":368,"prizeGold":1450,
         "prizeXp":735,
@@ -7566,7 +6538,7 @@ exports.data = [
     },
     {
         "dungeonId": 31,
-        "rank": 48,
+        "rank": 83,
         "collectId":69001,
         "levelCount" : 6,
         "normalPool":[
@@ -7825,46 +6797,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 3,
-                        "item": 526
-                    },
-                    {
-                        "weight": 1,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 577
-                    },
-                    {
-                        "weight": 2,
-                        "item": 581
-                    },
-                    {
-                        "weight": 2,
-                        "item": 526
-                    }
-                ]
-            }
+        "dropID":[
+            38
         ],
         "prizeWxp":368,"prizeGold":1450,
         "prizeXp":735,
@@ -7873,7 +6807,7 @@ exports.data = [
     },
     {
         "dungeonId": 32,
-        "rank": 52,
+        "rank": 91,
         "collectId":71001,
         "levelCount" : 6,
         "normalPool":[
@@ -8068,46 +7002,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 3,
-                        "item": 526
-                    },
-                    {
-                        "weight": 1,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 578
-                    },
-                    {
-                        "weight": 2,
-                        "item": 582
-                    },
-                    {
-                        "weight": 2,
-                        "item": 586
-                    }
-                ]
-            }
+        "dropID":[
+           39
         ],
         "prizeWxp":368,"prizeGold":1450,
         "prizeXp":735,
@@ -8116,7 +7012,7 @@ exports.data = [
     },
     {
         "dungeonId": 33,
-        "rank": 56,
+        "rank": 98,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -8328,46 +7224,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 3,
-                        "item": 526
-                    },
-                    {
-                        "weight": 1,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 575
-                    },
-                    {
-                        "weight": 2,
-                        "item": 579
-                    },
-                    {
-                        "weight": 2,
-                        "item": 583
-                    }
-                ]
-            }
+        "dropID":[
+           40
         ],
         "prizeWxp":368,"prizeGold":1450,
         "prizeXp":735,
@@ -8376,7 +7234,7 @@ exports.data = [
     },
     {
         "dungeonId": 34,
-        "rank": 60,
+        "rank": 100,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -8590,46 +7448,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 3,
-                        "item": 526
-                    },
-                    {
-                        "weight": 1,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 576
-                    },
-                    {
-                        "weight": 2,
-                        "item": 580
-                    },
-                    {
-                        "weight": 2,
-                        "item": 584
-                    }
-                ]
-            }
+        "dropID":[
+            41
         ],
         "prizeWxp":368,"prizeGold":1450,
         "prizeXp":735,
@@ -8638,7 +7458,7 @@ exports.data = [
     },
     {
         "dungeonId": 35,
-        "rank": 65,
+        "rank": 101,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -8846,47 +7666,8 @@ exports.data = [
                 "entrance":0
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 3,
-                        "item": 526
-                    },
-                    {
-                        "weight": 1,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    }
-                ]
-            },
-            {
-                "rate": 0.3 ,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 577
-                    },
-                    {
-                        "weight": 2,
-                        "item": 581
-                    },
-                    {
-                        "weight": 2,
-                        "item": 585
-                    }
-
-                ]
-            }
+        "dropID":[
+            42
         ],
         "prizeWxp":368,"prizeGold":1450,
         "prizeXp":735,
@@ -8895,7 +7676,7 @@ exports.data = [
     },
     {
         "dungeonId": 36,
-        "rank": 57,
+        "rank": 103,
         "collectId":77001,
         "levelCount" : 6,
         "normalPool":[
@@ -9093,49 +7874,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 578
-                    },
-                    {
-                        "weight": 2,
-                        "item": 582
-                    }, {
-                        "weight": 2,
-                        "item": 586
-                    }
-                ]
-            }
+        "dropID":[
+            43
         ],
         "prizeWxp":435,"prizeGold":1740,
         "prizeXp":870,
@@ -9144,7 +7884,7 @@ exports.data = [
     },
     {
         "dungeonId": 37,
-        "rank": 62,
+        "rank": 105,
         "collectId":79001,
         "levelCount" : 6,
         "normalPool":[
@@ -9357,50 +8097,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 575
-                    },
-                    {
-                        "weight": 2,
-                        "item": 579
-                    },
-                    {
-                        "weight": 2,
-                        "item": 583
-                    }
-                ]
-            }
+        "dropID":[
+            44
         ],
         "prizeWxp":435,"prizeGold":1740,
         "prizeXp":870,
@@ -9409,7 +8107,7 @@ exports.data = [
     },
     {
         "dungeonId": 38,
-        "rank": 68,
+        "rank": 111,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -9617,50 +8315,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 576
-                    },
-                    {
-                        "weight": 2,
-                        "item": 580
-                    },
-                    {
-                        "weight": 2,
-                        "item": 584
-                    }
-                ]
-            }
+        "dropID":[
+            45
         ],
         "prizeWxp":435,"prizeGold":1740,
         "prizeXp":870,
@@ -9669,7 +8325,7 @@ exports.data = [
     },
     {
         "dungeonId": 39,
-        "rank": 72,
+        "rank": 115,
         "collectId":83001,
         "levelCount" : 6,
         "normalPool":[
@@ -9880,50 +8536,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 577
-                    },
-                    {
-                        "weight": 2,
-                        "item": 581
-                    },
-                    {
-                        "weight": 2,
-                        "item": 585
-                    }
-                ]
-            }
+        "dropID":[
+            46
         ],
         "prizeWxp":435,"prizeGold":1740,
         "prizeXp":870,
@@ -9932,7 +8546,7 @@ exports.data = [
     },
     {
         "dungeonId": 40,
-        "rank": 78,
+        "rank": 120,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -10186,50 +8800,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            } ,
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 578
-                    },
-                    {
-                        "weight": 2,
-                        "item": 582
-                    },
-                    {
-                        "weight": 2,
-                        "item": 586
-                    }
-                ]
-            }
+        "dropID":[
+            47
         ],
         "prizeWxp":435,"prizeGold":1740,
         "prizeXp":870,
@@ -10238,7 +8810,7 @@ exports.data = [
     },
     {
         "dungeonId": 41,
-        "rank": 82,
+        "rank": 124,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -10488,33 +9060,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            }
+        "dropID":[
+            48
         ],
         "prizeWxp":435,"prizeGold":1740,
         "prizeXp":870,
@@ -10523,7 +9070,7 @@ exports.data = [
     },
     {
         "dungeonId": 42,
-        "rank": 90,
+        "rank": 130,
         "levelCount" : 6,
         "normalPool":[
         {
@@ -10749,33 +9296,8 @@ exports.data = [
                 "entrance":0
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            }
+        "dropID":[
+            49
         ],
         "prizeWxp":435,"prizeGold":1740,
         "prizeXp":870,
@@ -10784,7 +9306,7 @@ exports.data = [
     },
     {
         "dungeonId": 43,
-        "rank": 85,
+        "rank": 152,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -11002,59 +9524,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    }
-                ]
-            },
-            {
-                "rate": 0.15,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 587
-                    },
-                    {
-                        "weight": 2,
-                        "item": 591
-                    },
-                    {
-                        "weight": 2,
-                        "item": 595
-                    }
-                ]
-            }
+        "dropID":[
+            50
 
         ],
         "prizeWxp":500,"prizeGold":2000,
@@ -11064,7 +9535,7 @@ exports.data = [
     },
     {
         "dungeonId": 44,
-        "rank": 90,
+        "rank": 155,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -11275,59 +9746,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    }
-                ]
-            },
-            {
-                "rate": 0.15,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 588
-                    },
-                    {
-                        "weight": 2,
-                        "item": 592
-                    },
-                    {
-                        "weight": 2,
-                        "item": 596
-                    }
-                ]
-            }
+        "dropID":[
+            51
         ],
         "prizeWxp":500,"prizeGold":2000,
         "prizeXp":1000,
@@ -11336,7 +9756,7 @@ exports.data = [
     },
     {
         "dungeonId": 45,
-        "rank": 94,
+        "rank": 156,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -11552,59 +9972,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    }
-                ]
-            },
-            {
-                "rate": 0.15,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 589
-                    },
-                    {
-                        "weight": 2,
-                        "item": 593
-                    },
-                    {
-                        "weight": 2,
-                        "item": 597
-                    }
-                ]
-            }
+        "dropID":[
+            52
         ],
         "prizeWxp":500,"prizeGold":2000,
         "prizeXp":1000,
@@ -11613,7 +9982,7 @@ exports.data = [
     },
     {
         "dungeonId": 46,
-        "rank": 100,
+        "rank": 160,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -11838,64 +10207,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    }
-                ]
-            },
-            {
-                "rate": 0.15,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 590
-                    },
-                    {
-                        "weight": 2,
-                        "item": 594
-                    },
-                    {
-                        "weight": 2,
-                        "item": 598
-                    }
-                ]
-            }
+        "dropID":[
+            53
         ],
         "prizeWxp":500,"prizeGold":2000,
         "prizeXp":1000,
@@ -11904,7 +10217,7 @@ exports.data = [
     },
     {
         "dungeonId": 47,
-        "rank": 106,
+        "rank": 162,
         "levelCount" :6,
         "normalPool":[
             {
@@ -12119,59 +10432,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    }
-                ]
-            },
-            {
-                "rate": 0.15,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 587
-                    },
-                    {
-                        "weight": 2,
-                        "item": 591
-                    },
-                    {
-                        "weight": 2,
-                        "item": 595
-                    }
-                ]
-            }
+        "dropID":[
+           54
         ],
         "prizeWxp":500,"prizeGold":2000,
         "prizeXp":1000,
@@ -12180,7 +10442,7 @@ exports.data = [
     },
     {
         "dungeonId": 48,
-        "rank":110,
+        "rank":168,
         "collectId":102001,
         "levelCount" : 6,
         "normalPool":[
@@ -12399,59 +10661,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    }
-                ]
-            },
-            {
-                "rate": 0.15,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 588
-                    },
-                    {
-                        "weight": 2,
-                        "item": 592
-                    },
-                    {
-                        "weight": 2,
-                        "item": 596
-                    }
-                ]
-            }
+        "dropID":[
+            55
         ],
         "prizeWxp":500,"prizeGold":2000,
         "prizeXp":1000,
@@ -12460,7 +10671,7 @@ exports.data = [
     },
     {
         "dungeonId": 49,
-        "rank": 118,
+        "rank": 174,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -12678,59 +10889,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 526
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    }
-                ]
-            },
-            {
-                "rate": 0.15,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 589
-                    } ,
-                    {
-                        "weight": 2,
-                        "item": 593
-                    },
-                    {
-                        "weight": 2,
-                        "item": 597
-                    }
-                ]
-            }
+        "dropID":[
+           56
         ],
         "prizeWxp":500,"prizeGold":2000,
         "prizeXp":1000,
@@ -12739,7 +10899,7 @@ exports.data = [
     },
     {
         "dungeonId": 50,
-        "rank": 105,
+        "rank": 235,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -12949,59 +11109,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 3,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 3,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    }
-                ]
-            },
-            {
-                "rate": 0.15,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 590
-                    },
-                    {
-                        "weight": 2,
-                        "item": 594
-                    },
-                    {
-                        "weight": 2,
-                        "item": 598
-                    }
-                ]
-            }
+        "dropID":[
+            57
         ],
         "prizeWxp":570,"prizeGold":2260,
         "prizeXp":1130,
@@ -13010,7 +11119,7 @@ exports.data = [
     },
     {
         "dungeonId": 51,
-        "rank": 110,
+        "rank": 244,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -13231,59 +11340,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 3,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 3,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    }
-                ]
-            },
-            {
-                "rate": 0.15,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 587
-                    },
-                    {
-                        "weight": 2,
-                        "item": 591
-                    },
-                    {
-                        "weight": 2,
-                        "item": 595
-                    }
-                ]
-            }
+        "dropID":[
+           58
         ],
         "prizeWxp":570,"prizeGold":2260,
         "prizeXp":1130,
@@ -13292,7 +11350,7 @@ exports.data = [
     },
     {
         "dungeonId": 52,
-        "rank": 120,
+        "rank": 250,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -13496,59 +11554,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 3,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 3,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    }
-                ]
-            },
-            {
-                "rate": 0.15,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 588
-                    },
-                    {
-                        "weight": 2,
-                        "item": 592
-                    },
-                    {
-                        "weight": 2,
-                        "item": 596
-                    }
-                ]
-            }
+        "dropID":[
+            59
         ],
         "prizeWxp":570,"prizeGold":2260,
         "prizeXp":1130,
@@ -13557,7 +11564,7 @@ exports.data = [
     },
     {
         "dungeonId": 53,
-        "rank": 126,
+        "rank": 262,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -13781,59 +11788,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 3,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 3,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    }
-                ]
-            },
-            {
-                "rate": 0.15,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 589
-                    },
-                    {
-                        "weight": 2,
-                        "item": 593
-                    },
-                    {
-                        "weight": 2,
-                        "item": 597
-                    }
-                ]
-            }
+        "dropID":[
+            60
         ],
         "prizeWxp":570,"prizeGold":2260,
         "prizeXp":1130,
@@ -13842,7 +11798,7 @@ exports.data = [
     },
     {
         "dungeonId": 54,
-        "rank": 133,
+        "rank": 265,
         "levelCount" : 6,
         "normalPool":[
         {
@@ -14059,59 +12015,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 3,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 3,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    }
-                ]
-            } ,
-            {
-                "rate": 0.15,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 590
-                    } ,
-                    {
-                        "weight": 2,
-                        "item": 594
-                    },
-                    {
-                        "weight": 2,
-                        "item": 598
-                    }
-                ]
-            }
+        "dropID":[
+            61
         ],
         "prizeWxp":570,"prizeGold":2260,
         "prizeXp":1130,
@@ -14120,7 +12025,7 @@ exports.data = [
     },
     {
         "dungeonId": 55,
-        "rank": 137,
+        "rank": 272,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -14303,42 +12208,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 3,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 3,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    }
-                ]
-            }
+        "dropID":[
+           62
         ],
         "prizeWxp":570,"prizeGold":2260,
         "prizeXp":1130,
@@ -14347,7 +12218,7 @@ exports.data = [
     },
     {
         "dungeonId": 56,
-        "rank": 144,
+        "rank": 280,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -14545,59 +12416,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 3,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 3,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.3,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    }
-                ]
-            },
-            {
-                "rate": 0.02,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 599
-                    },
-                    {
-                        "weight": 2,
-                        "item": 603
-                    },
-                    {
-                        "weight": 2,
-                        "item": 607
-                    }
-                ]
-            }
+        "dropID":[
+           63
         ],
         "prizeWxp":570,"prizeGold":2260,
         "prizeXp":1130,
@@ -14606,7 +12426,7 @@ exports.data = [
     },
     {
         "dungeonId": 57,
-        "rank": 135,
+        "rank": 320,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -14810,50 +12630,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.02,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 600
-                    },
-                    {
-                        "weight": 2,
-                        "item": 604
-                    },
-                    {
-                        "weight": 2,
-                        "item": 608
-                    }
-                ]
-            }
+        "dropID":[
+           64
         ],
         "prizeWxp":630,"prizeGold":2520,
         "prizeXp":1260,
@@ -14862,7 +12640,7 @@ exports.data = [
     },
     {
         "dungeonId": 58,
-        "rank": 142,
+        "rank": 330,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -15057,50 +12835,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.02,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 601
-                    },
-                    {
-                        "weight": 2,
-                        "item": 605
-                    },
-                    {
-                        "weight": 2,
-                        "item": 609
-                    }
-                ]
-            }
+        "dropID":[
+            65
         ],
         "prizeWxp":630,"prizeGold":2520,
         "prizeXp":1260,
@@ -15109,7 +12845,7 @@ exports.data = [
     },
     {
         "dungeonId": 59,
-        "rank": 149,
+        "rank": 350,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -15307,50 +13043,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.02,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 602
-                    },
-                    {
-                        "weight": 2,
-                        "item": 606
-                    },
-                    {
-                        "weight": 2,
-                        "item": 610
-                    }
-                ]
-            }
+        "dropID":[
+            66
         ],
         "prizeWxp":630,"prizeGold":2520,
         "prizeXp":1260,
@@ -15359,7 +13053,7 @@ exports.data = [
     },
     {
         "dungeonId": 60,
-        "rank": 156,
+        "rank": 370,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -15563,50 +13257,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.02,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 599
-                    },
-                    {
-                        "weight": 2,
-                        "item": 603
-                    },
-                    {
-                        "weight": 2,
-                        "item": 607
-                    }
-                ]
-            }
+        "dropID":[
+            67
         ],
         "prizeWxp":630,"prizeGold":2520,
         "prizeXp":1260,
@@ -15615,7 +13267,7 @@ exports.data = [
     },
     {
         "dungeonId": 61,
-        "rank": 162,
+        "rank": 380,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -15820,50 +13472,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.02,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 600
-                    },
-                    {
-                        "weight": 2,
-                        "item": 604
-                    },
-                    {
-                        "weight": 2,
-                        "item": 608
-                    }
-                ]
-            }
+        "dropID":[
+            68
         ],
         "prizeWxp":630,"prizeGold":2520,
         "prizeXp":1260,
@@ -15872,7 +13482,7 @@ exports.data = [
     },
     {
         "dungeonId": 62,
-        "rank": 170,
+        "rank": 398,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -16095,50 +13705,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.02,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 601
-                    },
-                    {
-                        "weight": 2,
-                        "item": 605
-                    },
-                    {
-                        "weight": 2,
-                        "item": 609
-                    }
-                ]
-            }
+        "dropID":[
+            69
         ],
         "prizeWxp":630,"prizeGold":2520,
         "prizeXp":1260,
@@ -16147,7 +13715,7 @@ exports.data = [
     },
     {
         "dungeonId": 63,
-        "rank": 180,
+        "rank": 402,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -16329,50 +13897,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
-            {
-                "rate": 0.8,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.6,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 528
-                    },
-                    {
-                        "weight": 2,
-                        "item": 527
-                    }
-                ]
-            },
-            {
-                "rate": 0.02,
-                "items":[
-                    {
-                        "weight": 2,
-                        "item": 602
-                    },
-                    {
-                        "weight": 2,
-                        "item": 606
-                    },
-                    {
-                        "weight": 2,
-                        "item": 610
-                    }
-                ]
-            }
+        "dropID":[
+            70
         ],
         "prizeWxp":630,"prizeGold":2520,
         "prizeXp":1260,
@@ -16525,27 +14051,22 @@ exports.data = [
             }
 
         ],
-        "prize":
+        "dropID":
             [
-                {
-                    "rate": 0.8,
-                    "items":
-                        [
-                            {
-                                "weight": 2,
-                                "item": 525
-                            }
-                        ]
-
-                }
+                71
             ],
         "infinityPrize":
             [
                 {
-                    "level":2,
+                    "level":1,
                     "type":0,
-                    "value":0,
-                    "count": 3
+                    "value":538,
+                    "count": 1
+                },
+                {
+                    "level":2,
+                    "type":2,
+                    "count": 20
                 },
                 {
                     "level":5,
@@ -16555,8 +14076,8 @@ exports.data = [
                 {
                     "level":7,
                     "type":0,
-                    "value":0,
-                    "count": 5
+                    "value":853,
+                    "count": 2
                 },
                 {
                     "level":9,
@@ -16567,13 +14088,12 @@ exports.data = [
                 {
                     "level":10,
                     "type":2,
-                    "count": 10
+                    "count": 20
                 },
                 {
                     "level":15,
-                    "type":0,
-                    "value":538,
-                    "count": 1
+                    "type":1,
+                    "count": 1000
                 },
                 {
                     "level":20,
@@ -16797,34 +14317,22 @@ exports.data = [
             }
 
         ],
-        "prize":
+        "dropID":
             [
-                {
-                    "rate": 0.8,
-                    "items":[
-                        {
-                            "weight": 2,
-                            "item": 525
-                        }
-                    ]
-                },
-                {
-                    "rate": 0.6,
-                    "items":[
-                        {
-                            "weight": 2,
-                            "item": 525
-                        }
-                    ]
-                }
+                72
             ],
         "infinityPrize":
             [
                 {
-                    "level":2,
+                    "level":1,
                     "type":0,
-                    "value":0,
-                    "count": 5
+                    "value":538,
+                    "count": 1
+                },
+                {
+                    "level":2,
+                    "type":2,
+                    "count": 20
                 },
                 {
                     "level":5,
@@ -16834,8 +14342,8 @@ exports.data = [
                 {
                     "level":7,
                     "type":0,
-                    "value":534,
-                    "count": 1
+                    "value":853,
+                    "count": 3
                 },
                 {
                     "level":9,
@@ -16846,7 +14354,7 @@ exports.data = [
                 {
                     "level":10,
                     "type":2,
-                    "count": 10
+                    "count": 20
                 },
                 {
                     "level":15,
@@ -16855,9 +14363,8 @@ exports.data = [
                 },
                 {
                     "level":20,
-                    "type":0,
-                    "value":534,
-                    "count": 3
+                    "type":1,
+                    "count": 2500
                 },
                 {
                     "level":25,
@@ -17068,34 +14575,22 @@ exports.data = [
             }
 
         ],
-        "prize":
+        "dropID":
             [
-                {
-                    "rate": 0.8,
-                    "items":[
-                        {
-                            "weight": 2,
-                            "item": 525
-                        }
-                    ]
-                },
-                {
-                    "rate": 0.6,
-                    "items":[
-                        {
-                            "weight": 2,
-                            "item": 526
-                        }
-                    ]
-                }
+                73
             ],
         "infinityPrize":
             [
                 {
-                    "level":2,
+                    "level":1,
                     "type":0,
-                    "value":0,
-                    "count": 10
+                    "value":538,
+                    "count": 1
+                },
+                {
+                    "level":2,
+                    "type":2,
+                    "count": 20
                 },
                 {
                     "level":5,
@@ -17105,8 +14600,8 @@ exports.data = [
                 {
                     "level":7,
                     "type":0,
-                    "value":535,
-                    "count": 1
+                    "value":854,
+                    "count": 3
                 },
                 {
                     "level":9,
@@ -17117,7 +14612,7 @@ exports.data = [
                 {
                     "level":10,
                     "type":2,
-                    "count": 10
+                    "count": 20
                 },
                 {
                     "level":15,
@@ -17126,9 +14621,8 @@ exports.data = [
                 },
                 {
                     "level":20,
-                    "type":0,
-                    "value":0,
-                    "count": 10
+                    "type":1,
+                    "count": 3500
                 },
                 {
                     "level":25,
@@ -17139,14 +14633,13 @@ exports.data = [
                 {
                     "level":30,
                     "type":0,
-                    "value":535,
-                    "count": 2
+                    "value":538,
+                    "count": 1
                 },
                 {
                     "level":35,
-                    "type":0,
-                    "value":540,
-                    "count": 2
+                    "type":1,
+                    "count": 4500
                 },
                 {
                     "level":45,
@@ -17175,7 +14668,7 @@ exports.data = [
         "prizeXp":330,
         "wxpRate":1,"goldRate":0.3,
         "xpRate":0.4,
-        "rank":28
+        "rank":36
     },
     {
         "dungeonId": 67,
@@ -17331,38 +14824,22 @@ exports.data = [
             }
 
         ],
-        "prize":
+        "dropID":
             [
-                {
-                    "rate": 0.8,
-                    "items":[
-                        {
-                            "weight": 2,
-                            "item": 526
-                        },
-                        {
-                            "weight": 2,
-                            "item": 525
-                        }
-                    ]
-                },
-                {
-                    "rate": 0.6,
-                    "items":[
-                        {
-                            "weight": 2,
-                            "item": 526
-                        }
-                    ]
-                }
+                74
             ],
         "infinityPrize":
             [
                 {
-                    "level":2,
+                    "level":1,
                     "type":0,
-                    "value":0,
-                    "count": 10
+                    "value":538,
+                    "count": 1
+                },
+                {
+                    "level":2,
+                    "type":2,
+                    "count": 20
                 },
                 {
                     "level":5,
@@ -17372,8 +14849,8 @@ exports.data = [
                 {
                     "level":7,
                     "type":0,
-                    "value":535,
-                    "count": 1
+                    "value":854,
+                    "count": 5
                 },
                 {
                     "level":9,
@@ -17384,18 +14861,18 @@ exports.data = [
                 {
                     "level":10,
                     "type":2,
-                    "count": 10
+                    "count": 20
                 },
                 {
                     "level":15,
                     "type":1,
-                    "count": 2000
+                    "count": 3000
                 },
                 {
                     "level":20,
                     "type":0,
-                    "value":0,
-                    "count": 15
+                    "value":854,
+                    "count": 10
                 },
                 {
                     "level":25,
@@ -17406,14 +14883,13 @@ exports.data = [
                 {
                     "level":30,
                     "type":0,
-                    "value":534,
-                    "count": 2
+                    "value":538,
+                    "count": 1
                 },
                 {
                     "level":35,
-                    "type":0,
-                    "value":535,
-                    "count": 2
+                    "type":1,
+                    "count": 5500
                 },
                 {
                     "level":45,
@@ -17442,7 +14918,7 @@ exports.data = [
         "prizeXp":420,
         "wxpRate":1,"goldRate":0.3,
         "xpRate":0.4,
-        "rank":42
+        "rank":75
     },
     {
         "dungeonId": 68,
@@ -17614,49 +15090,33 @@ exports.data = [
             }
 
         ],
-        "prize":
+        "dropID":
             [
-                {
-                    "rate": 0.8,
-                    "items":[
-                        {
-                            "weight": 3,
-                            "item": 526
-                        },
-                        {
-                            "weight": 1,
-                            "item": 527
-                        }
-                    ]
-                },
-                {
-                    "rate": 0.6,
-                    "items":[
-                        {
-                            "weight": 2,
-                            "item": 526
-                        }
-                    ]
-                }
+                75
             ],
         "infinityPrize":
             [
                 {
-                    "level":2,
+                    "level":1,
                     "type":0,
-                    "value":0,
+                    "value":538,
+                    "count": 1
+                },
+                {
+                    "level":2,
+                    "type":2,
                     "count": 20
                 },
                 {
                     "level":5,
-                    "type":0,
-                    "value":534,
-                    "count": 2
+                    "type":1,
+                    "count":2000
                 },
                 {
                     "level":7,
-                    "type":1,
-                    "count": 2000
+                    "type":0,
+                    "value":855,
+                    "count": 3
                 },
                 {
                     "level":9,
@@ -17667,19 +15127,18 @@ exports.data = [
                 {
                     "level":10,
                     "type":2,
-                    "count": 15
+                    "count": 20
                 },
                 {
                     "level":15,
-                    "type":0,
-                    "value":535,
-                    "count": 1
+                    "type":1,
+                    "count": 3500
                 },
                 {
                     "level":20,
                     "type":0,
-                    "value":0,
-                    "count": 20
+                    "value":855,
+                    "count": 7
                 },
                 {
                     "level":25,
@@ -17695,9 +15154,8 @@ exports.data = [
                 },
                 {
                     "level":35,
-                    "type":0,
-                    "value":535,
-                    "count": 10
+                    "type":1,
+                    "count": 6000
                 },
                 {
                     "level":45,
@@ -17726,7 +15184,7 @@ exports.data = [
         "prizeXp":515,
         "wxpRate":1,"goldRate":0.3,
         "xpRate":0.4,
-        "rank":62
+        "rank":110
     },
     {
         "dungeonId": 69,
@@ -17887,53 +15345,33 @@ exports.data = [
             }
 
         ],
-        "prize":
+        "dropID":
             [
-                {
-                    "rate": 0.8,
-                    "items":[
-                        {
-                            "weight": 2,
-                            "item": 526
-                        },
-                        {
-                            "weight": 2,
-                            "item": 527
-                        }
-                    ]
-                },
-                {
-                    "rate": 0.6,
-                    "items":[
-                        {
-                            "weight": 2,
-                            "item": 526
-                        },
-                        {
-                            "weight": 2,
-                            "item": 527
-                        }
-                    ]
-                }
+                76
             ],
         "infinityPrize":
             [
                 {
-                    "level":2,
+                    "level":1,
                     "type":0,
-                    "value":0,
-                    "count": 25
+                    "value":538,
+                    "count": 1
+                },
+                {
+                    "level":2,
+                    "type":2,
+                    "count": 20
                 },
                 {
                     "level":5,
-                    "type":0,
-                    "value":534,
-                    "count": 2
+                    "type":1,
+                    "count":2500
                 },
                 {
                     "level":7,
-                    "type":1,
-                    "count": 2000
+                    "type":0,
+                    "value":855,
+                    "count": 5
                 },
                 {
                     "level":9,
@@ -17944,19 +15382,18 @@ exports.data = [
                 {
                     "level":10,
                     "type":2,
-                    "count": 15
+                    "count": 20
                 },
                 {
                     "level":15,
-                    "type":0,
-                    "value":535,
-                    "count": 1
+                    "type":1,
+                    "count": 4500
                 },
                 {
                     "level":20,
                     "type":0,
-                    "value":0,
-                    "count": 25
+                    "value":855,
+                    "count": 10
                 },
                 {
                     "level":25,
@@ -17972,9 +15409,8 @@ exports.data = [
                 },
                 {
                     "level":35,
-                    "type":0,
-                    "value":536,
-                    "count": 1
+                    "type":1,
+                    "count": 7000
                 },
                 {
                     "level":45,
@@ -17990,7 +15426,7 @@ exports.data = [
                     "level":65,
                     "type":2,
                     "count": 30
-                } ,
+                },
                 {
                     "level":75,
                     "type":2,
@@ -18003,7 +15439,7 @@ exports.data = [
         "prizeXp":600,
         "wxpRate":1,"goldRate":0.3,
         "xpRate":0.4,
-        "rank":85
+        "rank":163
     },
     {
         "dungeonId": 70,
@@ -18162,21 +15598,26 @@ exports.data = [
         "infinityPrize":
             [
                 {
-                    "level":2,
+                    "level":1,
                     "type":0,
-                    "value":0,
-                    "count": 25
-                },
-                {
-                    "level":5,
-                    "type":0,
-                    "value":535,
+                    "value":538,
                     "count": 1
                 },
                 {
-                    "level":7,
+                    "level":2,
+                    "type":2,
+                    "count": 20
+                },
+                {
+                    "level":5,
                     "type":1,
-                    "count": 2500
+                    "count":3000
+                },
+                {
+                    "level":7,
+                    "type":0,
+                    "value":856,
+                    "count": 3
                 },
                 {
                     "level":9,
@@ -18187,18 +15628,18 @@ exports.data = [
                 {
                     "level":10,
                     "type":2,
-                    "count": 15
+                    "count": 20
                 },
                 {
                     "level":15,
-                    "type":0,
-                    "value":535,
-                    "count": 2
+                    "type":1,
+                    "count": 5000
                 },
                 {
                     "level":20,
-                    "type":1,
-                    "count": 2500
+                    "type":0,
+                    "value":856,
+                    "count": 5
                 },
                 {
                     "level":25,
@@ -18214,9 +15655,8 @@ exports.data = [
                 },
                 {
                     "level":35,
-                    "type":0,
-                    "value":536,
-                    "count": 2
+                    "type":1,
+                    "count": 8000
                 },
                 {
                     "level":45,
@@ -18239,43 +15679,9 @@ exports.data = [
                     "count": 30
                 }
             ],
-        "prize":
+        "dropID":
             [
-                {
-                    "rate": 0.8,
-                    "items":[
-                        {
-                            "weight": 2,
-                            "item": 527
-                        },
-                        {
-                            "weight": 3,
-                            "item": 526
-                        }
-                    ]
-                },
-                {
-                    "rate": 0.6,
-                    "items":[
-                        {
-                            "weight": 2,
-                            "item": 527
-                        },
-                        {
-                            "weight": 3,
-                            "item": 526
-                        }
-                    ]
-                },
-                {
-                    "rate": 0.3,
-                    "items":[
-                        {
-                            "weight": 2,
-                            "item": 528
-                        }
-                    ]
-                }
+                77
             ],
         "infinity_a":0,
         "infinity_b":0,
@@ -18283,7 +15689,7 @@ exports.data = [
         "prizeXp":700,
         "wxpRate":1,"goldRate":0.3,
         "xpRate":0.4,
-        "rank":115
+        "rank":250
     },
     {
         "dungeonId": 71,
@@ -18439,62 +15845,33 @@ exports.data = [
             }
 
         ],
-        "prize":
+        "dropID":
             [
-                {
-                    "rate": 0.8,
-                    "items":[
-                        {
-                            "weight": 2,
-                            "item": 528
-                        },
-                        {
-                            "weight": 3,
-                            "item": 527
-                        }
-                    ]
-                },
-                {
-                    "rate": 0.6,
-                    "items":[
-                        {
-                            "weight": 2,
-                            "item": 528
-                        },
-                        {
-                            "weight": 3,
-                            "item": 527
-                        }
-                    ]
-                },
-                {
-                    "rate": 0.3,
-                    "items":[
-                        {
-                            "weight": 2,
-                            "item": 528
-                        }
-                    ]
-                }
+                78
             ],
         "infinityPrize":
             [
                 {
-                    "level":2,
+                    "level":1,
                     "type":0,
-                    "value":0,
-                    "count": 25
-                },
-                {
-                    "level":5,
-                    "type":0,
-                    "value":536,
+                    "value":538,
                     "count": 1
                 },
                 {
-                    "level":7,
+                    "level":2,
+                    "type":2,
+                    "count": 20
+                },
+                {
+                    "level":5,
                     "type":1,
-                    "count": 2500
+                    "count":3500
+                },
+                {
+                    "level":7,
+                    "type":0,
+                    "value":856,
+                    "count":6
                 },
                 {
                     "level":9,
@@ -18505,19 +15882,18 @@ exports.data = [
                 {
                     "level":10,
                     "type":2,
-                    "count": 15
+                    "count": 20
                 },
                 {
                     "level":15,
-                    "type":0,
-                    "value":536,
-                    "count": 2
+                    "type":1,
+                    "count": 6000
                 },
                 {
                     "level":20,
                     "type":0,
-                    "value":529,
-                    "count": 1
+                    "value":856,
+                    "count": 10
                 },
                 {
                     "level":25,
@@ -18533,9 +15909,8 @@ exports.data = [
                 },
                 {
                     "level":35,
-                    "type":0,
-                    "value":536,
-                    "count": 2
+                    "type":1,
+                    "count": 9000
                 },
                 {
                     "level":45,
@@ -18544,9 +15919,8 @@ exports.data = [
                 },
                 {
                     "level":55,
-                    "type":0,
-                    "value":529,
-                    "count": 2
+                    "type":2,
+                    "count": 30
                 },
                 {
                     "level":65,
@@ -18565,7 +15939,7 @@ exports.data = [
         "prizeXp":790,
         "wxpRate":1,"goldRate":0.3,
         "xpRate":0.4,
-        "rank":140
+        "rank":340
     },
     {
         "dungeonId": 72,
@@ -18717,62 +16091,33 @@ exports.data = [
             }
 
         ],
-        "prize":
+        "dropID":
             [
-                {
-                    "rate": 0.8,
-                    "items":[
-                        {
-                            "weight": 2,
-                            "item": 528
-                        },
-                        {
-                            "weight": 2,
-                            "item": 527
-                        }
-                    ]
-                },
-                {
-                    "rate": 0.6,
-                    "items":[
-                        {
-                            "weight": 2,
-                            "item": 528
-                        },
-                        {
-                            "weight": 2,
-                            "item": 527
-                        }
-                    ]
-                },
-                {
-                    "rate": 0.3,
-                    "items":[
-                        {
-                            "weight": 2,
-                            "item": 529
-                        }
-                    ]
-                }
+                79
             ],
         "infinityPrize":
             [
                 {
-                    "level":2,
+                    "level":1,
                     "type":0,
-                    "value":0,
-                    "count": 25
-                },
-                {
-                    "level":5,
-                    "type":0,
-                    "value":537,
+                    "value":538,
                     "count": 1
                 },
                 {
-                    "level":7,
+                    "level":2,
+                    "type":2,
+                    "count": 20
+                },
+                {
+                    "level":5,
                     "type":1,
-                    "count": 2500
+                    "count":4000
+                },
+                {
+                    "level":7,
+                    "type":0,
+                    "value":857,
+                    "count":3
                 },
                 {
                     "level":9,
@@ -18783,19 +16128,18 @@ exports.data = [
                 {
                     "level":10,
                     "type":2,
-                    "count": 15
+                    "count": 20
                 },
                 {
                     "level":15,
-                    "type":0,
-                    "value":536,
-                    "count": 2
+                    "type":1,
+                    "count": 7000
                 },
                 {
                     "level":20,
                     "type":0,
-                    "value":529,
-                    "count": 1
+                    "value":857,
+                    "count": 5
                 },
                 {
                     "level":25,
@@ -18811,9 +16155,8 @@ exports.data = [
                 },
                 {
                     "level":35,
-                    "type":0,
-                    "value":537,
-                    "count": 1
+                    "type":1,
+                    "count": 10000
                 },
                 {
                     "level":45,
@@ -18822,9 +16165,8 @@ exports.data = [
                 },
                 {
                     "level":55,
-                    "type":0,
-                    "value":529,
-                    "count": 2
+                    "type":2,
+                    "count": 30
                 },
                 {
                     "level":65,
@@ -19015,7 +16357,7 @@ exports.data = [
             }
 
         ],
-        "prize":
+        "prize"://TODO
             [
                 {
                     "rate": 0.2,
@@ -19228,7 +16570,7 @@ exports.data = [
             }
 
         ],
-        "prize":
+        "prize"://TODO:
             [
                 {
                     "rate": 0.2,
@@ -19395,7 +16737,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "prize"://TODO:
             [
                 {
                     "rate": 0.8,
@@ -19614,7 +16956,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "dropID":
             [
             ],
         "prizeWxp":0,"prizeGold": 0,
@@ -19878,7 +17220,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
         ],
         "prizeWxp":0,"prizeGold": 0,
         "prizeXp":0,
@@ -20106,7 +17448,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
 
         ],
         "prizeWxp":0,"prizeGold":0,
@@ -20333,7 +17675,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
 
         ],
         "prizeWxp":0,"prizeGold": 0,
@@ -20571,7 +17913,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
 
         ],
         "prizeWxp":0,"prizeGold":0,
@@ -20836,7 +18178,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
 
         ],
         "prizeWxp":0,"prizeGold":0,
@@ -21073,7 +18415,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
 
         ],
         "prizeWxp":0,"prizeGold":0,
@@ -21291,7 +18633,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":[
+        "dropID":[
 
         ],
         "prizeWxp":0,"prizeGold":0,
@@ -21465,7 +18807,7 @@ exports.data = [
             ]
         }
     ],
-    "prize":
+    "prize"://TODO:
         [
             {
                 "rate": 0.8,
@@ -21680,7 +19022,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "prize"://TODO:
             [
                 {
                     "rate": 0.8,
@@ -21938,7 +19280,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "prize"://TODO:
             [
                 {
                     "rate": 0.8,
@@ -22244,7 +19586,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "prize"://TODO:
             [
                 {
                     "rate": 0.8,
@@ -22426,7 +19768,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "prize"://TODO:
             [
                 {
                     "rate": 0.8,
@@ -22639,7 +19981,7 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "prize"://TODO:
             [
                 {
                     "rate": 0.8,
@@ -22859,7 +20201,7 @@ exports.data = [
                 "exit": 29
             }
         ],
-        "prize":
+        "prize"://TODO:
             [
                 {
                     "rate": 0.8,
@@ -22931,6 +20273,9 @@ exports.data = [
     "triggers": ["stage0-1:FirstBoss","stage0-1:FirstMonster","stage0-1:Firstbaoxiang","stage0-1:FirstCard"],
     "collectId":153001,
     "prizeWxp":0,
+    "dropID":[
+         71
+    ],
     "prizeGold": 100,
     "prizeXp":100,
     "wxpRate":1,
@@ -23051,8 +20396,8 @@ exports.data = [
             }
 
         ],
-        "prize":
-            [
+        "dropID":
+            [ 8
             ],
         "prizeWxp":100,
         "prizeGold": 400,
@@ -23246,9 +20591,9 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "dropID":
             [
-
+                  9
             ],
         "prizeWxp":100,
         "prizeGold": 400,
@@ -23458,9 +20803,9 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "dropID":
             [
-
+                10
             ],
         "prizeWxp":100,
         "prizeGold": 400,
@@ -23683,8 +21028,8 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
-            [
+        "dropID":
+            [     11
             ],
         "prizeWxp":100,"prizeGold": 400,
         "prizeXp":208,
@@ -23843,19 +21188,9 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "dropID":
             [
-                {
-                    "rate": 0.8,
-                    "items":
-                        [
-                            {
-                                "weight": 2,
-                                "item": 525
-                            }
-                        ]
-
-                }
+                12
             ],
         "prizeWxp":100,"prizeGold": 400,
         "prizeXp":200,
@@ -24038,19 +21373,9 @@ exports.data = [
                 ]
             }
         ],
-        "prize":
+        "dropID":
             [
-                {
-                    "rate": 0.8,
-                    "items":
-                        [
-                            {
-                                "weight": 2,
-                                "item": 525
-                            }
-                        ]
-
-                }
+                13
             ],
         "prizeWxp":100,"prizeGold": 400,
         "prizeXp":200,
@@ -24233,20 +21558,7 @@ exports.data = [
                 "exit": 29
             }
         ],
-        "prize":
-            [
-                {
-                    "rate": 0.8,
-                    "items":
-                        [
-                            {
-                                "weight": 2,
-                                "item": 525
-                            }
-                        ]
-
-                }
-            ],
+        "dropID":[ 14 ],
         "prizeWxp":100,
         "prizeGold": 400,
         "prizeXp":200,
@@ -24379,6 +21691,7 @@ exports.data = [
                 "rank": 8
             }
         ],
+        "dropID":[ 71 ],
         "prizeWxp":100,
         "prizeGold": 400,
         "prizeXp":200,
@@ -24488,6 +21801,9 @@ exports.data = [
                         "pos":12
                     }
                 ],
+            "dropID":[
+                  71
+            ],
                 "rank": 10,
                 "entrance":0,
                 "exit": 29
@@ -24498,6 +21814,7 @@ exports.data = [
                         "id": 157,
                         "count":1,
                         "collectId":158001,
+                        "questOnly":true,
                         "keyed":true
                     },
                     {
@@ -24515,7 +21832,9 @@ exports.data = [
                 ],
                 "rank": 10
             }
-        ],
+        ], "dropID":[   71
+
+    ],
         "prizeWxp":100,
         "prizeGold": 400,
         "prizeXp":200,
@@ -24593,7 +21912,7 @@ exports.data = [
     },
     {
         "dungeonId": 102,
-        "rank": 10,
+        "rank": 1,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -24824,7 +22143,7 @@ exports.data = [
             ]
             }
         ],
-        "prize":[
+        "dropID":[
 
         ],
         "prizeWxp":0,"prizeGold":0,
@@ -24834,7 +22153,7 @@ exports.data = [
     },
     {
         "dungeonId": 103,
-        "rank": 50,
+        "rank": 70,
         "levelCount" : 6,
         "normalPool":[
             {
@@ -25038,7 +22357,7 @@ exports.data = [
             ]
             }
         ],
-        "prize":[
+        "dropID":[
 
         ],
         "prizeWxp":0,"prizeGold":0,
@@ -25048,243 +22367,81 @@ exports.data = [
     },
     {
         "dungeonId": 104,
-        "rank": 160,
+        "rank": 250,
         "levelCount" : 6,
         "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
+              { "id":170, "weight":3 },
+              { "id":171, "weight":3 },
+              { "id":172, "weight":3 },
+              { "id":173, "weight":3 },
+              { "id":174, "weight":3 },
+              { "id":175, "weight":3 },
+              { "id":176, "weight":3 },
+              { "id":177, "weight":3 },
+              { "id":178, "weight":3 },
+              { "id":179, "weight":3 }
+          ],
+        "levels": [
+            {"normalCount":1,
+                "objects" :
+            [
+              { "id": 49 , "count":2 },
+              { "id": 42, "count":1 }, { "id": 43, "count":1 },
+              { "id": 12, "count":2 },
+              { "id": 69, "count":1 },
+              { "id": 45, "count":1 },
+              {"id": 190, "count":1 }
+          ]},
+            {"normalCount":1,
+                "objects" :
+                    [
+              { "id": 42, "count":1 }, { "id": 43, "count":1 },
+              { "id": 149 , "count":2 },
+              { "id": 12, "count":2 },
+              { "id": 69, "count":1 },
+              { "id": 45, "count":1 },
+              {"id": 190, "count":1 }
+          ]},
+            {"normalCount":1,
+                "objects" :
+          [
+                  { "id": 49 , "count":2 },
+              { "id": 42, "count":1 }, { "id": 43, "count":1 },
+              { "id": 149, "count":3 },
+              { "id": 12, "count":2 },
+              { "id":63, "count":1 },
+              {"id": 190, "count":2 }
+          ]}, {"normalCount":1,
+                "objects":
+          [
+              { "id": 42, "count":2 }, { "id": 43, "count":1 },
+              { "id": 47 , "count":1 },
+              { "id": 12, "count":2 },
+              { "id": 69, "count":1 }
+          ]},
+{"normalCount":1,
+    "objects" :
+        [
+              { "id": 42, "count":2 }, { "id": 43, "count":1 },
+              { "id": 47 , "count":1 },
+              { "id": 12, "count":2 },
+              { "id": 69, "count":1 },
+              {"id": 190, "count":1 }
+          ]},
+            {"normalCount":1,
+                "objects" :
+          [
+              { "id": 42, "count":2 }, { "id": 43, "count":1 },
+              { "id": 47 , "count":1 },
+              { "id": 12, "count":1 },
+              { "id": 149, "count":3 },
+              { "id": 69, "count":1 },
+              {"id": 190, "count":2 }
+          ]}
         ],
-
-        "levels" :[
-            {
-                "normalCount":1,"objects" :[
-                {
-                    "id": 42,
-                    "count":1
-                },
-                {
-                    "id": 43,
-                    "count":1
-                },
-                {
-                    "id": 49 ,
-                    "count":2
-                },
-                {
-                    "id": 12,
-                    "count":2
-                },                  {
-                    "id": 190,
-                    "count":1
-                },
-                {
-                    "id": 69,
-                    "count":1
-                },
-                {
-                    "id": 45,
-                    "count":1
-                }
-            ]
-            },
-            {
-                "normalCount":1,"objects" :[
-                {
-                    "id": 42,
-                    "count":1
-                },
-                {
-                    "id": 43,
-                    "count":1
-                },
-                {
-                    "id": 149 ,
-                    "count":2
-                },
-                {
-                    "id": 12,
-                    "count":2
-                },
-                {
-                    "id": 69,
-                    "count":1
-                },
-                {
-                    "id": 45,
-                    "count":1
-                },
-                {
-                    "id": 190,
-                    "count":1
-                }
-            ]
-            },
-            {
-                "normalCount":1,"objects" :[
-                {
-                    "id": 42,
-                    "count":1
-                },
-                {
-                    "id": 49 ,
-                    "count":2
-                },
-                {
-                    "id": 149,
-                    "count":3
-                },
-                {
-                    "id": 12,
-                    "count":2
-                },
-                {
-                    "id": 43,
-                    "count":1
-                },
-                {
-                    "id":63,
-                    "count":1
-                } ,
-                {
-                    "id": 190,
-                    "count":2
-                }
-            ]
-            },
-            {
-                "normalCount":1,"objects" :[
-                {
-                    "id": 42,
-                    "count":2
-                },
-                {
-                    "id": 43,
-                    "count":1
-                },
-                {
-                    "id": 47 ,
-                    "count":1
-                },
-                {
-                    "id": 190,
-                    "count":1
-                },
-                {
-                    "id": 12,
-                    "count":2
-                },
-                {
-                    "id": 69,
-                    "count":1
-                }
-            ]
-            },
-            {
-                "normalCount":1,"objects" :[
-                {
-                    "id": 42,
-                    "count":2
-                },
-                {
-                    "id": 43,
-                    "count":1
-                },
-                {
-                    "id": 47 ,
-                    "count":1
-                },
-                {
-                    "id": 12,
-                    "count":2
-                },
-                {
-                    "id": 190,
-                    "count":1
-                },
-                {
-                    "id": 69,
-                    "count":1
-                }
-            ]
-            },
-            {
-                "normalCount":1,"objects" :[
-                {
-                    "id": 42,
-                    "count":2
-                },
-                {
-                    "id": 47 ,
-                    "count":1
-                },
-                {
-                    "id": 12,
-                    "count":1
-                },
-                {
-                    "id": 43,
-                    "count":1
-                },
-                {
-                    "id": 149,
-                    "count":3
-                },
-                {
-                    "id": 69,
-                    "count":1
-                },
-                {
-                    "id": 190,
-                    "count":2
-                }
-            ]
-            }
-        ],
-        "prize":[
-
-        ],
-        "prizeWxp":0,"prizeGold":0,
-        "prizeXp":0,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "dropID":[ ],
+        "prizeWxp":0,"prizeGold":0, "prizeXp":0,
+        "wxpRate":1,"goldRate":0.2, "xpRate":0.1
     }
 
-]
+];

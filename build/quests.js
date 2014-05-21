@@ -41,25 +41,7 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":0,
-                "value":35,
-                "count":1,
-                "classLimit":[1]
-            },
-            {
-                "type":0,
-                "value":39,
-                "count":1,
-                "classLimit":[2]
-            },
-            {
-                "type":0,
-                "value":43,
-                "count":1,
-                "classLimit":[0]
-            },
-            {
-                "type":3,
+                "type":1,
                 "count":250
             }
         ],
@@ -84,25 +66,7 @@ exports.data = [
             ],
             "prize":[
                 {
-                    "type":0,
-                    "value":35,
-                    "count":1,
-                    "classLimit":[1]
-                },
-                {
-                    "type":0,
-                    "value":39,
-                    "count":1,
-                    "classLimit":[2]
-                },
-                {
-                    "type":0,
-                    "value":43,
-                    "count":1,
-                    "classLimit":[0]
-                },
-                {
-                    "type":3,
+                    "type":1,
                     "count":250
                 }
             ],
@@ -129,25 +93,7 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":0,
-                "value":33,
-                "count":1,
-                "classLimit":[1]
-            },
-            {
-                "type":0,
-                "value":37,
-                "count":1,
-                "classLimit":[2]
-            },
-            {
-                "type":0,
-                "value":41,
-                "count":1,
-                "classLimit":[0]
-            },
-            {
-                "type":3,
+                "type":1,
                 "count":150
             }
         ],
@@ -173,17 +119,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":0,
-                "value":525,
-                "count":2
-            },
-            {
                 "type":1,
                 "count":200
-            },
-            {
-                "type":3,
-                "count":50
             }
         ],
         "cond":
@@ -206,26 +143,9 @@ exports.data = [
             }
         ],
         "prize":[
+
             {
-                "type":0,
-                "value":34,
-                "count":1,
-                "classLimit":[1]
-            },
-            {
-                "type":0,
-                "value":38,
-                "count":1,
-                "classLimit":[2]
-            },
-            {
-                "type":0,
-                "value":42,
-                "count":1,
-                "classLimit":[0]
-            },
-            {
-                "type":3,
+                "type":1,
                 "count":200
             }
         ],
@@ -251,17 +171,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":0,
-                "value":0,
-                "count":5
-            },
-            {
                 "type":1,
                 "count":200
-            },
-            {
-                "type":3,
-                "count":50
             }
         ],
         "cond":
@@ -310,7 +221,7 @@ exports.data = [
     ],
     "prize":[
         {
-            "type":3,
+            "type":1,
             "count":100
         }
     ],
@@ -335,17 +246,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":0,
-                "value":455,
-                "count":1
-            },
-            {
                 "type":1,
                 "count":200
-            },
-            {
-                "type":3,
-                "count":50
             }
         ],
         "cond":
@@ -368,23 +270,9 @@ exports.data = [
             }
         ],
         "prize":[
+
             {
-                "type":0,
-                "value":32,
-                "count":1
-            },
-            {
-                "type":0,
-                "value":36,
-                "count":1
-            },
-            {
-                "type":0,
-                "value":40,
-                "count":1
-            },
-            {
-                "type":3,
+                "type":1,
                 "count":200
             }
         ],
@@ -408,19 +296,12 @@ exports.data = [
             }
         ],
         "prize":[
-            {
-                "type":0,
-                "value":476,
-                "count":1
-            },
+
             {
                 "type":1,
                 "count":200
-            },
-            {
-                "type":3,
-                "count":50
             }
+
         ],
         "cond":
         { "and": [
@@ -442,14 +323,10 @@ exports.data = [
             }
         ],
         "prize":[
+
             {
-                "type":0,
-                "value":496,
-                "count":1
-            },
-            {
-                "type":3,
-                "count":50
+                "type":1,
+                "count":100
             }
         ],
         "cond":
@@ -475,10 +352,6 @@ exports.data = [
             {
                 "type":1,
                 "count":200
-            },
-            {
-                "type":3,
-                "count":300
             }
         ],
         "cond":
@@ -502,17 +375,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":0,
-                "value":0,
-                "count":3
-            },
-            {
                 "type":1,
                 "count":200
-            },
-            {
-                "type":3,
-                "count":300
             }
         ],
         "cond":
@@ -539,10 +403,6 @@ exports.data = [
             {
                 "type":1,
                 "count":200
-            },
-            {
-                "type":3,
-                "count":50
             }
         ],
         "cond":
@@ -572,10 +432,6 @@ exports.data = [
             {
                 "type":1,
                 "count":400
-            },
-            {
-                "type":3,
-                "count":300
             }
         ],
         "cond":
@@ -607,16 +463,12 @@ exports.data = [
         "prize":[
             {
                 "type":1,
-                "count":200
+                "count":500
             },
             {
                 "type":0,
                 "value":538,
                 "count":1
-            },
-            {
-                "type":3,
-                "count":50
             }
         ],
         "cond":
@@ -642,10 +494,6 @@ exports.data = [
             {
                 "type":1,
                 "count":380
-            },
-            {
-                "type":3,
-                "count":100
             }
         ],
         "cond":
@@ -670,13 +518,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":0,
-                "value":534,
-                "count":2
-            },
-            {
-                "type":3,
-                "count":100
+                "type":1,
+                "count":500
             }
         ],
         "cond":
@@ -702,10 +545,6 @@ exports.data = [
             {
                 "type":1,
                 "count":380
-            },
-            {
-                "type":3,
-                "count":100
             }
         ],
         "cond":
@@ -729,13 +568,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":0,
-                "value":538,
-                "count":1
-            },
-            {
-                "type":3,
-                "count":100
+                "type":1,
+                "count":500
             }
         ],
         "cond":
@@ -761,10 +595,6 @@ exports.data = [
             {
                 "type":1,
                 "count":380
-            },
-            {
-                "type":3,
-                "count":100
             }
         ],
         "cond":
@@ -816,10 +646,6 @@ exports.data = [
             {
                 "type":1,
                 "count":380
-            },
-            {
-                "type":3,
-                "count":100
             }
         ],
         "cond":
@@ -842,14 +668,10 @@ exports.data = [
             }
         ],
         "prize":[
+
             {
-                "type":0,
-                "value":0,
-                "count":5
-            },
-            {
-                "type":3,
-                "count":100
+                "type":1,
+                "count":500
             }
         ],
         "cond":
@@ -875,10 +697,6 @@ exports.data = [
             {
                 "type":1,
                 "count":1100
-            },
-            {
-                "type":3,
-                "count":100
             }
         ],
         "cond":
@@ -904,10 +722,6 @@ exports.data = [
             {
                 "type":1,
                 "count":380
-            },
-            {
-                "type":3,
-                "count":190
             }
         ],
         "cond":
@@ -958,10 +772,6 @@ exports.data = [
             {
                 "type":1,
                 "count":380
-            },
-            {
-                "type":3,
-                "count":100
             }
         ],
         "cond":
@@ -987,10 +797,6 @@ exports.data = [
             {
                 "type":1,
                 "count":380
-            },
-            {
-                "type":3,
-                "count":100
             }
         ],
         "cond":
@@ -1014,16 +820,12 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":2,
-                "count":100
-            },
-            {
                 "type":1,
                 "count":760
             },
             {
-                "type":3,
-                "count":200
+                "type":2,
+                "count":100
             }
         ],
         "cond":
@@ -1054,11 +856,7 @@ exports.data = [
         "prize":[
             {
                 "type":1,
-                "count":380
-            },
-            {
-                "type":3,
-                "count":100
+                "count":1180
             },
             {
                 "type":0,
@@ -1089,11 +887,6 @@ exports.data = [
             {
                 "type":1,
                 "count":480
-            },
-            {
-                "type":0,
-                "value":534,
-                "count":2
             }
         ],
         "cond":
@@ -1119,11 +912,6 @@ exports.data = [
             {
                 "type":1,
                 "count":480
-            },
-            {
-                "type":0,
-                "value":534,
-                "count":2
             }
         ],
         "cond":
@@ -1172,9 +960,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":0,
-                "value":534,
-                "count":4
+                "type":1,
+                "count":600
             }
         ],
         "cond":
@@ -1200,10 +987,6 @@ exports.data = [
             {
                 "type":1,
                 "count":960
-            },
-            {
-                "type":3,
-                "count":120
             }
         ],
         "cond":
@@ -1227,9 +1010,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":0,
-                "value":534,
-                "count":2
+                "type":1,
+                "count":800
             }
         ],
         "cond":
@@ -1255,10 +1037,6 @@ exports.data = [
             {
                 "type":1,
                 "count":480
-            },
-            {
-                "type":3,
-                "count":120
             }
         ],
         "cond":
@@ -1301,12 +1079,7 @@ exports.data = [
         "prize":[
             {
                 "type":1,
-                "count":480
-            },
-            {
-                "type":0,
-                "value":0,
-                "count":10
+                "count":1180
             }
         ],
         "cond":
@@ -1332,15 +1105,6 @@ exports.data = [
             {
                 "type":1,
                 "count":960
-            },
-            {
-                "type":3,
-                "count":240
-            },
-            {
-                "type":0,
-                "value":540,
-                "count":1
             }
         ],
         "cond":
@@ -1364,8 +1128,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":120
+                "type":1,
+                "count":1120
             }
         ],
         "cond":
@@ -1390,11 +1154,7 @@ exports.data = [
         "prize":[
             {
                 "type":1,
-                "count":480
-            },
-            {
-                "type":3,
-                "count":120
+                "count":580
             }
         ],
         "cond":
@@ -1420,15 +1180,6 @@ exports.data = [
             {
                 "type":1,
                 "count":480
-            },
-            {
-                "type":3,
-                "count":120
-            },
-            {
-                "type":0,
-                "value":535,
-                "count":1
             }
         ],
         "cond":
@@ -1452,8 +1203,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":240
+                "type":1,
+                "count":600
             }
         ],
         "cond":
@@ -1479,11 +1230,6 @@ exports.data = [
             {
                 "type":1,
                 "count":480
-            },
-            {
-                "type":0,
-                "value":526,
-                "count":1
             }
         ],
         "cond":
@@ -1507,8 +1253,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":120
+                "type":1,
+                "count":620
             }
         ],
         "cond":
@@ -1534,10 +1280,6 @@ exports.data = [
             {
                 "type":1,
                 "count":960
-            },
-            {
-                "type":3,
-                "count":240
             },
             {
                 "type":2,
@@ -1575,10 +1317,6 @@ exports.data = [
                 "count":960
             },
             {
-                "type":3,
-                "count":240
-            },
-            {
                 "type":0,
                 "value":538,
                 "count":1
@@ -1607,11 +1345,6 @@ exports.data = [
             {
                 "type":1,
                 "count":600
-            },
-            {
-                "type":0,
-                "value":526,
-                "count":1
             }
         ],
         "cond":
@@ -1635,8 +1368,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":150
+                "type":1,
+                "count":650
             }
         ],
         "cond":
@@ -1661,16 +1394,7 @@ exports.data = [
         "prize":[
             {
                 "type":1,
-                "count":1200
-            },
-            {
-                "type":3,
-                "count":300
-            },
-            {
-                "type":0,
-                "value":534,
-                "count":1
+                "count":1700
             }
         ],
         "cond":
@@ -1721,11 +1445,6 @@ exports.data = [
             {
                 "type":1,
                 "count":600
-            },
-            {
-                "type":0,
-                "value":526,
-                "count":1
             }
         ],
         "cond":
@@ -1749,8 +1468,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":150
+                "type":1,
+                "count":850
             }
         ],
         "cond":
@@ -1801,15 +1520,6 @@ exports.data = [
             {
                 "type":1,
                 "count":600
-            },
-            {
-                "type":3,
-                "count":300
-            },
-            {
-                "type":0,
-                "value":527,
-                "count":1
             }
         ],
         "cond":
@@ -1835,10 +1545,6 @@ exports.data = [
             {
                 "type":1,
                 "count":600
-            },
-            {
-                "type":3,
-                "count":150
             }
         ],
         "cond":
@@ -1862,8 +1568,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":300
+                "type":1,
+                "count":900
             }
         ],
         "cond":
@@ -1939,10 +1645,6 @@ exports.data = [
             {
                 "type":1,
                 "count":1800
-            },
-            {
-                "type":3,
-                "count":300
             }
         ],
         "cond":
@@ -1968,15 +1670,6 @@ exports.data = [
             {
                 "type":1,
                 "count":600
-            },
-            {
-                "type":3,
-                "count":150
-            },
-            {
-                "type":0,
-                "value":526,
-                "count":1
             }
         ],
         "cond":
@@ -2002,10 +1695,6 @@ exports.data = [
             {
                 "type":1,
                 "count":600
-            },
-            {
-                "type":3,
-                "count":300
             },
             {
                 "type":2,
@@ -2049,10 +1738,6 @@ exports.data = [
                 "count":1200
             },
             {
-                "type":3,
-                "count":300
-            },
-            {
                 "type":0,
                 "value":538,
                 "count":1
@@ -2079,8 +1764,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":250
+                "type":1,
+                "count":750
             }
         ],
         "cond":
@@ -2106,15 +1791,6 @@ exports.data = [
             {
                 "type":1,
                 "count":2000
-            },
-            {
-                "type":3,
-                "count":500
-            },
-            {
-                "type":0,
-                "value":527,
-                "count":1
             }
         ],
         "cond":
@@ -2165,15 +1841,6 @@ exports.data = [
             {
                 "type":1,
                 "count":2000
-            },
-            {
-                "type":3,
-                "count":500
-            },
-            {
-                "type":0,
-                "value":0,
-                "count":10
             }
         ],
         "cond":
@@ -2199,10 +1866,6 @@ exports.data = [
             {
                 "type":1,
                 "count":1000
-            },
-            {
-                "type":3,
-                "count":250
             }
         ],
         "cond":
@@ -2226,8 +1889,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":500
+                "type":1,
+                "count":1200
             }
         ],
         "cond":
@@ -2253,11 +1916,6 @@ exports.data = [
             {
                 "type":1,
                 "count":1000
-            },
-            {
-                "type":0,
-                "value":535,
-                "count":1
             }
         ],
         "cond":
@@ -2283,10 +1941,6 @@ exports.data = [
             {
                 "type":1,
                 "count":1000
-            },
-            {
-                "type":3,
-                "count":250
             }
         ],
         "cond":
@@ -2365,10 +2019,6 @@ exports.data = [
                 "count":1000
             },
             {
-                "type":3,
-                "count":250
-            },
-            {
                 "type":2,
                 "count":100
             }
@@ -2404,10 +2054,6 @@ exports.data = [
                 "count":2000
             },
             {
-                "type":3,
-                "count":500
-            },
-            {
                 "type":0,
                 "value":538,
                 "count":1
@@ -2434,8 +2080,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":260
+                "type":1,
+                "count":1260
             }
         ],
         "cond":
@@ -2461,15 +2107,6 @@ exports.data = [
             {
                 "type":1,
                 "count":2080
-            },
-            {
-                "type":3,
-                "count":520
-            },
-            {
-                "type":0,
-                "value":527,
-                "count":1
             }
         ],
         "cond":
@@ -2518,8 +2155,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":260
+                "type":1,
+                "count":1260
             }
         ],
         "cond":
@@ -2545,10 +2182,6 @@ exports.data = [
             {
                 "type":1,
                 "count":1040
-            },
-            {
-                "type":3,
-                "count":260
             }
         ],
         "cond":
@@ -2597,8 +2230,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":260
+                "type":1,
+                "count":1260
             }
         ],
         "cond":
@@ -2624,15 +2257,6 @@ exports.data = [
             {
                 "type":1,
                 "count":2080
-            },
-            {
-                "type":3,
-                "count":520
-            },
-            {
-                "type":0,
-                "value":535,
-                "count":2
             }
         ],
         "cond":
@@ -2658,10 +2282,6 @@ exports.data = [
             {
                 "type":1,
                 "count":1040
-            },
-            {
-                "type":3,
-                "count":260
             }
         ],
         "cond":
@@ -2685,8 +2305,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":260
+                "type":1,
+                "count":1260
             }
         ],
         "cond":
@@ -2735,8 +2355,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":260
+                "type":1,
+                "count":1260
             }
         ],
         "cond":
@@ -2795,10 +2415,6 @@ exports.data = [
                 "count":1040
             },
             {
-                "type":3,
-                "count":260
-            },
-            {
                 "type":2,
                 "count":100
             }
@@ -2846,10 +2462,6 @@ exports.data = [
                 "count":2080
             },
             {
-                "type":3,
-                "count":520
-            },
-            {
                 "type":0,
                 "value":538,
                 "count":1
@@ -2878,10 +2490,6 @@ exports.data = [
             {
                 "type":1,
                 "count":1280
-            },
-            {
-                "type":3,
-                "count":320
             }
         ],
         "cond":
@@ -2917,13 +2525,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":320
-            },
-            {
-                "type":0,
-                "value":536,
-                "count":1
+                "type":1,
+                "count":1320
             }
         ],
         "cond":
@@ -2950,11 +2553,6 @@ exports.data = [
             {
                 "type":1,
                 "count":2560
-            },
-            {
-                "type":0,
-                "value":528,
-                "count":1
             }
         ],
         "cond":
@@ -3005,10 +2603,6 @@ exports.data = [
             {
                 "type":1,
                 "count":2560
-            },
-            {
-                "type":3,
-                "count":640
             }
         ],
         "cond":
@@ -3034,10 +2628,6 @@ exports.data = [
             {
                 "type":1,
                 "count":1280
-            },
-            {
-                "type":3,
-                "count":320
             }
         ],
         "cond":
@@ -3061,8 +2651,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":320
+                "type":1,
+                "count":1320
             }
         ],
         "cond":
@@ -3120,15 +2710,6 @@ exports.data = [
             {
                 "type":1,
                 "count":1280
-            },
-            {
-                "type":3,
-                "count":320
-            },
-            {
-                "type":0,
-                "value":528,
-                "count":1
             }
         ],
         "cond":
@@ -3152,8 +2733,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":320
+                "type":1,
+                "count":1320
             }
         ],
         "cond":
@@ -3177,8 +2758,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":320
+                "type":1,
+                "count":1320
             }
         ],
         "cond":
@@ -3204,10 +2785,6 @@ exports.data = [
             {
                 "type":1,
                 "count":2560
-            },
-            {
-                "type":3,
-                "count":640
             },
             {
                 "type":2,
@@ -3262,15 +2839,6 @@ exports.data = [
             {
                 "type":1,
                 "count":3200
-            },
-            {
-                "type":3,
-                "count":800
-            },
-            {
-                "type":0,
-                "value":528,
-                "count":1
             }
         ],
         "cond":
@@ -3294,8 +2862,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":400
+                "type":1,
+                "count":1800
             }
         ],
         "cond":
@@ -3331,13 +2899,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":800
-            },
-            {
-                "type":0,
-                "value":538,
-                "count":1
+                "type":1,
+                "count":2200
             }
         ],
         "cond":
@@ -3363,10 +2926,6 @@ exports.data = [
             {
                 "type":1,
                 "count":1600
-            },
-            {
-                "type":3,
-                "count":800
             }
         ],
         "cond":
@@ -3392,10 +2951,6 @@ exports.data = [
             {
                 "type":1,
                 "count":1600
-            },
-            {
-                "type":3,
-                "count":400
             }
         ],
         "cond":
@@ -3446,10 +3001,6 @@ exports.data = [
             {
                 "type":1,
                 "count":1600
-            },
-            {
-                "type":3,
-                "count":800
             }
         ],
         "cond":
@@ -3473,8 +3024,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":400
+                "type":1,
+                "count":2000
             }
         ],
         "cond":
@@ -3500,10 +3051,6 @@ exports.data = [
             {
                 "type":1,
                 "count":600
-            },
-            {
-                "type":3,
-                "count":150
             }
         ],
         "cond":
@@ -3529,15 +3076,6 @@ exports.data = [
             {
                 "type":1,
                 "count":3200
-            },
-            {
-                "type":3,
-                "count":800
-            },
-            {
-                "type":0,
-                "value":538,
-                "count":1
             }
         ],
         "cond":
@@ -3565,10 +3103,6 @@ exports.data = [
                 "count":3200
             },
             {
-                "type":3,
-                "count":800
-            },
-            {
                 "type":2,
                 "count":100
             }
@@ -3594,8 +3128,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":450
+                "type":1,
+                "count":2450
             }
         ],
         "cond":
@@ -3621,15 +3155,6 @@ exports.data = [
             {
                 "type":1,
                 "count":1800
-            },
-            {
-                "type":3,
-                "count":450
-            },
-            {
-                "type":0,
-                "value":528,
-                "count":3
             }
         ],
         "cond":
@@ -3655,15 +3180,6 @@ exports.data = [
             {
                 "type":1,
                 "count":3600
-            },
-            {
-                "type":3,
-                "count":450
-            },
-            {
-                "type":0,
-                "value":536,
-                "count":2
             }
         ],
         "cond":
@@ -3689,10 +3205,6 @@ exports.data = [
             {
                 "type":1,
                 "count":1800
-            },
-            {
-                "type":3,
-                "count":450
             }
         ],
         "cond":
@@ -3716,8 +3228,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":450
+                "type":1,
+                "count":2450
             }
         ],
         "cond":
@@ -3741,13 +3253,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":450
-            },
-            {
-                "type":0,
-                "value":535,
-                "count":2
+                "type":1,
+                "count":2450
             }
         ],
         "cond":
@@ -3773,10 +3280,6 @@ exports.data = [
             {
                 "type":1,
                 "count":1800
-            },
-            {
-                "type":3,
-                "count":450
             }
         ],
         "cond":
@@ -3800,8 +3303,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":450
+                "type":1,
+                "count":2450
             }
         ],
         "cond":
@@ -3827,10 +3330,6 @@ exports.data = [
             {
                 "type":1,
                 "count":3600
-            },
-            {
-                "type":3,
-                "count":450
             },
             {
                 "type":2,
@@ -3872,15 +3371,6 @@ exports.data = [
             {
                 "type":1,
                 "count":3600
-            },
-            {
-                "type":3,
-                "count":450
-            },
-            {
-                "type":0,
-                "value":0,
-                "count":20
             }
         ],
         "cond":
@@ -3906,15 +3396,6 @@ exports.data = [
             {
                 "type":1,
                 "count":3600
-            },
-            {
-                "type":3,
-                "count":450
-            },
-            {
-                "type":0,
-                "value":528,
-                "count":1
             }
         ],
         "cond":
@@ -3940,10 +3421,6 @@ exports.data = [
             {
                 "type":1,
                 "count":1800
-            },
-            {
-                "type":3,
-                "count":450
             }
         ],
         "cond":
@@ -3976,10 +3453,6 @@ exports.data = [
             {
                 "type":1,
                 "count":200
-            },
-            {
-                "type":3,
-                "count":50
             }
         ],
         "stage": 88
@@ -4007,10 +3480,6 @@ exports.data = [
             {
                 "type":1,
                 "count":200
-            },
-            {
-                "type":3,
-                "count":50
             }
         ],
         "stage": 88
@@ -4038,10 +3507,6 @@ exports.data = [
             {
                 "type":1,
                 "count":200
-            },
-            {
-                "type":3,
-                "count":50
             }
         ],
         "stage": 88
@@ -4094,8 +3559,8 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":3,
-                "count":500
+                "type":1,
+                "count":1500
             }
         ],
         "stage": 89
@@ -4162,12 +3627,12 @@ exports.data = [
         ]
         },
         "hidden": true,
-        "title":"击败恶霸山贼",
-        "desc":"击杀大恶霸山贼。",
+        "title":"寻找被山贼捉走的村民",
+        "desc":"寻找被山贼捉走的村民",
         "objects":[
             {
                 "type":0,
-                "label":"打倒恶霸山贼",
+                "label":"找到村民",
                 "collect":135001,
                 "count":1
             }
@@ -4674,30 +4139,12 @@ exports.data = [
         ],
         "prize":[
             {
-                "type":0,
-                "value":35,
-                "count":1,
-                "classLimit":[1]
-            },
-            {
-                "type":0,
-                "value":39,
-                "count":1,
-                "classLimit":[2]
-            },
-            {
-                "type":0,
-                "value":43,
-                "count":1,
-                "classLimit":[0]
+                "type":1,
+                "count":250
             },
             {
                 "type":3,
                 "count":250
-            },
-            {
-                "type":1,
-                "count":150
             }
         ],
         "cond":
@@ -4719,10 +4166,6 @@ exports.data = [
             }
         ],
         "prize":[
-            {
-                "type":3,
-                "count":150
-            },
             {
                 "type":1,
                 "count":150
@@ -4747,26 +4190,9 @@ exports.data = [
             }
         ],
         "prize":[
+
             {
-                "type":0,
-                "value":33,
-                "count":1,
-                "classLimit":[1]
-            },
-            {
-                "type":0,
-                "value":37,
-                "count":1,
-                "classLimit":[2]
-            },
-            {
-                "type":0,
-                "value":41,
-                "count":1,
-                "classLimit":[0]
-            },
-            {
-                "type":3,
+                "type":1,
                 "count":150
             }
         ],
@@ -4789,26 +4215,9 @@ exports.data = [
             }
         ],
         "prize":[
+
             {
-                "type":0,
-                "value":34,
-                "count":1,
-                "classLimit":[1]
-            },
-            {
-                "type":0,
-                "value":38,
-                "count":1,
-                "classLimit":[2]
-            },
-            {
-                "type":0,
-                "value":42,
-                "count":1,
-                "classLimit":[0]
-            },
-            {
-                "type":3,
+                "type":1,
                 "count":200
             }
         ],
@@ -4832,18 +4241,10 @@ exports.data = [
             }
         ],
         "prize":[
-            {
-                "type":0,
-                "value":0,
-                "count":5
-            },
+
             {
                 "type":1,
                 "count":200
-            },
-            {
-                "type":3,
-                "count":50
             }
         ],
         "cond":
@@ -4867,26 +4268,9 @@ exports.data = [
             }
         ],
         "prize":[
+
             {
-                "type":0,
-                "value":32,
-                "count":1,
-                "classLimit":[1]
-            },
-            {
-                "type":0,
-                "value":36,
-                "count":1,
-                "classLimit":[2]
-            },
-            {
-                "type":0,
-                "value":40,
-                "count":1,
-                "classLimit":[0]
-            },
-            {
-                "type":3,
+                "type":1,
                 "count":250
             }
         ],
@@ -4934,19 +4318,12 @@ exports.data = [
             }
         ],
         "prize":[
-            {
-                "type":0,
-                "value":455,
-                "count":1
-            },
+
             {
                 "type":1,
                 "count":200
-            },
-            {
-                "type":3,
-                "count":250
             }
+
         ],
         "cond":
         { "and": [
@@ -4997,31 +4374,8 @@ exports.data = [
                 "count":400
             },
             {
-                "type":0,
-                "value":568,
-                "count":1,
-                "classLimit":[1]
-            },
-            {
-                "type":0,
-                "value":571,
-                "count":1,
-                "classLimit":[2]
-            },
-            {
-                "type":0,
-                "value":564,
-                "count":1,
-                "classLimit":[0]
-            },
-            {
-                "type":0,
-                "value":558,
-                "count":20
-            },
-            {
-                "type":3,
-                "count":400
+                "type":2,
+                "count":100
             }
         ],
         "cond":
@@ -5045,16 +4399,6 @@ exports.data = [
             {
                 "type":1,
                 "count":500
-            },
-            {
-                "type":0,
-                "value":0,
-                "count":5
-            },
-            {
-                "type":0,
-                "value":534,
-                "count":1
             }
         ]
     },
@@ -5076,13 +4420,8 @@ exports.data = [
             },
             {
                 "type":0,
-                "value":0,
-                "count":15
-            },
-            {
-                "type":0,
-                "value":534,
-                "count":3
+                "value":538,
+                "count":1
             }
         ],
         "cond":
@@ -5108,19 +4447,13 @@ exports.data = [
                 "count":1500
             },
             {
-                "type":0,
-                "value":0,
-                "count":20
+                "type":2,
+                "count":100
             },
             {
                 "type":0,
-                "value":534,
+                "value":538,
                 "count":5
-            },
-            {
-                "type":0,
-                "value":535,
-                "count":2
             }
         ],
         "cond":
@@ -5146,19 +4479,13 @@ exports.data = [
                 "count":2000
             },
             {
-                "type":0,
-                "value":0,
-                "count":25
+                "type":2,
+                "count":100
             },
             {
                 "type":0,
-                "value":536,
+                "value":538,
                 "count":1
-            },
-            {
-                "type":0,
-                "value":535,
-                "count":3
             }
         ],
         "cond":
@@ -5181,17 +4508,11 @@ exports.data = [
         "prize":[
             {
                 "type":2,
-                "count":100
+                "count":150
             },
             {
-                "type":0,
-                "value":0,
-                "count":25
-            },
-            {
-                "type":0,
-                "value":537,
-                "count":2
+                "type":1,
+                "count":5000
             },
             {
                 "type":0,
@@ -5238,16 +4559,6 @@ exports.data = [
             {
                 "type":1,
                 "count":500
-            },
-            {
-                "type":0,
-                "value":0,
-                "count":10
-            },
-            {
-                "type":0,
-                "value":530,
-                "count":1
             }
         ],
         "cond":
@@ -5273,14 +4584,8 @@ exports.data = [
                 "count":800
             },
             {
-                "type":0,
-                "value":0,
-                "count":15
-            },
-            {
-                "type":0,
-                "value":530,
-                "count":3
+                "type":2,
+                "count":20
             }
         ],
         "cond":
@@ -5306,14 +4611,8 @@ exports.data = [
                 "count":1300
             },
             {
-                "type":0,
-                "value":0,
-                "count":15
-            },
-            {
-                "type":0,
-                "value":531,
-                "count":2
+                "type":2,
+                "count":40
             }
         ],
         "cond":
@@ -5339,14 +4638,8 @@ exports.data = [
                 "count":1500
             },
             {
-                "type":0,
-                "value":0,
-                "count":20
-            },
-            {
-                "type":0,
-                "value":531,
-                "count":4
+                "type":2,
+                "count":40
             }
         ],
         "cond":
@@ -5372,14 +4665,8 @@ exports.data = [
                 "count":2000
             },
             {
-                "type":0,
-                "value":0,
-                "count":25
-            },
-            {
-                "type":0,
-                "value":532,
-                "count":1
+                "type":2,
+                "count":40
             }
         ],
         "cond":
@@ -5405,14 +4692,8 @@ exports.data = [
                 "count":2500
             },
             {
-                "type":0,
-                "value":0,
-                "count":25
-            },
-            {
-                "type":0,
-                "value":532,
-                "count":3
+                "type":2,
+                "count":40
             }
         ],
         "cond":
@@ -5438,14 +4719,8 @@ exports.data = [
                 "count":3000
             },
             {
-                "type":0,
-                "value":0,
-                "count":30
-            },
-            {
-                "type":0,
-                "value":533,
-                "count":1
+                "type":2,
+                "count":40
             },
             {
                 "type":0,
@@ -5456,6 +4731,168 @@ exports.data = [
         "cond":
         { "and": [
             { "==": [ { "type": "getProperty", "key": "quests.175.complete"}, true ] }
+        ]
+        }
+    },
+    {
+        "questId":177,
+        "title":"突破天际的战斗力IX",
+        "desc":"将角色战斗力提升至4000以上",
+        "objects":[
+            {
+                "type":5,
+                "label":"战斗力突破4000",
+                "count":4000
+            }
+        ],
+        "prize":[
+            {
+                "type":1,
+                "count":4000
+            },
+            {
+                "type":2,
+                "count":60
+            }
+        ],
+        "cond":
+        { "and": [
+            { "==": [ { "type": "getProperty", "key": "quests.176.complete"}, true ] }
+        ]
+        }
+    },
+    {
+        "questId":178,
+        "title":"突破天际的战斗力X",
+        "desc":"将角色战斗力提升至5000以上",
+        "objects":[
+            {
+                "type":5,
+                "label":"战斗力突破5000",
+                "count":5000
+            }
+        ],
+        "prize":[
+            {
+                "type":1,
+                "count":5000
+            },
+            {
+                "type":2,
+                "count":60
+            }
+        ],
+        "cond":
+        { "and": [
+            { "==": [ { "type": "getProperty", "key": "quests.177.complete"}, true ] }
+        ]
+        }
+    },
+    {
+        "questId":179,
+        "title":"突破天际的战斗力XI",
+        "desc":"将角色战斗力提升至6000以上",
+        "objects":[
+            {
+                "type":5,
+                "label":"战斗力突破6000",
+                "count":6000
+            }
+        ],
+        "prize":[
+            {
+                "type":1,
+                "count":6000
+            },
+            {
+                "type":2,
+                "count":60
+            }
+        ],
+        "cond":
+        { "and": [
+            { "==": [ { "type": "getProperty", "key": "quests.178.complete"}, true ] }
+        ]
+        }
+    },
+    {
+        "questId":180,
+        "title":"突破天际的战斗力XII",
+        "desc":"将角色战斗力提升至7000以上",
+        "objects":[
+            {
+                "type":5,
+                "label":"战斗力突破7000",
+                "count":8000
+            }
+        ],
+        "prize":[
+            {
+                "type":1,
+                "count":7000
+            },
+            {
+                "type":2,
+                "count":60
+            }
+        ],
+        "cond":
+        { "and": [
+            { "==": [ { "type": "getProperty", "key": "quests.179.complete"}, true ] }
+        ]
+        }
+    },
+    {
+        "questId":181,
+        "title":"突破天际的战斗力XIII",
+        "desc":"将角色战斗力提升至9000以上",
+        "objects":[
+            {
+                "type":5,
+                "label":"战斗力突破9000",
+                "count":9000
+            }
+        ],
+        "prize":[
+            {
+                "type":1,
+                "count":9000
+            },
+            {
+                "type":2,
+                "count":60
+            }
+        ],
+        "cond":
+        { "and": [
+            { "==": [ { "type": "getProperty", "key": "quests.180.complete"}, true ] }
+        ]
+        }
+    },
+    {
+        "questId":182,
+        "title":"突破天际的战斗力XIV",
+        "desc":"将角色战斗力提升至10000以上",
+        "objects":[
+            {
+                "type":5,
+                "label":"战斗力突破10000",
+                "count":10000
+            }
+        ],
+        "prize":[
+            {
+                "type":1,
+                "count":10000
+            },
+            {
+                "type":2,
+                "count":100
+            }
+        ],
+        "cond":
+        { "and": [
+            { "==": [ { "type": "getProperty", "key": "quests.181.complete"}, true ] }
         ]
         }
     }

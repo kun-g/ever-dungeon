@@ -132,8 +132,76 @@
       if (type && type === 'error') {
         return logError(msg);
       } else {
-        return logUser(msg);
+
       }
+    };
+
+    Player.prototype.isEquiped = function(slot) {
+      var e, equipment, i;
+      equipment = (function() {
+        var _ref7, _results;
+        _ref7 = this.equipment;
+        _results = [];
+        for (i in _ref7) {
+          e = _ref7[i];
+          _results.push(e);
+        }
+        return _results;
+      }).call(this);
+      return equipment.indexOf(+slot) !== -1;
+    };
+
+    Player.prototype.migrate = function() {
+      var cfg, enhanceID, item, lv, p, prize, slot, _i, _ref7;
+      _ref7 = this.inventory.container;
+      for (slot in _ref7) {
+        item = _ref7[slot];
+        if (item != null) {
+          if (item.transPrize != null) {
+            if (this.isEquiped(slot)) {
+              lv = -1;
+              if (item.enhancement && item.enhancement.length > 0) {
+                lv = item.enhancement.reduce((function(r, i) {
+                  return r + i.level;
+                }), 0);
+              }
+              cfg = require('./transfer').data;
+              if (cfg[item.id]) {
+                p = cfg[item.id].filter((function(_this) {
+                  return function(e) {
+                    return isClassMatch(_this.hero["class"], e.classLimit);
+                  };
+                })(this));
+                item.id = p[0].value;
+              }
+              enhanceID = queryTable(TABLE_ITEM, item.id).enhanceID;
+              if ((enhanceID != null) && lv >= 0) {
+                item.enhancement = [
+                  {
+                    id: enhanceID,
+                    level: lv
+                  }
+                ];
+              }
+              continue;
+            }
+            this.sellItem(slot);
+          }
+        }
+      }
+      prize = queryTable(TABLE_CONFIG, 'InitialEquipment');
+      for (slot = _i = 0; _i <= 5; slot = ++_i) {
+        if (!(this.equipment[slot] == null)) {
+          continue;
+        }
+        console.log('Equip', slot, this.equipment[slot]);
+        this.claimPrize(prize[slot].filter((function(_this) {
+          return function(e) {
+            return isClassMatch(_this.hero["class"], e.classLimit);
+          };
+        })(this)));
+      }
+      return this.syncBag(true);
     };
 
     Player.prototype.onDisconnect = function() {
@@ -295,6 +363,8 @@
           }
         };
       })(this)));
+      helperLib.initObserveration(this);
+      this.installObserver('heroxpChanged');
       if (this.isNewPlayer) {
         this.isNewPlayer = false;
       }
@@ -488,7 +558,8 @@
             gender: this.hero.gender,
             hairStyle: this.hero.hairStyle,
             hairColor: this.hero.hairColor,
-            equipment: equip
+            equipment: equip,
+            equipSlot: this.equipment
           };
           this.save();
         } else {
@@ -503,17 +574,25 @@
     };
 
     Player.prototype.switchHero = function(hClass) {
-      var k, v, _ref7;
+      var k, v, _ref7, _ref8, _results;
       if (this.heroBase[hClass] == null) {
         return false;
       }
-      _ref7 = this.heroBase[hClass];
-      for (k in _ref7) {
-        v = _ref7[k];
-        this.hero.newProperty(k, JSON.parse(JSON.stringify(v)));
+      if (this.hero != null) {
+        this.heroBase.newProperty(this.hero["class"], {});
+        _ref7 = this.hero;
+        for (k in _ref7) {
+          v = _ref7[k];
+          this.heroBase[this.hero["class"]].newProperty(k, JSON.parse(JSON.stringify(v)));
+        }
       }
-      this.hero.newProperty('equipment', []);
-      return this.hero.newProperty('vip', this.vipLevel());
+      _ref8 = this.heroBase[hClass];
+      _results = [];
+      for (k in _ref8) {
+        v = _ref8[k];
+        _results.push(this.hero.newProperty(k, JSON.parse(JSON.stringify(v))));
+      }
+      return _results;
     };
 
     Player.prototype.addMoney = function(type, point) {
@@ -544,20 +623,12 @@
         prevLevel = this.createHero().level;
         this.hero.xp += point;
         currentLevel = this.createHero().level;
-        this.onEvent('experience');
-        if (prevLevel !== currentLevel) {
-          if (currentLevel === 10) {
-            dbLib.broadcastEvent(BROADCAST_PLAYER_LEVEL, {
-              who: this.name,
-              what: this.hero["class"]
-            });
-          }
-          this.onEvent('level');
-          this.log('levelChange', {
-            prevLevel: prevLevel,
-            newLevel: currentLevel
-          });
-        }
+        this.notify('heroxpChanged', {
+          xp: this.hero.xp,
+          delta: point,
+          prevLevel: prevLevel,
+          currentLevel: currentLevel
+        });
       }
       return this.hero.xp;
     };
@@ -744,7 +815,7 @@
             if (teamCount > team.length) {
               if (mercenary.length >= teamCount - team.length) {
                 team = team.concat(mercenary.splice(0, teamCount - team.length));
-                _this.mercenary.splice(0, teamCount - team.length);
+                _this.mercenary = [];
               } else {
                 _this.costEnergy(-stageConfig.cost);
                 return cb(RET_NeedTeammate);
@@ -864,14 +935,8 @@
       return packQuestEvent(this.quests, qid, this.questVersion);
     };
 
-    Player.prototype.claimPrize = function(prize, allOrFail) {
-      var e, equipUpdate, i, itemPrize, k, otherPrize, p, ret, _i, _j, _len, _len1, _ref7;
-      if (allOrFail == null) {
-        allOrFail = true;
-      }
-      if (prize == null) {
-        return [];
-      }
+    Player.prototype.rearragenPrize = function(prize) {
+      var itemPrize, otherPrize, p, _i, _len;
       if (!Array.isArray(prize)) {
         prize = [prize];
       }
@@ -879,12 +944,14 @@
       otherPrize = [];
       for (_i = 0, _len = prize.length; _i < _len; _i++) {
         p = prize[_i];
-        if (p.type === PRIZETYPE_ITEM) {
-          if (p.count > 0) {
-            itemPrize.push(p);
+        if (p != null) {
+          if (p.type === PRIZETYPE_ITEM) {
+            if (p.count > 0) {
+              itemPrize.push(p);
+            }
+          } else {
+            otherPrize.push(p);
           }
-        } else {
-          otherPrize.push(p);
         }
       }
       if (itemPrize.length > 1) {
@@ -901,10 +968,84 @@
           }
         ];
       }
-      prize = itemPrize.concat(otherPrize);
+      return itemPrize.concat(otherPrize);
+    };
+
+    Player.prototype.claimCost = function(cost, count) {
+      var cfg, haveEnoughtMoney, p, prize, ret, retRM, _i, _len;
+      if (count == null) {
+        count = 1;
+      }
+      cfg = queryTable(TABLE_COSTS, cost);
+      if (cfg == null) {
+        return null;
+      }
+      prize = this.rearragenPrize(cfg.material);
+      haveEnoughtMoney = prize.reduce((function(_this) {
+        return function(r, l) {
+          if (l.type === PRIZETYPE_GOLD && _this.gold < l.count * count) {
+            return false;
+          }
+          if (l.type === PRIZETYPE_DIAMOND && _this.diamond < l.count * count) {
+            return false;
+          }
+          return r;
+        };
+      })(this), true);
+      if (!haveEnoughtMoney) {
+        return null;
+      }
       ret = [];
-      for (_j = 0, _len1 = prize.length; _j < _len1; _j++) {
-        p = prize[_j];
+      for (_i = 0, _len = prize.length; _i < _len; _i++) {
+        p = prize[_i];
+        if (p != null) {
+          switch (p.type) {
+            case PRIZETYPE_ITEM:
+              retRM = this.inventory.remove(p.value, p.count * count, null, true);
+              if (!(retRM && retRM.length > 0)) {
+                return null;
+              }
+              ret = this.doAction({
+                id: 'ItemChange',
+                ret: retRM,
+                version: this.inventoryVersion
+              });
+              break;
+            case PRIZETYPE_GOLD:
+              ret.push({
+                NTF: Event_InventoryUpdateItem,
+                arg: {
+                  syn: this.inventoryVersion,
+                  god: this.addGold(-p.count * count)
+                }
+              });
+              break;
+            case PRIZETYPE_DIAMOND:
+              ret.push({
+                NTF: Event_InventoryUpdateItem,
+                arg: {
+                  syn: this.inventoryVersion,
+                  dim: this.addDiamond(-p.count * count)
+                }
+              });
+          }
+        }
+      }
+      return ret;
+    };
+
+    Player.prototype.claimPrize = function(prize, allOrFail) {
+      var e, equipUpdate, i, k, p, ret, _i, _len, _ref7;
+      if (allOrFail == null) {
+        allOrFail = true;
+      }
+      if (prize == null) {
+        return [];
+      }
+      prize = this.rearragenPrize(prize);
+      ret = [];
+      for (_i = 0, _len = prize.length; _i < _len; _i++) {
+        p = prize[_i];
         if (p != null) {
           switch (p.type) {
             case PRIZETYPE_ITEM:
@@ -1260,7 +1401,7 @@
           this.onEvent('Equipment');
           return {
             ret: RET_OK,
-            ntf: ret
+            ntf: [ret]
           };
       }
       logError({
@@ -1313,121 +1454,28 @@
       return this.inventory.size(delta);
     };
 
-    Player.prototype.transformGem = function(count) {
-      var gem7, gemIndex, gems, goldCost, i, prize, r, ret, retPrize, retRM, _i, _ref7;
-      gem7 = 0;
-      goldCost = count * 50;
-      if (!(goldCost <= this.gold)) {
+    Player.prototype.transformGem = function(tarID, count) {
+      var cfg, ret;
+      cfg = queryTable(TABLE_ITEM, tarID);
+      if (cfg == null) {
         return {
-          ret: RET_NotEnoughGold
+          ret: RET_Unknown
         };
       }
-      retRM = this.inventory.removeById(gem7, count, true);
-      if (!retRM) {
-        return {
-          ret: RET_NoEnhanceStone
-        };
-      }
-      this.addGold(-goldCost);
-      gems = {};
-      gemIndex = queryTable(TABLE_CONFIG, 'Global_Enhancement_GEM_Index', this.abIndex);
-      prize = [];
-      for (i = _i = 1, _ref7 = Math.floor(count * 0.5); 1 <= _ref7 ? _i <= _ref7 : _i >= _ref7; i = 1 <= _ref7 ? ++_i : --_i) {
-        r = rand() % gemIndex.length;
-        if (gems[r] == null) {
-          gems[r] = {
-            type: PRIZETYPE_ITEM,
-            value: gemIndex[r],
-            count: 0
-          };
-          prize.push(gems[r]);
-        }
-        gems[r].count++;
-      }
-      retPrize = this.claimPrize(prize);
-      if (retPrize) {
-        ret = this.doAction({
-          id: 'ItemChange',
-          ret: retRM,
-          version: this.inventoryVersion
-        });
-        ret = ret.concat(retPrize);
-        ret = ret.concat({
-          NTF: Event_InventoryUpdateItem,
-          arg: {
-            syn: this.inventoryVersion,
-            god: this.gold
-          }
-        });
-        return {
-          out: prize,
-          res: ret
-        };
-      } else {
-        this.inventory.reverseOpration(retRM);
-        return {
-          ret: RET_InventoryFull
-        };
-      }
-    };
-
-    Player.prototype.craftItem = function(slot) {
-      var newItem, recipe, ret, retRM;
-      recipe = this.getItemAt(slot);
-      if (recipe.category !== ITEM_RECIPE) {
-        return {
-          ret: RET_NeedReceipt
-        };
-      }
-      if (this.gold < recipe.recipeCost) {
-        return {
-          ret: RET_NotEnoughGold
-        };
-      }
-      retRM = this.inventory.removeById(recipe.recipeIngredient, 1, true);
-      if (!retRM) {
+      ret = this.claimCost(cfg.synthesizeID, count);
+      if (ret == null) {
         return {
           ret: RET_InsufficientIngredient
         };
       }
-      ret = this.removeItem(null, 1, slot);
-      ret = ret.concat(this.doAction({
-        id: 'ItemChange',
-        ret: retRM,
-        version: this.inventoryVersion
-      }));
-      this.addGold(-recipe.recipeCost);
-      newItem = new Item(recipe.recipeTarget);
-      ret = ret.concat(this.aquireItem(newItem));
-      ret = ret.concat({
-        NTF: Event_InventoryUpdateItem,
-        arg: {
-          syn: this.inventoryVersion,
-          god: this.gold
-        }
-      });
-      this.log('craftItem', {
-        slot: slot,
-        id: recipe.id
-      });
-      if (newItem.rank >= 8) {
-        dbLib.broadcastEvent(BROADCAST_CRAFT, {
-          who: this.name,
-          what: newItem.id
-        });
-      }
+      ret = ret.concat(this.aquireItem(tarID, count));
       return {
-        out: {
-          type: PRIZETYPE_ITEM,
-          value: newItem.id,
-          count: 1
-        },
         res: ret
       };
     };
 
     Player.prototype.levelUpItem = function(slot) {
-      var cost, eh, exp, item, k, newItem, ret, s, upConfig, _ref7, _ref8, _ref9;
+      var cost, eh, exp, item, k, newItem, ret, s, upConfig, _ref7;
       item = this.getItemAt(slot);
       if (item == null) {
         return {
@@ -1445,8 +1493,8 @@
           ret: RET_EquipCantUpgrade
         };
       }
-      exp = (_ref7 = item.upgradeXp) != null ? _ref7 : upConfig.xp;
-      cost = (_ref8 = item.upgradeCost) != null ? _ref8 : upConfig.cost;
+      exp = upConfig.xp;
+      cost = upConfig.cost;
       if (!((exp != null) && (cost != null))) {
         return {
           ret: RET_EquipCantUpgrade
@@ -1462,9 +1510,9 @@
           ret: RET_NotEnoughGold
         };
       }
-      _ref9 = this.equipment;
-      for (k in _ref9) {
-        s = _ref9[k];
+      _ref7 = this.equipment;
+      for (k in _ref7) {
+        s = _ref7[k];
         if (s === slot) {
           delete this.equipment[k];
         }
@@ -1474,7 +1522,6 @@
       newItem = new Item(item.upgradeTarget);
       newItem.enhancement = item.enhancement;
       ret = ret.concat(this.aquireItem(newItem));
-      ret = ret.concat(this.useItem(this.queryItemSlot(newItem)).ntf);
       eh = newItem.enhancement.map(function(e) {
         return {
           id: e.id,
@@ -1521,149 +1568,120 @@
       };
     };
 
-    Player.prototype.enhanceItem = function(itemSlot, gemSlot) {
-      var cost, eh, enhance, enhance7, enhanceID, enhanceTable, equip, gem, gold, i, index, leftEnhancement, level, maxIndex, maxLevel, minIndex, minLevel, myEnhancements, rate, result, ret, retRM, _ref7, _ref8;
+    Player.prototype.upgradeItemQuality = function(slot) {
+      var eh, enhance, item, newItem, ret;
+      item = this.getItemAt(slot);
+      enhance = item.enhancement;
+      ret = this.craftItem(slot);
+      newItem = ret.newItem;
+      if (newItem) {
+        ret.newItem.enhancement = enhance;
+        eh = newItem.enhancement.map(function(e) {
+          return {
+            id: e.id,
+            lv: e.level
+          };
+        });
+        ret.res.push({
+          NTF: Event_InventoryUpdateItem,
+          arg: {
+            syn: this.inventoryVersion,
+            itm: [
+              {
+                sid: this.queryItemSlot(newItem),
+                eh: eh
+              }
+            ]
+          }
+        });
+      }
+      return ret;
+    };
+
+    Player.prototype.craftItem = function(slot) {
+      var newItem, recipe, ret;
+      recipe = this.getItemAt(slot);
+      if (recipe == null) {
+        return {
+          ret: RET_NeedReceipt
+        };
+      }
+      ret = this.claimCost(recipe.forgeID);
+      if (ret == null) {
+        return {
+          ret: RET_InsufficientIngredient
+        };
+      }
+      if (recipe.forgeTarget == null) {
+        return {
+          ret: RET_Unknown
+        };
+      }
+      newItem = new Item(recipe.forgeTarget);
+      ret = ret.concat(this.aquireItem(newItem));
+      ret = ret.concat({
+        NTF: Event_InventoryUpdateItem,
+        arg: {
+          syn: this.inventoryVersion,
+          god: this.gold
+        }
+      });
+      this.log('craftItem', {
+        slot: slot,
+        id: recipe.id
+      });
+      if (newItem.rank >= 8) {
+        dbLib.broadcastEvent(BROADCAST_CRAFT, {
+          who: this.name,
+          what: newItem.id
+        });
+      }
+      return {
+        out: {
+          type: PRIZETYPE_ITEM,
+          value: newItem.id,
+          count: 1
+        },
+        res: ret,
+        newItem: newItem
+      };
+    };
+
+    Player.prototype.enhanceItem = function(itemSlot) {
+      var eh, enhance, equip, level, ret;
       equip = this.getItemAt(itemSlot);
-      gem = this.getItemAt(gemSlot);
-      if (!(equip && gem)) {
+      if (!equip) {
         return {
           ret: RET_ItemNotExist
         };
       }
-      if (!(equip.category === ITEM_EQUIPMENT && equip.subcategory <= EquipSlot_Neck)) {
+      if (equip.enhancement[0] == null) {
+        equip.enhancement[0] = {
+          id: equip.enhanceID,
+          level: -1
+        };
+      }
+      level = equip.enhancement[0].level + 1;
+      if (!(level < 40 && (equip.enhanceID != null))) {
         return {
           ret: RET_EquipCantUpgrade
         };
       }
-      if (gem.category !== ITEM_GEM) {
+      enhance = queryTable(TABLE_ENHANCE, equip.enhanceID);
+      ret = this.claimCost(enhance.costList[level]);
+      if (ret == null) {
         return {
-          ret: RET_NoEnhanceStone
+          ret: RET_Unknown
         };
       }
-      maxLevel = -1;
-      minLevel = 1000000;
-      maxIndex = -1;
-      minIndex = 0;
-      _ref7 = equip.enhancement;
-      for (i in _ref7) {
-        enhance = _ref7[i];
-        if (enhance.level > maxLevel) {
-          maxLevel = enhance.level;
-          maxIndex = i;
-        }
-        if (enhance.level < minLevel) {
-          minLevel = enhance.level;
-          minIndex = i;
-        }
-      }
-      level = 0;
-      enhanceID = -1;
-      maxLevel++;
-      cost = maxLevel * 2;
-      if (cost < 1) {
-        cost = 1;
-      }
-      gold = cost * 200;
-      if (this.addGold(-gold) === false) {
-        return {
-          ret: RET_NotEnoughGold
-        };
-      }
-      retRM = this.inventory.remove(gem.id, cost, gemSlot, true);
-      if (!retRM) {
-        this.addGold(gold);
-        return {
-          ret: RET_NoEnhanceStone
-        };
-      }
-      if (gem.subcategory === ENHANCE_VOID) {
-        if (maxIndex === -1) {
-          return {
-            ret: RET_CantUseVoidStone
-          };
-        }
-        leftEnhancement = [RES_ATTACK, RES_HEALTH, RES_SPEED, RES_CRITICAL, RES_STRONG, RES_ACCURACY, RES_REACTIVITY];
-        equip.enhancement.forEach(function(e) {
-          return leftEnhancement = leftEnhancement.filter(function(l) {
-            return l !== e.id;
-          });
-        });
-        enhance = leftEnhancement[rand() % leftEnhancement.length];
-        equip.enhancement[maxIndex].id = enhance;
-        equip.enhancement.push(equip.enhancement.shift());
-      } else {
-        myEnhancements = equip.enhancement.map(function(e) {
-          return e.id;
-        });
-        enhance7 = [RES_ATTACK, RES_HEALTH, RES_SPEED, RES_CRITICAL, RES_STRONG, RES_ACCURACY, RES_REACTIVITY];
-        enhance7 = enhance7[rand() % enhance7.length];
-        enhanceTable = [enhance7, 0, 0, RES_ATTACK, RES_HEALTH, RES_SPEED, RES_CRITICAL, RES_STRONG, RES_ACCURACY, RES_REACTIVITY];
-        enhanceID = enhanceTable[gem.subcategory];
-        _ref8 = equip.enhancement;
-        for (i in _ref8) {
-          enhance = _ref8[i];
-          if (enhance.id === enhanceID) {
-            index = i;
-          }
-        }
-        if (index < equip.enhancement.length) {
-          level = equip.enhancement[index].level + 1;
-        } else if (equip.enhancement.length < ENHANCE_LIMIT) {
-          index = equip.enhancement.length;
-        } else {
-          index = minIndex;
-        }
-        rate = queryTable(TABLE_CONFIG, "Enhance_Rate", this.abIndex)[level];
-        if (level >= equip.rank) {
-          if (gem.subcategory !== ENHANCE_SEVEN) {
-            return {
-              ret: RET_ExceedMaxEnhanceLevel
-            };
-          } else {
-            rate = -1;
-          }
-        }
-        if (Math.random() < rate) {
-          equip.enhancement[index] = {
-            id: enhanceID,
-            level: level
-          };
-          result = 'Success';
-        } else {
-          result = 'Fail';
-        }
-      }
-      ret = [
-        {
-          NTF: Event_InventoryUpdateItem,
-          arg: {
-            syn: this.inventoryVersion,
-            'god': this.gold
-          }
-        }
-      ];
-      ret = ret.concat(this.doAction({
-        id: 'ItemChange',
-        ret: retRM,
-        version: this.inventoryVersion
-      }));
+      equip.enhancement[0].level = level;
       this.log('enhanceItem', {
         itemId: equip.id,
-        gemId: gem.subcategory,
-        result: result,
-        enhance: enhanceID,
         level: level,
-        itemSlot: itemSlot,
-        gemSlot: gemSlot
+        itemSlot: itemSlot
       });
-      if (result === 'Fail') {
-        return {
-          ret: RET_EnhanceFailed,
-          ntf: ret
-        };
-      }
       this.onEvent('Equipment');
-      if (level >= 5) {
+      if (level >= 20) {
         dbLib.broadcastEvent(BROADCAST_ENHANCE, {
           who: this.name,
           what: equip.id,
@@ -1701,20 +1719,20 @@
     };
 
     Player.prototype.sellItem = function(slot) {
-      var item, k, ret, s, _ref7;
-      item = this.getItemAt(slot);
-      _ref7 = this.equipment;
-      for (k in _ref7) {
-        s = _ref7[k];
-        if (s === slot) {
-          return {
-            ret: RET_Unknown
-          };
-        }
+      var item, ret;
+      if (this.isEquiped(slot)) {
+        return {
+          ret: RET_Unknown
+        };
       }
-      if (item != null ? item.sellprice : void 0) {
-        this.addGold(item.sellprice * item.count);
+      item = this.getItemAt(slot);
+      if ((item != null ? item.transPrize : void 0) || (item != null ? item.sellprice : void 0)) {
         ret = this.removeItem(null, null, slot);
+        if (item != null ? item.transPrize : void 0) {
+          ret = ret.concat(this.claimPrize(item.transPrize));
+        } else if (item != null ? item.sellprice : void 0) {
+          this.addGold(item.sellprice * item.count);
+        }
         this.log('sellItem', {
           itemId: item.id,
           price: item.sellprice,
@@ -1759,7 +1777,7 @@
     };
 
     Player.prototype.generateDungeonAward = function(dungeon) {
-      var cfg, dropInfo, gr, iPrize, infiniteLevel, items, p, percentage, prize, result, wr, xr, _i, _len, _ref10, _ref7, _ref8, _ref9;
+      var cfg, dropInfo, gr, iPrize, infiniteLevel, p, percentage, prize, result, wr, xr, _i, _len, _ref10, _ref7, _ref8, _ref9;
       result = dungeon.result;
       cfg = dungeon.getConfig();
       if (result === DUNGEON_RESULT_DONE || (cfg == null)) {
@@ -1774,26 +1792,8 @@
       percentage = 1;
       if (result === DUNGEON_RESULT_WIN) {
         dbLib.incrBluestarBy(this.name, 1);
-        if (cfg.prize) {
-          items = cfg.prize.filter(function(p) {
-            return Math.random() < p.rate;
-          }).map(function(g) {
-            var e;
-            e = selectElementFromWeightArray(g.items, Math.random());
-            if (e) {
-              return {
-                type: PRIZETYPE_ITEM,
-                value: e.item,
-                count: 1
-              };
-            } else {
-              return {
-                type: PRIZETYPE_ITEM,
-                value: g[0],
-                count: 1
-              };
-            }
-          });
+        if (cfg.dropID) {
+          dropInfo = dropInfo.concat(cfg.dropID);
         }
       } else {
         percentage = (dungeon.currentLevel / cfg.levelCount) * 0.5;
@@ -1835,17 +1835,17 @@
             value: iPrize.value,
             count: iPrize.count
           };
-        }
-        if (iPrize.type === PRIZETYPE_GOLD) {
-          prize.push({
-            type: PRIZETYPE_GOLD,
-            count: iPrize.count
-          });
-        } else {
-          prize.push(iPrize);
+          if (iPrize.type === PRIZETYPE_GOLD) {
+            prize.push({
+              type: PRIZETYPE_GOLD,
+              count: iPrize.count
+            });
+          } else {
+            prize.push(iPrize);
+          }
         }
       }
-      return prize.concat(items);
+      return prize.concat();
     };
 
     Player.prototype.claimDungeonAward = function(dungeon) {
@@ -2567,32 +2567,38 @@
       };
     };
 
-    Player.prototype.injectWXP = function(slot) {
-      var bookNeeded, equip, ret, retRM, upgrade, xpNeeded;
+    Player.prototype.injectWXP = function(slot, bookSlot) {
+      var book, equip, ev, ret, retRM;
       equip = this.getItemAt(slot);
-      if (!equip) {
+      book = this.getItemAt(bookSlot);
+      if (!(equip && book)) {
         return {
           ret: RET_ItemNotExist
         };
       }
-      upgrade = queryTable(TABLE_UPGRADE, equip.rank);
-      xpNeeded = upgrade.xp - equip.xp;
-      bookNeeded = Math.ceil(xpNeeded / 100);
-      retRM = this.inventory.remove(queryTable(TABLE_CONFIG, 'Global_WXP_BOOK'), bookNeeded, null, true);
+      retRM = this.inventory.removeItemAt(bookSlot, 1, true);
       if (retRM) {
-        equip.xp = upgrade.xp;
+        equip.xp += book.wxp;
         ret = this.doAction({
           id: 'ItemChange',
           ret: retRM,
           version: this.inventoryVersion
         });
+        ev = {
+          NTF: Event_InventoryUpdateItem,
+          arg: {
+            itm: [
+              {
+                cid: equip.id,
+                sid: this.queryItemSlot(equip),
+                stc: 1,
+                xp: equip.xp
+              }
+            ]
+          }
+        };
+        ret.push(ev);
         return {
-          out: {
-            cid: equip.id,
-            sid: this.queryItemSlot(equip),
-            stc: 1,
-            xp: equip.xp
-          },
           res: ret
         };
       } else {
@@ -2922,22 +2928,6 @@
       this.player = player;
     }
 
-    PlayerEnvironment.prototype.aquireItem = function(item, count, allOrFail) {
-      var _ref7;
-      count = count != null ? count : 1;
-      item = createItem(item);
-      if (item == null) {
-        showMeTheStack();
-      }
-      if (item == null) {
-        return [];
-      }
-      return {
-        version: this.player.inventoryVersion,
-        ret: (_ref7 = this.player) != null ? _ref7.inventory.add(item, count, allOrFail) : void 0
-      };
-    };
-
     PlayerEnvironment.prototype.removeItem = function(item, count, slot, allorfail) {
       var _ref7;
       return {
@@ -2947,19 +2937,21 @@
     };
 
     PlayerEnvironment.prototype.translateAction = function(cmd) {
-      var i, ret, routine, _ref7;
+      var i, out, ret, routine, _ref7;
       if (cmd == null) {
         return [];
       }
       ret = [];
-      if (cmd.output() != null) {
-        ret = cmd.output();
+      out = cmd.output();
+      if (out) {
+        ret = out;
       }
       _ref7 = cmd.cmdRoutine;
       for (i in _ref7) {
         routine = _ref7[i];
-        if ((routine != null ? routine.output() : void 0) != null) {
-          ret = ret.concat(routine.output());
+        out = routine != null ? routine.output() : void 0;
+        if (out != null) {
+          ret = ret.concat(out);
         }
       }
       return ret.concat(this.translateAction(cmd.nextCMD));
@@ -3016,15 +3008,38 @@
         ];
       }
     },
+    UseItem: {
+      output: function(env) {
+        return env.player.useItem(env.variable('slot')).ntf;
+      }
+    },
     AquireItem: {
       callback: function(env) {
-        var ret, version, _ref7;
-        _ref7 = env.aquireItem(env.variable('item'), env.variable('count'), env.variable('allorfail')), ret = _ref7.ret, version = _ref7.version;
-        return this.routine({
+        var count, e, item, ret, _i, _len, _ref7, _results;
+        count = (_ref7 = env.variable('count')) != null ? _ref7 : 1;
+        item = createItem(env.variable('item'));
+        if (item == null) {
+          return showMeTheStack();
+        }
+        ret = env.player.inventory.add(item, count, env.variable('allorfail'));
+        this.routine({
           id: 'ItemChange',
           ret: ret,
-          version: version
+          version: env.player.inventoryVersion
         });
+        if (ret) {
+          _results = [];
+          for (_i = 0, _len = ret.length; _i < _len; _i++) {
+            e = ret[_i];
+            if (env.player.getItemAt(e.slot).autoUse) {
+              _results.push(this.next({
+                id: 'UseItem',
+                slot: e.slot
+              }));
+            }
+          }
+          return _results;
+        }
       }
     },
     RemoveItem: {

@@ -1182,7 +1182,7 @@ exports.data = [
               { "type": "setProperty",  "modifications": {"attack":{"c":4}} }
           ],
           "triggerCondition": [
-              {"type": "property", "property":"health","to": 60 },
+              {"type": "property", "property":"health","to": 30 },
               {"type":"event","event":"onBattleTurnEnd"}
           ],
           "targetSelection": {
@@ -1583,7 +1583,7 @@ exports.data = [
             "action":[
                 {"type": "playEffect","effect":28,"pos":"self"},
                 { "type": "setProperty","modifications": {"critical":{"c":5}}},
-                { "type": "setProperty","modifications": {"attack":{"c":2}}}
+                { "type": "setProperty","modifications": {"attack":{"c":10}}}
             ],
             "targetSelection":{ "pool":"self" },
             "uninstallAction": [

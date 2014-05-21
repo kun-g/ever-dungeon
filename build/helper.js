@@ -1,5 +1,5 @@
 (function() {
-  var actCampaign, conditionCheck, currentTime, destroyReactDB, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, tap, tapObject, updateLockStatus;
+  var actCampaign, conditionCheck, currentTime, dbLib, destroyReactDB, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, tap, tapObject, updateLockStatus;
 
   conditionCheck = require('./trigger').conditionCheck;
 
@@ -144,8 +144,10 @@
 
   exports.tap = tap;
 
+  dbLib = require('./db');
+
   exports.initLeaderboard = function(config) {
-    var cfg, dbLib, generateHandler, k, key, localConfig, srvCfg, tickLeaderboard, v;
+    var cfg, generateHandler, k, key, localConfig, srvCfg, tickLeaderboard, v;
     localConfig = [];
     srvCfg = {};
     generateHandler = function(dbKey, cfg) {
@@ -163,7 +165,6 @@
         localConfig[key][k] = v;
       }
     }
-    dbLib = require('./db');
     dbLib.getServerConfig('Leaderboard', function(err, arg) {
       if (arg) {
         srvCfg = JSON.parse(arg);
@@ -305,14 +306,16 @@
             e.reset(me, util);
           }
           count = (_ref = me.counters[key]) != null ? _ref : 0;
-          ret.push({
-            NTF: Event_BountyUpdate,
-            arg: {
-              bid: e.id,
-              sta: e.actived,
-              cnt: e.count - count
-            }
-          });
+          if (e.id != null) {
+            ret.push({
+              NTF: Event_BountyUpdate,
+              arg: {
+                bid: e.id,
+                sta: e.actived,
+                cnt: e.count - count
+              }
+            });
+          }
         }
       }
     }
@@ -337,14 +340,14 @@
         me[key].newProperty('status', 'Init');
         me[key].newProperty('date', currentTime());
         if (key === 'event_daily') {
-          me[key].newProperty('rank', me.battleForce / 24 - 3);
+          me[key].newProperty('rank', Math.ceil(me.battleForce * 0.04));
           if (me[key].rank < 1) {
             me[key].rank = 1;
           }
           me[key].newProperty('reward', [
             {
-              type: PRIZETYPE_GOLD,
-              count: Math.floor(me[key].rank * 18)
+              type: PRIZETYPE_DIAMOND,
+              count: 50
             }
           ]);
         }
@@ -353,57 +356,30 @@
     if (e.quest && Array.isArray(e.quest) && me[key].status === 'Init') {
       me[key].newProperty('quest', shuffle(e.quest, Math.random()).slice(0, e.steps));
       me[key].newProperty('step', 0);
-      goldCount = Math.ceil(me[key].rank * 6);
+      goldCount = Math.ceil(me.battleForce);
       diamondCount = Math.ceil(me[key].rank / 10);
-      goldCount = Math.floor(me[key].rank * 6);
       me[key].newProperty('stepPrize', [
         [
           {
-            type: PRIZETYPE_GOLD,
-            count: goldCount
-          }, {
             type: PRIZETYPE_ITEM,
-            value: 0,
-            count: diamondCount
-          }
-        ], [
-          {
-            type: PRIZETYPE_GOLD,
-            count: goldCount
-          }, {
-            type: PRIZETYPE_ITEM,
-            value: 0,
-            count: diamondCount
-          }, {
-            type: PRIZETYPE_ITEM,
-            value: 534,
-            count: 5
-          }
-        ], [
-          {
-            type: PRIZETYPE_GOLD,
-            count: goldCount
-          }, {
-            type: PRIZETYPE_ITEM,
-            value: 0,
-            count: diamondCount
-          }, {
-            type: PRIZETYPE_ITEM,
-            value: 535,
-            count: 2
-          }
-        ], [
-          {
-            type: PRIZETYPE_GOLD,
-            count: goldCount
-          }, {
-            type: PRIZETYPE_ITEM,
-            value: 0,
-            count: diamondCount
-          }, {
-            type: PRIZETYPE_ITEM,
-            value: 536,
+            value: 538,
             count: 1
+          }
+        ], [
+          {
+            type: PRIZETYPE_GOLD,
+            count: goldCount
+          }
+        ], [
+          {
+            type: PRIZETYPE_ITEM,
+            value: 540,
+            count: 1
+          }
+        ], [
+          {
+            type: PRIZETYPE_DIAMOND,
+            count: 10
           }
         ]
       ]);
@@ -581,6 +557,20 @@
         obj.timestamp.newProperty('goblin', util.currentTime());
         return obj.counters.newProperty('goblin', 0);
       }
+    },
+    monthCard: {
+      storeType: "player",
+      actived: function(obj, util) {
+        return obj.flags.monthCard;
+      },
+      count: 1,
+      canReset: function(obj, util) {
+        return util.diffDay(obj.timestamp.monthCard, util.today) && util.today.hour() >= 8;
+      },
+      reset: function(obj, util) {
+        obj.timestamp.newProperty('monthCard', util.currentTime());
+        return obj.counters.newProperty('monthCard', 0);
+      }
     }
   };
 
@@ -674,6 +664,36 @@
       }
     }
     return xp;
+  };
+
+  exports.observers = {
+    heroxpChanged: function(obj, arg) {
+      if (arg.prevLevel !== arg.currentLevel) {
+        if (arg.currentLevel === 10) {
+          return dbLib.broadcastEvent(BROADCAST_PLAYER_LEVEL, {
+            who: obj.name,
+            what: obj.hero["class"]
+          });
+        }
+      }
+    }
+  };
+
+  exports.initObserveration = function(obj) {
+    obj.observers = {};
+    obj.installObserver = function(event) {
+      return obj.observers[event] = exports.observers[event];
+    };
+    obj.removeObserver = function(event) {
+      return obj.observers[event] = null;
+    };
+    return obj.notify = function(event, arg) {
+      var ob;
+      ob = obj.observers[event];
+      if (ob) {
+        return ob(obj, arg);
+      }
+    };
   };
 
 }).call(this);
