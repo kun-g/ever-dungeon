@@ -99,10 +99,13 @@ initGlobalConfig(null, function () {
             logInfo({ diamond: player.diamond, bag: bag});
           }
           //showInventory();
-          console.log(name);
-          player.migrate();
+          if (player.migrate()) {
+            console.log(name);
+            player.save(cb);
+          } else {
+            cb();
+          }
           //showInventory();
-          player.save(cb);
         });
       }, function(err) {console.log('Done', err);});
   });
