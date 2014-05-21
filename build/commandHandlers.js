@@ -111,7 +111,7 @@ function handler_doUseItem(arg, player, handler, rpcID) {
   var ret = null;
   switch (opn) {
     case USE_ITEM_OPT_INJECTWXP:
-      ret = player.injectWXP(arg.opd, sid);
+      ret = player.injectWXP(arg.opd, slot);
       break;
     case USE_ITEM_OPT_SELL:
       ret = player.sellItem(slot, arg.sho);
