@@ -2594,7 +2594,7 @@
           ret: RET_ItemNotExist
         };
       }
-      retRM = this.inventory.removeItemAt(bookSlot, bookNeeded, null, true);
+      retRM = this.inventory.removeItemAt(bookSlot, 1, true);
       if (retRM) {
         equip.xp += book.wxp;
         ret = this.doAction({
