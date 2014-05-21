@@ -159,10 +159,7 @@
         item = _ref7[slot];
         if (item != null) {
           if (item.transPrize != null) {
-            console.log('X', slot, item.id, item.label);
-            flag = true;
             if (this.isEquiped(slot)) {
-              console.log('E', slot, item.id, item.label);
               lv = 0;
               if (item.enhancement && item.enhancement.length > 0) {
                 lv = item.enhancement.reduce((function(r, i) {
@@ -190,7 +187,7 @@
               }
               continue;
             }
-            console.log('Sell');
+            flag = true;
             this.sellItem(slot);
           }
         }
@@ -200,7 +197,6 @@
         if (!(this.equipment[slot] == null)) {
           continue;
         }
-        console.log('Y');
         flag = true;
         this.claimPrize(prize[slot].filter((function(_this) {
           return function(e) {
