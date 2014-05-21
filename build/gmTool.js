@@ -79,8 +79,8 @@ initGlobalConfig(null, function () {
   require('./helper').initLeaderboard(queryTable(TABLE_LEADBOARD));
   initServer();
   gServerID = -1;
-  //dbLib.loadPlayer('Doge', function (err, player) {
-  dbClient.keys("Develop.player.*", function (err, list) {
+  dbLib.loadPlayer('Jkb', function (err, player) {
+  //dbClient.keys("Develop.player.*", function (err, list) {
     list = list.map( function (e) { return e.slice('Develop.player.'.length); } );
     list.forEach( function (name) {
       dbLib.loadPlayer(name, function (err, player) {

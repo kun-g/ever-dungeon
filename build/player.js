@@ -152,7 +152,7 @@
     };
 
     Player.prototype.migrate = function() {
-      var cfg, enhanceID, item, lv, p, slot, _ref7;
+      var cfg, enhanceID, item, lv, p, prize, slot, _i, _ref7;
       _ref7 = this.inventory.container;
       for (slot in _ref7) {
         item = _ref7[slot];
@@ -187,6 +187,16 @@
             }
             this.sellItem(slot);
           }
+        }
+      }
+      prize = queryTable(TABLE_CONFIG, 'InitialEquipment');
+      for (slot = _i = 0; _i <= 5; slot = ++_i) {
+        if (this.equipment[slot] == null) {
+          this.claimPrize(prize.filter((function(_this) {
+            return function(e) {
+              return isClassMatch(_this.hero["class"], e.classLimit);
+            };
+          })(this)));
         }
       }
       return this.syncBag(true);
