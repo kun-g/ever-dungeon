@@ -152,14 +152,16 @@
     };
 
     Player.prototype.migrate = function() {
-      var cfg, enhanceID, item, lv, p, prize, slot, _i, _ref7;
+      var cfg, enhanceID, flag, item, lv, p, prize, slot, _i, _ref7;
+      flag = false;
       _ref7 = this.inventory.container;
       for (slot in _ref7) {
         item = _ref7[slot];
         if (item != null) {
           if (item.transPrize != null) {
+            flag = true;
             if (this.isEquiped(slot)) {
-              lv = -1;
+              lv = 0;
               if (item.enhancement && item.enhancement.length > 0) {
                 lv = item.enhancement.reduce((function(r, i) {
                   return r + i.level;
@@ -173,6 +175,7 @@
                   };
                 })(this));
                 item.id = p[0].value;
+                console.log(item.id);
               }
               enhanceID = queryTable(TABLE_ITEM, item.id).enhanceID;
               if ((enhanceID != null) && lv >= 0) {
@@ -194,14 +197,14 @@
         if (!(this.equipment[slot] == null)) {
           continue;
         }
-        console.log('Equip', slot, this.equipment[slot]);
+        flag = true;
         this.claimPrize(prize[slot].filter((function(_this) {
           return function(e) {
             return isClassMatch(_this.hero["class"], e.classLimit);
           };
         })(this)));
       }
-      return this.syncBag(true);
+      return flag;
     };
 
     Player.prototype.onDisconnect = function() {
@@ -602,7 +605,7 @@
       if (point + this[type] < 0) {
         return false;
       }
-      this[type] += point;
+      this[type] = Math.floor(this[type] + point);
       if (type === 'diamond') {
         this.costedDiamond += point;
       }

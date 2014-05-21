@@ -576,7 +576,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 1,
-		"forgeID": 17,
 		"hide": true
 	},
 	{
@@ -622,7 +621,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 1,
-		"forgeID": 18,
 		"hide": true
 	},
 	{
@@ -660,7 +658,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 1,
-		"forgeID": 19,
 		"hide": true
 	},
 	{
@@ -699,7 +696,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 1,
-		"forgeID": 20,
 		"hide": true
 	},
 	{
@@ -741,7 +737,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 2,
-		"forgeID": 17,
 		"hide": true
 	},
 	{
@@ -787,7 +782,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 2,
-		"forgeID": 18,
 		"hide": true
 	},
 	{
@@ -826,7 +820,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 2,
-		"forgeID": 19,
 		"hide": true
 	},
 	{
@@ -864,7 +857,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 2,
-		"forgeID": 20,
 		"hide": true
 	},
 	{
@@ -907,7 +899,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 0,
-		"forgeID": 17,
 		"hide": true
 	},
 	{
@@ -952,7 +943,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 0,
-		"forgeID": 18,
 		"hide": true
 	},
 	{
@@ -989,7 +979,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 0,
-		"forgeID": 19,
 		"hide": true
 	},
 	{
@@ -1028,7 +1017,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 0,
-		"forgeID": 20,
 		"hide": true
 	},
 	{
@@ -3743,7 +3731,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 1,
-		"forgeID": 23,
 		"hide": true
 	},
 	{
@@ -3790,7 +3777,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 1,
-		"forgeID": 24,
 		"hide": true
 	},
 	{
@@ -3828,7 +3814,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 1,
-		"forgeID": 25,
 		"hide": true
 	},
 	{
@@ -3867,7 +3852,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 1,
-		"forgeID": 26,
 		"hide": true
 	},
 	{
@@ -3909,7 +3893,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 2,
-		"forgeID": 23,
 		"hide": true
 	},
 	{
@@ -3956,7 +3939,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 2,
-		"forgeID": 24,
 		"hide": true
 	},
 	{
@@ -3996,7 +3978,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 2,
-		"forgeID": 25,
 		"hide": true
 	},
 	{
@@ -4034,7 +4015,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 2,
-		"forgeID": 26,
 		"hide": true
 	},
 	{
@@ -4077,7 +4057,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 0,
-		"forgeID": 23,
 		"hide": true
 	},
 	{
@@ -4123,7 +4102,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 0,
-		"forgeID": 24,
 		"hide": true
 	},
 	{
@@ -4160,7 +4138,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 0,
-		"forgeID": 25,
 		"hide": true
 	},
 	{
@@ -4200,7 +4177,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 0,
-		"forgeID": 26,
 		"hide": true
 	},
 	{
@@ -6976,7 +6952,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 1,
-		"forgeID": 29,
 		"hide": true
 	},
 	{
@@ -7023,7 +6998,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 1,
-		"forgeID": 30,
 		"hide": true
 	},
 	{
@@ -7061,7 +7035,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 1,
-		"forgeID": 31,
 		"hide": true
 	},
 	{
@@ -7100,7 +7073,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 1,
-		"forgeID": 32,
 		"hide": true
 	},
 	{
@@ -7142,7 +7114,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 2,
-		"forgeID": 29,
 		"hide": true
 	},
 	{
@@ -7189,7 +7160,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 2,
-		"forgeID": 30,
 		"hide": true
 	},
 	{
@@ -7229,7 +7199,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 2,
-		"forgeID": 31,
 		"hide": true
 	},
 	{
@@ -7267,7 +7236,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 2,
-		"forgeID": 32,
 		"hide": true
 	},
 	{
@@ -7310,7 +7278,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 0,
-		"forgeID": 29,
 		"hide": true
 	},
 	{
@@ -7357,7 +7324,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 0,
-		"forgeID": 30,
 		"hide": true
 	},
 	{
@@ -7395,7 +7361,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 0,
-		"forgeID": 31,
 		"hide": true
 	},
 	{
@@ -7435,7 +7400,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 0,
-		"forgeID": 32,
 		"hide": true
 	},
 	{
@@ -10263,7 +10227,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 1,
-		"forgeID": 35,
 		"hide": true
 	},
 	{
@@ -10310,7 +10273,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 1,
-		"forgeID": 36,
 		"hide": true
 	},
 	{
@@ -10348,7 +10310,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 1,
-		"forgeID": 37,
 		"hide": true
 	},
 	{
@@ -10387,7 +10348,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 1,
-		"forgeID": 38,
 		"hide": true
 	},
 	{
@@ -10429,7 +10389,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 2,
-		"forgeID": 35,
 		"hide": true
 	},
 	{
@@ -10476,7 +10435,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 2,
-		"forgeID": 36,
 		"hide": true
 	},
 	{
@@ -10516,7 +10474,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 2,
-		"forgeID": 37,
 		"hide": true
 	},
 	{
@@ -10554,7 +10511,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 2,
-		"forgeID": 38,
 		"hide": true
 	},
 	{
@@ -10597,7 +10553,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 0,
-		"forgeID": 35,
 		"hide": true
 	},
 	{
@@ -10644,7 +10599,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 0,
-		"forgeID": 36,
 		"hide": true
 	},
 	{
@@ -10682,7 +10636,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 0,
-		"forgeID": 37,
 		"hide": true
 	},
 	{
@@ -10722,7 +10675,6 @@ exports.data =[
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 0,
-		"forgeID": 38,
 		"hide": true
 	},
 	{
@@ -22090,7 +22042,6 @@ exports.data =[
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
-		"forgeID": 21,
 		"hide": true
 	},
 	{
@@ -22262,7 +22213,6 @@ exports.data =[
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
-		"forgeID": 27,
 		"hide": true
 	},
 	{
@@ -22434,7 +22384,6 @@ exports.data =[
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
-		"forgeID": 33,
 		"hide": true
 	},
 	{
@@ -22606,7 +22555,6 @@ exports.data =[
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
-		"forgeID": 39,
 		"hide": true
 	},
 	{
@@ -22937,7 +22885,6 @@ exports.data =[
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
-		"forgeID": 21,
 		"hide": true
 	},
 	{
@@ -23103,7 +23050,6 @@ exports.data =[
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
-		"forgeID": 27,
 		"hide": true
 	},
 	{
@@ -23269,7 +23215,6 @@ exports.data =[
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
-		"forgeID": 33,
 		"hide": true
 	},
 	{
@@ -23435,7 +23380,6 @@ exports.data =[
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
-		"forgeID": 39,
 		"hide": true
 	},
 	{
@@ -23755,7 +23699,6 @@ exports.data =[
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
-		"forgeID": 21,
 		"hide": true
 	},
 	{
@@ -23921,7 +23864,6 @@ exports.data =[
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
-		"forgeID": 27,
 		"hide": true
 	},
 	{
@@ -24087,7 +24029,6 @@ exports.data =[
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
-		"forgeID": 33,
 		"hide": true
 	},
 	{
@@ -24253,7 +24194,6 @@ exports.data =[
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
-		"forgeID": 39,
 		"hide": true
 	},
 	{
@@ -24574,7 +24514,6 @@ exports.data =[
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
-		"forgeID": 22,
 		"hide": true
 	},
 	{
@@ -24740,7 +24679,6 @@ exports.data =[
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
-		"forgeID": 28,
 		"hide": true
 	},
 	{
@@ -24906,7 +24844,6 @@ exports.data =[
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
-		"forgeID": 34,
 		"hide": true
 	},
 	{
@@ -25072,7 +25009,6 @@ exports.data =[
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
-		"forgeID": 40,
 		"hide": true
 	},
 	{
@@ -25392,7 +25328,6 @@ exports.data =[
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
-		"forgeID": 22,
 		"hide": true
 	},
 	{
@@ -25552,7 +25487,6 @@ exports.data =[
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
-		"forgeID": 28,
 		"hide": true
 	},
 	{
@@ -25712,7 +25646,6 @@ exports.data =[
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
-		"forgeID": 34,
 		"hide": true
 	},
 	{
@@ -25872,7 +25805,6 @@ exports.data =[
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
-		"forgeID": 40,
 		"hide": true
 	},
 	{
@@ -26348,7 +26280,6 @@ exports.data =[
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
-		"forgeID": 28,
 		"hide": true
 	},
 	{
@@ -26514,7 +26445,6 @@ exports.data =[
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
-		"forgeID": 34,
 		"hide": true
 	},
 	{
@@ -26680,7 +26610,6 @@ exports.data =[
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
-		"forgeID": 40,
 		"hide": true
 	},
 	{
