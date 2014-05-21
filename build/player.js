@@ -2602,13 +2602,13 @@
           ret: retRM,
           version: this.inventoryVersion
         });
+        ret.push({
+          cid: equip.id,
+          sid: this.queryItemSlot(equip),
+          stc: 1,
+          xp: equip.xp
+        });
         return {
-          out: {
-            cid: equip.id,
-            sid: this.queryItemSlot(equip),
-            stc: 1,
-            xp: equip.xp
-          },
           res: ret
         };
       } else {
