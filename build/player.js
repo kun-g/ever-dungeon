@@ -567,6 +567,7 @@
         return false;
       }
       if (this.hero != null) {
+        this.heroBase.newProperty(this.hero["class"], {});
         _ref7 = this.hero;
         for (k in _ref7) {
           v = _ref7[k];
