@@ -80,7 +80,7 @@ initGlobalConfig(null, function () {
   initServer();
   gServerID = -1;
   dbLib.loadPlayer('Jkb', function (err, player) {
-    list = ['Jkb']
+    list = ['Develop.player.Jkb']
   //dbClient.keys("Develop.player.*", function (err, list) {
     list = list.map( function (e) { return e.slice('Develop.player.'.length); } );
     list.forEach( function (name) {
