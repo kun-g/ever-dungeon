@@ -959,8 +959,11 @@
       return itemPrize.concat(otherPrize);
     };
 
-    Player.prototype.claimCost = function(cost) {
+    Player.prototype.claimCost = function(cost, count) {
       var cfg, haveEnoughtMoney, p, prize, ret, retRM, _i, _len;
+      if (count == null) {
+        count = 1;
+      }
       cfg = queryTable(TABLE_COSTS, cost);
       if (cfg == null) {
         return null;
@@ -968,10 +971,10 @@
       prize = this.rearragenPrize(cfg.material);
       haveEnoughtMoney = prize.reduce((function(_this) {
         return function(r, l) {
-          if (l.type === PRIZETYPE_GOLD && _this.gold < l.count) {
+          if (l.type === PRIZETYPE_GOLD && _this.gold < l.count * count) {
             return false;
           }
-          if (l.type === PRIZETYPE_DIAMOND && _this.diamond < l.count) {
+          if (l.type === PRIZETYPE_DIAMOND && _this.diamond < l.count * count) {
             return false;
           }
           return r;
@@ -986,7 +989,7 @@
         if (p != null) {
           switch (p.type) {
             case PRIZETYPE_ITEM:
-              retRM = this.inventory.remove(p.value, p.count, null, true);
+              retRM = this.inventory.remove(p.value, p.count * count, null, true);
               if (!(retRM && retRM.length > 0)) {
                 return null;
               }
@@ -1001,7 +1004,7 @@
                 NTF: Event_InventoryUpdateItem,
                 arg: {
                   syn: this.inventoryVersion,
-                  god: this.addGold(-p.count)
+                  god: this.addGold(-p.count * count)
                 }
               });
               break;
@@ -1010,7 +1013,7 @@
                 NTF: Event_InventoryUpdateItem,
                 arg: {
                   syn: this.inventoryVersion,
-                  dim: this.addDiamond(-p.count)
+                  dim: this.addDiamond(-p.count * count)
                 }
               });
           }
@@ -1439,62 +1442,24 @@
       return this.inventory.size(delta);
     };
 
-    Player.prototype.transformGem = function(count) {
-      var gem7, gemIndex, gems, goldCost, i, prize, r, ret, retPrize, retRM, _i, _ref7;
-      gem7 = 0;
-      goldCost = count * 50;
-      if (!(goldCost <= this.gold)) {
+    Player.prototype.transformGem = function(tarID, count) {
+      var cfg, ret;
+      cfg = queryTable(TABLE_ITEM, tarID);
+      if (cfg == null) {
         return {
-          ret: RET_NotEnoughGold
+          ret: RET_Unknown
         };
       }
-      retRM = this.inventory.removeById(gem7, count, true);
-      if (!retRM) {
+      ret = this.claimCost(cfg.synthesizeID, count);
+      if (ret == null) {
         return {
-          ret: RET_NoEnhanceStone
+          ret: RET_InsufficientIngredient
         };
       }
-      this.addGold(-goldCost);
-      gems = {};
-      gemIndex = queryTable(TABLE_CONFIG, 'Global_Enhancement_GEM_Index', this.abIndex);
-      prize = [];
-      for (i = _i = 1, _ref7 = Math.floor(count * 0.5); 1 <= _ref7 ? _i <= _ref7 : _i >= _ref7; i = 1 <= _ref7 ? ++_i : --_i) {
-        r = rand() % gemIndex.length;
-        if (gems[r] == null) {
-          gems[r] = {
-            type: PRIZETYPE_ITEM,
-            value: gemIndex[r],
-            count: 0
-          };
-          prize.push(gems[r]);
-        }
-        gems[r].count++;
-      }
-      retPrize = this.claimPrize(prize);
-      if (retPrize) {
-        ret = this.doAction({
-          id: 'ItemChange',
-          ret: retRM,
-          version: this.inventoryVersion
-        });
-        ret = ret.concat(retPrize);
-        ret = ret.concat({
-          NTF: Event_InventoryUpdateItem,
-          arg: {
-            syn: this.inventoryVersion,
-            god: this.gold
-          }
-        });
-        return {
-          out: prize,
-          res: ret
-        };
-      } else {
-        this.inventory.reverseOpration(retRM);
-        return {
-          ret: RET_InventoryFull
-        };
-      }
+      ret = ret.concat(this.aquireItem(tarID, count));
+      return {
+        res: ret
+      };
     };
 
     Player.prototype.levelUpItem = function(slot) {
