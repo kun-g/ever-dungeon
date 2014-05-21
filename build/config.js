@@ -63,7 +63,7 @@ exports.data = {
             {"type":0,"value":35,"count":1, classLimit:[1]},
             {"type":0,"value":39, "count":1,classLimit:[2]}],
         3:[{"type":0,"value":712,"count":1,classLimit:[0]},
-            {"type":0,"value":742,"count":1,classLimit:[2]},
+            {"type":0,"value":742,"count":1,classLimit:[1]},
             {"type":0,"value":772,"count":1,classLimit:[2]}]},
 
   "Global_Blue_Star_RewardTable" : [ ],
