@@ -2602,7 +2602,6 @@
           ret: retRM,
           version: this.inventoryVersion
         });
-        ret.push({});
         ev = {
           NTF: Event_InventoryUpdateItem,
           arg: {
@@ -2614,6 +2613,7 @@
             }
           }
         };
+        ret.push(ev);
         return {
           res: ret
         };
