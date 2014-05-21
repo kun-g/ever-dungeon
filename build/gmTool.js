@@ -85,6 +85,9 @@ initGlobalConfig(null, function () {
     async.mapSeries(list,
       function(name, cb) {
         dbLib.loadPlayer(name, function (err, player) {
+          count++;
+          if (count < 3000) return cb();
+
           function showInventory() {
             var bag = player.inventory.map(
               function (e, i) {
@@ -104,7 +107,7 @@ initGlobalConfig(null, function () {
             console.log(name);
             player.save(cb);
           } else {
-            console.log(count++);
+            console.log(count);
             cb();
           }
           player = null;
