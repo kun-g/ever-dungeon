@@ -2605,12 +2605,14 @@
         ev = {
           NTF: Event_InventoryUpdateItem,
           arg: {
-            itm: {
-              cid: equip.id,
-              sid: this.queryItemSlot(equip),
-              stc: 1,
-              xp: equip.xp
-            }
+            itm: [
+              {
+                cid: equip.id,
+                sid: this.queryItemSlot(equip),
+                stc: 1,
+                xp: equip.xp
+              }
+            ]
           }
         };
         ret.push(ev);
