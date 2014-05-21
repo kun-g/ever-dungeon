@@ -157,42 +157,42 @@
       _ref7 = this.inventory.container;
       for (slot in _ref7) {
         item = _ref7[slot];
-        if (!(item != null)) {
-          continue;
-        }
-        console.log('X', slot, item.id);
-        if (item.transPrize != null) {
-          flag = true;
-          if (this.isEquiped(slot)) {
-            lv = 0;
-            if (item.enhancement && item.enhancement.length > 0) {
-              lv = item.enhancement.reduce((function(r, i) {
-                return r + i.level;
-              }), 0);
+        if (item != null) {
+          if (item.transPrize != null) {
+            console.log('X', slot, item.id, item.label);
+            flag = true;
+            if (this.isEquiped(slot)) {
+              console.log('E', slot, item.id, item.label);
+              lv = 0;
+              if (item.enhancement && item.enhancement.length > 0) {
+                lv = item.enhancement.reduce((function(r, i) {
+                  return r + i.level;
+                }), 0);
+              }
+              cfg = require('./transfer').data;
+              if (cfg[item.id]) {
+                p = cfg[item.id].filter((function(_this) {
+                  return function(e) {
+                    return isClassMatch(_this.hero["class"], e.classLimit);
+                  };
+                })(this));
+                item.id = p[0].value;
+                console.log(item.id);
+              }
+              enhanceID = queryTable(TABLE_ITEM, item.id).enhanceID;
+              if ((enhanceID != null) && lv >= 0) {
+                item.enhancement = [
+                  {
+                    id: enhanceID,
+                    level: lv
+                  }
+                ];
+              }
+              continue;
             }
-            cfg = require('./transfer').data;
-            if (cfg[item.id]) {
-              p = cfg[item.id].filter((function(_this) {
-                return function(e) {
-                  return isClassMatch(_this.hero["class"], e.classLimit);
-                };
-              })(this));
-              item.id = p[0].value;
-              console.log(item.id);
-            }
-            enhanceID = queryTable(TABLE_ITEM, item.id).enhanceID;
-            if ((enhanceID != null) && lv >= 0) {
-              item.enhancement = [
-                {
-                  id: enhanceID,
-                  level: lv
-                }
-              ];
-            }
-            continue;
+            console.log('Sell');
+            this.sellItem(slot);
           }
-          console.log('Sell');
-          this.sellItem(slot);
         }
       }
       prize = queryTable(TABLE_CONFIG, 'InitialEquipment');
