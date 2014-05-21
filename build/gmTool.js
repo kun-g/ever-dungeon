@@ -81,29 +81,31 @@ initGlobalConfig(null, function () {
   gServerID = -1;
   dbClient.keys("Master.player.*", function (err, list) {
     list = list.map( function (e) { return e.slice('Master.player.'.length); } );
-    list.forEach( function (name) {
-      dbLib.loadPlayer(name, function (err, player) {
-        function showInventory() {
-          var bag = player.inventory.map(
-            function (e, i) {
-              if (!e) return null;
-              var ret = { id: e.id, name: e.label, slot: i };
-              if (e.enhancement) {
-                ret.enhancement = JSON.parse(JSON.stringify(e.enhancement));
-              }
-              if (player.isEquiped(i)) ret.equip = true;
-              return ret;
-            })
-          .filter( function (e) { return e; } );
-          logInfo({ diamond: player.diamond, bag: bag});
-        }
-        //showInventory();
-        console.log(name);
-        player.migrate();
-        //showInventory();
-        player.save();
+    async.map(list,
+      function(name, cb) {
+        dbLib.loadPlayer(name, function (err, player) {
+          function showInventory() {
+            var bag = player.inventory.map(
+              function (e, i) {
+                if (!e) return null;
+                var ret = { id: e.id, name: e.label, slot: i };
+                if (e.enhancement) {
+                  ret.enhancement = JSON.parse(JSON.stringify(e.enhancement));
+                }
+                if (player.isEquiped(i)) ret.equip = true;
+                return ret;
+              })
+            .filter( function (e) { return e; } );
+            logInfo({ diamond: player.diamond, bag: bag});
+          }
+          //showInventory();
+          console.log(name);
+          player.migrate();
+          //showInventory();
+          player.save(cb);
+        });
       });
-    });
+  });
   });
 });
 //async.map(players, function (playerName, cb) {
