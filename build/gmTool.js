@@ -104,8 +104,7 @@ initGlobalConfig(null, function () {
           //showInventory();
           player.save(cb);
         });
-      });
-  });
+      }, function(err) {console.log('Done', err);});
   });
 });
 //async.map(players, function (playerName, cb) {
