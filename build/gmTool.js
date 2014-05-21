@@ -84,10 +84,9 @@ initGlobalConfig(null, function () {
     list = list.map( function (e) { return e.slice('Master.player.'.length); } );
     async.mapSeries(list,
       function(name, cb) {
+        count++;
+        if (count < 3000) return cb();
         dbLib.loadPlayer(name, function (err, player) {
-          count++;
-          if (count < 3000) return cb();
-
           function showInventory() {
             var bag = player.inventory.map(
               function (e, i) {
