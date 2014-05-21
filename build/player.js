@@ -1668,6 +1668,11 @@
     Player.prototype.enhanceItem = function(itemSlot) {
       var eh, enhance, equip, level, ret;
       equip = this.getItemAt(itemSlot);
+      if (!equip) {
+        return {
+          ret: RET_ItemNotExist
+        };
+      }
       if (equip.enhancement[0] == null) {
         equip.enhancement[0] = {
           id: equip.enhanceID,
@@ -1675,11 +1680,6 @@
         };
       }
       level = equip.enhancement[0].level + 1;
-      if (!equip) {
-        return {
-          ret: RET_ItemNotExist
-        };
-      }
       if (!(level < 40 && (equip.enhanceID != null))) {
         return {
           ret: RET_EquipCantUpgrade
