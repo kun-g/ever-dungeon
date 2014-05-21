@@ -195,7 +195,7 @@
           continue;
         }
         console.log('Equip', slot, this.equipment[slot]);
-        this.claimPrize(prize.filter((function(_this) {
+        this.claimPrize(prize[slot].filter((function(_this) {
           return function(e) {
             return isClassMatch(_this.hero["class"], e.classLimit);
           };
