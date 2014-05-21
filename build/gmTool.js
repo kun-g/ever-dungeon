@@ -81,7 +81,7 @@ initGlobalConfig(null, function () {
   gServerID = -1;
   dbClient.keys("Master.player.*", function (err, list) {
     list = list.map( function (e) { return e.slice('Master.player.'.length); } );
-    async.map(list,
+    async.mapSeries(list,
       function(name, cb) {
         dbLib.loadPlayer(name, function (err, player) {
           function showInventory() {
