@@ -7,8 +7,8 @@ require('./globals');
 //        'Doyle', '豆豆同学丶', '震北冥', '888666', '蛋町' ];
 players = ['jvf'];
 
-serverName = 'Develop';
-//serverName = 'Master';
+//serverName = 'Develop';
+serverName = 'Master';
 
 var config = {
   Develop: {
@@ -98,6 +98,7 @@ initGlobalConfig(null, function () {
           logInfo({ diamond: player.diamond, bag: bag});
         }
         //showInventory();
+        console.log(name);
         player.migrate();
         //showInventory();
         player.save();
