@@ -191,6 +191,7 @@
             }
             continue;
           }
+          console.log('Sell');
           this.sellItem(slot);
         }
       }
