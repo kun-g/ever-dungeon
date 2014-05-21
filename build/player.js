@@ -2586,7 +2586,7 @@
     };
 
     Player.prototype.injectWXP = function(slot, bookSlot) {
-      var book, equip, ret, retRM;
+      var book, equip, ev, ret, retRM;
       equip = this.getItemAt(slot);
       book = this.getItemAt(bookSlot);
       if (!(equip && book)) {
@@ -2602,12 +2602,18 @@
           ret: retRM,
           version: this.inventoryVersion
         });
-        ret.push({
-          cid: equip.id,
-          sid: this.queryItemSlot(equip),
-          stc: 1,
-          xp: equip.xp
-        });
+        ret.push({});
+        ev = {
+          NTF: Event_InventoryUpdateItem,
+          arg: {
+            itm: {
+              cid: equip.id,
+              sid: this.queryItemSlot(equip),
+              stc: 1,
+              xp: equip.xp
+            }
+          }
+        };
         return {
           res: ret
         };
