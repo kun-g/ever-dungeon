@@ -1612,6 +1612,11 @@
           ret: RET_InsufficientIngredient
         };
       }
+      if (recipe.forgeTarget == null) {
+        return {
+          ret: RET_Unknown
+        };
+      }
       newItem = new Item(recipe.forgeTarget);
       ret = ret.concat(this.aquireItem(newItem));
       ret = ret.concat({
