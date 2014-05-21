@@ -80,14 +80,14 @@ initGlobalConfig(null, function () {
   initServer();
   gServerID = -1;
   dbLib.loadPlayer('Jkb', function (err, player) {
-    list = ['Develop.player.Jkb']
+    list = ['Develop.player.Jkb'];
   //dbClient.keys("Develop.player.*", function (err, list) {
     list = list.map( function (e) { return e.slice('Develop.player.'.length); } );
     list.forEach( function (name) {
       dbLib.loadPlayer(name, function (err, player) {
         function showInventory() {
           var bag = player.inventory.map(
-            function (e, i) { 
+            function (e, i) {
               if (!e) return null;
               var ret = { id: e.id, name: e.label, slot: i };
               if (e.enhancement) {

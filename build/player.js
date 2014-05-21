@@ -191,13 +191,15 @@
       }
       prize = queryTable(TABLE_CONFIG, 'InitialEquipment');
       for (slot = _i = 0; _i <= 5; slot = ++_i) {
-        if (this.equipment[slot] == null) {
-          this.claimPrize(prize.filter((function(_this) {
-            return function(e) {
-              return isClassMatch(_this.hero["class"], e.classLimit);
-            };
-          })(this)));
+        if (!(this.equipment[slot] == null)) {
+          continue;
         }
+        console.log('Equip', slot, this.equipment[slot]);
+        this.claimPrize(prize.filter((function(_this) {
+          return function(e) {
+            return isClassMatch(_this.hero["class"], e.classLimit);
+          };
+        })(this)));
       }
       return this.syncBag(true);
     };
