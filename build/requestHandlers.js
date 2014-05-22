@@ -334,7 +334,7 @@
           }, function(account, cb) {
             return dbLib.createNewPlayer(account, gServerName, name, cb);
           }, function(account, cb) {
-            var player, prize;
+            var k, p, player, prize;
             player = new Player();
             player.setName(name);
             player.accountID = account;
@@ -347,11 +347,14 @@
               hairColor: arg.hcl
             });
             prize = queryTable(TABLE_CONFIG, 'InitialEquipment');
-            player.claimPrize(prize.filter((function(_this) {
-              return function(e) {
-                return isClassMatch(arg.cid, e.classLimit);
-              };
-            })(this)));
+            for (k in prize) {
+              p = prize[k];
+              player.claimPrize(p.filter((function(_this) {
+                return function(e) {
+                  return isClassMatch(arg.cid, e.classLimit);
+                };
+              })(this)));
+            }
             logUser({
               name: name,
               action: 'register',

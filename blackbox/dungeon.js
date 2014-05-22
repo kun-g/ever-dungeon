@@ -114,7 +114,7 @@
   };
 
   createUnits = function(rules, randFunc) {
-    var cfg, globalRule, i, l, levelConfig, levelRule, placeUnit, r, rand, result, rule, selectFromPool, selectPos, translateRule, _i, _j, _k, _len, _len1, _len2, _ref5, _ref6, _ref7;
+    var cfg, filterLevels, globalRule, i, l, levelConfig, levelRule, placeUnit, r, rand, result, rule, selectFromPool, selectPos, translateRule, _i, _j, _k, _len, _len1, _len2, _ref5;
     rand = function(mod) {
       var r;
       if (mod == null) {
@@ -127,6 +127,9 @@
       return r;
     };
     translateRule = function(cRule) {
+      if (!cRule) {
+        return [];
+      }
       return cRule.map(function(r) {
         var currentRule, k, v;
         if (!((r.from != null) || (r.to != null))) {
@@ -149,10 +152,11 @@
       });
     };
     levelRule = [];
+    console.log(rules.levels, rules, 'X');
     _ref5 = rules.levels;
     for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
       l = _ref5[_i];
-      levelRule.push(translateRule(l));
+      levelRule.push(translateRule(l.objects));
     }
     globalRule = translateRule(rules.global);
     levelConfig = [];
@@ -197,7 +201,7 @@
       }
       return -1;
     };
-    placeUnit = function(lRule, lConfig) {
+    placeUnit = function(lRule, lConfig, single) {
       var count, idList, result, _k, _len2, _ref6;
       result = [];
       for (_k = 0, _len2 = lRule.length; _k < _len2; _k++) {
@@ -206,6 +210,9 @@
           continue;
         }
         count = (_ref6 = r.count) != null ? _ref6 : 1;
+        if (single) {
+          count = 1;
+        }
         if (count + lConfig.total > lConfig.limit) {
           count = lConfig.total - lConfig.limit + count;
         }
@@ -233,6 +240,7 @@
             if (Array.isArray(r.pos)) {
               u.pos = selectPos(r.pos, lConfig);
             }
+            lConfig.takenPos[r.pos] = true;
           }
           _ref7 = lConfig.property;
           for (k in _ref7) {
@@ -259,24 +267,33 @@
     }
     for (_k = 0, _len2 = globalRule.length; _k < _len2; _k++) {
       rule = globalRule[_k];
-      cfg = levelConfig.filter(function(c) {
-        return c.total < c.limit;
-      });
-      if (((_ref6 = rule.levels) != null ? _ref6.from : void 0) != null) {
-        cfg = cfg.filter(function(c) {
-          return c.id > rule.levels.from;
+      i = 0;
+      filterLevels = function() {
+        var _ref6, _ref7;
+        cfg = levelConfig.filter(function(c) {
+          return c.total < c.limit;
         });
+        if (((_ref6 = rule.levels) != null ? _ref6.from : void 0) != null) {
+          cfg = cfg.filter(function(c) {
+            return c.id > rule.levels.from;
+          });
+        }
+        if (((_ref7 = rule.levels) != null ? _ref7.to : void 0) != null) {
+          cfg = cfg.filter(function(c) {
+            return c.id < rule.levels.to;
+          });
+        }
+        return cfg;
+      };
+      while (i < rule.count) {
+        cfg = filterLevels();
+        if (cfg.length <= 0) {
+          break;
+        }
+        cfg = cfg[rand() % cfg.length];
+        result[cfg.id] = result[cfg.id].concat(placeUnit([rule], cfg, true));
+        i++;
       }
-      if (((_ref7 = rule.levels) != null ? _ref7.to : void 0) != null) {
-        cfg = cfg.filter(function(c) {
-          return c.id < rule.levels.to;
-        });
-      }
-      if (cfg.length <= 0) {
-        continue;
-      }
-      cfg = cfg[rand() % cfg.length];
-      result[cfg.id] = result[cfg.id].concat(placeUnit([rule], cfg));
     }
     return result;
   };
@@ -380,7 +397,7 @@
     };
 
     Dungeon.prototype.initialize = function() {
-      var cfg, infiniteLevel, _ref5, _ref6, _ref7;
+      var arrCollectID, cfg, creation, infiniteLevel, o, q, qid, qst, quests, _i, _len, _ref5, _ref6, _ref7, _ref8;
       this.speedCompete = compete(speedFormula, this);
       this.hitCompete = compete(hitFormula, this);
       this.criticalCompete = compete(criticalFormula, this);
@@ -422,6 +439,31 @@
           this.xpRate *= 1.1;
         }
       }
+      creation = createUnits(cfg, (function(_this) {
+        return function() {
+          return _this.rand;
+        };
+      })(this));
+      arrCollectID = [];
+      quests = this.quests != null ? this.quests : [];
+      for (qid in quests) {
+        qst = quests[qid];
+        q = queryTable(TABLE_QUEST, qid, this.abIndex);
+        _ref8 = q.objects;
+        for (_i = 0, _len = _ref8.length; _i < _len; _i++) {
+          o = _ref8[_i];
+          arrCollectID.push(o.collectId);
+        }
+      }
+      this.unitCreation = creation.map(function(level) {
+        return level.filter(function(e) {
+          if (e.property.questOnly) {
+            return arrCollectID.indexOf(e.property.collectId);
+          } else {
+            return true;
+          }
+        });
+      });
       this.initiateHeroes(this.team);
       this.nextLevel();
       return this.replayActionLog();
@@ -867,17 +909,11 @@
     };
 
     Dungeon.prototype.nextLevel = function() {
-      var badPool, bossPool, cfg, elitePool, goodPool, lvConfig, normalPool, quest, soldierPool;
+      var cfg, lvConfig;
       this.currentLevel++;
       cfg = this.getConfig();
       if (this.currentLevel < cfg.levelCount) {
         lvConfig = cfg.levels[this.currentLevel];
-        soldierPool = cfg.soldierPool != null ? cfg.soldierPool : null;
-        elitePool = cfg.elitePool != null ? cfg.elitePool : null;
-        bossPool = cfg.bossPool != null ? cfg.bossPool : null;
-        goodPool = cfg.goodPool != null ? cfg.goodPool : null;
-        badPool = cfg.badPool != null ? cfg.badPool : null;
-        normalPool = cfg.normalPool != null ? cfg.normalPool : null;
         this.level = new Level();
         this.level.rand = (function(_this) {
           return function(r) {
@@ -895,15 +931,7 @@
         Object.defineProperty(this.level, 'rand', {
           enumerable: false
         });
-        quest = this.quests != null ? this.quests : [];
-        return this.level.init(lvConfig, this.baseRank, this.getHeroes(), quest, {
-          soldier: soldierPool,
-          elite: elitePool,
-          boss: bossPool,
-          good: goodPool,
-          bad: badPool,
-          normal: normalPool
-        });
+        return this.level.init(lvConfig, this.baseRank, this.getHeroes(), this.unitCreation[this.currentLevel]);
       }
     };
 
@@ -972,7 +1000,7 @@
       this.ref = HEROTAG;
     }
 
-    Level.prototype.init = function(lvConfig, baseRank, heroes, quests, pool) {
+    Level.prototype.init = function(lvConfig, baseRank, heroes, objectConfig) {
       this.objects = this.objects.concat(heroes);
       this.rank = baseRank;
       if (lvConfig.rank != null) {
@@ -980,7 +1008,7 @@
       }
       this.generateBlockLayout(lvConfig);
       this.setupEnterAndExit(lvConfig);
-      this.placeMapObjects(lvConfig, quests, pool);
+      this.placeMapObjects(objectConfig);
       return this.entrance;
     };
 
@@ -1207,127 +1235,29 @@
       return _results;
     };
 
-    Level.prototype.placeMapObjects = function(config, quests, pool) {
-      var c, fillupMonster, monsterConfig, monsterCount, o, objectConfig, that, _i, _j, _k, _len, _len1, _len2, _ref5, _results;
-      if (config == null) {
+    Level.prototype.placeMapObjects = function(cfg) {
+      var c, o, _i, _j, _len, _len1, _ref5, _ref6, _results;
+      if (cfg == null) {
         return false;
       }
-      objectConfig = [];
-      if (config.objects != null) {
-        objectConfig = config.objects.filter(function(o) {
-          var q, qid, qst, ret;
-          if (o.questOnly) {
-            ret = false;
-            for (qid in quests) {
-              qst = quests[qid];
-              q = queryTable(TABLE_QUEST, qid, this.abIndex);
-              ret = q.objects.reduce((function(r, l) {
-                return r || l.collect === o.collectId;
-              }), false);
-              if (ret) {
-                return ret;
-              }
-            }
-            return false;
-          } else {
-            return true;
-          }
-        });
-      }
-      monsterCount = objectConfig.reduce((function(r, l) {
-        var count;
-        count = 1;
-        if (l.count != null) {
-          count = l.count;
+      for (_i = 0, _len = cfg.length; _i < _len; _i++) {
+        o = cfg[_i];
+        if (!(((_ref5 = o.property) != null ? _ref5.pos : void 0) != null)) {
+          continue;
         }
-        if (l.boss != null) {
-          r.boss += count;
-        }
-        if (l.elite != null) {
-          r.elite += count;
-        }
-        if (l.soldier != null) {
-          r.soldier += count;
-        }
-        if (l.normal != null) {
-          r.normal += count;
-        }
-        return r;
-      }), {
-        soldier: 0,
-        elite: 0,
-        boss: 0,
-        normal: 0
-      });
-      that = this;
-      fillupMonster = function(cfg) {
-        var i, m, _i, _ref5, _ref6, _results;
-        if (config[cfg.targetCounter] && monsterCount[cfg.counter] < config[cfg.targetCounter]) {
-          _results = [];
-          for (i = _i = _ref5 = monsterCount[cfg.counter], _ref6 = config[cfg.targetCounter]; _ref5 <= _ref6 ? _i <= _ref6 : _i >= _ref6; i = _ref5 <= _ref6 ? ++_i : --_i) {
-            m = selectElementFromWeightArray(pool[cfg.pool], that.rand());
-            objectConfig.push({
-              id: m.id,
-              count: 1,
-              collectId: m.collectId,
-              keyed: cfg.keyed
-            });
-            _results.push(monsterCount[cfg.counter] += 1);
-          }
-          return _results;
-        }
-      };
-      monsterConfig = [
-        {
-          counter: 'soldier',
-          targetCounter: 'soldierCount',
-          pool: 'soldier',
-          keyed: false
-        }, {
-          counter: 'good',
-          targetCounter: 'goodCount',
-          pool: 'good',
-          keyed: false
-        }, {
-          counter: 'bad',
-          targetCounter: 'badCount',
-          pool: 'bad',
-          keyed: false
-        }, {
-          counter: 'normal',
-          targetCounter: 'normalCount',
-          pool: 'normal',
-          keyed: false
-        }, {
-          counter: 'elite',
-          targetCounter: 'eliteCount',
-          pool: 'elite',
-          keyed: true
-        }, {
-          counter: 'boss',
-          targetCounter: 'bossCount',
-          pool: 'boss',
-          keyed: true
-        }
-      ];
-      for (_i = 0, _len = monsterConfig.length; _i < _len; _i++) {
-        c = monsterConfig[_i];
-        fillupMonster(c);
-      }
-      for (_j = 0, _len1 = objectConfig.length; _j < _len1; _j++) {
-        o = objectConfig[_j];
-        if (o.pos != null) {
-          this.createObject(o.id, o.pos, o.keyed, o.collectId);
-        }
+        c = o.property;
+        this.createObject(o.id, c.pos, c.keyed, c.collectId);
       }
       _results = [];
-      for (_k = 0, _len2 = objectConfig.length; _k < _len2; _k++) {
-        o = objectConfig[_k];
-        if (o.pos == null) {
-          _results.push(this.placeObjects(o.id, (_ref5 = o.count) != null ? _ref5 : 1, o.keyed, o.collectId));
-        } else {
-          _results.push(void 0);
+      for (_j = 0, _len1 = cfg.length; _j < _len1; _j++) {
+        o = cfg[_j];
+        if (!((o.property == null) || (o.property.pos == null))) {
+          continue;
         }
+        c = (_ref6 = o.property) != null ? _ref6 : {
+          count: 1
+        };
+        _results.push(this.placeObjects(o.id, c.count, c.keyed, c.collectId));
       }
       return _results;
     };

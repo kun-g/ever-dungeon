@@ -4141,10 +4141,6 @@ exports.data = [
             {
                 "type":1,
                 "count":250
-            },
-            {
-                "type":3,
-                "count":250
             }
         ],
         "cond":

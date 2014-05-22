@@ -624,7 +624,7 @@
       var currentLevel, prevLevel;
       if (point) {
         prevLevel = this.createHero().level;
-        this.hero.xp += point;
+        this.hero.xp = Math.floor(this.hero.xp + point);
         currentLevel = this.createHero().level;
         this.notify('heroxpChanged', {
           xp: this.hero.xp,
