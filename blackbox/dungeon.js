@@ -165,19 +165,14 @@
         id: i,
         total: 0,
         limit: Infinity,
-        property: {},
         takenPos: {}
       };
       for (_j = 0, _len1 = l.length; _j < _len1; _j++) {
         r = l[_j];
-        if (!(!((r.id != null) || (r.pool != null)))) {
-          continue;
-        }
-        if (r.count != null) {
-          cfg.limit = r.count;
-        }
-        if (r.property) {
-          cfg.property = r.property;
+        if (!((r.id != null) || (r.pool != null))) {
+          if (r.count != null) {
+            cfg.limit = r.count;
+          }
         }
       }
       levelConfig.push(cfg);
@@ -226,12 +221,12 @@
           count = 1;
         }
         idList.forEach(function(c) {
-          var k, u, v, _ref7, _ref8;
-          u = {
-            id: c.id,
-            property: {},
-            count: count
-          };
+          var k, u, v;
+          u = {};
+          for (k in c) {
+            v = c[k];
+            u[k] = v;
+          }
           if (r.pos) {
             if (typeof r.pos === 'number') {
               u.pos = r.pos;
@@ -240,18 +235,6 @@
               u.pos = selectPos(r.pos, lConfig);
             }
             lConfig.takenPos[r.pos] = true;
-          }
-          _ref7 = lConfig.property;
-          for (k in _ref7) {
-            v = _ref7[k];
-            u.property[k] = v;
-          }
-          if (r.property) {
-            _ref8 = r.property;
-            for (k in _ref8) {
-              v = _ref8[k];
-              u.property[k] = v;
-            }
           }
           lConfig.total += count;
           return result.push(u);
@@ -1235,28 +1218,22 @@
     };
 
     Level.prototype.placeMapObjects = function(cfg) {
-      var c, o, _i, _j, _len, _len1, _ref5, _ref6, _results;
+      var o, _i, _j, _len, _len1, _ref5, _results;
       if (cfg == null) {
         return false;
       }
       for (_i = 0, _len = cfg.length; _i < _len; _i++) {
         o = cfg[_i];
-        if (!(((_ref5 = o.property) != null ? _ref5.pos : void 0) != null)) {
-          continue;
+        if (o.pos != null) {
+          this.createObject(o.id, o.pos, o.keyed, o.collectId);
         }
-        c = o.property;
-        this.createObject(o.id, c.pos, c.keyed, c.collectId);
       }
       _results = [];
       for (_j = 0, _len1 = cfg.length; _j < _len1; _j++) {
         o = cfg[_j];
-        if (!((o.property == null) || (o.property.pos == null))) {
-          continue;
+        if (o.pos == null) {
+          _results.push(this.placeObjects(o.id, (_ref5 = o.count) != null ? _ref5 : 1, o.keyed, o.collectId));
         }
-        c = (_ref6 = o.property) != null ? _ref6 : {
-          count: 1
-        };
-        _results.push(this.placeObjects(o.id, o.count, c.keyed, c.collectId));
       }
       return _results;
     };

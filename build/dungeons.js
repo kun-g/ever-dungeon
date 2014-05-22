@@ -21277,130 +21277,54 @@ exports.data = [
         "levelCount" : 6,
         "pool":{
             "normalPool":[
-                {
-                    "id":170,
-                    "weight":5
-                },
-                {
-                    "id":171,
-                    "weight":1
-                },
-                {
-                    "id":173,
-                    "weight":5
-                },
-                {
-                    "id":174,
-                    "weight":1
-                },
-                {
-                    "id":176,
-                    "weight":5
-                },
-                {
-                    "id":178,
-                    "weight":5
-                },
-                {
-                    "id":179,
-                    "weight":1
-                },
-                {
-                    "id":172,
-                    "weight":5
-                }
+                { "id":170, "weight":5 }, { "id":171, "weight":1 },
+                { "id":173, "weight":5 }, { "id":174, "weight":1 },
+                { "id":176, "weight":5 }, { "id":178, "weight":5 },
+                { "id":179, "weight":1 }, { "id":172, "weight":5 }
             ]
         },
-         
         "rank": 3,
         "levels" :[
             {
-                 "objects" :[{"pool":"normalPool","from":0,to:2},
-                    {
-                        "id": 5,
-                        "count":3
-                    },
-                    {
-                        "id": 149,
-                        "count":1
-                    },
-                    {
-                        "id": 7 ,
-                        "count":4
-                    }
+                 "objects" :[
+                   {"pool":"normalPool","from":0,to:2},
+                   { "id": 5, "count":3 },
+                   { "id": 149, "count":1 },
+                   { "id": 7 , "count":4 }
                 ]
             },
             {
-                 "objects" :[{"pool":"normalPool","from":0,to:2},
-                    {
-                        "id": 5,
-                        "count":3
-                    },
-                    {
-                        "id": 7 ,
-                        "count":4
-                    }
+                 "objects" :[
+                   {"pool":"normalPool","from":0,to:2},
+                   { "id": 5, "count":3 },
+                   { "id": 7 , "count":4 }
                 ]
             },
             {
-                 "objects" :[{"pool":"normalPool","from":0,to:2},
-                    {
-                        "id": 5,
-                        "count":3
-                    },
-                    {
-                        "id": 149,
-                        "count":1
-                    },
-                    {
-                        "id": 7 ,
-                        "count":3
-                    },
-                    {
-                        "id": 23,
-                        "count":1,
-                        "keyed":true
-                    }
+                 "objects" :[
+                   {"pool":"normalPool","from":0,to:2},
+                   { "id": 5, "count":3 },
+                   { "id": 149, "count":1 },
+                   { "id": 7 , "count":3 },
+                   { "id": 23, "count":1, "keyed":true }
                 ]
             },
             {
-                 "objects" :[{"pool":"normalPool","from":0,to:2},
-                    {
-                        "id": 5,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":1
-                    },
-                    {
-                        "id": 7 ,
-                        "count":3
-                    },
-                    {
-                        "id": 6,
-                        "count":2
-                    }
+                 "objects" :[
+                   {"pool":"normalPool","from":0,to:2},
+                   { "id": 5, "count":2 },
+                   { "id": 149, "count":1 },
+                   { "id": 7 , "count":3 },
+                   { "id": 6, "count":2 }
                 ]
             },
             {
-                 "objects" :[{"pool":"normalPool","from":0,to:2},
-                    {
-                        "id": 5,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 7 ,
-                        "count":2
-                    },
-                    {
-                        "id": 6,
-                        "count":3
-                    }
+                 "objects" :[
+                  {"pool":"normalPool","from":0,to:2},
+                   { "id": 5, "count":2 },
+                   { "id": 149, "count":2 },
+                   { "id": 7 , "count":2 },
+                   { "id": 6, "count":3 }
                 ]
             },
             {
@@ -21420,10 +21344,8 @@ exports.data = [
                     {
                         "id": 32,
                         "count":1,
-                        property: {
-                          "keyed":true,
-                          "collectId":160001
-                        }
+                        "keyed":true,
+                        "collectId":160001
                     }
                 ]
             }
