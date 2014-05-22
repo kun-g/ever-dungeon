@@ -1922,7 +1922,11 @@
           src: MESSAGE_REWARD_TYPE_OFFLINE,
           prize: offlineReward
         };
-        dungeon.team.forEach(function(m) {
+        dungeon.team.filter((function(_this) {
+          return function(m) {
+            return m.nam !== _this.name;
+          };
+        })(this)).forEach(function(m) {
           if (m) {
             return dbLib.deliverMessage(m.nam, teammateRewardMessage);
           }

@@ -1257,7 +1257,7 @@
         c = (_ref6 = o.property) != null ? _ref6 : {
           count: 1
         };
-        _results.push(this.placeObjects(o.id, c.count, c.keyed, c.collectId));
+        _results.push(this.placeObjects(o.id, o.count, c.keyed, c.collectId));
       }
       return _results;
     };
