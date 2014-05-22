@@ -152,7 +152,6 @@
       });
     };
     levelRule = [];
-    console.log(rules.levels, rules, 'X');
     _ref5 = rules.levels;
     for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
       l = _ref5[_i];
@@ -171,7 +170,7 @@
       };
       for (_j = 0, _len1 = l.length; _j < _len1; _j++) {
         r = l[_j];
-        if (!(r.id == null)) {
+        if (!(!((r.id != null) || (r.pool != null)))) {
           continue;
         }
         if (r.count != null) {

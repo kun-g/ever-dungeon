@@ -21420,8 +21420,10 @@ exports.data = [
                     {
                         "id": 32,
                         "count":1,
-                        "keyed":true,
-                        "collectId":160001
+                        property: {
+                          "keyed":true,
+                          "collectId":160001
+                        }
                     }
                 ]
             }
