@@ -79,34 +79,41 @@ initGlobalConfig(null, function () {
   require('./helper').initLeaderboard(queryTable(TABLE_LEADBOARD));
   initServer();
   gServerID = -1;
+  count = 0;
   dbClient.keys("Master.player.*", function (err, list) {
     list = list.map( function (e) { return e.slice('Master.player.'.length); } );
-    async.mapSeries(list,
+    list = ['豆豆同学丶'];
+    async.map(list,
       function(name, cb) {
-        dbLib.loadPlayer(name, function (err, player) {
-          function showInventory() {
-            var bag = player.inventory.map(
-              function (e, i) {
-                if (!e) return null;
-                var ret = { id: e.id, name: e.label, slot: i };
-                if (e.enhancement) {
-                  ret.enhancement = JSON.parse(JSON.stringify(e.enhancement));
-                }
-                if (player.isEquiped(i)) ret.equip = true;
-                return ret;
-              })
-            .filter( function (e) { return e; } );
-            logInfo({ diamond: player.diamond, bag: bag});
-          }
-          //showInventory();
-          if (player.migrate()) {
-            console.log(name);
-            player.save(cb);
-          } else {
-            cb();
-          }
-          //showInventory();
-        });
+        if (list.indexOf(name) < 0) {
+          cb();
+        } else {
+          dbLib.loadPlayer(name, function (err, player) {
+            function showInventory() {
+              var bag = player.inventory.map(
+                function (e, i) {
+                  if (!e) return null;
+                  var ret = { id: e.id, name: e.label, slot: i };
+                  if (e.enhancement) {
+                    ret.enhancement = JSON.parse(JSON.stringify(e.enhancement));
+                  }
+                  if (player.isEquiped(i)) ret.equip = true;
+                  return ret;
+                })
+              .filter( function (e) { return e; } );
+              logInfo({ diamond: player.diamond, bag: bag});
+            }
+            //showInventory();
+            if (player.migrate()) {
+              console.log(name);
+              player.save(cb);
+            } else {
+              cb();
+            }
+            player = null;
+            //showInventory();
+          });
+        }
       }, function(err) {console.log('Done', err);});
   });
 });

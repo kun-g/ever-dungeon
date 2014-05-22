@@ -159,7 +159,6 @@
         item = _ref7[slot];
         if (item != null) {
           if (item.transPrize != null) {
-            flag = true;
             if (this.isEquiped(slot)) {
               lv = 0;
               if (item.enhancement && item.enhancement.length > 0) {
@@ -175,6 +174,7 @@
                   };
                 })(this));
                 item.id = p[0].value;
+                console.log(item.id);
               }
               enhanceID = queryTable(TABLE_ITEM, item.id).enhanceID;
               if ((enhanceID != null) && lv >= 0) {
@@ -187,6 +187,7 @@
               }
               continue;
             }
+            flag = true;
             this.sellItem(slot);
           }
         }
