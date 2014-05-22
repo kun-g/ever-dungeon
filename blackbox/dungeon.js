@@ -441,7 +441,7 @@
       }
       creation = createUnits(cfg, (function(_this) {
         return function() {
-          return _this.rand;
+          return _this.rand();
         };
       })(this));
       arrCollectID = [];
