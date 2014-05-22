@@ -211,7 +211,7 @@
           count = lConfig.total - lConfig.limit + count;
         }
         if (count <= 0) {
-          break;
+          continue;
         }
         if (r.id != null) {
           idList = [r];
