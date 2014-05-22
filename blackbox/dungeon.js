@@ -439,8 +439,8 @@
       }
       this.unitCreation = creation.map(function(level) {
         return level.filter(function(e) {
-          if (e.property.questOnly) {
-            return arrCollectID.indexOf(e.property.collectId);
+          if (e.questOnly) {
+            return arrCollectID.indexOf(e.collectId);
           } else {
             return true;
           }
