@@ -1722,24 +1722,25 @@
     };
 
     Player.prototype.sellItem = function(slot) {
-      var item, ret;
+      var count, item, ret;
       if (this.isEquiped(slot)) {
         return {
           ret: RET_Unknown
         };
       }
       item = this.getItemAt(slot);
+      count = item.count;
       if ((item != null ? item.transPrize : void 0) || (item != null ? item.sellprice : void 0)) {
         ret = this.removeItem(null, null, slot);
         if (item != null ? item.transPrize : void 0) {
           ret = ret.concat(this.claimPrize(item.transPrize));
         } else if (item != null ? item.sellprice : void 0) {
-          this.addGold(item.sellprice * item.count);
+          this.addGold(item.sellprice * count);
         }
         this.log('sellItem', {
           itemId: item.id,
           price: item.sellprice,
-          count: item.count,
+          count: count,
           slot: slot
         });
         return {
