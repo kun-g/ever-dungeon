@@ -312,10 +312,14 @@
         loginStreak: this.loginStreak.count,
         date: currentTime()
       });
-      reward = queryTable(TABLE_CAMPAIGN, 'LoginStreak', this.abIndex).level[this.loginStreak.count].award;
-      ret = this.claimPrize(reward);
+      reward = queryTable(TABLE_DP)[this.loginStreak.count].prize;
+      ret = this.claimPrize(reward.filter((function(_this) {
+        return function(e) {
+          return !e.vip || _this.vipLevel() > e.vip;
+        };
+      })(this)));
       this.loginStreak.count += 1;
-      if (this.loginStreak.count >= queryTable(TABLE_CAMPAIGN, 'LoginStreak').level.length) {
+      if (this.loginStreak.count >= queryTable(TABLE_DP).length) {
         this.loginStreak.count = 0;
       }
       return {
@@ -624,7 +628,7 @@
       var currentLevel, prevLevel;
       if (point) {
         prevLevel = this.createHero().level;
-        this.hero.xp += point;
+        this.hero.xp = Math.floor(this.hero.xp + point);
         currentLevel = this.createHero().level;
         this.notify('heroxpChanged', {
           xp: this.hero.xp,
@@ -1684,7 +1688,7 @@
         itemSlot: itemSlot
       });
       this.onEvent('Equipment');
-      if (level >= 20) {
+      if (level >= 32) {
         dbLib.broadcastEvent(BROADCAST_ENHANCE, {
           who: this.name,
           what: equip.id,
@@ -1922,7 +1926,11 @@
           src: MESSAGE_REWARD_TYPE_OFFLINE,
           prize: offlineReward
         };
-        dungeon.team.forEach(function(m) {
+        dungeon.team.filter((function(_this) {
+          return function(m) {
+            return m.nam !== _this.name;
+          };
+        })(this)).forEach(function(m) {
           if (m) {
             return dbLib.deliverMessage(m.nam, teammateRewardMessage);
           }
