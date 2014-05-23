@@ -171,14 +171,12 @@ exports.data = {
       },
       {
         "count": 4,
-        "award": [ { "type":0, "value":538, "count":1 } ]
+        "award": [ { "type":1,  "count":3000 } ]
       },
       {
         "count": 5,
         "award": [
-          { "type":0, "value":534, "count":1 },
-          { "type":0, "value":535, "count":1 },
-          { "type":0, "value":536, "count":1 }
+          { "type":2,  "count":100 }
         ]
       }
     ]
