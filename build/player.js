@@ -624,7 +624,7 @@
       var currentLevel, prevLevel;
       if (point) {
         prevLevel = this.createHero().level;
-        this.hero.xp = Math.floor(this.hero.xp + point);
+        this.hero.xp += point;
         currentLevel = this.createHero().level;
         this.notify('heroxpChanged', {
           xp: this.hero.xp,
@@ -1922,11 +1922,7 @@
           src: MESSAGE_REWARD_TYPE_OFFLINE,
           prize: offlineReward
         };
-        dungeon.team.filter((function(_this) {
-          return function(m) {
-            return m.nam !== _this.name;
-          };
-        })(this)).forEach(function(m) {
+        dungeon.team.forEach(function(m) {
           if (m) {
             return dbLib.deliverMessage(m.nam, teammateRewardMessage);
           }
