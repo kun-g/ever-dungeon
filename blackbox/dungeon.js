@@ -1441,6 +1441,14 @@
       return factionDB[src][tar][flag];
     };
 
+    DungeonEnvironment.prototype.isLevelInitialized = function() {
+      return this.dungeon.level.initialized;
+    };
+
+    DungeonEnvironment.prototype.levelInitialized = function() {
+      return this.dungeon.level.initialized = true;
+    };
+
     DungeonEnvironment.prototype.isEntranceExplored = function() {
       var e, entrance, _i, _len, _ref5, _ref6;
       entrance = this.dungeon.getEntrance();
@@ -1848,7 +1856,7 @@
         var e, entrance, i, monster, newPosition, _i, _j, _k, _l, _len, _len1, _ref5, _ref6, _ref7, _ref8;
         entrance = env.getEntrance();
         env.onEvent('onEnterLevel', this);
-        if (env.isEntranceExplored()) {
+        if (env.isLevelInitialized()) {
           for (e = _i = 0, _ref5 = DG_BLOCKCOUNT - 1; 0 <= _ref5 ? _i <= _ref5 : _i >= _ref5; e = 0 <= _ref5 ? ++_i : --_i) {
             if (env.getBlock(e).explored) {
               this.routine({
@@ -1858,6 +1866,7 @@
             }
           }
         } else {
+          env.levelInitialized();
           if (Array.isArray(entrance)) {
             for (_j = 0, _len = entrance.length; _j < _len; _j++) {
               e = entrance[_j];
