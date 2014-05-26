@@ -322,6 +322,7 @@
       if (this.loginStreak.count >= queryTable(TABLE_DP).length) {
         this.loginStreak.count = 0;
       }
+      console.log(queryTable(TABLE_DP).length);
       return {
         ret: RET_OK,
         res: ret
