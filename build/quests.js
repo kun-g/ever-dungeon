@@ -4141,6 +4141,10 @@ exports.data = [
             {
                 "type":1,
                 "count":250
+            },
+            {
+                "type":3,
+                "count":250
             }
         ],
         "cond":
@@ -4731,7 +4735,7 @@ exports.data = [
         }
     },
     {
-        "questId":176,
+        "questId":177,
         "title":"突破天际的战斗力IX",
         "desc":"将角色战斗力提升至4000以上",
         "objects":[
@@ -4753,12 +4757,12 @@ exports.data = [
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.175.complete"}, true ] }
+            { "==": [ { "type": "getProperty", "key": "quests.176.complete"}, true ] }
         ]
         }
     },
     {
-        "questId":176,
+        "questId":178,
         "title":"突破天际的战斗力X",
         "desc":"将角色战斗力提升至5000以上",
         "objects":[
@@ -4780,12 +4784,12 @@ exports.data = [
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.175.complete"}, true ] }
+            { "==": [ { "type": "getProperty", "key": "quests.177.complete"}, true ] }
         ]
         }
     },
     {
-        "questId":176,
+        "questId":179,
         "title":"突破天际的战斗力XI",
         "desc":"将角色战斗力提升至6000以上",
         "objects":[
@@ -4807,12 +4811,12 @@ exports.data = [
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.175.complete"}, true ] }
+            { "==": [ { "type": "getProperty", "key": "quests.178.complete"}, true ] }
         ]
         }
     },
     {
-        "questId":176,
+        "questId":180,
         "title":"突破天际的战斗力XII",
         "desc":"将角色战斗力提升至7000以上",
         "objects":[
@@ -4834,12 +4838,12 @@ exports.data = [
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.175.complete"}, true ] }
+            { "==": [ { "type": "getProperty", "key": "quests.179.complete"}, true ] }
         ]
         }
     },
     {
-        "questId":176,
+        "questId":181,
         "title":"突破天际的战斗力XIII",
         "desc":"将角色战斗力提升至9000以上",
         "objects":[
@@ -4861,12 +4865,12 @@ exports.data = [
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.175.complete"}, true ] }
+            { "==": [ { "type": "getProperty", "key": "quests.180.complete"}, true ] }
         ]
         }
     },
     {
-        "questId":176,
+        "questId":182,
         "title":"突破天际的战斗力XIV",
         "desc":"将角色战斗力提升至10000以上",
         "objects":[
@@ -4888,7 +4892,7 @@ exports.data = [
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.175.complete"}, true ] }
+            { "==": [ { "type": "getProperty", "key": "quests.181.complete"}, true ] }
         ]
         }
     }

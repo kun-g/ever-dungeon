@@ -576,7 +576,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 1,
-		"forgeID": 17
+		"hide": true
 	},
 	{
 		"classId": 33,
@@ -621,7 +621,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 1,
-		"forgeID": 18
+		"hide": true
 	},
 	{
 		"classId": 34,
@@ -658,7 +658,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 1,
-		"forgeID": 19
+		"hide": true
 	},
 	{
 		"classId": 35,
@@ -696,7 +696,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 1,
-		"forgeID": 20
+		"hide": true
 	},
 	{
 		"classId": 36,
@@ -737,7 +737,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 2,
-		"forgeID": 17
+		"hide": true
 	},
 	{
 		"classId": 37,
@@ -782,7 +782,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 2,
-		"forgeID": 18
+		"hide": true
 	},
 	{
 		"classId": 38,
@@ -820,7 +820,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 2,
-		"forgeID": 19
+		"hide": true
 	},
 	{
 		"classId": 39,
@@ -857,7 +857,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 2,
-		"forgeID": 20
+		"hide": true
 	},
 	{
 		"classId": 40,
@@ -899,7 +899,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 0,
-		"forgeID": 17
+		"hide": true
 	},
 	{
 		"classId": 41,
@@ -943,7 +943,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 0,
-		"forgeID": 18
+		"hide": true
 	},
 	{
 		"classId": 42,
@@ -979,7 +979,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 0,
-		"forgeID": 19
+		"hide": true
 	},
 	{
 		"classId": 43,
@@ -1017,7 +1017,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 5,
 		"enhanceID": 0,
-		"forgeID": 20
+		"hide": true
 	},
 	{
 		"classId": 44,
@@ -1060,6 +1060,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 10,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 17,
 		"forgeTarget": 104
 	},
@@ -1106,6 +1107,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 10,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 18,
 		"forgeTarget": 105
 	},
@@ -1144,6 +1146,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 10,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 19,
 		"forgeTarget": 106
 	},
@@ -1183,6 +1186,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 10,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 20,
 		"forgeTarget": 107
 	},
@@ -1225,6 +1229,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 10,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 17,
 		"forgeTarget": 108
 	},
@@ -1271,6 +1276,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 10,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 18,
 		"forgeTarget": 109
 	},
@@ -1311,6 +1317,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 10,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 19,
 		"forgeTarget": 110
 	},
@@ -1349,6 +1356,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 10,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 20,
 		"forgeTarget": 111
 	},
@@ -1392,6 +1400,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 10,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 17,
 		"forgeTarget": 112
 	},
@@ -1438,6 +1447,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 10,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 18,
 		"forgeTarget": 113
 	},
@@ -1475,6 +1485,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 10,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 19,
 		"forgeTarget": 114
 	},
@@ -1515,6 +1526,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 10,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 20,
 		"forgeTarget": 115
 	},
@@ -1559,6 +1571,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 17,
 		"forgeTarget": 116
 	},
@@ -1606,6 +1619,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 18,
 		"forgeTarget": 117
 	},
@@ -1644,6 +1658,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 19,
 		"forgeTarget": 118
 	},
@@ -1683,6 +1698,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 20,
 		"forgeTarget": 119
 	},
@@ -1725,6 +1741,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 17,
 		"forgeTarget": 120
 	},
@@ -1772,6 +1789,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 18,
 		"forgeTarget": 121
 	},
@@ -1812,6 +1830,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 19,
 		"forgeTarget": 122
 	},
@@ -1850,6 +1869,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 20,
 		"forgeTarget": 123
 	},
@@ -1893,6 +1913,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 17,
 		"forgeTarget": 124
 	},
@@ -1939,6 +1960,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 18,
 		"forgeTarget": 125
 	},
@@ -1976,6 +1998,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 19,
 		"forgeTarget": 126
 	},
@@ -2016,6 +2039,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 20,
 		"forgeTarget": 127
 	},
@@ -2060,6 +2084,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 17,
 		"forgeTarget": 128
 	},
@@ -2107,6 +2132,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 18,
 		"forgeTarget": 129
 	},
@@ -2145,6 +2171,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 19,
 		"forgeTarget": 130
 	},
@@ -2184,6 +2211,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 20,
 		"forgeTarget": 131
 	},
@@ -2226,6 +2254,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 17,
 		"forgeTarget": 132
 	},
@@ -2273,6 +2302,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 18,
 		"forgeTarget": 133
 	},
@@ -2313,6 +2343,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 19,
 		"forgeTarget": 134
 	},
@@ -2351,6 +2382,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 20,
 		"forgeTarget": 135
 	},
@@ -2394,6 +2426,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 17,
 		"forgeTarget": 136
 	},
@@ -2441,6 +2474,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 18,
 		"forgeTarget": 137
 	},
@@ -2479,6 +2513,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 19,
 		"forgeTarget": 138
 	},
@@ -2519,6 +2554,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 20,
 		"forgeTarget": 139
 	},
@@ -2573,6 +2609,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 17,
 		"forgeTarget": 140
 	},
@@ -2633,6 +2670,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 18,
 		"forgeTarget": 141,
 		"iconf": "emchest5.png",
@@ -2673,6 +2711,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 19,
 		"forgeTarget": 142
 	},
@@ -2712,6 +2751,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 20,
 		"forgeTarget": 143
 	},
@@ -2764,6 +2804,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 17,
 		"forgeTarget": 144
 	},
@@ -2824,6 +2865,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 18,
 		"forgeTarget": 145,
 		"iconf": "epchest5.png",
@@ -2866,6 +2908,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 19,
 		"forgeTarget": 146
 	},
@@ -2904,6 +2947,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 20,
 		"forgeTarget": 147
 	},
@@ -2947,6 +2991,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 17,
 		"forgeTarget": 148
 	},
@@ -2994,6 +3039,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 18,
 		"forgeTarget": 149
 	},
@@ -3037,6 +3083,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 19,
 		"forgeTarget": 150,
 		"iconf": "ewsubweapon5.png",
@@ -3079,6 +3126,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 20,
 		"forgeTarget": 151
 	},
@@ -3132,6 +3180,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 17,
 		"forgeTarget": 152
 	},
@@ -3191,6 +3240,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 18,
 		"forgeTarget": 153,
 		"iconf": "emchest6.png",
@@ -3230,6 +3280,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 19,
 		"forgeTarget": 154
 	},
@@ -3268,6 +3319,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 20,
 		"forgeTarget": 155
 	},
@@ -3319,6 +3371,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 17,
 		"forgeTarget": 156
 	},
@@ -3378,6 +3431,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 18,
 		"forgeTarget": 157,
 		"iconf": "epchest6.png",
@@ -3419,6 +3473,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 19,
 		"forgeTarget": 158
 	},
@@ -3456,6 +3511,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 20,
 		"forgeTarget": 159
 	},
@@ -3498,6 +3554,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 17,
 		"forgeTarget": 160
 	},
@@ -3544,6 +3601,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 18,
 		"forgeTarget": 161
 	},
@@ -3586,6 +3644,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 19,
 		"forgeTarget": 162,
 		"iconf": "ewsubweapon6.png",
@@ -3627,6 +3686,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 20,
 		"forgeTarget": 163
 	},
@@ -3671,7 +3731,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 1,
-		"forgeID": 23
+		"hide": true
 	},
 	{
 		"classId": 105,
@@ -3717,7 +3777,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 1,
-		"forgeID": 24
+		"hide": true
 	},
 	{
 		"classId": 106,
@@ -3754,7 +3814,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 1,
-		"forgeID": 25
+		"hide": true
 	},
 	{
 		"classId": 107,
@@ -3792,7 +3852,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 1,
-		"forgeID": 26
+		"hide": true
 	},
 	{
 		"classId": 108,
@@ -3833,7 +3893,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 2,
-		"forgeID": 23
+		"hide": true
 	},
 	{
 		"classId": 109,
@@ -3879,7 +3939,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 2,
-		"forgeID": 24
+		"hide": true
 	},
 	{
 		"classId": 110,
@@ -3918,7 +3978,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 2,
-		"forgeID": 25
+		"hide": true
 	},
 	{
 		"classId": 111,
@@ -3955,7 +4015,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 2,
-		"forgeID": 26
+		"hide": true
 	},
 	{
 		"classId": 112,
@@ -3997,7 +4057,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 0,
-		"forgeID": 23
+		"hide": true
 	},
 	{
 		"classId": 113,
@@ -4042,7 +4102,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 0,
-		"forgeID": 24
+		"hide": true
 	},
 	{
 		"classId": 114,
@@ -4078,7 +4138,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 0,
-		"forgeID": 25
+		"hide": true
 	},
 	{
 		"classId": 115,
@@ -4117,7 +4177,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 15,
 		"enhanceID": 0,
-		"forgeID": 26
+		"hide": true
 	},
 	{
 		"classId": 116,
@@ -4160,6 +4220,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 23,
 		"forgeTarget": 176
 	},
@@ -4207,6 +4268,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 24,
 		"forgeTarget": 177
 	},
@@ -4245,6 +4307,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 25,
 		"forgeTarget": 178
 	},
@@ -4284,6 +4347,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 26,
 		"forgeTarget": 179
 	},
@@ -4326,6 +4390,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 23,
 		"forgeTarget": 180
 	},
@@ -4373,6 +4438,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 24,
 		"forgeTarget": 181
 	},
@@ -4413,6 +4479,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 25,
 		"forgeTarget": 182
 	},
@@ -4451,6 +4518,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 26,
 		"forgeTarget": 183
 	},
@@ -4494,6 +4562,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 23,
 		"forgeTarget": 184
 	},
@@ -4541,6 +4610,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 24,
 		"forgeTarget": 185
 	},
@@ -4579,6 +4649,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 25,
 		"forgeTarget": 186
 	},
@@ -4619,6 +4690,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 20,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 26,
 		"forgeTarget": 187
 	},
@@ -4663,6 +4735,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 23,
 		"forgeTarget": 188
 	},
@@ -4710,6 +4783,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 24,
 		"forgeTarget": 189
 	},
@@ -4748,6 +4822,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 25,
 		"forgeTarget": 190
 	},
@@ -4787,6 +4862,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 26,
 		"forgeTarget": 191
 	},
@@ -4829,6 +4905,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 23,
 		"forgeTarget": 192
 	},
@@ -4876,6 +4953,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 24,
 		"forgeTarget": 193
 	},
@@ -4916,6 +4994,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 25,
 		"forgeTarget": 194
 	},
@@ -4954,6 +5033,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 26,
 		"forgeTarget": 195
 	},
@@ -4997,6 +5077,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 23,
 		"forgeTarget": 196
 	},
@@ -5044,6 +5125,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 24,
 		"forgeTarget": 197
 	},
@@ -5082,6 +5164,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 25,
 		"forgeTarget": 198
 	},
@@ -5122,6 +5205,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 25,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 26,
 		"forgeTarget": 199
 	},
@@ -5176,6 +5260,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 23,
 		"forgeTarget": 200
 	},
@@ -5236,6 +5321,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 24,
 		"forgeTarget": 201,
 		"iconf": "emchest5.png",
@@ -5276,6 +5362,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 25,
 		"forgeTarget": 202
 	},
@@ -5315,6 +5402,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 26,
 		"forgeTarget": 203
 	},
@@ -5367,6 +5455,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 23,
 		"forgeTarget": 204
 	},
@@ -5427,6 +5516,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 24,
 		"forgeTarget": 205,
 		"iconf": "epchest5.png",
@@ -5469,6 +5559,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 25,
 		"forgeTarget": 206
 	},
@@ -5507,6 +5598,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 26,
 		"forgeTarget": 207
 	},
@@ -5550,6 +5642,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 23,
 		"forgeTarget": 208
 	},
@@ -5597,6 +5690,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 24,
 		"forgeTarget": 209
 	},
@@ -5640,6 +5734,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 25,
 		"forgeTarget": 210,
 		"iconf": "ewsubweapon5.png",
@@ -5682,6 +5777,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 30,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 26,
 		"forgeTarget": 211
 	},
@@ -5736,6 +5832,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 23,
 		"forgeTarget": 212
 	},
@@ -5796,6 +5893,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 24,
 		"forgeTarget": 213,
 		"iconf": "emchest6.png",
@@ -5830,10 +5928,11 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 1,
-		"forgeID": 25,
+		"hide": true,
 		"basic_properties": {
 			"critical": 60
 		},
+		"forgeID": 25,
 		"forgeTarget": 214
 	},
 	{
@@ -5873,6 +5972,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 26,
 		"forgeTarget": 215
 	},
@@ -5925,6 +6025,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 23,
 		"forgeTarget": 216
 	},
@@ -5985,6 +6086,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 24,
 		"forgeTarget": 217,
 		"iconf": "epchest6.png",
@@ -6027,6 +6129,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 25,
 		"forgeTarget": 218
 	},
@@ -6065,6 +6168,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 26,
 		"forgeTarget": 219
 	},
@@ -6108,6 +6212,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 23,
 		"forgeTarget": 220
 	},
@@ -6155,6 +6260,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 24,
 		"forgeTarget": 221
 	},
@@ -6198,6 +6304,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 25,
 		"forgeTarget": 222,
 		"iconf": "ewsubweapon6.png",
@@ -6240,6 +6347,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 26,
 		"forgeTarget": 223
 	},
@@ -6293,6 +6401,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 40,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 23,
 		"forgeTarget": 224
 	},
@@ -6352,6 +6461,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 40,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 24,
 		"forgeTarget": 225,
 		"iconf": "emchest7.png",
@@ -6391,6 +6501,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 40,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 25,
 		"forgeTarget": 226
 	},
@@ -6429,6 +6540,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 40,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 26,
 		"forgeTarget": 227
 	},
@@ -6480,6 +6592,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 40,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 23,
 		"forgeTarget": 228
 	},
@@ -6539,6 +6652,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 40,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 24,
 		"forgeTarget": 229,
 		"iconf": "epchest7.png",
@@ -6580,6 +6694,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 40,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 25,
 		"forgeTarget": 230
 	},
@@ -6617,6 +6732,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 40,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 26,
 		"forgeTarget": 231
 	},
@@ -6659,6 +6775,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 40,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 23,
 		"forgeTarget": 232
 	},
@@ -6705,6 +6822,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 40,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 24,
 		"forgeTarget": 233
 	},
@@ -6747,6 +6865,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 40,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 25,
 		"forgeTarget": 234,
 		"iconf": "ewsubweapon7.png",
@@ -6788,6 +6907,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 40,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 26,
 		"forgeTarget": 235
 	},
@@ -6832,7 +6952,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 1,
-		"forgeID": 29
+		"hide": true
 	},
 	{
 		"classId": 177,
@@ -6878,7 +6998,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 1,
-		"forgeID": 30
+		"hide": true
 	},
 	{
 		"classId": 178,
@@ -6915,7 +7035,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 1,
-		"forgeID": 31
+		"hide": true
 	},
 	{
 		"classId": 179,
@@ -6953,7 +7073,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 1,
-		"forgeID": 32
+		"hide": true
 	},
 	{
 		"classId": 180,
@@ -6994,7 +7114,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 2,
-		"forgeID": 29
+		"hide": true
 	},
 	{
 		"classId": 181,
@@ -7040,7 +7160,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 2,
-		"forgeID": 30
+		"hide": true
 	},
 	{
 		"classId": 182,
@@ -7079,7 +7199,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 2,
-		"forgeID": 31
+		"hide": true
 	},
 	{
 		"classId": 183,
@@ -7116,7 +7236,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 2,
-		"forgeID": 32
+		"hide": true
 	},
 	{
 		"classId": 184,
@@ -7158,7 +7278,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 0,
-		"forgeID": 29
+		"hide": true
 	},
 	{
 		"classId": 185,
@@ -7204,7 +7324,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 0,
-		"forgeID": 30
+		"hide": true
 	},
 	{
 		"classId": 186,
@@ -7241,7 +7361,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 0,
-		"forgeID": 31
+		"hide": true
 	},
 	{
 		"classId": 187,
@@ -7280,7 +7400,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 35,
 		"enhanceID": 0,
-		"forgeID": 32
+		"hide": true
 	},
 	{
 		"classId": 188,
@@ -7323,6 +7443,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 50,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 29,
 		"forgeTarget": 248
 	},
@@ -7370,6 +7491,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 50,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 30,
 		"forgeTarget": 249
 	},
@@ -7408,6 +7530,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 50,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 31,
 		"forgeTarget": 250
 	},
@@ -7447,6 +7570,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 50,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 32,
 		"forgeTarget": 251
 	},
@@ -7489,6 +7613,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 50,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 29,
 		"forgeTarget": 252
 	},
@@ -7536,6 +7661,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 50,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 30,
 		"forgeTarget": 253
 	},
@@ -7576,6 +7702,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 50,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 31,
 		"forgeTarget": 254
 	},
@@ -7614,6 +7741,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 50,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 32,
 		"forgeTarget": 255
 	},
@@ -7657,6 +7785,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 50,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 29,
 		"forgeTarget": 256
 	},
@@ -7704,6 +7833,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 50,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 30,
 		"forgeTarget": 257
 	},
@@ -7742,6 +7872,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 50,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 31,
 		"forgeTarget": 258
 	},
@@ -7782,6 +7913,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 50,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 32,
 		"forgeTarget": 259
 	},
@@ -7836,6 +7968,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 29,
 		"forgeTarget": 260
 	},
@@ -7896,6 +8029,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 30,
 		"forgeTarget": 261,
 		"iconf": "emchest5.png",
@@ -7936,6 +8070,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 31,
 		"forgeTarget": 262
 	},
@@ -7975,6 +8110,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 32,
 		"forgeTarget": 263
 	},
@@ -8027,6 +8163,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 29,
 		"forgeTarget": 264
 	},
@@ -8087,6 +8224,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 30,
 		"forgeTarget": 265,
 		"iconf": "epchest5.png",
@@ -8129,6 +8267,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 31,
 		"forgeTarget": 266
 	},
@@ -8167,6 +8306,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 32,
 		"forgeTarget": 267
 	},
@@ -8210,6 +8350,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 29,
 		"forgeTarget": 268
 	},
@@ -8257,6 +8398,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 30,
 		"forgeTarget": 269
 	},
@@ -8300,6 +8442,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 31,
 		"forgeTarget": 270,
 		"iconf": "ewsubweapon5.png",
@@ -8342,6 +8485,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 32,
 		"forgeTarget": 271
 	},
@@ -8396,6 +8540,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 75,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 29,
 		"forgeTarget": 272
 	},
@@ -8456,6 +8601,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 75,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 30,
 		"forgeTarget": 273,
 		"iconf": "emchest6.png",
@@ -8496,6 +8642,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 75,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 31,
 		"forgeTarget": 274
 	},
@@ -8535,6 +8682,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 75,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 32,
 		"forgeTarget": 275
 	},
@@ -8587,6 +8735,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 75,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 29,
 		"forgeTarget": 276
 	},
@@ -8647,6 +8796,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 75,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 30,
 		"forgeTarget": 277,
 		"iconf": "epchest6.png",
@@ -8689,6 +8839,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 75,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 31,
 		"forgeTarget": 278
 	},
@@ -8727,6 +8878,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 75,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 32,
 		"forgeTarget": 279
 	},
@@ -8770,6 +8922,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 75,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 29,
 		"forgeTarget": 280
 	},
@@ -8817,6 +8970,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 75,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 30,
 		"forgeTarget": 281
 	},
@@ -8860,6 +9014,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 75,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 31,
 		"forgeTarget": 282,
 		"iconf": "ewsubweapon6.png",
@@ -8902,6 +9057,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 75,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 32,
 		"forgeTarget": 283
 	},
@@ -8956,6 +9112,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 29,
 		"forgeTarget": 284
 	},
@@ -9016,6 +9173,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 30,
 		"forgeTarget": 285,
 		"iconf": "emchest7.png",
@@ -9056,6 +9214,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 31,
 		"forgeTarget": 286
 	},
@@ -9095,6 +9254,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 32,
 		"forgeTarget": 287
 	},
@@ -9147,6 +9307,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 29,
 		"forgeTarget": 288
 	},
@@ -9207,6 +9368,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 30,
 		"forgeTarget": 289,
 		"iconf": "epchest7.png",
@@ -9249,6 +9411,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 31,
 		"forgeTarget": 290
 	},
@@ -9287,6 +9450,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 32,
 		"forgeTarget": 291
 	},
@@ -9330,6 +9494,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 29,
 		"forgeTarget": 292
 	},
@@ -9377,6 +9542,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 30,
 		"forgeTarget": 293
 	},
@@ -9420,6 +9586,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 31,
 		"forgeTarget": 294,
 		"iconf": "ewsubweapon7.png",
@@ -9462,6 +9629,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 32,
 		"forgeTarget": 295
 	},
@@ -9515,6 +9683,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 110,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 29,
 		"forgeTarget": 296
 	},
@@ -9574,6 +9743,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 110,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 30,
 		"forgeTarget": 297,
 		"iconf": "emchest8.png",
@@ -9613,6 +9783,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 110,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 31,
 		"forgeTarget": 298
 	},
@@ -9651,6 +9822,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 110,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 32,
 		"forgeTarget": 299
 	},
@@ -9702,6 +9874,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 110,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 29,
 		"forgeTarget": 300
 	},
@@ -9761,6 +9934,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 110,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 30,
 		"forgeTarget": 301,
 		"iconf": "epchest8.png",
@@ -9802,6 +9976,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 110,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 31,
 		"forgeTarget": 302
 	},
@@ -9839,6 +10014,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 110,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 32,
 		"forgeTarget": 303
 	},
@@ -9881,6 +10057,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 110,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 29,
 		"forgeTarget": 304
 	},
@@ -9927,6 +10104,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 110,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 30,
 		"forgeTarget": 305
 	},
@@ -9964,6 +10142,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 110,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 31,
 		"forgeTarget": 306
 	},
@@ -10003,6 +10182,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 110,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 32,
 		"forgeTarget": 307
 	},
@@ -10047,7 +10227,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 1,
-		"forgeID": 35
+		"hide": true
 	},
 	{
 		"classId": 249,
@@ -10093,7 +10273,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 1,
-		"forgeID": 36
+		"hide": true
 	},
 	{
 		"classId": 250,
@@ -10130,7 +10310,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 1,
-		"forgeID": 37
+		"hide": true
 	},
 	{
 		"classId": 251,
@@ -10168,7 +10348,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 1,
-		"forgeID": 38
+		"hide": true
 	},
 	{
 		"classId": 252,
@@ -10209,7 +10389,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 2,
-		"forgeID": 35
+		"hide": true
 	},
 	{
 		"classId": 253,
@@ -10255,7 +10435,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 2,
-		"forgeID": 36
+		"hide": true
 	},
 	{
 		"classId": 254,
@@ -10294,7 +10474,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 2,
-		"forgeID": 37
+		"hide": true
 	},
 	{
 		"classId": 255,
@@ -10331,7 +10511,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 2,
-		"forgeID": 38
+		"hide": true
 	},
 	{
 		"classId": 256,
@@ -10373,7 +10553,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 0,
-		"forgeID": 35
+		"hide": true
 	},
 	{
 		"classId": 257,
@@ -10419,7 +10599,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 0,
-		"forgeID": 36
+		"hide": true
 	},
 	{
 		"classId": 258,
@@ -10456,7 +10636,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 0,
-		"forgeID": 37
+		"hide": true
 	},
 	{
 		"classId": 259,
@@ -10495,7 +10675,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 60,
 		"enhanceID": 0,
-		"forgeID": 38
+		"hide": true
 	},
 	{
 		"classId": 260,
@@ -10548,6 +10728,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 35,
 		"forgeTarget": 320
 	},
@@ -10608,6 +10789,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 36,
 		"forgeTarget": 321,
 		"iconf": "emchest5.png",
@@ -10648,6 +10830,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 37,
 		"forgeTarget": 322
 	},
@@ -10687,6 +10870,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 38,
 		"forgeTarget": 323
 	},
@@ -10739,6 +10923,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 35,
 		"forgeTarget": 324
 	},
@@ -10799,6 +10984,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 36,
 		"forgeTarget": 325,
 		"iconf": "epchest5.png",
@@ -10841,6 +11027,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 37,
 		"forgeTarget": 326
 	},
@@ -10879,6 +11066,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 38,
 		"forgeTarget": 327
 	},
@@ -10922,6 +11110,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 35,
 		"forgeTarget": 328
 	},
@@ -10969,6 +11158,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 36,
 		"forgeTarget": 329
 	},
@@ -11012,6 +11202,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 37,
 		"forgeTarget": 330,
 		"iconf": "ewsubweapon5.png",
@@ -11054,6 +11245,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 90,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 38,
 		"forgeTarget": 331
 	},
@@ -11108,6 +11300,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 120,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 35,
 		"forgeTarget": 332
 	},
@@ -11168,6 +11361,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 120,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 36,
 		"forgeTarget": 333,
 		"iconf": "emchest6.png",
@@ -11208,6 +11402,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 120,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 37,
 		"forgeTarget": 334
 	},
@@ -11247,6 +11442,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 120,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 38,
 		"forgeTarget": 335
 	},
@@ -11299,6 +11495,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 120,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 35,
 		"forgeTarget": 336
 	},
@@ -11359,6 +11556,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 120,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 36,
 		"forgeTarget": 337,
 		"iconf": "epchest6.png",
@@ -11401,6 +11599,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 120,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 37,
 		"forgeTarget": 338
 	},
@@ -11439,6 +11638,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 120,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 38,
 		"forgeTarget": 339
 	},
@@ -11482,6 +11682,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 120,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 35,
 		"forgeTarget": 340
 	},
@@ -11529,6 +11730,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 120,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 36,
 		"forgeTarget": 341
 	},
@@ -11572,6 +11774,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 120,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 37,
 		"forgeTarget": 342,
 		"iconf": "ewsubweapon6.png",
@@ -11614,6 +11817,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 120,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 38,
 		"forgeTarget": 343
 	},
@@ -11668,6 +11872,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 150,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 35,
 		"forgeTarget": 344
 	},
@@ -11728,6 +11933,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 150,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 36,
 		"forgeTarget": 345,
 		"iconf": "emchest7.png",
@@ -11768,6 +11974,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 150,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 37,
 		"forgeTarget": 346
 	},
@@ -11807,6 +12014,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 150,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 38,
 		"forgeTarget": 347
 	},
@@ -11859,6 +12067,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 150,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 35,
 		"forgeTarget": 348
 	},
@@ -11919,6 +12128,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 150,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 36,
 		"forgeTarget": 349,
 		"iconf": "epchest7.png",
@@ -11961,6 +12171,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 150,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 37,
 		"forgeTarget": 350
 	},
@@ -11999,6 +12210,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 150,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 38,
 		"forgeTarget": 351
 	},
@@ -12042,6 +12254,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 150,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 35,
 		"forgeTarget": 352
 	},
@@ -12089,6 +12302,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 150,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 36,
 		"forgeTarget": 353
 	},
@@ -12132,6 +12346,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 150,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 37,
 		"forgeTarget": 354,
 		"iconf": "ewsubweapon7.png",
@@ -12174,6 +12389,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 150,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 38,
 		"forgeTarget": 355
 	},
@@ -12228,6 +12444,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 180,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 35,
 		"forgeTarget": 356
 	},
@@ -12288,6 +12505,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 180,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 36,
 		"forgeTarget": 357,
 		"iconf": "emchest8.png",
@@ -12328,6 +12546,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 180,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 37,
 		"forgeTarget": 358
 	},
@@ -12367,6 +12586,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 180,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 38,
 		"forgeTarget": 359
 	},
@@ -12419,6 +12639,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 180,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 35,
 		"forgeTarget": 360
 	},
@@ -12479,6 +12700,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 180,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 36,
 		"forgeTarget": 361,
 		"iconf": "epchest8.png",
@@ -12521,6 +12743,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 180,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 37,
 		"forgeTarget": 362
 	},
@@ -12559,6 +12782,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 180,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 38,
 		"forgeTarget": 363
 	},
@@ -12602,6 +12826,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 180,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 35,
 		"forgeTarget": 364
 	},
@@ -12649,6 +12874,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 180,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 36,
 		"forgeTarget": 365
 	},
@@ -12687,6 +12913,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 180,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 37,
 		"forgeTarget": 366
 	},
@@ -12727,6 +12954,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 180,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 38,
 		"forgeTarget": 367
 	},
@@ -12780,6 +13008,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 210,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 35,
 		"forgeTarget": 368
 	},
@@ -12839,6 +13068,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 210,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 36,
 		"forgeTarget": 369,
 		"iconf": "emchest9.png",
@@ -12878,6 +13108,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 210,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 37,
 		"forgeTarget": 370
 	},
@@ -12916,6 +13147,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 210,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 38,
 		"forgeTarget": 371
 	},
@@ -12967,6 +13199,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 210,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 35,
 		"forgeTarget": 372
 	},
@@ -13026,6 +13259,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 210,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 36,
 		"forgeTarget": 373,
 		"iconf": "epchest9.png",
@@ -13066,6 +13300,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 210,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 37,
 		"forgeTarget": 374
 	},
@@ -13103,6 +13338,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 210,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 38,
 		"forgeTarget": 375
 	},
@@ -13145,6 +13381,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 210,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 35,
 		"forgeTarget": 376
 	},
@@ -13191,6 +13428,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 210,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 36,
 		"forgeTarget": 377
 	},
@@ -13228,6 +13466,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 210,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 37,
 		"forgeTarget": 378
 	},
@@ -13267,6 +13506,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 210,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 38,
 		"forgeTarget": 379
 	},
@@ -13320,7 +13560,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 100,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 321,
@@ -13379,6 +13620,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 100,
 		"enhanceID": 1,
+		"hide": true,
 		"iconf": "emchest5.png",
 		"iconm": "emchest5-2.png"
 	},
@@ -13416,7 +13658,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 100,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 323,
@@ -13453,7 +13696,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 100,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 324,
@@ -13503,7 +13747,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 100,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 325,
@@ -13562,6 +13807,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 100,
 		"enhanceID": 2,
+		"hide": true,
 		"iconf": "epchest5.png",
 		"iconm": "epchest5-2.png"
 	},
@@ -13601,7 +13847,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 100,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 327,
@@ -13637,7 +13884,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 100,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 328,
@@ -13678,7 +13926,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 100,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 329,
@@ -13723,7 +13972,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 100,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 330,
@@ -13765,6 +14015,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 100,
 		"enhanceID": 0,
+		"hide": true,
 		"iconf": "ewsubweapon5.png",
 		"iconm": "ewsubweapon5-2.png"
 	},
@@ -13804,7 +14055,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 100,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 332,
@@ -13856,7 +14108,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 150,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 333,
@@ -13915,6 +14168,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 150,
 		"enhanceID": 1,
+		"hide": true,
 		"iconf": "emchest6.png",
 		"iconm": "emchest6-2.png"
 	},
@@ -13952,7 +14206,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 150,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 335,
@@ -13989,7 +14244,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 150,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 336,
@@ -14039,7 +14295,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 150,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 337,
@@ -14098,6 +14355,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 150,
 		"enhanceID": 2,
+		"hide": true,
 		"iconf": "epchest6.png",
 		"iconm": "epchest6-2.png"
 	},
@@ -14137,7 +14395,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 150,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 339,
@@ -14173,7 +14432,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 150,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 340,
@@ -14214,7 +14474,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 150,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 341,
@@ -14259,7 +14520,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 150,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 342,
@@ -14301,6 +14563,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 150,
 		"enhanceID": 0,
+		"hide": true,
 		"iconf": "ewsubweapon6.png",
 		"iconm": "ewsubweapon6-2.png"
 	},
@@ -14340,7 +14603,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 150,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 344,
@@ -14392,7 +14656,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 200,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 345,
@@ -14451,6 +14716,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 200,
 		"enhanceID": 1,
+		"hide": true,
 		"iconf": "emchest7.png",
 		"iconm": "emchest7-2.png"
 	},
@@ -14488,7 +14754,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 200,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 347,
@@ -14525,7 +14792,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 200,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 348,
@@ -14575,7 +14843,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 200,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 349,
@@ -14634,6 +14903,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 200,
 		"enhanceID": 2,
+		"hide": true,
 		"iconf": "epchest7.png",
 		"iconm": "epchest7-2.png"
 	},
@@ -14673,7 +14943,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 200,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 351,
@@ -14709,7 +14980,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 200,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 352,
@@ -14750,7 +15022,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 200,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 353,
@@ -14795,7 +15068,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 200,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 354,
@@ -14837,6 +15111,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 200,
 		"enhanceID": 0,
+		"hide": true,
 		"iconf": "ewsubweapon7.png",
 		"iconm": "ewsubweapon7-2.png"
 	},
@@ -14876,7 +15151,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 200,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 356,
@@ -14928,7 +15204,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 250,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 357,
@@ -14987,6 +15264,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 250,
 		"enhanceID": 1,
+		"hide": true,
 		"iconf": "emchest8.png",
 		"iconm": "emchest8-2.png"
 	},
@@ -15024,7 +15302,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 250,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 359,
@@ -15061,7 +15340,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 250,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 360,
@@ -15111,7 +15391,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 250,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 361,
@@ -15170,6 +15451,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 250,
 		"enhanceID": 2,
+		"hide": true,
 		"iconf": "epchest8.png",
 		"iconm": "epchest8-2.png"
 	},
@@ -15209,7 +15491,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 250,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 363,
@@ -15245,7 +15528,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 250,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 364,
@@ -15286,7 +15570,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 250,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 365,
@@ -15331,7 +15616,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 250,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 366,
@@ -15367,7 +15653,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 250,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 367,
@@ -15405,7 +15692,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 250,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 368,
@@ -15457,7 +15745,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 300,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 369,
@@ -15516,6 +15805,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 300,
 		"enhanceID": 1,
+		"hide": true,
 		"iconf": "emchest9.png",
 		"iconm": "emchest9-2.png"
 	},
@@ -15553,7 +15843,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 300,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 371,
@@ -15590,7 +15881,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 300,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 372,
@@ -15640,7 +15932,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 300,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 373,
@@ -15699,6 +15992,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 300,
 		"enhanceID": 2,
+		"hide": true,
 		"iconf": "epchest9.png",
 		"iconm": "epchest9-2.png"
 	},
@@ -15738,7 +16032,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 300,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 375,
@@ -15774,7 +16069,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 300,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 376,
@@ -15815,7 +16111,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 300,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 377,
@@ -15860,7 +16157,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 300,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 378,
@@ -15896,7 +16194,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 300,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 379,
@@ -15933,7 +16232,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 300,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 380,
@@ -15984,7 +16284,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 400,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 381,
@@ -16042,6 +16343,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 400,
 		"enhanceID": 1,
+		"hide": true,
 		"iconf": "emchest10.png",
 		"iconm": "emchest10-2.png"
 	},
@@ -16078,7 +16380,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 400,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 383,
@@ -16114,7 +16417,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 400,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 384,
@@ -16163,7 +16467,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 400,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 385,
@@ -16221,6 +16526,7 @@ exports.data = [
 		"autoUse": true,
 		"sellGem": 400,
 		"enhanceID": 2,
+		"hide": true,
 		"iconf": "epchest10.png",
 		"iconm": "epchest10-2.png"
 	},
@@ -16259,7 +16565,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 400,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 387,
@@ -16294,7 +16601,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 400,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 388,
@@ -16334,7 +16642,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 400,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 389,
@@ -16378,7 +16687,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 400,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 390,
@@ -16413,7 +16723,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 400,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 391,
@@ -16450,7 +16761,8 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"sellGem": 400,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 392,
@@ -21730,7 +22042,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
-		"forgeID": 21
+		"hide": true
 	},
 	{
 		"classId": 623,
@@ -21757,8 +22069,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 21,
-		"forgeTarget": 631
+		"forgeTarget": 628
 	},
 	{
 		"classId": 624,
@@ -21785,8 +22098,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 21,
-		"forgeTarget": 632
+		"forgeTarget": 629
 	},
 	{
 		"classId": 625,
@@ -21813,8 +22127,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 21,
-		"forgeTarget": 633
+		"forgeTarget": 630
 	},
 	{
 		"classId": 626,
@@ -21841,8 +22156,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 21,
-		"forgeTarget": 634
+		"forgeTarget": 631
 	},
 	{
 		"classId": 627,
@@ -21868,8 +22184,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 21,
-		"forgeTarget": 635
+		"forgeTarget": 632
 	},
 	{
 		"classId": 628,
@@ -21896,7 +22213,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
-		"forgeID": 27
+		"hide": true
 	},
 	{
 		"classId": 629,
@@ -21923,8 +22240,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 27,
-		"forgeTarget": 637
+		"forgeTarget": 634
 	},
 	{
 		"classId": 630,
@@ -21951,8 +22269,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 27,
-		"forgeTarget": 638
+		"forgeTarget": 635
 	},
 	{
 		"classId": 631,
@@ -21979,8 +22298,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 27,
-		"forgeTarget": 639
+		"forgeTarget": 636
 	},
 	{
 		"classId": 632,
@@ -22007,8 +22327,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 27,
-		"forgeTarget": 640
+		"forgeTarget": 637
 	},
 	{
 		"classId": 633,
@@ -22034,8 +22355,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 27,
-		"forgeTarget": 641
+		"forgeTarget": 638
 	},
 	{
 		"classId": 634,
@@ -22062,7 +22384,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
-		"forgeID": 33
+		"hide": true
 	},
 	{
 		"classId": 635,
@@ -22089,8 +22411,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 33,
-		"forgeTarget": 643
+		"forgeTarget": 640
 	},
 	{
 		"classId": 636,
@@ -22117,8 +22440,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 33,
-		"forgeTarget": 644
+		"forgeTarget": 641
 	},
 	{
 		"classId": 637,
@@ -22145,8 +22469,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 33,
-		"forgeTarget": 645
+		"forgeTarget": 642
 	},
 	{
 		"classId": 638,
@@ -22173,8 +22498,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 33,
-		"forgeTarget": 646
+		"forgeTarget": 643
 	},
 	{
 		"classId": 639,
@@ -22200,8 +22526,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 33,
-		"forgeTarget": 647
+		"forgeTarget": 644
 	},
 	{
 		"classId": 640,
@@ -22228,7 +22555,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
-		"forgeID": 39
+		"hide": true
 	},
 	{
 		"classId": 641,
@@ -22255,8 +22582,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 39,
-		"forgeTarget": 649
+		"forgeTarget": 646
 	},
 	{
 		"classId": 642,
@@ -22283,8 +22611,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 39,
-		"forgeTarget": 650
+		"forgeTarget": 647
 	},
 	{
 		"classId": 643,
@@ -22311,8 +22640,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 39,
-		"forgeTarget": 651
+		"forgeTarget": 648
 	},
 	{
 		"classId": 644,
@@ -22339,8 +22669,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 39,
-		"forgeTarget": 652
+		"forgeTarget": 649
 	},
 	{
 		"classId": 645,
@@ -22366,8 +22697,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 39,
-		"forgeTarget": 653
+		"forgeTarget": 650
 	},
 	{
 		"classId": 646,
@@ -22393,7 +22725,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 647,
@@ -22419,7 +22752,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 648,
@@ -22445,7 +22779,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 649,
@@ -22471,7 +22806,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 650,
@@ -22497,7 +22833,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 651,
@@ -22522,7 +22859,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 652,
@@ -22547,7 +22885,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
-		"forgeID": 21
+		"hide": true
 	},
 	{
 		"classId": 653,
@@ -22573,8 +22911,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 21,
-		"forgeTarget": 661
+		"forgeTarget": 658
 	},
 	{
 		"classId": 654,
@@ -22600,8 +22939,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 21,
-		"forgeTarget": 662
+		"forgeTarget": 659
 	},
 	{
 		"classId": 655,
@@ -22627,8 +22967,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 21,
-		"forgeTarget": 663
+		"forgeTarget": 660
 	},
 	{
 		"classId": 656,
@@ -22654,8 +22995,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 21,
-		"forgeTarget": 664
+		"forgeTarget": 661
 	},
 	{
 		"classId": 657,
@@ -22680,8 +23022,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 21,
-		"forgeTarget": 665
+		"forgeTarget": 662
 	},
 	{
 		"classId": 658,
@@ -22707,7 +23050,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
-		"forgeID": 27
+		"hide": true
 	},
 	{
 		"classId": 659,
@@ -22733,8 +23076,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 27,
-		"forgeTarget": 667
+		"forgeTarget": 664
 	},
 	{
 		"classId": 660,
@@ -22760,8 +23104,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 27,
-		"forgeTarget": 668
+		"forgeTarget": 665
 	},
 	{
 		"classId": 661,
@@ -22787,8 +23132,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 27,
-		"forgeTarget": 669
+		"forgeTarget": 666
 	},
 	{
 		"classId": 662,
@@ -22814,8 +23160,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 27,
-		"forgeTarget": 670
+		"forgeTarget": 667
 	},
 	{
 		"classId": 663,
@@ -22840,8 +23187,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 27,
-		"forgeTarget": 671
+		"forgeTarget": 668
 	},
 	{
 		"classId": 664,
@@ -22867,7 +23215,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
-		"forgeID": 33
+		"hide": true
 	},
 	{
 		"classId": 665,
@@ -22893,8 +23241,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 33,
-		"forgeTarget": 673
+		"forgeTarget": 670
 	},
 	{
 		"classId": 666,
@@ -22920,8 +23269,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 33,
-		"forgeTarget": 674
+		"forgeTarget": 671
 	},
 	{
 		"classId": 667,
@@ -22947,8 +23297,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 33,
-		"forgeTarget": 675
+		"forgeTarget": 672
 	},
 	{
 		"classId": 668,
@@ -22974,8 +23325,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 33,
-		"forgeTarget": 676
+		"forgeTarget": 673
 	},
 	{
 		"classId": 669,
@@ -23000,8 +23352,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 33,
-		"forgeTarget": 677
+		"forgeTarget": 674
 	},
 	{
 		"classId": 670,
@@ -23027,7 +23380,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
-		"forgeID": 39
+		"hide": true
 	},
 	{
 		"classId": 671,
@@ -23053,8 +23406,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 39,
-		"forgeTarget": 679
+		"forgeTarget": 676
 	},
 	{
 		"classId": 672,
@@ -23080,8 +23434,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 39,
-		"forgeTarget": 680
+		"forgeTarget": 677
 	},
 	{
 		"classId": 673,
@@ -23107,8 +23462,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 39,
-		"forgeTarget": 681
+		"forgeTarget": 678
 	},
 	{
 		"classId": 674,
@@ -23134,8 +23490,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 39,
-		"forgeTarget": 682
+		"forgeTarget": 679
 	},
 	{
 		"classId": 675,
@@ -23160,8 +23517,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 39,
-		"forgeTarget": 683
+		"forgeTarget": 680
 	},
 	{
 		"classId": 676,
@@ -23186,7 +23544,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 677,
@@ -23211,7 +23570,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 678,
@@ -23236,7 +23596,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 679,
@@ -23261,7 +23622,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 680,
@@ -23286,7 +23648,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 681,
@@ -23310,7 +23673,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 682,
@@ -23335,7 +23699,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
-		"forgeID": 21
+		"hide": true
 	},
 	{
 		"classId": 683,
@@ -23361,8 +23725,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 21,
-		"forgeTarget": 691
+		"forgeTarget": 688
 	},
 	{
 		"classId": 684,
@@ -23388,8 +23753,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 21,
-		"forgeTarget": 692
+		"forgeTarget": 689
 	},
 	{
 		"classId": 685,
@@ -23415,8 +23781,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 21,
-		"forgeTarget": 693
+		"forgeTarget": 690
 	},
 	{
 		"classId": 686,
@@ -23442,8 +23809,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 21,
-		"forgeTarget": 694
+		"forgeTarget": 691
 	},
 	{
 		"classId": 687,
@@ -23468,8 +23836,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 21,
-		"forgeTarget": 695
+		"forgeTarget": 692
 	},
 	{
 		"classId": 688,
@@ -23495,7 +23864,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
-		"forgeID": 27
+		"hide": true
 	},
 	{
 		"classId": 689,
@@ -23521,8 +23890,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 27,
-		"forgeTarget": 697
+		"forgeTarget": 694
 	},
 	{
 		"classId": 690,
@@ -23548,8 +23918,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 27,
-		"forgeTarget": 698
+		"forgeTarget": 695
 	},
 	{
 		"classId": 691,
@@ -23575,8 +23946,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 27,
-		"forgeTarget": 699
+		"forgeTarget": 696
 	},
 	{
 		"classId": 692,
@@ -23602,8 +23974,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 27,
-		"forgeTarget": 700
+		"forgeTarget": 697
 	},
 	{
 		"classId": 693,
@@ -23628,8 +24001,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 27,
-		"forgeTarget": 701
+		"forgeTarget": 698
 	},
 	{
 		"classId": 694,
@@ -23655,7 +24029,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
-		"forgeID": 33
+		"hide": true
 	},
 	{
 		"classId": 695,
@@ -23681,8 +24055,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 33,
-		"forgeTarget": 703
+		"forgeTarget": 700
 	},
 	{
 		"classId": 696,
@@ -23708,8 +24083,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 33,
-		"forgeTarget": 704
+		"forgeTarget": 701
 	},
 	{
 		"classId": 697,
@@ -23735,8 +24111,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 33,
-		"forgeTarget": 705
+		"forgeTarget": 702
 	},
 	{
 		"classId": 698,
@@ -23762,8 +24139,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 33,
-		"forgeTarget": 706
+		"forgeTarget": 703
 	},
 	{
 		"classId": 699,
@@ -23788,8 +24166,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 33,
-		"forgeTarget": 707
+		"forgeTarget": 704
 	},
 	{
 		"classId": 700,
@@ -23815,7 +24194,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
-		"forgeID": 39
+		"hide": true
 	},
 	{
 		"classId": 701,
@@ -23841,8 +24220,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 39,
-		"forgeTarget": 709
+		"forgeTarget": 706
 	},
 	{
 		"classId": 702,
@@ -23868,8 +24248,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 39,
-		"forgeTarget": 710
+		"forgeTarget": 707
 	},
 	{
 		"classId": 703,
@@ -23895,8 +24276,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 39,
-		"forgeTarget": 711
+		"forgeTarget": 708
 	},
 	{
 		"classId": 704,
@@ -23922,8 +24304,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 39,
-		"forgeTarget": 712
+		"forgeTarget": 709
 	},
 	{
 		"classId": 705,
@@ -23948,8 +24331,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 39,
-		"forgeTarget": 713
+		"forgeTarget": 710
 	},
 	{
 		"classId": 706,
@@ -23974,7 +24358,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 707,
@@ -23999,7 +24384,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 708,
@@ -24024,7 +24410,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 709,
@@ -24049,7 +24436,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 710,
@@ -24074,7 +24462,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 711,
@@ -24098,7 +24487,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 712,
@@ -24124,7 +24514,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
-		"forgeID": 22
+		"hide": true
 	},
 	{
 		"classId": 713,
@@ -24150,8 +24540,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 22,
-		"forgeTarget": 721
+		"forgeTarget": 718
 	},
 	{
 		"classId": 714,
@@ -24177,8 +24568,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 22,
-		"forgeTarget": 722
+		"forgeTarget": 719
 	},
 	{
 		"classId": 715,
@@ -24204,8 +24596,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 22,
-		"forgeTarget": 723
+		"forgeTarget": 720
 	},
 	{
 		"classId": 716,
@@ -24231,8 +24624,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 22,
-		"forgeTarget": 724
+		"forgeTarget": 721
 	},
 	{
 		"classId": 717,
@@ -24257,8 +24651,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 22,
-		"forgeTarget": 725
+		"forgeTarget": 722
 	},
 	{
 		"classId": 718,
@@ -24284,7 +24679,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
-		"forgeID": 28
+		"hide": true
 	},
 	{
 		"classId": 719,
@@ -24310,8 +24705,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 28,
-		"forgeTarget": 727
+		"forgeTarget": 724
 	},
 	{
 		"classId": 720,
@@ -24337,8 +24733,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 28,
-		"forgeTarget": 728
+		"forgeTarget": 725
 	},
 	{
 		"classId": 721,
@@ -24364,8 +24761,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 28,
-		"forgeTarget": 729
+		"forgeTarget": 726
 	},
 	{
 		"classId": 722,
@@ -24391,8 +24789,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 28,
-		"forgeTarget": 730
+		"forgeTarget": 727
 	},
 	{
 		"classId": 723,
@@ -24417,8 +24816,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 28,
-		"forgeTarget": 731
+		"forgeTarget": 728
 	},
 	{
 		"classId": 724,
@@ -24444,7 +24844,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
-		"forgeID": 34
+		"hide": true
 	},
 	{
 		"classId": 725,
@@ -24470,8 +24870,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 34,
-		"forgeTarget": 733
+		"forgeTarget": 730
 	},
 	{
 		"classId": 726,
@@ -24497,8 +24898,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 34,
-		"forgeTarget": 734
+		"forgeTarget": 731
 	},
 	{
 		"classId": 727,
@@ -24524,8 +24926,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 34,
-		"forgeTarget": 735
+		"forgeTarget": 732
 	},
 	{
 		"classId": 728,
@@ -24551,8 +24954,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 34,
-		"forgeTarget": 736
+		"forgeTarget": 733
 	},
 	{
 		"classId": 729,
@@ -24577,8 +24981,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 34,
-		"forgeTarget": 737
+		"forgeTarget": 734
 	},
 	{
 		"classId": 730,
@@ -24604,7 +25009,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
-		"forgeID": 40
+		"hide": true
 	},
 	{
 		"classId": 731,
@@ -24630,8 +25035,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 40,
-		"forgeTarget": 739
+		"forgeTarget": 736
 	},
 	{
 		"classId": 732,
@@ -24657,8 +25063,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 40,
-		"forgeTarget": 740
+		"forgeTarget": 737
 	},
 	{
 		"classId": 733,
@@ -24684,8 +25091,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 40,
-		"forgeTarget": 741
+		"forgeTarget": 738
 	},
 	{
 		"classId": 734,
@@ -24711,8 +25119,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 40,
-		"forgeTarget": 742
+		"forgeTarget": 739
 	},
 	{
 		"classId": 735,
@@ -24737,8 +25146,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 0,
+		"hide": true,
 		"forgeID": 40,
-		"forgeTarget": 743
+		"forgeTarget": 740
 	},
 	{
 		"classId": 736,
@@ -24763,7 +25173,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 737,
@@ -24788,7 +25199,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 738,
@@ -24813,7 +25225,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 739,
@@ -24838,7 +25251,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 740,
@@ -24863,7 +25277,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 741,
@@ -24887,7 +25302,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 0
+		"enhanceID": 0,
+		"hide": true
 	},
 	{
 		"classId": 742,
@@ -24912,7 +25328,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
-		"forgeID": 22
+		"hide": true
 	},
 	{
 		"classId": 743,
@@ -24937,8 +25353,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 22,
-		"forgeTarget": 751
+		"forgeTarget": 748
 	},
 	{
 		"classId": 744,
@@ -24963,8 +25380,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 22,
-		"forgeTarget": 752
+		"forgeTarget": 749
 	},
 	{
 		"classId": 745,
@@ -24989,8 +25407,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 22,
-		"forgeTarget": 753
+		"forgeTarget": 750
 	},
 	{
 		"classId": 746,
@@ -25015,8 +25434,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 22,
-		"forgeTarget": 754
+		"forgeTarget": 751
 	},
 	{
 		"classId": 747,
@@ -25040,8 +25460,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 22,
-		"forgeTarget": 755
+		"forgeTarget": 752
 	},
 	{
 		"classId": 748,
@@ -25066,7 +25487,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
-		"forgeID": 28
+		"hide": true
 	},
 	{
 		"classId": 749,
@@ -25091,8 +25512,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 28,
-		"forgeTarget": 757
+		"forgeTarget": 754
 	},
 	{
 		"classId": 750,
@@ -25117,8 +25539,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 28,
-		"forgeTarget": 758
+		"forgeTarget": 755
 	},
 	{
 		"classId": 751,
@@ -25143,8 +25566,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 28,
-		"forgeTarget": 759
+		"forgeTarget": 756
 	},
 	{
 		"classId": 752,
@@ -25169,8 +25593,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 28,
-		"forgeTarget": 760
+		"forgeTarget": 757
 	},
 	{
 		"classId": 753,
@@ -25194,8 +25619,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 28,
-		"forgeTarget": 761
+		"forgeTarget": 758
 	},
 	{
 		"classId": 754,
@@ -25220,7 +25646,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
-		"forgeID": 34
+		"hide": true
 	},
 	{
 		"classId": 755,
@@ -25245,8 +25671,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 34,
-		"forgeTarget": 763
+		"forgeTarget": 760
 	},
 	{
 		"classId": 756,
@@ -25271,8 +25698,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 34,
-		"forgeTarget": 764
+		"forgeTarget": 761
 	},
 	{
 		"classId": 757,
@@ -25297,8 +25725,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 34,
-		"forgeTarget": 765
+		"forgeTarget": 762
 	},
 	{
 		"classId": 758,
@@ -25323,8 +25752,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 34,
-		"forgeTarget": 766
+		"forgeTarget": 763
 	},
 	{
 		"classId": 759,
@@ -25348,8 +25778,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 34,
-		"forgeTarget": 767
+		"forgeTarget": 764
 	},
 	{
 		"classId": 760,
@@ -25374,7 +25805,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
-		"forgeID": 40
+		"hide": true
 	},
 	{
 		"classId": 761,
@@ -25399,8 +25830,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 40,
-		"forgeTarget": 769
+		"forgeTarget": 766
 	},
 	{
 		"classId": 762,
@@ -25425,8 +25857,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 40,
-		"forgeTarget": 770
+		"forgeTarget": 767
 	},
 	{
 		"classId": 763,
@@ -25451,8 +25884,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 40,
-		"forgeTarget": 771
+		"forgeTarget": 768
 	},
 	{
 		"classId": 764,
@@ -25477,8 +25911,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 40,
-		"forgeTarget": 772
+		"forgeTarget": 769
 	},
 	{
 		"classId": 765,
@@ -25502,8 +25937,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 1,
+		"hide": true,
 		"forgeID": 40,
-		"forgeTarget": 773
+		"forgeTarget": 770
 	},
 	{
 		"classId": 766,
@@ -25527,7 +25963,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 767,
@@ -25551,7 +25988,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 768,
@@ -25575,7 +26013,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 769,
@@ -25599,7 +26038,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 770,
@@ -25623,7 +26063,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 771,
@@ -25646,7 +26087,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 1
+		"enhanceID": 1,
+		"hide": true
 	},
 	{
 		"classId": 772,
@@ -25672,6 +26114,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 22
 	},
 	{
@@ -25698,8 +26141,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 22,
-		"forgeTarget": 781
+		"forgeTarget": 778
 	},
 	{
 		"classId": 774,
@@ -25725,8 +26169,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 22,
-		"forgeTarget": 782
+		"forgeTarget": 779
 	},
 	{
 		"classId": 775,
@@ -25752,8 +26197,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 22,
-		"forgeTarget": 783
+		"forgeTarget": 780
 	},
 	{
 		"classId": 776,
@@ -25779,8 +26225,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 22,
-		"forgeTarget": 784
+		"forgeTarget": 781
 	},
 	{
 		"classId": 777,
@@ -25805,8 +26252,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 22,
-		"forgeTarget": 785
+		"forgeTarget": 782
 	},
 	{
 		"classId": 778,
@@ -25832,7 +26280,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
-		"forgeID": 28
+		"hide": true
 	},
 	{
 		"classId": 779,
@@ -25858,8 +26306,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 28,
-		"forgeTarget": 787
+		"forgeTarget": 784
 	},
 	{
 		"classId": 780,
@@ -25885,8 +26334,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 28,
-		"forgeTarget": 788
+		"forgeTarget": 785
 	},
 	{
 		"classId": 781,
@@ -25912,8 +26362,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 28,
-		"forgeTarget": 789
+		"forgeTarget": 786
 	},
 	{
 		"classId": 782,
@@ -25939,8 +26390,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 28,
-		"forgeTarget": 790
+		"forgeTarget": 787
 	},
 	{
 		"classId": 783,
@@ -25965,8 +26417,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 28,
-		"forgeTarget": 791
+		"forgeTarget": 788
 	},
 	{
 		"classId": 784,
@@ -25992,7 +26445,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
-		"forgeID": 34
+		"hide": true
 	},
 	{
 		"classId": 785,
@@ -26018,8 +26471,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 34,
-		"forgeTarget": 793
+		"forgeTarget": 790
 	},
 	{
 		"classId": 786,
@@ -26045,8 +26499,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 34,
-		"forgeTarget": 794
+		"forgeTarget": 791
 	},
 	{
 		"classId": 787,
@@ -26072,8 +26527,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 34,
-		"forgeTarget": 795
+		"forgeTarget": 792
 	},
 	{
 		"classId": 788,
@@ -26099,8 +26555,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 34,
-		"forgeTarget": 796
+		"forgeTarget": 793
 	},
 	{
 		"classId": 789,
@@ -26125,8 +26582,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 34,
-		"forgeTarget": 797
+		"forgeTarget": 794
 	},
 	{
 		"classId": 790,
@@ -26152,7 +26610,7 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
-		"forgeID": 40
+		"hide": true
 	},
 	{
 		"classId": 791,
@@ -26178,8 +26636,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 40,
-		"forgeTarget": 799
+		"forgeTarget": 796
 	},
 	{
 		"classId": 792,
@@ -26205,8 +26664,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 40,
-		"forgeTarget": 800
+		"forgeTarget": 797
 	},
 	{
 		"classId": 793,
@@ -26232,8 +26692,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 40,
-		"forgeTarget": 801
+		"forgeTarget": 798
 	},
 	{
 		"classId": 794,
@@ -26259,8 +26720,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 40,
-		"forgeTarget": 802
+		"forgeTarget": 799
 	},
 	{
 		"classId": 795,
@@ -26285,8 +26747,9 @@ exports.data = [
 		"storeOnly": true,
 		"autoUse": true,
 		"enhanceID": 2,
+		"hide": true,
 		"forgeID": 40,
-		"forgeTarget": 803
+		"forgeTarget": 800
 	},
 	{
 		"classId": 796,
@@ -26311,7 +26774,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 797,
@@ -26336,7 +26800,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 798,
@@ -26361,7 +26826,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 799,
@@ -26386,7 +26852,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 800,
@@ -26411,7 +26878,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 801,
@@ -26435,7 +26903,8 @@ exports.data = [
 		},
 		"storeOnly": true,
 		"autoUse": true,
-		"enhanceID": 2
+		"enhanceID": 2,
+		"hide": true
 	},
 	{
 		"classId": 802,
@@ -27056,5 +27525,57 @@ exports.data = [
 		"sellprice": 250,
 		"quality": 4,
 		"synthesizeID": 44
-	}
+	},
+	{
+		"classId": 858,
+		"label": "努力之书",
+		"icon": "item-slds.png",
+		"category": 0,
+		"subcategory": 3,
+		"description": "记录着前人们努力成果的书，能让装备迅速积累熟练度。",
+		"stack": 99,
+		"sellprice": 150,
+		"quality": 0,
+		"wxp": 400
+	},
+	{
+		"classId": 859,
+		"label": "加强努力之书",
+		"icon": "item-slds2.png",
+		"category": 0,
+		"subcategory": 3,
+		"description": "加强版的努力之书，能够大幅增加装备熟练度。",
+		"stack": 99,
+		"sellprice": 350,
+		"quality": 1,
+		"wxp": 1000
+	},
+	{
+		"classId": 860,
+		"label": "严苛努力之书",
+		"icon": "item-slds3.png",
+		"category": 0,
+		"subcategory": 3,
+		"description": "严苛努力的成果之书，拥有巨大的熟练度蕴含其中。",
+		"stack": 99,
+		"sellprice": 650,
+		"quality": 2,
+		"wxp": 1800
+	},
+    {
+        "classId":861,
+        "label": "努力头带",
+        "icon": "irfasion-helmet1.png",
+        "category": 1,
+        "subcategory": 13,
+        "description": "将职业练至10级的身份证明。",
+        "effecta": [
+            {
+                "part": "helmet",
+                "file": "rfasion-helmet1.ccbi"
+            }
+        ],
+        "storeOnly": true,
+        "expiration": {day: 2}
+    }
 ]

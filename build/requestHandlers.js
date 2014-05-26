@@ -117,8 +117,6 @@
         });
         req.write(token);
         return req.end();
-      case LOGIN_ACCOUNT_TYPE_TG:
-        return dbLib.loadAuth(passport, token, callback);
       case LOGIN_ACCOUNT_TYPE_AD:
       case LOGIN_ACCOUNT_TYPE_GAMECENTER:
         return callback(null);
@@ -336,7 +334,7 @@
           }, function(account, cb) {
             return dbLib.createNewPlayer(account, gServerName, name, cb);
           }, function(account, cb) {
-            var player;
+            var k, p, player, prize;
             player = new Player();
             player.setName(name);
             player.accountID = account;
@@ -348,6 +346,15 @@
               hairStyle: arg.hst,
               hairColor: arg.hcl
             });
+            prize = queryTable(TABLE_CONFIG, 'InitialEquipment');
+            for (k in prize) {
+              p = prize[k];
+              player.claimPrize(p.filter((function(_this) {
+                return function(e) {
+                  return isClassMatch(arg.cid, e.classLimit);
+                };
+              })(this)));
+            }
             logUser({
               name: name,
               action: 'register',

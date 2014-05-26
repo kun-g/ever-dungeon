@@ -154,35 +154,6 @@ exports.data = {
       }
     ]
   },
-  "LoginStreak": {
-    "show": false,
-    "level": [
-      {
-        "count": 1,
-        "award": [ { "type":1, "count":500 } ]
-      },
-      {
-        "count": 2,
-        "award": [ { "type":0, "value":534, "count":2 } ]
-      },
-      {
-        "count": 3,
-        "award": [ { "type":0, "value":540, "count":1 } ]
-      },
-      {
-        "count": 4,
-        "award": [ { "type":0, "value":538, "count":1 } ]
-      },
-      {
-        "count": 5,
-        "award": [
-          { "type":0, "value":534, "count":1 },
-          { "type":0, "value":535, "count":1 },
-          { "type":0, "value":536, "count":1 }
-        ]
-      }
-    ]
-  },
     "FirstCharge": {
         "show": true,
         "title": "首充翻倍大行动",
