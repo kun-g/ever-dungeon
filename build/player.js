@@ -272,8 +272,8 @@
         dis = diffDate(this.loginStreak.date);
         if (dis === 0) {
           flag = false;
-        } else if (dis > 1) {
-          this.loginStreak.count = 0;
+        } else {
+          this.loginStreak.count += 1;
         }
       } else {
         this.loginStreak.count = 0;
@@ -318,7 +318,6 @@
           return !e.vip || _this.vipLevel() > e.vip;
         };
       })(this)));
-      this.loginStreak.count += 1;
       if (this.loginStreak.count >= queryTable(TABLE_DP).length) {
         this.loginStreak.count = 0;
       }
