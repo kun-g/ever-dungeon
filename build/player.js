@@ -272,8 +272,8 @@
         dis = diffDate(this.loginStreak.date);
         if (dis === 0) {
           flag = false;
-        } else if (dis > 1) {
-          this.loginStreak.count = 0;
+        } else {
+          this.loginStreak.count += 1;
         }
       } else {
         this.loginStreak.count = 0;
@@ -307,17 +307,21 @@
           };
         }
       }
-      this.loginStreak.date = currentTime(true).valueOf();
+      this.loginStreak.newProperty('date', currentTime(true).valueOf());
       this.log('claimLoginReward', {
         loginStreak: this.loginStreak.count,
         date: currentTime()
       });
-      reward = queryTable(TABLE_CAMPAIGN, 'LoginStreak', this.abIndex).level[this.loginStreak.count].award;
-      ret = this.claimPrize(reward);
-      this.loginStreak.count += 1;
-      if (this.loginStreak.count >= queryTable(TABLE_CAMPAIGN, 'LoginStreak').level.length) {
+      reward = queryTable(TABLE_DP)[this.loginStreak.count].prize;
+      ret = this.claimPrize(reward.filter((function(_this) {
+        return function(e) {
+          return !e.vip || _this.vipLevel() > e.vip;
+        };
+      })(this)));
+      if (this.loginStreak.count >= queryTable(TABLE_DP).length) {
         this.loginStreak.count = 0;
       }
+      console.log(queryTable(TABLE_DP).length);
       return {
         ret: RET_OK,
         res: ret
@@ -624,7 +628,7 @@
       var currentLevel, prevLevel;
       if (point) {
         prevLevel = this.createHero().level;
-        this.hero.xp += point;
+        this.hero.xp = Math.floor(this.hero.xp + point);
         currentLevel = this.createHero().level;
         this.notify('heroxpChanged', {
           xp: this.hero.xp,
@@ -1684,7 +1688,7 @@
         itemSlot: itemSlot
       });
       this.onEvent('Equipment');
-      if (level >= 20) {
+      if (level >= 32) {
         dbLib.broadcastEvent(BROADCAST_ENHANCE, {
           who: this.name,
           what: equip.id,
@@ -1722,25 +1726,24 @@
     };
 
     Player.prototype.sellItem = function(slot) {
-      var count, item, ret;
+      var item, ret;
       if (this.isEquiped(slot)) {
         return {
           ret: RET_Unknown
         };
       }
       item = this.getItemAt(slot);
-      count = item.count;
       if ((item != null ? item.transPrize : void 0) || (item != null ? item.sellprice : void 0)) {
         ret = this.removeItem(null, null, slot);
         if (item != null ? item.transPrize : void 0) {
           ret = ret.concat(this.claimPrize(item.transPrize));
         } else if (item != null ? item.sellprice : void 0) {
-          this.addGold(item.sellprice * count);
+          this.addGold(item.sellprice * item.count);
         }
         this.log('sellItem', {
           itemId: item.id,
           price: item.sellprice,
-          count: count,
+          count: item.count,
           slot: slot
         });
         return {
@@ -1923,7 +1926,11 @@
           src: MESSAGE_REWARD_TYPE_OFFLINE,
           prize: offlineReward
         };
-        dungeon.team.forEach(function(m) {
+        dungeon.team.filter((function(_this) {
+          return function(m) {
+            return m.nam !== _this.name;
+          };
+        })(this)).forEach(function(m) {
           if (m) {
             return dbLib.deliverMessage(m.nam, teammateRewardMessage);
           }
