@@ -272,8 +272,8 @@
         dis = diffDate(this.loginStreak.date);
         if (dis === 0) {
           flag = false;
-        } else if (dis > 1) {
-          this.loginStreak.count = 0;
+        } else {
+          this.loginStreak.count += 1;
         }
       } else {
         this.loginStreak.count = 0;
@@ -307,7 +307,7 @@
           };
         }
       }
-      this.loginStreak.date = currentTime(true).valueOf();
+      this.loginStreak.newProperty('date', currentTime(true).valueOf());
       this.log('claimLoginReward', {
         loginStreak: this.loginStreak.count,
         date: currentTime()
@@ -318,10 +318,10 @@
           return !e.vip || _this.vipLevel() > e.vip;
         };
       })(this)));
-      this.loginStreak.count += 1;
       if (this.loginStreak.count >= queryTable(TABLE_DP).length) {
         this.loginStreak.count = 0;
       }
+      console.log(queryTable(TABLE_DP).length);
       return {
         ret: RET_OK,
         res: ret
