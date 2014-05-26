@@ -307,7 +307,7 @@
           };
         }
       }
-      this.loginStreak.date = currentTime(true).valueOf();
+      this.loginStreak.newProperty('date', currentTime(true).valueOf());
       this.log('claimLoginReward', {
         loginStreak: this.loginStreak.count,
         date: currentTime()
