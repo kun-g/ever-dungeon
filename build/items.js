@@ -27561,5 +27561,21 @@ exports.data = [
 		"sellprice": 650,
 		"quality": 2,
 		"wxp": 1800
-	}
+	},
+    {
+        "classId":861,
+        "label": "努力头带",
+        "icon": "irfasion-helmet1.png",
+        "category": 1,
+        "subcategory": 13,
+        "description": "将职业练至10级的身份证明。",
+        "effecta": [
+            {
+                "part": "helmet",
+                "file": "rfasion-helmet1.ccbi"
+            }
+        ],
+        "storeOnly": true,
+        "expiration": {day: 2}
+    }
 ]
