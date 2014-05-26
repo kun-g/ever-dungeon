@@ -127,7 +127,7 @@ xwrapReceipt = function(receipt) {
       time = x[3];
       tunnel = x[4];
   return {
-    id: +id,
+    id: id,
     serverID: +serverID,
     time: +time,
     productID: +productID,
