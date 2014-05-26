@@ -119,6 +119,22 @@ function syncItem() {
   });
 }
 
+xwrapReceipt = function(receipt) {
+  var x = receipt.split('@');
+  var id = x[0];
+      productID = x[1];
+      serverID = x[2];
+      time = x[3];
+      tunnel = x[4];
+  return {
+    id: +id,
+    serverID: +serverID,
+    time: +time,
+    productID: +productID,
+    tunnel: tunnel
+  };
+};
+
 function loadReceipt () {
   require('./globals');
   list = [
