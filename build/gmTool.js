@@ -121,7 +121,7 @@ function syncItem() {
 
 function loadReceipt () {
   require('./globals');
-  accountDBClient.keys('Receipt.*AppStore', function (err, list) {
+  accountDBClient.keys('Receipt.*', function (err, list) {
     console.log(list);
     list.forEach( function (e) { accountDBClient.del(e); } );
     //list.forEach( function (e) { console.log(unwrapReceipt(e)); } );
