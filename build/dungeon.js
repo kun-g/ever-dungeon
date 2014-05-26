@@ -1867,20 +1867,22 @@
           }
         } else {
           env.levelInitialized();
-          if (Array.isArray(entrance)) {
-            for (_j = 0, _len = entrance.length; _j < _len; _j++) {
-              e = entrance[_j];
+          if (!env.isEntranceExplored()) {
+            if (Array.isArray(entrance)) {
+              for (_j = 0, _len = entrance.length; _j < _len; _j++) {
+                e = entrance[_j];
+                this.routine({
+                  id: 'ExploreBlock',
+                  block: e,
+                  positions: entrance
+                });
+              }
+            } else {
               this.routine({
                 id: 'ExploreBlock',
-                block: e,
-                positions: entrance
+                block: entrance
               });
             }
-          } else {
-            this.routine({
-              id: 'ExploreBlock',
-              block: entrance
-            });
           }
           if (Array.isArray(entrance)) {
             newPosition = entrance;
