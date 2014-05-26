@@ -75,7 +75,8 @@ dbLib.initializeDB({
   "Publisher": { "IP": ip, "PORT": port},
   "Subscriber": { "IP": ip, "PORT": port}
 });
-initGlobalConfig(null, function () {
+
+function syncItem() {
   require('./helper').initLeaderboard(queryTable(TABLE_LEADBOARD));
   initServer();
   gServerID = -1;
@@ -116,6 +117,18 @@ initGlobalConfig(null, function () {
         }
       }, function(err) {console.log('Done', err);});
   });
+}
+
+function loadReceipt () {
+  require('./globals');
+  accountDBClient.keys('Receipt.*AppStore', function (err, list) {
+    console.log(list);
+    list.forEach( function (e) { console.log(unwrapReceipt(e)); } );
+  });
+}
+
+initGlobalConfig(null, function () {
+  loadReceipt ();
 });
 //async.map(players, function (playerName, cb) {
 //  dbLib.deliverMessage(playerName, rewardMessage, cb);
