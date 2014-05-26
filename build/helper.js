@@ -337,6 +337,9 @@
     }
     if (e.daily) {
       if (!me[key].date || diffDate(me[key].date, currentTime()) !== 0) {
+        e.quest.forEach(function(q) {
+          return delete me.quests[q];
+        });
         me[key].newProperty('status', 'Init');
         me[key].newProperty('date', currentTime());
         if (key === 'event_daily') {

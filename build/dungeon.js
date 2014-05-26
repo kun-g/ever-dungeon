@@ -1848,16 +1848,8 @@
         var e, entrance, i, monster, newPosition, _i, _j, _k, _l, _len, _len1, _ref5, _ref6, _ref7, _ref8;
         entrance = env.getEntrance();
         env.onEvent('onEnterLevel', this);
-        if (Array.isArray(entrance)) {
-          newPosition = entrance;
-          for (i = _i = _ref5 = newPosition.length, _ref6 = env.getHeroes().length - 1; _ref5 <= _ref6 ? _i <= _ref6 : _i >= _ref6; i = _ref5 <= _ref6 ? ++_i : --_i) {
-            newPosition.push(entrance[0]);
-          }
-        } else {
-          newPosition = [entrance, entrance, entrance];
-        }
         if (env.isEntranceExplored()) {
-          for (e = _j = 0, _ref7 = DG_BLOCKCOUNT - 1; 0 <= _ref7 ? _j <= _ref7 : _j >= _ref7; e = 0 <= _ref7 ? ++_j : --_j) {
+          for (e = _i = 0, _ref5 = DG_BLOCKCOUNT - 1; 0 <= _ref5 ? _i <= _ref5 : _i >= _ref5; e = 0 <= _ref5 ? ++_i : --_i) {
             if (env.getBlock(e).explored) {
               this.routine({
                 id: 'OpenBlock',
@@ -1867,8 +1859,8 @@
           }
         } else {
           if (Array.isArray(entrance)) {
-            for (_k = 0, _len = entrance.length; _k < _len; _k++) {
-              e = entrance[_k];
+            for (_j = 0, _len = entrance.length; _j < _len; _j++) {
+              e = entrance[_j];
               this.routine({
                 id: 'ExploreBlock',
                 block: e,
@@ -1881,12 +1873,20 @@
               block: entrance
             });
           }
-        }
-        env.moveHeroes(newPosition);
-        _ref8 = env.getMonsters();
-        for (_l = 0, _len1 = _ref8.length; _l < _len1; _l++) {
-          monster = _ref8[_l];
-          monster.onEvent('onEnterLevel', this);
+          if (Array.isArray(entrance)) {
+            newPosition = entrance;
+            for (i = _k = _ref6 = newPosition.length, _ref7 = env.getHeroes().length - 1; _ref6 <= _ref7 ? _k <= _ref7 : _k >= _ref7; i = _ref6 <= _ref7 ? ++_k : --_k) {
+              newPosition.push(entrance[0]);
+            }
+          } else {
+            newPosition = [entrance, entrance, entrance];
+          }
+          env.moveHeroes(newPosition);
+          _ref8 = env.getMonsters();
+          for (_l = 0, _len1 = _ref8.length; _l < _len1; _l++) {
+            monster = _ref8[_l];
+            monster.onEvent('onEnterLevel', this);
+          }
         }
         return this.routine({
           id: 'TickSpell'
