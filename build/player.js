@@ -291,7 +291,7 @@
         }
       ];
       itemsNeedRemove = this.inventory.filter(function(item) {
-        if (item.expiration == null) {
+        if ((item != null ? item.expiration : void 0) == null) {
           return false;
         }
         if (item.date == null) {
