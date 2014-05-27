@@ -3044,9 +3044,6 @@
         var count, e, item, ret, _i, _len, _ref7, _results;
         count = (_ref7 = env.variable('count')) != null ? _ref7 : 1;
         item = createItem(env.variable('item'));
-        if (item.expiration) {
-          item.date = helperLib.currentTime().valueOf();
-        }
         if (item == null) {
           return showMeTheStack();
         }
@@ -3056,6 +3053,9 @@
           ret: ret,
           version: env.player.inventoryVersion
         });
+        if (item.expiration) {
+          item.newProperty('date', helperLib.currentTime().valueOf());
+        }
         if (ret) {
           _results = [];
           for (_i = 0, _len = ret.length; _i < _len; _i++) {
