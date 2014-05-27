@@ -300,7 +300,7 @@
       });
       rmMSG = itemsNeedRemove.map((function(_this) {
         return function(e) {
-          return _this.removeItem(_this.queryItemSlot(e));
+          return _this.removeItem(null, null, _this.queryItemSlot(e));
         };
       })(this));
       ret = ret.concat(rmMSG);
