@@ -4844,5 +4844,130 @@ exports.data = [
 				}
 			]
 		}
-	]
+	],
+    [
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 18,
+                    "type": 0,
+                    "value": 853,
+                    "count": 3
+                },
+                {
+                    "weight": 6,
+                    "type": 0,
+                    "value": 853,
+                    "count": 5
+                },
+                {
+                    "weight": 3,
+                    "type": 0,
+                    "value": 853,
+                    "count":8
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 18,
+                    "type": 0,
+                    "value": 854,
+                    "count": 3
+                },
+                {
+                    "weight": 6,
+                    "type": 0,
+                    "value": 854,
+                    "count": 5
+                },
+                {
+                    "weight": 3,
+                    "type": 0,
+                    "value": 854,
+                    "count":8
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 18,
+                    "type": 0,
+                    "value": 855,
+                    "count": 4
+                },
+                {
+                    "weight": 6,
+                    "type": 0,
+                    "value": 855,
+                    "count": 6
+                },
+                {
+                    "weight": 3,
+                    "type": 0,
+                    "value": 855,
+                    "count":9
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 18,
+                    "type": 0,
+                    "value": 856,
+                    "count": 4
+                },
+                {
+                    "weight": 6,
+                    "type": 0,
+                    "value": 856,
+                    "count": 6
+                },
+                {
+                    "weight": 3,
+                    "type": 0,
+                    "value": 856,
+                    "count":9
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 18,
+                    "type": 0,
+                    "value": 857,
+                    "count": 5
+                },
+                {
+                    "weight": 6,
+                    "type": 0,
+                    "value": 857,
+                    "count": 7
+                },
+                {
+                    "weight": 2,
+                    "type": 0,
+                    "value": 857,
+                    "count":10
+                }
+            ]
+        }
+    ]
 ]

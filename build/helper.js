@@ -597,8 +597,7 @@
         return util.diffDay(obj.timestamp.monthCard, util.today) && util.today.hour() >= 8;
       },
       reset: function(obj, util) {
-        obj.timestamp.newProperty('monthCard', util.currentTime());
-        return obj.counters.newProperty('monthCard', 0);
+        return obj.timestamp.newProperty('monthCard', util.currentTime());
       }
     }
   };
