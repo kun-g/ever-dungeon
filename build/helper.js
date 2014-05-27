@@ -561,6 +561,32 @@
         return obj.counters.newProperty('goblin', 0);
       }
     },
+    book: {
+      storeType: "player",
+      id: 1,
+      actived: 1,
+      count: 3,
+      canReset: function(obj, util) {
+        return (util.today.hour() >= 8) && (util.today.weekday === 1 || util.today.weekday === 3 || util.today.weekday === 5 || util.today.weekday === 7);
+      },
+      reset: function(obj, util) {
+        obj.timestamp.newProperty('goblin', util.currentTime());
+        return obj.counters.newProperty('goblin', 0);
+      }
+    },
+    enhanceStone: {
+      storeType: "player",
+      id: 2,
+      actived: 1,
+      count: 3,
+      canReset: function(obj, util) {
+        return (util.today.hour() >= 8) && (util.today.weekday === 2 || util.today.weekday === 4 || util.today.weekday === 6 || util.today.weekday === 7);
+      },
+      reset: function(obj, util) {
+        obj.timestamp.newProperty('goblin', util.currentTime());
+        return obj.counters.newProperty('goblin', 0);
+      }
+    },
     monthCard: {
       storeType: "player",
       actived: function(obj, util) {

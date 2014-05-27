@@ -239,7 +239,7 @@
     };
 
     Player.prototype.onLogin = function() {
-      var dis, flag, key, prize, ret, s, _i, _len, _ref7;
+      var dis, flag, itemsNeedRemove, key, prize, ret, rmMSG, s, _i, _len, _ref7;
       if (!this.lastLogin) {
         return [];
       }
@@ -268,7 +268,7 @@
         }
       }
       flag = true;
-      if (this.loginStreak.date) {
+      if (this.loginStreak.date && diffDate(this.loginStreak.date, 'month') === 0) {
         dis = diffDate(this.loginStreak.date);
         if (dis === 0) {
           flag = false;
@@ -290,6 +290,21 @@
           claim: flag
         }
       ];
+      itemsNeedRemove = this.inventory.filter(function(item) {
+        if (item.expiration == null) {
+          return false;
+        }
+        if (item.date == null) {
+          return true;
+        }
+        return helperLib.currentTime(true).valueOf() > item.date + item.expiration.day * 24 * 60 * 60;
+      });
+      rmMSG = itemsNeedRemove.map((function(_this) {
+        return function(e) {
+          return _this.removeItem(_this.queryItemSlot(e));
+        };
+      })(this));
+      ret = ret.concat(rmMSG);
       return ret;
     };
 
@@ -3029,6 +3044,9 @@
         var count, e, item, ret, _i, _len, _ref7, _results;
         count = (_ref7 = env.variable('count')) != null ? _ref7 : 1;
         item = createItem(env.variable('item'));
+        if (item.expiration) {
+          item.newProperty('date', helperLib.currentTime().valueOf());
+        }
         if (item == null) {
           return showMeTheStack();
         }
