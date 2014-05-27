@@ -1723,17 +1723,17 @@ var data = [
           cost: 15,
           team: 3,
           hidden: true,
-          dungeon: 102,
-          description: "Weapon1",
+          dungeon: 105,
+          description: "Enhance1",
           condition: function (obj, util) {
-            return ( obj.counters.weapon < 2 ) &&
+            return ( obj.counters.enhance < 3 ) &&
               ( util.today.weekday() === 2 ||
                 util.today.weekday() === 4 ||
-                util.today.weekday() === 5 ||
+                util.today.weekday() === 6 ||
                 util.today.weekday() === 0 );
           },
           initialAction: function (obj) {
-            obj.counters.weapon++;
+            obj.counters.enhance++;
           }
         },
         {
@@ -1741,17 +1741,17 @@ var data = [
           cost: 15,
           team: 3,
           hidden: true,
-          dungeon: 103,
-          description: "Weapon2",
+          dungeon: 106,
+          description: "Enhance2",
           condition: function (obj, util) {
-            return ( obj.counters.weapon < 2 ) &&
+            return ( obj.counters.enhance < 3 ) &&
               ( util.today.weekday() === 2 ||
                 util.today.weekday() === 4 ||
-                util.today.weekday() === 5 ||
+                util.today.weekday() === 6 ||
                 util.today.weekday() === 0 );
           },
           initialAction: function (obj) {
-            obj.counters.weapon++;
+            obj.counters.enhance++;
           }
         },
         {
@@ -1759,17 +1759,17 @@ var data = [
           cost: 15,
           team: 3,
           hidden: true,
-          dungeon: 104,
-          description: "Weapon3",
+          dungeon: 107,
+          description: "Enhance3",
           condition: function (obj, util) {
-            return ( obj.counters.weapon < 2 ) &&
+            return ( obj.counters.enhance < 3 ) &&
               ( util.today.weekday() === 2 ||
                 util.today.weekday() === 4 ||
-                util.today.weekday() === 5 ||
+                util.today.weekday() === 6 ||
                 util.today.weekday() === 0 );
           },
           initialAction: function (obj) {
-            obj.counters.weapon++;
+            obj.counters.enhance++;
           }
         },
         {
@@ -1777,12 +1777,12 @@ var data = [
           cost: 15,
           team: 3,
           hidden: true,
-          dungeon: 105,
-          description: "Enhance1",
+          dungeon: 108,
+          description: "Enhance4",
           condition: function (obj, util) {
-            return ( obj.counters.enhance < 2 ) &&
-              ( util.today.weekday() === 1 ||
-                util.today.weekday() === 3 ||
+            return ( obj.counters.enhance < 3 ) &&
+              ( util.today.weekday() === 2 ||
+                util.today.weekday() === 4 ||
                 util.today.weekday() === 6 ||
                 util.today.weekday() === 0 );
           },
@@ -1795,12 +1795,12 @@ var data = [
           cost: 15,
           team: 3,
           hidden: true,
-          dungeon: 106,
-          description: "Enhance2",
+          dungeon: 109,
+          description: "Enhance5",
           condition: function (obj, util) {
-            return ( obj.counters.enhance < 2 ) &&
-              ( util.today.weekday() === 1 ||
-                util.today.weekday() === 3 ||
+            return ( obj.counters.enhance < 3 ) &&
+              ( util.today.weekday() === 2 ||
+                util.today.weekday() === 4 ||
                 util.today.weekday() === 6 ||
                 util.today.weekday() === 0 );
           },
@@ -1810,21 +1810,6 @@ var data = [
         },
         {
           stageId: 113,
-          cost: 15,
-          team: 3,
-          hidden: true,
-          dungeon: 107,
-          description: "Enhance3",
-          condition: function (obj, util) {
-            return ( obj.counters.enhance < 2 ) &&
-              ( util.today.weekday() === 1 ||
-                util.today.weekday() === 3 ||
-                util.today.weekday() === 6 ||
-                util.today.weekday() === 0 );
-          },
-          initialAction: function (obj) {
-            obj.counters.enhance++;
-          }
         },
         {
             stageId: 114,
