@@ -3044,6 +3044,7 @@
         item = createItem(env.variable('item'));
         if (item.expiration) {
           item.date = helperLib.currentTime(true).valueOf();
+          item.attrSave('date');
         }
         if (item == null) {
           return showMeTheStack();
