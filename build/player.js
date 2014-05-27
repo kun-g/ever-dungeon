@@ -3043,7 +3043,7 @@
         count = (_ref7 = env.variable('count')) != null ? _ref7 : 1;
         item = createItem(env.variable('item'));
         if (item.expiration) {
-          item.date = helperLib.currentTime().valueOf();
+          item.date = helperLib.currentTime(true).valueOf();
         }
         if (item == null) {
           return showMeTheStack();
