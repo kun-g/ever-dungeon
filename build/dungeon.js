@@ -440,7 +440,7 @@
       this.unitCreation = creation.map(function(level) {
         return level.filter(function(e) {
           if (e.questOnly) {
-            return arrCollectID.indexOf(e.collectId);
+            return arrCollectID.indexOf(e.collectId) !== -1;
           } else {
             return true;
           }
