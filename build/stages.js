@@ -1809,7 +1809,7 @@ var data = [
           }
         },
         {
-          stageId: 113,
+          stageId: 113
         },
         {
             stageId: 114,
