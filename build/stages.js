@@ -1728,7 +1728,7 @@ var data = [
           condition: function (obj, util) {
             return ( obj.counters.enhance < 3 ) &&
               ( util.today.weekday() === 2 ||
-                util.today.weekday() === 4 ||
+                util.today.weekday() === 3 ||
                 util.today.weekday() === 6 ||
                 util.today.weekday() === 0 );
           },
@@ -1746,7 +1746,7 @@ var data = [
           condition: function (obj, util) {
             return ( obj.counters.enhance < 3 ) &&
               ( util.today.weekday() === 2 ||
-                util.today.weekday() === 4 ||
+                util.today.weekday() === 3 ||
                 util.today.weekday() === 6 ||
                 util.today.weekday() === 0 );
           },
@@ -1764,7 +1764,7 @@ var data = [
           condition: function (obj, util) {
             return ( obj.counters.enhance < 3 ) &&
               ( util.today.weekday() === 2 ||
-                util.today.weekday() === 4 ||
+                util.today.weekday() === 3 ||
                 util.today.weekday() === 6 ||
                 util.today.weekday() === 0 );
           },
@@ -1782,7 +1782,7 @@ var data = [
           condition: function (obj, util) {
             return ( obj.counters.enhance < 3 ) &&
               ( util.today.weekday() === 2 ||
-                util.today.weekday() === 4 ||
+                util.today.weekday() === 3 ||
                 util.today.weekday() === 6 ||
                 util.today.weekday() === 0 );
           },
@@ -1800,7 +1800,7 @@ var data = [
           condition: function (obj, util) {
             return ( obj.counters.enhance < 3 ) &&
               ( util.today.weekday() === 2 ||
-                util.today.weekday() === 4 ||
+                util.today.weekday() === 3 ||
                 util.today.weekday() === 6 ||
                 util.today.weekday() === 0 );
           },
