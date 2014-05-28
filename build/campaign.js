@@ -85,26 +85,15 @@ exports.data = {
     "description": "玩家凡注册之日起一周内冲到6级即可获得丰厚奖励。",
       "mailTitle": "《冲级得礼包》奖励",
       "mailBody": "恭喜你完成冲级活动，点击领取奖励！",
-      "date": "2014/05/05",
+      "date": "2014/07/05",
       "timeLimit": 604800,
-      "dateDescription": "截止日期为2014年5月5日24时",
+      "dateDescription": "截止日期为2014年7月5日24时",
     "level": [
       {
         "count": 6,
         "award": [
             {"type":1, "count":6000 },
-            { "type":0,"value":0, "count":50 },
-            { "type":0,"value":460, "count":1 },
-            { "type":0,"value":239, "count":1 ,"classLimit":[1]},
-            { "type":0,"value":243, "count":1 ,"classLimit":[2]},
-            { "type":0,"value":247, "count":1 ,"classLimit":[0]},
-            { "type":0,"value":603, "count":1 ,"classLimit":[1]},
-            { "type":0,"value":607, "count":1 ,"classLimit":[2]},
-            { "type":0,"value":599, "count":1 ,"classLimit":[0]},
-            { "type":0,"value":593, "count":1 ,"classLimit":[1]},
-            { "type":0,"value":597, "count":1 ,"classLimit":[2]},
-            { "type":0,"value":589, "count":1 ,"classLimit":[0]},
-            { "type":0,"value":560, "count":40 }
+            { "type":2,"count":150 }
         ]
       }
     ]
@@ -161,8 +150,8 @@ exports.data = {
         "description":"首次充值即可获得宝石翻倍的奖励，充多少送多少，妈妈再也不用担心我的宝石了！",
         "mailTitle": "《首充翻倍大行动》活动奖励",
         "mailBody": "恭喜你完成活动，点击领取活动奖励！",
-        "date": "2014/05/25",
-        "dateDescription": "截止日期2014年5月25日24时",
+        "date": "2014/06/25",
+        "dateDescription": "截止日期2014年6月25日24时",
         "objective": {
             "6": {
                 "award": [
