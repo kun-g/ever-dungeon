@@ -1293,7 +1293,7 @@
     };
 
     Player.prototype.useItem = function(slot) {
-      var dropData, e, equip, item, myClass, prize, ret, tmp, _ref7;
+      var equip, item, myClass, prize, prz, ret, tmp;
       item = this.getItemAt(slot);
       myClass = this.hero["class"];
       if (item == null) {
@@ -1331,20 +1331,8 @@
                   ret: RET_NoKey
                 };
               }
-              dropData = queryTable(TABLE_DROP, item.dropId, this.abIndex);
-              if (!((dropData != null) && dropData.dropList)) {
-                logError({
-                  'action': 'useItem',
-                  type: 'TreasureChest',
-                  reason: 'invalidDropData',
-                  id: item.id
-                });
-                return {
-                  ret: RET_Unknown
-                };
-              }
-              e = selectElementFromWeightArray(dropData.dropList, Math.random());
-              prize = this.claimPrize(e.drop);
+              prz = helperLib.generatePrize(queryTable(TABLE_DROP), [item.dropId]);
+              prize = this.claimPrize(prz);
               if (!prize) {
                 return {
                   ret: RET_InventoryFull
@@ -1360,15 +1348,8 @@
               if (item.dropKey != null) {
                 ret = ret.concat(this.removeItemById(item.dropKey, 1, true));
               }
-              if (e.drop.type === PRIZETYPE_ITEM && ((_ref7 = queryTable(TABLE_ITEM, e.drop.value, this.abIndex)) != null ? _ref7.quality : void 0) >= 2) {
-                dbLib.broadcastEvent(BROADCAST_TREASURE_CHEST, {
-                  who: this.name,
-                  src: item.id,
-                  out: e.drop.value
-                });
-              }
               return {
-                prize: [e.drop],
+                prize: [prz],
                 res: ret
               };
             case ItemUse_Function:
@@ -2140,7 +2121,7 @@
         return null;
       }
       if (this.campaignState[campaignName] == null) {
-        if (campaignName === 'Charge') {
+        if (campaignName === 'Charge' || campaignName === 'DuanwuCharge') {
           this.campaignState.newProperty(campaignName, {});
         } else {
           this.campaignState.newProperty(campaignName, 0);
@@ -2196,7 +2177,7 @@
     };
 
     Player.prototype.onCampaign = function(state, data) {
-      var config, level, o, r, reward, rmb, _i, _len, _ref10, _ref11, _ref12, _ref13, _ref7, _ref8, _ref9, _results;
+      var config, level, o, r, reward, rmb, _i, _len, _ref10, _ref11, _ref12, _ref13, _ref14, _ref7, _ref8, _ref9, _results;
       reward = [];
       switch (state) {
         case 'Friend':
@@ -2224,7 +2205,21 @@
               this.setCampaignState('Charge', state);
             }
           }
-          _ref9 = this.getCampaignConfig('TotalCharge'), config = _ref9.config, level = _ref9.level;
+          _ref9 = this.getCampaignConfig('DuanwuCharge'), config = _ref9.config, level = _ref9.level;
+          if ((config != null) && (level != null)) {
+            rmb = data;
+            state = this.getCampaignState('DuanwuCharge');
+            o = level[rmb];
+            if (!state[rmb] && (o != null)) {
+              reward.push({
+                cfg: config,
+                lv: o
+              });
+              state[rmb] = true;
+              this.setCampaignState('DuanwuCharge', state);
+            }
+          }
+          _ref10 = this.getCampaignConfig('TotalCharge'), config = _ref10.config, level = _ref10.level;
           if ((config != null) && (level != null) && this.rmb >= level.count) {
             if (this.getCampaignState('TotalCharge') != null) {
               this.setCampaignState('TotalCharge', this.getCampaignState('TotalCharge') + 1);
@@ -2236,7 +2231,7 @@
               lv: level
             });
           }
-          _ref10 = this.getCampaignConfig('FirstCharge'), config = _ref10.config, level = _ref10.level;
+          _ref11 = this.getCampaignConfig('FirstCharge'), config = _ref11.config, level = _ref11.level;
           if ((config != null) && (level != null)) {
             rmb = data;
             if (level[rmb] != null) {
@@ -2249,7 +2244,7 @@
           }
           break;
         case 'Level':
-          _ref11 = this.getCampaignConfig('LevelUp'), config = _ref11.config, level = _ref11.level;
+          _ref12 = this.getCampaignConfig('LevelUp'), config = _ref12.config, level = _ref12.level;
           if ((config != null) && (level != null) && this.createHero().level >= level.count) {
             if (this.getCampaignState('LevelUp') != null) {
               this.setCampaignState('LevelUp', this.getCampaignState('LevelUp') + 1);
@@ -2263,7 +2258,7 @@
           }
           break;
         case 'Stage':
-          _ref12 = this.getCampaignConfig('Stage'), config = _ref12.config, level = _ref12.level;
+          _ref13 = this.getCampaignConfig('Stage'), config = _ref13.config, level = _ref13.level;
           if ((config != null) && (level != null) && data === level.count) {
             this.setCampaignState('Stage', this.getCampaignState('Stage') + 1);
             reward.push({
@@ -2273,7 +2268,7 @@
           }
           break;
         case 'BattleForce':
-          _ref13 = this.getCampaignConfig('BattleForce'), config = _ref13.config, level = _ref13.level;
+          _ref14 = this.getCampaignConfig('BattleForce'), config = _ref14.config, level = _ref14.level;
           if ((config != null) && (level != null) && this.createHero().calculatePower() >= level.count) {
             this.setCampaignState('BattleForce', this.getCampaignState('BattleForce') + 1);
             reward.push({

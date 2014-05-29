@@ -227,6 +227,7 @@
             v = c[k];
             u[k] = v;
           }
+          u.count = count;
           if (r.pos) {
             if (typeof r.pos === 'number') {
               u.pos = r.pos;

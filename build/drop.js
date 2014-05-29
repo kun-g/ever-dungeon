@@ -35,7 +35,7 @@ exports.data = [
 				{
 					"weight": 2,
 					"type": 1,
-					"count": 1000
+					"count": 800
 				}
 			]
 		}
@@ -4978,31 +4978,31 @@ exports.data = [
                     "weight": 18,
                     "type": 0,
                     "value":853 ,
-                   "count": 3
+                   "count": 1
                 },
                 {
                     "weight": 18,
                     "type": 0,
                     "value": 854,
-                    "count": 3
+                    "count": 1
                 },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 855,
-                    "count":2
+                    "count":1
                 },
                 {
                     "weight": 18,
                     "type": 0,
                     "value": 858,
-                    "count":4
+                    "count":1
                 },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 859,
-                    "count":3
+                    "count":1
                 }
             ]
         },
@@ -5025,7 +5025,7 @@ exports.data = [
                     "weight": 2,
                     "type": 0,
                     "value": 538,
-                    "count":4
+                    "count":3
                 }
             ]
         },
@@ -5035,17 +5035,17 @@ exports.data = [
                 {
                     "weight": 18,
                     "type": 2,
-                    "count": 20
+                    "count": 10
                 },
                 {
                     "weight": 6,
                     "type": 2,
-                    "count": 50
+                    "count": 20
                 },
                 {
                     "weight": 2,
                     "type": 2,
-                    "count":100
+                    "count":40
                 }
             ]
         }
@@ -5064,19 +5064,19 @@ exports.data = [
                     "weight": 18,
                     "type": 0,
                     "value": 857,
-                    "count": 3
+                    "count": 2
                 },
                 {
                     "weight": 18,
                     "type": 0,
                     "value": 855,
-                    "count":3
+                    "count":2
                 },
                 {
                     "weight": 18,
                     "type": 0,
                     "value": 859,
-                    "count":4
+                    "count":2
                 },
                 {
                     "weight": 10,
@@ -5105,7 +5105,7 @@ exports.data = [
                     "weight": 2,
                     "type": 0,
                     "value": 538,
-                    "count":4
+                    "count":3
                 }
             ]
         },
@@ -5115,17 +5115,17 @@ exports.data = [
                 {
                     "weight": 18,
                     "type": 2,
-                    "count": 40
+                    "count": 20
                 },
                 {
                     "weight": 6,
                     "type": 2,
-                    "count": 60
+                    "count": 40
                 },
                 {
                     "weight": 2,
                     "type": 2,
-                    "count":150
+                    "count":80
                 }
             ]
         }
