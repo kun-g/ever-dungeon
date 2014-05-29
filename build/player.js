@@ -1293,7 +1293,7 @@
     };
 
     Player.prototype.useItem = function(slot) {
-      var equip, item, myClass, prize, ret, tmp;
+      var equip, item, myClass, prize, prz, ret, tmp;
       item = this.getItemAt(slot);
       myClass = this.hero["class"];
       if (item == null) {
@@ -1331,8 +1331,8 @@
                   ret: RET_NoKey
                 };
               }
-              prize = helperLib.generatePrize(queryTable(TABLE_DROP), [item.dropId]);
-              prize = this.claimPrize(prize);
+              prz = helperLib.generatePrize(queryTable(TABLE_DROP), [item.dropId]);
+              prize = this.claimPrize(prz);
               if (!prize) {
                 return {
                   ret: RET_InventoryFull
@@ -1349,7 +1349,7 @@
                 ret = ret.concat(this.removeItemById(item.dropKey, 1, true));
               }
               return {
-                prize: [e.drop],
+                prize: [prz],
                 res: ret
               };
             case ItemUse_Function:
