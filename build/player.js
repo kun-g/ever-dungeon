@@ -1293,7 +1293,7 @@
     };
 
     Player.prototype.useItem = function(slot) {
-      var equip, item, myClass, prize, ret, tmp, _ref7;
+      var equip, item, myClass, prize, ret, tmp;
       item = this.getItemAt(slot);
       myClass = this.hero["class"];
       if (item == null) {
@@ -1347,13 +1347,6 @@
               ret = prize.concat(this.removeItem(null, 1, slot));
               if (item.dropKey != null) {
                 ret = ret.concat(this.removeItemById(item.dropKey, 1, true));
-              }
-              if (e.drop.type === PRIZETYPE_ITEM && ((_ref7 = queryTable(TABLE_ITEM, e.drop.value, this.abIndex)) != null ? _ref7.quality : void 0) >= 2) {
-                dbLib.broadcastEvent(BROADCAST_TREASURE_CHEST, {
-                  who: this.name,
-                  src: item.id,
-                  out: e.drop.value
-                });
               }
               return {
                 prize: [e.drop],
