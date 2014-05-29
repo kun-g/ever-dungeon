@@ -138,44 +138,46 @@ exports.data = [
 
         "dungeonId": 1,
         "levelCount" :6 ,
-        "normalPool":[
-        {
-            "id":170,
-            "weight":5
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
         },
-    {
-        "id":171,
-        "weight":1
-    },
-    {
-        "id":173,
-        "weight":5
-    },
-    {
-        "id":174,
-        "weight":1
-    },
-    {
-        "id":176,
-        "weight":5
-    },
-    {
-        "id":178,
-        "weight":5
-    },
-    {
-        "id":179,
-        "weight":1
-    },
-    {
-        "id":172,
-        "weight":5
-    }
-    ],        
         "rank": 1,
         "levels" :[
             {    
-                 "normalCount":1,"objects" :[
+                "objects" :[
                     {
                          "id": 3,
                          "count":4
@@ -192,7 +194,7 @@ exports.data = [
                 ]
             },
             {    
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":3
@@ -209,7 +211,7 @@ exports.data = [
                 ]
             },
             {    
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":2
@@ -230,7 +232,7 @@ exports.data = [
                 ]
             },
             {    
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":2
@@ -250,7 +252,7 @@ exports.data = [
                 ]
             },
             {    
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":2
@@ -270,7 +272,7 @@ exports.data = [
                 ]
             },
             {     
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":2
@@ -308,43 +310,45 @@ exports.data = [
         "dungeonId": 2,
         "rank": 1,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
         "levels" :[
             {    
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":3
@@ -364,7 +368,7 @@ exports.data = [
                 ]
             },
             {     
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":3
@@ -384,7 +388,7 @@ exports.data = [
                 ]
             },
             {    
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":2
@@ -409,7 +413,7 @@ exports.data = [
                 ]
             },
             {    
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -433,7 +437,7 @@ exports.data = [
                 ]
             },
             {    
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -457,7 +461,7 @@ exports.data = [
                 ]
             },
             {    
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -498,44 +502,46 @@ exports.data = [
     {
         "dungeonId": 3,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
         "rank": 2,
         "levels" :[
             {    
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":3
@@ -561,7 +567,7 @@ exports.data = [
                 ]
             },
             {     
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -591,7 +597,7 @@ exports.data = [
                 ]
             },
             {    
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -626,7 +632,7 @@ exports.data = [
                 ]
             },
             {    
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -660,7 +666,7 @@ exports.data = [
                 ]
             },
             {     
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -690,7 +696,7 @@ exports.data = [
                 ]
             },
             {    
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -734,44 +740,46 @@ exports.data = [
     {
         "dungeonId": 4,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
         "rank": 3,
         "levels" :[
             {    
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":2
@@ -811,7 +819,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -847,7 +855,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -894,7 +902,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -926,7 +934,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -962,7 +970,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -1016,45 +1024,47 @@ exports.data = [
     {
         "dungeonId": 5,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
         "rank": 4,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -1070,7 +1080,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -1082,7 +1092,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -1103,7 +1113,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -1123,7 +1133,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -1143,7 +1153,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -1178,44 +1188,46 @@ exports.data = [
         "dungeonId": 6,
         "rank": 4,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -1235,7 +1247,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -1251,7 +1263,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -1282,7 +1294,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -1302,7 +1314,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -1322,7 +1334,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -1370,53 +1382,55 @@ exports.data = [
     {
         "dungeonId": 7,
         "levelCount" : 6,
-        "normalPool":[
-        {
-            "id":170,
-            "weight":3
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
         },
-    {
-        "id":171,
-        "weight":3
-    },
-    {
-        "id":172,
-        "weight":3
-    },
-    {
-        "id":173,
-        "weight":3
-    },
-    {
-        "id":174,
-        "weight":3
-    },
-    {
-        "id":175,
-        "weight":3
-    },
-    {
-        "id":176,
-        "weight":3
-    },
-    {
-        "id":177,
-        "weight":3
-    },
-    {
-        "id":178,
-        "weight":3
-    },
-    {
-        "id":179,
-        "weight":3
-    }
-    ],
          
         "rank": 5,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -1436,7 +1450,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -1452,7 +1466,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -1477,7 +1491,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -1493,7 +1507,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -1513,7 +1527,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -1570,46 +1584,48 @@ exports.data = [
         "dungeonId": 8,
         "rank": 6,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
 
         "collectId":17001,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 15,
                         "count":2
@@ -1633,7 +1649,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 6,
                         "count":2
@@ -1663,7 +1679,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 15,
                         "count":2
@@ -1688,7 +1704,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 15,
                         "count":2
@@ -1712,7 +1728,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 15,
                         "count":2
@@ -1736,7 +1752,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 34,
                         "count":1,
@@ -1779,44 +1795,46 @@ exports.data = [
         "dungeonId": 9,
         "rank": 6,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 15,
                         "count":2
@@ -1840,7 +1858,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 6,
                         "count":2
@@ -1864,7 +1882,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 15,
                         "count":1
@@ -1885,7 +1903,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 15,
                         "count":2
@@ -1909,7 +1927,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 15,
                         "count":2
@@ -1929,7 +1947,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 32,
                         "count":2,
@@ -1969,44 +1987,46 @@ exports.data = [
         "dungeonId": 10,
         "rank": 7,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 15,
                         "count":1
@@ -2032,7 +2052,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 6,
                         "count":2
@@ -2062,7 +2082,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 15,
                         "count":1
@@ -2097,7 +2117,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 15,
                         "count":2
@@ -2126,7 +2146,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 15,
                         "count":2
@@ -2156,7 +2176,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 33,
                         "count":2,
@@ -2201,44 +2221,46 @@ exports.data = [
         "dungeonId": 11,
         "rank": 7,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 15,
                         "count":1
@@ -2258,7 +2280,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 37,
                         "count":2
@@ -2284,7 +2306,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 15,
                         "count":1
@@ -2319,7 +2341,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 15,
                         "count":2
@@ -2349,7 +2371,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 15,
                         "count":2
@@ -2371,7 +2393,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 55,
                         "count":1,
@@ -2416,52 +2438,54 @@ exports.data = [
         "dungeonId": 12,
         "rank": 7,
         "levelCount" :6,
-        "normalPool":[
-        {
-            "id":170,
-            "weight":3
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
         },
-    {
-        "id":171,
-        "weight":3
-    },
-    {
-        "id":172,
-        "weight":3
-    },
-    {
-        "id":173,
-        "weight":3
-    },
-    {
-        "id":174,
-        "weight":3
-    },
-    {
-        "id":175,
-        "weight":3
-    },
-    {
-        "id":176,
-        "weight":3
-    },
-    {
-        "id":177,
-        "weight":3
-    },
-    {
-        "id":178,
-        "weight":3
-    },
-    {
-        "id":179,
-        "weight":3
-    }
-    ],
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 37 ,
                         "count":2
@@ -2481,7 +2505,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 37,
                         "count":3
@@ -2501,7 +2525,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 52 ,
                         "count":1,
@@ -2522,7 +2546,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 35,
                         "count":2
@@ -2542,7 +2566,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 35,
                         "count":2
@@ -2562,7 +2586,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 55,
                         "count":1,
@@ -2604,52 +2628,54 @@ exports.data = [
         "dungeonId": 13,
         "rank": 8,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 37 ,
                         "count":3
@@ -2665,7 +2691,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 37 ,
                         "count":2
@@ -2685,7 +2711,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 53 ,
                         "count":1,
@@ -2716,7 +2742,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 35,
                         "count":2
@@ -2736,7 +2762,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 35,
                         "count":2
@@ -2756,7 +2782,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 53,
                         "count":1,
@@ -2795,52 +2821,54 @@ exports.data = [
         "dungeonId": 14,
         "rank": 8,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":1
-            },
-            {
-                "id":171,
-                "weight":5
-            },
-            {
-                "id":172,
-                "weight":5
-            },
-            {
-                "id":173,
-                "weight":1
-            },
-            {
-                "id":174,
-                "weight":5
-            },
-            {
-                "id":175,
-                "weight":5
-            },
-            {
-                "id":176,
-                "weight":1
-            },
-            {
-                "id":177,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":1
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 37,
                         "count":3
@@ -2860,7 +2888,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 35,
                         "count":2
@@ -2884,7 +2912,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 35,
                         "count":2
@@ -2909,7 +2937,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 35,
                         "count":2
@@ -2933,7 +2961,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 35,
                         "count":2
@@ -2949,7 +2977,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 35,
                         "count":2
@@ -2997,44 +3025,46 @@ exports.data = [
         "dungeonId": 15,
         "rank": 14,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 35,
                         "count":2
@@ -3054,7 +3084,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 35,
                         "count":2
@@ -3074,7 +3104,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 35,
                         "count":2
@@ -3099,7 +3129,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 35,
                         "count":2
@@ -3123,7 +3153,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 35,
                         "count":2
@@ -3147,7 +3177,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 35,
                         "count":2
@@ -3185,45 +3215,47 @@ exports.data = [
         "dungeonId": 16,
         "rank": 15,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
         "collectId":34001,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 37,
                         "count":3
@@ -3243,7 +3275,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2
@@ -3273,7 +3305,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2
@@ -3298,7 +3330,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2
@@ -3328,7 +3360,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":1
@@ -3352,7 +3384,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2
@@ -3389,45 +3421,47 @@ exports.data = [
         "dungeonId": 17,
         "rank": 17,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
         "collectId":37001,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 37,
                         "count":2
@@ -3451,7 +3485,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2
@@ -3485,7 +3519,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2
@@ -3516,7 +3550,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":1
@@ -3544,7 +3578,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2
@@ -3572,7 +3606,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2
@@ -3625,52 +3659,54 @@ exports.data = [
         "dungeonId": 18,
         "rank": 18,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 10,
                         "count":2
@@ -3700,7 +3736,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2
@@ -3734,7 +3770,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2
@@ -3776,7 +3812,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2
@@ -3804,7 +3840,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":1
@@ -3844,7 +3880,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2
@@ -3893,52 +3929,54 @@ exports.data = [
         "dungeonId": 19,
         "rank": 20,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2
@@ -3962,7 +4000,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2
@@ -3986,7 +4024,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2
@@ -4015,7 +4053,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2
@@ -4039,7 +4077,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2
@@ -4059,7 +4097,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2
@@ -4097,52 +4135,54 @@ exports.data = [
         "dungeonId": 20,
         "rank": 21,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 10,
                         "count":2
@@ -4163,7 +4203,7 @@ exports.data = [
             },
 
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2
@@ -4183,7 +4223,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":1
@@ -4218,7 +4258,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":1
@@ -4242,7 +4282,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2
@@ -4262,7 +4302,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2
@@ -4300,52 +4340,54 @@ exports.data = [
         "dungeonId": 21,
         "rank": 22,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":1
-            },
-            {
-                "id":171,
-                "weight":5
-            },
-            {
-                "id":172,
-                "weight":5
-            },
-            {
-                "id":173,
-                "weight":1
-            },
-            {
-                "id":174,
-                "weight":5
-            },
-            {
-                "id":175,
-                "weight":5
-            },
-            {
-                "id":176,
-                "weight":1
-            },
-            {
-                "id":177,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":1
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 10,
                         "count":2
@@ -4369,7 +4411,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":1
@@ -4393,7 +4435,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":1
@@ -4426,7 +4468,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":1
@@ -4454,7 +4496,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":1
@@ -4478,7 +4520,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2
@@ -4530,44 +4572,46 @@ exports.data = [
         "dungeonId": 22,
         "rank": 34,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 10,
                         "count":2
@@ -4591,7 +4635,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":4
@@ -4615,7 +4659,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":5
@@ -4644,7 +4688,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":5
@@ -4672,7 +4716,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":4
@@ -4696,7 +4740,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":5
@@ -4734,44 +4778,46 @@ exports.data = [
         "dungeonId": 23,
         "rank": 35,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 10,
                         "count":2
@@ -4795,7 +4841,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":4
@@ -4828,7 +4874,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":5
@@ -4857,7 +4903,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":5
@@ -4885,7 +4931,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":4
@@ -4913,7 +4959,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":5
@@ -4955,52 +5001,54 @@ exports.data = [
         "dungeonId": 24,
         "rank": 39,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 10,
                         "count":2
@@ -5030,7 +5078,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":4
@@ -5064,7 +5112,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":5
@@ -5099,7 +5147,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":5
@@ -5133,7 +5181,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":4
@@ -5179,7 +5227,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":5
@@ -5227,53 +5275,55 @@ exports.data = [
         "dungeonId": 25,
         "rank": 45,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "collectId":57001,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 40,
                         "count":1
@@ -5303,7 +5353,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":4
@@ -5337,7 +5387,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":5
@@ -5368,7 +5418,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":4
@@ -5402,7 +5452,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":4
@@ -5436,7 +5486,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":5
@@ -5481,52 +5531,54 @@ exports.data = [
         "dungeonId": 26,
         "rank": 49,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 40,
                         "count":1
@@ -5550,7 +5602,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":4
@@ -5584,7 +5636,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":5
@@ -5613,7 +5665,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":4
@@ -5637,7 +5689,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":4
@@ -5665,7 +5717,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":5
@@ -5704,52 +5756,54 @@ exports.data = [
         "rank": 54,
         "collectId":62001,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":4
@@ -5777,7 +5831,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":4
@@ -5797,7 +5851,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":5
@@ -5826,7 +5880,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":4
@@ -5850,7 +5904,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":5
@@ -5874,7 +5928,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":5
@@ -5917,52 +5971,54 @@ exports.data = [
         "dungeonId": 28,
         "rank": 58,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":1
-            },
-            {
-                "id":171,
-                "weight":5
-            },
-            {
-                "id":172,
-                "weight":5
-            },
-            {
-                "id":173,
-                "weight":1
-            },
-            {
-                "id":174,
-                "weight":5
-            },
-            {
-                "id":175,
-                "weight":5
-            },
-            {
-                "id":176,
-                "weight":1
-            },
-            {
-                "id":177,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":1
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 40,
                         "count":1
@@ -5986,7 +6042,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":4
@@ -6010,7 +6066,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":5
@@ -6040,7 +6096,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":4
@@ -6060,7 +6116,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":5
@@ -6088,7 +6144,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":5
@@ -6140,52 +6196,54 @@ exports.data = [
         "collectId":65001,
         "rank": 70,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 39,
                         "count":3
@@ -6205,7 +6263,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 39,
                         "count":3
@@ -6221,7 +6279,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 39,
                         "count":2
@@ -6246,7 +6304,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 39,
                         "count":2
@@ -6266,7 +6324,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 39,
                         "count":2
@@ -6290,7 +6348,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 39,
                         "count":2
@@ -6327,52 +6385,54 @@ exports.data = [
         "dungeonId": 30,
         "rank": 76,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 39,
                         "count":3
@@ -6396,7 +6456,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 39,
                         "count":3
@@ -6420,7 +6480,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 39,
                         "count":1
@@ -6446,7 +6506,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 39,
                         "count":2
@@ -6470,7 +6530,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 39,
                         "count":2
@@ -6498,7 +6558,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 39,
                         "count":2
@@ -6541,52 +6601,54 @@ exports.data = [
         "rank": 83,
         "collectId":69001,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 39,
                         "count":2
@@ -6626,7 +6688,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 39,
                         "count":1
@@ -6656,7 +6718,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 39,
                         "count":1
@@ -6688,7 +6750,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":2
@@ -6718,7 +6780,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":2
@@ -6754,7 +6816,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":2
@@ -6810,52 +6872,54 @@ exports.data = [
         "rank": 91,
         "collectId":71001,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":2
@@ -6875,7 +6939,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":1
@@ -6899,7 +6963,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":1
@@ -6920,7 +6984,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":2
@@ -6940,7 +7004,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":2
@@ -6968,7 +7032,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":2
@@ -7014,52 +7078,54 @@ exports.data = [
         "dungeonId": 33,
         "rank": 98,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":2
@@ -7087,7 +7153,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":1
@@ -7111,7 +7177,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":1
@@ -7136,7 +7202,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":2
@@ -7160,7 +7226,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":2
@@ -7184,7 +7250,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":2
@@ -7236,52 +7302,54 @@ exports.data = [
         "dungeonId": 34,
         "rank": 100,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":1
@@ -7309,7 +7377,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":1
@@ -7337,7 +7405,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":1
@@ -7366,7 +7434,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":2
@@ -7390,7 +7458,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":2
@@ -7414,7 +7482,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":2
@@ -7460,52 +7528,54 @@ exports.data = [
         "dungeonId": 35,
         "rank": 101,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":1
-            },
-            {
-                "id":171,
-                "weight":5
-            },
-            {
-                "id":172,
-                "weight":5
-            },
-            {
-                "id":173,
-                "weight":1
-            },
-            {
-                "id":174,
-                "weight":5
-            },
-            {
-                "id":175,
-                "weight":5
-            },
-            {
-                "id":176,
-                "weight":1
-            },
-            {
-                "id":177,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":1
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":2
@@ -7533,7 +7603,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":1
@@ -7553,7 +7623,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":1
@@ -7582,7 +7652,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":2
@@ -7602,7 +7672,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":2
@@ -7626,7 +7696,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":2
@@ -7679,52 +7749,54 @@ exports.data = [
         "rank": 103,
         "collectId":77001,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -7744,7 +7816,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -7764,7 +7836,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -7785,7 +7857,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 46 ,
                         "count":2
@@ -7805,7 +7877,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 46 ,
                         "count":2
@@ -7825,7 +7897,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -7849,7 +7921,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 46 ,
                         "count":2
@@ -7887,52 +7959,54 @@ exports.data = [
         "rank": 105,
         "collectId":79001,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -7956,7 +8030,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -7986,7 +8060,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 46 ,
                         "count":2
@@ -8011,7 +8085,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -8039,7 +8113,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -8063,7 +8137,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id":65 ,
                         "count":2,
@@ -8109,52 +8183,54 @@ exports.data = [
         "dungeonId": 38,
         "rank": 111,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -8178,7 +8254,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":2
@@ -8202,7 +8278,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -8231,7 +8307,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -8255,7 +8331,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -8285,7 +8361,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 46 ,
                         "count":2
@@ -8328,52 +8404,54 @@ exports.data = [
         "rank": 115,
         "collectId":83001,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 50,
                         "count":5
@@ -8397,7 +8475,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -8425,7 +8503,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -8458,7 +8536,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 50,
                         "count":4
@@ -8478,7 +8556,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 50,
                         "count":3
@@ -8502,7 +8580,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 46 ,
                         "count":2
@@ -8548,52 +8626,54 @@ exports.data = [
         "dungeonId": 40,
         "rank": 120,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -8627,7 +8707,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -8661,7 +8741,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -8700,7 +8780,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 50,
                         "count":5
@@ -8730,7 +8810,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -8764,7 +8844,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 81 ,
                         "count":2
@@ -8812,53 +8892,55 @@ exports.data = [
         "dungeonId": 41,
         "rank": 124,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "collectId":87001,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 50,
                         "count":5
@@ -8882,7 +8964,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -8910,7 +8992,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -8954,7 +9036,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -8987,7 +9069,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -9020,7 +9102,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 81 ,
                         "count":2
@@ -9072,52 +9154,54 @@ exports.data = [
         "dungeonId": 42,
         "rank": 130,
         "levelCount" : 6,
-        "normalPool":[
-        {
-            "id":170,
-            "weight":1
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
         },
-        {
-            "id":171,
-            "weight":5
-        },
-        {
-            "id":172,
-            "weight":5
-        },
-        {
-            "id":173,
-            "weight":1
-        },
-        {
-            "id":174,
-            "weight":5
-        },
-        {
-            "id":175,
-            "weight":5
-        },
-        {
-            "id":176,
-            "weight":1
-        },
-        {
-            "id":177,
-            "weight":5
-        },
-        {
-            "id":178,
-            "weight":1
-        },
-        {
-            "id":179,
-            "weight":3
-        }
-    ],
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 50,
                         "count":5
@@ -9141,7 +9225,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -9169,7 +9253,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -9202,7 +9286,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1
@@ -9230,7 +9314,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":2
@@ -9258,7 +9342,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 65,
                         "count":2,
@@ -9308,52 +9392,54 @@ exports.data = [
         "dungeonId": 43,
         "rank": 152,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 50,
                         "count":5
@@ -9373,7 +9459,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 50,
                         "count":5
@@ -9399,7 +9485,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 50,
                         "count":4
@@ -9420,7 +9506,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 50,
                         "count":4
@@ -9454,7 +9540,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 50,
                         "count":4
@@ -9488,7 +9574,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 50,
                         "count":4
@@ -9537,53 +9623,55 @@ exports.data = [
         "dungeonId": 44,
         "rank": 155,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "collectId":95001,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -9613,7 +9701,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -9633,7 +9721,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -9668,7 +9756,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -9690,7 +9778,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -9720,7 +9808,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 94 ,
                         "count":2,
@@ -9758,52 +9846,54 @@ exports.data = [
         "dungeonId": 45,
         "rank": 156,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -9823,7 +9913,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -9853,7 +9943,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -9888,7 +9978,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -9916,7 +10006,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -9942,7 +10032,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 61 ,
                         "count":1,
@@ -9984,52 +10074,54 @@ exports.data = [
         "dungeonId": 46,
         "rank": 160,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -10057,7 +10149,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -10085,7 +10177,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -10114,7 +10206,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 73,
                         "count":2
@@ -10142,7 +10234,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -10166,7 +10258,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 119 ,
                         "count":1,
@@ -10219,53 +10311,55 @@ exports.data = [
         "dungeonId": 47,
         "rank": 162,
         "levelCount" :6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "collectId":101001,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -10293,7 +10387,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -10321,7 +10415,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -10350,7 +10444,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -10374,7 +10468,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -10402,7 +10496,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 119 ,
                         "count":1,
@@ -10445,52 +10539,54 @@ exports.data = [
         "rank":168,
         "collectId":102001,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":1
-            },
-            {
-                "id":171,
-                "weight":5
-            },
-            {
-                "id":172,
-                "weight":5
-            },
-            {
-                "id":173,
-                "weight":1
-            },
-            {
-                "id":174,
-                "weight":5
-            },
-            {
-                "id":175,
-                "weight":5
-            },
-            {
-                "id":176,
-                "weight":1
-            },
-            {
-                "id":177,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":1
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -10518,7 +10614,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -10542,7 +10638,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -10571,7 +10667,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -10596,7 +10692,7 @@ exports.data = [
             },
 
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -10624,7 +10720,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 61 ,
                         "count":1,
@@ -10673,52 +10769,54 @@ exports.data = [
         "dungeonId": 49,
         "rank": 174,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":1
-            },
-            {
-                "id":171,
-                "weight":5
-            },
-            {
-                "id":172,
-                "weight":5
-            },
-            {
-                "id":173,
-                "weight":1
-            },
-            {
-                "id":174,
-                "weight":5
-            },
-            {
-                "id":175,
-                "weight":5
-            },
-            {
-                "id":176,
-                "weight":1
-            },
-            {
-                "id":177,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":1
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -10746,7 +10844,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -10774,7 +10872,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -10803,7 +10901,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 73,
                         "count":2
@@ -10831,7 +10929,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2
@@ -10855,7 +10953,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 124 ,
                         "count":1,
@@ -10901,52 +10999,54 @@ exports.data = [
         "dungeonId": 50,
         "rank": 235,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -10970,7 +11070,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -10998,7 +11098,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -11027,7 +11127,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -11055,7 +11155,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -11079,7 +11179,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 124 ,
                         "count":1,
@@ -11121,53 +11221,55 @@ exports.data = [
         "dungeonId": 51,
         "rank": 244,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "collectId":106001,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -11197,7 +11299,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -11225,7 +11327,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -11254,7 +11356,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -11282,7 +11384,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -11310,7 +11412,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 124 ,
                         "count":1,
@@ -11352,52 +11454,54 @@ exports.data = [
         "dungeonId": 52,
         "rank": 250,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -11421,7 +11525,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -11441,7 +11545,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -11476,7 +11580,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 101 ,
                         "count":3
@@ -11500,7 +11604,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -11524,7 +11628,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 121 ,
                         "count":1,
@@ -11566,52 +11670,54 @@ exports.data = [
         "dungeonId": 53,
         "rank": 262,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -11645,7 +11751,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -11673,7 +11779,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -11706,7 +11812,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -11734,7 +11840,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -11758,7 +11864,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 121 ,
                         "count":1,
@@ -11800,53 +11906,55 @@ exports.data = [
         "dungeonId": 54,
         "rank": 265,
         "levelCount" : 6,
-        "normalPool":[
-        {
-            "id":170,
-            "weight":1
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
         },
-        {
-            "id":171,
-            "weight":5
-        },
-        {
-            "id":172,
-            "weight":5
-        },
-        {
-            "id":173,
-            "weight":1
-        },
-        {
-            "id":174,
-            "weight":5
-        },
-        {
-            "id":175,
-            "weight":5
-        },
-        {
-            "id":176,
-            "weight":1
-        },
-        {
-            "id":177,
-            "weight":5
-        },
-        {
-            "id":178,
-            "weight":1
-        },
-        {
-            "id":179,
-            "weight":3
-        }
-    ],
          
         "collectId":111001,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -11870,7 +11978,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -11894,7 +12002,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -11923,7 +12031,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -11951,7 +12059,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -11985,7 +12093,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 121 ,
                         "count":1,
@@ -12027,53 +12135,55 @@ exports.data = [
         "dungeonId": 55,
         "rank": 272,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":1
-            },
-            {
-                "id":171,
-                "weight":5
-            },
-            {
-                "id":172,
-                "weight":5
-            },
-            {
-                "id":173,
-                "weight":1
-            },
-            {
-                "id":174,
-                "weight":5
-            },
-            {
-                "id":175,
-                "weight":5
-            },
-            {
-                "id":176,
-                "weight":1
-            },
-            {
-                "id":177,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":1
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "collectId":112001,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -12093,7 +12203,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -12113,7 +12223,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -12142,7 +12252,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -12158,7 +12268,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -12182,7 +12292,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 121 ,
                         "count":1,
@@ -12220,52 +12330,54 @@ exports.data = [
         "dungeonId": 56,
         "rank": 280,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":1
-            },
-            {
-                "id":171,
-                "weight":5
-            },
-            {
-                "id":172,
-                "weight":5
-            },
-            {
-                "id":173,
-                "weight":1
-            },
-            {
-                "id":174,
-                "weight":5
-            },
-            {
-                "id":175,
-                "weight":5
-            },
-            {
-                "id":176,
-                "weight":1
-            },
-            {
-                "id":177,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":1
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -12289,7 +12401,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -12313,7 +12425,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -12342,7 +12454,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -12362,7 +12474,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -12386,7 +12498,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 130 ,
                         "count":1,
@@ -12428,52 +12540,54 @@ exports.data = [
         "dungeonId": 57,
         "rank": 320,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 78,
                         "count":3
@@ -12499,7 +12613,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 78,
                         "count":2
@@ -12525,7 +12639,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 78,
                         "count":2
@@ -12546,7 +12660,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 101 ,
                         "count":3
@@ -12570,7 +12684,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 78,
                         "count":2
@@ -12594,7 +12708,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 128 ,
                         "count":1,
@@ -12642,53 +12756,55 @@ exports.data = [
         "dungeonId": 58,
         "rank": 330,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "collectId":119001,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 78,
                         "count":3
@@ -12708,7 +12824,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 78,
                         "count":3
@@ -12728,7 +12844,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 78,
                         "count":2
@@ -12753,7 +12869,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 78,
                         "count":2
@@ -12777,7 +12893,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 78,
                         "count":2
@@ -12801,7 +12917,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 128 ,
                         "count":1,
@@ -12847,53 +12963,55 @@ exports.data = [
         "dungeonId": 59,
         "rank": 350,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "collectId":120001,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 78,
                         "count":2
@@ -12917,7 +13035,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 78,
                         "count":2
@@ -12941,7 +13059,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 78,
                         "count":2
@@ -12966,7 +13084,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 78,
                         "count":2
@@ -12990,7 +13108,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 78,
                         "count":2
@@ -13014,7 +13132,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 130 ,
                         "count":1,
@@ -13055,53 +13173,55 @@ exports.data = [
         "dungeonId": 60,
         "rank": 370,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":1
-            },
-            {
-                "id":171,
-                "weight":5
-            },
-            {
-                "id":172,
-                "weight":5
-            },
-            {
-                "id":173,
-                "weight":1
-            },
-            {
-                "id":174,
-                "weight":5
-            },
-            {
-                "id":175,
-                "weight":5
-            },
-            {
-                "id":176,
-                "weight":1
-            },
-            {
-                "id":177,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":1
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "collectId":121001,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 78,
                         "count":2
@@ -13125,7 +13245,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 78,
                         "count":2
@@ -13149,7 +13269,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 78,
                         "count":2
@@ -13180,7 +13300,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 78,
                         "count":2
@@ -13204,7 +13324,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 78,
                         "count":2
@@ -13228,7 +13348,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 130 ,
                         "count":1,
@@ -13269,53 +13389,55 @@ exports.data = [
         "dungeonId": 61,
         "rank": 380,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":1
-            },
-            {
-                "id":171,
-                "weight":5
-            },
-            {
-                "id":172,
-                "weight":5
-            },
-            {
-                "id":173,
-                "weight":1
-            },
-            {
-                "id":174,
-                "weight":5
-            },
-            {
-                "id":175,
-                "weight":5
-            },
-            {
-                "id":176,
-                "weight":1
-            },
-            {
-                "id":177,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":1
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "collectId":122001,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 78,
                         "count":2
@@ -13339,7 +13461,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 78,
                         "count":2
@@ -13363,7 +13485,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 78,
                         "count":2
@@ -13394,7 +13516,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 110,
                         "count":2
@@ -13418,7 +13540,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 110,
                         "count":2
@@ -13442,7 +13564,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 127,
                         "count":2,
@@ -13484,48 +13606,50 @@ exports.data = [
         "dungeonId": 62,
         "rank": 398,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":1
-            },
-            {
-                "id":171,
-                "weight":5
-            },
-            {
-                "id":172,
-                "weight":5
-            },
-            {
-                "id":173,
-                "weight":1
-            },
-            {
-                "id":174,
-                "weight":5
-            },
-            {
-                "id":175,
-                "weight":5
-            },
-            {
-                "id":176,
-                "weight":1
-            },
-            {
-                "id":177,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":1
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
         "collectId":123001,
         "levels" :[
             {
@@ -13677,7 +13801,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 130,
                         "count":2,
@@ -13717,52 +13841,54 @@ exports.data = [
         "dungeonId": 63,
         "rank": 402,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":1
-            },
-            {
-                "id":171,
-                "weight":5
-            },
-            {
-                "id":172,
-                "weight":5
-            },
-            {
-                "id":173,
-                "weight":1
-            },
-            {
-                "id":174,
-                "weight":5
-            },
-            {
-                "id":175,
-                "weight":5
-            },
-            {
-                "id":176,
-                "weight":1
-            },
-            {
-                "id":177,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":1
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 110,
                         "count":2
@@ -13782,7 +13908,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 110,
                         "count":2
@@ -13798,7 +13924,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 110,
                         "count":2
@@ -13819,7 +13945,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 110,
                         "count":2
@@ -13843,7 +13969,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 110,
                         "count":2
@@ -13867,7 +13993,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 93,
                         "count":1,
@@ -13908,149 +14034,159 @@ exports.data = [
     {
         "dungeonId": 64,
         "levelCount" :5,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
-        "soldierPool":[
-            {
-                "id":3,
-                "weight":2
-            },
-            {
-                "id":4,
-                "weight":2
-            },
-            {
-                "id":5,
-                "weight":2
-            },
-            {
-                "id":6,
-                "weight":2
-            },
-            {
-                "id":7,
-                "weight":2
-            },
-            {
-                "id":8,
-                "weight":1
-            }
-        ],
-        "elitePool":[
-            {
-                "id":22,
-                "weight":2
-            },
-            {
-                "id":23,
-                "weight":2
-            },
-            {
-                "id":24,
-                "weight":2
-            },
-            {
-                "id":32,
-                "weight":2
-            },
-            {
-                "id":25,
-                "weight":2
-            }
-        ],
-        "bossPool":[
-            {
-                "id":23,
-                "weight":2
-            },
-            {
-                "id":25,
-                "weight":2
-            },
-            {
-                "id":32,
-                "weight":2
-            },
-            {
-                "id":34,
-                "weight":2
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ],
+            "soldierPool":[
+                {
+                    "id":3,
+                    "weight":2
+                },
+                {
+                    "id":4,
+                    "weight":2
+                },
+                {
+                    "id":5,
+                    "weight":2
+                },
+                {
+                    "id":6,
+                    "weight":2
+                },
+                {
+                    "id":7,
+                    "weight":2
+                }
+            ],
+            "elitePool":[
+                {
+                    "id":22,
+                    "weight":2
+                },
+                {
+                    "id":23,
+                    "weight":2
+                },
+                {
+                    "id":24,
+                    "weight":2
+                },
+                {
+                    "id":32,
+                    "weight":2
+                },
+                {
+                    "id":25,
+                    "weight":2
+                }
+            ],
+            "bossPool":[
+                {
+                    "id":23,
+                    "weight":2
+                },
+                {
+                    "id":25,
+                    "weight":2
+                },
+                {
+                    "id":32,
+                    "weight":2
+                },
+                {
+                    "id":34,
+                    "weight":2
+                }
+            ]
+        },
+
         "levels" :[
             {
-                "soldierCount":7,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                    }
+                 "objects" :[
+                     {"pool":"normalPool","from":0,to:2},
+                     {"pool":"soldierPool","from":6,to:9},
+                     {"id": 149,from:0, to: 2
+                     },
+                     {id: 8,from:0, to: 2}
                 ]
             },
             {
-                "soldierCount":7
-            },
-            {
-                "soldierCount":7  ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,from:0, to: 2
+                    },
+                    {id: 8,from:0, to: 2}
                 ]
             },
             {
-                "soldierCount":6,
-                "eliteCount": 1
-            },
-            {
-                "soldierCount":6 ,
-                "bossCount":1 ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,from:0, to: 2
+                    },
+                    {id: 8,from:0, to: 2}
                 ]
+            },
+    {
+        "objects" :[
+            {"pool":"normalPool","from":0,to:2},
+            {"pool":"soldierPool","from":6,to:9},
+            {"pool":"elitePool","count":1},
+            {"id": 149,from:0, to: 2
             }
-
-        ],
+        ]
+    },
+    {
+        "objects" :[
+            {"pool":"normalPool","from":0,to:2},
+            {"pool":"soldierPool","from":6,to:9},
+            {"pool":"bossPool","count":1},
+            {"id": 149,from:0, to: 2},
+            {id: 8,from:0, to: 2}
+        ]
+    }],
         "dropID":
             [
                 71
@@ -14150,173 +14286,182 @@ exports.data = [
     {
         "dungeonId": 65,
         "levelCount" :5,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
-        "soldierPool":[
-            {
-                "id":15,
-                "weight":2
-            },
-            {
-                "id":14,
-                "weight":2
-            },
-            {
-                "id":8,
-                "weight":1
-            },
-            {
-                "id":6,
-                "weight":2
-            },
-            {
-                "id":16,
-                "weight":1
-            },
-            {
-                "id":37,
-                "weight":2
-            },
-            {
-                "id":35,
-                "weight":2
-            },
-            {
-                "id":36,
-                "weight":2
-            }
-        ],
-        "elitePool":[
-            {
-                "id":33,
-                "weight":2
-            },
-            {
-                "id":23,
-                "weight":2
-            },
-            {
-                "id":54,
-                "weight":2
-            },
-            {
-                "id":34,
-                "weight":2
-            },
-            {
-                "id":20,
-                "weight":2
-            },
-            {
-                "id":21,
-                "weight":2
-            }
-        ],
-        "bossPool":[
-            {
-                "id":32,
-                "weight":2
-            },
-            {
-                "id":34,
-                "weight":2
-            },
-            {
-                "id":33,
-                "weight":2
-            },
-            {
-                "id":55,
-                "weight":2
-            },
-            {
-                "id":52,
-                "weight":2
-            },
-            {
-                "id":53,
-                "weight":2
-            },
-            {
-                "id":30,
-                "weight":2
-            }
-        ],
+        "pool":{
+            "soldierPool":[
+                {
+                    "id":15,
+                    "weight":2
+                },
+                {
+                    "id":14,
+                    "weight":2
+                },
+                {
+                    "id":37,
+                    "weight":2
+                },
+                {
+                    "id":35,
+                    "weight":2
+                },
+                {
+                    "id":36,
+                    "weight":2
+                }
+            ],
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ],
+            "elitePool":[
+                {
+                    "id":33,
+                    "weight":2
+                },
+                {
+                    "id":23,
+                    "weight":2
+                },
+                {
+                    "id":54,
+                    "weight":2
+                },
+                {
+                    "id":34,
+                    "weight":2
+                },
+                {
+                    "id":20,
+                    "weight":2
+                },
+                {
+                    "id":21,
+                    "weight":2
+                }
+            ],
+            "bossPool":[
+                {
+                    "id":32,
+                    "weight":2
+                },
+                {
+                    "id":34,
+                    "weight":2
+                },
+                {
+                    "id":33,
+                    "weight":2
+                },
+                {
+                    "id":55,
+                    "weight":2
+                },
+                {
+                    "id":52,
+                    "weight":2
+                },
+                {
+                    "id":53,
+                    "weight":2
+                },
+                {
+                    "id":30,
+                    "weight":2
+                }
+            ],
+            "rangePool":[
+
+                {
+                    "id":8,
+                    "weight":1
+                },
+                {
+                    "id":16,
+                    "weight":1
+                }
+            ]
+        },
         "levels" :[
             {
-                "soldierCount":7 ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2},
+                    {"pool":"rangePool","from":0,to:2}
                 ]
             },
             {
-                "soldierCount":7 ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2},
+                    {"pool":"rangePool","from":0,to:2}
                 ]
             },
             {
-                "soldierCount":7
-            },
-            {
-                "soldierCount":6,
-                "eliteCount": 1 ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2},
+                    {"pool":"rangePool","from":0,to:2}
                 ]
             },
             {
-                "soldierCount":6 ,
-                "bossCount":1
-            }
-
-        ],
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"pool":"elitePool","count":1},
+                    {"id": 149,"from":0,to:2},
+                    {"pool":"rangePool","from":0,to:2}
+                ]
+            },
+            {
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"pool":"bossPool","count":1},
+                    {"id": 149,"from":0,to:2},
+                    {"pool":"rangePool","from":0,to:2}
+                ]
+            }],
         "dropID":
             [
                 72
@@ -14415,56 +14560,11 @@ exports.data = [
     {
         "dungeonId": 66,
         "levelCount" :5,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
-        "soldierPool":[
+        "pool":{
+            "soldierPool":[
             {
                 "id":36,
                 "weight":2
-            },
-            {
-                "id":13,
-                "weight":1
             },
             {
                 "id":37,
@@ -14487,94 +14587,141 @@ exports.data = [
                 "weight":2
             }
         ],
-        "elitePool":[
-            {
-                "id":30,
-                "weight":2
-            },
-            {
-                "id":26,
-                "weight":2
-            },
-            {
-                "id":27,
-                "weight":2
-            },
-            {
-                "id":55,
-                "weight":2
-            },
-            {
-                "id":28,
-                "weight":2
-            }
-        ],
-        "bossPool":[
-            {
-                "id":26,
-                "weight":2
-            },
-            {
-                "id":30,
-                "weight":2
-            },
-            {
-                "id":27,
-                "weight":2
-            },
-            {
-                "id":55,
-                "weight":2
-            },
-            {
-                "id":28,
-                "weight":2
-            },
-            {
-                "id":29,
-                "weight":2
-            }
-        ],
+            "elitePool":[
+                {
+                    "id":30,
+                    "weight":2
+                },
+                {
+                    "id":26,
+                    "weight":2
+                },
+                {
+                    "id":27,
+                    "weight":2
+                },
+                {
+                    "id":55,
+                    "weight":2
+                },
+                {
+                    "id":28,
+                    "weight":2
+                }
+            ],
+            "bossPool":[
+                {
+                    "id":26,
+                    "weight":2
+                },
+                {
+                    "id":30,
+                    "weight":2
+                },
+                {
+                    "id":27,
+                    "weight":2
+                },
+                {
+                    "id":55,
+                    "weight":2
+                },
+                {
+                    "id":28,
+                    "weight":2
+                },
+                {
+                    "id":29,
+                    "weight":2
+                }
+            ],
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
+
         "levels" :[
             {
-                "soldierCount":7  ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2},
+                    {"id":13,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":7  ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2},
+                    {"id":13,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":7  ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2},
+                    {"id":13,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":6,
-                "eliteCount": 1 ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"pool":"elitePool","count":1},
+                    {"id": 149,"from":0,to:2},
+                    {"id":13,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":6 ,
-                "bossCount":1
-            }
-
-        ],
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"pool":"bossPool","count":1},
+                    {"id": 149,"from":0,to:2},
+                    {"id":13,"from":0,to:2}
+                ]
+            }],
         "dropID":
             [
                 73
@@ -14673,157 +14820,164 @@ exports.data = [
     {
         "dungeonId": 67,
         "levelCount" :5,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
-        "soldierPool":[
-            {
-                "id":38,
-                "weight":2
-            },
-            {
-                "id":50,
-                "weight":2
-            },
-            {
-                "id":40,
-                "weight":1
-            },
-            {
-                "id":39,
-                "weight":2
-            },
-            {
-                "id":9,
-                "weight":2
-            },
-            {
-                "id":10,
-                "weight":2
-            },
-            {
-                "id":11,
-                "weight":2
-            },
-            {
-                "id":17,
-                "weight":2
-            }
-        ],
-        "elitePool":[
-            {
-                "id":56,
-                "weight":2
-            },
-            {
-                "id":29,
-                "weight":2
-            },
-            {
-                "id":57,
-                "weight":2
-            },
-            {
-                "id":66,
-                "weight":2
-            },
-            {
-                "id":64,
-                "weight":2
-            },
-            {
-                "id":65,
-                "weight":2
-            }
-        ],
-        "bossPool":[
-            {
-                "id":57,
-                "weight":2
-            },
-            {
-                "id":66,
-                "weight":2
-            },
-            {
-                "id":64,
-                "weight":2
-            }
-        ],
+        "pool":{
+            "soldierPool":[
+                {
+                    "id":38,
+                    "weight":2
+                },
+                {
+                    "id":50,
+                    "weight":2
+                },
+                {
+                    "id":39,
+                    "weight":2
+                },
+                {
+                    "id":9,
+                    "weight":2
+                },
+                {
+                    "id":10,
+                    "weight":2
+                },
+                {
+                    "id":11,
+                    "weight":2
+                },
+                {
+                    "id":17,
+                    "weight":2
+                }
+            ],
+            "elitePool":[
+                {
+                    "id":56,
+                    "weight":2
+                },
+                {
+                    "id":29,
+                    "weight":2
+                },
+                {
+                    "id":57,
+                    "weight":2
+                },
+                {
+                    "id":66,
+                    "weight":2
+                },
+                {
+                    "id":64,
+                    "weight":2
+                },
+                {
+                    "id":65,
+                    "weight":2
+                }
+            ],
+            "bossPool":[
+                {
+                    "id":57,
+                    "weight":2
+                },
+                {
+                    "id":66,
+                    "weight":2
+                },
+                {
+                    "id":64,
+                    "weight":2
+                }
+            ],
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
+
         "levels" :[
             {
-                "soldierCount":7,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2},
+                    {"id":40,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":7,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2},
+                    {"id":40,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":7   ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2},
+                    {"id":40,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":6,
-                "eliteCount": 1
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"pool":"elitePool","count":1},
+                    {"id": 149,"from":0,to:2},
+                    {"id":40,"from":0,to:2}
+                ]
             },
             {
-                "soldierCount":5 ,
-                "bossCount":2
-            }
-
-        ],
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"pool":"bossPool","count":1},
+                    {"id": 149,"from":0,to:2},
+                    {"id":40,"from":0,to:2}
+                ]
+            }],
         "dropID":
             [
                 74
@@ -14923,172 +15077,179 @@ exports.data = [
     {
         "dungeonId": 68,
         "levelCount" :5,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
-        "soldierPool":[
-            {
-                "id":39,
-                "weight":2
-            },
-            {
-                "id":47,
-                "weight":2
-            },
-            {
-                "id":69,
-                "weight":2
-            },
-            {
-                "id":12,
-                "weight":2
-            },
-            {
-                "id":45,
-                "weight":1
-            },
-            {
-                "id":49,
-                "weight":2
-            },
-            {
-                "id":42,
-                "weight":2
-            },
-            {
-                "id":46,
-                "weight":2
-            },
-            {
-                "id":43,
-                "weight":2
-            }
-        ],
-        "elitePool":[
-            {
-                "id":86,
-                "weight":2
-            },
-            {
-                "id":62,
-                "weight":2
-            },
-            {
-                "id":59,
-                "weight":2
-            },
-            {
-                "id":60,
-                "weight":2
-            },
-            {
-                "id":63,
-                "weight":2
-            },
-            {
-                "id":65,
-                "weight":2
-            }
-        ],
-        "bossPool":[
-            {
-                "id":62,
-                "weight":2
-            },
-            {
-                "id":60,
-                "weight":2
-            },
-            {
-                "id":66,
-                "weight":2
-            },
-            {
-                "id":29,
-                "weight":2
-            },
-            {
-                "id":87,
-                "weight":2
-            },
-            {
-                "id":98,
-                "weight":2
-            }
-        ],
+        "pool":{
+            "soldierPool":[
+                {
+                    "id":39,
+                    "weight":2
+                },
+                {
+                    "id":47,
+                    "weight":2
+                },
+                {
+                    "id":69,
+                    "weight":2
+                },
+                {
+                    "id":12,
+                    "weight":2
+                },
+                {
+                    "id":49,
+                    "weight":2
+                },
+                {
+                    "id":42,
+                    "weight":2
+                },
+                {
+                    "id":46,
+                    "weight":2
+                },
+                {
+                    "id":43,
+                    "weight":2
+                }
+            ],
+            "elitePool":[
+                {
+                    "id":86,
+                    "weight":2
+                },
+                {
+                    "id":62,
+                    "weight":2
+                },
+                {
+                    "id":59,
+                    "weight":2
+                },
+                {
+                    "id":60,
+                    "weight":2
+                },
+                {
+                    "id":63,
+                    "weight":2
+                },
+                {
+                    "id":65,
+                    "weight":2
+                }
+            ],
+            "bossPool":[
+                {
+                    "id":62,
+                    "weight":2
+                },
+                {
+                    "id":60,
+                    "weight":2
+                },
+                {
+                    "id":66,
+                    "weight":2
+                },
+                {
+                    "id":29,
+                    "weight":2
+                },
+                {
+                    "id":87,
+                    "weight":2
+                },
+                {
+                    "id":98,
+                    "weight":2
+                }
+            ],
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
         "levels" :[
             {
-                "soldierCount":7  ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2},
+                    {"id":45,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":7 ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2},
+                    {"id":45,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":7
-            },
-            {
-                "soldierCount":6,
-                "eliteCount": 2  ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2},
+                    {"id":45,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":6 ,
-                "bossCount":2
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"pool":"elitePool","count":1},
+                    {"id": 149,"from":0,to:2},
+                    {"id":45,"from":0,to:2}
+                ]
+            },
+            {
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"pool":"bossPool","count":1},
+                    {"id": 149,"from":0,to:2},
+                    {"id":45,"from":0,to:2}
+                ]
             }
-
         ],
         "dropID":
             [
@@ -15189,162 +15350,163 @@ exports.data = [
     {
         "dungeonId": 69,
         "levelCount" :5,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
-        "soldierPool":[
-            {
-                "id":48,
-                "weight":2
-            },
-            {
-                "id":46,
-                "weight":2
-            },
-            {
-                "id":49,
-                "weight":2
-            },
-            {
-                "id":71,
-                "weight":2
-            },
-            {
-                "id":70,
-                "weight":2
-            },
-            {
-                "id":50,
-                "weight":2
-            },
-            {
-                "id":81,
-                "weight":2
-            },
-            {
-                "id":79,
-                "weight":2
-            }
-        ],
-        "elitePool":[
-            {
-                "id":88,
-                "weight":2
-            },
-            {
-                "id":98,
-                "weight":2
-            },
-            {
-                "id":87,
-                "weight":2
-            },
-            {
-                "id":96,
-                "weight":2
-            },
-            {
-                "id":89,
-                "weight":2
-            }
-        ],
-        "bossPool":[
-            {
-                "id":98,
-                "weight":2
-            },
-            {
-                "id":97,
-                "weight":2
-            },
-            {
-                "id":96,
-                "weight":2
-            },
-            {
-                "id":89,
-                "weight":1
-            }
-        ],
+        "pool":{
+            "soldierPool":[
+                {
+                    "id":48,
+                    "weight":2
+                },
+                {
+                    "id":46,
+                    "weight":2
+                },
+                {
+                    "id":49,
+                    "weight":2
+                },
+                {
+                    "id":71,
+                    "weight":2
+                },
+                {
+                    "id":70,
+                    "weight":2
+                },
+                {
+                    "id":50,
+                    "weight":2
+                },
+                {
+                    "id":81,
+                    "weight":2
+                },
+                {
+                    "id":79,
+                    "weight":2
+                }
+            ],
+            "elitePool":[
+                {
+                    "id":88,
+                    "weight":2
+                },
+                {
+                    "id":98,
+                    "weight":2
+                },
+                {
+                    "id":87,
+                    "weight":2
+                },
+                {
+                    "id":96,
+                    "weight":2
+                },
+                {
+                    "id":89,
+                    "weight":2
+                }
+            ],
+            "bossPool":[
+                {
+                    "id":98,
+                    "weight":2
+                },
+                {
+                    "id":97,
+                    "weight":2
+                },
+                {
+                    "id":96,
+                    "weight":2
+                },
+                {
+                    "id":89,
+                    "weight":1
+                }
+            ],
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
+
         "levels" :[
             {
-                "soldierCount":7    ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":7  ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":7 ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":6,
-                "eliteCount": 1  ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"pool":"elitePool","count":1},
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":6 ,
-                "bossCount":2
-            }
-
-        ],
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"pool":"bossPool","count":1},
+                    {"id": 149,"from":0,to:2}
+                ]
+            }],
         "dropID":
             [
                 76
@@ -15444,157 +15606,163 @@ exports.data = [
     {
         "dungeonId": 70,
         "levelCount" :5,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
-        "soldierPool":[
-            {
-                "id":50,
-                "weight":2
-            },
-            {
-                "id":71,
-                "weight":2
-            },
-            {
-                "id":72,
-                "weight":2
-            },
-            {
-                "id":67,
-                "weight":2
-            },
-            {
-                "id":68,
-                "weight":2
-            },
-            {
-                "id":73,
-                "weight":2
-            },
-            {
-                "id":74,
-                "weight":2
-            },
-            {
-                "id":77,
-                "weight":2
-            }
-        ],
-        "elitePool":[
-            {
-                "id":94,
-                "weight":2
-            },
-            {
-                "id":92,
-                "weight":2
-            },
-            {
-                "id":61,
-                "weight":2
-            },
-            {
-                "id":119,
-                "weight":2
-            }
-        ],
-        "bossPool":[
-            {
-                "id":92,
-                "weight":2
-            },
-            {
-                "id":94,
-                "weight":2
-            },
-            {
-                "id":61,
-                "weight":2
-            },
-            {
-                "id":119,
-                "weight":2
-            },
-            {
-                "id":124,
-                "weight":2
-            }
-        ],
+        "pool":{
+            "soldierPool":[
+                {
+                    "id":50,
+                    "weight":2
+                },
+                {
+                    "id":71,
+                    "weight":2
+                },
+                {
+                    "id":72,
+                    "weight":2
+                },
+                {
+                    "id":67,
+                    "weight":2
+                },
+                {
+                    "id":68,
+                    "weight":2
+                },
+                {
+                    "id":73,
+                    "weight":2
+                },
+                {
+                    "id":74,
+                    "weight":2
+                },
+                {
+                    "id":77,
+                    "weight":2
+                }
+            ],
+            "elitePool":[
+                {
+                    "id":94,
+                    "weight":2
+                },
+                {
+                    "id":92,
+                    "weight":2
+                },
+                {
+                    "id":61,
+                    "weight":2
+                },
+                {
+                    "id":119,
+                    "weight":2
+                }
+            ],
+            "bossPool":[
+                {
+                    "id":92,
+                    "weight":2
+                },
+                {
+                    "id":94,
+                    "weight":2
+                },
+                {
+                    "id":61,
+                    "weight":2
+                },
+                {
+                    "id":119,
+                    "weight":2
+                },
+                {
+                    "id":124,
+                    "weight":2
+                }
+            ],
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
+
         "levels" :[
             {
-                "soldierCount":7
-            },
-            {
-                "soldierCount":7  ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":7 ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":6,
-                "eliteCount": 1  ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":6 ,
-                "bossCount":2
-            }
-
-        ],
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"pool":"elitePool","count":1},
+                    {"id": 149,"from":0,to:2}
+                ]
+            },
+            {
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"pool":"bossPool","count":1},
+                    {"id": 149,"from":0,to:2}
+                ]
+            }],
         "infinityPrize":
             [
                 {
@@ -15694,157 +15862,163 @@ exports.data = [
     {
         "dungeonId": 71,
         "levelCount" :5,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
-        "soldierPool":[
-            {
-                "id":102,
-                "weight":2
-            },
-            {
-                "id":77,
-                "weight":2
-            },
-            {
-                "id":75,
-                "weight":2
-            },
-            {
-                "id":73,
-                "weight":2
-            },
-            {
-                "id":74,
-                "weight":2
-            },
-            {
-                "id":101,
-                "weight":2
-            },
-            {
-                "id":107,
-                "weight":2
-            },
-            {
-                "id":44,
-                "weight":2
-            },
-            {
-                "id":104,
-                "weight":2
-            }
-        ],
-        "elitePool":[
-            {
-                "id":61,
-                "weight":2
-            },
-            {
-                "id":124,
-                "weight":2
-            },
-            {
-                "id":121,
-                "weight":2
-            },
-            {
-                "id":95,
-                "weight":2
-            }
-        ],
-        "bossPool":[
-            {
-                "id":94,
-                "weight":2
-            },
-            {
-                "id":124,
-                "weight":2
-            },
-            {
-                "id":121,
-                "weight":2
-            },
-            {
-                "id":130,
-                "weight":2
-            }
-        ],
+        "pool":{
+            "soldierPool":[
+                {
+                    "id":102,
+                    "weight":2
+                },
+                {
+                    "id":77,
+                    "weight":2
+                },
+                {
+                    "id":75,
+                    "weight":2
+                },
+                {
+                    "id":73,
+                    "weight":2
+                },
+                {
+                    "id":74,
+                    "weight":2
+                },
+                {
+                    "id":101,
+                    "weight":2
+                },
+                {
+                    "id":107,
+                    "weight":2
+                },
+                {
+                    "id":44,
+                    "weight":2
+                },
+                {
+                    "id":104,
+                    "weight":2
+                }
+            ],
+            "elitePool":[
+                {
+                    "id":61,
+                    "weight":2
+                },
+                {
+                    "id":124,
+                    "weight":2
+                },
+                {
+                    "id":121,
+                    "weight":2
+                },
+                {
+                    "id":95,
+                    "weight":2
+                }
+            ],
+            "bossPool":[
+                {
+                    "id":94,
+                    "weight":2
+                },
+                {
+                    "id":124,
+                    "weight":2
+                },
+                {
+                    "id":121,
+                    "weight":2
+                },
+                {
+                    "id":130,
+                    "weight":2
+                }
+            ],
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
+
         "levels" :[
             {
-                "soldierCount":7 ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":7 ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":7    ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":6,
-                "eliteCount": 1
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"pool":"elitePool","count":1},
+                    {"id": 149,"from":0,to:2}
+                ]
             },
             {
-                "soldierCount":6 ,
-                "bossCount":2
-            }
-
-        ],
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"pool":"bossPool","count":1},
+                    {"id": 149,"from":0,to:2}
+                ]
+            }],
         "dropID":
             [
                 78
@@ -15944,153 +16118,159 @@ exports.data = [
     {
         "dungeonId": 72,
         "levelCount" :5,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
-        "soldierPool":[
-            {
-                "id":103,
-                "weight":2
-            },
-            {
-                "id":78,
-                "weight":2
-            },
-            {
-                "id":101,
-                "weight":2
-            },
-            {
-                "id":104,
-                "weight":2
-            },
-            {
-                "id":80,
-                "weight":2
-            },
-            {
-                "id":111,
-                "weight":2
-            } ,
-            {
-                "id":110,
-                "weight":2
-            }
-        ],
-        "elitePool":[
-            {
-                "id":120,
-                "weight":2
-            },
-            {
-                "id":97,
-                "weight":2
-            },
-            {
-                "id":128,
-                "weight":2
-            },
-            {
-                "id":127,
-                "weight":2
-            },
-            {
-                "id":130,
-                "weight":2
-            }
-        ],
-        "bossPool":[
-            {
-                "id":128,
-                "weight":2
-            },
-            {
-                "id":97,
-                "weight":2
-            },
-            {
-                "id":130,
-                "weight":2
-            },
-            {
-                "id":93,
-                "weight":2
-            }
-        ],
+        "pool":{
+            "soldierPool":[
+                {
+                    "id":103,
+                    "weight":2
+                },
+                {
+                    "id":78,
+                    "weight":2
+                },
+                {
+                    "id":101,
+                    "weight":2
+                },
+                {
+                    "id":104,
+                    "weight":2
+                },
+                {
+                    "id":80,
+                    "weight":2
+                },
+                {
+                    "id":111,
+                    "weight":2
+                } ,
+                {
+                    "id":110,
+                    "weight":2
+                }
+            ],
+            "elitePool":[
+                {
+                    "id":120,
+                    "weight":2
+                },
+                {
+                    "id":97,
+                    "weight":2
+                },
+                {
+                    "id":128,
+                    "weight":2
+                },
+                {
+                    "id":127,
+                    "weight":2
+                },
+                {
+                    "id":130,
+                    "weight":2
+                }
+            ],
+            "bossPool":[
+                {
+                    "id":128,
+                    "weight":2
+                },
+                {
+                    "id":97,
+                    "weight":2
+                },
+                {
+                    "id":130,
+                    "weight":2
+                },
+                {
+                    "id":93,
+                    "weight":2
+                }
+            ],
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
+
         "levels" :[
             {
-                "soldierCount":7
-            },
-            {
-                "soldierCount":7 ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":7 ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":6,
-                "eliteCount": 1,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":6 ,
-                "bossCount":1
-            }
-
-        ],
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"pool":"elitePool","count":1},
+                    {"id": 149,"from":0,to:2}
+                ]
+            },
+            {
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"pool":"bossPool","count":1},
+                    {"id": 149,"from":0,to:2}
+                ]
+            }],
         "dropID":
             [
                 79
@@ -16190,173 +16370,187 @@ exports.data = [
     {
         "dungeonId": 73,
         "levelCount" :5,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
-        "soldierPool":[
-            {
-                "id":15,
-                "weight":2
-            },
-            {
-                "id":14,
-                "weight":2
-            },
-            {
-                "id":8,
-                "weight":1
-            },
-            {
-                "id":6,
-                "weight":2
-            },
-            {
-                "id":16,
-                "weight":1
-            },
-            {
-                "id":37,
-                "weight":2
-            },
-            {
-                "id":35,
-                "weight":2
-            },
-            {
-                "id":36,
-                "weight":2
-            }
-        ],
-        "elitePool":[
-            {
-                "id":33,
-                "weight":2
-            },
-            {
-                "id":23,
-                "weight":2
-            },
-            {
-                "id":54,
-                "weight":2
-            },
-            {
-                "id":34,
-                "weight":2
-            },
-            {
-                "id":20,
-                "weight":2
-            },
-            {
-                "id":21,
-                "weight":2
-            }
-        ],
-        "bossPool":[
-            {
-                "id":32,
-                "weight":2
-            },
-            {
-                "id":34,
-                "weight":2
-            },
-            {
-                "id":33,
-                "weight":2
-            },
-            {
-                "id":55,
-                "weight":2
-            },
-            {
-                "id":52,
-                "weight":2
-            },
-            {
-                "id":53,
-                "weight":2
-            },
-            {
-                "id":30,
-                "weight":2
-            }
-        ],
+        "pool":{
+            "soldierPool":[
+                {
+                    "id":15,
+                    "weight":2
+                },
+                {
+                    "id":14,
+                    "weight":2
+                },
+                {
+                    "id":8,
+                    "weight":1
+                },
+                {
+                    "id":6,
+                    "weight":2
+                },
+                {
+                    "id":16,
+                    "weight":1
+                },
+                {
+                    "id":37,
+                    "weight":2
+                },
+                {
+                    "id":35,
+                    "weight":2
+                },
+                {
+                    "id":36,
+                    "weight":2
+                }
+            ],
+            "elitePool":[
+                {
+                    "id":33,
+                    "weight":2
+                },
+                {
+                    "id":23,
+                    "weight":2
+                },
+                {
+                    "id":54,
+                    "weight":2
+                },
+                {
+                    "id":34,
+                    "weight":2
+                },
+                {
+                    "id":20,
+                    "weight":2
+                },
+                {
+                    "id":21,
+                    "weight":2
+                }
+            ],
+            "bossPool":[
+                {
+                    "id":32,
+                    "weight":2
+                },
+                {
+                    "id":34,
+                    "weight":2
+                },
+                {
+                    "id":33,
+                    "weight":2
+                },
+                {
+                    "id":55,
+                    "weight":2
+                },
+                {
+                    "id":52,
+                    "weight":2
+                },
+                {
+                    "id":53,
+                    "weight":2
+                },
+                {
+                    "id":30,
+                    "weight":2
+                }
+            ],
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
+
         "levels" :[
             {
-                "soldierCount":7,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
-                "soldierCount":7 ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,
+                        "count":2
+                    }
                 ]
             },
             {
-                "soldierCount":7
-            },
-            {
-                "soldierCount":6,
-                "eliteCount": 1  ,
-                 "normalCount":1,"objects" :[ {
-                    "id": 149,
-                    "count":2
-                }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,
+                        "count":2
+                    }
                 ]
             },
             {
-                "soldierCount":6 ,
-                "bossCount":1
-            }
-
-        ],
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"pool":"elitePool","count":1},
+                    {"id": 149,
+                        "count":2
+                    }
+                ]
+            },
+            {
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:2},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"pool":"bossPool","count":1},
+                    {"id": 149,
+                        "count":2
+                    }
+                ]
+            }],
         "prize"://TODO
             [
                 {
@@ -16403,48 +16597,50 @@ exports.data = [
     {
         "dungeonId": 74,
         "levelCount" :5,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
         "soldierPool":[
             {
                 "id":15,
@@ -16541,7 +16737,7 @@ exports.data = [
             },
             {
                 "soldierCount":7 ,
-                 "normalCount":1,"objects" :[ {
+                 "objects" :[{"pool":"normalPool","from":0,to:2}, {
                     "id": 149,
                     "count":2
                 }
@@ -16549,7 +16745,7 @@ exports.data = [
             },
             {
                 "soldierCount":7 ,
-                 "normalCount":1,"objects" :[ {
+                 "objects" :[{"pool":"normalPool","from":0,to:2}, {
                     "id": 149,
                     "count":2
                 }
@@ -16562,7 +16758,7 @@ exports.data = [
             {
                 "soldierCount":6 ,
                 "bossCount":1 ,
-                 "normalCount":1,"objects" :[ {
+                 "objects" :[{"pool":"normalPool","from":0,to:2}, {
                     "id": 149,
                     "count":2
                 }
@@ -16616,51 +16812,53 @@ exports.data = [
     {
         "dungeonId": 75,
         "levelCount" :6 ,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 140 ,
                         "count":1
@@ -16673,7 +16871,7 @@ exports.data = [
                 "rank": 20
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 139 ,
                         "count":1
@@ -16686,7 +16884,7 @@ exports.data = [
                 "rank": 20
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 138 ,
                         "count":1
@@ -16699,7 +16897,7 @@ exports.data = [
                 "rank": 20
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 137 ,
                         "count":1
@@ -16711,7 +16909,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 136 ,
                         "count":1
@@ -16724,7 +16922,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 135 ,
                         "count":1
@@ -16771,52 +16969,54 @@ exports.data = [
         "dungeonId": 76,
         "rank": 0,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3,
@@ -16838,7 +17038,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3,
@@ -16856,7 +17056,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2,
@@ -16889,7 +17089,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3,
@@ -16911,7 +17111,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2,
@@ -16933,7 +17133,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2,
@@ -16970,52 +17170,54 @@ exports.data = [
         "dungeonId": 77,
         "rank": 0,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 37 ,
                         "count":3
@@ -17043,7 +17245,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 37 ,
                         "count":2
@@ -17075,7 +17277,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 53 ,
                         "count":1,
@@ -17118,7 +17320,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 35,
                         "count":2
@@ -17150,7 +17352,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 35,
                         "count":2
@@ -17182,7 +17384,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 53,
                         "count":1,
@@ -17232,53 +17434,55 @@ exports.data = [
         "dungeonId": 78,
         "rank": 0,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
 
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 10,
                         "count":2
@@ -17300,7 +17504,7 @@ exports.data = [
             },
 
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2 ,
@@ -17321,7 +17525,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":1,
@@ -17357,7 +17561,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":1,
@@ -17382,7 +17586,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2,
@@ -17409,7 +17613,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 17,
                         "count":2,
@@ -17461,53 +17665,55 @@ exports.data = [
         "dungeonId": 79,
         "rank": 0,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
 
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":4,
@@ -17536,7 +17742,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":4,
@@ -17557,7 +17763,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":5,
@@ -17587,7 +17793,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":4,
@@ -17612,7 +17818,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":5,
@@ -17637,7 +17843,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 18,
                         "count":5,
@@ -17688,53 +17894,55 @@ exports.data = [
         "dungeonId": 80,
         "rank": 0,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
 
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":1,
@@ -17763,7 +17971,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":1,
@@ -17792,7 +18000,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":1,
@@ -17822,7 +18030,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":2,
@@ -17847,7 +18055,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":2,
@@ -17872,7 +18080,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 42,
                         "count":2,
@@ -17926,53 +18134,55 @@ exports.data = [
         "dungeonId": 81,
         "rank": 0,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
 
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 50,
                         "count":5
@@ -17996,7 +18206,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1,
@@ -18025,7 +18235,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1,
@@ -18070,7 +18280,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1,
@@ -18104,7 +18314,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 48,
                         "count":1,
@@ -18138,7 +18348,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 81 ,
                         "count":2
@@ -18191,53 +18401,55 @@ exports.data = [
         "dungeonId": 82,
         "rank":0,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
 
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2,
@@ -18266,7 +18478,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2,
@@ -18291,7 +18503,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2,
@@ -18321,7 +18533,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2,
@@ -18347,7 +18559,7 @@ exports.data = [
             },
 
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 68,
                         "count":2,
@@ -18376,7 +18588,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 61 ,
                         "count":1,
@@ -18428,53 +18640,55 @@ exports.data = [
         "dungeonId": 83,
         "rank": 0,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
 
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -18501,7 +18715,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -18522,7 +18736,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -18558,7 +18772,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -18575,7 +18789,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 75,
                         "count":2
@@ -18606,7 +18820,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 121 ,
                         "count":1,
@@ -18645,46 +18859,48 @@ exports.data = [
     {
     "dungeonId": 84,
     "levelCount" :6 ,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
 
         "rank": 1,
     "levels" :[
         {
-             "normalCount":1,"objects" :[
+             "objects" :[{"pool":"normalPool","from":0,to:2},
                 {
                     "id": 3,
                     "count":4
@@ -18701,7 +18917,7 @@ exports.data = [
             ]
         },
         {
-             "normalCount":1,"objects" :[
+             "objects" :[{"pool":"normalPool","from":0,to:2},
                 {
                     "id": 3,
                     "count":3
@@ -18718,7 +18934,7 @@ exports.data = [
             ]
         },
         {
-             "normalCount":1,"objects" :[
+             "objects" :[{"pool":"normalPool","from":0,to:2},
                 {
                     "id": 3,
                     "count":2
@@ -18739,7 +18955,7 @@ exports.data = [
             ]
         },
         {
-             "normalCount":1,"objects" :[
+             "objects" :[{"pool":"normalPool","from":0,to:2},
                 {
                     "id": 3,
                     "count":2
@@ -18759,7 +18975,7 @@ exports.data = [
             ]
         },
         {
-             "normalCount":1,"objects" :[
+             "objects" :[{"pool":"normalPool","from":0,to:2},
                 {
                     "id": 3,
                     "count":2
@@ -18779,7 +18995,7 @@ exports.data = [
             ]
         },
         {
-             "normalCount":1,"objects" :[
+             "objects" :[{"pool":"normalPool","from":0,to:2},
                 {
                     "id": 3,
                     "count":2
@@ -18841,45 +19057,47 @@ exports.data = [
         "dungeonId": 85,
         "rank": 2,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
 
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":3
@@ -18899,7 +19117,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":3
@@ -18919,7 +19137,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":2
@@ -18944,7 +19162,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -18968,7 +19186,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -18992,7 +19210,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -19056,46 +19274,48 @@ exports.data = [
     {
         "dungeonId": 86,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
 
         "rank": 2,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":3
@@ -19121,7 +19341,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -19151,7 +19371,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -19186,7 +19406,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -19220,7 +19440,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -19250,7 +19470,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -19314,46 +19534,48 @@ exports.data = [
     {
         "dungeonId": 87,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
 
         "rank": 2,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":2
@@ -19393,7 +19615,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -19429,7 +19651,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -19476,7 +19698,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -19508,7 +19730,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -19544,7 +19766,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -19618,46 +19840,48 @@ exports.data = [
     {
         "dungeonId": 88,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
 
         "rank": 2,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -19673,7 +19897,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -19685,7 +19909,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -19706,7 +19930,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -19726,7 +19950,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -19746,7 +19970,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -19801,45 +20025,47 @@ exports.data = [
         "dungeonId": 89,
         "rank": 6,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
 
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -19859,7 +20085,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -19875,7 +20101,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -19906,7 +20132,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -19926,7 +20152,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -19946,7 +20172,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -20014,54 +20240,56 @@ exports.data = [
     {
         "dungeonId": 90,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
          
 
         "rank": 8,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -20081,7 +20309,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -20097,7 +20325,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -20122,7 +20350,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -20138,7 +20366,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -20158,7 +20386,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -20286,45 +20514,47 @@ exports.data = [
 
         "dungeonId": 92,
         "levelCount" :3,
-        "normalPool":[
-     {
-            "id":170,
-            "weight":5
-    },
-    {
-        "id":171,
-        "weight":1
-    },
-    {
-        "id":173,
-        "weight":5
-    },
-    {
-        "id":174,
-        "weight":1
-    },
-    {
-        "id":176,
-        "weight":5
-    },
-    {
-        "id":178,
-        "weight":5
-    },
-    {
-        "id":179,
-        "weight":1
-    },
-    {
-        "id":172,
-        "weight":5
-        }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
         "rank": 1,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":3
@@ -20341,7 +20571,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":2
@@ -20362,7 +20592,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":2
@@ -20410,44 +20640,46 @@ exports.data = [
         "dungeonId": 93,
         "rank": 2,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":3
@@ -20467,7 +20699,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":3
@@ -20487,7 +20719,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":2
@@ -20513,7 +20745,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -20537,7 +20769,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -20561,7 +20793,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -20605,45 +20837,47 @@ exports.data = [
     {
         "dungeonId": 94,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
         "rank": 2,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":3
@@ -20664,7 +20898,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -20689,7 +20923,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -20719,7 +20953,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -20748,7 +20982,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -20773,7 +21007,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -20817,45 +21051,47 @@ exports.data = [
     {
         "dungeonId": 95,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
         "rank": 3,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":2
@@ -20886,7 +21122,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -20912,7 +21148,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -20944,7 +21180,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -20966,7 +21202,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -20992,7 +21228,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 3,
                         "count":1
@@ -21039,45 +21275,47 @@ exports.data = [
     {
         "dungeonId": 96,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
         "rank": 3,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -21093,7 +21331,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -21105,7 +21343,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -21126,7 +21364,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -21146,7 +21384,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -21166,7 +21404,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -21201,48 +21439,50 @@ exports.data = [
         "dungeonId": 97,
         "rank": 6,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":182,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":182,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -21262,7 +21502,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -21278,7 +21518,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -21304,7 +21544,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -21324,7 +21564,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -21344,7 +21584,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -21386,53 +21626,55 @@ exports.data = [
     {
         "dungeonId": 98,
         "levelCount" : 6,
-        "normalPool":[
-        {
-            "id":170,
-            "weight":3
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
         },
-    {
-        "id":171,
-        "weight":3
-    },
-    {
-        "id":172,
-        "weight":3
-    },
-    {
-        "id":173,
-        "weight":3
-    },
-    {
-        "id":174,
-        "weight":3
-    },
-    {
-        "id":175,
-        "weight":3
-    },
-    {
-        "id":176,
-        "weight":3
-    },
-    {
-        "id":177,
-        "weight":3
-    },
-    {
-        "id":178,
-        "weight":3
-    },
-    {
-        "id":179,
-        "weight":3
-    }
-    ],
          
         "rank": 9,
         "levels" :[
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -21452,7 +21694,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":3
@@ -21468,7 +21710,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -21493,7 +21735,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -21509,7 +21751,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -21529,7 +21771,7 @@ exports.data = [
                 ]
             },
             {
-                 "normalCount":1,"objects" :[
+                 "objects" :[{"pool":"normalPool","from":0,to:2},
                     {
                         "id": 5,
                         "count":2
@@ -21568,40 +21810,43 @@ exports.data = [
     },
     {
         "dungeonId": 99,
-        "levelCount" : 4,         "normalPool":[
-        {
-            "id":170,
-            "weight":5
+        "levelCount" : 4,
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
         },
-        {
-            "id":171,
-            "weight":1
-        },
-        {
-            "id":173,
-            "weight":5
-        },
-        {
-            "id":174,
-            "weight":1
-        },
-        {
-            "id":176,
-            "weight":5
-        },
-        {
-            "id":178,
-            "weight":5
-        },
-        {
-            "id":179,
-            "weight":1
-        },
-        {
-            "id":172,
-            "weight":5
-        }
-    ],
         "levels" :[
             {
                  "normalCount":1,"objects" : [
@@ -21702,40 +21947,42 @@ exports.data = [
     {
         "dungeonId": 100,
         "levelCount" : 4,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":5
-            },
-            {
-                "id":171,
-                "weight":1
-            },
-            {
-                "id":173,
-                "weight":5
-            },
-            {
-                "id":174,
-                "weight":1
-            },
-            {
-                "id":176,
-                "weight":5
-            },
-            {
-                "id":178,
-                "weight":5
-            },
-            {
-                "id":179,
-                "weight":1
-            },
-            {
-                "id":172,
-                "weight":5
-            }
-        ],
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
+                },
+                {
+                    "id":176,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":5
+                },
+                {
+                    "id":179,
+                    "weight":1
+                },
+                {
+                    "id":172,
+                    "weight":5
+                }
+            ]
+        },
          
         "levels" :[
             {
@@ -21914,62 +22161,62 @@ exports.data = [
         "dungeonId": 102,
         "rank": 1,
         "levelCount" : 6,
-        "normalPool":[
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
+        "global": [
+            {id: 188,from: 8, to: 13}
+            ],
+            "levels" :[
             {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
-        ],
-
-        "levels" :[
-            {
-                "normalCount":1,"objects" :[
+                "objects" :[{"pool":"normalPool","from":0,to:2},
                 {
                     "id": 39,
                     "count":2
                 },
                 {
                     "id":47 ,
-                    "count":1
-                },
-                {
-                    "id":188 ,
                     "count":1
                 },
                 {
@@ -21991,7 +22238,7 @@ exports.data = [
             ]
             },
             {
-                "normalCount":1,"objects" :[
+                "objects" :[{"pool":"normalPool","from":0,to:2},
                 {
                     "id": 39,
                     "count":1
@@ -21999,10 +22246,6 @@ exports.data = [
                 {
                     "id": 47 ,
                     "count":2
-                },
-                {
-                    "id":188 ,
-                    "count":1
                 },
                 {
                     "id": 149,
@@ -22019,7 +22262,7 @@ exports.data = [
             ]
             },
             {
-                "normalCount":1,"objects" :[
+                "objects" :[{"pool":"normalPool","from":0,to:2},
                 {
                     "id": 39,
                     "count":1
@@ -22027,10 +22270,6 @@ exports.data = [
                 {
                     "id": 47 ,
                     "count":1
-                },
-                {
-                    "id":188 ,
-                    "count":2
                 },
                 {
                     "id": 12,
@@ -22047,13 +22286,9 @@ exports.data = [
             ]
             },
             {
-                "normalCount":1,"objects" :[
+                "objects" :[{"pool":"normalPool","from":0,to:2},
                 {
                     "id": 42,
-                    "count":2
-                },
-                {
-                    "id":188 ,
                     "count":2
                 },
                 {
@@ -22075,13 +22310,9 @@ exports.data = [
             ]
             },
             {
-                "normalCount":1,"objects" :[
+                "objects" :[{"pool":"normalPool","from":0,to:2},
                 {
                     "id": 42,
-                    "count":2
-                },
-                {
-                    "id":188 ,
                     "count":2
                 },
                 {
@@ -22103,7 +22334,7 @@ exports.data = [
             ]
             },
             {
-                "normalCount":1,"objects" :[
+                "objects" :[{"pool":"normalPool","from":0,to:2},
                 {
                     "id": 42,
                     "count":2
@@ -22135,10 +22366,6 @@ exports.data = [
                 {
                     "id": 66,
                     "count":1
-                },
-                {
-                    "id":188 ,
-                    "count":1
                 }
             ]
             }
@@ -22155,52 +22382,56 @@ exports.data = [
         "dungeonId": 103,
         "rank": 70,
         "levelCount" : 6,
-        "normalPool":[
-            {
-                "id":170,
-                "weight":3
-            },
-            {
-                "id":171,
-                "weight":3
-            },
-            {
-                "id":172,
-                "weight":3
-            },
-            {
-                "id":173,
-                "weight":3
-            },
-            {
-                "id":174,
-                "weight":3
-            },
-            {
-                "id":175,
-                "weight":3
-            },
-            {
-                "id":176,
-                "weight":3
-            },
-            {
-                "id":177,
-                "weight":3
-            },
-            {
-                "id":178,
-                "weight":3
-            },
-            {
-                "id":179,
-                "weight":3
-            }
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
+        "global": [
+            {id: 189,from: 8, to: 13}
         ],
-
         "levels" :[
             {
-                "normalCount":1,"objects" :[
+                "objects" :[{"pool":"normalPool","from":0,to:2},
                 {
                     "id": 68,
                     "count":2
@@ -22216,15 +22447,11 @@ exports.data = [
                 {
                     "id": 67,
                     "count":2
-                },
-                {
-                    "id":189,
-                    "count":1
                 }
             ]
             },
             {
-                "normalCount":1,"objects" :[
+                "objects" :[{"pool":"normalPool","from":0,to:2},
                 {
                     "id": 68,
                     "count":2
@@ -22232,10 +22459,6 @@ exports.data = [
                 {
                     "id": 74 ,
                     "count":3
-                },
-                {
-                    "id":189,
-                    "count":2
                 },
                 {
                     "id": 67,
@@ -22252,17 +22475,13 @@ exports.data = [
             ]
             },
             {
-                "normalCount":1,"objects" :[
+                "objects" :[{"pool":"normalPool","from":0,to:2},
                 {
                     "id": 68,
                     "count":2
                 },
                 {
                     "id": 74,
-                    "count":1
-                },
-                {
-                    "id":189,
                     "count":1
                 },
                 {
@@ -22285,7 +22504,7 @@ exports.data = [
             ]
             },
             {
-                "normalCount":1,"objects" :[
+                "objects" :[{"pool":"normalPool","from":0,to:2},
                 {
                     "id": 68,
                     "count":3
@@ -22295,23 +22514,15 @@ exports.data = [
                     "count":3
                 },
                 {
-                    "id": 189 ,
-                    "count":1
-                },
-                {
                     "id": 67,
                     "count":2
                 }
             ]
             },
             {
-                "normalCount":1,"objects" :[
+                "objects" :[{"pool":"normalPool","from":0,to:2},
                 {
                     "id": 68,
-                    "count":2
-                },
-                {
-                    "id":189,
                     "count":2
                 },
                 {
@@ -22329,11 +22540,7 @@ exports.data = [
             ]
             },
             {
-                "normalCount":1,"objects" :[
-                {
-                    "id": 189 ,
-                    "count":1
-                },
+                "objects" :[{"pool":"normalPool","from":0,to:2},
                 {
                     "id": 68,
                     "count":1
@@ -22369,18 +22576,23 @@ exports.data = [
         "dungeonId": 104,
         "rank": 250,
         "levelCount" : 6,
-        "normalPool":[
-              { "id":170, "weight":3 },
-              { "id":171, "weight":3 },
-              { "id":172, "weight":3 },
-              { "id":173, "weight":3 },
-              { "id":174, "weight":3 },
-              { "id":175, "weight":3 },
-              { "id":176, "weight":3 },
-              { "id":177, "weight":3 },
-              { "id":178, "weight":3 },
-              { "id":179, "weight":3 }
-          ],
+        "pool":{
+            "normalPool":[
+                { "id":170, "weight":3 },
+                { "id":171, "weight":3 },
+                { "id":172, "weight":3 },
+                { "id":173, "weight":3 },
+                { "id":174, "weight":3 },
+                { "id":175, "weight":3 },
+                { "id":176, "weight":3 },
+                { "id":177, "weight":3 },
+                { "id":178, "weight":3 },
+                { "id":179, "weight":3 }
+            ]
+        },
+        "global": [
+        {id: 190,from: 8, to: 13}
+    ],
         "levels": [
             {"normalCount":1,
                 "objects" :
@@ -22389,8 +22601,7 @@ exports.data = [
               { "id": 42, "count":1 }, { "id": 43, "count":1 },
               { "id": 12, "count":2 },
               { "id": 69, "count":1 },
-              { "id": 45, "count":1 },
-              {"id": 190, "count":1 }
+              { "id": 45, "count":1 }
           ]},
             {"normalCount":1,
                 "objects" :
@@ -22399,8 +22610,7 @@ exports.data = [
               { "id": 149 , "count":2 },
               { "id": 12, "count":2 },
               { "id": 69, "count":1 },
-              { "id": 45, "count":1 },
-              {"id": 190, "count":1 }
+              { "id": 45, "count":1 }
           ]},
             {"normalCount":1,
                 "objects" :
@@ -22409,8 +22619,7 @@ exports.data = [
               { "id": 42, "count":1 }, { "id": 43, "count":1 },
               { "id": 149, "count":3 },
               { "id": 12, "count":2 },
-              { "id":63, "count":1 },
-              {"id": 190, "count":2 }
+              { "id":63, "count":1 }
           ]}, {"normalCount":1,
                 "objects":
           [
@@ -22425,8 +22634,7 @@ exports.data = [
               { "id": 42, "count":2 }, { "id": 43, "count":1 },
               { "id": 47 , "count":1 },
               { "id": 12, "count":2 },
-              { "id": 69, "count":1 },
-              {"id": 190, "count":1 }
+              { "id": 69, "count":1 }
           ]},
             {"normalCount":1,
                 "objects" :
@@ -22435,13 +22643,707 @@ exports.data = [
               { "id": 47 , "count":1 },
               { "id": 12, "count":1 },
               { "id": 149, "count":3 },
-              { "id": 69, "count":1 },
-              {"id": 190, "count":2 }
+              { "id": 69, "count":1 }
           ]}
         ],
         "dropID":[ ],
         "prizeWxp":0,"prizeGold":0, "prizeXp":0,
         "wxpRate":1,"goldRate":0.2, "xpRate":0.1
+    },
+    {
+        "dungeonId": 105,
+        "rank": 8,
+        "levelCount" : 3,
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
+        "levels" :[
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:2},
+                    {
+                        "id": 35,
+                        "count":2
+                    },
+                    {
+                        "id": 36 ,
+                        "count":2
+                    },
+                    {
+                        "id": 37,
+                        "count":2
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 16,
+                        "count":1
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:2},
+                    {
+                        "id": 35,
+                        "count":2
+                    },
+                    {
+                        "id": 36 ,
+                        "count":3
+                    },
+                    {
+                        "id": 37,
+                        "count":2
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:2},
+                    {
+                        "id": 35,
+                        "count":2
+                    },
+                    {
+                        "id": 36 ,
+                        "count":2
+                    },
+                    {
+                        "id": 37,
+                        "count":2
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 135,
+                        "count":1,
+                        "pos":12,
+                        "keyed":true
+                    }
+                ],
+                "exit": 29,
+                "entrance":0
+            }
+        ],
+        "dropID":[ 80
+        ],
+        "prizeWxp":170,"prizeGold":680,
+        "prizeXp":340,
+        "wxpRate":1,"goldRate":0.2,
+        "xpRate":0.1
+    },
+    {
+        "dungeonId": 106,
+        "rank": 22,
+        "levelCount" : 3,
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
+
+        "levels" :[
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:2},
+                    {
+                        "id": 17,
+                        "count":1
+                    },
+                    {
+                        "id": 10,
+                        "count":2
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 13,
+                        "count":1
+                    },
+                    {
+                        "id": 9,
+                        "count":1
+                    },
+                    {
+                        "id": 38,
+                        "count":1
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:2},
+                    {
+                        "id": 17,
+                        "count":1
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 10,
+                        "count":2
+                    },
+                    {
+                        "id": 9,
+                        "count":1
+                    },
+                    {
+                        "id": 38,
+                        "count":2
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:2},
+                    {
+                        "id": 17,
+                        "count":2
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 10,
+                        "count":1
+                    },
+                    {
+                        "id": 137,
+                        "count":1,
+                        "pos":12,
+                        "keyed":true
+                    },
+                    {
+                        "id": 13,
+                        "count":2
+                    },
+                    {
+                        "id": 38,
+                        "count":1
+                    }
+                ],
+                "exit": 29,
+                "entrance":0
+            }
+        ],
+        "dropID":[ 81
+        ],
+        "prizeWxp":235,"prizeGold": 940,
+        "prizeXp":470,
+        "wxpRate":1,"goldRate":0.2,
+        "xpRate":0.1
+    },
+    {
+        "dungeonId": 107,
+        "rank": 58,
+        "levelCount" : 3,
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
+
+        "levels" :[
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:2},
+                    {
+                        "id": 18,
+                        "count":4
+                    },
+                    {
+                        "id": 39,
+                        "count":2
+                    },
+                    {
+                        "id": 11,
+                        "count":2
+                    },
+                    {
+                        "id": 38,
+                        "count":2
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:2},
+                    {
+                        "id": 18,
+                        "count":5
+                    },
+                    {
+                        "id": 40,
+                        "count":1
+                    },
+                    {
+                        "id": 39,
+                        "count":1
+                    },
+                    {
+                        "id": 11,
+                        "count":1
+                    },
+                    {
+                        "id": 149,
+                        "count":3
+                    },
+                    {
+                        "id": 38,
+                        "count":1
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:2},
+                    {
+                        "id": 18,
+                        "count":5
+                    },
+                    {
+                        "id": 40,
+                        "count":1
+                    },
+                    {
+                        "id": 39,
+                        "count":1
+                    },
+                    {
+                        "id": 11,
+                        "count":1
+                    },
+                    {
+                        "id": 149,
+                        "count":3
+                    },
+                    {
+                        "id": 38,
+                        "count":1
+                    },
+                    {
+                        "id": 138,
+                        "count":1,
+                        "pos":12,
+                        "keyed":true
+                    }
+                ],
+                "exit": 29,
+                "entrance":0
+            }
+        ],
+        "dropID":[  82
+        ],
+        "prizeWxp":300,"prizeGold": 1200,
+        "prizeXp":600,
+        "wxpRate":1,"goldRate":0.2,
+        "xpRate":0.1
+    },
+    {
+        "dungeonId": 108,
+        "rank": 101,
+        "levelCount" : 3,
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
+
+        "levels" :[
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:2},
+                    {
+                        "id": 42,
+                        "count":2
+                    },
+                    {
+                        "id": 43,
+                        "count":1
+                    },
+                    {
+                        "id": 47 ,
+                        "count":1
+                    },
+                    {
+                        "id": 46,
+                        "count":1
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:2},
+                    {
+                        "id": 42,
+                        "count":2
+                    },
+                    {
+                        "id": 43,
+                        "count":1
+                    },
+                    {
+                        "id": 47 ,
+                        "count":2
+                    },
+                    {
+                        "id": 46,
+                        "count":2
+                    },
+                    {
+                        "id": 45,
+                        "count":1
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:2},
+                    {
+                        "id": 42,
+                        "count":2
+                    },
+                    {
+                        "id": 47 ,
+                        "count":2
+                    },
+                    {
+                        "id": 149,
+                        "count":3
+                    },
+                    {
+                        "id": 43,
+                        "count":1
+                    },
+                    {
+                        "id": 46,
+                        "count":2
+                    },
+                    {
+                        "id": 139,
+                        "count":1,
+                        "pos":12,
+                        "keyed":true
+                    }
+                ],
+                "exit": 29,
+                "entrance":0
+            }
+        ],
+        "dropID":[83
+
+        ],
+        "prizeWxp":368,"prizeGold":1450,
+        "prizeXp":735,
+        "wxpRate":1,"goldRate":0.2,
+        "xpRate":0.1
+    },
+    {
+        "dungeonId": 109,
+        "rank": 130,
+        "levelCount" : 3,
+        "pool":{
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
+
+        "levels" :[
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:2},
+                    {
+                        "id": 48,
+                        "count":1
+                    },
+                    {
+                        "id": 50,
+                        "count":4
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 79,
+                        "count":1
+                    },
+                    {
+                        "id": 81 ,
+                        "count":1
+                    },
+                    {
+                        "id": 71 ,
+                        "count":2
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:2},
+                    {
+                        "id": 48,
+                        "count":2
+                    },
+                    {
+                        "id": 50,
+                        "count":3
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 79,
+                        "count":1
+                    },
+                    {
+                        "id": 81 ,
+                        "count":2
+                    },
+                    {
+                        "id": 71 ,
+                        "count":1
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:2},
+                    {
+                        "id": 48,
+                        "count":2
+                    },
+                    {
+                        "id": 50,
+                        "count":3
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 79,
+                        "count":1
+                    },
+                    {
+                        "id": 81 ,
+                        "count":2
+                    },
+                    {
+                        "id": 71 ,
+                        "count":1
+                    },
+                    {
+                        "id": 140,
+                        "count":1,
+                        "pos":12,
+                        "keyed":true
+                    }
+                ],
+                "exit": 29,
+                "entrance":0
+            }
+        ],
+        "dropID":[    84
+
+        ],
+        "prizeWxp":435,"prizeGold":1740,
+        "prizeXp":870,
+        "wxpRate":1,"goldRate":0.2,
+        "xpRate":0.1
     }
 
 ];

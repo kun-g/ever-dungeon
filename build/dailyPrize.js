@@ -152,7 +152,7 @@ exports.data = [
         "prize": [
             {
                 "type": 0,
-                "value":840,
+                "value":540,
                 "count":2
             }
         ]
@@ -213,7 +213,7 @@ exports.data = [
         "prize": [
             {
                 "type": 0,
-                "value":840,
+                "value":540,
                 "count":2
             }
         ]
@@ -274,7 +274,7 @@ exports.data = [
         "prize": [
             {
                 "type": 0,
-                "value":840,
+                "value":540,
                 "count":3
             }
         ]

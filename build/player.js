@@ -174,7 +174,6 @@
                   };
                 })(this));
                 item.id = p[0].value;
-                console.log(item.id);
               }
               enhanceID = queryTable(TABLE_ITEM, item.id).enhanceID;
               if ((enhanceID != null) && lv >= 0) {
@@ -239,7 +238,7 @@
     };
 
     Player.prototype.onLogin = function() {
-      var dis, flag, key, prize, ret, s, _i, _len, _ref7;
+      var dis, flag, itemsNeedRemove, key, prize, ret, rmMSG, s, _i, _len, _ref7;
       if (!this.lastLogin) {
         return [];
       }
@@ -268,7 +267,7 @@
         }
       }
       flag = true;
-      if (this.loginStreak.date) {
+      if (this.loginStreak.date && diffDate(this.loginStreak.date, 'month') === 0) {
         dis = diffDate(this.loginStreak.date);
         if (dis === 0) {
           flag = false;
@@ -290,6 +289,21 @@
           claim: flag
         }
       ];
+      itemsNeedRemove = this.inventory.filter(function(item) {
+        if ((item != null ? item.expiration : void 0) == null) {
+          return false;
+        }
+        if (item.date == null) {
+          return true;
+        }
+        return helperLib.currentTime(true).valueOf() > item.date + item.expiration.day * 24 * 60 * 60;
+      });
+      rmMSG = itemsNeedRemove.map((function(_this) {
+        return function(e) {
+          return _this.removeItem(null, null, _this.queryItemSlot(e));
+        };
+      })(this));
+      ret = ret.concat(rmMSG);
       return ret;
     };
 
@@ -321,7 +335,6 @@
       if (this.loginStreak.count >= queryTable(TABLE_DP).length) {
         this.loginStreak.count = 0;
       }
-      console.log(queryTable(TABLE_DP).length);
       return {
         ret: RET_OK,
         res: ret
@@ -3029,6 +3042,10 @@
         var count, e, item, ret, _i, _len, _ref7, _results;
         count = (_ref7 = env.variable('count')) != null ? _ref7 : 1;
         item = createItem(env.variable('item'));
+        if (item.expiration) {
+          item.date = helperLib.currentTime(true).valueOf();
+          item.attrSave('date');
+        }
         if (item == null) {
           return showMeTheStack();
         }

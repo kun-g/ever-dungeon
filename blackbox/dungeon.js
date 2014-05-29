@@ -434,13 +434,13 @@
         _ref8 = q.objects;
         for (_i = 0, _len = _ref8.length; _i < _len; _i++) {
           o = _ref8[_i];
-          arrCollectID.push(o.collectId);
+          arrCollectID.push(o.collect);
         }
       }
       this.unitCreation = creation.map(function(level) {
         return level.filter(function(e) {
           if (e.questOnly) {
-            return arrCollectID.indexOf(e.collectId);
+            return arrCollectID.indexOf(e.collectId) !== -1;
           } else {
             return true;
           }
