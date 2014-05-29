@@ -1293,7 +1293,7 @@
     };
 
     Player.prototype.useItem = function(slot) {
-      var dropData, e, equip, item, myClass, prize, ret, tmp, _ref7;
+      var equip, item, myClass, prize, ret, tmp, _ref7;
       item = this.getItemAt(slot);
       myClass = this.hero["class"];
       if (item == null) {
@@ -1331,20 +1331,8 @@
                   ret: RET_NoKey
                 };
               }
-              dropData = queryTable(TABLE_DROP, item.dropId, this.abIndex);
-              if (!((dropData != null) && dropData.dropList)) {
-                logError({
-                  'action': 'useItem',
-                  type: 'TreasureChest',
-                  reason: 'invalidDropData',
-                  id: item.id
-                });
-                return {
-                  ret: RET_Unknown
-                };
-              }
-              e = selectElementFromWeightArray(dropData.dropList, Math.random());
-              prize = this.claimPrize(e.drop);
+              prize = helperLib.generatePrize(queryTable(TABLE_DROP), item.dropId);
+              prize = this.claimPrize(prize);
               if (!prize) {
                 return {
                   ret: RET_InventoryFull
