@@ -1331,7 +1331,7 @@
                   ret: RET_NoKey
                 };
               }
-              prize = helperLib.generatePrize(queryTable(TABLE_DROP), item.dropId);
+              prize = helperLib.generatePrize(queryTable(TABLE_DROP), [item.dropId]);
               prize = this.claimPrize(prize);
               if (!prize) {
                 return {
