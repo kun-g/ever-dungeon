@@ -22768,7 +22768,7 @@ exports.data = [
                 "entrance":0
             }
         ],
-        "dropID":[ 70
+        "dropID":[ 80
         ],
         "prizeWxp":170,"prizeGold":680,
         "prizeXp":340,
@@ -22910,7 +22910,7 @@ exports.data = [
                 "entrance":0
             }
         ],
-        "dropID":[ 71
+        "dropID":[ 81
         ],
         "prizeWxp":235,"prizeGold": 940,
         "prizeXp":470,
@@ -23052,7 +23052,7 @@ exports.data = [
                 "entrance":0
             }
         ],
-        "dropID":[  72
+        "dropID":[  82
         ],
         "prizeWxp":300,"prizeGold": 1200,
         "prizeXp":600,
@@ -23186,7 +23186,7 @@ exports.data = [
                 "entrance":0
             }
         ],
-        "dropID":[73
+        "dropID":[83
 
         ],
         "prizeWxp":368,"prizeGold":1450,
@@ -23337,7 +23337,7 @@ exports.data = [
                 "entrance":0
             }
         ],
-        "dropID":[    74
+        "dropID":[    84
 
         ],
         "prizeWxp":435,"prizeGold":1740,

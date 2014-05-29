@@ -27577,5 +27577,29 @@ exports.data = [
         ],
         "storeOnly": true,
         "expiration": {day: 2}
+    },
+    {
+        "classId": 862,
+        "label": "端午粽子大礼包",
+        "icon": "item-gift3.png",
+        "category": 0,
+        "subcategory": 2,
+        "description": "打开有惊喜！",
+        "stack": 99,
+        "quality": 2,
+        "sellGem": 75,
+        "dropId": 85
+    },
+    {
+        "classId": 863,
+        "label": "端午翡翠粽子礼包",
+        "icon": "item-gift4.png",
+        "category": 0,
+        "subcategory": 2,
+        "description": "打开有惊喜",
+        "stack": 99,
+        "quality": 3,
+        "sellGem": 225,
+        "dropId": 86
     }
 ]
