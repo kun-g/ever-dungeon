@@ -35,7 +35,7 @@ exports.data = [
 				{
 					"weight": 2,
 					"type": 1,
-					"count": 1000
+					"count": 800
 				}
 			]
 		}
