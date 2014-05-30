@@ -78,7 +78,7 @@ exports.data = {
         }
     }
   },
-    "DuanwuCharge": {
+    "Charge": {
         "show": true,
         "title": "端午粽子派送",
         "banner":"event-banner-dwj.png",
