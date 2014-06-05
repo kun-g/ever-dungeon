@@ -4,7 +4,7 @@ exports.data = [
     [],
     [],
     [],
-    [
+    [//5
 		{
 			"rate": 1,
 			"prize": [
@@ -16,7 +16,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //6
 		{
 			"rate": 1,
 			"prize": [
@@ -28,19 +28,19 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//7
 		{
 			"rate": 1,
 			"prize": [
 				{
 					"weight": 2,
 					"type": 1,
-					"count": 1000
+					"count": 800
 				}
 			]
 		}
 	],
-	[
+	[ //8
 		{
 			"rate": 1,
 			"prize": [
@@ -95,7 +95,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//9
 		{
 			"rate": 1,
 			"prize": [
@@ -150,7 +150,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //10
 		{
 			"rate": 1,
 			"prize": [
@@ -205,7 +205,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//11
 		{
 			"rate": 1,
 			"prize": [
@@ -260,7 +260,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//12
 		{
 			"rate": 1,
 			"prize": [
@@ -315,7 +315,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//13
 		{
 			"rate": 1,
 			"prize": [
@@ -370,7 +370,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //14
 		{
 			"rate": 1,
 			"prize": [
@@ -425,7 +425,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//15
 		{
 			"rate": 1,
 			"prize": [
@@ -502,7 +502,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //16
 		{
 			"rate": 1,
 			"prize": [
@@ -579,7 +579,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //17
 		{
 			"rate": 1,
 			"prize": [
@@ -656,7 +656,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//18
 		{
 			"rate": 1,
 			"prize": [
@@ -733,7 +733,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //19
 		{
 			"rate": 1,
 			"prize": [
@@ -810,7 +810,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //20
 		{
 			"rate": 1,
 			"prize": [
@@ -887,7 +887,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //21
 		{
 			"rate": 1,
 			"prize": [
@@ -964,7 +964,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //22
 		{
 			"rate": 1,
 			"prize": [
@@ -1041,7 +1041,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//23
 		{
 			"rate": 1,
 			"prize": [
@@ -1118,7 +1118,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//24
 		{
 			"rate": 1,
 			"prize": [
@@ -1195,7 +1195,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //25
 		{
 			"rate": 1,
 			"prize": [
@@ -1272,7 +1272,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//26
 		{
 			"rate": 1,
 			"prize": [
@@ -1349,7 +1349,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //27
 		{
 			"rate": 1,
 			"prize": [
@@ -1426,7 +1426,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//28
 		{
 			"rate": 1,
 			"prize": [
@@ -1503,7 +1503,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //29
 		{
 			"rate": 1,
 			"prize": [
@@ -1580,7 +1580,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //30
 		{
 			"rate": 1,
 			"prize": [
@@ -1657,7 +1657,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //31
 		{
 			"rate": 1,
 			"prize": [
@@ -1734,7 +1734,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//32
 		{
 			"rate": 1,
 			"prize": [
@@ -1811,7 +1811,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//33
 		{
 			"rate": 1,
 			"prize": [
@@ -1888,7 +1888,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//34
 		{
 			"rate": 1,
 			"prize": [
@@ -1965,7 +1965,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //35
 		{
 			"rate": 1,
 			"prize": [
@@ -2042,7 +2042,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//36
 		{
 			"rate": 1,
 			"prize": [
@@ -2119,7 +2119,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//37
 		{
 			"rate": 1,
 			"prize": [
@@ -2196,7 +2196,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //38
 		{
 			"rate": 1,
 			"prize": [
@@ -2273,7 +2273,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//39
 		{
 			"rate": 1,
 			"prize": [
@@ -2350,7 +2350,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //40
 		{
 			"rate": 1,
 			"prize": [
@@ -2427,7 +2427,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//41
 		{
 			"rate": 1,
 			"prize": [
@@ -2504,7 +2504,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //42
 		{
 			"rate": 1,
 			"prize": [
@@ -2581,7 +2581,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //43
 		{
 			"rate": 1,
 			"prize": [
@@ -2658,7 +2658,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //44
 		{
 			"rate": 1,
 			"prize": [
@@ -2735,7 +2735,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //45
 		{
 			"rate": 1,
 			"prize": [
@@ -2812,7 +2812,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//46
 		{
 			"rate": 1,
 			"prize": [
@@ -2889,7 +2889,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//47
 		{
 			"rate": 1,
 			"prize": [
@@ -2966,7 +2966,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//48
 		{
 			"rate": 1,
 			"prize": [
@@ -3043,7 +3043,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //49
 		{
 			"rate": 1,
 			"prize": [
@@ -3120,7 +3120,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //50
 		{
 			"rate": 1,
 			"prize": [
@@ -3197,7 +3197,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //51
 		{
 			"rate": 1,
 			"prize": [
@@ -3274,7 +3274,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //52
 		{
 			"rate": 1,
 			"prize": [
@@ -3351,7 +3351,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//53
 		{
 			"rate": 1,
 			"prize": [
@@ -3428,7 +3428,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //54
 		{
 			"rate": 1,
 			"prize": [
@@ -3505,7 +3505,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //55
 		{
 			"rate": 1,
 			"prize": [
@@ -3582,7 +3582,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//56
 		{
 			"rate": 1,
 			"prize": [
@@ -3659,7 +3659,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //57
 		{
 			"rate": 1,
 			"prize": [
@@ -3736,7 +3736,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //58
 		{
 			"rate": 1,
 			"prize": [
@@ -3813,7 +3813,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //59
 		{
 			"rate": 1,
 			"prize": [
@@ -3890,7 +3890,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//60
 		{
 			"rate": 1,
 			"prize": [
@@ -3967,7 +3967,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //61
 		{
 			"rate": 1,
 			"prize": [
@@ -4044,7 +4044,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //62
 		{
 			"rate": 1,
 			"prize": [
@@ -4121,7 +4121,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //63
 		{
 			"rate": 1,
 			"prize": [
@@ -4198,7 +4198,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//64
 		{
 			"rate": 1,
 			"prize": [
@@ -4275,7 +4275,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//65
 		{
 			"rate": 1,
 			"prize": [
@@ -4352,7 +4352,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//66
 		{
 			"rate": 1,
 			"prize": [
@@ -4429,7 +4429,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//67
 		{
 			"rate": 1,
 			"prize": [
@@ -4506,7 +4506,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //68
 		{
 			"rate": 1,
 			"prize": [
@@ -4583,7 +4583,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//69
 		{
 			"rate": 1,
 			"prize": [
@@ -4660,7 +4660,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //70
 		{
 			"rate": 1,
 			"prize": [
@@ -4737,7 +4737,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //71
 		{
 			"rate": 1,
 			"prize": [
@@ -4749,7 +4749,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //72
 		{
 			"rate": 1,
 			"prize": [
@@ -4761,7 +4761,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //73
 		{
 			"rate": 1,
 			"prize": [
@@ -4773,7 +4773,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //74
 		{
 			"rate": 1,
 			"prize": [
@@ -4785,7 +4785,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[//75
 		{
 			"rate": 1,
 			"prize": [
@@ -4797,7 +4797,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //76
 		{
 			"rate": 1,
 			"prize": [
@@ -4809,7 +4809,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //77
 		{
 			"rate": 1,
 			"prize": [
@@ -4821,7 +4821,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //78
 		{
 			"rate": 1,
 			"prize": [
@@ -4833,7 +4833,7 @@ exports.data = [
 			]
 		}
 	],
-	[
+	[ //79
 		{
 			"rate": 1,
 			"prize": [
@@ -4845,7 +4845,7 @@ exports.data = [
 			]
 		}
 	],
-    [
+    [ //80
         {
             "rate": 1,
             "prize": [
@@ -4870,7 +4870,7 @@ exports.data = [
             ]
         }
     ],
-    [
+    [ //81
         {
             "rate": 1,
             "prize": [
@@ -4895,7 +4895,7 @@ exports.data = [
             ]
         }
     ],
-    [
+    [ //82
         {
             "rate": 1,
             "prize": [
@@ -4920,7 +4920,7 @@ exports.data = [
             ]
         }
     ],
-    [
+    [ //83
         {
             "rate": 1,
             "prize": [
@@ -4945,7 +4945,7 @@ exports.data = [
             ]
         }
     ],
-    [
+    [ //84
         {
             "rate": 1,
             "prize": [
@@ -4966,6 +4966,166 @@ exports.data = [
                     "type": 0,
                     "value": 857,
                     "count":10
+                }
+            ]
+        }
+    ],
+    [//85
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 18,
+                    "type": 0,
+                    "value":853 ,
+                   "count": 1
+                },
+                {
+                    "weight": 18,
+                    "type": 0,
+                    "value": 854,
+                    "count": 1
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 855,
+                    "count":1
+                },
+                {
+                    "weight": 18,
+                    "type": 0,
+                    "value": 858,
+                    "count":1
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 859,
+                    "count":1
+                }
+            ]
+        },
+        {
+            "rate": 0.2,
+            "prize": [
+                {
+                    "weight": 18,
+                    "type": 0,
+                    "value":538 ,
+                    "count": 1
+                },
+                {
+                    "weight": 6,
+                    "type": 0,
+                    "value": 538,
+                    "count": 2
+                },
+                {
+                    "weight": 2,
+                    "type": 0,
+                    "value": 538,
+                    "count":3
+                }
+            ]
+        },
+        {
+            "rate": 0.08,
+            "prize": [
+                {
+                    "weight": 18,
+                    "type": 2,
+                    "count": 10
+                },
+                {
+                    "weight": 6,
+                    "type": 2,
+                    "count": 20
+                },
+                {
+                    "weight": 2,
+                    "type": 2,
+                    "count":40
+                }
+            ]
+        }
+    ],
+    [ //86
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 18,
+                    "type": 0,
+                    "value":856 ,
+                    "count": 2
+                },
+                {
+                    "weight": 18,
+                    "type": 0,
+                    "value": 857,
+                    "count": 2
+                },
+                {
+                    "weight": 18,
+                    "type": 0,
+                    "value": 855,
+                    "count":2
+                },
+                {
+                    "weight": 18,
+                    "type": 0,
+                    "value": 859,
+                    "count":2
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 860,
+                    "count":2
+                }
+            ]
+        },
+        {
+            "rate": 0.4,
+            "prize": [
+                {
+                    "weight": 18,
+                    "type": 0,
+                    "value":538 ,
+                    "count": 1
+                },
+                {
+                    "weight": 6,
+                    "type": 0,
+                    "value": 538,
+                    "count": 2
+                },
+                {
+                    "weight": 2,
+                    "type": 0,
+                    "value": 538,
+                    "count":3
+                }
+            ]
+        },
+        {
+            "rate": 0.08,
+            "prize": [
+                {
+                    "weight": 18,
+                    "type": 2,
+                    "count": 20
+                },
+                {
+                    "weight": 6,
+                    "type": 2,
+                    "count": 40
+                },
+                {
+                    "weight": 2,
+                    "type": 2,
+                    "count":80
                 }
             ]
         }

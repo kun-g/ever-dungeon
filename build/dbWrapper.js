@@ -195,8 +195,8 @@
         selector = list.filter(function(e) {
           return e <= rangeTo && e >= rangeFrom;
         });
-        rangeFrom -= 30;
-        rangeTo += 30;
+        rangeFrom -= 300;
+        rangeTo += 300;
         trys -= 1;
       }
       return selector;
