@@ -2852,5 +2852,65 @@ exports.data = [
                 {"type": "playEffect","effect":43,"pos":"self"}
             ]
         }
+    },
+    {
+        "skillId": 126,
+        "label":"装备达人格挡",
+        "icon": "skill-warrior1.png",
+        "desc": "用坚实的盾牌来格挡攻击，抵消伤害，格挡次数随等级增加。",
+        "slotId": 0,
+        "config": {
+            "basic" : {
+                "spellEffect": 4,
+                "targetEffect": 1 ,
+                "spellDelay": 0.3
+            },
+            "targetSelection": {
+                "pool": "self",
+                "filter": [{"type":"alive"},{"type":"visible"}]
+            },
+            "triggerCondition": [
+                { "type": "onBeShow", "cd": 10 },
+            ],
+            "action": [
+                { "type": "installSpell", "spell": 127}
+            ],
+            "levelConfig": [
+                {"level": 1},
+                {"level": 2},
+                {"level": 3}
+            ]
+        }
+    },
+    {
+        "skillId": 127,
+        "slotId": -1,
+        "config": {
+            "basic": {
+                "buffEffect": 42,
+                "spellAction": 1,
+                "spellEffect": 1,
+                "spellDelay": 0.3
+            },
+            "triggerCondition": [
+                { "type": "event", "event": "onBePhysicalDamage" },
+                { "type": "event", "event": "onBePhysicalRangeDamage" },
+                { "type": "event", "event": "onBeSpellDamage" },
+                { "type": "event", "event": "onBeSpellRangeDamage" },
+                { "type": "targetMutex", "mutex": "reinforce" }
+            ],
+            "availableCondition": [
+                { "type": "effectCount" }
+            ],
+            "action": [
+                { "type": "modifyVar", "x": "damage", "formular": {"environment": {"damage":0}} },
+                {"type": "setMyMutex", "mutex": "reinforce", "count": 1 }
+            ],
+            "levelConfig": [
+                {"count": 1},
+                {"count": 2},
+                {"count": 3}
+            ]
+        }
     }
 ]

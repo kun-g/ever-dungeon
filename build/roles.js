@@ -27,7 +27,7 @@ exports.data = [
 			41,
 			42,
 			43,
-            622,
+            662,
             712
 		],
 		"levelId": 0
@@ -6794,5 +6794,143 @@ exports.data = [
 		"dropInfo": [
 			7
 		]
-	}
+	},
+    {
+        "classId": 191,
+        "className": "装备达人",
+        "faction": "monster",
+        "classType": 1,
+        "avatar": "enemy-zbdr1.ccbi",
+        "property": {
+            "health": 2,
+            "attack": 0.3,
+            "critical": 2,
+            "strong": 2,
+            "accuracy": 15,
+            "reactivity": -20,
+            "speed": 0,
+            "counterAttack": false,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 4,
+            "attack": 0,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundWound": "liulangwound.mp3",
+        "soundAttack": "liulangattack.mp3",
+        "soundDie": "liulangdie.mp3",
+        "effectAttack": 9,
+        "skill": [
+            {
+                "id": 126,
+                "level": 1
+            },
+            {
+                "id": 125,
+                "level": 1
+            }
+        ],
+        "dropInfo": [
+            87
+        ]
+    },
+    {
+        "classId": 192,
+        "className": "强劲装备达人",
+        "faction": "monster",
+        "classType": 1,
+        "avatar": "enemy-zbdr2.ccbi",
+        "property": {
+            "health": 1,
+            "attack": 0.12,
+            "critical": 2,
+            "strong": 2,
+            "accuracy": 15,
+            "reactivity": -20,
+            "speed": 0,
+            "counterAttack": false,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 4,
+            "attack": 0,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundWound": "liulangwound.mp3",
+        "soundAttack": "liulangattack.mp3",
+        "soundDie": "liulangdie.mp3",
+        "effectAttack": 9,
+        "skill": [
+            {
+                "id": 126,
+                "level": 1
+            },
+            {
+                "id": 125,
+                "level": 1
+            }
+        ],
+        "dropInfo": [
+            88
+        ]
+    },
+    {
+        "classId": 193,
+        "className": "威力装备达人",
+        "faction": "monster",
+        "classType": 1,
+        "avatar": "enemy-zbdr3.ccbi",
+        "property": {
+            "health": 3,
+            "attack": 0.8,
+            "critical": 2,
+            "strong": 2,
+            "accuracy": 15,
+            "reactivity": -20,
+            "speed": 0,
+            "counterAttack": false,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 4,
+            "attack": 0,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundWound": "liulangwound.mp3",
+        "soundAttack": "liulangattack.mp3",
+        "soundDie": "liulangdie.mp3",
+        "effectAttack": 9,
+        "skill": [
+            {
+                "id": 126,
+                "level": 1
+            },
+            {
+                "id": 125,
+                "level": 1
+            }
+        ],
+        "dropInfo": [
+            89
+        ]
+    }
 ]
