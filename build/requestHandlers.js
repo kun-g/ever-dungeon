@@ -493,6 +493,7 @@
     RPC_GameStartDungeon: {
       id: 1,
       func: function(arg, player, handler, rpcID, socket) {
+        player.dungeonData = {};
         return player.startDungeon(+arg.stg, arg.initialDataOnly, function(err, evEnter, extraMsg) {
           extraMsg = (extraMsg != null ? extraMsg : []).concat(player.syncEnergy());
           if (typeof evEnter === 'number') {

@@ -142,11 +142,14 @@
             currentRule[k] = v;
           }
         }
-        if (r.from != null) {
-          currentRule.count = r.from + rand();
-        }
-        if (r.to != null) {
-          currentRule.count %= r.to;
+        if ((r.from != null) || (r.to != null)) {
+          if ((r.from != null) && (r.to != null)) {
+            currentRule.count = r.from + rand() % (r.to - r.from + 1);
+          } else if (r.from != null) {
+            currentRule.count = r.from + rand();
+          } else {
+            currentRule.count %= r.to + 1;
+          }
         }
         return currentRule;
       });

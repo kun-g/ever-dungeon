@@ -561,30 +561,30 @@
         return obj.counters.newProperty('goblin', 0);
       }
     },
-    weapon: {
+    enhance: {
       storeType: "player",
       id: 1,
       actived: 1,
       count: 3,
       canReset: function(obj, util) {
-        return (util.today.hour() >= 8) && (util.today.weekday === 1 || util.today.weekday === 3 || util.today.weekday === 5 || util.today.weekday === 0);
+        return (util.today.hour() >= 8) && (util.today.weekday() === 2 || util.today.weekday() === 4 || util.today.weekday() === 6 || util.today.weekday() === 0);
       },
       reset: function(obj, util) {
-        obj.timestamp.newProperty('weapon', util.currentTime());
-        return obj.counters.newProperty('weapon', 0);
+        obj.timestamp.newProperty('enhance', util.currentTime());
+        return obj.counters.newProperty('enhance', 0);
       }
     },
-    enhance: {
+    weapon: {
       storeType: "player",
       id: 2,
       actived: 1,
       count: 3,
       canReset: function(obj, util) {
-        return (util.today.hour() >= 8) && (util.today.weekday === 2 || util.today.weekday === 4 || util.today.weekday === 6 || util.today.weekday === 0);
+        return (util.today.hour() >= 8) && (util.today.weekday() === 1 || util.today.weekday() === 3 || util.today.weekday() === 5 || util.today.weekday() === 0);
       },
       reset: function(obj, util) {
-        obj.timestamp.newProperty('enhance', util.currentTime());
-        return obj.counters.newProperty('enhance', 0);
+        obj.timestamp.newProperty('weapon', util.currentTime());
+        return obj.counters.newProperty('weapon', 0);
       }
     },
     monthCard: {
