@@ -6932,5 +6932,49 @@ exports.data = [
         "dropInfo": [
             89
         ]
+    },
+    {
+        "classId": 194,
+        "className": "威力装备达人",
+        "faction": "monster",
+        "classType": 1,
+        "avatar": "enemy-zbdr3.ccbi",
+        "property": {
+            "health": 3,
+            "attack": 0.8,
+            "critical": 2,
+            "strong": 2,
+            "accuracy": 15,
+            "reactivity": -20,
+            "speed": 0,
+            "counterAttack": false,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 4,
+            "attack": 0,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundWound": "liulangwound.mp3",
+        "soundAttack": "liulangattack.mp3",
+        "soundDie": "liulangdie.mp3",
+        "effectAttack": 9,
+        "skill": [
+            {
+                "id": 126,
+                "level": 1
+            },
+            {
+                "id": 125,
+                "level": 1
+            }
+        ],
+        "dropInfo": [ 90 ]
     }
 ]

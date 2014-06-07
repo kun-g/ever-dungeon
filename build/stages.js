@@ -1725,6 +1725,7 @@ var data = [
           hidden: true,
           dungeon: 105,
           description: "Enhance1",
+          eventName: "event_enhance",
           condition: function (obj, util) {
             return ( obj.counters.enhance < 3 ) &&
               ( util.today.weekday() === 2 ||
@@ -1742,6 +1743,7 @@ var data = [
           team: 3,
           hidden: true,
           dungeon: 106,
+          eventName: "event_enhance",
           description: "Enhance2",
           condition: function (obj, util) {
             return ( obj.counters.enhance < 3 ) &&
@@ -1761,6 +1763,7 @@ var data = [
           hidden: true,
           dungeon: 107,
           description: "Enhance3",
+          eventName: "event_enhance",
           condition: function (obj, util) {
             return ( obj.counters.enhance < 3 ) &&
               ( util.today.weekday() === 2 ||
@@ -1779,6 +1782,7 @@ var data = [
           hidden: true,
           dungeon: 108,
           description: "Enhance4",
+          eventName: "event_enhance",
           condition: function (obj, util) {
             return ( obj.counters.enhance < 3 ) &&
               ( util.today.weekday() === 2 ||
@@ -1797,6 +1801,7 @@ var data = [
           hidden: true,
           dungeon: 109,
           description: "Enhance5",
+          eventName: "event_enhance",
           condition: function (obj, util) {
             return ( obj.counters.enhance < 3 ) &&
               ( util.today.weekday() === 2 ||
@@ -1867,7 +1872,102 @@ var data = [
                 obj.counters.newProperty('goblin', 1);
               }
             }
-        }
+        },
+        {
+          stageId: 117,
+          cost: 15,
+          team: 3,
+          hidden: true,
+          dungeon: 105,
+          description: "Weapon1",
+          eventName: "event_weapon",
+          condition: function (obj, util) {
+            return ( obj.counters.weapon < 3 ) &&
+              ( util.today.weekday() === 1 ||
+                util.today.weekday() === 3 ||
+                util.today.weekday() === 5 ||
+                util.today.weekday() === 0 );
+          },
+          initialAction: function (obj) {
+            obj.counters.weapon++;
+          }
+        },
+        {
+          stageId: 117,
+          cost: 15,
+          team: 3,
+          hidden: true,
+          dungeon: 105,
+          description: "Weapon2",
+          eventName: "event_weapon",
+          condition: function (obj, util) {
+            return ( obj.counters.weapon < 3 ) &&
+              ( util.today.weekday() === 1 ||
+                util.today.weekday() === 3 ||
+                util.today.weekday() === 5 ||
+                util.today.weekday() === 0 );
+          },
+          initialAction: function (obj) {
+            obj.counters.weapon++;
+          }
+        },
+        {
+          stageId: 117,
+          cost: 15,
+          team: 3,
+          hidden: true,
+          dungeon: 105,
+          description: "Weapon3",
+          eventName: "event_weapon",
+          condition: function (obj, util) {
+            return ( obj.counters.weapon < 3 ) &&
+              ( util.today.weekday() === 1 ||
+                util.today.weekday() === 3 ||
+                util.today.weekday() === 5 ||
+                util.today.weekday() === 0 );
+          },
+          initialAction: function (obj) {
+            obj.counters.weapon++;
+          }
+        },
+        {
+          stageId: 117,
+          cost: 15,
+          team: 3,
+          hidden: true,
+          dungeon: 105,
+          description: "Weapon4",
+          eventName: "event_weapon",
+          condition: function (obj, util) {
+            return ( obj.counters.weapon < 3 ) &&
+              ( util.today.weekday() === 1 ||
+                util.today.weekday() === 3 ||
+                util.today.weekday() === 5 ||
+                util.today.weekday() === 0 );
+          },
+          initialAction: function (obj) {
+            obj.counters.weapon++;
+          }
+        },
+        {
+          stageId: 117,
+          cost: 15,
+          team: 3,
+          hidden: true,
+          dungeon: 105,
+          description: "Weapon5",
+          eventName: "event_weapon",
+          condition: function (obj, util) {
+            return ( obj.counters.weapon < 3 ) &&
+              ( util.today.weekday() === 1 ||
+                util.today.weekday() === 3 ||
+                util.today.weekday() === 5 ||
+                util.today.weekday() === 0 );
+          },
+          initialAction: function (obj) {
+            obj.counters.weapon++;
+          }
+        },
       ]
   }
 ];

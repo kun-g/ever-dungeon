@@ -5169,5 +5169,18 @@ exports.data = [
             ]
         }
     ],
+    [ //90
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 10,
+                    "type": 5,
+                    "func": 'countUp',
+                    "counter": 'monster'
+                }
+            ]
+        }
+    ],
 
 ]

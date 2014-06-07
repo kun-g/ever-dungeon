@@ -1349,7 +1349,7 @@
                 ret = ret.concat(this.removeItemById(item.dropKey, 1, true));
               }
               return {
-                prize: [prz],
+                prize: prz,
                 res: ret
               };
             case ItemUse_Function:
