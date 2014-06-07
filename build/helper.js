@@ -567,7 +567,7 @@
       actived: 1,
       count: 3,
       canReset: function(obj, util) {
-        return (util.today.hour() >= 8) && (util.today.weekday === 2 || util.today.weekday === 4 || util.today.weekday === 6 || util.today.weekday === 0);
+        return (util.today.hour() >= 8) && (util.today.weekday() === 2 || util.today.weekday() === 4 || util.today.weekday() === 6 || util.today.weekday() === 0);
       },
       reset: function(obj, util) {
         obj.timestamp.newProperty('enhance', util.currentTime());
@@ -580,7 +580,7 @@
       actived: 1,
       count: 3,
       canReset: function(obj, util) {
-        return (util.today.hour() >= 8) && (util.today.weekday === 1 || util.today.weekday === 3 || util.today.weekday === 5 || util.today.weekday === 0);
+        return (util.today.hour() >= 8) && (util.today.weekday() === 1 || util.today.weekday() === 3 || util.today.weekday() === 5 || util.today.weekday() === 0);
       },
       reset: function(obj, util) {
         obj.timestamp.newProperty('weapon', util.currentTime());
