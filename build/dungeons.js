@@ -23111,6 +23111,7 @@ exports.data = [
         "levels" :[
             {
                 "objects" :[{"pool":"normalPool","from":0,to:2},
+                    { "id": 194, "count": 3 },
                     {
                         "id": 42,
                         "count":2
