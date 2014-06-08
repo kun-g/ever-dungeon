@@ -2852,6 +2852,10 @@
       };
     };
 
+    Player.prototype.syncCounters = function(forceUpdate) {
+      return [];
+    };
+
     Player.prototype.syncQuest = function(forceUpdate) {
       var ret;
       ret = packQuestEvent(this.quests, null, this.questVersion);
