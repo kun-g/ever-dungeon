@@ -580,7 +580,7 @@
       actived: 1,
       count: 3,
       canReset: function(obj, util) {
-        return (util.today.hour() >= 8) && (util.today.weekday() === 1 || util.today.weekday() === 3 || util.today.weekday() === 5 || util.today.weekday() === 0);
+        return (util.today.hour() >= 8 && util.diffDay(obj.timestamp.enhance, util.today)) && (util.today.weekday() === 1 || util.today.weekday() === 3 || util.today.weekday() === 5 || util.today.weekday() === 0);
       },
       reset: function(obj, util) {
         obj.timestamp.newProperty('weapon', util.currentTime());
