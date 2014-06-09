@@ -1720,7 +1720,7 @@ var data = [
       "stage":[
         {
           stageId: 108,
-          cost: 15,
+          cost: 10,
           team: 3,
           hidden: true,
           dungeon: 105,
@@ -1729,7 +1729,7 @@ var data = [
           condition: function (obj, util) {
             return ( obj.counters.enhance < 3 ) &&
               ( util.today.weekday() === 2 ||
-                util.today.weekday() === 3 ||
+                util.today.weekday() === 4 ||
                 util.today.weekday() === 6 ||
                 util.today.weekday() === 0 );
           },
@@ -1739,7 +1739,7 @@ var data = [
         },
         {
           stageId: 109,
-          cost: 15,
+          cost: 10,
           team: 3,
           hidden: true,
           dungeon: 106,
@@ -1748,7 +1748,7 @@ var data = [
           condition: function (obj, util) {
             return ( obj.counters.enhance < 3 ) &&
               ( util.today.weekday() === 2 ||
-                util.today.weekday() === 3 ||
+                util.today.weekday() === 4 ||
                 util.today.weekday() === 6 ||
                 util.today.weekday() === 0 );
           },
@@ -1767,7 +1767,7 @@ var data = [
           condition: function (obj, util) {
             return ( obj.counters.enhance < 3 ) &&
               ( util.today.weekday() === 2 ||
-                util.today.weekday() === 3 ||
+                util.today.weekday() === 4 ||
                 util.today.weekday() === 6 ||
                 util.today.weekday() === 0 );
           },
@@ -1786,7 +1786,7 @@ var data = [
           condition: function (obj, util) {
             return ( obj.counters.enhance < 3 ) &&
               ( util.today.weekday() === 2 ||
-                util.today.weekday() === 3 ||
+                util.today.weekday() === 4 ||
                 util.today.weekday() === 6 ||
                 util.today.weekday() === 0 );
           },
@@ -1796,7 +1796,7 @@ var data = [
         },
         {
           stageId: 112,
-          cost: 15,
+          cost: 20,
           team: 3,
           hidden: true,
           dungeon: 109,
@@ -1805,7 +1805,7 @@ var data = [
           condition: function (obj, util) {
             return ( obj.counters.enhance < 3 ) &&
               ( util.today.weekday() === 2 ||
-                util.today.weekday() === 3 ||
+                util.today.weekday() === 4 ||
                 util.today.weekday() === 6 ||
                 util.today.weekday() === 0 );
           },
@@ -1873,101 +1873,139 @@ var data = [
               }
             }
         },
-        {
-          stageId: 117,
-          cost: 15,
-          team: 3,
-          hidden: true,
-          dungeon: 105,
-          description: "Weapon1",
-          eventName: "event_weapon",
-          condition: function (obj, util) {
-            return ( obj.counters.weapon < 3 ) &&
-              ( util.today.weekday() === 1 ||
-                util.today.weekday() === 3 ||
-                util.today.weekday() === 5 ||
-                util.today.weekday() === 0 );
+          {
+              stageId: 117,
+              cost: 10,
+              team: 3,
+              hidden: true,
+              dungeon: 110,
+              description: "wxp1",
+              eventName: "event_weapon",
+              condition: function (obj, util) {
+                return ( obj.counters.weapon < 3 ) &&
+                  ( util.today.weekday() === 1 ||
+                    util.today.weekday() === 3 ||
+                    util.today.weekday() === 5 ||
+                    util.today.weekday() === 0 );
+              },
+              initialAction: function (obj) {
+                obj.counters.weapon++;
+              }
           },
-          initialAction: function (obj) {
-            obj.counters.weapon++;
-          }
-        },
-        {
-          stageId: 117,
-          cost: 15,
-          team: 3,
-          hidden: true,
-          dungeon: 105,
-          description: "Weapon2",
-          eventName: "event_weapon",
-          condition: function (obj, util) {
-            return ( obj.counters.weapon < 3 ) &&
-              ( util.today.weekday() === 1 ||
-                util.today.weekday() === 3 ||
-                util.today.weekday() === 5 ||
-                util.today.weekday() === 0 );
+          {
+              stageId: 118,
+              cost: 15,
+              team: 3,
+              hidden: true,
+              dungeon: 111,
+              description: "wxp2",
+              eventName: "event_weapon",
+              condition: function (obj, util) {
+                return ( obj.counters.weapon < 3 ) &&
+                  ( util.today.weekday() === 1 ||
+                    util.today.weekday() === 3 ||
+                    util.today.weekday() === 5 ||
+                    util.today.weekday() === 0 );
+              },
+              initialAction: function (obj) {
+                obj.counters.weapon++;
+              }
           },
-          initialAction: function (obj) {
-            obj.counters.weapon++;
-          }
-        },
-        {
-          stageId: 117,
-          cost: 15,
-          team: 3,
-          hidden: true,
-          dungeon: 105,
-          description: "Weapon3",
-          eventName: "event_weapon",
-          condition: function (obj, util) {
-            return ( obj.counters.weapon < 3 ) &&
-              ( util.today.weekday() === 1 ||
-                util.today.weekday() === 3 ||
-                util.today.weekday() === 5 ||
-                util.today.weekday() === 0 );
+          {
+              stageId: 119,
+              cost: 20,
+              team: 3,
+              hidden: true,
+              dungeon: 112,
+              description: "wxp3",
+              eventName: "event_weapon",
+              condition: function (obj, util) {
+                return ( obj.counters.weapon < 3 ) &&
+                  ( util.today.weekday() === 1 ||
+                    util.today.weekday() === 3 ||
+                    util.today.weekday() === 5 ||
+                    util.today.weekday() === 0 );
+              },
+              initialAction: function (obj) {
+                obj.counters.weapon++;
+              }
           },
-          initialAction: function (obj) {
-            obj.counters.weapon++;
-          }
-        },
-        {
-          stageId: 117,
-          cost: 15,
-          team: 3,
-          hidden: true,
-          dungeon: 105,
-          description: "Weapon4",
-          eventName: "event_weapon",
-          condition: function (obj, util) {
-            return ( obj.counters.weapon < 3 ) &&
-              ( util.today.weekday() === 1 ||
-                util.today.weekday() === 3 ||
-                util.today.weekday() === 5 ||
-                util.today.weekday() === 0 );
+          {
+              stageId: 120,
+              cost: 10,
+              team: 3,
+              hidden: true,
+              dungeon: 113,
+              description: "infinity",
+              eventName: "event_goblin",
+              condition: function (obj, util) {
+                  return obj.counters.goblin < 3 || !obj.counters.goblin;
+              },
+              initialAction: function (obj) {
+                  if (obj.counters.goblin) {
+                      obj.counters.goblin++;
+                  } else {
+                      obj.counters.newProperty('goblin', 1);
+                  }
+              }
           },
-          initialAction: function (obj) {
-            obj.counters.weapon++;
-          }
-        },
-        {
-          stageId: 117,
-          cost: 15,
-          team: 3,
-          hidden: true,
-          dungeon: 105,
-          description: "Weapon5",
-          eventName: "event_weapon",
-          condition: function (obj, util) {
-            return ( obj.counters.weapon < 3 ) &&
-              ( util.today.weekday() === 1 ||
-                util.today.weekday() === 3 ||
-                util.today.weekday() === 5 ||
-                util.today.weekday() === 0 );
+          {
+              stageId: 121,
+              cost: 10,
+              team: 3,
+              hidden: true,
+              dungeon: 114,
+              description: "hunt83",
+              eventName: "event_goblin",
+              condition: function (obj, util) {
+                  return obj.counters.goblin < 3 || !obj.counters.goblin;
+              },
+              initialAction: function (obj) {
+                  //if (obj.counters.goblin) {
+                  //    obj.counters.goblin++;
+                  //} else {
+                  //    obj.counters.newProperty('goblin', 1);
+                  //}
+              }
           },
-          initialAction: function (obj) {
-            obj.counters.weapon++;
+          {
+              stageId: 122,
+              cost: 10,
+              team: 3,
+              hidden: true,
+              dungeon: 115,
+              description: "hunt39",
+              eventName: "event_goblin",
+              condition: function (obj, util) {
+                  return obj.counters.goblin < 3 || !obj.counters.goblin;
+              },
+              initialAction: function (obj) {
+                  //if (obj.counters.goblin) {
+                  //    obj.counters.goblin++;
+                  //} else {
+                  //    obj.counters.newProperty('goblin', 1);
+                  //}
+              }
+          },
+          {
+              stageId: 123,
+              cost: 10,
+              team: 3,
+              hidden: true,
+              dungeon: 116,
+              description: "hunt112",
+              eventName: "event_goblin",
+              condition: function (obj, util) {
+                  return obj.counters.goblin < 3 || !obj.counters.goblin;
+              },
+              initialAction: function (obj) {
+                  //if (obj.counters.goblin) {
+                  //    obj.counters.goblin++;
+                  //} else {
+                  //    obj.counters.newProperty('goblin', 1);
+                  //}
+              }
           }
-        },
       ]
   }
 ];
