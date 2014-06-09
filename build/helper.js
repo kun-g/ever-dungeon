@@ -293,7 +293,7 @@
   exports.genUtil = genCampaignUtil;
 
   initCampaign = function(me, allCampaign, abIndex) {
-    var count, e, key, ret, util, _ref;
+    var count, e, evt, key, ret, util, _ref;
     ret = [];
     util = genCampaignUtil();
     for (key in allCampaign) {
@@ -305,16 +305,22 @@
           if (e.canReset(me, util)) {
             e.reset(me, util);
           }
-          count = (_ref = me.counters[key]) != null ? _ref : 0;
           if (e.id != null) {
-            ret.push({
+            evt = {
               NTF: Event_BountyUpdate,
               arg: {
                 bid: e.id,
-                sta: e.actived,
-                cnt: e.count - count
+                sta: e.actived
               }
-            });
+            };
+            count = (_ref = me.counters[key]) != null ? _ref : 0;
+            if (e.count) {
+              evt.arg.cnt = e.count - count;
+            }
+            if (key === 'hunting') {
+              evt.arg.stg = e.stages[e.stages.length % rand()];
+            }
+            ret.push(evt);
           }
         }
       }
@@ -585,6 +591,30 @@
       reset: function(obj, util) {
         obj.timestamp.newProperty('weapon', util.currentTime());
         return obj.counters.newProperty('weapon', 0);
+      }
+    },
+    infinite: {
+      storeType: "player",
+      id: 3,
+      actived: 1,
+      canReset: function(obj, util) {
+        return util.today.hour() >= 8 && util.diffDay(obj.timestamp.infinite, util.today);
+      },
+      reset: function(obj, util) {
+        return obj.timestamp.newProperty('infinite', util.currentTime());
+      }
+    },
+    hunting: {
+      storeType: "player",
+      id: 4,
+      actived: 1,
+      stages: [114, 115, 116],
+      canReset: function(obj, util) {
+        return util.today.hour() >= 8 && util.diffDay(obj.timestamp.hunting, util.today);
+      },
+      reset: function(obj, util) {
+        obj.timestamp.newProperty('hunting', util.currentTime());
+        return obj.counters.newProperty('monster', 0);
       }
     },
     monthCard: {
