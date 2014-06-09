@@ -234,13 +234,6 @@ function loadReceipt () {
   }
   list.forEach( function (e) {
     var x = unwrapReceipt(e);
-    if (x.productID < 10) {
-    } else {
-      x = xwrapReceipt(e);
-      if (x.tunnel == null) x.tunnel = 'APP111';
-      console.log(x.id)
-      dbClient.hget('Master.player.'+x.id, 'accountID', function (err, id) { console.log(wrapReceipt(id, x.productID, x.serverID, x.time, x.tunnel)); });
-    }
     var time = moment(x.time*1000);
     var rmb = queryTable(TABLE_CONFIG, 'Product_List')[x.productID].rmb;
     pushPayment(paymentDB, time.format('MM'), {rmb: rmb, tunnel: x.tunnel});
