@@ -238,6 +238,7 @@ function loadReceipt () {
     } else {
       x = xwrapReceipt(e);
       if (x.tunnel == null) x.tunnel = 'APP111';
+      console.log(x.id)
       dbClient.hget('Master.player.'+x.id, 'accountID', function (err, id) { console.log(wrapReceipt(id, x.productID, x.serverID, x.time, x.tunnel)); });
     }
     var time = moment(x.time*1000);
