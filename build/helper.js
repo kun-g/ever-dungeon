@@ -603,7 +603,7 @@
   };
 
   exports.splicePrize = function(prize) {
-    var goldPrize, otherPrize, wxPrize, xpPrize;
+    var goldPrize, itemFlag, otherPrize, wxPrize, xpPrize;
     goldPrize = {
       type: PRIZETYPE_GOLD,
       count: 0
@@ -616,6 +616,7 @@
       type: PRIZETYPE_WXP,
       count: 0
     };
+    itemFlag = {};
     otherPrize = [];
     prize.forEach(function(p) {
       if (p == null) {
@@ -628,6 +629,11 @@
           return xpPrize.count += p.count;
         case PRIZETYPE_GOLD:
           return goldPrize.count += p.count;
+        case PRIZETYPE_ITEM:
+          if (!itemFlag[p.value]) {
+            itemFlag[p.value] = 0;
+          }
+          return itemFlag[p.value] += p.count;
         default:
           return otherPrize.push(p);
       }
