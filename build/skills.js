@@ -2870,7 +2870,7 @@ exports.data = [
                 "filter": [{"type":"alive"},{"type":"visible"}]
             },
             "triggerCondition": [
-                { "type": "onBeShow", "cd": 10 },
+                { "type": "onBeShow", "cd": 10 }
             ],
             "action": [
                 { "type": "installSpell", "spell": 127}
