@@ -707,7 +707,7 @@
       id: 30,
       func: function(arg, player, handler, rpcID, socket) {
         return helperLib.getPositionOnLeaderboard(arg.typ, player.name, arg.src, arg.src + arg.cnt - 1, function(err, result) {
-          var ret;
+          var board, ret;
           ret = {
             REQ: rpcID,
             RET: RET_OK
@@ -716,8 +716,23 @@
             ret.me = result.position;
           }
           if (result.board != null) {
-            return async.map(result.board, getPlayerHero, function(err, result) {
-              ret.lst = result.map(getBasicInfo);
+            board = result.board.reduce((function(l, r, i) {
+              if (i % 2 === 0) {
+                r.name.push(l);
+              } else {
+                r.score.push(l);
+              }
+              return r;
+            }), {
+              name: [],
+              score: []
+            });
+            return async.map(board.name, getPlayerHero, function(err, result) {
+              ret.lst = result.map(function(e, i) {
+                var r;
+                r = getBasicInfo(e.name);
+                return r.scr = board.score[i];
+              });
               return handler([ret]);
             });
           } else {
