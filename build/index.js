@@ -213,6 +213,7 @@ function deliverReceipt (receipt, tunnel, cb) {
           paymentType: tunnel,
           receipt: receipt
         };
+
   async.waterfall([
     function (cb) { dbWrapper.updateReceipt(receipt, RECEIPT_STATE_AUTHORIZED, cb); },
     function (_, cb) { dbLib.getPlayerNameByID(receiptInfo.id, serverName, cb); },

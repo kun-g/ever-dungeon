@@ -2852,5 +2852,417 @@ exports.data = [
                 {"type": "playEffect","effect":43,"pos":"self"}
             ]
         }
+    },
+    {
+        "skillId": 126,
+        "label":"装备达人格挡",
+        "icon": "skill-warrior1.png",
+        "desc": "用坚实的盾牌来格挡攻击，抵消伤害，格挡次数随等级增加。",
+        "slotId": 0,
+        "config": {
+            "basic" : {
+                "spellEffect": 4,
+                "targetEffect": 1 ,
+                "spellDelay": 0.3
+            },
+            "targetSelection": {
+                "pool": "self",
+                "filter": [{"type":"alive"},{"type":"visible"}]
+            },
+            "triggerCondition": [
+                { "type": "onBeShow", "cd": 10 }
+            ],
+            "action": [
+                { "type": "installSpell", "spell": 127}
+            ],
+            "levelConfig": [
+                {"level": 1},
+                {"level": 2},
+                {"level": 3}
+            ]
+        }
+    },
+    {
+        "skillId": 127,
+        "slotId": -1,
+        "config": {
+            "basic": {
+                "buffEffect": 42,
+                "spellAction": 1,
+                "spellEffect": 1,
+                "spellDelay": 0.3
+            },
+            "triggerCondition": [
+                { "type": "event", "event": "onBePhysicalDamage" },
+                { "type": "event", "event": "onBePhysicalRangeDamage" },
+                { "type": "event", "event": "onBeSpellDamage" },
+                { "type": "event", "event": "onBeSpellRangeDamage" },
+                { "type": "targetMutex", "mutex": "reinforce" }
+            ],
+            "availableCondition": [
+                { "type": "effectCount" }
+            ],
+            "action": [
+                { "type": "modifyVar", "x": "damage", "formular": {"environment": {"damage":0}} },
+                {"type": "setMyMutex", "mutex": "reinforce", "count": 1 }
+            ],
+            "levelConfig": [
+                {"count": 1},
+                {"count": 2},
+                {"count": 3}
+            ]
+        }
+    },
+    {
+        "skillId": 128,
+        "label":"pk盾墙",
+        "icon": "skill-warrior1.png",
+        "desc": "用坚实的盾牌来格挡攻击，抵消伤害，格挡次数随等级增加。",
+        "slotId": 0,
+        "config": {
+            "basic" : {
+                "spellAction": 2,
+                "spellEffect": 4,
+                "targetEffect": 1 ,
+                "spellDelay": 0.3
+            },
+            "targetSelection": {
+                "pool": "self"
+            },
+            "triggerCondition": [
+                { "type": "onBeShow", "cd": 10 }
+            ],
+            "action": [
+                { "type": "installSpell", "spell": 129}
+            ],
+            "levelConfig": [
+                {"level": 1},
+                {"level": 2}
+            ]
+        }
+    },
+    {
+        "skillId": 129,
+        "slotId": -1,
+        "config": {
+            "basic": {
+                "buffEffect": 42,
+                "spellAction": 4,
+                "spellEffect": 1,
+                "spellDelay": 0.3
+            },
+            "triggerCondition": [
+                { "type": "event", "event": "onBePhysicalDamage" },
+                { "type": "event", "event": "onBePhysicalRangeDamage" },
+                { "type": "event", "event": "onBeSpellDamage" },
+                { "type": "event", "event": "onBeSpellRangeDamage" },
+                { "type": "targetMutex", "mutex": "reinforce" }
+            ],
+            "availableCondition": [
+                { "type": "effectCount" }
+            ],
+            "action": [
+                { "type": "modifyVar", "x": "damage", "formular": {"environment": {"damage":0}} },
+                {"type": "setMyMutex", "mutex": "reinforce", "count": 1 }
+            ],
+            "levelConfig": [
+                {"count": 1},
+                {"count": 2}
+            ]
+        }
+    },
+    {
+        "skillId": 130,
+        "label":"pk援护",
+        "icon": "skill-warrior2.png",
+        "desc":"战士运用自身厚实的装备保护队友，为其承受伤害，技能等级越高，所受伤害越少。",
+        "slotId": 1 ,
+        "config": {
+            "basic" : {
+                "spellAction":4,
+                "spellEffect": 9,
+                "targetEffect": 1 ,
+                "spellDelay": 0,
+                "targetDelay": 0
+            },
+            "targetSelection": {
+                "pool": "target",
+                "filter": [{"type":"alive"},{"type":"visible"}]
+            },
+            "triggerCondition": [
+                { "type": "event", "event": "onTeammateBePhysicalDamage" },
+                { "type": "event", "event": "onTeammateBePhysicalRangeDamage" },
+                { "type": "chance", "chance": 0.5 },
+                { "type": "targetMutex", "mutex": "reinforce" },
+                {"type":"alive"}
+            ],
+            "action": [
+                {"type": "modifyVar", "x": "damage" },
+                {"type": "setTargetMutex", "mutex": "reinforce", "count": 1 },
+                {"type": "setMyMutex", "mutex": "reinforce", "count": 1 },
+                {"type": "replaceTar" },
+                {"type": "ignoreHurt" }
+            ],
+            "levelConfig": [
+                { "formular": {"environment": {"damage":0.9}} },
+                { "formular": {"environment": {"damage":0.8}} }
+            ]
+        }
+    },
+    {
+        "skillId": 131,
+        "label": "pk自愈",
+        "icon": "skill-warrior3.png",
+        "desc":"战士在受到治疗时，能够获得额外的生命值回复，回复值与韧性值有关。",
+        "slotId": 2,
+        "config": {
+            "basic" : { },
+            "triggerCondition": [
+                { "type": "onBeShow", "cd": 14 }
+            ],
+            "targetSelection": {
+                "pool": "self",
+                "filter": [{"type":"alive"},{"type":"visible"}]
+            },
+            "action": [
+                { "type": "heal"}
+            ],
+            "levelConfig" : [
+                {"formular": { "src":{"strong":0.15}, "c": 2 }},
+                {"formular": { "src":{"strong":0.15}, "c": 8 }}
+            ]
+        }
+    },
+    {
+        "skillId": 5,
+        "label":"闪电",
+        "icon": "skill-mage1.png",
+        "desc":"召唤闪电，对一名敌人造成伤害，伤害值与法师攻击力相关。",
+        "slotId": 0,
+        "config": {
+            "basic": {
+                "spellAction": 1,
+                "spellEffect": 4,
+                "targetEffect": 0,
+                "targetDelay": 0.3
+            },
+            "triggerCondition": [
+                { "type": "countDown", "cd": 10 }
+            ],
+            "targetSelection": {
+                "pool": "objects",
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"},{"type":"shuffle"},{"type":"count","count":1}]
+            },
+            "action": [
+                { "type": "damage","damageType":"Spell","isRange":true }
+            ],
+            "levelConfig" : [
+                { "formular": {"src":{"attack":0.8}} },
+                { "formular": {"src":{"attack":1}} },
+                { "formular": {"src":{"attack":1.2}} }
+            ]
+        }
+    },
+    {
+        "skillId": 6,
+        "label":"过载",
+        "icon": "skill-mage2.png",
+        "desc":"攻击造成暴击时，法师能够施展法术过载，对全体敌人造成伤害，伤害值与攻击力相关。",
+        "slotId": 3,
+        "config":{
+            "basic":{
+                "spellEffect": 29,
+                "spellDelay": 0.6,
+                "targetDelay": 0.9
+            },
+            "triggerCondition": [
+                {"type": "event", "event": "onCriticalDamage" },
+                {"type": "chance", "chance": 0.8}
+            ],
+            "targetSelection": {
+                "pool": "objects",
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"}]
+            },
+            "action": [
+                {"type": "damage","damageType":"Spell","isRange":true,"formular": {"src":{"attack":0.3},"c":15}},
+                {"type": "playEffect","effect":4,"pos":"self"}
+            ]
+        }
+    },
+    {
+        "skillId": 7,
+        "label":"炎甲",
+        "icon": "skill-mage3.png",
+        "desc":"法师使用一层火焰魔法保护自己，当受到攻击时，对敌人造成伤害，伤害值与攻击力有关。",
+        "slotId":2,
+        "config":{
+            "basic":{
+                "spellEffect": 32,
+                "targetEffect": 10,
+                "spellDelay": 0.3,
+                "targetDelay": 0.3
+            },
+            "triggerCondition": [
+                { "type": "event", "event": "onBePhysicalDamage" },
+                { "type": "chance", "chance": 0.3 }
+            ],
+            "action": [
+                { "type": "damage","damageType":"Spell" }
+            ],
+            "targetSelection": {
+                "pool": "source",
+                "filter": [{"type":"alive"},{"type":"visible"}]
+            },
+            "levelConfig":[
+                {"formular": {"src":{"attack":0.2},"c":2}},
+                {"formular": {"src":{"attack":0.3},"c":10}},
+                {"formular": {"src":{"attack":0.4},"c":15}}
+            ]
+        }
+    },
+    {
+        "skillId": 8,
+        "label":"治愈",
+        "icon": "skill-priest1.png",
+        "desc":"对队伍中生命值最低的成员进行回复，回复值与命中值相关。",
+        "slotId": 0,
+        "config": {
+            "basic": {
+                "spellAction":1,
+                "spellEffect": 4,
+                "targetEffect": 3,
+                "spellDelay": 0.3,
+                "targetDelay": 0.3
+            },
+            "triggerCondition": [
+                { "type": "countDown", "cd": 10 }
+            ],
+            "targetSelection": {
+                "pool": "objects",
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"sort","by":"health"},{"type":"count","count":1}]
+            },
+            "action": [
+                { "type": "heal" }
+            ],
+            "levelConfig" : [
+                {"formular": { "src":{"accuracy":0.15}, "c": 5 }},
+                {"formular": { "src":{"accuracy":0.15}, "c": 10 }},
+                {"formular": { "src":{"accuracy":0.15}, "c": 20 }}
+            ]
+        }
+    },
+    {
+        "skillId": 9,
+        "label":"宽恕",
+        "icon": "skill-priest2.png",
+        "desc":"当牧师对敌人造成伤害时，有一定几率能回复我方队友生命值，回复生命值与命中值相关。",
+        "slotId": 1,
+        "config": {
+            "basic": {
+                "targetEffect": 3,
+                "targetDelay": 0.3
+            },
+            "triggerCondition": [
+                { "type": "event", "event": "onPhysicalDamage" },
+                { "type": "chance", "chance":0.6 }
+            ],
+            "action": [
+                { "type": "heal"}
+            ],
+            "targetSelection": {
+                "pool": "objects",
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"sort","by":"health"},{"type":"count","count":1}]
+            },
+            "levelConfig" : [
+                { "formular":{"src":{"accuracy":0.1},"c": 3} },
+                { "formular":{"src":{"accuracy":0.15},"c": 10} },
+                { "formular":{"src":{"accuracy":0.2},"c": 20} }
+            ]
+        }
+    },
+    {
+        "skillId": 10,
+        "label":"救赎",
+        "icon": "skill-priest3.png",
+        "desc":"牧师成功击杀敌人时，能够有一定概率短时间提升全体成员的攻击力。",
+        "slotId": 2,
+        "config":{
+            "basic":{
+                "spellAction": 1,
+                "spellEffect": 4,
+                "targetEffect": 13,
+                "spellDelay": 0.3,
+                "targetDelay": 0.3
+            },
+            "triggerCondition": [
+                { "type": "event", "event": "onKill" },
+                { "type": "chance", "chance":0.3 }
+            ],
+            "action": [
+                {"type":"delay"},
+                {"type": "installSpell", "spell": 14 }
+            ],
+            "targetSelection": {
+                "pool": "objects",
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"}]
+            },
+            "levelConfig" : [
+                { "level": 1 }, { "level": 2 }, { "level": 3 }
+            ]
+        }
+    },
+    {
+        "skillId": 11,
+        "label":"奇迹之光",
+        "icon": "skill-priest4.png",
+        "desc":"当我方成员受到致命一击时，牧师能够一定概率召唤奇迹之光，使其吸收此次伤害。",
+        "slotId": 3,
+        "config": {
+            "basic": {
+                "spellAction": 1,
+                "spellEffect": 4,
+                "targetEffect": 33,
+                "spellDelay": 0.3,
+                "targetDelay": 0.3
+            },
+            "triggerCondition": [
+                { "type": "event", "event": "onTeammateBeDeathStrike" },
+                { "type": "event", "event": "onBeDeathStrike" },
+                {"type":"alive"},
+                { "type": "chance", "chance": 0.4 },
+                { "type": "targetMutex", "mutex": "lightOfMiracel" }
+            ],
+            "targetSelection": {
+                "pool": "target",
+                "filter": [{"type":"alive"},{"type":"visible"}]
+            },
+            "action": [
+                {"type": "heal", "formular": {"environment":{"damage":1}}},
+                {"type": "modifyVar", "x": "damage", "formular": {"environment":{"c":0}}},
+                {"type": "setTargetMutex", "mutex": "lightOfMiracel", "count": 1 }
+            ]
+        }
+    },
+    {
+        "skillId": 12,
+        "label":"元素爆发",
+        "icon": "skill-mage4.png",
+        "desc":"法师每次攻击能够增加自身暴击值，直至造成暴击后清空。",
+        "slotId": 1,
+        "config":{
+            "targetSelection": { "pool": "self" },
+            "triggerCondition": [
+                { "type": "event", "event": "onCriticalDamage", "count": 1 }
+            ],
+            "installAction": [
+                { "type": "removeSpell", "spell": 33},
+                { "type": "installSpell", "spell": 33}
+            ],
+            "action": [
+                { "type": "removeSpell", "spell": 33},
+                { "type": "installSpell", "spell": 33}
+            ],
+            "levelConfig":[{"level":1},{"level":2},{"level":3}]
+        }
     }
 ]

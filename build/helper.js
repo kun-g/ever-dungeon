@@ -293,7 +293,7 @@
   exports.genUtil = genCampaignUtil;
 
   initCampaign = function(me, allCampaign, abIndex) {
-    var count, e, key, ret, util, _ref;
+    var actived, count, e, evt, key, ret, util, _ref;
     ret = [];
     util = genCampaignUtil();
     for (key in allCampaign) {
@@ -302,19 +302,29 @@
         if (key === 'event_daily') {
           ret = ret.concat(initDailyEvent(me, 'event_daily', e));
         } else {
-          if (e.canReset(me, util)) {
+          if (typeof e.canReset === "function" ? e.canReset(me, util) : void 0) {
             e.reset(me, util);
           }
-          count = (_ref = me.counters[key]) != null ? _ref : 0;
           if (e.id != null) {
-            ret.push({
+            actived = e.actived;
+            if (typeof actived === 'function') {
+              actived = actived(me, util);
+            }
+            evt = {
               NTF: Event_BountyUpdate,
               arg: {
                 bid: e.id,
-                sta: e.actived,
-                cnt: e.count - count
+                sta: actived
               }
-            });
+            };
+            count = (_ref = me.counters[key]) != null ? _ref : 0;
+            if (e.count) {
+              evt.arg.cnt = e.count - count;
+            }
+            if (key === 'hunting') {
+              evt.arg.stg = e.stages[e.stages.length % rand()];
+            }
+            ret.push(evt);
           }
         }
       }
@@ -561,49 +571,69 @@
         return obj.counters.newProperty('goblin', 0);
       }
     },
-    weapon: {
+    enhance: {
       storeType: "player",
       id: 1,
       actived: 1,
       count: 3,
       canReset: function(obj, util) {
-        return (util.today.hour() >= 8) && (util.today.weekday === 1 || util.today.weekday === 3 || util.today.weekday === 5 || util.today.weekday === 0);
-      },
-      reset: function(obj, util) {
-        obj.timestamp.newProperty('weapon', util.currentTime());
-        return obj.counters.newProperty('weapon', 0);
-      }
-    },
-    enhance: {
-      storeType: "player",
-      id: 2,
-      actived: 1,
-      count: 3,
-      canReset: function(obj, util) {
-        return (util.today.hour() >= 8) && (util.today.weekday === 2 || util.today.weekday === 4 || util.today.weekday === 6 || util.today.weekday === 0);
+        return (util.today.hour() >= 8 && util.diffDay(obj.timestamp.enhance, util.today)) && (util.today.weekday() === 2 || util.today.weekday() === 4 || util.today.weekday() === 6 || util.today.weekday() === 0);
       },
       reset: function(obj, util) {
         obj.timestamp.newProperty('enhance', util.currentTime());
         return obj.counters.newProperty('enhance', 0);
       }
     },
+    weapon: {
+      storeType: "player",
+      id: 2,
+      actived: 1,
+      count: 3,
+      canReset: function(obj, util) {
+        return (util.today.hour() >= 8 && util.diffDay(obj.timestamp.weapon, util.today)) && (util.today.weekday() === 1 || util.today.weekday() === 3 || util.today.weekday() === 5 || util.today.weekday() === 0);
+      },
+      reset: function(obj, util) {
+        obj.timestamp.newProperty('weapon', util.currentTime());
+        return obj.counters.newProperty('weapon', 0);
+      }
+    },
+    infinite: {
+      storeType: "player",
+      id: 3,
+      actived: 1,
+      canReset: function(obj, util) {
+        return util.today.hour() >= 8 && util.diffDay(obj.timestamp.infinite, util.today);
+      },
+      reset: function(obj, util) {
+        return obj.timestamp.newProperty('infinite', util.currentTime());
+      }
+    },
+    hunting: {
+      storeType: "player",
+      id: 4,
+      actived: 1,
+      stages: [114, 115, 116],
+      canReset: function(obj, util) {
+        return util.today.hour() >= 8 && util.diffDay(obj.timestamp.hunting, util.today);
+      },
+      reset: function(obj, util) {
+        obj.timestamp.newProperty('hunting', util.currentTime());
+        return obj.counters.newProperty('monster', 0);
+      }
+    },
     monthCard: {
       storeType: "player",
       actived: function(obj, util) {
-        return obj.flags.monthCard;
-      },
-      count: 1,
-      canReset: function(obj, util) {
-        return util.diffDay(obj.timestamp.monthCard, util.today) && util.today.hour() >= 8;
-      },
-      reset: function(obj, util) {
-        return obj.timestamp.newProperty('monthCard', util.currentTime());
+        var _base;
+        return typeof (_base = util.diffDay(obj.timestamp.monthCard, util.today)) === "function" ? _base({
+          1: 0
+        }) : void 0;
       }
     }
   };
 
   exports.splicePrize = function(prize) {
-    var goldPrize, otherPrize, wxPrize, xpPrize;
+    var goldPrize, itemFlag, otherPrize, wxPrize, xpPrize;
     goldPrize = {
       type: PRIZETYPE_GOLD,
       count: 0
@@ -616,6 +646,7 @@
       type: PRIZETYPE_WXP,
       count: 0
     };
+    itemFlag = {};
     otherPrize = [];
     prize.forEach(function(p) {
       if (p == null) {
@@ -628,6 +659,11 @@
           return xpPrize.count += p.count;
         case PRIZETYPE_GOLD:
           return goldPrize.count += p.count;
+        case PRIZETYPE_ITEM:
+          if (!itemFlag[p.value]) {
+            itemFlag[p.value] = 0;
+          }
+          return itemFlag[p.value] += p.count;
         default:
           return otherPrize.push(p);
       }

@@ -42,7 +42,8 @@ exports.data = {
     {"rmb":128,"diamond":1460},
     {"rmb":198,"diamond":2260},
     {"rmb":328,"diamond":3760},
-    {"rmb":648,"diamond":7480}
+    {"rmb":648,"diamond":7480},
+    {"rmb":25,"diamond":180}
   ],
     "InitialEquipment":{
         5:[{"type":0,"value":622,"count":1,classLimit:[0]},
@@ -63,7 +64,7 @@ exports.data = {
             {"type":0,"value":35,"count":1, classLimit:[1]},
             {"type":0,"value":39, "count":1,classLimit:[2]}],
         3:[{"type":0,"value":712,"count":1,classLimit:[0]},
-            {"type":0,"value":742,"count":1,classLimit:[1]},
+            {"type":0,"value":742,"count":1,classLimit:[2]},
             {"type":0,"value":772,"count":1,classLimit:[2]}]},
 
   "Global_Blue_Star_RewardTable" : [ ],

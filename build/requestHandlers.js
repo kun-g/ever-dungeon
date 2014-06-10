@@ -267,6 +267,9 @@
                 if (player.tutorialStage != null) {
                   loginInfo.arg.tut = player.tutorialStage;
                 }
+                if (player.counters.monthCard) {
+                  loginInfo.arg.mcc = player.counters.monthCard;
+                }
                 handle([loginInfo].concat(ev));
                 player.saveDB(cb);
                 return player = null;
@@ -493,6 +496,7 @@
     RPC_GameStartDungeon: {
       id: 1,
       func: function(arg, player, handler, rpcID, socket) {
+        player.dungeonData = {};
         return player.startDungeon(+arg.stg, arg.initialDataOnly, function(err, evEnter, extraMsg) {
           extraMsg = (extraMsg != null ? extraMsg : []).concat(player.syncEnergy());
           if (typeof evEnter === 'number') {
@@ -706,7 +710,7 @@
       id: 30,
       func: function(arg, player, handler, rpcID, socket) {
         return helperLib.getPositionOnLeaderboard(arg.typ, player.name, arg.src, arg.src + arg.cnt - 1, function(err, result) {
-          var ret;
+          var board, ret;
           ret = {
             REQ: rpcID,
             RET: RET_OK
@@ -715,14 +719,59 @@
             ret.me = result.position;
           }
           if (result.board != null) {
-            return async.map(result.board, getPlayerHero, function(err, result) {
-              ret.lst = result.map(getBasicInfo);
+            board = result.board.reduce((function(r, l, i) {
+              if (i % 2 === 0) {
+                r.name.push(l);
+              } else {
+                r.score.push(l);
+              }
+              return r;
+            }), {
+              name: [],
+              score: []
+            });
+            return async.map(board.name, getPlayerHero, function(err, result) {
+              ret.lst = result.map(function(e, i) {
+                var r;
+                r = getBasicInfo(e);
+                r.scr = +board.score[i];
+                return r;
+              });
               return handler([ret]);
             });
           } else {
             return handler([ret]);
           }
         });
+      },
+      args: [],
+      needPid: true
+    },
+    RPC_SubmitBounty: {
+      id: 31,
+      func: function(arg, player, handler, rpcID, socket) {
+        var ret;
+        switch (arg.bid) {
+          case -1:
+            if (player.counter.monthCard) {
+              player.counter.monthCard--;
+              obj.timestamp.newProperty('monthCard', util.currentTime());
+              ret = [
+                {
+                  NTF: Event_InventoryUpdateItem,
+                  arg: {
+                    dim: this.addDiamond(80)
+                  }
+                }
+              ];
+              return handler([
+                {
+                  REQ: rpcID,
+                  RET: RET_OK
+                }
+              ].concat(ret));
+            }
+        }
       },
       args: [],
       needPid: true

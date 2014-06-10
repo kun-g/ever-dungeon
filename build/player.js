@@ -420,6 +420,9 @@
         receipt: myReceipt
       });
       if (flag) {
+        if (rec.productID === MonthCardID) {
+          this.counters.newProperty('monthCard', 30);
+        }
         ret = [
           {
             NTF: Event_InventoryUpdateItem,
@@ -888,6 +891,9 @@
             if (stageConfig.event === 'event_daily') {
               _this.dungeonData.baseRank = helperLib.initCalcDungeonBaseRank(_this);
             }
+            if (stageConfig.pvp) {
+              _this.dungeonData.PVP_Pool = team.map(createMirrorHero);
+            }
             return cb('OK');
           };
         })(this)
@@ -1349,7 +1355,7 @@
                 ret = ret.concat(this.removeItemById(item.dropKey, 1, true));
               }
               return {
-                prize: [prz],
+                prize: prz,
                 res: ret
               };
             case ItemUse_Function:
@@ -2850,6 +2856,10 @@
         NTF: Event_UpdateFlags,
         arg: arg
       };
+    };
+
+    Player.prototype.syncCounters = function(forceUpdate) {
+      return [];
     };
 
     Player.prototype.syncQuest = function(forceUpdate) {
