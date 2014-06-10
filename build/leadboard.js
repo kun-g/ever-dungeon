@@ -9,7 +9,7 @@ exports.data = [
     },
     {
         "name":"infinitydungeon",
-        "key":"stage.78.state",
+        "key":"stage.120.state",
         "reverse":false,
         "initialValue":0,
         "type":"player",

@@ -30,7 +30,8 @@ exports.data = [
             662,
             712
 		],
-		"levelId": 0
+		"levelId": 0,
+        "transId":197
 	},
 	{
 		"classId": 1,
@@ -63,7 +64,9 @@ exports.data = [
 			652,
             742
 		],
-		"levelId": 1
+		"levelId": 1,
+        "transId":198
+
 	},
 	{
 		"classId": 2,
@@ -96,7 +99,8 @@ exports.data = [
             682,
             772
 		],
-		"levelId": 2
+		"levelId": 2,
+        "transId":199
 	},
 	{
 		"classId": 3,
@@ -7066,5 +7070,74 @@ exports.data = [
         "dropInfo": [
             90
         ]
+    },
+    {
+        "classId": 197,
+        "className": "pk战士",
+        "faction": "monster",
+        "classType": 1,
+        "avatar": "avatar.ccbi",
+        "emblem": [
+            "emblem-warrior.png",
+            "emblem-warrior2.png"
+        ],
+        "defaultArmors": [
+            6,
+            10,
+            11,
+            40,
+            41,
+            42,
+            43,
+            662,
+            712
+        ],
+        "levelId": 4
+    },
+    {
+        "classId": 198,
+        "className": "法师",
+        "faction": "hero",
+        "classType": 1,
+        "avatar": "avatar.ccbi",
+        "emblem": [
+            "emblem-mage.png",
+            "emblem-mage2.png"
+        ],
+        "defaultArmors": [
+            6,
+            10,
+            11,
+            32,
+            33,
+            34,
+            35,,
+            652,
+            742
+        ],
+        "levelId": 1
+    },
+    {
+        "classId": 199,
+        "className": "牧师",
+        "faction": "monster",
+        "classType": 1,
+        "avatar": "avatar.ccbi",
+        "emblem": [
+            "emblem-priest.png",
+            "emblem-priest2.png"
+        ],
+        "defaultArmors": [
+            6,
+            10,
+            11,
+            36,
+            37,
+            38,
+            39,
+            682,
+            772
+        ],
+        "levelId": 2
     }
 ]

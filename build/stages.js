@@ -1975,17 +1975,9 @@ var data = [
               hidden: true,
               dungeon: 115,
               description: "hunt39",
-              eventName: "event_goblin",
-              condition: function (obj, util) {
-                  return obj.counters.goblin < 3 || !obj.counters.goblin;
-              },
-              initialAction: function (obj) {
-                  //if (obj.counters.goblin) {
-                  //    obj.counters.goblin++;
-                  //} else {
-                  //    obj.counters.newProperty('goblin', 1);
-                  //}
-              }
+              eventName: "event_hunt39",
+              condition: function (obj, util) { return true; },
+              initialAction: function (obj) { }
           },
           {
               stageId: 123,
@@ -1994,17 +1986,22 @@ var data = [
               hidden: true,
               dungeon: 116,
               description: "hunt112",
+              eventName: "event_hunt112",
+              condition: function (obj, util) { return true; },
+              initialAction: function (obj) { }
+          },
+          {
+              stageId: 118,
+              cost: 10,
+              team: 1,
+              pvp: true,
+              hidden: true,
+              dungeon: 116,
+              description: "hunt112",
               eventName: "event_goblin",
-              condition: function (obj, util) {
-                  return obj.counters.goblin < 3 || !obj.counters.goblin;
+              condition: function (obj, util) { return true;
               },
-              initialAction: function (obj) {
-                  //if (obj.counters.goblin) {
-                  //    obj.counters.goblin++;
-                  //} else {
-                  //    obj.counters.newProperty('goblin', 1);
-                  //}
-              }
+              initialAction: function (obj) { }
           }
       ]
   }

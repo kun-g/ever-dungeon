@@ -891,6 +891,9 @@
             if (stageConfig.event === 'event_daily') {
               _this.dungeonData.baseRank = helperLib.initCalcDungeonBaseRank(_this);
             }
+            if (stageConfig.pvp) {
+              _this.dungeonData.PVP_Pool = team.map(createMirrorHero);
+            }
             return cb('OK');
           };
         })(this)

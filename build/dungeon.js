@@ -425,6 +425,9 @@
           this.xpRate *= 1.1;
         }
       }
+      if (this.PVP_Pool) {
+        cfg.pool.PVP = this.PVP_Pool;
+      }
       creation = createUnits(cfg, (function(_this) {
         return function() {
           return _this.rand();

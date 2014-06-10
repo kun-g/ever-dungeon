@@ -23939,11 +23939,23 @@ exports.data = [
         "pool":{
             "soldierPool":[
                 {
-                    "id":7,
+                    "id":3,
                     "weight":2
                 },
                 {
-                    "id":8,
+                    "id":4,
+                    "weight":2
+                },
+                {
+                    "id":5,
+                    "weight":2
+                },
+                {
+                    "id":6,
+                    "weight":2
+                },
+                {
+                    "id":7,
                     "weight":2
                 },
                 {
@@ -23959,31 +23971,39 @@ exports.data = [
                     "weight":2
                 },
                 {
+                    "id":12,
+                    "weight":2
+                },
+                {
                     "id":14,
                     "weight":2
                 },
                 {
-                    "id":13,
+                    "id":15,
                     "weight":2
                 },
                 {
-                    "id":16,
+                    "id":17,
                     "weight":2
                 },
                 {
-                    "id":18,
+                    "id":35,
                     "weight":2
                 },
                 {
-                    "id":19,
+                    "id":36,
+                    "weight":2
+                },
+                {
+                    "id":37,
+                    "weight":2
+                },
+                {
+                    "id":38,
                     "weight":2
                 },
                 {
                     "id":39,
-                    "weight":2
-                },
-                {
-                    "id":40,
                     "weight":2
                 },
                 {
@@ -23999,7 +24019,7 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":45,
+                    "id":44,
                     "weight":2
                 },
                 {
@@ -24011,27 +24031,27 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":48,
+                    "id":49,
                     "weight":2
                 },
                 {
-                    "id":50,
+                    "id":67,
                     "weight":2
                 },
                 {
-                    "id":51,
+                    "id":68,
                     "weight":2
                 },
                 {
-                    "id":53,
+                    "id":69,
+                    "weight":2
+                },
+                {
+                    "id":70,
                     "weight":2
                 },
                 {
                     "id":71,
-                    "weight":2
-                },
-                {
-                    "id":72,
                     "weight":2
                 },
                 {
@@ -24047,7 +24067,7 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":77,
+                    "id":76,
                     "weight":2
                 },
                 {
@@ -24059,31 +24079,27 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":80,
-                    "weight":2
-                },
-                {
                     "id":81,
                     "weight":2
                 },
                 {
-                    "id":82,
+                    "id":99,
                     "weight":2
                 },
                 {
-                    "id":83,
+                    "id":100,
                     "weight":2
                 },
                 {
-                    "id":85,
+                    "id":101,
+                    "weight":2
+                },
+                {
+                    "id":102,
                     "weight":2
                 },
                 {
                     "id":103,
-                    "weight":2
-                },
-                {
-                    "id":104,
                     "weight":2
                 },
                 {
@@ -24099,11 +24115,12 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":110,
+                    "id":108,
                     "weight":2
                 },
+
                 {
-                    "id":109,
+                    "id":110,
                     "weight":2
                 },
                 {
@@ -24111,46 +24128,180 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":112,
+                    "id":113,
+                    "weight":2
+                }
+            ],
+            "rangePool":[
+                {
+                    "id":8,
+                    "weight":2
+                },
+                {
+                    "id":13,
+                    "weight":2
+                },
+                {
+                    "id":16,
+                    "weight":2
+                },
+                {
+                    "id":40,
+                    "weight":2
+                },
+                {
+                    "id":45,
+                    "weight":2
+                },
+                {
+                    "id":48,
+                    "weight":2
+                },
+                {
+                    "id":72,
+                    "weight":2
+                },
+                {
+                    "id":77,
+                    "weight":2
+                },
+                {
+                    "id":80,
                     "weight":2
                 },
                 {
                     "id":114,
                     "weight":2
                 },
-
                 {
-                    "id":115,
+                    "id":109,
                     "weight":2
                 },
                 {
-                    "id":117,
+                    "id":112,
                     "weight":2
                 }
+
             ],
-            "rangePool":[
+            "elitePool":[
                 {
-                    "id":12,
+                    "id":20,
                     "weight":2
                 },
                 {
-                    "id":17,
+                    "id":21,
                     "weight":2
                 },
                 {
-                    "id":44,
+                    "id":22,
                     "weight":2
                 },
                 {
-                    "id":49,
+                    "id":23,
                     "weight":2
                 },
                 {
-                    "id":76,
+                    "id":24,
                     "weight":2
                 },
                 {
-                    "id":81,
+                    "id":25,
+                    "weight":2
+                },
+                {
+                    "id":26,
+                    "weight":2
+                },
+                {
+                    "id":27,
+                    "weight":2
+                },
+                {
+                    "id":28,
+                    "weight":2
+                },
+                {
+                    "id":29,
+                    "weight":2
+                },
+                {
+                    "id":30,
+                    "weight":2
+                },
+                {
+                    "id":31,
+                    "weight":2
+                },
+                {
+                    "id":32,
+                    "weight":2
+                },
+                {
+                    "id":33,
+                    "weight":2
+                },
+                {
+                    "id":34,
+                    "weight":2
+                },
+                {
+                    "id":52,
+                    "weight":2
+                },
+                {
+                    "id":53,
+                    "weight":2
+                },
+                {
+                    "id":54,
+                    "weight":2
+                },
+                {
+                    "id":55,
+                    "weight":2
+                },
+                {
+                    "id":56,
+                    "weight":2
+                },
+                {
+                    "id":57,
+                    "weight":2
+                },
+                {
+                    "id":58,
+                    "weight":2
+                },
+                {
+                    "id":59,
+                    "weight":2
+                },
+                {
+                    "id":60,
+                    "weight":2
+                },
+                {
+                    "id":61,
+                    "weight":2
+                },
+                {
+                    "id":62,
+                    "weight":2
+                },
+                {
+                    "id":63,
+                    "weight":2
+                },
+                {
+                    "id":64,
+                    "weight":2
+                },
+                {
+                    "id":65,
+                    "weight":2
+                },
+                {
+                    "id":66,
                     "weight":2
                 },
                 {
@@ -24158,137 +24309,15 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":108,
+                    "id":85,
                     "weight":2
                 },
                 {
-                    "id":113,
+                    "id":86,
                     "weight":2
                 },
                 {
-                    "id":116,
-                    "weight":2
-                }
-            ],
-            "elitePool":[
-                {
-                    "id":24,
-                    "weight":2
-                },
-                {
-                    "id":25,
-                    "weight":2
-                },
-                {
-                    "id":26,
-                    "weight":2
-                },
-                {
-                    "id":27,
-                    "weight":2
-                },
-                {
-                    "id":64,
-                    "weight":2
-                },
-                {
-                    "id":28,
-                    "weight":2
-                },
-                {
-                    "id":29,
-                    "weight":2
-                },
-                {
-                    "id":30,
-                    "weight":2
-                },
-                {
-                    "id":31,
-                    "weight":2
-                },
-                {
-                    "id":32,
-                    "weight":2
-                },
-                {
-                    "id":33,
-                    "weight":2
-                },
-                {
-                    "id":34,
-                    "weight":2
-                },
-                {
-                    "id":35,
-                    "weight":2
-                },
-                {
-                    "id":36,
-                    "weight":2
-                },
-                {
-                    "id":37,
-                    "weight":2
-                },
-                {
-                    "id":38,
-                    "weight":2
-                },
-                {
-                    "id":56,
-                    "weight":2
-                },
-                {
-                    "id":58,
-                    "weight":2
-                },
-                {
-                    "id":59,
-                    "weight":2
-                },
-                {
-                    "id":60,
-                    "weight":2
-                },
-                {
-                    "id":61,
-                    "weight":2
-                },
-                {
-                    "id":62,
-                    "weight":2
-                },
-                {
-                    "id":63,
-                    "weight":2
-                },
-                {
-                    "id":64,
-                    "weight":2
-                },
-                {
-                    "id":65,
-                    "weight":2
-                },
-                {
-                    "id":66,
-                    "weight":2
-                },
-                {
-                    "id":67,
-                    "weight":2
-                },
-                {
-                    "id":68,
-                    "weight":2
-                },
-                {
-                    "id":69,
-                    "weight":2
-                },
-                {
-                    "id":70,
+                    "id":87,
                     "weight":2
                 },
                 {
@@ -24297,6 +24326,10 @@ exports.data = [
                 },
                 {
                     "id":89,
+                    "weight":2
+                },
+                {
+                    "id":90,
                     "weight":2
                 },
                 {
@@ -24332,19 +24365,19 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":99,
+                    "id":116,
                     "weight":2
                 },
                 {
-                    "id":100,
+                    "id":117,
                     "weight":2
                 },
                 {
-                    "id":101,
+                    "id":118,
                     "weight":2
                 },
                 {
-                    "id":102,
+                    "id":119,
                     "weight":2
                 },
                 {
@@ -24385,28 +24418,28 @@ exports.data = [
                 },
                 {
                     "id":130,
-                    "weight":2
-                },
-                {
-                    "id":131,
-                    "weight":2
-                },
-                {
-                    "id":132,
-                    "weight":2
-                },
-                {
-                    "id":133,
-                    "weight":2
-                },
-                {
-                    "id":134,
                     "weight":2
                 }
 
             ],
             "bossPool":[
                 {
+                    "id":20,
+                    "weight":2
+                },
+                {
+                    "id":21,
+                    "weight":2
+                },
+                {
+                    "id":22,
+                    "weight":2
+                },
+                {
+                    "id":23,
+                    "weight":2
+                },
+                {
                     "id":24,
                     "weight":2
                 },
@@ -24420,10 +24453,6 @@ exports.data = [
                 },
                 {
                     "id":27,
-                    "weight":2
-                },
-                {
-                    "id":64,
                     "weight":2
                 },
                 {
@@ -24455,23 +24484,27 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":35,
+                    "id":52,
                     "weight":2
                 },
                 {
-                    "id":36,
+                    "id":53,
                     "weight":2
                 },
                 {
-                    "id":37,
+                    "id":54,
                     "weight":2
                 },
                 {
-                    "id":38,
+                    "id":55,
                     "weight":2
                 },
                 {
                     "id":56,
+                    "weight":2
+                },
+                {
+                    "id":57,
                     "weight":2
                 },
                 {
@@ -24511,19 +24544,19 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":67,
+                    "id":84,
                     "weight":2
                 },
                 {
-                    "id":68,
+                    "id":85,
                     "weight":2
                 },
                 {
-                    "id":69,
+                    "id":86,
                     "weight":2
                 },
                 {
-                    "id":70,
+                    "id":87,
                     "weight":2
                 },
                 {
@@ -24532,6 +24565,10 @@ exports.data = [
                 },
                 {
                     "id":89,
+                    "weight":2
+                },
+                {
+                    "id":90,
                     "weight":2
                 },
                 {
@@ -24567,19 +24604,19 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":99,
+                    "id":116,
                     "weight":2
                 },
                 {
-                    "id":100,
+                    "id":117,
                     "weight":2
                 },
                 {
-                    "id":101,
+                    "id":118,
                     "weight":2
                 },
                 {
-                    "id":102,
+                    "id":119,
                     "weight":2
                 },
                 {
@@ -24620,22 +24657,6 @@ exports.data = [
                 },
                 {
                     "id":130,
-                    "weight":2
-                },
-                {
-                    "id":131,
-                    "weight":2
-                },
-                {
-                    "id":132,
-                    "weight":2
-                },
-                {
-                    "id":133,
-                    "weight":2
-                },
-                {
-                    "id":134,
                     "weight":2
                 }
 
@@ -24825,11 +24846,23 @@ exports.data = [
         "pool":{
             "soldierPool":[
                 {
-                    "id":7,
+                    "id":3,
                     "weight":2
                 },
                 {
-                    "id":8,
+                    "id":4,
+                    "weight":2
+                },
+                {
+                    "id":5,
+                    "weight":2
+                },
+                {
+                    "id":6,
+                    "weight":2
+                },
+                {
+                    "id":7,
                     "weight":2
                 },
                 {
@@ -24845,31 +24878,39 @@ exports.data = [
                     "weight":2
                 },
                 {
+                    "id":12,
+                    "weight":2
+                },
+                {
                     "id":14,
                     "weight":2
                 },
                 {
-                    "id":13,
+                    "id":15,
                     "weight":2
                 },
                 {
-                    "id":16,
+                    "id":17,
                     "weight":2
                 },
                 {
-                    "id":18,
+                    "id":35,
                     "weight":2
                 },
                 {
-                    "id":19,
+                    "id":36,
+                    "weight":2
+                },
+                {
+                    "id":37,
+                    "weight":2
+                },
+                {
+                    "id":38,
                     "weight":2
                 },
                 {
                     "id":39,
-                    "weight":2
-                },
-                {
-                    "id":40,
                     "weight":2
                 },
                 {
@@ -24885,7 +24926,7 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":45,
+                    "id":44,
                     "weight":2
                 },
                 {
@@ -24897,27 +24938,27 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":48,
+                    "id":49,
                     "weight":2
                 },
                 {
-                    "id":50,
+                    "id":67,
                     "weight":2
                 },
                 {
-                    "id":51,
+                    "id":68,
                     "weight":2
                 },
                 {
-                    "id":53,
+                    "id":69,
+                    "weight":2
+                },
+                {
+                    "id":70,
                     "weight":2
                 },
                 {
                     "id":71,
-                    "weight":2
-                },
-                {
-                    "id":72,
                     "weight":2
                 },
                 {
@@ -24933,7 +24974,7 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":77,
+                    "id":76,
                     "weight":2
                 },
                 {
@@ -24945,31 +24986,27 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":80,
-                    "weight":2
-                },
-                {
                     "id":81,
                     "weight":2
                 },
                 {
-                    "id":82,
+                    "id":99,
                     "weight":2
                 },
                 {
-                    "id":83,
+                    "id":100,
                     "weight":2
                 },
                 {
-                    "id":85,
+                    "id":101,
+                    "weight":2
+                },
+                {
+                    "id":102,
                     "weight":2
                 },
                 {
                     "id":103,
-                    "weight":2
-                },
-                {
-                    "id":104,
                     "weight":2
                 },
                 {
@@ -24985,11 +25022,12 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":110,
+                    "id":108,
                     "weight":2
                 },
+
                 {
-                    "id":109,
+                    "id":110,
                     "weight":2
                 },
                 {
@@ -24997,46 +25035,180 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":112,
+                    "id":113,
+                    "weight":2
+                }
+            ],
+            "rangePool":[
+                {
+                    "id":8,
+                    "weight":2
+                },
+                {
+                    "id":13,
+                    "weight":2
+                },
+                {
+                    "id":16,
+                    "weight":2
+                },
+                {
+                    "id":40,
+                    "weight":2
+                },
+                {
+                    "id":45,
+                    "weight":2
+                },
+                {
+                    "id":48,
+                    "weight":2
+                },
+                {
+                    "id":72,
+                    "weight":2
+                },
+                {
+                    "id":77,
+                    "weight":2
+                },
+                {
+                    "id":80,
                     "weight":2
                 },
                 {
                     "id":114,
                     "weight":2
                 },
-
                 {
-                    "id":115,
+                    "id":109,
                     "weight":2
                 },
                 {
-                    "id":117,
+                    "id":112,
                     "weight":2
                 }
+
             ],
-            "rangePool":[
+            "elitePool":[
                 {
-                    "id":12,
+                    "id":20,
                     "weight":2
                 },
                 {
-                    "id":17,
+                    "id":21,
                     "weight":2
                 },
                 {
-                    "id":44,
+                    "id":22,
                     "weight":2
                 },
                 {
-                    "id":49,
+                    "id":23,
                     "weight":2
                 },
                 {
-                    "id":76,
+                    "id":24,
                     "weight":2
                 },
                 {
-                    "id":81,
+                    "id":25,
+                    "weight":2
+                },
+                {
+                    "id":26,
+                    "weight":2
+                },
+                {
+                    "id":27,
+                    "weight":2
+                },
+                {
+                    "id":28,
+                    "weight":2
+                },
+                {
+                    "id":29,
+                    "weight":2
+                },
+                {
+                    "id":30,
+                    "weight":2
+                },
+                {
+                    "id":31,
+                    "weight":2
+                },
+                {
+                    "id":32,
+                    "weight":2
+                },
+                {
+                    "id":33,
+                    "weight":2
+                },
+                {
+                    "id":34,
+                    "weight":2
+                },
+                {
+                    "id":52,
+                    "weight":2
+                },
+                {
+                    "id":53,
+                    "weight":2
+                },
+                {
+                    "id":54,
+                    "weight":2
+                },
+                {
+                    "id":55,
+                    "weight":2
+                },
+                {
+                    "id":56,
+                    "weight":2
+                },
+                {
+                    "id":57,
+                    "weight":2
+                },
+                {
+                    "id":58,
+                    "weight":2
+                },
+                {
+                    "id":59,
+                    "weight":2
+                },
+                {
+                    "id":60,
+                    "weight":2
+                },
+                {
+                    "id":61,
+                    "weight":2
+                },
+                {
+                    "id":62,
+                    "weight":2
+                },
+                {
+                    "id":63,
+                    "weight":2
+                },
+                {
+                    "id":64,
+                    "weight":2
+                },
+                {
+                    "id":65,
+                    "weight":2
+                },
+                {
+                    "id":66,
                     "weight":2
                 },
                 {
@@ -25044,137 +25216,15 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":108,
+                    "id":85,
                     "weight":2
                 },
                 {
-                    "id":113,
+                    "id":86,
                     "weight":2
                 },
                 {
-                    "id":116,
-                    "weight":2
-                }
-            ],
-            "elitePool":[
-                {
-                    "id":24,
-                    "weight":2
-                },
-                {
-                    "id":25,
-                    "weight":2
-                },
-                {
-                    "id":26,
-                    "weight":2
-                },
-                {
-                    "id":27,
-                    "weight":2
-                },
-                {
-                    "id":64,
-                    "weight":2
-                },
-                {
-                    "id":28,
-                    "weight":2
-                },
-                {
-                    "id":29,
-                    "weight":2
-                },
-                {
-                    "id":30,
-                    "weight":2
-                },
-                {
-                    "id":31,
-                    "weight":2
-                },
-                {
-                    "id":32,
-                    "weight":2
-                },
-                {
-                    "id":33,
-                    "weight":2
-                },
-                {
-                    "id":34,
-                    "weight":2
-                },
-                {
-                    "id":35,
-                    "weight":2
-                },
-                {
-                    "id":36,
-                    "weight":2
-                },
-                {
-                    "id":37,
-                    "weight":2
-                },
-                {
-                    "id":38,
-                    "weight":2
-                },
-                {
-                    "id":56,
-                    "weight":2
-                },
-                {
-                    "id":58,
-                    "weight":2
-                },
-                {
-                    "id":59,
-                    "weight":2
-                },
-                {
-                    "id":60,
-                    "weight":2
-                },
-                {
-                    "id":61,
-                    "weight":2
-                },
-                {
-                    "id":62,
-                    "weight":2
-                },
-                {
-                    "id":63,
-                    "weight":2
-                },
-                {
-                    "id":64,
-                    "weight":2
-                },
-                {
-                    "id":65,
-                    "weight":2
-                },
-                {
-                    "id":66,
-                    "weight":2
-                },
-                {
-                    "id":67,
-                    "weight":2
-                },
-                {
-                    "id":68,
-                    "weight":2
-                },
-                {
-                    "id":69,
-                    "weight":2
-                },
-                {
-                    "id":70,
+                    "id":87,
                     "weight":2
                 },
                 {
@@ -25183,6 +25233,10 @@ exports.data = [
                 },
                 {
                     "id":89,
+                    "weight":2
+                },
+                {
+                    "id":90,
                     "weight":2
                 },
                 {
@@ -25218,19 +25272,19 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":99,
+                    "id":116,
                     "weight":2
                 },
                 {
-                    "id":100,
+                    "id":117,
                     "weight":2
                 },
                 {
-                    "id":101,
+                    "id":118,
                     "weight":2
                 },
                 {
-                    "id":102,
+                    "id":119,
                     "weight":2
                 },
                 {
@@ -25271,28 +25325,28 @@ exports.data = [
                 },
                 {
                     "id":130,
-                    "weight":2
-                },
-                {
-                    "id":131,
-                    "weight":2
-                },
-                {
-                    "id":132,
-                    "weight":2
-                },
-                {
-                    "id":133,
-                    "weight":2
-                },
-                {
-                    "id":134,
                     "weight":2
                 }
 
             ],
             "bossPool":[
                 {
+                    "id":20,
+                    "weight":2
+                },
+                {
+                    "id":21,
+                    "weight":2
+                },
+                {
+                    "id":22,
+                    "weight":2
+                },
+                {
+                    "id":23,
+                    "weight":2
+                },
+                {
                     "id":24,
                     "weight":2
                 },
@@ -25306,10 +25360,6 @@ exports.data = [
                 },
                 {
                     "id":27,
-                    "weight":2
-                },
-                {
-                    "id":64,
                     "weight":2
                 },
                 {
@@ -25341,23 +25391,27 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":35,
+                    "id":52,
                     "weight":2
                 },
                 {
-                    "id":36,
+                    "id":53,
                     "weight":2
                 },
                 {
-                    "id":37,
+                    "id":54,
                     "weight":2
                 },
                 {
-                    "id":38,
+                    "id":55,
                     "weight":2
                 },
                 {
                     "id":56,
+                    "weight":2
+                },
+                {
+                    "id":57,
                     "weight":2
                 },
                 {
@@ -25397,19 +25451,19 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":67,
+                    "id":84,
                     "weight":2
                 },
                 {
-                    "id":68,
+                    "id":85,
                     "weight":2
                 },
                 {
-                    "id":69,
+                    "id":86,
                     "weight":2
                 },
                 {
-                    "id":70,
+                    "id":87,
                     "weight":2
                 },
                 {
@@ -25418,6 +25472,10 @@ exports.data = [
                 },
                 {
                     "id":89,
+                    "weight":2
+                },
+                {
+                    "id":90,
                     "weight":2
                 },
                 {
@@ -25453,19 +25511,19 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":99,
+                    "id":116,
                     "weight":2
                 },
                 {
-                    "id":100,
+                    "id":117,
                     "weight":2
                 },
                 {
-                    "id":101,
+                    "id":118,
                     "weight":2
                 },
                 {
-                    "id":102,
+                    "id":119,
                     "weight":2
                 },
                 {
@@ -25506,22 +25564,6 @@ exports.data = [
                 },
                 {
                     "id":130,
-                    "weight":2
-                },
-                {
-                    "id":131,
-                    "weight":2
-                },
-                {
-                    "id":132,
-                    "weight":2
-                },
-                {
-                    "id":133,
-                    "weight":2
-                },
-                {
-                    "id":134,
                     "weight":2
                 }
 
@@ -25712,11 +25754,23 @@ exports.data = [
         "pool":{
             "soldierPool":[
                 {
-                    "id":7,
+                    "id":3,
                     "weight":2
                 },
                 {
-                    "id":8,
+                    "id":4,
+                    "weight":2
+                },
+                {
+                    "id":5,
+                    "weight":2
+                },
+                {
+                    "id":6,
+                    "weight":2
+                },
+                {
+                    "id":7,
                     "weight":2
                 },
                 {
@@ -25732,31 +25786,39 @@ exports.data = [
                     "weight":2
                 },
                 {
+                    "id":12,
+                    "weight":2
+                },
+                {
                     "id":14,
                     "weight":2
                 },
                 {
-                    "id":13,
+                    "id":15,
                     "weight":2
                 },
                 {
-                    "id":16,
+                    "id":17,
                     "weight":2
                 },
                 {
-                    "id":18,
+                    "id":35,
                     "weight":2
                 },
                 {
-                    "id":19,
+                    "id":36,
+                    "weight":2
+                },
+                {
+                    "id":37,
+                    "weight":2
+                },
+                {
+                    "id":38,
                     "weight":2
                 },
                 {
                     "id":39,
-                    "weight":2
-                },
-                {
-                    "id":40,
                     "weight":2
                 },
                 {
@@ -25772,7 +25834,7 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":45,
+                    "id":44,
                     "weight":2
                 },
                 {
@@ -25784,27 +25846,27 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":48,
+                    "id":49,
                     "weight":2
                 },
                 {
-                    "id":50,
+                    "id":67,
                     "weight":2
                 },
                 {
-                    "id":51,
+                    "id":68,
                     "weight":2
                 },
                 {
-                    "id":53,
+                    "id":69,
+                    "weight":2
+                },
+                {
+                    "id":70,
                     "weight":2
                 },
                 {
                     "id":71,
-                    "weight":2
-                },
-                {
-                    "id":72,
                     "weight":2
                 },
                 {
@@ -25820,7 +25882,7 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":77,
+                    "id":76,
                     "weight":2
                 },
                 {
@@ -25832,31 +25894,27 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":80,
-                    "weight":2
-                },
-                {
                     "id":81,
                     "weight":2
                 },
                 {
-                    "id":82,
+                    "id":99,
                     "weight":2
                 },
                 {
-                    "id":83,
+                    "id":100,
                     "weight":2
                 },
                 {
-                    "id":85,
+                    "id":101,
+                    "weight":2
+                },
+                {
+                    "id":102,
                     "weight":2
                 },
                 {
                     "id":103,
-                    "weight":2
-                },
-                {
-                    "id":104,
                     "weight":2
                 },
                 {
@@ -25872,11 +25930,12 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":110,
+                    "id":108,
                     "weight":2
                 },
+
                 {
-                    "id":109,
+                    "id":110,
                     "weight":2
                 },
                 {
@@ -25884,46 +25943,180 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":112,
+                    "id":113,
+                    "weight":2
+                }
+            ],
+            "rangePool":[
+                {
+                    "id":8,
+                    "weight":2
+                },
+                {
+                    "id":13,
+                    "weight":2
+                },
+                {
+                    "id":16,
+                    "weight":2
+                },
+                {
+                    "id":40,
+                    "weight":2
+                },
+                {
+                    "id":45,
+                    "weight":2
+                },
+                {
+                    "id":48,
+                    "weight":2
+                },
+                {
+                    "id":72,
+                    "weight":2
+                },
+                {
+                    "id":77,
+                    "weight":2
+                },
+                {
+                    "id":80,
                     "weight":2
                 },
                 {
                     "id":114,
                     "weight":2
                 },
-
                 {
-                    "id":115,
+                    "id":109,
                     "weight":2
                 },
                 {
-                    "id":117,
+                    "id":112,
                     "weight":2
                 }
+
             ],
-            "rangePool":[
+            "elitePool":[
                 {
-                    "id":12,
+                    "id":20,
                     "weight":2
                 },
                 {
-                    "id":17,
+                    "id":21,
                     "weight":2
                 },
                 {
-                    "id":44,
+                    "id":22,
                     "weight":2
                 },
                 {
-                    "id":49,
+                    "id":23,
                     "weight":2
                 },
                 {
-                    "id":76,
+                    "id":24,
                     "weight":2
                 },
                 {
-                    "id":81,
+                    "id":25,
+                    "weight":2
+                },
+                {
+                    "id":26,
+                    "weight":2
+                },
+                {
+                    "id":27,
+                    "weight":2
+                },
+                {
+                    "id":28,
+                    "weight":2
+                },
+                {
+                    "id":29,
+                    "weight":2
+                },
+                {
+                    "id":30,
+                    "weight":2
+                },
+                {
+                    "id":31,
+                    "weight":2
+                },
+                {
+                    "id":32,
+                    "weight":2
+                },
+                {
+                    "id":33,
+                    "weight":2
+                },
+                {
+                    "id":34,
+                    "weight":2
+                },
+                {
+                    "id":52,
+                    "weight":2
+                },
+                {
+                    "id":53,
+                    "weight":2
+                },
+                {
+                    "id":54,
+                    "weight":2
+                },
+                {
+                    "id":55,
+                    "weight":2
+                },
+                {
+                    "id":56,
+                    "weight":2
+                },
+                {
+                    "id":57,
+                    "weight":2
+                },
+                {
+                    "id":58,
+                    "weight":2
+                },
+                {
+                    "id":59,
+                    "weight":2
+                },
+                {
+                    "id":60,
+                    "weight":2
+                },
+                {
+                    "id":61,
+                    "weight":2
+                },
+                {
+                    "id":62,
+                    "weight":2
+                },
+                {
+                    "id":63,
+                    "weight":2
+                },
+                {
+                    "id":64,
+                    "weight":2
+                },
+                {
+                    "id":65,
+                    "weight":2
+                },
+                {
+                    "id":66,
                     "weight":2
                 },
                 {
@@ -25931,137 +26124,15 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":108,
+                    "id":85,
                     "weight":2
                 },
                 {
-                    "id":113,
+                    "id":86,
                     "weight":2
                 },
                 {
-                    "id":116,
-                    "weight":2
-                }
-            ],
-            "elitePool":[
-                {
-                    "id":24,
-                    "weight":2
-                },
-                {
-                    "id":25,
-                    "weight":2
-                },
-                {
-                    "id":26,
-                    "weight":2
-                },
-                {
-                    "id":27,
-                    "weight":2
-                },
-                {
-                    "id":64,
-                    "weight":2
-                },
-                {
-                    "id":28,
-                    "weight":2
-                },
-                {
-                    "id":29,
-                    "weight":2
-                },
-                {
-                    "id":30,
-                    "weight":2
-                },
-                {
-                    "id":31,
-                    "weight":2
-                },
-                {
-                    "id":32,
-                    "weight":2
-                },
-                {
-                    "id":33,
-                    "weight":2
-                },
-                {
-                    "id":34,
-                    "weight":2
-                },
-                {
-                    "id":35,
-                    "weight":2
-                },
-                {
-                    "id":36,
-                    "weight":2
-                },
-                {
-                    "id":37,
-                    "weight":2
-                },
-                {
-                    "id":38,
-                    "weight":2
-                },
-                {
-                    "id":56,
-                    "weight":2
-                },
-                {
-                    "id":58,
-                    "weight":2
-                },
-                {
-                    "id":59,
-                    "weight":2
-                },
-                {
-                    "id":60,
-                    "weight":2
-                },
-                {
-                    "id":61,
-                    "weight":2
-                },
-                {
-                    "id":62,
-                    "weight":2
-                },
-                {
-                    "id":63,
-                    "weight":2
-                },
-                {
-                    "id":64,
-                    "weight":2
-                },
-                {
-                    "id":65,
-                    "weight":2
-                },
-                {
-                    "id":66,
-                    "weight":2
-                },
-                {
-                    "id":67,
-                    "weight":2
-                },
-                {
-                    "id":68,
-                    "weight":2
-                },
-                {
-                    "id":69,
-                    "weight":2
-                },
-                {
-                    "id":70,
+                    "id":87,
                     "weight":2
                 },
                 {
@@ -26070,6 +26141,10 @@ exports.data = [
                 },
                 {
                     "id":89,
+                    "weight":2
+                },
+                {
+                    "id":90,
                     "weight":2
                 },
                 {
@@ -26105,19 +26180,19 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":99,
+                    "id":116,
                     "weight":2
                 },
                 {
-                    "id":100,
+                    "id":117,
                     "weight":2
                 },
                 {
-                    "id":101,
+                    "id":118,
                     "weight":2
                 },
                 {
-                    "id":102,
+                    "id":119,
                     "weight":2
                 },
                 {
@@ -26158,28 +26233,28 @@ exports.data = [
                 },
                 {
                     "id":130,
-                    "weight":2
-                },
-                {
-                    "id":131,
-                    "weight":2
-                },
-                {
-                    "id":132,
-                    "weight":2
-                },
-                {
-                    "id":133,
-                    "weight":2
-                },
-                {
-                    "id":134,
                     "weight":2
                 }
 
             ],
             "bossPool":[
                 {
+                    "id":20,
+                    "weight":2
+                },
+                {
+                    "id":21,
+                    "weight":2
+                },
+                {
+                    "id":22,
+                    "weight":2
+                },
+                {
+                    "id":23,
+                    "weight":2
+                },
+                {
                     "id":24,
                     "weight":2
                 },
@@ -26193,10 +26268,6 @@ exports.data = [
                 },
                 {
                     "id":27,
-                    "weight":2
-                },
-                {
-                    "id":64,
                     "weight":2
                 },
                 {
@@ -26228,23 +26299,27 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":35,
+                    "id":52,
                     "weight":2
                 },
                 {
-                    "id":36,
+                    "id":53,
                     "weight":2
                 },
                 {
-                    "id":37,
+                    "id":54,
                     "weight":2
                 },
                 {
-                    "id":38,
+                    "id":55,
                     "weight":2
                 },
                 {
                     "id":56,
+                    "weight":2
+                },
+                {
+                    "id":57,
                     "weight":2
                 },
                 {
@@ -26284,19 +26359,19 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":67,
+                    "id":84,
                     "weight":2
                 },
                 {
-                    "id":68,
+                    "id":85,
                     "weight":2
                 },
                 {
-                    "id":69,
+                    "id":86,
                     "weight":2
                 },
                 {
-                    "id":70,
+                    "id":87,
                     "weight":2
                 },
                 {
@@ -26305,6 +26380,10 @@ exports.data = [
                 },
                 {
                     "id":89,
+                    "weight":2
+                },
+                {
+                    "id":90,
                     "weight":2
                 },
                 {
@@ -26340,19 +26419,19 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":99,
+                    "id":116,
                     "weight":2
                 },
                 {
-                    "id":100,
+                    "id":117,
                     "weight":2
                 },
                 {
-                    "id":101,
+                    "id":118,
                     "weight":2
                 },
                 {
-                    "id":102,
+                    "id":119,
                     "weight":2
                 },
                 {
@@ -26393,22 +26472,6 @@ exports.data = [
                 },
                 {
                     "id":130,
-                    "weight":2
-                },
-                {
-                    "id":131,
-                    "weight":2
-                },
-                {
-                    "id":132,
-                    "weight":2
-                },
-                {
-                    "id":133,
-                    "weight":2
-                },
-                {
-                    "id":134,
                     "weight":2
                 }
 
@@ -26599,11 +26662,23 @@ exports.data = [
         "pool":{
             "soldierPool":[
                 {
-                    "id":7,
+                    "id":3,
                     "weight":2
                 },
                 {
-                    "id":8,
+                    "id":4,
+                    "weight":2
+                },
+                {
+                    "id":5,
+                    "weight":2
+                },
+                {
+                    "id":6,
+                    "weight":2
+                },
+                {
+                    "id":7,
                     "weight":2
                 },
                 {
@@ -26619,31 +26694,39 @@ exports.data = [
                     "weight":2
                 },
                 {
+                    "id":12,
+                    "weight":2
+                },
+                {
                     "id":14,
                     "weight":2
                 },
                 {
-                    "id":13,
+                    "id":15,
                     "weight":2
                 },
                 {
-                    "id":16,
+                    "id":17,
                     "weight":2
                 },
                 {
-                    "id":18,
+                    "id":35,
                     "weight":2
                 },
                 {
-                    "id":19,
+                    "id":36,
+                    "weight":2
+                },
+                {
+                    "id":37,
+                    "weight":2
+                },
+                {
+                    "id":38,
                     "weight":2
                 },
                 {
                     "id":39,
-                    "weight":2
-                },
-                {
-                    "id":40,
                     "weight":2
                 },
                 {
@@ -26659,7 +26742,7 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":45,
+                    "id":44,
                     "weight":2
                 },
                 {
@@ -26671,27 +26754,27 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":48,
+                    "id":49,
                     "weight":2
                 },
                 {
-                    "id":50,
+                    "id":67,
                     "weight":2
                 },
                 {
-                    "id":51,
+                    "id":68,
                     "weight":2
                 },
                 {
-                    "id":53,
+                    "id":69,
+                    "weight":2
+                },
+                {
+                    "id":70,
                     "weight":2
                 },
                 {
                     "id":71,
-                    "weight":2
-                },
-                {
-                    "id":72,
                     "weight":2
                 },
                 {
@@ -26707,7 +26790,7 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":77,
+                    "id":76,
                     "weight":2
                 },
                 {
@@ -26719,31 +26802,27 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":80,
-                    "weight":2
-                },
-                {
                     "id":81,
                     "weight":2
                 },
                 {
-                    "id":82,
+                    "id":99,
                     "weight":2
                 },
                 {
-                    "id":83,
+                    "id":100,
                     "weight":2
                 },
                 {
-                    "id":85,
+                    "id":101,
+                    "weight":2
+                },
+                {
+                    "id":102,
                     "weight":2
                 },
                 {
                     "id":103,
-                    "weight":2
-                },
-                {
-                    "id":104,
                     "weight":2
                 },
                 {
@@ -26759,11 +26838,12 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":110,
+                    "id":108,
                     "weight":2
                 },
+
                 {
-                    "id":109,
+                    "id":110,
                     "weight":2
                 },
                 {
@@ -26771,46 +26851,180 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":112,
+                    "id":113,
+                    "weight":2
+                }
+            ],
+            "rangePool":[
+                {
+                    "id":8,
+                    "weight":2
+                },
+                {
+                    "id":13,
+                    "weight":2
+                },
+                {
+                    "id":16,
+                    "weight":2
+                },
+                {
+                    "id":40,
+                    "weight":2
+                },
+                {
+                    "id":45,
+                    "weight":2
+                },
+                {
+                    "id":48,
+                    "weight":2
+                },
+                {
+                    "id":72,
+                    "weight":2
+                },
+                {
+                    "id":77,
+                    "weight":2
+                },
+                {
+                    "id":80,
                     "weight":2
                 },
                 {
                     "id":114,
                     "weight":2
                 },
-
                 {
-                    "id":115,
+                    "id":109,
                     "weight":2
                 },
                 {
-                    "id":117,
+                    "id":112,
                     "weight":2
                 }
+
             ],
-            "rangePool":[
+            "elitePool":[
                 {
-                    "id":12,
+                    "id":20,
                     "weight":2
                 },
                 {
-                    "id":17,
+                    "id":21,
                     "weight":2
                 },
                 {
-                    "id":44,
+                    "id":22,
                     "weight":2
                 },
                 {
-                    "id":49,
+                    "id":23,
                     "weight":2
                 },
                 {
-                    "id":76,
+                    "id":24,
                     "weight":2
                 },
                 {
-                    "id":81,
+                    "id":25,
+                    "weight":2
+                },
+                {
+                    "id":26,
+                    "weight":2
+                },
+                {
+                    "id":27,
+                    "weight":2
+                },
+                {
+                    "id":28,
+                    "weight":2
+                },
+                {
+                    "id":29,
+                    "weight":2
+                },
+                {
+                    "id":30,
+                    "weight":2
+                },
+                {
+                    "id":31,
+                    "weight":2
+                },
+                {
+                    "id":32,
+                    "weight":2
+                },
+                {
+                    "id":33,
+                    "weight":2
+                },
+                {
+                    "id":34,
+                    "weight":2
+                },
+                {
+                    "id":52,
+                    "weight":2
+                },
+                {
+                    "id":53,
+                    "weight":2
+                },
+                {
+                    "id":54,
+                    "weight":2
+                },
+                {
+                    "id":55,
+                    "weight":2
+                },
+                {
+                    "id":56,
+                    "weight":2
+                },
+                {
+                    "id":57,
+                    "weight":2
+                },
+                {
+                    "id":58,
+                    "weight":2
+                },
+                {
+                    "id":59,
+                    "weight":2
+                },
+                {
+                    "id":60,
+                    "weight":2
+                },
+                {
+                    "id":61,
+                    "weight":2
+                },
+                {
+                    "id":62,
+                    "weight":2
+                },
+                {
+                    "id":63,
+                    "weight":2
+                },
+                {
+                    "id":64,
+                    "weight":2
+                },
+                {
+                    "id":65,
+                    "weight":2
+                },
+                {
+                    "id":66,
                     "weight":2
                 },
                 {
@@ -26818,137 +27032,15 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":108,
+                    "id":85,
                     "weight":2
                 },
                 {
-                    "id":113,
+                    "id":86,
                     "weight":2
                 },
                 {
-                    "id":116,
-                    "weight":2
-                }
-            ],
-            "elitePool":[
-                {
-                    "id":24,
-                    "weight":2
-                },
-                {
-                    "id":25,
-                    "weight":2
-                },
-                {
-                    "id":26,
-                    "weight":2
-                },
-                {
-                    "id":27,
-                    "weight":2
-                },
-                {
-                    "id":64,
-                    "weight":2
-                },
-                {
-                    "id":28,
-                    "weight":2
-                },
-                {
-                    "id":29,
-                    "weight":2
-                },
-                {
-                    "id":30,
-                    "weight":2
-                },
-                {
-                    "id":31,
-                    "weight":2
-                },
-                {
-                    "id":32,
-                    "weight":2
-                },
-                {
-                    "id":33,
-                    "weight":2
-                },
-                {
-                    "id":34,
-                    "weight":2
-                },
-                {
-                    "id":35,
-                    "weight":2
-                },
-                {
-                    "id":36,
-                    "weight":2
-                },
-                {
-                    "id":37,
-                    "weight":2
-                },
-                {
-                    "id":38,
-                    "weight":2
-                },
-                {
-                    "id":56,
-                    "weight":2
-                },
-                {
-                    "id":58,
-                    "weight":2
-                },
-                {
-                    "id":59,
-                    "weight":2
-                },
-                {
-                    "id":60,
-                    "weight":2
-                },
-                {
-                    "id":61,
-                    "weight":2
-                },
-                {
-                    "id":62,
-                    "weight":2
-                },
-                {
-                    "id":63,
-                    "weight":2
-                },
-                {
-                    "id":64,
-                    "weight":2
-                },
-                {
-                    "id":65,
-                    "weight":2
-                },
-                {
-                    "id":66,
-                    "weight":2
-                },
-                {
-                    "id":67,
-                    "weight":2
-                },
-                {
-                    "id":68,
-                    "weight":2
-                },
-                {
-                    "id":69,
-                    "weight":2
-                },
-                {
-                    "id":70,
+                    "id":87,
                     "weight":2
                 },
                 {
@@ -26957,6 +27049,10 @@ exports.data = [
                 },
                 {
                     "id":89,
+                    "weight":2
+                },
+                {
+                    "id":90,
                     "weight":2
                 },
                 {
@@ -26992,19 +27088,19 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":99,
+                    "id":116,
                     "weight":2
                 },
                 {
-                    "id":100,
+                    "id":117,
                     "weight":2
                 },
                 {
-                    "id":101,
+                    "id":118,
                     "weight":2
                 },
                 {
-                    "id":102,
+                    "id":119,
                     "weight":2
                 },
                 {
@@ -27045,28 +27141,28 @@ exports.data = [
                 },
                 {
                     "id":130,
-                    "weight":2
-                },
-                {
-                    "id":131,
-                    "weight":2
-                },
-                {
-                    "id":132,
-                    "weight":2
-                },
-                {
-                    "id":133,
-                    "weight":2
-                },
-                {
-                    "id":134,
                     "weight":2
                 }
 
             ],
             "bossPool":[
                 {
+                    "id":20,
+                    "weight":2
+                },
+                {
+                    "id":21,
+                    "weight":2
+                },
+                {
+                    "id":22,
+                    "weight":2
+                },
+                {
+                    "id":23,
+                    "weight":2
+                },
+                {
                     "id":24,
                     "weight":2
                 },
@@ -27080,10 +27176,6 @@ exports.data = [
                 },
                 {
                     "id":27,
-                    "weight":2
-                },
-                {
-                    "id":64,
                     "weight":2
                 },
                 {
@@ -27115,23 +27207,27 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":35,
+                    "id":52,
                     "weight":2
                 },
                 {
-                    "id":36,
+                    "id":53,
                     "weight":2
                 },
                 {
-                    "id":37,
+                    "id":54,
                     "weight":2
                 },
                 {
-                    "id":38,
+                    "id":55,
                     "weight":2
                 },
                 {
                     "id":56,
+                    "weight":2
+                },
+                {
+                    "id":57,
                     "weight":2
                 },
                 {
@@ -27171,19 +27267,19 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":67,
+                    "id":84,
                     "weight":2
                 },
                 {
-                    "id":68,
+                    "id":85,
                     "weight":2
                 },
                 {
-                    "id":69,
+                    "id":86,
                     "weight":2
                 },
                 {
-                    "id":70,
+                    "id":87,
                     "weight":2
                 },
                 {
@@ -27192,6 +27288,10 @@ exports.data = [
                 },
                 {
                     "id":89,
+                    "weight":2
+                },
+                {
+                    "id":90,
                     "weight":2
                 },
                 {
@@ -27227,19 +27327,19 @@ exports.data = [
                     "weight":2
                 },
                 {
-                    "id":99,
+                    "id":116,
                     "weight":2
                 },
                 {
-                    "id":100,
+                    "id":117,
                     "weight":2
                 },
                 {
-                    "id":101,
+                    "id":118,
                     "weight":2
                 },
                 {
-                    "id":102,
+                    "id":119,
                     "weight":2
                 },
                 {
@@ -27280,22 +27380,6 @@ exports.data = [
                 },
                 {
                     "id":130,
-                    "weight":2
-                },
-                {
-                    "id":131,
-                    "weight":2
-                },
-                {
-                    "id":132,
-                    "weight":2
-                },
-                {
-                    "id":133,
-                    "weight":2
-                },
-                {
-                    "id":134,
                     "weight":2
                 }
 
@@ -27479,6 +27563,431 @@ exports.data = [
         "prizeXp":420,
         "wxpRate":1,"goldRate":0.3,
         "xpRate":0.4,
+        "rank":15
+    },
+
+    {
+        "dungeonId": 117,
+        "levelCount" :1,
+        "pool":{
+            "soldierPool":[
+                {
+                    "id":3,
+                    "weight":2
+                },
+                {
+                    "id":4,
+                    "weight":2
+                },
+                {
+                    "id":5,
+                    "weight":2
+                },
+                {
+                    "id":6,
+                    "weight":2
+                },
+                {
+                    "id":7,
+                    "weight":2
+                },
+                {
+                    "id":9,
+                    "weight":2
+                },
+                {
+                    "id":10,
+                    "weight":2
+                },
+                {
+                    "id":11,
+                    "weight":2
+                },
+                {
+                    "id":12,
+                    "weight":2
+                },
+                {
+                    "id":14,
+                    "weight":2
+                },
+                {
+                    "id":15,
+                    "weight":2
+                },
+                {
+                    "id":17,
+                    "weight":2
+                },
+                {
+                    "id":35,
+                    "weight":2
+                },
+                {
+                    "id":36,
+                    "weight":2
+                },
+                {
+                    "id":37,
+                    "weight":2
+                },
+                {
+                    "id":38,
+                    "weight":2
+                },
+                {
+                    "id":39,
+                    "weight":2
+                },
+                {
+                    "id":41,
+                    "weight":2
+                },
+                {
+                    "id":42,
+                    "weight":2
+                },
+                {
+                    "id":43,
+                    "weight":2
+                },
+                {
+                    "id":44,
+                    "weight":2
+                },
+                {
+                    "id":46,
+                    "weight":2
+                },
+                {
+                    "id":47,
+                    "weight":2
+                },
+                {
+                    "id":49,
+                    "weight":2
+                },
+                {
+                    "id":67,
+                    "weight":2
+                },
+                {
+                    "id":68,
+                    "weight":2
+                },
+                {
+                    "id":69,
+                    "weight":2
+                },
+                {
+                    "id":70,
+                    "weight":2
+                },
+                {
+                    "id":71,
+                    "weight":2
+                },
+                {
+                    "id":73,
+                    "weight":2
+                },
+                {
+                    "id":74,
+                    "weight":2
+                },
+                {
+                    "id":75,
+                    "weight":2
+                },
+                {
+                    "id":76,
+                    "weight":2
+                },
+                {
+                    "id":78,
+                    "weight":2
+                },
+                {
+                    "id":79,
+                    "weight":2
+                },
+                {
+                    "id":81,
+                    "weight":2
+                },
+                {
+                    "id":99,
+                    "weight":2
+                },
+                {
+                    "id":100,
+                    "weight":2
+                },
+                {
+                    "id":101,
+                    "weight":2
+                },
+                {
+                    "id":102,
+                    "weight":2
+                },
+                {
+                    "id":103,
+                    "weight":2
+                },
+                {
+                    "id":105,
+                    "weight":2
+                },
+                {
+                    "id":106,
+                    "weight":2
+                },
+                {
+                    "id":107,
+                    "weight":2
+                },
+                {
+                    "id":108,
+                    "weight":2
+                },
+
+                {
+                    "id":110,
+                    "weight":2
+                },
+                {
+                    "id":111,
+                    "weight":2
+                },
+                {
+                    "id":113,
+                    "weight":2
+                }
+            ],
+            "rangePool":[
+                {
+                    "id":8,
+                    "weight":2
+                },
+                {
+                    "id":13,
+                    "weight":2
+                },
+                {
+                    "id":16,
+                    "weight":2
+                },
+                {
+                    "id":40,
+                    "weight":2
+                },
+                {
+                    "id":45,
+                    "weight":2
+                },
+                {
+                    "id":48,
+                    "weight":2
+                },
+                {
+                    "id":72,
+                    "weight":2
+                },
+                {
+                    "id":77,
+                    "weight":2
+                },
+                {
+                    "id":80,
+                    "weight":2
+                },
+                {
+                    "id":114,
+                    "weight":2
+                },
+                {
+                    "id":109,
+                    "weight":2
+                },
+                {
+                    "id":112,
+                    "weight":2
+                }
+
+            ],
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
+        "levels" :[
+            {
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:3},
+                    {"pool":"soldierPool","from":5,to:14},
+                    {"pool":"rangePool","from":0,to:1},
+                    {"id": 149,"from":0,to:2},
+                    {"id": 197,"count":1,"keyed":true}
+
+                ]
+            }
+        ],
+        "dropID":
+            [
+
+            ],
+        "rank":15
+    },
+   {
+        "dungeonId": 118,
+        "levelCount" :1,
+        "pool":{
+            "rangePool":[
+                { "id":8, "weight":2 },
+                {
+                    "id":13,
+                    "weight":2
+                },
+                {
+                    "id":16,
+                    "weight":2
+                },
+                {
+                    "id":40,
+                    "weight":2
+                },
+                {
+                    "id":45,
+                    "weight":2
+                },
+                {
+                    "id":48,
+                    "weight":2
+                },
+                {
+                    "id":72,
+                    "weight":2
+                },
+                {
+                    "id":77,
+                    "weight":2
+                },
+                {
+                    "id":80,
+                    "weight":2
+                },
+                {
+                    "id":114,
+                    "weight":2
+                },
+                {
+                    "id":109,
+                    "weight":2
+                },
+                {
+                    "id":112,
+                    "weight":2
+                }
+
+            ],
+            "normalPool":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179,
+                    "weight":3
+                }
+            ]
+        },
+        "levels" :[
+            {
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:3},
+                    {"pool":"rangePool","from":0,to:1},
+                    {"pool":"PVP","count":1},
+                    {"id": 149,"from":0,to:2},
+                    {"id": 197,"count":1,"keyed":true}
+
+                ]
+            }
+        ],
+        "dropID":
+            [
+
+            ],
         "rank":15
     }
 
