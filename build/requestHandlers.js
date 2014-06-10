@@ -716,7 +716,7 @@
             ret.me = result.position;
           }
           if (result.board != null) {
-            board = result.board.reduce((function(l, r, i) {
+            board = result.board.reduce((function(r, l, i) {
               if (i % 2 === 0) {
                 r.name.push(l);
               } else {
