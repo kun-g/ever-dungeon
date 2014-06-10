@@ -267,6 +267,9 @@
                 if (player.tutorialStage != null) {
                   loginInfo.arg.tut = player.tutorialStage;
                 }
+                if (player.counters.monthCard) {
+                  loginInfo.arg.mcc = player.counters.monthCard;
+                }
                 handle([loginInfo].concat(ev));
                 player.saveDB(cb);
                 return player = null;
@@ -731,7 +734,7 @@
               ret.lst = result.map(function(e, i) {
                 var r;
                 r = getBasicInfo(e);
-                r.scr = board.score[i];
+                r.scr = +board.score[i];
                 return r;
               });
               return handler([ret]);
@@ -740,6 +743,35 @@
             return handler([ret]);
           }
         });
+      },
+      args: [],
+      needPid: true
+    },
+    RPC_SubmitBounty: {
+      id: 31,
+      func: function(arg, player, handler, rpcID, socket) {
+        var ret;
+        switch (arg.bid) {
+          case -1:
+            if (player.counter.monthCard) {
+              player.counter.monthCard--;
+              obj.timestamp.newProperty('monthCard', util.currentTime());
+              ret = [
+                {
+                  NTF: Event_InventoryUpdateItem,
+                  arg: {
+                    dim: this.addDiamond(80)
+                  }
+                }
+              ];
+              return handler([
+                {
+                  REQ: rpcID,
+                  RET: RET_OK
+                }
+              ].concat(ret));
+            }
+        }
       },
       args: [],
       needPid: true

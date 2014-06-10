@@ -293,7 +293,7 @@
   exports.genUtil = genCampaignUtil;
 
   initCampaign = function(me, allCampaign, abIndex) {
-    var count, e, evt, key, ret, util, _ref;
+    var actived, count, e, evt, key, ret, util, _ref;
     ret = [];
     util = genCampaignUtil();
     for (key in allCampaign) {
@@ -302,15 +302,19 @@
         if (key === 'event_daily') {
           ret = ret.concat(initDailyEvent(me, 'event_daily', e));
         } else {
-          if (e.canReset(me, util)) {
+          if (typeof e.canReset === "function" ? e.canReset(me, util) : void 0) {
             e.reset(me, util);
           }
           if (e.id != null) {
+            actived = e.actived;
+            if (typeof actived === 'function') {
+              actived = actived(me, util);
+            }
             evt = {
               NTF: Event_BountyUpdate,
               arg: {
                 bid: e.id,
-                sta: e.actived
+                sta: actived
               }
             };
             count = (_ref = me.counters[key]) != null ? _ref : 0;
@@ -620,14 +624,10 @@
     monthCard: {
       storeType: "player",
       actived: function(obj, util) {
-        return obj.flags.monthCard;
-      },
-      count: 1,
-      canReset: function(obj, util) {
-        return util.diffDay(obj.timestamp.monthCard, util.today) && util.today.hour() >= 8;
-      },
-      reset: function(obj, util) {
-        return obj.timestamp.newProperty('monthCard', util.currentTime());
+        var _base;
+        return typeof (_base = util.diffDay(obj.timestamp.monthCard, util.today)) === "function" ? _base({
+          1: 0
+        }) : void 0;
       }
     }
   };

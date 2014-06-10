@@ -420,6 +420,9 @@
         receipt: myReceipt
       });
       if (flag) {
+        if (rec.productID === MonthCardID) {
+          this.counters.newProperty('monthCard', 30);
+        }
         ret = [
           {
             NTF: Event_InventoryUpdateItem,
