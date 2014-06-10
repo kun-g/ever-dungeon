@@ -731,7 +731,8 @@
               ret.lst = result.map(function(e, i) {
                 var r;
                 r = getBasicInfo(e);
-                return r.scr = board.score[i];
+                r.scr = board.score[i];
+                return r;
               });
               return handler([ret]);
             });
