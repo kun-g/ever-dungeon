@@ -892,7 +892,7 @@
               _this.dungeonData.baseRank = helperLib.initCalcDungeonBaseRank(_this);
             }
             if (stageConfig.pvp) {
-              _this.dungeonData.PVP_Pool = team.map(createMirrorHero);
+              _this.dungeonData.PVP_Pool = team;
             }
             return cb('OK');
           };
