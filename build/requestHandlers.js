@@ -730,7 +730,7 @@
             return async.map(board.name, getPlayerHero, function(err, result) {
               ret.lst = result.map(function(e, i) {
                 var r;
-                r = getBasicInfo(e.name);
+                r = getBasicInfo(e);
                 return r.scr = board.score[i];
               });
               return handler([ret]);
