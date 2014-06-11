@@ -322,7 +322,8 @@
               evt.arg.cnt = e.count - count;
             }
             if (key === 'hunting') {
-              evt.arg.stg = e.stages[e.stages.length % rand()];
+              console.log(rand() % e.stages.length, e.stages.length);
+              evt.arg.stg = e.stages[rand() % e.stages.length];
             }
             ret.push(evt);
           }
@@ -633,7 +634,7 @@
   };
 
   exports.splicePrize = function(prize) {
-    var goldPrize, itemFlag, otherPrize, wxPrize, xpPrize;
+    var count, goldPrize, id, itemFlag, otherPrize, wxPrize, xpPrize;
     goldPrize = {
       type: PRIZETYPE_GOLD,
       count: 0
@@ -668,6 +669,14 @@
           return otherPrize.push(p);
       }
     });
+    for (id in itemFlag) {
+      count = itemFlag[id];
+      otherPrize.push({
+        type: PRIZETYPE_ITEM,
+        value: +id,
+        count: +count
+      });
+    }
     return {
       goldPrize: goldPrize,
       xpPrize: xpPrize,

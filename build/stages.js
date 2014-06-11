@@ -1991,12 +1991,12 @@ var data = [
               initialAction: function (obj) { }
           },
           {
-              stageId: 118,
+              stageId: 124,
               cost: 10,
               team: 1,
               pvp: true,
               hidden: true,
-              dungeon: 116,
+              dungeon: 118,
               description: "hunt112",
               eventName: "event_goblin",
               condition: function (obj, util) { return true;
