@@ -6813,7 +6813,6 @@ exports.data = [
             "accuracy": 15,
             "reactivity": -20,
             "speed": 0,
-            "counterAttack": false,
             "exp": 0,
             "gold": 0
         },
@@ -6863,7 +6862,6 @@ exports.data = [
             "accuracy": 15,
             "reactivity": -20,
             "speed": 0,
-            "counterAttack": false,
             "exp": 0,
             "gold": 0
         },
@@ -6913,7 +6911,6 @@ exports.data = [
             "accuracy": 15,
             "reactivity": -20,
             "speed": 0,
-            "counterAttack": false,
             "exp": 0,
             "gold": 0
         },
