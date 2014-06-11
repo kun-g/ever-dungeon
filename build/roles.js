@@ -7075,7 +7075,7 @@ exports.data = [
         "classId": 197,
         "className": "pk战士",
         "faction": "monster",
-        "classType": 1,
+        "classType": 4,
         "avatar": "avatar.ccbi",
         "emblem": [
             "emblem-warrior.png",
@@ -7098,7 +7098,7 @@ exports.data = [
         "classId": 198,
         "className": "法师",
         "faction": "hero",
-        "classType": 1,
+        "classType": 4,
         "avatar": "avatar.ccbi",
         "emblem": [
             "emblem-mage.png",
@@ -7121,7 +7121,7 @@ exports.data = [
         "classId": 199,
         "className": "牧师",
         "faction": "monster",
-        "classType": 1,
+        "classType": 4,
         "avatar": "avatar.ccbi",
         "emblem": [
             "emblem-priest.png",
