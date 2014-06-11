@@ -1224,6 +1224,7 @@
       _results = [];
       for (i = _i = 1; 1 <= count ? _i <= count : _i >= count; i = 1 <= count ? ++_i : --_i) {
         pos = indexes.splice(this.rand() % indexes.length, 1)[0];
+        arg.pos = pos;
         _results.push(this.createObject(arg));
       }
       return _results;
