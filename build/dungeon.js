@@ -428,6 +428,7 @@
       if (this.PVP_Pool) {
         cfg.pool.PVP = this.PVP_Pool.map(function(e) {
           e.weight = 10;
+          e.id = e.cid;
           return e;
         });
       }
