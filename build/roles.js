@@ -6804,7 +6804,6 @@ exports.data = [
         "className": "装备达人",
         "faction": "monster",
         "classType": 1,
-        "counterAttack": true,
         "avatar": "enemy-zbdr1.ccbi",
         "property": {
             "health": 2,
@@ -6825,6 +6824,7 @@ exports.data = [
             "strong": 1,
             "accuracy": 1,
             "reactivity": 1,
+            "counterAttack": true,
             "speed": 1
         },
         "soundWound": "liulangwound.mp3",
@@ -6854,7 +6854,6 @@ exports.data = [
         "className": "强劲装备达人",
         "faction": "monster",
         "classType": 1,
-        "counterAttack": true,
         "avatar": "enemy-zbdr2.ccbi",
         "property": {
             "health": 1,
@@ -6865,7 +6864,8 @@ exports.data = [
             "reactivity": -20,
             "speed": 0,
             "exp": 0,
-            "gold": 0
+            "gold": 0,
+            "counterAttack": true
         },
         "xproperty": {
             "balance": 0.1,
@@ -6904,7 +6904,6 @@ exports.data = [
         "className": "威力装备达人",
         "faction": "monster",
         "classType": 1,
-        "counterAttack": true,
         "avatar": "enemy-zbdr3.ccbi",
         "property": {
             "health": 3,
@@ -6915,7 +6914,8 @@ exports.data = [
             "reactivity": -20,
             "speed": 0,
             "exp": 0,
-            "gold": 0
+            "gold": 0,
+            "counterAttack": true
         },
         "xproperty": {
             "balance": 0.1,

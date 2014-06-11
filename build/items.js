@@ -408,11 +408,11 @@ exports.data = [
 	},
 	{
 		"classId": 25,
-		"label": "勇者行囊",
+		"label": "新手宝石礼包",
 		"icon": "item-giftbox.png",
 		"category": 0,
 		"subcategory": 0,
-		"description": "欢迎来到地下城！这是为勇者们准备的礼物，点击领取。",
+		"description": "打开即可获得金币宝石奖励。",
 		"quality": 1,
 		"prize": [
 			{

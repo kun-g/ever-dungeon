@@ -27876,7 +27876,7 @@ exports.data = [
             ],
         "rank":15
     },
-   {
+    {
         "dungeonId": 118,
         "levelCount" :1,
         "pool":{
