@@ -666,11 +666,13 @@
           if (!itemFlag[p.value]) {
             itemFlag[p.value] = 0;
           }
+          console.log('x');
           return itemFlag[p.value] += p.count;
         default:
           return otherPrize.push(p);
       }
     });
+    console.log(itemFlag);
     for (id in itemFlag) {
       count = itemFlag[id];
       otherPrize.push({
