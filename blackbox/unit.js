@@ -265,7 +265,7 @@
     Mirror.prototype.initialize = function(heroData) {
       var battleForce, cfg, hero;
       hero = new Hero(heroData);
-      this.equipment = heroData.equipment;
+      this.equipment = heroData.itm;
       battleForce = hero.calculatePower();
       cfg = queryTable(TABLE_ROLE, hero.transId);
       if (cfg != null) {
