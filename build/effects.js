@@ -179,5 +179,25 @@ exports.data = [
     {
         "effectId": 43,
         "file": "effect-mission.ccbi"
+    },
+    {
+        "effectId":44,
+        "file":"effect-lingting2.ccbi"
+    },
+    {
+        "effectId":45,
+        "file":"effect-zsyh2.ccbi"
+    },
+    {
+        "effectId":46,
+        "file":"effect-zsyh.ccbi"
+    },
+    {
+        "effectId":47,
+        "file":"effect-mshx2.ccbi"
+    },
+    {
+        "effectId":48,
+        "file":"effect-mshx.ccbi"
     }
 ]
