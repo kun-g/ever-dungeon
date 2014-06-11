@@ -201,7 +201,9 @@
     tickLeaderboard = function(board, cb) {
       cfg = localConfig[board];
       if (cfg.resetTime && matchDate(srvCfg[cfg.name], currentTime(), cfg.resetTime)) {
-        return require('./dbWrapper').removeLeaderboard(cfg.name, cb);
+        require('./dbWrapper').removeLeaderboard(cfg.name, cb);
+        srvCfg[cfg.name] = currentTime();
+        return dbLib.setServerConfig('Leaderboard', JSON.stringify(srvCfg));
       }
     };
     return exports.getPositionOnLeaderboard = function(board, name, from, to, cb) {
