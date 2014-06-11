@@ -27865,7 +27865,6 @@ exports.data = [
                     {"pool":"soldierPool","from":5,to:14},
                     {"pool":"rangePool","from":0,to:1},
                     {"id": 149,"from":0,to:2},
-                    {"id": 197,"count":1,"keyed":true}
 
                 ]
             }
@@ -27978,7 +27977,6 @@ exports.data = [
                     {"pool":"rangePool","from":0,to:1},
                     {"pool":"PVP","count":1},
                     {"id": 149,"from":0,to:2},
-                    {"id": 197,"count":1,"keyed":true}
 
                 ]
             }
