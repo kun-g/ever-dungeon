@@ -259,10 +259,10 @@
       this.type = Unit_Mirror;
       this.blockType = Block_Enemy;
       this.isVisible = false;
-      this.initialize();
+      this.initialize(heroData);
     }
 
-    Mirror.prototype.initialize = function() {
+    Mirror.prototype.initialize = function(heroData) {
       var battleForce, cfg, hero;
       hero = new Hero(heroData);
       this.equipment = heroData.equipment;
