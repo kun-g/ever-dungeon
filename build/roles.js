@@ -6814,6 +6814,7 @@ exports.data = [
             "reactivity": -20,
             "speed": 0,
             "exp": 0,
+            "counterAttack": true,
             "gold": 0
         },
         "xproperty": {
@@ -6824,7 +6825,6 @@ exports.data = [
             "strong": 1,
             "accuracy": 1,
             "reactivity": 1,
-            "counterAttack": true,
             "speed": 1
         },
         "soundWound": "liulangwound.mp3",
