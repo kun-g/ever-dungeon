@@ -1,5 +1,5 @@
 (function() {
-  var Hero, Monster, Npc, Unit, Wizard, createUnit, flagCreation,
+  var Hero, Mirror, Monster, Npc, Unit, Wizard, createUnit, flagCreation,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -248,6 +248,30 @@
 
   })(Unit);
 
+  Mirror = (function(_super) {
+    __extends(Mirror, _super);
+
+    function Mirror(heroData) {
+      Mirror.__super__.constructor.apply(this, arguments);
+    }
+
+    Mirror.prototype.initialize = function() {
+      var battleForce;
+      Mirror.__super__.initialize.apply(this, arguments);
+      battleForce = this.calculatePower();
+      this.health = battleForce * (10 / 18.5);
+      this.attack = battleForce * (0.3 / 18.5);
+      this.critical = battleForce * (1 / 18.5);
+      this.strong = battleForce * (1 / 18.5);
+      this.accuracy = battleForce * (1 / 18.5) + 20;
+      this.reactivity = battleForce * (10 / 18.5) - 20;
+      return this.speed = battleForce * (1 / 18.5) + 20;
+    };
+
+    return Mirror;
+
+  })(Hero);
+
   Monster = (function(_super) {
     __extends(Monster, _super);
 
@@ -336,6 +360,8 @@
         return new Monster(config);
       case Unit_NPC:
         return new Npc(config);
+      case Unit_Mirror:
+        return new Mirror(config);
     }
   };
 

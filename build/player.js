@@ -2701,6 +2701,9 @@
               };
             });
           }
+          if (e.time) {
+            ret.ts = e.time;
+          }
           return ret;
         };
       })(this))).filter(function(e) {
