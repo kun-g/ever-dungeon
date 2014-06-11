@@ -1172,7 +1172,7 @@
       }
       o.effect = cfg.effect;
       this.ref += 1;
-      this.blocks[pos].addRef(o);
+      this.blocks[cfg.pos].addRef(o);
       this.objects.push(o);
       return o;
     };
