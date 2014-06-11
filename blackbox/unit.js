@@ -253,24 +253,39 @@
 
     function Mirror(heroData) {
       Mirror.__super__.constructor.apply(this, arguments);
+      if (heroData == null) {
+        return false;
+      }
+      this.type = Unit_Mirror;
+      this.blockType = Block_Enemy;
+      this.isVisible = false;
+      this.initialize();
     }
 
     Mirror.prototype.initialize = function() {
-      var battleForce;
-      Mirror.__super__.initialize.apply(this, arguments);
-      battleForce = this.calculatePower();
+      var battleForce, cfg, hero;
+      hero = new Hero(heroData);
+      this.equipment = heroData.equipment;
+      battleForce = hero.calculatePower();
+      cfg = queryTable(TABLE_ROLE, hero.transId);
+      if (cfg != null) {
+        this.initWithConfig(cfg);
+      }
+      this.level = 0;
+      this.levelUp();
       this.health = battleForce * (10 / 18.5);
       this.attack = battleForce * (0.3 / 18.5);
       this.critical = battleForce * (1 / 18.5);
       this.strong = battleForce * (1 / 18.5);
       this.accuracy = battleForce * (1 / 18.5) + 20;
       this.reactivity = battleForce * (10 / 18.5) - 20;
-      return this.speed = battleForce * (1 / 18.5) + 20;
+      this.speed = battleForce * (1 / 18.5) + 20;
+      return this.maxHP = this.health;
     };
 
     return Mirror;
 
-  })(Hero);
+  })(Unit);
 
   Monster = (function(_super) {
     __extends(Monster, _super);
