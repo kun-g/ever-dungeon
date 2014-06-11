@@ -1948,7 +1948,9 @@
         return !((e.count != null) && e.count === 0);
       });
       if (prize.length > 0) {
-        rewardMessage.arg.prize = prize;
+        rewardMessage.arg.prize = prize.filter(function(f) {
+          return f.type !== PRIZETYPE_FUNCTION;
+        });
       }
       ret = ret.concat(this.claimPrize(prize, false));
       this.log('finishDungeon', {
