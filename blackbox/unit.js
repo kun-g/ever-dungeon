@@ -375,7 +375,7 @@
         return new Monster(config);
       case Unit_NPC:
         return new Npc(config);
-      case Unit_Mirror:
+      case Unit_Hero:
         return new Mirror(config);
     }
   };
