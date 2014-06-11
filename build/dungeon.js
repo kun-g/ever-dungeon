@@ -426,7 +426,10 @@
         }
       }
       if (this.PVP_Pool) {
-        cfg.pool.PVP = this.PVP_Pool;
+        cfg.pool.PVP = this.PVP_Pool.map(function(e) {
+          e.weight = 10;
+          return e;
+        });
       }
       creation = createUnits(cfg, (function(_this) {
         return function() {
