@@ -3015,24 +3015,24 @@
   playerCSConfig = {
     ItemChange: {
       output: function(env) {
-        var arg, e, items, ret;
+        var arg, items, ret;
         ret = env.variable('ret');
         if (!(ret && ret.length > 0)) {
           return [];
         }
-        items = (function() {
-          var _i, _len, _results;
-          _results = [];
-          for (_i = 0, _len = ret.length; _i < _len; _i++) {
-            e = ret[_i];
-            _results.push({
-              sid: Number(e.slot),
-              cid: e.id,
-              stc: e.count
-            });
+        items = ret.map(function(e) {
+          var evt, item;
+          item = env.player.getItemAt(e.slot);
+          evt = {
+            sid: Number(e.slot),
+            cid: e.id,
+            stc: e.count
+          };
+          if (item.time) {
+            evt.ts = item.time;
           }
-          return _results;
-        })();
+          return evt;
+        });
         arg = {
           syn: env.variable('version')
         };
