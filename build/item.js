@@ -27,6 +27,9 @@
         cfg.xp = 0;
         cfg.enhancement = [];
       }
+      if (this.getConfig().expiration) {
+        cfg.date = -1;
+      }
       Item.__super__.constructor.call(this, data, cfg, {});
       if (this.id != null) {
         this.initialize();
