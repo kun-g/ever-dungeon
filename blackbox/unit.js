@@ -283,6 +283,7 @@
       }
       this.level = 0;
       this.levelUp();
+      this.counterAttack = true;
       this.health = Math.ceil(battleForce * (10 / 18.5));
       this.attack = Math.ceil(battleForce * (0.3 / 18.5));
       this.critical = battleForce * (1 / 18.5);
