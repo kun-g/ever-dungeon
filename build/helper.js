@@ -672,7 +672,6 @@
           return otherPrize.push(p);
       }
     });
-    console.log(itemFlag);
     for (id in itemFlag) {
       count = itemFlag[id];
       otherPrize.push({
