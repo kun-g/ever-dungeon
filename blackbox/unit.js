@@ -281,7 +281,9 @@
       if (cfg != null) {
         this.initWithConfig(cfg);
       }
+      this["class"] = cid;
       this.level = 0;
+      this.xp = heroData.exp;
       this.levelUp();
       this.counterAttack = true;
       this.health = Math.ceil(battleForce * (10 / 18.5));
@@ -294,7 +296,6 @@
       this.maxHP = this.health;
       this.equipment = heroData.itm;
       this.name = heroData.nam;
-      this["class"] = cid;
       this.gender = heroData.gen;
       this.hairStyle = heroData.hst;
       this.hairColor = heroData.hcl;
