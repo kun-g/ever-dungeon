@@ -653,7 +653,6 @@
   exports.intervalEvent = {
     infinityDungeonPrize: {
       time: {
-        day: 1,
         hour: 14
       },
       func: function(libs) {
