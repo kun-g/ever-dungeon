@@ -201,7 +201,9 @@
     tickLeaderboard = function(board, cb) {
       cfg = localConfig[board];
       if (cfg.resetTime && matchDate(srvCfg[cfg.name], currentTime(), cfg.resetTime)) {
-        return require('./dbWrapper').removeLeaderboard(cfg.name, cb);
+        require('./dbWrapper').removeLeaderboard(cfg.name, cb);
+        srvCfg[cfg.name] = currentTime();
+        return dbLib.setServerConfig('Leaderboard', JSON.stringify(srvCfg));
       }
     };
     return exports.getPositionOnLeaderboard = function(board, name, from, to, cb) {
@@ -322,7 +324,8 @@
               evt.arg.cnt = e.count - count;
             }
             if (key === 'hunting') {
-              evt.arg.stg = e.stages[e.stages.length % rand()];
+              console.log(rand() % e.stages.length, e.stages.length);
+              evt.arg.stg = e.stages[rand() % e.stages.length];
             }
             ret.push(evt);
           }
@@ -633,7 +636,7 @@
   };
 
   exports.splicePrize = function(prize) {
-    var goldPrize, itemFlag, otherPrize, wxPrize, xpPrize;
+    var count, goldPrize, id, itemFlag, otherPrize, wxPrize, xpPrize;
     goldPrize = {
       type: PRIZETYPE_GOLD,
       count: 0
@@ -663,11 +666,21 @@
           if (!itemFlag[p.value]) {
             itemFlag[p.value] = 0;
           }
+          console.log('x');
           return itemFlag[p.value] += p.count;
         default:
           return otherPrize.push(p);
       }
     });
+    console.log(itemFlag);
+    for (id in itemFlag) {
+      count = itemFlag[id];
+      otherPrize.push({
+        type: PRIZETYPE_ITEM,
+        value: +id,
+        count: +count
+      });
+    }
     return {
       goldPrize: goldPrize,
       xpPrize: xpPrize,

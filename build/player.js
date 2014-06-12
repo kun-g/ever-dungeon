@@ -892,7 +892,7 @@
               _this.dungeonData.baseRank = helperLib.initCalcDungeonBaseRank(_this);
             }
             if (stageConfig.pvp) {
-              _this.dungeonData.PVP_Pool = team.map(createMirrorHero);
+              _this.dungeonData.PVP_Pool = team.map(getBasicInfo);
             }
             return cb('OK');
           };
@@ -1948,7 +1948,9 @@
         return !((e.count != null) && e.count === 0);
       });
       if (prize.length > 0) {
-        rewardMessage.arg.prize = prize;
+        rewardMessage.arg.prize = prize.filter(function(f) {
+          return f.type !== PRIZETYPE_FUNCTION;
+        });
       }
       ret = ret.concat(this.claimPrize(prize, false));
       this.log('finishDungeon', {
@@ -2698,6 +2700,9 @@
                 lv: e.level
               };
             });
+          }
+          if (e.time) {
+            ret.ts = e.time;
           }
           return ret;
         };

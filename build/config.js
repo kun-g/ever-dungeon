@@ -45,6 +45,7 @@ exports.data = {
     {"rmb":648,"diamond":7480},
     {"rmb":25,"diamond":180}
   ],
+
     "InitialEquipment":{
         5:[{"type":0,"value":622,"count":1,classLimit:[0]},
             {"type":0,"value":652,"count":1,classLimit:[1]},
@@ -66,7 +67,6 @@ exports.data = {
         3:[{"type":0,"value":712,"count":1,classLimit:[0]},
             {"type":0,"value":742,"count":1,classLimit:[2]},
             {"type":0,"value":772,"count":1,classLimit:[2]}]},
-
   "Global_Blue_Star_RewardTable" : [ ],
   "Global_Recyclable_Enhancement" : [ 0, 1, 2, 3, 4, 5, 6 ],
   "Global_Recycle_Config" : [

@@ -1,5 +1,5 @@
 (function() {
-  var Hero, Monster, Npc, Unit, Wizard, createUnit, flagCreation,
+  var Hero, Mirror, Monster, Npc, Unit, Wizard, createUnit, flagCreation,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -248,6 +248,45 @@
 
   })(Unit);
 
+  Mirror = (function(_super) {
+    __extends(Mirror, _super);
+
+    function Mirror(heroData) {
+      Mirror.__super__.constructor.apply(this, arguments);
+      if (heroData == null) {
+        return false;
+      }
+      this.type = Unit_Mirror;
+      this.blockType = Block_Enemy;
+      this.isVisible = false;
+      this.initialize(heroData);
+    }
+
+    Mirror.prototype.initialize = function(heroData) {
+      var battleForce, cfg, hero;
+      hero = new Hero(heroData);
+      this.equipment = heroData.itm;
+      battleForce = hero.calculatePower();
+      cfg = queryTable(TABLE_ROLE, hero.transId);
+      if (cfg != null) {
+        this.initWithConfig(cfg);
+      }
+      this.level = 0;
+      this.levelUp();
+      this.health = battleForce * (10 / 18.5);
+      this.attack = battleForce * (0.3 / 18.5);
+      this.critical = battleForce * (1 / 18.5);
+      this.strong = battleForce * (1 / 18.5);
+      this.accuracy = battleForce * (1 / 18.5) + 20;
+      this.reactivity = battleForce * (10 / 18.5) - 20;
+      this.speed = battleForce * (1 / 18.5) + 20;
+      return this.maxHP = this.health;
+    };
+
+    return Mirror;
+
+  })(Unit);
+
   Monster = (function(_super) {
     __extends(Monster, _super);
 
@@ -336,6 +375,8 @@
         return new Monster(config);
       case Unit_NPC:
         return new Npc(config);
+      case Unit_Hero:
+        return new Mirror(config);
     }
   };
 

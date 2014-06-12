@@ -6813,8 +6813,8 @@ exports.data = [
             "accuracy": 15,
             "reactivity": -20,
             "speed": 0,
-            "counterAttack": false,
             "exp": 0,
+            "counterAttack": true,
             "gold": 0
         },
         "xproperty": {
@@ -6863,9 +6863,9 @@ exports.data = [
             "accuracy": 15,
             "reactivity": -20,
             "speed": 0,
-            "counterAttack": false,
             "exp": 0,
-            "gold": 0
+            "gold": 0,
+            "counterAttack": true
         },
         "xproperty": {
             "balance": 0.1,
@@ -6884,7 +6884,7 @@ exports.data = [
         "skill": [
             {
                 "id": 126,
-                "level": 1
+                "level": 2
             },
             {
                 "id": 125,
@@ -6913,9 +6913,9 @@ exports.data = [
             "accuracy": 15,
             "reactivity": -20,
             "speed": 0,
-            "counterAttack": false,
             "exp": 0,
-            "gold": 0
+            "gold": 0,
+            "counterAttack": true
         },
         "xproperty": {
             "balance": 0.1,
@@ -6934,7 +6934,7 @@ exports.data = [
         "skill": [
             {
                 "id": 126,
-                "level": 1
+                "level": 3
             },
             {
                 "id": 125,
@@ -7075,7 +7075,7 @@ exports.data = [
         "classId": 197,
         "className": "pk战士",
         "faction": "monster",
-        "classType": 1,
+        "classType": 4,
         "avatar": "avatar.ccbi",
         "emblem": [
             "emblem-warrior.png",
@@ -7098,7 +7098,7 @@ exports.data = [
         "classId": 198,
         "className": "法师",
         "faction": "hero",
-        "classType": 1,
+        "classType": 4,
         "avatar": "avatar.ccbi",
         "emblem": [
             "emblem-mage.png",
@@ -7121,7 +7121,7 @@ exports.data = [
         "classId": 199,
         "className": "牧师",
         "faction": "monster",
-        "classType": 1,
+        "classType": 4,
         "avatar": "avatar.ccbi",
         "emblem": [
             "emblem-priest.png",
@@ -7139,5 +7139,170 @@ exports.data = [
             772
         ],
         "levelId": 2
+    },
+    {
+        "classId": 200,
+        "className": "狂暴哥布林",
+        "faction": "monster",
+        "classType": 1,
+        "avatar": "enemy-goblinboss.ccbi",
+        "property": {
+            "health": 10,
+            "attack": 1,
+            "critical": 60,
+            "strong": 20,
+            "accuracy": 10,
+            "reactivity": -20,
+            "speed": 0,
+            "counterAttack": false,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 1,
+            "attack": 0,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundDie": "gebulindie.mp3",
+        "scale": 1.2,
+        "skill": [
+            {
+                "id": 55,
+                "level": 1
+            },
+            {
+                "id": 28,
+                "level": 1
+            },
+            {
+                "id": 58,
+                "level": 1
+            },
+            {
+                "id": 140,
+                "level": 1
+            },
+            {
+                "id": 142,
+                "level": 1
+            }
+        ],
+        "bossFlag": true
+    },
+    {
+        "classId": 201,
+        "className": "狼王",
+        "faction": "monster",
+        "classType": 1,
+        "avatar": "enemy-wolfboss.ccbi",
+        "property": {
+            "health": 10,
+            "attack": 0.6,
+            "critical": 10,
+            "strong": 20,
+            "accuracy": 60,
+            "reactivity": -40,
+            "speed": 20,
+            "counterAttack": true,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 1,
+            "attack": 0,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundSpawn": "tulang.mp3",
+        "soundWound": "tulangwound.mp3",
+        "soundAttack": "tulangattack.mp3",
+        "soundDie": "tulangdie.mp3",
+        "effectAttack": 31,
+        "scale": 1.2,
+        "skill": [
+            {
+                "id": 62,
+                "level": 1
+            },
+            {
+                "id": 143,
+                "level": 1
+            },
+            {
+                "id": 144,
+                "level": 1
+            },
+            {
+                "id": 146,
+                "level": 1
+            },
+            {
+                "id": 55,
+                "level": 1
+            }
+        ],
+        "bossFlag": true
+    },
+    {
+        "classId": 202,
+        "className": "剑圣",
+        "faction": "monster",
+        "classType": 1,
+        "avatar": "enemy-swordboss.ccbi",
+        "property": {
+            "health": 10,
+            "attack": 0.75,
+            "critical": 30,
+            "strong": 10,
+            "accuracy": 60,
+            "reactivity": -20,
+            "speed": 30,
+            "counterAttack": true,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 1,
+            "attack": 0,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundWound": "liulangwound.mp3",
+        "soundAttack": "liulangattack.mp3",
+        "soundDie": "liulangdie.mp3",
+        "effectAttack": 8,
+        "scale": 1.2,
+        "skill": [
+            {
+                "id": 149,
+                "level": 1
+            },
+            {
+                "id": 151,
+                "level": 1
+            },
+            {
+                "id": 72,
+                "level": 1
+            },
+            {
+                "id": 55,
+                "level": 1
+            }
+        ],
+        "bossFlag": true
     }
 ]
