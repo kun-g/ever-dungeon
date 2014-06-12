@@ -285,7 +285,7 @@
       date = date.month(rule.month);
     }
     if (rule.day) {
-      date = date.add('days', rule.day);
+      date = date.add('day', rule.day);
     }
     date = date.set('hour', (_ref = rule.hour) != null ? _ref : 0);
     date = date.set('minute', (_ref1 = rule.minute) != null ? _ref1 : 0);
@@ -666,7 +666,7 @@
               src: MESSAGE_REWARD_TYPE_SYSTEM,
               prize: [
                 {
-                  type: PRIZETYPE_GOLD,
+                  type: PRIZETYPE_DIAMOND,
                   count: 1024
                 }
               ],

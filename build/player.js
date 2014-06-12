@@ -296,7 +296,7 @@
         if (item.date == null) {
           return true;
         }
-        return helperLib.matchDate(item.date, null, item.expiration.day);
+        return helperLib.matchDate(item.date, helperLib.currentTime(), item.expiration);
       });
       rmMSG = itemsNeedRemove.map((function(_this) {
         return function(e) {
@@ -2703,8 +2703,8 @@
               };
             });
           }
-          if (e.time) {
-            ret.ts = e.time;
+          if (e.date) {
+            ret.ts = e.date;
           }
           return ret;
         };
@@ -3028,8 +3028,8 @@
             cid: e.id,
             stc: e.count
           };
-          if (item.time) {
-            evt.ts = item.time;
+          if (item.date) {
+            evt.ts = item.date;
           }
           return evt;
         });
