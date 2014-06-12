@@ -3028,7 +3028,7 @@
             cid: e.id,
             stc: e.count
           };
-          if (item.date) {
+          if (item != null ? item.date : void 0) {
             evt.ts = item.date;
           }
           return evt;
