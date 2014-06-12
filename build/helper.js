@@ -626,6 +626,7 @@
     },
     monthCard: {
       storeType: "player",
+      id: -1,
       actived: function(obj, util) {
         var _base;
         return typeof (_base = util.diffDay(obj.timestamp.monthCard, util.today)) === "function" ? _base({
