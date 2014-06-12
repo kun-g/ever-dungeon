@@ -267,7 +267,7 @@
         }
       }
       flag = true;
-      if (this.loginStreak.date && diffDate(this.loginStreak.date, 'month') === 0) {
+      if (moment().isSame(this.loginStreak.date, 'month')) {
         dis = diffDate(this.loginStreak.date);
         if (dis === 0) {
           flag = false;
