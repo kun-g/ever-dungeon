@@ -209,7 +209,20 @@
     return exports.getPositionOnLeaderboard = function(board, name, from, to, cb) {
       tickLeaderboard(board);
       cfg = localConfig[board];
-      return require('./db').queryLeaderboard(cfg.name, name, from, to, cb);
+      return require('./db').queryLeaderboard(cfg.name, name, from, to, function(err, result) {
+        result.board = result.board.reduce((function(r, l, i) {
+          if (i % 2 === 0) {
+            r.name.push(l);
+          } else {
+            r.score.push(l);
+          }
+          return r;
+        }), {
+          name: [],
+          score: []
+        });
+        return cb(err, result);
+      });
     };
   };
 
@@ -628,13 +641,16 @@
       storeType: "player",
       id: -1,
       actived: function(obj, util) {
-        var _base;
-        return typeof (_base = util.diffDay(obj.timestamp.monthCard, util.today)) === "function" ? _base({
-          1: 0
-        }) : void 0;
+        if (util.diffDay(obj.timestamp.monthCard, util.today)) {
+          return 1;
+        } else {
+          return 0;
+        }
       }
     }
   };
+
+  exports.intervalEvent = {};
 
   exports.splicePrize = function(prize) {
     var count, goldPrize, id, itemFlag, otherPrize, wxPrize, xpPrize;

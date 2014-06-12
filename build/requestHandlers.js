@@ -720,17 +720,7 @@
             ret.me = result.position;
           }
           if (result.board != null) {
-            board = result.board.reduce((function(r, l, i) {
-              if (i % 2 === 0) {
-                r.name.push(l);
-              } else {
-                r.score.push(l);
-              }
-              return r;
-            }), {
-              name: [],
-              score: []
-            });
+            board = result.board;
             return async.map(board.name, getPlayerHero, function(err, result) {
               console.log(err);
               ret.lst = result.map(function(e, i) {
