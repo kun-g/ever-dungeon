@@ -264,7 +264,7 @@
     }
 
     Mirror.prototype.initialize = function(heroData) {
-      var battleForce, cfg, hero;
+      var battleForce, cfg, cid, hero;
       hero = new Hero({
         name: heroData.nam,
         "class": heroData.cid,
@@ -275,7 +275,9 @@
         xp: heroData.exp
       });
       battleForce = hero.calculatePower();
-      cfg = queryTable(TABLE_ROLE, hero.transId);
+      cfg = queryTable(TABLE_ROLE, heroData.cid);
+      cid = cfg.transId;
+      cfg = queryTable(TABLE_ROLE, cfg.transId);
       if (cfg != null) {
         this.initWithConfig(cfg);
       }
@@ -291,12 +293,12 @@
       this.maxHP = this.health;
       this.equipment = heroData.itm;
       this.name = heroData.nam;
-      this["class"] = hero.transId;
+      this["class"] = cid;
       this.gender = heroData.gen;
       this.hairStyle = heroData.hst;
       this.hairColor = heroData.hcl;
       this.ref = heroData.ref;
-      return this.id = this["class"];
+      return this.id = cid;
     };
 
     return Mirror;
