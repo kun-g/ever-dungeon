@@ -296,6 +296,7 @@
         if (item.date == null) {
           return true;
         }
+        console.log(helperLib.matchDate(item.date, helperLib.currentTime(), item.expiration));
         return helperLib.matchDate(item.date, helperLib.currentTime(), item.expiration);
       });
       rmMSG = itemsNeedRemove.map((function(_this) {
