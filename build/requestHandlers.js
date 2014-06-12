@@ -752,7 +752,7 @@
                 {
                   NTF: Event_InventoryUpdateItem,
                   arg: {
-                    dim: this.addDiamond(80)
+                    dim: player.addDiamond(80)
                   }
                 }
               ];
