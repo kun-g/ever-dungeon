@@ -1181,6 +1181,7 @@
         o.collectId = cfg.collectId;
       }
       o.effect = cfg.effect;
+      o.pos = cfg.pos;
       this.ref += 1;
       this.blocks[cfg.pos].addRef(o);
       this.objects.push(o);
