@@ -272,7 +272,7 @@
       date = date.month(rule.month);
     }
     if (rule.day) {
-      date = date.day(rule.day);
+      date = date.add('days', rule.day);
     }
     date = date.hour((_ref = rule.hour) != null ? _ref : 0);
     date = date.minute((_ref1 = rule.minute) != null ? _ref1 : 0);
