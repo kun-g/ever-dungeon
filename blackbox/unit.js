@@ -265,8 +265,15 @@
 
     Mirror.prototype.initialize = function(heroData) {
       var battleForce, cfg, hero;
-      hero = new Hero(heroData);
-      this.equipment = heroData.itm;
+      hero = new Hero({
+        name: heroData.nam,
+        "class": heroData.cid,
+        gender: heroData.gen,
+        hairStyle: heroData.hst,
+        hairColor: heroData.hcl,
+        equipment: heroData.itm,
+        xp: heroData.exp
+      });
       battleForce = hero.calculatePower();
       cfg = queryTable(TABLE_ROLE, hero.transId);
       if (cfg != null) {
@@ -281,7 +288,13 @@
       this.accuracy = battleForce * (1 / 18.5) + 20;
       this.reactivity = battleForce * (10 / 18.5) - 20;
       this.speed = battleForce * (1 / 18.5) + 20;
-      return this.maxHP = this.health;
+      this.maxHP = this.health;
+      this.equipment = heroData.itm;
+      this.name = heroData.nam;
+      this["class"] = hero.transId;
+      this.gender = heroData.gen;
+      this.hairStyle = heroData.hst;
+      return this.hairColor = heroData.hcl;
     };
 
     return Mirror;
