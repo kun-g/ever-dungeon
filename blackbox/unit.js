@@ -294,7 +294,9 @@
       this["class"] = hero.transId;
       this.gender = heroData.gen;
       this.hairStyle = heroData.hst;
-      return this.hairColor = heroData.hcl;
+      this.hairColor = heroData.hcl;
+      this.ref = heroData.ref;
+      return this.id = this["class"];
     };
 
     return Mirror;
