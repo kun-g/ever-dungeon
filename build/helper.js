@@ -287,9 +287,9 @@
     if (rule.day) {
       date = date.add('days', rule.day);
     }
-    date = date.hour((_ref = rule.hour) != null ? _ref : 0);
-    date = date.minute((_ref1 = rule.minute) != null ? _ref1 : 0);
-    date = date.second((_ref2 = rule.second) != null ? _ref2 : 0);
+    date = date.set('hour', (_ref = rule.hour) != null ? _ref : 0);
+    date = date.set('minute', (_ref1 = rule.minute) != null ? _ref1 : 0);
+    date = date.set('second', (_ref2 = rule.second) != null ? _ref2 : 0);
     return date <= today;
   };
 
