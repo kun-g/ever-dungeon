@@ -745,8 +745,8 @@
         var ret;
         switch (arg.bid) {
           case -1:
-            if (player.counter.monthCard) {
-              player.counter.monthCard--;
+            if (player.counters.monthCard) {
+              player.counters.monthCard--;
               obj.timestamp.newProperty('monthCard', util.currentTime());
               ret = [
                 {

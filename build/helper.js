@@ -650,7 +650,57 @@
     }
   };
 
-  exports.intervalEvent = {};
+  exports.intervalEvent = {
+    infinityDungeonPrize: {
+      time: {
+        day: 1,
+        hour: 14
+      },
+      func: function(libs) {
+        var cfg;
+        cfg = [
+          {
+            from: 0,
+            to: 4,
+            mail: {
+              type: MESSAGE_TYPE_SystemReward,
+              src: MESSAGE_REWARD_TYPE_SYSTEM,
+              prize: [
+                {
+                  type: PRIZETYPE_GOLD,
+                  count: 1024
+                }
+              ],
+              tit: "无尽关排行奖励",
+              txt: "无尽关排行奖励"
+            }
+          }, {
+            from: 5,
+            to: 10,
+            mail: {
+              type: MESSAGE_TYPE_SystemReward,
+              src: MESSAGE_REWARD_TYPE_SYSTEM,
+              prize: [
+                {
+                  type: PRIZETYPE_GOLD,
+                  count: 512
+                }
+              ],
+              tit: "无尽关排行奖励",
+              txt: "无尽关排行奖励"
+            }
+          }
+        ];
+        return cfg.forEach(function(e) {
+          return libs.helper.getPositionOnLeaderboard(1, 'nobody', e.from, e.to, function(err, result) {
+            return result.board.name.forEach(function(name) {
+              return libs.db.deliverMessage(name, e.mail);
+            });
+          });
+        });
+      }
+    }
+  };
 
   exports.splicePrize = function(prize) {
     var count, goldPrize, id, itemFlag, otherPrize, wxPrize, xpPrize;
