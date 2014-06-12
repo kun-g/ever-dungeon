@@ -371,6 +371,9 @@
       if (this.baseRank) {
         ret.baseRank = this.baseRank;
       }
+      if (this.PVP_Pool) {
+        ret.PVP_Pool = this.PVP_Pool;
+      }
       return ret;
     };
 
