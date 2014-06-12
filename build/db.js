@@ -451,7 +451,6 @@ exports.initializeDB = function (cfg) {
             board: ret[1]
           };
         }
-        console.log(err, ret)
         if (handler) { handler(err, ret); }
       });
     };

@@ -732,6 +732,7 @@
               score: []
             });
             return async.map(board.name, getPlayerHero, function(err, result) {
+              console.log(err);
               ret.lst = result.map(function(e, i) {
                 var r;
                 r = getBasicInfo(e);
