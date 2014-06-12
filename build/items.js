@@ -27613,10 +27613,23 @@ exports.data = [
             {
                 "part": "helmet",
                 "file": "rfasion-helmetsg1.ccbi"
+            },
+            {
+                "part": "helmet2",
+                "file": "rfasion-helmetsg1-2.ccbi"
             }
         ],
+        "basic_properties": {
+            "health": 30,
+            "attack": 10,
+            "speed": 10,
+            "strong": 15,
+            "accuracy": 5,
+            "critical": 5,
+            "reactivity": 15
+        },
         "storeOnly": true,
-        "expiration": {day: 3}
+        "expiration": {day: 2}
     },
     {
         "classId": 865,
@@ -27629,10 +27642,23 @@ exports.data = [
             {
                 "part": "helmet",
                 "file": "rfasion-helmetsg2.ccbi"
+            },
+            {
+                "part": "helmet2",
+                "file": "rfasion-helmetsg2-2.ccbi"
             }
         ],
+        "basic_properties": {
+            "health": 130,
+            "attack": 15,
+            "speed": 25,
+            "strong": 30,
+            "accuracy": 20,
+            "critical": 20,
+            "reactivity": 30
+        },
         "storeOnly": true,
-        "expiration": {day: 3}
+        "expiration": {day: 2}
     },
     {
         "classId":866,
@@ -27645,10 +27671,23 @@ exports.data = [
             {
                 "part": "helmet",
                 "file": "rfasion-helmetsg3.ccbi"
+            },
+            {
+                "part": "helmet2",
+                "file": "rfasion-helmetsg3-2.ccbi"
             }
         ],
+        "basic_properties": {
+            "health": 340,
+            "attack": 30,
+            "speed": 70,
+            "strong": 90,
+            "accuracy": 50,
+            "critical": 50,
+            "reactivity": 90
+        },
         "storeOnly": true,
-        "expiration": {day: 3}
+        "expiration": {day: 2}
     },
     {
         "classId":867,
@@ -27663,8 +27702,17 @@ exports.data = [
                 "file": "rfasion-helmetwj1.ccbi"
             }
         ],
+        "basic_properties": {
+            "health": 30,
+            "attack": 10,
+            "speed": 10,
+            "strong": 5,
+            "accuracy": 15,
+            "critical": 15,
+            "reactivity": 5
+        },
         "storeOnly": true,
-        "expiration": {day: 3}
+        "expiration": {day: 2}
     },
     {
         "classId": 868,
@@ -27679,8 +27727,17 @@ exports.data = [
                 "file": "rfasion-helmetwj2.ccbi"
             }
         ],
+        "basic_properties": {
+            "health":70,
+            "attack": 25,
+            "speed": 25,
+            "strong": 20,
+            "accuracy": 30,
+            "critical": 30,
+            "reactivity": 20
+        },
         "storeOnly": true,
-        "expiration": {day: 3}
+        "expiration": {day: 2}
     },
     {
         "classId": 869,
@@ -27695,8 +27752,17 @@ exports.data = [
                 "file": "rfasion-helmetwj3.ccbi"
             }
         ],
+        "basic_properties": {
+            "health": 130,
+            "attack": 65,
+            "speed": 70,
+            "strong": 50,
+            "accuracy": 90,
+            "critical": 90,
+            "reactivity": 50
+        },
         "storeOnly": true,
-        "expiration": {day: 3}
+        "expiration": {day: 2}
     },
     {
         "classId": 870,

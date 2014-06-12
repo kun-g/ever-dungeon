@@ -393,7 +393,7 @@ exports.data = [
         "levelData":[
             {
                 "xp":0,
-                "skill": [{"id":27},{"id":28}]
+                "skill": [{"id":27},{"id":156}]
             },
             {
                 "xp":250,
@@ -420,5 +420,5 @@ exports.data = [
                 "skill": [{"id":131, "level": 2}]
             }
         ]
-    },
+    }
 ]
