@@ -296,7 +296,7 @@
         if (item.date == null) {
           return true;
         }
-        return helperLib.currentTime(true).valueOf() > item.date + item.expiration.day * 24 * 60 * 60;
+        return helperLib.matchDate(item.date, null, item.expiration.day);
       });
       rmMSG = itemsNeedRemove.map((function(_this) {
         return function(e) {
