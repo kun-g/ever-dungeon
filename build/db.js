@@ -445,6 +445,7 @@ exports.initializeDB = function (cfg) {
   dbClient.script('load', lua_queryLeaderboard, function (err, sha) {
     exports.queryLeaderboard = function (board, name, from, to, handler) {
       dbClient.evalsha(sha, 0, board, name, from, to, function (err, ret) {
+        console.log(err, ret)
         if (!err) {
           ret = {
             position: ret[0],
