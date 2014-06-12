@@ -437,7 +437,7 @@
           NTF: Event_PlayerInfo,
           arg: {
             rmb: this.rmb,
-            mcc: player.counters.monthCard
+            mcc: this.counters.monthCard
           }
         });
         ret.push({
