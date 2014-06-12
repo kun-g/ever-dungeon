@@ -641,10 +641,10 @@
       storeType: "player",
       id: -1,
       actived: function(obj, util) {
-        if (!(obj.timestamp.monthCard || !util.diffDay(obj.timestamp.monthCard, util.today))) {
-          return 0;
+        if (obj.counters.monthCard && util.diffDay(obj.timestamp.monthCard, util.today)) {
+          return 1;
         }
-        return 1;
+        return 0;
       }
     }
   };
