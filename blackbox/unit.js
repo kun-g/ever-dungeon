@@ -259,6 +259,7 @@
       this.type = Unit_Mirror;
       this.blockType = Block_Enemy;
       this.isVisible = false;
+      this.keyed = true;
       this.initialize(heroData);
     }
 
