@@ -1620,9 +1620,9 @@
       return this.dungeon.currentLevel >= this.dungeon.getConfig().levelCount;
     };
 
-    DungeonEnvironment.prototype.createObject = function(classID, pos, withkey, collectId, effect) {
+    DungeonEnvironment.prototype.createObject = function(cfg) {
       var _ref5, _ref6;
-      return (_ref5 = this.dungeon) != null ? (_ref6 = _ref5.level) != null ? _ref6.createObject(classID, pos, withkey, collectId, effect) : void 0 : void 0;
+      return (_ref5 = this.dungeon) != null ? (_ref6 = _ref5.level) != null ? _ref6.createObject(cfg) : void 0 : void 0;
     };
 
     DungeonEnvironment.prototype.useItem = function(spell, level, cmd) {
@@ -2841,7 +2841,13 @@
         env.variable('pos', pos);
         for (_i = 0, _len = pos.length; _i < _len; _i++) {
           p = pos[_i];
-          env.createObject(env.variable('classID'), p, env.variable('withKey'), env.variable('collectID'), env.variable('effect'));
+          env.createObject({
+            id: env.variable('classID'),
+            pos: p,
+            keyed: env.variable('withKey'),
+            collectId: env.variable('collectID'),
+            effect: env.variable('effect')
+          });
         }
         for (_j = 0, _len1 = pos.length; _j < _len1; _j++) {
           p = pos[_j];
