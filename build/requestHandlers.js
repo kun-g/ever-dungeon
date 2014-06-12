@@ -178,7 +178,7 @@
           }, function(cb) {
             return loadPlayer(arg.tp, arg.id, cb);
           }, function(player, cb) {
-            var ev, time;
+            var ev, msg, time;
             if (player) {
               player.log('login', {
                 type: arg.tp,
@@ -210,14 +210,18 @@
                 NTF: Event_UpdateStoreInfo,
                 arg: gShop.dump(player)
               });
-              ev.push({
+              msg = {
                 NTF: Event_PlayerInfo,
                 arg: {
                   aid: player.accountID,
                   vip: player.vipLevel(),
                   rmb: player.rmb
                 }
-              });
+              };
+              if (player.counters.monthCard) {
+                msg.arg.mcc = player.counters.monthCard;
+              }
+              ev.push(msg);
               ev.push({
                 NTF: Event_RoleUpdate,
                 arg: {
@@ -266,9 +270,6 @@
                 };
                 if (player.tutorialStage != null) {
                   loginInfo.arg.tut = player.tutorialStage;
-                }
-                if (player.counters.monthCard) {
-                  loginInfo.arg.mcc = player.counters.monthCard;
                 }
                 handle([loginInfo].concat(ev));
                 player.saveDB(cb);
