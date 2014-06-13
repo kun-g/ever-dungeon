@@ -1171,7 +1171,7 @@
       cfg.ref = this.ref;
       o = createUnit(cfg);
       if (o == null) {
-        console.log(cfg);
+        console.log('Noo', cfg);
       }
       o.installSpell(DUNGEON_DROP_CARD_SPELL, 1);
       if (cfg.keyed) {
@@ -1181,6 +1181,7 @@
         o.collectId = cfg.collectId;
       }
       o.effect = cfg.effect;
+      o.pos = cfg.pos;
       this.ref += 1;
       this.blocks[cfg.pos].addRef(o);
       this.objects.push(o);
@@ -1238,17 +1239,23 @@
     };
 
     Level.prototype.placeMapObjects = function(cfg) {
-      var o, _i, _len, _results;
+      var o, _i, _j, _len, _len1, _results;
       if (cfg == null) {
         return false;
       }
-      _results = [];
       for (_i = 0, _len = cfg.length; _i < _len; _i++) {
         o = cfg[_i];
         if (o.pos != null) {
-          _results.push(this.createObject(o));
-        } else {
+          this.createObject(o);
+        }
+      }
+      _results = [];
+      for (_j = 0, _len1 = cfg.length; _j < _len1; _j++) {
+        o = cfg[_j];
+        if (o.pos == null) {
           _results.push(this.placeObjects(o));
+        } else {
+          _results.push(void 0);
         }
       }
       return _results;

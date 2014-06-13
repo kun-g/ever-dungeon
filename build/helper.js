@@ -209,7 +209,20 @@
     return exports.getPositionOnLeaderboard = function(board, name, from, to, cb) {
       tickLeaderboard(board);
       cfg = localConfig[board];
-      return require('./db').queryLeaderboard(cfg.name, name, from, to, cb);
+      return require('./db').queryLeaderboard(cfg.name, name, from, to, function(err, result) {
+        result.board = result.board.reduce((function(r, l, i) {
+          if (i % 2 === 0) {
+            r.name.push(l);
+          } else {
+            r.score.push(l);
+          }
+          return r;
+        }), {
+          name: [],
+          score: []
+        });
+        return cb(err, result);
+      });
     };
   };
 
@@ -272,11 +285,11 @@
       date = date.month(rule.month);
     }
     if (rule.day) {
-      date = date.day(rule.day);
+      date = date.add('day', rule.day);
     }
-    date = date.hour((_ref = rule.hour) != null ? _ref : 0);
-    date = date.minute((_ref1 = rule.minute) != null ? _ref1 : 0);
-    date = date.second((_ref2 = rule.second) != null ? _ref2 : 0);
+    date = date.set('hour', (_ref = rule.hour) != null ? _ref : 0);
+    date = date.set('minute', (_ref1 = rule.minute) != null ? _ref1 : 0);
+    date = date.set('second', (_ref2 = rule.second) != null ? _ref2 : 0);
     return date <= today;
   };
 
@@ -324,8 +337,12 @@
               evt.arg.cnt = e.count - count;
             }
             if (key === 'hunting') {
-              console.log(rand() % e.stages.length, e.stages.length);
-              evt.arg.stg = e.stages[rand() % e.stages.length];
+              if (!moment().isSame(gHuntingInfo.timestamp, 'day') || (gHuntingInfo.timestamp == null)) {
+                gHuntingInfo.timestamp = currentTime();
+                gHuntingInfo.stage = e.stages[rand() % e.stages.length];
+                dbLib.setServerConfig('huntingInfo', JSON.stringify(gHuntingInfo));
+              }
+              evt.arg.stg = +gHuntingInfo.stage;
             }
             ret.push(evt);
           }
@@ -567,7 +584,7 @@
       actived: 1,
       count: 3,
       canReset: function(obj, util) {
-        return util.diffDay(obj.timestamp.goblin, util.today) && util.today.hour() >= 8;
+        return util.diffDay(obj.timestamp.goblin, util.today);
       },
       reset: function(obj, util) {
         obj.timestamp.newProperty('goblin', util.currentTime());
@@ -580,7 +597,7 @@
       actived: 1,
       count: 3,
       canReset: function(obj, util) {
-        return (util.today.hour() >= 8 && util.diffDay(obj.timestamp.enhance, util.today)) && (util.today.weekday() === 2 || util.today.weekday() === 4 || util.today.weekday() === 6 || util.today.weekday() === 0);
+        return (util.diffDay(obj.timestamp.enhance, util.today)) && (util.today.weekday() === 2 || util.today.weekday() === 4 || util.today.weekday() === 6 || util.today.weekday() === 0);
       },
       reset: function(obj, util) {
         obj.timestamp.newProperty('enhance', util.currentTime());
@@ -593,7 +610,7 @@
       actived: 1,
       count: 3,
       canReset: function(obj, util) {
-        return (util.today.hour() >= 8 && util.diffDay(obj.timestamp.weapon, util.today)) && (util.today.weekday() === 1 || util.today.weekday() === 3 || util.today.weekday() === 5 || util.today.weekday() === 0);
+        return (util.diffDay(obj.timestamp.weapon, util.today)) && (util.today.weekday() === 1 || util.today.weekday() === 3 || util.today.weekday() === 5 || util.today.weekday() === 0);
       },
       reset: function(obj, util) {
         obj.timestamp.newProperty('weapon', util.currentTime());
@@ -603,7 +620,7 @@
     infinite: {
       storeType: "player",
       id: 3,
-      actived: 1,
+      actived: 0,
       canReset: function(obj, util) {
         return util.today.hour() >= 8 && util.diffDay(obj.timestamp.infinite, util.today);
       },
@@ -614,10 +631,10 @@
     hunting: {
       storeType: "player",
       id: 4,
-      actived: 1,
-      stages: [114, 115, 116],
+      actived: 0,
+      stages: [114, 115, 116, 119, 120, 121, 122, 123, 124, 125, 126],
       canReset: function(obj, util) {
-        return util.today.hour() >= 8 && util.diffDay(obj.timestamp.hunting, util.today);
+        return util.diffDay(obj.timestamp.hunting, util.today);
       },
       reset: function(obj, util) {
         obj.timestamp.newProperty('hunting', util.currentTime());
@@ -626,11 +643,164 @@
     },
     monthCard: {
       storeType: "player",
+      id: -1,
       actived: function(obj, util) {
-        var _base;
-        return typeof (_base = util.diffDay(obj.timestamp.monthCard, util.today)) === "function" ? _base({
-          1: 0
-        }) : void 0;
+        if (!obj.counters.monthCard) {
+          return 0;
+        }
+        if (!obj.timestamp.monthCard) {
+          return 1;
+        }
+        if (moment().isSame(obj.timestamp.monthCard, 'day')) {
+          return 0;
+        }
+        return 1;
+      }
+    }
+  };
+
+  exports.intervalEvent = {
+    infinityDungeonPrize: {
+      time: {
+        hour: 6
+      },
+      func: function(libs) {
+        var cfg;
+        cfg = [
+          {
+            from: 0,
+            to: 0,
+            mail: {
+              type: MESSAGE_TYPE_SystemReward,
+              src: MESSAGE_REWARD_TYPE_SYSTEM,
+              prize: [
+                {
+                  type: 2,
+                  count: 50
+                }, {
+                  type: 0,
+                  value: 869,
+                  count: 1
+                }
+              ],
+              tit: "铁人试炼排行奖励",
+              txt: "恭喜你成为铁人试炼冠军，点击领取奖励。"
+            }
+          }, {
+            from: 1,
+            to: 4,
+            mail: {
+              type: MESSAGE_TYPE_SystemReward,
+              src: MESSAGE_REWARD_TYPE_SYSTEM,
+              prize: [
+                {
+                  type: 2,
+                  count: 20
+                }, {
+                  type: 0,
+                  value: 868,
+                  count: 1
+                }
+              ],
+              tit: "铁人试炼排行奖励",
+              txt: "恭喜你进入铁人试炼前五，点击领取奖励。"
+            }
+          }, {
+            from: 5,
+            to: 9,
+            mail: {
+              type: MESSAGE_TYPE_SystemReward,
+              src: MESSAGE_REWARD_TYPE_SYSTEM,
+              prize: [
+                {
+                  type: 2,
+                  count: 10
+                }, {
+                  type: 0,
+                  value: 867,
+                  count: 1
+                }
+              ],
+              tit: "铁人试炼排行奖励",
+              txt: "恭喜你进入铁人试炼前十，点击领取奖励。"
+            }
+          }
+        ];
+        return cfg.forEach(function(e) {
+          return libs.helper.getPositionOnLeaderboard(1, 'nobody', e.from, e.to, function(err, result) {
+            return result.board.name.forEach(function(name) {
+              return libs.db.deliverMessage(name, e.mail);
+            });
+          });
+        });
+      }
+    },
+    killMonsterPrize: {
+      time: {
+        hour: 6
+      },
+      func: function(libs) {
+        var cfg;
+        return cfg = [
+          {
+            from: 0,
+            to: 0,
+            mail: {
+              type: MESSAGE_TYPE_SystemReward,
+              src: MESSAGE_REWARD_TYPE_SYSTEM,
+              prize: [
+                {
+                  type: 2,
+                  count: 50
+                }, {
+                  type: 0,
+                  value: 866,
+                  count: 1
+                }
+              ],
+              tit: "狩猎任务排行奖励",
+              txt: "恭喜你成为狩猎任务冠军，点击领取奖励。"
+            }
+          }, {
+            from: 1,
+            to: 4,
+            mail: {
+              type: MESSAGE_TYPE_SystemReward,
+              src: MESSAGE_REWARD_TYPE_SYSTEM,
+              prize: [
+                {
+                  type: 2,
+                  count: 20
+                }, {
+                  type: 0,
+                  value: 865,
+                  count: 1
+                }
+              ],
+              tit: "铁人试炼排行奖励",
+              txt: "恭喜你进入狩猎任务前五，点击领取奖励。"
+            }
+          }, {
+            from: 5,
+            to: 9,
+            mail: {
+              type: MESSAGE_TYPE_SystemReward,
+              src: MESSAGE_REWARD_TYPE_SYSTEM,
+              prize: [
+                {
+                  type: 2,
+                  count: 10
+                }, {
+                  type: 0,
+                  value: 864,
+                  count: 1
+                }
+              ],
+              tit: "铁人试炼排行奖励",
+              txt: "恭喜你进入狩猎任务前十，点击领取奖励。"
+            }
+          }
+        ];
       }
     }
   };
@@ -672,7 +842,6 @@
           return otherPrize.push(p);
       }
     });
-    console.log(itemFlag);
     for (id in itemFlag) {
       count = itemFlag[id];
       otherPrize.push({

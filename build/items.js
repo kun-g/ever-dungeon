@@ -408,7 +408,7 @@ exports.data = [
 	},
 	{
 		"classId": 25,
-		"label": "新手宝石礼包",
+		"label": "金币大礼包",
 		"icon": "item-giftbox.png",
 		"category": 0,
 		"subcategory": 0,
@@ -27601,5 +27601,182 @@ exports.data = [
         "quality": 2,
         "sellGem": 225,
         "dropId": 86
+    },
+    {
+        "classId": 864,
+        "label": "猎人之冠",
+        "icon": "irfasion-helmetsg1.png",
+        "category": 1,
+        "subcategory": 13,
+        "description": "优秀狩猎者的身份证明。",
+        "effecta": [
+            {
+                "part": "helmet",
+                "file": "rfasion-helmetsg1.ccbi"
+            },
+            {
+                "part": "helmet2",
+                "file": "rfasion-helmetsg1-2.ccbi"
+            }
+        ],
+        "basic_properties": {
+            "health": 30,
+            "attack": 10,
+            "speed": 10,
+            "strong": 15,
+            "accuracy": 5,
+            "critical": 5,
+            "reactivity": 15
+        },
+        "storeOnly": true,
+        "expiration": {day: 2}
+    },
+    {
+        "classId": 865,
+        "label": "狩猎精英者",
+        "icon": "irfasion-helmetsg2.png",
+        "category": 1,
+        "subcategory": 13,
+        "description": "狩猎精英的身份证明。",
+        "effecta": [
+            {
+                "part": "helmet",
+                "file": "rfasion-helmetsg2.ccbi"
+            },
+            {
+                "part": "helmet2",
+                "file": "rfasion-helmetsg2-2.ccbi"
+            }
+        ],
+        "basic_properties": {
+            "health": 130,
+            "attack": 15,
+            "speed": 25,
+            "strong": 30,
+            "accuracy": 20,
+            "critical": 20,
+            "reactivity": 30
+        },
+        "storeOnly": true,
+        "expiration": {day: 2}
+    },
+    {
+        "classId":866,
+        "label": "猎人圣冠",
+        "icon": "irfasion-helmetsg3.png",
+        "category": 1,
+        "subcategory": 13,
+        "description": "只有猎人中的猎人才有资格戴上这顶圣冠。",
+        "effecta": [
+            {
+                "part": "helmet",
+                "file": "rfasion-helmetsg3.ccbi"
+            },
+            {
+                "part": "helmet2",
+                "file": "rfasion-helmetsg3-2.ccbi"
+            }
+        ],
+        "basic_properties": {
+            "health": 340,
+            "attack": 30,
+            "speed": 70,
+            "strong": 90,
+            "accuracy": 50,
+            "critical": 50,
+            "reactivity": 90
+        },
+        "storeOnly": true,
+        "expiration": {day: 2}
+    },
+    {
+        "classId":867,
+        "label": "铁人头冠",
+        "icon": "irfasion-helmetwj1.png",
+        "category": 1,
+        "subcategory": 13,
+        "description": "历经铁人试炼后获得成功的证明。",
+        "effecta": [
+            {
+                "part": "helmet",
+                "file": "rfasion-helmetwj1.ccbi"
+            }
+        ],
+        "basic_properties": {
+            "health": 30,
+            "attack": 10,
+            "speed": 10,
+            "strong": 5,
+            "accuracy": 15,
+            "critical": 15,
+            "reactivity": 5
+        },
+        "storeOnly": true,
+        "expiration": {day: 2}
+    },
+    {
+        "classId": 868,
+        "label": "铁人精英者",
+        "icon": "irfasion-helmetwj2.png",
+        "category": 1,
+        "subcategory": 13,
+        "description": "只发给铁人试炼中出类拔萃的试炼者。",
+        "effecta": [
+            {
+                "part": "helmet",
+                "file": "rfasion-helmetwj2.ccbi"
+            }
+        ],
+        "basic_properties": {
+            "health":70,
+            "attack": 25,
+            "speed": 25,
+            "strong": 20,
+            "accuracy": 30,
+            "critical": 30,
+            "reactivity": 20
+        },
+        "storeOnly": true,
+        "expiration": {day: 2}
+    },
+    {
+        "classId": 869,
+        "label": "试炼圣冠",
+        "icon": "irfasion-helmetwj3.png",
+        "category": 1,
+        "subcategory": 13,
+        "description": "披荆斩棘成为试炼之王的人才能获得此顶圣冠。",
+        "effecta": [
+            {
+                "part": "helmet",
+                "file": "rfasion-helmetwj3.ccbi"
+            }
+        ],
+        "basic_properties": {
+            "health": 130,
+            "attack": 65,
+            "speed": 70,
+            "strong": 50,
+            "accuracy": 90,
+            "critical": 90,
+            "reactivity": 50
+        },
+        "storeOnly": true,
+        "expiration": {day: 2}
+    },
+    {
+        "classId": 870,
+        "label": "界限头冠",
+        "icon": "irfasion-helmetzdl2.png",
+        "category": 1,
+        "subcategory": 13,
+        "description": "突破自身界限，战斗力突破10000的身份证明。",
+        "effecta": [
+            {
+                "part": "helmet",
+                "file": "rfasion-helmetzdl2.ccbi"
+            }
+        ],
+        "storeOnly": true
     }
 ]

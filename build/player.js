@@ -267,7 +267,7 @@
         }
       }
       flag = true;
-      if (this.loginStreak.date && diffDate(this.loginStreak.date, 'month') === 0) {
+      if (moment().isSame(this.loginStreak.date, 'month')) {
         dis = diffDate(this.loginStreak.date);
         if (dis === 0) {
           flag = false;
@@ -296,7 +296,8 @@
         if (item.date == null) {
           return true;
         }
-        return helperLib.currentTime(true).valueOf() > item.date + item.expiration.day * 24 * 60 * 60;
+        console.log(helperLib.matchDate(item.date, helperLib.currentTime(), item.expiration));
+        return helperLib.matchDate(item.date, helperLib.currentTime(), item.expiration);
       });
       rmMSG = itemsNeedRemove.map((function(_this) {
         return function(e) {
@@ -420,9 +421,6 @@
         receipt: myReceipt
       });
       if (flag) {
-        if (rec.productID === MonthCardID) {
-          this.counters.newProperty('monthCard', 30);
-        }
         ret = [
           {
             NTF: Event_InventoryUpdateItem,
@@ -431,12 +429,17 @@
             }
           }
         ];
+        if (rec.productID === MonthCardID) {
+          this.counters.newProperty('monthCard', 30);
+          ret = ret.concat(this.syncEvent());
+        }
         this.rmb += cfg.rmb;
         this.onCampaign('RMB', cfg.rmb);
         ret.push({
           NTF: Event_PlayerInfo,
           arg: {
-            rmb: this.rmb
+            rmb: this.rmb,
+            mcc: this.counters.monthCard
           }
         });
         ret.push({
@@ -683,6 +686,7 @@
 
     Player.prototype.stageIsUnlockable = function(stage) {
       var stageConfig;
+      return true;
       stageConfig = queryTable(TABLE_STAGE, stage, this.abIndex);
       if (stageConfig.condition) {
         return stageConfig.condition(this, genUtil());
@@ -2701,8 +2705,8 @@
               };
             });
           }
-          if (e.time) {
-            ret.ts = e.time;
+          if (e.date) {
+            ret.ts = e.date;
           }
           return ret;
         };
@@ -3013,24 +3017,24 @@
   playerCSConfig = {
     ItemChange: {
       output: function(env) {
-        var arg, e, items, ret;
+        var arg, items, ret;
         ret = env.variable('ret');
         if (!(ret && ret.length > 0)) {
           return [];
         }
-        items = (function() {
-          var _i, _len, _results;
-          _results = [];
-          for (_i = 0, _len = ret.length; _i < _len; _i++) {
-            e = ret[_i];
-            _results.push({
-              sid: Number(e.slot),
-              cid: e.id,
-              stc: e.count
-            });
+        items = ret.map(function(e) {
+          var evt, item;
+          item = env.player.getItemAt(e.slot);
+          evt = {
+            sid: Number(e.slot),
+            cid: e.id,
+            stc: e.count
+          };
+          if (item != null ? item.date : void 0) {
+            evt.ts = item.date;
           }
-          return _results;
-        })();
+          return evt;
+        });
         arg = {
           syn: env.variable('version')
         };

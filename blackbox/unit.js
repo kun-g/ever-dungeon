@@ -259,28 +259,48 @@
       this.type = Unit_Mirror;
       this.blockType = Block_Enemy;
       this.isVisible = false;
+      this.keyed = true;
       this.initialize(heroData);
     }
 
     Mirror.prototype.initialize = function(heroData) {
-      var battleForce, cfg, hero;
-      hero = new Hero(heroData);
-      this.equipment = heroData.itm;
+      var battleForce, cfg, cid, hero;
+      hero = new Hero({
+        name: heroData.nam,
+        "class": heroData.cid,
+        gender: heroData.gen,
+        hairStyle: heroData.hst,
+        hairColor: heroData.hcl,
+        equipment: heroData.itm,
+        xp: heroData.exp
+      });
       battleForce = hero.calculatePower();
-      cfg = queryTable(TABLE_ROLE, hero.transId);
+      cfg = queryTable(TABLE_ROLE, heroData.cid);
+      cid = cfg.transId;
+      cfg = queryTable(TABLE_ROLE, cfg.transId);
       if (cfg != null) {
         this.initWithConfig(cfg);
       }
+      this["class"] = cid;
       this.level = 0;
+      this.xp = heroData.exp;
       this.levelUp();
-      this.health = battleForce * (10 / 18.5);
-      this.attack = battleForce * (0.3 / 18.5);
+      this.counterAttack = true;
+      this.health = Math.ceil(battleForce * (10 / 18.5));
+      this.attack = Math.ceil(battleForce * (0.3 / 18.5));
       this.critical = battleForce * (1 / 18.5);
       this.strong = battleForce * (1 / 18.5);
       this.accuracy = battleForce * (1 / 18.5) + 20;
       this.reactivity = battleForce * (10 / 18.5) - 20;
       this.speed = battleForce * (1 / 18.5) + 20;
-      return this.maxHP = this.health;
+      this.maxHP = this.health;
+      this.equipment = heroData.itm;
+      this.name = heroData.nam;
+      this.gender = heroData.gen;
+      this.hairStyle = heroData.hst;
+      this.hairColor = heroData.hcl;
+      this.ref = heroData.ref;
+      return this.id = cid;
     };
 
     return Mirror;

@@ -178,7 +178,7 @@
           }, function(cb) {
             return loadPlayer(arg.tp, arg.id, cb);
           }, function(player, cb) {
-            var ev, time;
+            var ev, msg, time;
             if (player) {
               player.log('login', {
                 type: arg.tp,
@@ -210,14 +210,18 @@
                 NTF: Event_UpdateStoreInfo,
                 arg: gShop.dump(player)
               });
-              ev.push({
+              msg = {
                 NTF: Event_PlayerInfo,
                 arg: {
                   aid: player.accountID,
                   vip: player.vipLevel(),
                   rmb: player.rmb
                 }
-              });
+              };
+              if (player.counters.monthCard) {
+                msg.arg.mcc = player.counters.monthCard;
+              }
+              ev.push(msg);
               ev.push({
                 NTF: Event_RoleUpdate,
                 arg: {
@@ -266,9 +270,6 @@
                 };
                 if (player.tutorialStage != null) {
                   loginInfo.arg.tut = player.tutorialStage;
-                }
-                if (player.counters.monthCard) {
-                  loginInfo.arg.mcc = player.counters.monthCard;
                 }
                 handle([loginInfo].concat(ev));
                 player.saveDB(cb);
@@ -719,18 +720,9 @@
             ret.me = result.position;
           }
           if (result.board != null) {
-            board = result.board.reduce((function(r, l, i) {
-              if (i % 2 === 0) {
-                r.name.push(l);
-              } else {
-                r.score.push(l);
-              }
-              return r;
-            }), {
-              name: [],
-              score: []
-            });
+            board = result.board;
             return async.map(board.name, getPlayerHero, function(err, result) {
+              console.log(err);
               ret.lst = result.map(function(e, i) {
                 var r;
                 r = getBasicInfo(e);
@@ -753,17 +745,18 @@
         var ret;
         switch (arg.bid) {
           case -1:
-            if (player.counter.monthCard) {
-              player.counter.monthCard--;
-              obj.timestamp.newProperty('monthCard', util.currentTime());
+            if (player.counters.monthCard) {
+              player.counters.monthCard--;
+              player.timestamp.newProperty('monthCard', helperLib.currentTime());
               ret = [
                 {
                   NTF: Event_InventoryUpdateItem,
                   arg: {
-                    dim: this.addDiamond(80)
+                    dim: player.addDiamond(80)
                   }
                 }
               ];
+              player.saveDB();
               return handler([
                 {
                   REQ: rpcID,

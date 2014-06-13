@@ -3509,5 +3509,27 @@ exports.data = [
                 {"type": "heal","self":true,"formular": {"c":180}}
             ]
         }
+    },
+    {
+        "skillId": 156,
+        "label":"pk传送",
+        "config": {
+            "triggerCondition": [
+                {"type":"event","event":"onBattleTurnEnd"},
+                {"type":"alive"}
+            ],
+            "targetSelection":{
+                "pool":"self",
+                "filter": [{"type":"alive"}]
+            },
+            "action": [
+                {"type": "delay"},
+                {"type":"playEffect","effect":20,"pos":"self"},
+                {"type": "delay"},
+                {"type": "randTeleport"},
+                {"type": "delay"},
+                {"type":"playEffect","effect":21,"pos":"self"}
+            ]
+        }
     }
 ]
