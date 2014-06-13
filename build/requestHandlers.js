@@ -756,6 +756,7 @@
                   }
                 }
               ];
+              player.saveDB();
               return handler([
                 {
                   REQ: rpcID,

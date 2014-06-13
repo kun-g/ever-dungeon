@@ -337,8 +337,11 @@
               evt.arg.cnt = e.count - count;
             }
             if (key === 'hunting') {
-              console.log(rand() % e.stages.length, e.stages.length);
-              evt.arg.stg = e.stages[rand() % e.stages.length];
+              if (!moment().isSame(gHuntingInfo.timestamp, 'day')) {
+                gHuntingInfo.stage = e.stages[rand() % e.stages.length];
+                dbLib.setServerConfig('huntingInfo', JSON.stringify(gHuntingInfo));
+              }
+              evt.arg.stg = +gHuntingInfo.stage;
             }
             ret.push(evt);
           }
@@ -580,7 +583,7 @@
       actived: 1,
       count: 3,
       canReset: function(obj, util) {
-        return util.diffDay(obj.timestamp.goblin, util.today) && util.today.hour() >= 8;
+        return util.diffDay(obj.timestamp.goblin, util.today);
       },
       reset: function(obj, util) {
         obj.timestamp.newProperty('goblin', util.currentTime());
@@ -593,7 +596,7 @@
       actived: 1,
       count: 3,
       canReset: function(obj, util) {
-        return (util.today.hour() >= 8 && util.diffDay(obj.timestamp.enhance, util.today)) && (util.today.weekday() === 2 || util.today.weekday() === 4 || util.today.weekday() === 6 || util.today.weekday() === 0);
+        return (util.diffDay(obj.timestamp.enhance, util.today)) && (util.today.weekday() === 2 || util.today.weekday() === 4 || util.today.weekday() === 6 || util.today.weekday() === 0);
       },
       reset: function(obj, util) {
         obj.timestamp.newProperty('enhance', util.currentTime());
@@ -606,7 +609,7 @@
       actived: 1,
       count: 3,
       canReset: function(obj, util) {
-        return (util.today.hour() >= 8 && util.diffDay(obj.timestamp.weapon, util.today)) && (util.today.weekday() === 1 || util.today.weekday() === 3 || util.today.weekday() === 5 || util.today.weekday() === 0);
+        return (util.diffDay(obj.timestamp.weapon, util.today)) && (util.today.weekday() === 1 || util.today.weekday() === 3 || util.today.weekday() === 5 || util.today.weekday() === 0);
       },
       reset: function(obj, util) {
         obj.timestamp.newProperty('weapon', util.currentTime());
@@ -628,9 +631,9 @@
       storeType: "player",
       id: 4,
       actived: 0,
-      stages: [114, 115, 116],
+      stages: [114, 115, 116, 119, 120, 121, 122, 123, 124, 125, 126],
       canReset: function(obj, util) {
-        return util.today.hour() >= 8 && util.diffDay(obj.timestamp.hunting, util.today);
+        return util.diffDay(obj.timestamp.hunting, util.today);
       },
       reset: function(obj, util) {
         obj.timestamp.newProperty('hunting', util.currentTime());

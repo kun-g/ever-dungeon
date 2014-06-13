@@ -272,6 +272,11 @@ if (config) {
           dbLib.setServerConfig('Interval', JSON.stringify(intervalCfg));
         }
       }, 60000);
+
+      gHuntingInfo = {};
+      dbLib.getServerConfig('huntingInfo', function (err, arg) {
+        if (arg) { gHuntingInfo = JSON.parse(arg); }
+      });
     });
   });
 } else {
