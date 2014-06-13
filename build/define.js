@@ -99,6 +99,30 @@ listAllProperties = function(o){
   return result; 
 };
 
+createMirrorHero = function (data) {
+  cfg = queryTable(TABLE_ROLE, data.class);
+  //TODO:
+  hero = {
+    xp: data.xp,
+    name: data.name,
+    class: cfg.transId,
+    gender: data.gender,
+    hairStyle: data.hairStyle,
+    hairColor: data.hairColor,
+    equipment: data.equipment
+  };
+  hero = new Hero(hero);
+  battleForce = hero.calculatePower();
+  hero.health = battleForce * (10/18.5);
+  hero.attack = battleForce * (0.3/18.5);
+  hero.critical = battleForce * (1/18.5);
+  hero.strong = battleForce * (1/18.5);
+  hero.accuracy = battleForce * (1/18.5) + 20;
+  hero.reactivity = battleForce * (10/18.5) - 20;
+  hero.speed = battleForce * (1/18.5) + 20;
+  return hero;
+};
+
 getBasicInfo = function (hero) {
   if (!hero) throw 'Invalid Hero Data';
   var translateTable = {
@@ -108,7 +132,6 @@ getBasicInfo = function (hero) {
     hairStyle : 'hst',
     hairColor : 'hcl',
     xp : 'exp',
-    blueStar : 'bst',
     isFriend: 'ifn',
     vipLevel: 'vip'
   };
@@ -485,6 +508,7 @@ Unit_Hero = 0;
 Unit_Enemy = 1;
 Unit_NPC = 2;
 Unit_TreasureBox = 3;
+Unit_Mirror = 4;
 Unit_Boss = 5;
 Unit_Exit = 100;
 

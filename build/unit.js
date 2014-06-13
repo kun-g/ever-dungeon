@@ -1,5 +1,5 @@
 (function() {
-  var Hero, Monster, Npc, Unit, Wizard, createUnit, flagCreation,
+  var Hero, Mirror, Monster, Npc, Unit, Wizard, createUnit, flagCreation,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -248,6 +248,65 @@
 
   })(Unit);
 
+  Mirror = (function(_super) {
+    __extends(Mirror, _super);
+
+    function Mirror(heroData) {
+      Mirror.__super__.constructor.apply(this, arguments);
+      if (heroData == null) {
+        return false;
+      }
+      this.type = Unit_Mirror;
+      this.blockType = Block_Enemy;
+      this.isVisible = false;
+      this.keyed = true;
+      this.initialize(heroData);
+    }
+
+    Mirror.prototype.initialize = function(heroData) {
+      var battleForce, cfg, cid, hero;
+      hero = new Hero({
+        name: heroData.nam,
+        "class": heroData.cid,
+        gender: heroData.gen,
+        hairStyle: heroData.hst,
+        hairColor: heroData.hcl,
+        equipment: heroData.itm,
+        xp: heroData.exp
+      });
+      battleForce = hero.calculatePower();
+      cfg = queryTable(TABLE_ROLE, heroData.cid);
+      cid = cfg.transId;
+      cfg = queryTable(TABLE_ROLE, cfg.transId);
+      if (cfg != null) {
+        this.initWithConfig(cfg);
+      }
+      this["class"] = cid;
+      this.level = 0;
+      this.xp = heroData.exp;
+      this.levelUp();
+      this.counterAttack = true;
+      this.health = Math.ceil(battleForce * (10 / 18.5));
+      this.attack = Math.ceil(battleForce * (0.3 / 18.5));
+      this.critical = battleForce * (1 / 18.5);
+      this.strong = battleForce * (1 / 18.5);
+      this.accuracy = battleForce * (1 / 18.5) + 20;
+      this.reactivity = battleForce * (10 / 18.5) - 20;
+      this.speed = battleForce * (1 / 18.5) + 20;
+      this.maxHP = this.health;
+      this.equipment = heroData.itm;
+      this.name = heroData.nam;
+      this.gender = heroData.gen;
+      this.hairStyle = heroData.hst;
+      this.hairColor = heroData.hcl;
+      this.ref = heroData.ref;
+      return this.id = cid;
+    };
+
+    return Mirror;
+
+  })(Unit);
+
   Monster = (function(_super) {
     __extends(Monster, _super);
 
@@ -336,6 +395,8 @@
         return new Monster(config);
       case Unit_NPC:
         return new Npc(config);
+      case Unit_Hero:
+        return new Mirror(config);
     }
   };
 

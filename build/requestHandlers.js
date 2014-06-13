@@ -178,7 +178,7 @@
           }, function(cb) {
             return loadPlayer(arg.tp, arg.id, cb);
           }, function(player, cb) {
-            var ev, time;
+            var ev, msg, time;
             if (player) {
               player.log('login', {
                 type: arg.tp,
@@ -210,14 +210,18 @@
                 NTF: Event_UpdateStoreInfo,
                 arg: gShop.dump(player)
               });
-              ev.push({
+              msg = {
                 NTF: Event_PlayerInfo,
                 arg: {
                   aid: player.accountID,
                   vip: player.vipLevel(),
                   rmb: player.rmb
                 }
-              });
+              };
+              if (player.counters.monthCard) {
+                msg.arg.mcc = player.counters.monthCard;
+              }
+              ev.push(msg);
               ev.push({
                 NTF: Event_RoleUpdate,
                 arg: {
@@ -707,7 +711,7 @@
       id: 30,
       func: function(arg, player, handler, rpcID, socket) {
         return helperLib.getPositionOnLeaderboard(arg.typ, player.name, arg.src, arg.src + arg.cnt - 1, function(err, result) {
-          var ret;
+          var board, ret;
           ret = {
             REQ: rpcID,
             RET: RET_OK
@@ -716,14 +720,51 @@
             ret.me = result.position;
           }
           if (result.board != null) {
-            return async.map(result.board, getPlayerHero, function(err, result) {
-              ret.lst = result.map(getBasicInfo);
+            board = result.board;
+            return async.map(board.name, getPlayerHero, function(err, result) {
+              console.log(err);
+              ret.lst = result.map(function(e, i) {
+                var r;
+                r = getBasicInfo(e);
+                r.scr = +board.score[i];
+                return r;
+              });
               return handler([ret]);
             });
           } else {
             return handler([ret]);
           }
         });
+      },
+      args: [],
+      needPid: true
+    },
+    RPC_SubmitBounty: {
+      id: 31,
+      func: function(arg, player, handler, rpcID, socket) {
+        var ret;
+        switch (arg.bid) {
+          case -1:
+            if (player.counters.monthCard) {
+              player.counters.monthCard--;
+              player.timestamp.newProperty('monthCard', helperLib.currentTime());
+              ret = [
+                {
+                  NTF: Event_InventoryUpdateItem,
+                  arg: {
+                    dim: player.addDiamond(80)
+                  }
+                }
+              ];
+              player.saveDB();
+              return handler([
+                {
+                  REQ: rpcID,
+                  RET: RET_OK
+                }
+              ].concat(ret));
+            }
+        }
       },
       args: [],
       needPid: true

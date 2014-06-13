@@ -8,75 +8,21 @@ exports.data = [
         "availableCondition":true
     },
     {
-        "name":"infinitydungeon1",
-        "key":"stage.78.state",
+        "name":"infinitydungeon",
+        "key":"stage.120.state",
+        "resetTime": { weekday: 7, hour: 6 },
         "reverse":false,
         "initialValue":0,
         "type":"player",
         "availableCondition":true
     },
     {
-        "name":"infinitydungeon2",
-        "key":"stage.79.state",
-        "reverse":false,
-        "initialValue":0,
-        "type":"player",
-        "availableCondition":true
-    },
-    {
-        "name":"infinitydungeon3",
-        "key":"stage.80.state",
-        "reverse":false,
-        "initialValue":0,
-        "type":"player",
-        "availableCondition":true
-    },
-    {
-        "name":"infinitydungeon4",
-        "key":"stage.81.state",
-        "reverse":false,
-        "initialValue":0,
-        "type":"player",
-        "availableCondition":true
-    },
-    {
-        "name":"infinitydungeon5",
-        "key":"stage.82.state",
-        "reverse":false,
-        "initialValue":0,
-        "type":"player",
-        "availableCondition":true
-    },
-    {
-        "name":"infinitydungeon6",
-        "key":"stage.83.state",
-        "reverse":false,
-        "initialValue":0,
-        "type":"player",
-        "availableCondition":true
-    },
-    {
-        "name":"infinitydungeon7",
-        "key":"stage.84.state",
-        "reverse":false,
-        "initialValue":0,
-        "type":"player",
-        "availableCondition":true
-    } ,
-    {
-        "name":"infinitydungeon8",
-        "key":"stage.85.state",
-        "reverse":false,
-        "initialValue":0,
-        "type":"player",
-        "availableCondition":true
-    },
-    {
-        "name":"infinitydungeon9",
-        "key":"stage.86.state",
+        "name":"killMonster",
+        "key":"counters.monster",
+        "resetTime": { weekday: 7, hour: 6 },
         "reverse":false,
         "initialValue":0,
         "type":"player",
         "availableCondition":true
     }
-]
+];

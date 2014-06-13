@@ -371,6 +371,9 @@
       if (this.baseRank) {
         ret.baseRank = this.baseRank;
       }
+      if (this.PVP_Pool) {
+        ret.PVP_Pool = this.PVP_Pool;
+      }
       return ret;
     };
 
@@ -424,6 +427,13 @@
           this.goldRate = 1.1;
           this.xpRate *= 1.1;
         }
+      }
+      if (this.PVP_Pool) {
+        cfg.pool.PVP = this.PVP_Pool.map(function(e) {
+          e.weight = 10;
+          e.id = e.cid;
+          return e;
+        });
       }
       creation = createUnits(cfg, (function(_this) {
         return function() {
@@ -1150,35 +1160,41 @@
       return (_ref5 = this.blocks[this.exit]) != null ? _ref5.tileType = isLock ? Block_LockedExit : Block_Exit : void 0;
     };
 
-    Level.prototype.createObject = function(id, pos, keyed, collectId, effect) {
-      var o;
-      o = createUnit({
-        id: id,
-        rank: this.rank,
-        pos: pos,
-        ref: this.ref,
-        keyed: keyed
-      });
+    Level.prototype.createObject = function(arg) {
+      var cfg, k, o, v;
+      cfg = {};
+      for (k in arg) {
+        v = arg[k];
+        cfg[k] = v;
+      }
+      cfg.rank = this.rank;
+      cfg.ref = this.ref;
+      o = createUnit(cfg);
+      if (o == null) {
+        console.log('Noo', cfg);
+      }
       o.installSpell(DUNGEON_DROP_CARD_SPELL, 1);
-      if (keyed) {
-        this.lockUp;
+      if (cfg.keyed) {
+        this.lockUp(true);
       }
-      if (collectId != null) {
-        o.collectId = collectId;
+      if (cfg.collectId != null) {
+        o.collectId = cfg.collectId;
       }
-      o.effect = effect;
+      o.effect = cfg.effect;
+      o.pos = cfg.pos;
       this.ref += 1;
-      this.blocks[pos].addRef(o);
+      this.blocks[cfg.pos].addRef(o);
       this.objects.push(o);
       return o;
     };
 
-    Level.prototype.placeObjects = function(id, count, keyed, collectId) {
-      var i, indexes, pos, _i, _results;
+    Level.prototype.placeObjects = function(arg) {
+      var count, i, indexes, pos, _i, _ref5, _results;
+      count = (_ref5 = arg.count) != null ? _ref5 : 1;
       indexes = (function() {
-        var _i, _ref5, _results;
+        var _i, _ref6, _results;
         _results = [];
-        for (i = _i = 0, _ref5 = DG_BLOCKCOUNT - 1; 0 <= _ref5 ? _i <= _ref5 : _i >= _ref5; i = 0 <= _ref5 ? ++_i : --_i) {
+        for (i = _i = 0, _ref6 = DG_BLOCKCOUNT - 1; 0 <= _ref6 ? _i <= _ref6 : _i >= _ref6; i = 0 <= _ref6 ? ++_i : --_i) {
           if (this.blocks[i].getType() === Block_Empty) {
             _results.push(i);
           }
@@ -1216,27 +1232,30 @@
       _results = [];
       for (i = _i = 1; 1 <= count ? _i <= count : _i >= count; i = 1 <= count ? ++_i : --_i) {
         pos = indexes.splice(this.rand() % indexes.length, 1)[0];
-        _results.push(this.createObject(id, pos, keyed, collectId));
+        arg.pos = pos;
+        _results.push(this.createObject(arg));
       }
       return _results;
     };
 
     Level.prototype.placeMapObjects = function(cfg) {
-      var o, _i, _j, _len, _len1, _ref5, _results;
+      var o, _i, _j, _len, _len1, _results;
       if (cfg == null) {
         return false;
       }
       for (_i = 0, _len = cfg.length; _i < _len; _i++) {
         o = cfg[_i];
         if (o.pos != null) {
-          this.createObject(o.id, o.pos, o.keyed, o.collectId);
+          this.createObject(o);
         }
       }
       _results = [];
       for (_j = 0, _len1 = cfg.length; _j < _len1; _j++) {
         o = cfg[_j];
         if (o.pos == null) {
-          _results.push(this.placeObjects(o.id, (_ref5 = o.count) != null ? _ref5 : 1, o.keyed, o.collectId));
+          _results.push(this.placeObjects(o));
+        } else {
+          _results.push(void 0);
         }
       }
       return _results;
@@ -1608,9 +1627,9 @@
       return this.dungeon.currentLevel >= this.dungeon.getConfig().levelCount;
     };
 
-    DungeonEnvironment.prototype.createObject = function(classID, pos, withkey, collectId, effect) {
+    DungeonEnvironment.prototype.createObject = function(cfg) {
       var _ref5, _ref6;
-      return (_ref5 = this.dungeon) != null ? (_ref6 = _ref5.level) != null ? _ref6.createObject(classID, pos, withkey, collectId, effect) : void 0 : void 0;
+      return (_ref5 = this.dungeon) != null ? (_ref6 = _ref5.level) != null ? _ref6.createObject(cfg) : void 0 : void 0;
     };
 
     DungeonEnvironment.prototype.useItem = function(spell, level, cmd) {
@@ -2829,7 +2848,13 @@
         env.variable('pos', pos);
         for (_i = 0, _len = pos.length; _i < _len; _i++) {
           p = pos[_i];
-          env.createObject(env.variable('classID'), p, env.variable('withKey'), env.variable('collectID'), env.variable('effect'));
+          env.createObject({
+            id: env.variable('classID'),
+            pos: p,
+            keyed: env.variable('withKey'),
+            collectId: env.variable('collectID'),
+            effect: env.variable('effect')
+          });
         }
         for (_j = 0, _len1 = pos.length; _j < _len1; _j++) {
           p = pos[_j];
