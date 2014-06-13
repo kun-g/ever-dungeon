@@ -668,33 +668,60 @@
         cfg = [
           {
             from: 0,
+            to: 0,
+            mail: {
+              type: MESSAGE_TYPE_SystemReward,
+              src: MESSAGE_REWARD_TYPE_SYSTEM,
+              prize: [
+                {
+                  type: 2,
+                  count: 50
+                }, {
+                  type: 0,
+                  value: 869,
+                  count: 1
+                }
+              ],
+              tit: "铁人试炼排行奖励",
+              txt: "恭喜你成为铁人试炼冠军，点击领取奖励。"
+            }
+          }, {
+            from: 1,
             to: 4,
             mail: {
               type: MESSAGE_TYPE_SystemReward,
               src: MESSAGE_REWARD_TYPE_SYSTEM,
               prize: [
                 {
-                  type: PRIZETYPE_DIAMOND,
-                  count: 1024
+                  type: 2,
+                  count: 20
+                }, {
+                  type: 0,
+                  value: 868,
+                  count: 1
                 }
               ],
-              tit: "无尽关排行奖励",
-              txt: "无尽关排行奖励"
+              tit: "铁人试炼排行奖励",
+              txt: "恭喜你进入铁人试炼前五，点击领取奖励。"
             }
           }, {
             from: 5,
-            to: 10,
+            to: 9,
             mail: {
               type: MESSAGE_TYPE_SystemReward,
               src: MESSAGE_REWARD_TYPE_SYSTEM,
               prize: [
                 {
-                  type: PRIZETYPE_GOLD,
-                  count: 512
+                  type: 2,
+                  count: 10
+                }, {
+                  type: 0,
+                  value: 867,
+                  count: 1
                 }
               ],
-              tit: "无尽关排行奖励",
-              txt: "无尽关排行奖励"
+              tit: "铁人试炼排行奖励",
+              txt: "恭喜你进入铁人试炼前十，点击领取奖励。"
             }
           }
         ];
@@ -705,6 +732,74 @@
             });
           });
         });
+      }
+    },
+    killMonsterPrize: {
+      time: {
+        hour: 6
+      },
+      func: function(libs) {
+        var cfg;
+        return cfg = [
+          {
+            from: 0,
+            to: 0,
+            mail: {
+              type: MESSAGE_TYPE_SystemReward,
+              src: MESSAGE_REWARD_TYPE_SYSTEM,
+              prize: [
+                {
+                  type: 2,
+                  count: 50
+                }, {
+                  type: 0,
+                  value: 866,
+                  count: 1
+                }
+              ],
+              tit: "狩猎任务排行奖励",
+              txt: "恭喜你成为狩猎任务冠军，点击领取奖励。"
+            }
+          }, {
+            from: 1,
+            to: 4,
+            mail: {
+              type: MESSAGE_TYPE_SystemReward,
+              src: MESSAGE_REWARD_TYPE_SYSTEM,
+              prize: [
+                {
+                  type: 2,
+                  count: 20
+                }, {
+                  type: 0,
+                  value: 865,
+                  count: 1
+                }
+              ],
+              tit: "铁人试炼排行奖励",
+              txt: "恭喜你进入狩猎任务前五，点击领取奖励。"
+            }
+          }, {
+            from: 5,
+            to: 9,
+            mail: {
+              type: MESSAGE_TYPE_SystemReward,
+              src: MESSAGE_REWARD_TYPE_SYSTEM,
+              prize: [
+                {
+                  type: 2,
+                  count: 10
+                }, {
+                  type: 0,
+                  value: 864,
+                  count: 1
+                }
+              ],
+              tit: "铁人试炼排行奖励",
+              txt: "恭喜你进入狩猎任务前十，点击领取奖励。"
+            }
+          }
+        ];
       }
     }
   };
