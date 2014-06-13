@@ -408,7 +408,7 @@ exports.data = [
 	},
 	{
 		"classId": 25,
-		"label": "新手宝石礼包",
+		"label": "金币大礼包",
 		"icon": "item-giftbox.png",
 		"category": 0,
 		"subcategory": 0,
