@@ -337,7 +337,8 @@
               evt.arg.cnt = e.count - count;
             }
             if (key === 'hunting') {
-              if (!moment().isSame(gHuntingInfo.timestamp, 'day')) {
+              if (!moment().isSame(gHuntingInfo.timestamp, 'day') || (gHuntingInfo.timestamp == null)) {
+                gHuntingInfo.timestamp = currentTime();
                 gHuntingInfo.stage = e.stages[rand() % e.stages.length];
                 dbLib.setServerConfig('huntingInfo', JSON.stringify(gHuntingInfo));
               }
