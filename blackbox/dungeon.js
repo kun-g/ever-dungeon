@@ -1684,7 +1684,7 @@
       tailString = isBegin ? 'Begin' : 'End';
       allEvent = 'on' + turnType + 'Turn' + tailString;
       turnEvent = 'onTurn' + tailString;
-      _ref5 = this.getMonsters().concat(this.getHeroes()).concat(this.getBlock());
+      _ref5 = this.getObjects().concat(this.getBlock());
       for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
         e = _ref5[_i];
         e.onEvent(allEvent, cmd);
