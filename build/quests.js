@@ -4823,7 +4823,7 @@ exports.data = [
             {
                 "type":5,
                 "label":"战斗力突破7000",
-                "count":8000
+                "count":7000
             }
         ],
         "prize":[

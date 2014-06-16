@@ -2931,7 +2931,7 @@ exports.data = [
                 "pool": "self"
             },
             "triggerCondition": [
-                { "type": "onBeShow", "cd": 10 }
+                { "type": "onTurnBegin", "cd": 10 }
             ],
             "action": [
                 { "type": "installSpell", "spell": 129}
@@ -3019,7 +3019,7 @@ exports.data = [
         "config": {
             "basic" : { },
             "triggerCondition": [
-                { "type": "onBeShow", "cd": 14 }
+                { "type": "onTurnBegin", "cd": 14 }
             ],
             "targetSelection": {
                 "pool": "self",
@@ -3036,7 +3036,7 @@ exports.data = [
     },
     {
         "skillId": 132,
-        "label":"闪电",
+        "label":"闪电pk",
         "icon": "skill-mage1.png",
         "desc":"召唤闪电，对一名敌人造成伤害，伤害值与法师攻击力相关。",
         "slotId": 0,
@@ -3048,7 +3048,7 @@ exports.data = [
                 "targetDelay": 0.3
             },
             "triggerCondition": [
-                { "type": "countDown", "cd": 10 }
+                { "type": "onTurnBegin", "cd": 10 }
             ],
             "targetSelection": {
                 "pool": "objects",
@@ -3059,40 +3059,32 @@ exports.data = [
             ],
             "levelConfig" : [
                 { "formular": {"src":{"attack":0.8}} },
-                { "formular": {"src":{"attack":1}} },
-                { "formular": {"src":{"attack":1.2}} }
+                { "formular": {"src":{"attack":1}} }
             ]
         }
     },
-    {
-        "skillId": 133,
-        "label":"过载",
-        "icon": "skill-mage2.png",
-        "desc":"攻击造成暴击时，法师能够施展法术过载，对全体敌人造成伤害，伤害值与攻击力相关。",
-        "slotId": 3,
-        "config":{
-            "basic":{
-                "spellEffect": 29,
-                "spellDelay": 0.6,
-                "targetDelay": 0.9
-            },
-            "triggerCondition": [
-                {"type": "event", "event": "onCriticalDamage" },
-                {"type": "chance", "chance": 0.8}
+    {"skillId": 133,
+        "config": {
+            "action":[
+                { "type": "setProperty"}
             ],
-            "targetSelection": {
-                "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"}]
-            },
-            "action": [
-                {"type": "damage","damageType":"Spell","isRange":true,"formular": {"src":{"attack":0.3},"c":15}},
-                {"type": "playEffect","effect":4,"pos":"self"}
+            "targetSelection":{ "pool":"Self" },
+            "uninstallAction": [
+                { "type": "resetProperty" },
+                { "type": "shock", "delay":0.3, "range":5, "time":0.2 }
+            ],
+            "triggerCondition": [
+                { "type":"event", "event":"onTurnEnd" }
+            ],
+            "levelConfig":[
+                { "modifications": {"critical":{"c":1}}, "level": 1},
+                { "modifications": {"critical":{"c":2}}, "level": 2}
             ]
         }
     },
     {
         "skillId": 134,
-        "label":"炎甲",
+        "label":"炎甲ok",
         "icon": "skill-mage3.png",
         "desc":"法师使用一层火焰魔法保护自己，当受到攻击时，对敌人造成伤害，伤害值与攻击力有关。",
         "slotId":2,
@@ -3104,7 +3096,7 @@ exports.data = [
                 "targetDelay": 0.3
             },
             "triggerCondition": [
-                { "type": "event", "event": "onBePhysicalDamage" },
+                { "type": "event", "event": "onBeDamage" },
                 { "type": "chance", "chance": 0.3 }
             ],
             "action": [
@@ -3116,14 +3108,13 @@ exports.data = [
             },
             "levelConfig":[
                 {"formular": {"src":{"attack":0.2},"c":2}},
-                {"formular": {"src":{"attack":0.3},"c":10}},
-                {"formular": {"src":{"attack":0.4},"c":15}}
+                {"formular": {"src":{"attack":0.3},"c":10}}
             ]
         }
     },
     {
         "skillId": 135,
-        "label":"治愈",
+        "label":"治愈pk",
         "icon": "skill-priest1.png",
         "desc":"对队伍中生命值最低的成员进行回复，回复值与命中值相关。",
         "slotId": 0,
@@ -3136,54 +3127,43 @@ exports.data = [
                 "targetDelay": 0.3
             },
             "triggerCondition": [
-                { "type": "countDown", "cd": 10 }
+                { "type": "onTurnBegin", "cd": 10 }
             ],
             "targetSelection": {
                 "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"sort","by":"health"},{"type":"count","count":1}]
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"shuffle"},{"type":"count","count":1}]
             },
             "action": [
                 { "type": "heal" }
             ],
             "levelConfig" : [
-                {"formular": { "src":{"accuracy":0.15}, "c": 5 }},
-                {"formular": { "src":{"accuracy":0.15}, "c": 10 }},
-                {"formular": { "src":{"accuracy":0.15}, "c": 20 }}
+                {"formular": { "src":{"accuracy":0.15}}},
+                {"formular": { "src":{"accuracy":0.25}}}
             ]
         }
     },
     {
-        "skillId": 136,
-        "label":"宽恕",
-        "icon": "skill-priest2.png",
-        "desc":"当牧师对敌人造成伤害时，有一定几率能回复我方队友生命值，回复生命值与命中值相关。",
-        "slotId": 1,
+        "skillId":136,
         "config": {
-            "basic": {
-                "targetEffect": 3,
-                "targetDelay": 0.3
-            },
-            "triggerCondition": [
-                { "type": "event", "event": "onPhysicalDamage" },
-                { "type": "chance", "chance":0.6 }
+            "installAction": [
+                { "type": "setProperty" }
             ],
-            "action": [
-                { "type": "heal"}
+            "uninstallAction": [
+                { "type": "resetProperty" }
             ],
-            "targetSelection": {
-                "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"sort","by":"health"},{"type":"count","count":1}]
-            },
+            "buffType":"AttackBuff",
+            "availableCondition": [
+                { "type": "event", "event": "onBeginBattleTurn", "eventCount": 2 }
+            ],
             "levelConfig" : [
-                { "formular":{"src":{"accuracy":0.1},"c": 3} },
-                { "formular":{"src":{"accuracy":0.15},"c": 10} },
-                { "formular":{"src":{"accuracy":0.2},"c": 20} }
+                { "modifications": {"attack":{"src":{"attack":0.5},"c":5}}},
+                { "modifications": {"attack":{"src":{"attack":0.5},"c":15}}}
             ]
         }
     },
     {
         "skillId": 137,
-        "label":"救赎",
+        "label":"pk救赎",
         "icon": "skill-priest3.png",
         "desc":"牧师成功击杀敌人时，能够有一定概率短时间提升全体成员的攻击力。",
         "slotId": 2,
@@ -3196,25 +3176,24 @@ exports.data = [
                 "targetDelay": 0.3
             },
             "triggerCondition": [
-                { "type": "event", "event": "onKill" },
-                { "type": "chance", "chance":0.3 }
+                { "type": "onTurnBegin", "cd": 6 }
             ],
             "action": [
                 {"type":"delay"},
-                {"type": "installSpell", "spell": 14 }
+                {"type": "installSpell", "spell": 136 }
             ],
             "targetSelection": {
                 "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"}]
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"shuffle"},{"type":"count","count":1}]
             },
             "levelConfig" : [
-                { "level": 1 }, { "level": 2 }, { "level": 3 }
+                { "level": 1 }, { "level": 2 }
             ]
         }
     },
     {
         "skillId": 138,
-        "label":"奇迹之光",
+        "label":"奇迹之光pk",
         "icon": "skill-priest4.png",
         "desc":"当我方成员受到致命一击时，牧师能够一定概率召唤奇迹之光，使其吸收此次伤害。",
         "slotId": 3,
@@ -3230,7 +3209,7 @@ exports.data = [
                 { "type": "event", "event": "onTeammateBeDeathStrike" },
                 { "type": "event", "event": "onBeDeathStrike" },
                 {"type":"alive"},
-                { "type": "chance", "chance": 0.4 },
+                { "type": "chance" },
                 { "type": "targetMutex", "mutex": "lightOfMiracel" }
             ],
             "targetSelection": {
@@ -3241,12 +3220,15 @@ exports.data = [
                 {"type": "heal", "formular": {"environment":{"damage":1}}},
                 {"type": "modifyVar", "x": "damage", "formular": {"environment":{"c":0}}},
                 {"type": "setTargetMutex", "mutex": "lightOfMiracel", "count": 1 }
+            ],
+            "levelConfig" : [
+                {  "chance": 0.25 }, {  "chance": 0.4 }
             ]
         }
     },
     {
         "skillId": 139,
-        "label":"元素爆发",
+        "label":"元素爆发pk",
         "icon": "skill-mage4.png",
         "desc":"法师每次攻击能够增加自身暴击值，直至造成暴击后清空。",
         "slotId": 1,
@@ -3256,14 +3238,14 @@ exports.data = [
                 { "type": "event", "event": "onCriticalDamage", "count": 1 }
             ],
             "installAction": [
-                { "type": "removeSpell", "spell": 33},
-                { "type": "installSpell", "spell": 33}
+                { "type": "removeSpell", "spell": 133},
+                { "type": "installSpell", "spell": 133}
             ],
             "action": [
-                { "type": "removeSpell", "spell": 33},
-                { "type": "installSpell", "spell": 33}
+                { "type": "removeSpell", "spell": 133},
+                { "type": "installSpell", "spell": 133}
             ],
-            "levelConfig":[{"level":1},{"level":2},{"level":3}]
+            "levelConfig":[{"level":1},{"level":2}]
         }
     },
     {
