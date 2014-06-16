@@ -620,7 +620,7 @@
     infinite: {
       storeType: "player",
       id: 3,
-      actived: 0,
+      actived: 1,
       canReset: function(obj, util) {
         return util.today.hour() >= 8 && util.diffDay(obj.timestamp.infinite, util.today);
       },
@@ -631,7 +631,7 @@
     hunting: {
       storeType: "player",
       id: 4,
-      actived: 0,
+      actived: 1,
       stages: [114, 115, 116, 119, 120, 121, 122, 123, 124, 125, 126],
       canReset: function(obj, util) {
         return util.diffDay(obj.timestamp.hunting, util.today);

@@ -2002,6 +2002,94 @@ var data = [
               condition: function (obj, util) { return true;
               },
               initialAction: function (obj) { }
+          },
+          {
+              stageId: 125,
+              cost: 10,
+              team: 3,
+              hidden: true,
+              dungeon: 119,
+              description: "hunt39",
+              eventName: "event_hunt39",
+              condition: function (obj, util) { return true; },
+              initialAction: function (obj) { }
+          },
+          {
+              stageId: 126,
+              cost: 10,
+              team: 3,
+              hidden: true,
+              dungeon: 120,
+              description: "hunt39",
+              eventName: "event_hunt39",
+              condition: function (obj, util) { return true; },
+              initialAction: function (obj) { }
+          },
+          {
+              stageId: 127,
+              cost: 10,
+              team: 3,
+              hidden: true,
+              dungeon: 121,
+              description: "hunt39",
+              eventName: "event_hunt39",
+              condition: function (obj, util) { return true; },
+              initialAction: function (obj) { }
+          },
+          {
+              stageId: 128,
+              cost: 10,
+              team: 3,
+              hidden: true,
+              dungeon: 122,
+              description: "hunt39",
+              eventName: "event_hunt39",
+              condition: function (obj, util) { return true; },
+              initialAction: function (obj) { }
+          },
+          {
+              stageId: 129,
+              cost: 10,
+              team: 3,
+              hidden: true,
+              dungeon: 123,
+              description: "hunt39",
+              eventName: "event_hunt39",
+              condition: function (obj, util) { return true; },
+              initialAction: function (obj) { }
+          },
+          {
+              stageId: 130,
+              cost: 10,
+              team: 3,
+              hidden: true,
+              dungeon: 124,
+              description: "hunt39",
+              eventName: "event_hunt39",
+              condition: function (obj, util) { return true; },
+              initialAction: function (obj) { }
+          },
+          {
+              stageId: 131,
+              cost: 10,
+              team: 3,
+              hidden: true,
+              dungeon: 125,
+              description: "hunt39",
+              eventName: "event_hunt39",
+              condition: function (obj, util) { return true; },
+              initialAction: function (obj) { }
+          },
+          {
+              stageId: 132,
+              cost: 10,
+              team: 3,
+              hidden: true,
+              dungeon: 126,
+              description: "hunt39",
+              eventName: "event_hunt39",
+              condition: function (obj, util) { return true; },
+              initialAction: function (obj) { }
           }
       ]
   }
