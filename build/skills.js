@@ -3493,7 +3493,7 @@ exports.data = [
         }
     },
     {
-        "skillId": 156,
+        "skillId": 152,
         "label":"pk传送",
         "config": {
             "triggerCondition": [

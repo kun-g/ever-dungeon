@@ -7101,7 +7101,7 @@ exports.data = [
     {
         "classId": 198,
         "className": "法师",
-        "faction": "hero",
+        "faction": "monster",
         "classType": 4,
         "avatar": "avatar.ccbi",
         "emblem": [
