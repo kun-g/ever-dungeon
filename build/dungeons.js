@@ -16365,7 +16365,7 @@ exports.data = [
         "prizeXp":885,
         "wxpRate":1,"goldRate":0.3,
         "xpRate":0.4,
-        "rank":178
+        "rank":458
     },
     {
         "dungeonId": 73,
@@ -24720,7 +24720,6 @@ exports.data = [
                     {"pool":"soldierPool","from":8,to:14},
                     {"pool":"rangePool","from":0,to:3},
                     {"pool":"elitePool","count":1},
-                    {"pool":"rangePool","from":0,to:3},
                     {"id": 149,"from":0,to:2}
                 ]
             },
@@ -25628,7 +25627,6 @@ exports.data = [
                     {"pool":"soldierPool","from":8,to:14},
                     {"pool":"rangePool","from":0,to:3},
                     {"pool":"elitePool","count":1},
-                    {"pool":"rangePool","from":0,to:3},
                     {"id": 149,"from":0,to:2}
                 ]
             },
@@ -26536,7 +26534,6 @@ exports.data = [
                     {"pool":"soldierPool","from":8,to:14},
                     {"pool":"rangePool","from":0,to:3},
                     {"pool":"elitePool","count":1},
-                    {"pool":"rangePool","from":0,to:3},
                     {"id": 149,"from":0,to:2}
                 ]
             },
@@ -27445,7 +27442,6 @@ exports.data = [
                     {"pool":"soldierPool","from":8,to:14},
                     {"pool":"rangePool","from":0,to:3},
                     {"pool":"elitePool","count":1},
-                    {"pool":"rangePool","from":0,to:3},
                     {"id": 149,"from":0,to:2}
                 ]
             },
@@ -28775,7 +28771,6 @@ exports.data = [
                     {"pool":"soldierPool","from":8,to:14},
                     {"pool":"rangePool","from":0,to:3},
                     {"pool":"elitePool","count":1},
-                    {"pool":"rangePool","from":0,to:3},
                     {"id": 149,"from":0,to:2}
                 ]
             },
@@ -29683,7 +29678,6 @@ exports.data = [
                     {"pool":"soldierPool","from":8,to:14},
                     {"pool":"rangePool","from":0,to:3},
                     {"pool":"elitePool","count":1},
-                    {"pool":"rangePool","from":0,to:3},
                     {"id": 149,"from":0,to:2}
                 ]
             },
@@ -30591,7 +30585,6 @@ exports.data = [
                     {"pool":"soldierPool","from":8,to:14},
                     {"pool":"rangePool","from":0,to:3},
                     {"pool":"elitePool","count":1},
-                    {"pool":"rangePool","from":0,to:3},
                     {"id": 149,"from":0,to:2}
                 ]
             },
@@ -31499,7 +31492,6 @@ exports.data = [
                     {"pool":"soldierPool","from":8,to:14},
                     {"pool":"rangePool","from":0,to:3},
                     {"pool":"elitePool","count":1},
-                    {"pool":"rangePool","from":0,to:3},
                     {"id": 149,"from":0,to:2}
                 ]
             },
@@ -32407,7 +32399,6 @@ exports.data = [
                     {"pool":"soldierPool","from":8,to:14},
                     {"pool":"rangePool","from":0,to:3},
                     {"pool":"elitePool","count":1},
-                    {"pool":"rangePool","from":0,to:3},
                     {"id": 149,"from":0,to:2}
                 ]
             },
@@ -33315,7 +33306,6 @@ exports.data = [
                     {"pool":"soldierPool","from":8,to:14},
                     {"pool":"rangePool","from":0,to:3},
                     {"pool":"elitePool","count":1},
-                    {"pool":"rangePool","from":0,to:3},
                     {"id": 149,"from":0,to:2}
                 ]
             },
@@ -34223,7 +34213,6 @@ exports.data = [
                     {"pool":"soldierPool","from":8,to:14},
                     {"pool":"rangePool","from":0,to:3},
                     {"pool":"elitePool","count":1},
-                    {"pool":"rangePool","from":0,to:3},
                     {"id": 149,"from":0,to:2}
                 ]
             },
@@ -35131,7 +35120,6 @@ exports.data = [
                     {"pool":"soldierPool","from":8,to:14},
                     {"pool":"rangePool","from":0,to:3},
                     {"pool":"elitePool","count":1},
-                    {"pool":"rangePool","from":0,to:3},
                     {"id": 149,"from":0,to:2}
                 ]
             },
