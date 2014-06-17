@@ -2072,7 +2072,7 @@
     TickSpell: {
       callback: function(env) {
         var h, _i, _len, _ref5, _results;
-        _ref5 = env.getHeroes().concat(env.getMonsters());
+        _ref5 = env.getObjects();
         _results = [];
         for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
           h = _ref5[_i];
