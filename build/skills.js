@@ -3019,7 +3019,7 @@ exports.data = [
         "config": {
             "basic" : { },
             "triggerCondition": [
-                { "type": "onTurnBegin", "cd": 14 }
+                { "type": "event", "event": "onTurnBegin", "count": 14 }
             ],
             "targetSelection": {
                 "pool": "self",

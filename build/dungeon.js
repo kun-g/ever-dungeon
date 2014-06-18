@@ -1170,9 +1170,6 @@
       cfg.rank = this.rank;
       cfg.ref = this.ref;
       o = createUnit(cfg);
-      if (o == null) {
-        console.log('Noo', cfg);
-      }
       o.installSpell(DUNGEON_DROP_CARD_SPELL, 1);
       if (cfg.keyed) {
         this.lockUp(true);
