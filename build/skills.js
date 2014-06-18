@@ -3127,7 +3127,7 @@ exports.data = [
                 "targetDelay": 0.3
             },
             "triggerCondition": [
-                { "type": "event", "event": "onTurnBegin", "count": 14 }
+                { "type": "event", "event": "onTurnBegin", "eventCount": 14 }
             ],
             "targetSelection": {
                 "pool": "objects",
