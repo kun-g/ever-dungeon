@@ -2923,7 +2923,7 @@ exports.data = [
         "config": {
             "basic" : {
                 "spellAction": 2,
-                "spellEffect": 4,
+                "spellEffect": 45,
                 "targetEffect": 1 ,
                 "spellDelay": 0.3
             },
@@ -2931,7 +2931,7 @@ exports.data = [
                 "pool": "self"
             },
             "triggerCondition": [
-                { "type":"event","event":"onTurnEnd", "eventCount": 3,"reset":true },
+                { "type":"event","event":"onTurnEnd", "eventCount": 5,"reset":true },
                 { "type": "chance", "chance": 0.5}
             ],
             "action": [
@@ -2950,7 +2950,7 @@ exports.data = [
             "basic": {
                 "buffEffect": 42,
                 "spellAction": 4,
-                "spellEffect": 1,
+                "spellEffect":46,
                 "spellDelay": 0.3
             },
             "triggerCondition": [
@@ -3020,7 +3020,7 @@ exports.data = [
         "config": {
             "basic" : { },
             "triggerCondition": [
-                { "type":"event","event":"onTurnEnd", "eventCount": 5,"reset":true },
+                { "type":"event","event":"onTurnEnd", "eventCount": 8,"reset":true },
                 { "type": "chance", "chance": 0.3}
             ],
             "targetSelection": {
@@ -3050,7 +3050,7 @@ exports.data = [
                 "targetDelay": 0.3
             },
             "triggerCondition": [
-                { "type":"event","event":"onTurnEnd", "eventCount": 3,"reset":true },
+                { "type":"event","event":"onTurnEnd", "eventCount": 5,"reset":true },
                 { "type": "chance", "chance": 0.5}
             ],
             "targetSelection": {
@@ -3130,7 +3130,7 @@ exports.data = [
                 "targetDelay": 0.3
             },
             "triggerCondition": [
-                { "type":"event","event":"onTurnEnd", "eventCount": 3,"reset":true },
+                { "type":"event","event":"onTurnEnd", "eventCount": 5,"reset":true },
                 { "type": "chance", "chance": 0.5}
             ],
             "targetSelection": {
@@ -3180,7 +3180,7 @@ exports.data = [
                 "targetDelay": 0.3
             },
             "triggerCondition": [
-                { "type":"event","event":"onTurnEnd", "eventCount": 5,"reset":true },
+                { "type":"event","event":"onTurnEnd", "eventCount": 8,"reset":true },
                 { "type": "chance", "chance": 0.3}
             ],
             "action": [
