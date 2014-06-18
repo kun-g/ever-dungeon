@@ -2931,7 +2931,7 @@ exports.data = [
                 "pool": "self"
             },
             "triggerCondition": [
-                { "type":"event","event":"onTurnBegin", "eventCount": 3 },
+                { "type":"event","event":"onTurnEnd", "eventCount": 3,"reset":true },
                 { "type": "chance", "chance": 0.5}
             ],
             "action": [
@@ -3020,7 +3020,7 @@ exports.data = [
         "config": {
             "basic" : { },
             "triggerCondition": [
-                { "type":"event","event":"onTurnBegin", "eventCount": 5 },
+                { "type":"event","event":"onTurnEnd", "eventCount": 5,"reset":true },
                 { "type": "chance", "chance": 0.3}
             ],
             "targetSelection": {
@@ -3050,7 +3050,7 @@ exports.data = [
                 "targetDelay": 0.3
             },
             "triggerCondition": [
-                { "type":"event","event":"onTurnBegin", "eventCount": 3 },
+                { "type":"event","event":"onTurnEnd", "eventCount": 3,"reset":true },
                 { "type": "chance", "chance": 0.5}
             ],
             "targetSelection": {
@@ -3130,7 +3130,7 @@ exports.data = [
                 "targetDelay": 0.3
             },
             "triggerCondition": [
-                { "type":"event","event":"onTurnBegin", "eventCount": 3 },
+                { "type":"event","event":"onTurnEnd", "eventCount": 3,"reset":true },
                 { "type": "chance", "chance": 0.5}
             ],
             "targetSelection": {
@@ -3157,7 +3157,7 @@ exports.data = [
             ],
             "buffType":"AttackBuff",
             "availableCondition": [
-                { "type": "event", "event": "onBeginBattleTurn", "eventCount": 2 }
+                { "type": "event", "event": "onBeginBattleTurn", "eventCount": 1 }
             ],
             "levelConfig" : [
                 { "modifications": {"attack":{"src":{"attack":0.5},"c":5}}},
@@ -3180,7 +3180,7 @@ exports.data = [
                 "targetDelay": 0.3
             },
             "triggerCondition": [
-                { "type":"event","event":"onTurnBegin", "eventCount": 5 },
+                { "type":"event","event":"onTurnEnd", "eventCount": 5,"reset":true },
                 { "type": "chance", "chance": 0.3}
             ],
             "action": [
