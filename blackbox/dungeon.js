@@ -107,10 +107,14 @@
     }
   };
 
-  calcInfiniteRank = function(infiniteLevel) {
+  calcInfiniteRank = function(infiniteLevel, id) {
     var x;
     x = calcInfiniteX(infiniteLevel);
-    return Math.ceil(0.1 * x * x + 0.1 * x + 1);
+    if ((id != null) && id === 1) {
+      return 1.5 * x * x + 2 * x + 1;
+    } else {
+      return Math.ceil(0.1 * x * x + 0.1 * x + 1);
+    }
   };
 
   createUnits = function(rules, randFunc) {

@@ -1937,16 +1937,11 @@ var data = [
               hidden: true,
               dungeon: 113,
               description: "infinity",
-              eventName: "event_goblin",
+              eventName: "event_infinite",
               condition: function (obj, util) {
-                  return obj.counters.goblin < 3 || !obj.counters.goblin;
+                return true;
               },
               initialAction: function (obj) {
-                  if (obj.counters.goblin) {
-                      obj.counters.goblin++;
-                  } else {
-                      obj.counters.newProperty('goblin', 1);
-                  }
               }
           },
           {
