@@ -189,8 +189,15 @@
         if (tmp.length) {
           obj = (_ref = require('./trigger').doGetProperty(player, tmp.join('.'))) != null ? _ref : player;
         }
-        if (obj[key] == null) {
-          obj[key] = v.initialValue;
+        if (v.initialValue && (obj[key] == null)) {
+          obj[key] = 0;
+          if (typeof v.initialValue === 'number') {
+            obj[key] = v.initialValue;
+          } else if (v.initialValue === 'length') {
+            require('./db').queryLeaderboardLength(key, function(err, result) {
+              return obj[key] = +result;
+            });
+          }
         }
         v.func(player.name, obj[key]);
         return tap(obj, key, function(dummy, value) {

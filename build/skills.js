@@ -2931,7 +2931,8 @@ exports.data = [
                 "pool": "self"
             },
             "triggerCondition": [
-                { "type": "onTurnBegin", "cd": 10 }
+                { "type":"event","event":"onTurnBegin", "eventCount": 3 },
+                { "type": "chance", "chance": 0.5}
             ],
             "action": [
                 { "type": "installSpell", "spell": 129}
@@ -3019,7 +3020,8 @@ exports.data = [
         "config": {
             "basic" : { },
             "triggerCondition": [
-                { "type": "event", "event": "onTurnBegin", "count": 14 }
+                { "type":"event","event":"onTurnBegin", "eventCount": 5 },
+                { "type": "chance", "chance": 0.3}
             ],
             "targetSelection": {
                 "pool": "self",
@@ -3048,7 +3050,8 @@ exports.data = [
                 "targetDelay": 0.3
             },
             "triggerCondition": [
-                { "type": "onTurnBegin", "cd": 10 }
+                { "type":"event","event":"onTurnBegin", "eventCount": 3 },
+                { "type": "chance", "chance": 0.5}
             ],
             "targetSelection": {
                 "pool": "objects",
@@ -3127,7 +3130,8 @@ exports.data = [
                 "targetDelay": 0.3
             },
             "triggerCondition": [
-                { "type": "event", "event": "onTurnBegin", "eventCount": 14 }
+                { "type":"event","event":"onTurnBegin", "eventCount": 3 },
+                { "type": "chance", "chance": 0.5}
             ],
             "targetSelection": {
                 "pool": "objects",
@@ -3176,7 +3180,8 @@ exports.data = [
                 "targetDelay": 0.3
             },
             "triggerCondition": [
-                { "type": "onTurnBegin", "cd": 6 }
+                { "type":"event","event":"onTurnBegin", "eventCount": 5 },
+                { "type": "chance", "chance": 0.3}
             ],
             "action": [
                 {"type":"delay"},
@@ -3514,4 +3519,4 @@ exports.data = [
             ]
         }
     }
-]
+];
