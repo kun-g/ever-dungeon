@@ -1938,6 +1938,7 @@ var data = [
               dungeon: 113,
               description: "infinity",
               eventName: "event_infinite",
+	      "isInfinite":true,
               condition: function (obj, util) {
                 return true;
               },
@@ -1952,6 +1953,8 @@ var data = [
               dungeon: 114,
               description: "hunt83",
               eventName: "event_goblin",
+              "isInfinite":true,
+              "formularId":1,
               condition: function (obj, util) {
                   return obj.counters.goblin < 3 || !obj.counters.goblin;
               },
@@ -1971,6 +1974,8 @@ var data = [
               dungeon: 115,
               description: "hunt39",
               eventName: "event_hunt39",
+              "isInfinite":true,
+              "formularId":1,
               condition: function (obj, util) { return true; },
               initialAction: function (obj) { }
           },
@@ -1982,6 +1987,8 @@ var data = [
               dungeon: 116,
               description: "hunt112",
               eventName: "event_hunt112",
+              "isInfinite":true,
+              "formularId":1,
               condition: function (obj, util) { return true; },
               initialAction: function (obj) { }
           },
@@ -1994,6 +2001,8 @@ var data = [
               dungeon: 118,
               description: "hunt112",
               eventName: "event_goblin",
+              "isInfinite":true,
+              "formularId":1,
               condition: function (obj, util) { return true;
               },
               initialAction: function (obj) { }
@@ -2006,6 +2015,8 @@ var data = [
               dungeon: 119,
               description: "hunt39",
               eventName: "event_hunt39",
+              "isInfinite":true,
+              "formularId":1,
               condition: function (obj, util) { return true; },
               initialAction: function (obj) { }
           },
@@ -2017,6 +2028,8 @@ var data = [
               dungeon: 120,
               description: "hunt39",
               eventName: "event_hunt39",
+              "isInfinite":true,
+              "formularId":1,
               condition: function (obj, util) { return true; },
               initialAction: function (obj) { }
           },
@@ -2028,6 +2041,8 @@ var data = [
               dungeon: 121,
               description: "hunt39",
               eventName: "event_hunt39",
+              "isInfinite":true,
+              "formularId":1,
               condition: function (obj, util) { return true; },
               initialAction: function (obj) { }
           },
@@ -2039,6 +2054,8 @@ var data = [
               dungeon: 122,
               description: "hunt39",
               eventName: "event_hunt39",
+              "isInfinite":true,
+              "formularId":1,
               condition: function (obj, util) { return true; },
               initialAction: function (obj) { }
           },
@@ -2050,6 +2067,8 @@ var data = [
               dungeon: 123,
               description: "hunt39",
               eventName: "event_hunt39",
+              "isInfinite":true,
+              "formularId":1,
               condition: function (obj, util) { return true; },
               initialAction: function (obj) { }
           },
@@ -2061,6 +2080,8 @@ var data = [
               dungeon: 124,
               description: "hunt39",
               eventName: "event_hunt39",
+              "isInfinite":true,
+              "formularId":1,
               condition: function (obj, util) { return true; },
               initialAction: function (obj) { }
           },
@@ -2072,6 +2093,8 @@ var data = [
               dungeon: 125,
               description: "hunt39",
               eventName: "event_hunt39",
+              "isInfinite":true,
+              "formularId":1,
               condition: function (obj, util) { return true; },
               initialAction: function (obj) { }
           },
@@ -2083,6 +2106,8 @@ var data = [
               dungeon: 126,
               description: "hunt39",
               eventName: "event_hunt39",
+              "isInfinite":true,
+              "formularId":1,
               condition: function (obj, util) { return true; },
               initialAction: function (obj) { }
           }
