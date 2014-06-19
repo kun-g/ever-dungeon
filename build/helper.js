@@ -632,7 +632,8 @@
         return util.today.hour() >= 8 && util.diffDay(obj.timestamp.infinite, util.today);
       },
       reset: function(obj, util) {
-        return obj.timestamp.newProperty('infinite', util.currentTime());
+        obj.timestamp.newProperty('infinite', util.currentTime());
+        return obj.stage[120].level = 0;
       }
     },
     hunting: {
