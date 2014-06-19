@@ -189,8 +189,15 @@
         if (tmp.length) {
           obj = (_ref = require('./trigger').doGetProperty(player, tmp.join('.'))) != null ? _ref : player;
         }
-        if (obj[key] == null) {
-          obj[key] = v.initialValue;
+        if (v.initialValue && (obj[key] == null)) {
+          obj[key] = 0;
+          if (typeof v.initialValue === 'number') {
+            obj[key] = v.initialValue;
+          } else if (v.initialValue === 'length') {
+            require('./db').queryLeaderboardLength(key, function(err, result) {
+              return obj[key] = +result;
+            });
+          }
         }
         v.func(player.name, obj[key]);
         return tap(obj, key, function(dummy, value) {
@@ -201,13 +208,28 @@
     tickLeaderboard = function(board, cb) {
       cfg = localConfig[board];
       if (cfg.resetTime && matchDate(srvCfg[cfg.name], currentTime(), cfg.resetTime)) {
-        return require('./dbWrapper').removeLeaderboard(cfg.name, cb);
+        require('./dbWrapper').removeLeaderboard(cfg.name, cb);
+        srvCfg[cfg.name] = currentTime();
+        return dbLib.setServerConfig('Leaderboard', JSON.stringify(srvCfg));
       }
     };
     return exports.getPositionOnLeaderboard = function(board, name, from, to, cb) {
       tickLeaderboard(board);
       cfg = localConfig[board];
-      return require('./db').queryLeaderboard(cfg.name, name, from, to, cb);
+      return require('./db').queryLeaderboard(cfg.name, name, from, to, function(err, result) {
+        result.board = result.board.reduce((function(r, l, i) {
+          if (i % 2 === 0) {
+            r.name.push(l);
+          } else {
+            r.score.push(l);
+          }
+          return r;
+        }), {
+          name: [],
+          score: []
+        });
+        return cb(err, result);
+      });
     };
   };
 
@@ -270,11 +292,11 @@
       date = date.month(rule.month);
     }
     if (rule.day) {
-      date = date.day(rule.day);
+      date = date.add('day', rule.day);
     }
-    date = date.hour((_ref = rule.hour) != null ? _ref : 0);
-    date = date.minute((_ref1 = rule.minute) != null ? _ref1 : 0);
-    date = date.second((_ref2 = rule.second) != null ? _ref2 : 0);
+    date = date.set('hour', (_ref = rule.hour) != null ? _ref : 0);
+    date = date.set('minute', (_ref1 = rule.minute) != null ? _ref1 : 0);
+    date = date.set('second', (_ref2 = rule.second) != null ? _ref2 : 0);
     return date <= today;
   };
 
@@ -293,7 +315,7 @@
   exports.genUtil = genCampaignUtil;
 
   initCampaign = function(me, allCampaign, abIndex) {
-    var count, e, key, ret, util, _ref;
+    var actived, count, e, evt, key, ret, util, _ref;
     ret = [];
     util = genCampaignUtil();
     for (key in allCampaign) {
@@ -302,19 +324,34 @@
         if (key === 'event_daily') {
           ret = ret.concat(initDailyEvent(me, 'event_daily', e));
         } else {
-          if (e.canReset(me, util)) {
+          if (typeof e.canReset === "function" ? e.canReset(me, util) : void 0) {
             e.reset(me, util);
           }
-          count = (_ref = me.counters[key]) != null ? _ref : 0;
           if (e.id != null) {
-            ret.push({
+            actived = e.actived;
+            if (typeof actived === 'function') {
+              actived = actived(me, util);
+            }
+            evt = {
               NTF: Event_BountyUpdate,
               arg: {
                 bid: e.id,
-                sta: e.actived,
-                cnt: e.count - count
+                sta: actived
               }
-            });
+            };
+            count = (_ref = me.counters[key]) != null ? _ref : 0;
+            if (e.count) {
+              evt.arg.cnt = e.count - count;
+            }
+            if (key === 'hunting') {
+              if (!moment().isSame(gHuntingInfo.timestamp, 'day') || (gHuntingInfo.timestamp == null)) {
+                gHuntingInfo.timestamp = currentTime();
+                gHuntingInfo.stage = e.stages[rand() % e.stages.length];
+                dbLib.setServerConfig('huntingInfo', JSON.stringify(gHuntingInfo));
+              }
+              evt.arg.stg = +gHuntingInfo.stage;
+            }
+            ret.push(evt);
           }
         }
       }
@@ -554,7 +591,7 @@
       actived: 1,
       count: 3,
       canReset: function(obj, util) {
-        return util.diffDay(obj.timestamp.goblin, util.today) && util.today.hour() >= 8;
+        return util.diffDay(obj.timestamp.goblin, util.today);
       },
       reset: function(obj, util) {
         obj.timestamp.newProperty('goblin', util.currentTime());
@@ -567,7 +604,7 @@
       actived: 1,
       count: 3,
       canReset: function(obj, util) {
-        return (util.today.hour() >= 8) && (util.today.weekday() === 2 || util.today.weekday() === 4 || util.today.weekday() === 6 || util.today.weekday() === 0);
+        return (util.diffDay(obj.timestamp.enhance, util.today)) && (util.today.weekday() === 2 || util.today.weekday() === 4 || util.today.weekday() === 6 || util.today.weekday() === 0);
       },
       reset: function(obj, util) {
         obj.timestamp.newProperty('enhance', util.currentTime());
@@ -580,30 +617,203 @@
       actived: 1,
       count: 3,
       canReset: function(obj, util) {
-        return (util.today.hour() >= 8) && (util.today.weekday() === 1 || util.today.weekday() === 3 || util.today.weekday() === 5 || util.today.weekday() === 0);
+        return (util.diffDay(obj.timestamp.weapon, util.today)) && (util.today.weekday() === 1 || util.today.weekday() === 3 || util.today.weekday() === 5 || util.today.weekday() === 0);
       },
       reset: function(obj, util) {
         obj.timestamp.newProperty('weapon', util.currentTime());
         return obj.counters.newProperty('weapon', 0);
       }
     },
-    monthCard: {
+    infinite: {
       storeType: "player",
-      actived: function(obj, util) {
-        return obj.flags.monthCard;
-      },
-      count: 1,
+      id: 3,
+      actived: 1,
       canReset: function(obj, util) {
-        return util.diffDay(obj.timestamp.monthCard, util.today) && util.today.hour() >= 8;
+        return util.today.hour() >= 8 && util.diffDay(obj.timestamp.infinite, util.today);
       },
       reset: function(obj, util) {
-        return obj.timestamp.newProperty('monthCard', util.currentTime());
+        return obj.timestamp.newProperty('infinite', util.currentTime());
+      }
+    },
+    hunting: {
+      storeType: "player",
+      id: 4,
+      actived: 1,
+      stages: [114, 115, 116, 119, 120, 121, 122, 123, 124, 125, 126],
+      canReset: function(obj, util) {
+        return util.diffDay(obj.timestamp.hunting, util.today);
+      },
+      reset: function(obj, util) {
+        obj.timestamp.newProperty('hunting', util.currentTime());
+        return obj.counters.newProperty('monster', 0);
+      }
+    },
+    monthCard: {
+      storeType: "player",
+      id: -1,
+      actived: function(obj, util) {
+        if (!obj.counters.monthCard) {
+          return 0;
+        }
+        if (!obj.timestamp.monthCard) {
+          return 1;
+        }
+        if (moment().isSame(obj.timestamp.monthCard, 'day')) {
+          return 0;
+        }
+        return 1;
+      }
+    }
+  };
+
+  exports.intervalEvent = {
+    infinityDungeonPrize: {
+      time: {
+        hour: 6
+      },
+      func: function(libs) {
+        var cfg;
+        cfg = [
+          {
+            from: 0,
+            to: 0,
+            mail: {
+              type: MESSAGE_TYPE_SystemReward,
+              src: MESSAGE_REWARD_TYPE_SYSTEM,
+              prize: [
+                {
+                  type: 2,
+                  count: 50
+                }, {
+                  type: 0,
+                  value: 869,
+                  count: 1
+                }
+              ],
+              tit: "铁人试炼排行奖励",
+              txt: "恭喜你成为铁人试炼冠军，点击领取奖励。"
+            }
+          }, {
+            from: 1,
+            to: 4,
+            mail: {
+              type: MESSAGE_TYPE_SystemReward,
+              src: MESSAGE_REWARD_TYPE_SYSTEM,
+              prize: [
+                {
+                  type: 2,
+                  count: 20
+                }, {
+                  type: 0,
+                  value: 868,
+                  count: 1
+                }
+              ],
+              tit: "铁人试炼排行奖励",
+              txt: "恭喜你进入铁人试炼前五，点击领取奖励。"
+            }
+          }, {
+            from: 5,
+            to: 9,
+            mail: {
+              type: MESSAGE_TYPE_SystemReward,
+              src: MESSAGE_REWARD_TYPE_SYSTEM,
+              prize: [
+                {
+                  type: 2,
+                  count: 10
+                }, {
+                  type: 0,
+                  value: 867,
+                  count: 1
+                }
+              ],
+              tit: "铁人试炼排行奖励",
+              txt: "恭喜你进入铁人试炼前十，点击领取奖励。"
+            }
+          }
+        ];
+        return cfg.forEach(function(e) {
+          return libs.helper.getPositionOnLeaderboard(1, 'nobody', e.from, e.to, function(err, result) {
+            return result.board.name.forEach(function(name) {
+              return libs.db.deliverMessage(name, e.mail);
+            });
+          });
+        });
+      }
+    },
+    killMonsterPrize: {
+      time: {
+        hour: 6
+      },
+      func: function(libs) {
+        var cfg;
+        return cfg = [
+          {
+            from: 0,
+            to: 0,
+            mail: {
+              type: MESSAGE_TYPE_SystemReward,
+              src: MESSAGE_REWARD_TYPE_SYSTEM,
+              prize: [
+                {
+                  type: 2,
+                  count: 50
+                }, {
+                  type: 0,
+                  value: 866,
+                  count: 1
+                }
+              ],
+              tit: "狩猎任务排行奖励",
+              txt: "恭喜你成为狩猎任务冠军，点击领取奖励。"
+            }
+          }, {
+            from: 1,
+            to: 4,
+            mail: {
+              type: MESSAGE_TYPE_SystemReward,
+              src: MESSAGE_REWARD_TYPE_SYSTEM,
+              prize: [
+                {
+                  type: 2,
+                  count: 20
+                }, {
+                  type: 0,
+                  value: 865,
+                  count: 1
+                }
+              ],
+              tit: "铁人试炼排行奖励",
+              txt: "恭喜你进入狩猎任务前五，点击领取奖励。"
+            }
+          }, {
+            from: 5,
+            to: 9,
+            mail: {
+              type: MESSAGE_TYPE_SystemReward,
+              src: MESSAGE_REWARD_TYPE_SYSTEM,
+              prize: [
+                {
+                  type: 2,
+                  count: 10
+                }, {
+                  type: 0,
+                  value: 864,
+                  count: 1
+                }
+              ],
+              tit: "铁人试炼排行奖励",
+              txt: "恭喜你进入狩猎任务前十，点击领取奖励。"
+            }
+          }
+        ];
       }
     }
   };
 
   exports.splicePrize = function(prize) {
-    var goldPrize, otherPrize, wxPrize, xpPrize;
+    var count, goldPrize, id, itemFlag, otherPrize, wxPrize, xpPrize;
     goldPrize = {
       type: PRIZETYPE_GOLD,
       count: 0
@@ -616,6 +826,7 @@
       type: PRIZETYPE_WXP,
       count: 0
     };
+    itemFlag = {};
     otherPrize = [];
     prize.forEach(function(p) {
       if (p == null) {
@@ -628,10 +839,24 @@
           return xpPrize.count += p.count;
         case PRIZETYPE_GOLD:
           return goldPrize.count += p.count;
+        case PRIZETYPE_ITEM:
+          if (!itemFlag[p.value]) {
+            itemFlag[p.value] = 0;
+          }
+          console.log('x');
+          return itemFlag[p.value] += p.count;
         default:
           return otherPrize.push(p);
       }
     });
+    for (id in itemFlag) {
+      count = itemFlag[id];
+      otherPrize.push({
+        type: PRIZETYPE_ITEM,
+        value: +id,
+        count: +count
+      });
+    }
     return {
       goldPrize: goldPrize,
       xpPrize: xpPrize,
