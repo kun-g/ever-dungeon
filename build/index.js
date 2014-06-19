@@ -258,7 +258,7 @@ if (config) {
           var now = helperLib.currentTime();
           var moment = require('moment');
           if (helperLib.matchDate(now, now, cfg.time) &&
-              (!intervalCfg[key] || !moment.isSame(intervalCfg[key], 'day'))
+              (!intervalCfg[key] || !moment().isSame(intervalCfg[key], 'day'))
             ) {
             cfg.func({helper: helperLib, db: require('./db')});
             intervalCfg[key] = helperLib.currentTime();
