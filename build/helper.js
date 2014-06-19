@@ -640,14 +640,14 @@
       storeType: "player",
       id: 4,
       actived: 1,
-      stages: [114, 115, 116, 119, 120, 121, 122, 123, 124, 125, 126],
+      stages: [121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132],
       canReset: function(obj, util) {
         return util.diffDay(obj.timestamp.hunting, util.today);
       },
       reset: function(obj, util) {
         var s, stages, _i, _len;
         obj.timestamp.newProperty('hunting', util.currentTime());
-        stages = [114, 115, 116, 119, 120, 121, 122, 123, 124, 125, 126];
+        stages = [121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132];
         for (_i = 0, _len = stages.length; _i < _len; _i++) {
           s = stages[_i];
           obj.stage[s].newProperty('level', 0);
