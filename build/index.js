@@ -256,6 +256,7 @@ if (config) {
         for (var key in config) {
           var cfg = config[key];
           var now = helperLib.currentTime();
+          var moment = require('moment');
           if (helperLib.matchDate(now, now, cfg.time) &&
               (!intervalCfg[key] || !moment.isSame(intervalCfg[key], 'day'))
             ) {
