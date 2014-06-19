@@ -249,20 +249,16 @@ if (config) {
     dbLib.getServerConfig('Interval', function (err, arg) {
       if (arg) { intervalCfg = JSON.parse(arg); }
 
-      for (var key in config) {
-        var cfg = config[key];
-        if (!intervalCfg[key]) {
-          intervalCfg[key] = helperLib.currentTime();
-        }
-      }
-
       // TODO: 多个服务器的情况
       dbLib.setServerConfig('Interval', JSON.stringify(intervalCfg));
       setInterval(function () {
         var flag = false;
         for (var key in config) {
           var cfg = config[key];
-          if (helperLib.matchDate(intervalCfg[key], helperLib.currentTime(), cfg.time)) {
+          var now = helperLib.currentTime();
+          if (helperLib.matchDate(now, now, cfg.time) &&
+              (!intervalCfg[key] || !moment.isSame(intervalCfg[key], 'day'))
+            ) {
             cfg.func({helper: helperLib, db: require('./db')});
             intervalCfg[key] = helperLib.currentTime();
             flag = true;
