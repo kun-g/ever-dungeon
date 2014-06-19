@@ -14102,41 +14102,50 @@ exports.data = [
             "elitePool":[
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 }
             ],
             "bossPool":[
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 }
             ]
         },
@@ -14354,57 +14363,70 @@ exports.data = [
             "elitePool":[
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 }
             ],
             "bossPool":[
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 }
             ],
             "rangePool":[
@@ -14590,49 +14612,60 @@ exports.data = [
             "elitePool":[
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 }
             ],
             "bossPool":[
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 }
             ],
             "normalPool":[
@@ -14854,41 +14887,50 @@ exports.data = [
             "elitePool":[
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 }
             ],
             "bossPool":[
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 }
             ],
             "normalPool":[
@@ -15115,53 +15157,65 @@ exports.data = [
             "elitePool":[
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 }
             ],
             "bossPool":[
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 }
             ],
             "normalPool":[
@@ -15388,41 +15442,50 @@ exports.data = [
             "elitePool":[
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 }
             ],
             "bossPool":[
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":1
+                    "weight":1 ,
+                    "keyed":true
                 }
             ],
             "normalPool":[
@@ -15644,19 +15707,23 @@ exports.data = [
             "elitePool":[
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 }
             ],
             "bossPool":[
@@ -15904,37 +15971,45 @@ exports.data = [
             "elitePool":[
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 }
             ],
             "bossPool":[
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 }
             ],
             "normalPool":[
@@ -16152,41 +16227,50 @@ exports.data = [
             "elitePool":[
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 }
             ],
             "bossPool":[
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 }
             ],
             "normalPool":[
@@ -16408,57 +16492,70 @@ exports.data = [
             "elitePool":[
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 }
             ],
             "bossPool":[
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 }
             ],
             "normalPool":[
@@ -16678,57 +16775,70 @@ exports.data = [
         "elitePool":[
             {
                 "id":33,
-                "weight":2
+                "weight":2,
+                "keyed":true
             },
             {
                 "id":23,
-                "weight":2
+                "weight":2 ,
+                "keyed":true
             },
             {
                 "id":54,
-                "weight":2
+                "weight":2 ,
+                "keyed":true
             },
             {
                 "id":34,
-                "weight":2
+                "weight":2 ,
+                "keyed":true
             },
             {
                 "id":20,
-                "weight":2
+                "weight":2,
+                "keyed":true
             },
             {
                 "id":21,
-                "weight":2
+                "weight":2 ,
+                "keyed":true
             }
         ],
         "bossPool":[
             {
                 "id":32,
-                "weight":2
+                "weight":2,
+                "keyed":true
             },
             {
                 "id":34,
-                "weight":2
+                "weight":2,
+                "keyed":true
             },
             {
                 "id":33,
-                "weight":2
+                "weight":2 ,
+                "keyed":true
             },
             {
                 "id":55,
-                "weight":2
+                "weight":2 ,
+                "keyed":true
             },
             {
                 "id":52,
-                "weight":2
+                "weight":2,
+                "keyed":true
             },
             {
                 "id":53,
-                "weight":2
+                "weight":2 ,
+                "keyed":true
             },
             {
                 "id":30,
-                "weight":2
+                "weight":2,
+                "keyed":true
             }
         ],
         "levels" :[
@@ -24186,478 +24296,596 @@ exports.data = [
             "elitePool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 }
 
             ],
             "bossPool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 }
 
             ],
@@ -25092,478 +25320,596 @@ exports.data = [
             "elitePool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 }
 
             ],
             "bossPool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 }
 
             ],
@@ -25999,478 +26345,596 @@ exports.data = [
             "elitePool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 }
 
             ],
             "bossPool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 }
 
             ],
@@ -26906,478 +27370,596 @@ exports.data = [
             "elitePool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 }
 
             ],
             "bossPool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 }
 
             ],
@@ -28236,478 +28818,596 @@ exports.data = [
             "elitePool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 }
 
             ],
             "bossPool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 }
 
             ],
@@ -29143,478 +29843,596 @@ exports.data = [
             "elitePool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 }
 
             ],
             "bossPool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 }
 
             ],
@@ -30050,478 +30868,596 @@ exports.data = [
             "elitePool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 }
 
             ],
             "bossPool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 }
 
             ],
@@ -30957,478 +31893,596 @@ exports.data = [
             "elitePool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 }
 
             ],
             "bossPool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 }
 
             ],
@@ -31864,478 +32918,596 @@ exports.data = [
             "elitePool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 }
 
             ],
             "bossPool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 }
 
             ],
@@ -32771,478 +33943,596 @@ exports.data = [
             "elitePool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 }
 
             ],
             "bossPool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 }
 
             ],
@@ -33678,478 +34968,596 @@ exports.data = [
             "elitePool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 }
 
             ],
             "bossPool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 }
 
             ],
@@ -34585,478 +35993,596 @@ exports.data = [
             "elitePool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 }
 
             ],
             "bossPool":[
                 {
                     "id":20,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":21,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":22,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":23,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":24,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":25,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":26,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":27,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":28,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":29,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":30,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":31,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":32,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":33,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":34,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":52,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":53,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":54,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":55,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":56,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":57,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":58,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":59,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":60,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":61,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":62,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":63,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":64,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":65,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":66,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":84,
-                    "weight":2
+                    "weight":2  ,
+                    "keyed":true
                 },
                 {
                     "id":85,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":86,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":87,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":88,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":89,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":90,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":91,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":92,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":93,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":94,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":95,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":96,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":97,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":98,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":116,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":117,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":118,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":119,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":120,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":121,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":123,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":124,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":125,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":126,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":127,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":128,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 },
                 {
                     "id":129,
-                    "weight":2
+                    "weight":2 ,
+                    "keyed":true
                 },
                 {
                     "id":130,
-                    "weight":2
+                    "weight":2,
+                    "keyed":true
                 }
 
             ],
