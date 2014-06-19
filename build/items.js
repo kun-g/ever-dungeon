@@ -408,11 +408,11 @@ exports.data = [
 	},
 	{
 		"classId": 25,
-		"label": "勇者行囊",
+		"label": "金币大礼包",
 		"icon": "item-giftbox.png",
 		"category": 0,
 		"subcategory": 0,
-		"description": "欢迎来到地下城！这是为勇者们准备的礼物，点击领取。",
+		"description": "打开即可获得金币宝石奖励。",
 		"quality": 1,
 		"prize": [
 			{
@@ -3692,7 +3692,7 @@ exports.data = [
 	},
 	{
 		"classId": 104,
-		"label": "初阶长靴（优质）",
+		"label": "初阶长靴(优质)",
 		"icon": "emfoot2.png",
 		"category": 1,
 		"subcategory": 4,
@@ -3735,7 +3735,7 @@ exports.data = [
 	},
 	{
 		"classId": 105,
-		"label": "初阶法师袍（优质）",
+		"label": "初阶法师袍(优质)",
 		"icon": "emchest2.png",
 		"category": 1,
 		"subcategory": 2,
@@ -3781,7 +3781,7 @@ exports.data = [
 	},
 	{
 		"classId": 106,
-		"label": "初阶魔法书（优质）",
+		"label": "初阶魔法书(优质)",
 		"icon": "emsubweapon2.png",
 		"category": 1,
 		"subcategory": 1,
@@ -3818,7 +3818,7 @@ exports.data = [
 	},
 	{
 		"classId": 107,
-		"label": "初阶法杖（优质）",
+		"label": "初阶法杖(优质)",
 		"icon": "emmainweapon2.png",
 		"category": 1,
 		"subcategory": 0,
@@ -3856,7 +3856,7 @@ exports.data = [
 	},
 	{
 		"classId": 108,
-		"label": "轻盈鞋子（优质）",
+		"label": "轻盈鞋子(优质)",
 		"icon": "epfoot2.png",
 		"category": 1,
 		"subcategory": 4,
@@ -3897,7 +3897,7 @@ exports.data = [
 	},
 	{
 		"classId": 109,
-		"label": "轻巧外衣（优质）",
+		"label": "轻巧外衣(优质)",
 		"icon": "epchest2.png",
 		"category": 1,
 		"subcategory": 2,
@@ -3943,7 +3943,7 @@ exports.data = [
 	},
 	{
 		"classId": 110,
-		"label": "精巧十字架（优质）",
+		"label": "精巧十字架(优质)",
 		"icon": "epsubweapon2.png",
 		"category": 1,
 		"subcategory": 1,
@@ -3982,7 +3982,7 @@ exports.data = [
 	},
 	{
 		"classId": 111,
-		"label": "精巧权杖（优质）",
+		"label": "精巧权杖(优质)",
 		"icon": "epmainweapon2.png",
 		"category": 1,
 		"subcategory": 0,
@@ -4019,7 +4019,7 @@ exports.data = [
 	},
 	{
 		"classId": 112,
-		"label": "学徒战靴（优质）",
+		"label": "学徒战靴(优质)",
 		"icon": "ewfoot2.png",
 		"category": 1,
 		"subcategory": 4,
@@ -4061,7 +4061,7 @@ exports.data = [
 	},
 	{
 		"classId": 113,
-		"label": "学徒铠甲（优质）",
+		"label": "学徒铠甲(优质)",
 		"icon": "ewchest2.png",
 		"category": 1,
 		"subcategory": 2,
@@ -4106,7 +4106,7 @@ exports.data = [
 	},
 	{
 		"classId": 114,
-		"label": "学徒小盾（优质）",
+		"label": "学徒小盾(优质)",
 		"icon": "ewsubweapon2.png",
 		"category": 1,
 		"subcategory": 1,
@@ -4142,7 +4142,7 @@ exports.data = [
 	},
 	{
 		"classId": 115,
-		"label": "学徒长剑（优质）",
+		"label": "学徒长剑(优质)",
 		"icon": "ewmainweapon2.png",
 		"category": 1,
 		"subcategory": 0,
@@ -4181,7 +4181,7 @@ exports.data = [
 	},
 	{
 		"classId": 116,
-		"label": "见习长靴（优质）",
+		"label": "见习长靴(优质)",
 		"icon": "emfoot3.png",
 		"category": 1,
 		"subcategory": 4,
@@ -4226,7 +4226,7 @@ exports.data = [
 	},
 	{
 		"classId": 117,
-		"label": "见习法袍（优质）",
+		"label": "见习法袍(优质)",
 		"icon": "emchest3.png",
 		"category": 1,
 		"subcategory": 2,
@@ -4274,7 +4274,7 @@ exports.data = [
 	},
 	{
 		"classId": 118,
-		"label": "见习魔法书（优质）",
+		"label": "见习魔法书(优质)",
 		"icon": "emsubweapon3.png",
 		"category": 1,
 		"subcategory": 1,
@@ -4313,7 +4313,7 @@ exports.data = [
 	},
 	{
 		"classId": 119,
-		"label": "见习法杖（优质）",
+		"label": "见习法杖(优质)",
 		"icon": "emmainweapon3.png",
 		"category": 1,
 		"subcategory": 0,
@@ -4353,7 +4353,7 @@ exports.data = [
 	},
 	{
 		"classId": 120,
-		"label": "祷告之鞋（优质）",
+		"label": "祷告之鞋(优质)",
 		"icon": "epfoot3.png",
 		"category": 1,
 		"subcategory": 4,
@@ -4396,7 +4396,7 @@ exports.data = [
 	},
 	{
 		"classId": 121,
-		"label": "祷告之衣（优质）",
+		"label": "祷告之衣(优质)",
 		"icon": "epchest3.png",
 		"category": 1,
 		"subcategory": 2,
@@ -4444,7 +4444,7 @@ exports.data = [
 	},
 	{
 		"classId": 122,
-		"label": "祷告十字架（优质）",
+		"label": "祷告十字架(优质)",
 		"icon": "epsubweapon3.png",
 		"category": 1,
 		"subcategory": 1,
@@ -4485,7 +4485,7 @@ exports.data = [
 	},
 	{
 		"classId": 123,
-		"label": "祷告权杖（优质）",
+		"label": "祷告权杖(优质)",
 		"icon": "epmainweapon3.png",
 		"category": 1,
 		"subcategory": 0,
@@ -4524,7 +4524,7 @@ exports.data = [
 	},
 	{
 		"classId": 124,
-		"label": "战斗铁靴（优质）",
+		"label": "战斗铁靴(优质)",
 		"icon": "ewfoot3.png",
 		"category": 1,
 		"subcategory": 4,
@@ -4568,7 +4568,7 @@ exports.data = [
 	},
 	{
 		"classId": 125,
-		"label": "战斗铠甲（优质）",
+		"label": "战斗铠甲(优质)",
 		"icon": "ewchest3.png",
 		"category": 1,
 		"subcategory": 2,
@@ -4616,7 +4616,7 @@ exports.data = [
 	},
 	{
 		"classId": 126,
-		"label": "战斗盾（优质）",
+		"label": "战斗盾(优质)",
 		"icon": "ewsubweapon3.png",
 		"category": 1,
 		"subcategory": 1,
@@ -4655,7 +4655,7 @@ exports.data = [
 	},
 	{
 		"classId": 127,
-		"label": "战斗长剑（优质）",
+		"label": "战斗长剑(优质)",
 		"icon": "ewmainweapon3.png",
 		"category": 1,
 		"subcategory": 0,
@@ -4696,7 +4696,7 @@ exports.data = [
 	},
 	{
 		"classId": 128,
-		"label": "精致长靴（优质）",
+		"label": "精致长靴(优质)",
 		"icon": "emfoot4.png",
 		"category": 1,
 		"subcategory": 4,
@@ -4741,7 +4741,7 @@ exports.data = [
 	},
 	{
 		"classId": 129,
-		"label": "精致法袍（优质）",
+		"label": "精致法袍(优质)",
 		"icon": "emchest4.png",
 		"category": 1,
 		"subcategory": 2,
@@ -4789,7 +4789,7 @@ exports.data = [
 	},
 	{
 		"classId": 130,
-		"label": "金边魔法书（优质）",
+		"label": "金边魔法书(优质)",
 		"icon": "emsubweapon4.png",
 		"category": 1,
 		"subcategory": 1,
@@ -4828,7 +4828,7 @@ exports.data = [
 	},
 	{
 		"classId": 131,
-		"label": "精致法杖（优质）",
+		"label": "精致法杖(优质)",
 		"icon": "emmainweapon4.png",
 		"category": 1,
 		"subcategory": 0,
@@ -4868,7 +4868,7 @@ exports.data = [
 	},
 	{
 		"classId": 132,
-		"label": "祈愿之鞋（优质）",
+		"label": "祈愿之鞋(优质)",
 		"icon": "epfoot4.png",
 		"category": 1,
 		"subcategory": 4,
@@ -4911,7 +4911,7 @@ exports.data = [
 	},
 	{
 		"classId": 133,
-		"label": "祈愿之衣（优质）",
+		"label": "祈愿之衣(优质)",
 		"icon": "epchest4.png",
 		"category": 1,
 		"subcategory": 2,
@@ -4959,7 +4959,7 @@ exports.data = [
 	},
 	{
 		"classId": 134,
-		"label": "祈愿十字架（优质）",
+		"label": "祈愿十字架(优质)",
 		"icon": "epsubweapon4.png",
 		"category": 1,
 		"subcategory": 1,
@@ -5000,7 +5000,7 @@ exports.data = [
 	},
 	{
 		"classId": 135,
-		"label": "祈愿权杖（优质）",
+		"label": "祈愿权杖(优质)",
 		"icon": "epmainweapon4.png",
 		"category": 1,
 		"subcategory": 0,
@@ -5039,7 +5039,7 @@ exports.data = [
 	},
 	{
 		"classId": 136,
-		"label": "卫兵铁靴（优质）",
+		"label": "卫兵铁靴(优质)",
 		"icon": "ewfoot4.png",
 		"category": 1,
 		"subcategory": 4,
@@ -5083,7 +5083,7 @@ exports.data = [
 	},
 	{
 		"classId": 137,
-		"label": "卫兵铁甲（优质）",
+		"label": "卫兵铁甲(优质)",
 		"icon": "ewchest4.png",
 		"category": 1,
 		"subcategory": 2,
@@ -5131,7 +5131,7 @@ exports.data = [
 	},
 	{
 		"classId": 138,
-		"label": "卫兵圆盾（优质）",
+		"label": "卫兵圆盾(优质)",
 		"icon": "ewsubweapon4.png",
 		"category": 1,
 		"subcategory": 1,
@@ -5170,7 +5170,7 @@ exports.data = [
 	},
 	{
 		"classId": 139,
-		"label": "卫兵长剑（优质）",
+		"label": "卫兵长剑(优质)",
 		"icon": "ewmainweapon4.png",
 		"category": 1,
 		"subcategory": 0,
@@ -5211,7 +5211,7 @@ exports.data = [
 	},
 	{
 		"classId": 140,
-		"label": "传承长靴（优质）",
+		"label": "传承长靴(优质)",
 		"icon": "emfoot5.png",
 		"category": 1,
 		"subcategory": 4,
@@ -5266,7 +5266,7 @@ exports.data = [
 	},
 	{
 		"classId": 141,
-		"label": "传承法袍（优质）",
+		"label": "传承法袍(优质)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "魔法师代代相传的法袍",
@@ -5329,7 +5329,7 @@ exports.data = [
 	},
 	{
 		"classId": 142,
-		"label": "古旧魔法书（优质）",
+		"label": "古旧魔法书(优质)",
 		"icon": "emsubweapon5.png",
 		"category": 1,
 		"subcategory": 1,
@@ -5408,7 +5408,7 @@ exports.data = [
 	},
 	{
 		"classId": 144,
-		"label": "侍僧之鞋（优质）",
+		"label": "侍僧之鞋(优质)",
 		"icon": "epfoot5.png",
 		"category": 1,
 		"subcategory": 4,
@@ -5461,7 +5461,7 @@ exports.data = [
 	},
 	{
 		"classId": 145,
-		"label": "侍僧外衣（优质）",
+		"label": "侍僧外衣(优质)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "长久岁月间侍僧们的标准着装",
@@ -5524,7 +5524,7 @@ exports.data = [
 	},
 	{
 		"classId": 146,
-		"label": "侍僧十字架（优质）",
+		"label": "侍僧十字架(优质)",
 		"icon": "epsubweapon5.png",
 		"category": 1,
 		"subcategory": 1,
@@ -5565,7 +5565,7 @@ exports.data = [
 	},
 	{
 		"classId": 147,
-		"label": "侍僧权杖（优质）",
+		"label": "侍僧权杖(优质)",
 		"icon": "epmainweapon5.png",
 		"category": 1,
 		"subcategory": 0,
@@ -5604,7 +5604,7 @@ exports.data = [
 	},
 	{
 		"classId": 148,
-		"label": "轻巧战靴（优质）",
+		"label": "轻巧战靴(优质)",
 		"icon": "ewfoot5.png",
 		"category": 1,
 		"subcategory": 4,
@@ -5648,7 +5648,7 @@ exports.data = [
 	},
 	{
 		"classId": 149,
-		"label": "坚固铁甲（优质）",
+		"label": "坚固铁甲(优质)",
 		"icon": "ewchest5.png",
 		"category": 1,
 		"subcategory": 2,
@@ -5696,7 +5696,7 @@ exports.data = [
 	},
 	{
 		"classId": 150,
-		"label": "坚固圆盾（优质）",
+		"label": "坚固圆盾(优质)",
 		"category": 1,
 		"subcategory": 1,
 		"description": "用上好的素材制成的坚固且耐用的圆盾",
@@ -5742,7 +5742,7 @@ exports.data = [
 	},
 	{
 		"classId": 151,
-		"label": "锋利长剑（优质）",
+		"label": "锋利长剑(优质)",
 		"icon": "ewmainweapon5.png",
 		"category": 1,
 		"subcategory": 0,
@@ -5783,7 +5783,7 @@ exports.data = [
 	},
 	{
 		"classId": 152,
-		"label": "长者长靴（优质）",
+		"label": "长者长靴(优质)",
 		"icon": "emfoot6.png",
 		"category": 1,
 		"subcategory": 4,
@@ -5838,7 +5838,7 @@ exports.data = [
 	},
 	{
 		"classId": 153,
-		"label": "长者法袍（优质）",
+		"label": "长者法袍(优质)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "魔法师资历的证明，略显过时但品质不凡",
@@ -5901,7 +5901,7 @@ exports.data = [
 	},
 	{
 		"classId": 154,
-		"label": "长者魔法书（优质）",
+		"label": "长者魔法书(优质)",
 		"icon": "emsubweapon6.png",
 		"category": 1,
 		"subcategory": 1,
@@ -5937,7 +5937,7 @@ exports.data = [
 	},
 	{
 		"classId": 155,
-		"label": "长者法杖（优质）",
+		"label": "长者法杖(优质)",
 		"icon": "emmainweapon6.png",
 		"category": 1,
 		"subcategory": 0,
@@ -5978,7 +5978,7 @@ exports.data = [
 	},
 	{
 		"classId": 156,
-		"label": "预言之鞋（优质）",
+		"label": "预言之鞋(优质)",
 		"icon": "epfoot6.png",
 		"category": 1,
 		"subcategory": 4,
@@ -6031,7 +6031,7 @@ exports.data = [
 	},
 	{
 		"classId": 157,
-		"label": "预言外衣（优质）",
+		"label": "预言外衣(优质)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "预言者神圣的外衣",
@@ -6094,7 +6094,7 @@ exports.data = [
 	},
 	{
 		"classId": 158,
-		"label": "预言十字架（优质）",
+		"label": "预言十字架(优质)",
 		"icon": "epsubweapon6.png",
 		"category": 1,
 		"subcategory": 1,
@@ -6135,7 +6135,7 @@ exports.data = [
 	},
 	{
 		"classId": 159,
-		"label": "预言权杖（优质）",
+		"label": "预言权杖(优质)",
 		"icon": "epmainweapon6.png",
 		"category": 1,
 		"subcategory": 0,
@@ -6174,7 +6174,7 @@ exports.data = [
 	},
 	{
 		"classId": 160,
-		"label": "厚重钢靴（优质）",
+		"label": "厚重钢靴(优质)",
 		"icon": "ewfoot6.png",
 		"category": 1,
 		"subcategory": 4,
@@ -6218,7 +6218,7 @@ exports.data = [
 	},
 	{
 		"classId": 161,
-		"label": "厚重战甲（优质）",
+		"label": "厚重战甲(优质)",
 		"icon": "ewchest6.png",
 		"category": 1,
 		"subcategory": 2,
@@ -6266,7 +6266,7 @@ exports.data = [
 	},
 	{
 		"classId": 162,
-		"label": "厚重钢盾（优质）",
+		"label": "厚重钢盾(优质)",
 		"category": 1,
 		"subcategory": 1,
 		"description": "工艺与用料都非常上乘，能够为战士提供最强大的保护",
@@ -6312,7 +6312,7 @@ exports.data = [
 	},
 	{
 		"classId": 163,
-		"label": "厚重钢剑（优质）",
+		"label": "厚重钢剑(优质)",
 		"icon": "ewmainweapon6.png",
 		"category": 1,
 		"subcategory": 0,
@@ -6353,7 +6353,7 @@ exports.data = [
 	},
 	{
 		"classId": 164,
-		"label": "驱魔长靴（优质）",
+		"label": "驱魔长靴(优质)",
 		"icon": "emfoot7.png",
 		"category": 1,
 		"subcategory": 4,
@@ -6407,7 +6407,7 @@ exports.data = [
 	},
 	{
 		"classId": 165,
-		"label": "驱魔法袍（优质）",
+		"label": "驱魔法袍(优质)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "寄宿驱魔之力的神秘法袍",
@@ -6469,7 +6469,7 @@ exports.data = [
 	},
 	{
 		"classId": 166,
-		"label": "驱散魔法书（优质）",
+		"label": "驱散魔法书(优质)",
 		"icon": "emsubweapon7.png",
 		"category": 1,
 		"subcategory": 1,
@@ -6507,7 +6507,7 @@ exports.data = [
 	},
 	{
 		"classId": 167,
-		"label": "驱逐魔杖（优质）",
+		"label": "驱逐魔杖(优质)",
 		"icon": "emmainweapon7.png",
 		"category": 1,
 		"subcategory": 0,
@@ -6546,7 +6546,7 @@ exports.data = [
 	},
 	{
 		"classId": 168,
-		"label": "神官之鞋（优质）",
+		"label": "神官之鞋(优质)",
 		"icon": "epfoot7.png",
 		"category": 1,
 		"subcategory": 4,
@@ -6598,7 +6598,7 @@ exports.data = [
 	},
 	{
 		"classId": 169,
-		"label": "神官外衣（优质）",
+		"label": "神官外衣(优质)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "神官们的衣服，威严与神圣并重",
@@ -6660,7 +6660,7 @@ exports.data = [
 	},
 	{
 		"classId": 170,
-		"label": "神官十字架（优质）",
+		"label": "神官十字架(优质)",
 		"icon": "epsubweapon7.png",
 		"category": 1,
 		"subcategory": 1,
@@ -6700,7 +6700,7 @@ exports.data = [
 	},
 	{
 		"classId": 171,
-		"label": "神官权杖（优质）",
+		"label": "神官权杖(优质)",
 		"icon": "epmainweapon7.png",
 		"category": 1,
 		"subcategory": 0,
@@ -6738,7 +6738,7 @@ exports.data = [
 	},
 	{
 		"classId": 172,
-		"label": "守护钢靴（优质）",
+		"label": "守护钢靴(优质)",
 		"icon": "ewfoot7.png",
 		"category": 1,
 		"subcategory": 4,
@@ -6781,7 +6781,7 @@ exports.data = [
 	},
 	{
 		"classId": 173,
-		"label": "守护战甲（优质）",
+		"label": "守护战甲(优质)",
 		"icon": "ewchest7.png",
 		"category": 1,
 		"subcategory": 2,
@@ -6828,7 +6828,7 @@ exports.data = [
 	},
 	{
 		"classId": 174,
-		"label": "守护战盾（优质）",
+		"label": "守护战盾(优质)",
 		"category": 1,
 		"subcategory": 1,
 		"description": "为守护者配备的战盾，能够抵御各种伤害",
@@ -6873,7 +6873,7 @@ exports.data = [
 	},
 	{
 		"classId": 175,
-		"label": "守护之剑（优质）",
+		"label": "守护之剑(优质)",
 		"icon": "ewmainweapon7.png",
 		"category": 1,
 		"subcategory": 0,
@@ -6913,7 +6913,7 @@ exports.data = [
 	},
 	{
 		"classId": 176,
-		"label": "见习长靴（稀有）",
+		"label": "见习长靴(稀有)",
 		"icon": "emfoot3.png",
 		"category": 1,
 		"subcategory": 4,
@@ -6956,7 +6956,7 @@ exports.data = [
 	},
 	{
 		"classId": 177,
-		"label": "见习法袍（稀有）",
+		"label": "见习法袍(稀有)",
 		"icon": "emchest3.png",
 		"category": 1,
 		"subcategory": 2,
@@ -7002,7 +7002,7 @@ exports.data = [
 	},
 	{
 		"classId": 178,
-		"label": "见习魔法书（稀有）",
+		"label": "见习魔法书(稀有)",
 		"icon": "emsubweapon3.png",
 		"category": 1,
 		"subcategory": 1,
@@ -7039,7 +7039,7 @@ exports.data = [
 	},
 	{
 		"classId": 179,
-		"label": "见习法杖（稀有）",
+		"label": "见习法杖(稀有)",
 		"icon": "emmainweapon3.png",
 		"category": 1,
 		"subcategory": 0,
@@ -7077,7 +7077,7 @@ exports.data = [
 	},
 	{
 		"classId": 180,
-		"label": "祷告之鞋（稀有）",
+		"label": "祷告之鞋(稀有)",
 		"icon": "epfoot3.png",
 		"category": 1,
 		"subcategory": 4,
@@ -7118,7 +7118,7 @@ exports.data = [
 	},
 	{
 		"classId": 181,
-		"label": "祷告之衣（稀有）",
+		"label": "祷告之衣(稀有)",
 		"icon": "epchest3.png",
 		"category": 1,
 		"subcategory": 2,
@@ -7164,7 +7164,7 @@ exports.data = [
 	},
 	{
 		"classId": 182,
-		"label": "祷告十字架（稀有）",
+		"label": "祷告十字架(稀有)",
 		"icon": "epsubweapon3.png",
 		"category": 1,
 		"subcategory": 1,
@@ -7203,7 +7203,7 @@ exports.data = [
 	},
 	{
 		"classId": 183,
-		"label": "祷告权杖（稀有）",
+		"label": "祷告权杖(稀有)",
 		"icon": "epmainweapon3.png",
 		"category": 1,
 		"subcategory": 0,
@@ -7240,7 +7240,7 @@ exports.data = [
 	},
 	{
 		"classId": 184,
-		"label": "战斗铁靴（稀有）",
+		"label": "战斗铁靴(稀有)",
 		"icon": "ewfoot3.png",
 		"category": 1,
 		"subcategory": 4,
@@ -7282,7 +7282,7 @@ exports.data = [
 	},
 	{
 		"classId": 185,
-		"label": "战斗铠甲（稀有）",
+		"label": "战斗铠甲(稀有)",
 		"icon": "ewchest3.png",
 		"category": 1,
 		"subcategory": 2,
@@ -7328,7 +7328,7 @@ exports.data = [
 	},
 	{
 		"classId": 186,
-		"label": "战斗盾（稀有）",
+		"label": "战斗盾(稀有)",
 		"icon": "ewsubweapon3.png",
 		"category": 1,
 		"subcategory": 1,
@@ -7365,7 +7365,7 @@ exports.data = [
 	},
 	{
 		"classId": 187,
-		"label": "战斗长剑（稀有）",
+		"label": "战斗长剑(稀有)",
 		"icon": "ewmainweapon3.png",
 		"category": 1,
 		"subcategory": 0,
@@ -7404,7 +7404,7 @@ exports.data = [
 	},
 	{
 		"classId": 188,
-		"label": "精致长靴（稀有）",
+		"label": "精致长靴(稀有)",
 		"icon": "emfoot4.png",
 		"category": 1,
 		"subcategory": 4,
@@ -7449,7 +7449,7 @@ exports.data = [
 	},
 	{
 		"classId": 189,
-		"label": "精致法袍（稀有）",
+		"label": "精致法袍(稀有)",
 		"icon": "emchest4.png",
 		"category": 1,
 		"subcategory": 2,
@@ -7497,7 +7497,7 @@ exports.data = [
 	},
 	{
 		"classId": 190,
-		"label": "金边魔法书（稀有）",
+		"label": "金边魔法书(稀有)",
 		"icon": "emsubweapon4.png",
 		"category": 1,
 		"subcategory": 1,
@@ -7536,7 +7536,7 @@ exports.data = [
 	},
 	{
 		"classId": 191,
-		"label": "精致法杖（稀有）",
+		"label": "精致法杖(稀有)",
 		"icon": "emmainweapon4.png",
 		"category": 1,
 		"subcategory": 0,
@@ -7576,7 +7576,7 @@ exports.data = [
 	},
 	{
 		"classId": 192,
-		"label": "祈愿之鞋（稀有）",
+		"label": "祈愿之鞋(稀有)",
 		"icon": "epfoot4.png",
 		"category": 1,
 		"subcategory": 4,
@@ -7619,7 +7619,7 @@ exports.data = [
 	},
 	{
 		"classId": 193,
-		"label": "祈愿之衣（稀有）",
+		"label": "祈愿之衣(稀有)",
 		"icon": "epchest4.png",
 		"category": 1,
 		"subcategory": 2,
@@ -7667,7 +7667,7 @@ exports.data = [
 	},
 	{
 		"classId": 194,
-		"label": "祈愿十字架（稀有）",
+		"label": "祈愿十字架(稀有)",
 		"icon": "epsubweapon4.png",
 		"category": 1,
 		"subcategory": 1,
@@ -7708,7 +7708,7 @@ exports.data = [
 	},
 	{
 		"classId": 195,
-		"label": "祈愿权杖（稀有）",
+		"label": "祈愿权杖(稀有)",
 		"icon": "epmainweapon4.png",
 		"category": 1,
 		"subcategory": 0,
@@ -7747,7 +7747,7 @@ exports.data = [
 	},
 	{
 		"classId": 196,
-		"label": "卫兵铁靴（稀有）",
+		"label": "卫兵铁靴(稀有)",
 		"icon": "ewfoot4.png",
 		"category": 1,
 		"subcategory": 4,
@@ -7791,7 +7791,7 @@ exports.data = [
 	},
 	{
 		"classId": 197,
-		"label": "卫兵铁甲（稀有）",
+		"label": "卫兵铁甲(稀有)",
 		"icon": "ewchest4.png",
 		"category": 1,
 		"subcategory": 2,
@@ -7839,7 +7839,7 @@ exports.data = [
 	},
 	{
 		"classId": 198,
-		"label": "卫兵圆盾（稀有）",
+		"label": "卫兵圆盾(稀有)",
 		"icon": "ewsubweapon4.png",
 		"category": 1,
 		"subcategory": 1,
@@ -7878,7 +7878,7 @@ exports.data = [
 	},
 	{
 		"classId": 199,
-		"label": "卫兵长剑（稀有）",
+		"label": "卫兵长剑(稀有)",
 		"icon": "ewmainweapon4.png",
 		"category": 1,
 		"subcategory": 0,
@@ -7919,7 +7919,7 @@ exports.data = [
 	},
 	{
 		"classId": 200,
-		"label": "传承长靴（稀有）",
+		"label": "传承长靴(稀有)",
 		"icon": "emfoot5.png",
 		"category": 1,
 		"subcategory": 4,
@@ -7974,7 +7974,7 @@ exports.data = [
 	},
 	{
 		"classId": 201,
-		"label": "传承法袍（稀有）",
+		"label": "传承法袍(稀有)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "魔法师代代相传的法袍",
@@ -8037,7 +8037,7 @@ exports.data = [
 	},
 	{
 		"classId": 202,
-		"label": "古旧魔法书（稀有）",
+		"label": "古旧魔法书(稀有)",
 		"icon": "emsubweapon5.png",
 		"category": 1,
 		"subcategory": 1,
@@ -8076,7 +8076,7 @@ exports.data = [
 	},
 	{
 		"classId": 203,
-		"label": "桦木杖（稀有）",
+		"label": "桦木杖(稀有)",
 		"icon": "emmainweapon5.png",
 		"category": 1,
 		"subcategory": 0,
@@ -8116,7 +8116,7 @@ exports.data = [
 	},
 	{
 		"classId": 204,
-		"label": "侍僧之鞋（稀有）",
+		"label": "侍僧之鞋(稀有)",
 		"icon": "epfoot5.png",
 		"category": 1,
 		"subcategory": 4,
@@ -8169,7 +8169,7 @@ exports.data = [
 	},
 	{
 		"classId": 205,
-		"label": "侍僧外衣（稀有）",
+		"label": "侍僧外衣(稀有)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "长久岁月间侍僧们的标准着装",
@@ -8232,7 +8232,7 @@ exports.data = [
 	},
 	{
 		"classId": 206,
-		"label": "侍僧十字架（稀有）",
+		"label": "侍僧十字架(稀有)",
 		"icon": "epsubweapon5.png",
 		"category": 1,
 		"subcategory": 1,
@@ -8273,7 +8273,7 @@ exports.data = [
 	},
 	{
 		"classId": 207,
-		"label": "侍僧权杖（稀有）",
+		"label": "侍僧权杖(稀有)",
 		"icon": "epmainweapon5.png",
 		"category": 1,
 		"subcategory": 0,
@@ -8312,7 +8312,7 @@ exports.data = [
 	},
 	{
 		"classId": 208,
-		"label": "轻巧战靴（稀有）",
+		"label": "轻巧战靴(稀有)",
 		"icon": "ewfoot5.png",
 		"category": 1,
 		"subcategory": 4,
@@ -8356,7 +8356,7 @@ exports.data = [
 	},
 	{
 		"classId": 209,
-		"label": "坚固铁甲（稀有）",
+		"label": "坚固铁甲(稀有)",
 		"icon": "ewchest5.png",
 		"category": 1,
 		"subcategory": 2,
@@ -8404,7 +8404,7 @@ exports.data = [
 	},
 	{
 		"classId": 210,
-		"label": "坚固圆盾（稀有）",
+		"label": "坚固圆盾(稀有)",
 		"category": 1,
 		"subcategory": 1,
 		"description": "用上好的素材制成的坚固且耐用的圆盾",
@@ -8450,7 +8450,7 @@ exports.data = [
 	},
 	{
 		"classId": 211,
-		"label": "锋利长剑（稀有）",
+		"label": "锋利长剑(稀有)",
 		"icon": "ewmainweapon5.png",
 		"category": 1,
 		"subcategory": 0,
@@ -8491,7 +8491,7 @@ exports.data = [
 	},
 	{
 		"classId": 212,
-		"label": "长者长靴（稀有）",
+		"label": "长者长靴(稀有)",
 		"icon": "emfoot6.png",
 		"category": 1,
 		"subcategory": 4,
@@ -8546,7 +8546,7 @@ exports.data = [
 	},
 	{
 		"classId": 213,
-		"label": "长者法袍（稀有）",
+		"label": "长者法袍(稀有)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "魔法师资历的证明，略显过时但品质不凡",
@@ -8609,7 +8609,7 @@ exports.data = [
 	},
 	{
 		"classId": 214,
-		"label": "长者魔法书（稀有）",
+		"label": "长者魔法书(稀有)",
 		"icon": "emsubweapon6.png",
 		"category": 1,
 		"subcategory": 1,
@@ -8648,7 +8648,7 @@ exports.data = [
 	},
 	{
 		"classId": 215,
-		"label": "长者法杖（稀有）",
+		"label": "长者法杖(稀有)",
 		"icon": "emmainweapon6.png",
 		"category": 1,
 		"subcategory": 0,
@@ -8688,7 +8688,7 @@ exports.data = [
 	},
 	{
 		"classId": 216,
-		"label": "预言之鞋（稀有）",
+		"label": "预言之鞋(稀有)",
 		"icon": "epfoot6.png",
 		"category": 1,
 		"subcategory": 4,
@@ -8741,7 +8741,7 @@ exports.data = [
 	},
 	{
 		"classId": 217,
-		"label": "预言外衣（稀有）",
+		"label": "预言外衣(稀有)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "预言者神圣的外衣",
@@ -8804,7 +8804,7 @@ exports.data = [
 	},
 	{
 		"classId": 218,
-		"label": "预言十字架（稀有）",
+		"label": "预言十字架(稀有)",
 		"icon": "epsubweapon6.png",
 		"category": 1,
 		"subcategory": 1,
@@ -8845,7 +8845,7 @@ exports.data = [
 	},
 	{
 		"classId": 219,
-		"label": "预言权杖（稀有）",
+		"label": "预言权杖(稀有)",
 		"icon": "epmainweapon6.png",
 		"category": 1,
 		"subcategory": 0,
@@ -8884,7 +8884,7 @@ exports.data = [
 	},
 	{
 		"classId": 220,
-		"label": "厚重钢靴（稀有）",
+		"label": "厚重钢靴(稀有)",
 		"icon": "ewfoot6.png",
 		"category": 1,
 		"subcategory": 4,
@@ -8928,7 +8928,7 @@ exports.data = [
 	},
 	{
 		"classId": 221,
-		"label": "厚重战甲（稀有）",
+		"label": "厚重战甲(稀有)",
 		"icon": "ewchest6.png",
 		"category": 1,
 		"subcategory": 2,
@@ -8976,7 +8976,7 @@ exports.data = [
 	},
 	{
 		"classId": 222,
-		"label": "厚重钢盾（稀有）",
+		"label": "厚重钢盾(稀有)",
 		"category": 1,
 		"subcategory": 1,
 		"description": "工艺与用料都非常上乘，能够为战士提供最强大的保护",
@@ -9022,7 +9022,7 @@ exports.data = [
 	},
 	{
 		"classId": 223,
-		"label": "厚重钢剑（稀有）",
+		"label": "厚重钢剑(稀有)",
 		"icon": "ewmainweapon6.png",
 		"category": 1,
 		"subcategory": 0,
@@ -9063,7 +9063,7 @@ exports.data = [
 	},
 	{
 		"classId": 224,
-		"label": "驱魔长靴（稀有）",
+		"label": "驱魔长靴(稀有)",
 		"icon": "emfoot7.png",
 		"category": 1,
 		"subcategory": 4,
@@ -9118,7 +9118,7 @@ exports.data = [
 	},
 	{
 		"classId": 225,
-		"label": "驱魔法袍（稀有）",
+		"label": "驱魔法袍(稀有)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "寄宿驱魔之力的神秘法袍",
@@ -9181,7 +9181,7 @@ exports.data = [
 	},
 	{
 		"classId": 226,
-		"label": "驱散魔法书（稀有）",
+		"label": "驱散魔法书(稀有)",
 		"icon": "emsubweapon7.png",
 		"category": 1,
 		"subcategory": 1,
@@ -9220,7 +9220,7 @@ exports.data = [
 	},
 	{
 		"classId": 227,
-		"label": "驱逐魔杖（稀有）",
+		"label": "驱逐魔杖(稀有)",
 		"icon": "emmainweapon7.png",
 		"category": 1,
 		"subcategory": 0,
@@ -9260,7 +9260,7 @@ exports.data = [
 	},
 	{
 		"classId": 228,
-		"label": "神官之鞋（稀有）",
+		"label": "神官之鞋(稀有)",
 		"icon": "epfoot7.png",
 		"category": 1,
 		"subcategory": 4,
@@ -9313,7 +9313,7 @@ exports.data = [
 	},
 	{
 		"classId": 229,
-		"label": "神官外衣（稀有）",
+		"label": "神官外衣(稀有)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "神官们的衣服，威严与神圣并重",
@@ -9376,7 +9376,7 @@ exports.data = [
 	},
 	{
 		"classId": 230,
-		"label": "神官十字架（稀有）",
+		"label": "神官十字架(稀有)",
 		"icon": "epsubweapon7.png",
 		"category": 1,
 		"subcategory": 1,
@@ -9417,7 +9417,7 @@ exports.data = [
 	},
 	{
 		"classId": 231,
-		"label": "神官权杖（稀有）",
+		"label": "神官权杖(稀有)",
 		"icon": "epmainweapon7.png",
 		"category": 1,
 		"subcategory": 0,
@@ -9456,7 +9456,7 @@ exports.data = [
 	},
 	{
 		"classId": 232,
-		"label": "守护钢靴（稀有）",
+		"label": "守护钢靴(稀有)",
 		"icon": "ewfoot7.png",
 		"category": 1,
 		"subcategory": 4,
@@ -9500,7 +9500,7 @@ exports.data = [
 	},
 	{
 		"classId": 233,
-		"label": "守护战甲（稀有）",
+		"label": "守护战甲(稀有)",
 		"icon": "ewchest7.png",
 		"category": 1,
 		"subcategory": 2,
@@ -9548,7 +9548,7 @@ exports.data = [
 	},
 	{
 		"classId": 234,
-		"label": "守护战盾（稀有）",
+		"label": "守护战盾(稀有)",
 		"category": 1,
 		"subcategory": 1,
 		"description": "为守护者配备的战盾，能够抵御各种伤害",
@@ -9594,7 +9594,7 @@ exports.data = [
 	},
 	{
 		"classId": 235,
-		"label": "守护之剑（稀有）",
+		"label": "守护之剑(稀有)",
 		"icon": "ewmainweapon7.png",
 		"category": 1,
 		"subcategory": 0,
@@ -9635,7 +9635,7 @@ exports.data = [
 	},
 	{
 		"classId": 236,
-		"label": "精灵长靴（稀有）",
+		"label": "精灵长靴(稀有)",
 		"icon": "emfoot8.png",
 		"category": 1,
 		"subcategory": 4,
@@ -9689,7 +9689,7 @@ exports.data = [
 	},
 	{
 		"classId": 237,
-		"label": "精灵法袍（稀有）",
+		"label": "精灵法袍(稀有)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "由精灵亲手缝制的法袍，极其珍贵",
@@ -9751,7 +9751,7 @@ exports.data = [
 	},
 	{
 		"classId": 238,
-		"label": "精灵魔法书（稀有）",
+		"label": "精灵魔法书(稀有)",
 		"icon": "emsubweapon8.png",
 		"category": 1,
 		"subcategory": 1,
@@ -9789,7 +9789,7 @@ exports.data = [
 	},
 	{
 		"classId": 239,
-		"label": "精灵法杖（稀有）",
+		"label": "精灵法杖(稀有)",
 		"icon": "emmainweapon8.png",
 		"category": 1,
 		"subcategory": 0,
@@ -9828,7 +9828,7 @@ exports.data = [
 	},
 	{
 		"classId": 240,
-		"label": "圣职之鞋（稀有）",
+		"label": "圣职之鞋(稀有)",
 		"icon": "epfoot8.png",
 		"category": 1,
 		"subcategory": 4,
@@ -9880,7 +9880,7 @@ exports.data = [
 	},
 	{
 		"classId": 241,
-		"label": "圣职外衣（稀有）",
+		"label": "圣职外衣(稀有)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "圣洁无暇的外衣，有神之力的加护",
@@ -9942,7 +9942,7 @@ exports.data = [
 	},
 	{
 		"classId": 242,
-		"label": "圣职十字架（稀有）",
+		"label": "圣职十字架(稀有)",
 		"icon": "epsubweapon8.png",
 		"category": 1,
 		"subcategory": 1,
@@ -9982,7 +9982,7 @@ exports.data = [
 	},
 	{
 		"classId": 243,
-		"label": "圣职权杖（稀有）",
+		"label": "圣职权杖(稀有)",
 		"icon": "epmainweapon8.png",
 		"category": 1,
 		"subcategory": 0,
@@ -10020,7 +10020,7 @@ exports.data = [
 	},
 	{
 		"classId": 244,
-		"label": "联盟钢靴（稀有）",
+		"label": "联盟钢靴(稀有)",
 		"icon": "ewfoot8.png",
 		"category": 1,
 		"subcategory": 4,
@@ -10063,7 +10063,7 @@ exports.data = [
 	},
 	{
 		"classId": 245,
-		"label": "联盟钢甲（稀有）",
+		"label": "联盟钢甲(稀有)",
 		"icon": "ewchest8.png",
 		"category": 1,
 		"subcategory": 2,
@@ -10110,7 +10110,7 @@ exports.data = [
 	},
 	{
 		"classId": 246,
-		"label": "联盟之盾（稀有）",
+		"label": "联盟之盾(稀有)",
 		"icon": "ewsubweapon8.png",
 		"category": 1,
 		"subcategory": 1,
@@ -10148,7 +10148,7 @@ exports.data = [
 	},
 	{
 		"classId": 247,
-		"label": "联盟大剑（稀有）",
+		"label": "联盟大剑(稀有)",
 		"icon": "ewmainweapon8.png",
 		"category": 1,
 		"subcategory": 0,
@@ -10188,7 +10188,7 @@ exports.data = [
 	},
 	{
 		"classId": 248,
-		"label": "精致长靴（史诗）",
+		"label": "精致长靴(史诗)",
 		"icon": "emfoot4.png",
 		"category": 1,
 		"subcategory": 4,
@@ -10231,7 +10231,7 @@ exports.data = [
 	},
 	{
 		"classId": 249,
-		"label": "精致法袍（史诗）",
+		"label": "精致法袍(史诗)",
 		"icon": "emchest4.png",
 		"category": 1,
 		"subcategory": 2,
@@ -10277,7 +10277,7 @@ exports.data = [
 	},
 	{
 		"classId": 250,
-		"label": "金边魔法书（史诗）",
+		"label": "金边魔法书(史诗)",
 		"icon": "emsubweapon4.png",
 		"category": 1,
 		"subcategory": 1,
@@ -10314,7 +10314,7 @@ exports.data = [
 	},
 	{
 		"classId": 251,
-		"label": "精致法杖（史诗）",
+		"label": "精致法杖(史诗)",
 		"icon": "emmainweapon4.png",
 		"category": 1,
 		"subcategory": 0,
@@ -10352,7 +10352,7 @@ exports.data = [
 	},
 	{
 		"classId": 252,
-		"label": "祈愿之鞋（史诗）",
+		"label": "祈愿之鞋(史诗)",
 		"icon": "epfoot4.png",
 		"category": 1,
 		"subcategory": 4,
@@ -10393,7 +10393,7 @@ exports.data = [
 	},
 	{
 		"classId": 253,
-		"label": "祈愿之衣（史诗）",
+		"label": "祈愿之衣(史诗)",
 		"icon": "epchest4.png",
 		"category": 1,
 		"subcategory": 2,
@@ -10439,7 +10439,7 @@ exports.data = [
 	},
 	{
 		"classId": 254,
-		"label": "祈愿十字架（史诗）",
+		"label": "祈愿十字架(史诗)",
 		"icon": "epsubweapon4.png",
 		"category": 1,
 		"subcategory": 1,
@@ -10478,7 +10478,7 @@ exports.data = [
 	},
 	{
 		"classId": 255,
-		"label": "祈愿权杖（史诗）",
+		"label": "祈愿权杖(史诗)",
 		"icon": "epmainweapon4.png",
 		"category": 1,
 		"subcategory": 0,
@@ -10515,7 +10515,7 @@ exports.data = [
 	},
 	{
 		"classId": 256,
-		"label": "卫兵铁靴（史诗）",
+		"label": "卫兵铁靴(史诗)",
 		"icon": "ewfoot4.png",
 		"category": 1,
 		"subcategory": 4,
@@ -10557,7 +10557,7 @@ exports.data = [
 	},
 	{
 		"classId": 257,
-		"label": "卫兵铁甲（史诗）",
+		"label": "卫兵铁甲(史诗)",
 		"icon": "ewchest4.png",
 		"category": 1,
 		"subcategory": 2,
@@ -10603,7 +10603,7 @@ exports.data = [
 	},
 	{
 		"classId": 258,
-		"label": "卫兵圆盾（史诗）",
+		"label": "卫兵圆盾(史诗)",
 		"icon": "ewsubweapon4.png",
 		"category": 1,
 		"subcategory": 1,
@@ -10640,7 +10640,7 @@ exports.data = [
 	},
 	{
 		"classId": 259,
-		"label": "卫兵长剑（史诗）",
+		"label": "卫兵长剑(史诗)",
 		"icon": "ewmainweapon4.png",
 		"category": 1,
 		"subcategory": 0,
@@ -10679,7 +10679,7 @@ exports.data = [
 	},
 	{
 		"classId": 260,
-		"label": "传承长靴（史诗）",
+		"label": "传承长靴(史诗)",
 		"icon": "emfoot5.png",
 		"category": 1,
 		"subcategory": 4,
@@ -10734,7 +10734,7 @@ exports.data = [
 	},
 	{
 		"classId": 261,
-		"label": "传承法袍（史诗）",
+		"label": "传承法袍(史诗)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "魔法师代代相传的法袍",
@@ -10797,7 +10797,7 @@ exports.data = [
 	},
 	{
 		"classId": 262,
-		"label": "古旧魔法书（史诗）",
+		"label": "古旧魔法书(史诗)",
 		"icon": "emsubweapon5.png",
 		"category": 1,
 		"subcategory": 1,
@@ -10836,7 +10836,7 @@ exports.data = [
 	},
 	{
 		"classId": 263,
-		"label": "桦木杖（史诗）",
+		"label": "桦木杖(史诗)",
 		"icon": "emmainweapon5.png",
 		"category": 1,
 		"subcategory": 0,
@@ -10876,7 +10876,7 @@ exports.data = [
 	},
 	{
 		"classId": 264,
-		"label": "侍僧之鞋（史诗）",
+		"label": "侍僧之鞋(史诗)",
 		"icon": "epfoot5.png",
 		"category": 1,
 		"subcategory": 4,
@@ -10929,7 +10929,7 @@ exports.data = [
 	},
 	{
 		"classId": 265,
-		"label": "侍僧外衣（史诗）",
+		"label": "侍僧外衣(史诗)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "长久岁月间侍僧们的标准着装",
@@ -10992,7 +10992,7 @@ exports.data = [
 	},
 	{
 		"classId": 266,
-		"label": "侍僧十字架（史诗）",
+		"label": "侍僧十字架(史诗)",
 		"icon": "epsubweapon5.png",
 		"category": 1,
 		"subcategory": 1,
@@ -11033,7 +11033,7 @@ exports.data = [
 	},
 	{
 		"classId": 267,
-		"label": "侍僧权杖（史诗）",
+		"label": "侍僧权杖(史诗)",
 		"icon": "epmainweapon5.png",
 		"category": 1,
 		"subcategory": 0,
@@ -11072,7 +11072,7 @@ exports.data = [
 	},
 	{
 		"classId": 268,
-		"label": "轻巧战靴（史诗）",
+		"label": "轻巧战靴(史诗)",
 		"icon": "ewfoot5.png",
 		"category": 1,
 		"subcategory": 4,
@@ -11116,7 +11116,7 @@ exports.data = [
 	},
 	{
 		"classId": 269,
-		"label": "坚固铁甲（史诗）",
+		"label": "坚固铁甲(史诗)",
 		"icon": "ewchest5.png",
 		"category": 1,
 		"subcategory": 2,
@@ -11164,7 +11164,7 @@ exports.data = [
 	},
 	{
 		"classId": 270,
-		"label": "坚固圆盾（史诗）",
+		"label": "坚固圆盾(史诗)",
 		"category": 1,
 		"subcategory": 1,
 		"description": "用上好的素材制成的坚固且耐用的圆盾",
@@ -11210,7 +11210,7 @@ exports.data = [
 	},
 	{
 		"classId": 271,
-		"label": "锋利长剑（史诗）",
+		"label": "锋利长剑(史诗)",
 		"icon": "ewmainweapon5.png",
 		"category": 1,
 		"subcategory": 0,
@@ -11251,7 +11251,7 @@ exports.data = [
 	},
 	{
 		"classId": 272,
-		"label": "长者长靴（史诗）",
+		"label": "长者长靴(史诗)",
 		"icon": "emfoot6.png",
 		"category": 1,
 		"subcategory": 4,
@@ -11306,7 +11306,7 @@ exports.data = [
 	},
 	{
 		"classId": 273,
-		"label": "长者法袍（史诗）",
+		"label": "长者法袍(史诗)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "魔法师资历的证明，略显过时但品质不凡",
@@ -11369,7 +11369,7 @@ exports.data = [
 	},
 	{
 		"classId": 274,
-		"label": "长者魔法书（史诗）",
+		"label": "长者魔法书(史诗)",
 		"icon": "emsubweapon6.png",
 		"category": 1,
 		"subcategory": 1,
@@ -11408,7 +11408,7 @@ exports.data = [
 	},
 	{
 		"classId": 275,
-		"label": "长者法杖（史诗）",
+		"label": "长者法杖(史诗)",
 		"icon": "emmainweapon6.png",
 		"category": 1,
 		"subcategory": 0,
@@ -11448,7 +11448,7 @@ exports.data = [
 	},
 	{
 		"classId": 276,
-		"label": "预言之鞋（史诗）",
+		"label": "预言之鞋(史诗)",
 		"icon": "epfoot6.png",
 		"category": 1,
 		"subcategory": 4,
@@ -11501,7 +11501,7 @@ exports.data = [
 	},
 	{
 		"classId": 277,
-		"label": "预言外衣（史诗）",
+		"label": "预言外衣(史诗)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "预言者神圣的外衣",
@@ -11564,7 +11564,7 @@ exports.data = [
 	},
 	{
 		"classId": 278,
-		"label": "预言十字架（史诗）",
+		"label": "预言十字架(史诗)",
 		"icon": "epsubweapon6.png",
 		"category": 1,
 		"subcategory": 1,
@@ -11605,7 +11605,7 @@ exports.data = [
 	},
 	{
 		"classId": 279,
-		"label": "预言权杖（史诗）",
+		"label": "预言权杖(史诗)",
 		"icon": "epmainweapon6.png",
 		"category": 1,
 		"subcategory": 0,
@@ -11644,7 +11644,7 @@ exports.data = [
 	},
 	{
 		"classId": 280,
-		"label": "厚重钢靴（史诗）",
+		"label": "厚重钢靴(史诗)",
 		"icon": "ewfoot6.png",
 		"category": 1,
 		"subcategory": 4,
@@ -11688,7 +11688,7 @@ exports.data = [
 	},
 	{
 		"classId": 281,
-		"label": "厚重战甲（史诗）",
+		"label": "厚重战甲(史诗)",
 		"icon": "ewchest6.png",
 		"category": 1,
 		"subcategory": 2,
@@ -11736,7 +11736,7 @@ exports.data = [
 	},
 	{
 		"classId": 282,
-		"label": "厚重钢盾（史诗）",
+		"label": "厚重钢盾(史诗)",
 		"category": 1,
 		"subcategory": 1,
 		"description": "工艺与用料都非常上乘，能够为战士提供最强大的保护",
@@ -11782,7 +11782,7 @@ exports.data = [
 	},
 	{
 		"classId": 283,
-		"label": "厚重钢剑（史诗）",
+		"label": "厚重钢剑(史诗)",
 		"icon": "ewmainweapon6.png",
 		"category": 1,
 		"subcategory": 0,
@@ -11823,7 +11823,7 @@ exports.data = [
 	},
 	{
 		"classId": 284,
-		"label": "驱魔长靴（史诗）",
+		"label": "驱魔长靴(史诗)",
 		"icon": "emfoot7.png",
 		"category": 1,
 		"subcategory": 4,
@@ -11878,7 +11878,7 @@ exports.data = [
 	},
 	{
 		"classId": 285,
-		"label": "驱魔法袍（史诗）",
+		"label": "驱魔法袍(史诗)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "寄宿驱魔之力的神秘法袍",
@@ -11941,7 +11941,7 @@ exports.data = [
 	},
 	{
 		"classId": 286,
-		"label": "驱散魔法书（史诗）",
+		"label": "驱散魔法书(史诗)",
 		"icon": "emsubweapon7.png",
 		"category": 1,
 		"subcategory": 1,
@@ -11980,7 +11980,7 @@ exports.data = [
 	},
 	{
 		"classId": 287,
-		"label": "驱逐魔杖（史诗）",
+		"label": "驱逐魔杖(史诗)",
 		"icon": "emmainweapon7.png",
 		"category": 1,
 		"subcategory": 0,
@@ -12020,7 +12020,7 @@ exports.data = [
 	},
 	{
 		"classId": 288,
-		"label": "神官之鞋（史诗）",
+		"label": "神官之鞋(史诗)",
 		"icon": "epfoot7.png",
 		"category": 1,
 		"subcategory": 4,
@@ -12073,7 +12073,7 @@ exports.data = [
 	},
 	{
 		"classId": 289,
-		"label": "神官外衣（史诗）",
+		"label": "神官外衣(史诗)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "神官们的衣服，威严与神圣并重",
@@ -12136,7 +12136,7 @@ exports.data = [
 	},
 	{
 		"classId": 290,
-		"label": "神官十字架（史诗）",
+		"label": "神官十字架(史诗)",
 		"icon": "epsubweapon7.png",
 		"category": 1,
 		"subcategory": 1,
@@ -12177,7 +12177,7 @@ exports.data = [
 	},
 	{
 		"classId": 291,
-		"label": "神官权杖（史诗）",
+		"label": "神官权杖(史诗)",
 		"icon": "epmainweapon7.png",
 		"category": 1,
 		"subcategory": 0,
@@ -12216,7 +12216,7 @@ exports.data = [
 	},
 	{
 		"classId": 292,
-		"label": "守护钢靴（史诗）",
+		"label": "守护钢靴(史诗)",
 		"icon": "ewfoot7.png",
 		"category": 1,
 		"subcategory": 4,
@@ -12260,7 +12260,7 @@ exports.data = [
 	},
 	{
 		"classId": 293,
-		"label": "守护战甲（史诗）",
+		"label": "守护战甲(史诗)",
 		"icon": "ewchest7.png",
 		"category": 1,
 		"subcategory": 2,
@@ -12308,7 +12308,7 @@ exports.data = [
 	},
 	{
 		"classId": 294,
-		"label": "守护战盾（史诗）",
+		"label": "守护战盾(史诗)",
 		"category": 1,
 		"subcategory": 1,
 		"description": "为守护者配备的战盾，能够抵御各种伤害",
@@ -12354,7 +12354,7 @@ exports.data = [
 	},
 	{
 		"classId": 295,
-		"label": "守护之剑（史诗）",
+		"label": "守护之剑(史诗)",
 		"icon": "ewmainweapon7.png",
 		"category": 1,
 		"subcategory": 0,
@@ -12395,7 +12395,7 @@ exports.data = [
 	},
 	{
 		"classId": 296,
-		"label": "精灵长靴（史诗）",
+		"label": "精灵长靴(史诗)",
 		"icon": "emfoot8.png",
 		"category": 1,
 		"subcategory": 4,
@@ -12450,7 +12450,7 @@ exports.data = [
 	},
 	{
 		"classId": 297,
-		"label": "精灵法袍（史诗）",
+		"label": "精灵法袍(史诗)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "由精灵亲手缝制的法袍，极其珍贵",
@@ -12513,7 +12513,7 @@ exports.data = [
 	},
 	{
 		"classId": 298,
-		"label": "精灵魔法书（史诗）",
+		"label": "精灵魔法书(史诗)",
 		"icon": "emsubweapon8.png",
 		"category": 1,
 		"subcategory": 1,
@@ -12552,7 +12552,7 @@ exports.data = [
 	},
 	{
 		"classId": 299,
-		"label": "精灵法杖（史诗）",
+		"label": "精灵法杖(史诗)",
 		"icon": "emmainweapon8.png",
 		"category": 1,
 		"subcategory": 0,
@@ -12592,7 +12592,7 @@ exports.data = [
 	},
 	{
 		"classId": 300,
-		"label": "圣职之鞋（史诗）",
+		"label": "圣职之鞋(史诗)",
 		"icon": "epfoot8.png",
 		"category": 1,
 		"subcategory": 4,
@@ -12645,7 +12645,7 @@ exports.data = [
 	},
 	{
 		"classId": 301,
-		"label": "圣职外衣（史诗）",
+		"label": "圣职外衣(史诗)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "圣洁无暇的外衣，有神之力的加护",
@@ -12708,7 +12708,7 @@ exports.data = [
 	},
 	{
 		"classId": 302,
-		"label": "圣职十字架（史诗）",
+		"label": "圣职十字架(史诗)",
 		"icon": "epsubweapon8.png",
 		"category": 1,
 		"subcategory": 1,
@@ -12749,7 +12749,7 @@ exports.data = [
 	},
 	{
 		"classId": 303,
-		"label": "圣职权杖（史诗）",
+		"label": "圣职权杖(史诗)",
 		"icon": "epmainweapon8.png",
 		"category": 1,
 		"subcategory": 0,
@@ -12788,7 +12788,7 @@ exports.data = [
 	},
 	{
 		"classId": 304,
-		"label": "联盟钢靴（史诗）",
+		"label": "联盟钢靴(史诗)",
 		"icon": "ewfoot8.png",
 		"category": 1,
 		"subcategory": 4,
@@ -12832,7 +12832,7 @@ exports.data = [
 	},
 	{
 		"classId": 305,
-		"label": "联盟钢甲（史诗）",
+		"label": "联盟钢甲(史诗)",
 		"icon": "ewchest8.png",
 		"category": 1,
 		"subcategory": 2,
@@ -12880,7 +12880,7 @@ exports.data = [
 	},
 	{
 		"classId": 306,
-		"label": "联盟之盾（史诗）",
+		"label": "联盟之盾(史诗)",
 		"icon": "ewsubweapon8.png",
 		"category": 1,
 		"subcategory": 1,
@@ -12919,7 +12919,7 @@ exports.data = [
 	},
 	{
 		"classId": 307,
-		"label": "联盟大剑（史诗）",
+		"label": "联盟大剑(史诗)",
 		"icon": "ewmainweapon8.png",
 		"category": 1,
 		"subcategory": 0,
@@ -12960,7 +12960,7 @@ exports.data = [
 	},
 	{
 		"classId": 308,
-		"label": "幽冥长靴（史诗）",
+		"label": "幽冥长靴(史诗)",
 		"icon": "emfoot9.png",
 		"category": 1,
 		"subcategory": 4,
@@ -13014,7 +13014,7 @@ exports.data = [
 	},
 	{
 		"classId": 309,
-		"label": "幽冥法袍（史诗）",
+		"label": "幽冥法袍(史诗)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "黑暗力量环绕的法袍，给人一种无形的压迫感",
@@ -13076,7 +13076,7 @@ exports.data = [
 	},
 	{
 		"classId": 310,
-		"label": "玄冥魔法书（史诗）",
+		"label": "玄冥魔法书(史诗)",
 		"icon": "emsubweapon9.png",
 		"category": 1,
 		"subcategory": 1,
@@ -13114,7 +13114,7 @@ exports.data = [
 	},
 	{
 		"classId": 311,
-		"label": "幽冥法杖（史诗）",
+		"label": "幽冥法杖(史诗)",
 		"icon": "emmainweapon9.png",
 		"category": 1,
 		"subcategory": 0,
@@ -13153,7 +13153,7 @@ exports.data = [
 	},
 	{
 		"classId": 312,
-		"label": "光明之鞋（史诗）",
+		"label": "光明之鞋(史诗)",
 		"icon": "epfoot9.png",
 		"category": 1,
 		"subcategory": 4,
@@ -13205,7 +13205,7 @@ exports.data = [
 	},
 	{
 		"classId": 313,
-		"label": "光明外衣（史诗）",
+		"label": "光明外衣(史诗)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "凝聚光明力量的鞋子",
@@ -13267,7 +13267,7 @@ exports.data = [
 	},
 	{
 		"classId": 314,
-		"label": "光明十字架（史诗）",
+		"label": "光明十字架(史诗)",
 		"icon": "epsubweapon9.png",
 		"category": 1,
 		"subcategory": 1,
@@ -13306,7 +13306,7 @@ exports.data = [
 	},
 	{
 		"classId": 315,
-		"label": "光明权杖（史诗）",
+		"label": "光明权杖(史诗)",
 		"icon": "epmainweapon9.png",
 		"category": 1,
 		"subcategory": 0,
@@ -13344,7 +13344,7 @@ exports.data = [
 	},
 	{
 		"classId": 316,
-		"label": "荣耀之靴（史诗）",
+		"label": "荣耀之靴(史诗)",
 		"icon": "ewfoot9.png",
 		"category": 1,
 		"subcategory": 4,
@@ -13387,7 +13387,7 @@ exports.data = [
 	},
 	{
 		"classId": 317,
-		"label": "誓言之铠（史诗）",
+		"label": "誓言之铠(史诗)",
 		"icon": "ewchest9.png",
 		"category": 1,
 		"subcategory": 2,
@@ -13434,7 +13434,7 @@ exports.data = [
 	},
 	{
 		"classId": 318,
-		"label": "辉光方盾（史诗）",
+		"label": "辉光方盾(史诗)",
 		"icon": "ewsubweapon9.png",
 		"category": 1,
 		"subcategory": 1,
@@ -13472,7 +13472,7 @@ exports.data = [
 	},
 	{
 		"classId": 319,
-		"label": "荣誉大剑（史诗）",
+		"label": "荣誉大剑(史诗)",
 		"icon": "ewmainweapon9.png",
 		"category": 1,
 		"subcategory": 0,
@@ -13512,7 +13512,7 @@ exports.data = [
 	},
 	{
 		"classId": 320,
-		"label": "传承长靴（传奇）",
+		"label": "传承长靴(传奇)",
 		"icon": "emfoot5.png",
 		"category": 1,
 		"subcategory": 4,
@@ -13565,7 +13565,7 @@ exports.data = [
 	},
 	{
 		"classId": 321,
-		"label": "传承法袍（传奇）",
+		"label": "传承法袍(传奇)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "魔法师代代相传的法袍",
@@ -13626,7 +13626,7 @@ exports.data = [
 	},
 	{
 		"classId": 322,
-		"label": "古旧魔法书（传奇）",
+		"label": "古旧魔法书(传奇)",
 		"icon": "emsubweapon5.png",
 		"category": 1,
 		"subcategory": 1,
@@ -13663,7 +13663,7 @@ exports.data = [
 	},
 	{
 		"classId": 323,
-		"label": "桦木杖（传奇）",
+		"label": "桦木杖(传奇)",
 		"icon": "emmainweapon5.png",
 		"category": 1,
 		"subcategory": 0,
@@ -13701,7 +13701,7 @@ exports.data = [
 	},
 	{
 		"classId": 324,
-		"label": "侍僧之鞋（传奇）",
+		"label": "侍僧之鞋(传奇)",
 		"icon": "epfoot5.png",
 		"category": 1,
 		"subcategory": 4,
@@ -13752,7 +13752,7 @@ exports.data = [
 	},
 	{
 		"classId": 325,
-		"label": "侍僧外衣（传奇）",
+		"label": "侍僧外衣(传奇)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "长久岁月间侍僧们的标准着装",
@@ -13813,7 +13813,7 @@ exports.data = [
 	},
 	{
 		"classId": 326,
-		"label": "侍僧十字架（传奇）",
+		"label": "侍僧十字架(传奇)",
 		"icon": "epsubweapon5.png",
 		"category": 1,
 		"subcategory": 1,
@@ -13852,7 +13852,7 @@ exports.data = [
 	},
 	{
 		"classId": 327,
-		"label": "侍僧权杖（传奇）",
+		"label": "侍僧权杖(传奇)",
 		"icon": "epmainweapon5.png",
 		"category": 1,
 		"subcategory": 0,
@@ -13889,7 +13889,7 @@ exports.data = [
 	},
 	{
 		"classId": 328,
-		"label": "轻巧战靴（传奇）",
+		"label": "轻巧战靴(传奇)",
 		"icon": "ewfoot5.png",
 		"category": 1,
 		"subcategory": 4,
@@ -13931,7 +13931,7 @@ exports.data = [
 	},
 	{
 		"classId": 329,
-		"label": "坚固铁甲（传奇）",
+		"label": "坚固铁甲(传奇)",
 		"icon": "ewchest5.png",
 		"category": 1,
 		"subcategory": 2,
@@ -13977,7 +13977,7 @@ exports.data = [
 	},
 	{
 		"classId": 330,
-		"label": "坚固圆盾（传奇）",
+		"label": "坚固圆盾(传奇)",
 		"category": 1,
 		"subcategory": 1,
 		"description": "用上好的素材制成的坚固且耐用的圆盾",
@@ -14021,7 +14021,7 @@ exports.data = [
 	},
 	{
 		"classId": 331,
-		"label": "锋利长剑（传奇）",
+		"label": "锋利长剑(传奇)",
 		"icon": "ewmainweapon5.png",
 		"category": 1,
 		"subcategory": 0,
@@ -14060,7 +14060,7 @@ exports.data = [
 	},
 	{
 		"classId": 332,
-		"label": "长者长靴（传奇）",
+		"label": "长者长靴(传奇)",
 		"icon": "emfoot6.png",
 		"category": 1,
 		"subcategory": 4,
@@ -14113,7 +14113,7 @@ exports.data = [
 	},
 	{
 		"classId": 333,
-		"label": "长者法袍（传奇）",
+		"label": "长者法袍(传奇)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "魔法师资历的证明，略显过时但品质不凡",
@@ -14174,7 +14174,7 @@ exports.data = [
 	},
 	{
 		"classId": 334,
-		"label": "长者魔法书（传奇）",
+		"label": "长者魔法书(传奇)",
 		"icon": "emsubweapon6.png",
 		"category": 1,
 		"subcategory": 1,
@@ -14211,7 +14211,7 @@ exports.data = [
 	},
 	{
 		"classId": 335,
-		"label": "长者法杖（传奇）",
+		"label": "长者法杖(传奇)",
 		"icon": "emmainweapon6.png",
 		"category": 1,
 		"subcategory": 0,
@@ -14249,7 +14249,7 @@ exports.data = [
 	},
 	{
 		"classId": 336,
-		"label": "预言之鞋（传奇）",
+		"label": "预言之鞋(传奇)",
 		"icon": "epfoot6.png",
 		"category": 1,
 		"subcategory": 4,
@@ -14300,7 +14300,7 @@ exports.data = [
 	},
 	{
 		"classId": 337,
-		"label": "预言外衣（传奇）",
+		"label": "预言外衣(传奇)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "预言者神圣的外衣",
@@ -14361,7 +14361,7 @@ exports.data = [
 	},
 	{
 		"classId": 338,
-		"label": "预言十字架（传奇）",
+		"label": "预言十字架(传奇)",
 		"icon": "epsubweapon6.png",
 		"category": 1,
 		"subcategory": 1,
@@ -14400,7 +14400,7 @@ exports.data = [
 	},
 	{
 		"classId": 339,
-		"label": "预言权杖（传奇）",
+		"label": "预言权杖(传奇)",
 		"icon": "epmainweapon6.png",
 		"category": 1,
 		"subcategory": 0,
@@ -14437,7 +14437,7 @@ exports.data = [
 	},
 	{
 		"classId": 340,
-		"label": "厚重钢靴（传奇）",
+		"label": "厚重钢靴(传奇)",
 		"icon": "ewfoot6.png",
 		"category": 1,
 		"subcategory": 4,
@@ -14479,7 +14479,7 @@ exports.data = [
 	},
 	{
 		"classId": 341,
-		"label": "厚重战甲（传奇）",
+		"label": "厚重战甲(传奇)",
 		"icon": "ewchest6.png",
 		"category": 1,
 		"subcategory": 2,
@@ -14525,7 +14525,7 @@ exports.data = [
 	},
 	{
 		"classId": 342,
-		"label": "厚重钢盾（传奇）",
+		"label": "厚重钢盾(传奇)",
 		"category": 1,
 		"subcategory": 1,
 		"description": "工艺与用料都非常上乘，能够为战士提供最强大的保护",
@@ -14569,7 +14569,7 @@ exports.data = [
 	},
 	{
 		"classId": 343,
-		"label": "厚重钢剑（传奇）",
+		"label": "厚重钢剑(传奇)",
 		"icon": "ewmainweapon6.png",
 		"category": 1,
 		"subcategory": 0,
@@ -14608,7 +14608,7 @@ exports.data = [
 	},
 	{
 		"classId": 344,
-		"label": "驱魔长靴（传奇）",
+		"label": "驱魔长靴(传奇)",
 		"icon": "emfoot7.png",
 		"category": 1,
 		"subcategory": 4,
@@ -14661,7 +14661,7 @@ exports.data = [
 	},
 	{
 		"classId": 345,
-		"label": "驱魔法袍（传奇）",
+		"label": "驱魔法袍(传奇)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "寄宿驱魔之力的神秘法袍",
@@ -14722,7 +14722,7 @@ exports.data = [
 	},
 	{
 		"classId": 346,
-		"label": "驱散魔法书（传奇）",
+		"label": "驱散魔法书(传奇)",
 		"icon": "emsubweapon7.png",
 		"category": 1,
 		"subcategory": 1,
@@ -14759,7 +14759,7 @@ exports.data = [
 	},
 	{
 		"classId": 347,
-		"label": "驱逐魔杖（传奇）",
+		"label": "驱逐魔杖(传奇)",
 		"icon": "emmainweapon7.png",
 		"category": 1,
 		"subcategory": 0,
@@ -14797,7 +14797,7 @@ exports.data = [
 	},
 	{
 		"classId": 348,
-		"label": "神官之鞋（传奇）",
+		"label": "神官之鞋(传奇)",
 		"icon": "epfoot7.png",
 		"category": 1,
 		"subcategory": 4,
@@ -14848,7 +14848,7 @@ exports.data = [
 	},
 	{
 		"classId": 349,
-		"label": "神官外衣（传奇）",
+		"label": "神官外衣(传奇)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "神官们的衣服，威严与神圣并重",
@@ -14909,7 +14909,7 @@ exports.data = [
 	},
 	{
 		"classId": 350,
-		"label": "神官十字架（传奇）",
+		"label": "神官十字架(传奇)",
 		"icon": "epsubweapon7.png",
 		"category": 1,
 		"subcategory": 1,
@@ -14948,7 +14948,7 @@ exports.data = [
 	},
 	{
 		"classId": 351,
-		"label": "神官权杖（传奇）",
+		"label": "神官权杖(传奇)",
 		"icon": "epmainweapon7.png",
 		"category": 1,
 		"subcategory": 0,
@@ -14985,7 +14985,7 @@ exports.data = [
 	},
 	{
 		"classId": 352,
-		"label": "守护钢靴（传奇）",
+		"label": "守护钢靴(传奇)",
 		"icon": "ewfoot7.png",
 		"category": 1,
 		"subcategory": 4,
@@ -15027,7 +15027,7 @@ exports.data = [
 	},
 	{
 		"classId": 353,
-		"label": "守护战甲（传奇）",
+		"label": "守护战甲(传奇)",
 		"icon": "ewchest7.png",
 		"category": 1,
 		"subcategory": 2,
@@ -15073,7 +15073,7 @@ exports.data = [
 	},
 	{
 		"classId": 354,
-		"label": "守护战盾（传奇）",
+		"label": "守护战盾(传奇)",
 		"category": 1,
 		"subcategory": 1,
 		"description": "为守护者配备的战盾，能够抵御各种伤害",
@@ -15117,7 +15117,7 @@ exports.data = [
 	},
 	{
 		"classId": 355,
-		"label": "守护之剑（传奇）",
+		"label": "守护之剑(传奇)",
 		"icon": "ewmainweapon7.png",
 		"category": 1,
 		"subcategory": 0,
@@ -15156,7 +15156,7 @@ exports.data = [
 	},
 	{
 		"classId": 356,
-		"label": "精灵长靴（传奇）",
+		"label": "精灵长靴(传奇)",
 		"icon": "emfoot8.png",
 		"category": 1,
 		"subcategory": 4,
@@ -15209,7 +15209,7 @@ exports.data = [
 	},
 	{
 		"classId": 357,
-		"label": "精灵法袍（传奇）",
+		"label": "精灵法袍(传奇)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "由精灵亲手缝制的法袍，极其珍贵",
@@ -15270,7 +15270,7 @@ exports.data = [
 	},
 	{
 		"classId": 358,
-		"label": "精灵魔法书（传奇）",
+		"label": "精灵魔法书(传奇)",
 		"icon": "emsubweapon8.png",
 		"category": 1,
 		"subcategory": 1,
@@ -15307,7 +15307,7 @@ exports.data = [
 	},
 	{
 		"classId": 359,
-		"label": "精灵法杖（传奇）",
+		"label": "精灵法杖(传奇)",
 		"icon": "emmainweapon8.png",
 		"category": 1,
 		"subcategory": 0,
@@ -15345,7 +15345,7 @@ exports.data = [
 	},
 	{
 		"classId": 360,
-		"label": "圣职之鞋（传奇）",
+		"label": "圣职之鞋(传奇)",
 		"icon": "epfoot8.png",
 		"category": 1,
 		"subcategory": 4,
@@ -15396,7 +15396,7 @@ exports.data = [
 	},
 	{
 		"classId": 361,
-		"label": "圣职外衣（传奇）",
+		"label": "圣职外衣(传奇)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "圣洁无暇的外衣，有神之力的加护",
@@ -15457,7 +15457,7 @@ exports.data = [
 	},
 	{
 		"classId": 362,
-		"label": "圣职十字架（传奇）",
+		"label": "圣职十字架(传奇)",
 		"icon": "epsubweapon8.png",
 		"category": 1,
 		"subcategory": 1,
@@ -15496,7 +15496,7 @@ exports.data = [
 	},
 	{
 		"classId": 363,
-		"label": "圣职权杖（传奇）",
+		"label": "圣职权杖(传奇)",
 		"icon": "epmainweapon8.png",
 		"category": 1,
 		"subcategory": 0,
@@ -15533,7 +15533,7 @@ exports.data = [
 	},
 	{
 		"classId": 364,
-		"label": "联盟钢靴（传奇）",
+		"label": "联盟钢靴(传奇)",
 		"icon": "ewfoot8.png",
 		"category": 1,
 		"subcategory": 4,
@@ -15575,7 +15575,7 @@ exports.data = [
 	},
 	{
 		"classId": 365,
-		"label": "联盟钢甲（传奇）",
+		"label": "联盟钢甲(传奇)",
 		"icon": "ewchest8.png",
 		"category": 1,
 		"subcategory": 2,
@@ -15621,7 +15621,7 @@ exports.data = [
 	},
 	{
 		"classId": 366,
-		"label": "联盟之盾（传奇）",
+		"label": "联盟之盾(传奇)",
 		"icon": "ewsubweapon8.png",
 		"category": 1,
 		"subcategory": 1,
@@ -15658,7 +15658,7 @@ exports.data = [
 	},
 	{
 		"classId": 367,
-		"label": "联盟大剑（传奇）",
+		"label": "联盟大剑(传奇)",
 		"icon": "ewmainweapon8.png",
 		"category": 1,
 		"subcategory": 0,
@@ -15697,7 +15697,7 @@ exports.data = [
 	},
 	{
 		"classId": 368,
-		"label": "幽冥长靴（传奇）",
+		"label": "幽冥长靴(传奇)",
 		"icon": "emfoot9.png",
 		"category": 1,
 		"subcategory": 4,
@@ -15750,7 +15750,7 @@ exports.data = [
 	},
 	{
 		"classId": 369,
-		"label": "幽冥法袍（传奇）",
+		"label": "幽冥法袍(传奇)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "黑暗力量环绕的法袍，给人一种无形的压迫感",
@@ -15811,7 +15811,7 @@ exports.data = [
 	},
 	{
 		"classId": 370,
-		"label": "玄冥魔法书（传奇）",
+		"label": "玄冥魔法书(传奇)",
 		"icon": "emsubweapon9.png",
 		"category": 1,
 		"subcategory": 1,
@@ -15848,7 +15848,7 @@ exports.data = [
 	},
 	{
 		"classId": 371,
-		"label": "幽冥法杖（传奇）",
+		"label": "幽冥法杖(传奇)",
 		"icon": "emmainweapon9.png",
 		"category": 1,
 		"subcategory": 0,
@@ -15886,7 +15886,7 @@ exports.data = [
 	},
 	{
 		"classId": 372,
-		"label": "光明之鞋（传奇）",
+		"label": "光明之鞋(传奇)",
 		"icon": "epfoot9.png",
 		"category": 1,
 		"subcategory": 4,
@@ -15937,7 +15937,7 @@ exports.data = [
 	},
 	{
 		"classId": 373,
-		"label": "光明外衣（传奇）",
+		"label": "光明外衣(传奇)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "注入了圣神之光的外衣",
@@ -15998,7 +15998,7 @@ exports.data = [
 	},
 	{
 		"classId": 374,
-		"label": "光明十字架（传奇）",
+		"label": "光明十字架(传奇)",
 		"icon": "epsubweapon9.png",
 		"category": 1,
 		"subcategory": 1,
@@ -16037,7 +16037,7 @@ exports.data = [
 	},
 	{
 		"classId": 375,
-		"label": "光明权杖（传奇）",
+		"label": "光明权杖(传奇)",
 		"icon": "epmainweapon9.png",
 		"category": 1,
 		"subcategory": 0,
@@ -16074,7 +16074,7 @@ exports.data = [
 	},
 	{
 		"classId": 376,
-		"label": "荣耀之靴（传奇）",
+		"label": "荣耀之靴(传奇)",
 		"icon": "ewfoot9.png",
 		"category": 1,
 		"subcategory": 4,
@@ -16116,7 +16116,7 @@ exports.data = [
 	},
 	{
 		"classId": 377,
-		"label": "誓言之铠（传奇）",
+		"label": "誓言之铠(传奇)",
 		"icon": "ewchest9.png",
 		"category": 1,
 		"subcategory": 2,
@@ -16162,7 +16162,7 @@ exports.data = [
 	},
 	{
 		"classId": 378,
-		"label": "辉光方盾（传奇）",
+		"label": "辉光方盾(传奇)",
 		"icon": "ewsubweapon9.png",
 		"category": 1,
 		"subcategory": 1,
@@ -16199,7 +16199,7 @@ exports.data = [
 	},
 	{
 		"classId": 379,
-		"label": "荣誉大剑（传奇）",
+		"label": "荣誉大剑(传奇)",
 		"icon": "ewmainweapon9.png",
 		"category": 1,
 		"subcategory": 0,
@@ -16237,7 +16237,7 @@ exports.data = [
 	},
 	{
 		"classId": 380,
-		"label": "混沌长靴（传奇）",
+		"label": "混沌长靴(传奇)",
 		"icon": "emfoot10.png",
 		"category": 1,
 		"subcategory": 4,
@@ -16289,7 +16289,7 @@ exports.data = [
 	},
 	{
 		"classId": 381,
-		"label": "暗影法袍（传奇）",
+		"label": "暗影法袍(传奇)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "暗影世界的遗产，闪烁着黑曜石般的光芒",
@@ -16349,7 +16349,7 @@ exports.data = [
 	},
 	{
 		"classId": 382,
-		"label": "暗影魔法书（传奇）",
+		"label": "暗影魔法书(传奇)",
 		"icon": "emsubweapon10.png",
 		"category": 1,
 		"subcategory": 1,
@@ -16385,7 +16385,7 @@ exports.data = [
 	},
 	{
 		"classId": 383,
-		"label": "混沌魔杖（传奇）",
+		"label": "混沌魔杖(传奇)",
 		"icon": "emmainweapon10.png",
 		"category": 1,
 		"subcategory": 0,
@@ -16422,7 +16422,7 @@ exports.data = [
 	},
 	{
 		"classId": 384,
-		"label": "圣灵之鞋（传奇）",
+		"label": "圣灵之鞋(传奇)",
 		"icon": "epfoot10.png",
 		"category": 1,
 		"subcategory": 4,
@@ -16472,7 +16472,7 @@ exports.data = [
 	},
 	{
 		"classId": 385,
-		"label": "圣灵之衣（传奇）",
+		"label": "圣灵之衣(传奇)",
 		"category": 1,
 		"subcategory": 2,
 		"description": "圣灵们编制的衣服，所穿之人会受到神的庇佑",
@@ -16532,7 +16532,7 @@ exports.data = [
 	},
 	{
 		"classId": 386,
-		"label": "圣灵十字架（传奇）",
+		"label": "圣灵十字架(传奇)",
 		"icon": "epsubweapon10.png",
 		"category": 1,
 		"subcategory": 1,
@@ -16570,7 +16570,7 @@ exports.data = [
 	},
 	{
 		"classId": 387,
-		"label": "圣灵权杖（传奇）",
+		"label": "圣灵权杖(传奇)",
 		"icon": "epmainweapon10.png",
 		"category": 1,
 		"subcategory": 0,
@@ -16606,7 +16606,7 @@ exports.data = [
 	},
 	{
 		"classId": 388,
-		"label": "盛怒战靴（传奇）",
+		"label": "盛怒战靴(传奇)",
 		"icon": "ewfoot10.png",
 		"category": 1,
 		"subcategory": 4,
@@ -16647,7 +16647,7 @@ exports.data = [
 	},
 	{
 		"classId": 389,
-		"label": "盛怒圣铠（传奇）",
+		"label": "盛怒圣铠(传奇)",
 		"icon": "ewchest10.png",
 		"category": 1,
 		"subcategory": 2,
@@ -16692,7 +16692,7 @@ exports.data = [
 	},
 	{
 		"classId": 390,
-		"label": "盛怒巨盾（传奇）",
+		"label": "盛怒巨盾(传奇)",
 		"icon": "ewsubweapon10.png",
 		"category": 1,
 		"subcategory": 1,
@@ -16728,7 +16728,7 @@ exports.data = [
 	},
 	{
 		"classId": 391,
-		"label": "盛怒之刃（传奇）",
+		"label": "盛怒之刃(传奇)",
 		"icon": "ewmainweapon10.png",
 		"category": 1,
 		"subcategory": 0,
@@ -20189,7 +20189,7 @@ exports.data = [
 		"icon": "item-vipbox1.png",
 		"category": 0,
 		"subcategory": 0,
-		"description": "内含金块X3，小瓶活力药剂X1（每日限购1个）",
+		"description": "内含金块X3，小瓶活力药剂X1(每日限购1个)",
 		"quality": 1,
 		"prize": [
 			{
@@ -20296,7 +20296,7 @@ exports.data = [
 		"icon": "item-vipbox2.png",
 		"category": 0,
 		"subcategory": 0,
-		"description": "内含金块X10（每日限购1个）",
+		"description": "内含金块X10(每日限购1个)",
 		"quality": 1,
 		"prize": [
 			{
@@ -22190,7 +22190,7 @@ exports.data = [
 	},
 	{
 		"classId": 628,
-		"label": "学徒之心（优质）",
+		"label": "学徒之心(优质)",
 		"icon": "ewn011.png",
 		"category": 1,
 		"subcategory": 5,
@@ -22217,7 +22217,7 @@ exports.data = [
 	},
 	{
 		"classId": 629,
-		"label": "战斗之心（优质）",
+		"label": "战斗之心(优质)",
 		"icon": "ewn011.png",
 		"category": 1,
 		"subcategory": 5,
@@ -22246,7 +22246,7 @@ exports.data = [
 	},
 	{
 		"classId": 630,
-		"label": "卫兵之心（优质）",
+		"label": "卫兵之心(优质)",
 		"icon": "ewn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -22275,7 +22275,7 @@ exports.data = [
 	},
 	{
 		"classId": 631,
-		"label": "不屈之心（优质）",
+		"label": "不屈之心(优质)",
 		"icon": "ewn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -22304,7 +22304,7 @@ exports.data = [
 	},
 	{
 		"classId": 632,
-		"label": "厚重之心（优质）",
+		"label": "厚重之心(优质)",
 		"icon": "ewn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -22333,7 +22333,7 @@ exports.data = [
 	},
 	{
 		"classId": 633,
-		"label": "守护之心（优质）",
+		"label": "守护之心(优质)",
 		"icon": "ewn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -22361,7 +22361,7 @@ exports.data = [
 	},
 	{
 		"classId": 634,
-		"label": "战斗之心（稀有）",
+		"label": "战斗之心(稀有)",
 		"icon": "ewn011.png",
 		"category": 1,
 		"subcategory": 5,
@@ -22388,7 +22388,7 @@ exports.data = [
 	},
 	{
 		"classId": 635,
-		"label": "卫兵之心（稀有）",
+		"label": "卫兵之心(稀有)",
 		"icon": "ewn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -22417,7 +22417,7 @@ exports.data = [
 	},
 	{
 		"classId": 636,
-		"label": "不屈之心（稀有）",
+		"label": "不屈之心(稀有)",
 		"icon": "ewn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -22446,7 +22446,7 @@ exports.data = [
 	},
 	{
 		"classId": 637,
-		"label": "厚重之心（稀有）",
+		"label": "厚重之心(稀有)",
 		"icon": "ewn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -22475,7 +22475,7 @@ exports.data = [
 	},
 	{
 		"classId": 638,
-		"label": "守护之心（稀有）",
+		"label": "守护之心(稀有)",
 		"icon": "ewn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -22504,7 +22504,7 @@ exports.data = [
 	},
 	{
 		"classId": 639,
-		"label": "联盟之心（稀有）",
+		"label": "联盟之心(稀有)",
 		"icon": "ewn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -22532,7 +22532,7 @@ exports.data = [
 	},
 	{
 		"classId": 640,
-		"label": "卫兵之心（史诗）",
+		"label": "卫兵之心(史诗)",
 		"icon": "ewn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -22559,7 +22559,7 @@ exports.data = [
 	},
 	{
 		"classId": 641,
-		"label": "不屈之心（史诗）",
+		"label": "不屈之心(史诗)",
 		"icon": "ewn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -22588,7 +22588,7 @@ exports.data = [
 	},
 	{
 		"classId": 642,
-		"label": "厚重之心（史诗）",
+		"label": "厚重之心(史诗)",
 		"icon": "ewn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -22617,7 +22617,7 @@ exports.data = [
 	},
 	{
 		"classId": 643,
-		"label": "守护之心（史诗）",
+		"label": "守护之心(史诗)",
 		"icon": "ewn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -22646,7 +22646,7 @@ exports.data = [
 	},
 	{
 		"classId": 644,
-		"label": "联盟之心（史诗）",
+		"label": "联盟之心(史诗)",
 		"icon": "ewn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -22675,7 +22675,7 @@ exports.data = [
 	},
 	{
 		"classId": 645,
-		"label": "荣耀之心（史诗）",
+		"label": "荣耀之心(史诗)",
 		"icon": "ewn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -22703,7 +22703,7 @@ exports.data = [
 	},
 	{
 		"classId": 646,
-		"label": "不屈之心（传奇）",
+		"label": "不屈之心(传奇)",
 		"icon": "ewn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -22730,7 +22730,7 @@ exports.data = [
 	},
 	{
 		"classId": 647,
-		"label": "厚重之心（传奇）",
+		"label": "厚重之心(传奇)",
 		"icon": "ewn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -22757,7 +22757,7 @@ exports.data = [
 	},
 	{
 		"classId": 648,
-		"label": "守护之心（传奇）",
+		"label": "守护之心(传奇)",
 		"icon": "ewn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -22784,7 +22784,7 @@ exports.data = [
 	},
 	{
 		"classId": 649,
-		"label": "联盟之心（传奇）",
+		"label": "联盟之心(传奇)",
 		"icon": "ewn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -22811,7 +22811,7 @@ exports.data = [
 	},
 	{
 		"classId": 650,
-		"label": "荣耀之心（传奇）",
+		"label": "荣耀之心(传奇)",
 		"icon": "ewn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -22838,7 +22838,7 @@ exports.data = [
 	},
 	{
 		"classId": 651,
-		"label": "盛怒之心（传奇）",
+		"label": "盛怒之心(传奇)",
 		"icon": "ewn041.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23028,7 +23028,7 @@ exports.data = [
 	},
 	{
 		"classId": 658,
-		"label": "初阶护符（优质）",
+		"label": "初阶护符(优质)",
 		"icon": "emn011.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23054,7 +23054,7 @@ exports.data = [
 	},
 	{
 		"classId": 659,
-		"label": "见习护符（优质）",
+		"label": "见习护符(优质)",
 		"icon": "emn011.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23082,7 +23082,7 @@ exports.data = [
 	},
 	{
 		"classId": 660,
-		"label": "魔力护符（优质）",
+		"label": "魔力护符(优质)",
 		"icon": "emn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23110,7 +23110,7 @@ exports.data = [
 	},
 	{
 		"classId": 661,
-		"label": "魔导护符（优质）",
+		"label": "魔导护符(优质)",
 		"icon": "emn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23138,7 +23138,7 @@ exports.data = [
 	},
 	{
 		"classId": 662,
-		"label": "长者护符（优质）",
+		"label": "长者护符(优质)",
 		"icon": "emn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23166,7 +23166,7 @@ exports.data = [
 	},
 	{
 		"classId": 663,
-		"label": "驱魔护符（优质）",
+		"label": "驱魔护符(优质)",
 		"icon": "emn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23193,7 +23193,7 @@ exports.data = [
 	},
 	{
 		"classId": 664,
-		"label": "见习护符（稀有）",
+		"label": "见习护符(稀有)",
 		"icon": "emn011.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23219,7 +23219,7 @@ exports.data = [
 	},
 	{
 		"classId": 665,
-		"label": "魔力护符（稀有）",
+		"label": "魔力护符(稀有)",
 		"icon": "emn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23247,7 +23247,7 @@ exports.data = [
 	},
 	{
 		"classId": 666,
-		"label": "魔导护符（稀有）",
+		"label": "魔导护符(稀有)",
 		"icon": "emn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23275,7 +23275,7 @@ exports.data = [
 	},
 	{
 		"classId": 667,
-		"label": "长者护符（稀有）",
+		"label": "长者护符(稀有)",
 		"icon": "emn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23303,7 +23303,7 @@ exports.data = [
 	},
 	{
 		"classId": 668,
-		"label": "驱魔护符（稀有）",
+		"label": "驱魔护符(稀有)",
 		"icon": "emn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23331,7 +23331,7 @@ exports.data = [
 	},
 	{
 		"classId": 669,
-		"label": "精灵护符（稀有）",
+		"label": "精灵护符(稀有)",
 		"icon": "emn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23358,7 +23358,7 @@ exports.data = [
 	},
 	{
 		"classId": 670,
-		"label": "魔力护符（史诗）",
+		"label": "魔力护符(史诗)",
 		"icon": "emn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23384,7 +23384,7 @@ exports.data = [
 	},
 	{
 		"classId": 671,
-		"label": "魔导护符（史诗）",
+		"label": "魔导护符(史诗)",
 		"icon": "emn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23412,7 +23412,7 @@ exports.data = [
 	},
 	{
 		"classId": 672,
-		"label": "长者护符（史诗）",
+		"label": "长者护符(史诗)",
 		"icon": "emn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23440,7 +23440,7 @@ exports.data = [
 	},
 	{
 		"classId": 673,
-		"label": "驱魔护符（史诗）",
+		"label": "驱魔护符(史诗)",
 		"icon": "emn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23468,7 +23468,7 @@ exports.data = [
 	},
 	{
 		"classId": 674,
-		"label": "精灵护符（史诗）",
+		"label": "精灵护符(史诗)",
 		"icon": "emn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23496,7 +23496,7 @@ exports.data = [
 	},
 	{
 		"classId": 675,
-		"label": "幽冥护符（史诗）",
+		"label": "幽冥护符(史诗)",
 		"icon": "emn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23523,7 +23523,7 @@ exports.data = [
 	},
 	{
 		"classId": 676,
-		"label": "魔导护符（传奇）",
+		"label": "魔导护符(传奇)",
 		"icon": "emn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23549,7 +23549,7 @@ exports.data = [
 	},
 	{
 		"classId": 677,
-		"label": "长者护符（传奇）",
+		"label": "长者护符(传奇)",
 		"icon": "emn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23575,7 +23575,7 @@ exports.data = [
 	},
 	{
 		"classId": 678,
-		"label": "驱魔护符（传奇）",
+		"label": "驱魔护符(传奇)",
 		"icon": "emn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23601,7 +23601,7 @@ exports.data = [
 	},
 	{
 		"classId": 679,
-		"label": "精灵护符（传奇）",
+		"label": "精灵护符(传奇)",
 		"icon": "emn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23627,7 +23627,7 @@ exports.data = [
 	},
 	{
 		"classId": 680,
-		"label": "幽冥护符（传奇）",
+		"label": "幽冥护符(传奇)",
 		"icon": "emn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23653,7 +23653,7 @@ exports.data = [
 	},
 	{
 		"classId": 681,
-		"label": "混沌护符（传奇）",
+		"label": "混沌护符(传奇)",
 		"icon": "emn041.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23842,7 +23842,7 @@ exports.data = [
 	},
 	{
 		"classId": 688,
-		"label": "救赎之证（优质）",
+		"label": "救赎之证(优质)",
 		"icon": "epn011.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23868,7 +23868,7 @@ exports.data = [
 	},
 	{
 		"classId": 689,
-		"label": "祷告之证（优质）",
+		"label": "祷告之证(优质)",
 		"icon": "epn011.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23896,7 +23896,7 @@ exports.data = [
 	},
 	{
 		"classId": 690,
-		"label": "祈愿之证（优质）",
+		"label": "祈愿之证(优质)",
 		"icon": "epn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23924,7 +23924,7 @@ exports.data = [
 	},
 	{
 		"classId": 691,
-		"label": "侍僧之证（优质）",
+		"label": "侍僧之证(优质)",
 		"icon": "epn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23952,7 +23952,7 @@ exports.data = [
 	},
 	{
 		"classId": 692,
-		"label": "预言之证（优质）",
+		"label": "预言之证(优质)",
 		"icon": "epn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -23980,7 +23980,7 @@ exports.data = [
 	},
 	{
 		"classId": 693,
-		"label": "神官之证（优质）",
+		"label": "神官之证(优质)",
 		"icon": "epn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -24007,7 +24007,7 @@ exports.data = [
 	},
 	{
 		"classId": 694,
-		"label": "祷告之证（稀有）",
+		"label": "祷告之证(稀有)",
 		"icon": "epn011.png",
 		"category": 1,
 		"subcategory": 5,
@@ -24033,7 +24033,7 @@ exports.data = [
 	},
 	{
 		"classId": 695,
-		"label": "祈愿之证（稀有）",
+		"label": "祈愿之证(稀有)",
 		"icon": "epn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -24061,7 +24061,7 @@ exports.data = [
 	},
 	{
 		"classId": 696,
-		"label": "侍僧之证（稀有）",
+		"label": "侍僧之证(稀有)",
 		"icon": "epn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -24089,7 +24089,7 @@ exports.data = [
 	},
 	{
 		"classId": 697,
-		"label": "预言之证（稀有）",
+		"label": "预言之证(稀有)",
 		"icon": "epn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -24117,7 +24117,7 @@ exports.data = [
 	},
 	{
 		"classId": 698,
-		"label": "神官之证（稀有）",
+		"label": "神官之证(稀有)",
 		"icon": "epn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -24145,7 +24145,7 @@ exports.data = [
 	},
 	{
 		"classId": 699,
-		"label": "圣职之证（稀有）",
+		"label": "圣职之证(稀有)",
 		"icon": "epn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -24172,7 +24172,7 @@ exports.data = [
 	},
 	{
 		"classId": 700,
-		"label": "祈愿之证（史诗）",
+		"label": "祈愿之证(史诗)",
 		"icon": "epn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -24198,7 +24198,7 @@ exports.data = [
 	},
 	{
 		"classId": 701,
-		"label": "侍僧之证（史诗）",
+		"label": "侍僧之证(史诗)",
 		"icon": "epn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -24226,7 +24226,7 @@ exports.data = [
 	},
 	{
 		"classId": 702,
-		"label": "预言之证（史诗）",
+		"label": "预言之证(史诗)",
 		"icon": "epn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -24254,7 +24254,7 @@ exports.data = [
 	},
 	{
 		"classId": 703,
-		"label": "神官之证（史诗）",
+		"label": "神官之证(史诗)",
 		"icon": "epn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -24282,7 +24282,7 @@ exports.data = [
 	},
 	{
 		"classId": 704,
-		"label": "圣职之证（史诗）",
+		"label": "圣职之证(史诗)",
 		"icon": "epn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -24310,7 +24310,7 @@ exports.data = [
 	},
 	{
 		"classId": 705,
-		"label": "光明之证（史诗）",
+		"label": "光明之证(史诗)",
 		"icon": "epn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -24337,7 +24337,7 @@ exports.data = [
 	},
 	{
 		"classId": 706,
-		"label": "侍僧之证（传奇）",
+		"label": "侍僧之证(传奇)",
 		"icon": "epn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -24363,7 +24363,7 @@ exports.data = [
 	},
 	{
 		"classId": 707,
-		"label": "预言之证（传奇）",
+		"label": "预言之证(传奇)",
 		"icon": "epn021.png",
 		"category": 1,
 		"subcategory": 5,
@@ -24389,7 +24389,7 @@ exports.data = [
 	},
 	{
 		"classId": 708,
-		"label": "神官之证（传奇）",
+		"label": "神官之证(传奇)",
 		"icon": "epn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -24415,7 +24415,7 @@ exports.data = [
 	},
 	{
 		"classId": 709,
-		"label": "圣职之证（传奇）",
+		"label": "圣职之证(传奇)",
 		"icon": "epn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -24441,7 +24441,7 @@ exports.data = [
 	},
 	{
 		"classId": 710,
-		"label": "光明之证（传奇）",
+		"label": "光明之证(传奇)",
 		"icon": "epn031.png",
 		"category": 1,
 		"subcategory": 5,
@@ -24467,7 +24467,7 @@ exports.data = [
 	},
 	{
 		"classId": 711,
-		"label": "圣灵之证（传奇）",
+		"label": "圣灵之证(传奇)",
 		"icon": "epn041.png",
 		"category": 1,
 		"subcategory": 5,
@@ -24657,7 +24657,7 @@ exports.data = [
 	},
 	{
 		"classId": 718,
-		"label": "路人的战士之戒（优质）",
+		"label": "路人的战士之戒(优质)",
 		"icon": "er011.png",
 		"category": 1,
 		"subcategory": 3,
@@ -24683,7 +24683,7 @@ exports.data = [
 	},
 	{
 		"classId": 719,
-		"label": "小清新的战士之戒（优质）",
+		"label": "小清新的战士之戒(优质)",
 		"icon": "er011.png",
 		"category": 1,
 		"subcategory": 3,
@@ -24711,7 +24711,7 @@ exports.data = [
 	},
 	{
 		"classId": 720,
-		"label": "微爽的战士之戒（优质）",
+		"label": "微爽的战士之戒(优质)",
 		"icon": "er021.png",
 		"category": 1,
 		"subcategory": 3,
@@ -24739,7 +24739,7 @@ exports.data = [
 	},
 	{
 		"classId": 721,
-		"label": "欢乐的战士之戒（优质）",
+		"label": "欢乐的战士之戒(优质)",
 		"icon": "er021.png",
 		"category": 1,
 		"subcategory": 3,
@@ -24767,7 +24767,7 @@ exports.data = [
 	},
 	{
 		"classId": 722,
-		"label": "给力的战士之戒（优质）",
+		"label": "给力的战士之戒(优质)",
 		"icon": "er021.png",
 		"category": 1,
 		"subcategory": 3,
@@ -24795,7 +24795,7 @@ exports.data = [
 	},
 	{
 		"classId": 723,
-		"label": "高端的战士之戒（优质）",
+		"label": "高端的战士之戒(优质)",
 		"icon": "er031.png",
 		"category": 1,
 		"subcategory": 3,
@@ -24822,7 +24822,7 @@ exports.data = [
 	},
 	{
 		"classId": 724,
-		"label": "小清新的战士之戒（稀有）",
+		"label": "小清新的战士之戒(稀有)",
 		"icon": "er011.png",
 		"category": 1,
 		"subcategory": 3,
@@ -24848,7 +24848,7 @@ exports.data = [
 	},
 	{
 		"classId": 725,
-		"label": "微爽的战士之戒（稀有）",
+		"label": "微爽的战士之戒(稀有)",
 		"icon": "er021.png",
 		"category": 1,
 		"subcategory": 3,
@@ -24876,7 +24876,7 @@ exports.data = [
 	},
 	{
 		"classId": 726,
-		"label": "欢乐的战士之戒（稀有）",
+		"label": "欢乐的战士之戒(稀有)",
 		"icon": "er021.png",
 		"category": 1,
 		"subcategory": 3,
@@ -24904,7 +24904,7 @@ exports.data = [
 	},
 	{
 		"classId": 727,
-		"label": "给力的战士之戒（稀有）",
+		"label": "给力的战士之戒(稀有)",
 		"icon": "er021.png",
 		"category": 1,
 		"subcategory": 3,
@@ -24932,7 +24932,7 @@ exports.data = [
 	},
 	{
 		"classId": 728,
-		"label": "高端的战士之戒（稀有）",
+		"label": "高端的战士之戒(稀有)",
 		"icon": "er031.png",
 		"category": 1,
 		"subcategory": 3,
@@ -24960,7 +24960,7 @@ exports.data = [
 	},
 	{
 		"classId": 729,
-		"label": "大气的战士之戒（稀有）",
+		"label": "大气的战士之戒(稀有)",
 		"icon": "er031.png",
 		"category": 1,
 		"subcategory": 3,
@@ -24987,7 +24987,7 @@ exports.data = [
 	},
 	{
 		"classId": 730,
-		"label": "微爽的战士之戒（史诗）",
+		"label": "微爽的战士之戒(史诗)",
 		"icon": "er021.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25013,7 +25013,7 @@ exports.data = [
 	},
 	{
 		"classId": 731,
-		"label": "欢乐的战士之戒（史诗）",
+		"label": "欢乐的战士之戒(史诗)",
 		"icon": "er021.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25041,7 +25041,7 @@ exports.data = [
 	},
 	{
 		"classId": 732,
-		"label": "给力的战士之戒（史诗）",
+		"label": "给力的战士之戒(史诗)",
 		"icon": "er021.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25069,7 +25069,7 @@ exports.data = [
 	},
 	{
 		"classId": 733,
-		"label": "高端的战士之戒（史诗）",
+		"label": "高端的战士之戒(史诗)",
 		"icon": "er031.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25097,7 +25097,7 @@ exports.data = [
 	},
 	{
 		"classId": 734,
-		"label": "大气的战士之戒（史诗）",
+		"label": "大气的战士之戒(史诗)",
 		"icon": "er031.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25125,7 +25125,7 @@ exports.data = [
 	},
 	{
 		"classId": 735,
-		"label": "酷炫的战士之戒（史诗）",
+		"label": "酷炫的战士之戒(史诗)",
 		"icon": "er031.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25152,7 +25152,7 @@ exports.data = [
 	},
 	{
 		"classId": 736,
-		"label": "欢乐的战士之戒（传奇）",
+		"label": "欢乐的战士之戒(传奇)",
 		"icon": "er021.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25178,7 +25178,7 @@ exports.data = [
 	},
 	{
 		"classId": 737,
-		"label": "给力的战士之戒（传奇）",
+		"label": "给力的战士之戒(传奇)",
 		"icon": "er021.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25204,7 +25204,7 @@ exports.data = [
 	},
 	{
 		"classId": 738,
-		"label": "高端的战士之戒（传奇）",
+		"label": "高端的战士之戒(传奇)",
 		"icon": "er031.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25230,7 +25230,7 @@ exports.data = [
 	},
 	{
 		"classId": 739,
-		"label": "大气的战士之戒（传奇）",
+		"label": "大气的战士之戒(传奇)",
 		"icon": "er031.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25256,7 +25256,7 @@ exports.data = [
 	},
 	{
 		"classId": 740,
-		"label": "酷炫的战士之戒（传奇）",
+		"label": "酷炫的战士之戒(传奇)",
 		"icon": "er031.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25282,7 +25282,7 @@ exports.data = [
 	},
 	{
 		"classId": 741,
-		"label": "碉堡的战士之戒（传奇）",
+		"label": "碉堡的战士之戒(传奇)",
 		"icon": "er041.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25466,7 +25466,7 @@ exports.data = [
 	},
 	{
 		"classId": 748,
-		"label": "路人的法师之戒（优质）",
+		"label": "路人的法师之戒(优质)",
 		"icon": "er012.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25491,7 +25491,7 @@ exports.data = [
 	},
 	{
 		"classId": 749,
-		"label": "小清新的法师之戒（优质）",
+		"label": "小清新的法师之戒(优质)",
 		"icon": "er012.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25518,7 +25518,7 @@ exports.data = [
 	},
 	{
 		"classId": 750,
-		"label": "微爽的法师之戒（优质）",
+		"label": "微爽的法师之戒(优质)",
 		"icon": "er022.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25545,7 +25545,7 @@ exports.data = [
 	},
 	{
 		"classId": 751,
-		"label": "欢乐的法师之戒（优质）",
+		"label": "欢乐的法师之戒(优质)",
 		"icon": "er022.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25572,7 +25572,7 @@ exports.data = [
 	},
 	{
 		"classId": 752,
-		"label": "给力的法师之戒（优质）",
+		"label": "给力的法师之戒(优质)",
 		"icon": "er022.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25599,7 +25599,7 @@ exports.data = [
 	},
 	{
 		"classId": 753,
-		"label": "高端的法师之戒（优质）",
+		"label": "高端的法师之戒(优质)",
 		"icon": "er032.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25625,7 +25625,7 @@ exports.data = [
 	},
 	{
 		"classId": 754,
-		"label": "小清新的法师之戒（稀有）",
+		"label": "小清新的法师之戒(稀有)",
 		"icon": "er012.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25650,7 +25650,7 @@ exports.data = [
 	},
 	{
 		"classId": 755,
-		"label": "微爽的法师之戒（稀有）",
+		"label": "微爽的法师之戒(稀有)",
 		"icon": "er022.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25677,7 +25677,7 @@ exports.data = [
 	},
 	{
 		"classId": 756,
-		"label": "欢乐的法师之戒（稀有）",
+		"label": "欢乐的法师之戒(稀有)",
 		"icon": "er022.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25704,7 +25704,7 @@ exports.data = [
 	},
 	{
 		"classId": 757,
-		"label": "给力的法师之戒（稀有）",
+		"label": "给力的法师之戒(稀有)",
 		"icon": "er022.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25731,7 +25731,7 @@ exports.data = [
 	},
 	{
 		"classId": 758,
-		"label": "高端的法师之戒（稀有）",
+		"label": "高端的法师之戒(稀有)",
 		"icon": "er032.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25758,7 +25758,7 @@ exports.data = [
 	},
 	{
 		"classId": 759,
-		"label": "大气的法师之戒（稀有）",
+		"label": "大气的法师之戒(稀有)",
 		"icon": "er032.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25784,7 +25784,7 @@ exports.data = [
 	},
 	{
 		"classId": 760,
-		"label": "微爽的法师之戒（史诗）",
+		"label": "微爽的法师之戒(史诗)",
 		"icon": "er022.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25809,7 +25809,7 @@ exports.data = [
 	},
 	{
 		"classId": 761,
-		"label": "欢乐的法师之戒（史诗）",
+		"label": "欢乐的法师之戒(史诗)",
 		"icon": "er022.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25836,7 +25836,7 @@ exports.data = [
 	},
 	{
 		"classId": 762,
-		"label": "给力的法师之戒（史诗）",
+		"label": "给力的法师之戒(史诗)",
 		"icon": "er022.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25863,7 +25863,7 @@ exports.data = [
 	},
 	{
 		"classId": 763,
-		"label": "高端的法师之戒（史诗）",
+		"label": "高端的法师之戒(史诗)",
 		"icon": "er032.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25890,7 +25890,7 @@ exports.data = [
 	},
 	{
 		"classId": 764,
-		"label": "大气的法师之戒（史诗）",
+		"label": "大气的法师之戒(史诗)",
 		"icon": "er032.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25917,7 +25917,7 @@ exports.data = [
 	},
 	{
 		"classId": 765,
-		"label": "酷炫的法师之戒（史诗）",
+		"label": "酷炫的法师之戒(史诗)",
 		"icon": "er032.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25943,7 +25943,7 @@ exports.data = [
 	},
 	{
 		"classId": 766,
-		"label": "欢乐的法师之戒（传奇）",
+		"label": "欢乐的法师之戒(传奇)",
 		"icon": "er022.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25968,7 +25968,7 @@ exports.data = [
 	},
 	{
 		"classId": 767,
-		"label": "给力的法师之戒（传奇）",
+		"label": "给力的法师之戒(传奇)",
 		"icon": "er022.png",
 		"category": 1,
 		"subcategory": 3,
@@ -25993,7 +25993,7 @@ exports.data = [
 	},
 	{
 		"classId": 768,
-		"label": "高端的法师之戒（传奇）",
+		"label": "高端的法师之戒(传奇)",
 		"icon": "er032.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26018,7 +26018,7 @@ exports.data = [
 	},
 	{
 		"classId": 769,
-		"label": "大气的法师之戒（传奇）",
+		"label": "大气的法师之戒(传奇)",
 		"icon": "er032.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26043,7 +26043,7 @@ exports.data = [
 	},
 	{
 		"classId": 770,
-		"label": "酷炫的法师之戒（传奇）",
+		"label": "酷炫的法师之戒(传奇)",
 		"icon": "er032.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26068,7 +26068,7 @@ exports.data = [
 	},
 	{
 		"classId": 771,
-		"label": "碉堡的法师之戒（传奇）",
+		"label": "碉堡的法师之戒(传奇)",
 		"icon": "er042.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26258,7 +26258,7 @@ exports.data = [
 	},
 	{
 		"classId": 778,
-		"label": "路人的牧师之戒（优质）",
+		"label": "路人的牧师之戒(优质)",
 		"icon": "er013.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26284,7 +26284,7 @@ exports.data = [
 	},
 	{
 		"classId": 779,
-		"label": "小清新的牧师之戒（优质）",
+		"label": "小清新的牧师之戒(优质)",
 		"icon": "er013.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26312,7 +26312,7 @@ exports.data = [
 	},
 	{
 		"classId": 780,
-		"label": "微爽的牧师之戒（优质）",
+		"label": "微爽的牧师之戒(优质)",
 		"icon": "er023.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26340,7 +26340,7 @@ exports.data = [
 	},
 	{
 		"classId": 781,
-		"label": "欢乐的牧师之戒（优质）",
+		"label": "欢乐的牧师之戒(优质)",
 		"icon": "er023.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26368,7 +26368,7 @@ exports.data = [
 	},
 	{
 		"classId": 782,
-		"label": "给力的牧师之戒（优质）",
+		"label": "给力的牧师之戒(优质)",
 		"icon": "er023.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26396,7 +26396,7 @@ exports.data = [
 	},
 	{
 		"classId": 783,
-		"label": "高端的牧师之戒（优质）",
+		"label": "高端的牧师之戒(优质)",
 		"icon": "er033.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26423,7 +26423,7 @@ exports.data = [
 	},
 	{
 		"classId": 784,
-		"label": "小清新的牧师之戒（稀有）",
+		"label": "小清新的牧师之戒(稀有)",
 		"icon": "er013.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26449,7 +26449,7 @@ exports.data = [
 	},
 	{
 		"classId": 785,
-		"label": "微爽的牧师之戒（稀有）",
+		"label": "微爽的牧师之戒(稀有)",
 		"icon": "er023.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26477,7 +26477,7 @@ exports.data = [
 	},
 	{
 		"classId": 786,
-		"label": "欢乐的牧师之戒（稀有）",
+		"label": "欢乐的牧师之戒(稀有)",
 		"icon": "er023.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26505,7 +26505,7 @@ exports.data = [
 	},
 	{
 		"classId": 787,
-		"label": "给力的牧师之戒（稀有）",
+		"label": "给力的牧师之戒(稀有)",
 		"icon": "er023.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26533,7 +26533,7 @@ exports.data = [
 	},
 	{
 		"classId": 788,
-		"label": "高端的牧师之戒（稀有）",
+		"label": "高端的牧师之戒(稀有)",
 		"icon": "er033.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26561,7 +26561,7 @@ exports.data = [
 	},
 	{
 		"classId": 789,
-		"label": "大气的牧师之戒（稀有）",
+		"label": "大气的牧师之戒(稀有)",
 		"icon": "er033.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26588,7 +26588,7 @@ exports.data = [
 	},
 	{
 		"classId": 790,
-		"label": "微爽的牧师之戒（史诗）",
+		"label": "微爽的牧师之戒(史诗)",
 		"icon": "er023.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26614,7 +26614,7 @@ exports.data = [
 	},
 	{
 		"classId": 791,
-		"label": "欢乐的牧师之戒（史诗）",
+		"label": "欢乐的牧师之戒(史诗)",
 		"icon": "er023.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26642,7 +26642,7 @@ exports.data = [
 	},
 	{
 		"classId": 792,
-		"label": "给力的牧师之戒（史诗）",
+		"label": "给力的牧师之戒(史诗)",
 		"icon": "er023.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26670,7 +26670,7 @@ exports.data = [
 	},
 	{
 		"classId": 793,
-		"label": "高端的牧师之戒（史诗）",
+		"label": "高端的牧师之戒(史诗)",
 		"icon": "er033.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26698,7 +26698,7 @@ exports.data = [
 	},
 	{
 		"classId": 794,
-		"label": "大气的牧师之戒（史诗）",
+		"label": "大气的牧师之戒(史诗)",
 		"icon": "er033.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26726,7 +26726,7 @@ exports.data = [
 	},
 	{
 		"classId": 795,
-		"label": "酷炫的牧师之戒（史诗）",
+		"label": "酷炫的牧师之戒(史诗)",
 		"icon": "er033.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26753,7 +26753,7 @@ exports.data = [
 	},
 	{
 		"classId": 796,
-		"label": "欢乐的牧师之戒（传奇）",
+		"label": "欢乐的牧师之戒(传奇)",
 		"icon": "er023.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26779,7 +26779,7 @@ exports.data = [
 	},
 	{
 		"classId": 797,
-		"label": "给力的牧师之戒（传奇）",
+		"label": "给力的牧师之戒(传奇)",
 		"icon": "er023.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26805,7 +26805,7 @@ exports.data = [
 	},
 	{
 		"classId": 798,
-		"label": "高端的牧师之戒（传奇）",
+		"label": "高端的牧师之戒(传奇)",
 		"icon": "er033.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26831,7 +26831,7 @@ exports.data = [
 	},
 	{
 		"classId": 799,
-		"label": "大气的牧师之戒（传奇）",
+		"label": "大气的牧师之戒(传奇)",
 		"icon": "er033.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26857,7 +26857,7 @@ exports.data = [
 	},
 	{
 		"classId": 800,
-		"label": "酷炫的牧师之戒（传奇）",
+		"label": "酷炫的牧师之戒(传奇)",
 		"icon": "er033.png",
 		"category": 1,
 		"subcategory": 3,
@@ -26883,7 +26883,7 @@ exports.data = [
 	},
 	{
 		"classId": 801,
-		"label": "碉堡的牧师之戒（传奇）",
+		"label": "碉堡的牧师之戒(传奇)",
 		"icon": "er043.png",
 		"category": 1,
 		"subcategory": 3,
@@ -27601,5 +27601,182 @@ exports.data = [
         "quality": 2,
         "sellGem": 225,
         "dropId": 86
+    },
+    {
+        "classId": 864,
+        "label": "猎人之冠",
+        "icon": "irfasion-helmetsg1.png",
+        "category": 1,
+        "subcategory": 13,
+        "description": "优秀狩猎者的身份证明。",
+        "effecta": [
+            {
+                "part": "helmet",
+                "file": "rfasion-helmetsg1.ccbi"
+            },
+            {
+                "part": "helmet2",
+                "file": "rfasion-helmetsg1-2.ccbi"
+            }
+        ],
+        "basic_properties": {
+            "health": 30,
+            "attack": 10,
+            "speed": 10,
+            "strong": 15,
+            "accuracy": 5,
+            "critical": 5,
+            "reactivity": 15
+        },
+        "storeOnly": true,
+        "expiration": {day: 2}
+    },
+    {
+        "classId": 865,
+        "label": "狩猎精英者",
+        "icon": "irfasion-helmetsg2.png",
+        "category": 1,
+        "subcategory": 13,
+        "description": "狩猎精英的身份证明。",
+        "effecta": [
+            {
+                "part": "helmet",
+                "file": "rfasion-helmetsg2.ccbi"
+            },
+            {
+                "part": "helmet2",
+                "file": "rfasion-helmetsg2-2.ccbi"
+            }
+        ],
+        "basic_properties": {
+            "health": 130,
+            "attack": 15,
+            "speed": 25,
+            "strong": 30,
+            "accuracy": 20,
+            "critical": 20,
+            "reactivity": 30
+        },
+        "storeOnly": true,
+        "expiration": {day: 2}
+    },
+    {
+        "classId":866,
+        "label": "猎人圣冠",
+        "icon": "irfasion-helmetsg3.png",
+        "category": 1,
+        "subcategory": 13,
+        "description": "只有猎人中的猎人才有资格戴上这顶圣冠。",
+        "effecta": [
+            {
+                "part": "helmet",
+                "file": "rfasion-helmetsg3.ccbi"
+            },
+            {
+                "part": "helmet2",
+                "file": "rfasion-helmetsg3-2.ccbi"
+            }
+        ],
+        "basic_properties": {
+            "health": 340,
+            "attack": 30,
+            "speed": 70,
+            "strong": 90,
+            "accuracy": 50,
+            "critical": 50,
+            "reactivity": 90
+        },
+        "storeOnly": true,
+        "expiration": {day: 2}
+    },
+    {
+        "classId":867,
+        "label": "铁人头冠",
+        "icon": "irfasion-helmetwj1.png",
+        "category": 1,
+        "subcategory": 13,
+        "description": "历经铁人试炼后获得成功的证明。",
+        "effecta": [
+            {
+                "part": "helmet",
+                "file": "rfasion-helmetwj1.ccbi"
+            }
+        ],
+        "basic_properties": {
+            "health": 30,
+            "attack": 10,
+            "speed": 10,
+            "strong": 5,
+            "accuracy": 15,
+            "critical": 15,
+            "reactivity": 5
+        },
+        "storeOnly": true,
+        "expiration": {day: 2}
+    },
+    {
+        "classId": 868,
+        "label": "铁人精英者",
+        "icon": "irfasion-helmetwj2.png",
+        "category": 1,
+        "subcategory": 13,
+        "description": "只发给铁人试炼中出类拔萃的试炼者。",
+        "effecta": [
+            {
+                "part": "helmet",
+                "file": "rfasion-helmetwj2.ccbi"
+            }
+        ],
+        "basic_properties": {
+            "health":70,
+            "attack": 25,
+            "speed": 25,
+            "strong": 20,
+            "accuracy": 30,
+            "critical": 30,
+            "reactivity": 20
+        },
+        "storeOnly": true,
+        "expiration": {day: 2}
+    },
+    {
+        "classId": 869,
+        "label": "试炼圣冠",
+        "icon": "irfasion-helmetwj3.png",
+        "category": 1,
+        "subcategory": 13,
+        "description": "披荆斩棘成为试炼之王的人才能获得此顶圣冠。",
+        "effecta": [
+            {
+                "part": "helmet",
+                "file": "rfasion-helmetwj3.ccbi"
+            }
+        ],
+        "basic_properties": {
+            "health": 130,
+            "attack": 65,
+            "speed": 70,
+            "strong": 50,
+            "accuracy": 90,
+            "critical": 90,
+            "reactivity": 50
+        },
+        "storeOnly": true,
+        "expiration": {day: 2}
+    },
+    {
+        "classId": 870,
+        "label": "界限头冠",
+        "icon": "irfasion-helmetzdl2.png",
+        "category": 1,
+        "subcategory": 13,
+        "description": "突破自身界限，战斗力突破10000的身份证明。",
+        "effecta": [
+            {
+                "part": "helmet",
+                "file": "rfasion-helmetzdl2.ccbi"
+            }
+        ],
+        "storeOnly": true
     }
 ]
