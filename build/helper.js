@@ -755,7 +755,7 @@
       },
       func: function(libs) {
         var cfg;
-        return cfg = [
+        cfg = [
           {
             from: 0,
             to: 0,
@@ -815,6 +815,13 @@
             }
           }
         ];
+        return cfg.forEach(function(e) {
+          return libs.helper.getPositionOnLeaderboard(2, 'nobody', e.from, e.to, function(err, result) {
+            return result.board.name.forEach(function(name) {
+              return libs.db.deliverMessage(name, e.mail);
+            });
+          });
+        });
       }
     }
   };
