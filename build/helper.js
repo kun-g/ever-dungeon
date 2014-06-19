@@ -235,7 +235,7 @@
 
   currentTime = function(needObject) {
     var obj;
-    obj = moment().zone("+08:00");
+    obj = moment();
     if (needObject) {
       return obj;
     } else {
@@ -254,9 +254,9 @@
       return null;
     }
     if (date) {
-      date = moment(date).zone("+08:00").startOf('day');
+      date = moment(date).startOf('day');
     }
-    today = moment(today).zone("+08:00").startOf('day');
+    today = moment(today).startOf('day');
     duration = moment.duration(today.diff(date));
     switch (flag) {
       case 'second':
@@ -281,8 +281,8 @@
     if (!date) {
       return false;
     }
-    date = moment(date).zone("+08:00");
-    today = moment(today).zone("+08:00");
+    date = moment(date);
+    today = moment(today);
     if (rule.weekday != null) {
       date = date.weekday(rule.weekday);
     } else if (rule.monthday != null) {
@@ -751,7 +751,7 @@
     },
     killMonsterPrize: {
       time: {
-        hour: 6
+        hour: 13
       },
       func: function(libs) {
         var cfg;

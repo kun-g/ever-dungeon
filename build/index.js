@@ -272,7 +272,7 @@ if (config) {
         if (flag) {
           dbLib.setServerConfig('Interval', JSON.stringify(intervalCfg));
         }
-      }, 60000);
+      }, 6000);
 
       gHuntingInfo = {};
       dbLib.getServerConfig('huntingInfo', function (err, arg) {
