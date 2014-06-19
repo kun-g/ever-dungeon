@@ -650,7 +650,9 @@
         stages = [121, 122, 123, 125, 126, 127, 128, 129, 130, 131, 132];
         for (_i = 0, _len = stages.length; _i < _len; _i++) {
           s = stages[_i];
-          obj.stage[s].newProperty('level', 0);
+          if (obj.stage[s]) {
+            obj.stage[s].newProperty('level', 0);
+          }
         }
         return obj.counters.newProperty('monster', 0);
       }
