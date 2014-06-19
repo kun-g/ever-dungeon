@@ -17,14 +17,6 @@ exports.data = [
         "availableCondition":true
     },
     {
-        "name":"Arena",
-        "key":"counters.arena",
-        "reverse": true,
-        "initialValue": 'length',
-        "type":"player",
-        "availableCondition":true
-    },
-    {
         "name":"killMonster",
         "key":"counters.monster",
         "resetTime": { day: 1},
@@ -32,5 +24,13 @@ exports.data = [
         "initialValue":0,
         "type":"player",
         "availableCondition":true
-    }
+    },
+    {
+        "name":"Arena",
+        "key":"counters.arena",
+        "reverse": true,
+        "initialValue": 'length',
+        "type":"player",
+        "availableCondition":true
+    },
 ];

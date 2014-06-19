@@ -256,6 +256,7 @@ if (config) {
         }
       }
 
+      // TODO: 多个服务器的情况
       dbLib.setServerConfig('Interval', JSON.stringify(intervalCfg));
       setInterval(function () {
         var flag = false;
