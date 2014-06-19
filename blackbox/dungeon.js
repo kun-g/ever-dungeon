@@ -419,7 +419,7 @@
         this.baseRank = cfg.rank;
       }
       if (this.infiniteLevel != null) {
-        this.baseRank += calcInfiniteRank(this.infiniteLevel);
+        this.baseRank += calcInfiniteRank(this.infiniteLevel, this.formularId);
         infiniteLevel = this.infiniteLevel;
         if (infiniteLevel % 10 === 0) {
           this.goldRate *= 1.5;

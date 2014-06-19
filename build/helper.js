@@ -633,7 +633,7 @@
       },
       reset: function(obj, util) {
         obj.timestamp.newProperty('infinite', util.currentTime());
-        return obj.stage[120].level = 0;
+        return obj.stage[120].newProperty('level', 0);
       }
     },
     hunting: {
