@@ -262,8 +262,7 @@ if (config) {
         var flag = false;
         for (var key in config) {
           var cfg = config[key];
-          if (helperLib.matchDate(intervalCfg[key], helperLib.currentTime(), cfg.time) &&
-              helperLib.diffDate(intervalCfg[key], helperLib.currentTime())) {
+          if (helperLib.matchDate(intervalCfg[key], helperLib.currentTime(), cfg.time)) {
             cfg.func({helper: helperLib, db: require('./db')});
             intervalCfg[key] = helperLib.currentTime();
             flag = true;
