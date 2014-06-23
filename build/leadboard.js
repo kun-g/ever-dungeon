@@ -9,7 +9,7 @@ exports.data = [
     },
     {
         "name":"infinitydungeon",
-        "key":"stage.120.state",
+        "key":"stage.120.level",
         "resetTime": { day: 1},
         "reverse":false,
         "initialValue":0,
@@ -24,5 +24,13 @@ exports.data = [
         "initialValue":0,
         "type":"player",
         "availableCondition":true
-    }
+    },
+    {
+        "name":"Arena",
+        "key":"counters.arena",
+        "reverse": true,
+        "initialValue": 'length',
+        "type":"player",
+        "availableCondition":true
+    },
 ];

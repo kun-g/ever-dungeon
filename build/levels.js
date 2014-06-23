@@ -393,7 +393,7 @@ exports.data = [
         "levelData":[
             {
                 "xp":0,
-                "skill": [{"id":27},{"id":156}]
+                "skill": [{"id":27},{"id":152}]
             },
             {
                 "xp":250,
@@ -418,6 +418,72 @@ exports.data = [
             {
                 "xp":40000,
                 "skill": [{"id":131, "level": 2}]
+            }
+        ]
+    },
+    {
+        "levelId": 5,
+        "levelData":[
+            {
+                "xp":0,
+                "skill": [{"id":27},{"id":152}]
+            },
+            {
+                "xp":250,
+                "skill": [{"id":132, "level": 1}]
+            },
+            {
+                "xp":3000,
+                "skill": [{"id":134, "level": 1}]
+            },
+            {
+                "xp":8000,
+                "skill": [{"id":139, "level": 1}]
+            },
+            {
+                "xp":17000,
+                "skill": [{"id":132, "level": 2}]
+            },
+            {
+                "xp":26000,
+                "skill": [{"id":134, "level": 2}]
+            },
+            {
+                "xp":40000,
+                "skill": [{"id":139, "level": 2}]
+            }
+        ]
+    },
+    {
+        "levelId": 6,
+        "levelData":[
+            {
+                "xp":0,
+                "skill": [{"id":27},{"id":152}]
+            },
+            {
+                "xp":250,
+                "skill": [{"id":135, "level": 1}]
+            },
+            {
+                "xp":3000,
+                "skill": [{"id":137, "level": 1}]
+            },
+            {
+                "xp":8000,
+                "skill": [{"id":138, "level": 1}]
+            },
+            {
+                "xp":17000,
+                "skill": [{"id":135, "level": 2}]
+            },
+            {
+                "xp":26000,
+                "skill": [{"id":137, "level": 2}]
+            },
+            {
+                "xp":40000,
+                "skill": [{"id":138, "level": 2}]
             }
         ]
     }

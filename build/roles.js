@@ -7092,12 +7092,16 @@ exports.data = [
             662,
             712
         ],
+        "property": {
+        "keyd":true,
+        "counterAttack": true
+    },
         "levelId": 4
     },
     {
         "classId": 198,
         "className": "法师",
-        "faction": "hero",
+        "faction": "monster",
         "classType": 4,
         "avatar": "avatar.ccbi",
         "emblem": [
@@ -7115,7 +7119,11 @@ exports.data = [
             652,
             742
         ],
-        "levelId": 1
+        "property": {
+            "keyd":true,
+            "counterAttack": true
+        },
+        "levelId": 5
     },
     {
         "classId": 199,
@@ -7138,7 +7146,11 @@ exports.data = [
             682,
             772
         ],
-        "levelId": 2
+        "property": {
+        "keyd":true,
+        "counterAttack": true
+    },
+        "levelId": 6
     },
     {
         "classId": 200,

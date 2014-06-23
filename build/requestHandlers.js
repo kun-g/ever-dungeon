@@ -769,6 +769,14 @@
       args: [],
       needPid: true
     },
+    RPC_GetPKInfo: {
+      id: 32,
+      func: function(arg, player, handler, rpcID, socket) {
+        return dbLib.queryLeaderboard(2, player.name, 0, 0, function(err, result) {});
+      },
+      args: [],
+      needPid: true
+    },
     RPC_SubmitDailyQuest: {
       id: 29,
       func: function(arg, player, handler, rpcID, socket) {
@@ -780,6 +788,31 @@
             }
           ].concat(ret));
           return player.saveDB();
+        });
+      },
+      args: [],
+      needPid: true
+    },
+    RPC_GetPkRivals: {
+      id: 32,
+      func: function(arg, player, handler, rpcID, socket) {
+        return dbLib.searchRival(player.name, function(err, rivalLst) {
+          var ret;
+          rivalLst = helperLib.warpRivalLst(rivalLst);
+          ret = {
+            REQ: rpcID,
+            RET: RET_OK
+          };
+          return async.map(rivalLst.name, getPlayerHero, function(err, result) {
+            console.log(err);
+            ret.lst = result.map(function(e, i) {
+              var r;
+              r = getBasicInfo(e);
+              r.rnk = +board.rnk[i];
+              return r;
+            });
+            return handler([ret]);
+          });
         });
       },
       args: [],
