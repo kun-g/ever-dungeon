@@ -107,10 +107,14 @@
     }
   };
 
-  calcInfiniteRank = function(infiniteLevel) {
+  calcInfiniteRank = function(infiniteLevel, id) {
     var x;
     x = calcInfiniteX(infiniteLevel);
-    return Math.ceil(0.1 * x * x + 0.1 * x + 1);
+    if ((id != null) && id === 1) {
+      return 1.5 * x * x + 2 * x + 1;
+    } else {
+      return Math.ceil(0.1 * x * x + 0.1 * x + 1);
+    }
   };
 
   createUnits = function(rules, randFunc) {
@@ -415,7 +419,7 @@
         this.baseRank = cfg.rank;
       }
       if (this.infiniteLevel != null) {
-        this.baseRank += calcInfiniteRank(this.infiniteLevel);
+        this.baseRank += calcInfiniteRank(this.infiniteLevel, this.formularId);
         infiniteLevel = this.infiniteLevel;
         if (infiniteLevel % 10 === 0) {
           this.goldRate *= 1.5;

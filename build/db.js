@@ -186,7 +186,7 @@ var lua_searchRival =" \
     {base=0.50,delt=0.05}}; \
 --need to check number of args? \
   if randLst[3] == nil then \
-    return {}; \
+    return nil \
   end \
   local key = prefix..board; \
   local rank = redis.call('ZREVRANK', key, name); \
@@ -409,7 +409,7 @@ exports.subscribe = function (channel, callback) {
 
 exports.queryLeaderboardLength = function (board, handler) {
   var dbKey = 'Leaderboard.'+board;
-  dbClient.zcount(dbKey, '-inf', '+inf', handler);
+  dbClient.zcard(dbKey, handler);
 };
 
 dbSeparator = '.';
@@ -503,7 +503,7 @@ exports.initializeDB = function (cfg) {
   });
   dbClient.script('load',lua_searchRival, function (err, sha) {
     exports.searchRival = function (name, handler) {
-      dbClient.evalsha(sha, 0, dbPrefix, name, Math.random(), Math.random(), Math.random(), function (err, ret) {
+      dbClient.evalsha(sha, 0, 'Arena', name, Math.random(), Math.random(), Math.random(), function (err, ret) {
        if (handler) { handler(err, JSON.parse(ret)); }
       });
     };

@@ -713,7 +713,7 @@
         };
         if (stg.isInfinite) {
           if (this.stage[stage].level == null) {
-            this.stage[stage].level = 0;
+            this.stage[stage].newProperty('level', 0);
           }
           if (state === STAGE_STATE_PASSED) {
             this.stage[stage].level += 1;

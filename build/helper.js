@@ -213,7 +213,7 @@
         return dbLib.setServerConfig('Leaderboard', JSON.stringify(srvCfg));
       }
     };
-    return exports.getPositionOnLeaderboard = function(board, name, from, to, cb) {
+    exports.getPositionOnLeaderboard = function(board, name, from, to, cb) {
       tickLeaderboard(board);
       cfg = localConfig[board];
       return require('./db').queryLeaderboard(cfg.name, name, from, to, function(err, result) {
@@ -231,11 +231,34 @@
         return cb(err, result);
       });
     };
+    exports.array2map = function(keys, value) {
+      var size;
+      size = keys.length;
+      return value.reduce((function(r, l, i) {
+        var keyIdx;
+        keyIdx = i % size;
+        r[keys[keyIdx]].push(l);
+        return r;
+      }), {});
+    };
+    return exports.warpRivalLst(lst)(function() {
+      return lst.reduce((function(r, l, i) {
+        if (i % 2 === 0) {
+          r.name.push(l);
+        } else {
+          r.rnk.push(l);
+        }
+        return r;
+      }), {
+        name: [],
+        rnk: []
+      });
+    });
   };
 
   currentTime = function(needObject) {
     var obj;
-    obj = moment().zone("+08:00");
+    obj = moment();
     if (needObject) {
       return obj;
     } else {
@@ -254,9 +277,9 @@
       return null;
     }
     if (date) {
-      date = moment(date).zone("+08:00").startOf('day');
+      date = moment(date).startOf('day');
     }
-    today = moment(today).zone("+08:00").startOf('day');
+    today = moment(today).startOf('day');
     duration = moment.duration(today.diff(date));
     switch (flag) {
       case 'second':
@@ -281,8 +304,8 @@
     if (!date) {
       return false;
     }
-    date = moment(date).zone("+08:00");
-    today = moment(today).zone("+08:00");
+    date = moment(date);
+    today = moment(today);
     if (rule.weekday != null) {
       date = date.weekday(rule.weekday);
     } else if (rule.monthday != null) {
@@ -632,19 +655,26 @@
         return util.today.hour() >= 8 && util.diffDay(obj.timestamp.infinite, util.today);
       },
       reset: function(obj, util) {
-        return obj.timestamp.newProperty('infinite', util.currentTime());
+        obj.timestamp.newProperty('infinite', util.currentTime());
+        return obj.stage[120].newProperty('level', 0);
       }
     },
     hunting: {
       storeType: "player",
       id: 4,
       actived: 1,
-      stages: [114, 115, 116, 119, 120, 121, 122, 123, 124, 125, 126],
+      stages: [121, 122, 123, 125, 126, 127, 128, 129, 130, 131, 132],
       canReset: function(obj, util) {
         return util.diffDay(obj.timestamp.hunting, util.today);
       },
       reset: function(obj, util) {
+        var s, stages, _i, _len;
         obj.timestamp.newProperty('hunting', util.currentTime());
+        stages = [121, 122, 123, 125, 126, 127, 128, 129, 130, 131, 132];
+        for (_i = 0, _len = stages.length; _i < _len; _i++) {
+          s = stages[_i];
+          obj.stage[s].newProperty('level', 0);
+        }
         return obj.counters.newProperty('monster', 0);
       }
     },
@@ -744,11 +774,11 @@
     },
     killMonsterPrize: {
       time: {
-        hour: 6
+        hour: 13
       },
       func: function(libs) {
         var cfg;
-        return cfg = [
+        cfg = [
           {
             from: 0,
             to: 0,
@@ -808,6 +838,13 @@
             }
           }
         ];
+        return cfg.forEach(function(e) {
+          return libs.helper.getPositionOnLeaderboard(2, 'nobody', e.from, e.to, function(err, result) {
+            return result.board.name.forEach(function(name) {
+              return libs.db.deliverMessage(name, e.mail);
+            });
+          });
+        });
       }
     }
   };
