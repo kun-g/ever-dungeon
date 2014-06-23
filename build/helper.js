@@ -213,7 +213,7 @@
         return dbLib.setServerConfig('Leaderboard', JSON.stringify(srvCfg));
       }
     };
-    exports.getPositionOnLeaderboard = function(board, name, from, to, cb) {
+    return exports.getPositionOnLeaderboard = function(board, name, from, to, cb) {
       tickLeaderboard(board);
       cfg = localConfig[board];
       return require('./db').queryLeaderboard(cfg.name, name, from, to, function(err, result) {
@@ -231,30 +231,32 @@
         return cb(err, result);
       });
     };
-    exports.array2map = function(keys, value) {
-      var size;
-      size = keys.length;
-      return value.reduce((function(r, l, i) {
-        var keyIdx;
-        keyIdx = i % size;
-        r[keys[keyIdx]].push(l);
-        return r;
-      }), {});
-    };
-    return exports.warpRivalLst(lst)(function() {
-      return lst.reduce((function(r, l, i) {
-        if (i % 2 === 0) {
-          r.name.push(l);
-        } else {
-          r.rnk.push(l);
-        }
-        return r;
-      }), {
-        name: [],
-        rnk: []
-      });
-    });
   };
+
+  exports.array2map = function(keys, value) {
+    var size;
+    size = keys.length;
+    return value.reduce((function(r, l, i) {
+      var keyIdx;
+      keyIdx = i % size;
+      r[keys[keyIdx]].push(l);
+      return r;
+    }), {});
+  };
+
+  exports.warpRivalLst(lst)(function() {
+    return lst.reduce((function(r, l, i) {
+      if (i % 2 === 0) {
+        r.name.push(l);
+      } else {
+        r.rnk.push(l);
+      }
+      return r;
+    }), {
+      name: [],
+      rnk: []
+    });
+  });
 
   currentTime = function(needObject) {
     var obj;
