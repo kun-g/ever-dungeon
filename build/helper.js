@@ -213,7 +213,7 @@
         return dbLib.setServerConfig('Leaderboard', JSON.stringify(srvCfg));
       }
     };
-    exports.getPositionOnLeaderboard = function(board, name, from, to, cb) {
+    return exports.getPositionOnLeaderboard = function(board, name, from, to, cb) {
       tickLeaderboard(board);
       cfg = localConfig[board];
       return require('./db').queryLeaderboard(cfg.name, name, from, to, function(err, result) {
@@ -231,28 +231,30 @@
         return cb(err, result);
       });
     };
-    exports.array2map = function(keys, value) {
-      var size;
-      size = keys.length;
-      return value.reduce((function(r, l, i) {
-        var keyIdx;
-        keyIdx = i % size;
-        r[keys[keyIdx]].push(l);
-        return r;
-      }), {});
-    };
-    return exports.warpRivalLst(lst)(function() {
-      return lst.reduce((function(r, l, i) {
-        if (i % 2 === 0) {
-          r.name.push(l);
-        } else {
-          r.rnk.push(l);
-        }
-        return r;
-      }), {
-        name: [],
-        rnk: []
-      });
+  };
+
+  exports.array2map = function(keys, value) {
+    var size;
+    size = keys.length;
+    return value.reduce((function(r, l, i) {
+      var keyIdx;
+      keyIdx = i % size;
+      r[keys[keyIdx]].push(l);
+      return r;
+    }), {});
+  };
+
+  exports.warpRivalLst = function(lst) {
+    return lst.reduce((function(r, l, i) {
+      if (i % 2 === 0) {
+        r.name.push(l);
+      } else {
+        r.rnk.push(l);
+      }
+      return r;
+    }), {
+      name: [],
+      rnk: []
     });
   };
 
@@ -673,7 +675,9 @@
         stages = [121, 122, 123, 125, 126, 127, 128, 129, 130, 131, 132];
         for (_i = 0, _len = stages.length; _i < _len; _i++) {
           s = stages[_i];
-          obj.stage[s].newProperty('level', 0);
+          if (obj.stage[s]) {
+            obj.stage[s].newProperty('level', 0);
+          }
         }
         return obj.counters.newProperty('monster', 0);
       }
