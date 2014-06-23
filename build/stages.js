@@ -517,9 +517,9 @@ var data = [
 	{
         "chapterId":4,
 		"idx": 3,
-        "style": "map-dungeon4",
+        "style": "map-dungeon7",
 		"title":"dungeonname7.png",
-        "label":"旋风谷",
+        "label":"断肠崖",
 		"desc":"塔伦山脉中最险要的地方，遍布着夺命的悬\n崖，稍不留神就会让你付出惨痛的代价。",
 		"icon":"mapicon4.png",
 		"stage":[
@@ -859,9 +859,9 @@ var data = [
 	{
 		"chapterId": 7,
 		"idx": 6,
-        "style": "map-dungeon7",
+        "style": "map-dungeon4",
 		"title":"dungeonname4.png",
-        "label":"断肠崖",
+        "label":"旋风谷",
 		"desc":"山谷险要的地势加上诡异的巨大山风，让这\n里成为勇者们永远的噩梦。",
 		"icon":"mapicon4.png",
 		"stage":[
@@ -1937,18 +1937,12 @@ var data = [
               hidden: true,
               dungeon: 113,
               description: "infinity",
-              eventName: "event_goblin",
-              "isInfinite":true,
-              "formularId":1,
+              eventName: "event_infinite",
+	      "isInfinite":true,
               condition: function (obj, util) {
-                  return obj.counters.goblin < 3 || !obj.counters.goblin;
+                return true;
               },
               initialAction: function (obj) {
-                  if (obj.counters.goblin) {
-                      obj.counters.goblin++;
-                  } else {
-                      obj.counters.newProperty('goblin', 1);
-                  }
               }
           },
           {

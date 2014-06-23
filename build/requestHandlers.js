@@ -795,15 +795,15 @@
             REQ: rpcID,
             RET: RET_OK
           };
-          async.map(rivalLst.name, getPlayerHero, function(err, result) {
-            return ret.arg = result.map(function(e, i) {
+          return async.map(rivalLst.name, getPlayerHero, function(err, result) {
+            ret.arg = result.map(function(e, i) {
               var r;
               r = getBasicInfo(e);
               r.rnk = rivalLst.rnk[i];
               return r;
             });
+            return handler([ret]);
           });
-          return handler([ret]);
         });
       },
       args: [],
