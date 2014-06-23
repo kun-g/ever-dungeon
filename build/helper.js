@@ -244,7 +244,7 @@
     }), {});
   };
 
-  exports.warpRivalLst(lst)(function() {
+  exports.warpRivalLst = function(lst) {
     return lst.reduce((function(r, l, i) {
       if (i % 2 === 0) {
         r.name.push(l);
@@ -256,7 +256,7 @@
       name: [],
       rnk: []
     });
-  });
+  };
 
   currentTime = function(needObject) {
     var obj;
