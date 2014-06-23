@@ -792,7 +792,7 @@
           var ret;
           rivalLst = helperLib.warpRivalLst(rivalLst);
           ret = {
-            arg: async.map(rivalLst.name, getPlayerHero, function(err, result) {
+            arg: map(rivalLst.name, getPlayerHero, function(err, result) {
               return ret.lst = result.map(function(e, i) {
                 var r;
                 r = getBasicInfo(e);
