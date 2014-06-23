@@ -792,6 +792,31 @@
       },
       args: [],
       needPid: true
+    },
+    RPC_GetPkRivals: {
+      id: 32,
+      func: function(arg, player, handler, rpcID, socket) {
+        return dbLib.searchRival(player.name, function(err, rivalLst) {
+          var ret;
+          rivalLst = helperLib.warpRivalLst(rivalLst);
+          ret = {
+            REQ: rpcID,
+            RET: RET_OK
+          };
+          return async.map(rivalLst.name, getPlayerHero, function(err, result) {
+            console.log(err);
+            ret.lst = result.map(function(e, i) {
+              var r;
+              r = getBasicInfo(e);
+              r.rnk = +board.rnk[i];
+              return r;
+            });
+            return handler([ret]);
+          });
+        });
+      },
+      args: [],
+      needPid: true
     }
   };
 
