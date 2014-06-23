@@ -801,7 +801,7 @@
             ret.lst = result.map(function(e, i) {
               var r;
               r = getBasicInfo(e);
-              r.rnk = +board.rnk[i];
+              r.rnk = +rivalLst.rnk[i];
               return r;
             });
             return handler([ret]);
