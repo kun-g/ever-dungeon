@@ -792,21 +792,18 @@
           var ret;
           rivalLst = helperLib.warpRivalLst(rivalLst);
           ret = {
-            arg: map(rivalLst.name, getPlayerHero, function(err, result) {
-              return ret.lst = result.map(function(e, i) {
-                var r;
-                r = getBasicInfo(e);
-                r.rnk = rivalLst.rnk[i];
-                return r;
-              });
-            })
+            REQ: rpcID,
+            RET: RET_OK
           };
-          return handler([
-            {
-              REQ: rpcID,
-              RET: RET_OK
-            }
-          ].concat(ret));
+          async.map(rivalLst.name, getPlayerHero, function(err, result) {
+            return ret.arg = result.map(function(e, i) {
+              var r;
+              r = getBasicInfo(e);
+              r.rnk = rivalLst.rnk[i];
+              return r;
+            });
+          });
+          return handler([ret]);
         });
       },
       args: [],
