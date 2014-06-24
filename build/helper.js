@@ -246,10 +246,8 @@
 
   exports.warpRivalLst = function(lst) {
     return lst.reduce((function(r, l, i) {
-      if (i % 2 === 0) {
-        r.name.push(l);
-      } else {
-        r.rnk.push(l);
+      if (l.length === 2) {
+        r.name.push(l[0]) && r.rnk.push(l[1]);
       }
       return r;
     }), {
@@ -703,7 +701,7 @@
   exports.intervalEvent = {
     infinityDungeonPrize: {
       time: {
-        hour: 6
+        hour: 11
       },
       func: function(libs) {
         var cfg;
