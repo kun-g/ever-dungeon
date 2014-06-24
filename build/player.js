@@ -685,7 +685,6 @@
 
     Player.prototype.stageIsUnlockable = function(stage) {
       var stageConfig;
-      return true;
       stageConfig = queryTable(TABLE_STAGE, stage, this.abIndex);
       if (stageConfig.condition) {
         return stageConfig.condition(this, genUtil());
@@ -755,6 +754,10 @@
             }
           });
         }
+        this.log('stage', {
+          operation: operation,
+          stage: stage
+        });
         return ret;
       }
     };
