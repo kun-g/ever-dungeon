@@ -812,7 +812,7 @@
     RPC_SweepStage: {
       id: 35,
       func: function(arg, player, handler, rpcID, socket) {
-        var cfg, count, dungeon, i, prize, ret_result, stgCfg, _i;
+        var cfg, count, dungeon, i, p, prize, ret, ret_result, stgCfg, _i;
         stgCfg = queryTable(TABLE_STAGE, +arg.stg, player.abIndex);
         cfg = queryTable(TABLE_DUNGEON, stgCfg.dungeon, player.abIndex);
         dungeon = {
@@ -832,13 +832,16 @@
         }
         ret_result = RET_OK;
         prize = [];
+        ret = [];
         if (arg.mod && player.vipLevel() < Sweep_Vip_Level) {
           ret_result = RET_VipLevelIsLow;
         } else if (player.energy < stgCfg.cost * count) {
           ret_result = RET_NotEnoughEnergy;
         } else {
           for (i = _i = 1; 1 <= count ? _i <= count : _i >= count; i = 1 <= count ? ++_i : --_i) {
-            prize.push(player.generateDungeonAward(dungeon, true));
+            p = player.generateDungeonAward(dungeon, true);
+            prize.push(p);
+            ret = ret.concat(player.claimPrize(p));
           }
         }
         player.log('sweepDungeon', {
@@ -852,7 +855,7 @@
             RET: ret_result,
             arg: prize
           }
-        ]);
+        ].concat(p));
       },
       args: [],
       needPid: true
