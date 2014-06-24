@@ -832,25 +832,20 @@
         ret_result = RET_OK;
         prize = [];
         ret = [];
-        if (arg.mod && true) {
+        if (arg.mod && false) {
           ret_result = RET_VipLevelIsLow;
         } else if (player.energy < stgCfg.cost * count) {
           ret_result = RET_NotEnoughEnergy;
         } else {
           for (i = _i = 1; 1 <= count ? _i <= count : _i >= count; i = 1 <= count ? ++_i : --_i) {
             p = player.generateDungeonAward(dungeon, true);
-            console.log(p);
-            r = (function() {
-              var _results;
-              _results = [];
-              for (k in p) {
-                v = p[k];
-                if (v.length) {
-                  _results.push(v);
-                }
+            r = [];
+            for (k in p) {
+              v = p[k];
+              if (v.length > 0) {
+                r = r.concat(v);
               }
-              return _results;
-            })();
+            }
             prize.push(r);
             ret = ret.concat(player.claimPrize(r));
           }
