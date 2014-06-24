@@ -722,7 +722,6 @@
           if (result.board != null) {
             board = result.board;
             return async.map(board.name, getPlayerHero, function(err, result) {
-              console.log(err);
               ret.lst = result.map(function(e, i) {
                 var r;
                 r = getBasicInfo(e);
@@ -840,6 +839,7 @@
         } else {
           for (i = _i = 1; 1 <= count ? _i <= count : _i >= count; i = 1 <= count ? ++_i : --_i) {
             p = player.generateDungeonAward(dungeon, true);
+            console.log(p);
             r = (function() {
               var _results;
               _results = [];
