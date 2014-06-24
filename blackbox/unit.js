@@ -291,7 +291,7 @@
       this.critical = battleForce * (1 / 18.5);
       this.strong = battleForce * (1 / 18.5);
       this.accuracy = battleForce * (1 / 18.5) + 30;
-      this.reactivity = battleForce * (10 / 18.5) - 60;
+      this.reactivity = battleForce * (1 / 18.5) - 40;
       this.speed = battleForce * (1 / 18.5) + 20;
       this.maxHP = this.health;
       this.equipment = heroData.itm;
