@@ -1,7 +1,7 @@
 exports.data = {
           "resource_version": 99,
           "quest": "0.0.4",
-          "stage": "0.1.3",
+          "stage": "0.1.4",
           "bin_version": "1.0.6",
           "bin_version_need": "1.0.4",
           "url": "http://drhu.qiniudn.com",
