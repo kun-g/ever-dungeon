@@ -784,6 +784,78 @@
       },
       args: [],
       needPid: true
+    },
+    RPC_GetPKInfo: {
+      id: 32,
+      func: function(arg, player, handler, rpcID, socket) {
+        return dbLib.searchRival(player.name, function(err, rivalLst) {
+          var ret;
+          rivalLst = helperLib.warpRivalLst(rivalLst);
+          ret = {
+            REQ: rpcID,
+            RET: RET_OK
+          };
+          return async.map(rivalLst.name, getPlayerHero, function(err, result) {
+            ret.arg = result.map(function(e, i) {
+              var r;
+              r = getBasicInfo(e);
+              r.rnk = rivalLst.rnk[i];
+              return r;
+            });
+            return handler([ret]);
+          });
+        });
+      },
+      args: [],
+      needPid: true
+    },
+    RPC_SweepStage: {
+      id: 35,
+      func: function(arg, player, handler, rpcID, socket) {
+        var cfg, count, dungeon, i, prize, ret_result, stgCfg, _i;
+        stgCfg = queryTable(TABLE_STAGE, +arg.stg, player.abIndex);
+        cfg = queryTable(TABLE_DUNGEON, stgCfg.dungeon, player.abIndex);
+        dungeon = {
+          team: [],
+          quests: [],
+          revive: 0,
+          result: DUNGEON_RESULT_WIN,
+          killingInfo: [],
+          currentLevel: cfg.levelCount,
+          getConfig: function() {
+            return cfg;
+          }
+        };
+        count = 1;
+        if (arg.mod) {
+          count = 5;
+        }
+        ret_result = RET_OK;
+        prize = [];
+        if (arg.mod && player.getVip() < Sweep_Vip_Level) {
+          ret_result = RET_VipLevelIsLow;
+        } else if (player.energy < stgCfg.cost * count) {
+          ret_result = RET_NotEnoughEnergy;
+        } else {
+          for (i = _i = 1; 1 <= count ? _i <= count : _i >= count; i = 1 <= count ? ++_i : --_i) {
+            prize.push(player.claimDungeonAward(dungeon));
+          }
+        }
+        player.log('sweepDungeon', {
+          stage: arg.stg,
+          auto: arg.mod,
+          reward: prize
+        });
+        return handler([
+          {
+            REQ: rpcID,
+            RET: ret_result,
+            arg: prize
+          }
+        ]);
+      },
+      args: [],
+      needPid: true
     }
   };
 

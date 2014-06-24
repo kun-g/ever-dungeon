@@ -480,6 +480,7 @@ exports.data = [
     },
     {
         "questId":17,
+        
         "title":"探索密谋森林",
         "desc":"搜索【密谋森林I】寻找相关线索",
         "objects":[
@@ -506,6 +507,7 @@ exports.data = [
     },
     {
         "questId":18,
+        
         "title":"走丢的雪莉",
         "desc":"雪莉去【密谋森林I】就再也没人见过了，帮村民们去找找吧",
         "objects":[
@@ -531,6 +533,7 @@ exports.data = [
     },
     {
         "questId":19,
+        
         "title":"狼骑的逆袭",
         "desc":"没有得到教训的狼骑又想卷土重来，去【密谋森林II】击溃它们！",
         "objects":[
@@ -581,6 +584,7 @@ exports.data = [
     },
     {
         "questId":21,
+        
         "title":"兽族一锅端",
         "desc":"【密谋森林III】中发现有兽族在建哨站，似乎在盘算着什么阴谋！",
         "objects":[
@@ -606,6 +610,7 @@ exports.data = [
     },
     {
         "questId":22,
+        
         "title":"圣灵草",
         "desc":"又到圣灵草生长的季节，这只在【密谋森林III】中生长的草药，是村庄中最常用的医疗用品。",
         "objects":[
@@ -632,6 +637,7 @@ exports.data = [
     },
     {
         "questId":23,
+        
         "title":"火焰史莱姆！？",
         "desc":"凶猛的火焰史莱姆出现在【密谋森林IV】中，已经袭击了不少村民了，赶紧去击败它！",
         "objects":[
@@ -657,6 +663,7 @@ exports.data = [
     },
     {
         "questId":24,
+        
         "title":"火焰魔法结晶",
         "desc":"【密谋森林IV】中的火焰史莱姆的出现，产生了蕴含火焰力量的结晶，采集回来给汤姆大叔瞧瞧。",
         "objects":[
@@ -708,6 +715,7 @@ exports.data = [
     },
     {
         "questId":26,
+        
         "title":"再战火焰史莱姆",
         "desc":"上次的火焰史莱姆一役没有将它彻底清除，现在它又恢复了，就在【密谋森林V】！",
         "objects":[
@@ -733,6 +741,7 @@ exports.data = [
     },
     {
         "questId":27,
+        
         "title":"寻找武器锻造学徒",
         "desc":"汤姆大叔的学徒为了寻找锻造材料一个人去了【密谋森林VI】！情况可能非常危险，去把他找回来吧！",
         "objects":[
@@ -783,6 +792,7 @@ exports.data = [
     },
     {
         "questId":29,
+        
         "title":"寻找密谋森林的最深层入口",
         "desc":"成功通过【密谋森林VI】寻找到最深处的入口",
         "objects":[
@@ -808,6 +818,7 @@ exports.data = [
     },
     {
         "questId":30,
+        
         "title":"解放密谋森林",
         "desc":"将【密谋森林VII】深处的怪物击败，为森林带来宁静",
         "objects":[
@@ -837,6 +848,7 @@ exports.data = [
     },
     {
         "questId":31,
+        
         "title":"食人魔终结者",
         "desc":"将【密谋森林VII】中的大小食人魔击倒！",
         "objects":[
@@ -873,6 +885,7 @@ exports.data = [
     },
     {
         "questId":32,
+        
         "title":"打打打打劫！？",
         "desc":"【湖滨大道I】出现了一伙山贼，找到并击倒他们！",
         "objects":[
@@ -898,6 +911,7 @@ exports.data = [
     },
     {
         "questId":33,
+        
         "title":"救出商队成员",
         "desc":"商队在途经【湖滨大道II】时受到山贼的袭击，其中一个成员被抓走了，帮商队救出他吧！",
         "objects":[
@@ -923,6 +937,7 @@ exports.data = [
     },
     {
         "questId":34,
+        
         "title":"商队守卫者I",
         "desc":"【湖滨大道II】上也出现了不少佣兵打劫商团，商团们肃清道路吧！",
         "objects":[
@@ -948,6 +963,7 @@ exports.data = [
     },
     {
         "questId":35,
+        
         "title":"找寻失踪的宝箱",
         "desc":"商队成员救回了，不过一起的宝箱还没找到，前往【湖滨大道II】替他们找回宝箱。",
         "objects":[
@@ -998,6 +1014,7 @@ exports.data = [
     },
     {
         "questId":37,
+        
         "title":"商队守卫者II",
         "desc":"肃清【湖滨大道III】上掠夺商队的坏人们！",
         "objects":[
@@ -1024,6 +1041,7 @@ exports.data = [
     {
         "questId":38,
         "title":"迷之怪物",
+        
         "desc":"【湖滨大道III】出现了一只迷之怪物，袭击商队，并且抢走大量宝物。",
         "objects":[
             {
@@ -1116,6 +1134,7 @@ exports.data = [
     },
     {
         "questId":41,
+        
         "title":"凑热闹的史莱姆",
         "desc":"原本宁静的【湖滨大道IV】，现在连史莱姆也来凑热闹，一并清除它们！",
         "objects":[
@@ -1142,6 +1161,7 @@ exports.data = [
     {
         "questId":42,
         "title":"迷之怪物II",
+        
         "desc":"迷之怪物这回出现在了【湖滨大道IV】，趁它还没跑走，速度去击败它！",
         "objects":[
             {
@@ -1166,6 +1186,7 @@ exports.data = [
     },
     {
         "questId":43,
+        
         "title":"找回商队宝箱",
         "desc":"迷之怪物已经被击倒，但商队的宝箱还在【湖滨大道IV】，去帮他们找回来吧。",
         "objects":[
@@ -1191,6 +1212,7 @@ exports.data = [
     },
     {
         "questId":44,
+        
         "title":"迎头痛击",
         "desc":"山贼团伙出现在了【湖滨大道V】，前往那里给他们迎头一击！",
         "objects":[
@@ -1216,6 +1238,7 @@ exports.data = [
     },
     {
         "questId":45,
+        
         "title":"救回雪莉",
         "desc":"山贼们为了报仇，把雪莉抓走了，目前他们在【湖滨大道VI】集结，赶紧把她救回来！",
         "objects":[
@@ -1242,6 +1265,7 @@ exports.data = [
     {
         "questId":46,
         "title":"剿灭山贼",
+        
         "desc":"山贼头目和残党逃去了【湖滨大道VI】，将他们彻底赶走吧！",
         "objects":[
             {
@@ -1266,6 +1290,7 @@ exports.data = [
     },
     {
         "questId":47,
+        
         "title":"肃清商旅道路",
         "desc":"商旅道路上只剩下佣兵们在作乱了，把【湖滨大道VII】的佣兵们彻底肃清！",
         "objects":[
@@ -4823,7 +4848,7 @@ exports.data = [
             {
                 "type":5,
                 "label":"战斗力突破7000",
-                "count":8000
+                "count":7000
             }
         ],
         "prize":[

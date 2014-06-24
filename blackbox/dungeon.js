@@ -107,10 +107,14 @@
     }
   };
 
-  calcInfiniteRank = function(infiniteLevel) {
+  calcInfiniteRank = function(infiniteLevel, id) {
     var x;
     x = calcInfiniteX(infiniteLevel);
-    return Math.ceil(0.1 * x * x + 0.1 * x + 1);
+    if ((id != null) && id === 1) {
+      return 1.5 * x * x + 2 * x + 1;
+    } else {
+      return Math.ceil(0.1 * x * x + 0.1 * x + 1);
+    }
   };
 
   createUnits = function(rules, randFunc) {
@@ -415,7 +419,7 @@
         this.baseRank = cfg.rank;
       }
       if (this.infiniteLevel != null) {
-        this.baseRank += calcInfiniteRank(this.infiniteLevel);
+        this.baseRank += calcInfiniteRank(this.infiniteLevel, this.formularId);
         infiniteLevel = this.infiniteLevel;
         if (infiniteLevel % 10 === 0) {
           this.goldRate *= 1.5;
@@ -1170,9 +1174,6 @@
       cfg.rank = this.rank;
       cfg.ref = this.ref;
       o = createUnit(cfg);
-      if (o == null) {
-        console.log('Noo', cfg);
-      }
       o.installSpell(DUNGEON_DROP_CARD_SPELL, 1);
       if (cfg.keyed) {
         this.lockUp(true);
@@ -1684,7 +1685,7 @@
       tailString = isBegin ? 'Begin' : 'End';
       allEvent = 'on' + turnType + 'Turn' + tailString;
       turnEvent = 'onTurn' + tailString;
-      _ref5 = this.getMonsters().concat(this.getHeroes()).concat(this.getBlock());
+      _ref5 = this.getObjects().concat(this.getBlock());
       for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
         e = _ref5[_i];
         e.onEvent(allEvent, cmd);
@@ -1876,7 +1877,7 @@
     },
     EnterLevel: {
       callback: function(env) {
-        var e, entrance, i, monster, newPosition, _i, _j, _k, _l, _len, _len1, _len2, _m, _ref5, _ref6, _ref7, _ref8;
+        var e, entrance, i, newPosition, o, _i, _j, _k, _l, _len, _len1, _len2, _m, _ref5, _ref6, _ref7, _ref8;
         entrance = env.getEntrance();
         env.onEvent('onEnterLevel', this);
         if (env.isLevelInitialized()) {
@@ -1931,10 +1932,10 @@
             newPosition = [entrance, entrance, entrance];
           }
           env.moveHeroes(newPosition);
-          _ref8 = env.getMonsters();
+          _ref8 = env.getObjects();
           for (_m = 0, _len2 = _ref8.length; _m < _len2; _m++) {
-            monster = _ref8[_m];
-            monster.onEvent('onEnterLevel', this);
+            o = _ref8[_m];
+            o.onEvent('onEnterLevel', this);
           }
         }
         return this.routine({
@@ -2072,7 +2073,7 @@
     TickSpell: {
       callback: function(env) {
         var h, _i, _len, _ref5, _results;
-        _ref5 = env.getHeroes().concat(env.getMonsters());
+        _ref5 = env.getObjects();
         _results = [];
         for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
           h = _ref5[_i];

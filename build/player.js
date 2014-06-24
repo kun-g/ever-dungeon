@@ -238,7 +238,7 @@
     };
 
     Player.prototype.onLogin = function() {
-      var dis, flag, itemsNeedRemove, key, prize, ret, rmMSG, s, _i, _len, _ref7;
+      var flag, itemsNeedRemove, key, prize, ret, rmMSG, s, _i, _len, _ref7;
       if (!this.lastLogin) {
         return [];
       }
@@ -267,9 +267,8 @@
         }
       }
       flag = true;
-      if (moment().isSame(this.loginStreak.date, 'month')) {
-        dis = diffDate(this.loginStreak.date);
-        if (dis === 0) {
+      if (this.loginStreak.date && moment().isSame(this.loginStreak.date, 'month')) {
+        if (moment().isSame(this.loginStreak.date, 'day')) {
           flag = false;
         } else {
           this.loginStreak.count += 1;
@@ -330,7 +329,7 @@
       reward = queryTable(TABLE_DP)[this.loginStreak.count].prize;
       ret = this.claimPrize(reward.filter((function(_this) {
         return function(e) {
-          return !e.vip || _this.vipLevel() > e.vip;
+          return !e.vip || _this.vipLevel() >= e.vip;
         };
       })(this)));
       if (this.loginStreak.count >= queryTable(TABLE_DP).length) {
@@ -686,6 +685,7 @@
 
     Player.prototype.stageIsUnlockable = function(stage) {
       var stageConfig;
+      return true;
       stageConfig = queryTable(TABLE_STAGE, stage, this.abIndex);
       if (stageConfig.condition) {
         return stageConfig.condition(this, genUtil());
@@ -713,7 +713,7 @@
         };
         if (stg.isInfinite) {
           if (this.stage[stage].level == null) {
-            this.stage[stage].level = 0;
+            this.stage[stage].newProperty('level', 0);
           }
           if (state === STAGE_STATE_PASSED) {
             this.stage[stage].level += 1;
@@ -1859,7 +1859,7 @@
       return prize;
     };
 
-    Player.prototype.claimDungeonAward = function(dungeon) {
+    Player.prototype.claimDungeonAward = function(dungeon, isSweep) {
       var goldPrize, k, objective, offlineReward, otherPrize, prize, qid, qst, quest, quests, result, ret, rewardMessage, teammateRewardMessage, wxPrize, xpPrize, _ref7, _ref8;
       if (dungeon == null) {
         return [];
@@ -1956,12 +1956,16 @@
         });
       }
       ret = ret.concat(this.claimPrize(prize, false));
-      this.log('finishDungeon', {
-        stage: dungeon.getInitialData().stage,
-        result: result,
-        reward: prize
-      });
-      this.releaseDungeon();
+      if (isSweep) {
+
+      } else {
+        this.log('finishDungeon', {
+          stage: dungeon.getInitialData().stage,
+          result: result,
+          reward: prize
+        });
+        this.releaseDungeon();
+      }
       return ret;
     };
 
