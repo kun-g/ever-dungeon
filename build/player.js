@@ -1859,7 +1859,7 @@
       return prize;
     };
 
-    Player.prototype.claimDungeonAward = function(dungeon) {
+    Player.prototype.claimDungeonAward = function(dungeon, isSweep) {
       var goldPrize, k, objective, offlineReward, otherPrize, prize, qid, qst, quest, quests, result, ret, rewardMessage, teammateRewardMessage, wxPrize, xpPrize, _ref7, _ref8;
       if (dungeon == null) {
         return [];
@@ -1956,12 +1956,16 @@
         });
       }
       ret = ret.concat(this.claimPrize(prize, false));
-      this.log('finishDungeon', {
-        stage: dungeon.getInitialData().stage,
-        result: result,
-        reward: prize
-      });
-      this.releaseDungeon();
+      if (isSweep) {
+
+      } else {
+        this.log('finishDungeon', {
+          stage: dungeon.getInitialData().stage,
+          result: result,
+          reward: prize
+        });
+        this.releaseDungeon();
+      }
       return ret;
     };
 
