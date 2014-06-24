@@ -832,7 +832,7 @@
         }
         ret_result = RET_OK;
         prize = [];
-        if (arg.mod && player.getVip() < Sweep_Vip_Level) {
+        if (arg.mod && player.vipLevel() < Sweep_Vip_Level) {
           ret_result = RET_VipLevelIsLow;
         } else if (player.energy < stgCfg.cost * count) {
           ret_result = RET_NotEnoughEnergy;
