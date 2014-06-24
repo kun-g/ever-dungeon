@@ -195,6 +195,7 @@
             obj[key] = v.initialValue;
           } else if (v.initialValue === 'length') {
             require('./db').queryLeaderboardLength(key, function(err, result) {
+              console.log('set leadbo', key, result);
               return obj[key] = +result;
             });
           }
@@ -247,7 +248,7 @@
   exports.warpRivalLst = function(lst) {
     return lst.reduce((function(r, l, i) {
       if (l.length === 2) {
-        r.name.push(l[0]) && r.rnk.push(l[1]);
+        r.name.push(l[0]) && r.rnk.push(+l[1]);
       }
       return r;
     }), {

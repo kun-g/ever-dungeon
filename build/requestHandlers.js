@@ -498,7 +498,7 @@
       id: 1,
       func: function(arg, player, handler, rpcID, socket) {
         player.dungeonData = {};
-        return player.startDungeon(+arg.stg, arg.initialDataOnly, function(err, evEnter, extraMsg) {
+        return player.startDungeon(+arg.stg, arg.initialDataOnly, arg.pkr, function(err, evEnter, extraMsg) {
           extraMsg = (extraMsg != null ? extraMsg : []).concat(player.syncEnergy());
           if (typeof evEnter === 'number') {
             handler([
@@ -785,7 +785,7 @@
       args: [],
       needPid: true
     },
-    RPC_GetPKInfo: {
+    RPC_GetPkRivals: {
       id: 32,
       func: function(arg, player, handler, rpcID, socket) {
         return dbLib.searchRival(player.name, function(err, rivalLst) {
@@ -799,11 +799,26 @@
             ret.arg = result.map(function(e, i) {
               var r;
               r = getBasicInfo(e);
-              r.rnk = rivalLst.rnk[i];
+              r.rnk = +rivalLst.rnk[i];
               return r;
             });
             return handler([ret]);
           });
+        });
+      },
+      args: [],
+      needPid: true
+    },
+    RPC_PVPInfoUpdate: {
+      id: 34,
+      func: function(arg, player, handler, rpcID, socket) {
+        return dbLib.getPvpInfo(player.name, function(err, result) {
+          var ret;
+          ret = {
+            REQ: rpcID,
+            RET: RET_OK
+          };
+          return handler([ret]);
         });
       },
       args: [],

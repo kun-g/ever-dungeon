@@ -776,7 +776,7 @@
       return ret;
     };
 
-    Player.prototype.startDungeon = function(stage, startInfoOnly, handler) {
+    Player.prototype.startDungeon = function(stage, startInfoOnly, pkr, handler) {
       var dungeonConfig, stageConfig;
       stageConfig = queryTable(TABLE_STAGE, stage, this.abIndex);
       dungeonConfig = queryTable(TABLE_DUNGEON, stageConfig.dungeon, this.abIndex);
@@ -894,10 +894,19 @@
             if (stageConfig.event === 'event_daily') {
               _this.dungeonData.baseRank = helperLib.initCalcDungeonBaseRank(_this);
             }
-            if (stageConfig.pvp) {
-              _this.dungeonData.PVP_Pool = team.map(getBasicInfo);
+            return cb();
+          };
+        })(this), (function(_this) {
+          return function(cb) {
+            if (stageConfig.pvp != null) {
+              return getPlayerHero(pkr, wrapCallback(_this, function(err, heroData) {
+                this.dungeonData.PVP_Pool = [getBasicInfo(heroData)];
+                return cb('OK');
+              }));
+            } else {
+              _this.dungeonData.PVP_Pool = [];
+              return cb('OK');
             }
-            return cb('OK');
           };
         })(this)
       ], (function(_this) {
@@ -1956,6 +1965,9 @@
         });
       }
       ret = ret.concat(this.claimPrize(prize, false));
+      if (result === 'Win') {
+        dbLib.saveSocre(this.name, dungeon.PVP_Pool[0].name);
+      }
       this.log('finishDungeon', {
         stage: dungeon.getInitialData().stage,
         result: result,
