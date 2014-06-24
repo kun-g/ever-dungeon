@@ -838,7 +838,7 @@
           ret_result = RET_NotEnoughEnergy;
         } else {
           for (i = _i = 1; 1 <= count ? _i <= count : _i >= count; i = 1 <= count ? ++_i : --_i) {
-            prize.push(player.claimDungeonAward(dungeon, true));
+            prize.push(player.generateDungeonAward(dungeon, true));
           }
         }
         player.log('sweepDungeon', {

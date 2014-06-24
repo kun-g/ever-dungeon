@@ -1859,7 +1859,7 @@
           }
         }
       }
-      return prize;
+      return helperLib.splicePrize(prize);
     };
 
     Player.prototype.claimDungeonAward = function(dungeon, isSweep) {
@@ -1901,8 +1901,7 @@
           }
         }
       }
-      prize = this.generateDungeonAward(dungeon);
-      _ref8 = helperLib.splicePrize(prize), goldPrize = _ref8.goldPrize, xpPrize = _ref8.xpPrize, wxPrize = _ref8.wxPrize, otherPrize = _ref8.otherPrize;
+      _ref8 = this.generateDungeonAward(dungeon), goldPrize = _ref8.goldPrize, xpPrize = _ref8.xpPrize, wxPrize = _ref8.wxPrize, otherPrize = _ref8.otherPrize;
       rewardMessage = {
         NTF: Event_DungeonReward,
         arg: {
