@@ -2033,9 +2033,7 @@
         });
       }
       ret = ret.concat(this.claimPrize(prize, false));
-      if (dungeon.result === DUNGEON_RESULT_WIN && (dungeon.PVP_Pool != null)) {
-        this.updatePkInof(dungeon.PVP_Pool[0].name);
-      }
+      this.updatePkInof(dungeon);
       if (isSweep) {
 
       } else {
@@ -2049,17 +2047,18 @@
       return ret;
     };
 
-    Player.prototype.updatePkInof = function(rivalName) {
-      dbLib.saveSocre(this.name, rivalName, function(err, result) {
-        getPlayerHero(pkr, wrapCallback(this, function(err, heroData) {
-          return heroData.counters.currentPKCount++;
+    Player.prototype.updatePkInof = function(dungeon) {
+      var rivalName;
+      this.counters.currentPKCount++;
+      if (dungeon.PVP_Pool != null) {
+        rivalName = dungeon.PVP_Pool[0].name;
+        return getPlayerHero(rivalName, wrapCallback(this, function(err, heroData) {
+          heroData.counters.currentPKCount++;
+          if (dungeon.result === DUNGEON_RESULT_WIN) {
+            return dbLib.saveSocre(this.name, rivalName, function(err, result) {}, result !== 'noNeed' ? (this.counters.Arena = result[0], heroData.counters.Arena = result[1]) : void 0);
+          }
         }));
-        if (result !== 'noNeed') {
-          this.counters.Arena = result[0];
-          return heroData.counters.Arena = result[1];
-        }
-      });
-      return this.counters.currentPKCount++;
+      }
     };
 
     Player.prototype.whisper = function(name, message, callback) {
