@@ -2058,7 +2058,7 @@
         rivalName = dungeon.PVP_Pool[0].name;
         if (dungeon.result === DUNGEON_RESULT_WIN) {
           return dbLib.saveSocre(this.name, rivalName, function(err, result) {
-            console.log('saveSocre', result);
+            console.log('saveSocre', err, result);
             if (result !== 'noNeed') {
               return this.counters.Arena = result[0];
             }
