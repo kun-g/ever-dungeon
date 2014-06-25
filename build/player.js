@@ -1966,7 +1966,13 @@
       }
       ret = ret.concat(this.claimPrize(prize, false));
       if (result === 'Win') {
-        dbLib.saveSocre(this.name, dungeon.PVP_Pool[0].name);
+        dbLib.saveSocre(this.name, dungeon.PVP_Pool[0].name, (function(_this) {
+          return function(err, result) {
+            if (result !== 'noNeed') {
+              return _this.name;
+            }
+          };
+        })(this));
       }
       this.log('finishDungeon', {
         stage: dungeon.getInitialData().stage,
