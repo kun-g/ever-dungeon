@@ -2053,7 +2053,11 @@
       if (dungeon.PVP_Pool != null) {
         rivalName = dungeon.PVP_Pool[0].name;
         if (dungeon.result === DUNGEON_RESULT_WIN) {
-          return dbLib.saveSocre(this.name, rivalName, function(err, result) {}, result !== 'noNeed' ? this.counters.Arena = result[0] : void 0);
+          return dbLib.saveSocre(this.name, rivalName, function(err, result) {
+            if (result !== 'noNeed') {
+              return this.counters.Arena = result[0];
+            }
+          });
         }
       }
     };
