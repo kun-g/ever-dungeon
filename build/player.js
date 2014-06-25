@@ -1,5 +1,6 @@
 (function() {
   var Bag, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Player, PlayerEnvironment, Serializer, addMercenaryMember, async, createItem, createUnit, currentTime, dbLib, diffDate, genUtil, getMercenaryMember, getPlayerHero, getVip, helperLib, itemLib, moment, playerCSConfig, playerCommandStream, playerMessageFilter, registerConstructor, updateMercenaryMember, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6,
+    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -33,6 +34,7 @@
     __extends(Player, _super);
 
     function Player(data) {
+      this.updatePkInof = __bind(this.updatePkInof, this);
       var cfg, now, versionCfg;
       this.type = 'player';
       now = new Date();
@@ -2032,7 +2034,7 @@
       }
       ret = ret.concat(this.claimPrize(prize, false));
       if (dungeon.result === DUNGEON_RESULT_WIN && (dungeon.PVP_Pool != null)) {
-        dbLib.saveSocre(this.name, dungeon.PVP_Pool[0].name);
+        this.updatePkInof(dungeon.PVP_Pool[0].name);
       }
       if (isSweep) {
 
@@ -2045,6 +2047,19 @@
         this.releaseDungeon();
       }
       return ret;
+    };
+
+    Player.prototype.updatePkInof = function(rivalName) {
+      dbLib.saveSocre(this.name, rivalName, function(err, result) {
+        getPlayerHero(pkr, wrapCallback(this, function(err, heroData) {
+          return heroData.counters.currentPKCount++;
+        }));
+        if (result !== 'noNeed') {
+          this.counters.Arena = result[0];
+          return heroData.counters.Arena = result[1];
+        }
+      });
+      return this.counters.currentPKCount++;
     };
 
     Player.prototype.whisper = function(name, message, callback) {
