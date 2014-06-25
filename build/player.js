@@ -2052,12 +2052,9 @@
       this.counters.currentPKCount++;
       if (dungeon.PVP_Pool != null) {
         rivalName = dungeon.PVP_Pool[0].name;
-        return getPlayerHero(rivalName, wrapCallback(this, function(err, heroData) {
-          heroData.counters.currentPKCount++;
-          if (dungeon.result === DUNGEON_RESULT_WIN) {
-            return dbLib.saveSocre(this.name, rivalName, function(err, result) {}, result !== 'noNeed' ? (this.counters.Arena = result[0], heroData.counters.Arena = result[1]) : void 0);
-          }
-        }));
+        if (dungeon.result === DUNGEON_RESULT_WIN) {
+          return dbLib.saveSocre(this.name, rivalName, function(err, result) {}, result !== 'noNeed' ? this.counters.Arena = result[0] : void 0);
+        }
       }
     };
 
