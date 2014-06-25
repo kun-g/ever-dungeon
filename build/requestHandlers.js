@@ -811,14 +811,19 @@
     RPC_PVPInfoUpdate: {
       id: 34,
       func: function(arg, player, handler, rpcID, socket) {
-        return dbLib.getPvpInfo(player.name, function(err, result) {
-          var ret;
-          ret = {
+        var ret;
+        ret = {
+          rnk: player.counters.Arena,
+          cpl: !player.counters.currentPKCount ? 0 : void 0,
+          ttl: !player.counters.totalPKCount ? 3 : void 0,
+          rcv: !player.flags.rcvAward ? 1 : void 0
+        };
+        return handler([
+          {
             REQ: rpcID,
             RET: RET_OK
-          };
-          return handler([ret]);
-        });
+          }
+        ].concat(ret));
       },
       args: [],
       needPid: true
