@@ -813,10 +813,12 @@
       func: function(arg, player, handler, rpcID, socket) {
         var ret;
         ret = {
-          rnk: player.counters.Arena,
-          cpl: !player.counters.currentPKCount ? 0 : void 0,
-          ttl: !player.counters.totalPKCount ? 3 : void 0,
-          rcv: !player.flags.rcvAward ? 1 : void 0
+          arg: {
+            rnk: player.counters.Arena,
+            cpl: !player.counters.currentPKCount ? 0 : void 0,
+            ttl: !player.counters.totalPKCount ? 3 : void 0,
+            rcv: !player.flags.rcvAward ? 1 : void 0
+          }
         };
         return handler([
           {
