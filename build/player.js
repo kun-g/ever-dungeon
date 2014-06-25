@@ -904,7 +904,6 @@
                 return cb('OK');
               }));
             } else {
-              _this.dungeonData.PVP_Pool = [];
               return cb('OK');
             }
           };
