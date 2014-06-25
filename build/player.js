@@ -898,9 +898,9 @@
           };
         })(this), (function(_this) {
           return function(cb) {
-            if (stageConfig.pvp != null) {
+            if ((stageConfig.pvp != null) && (pkr != null)) {
               return getPlayerHero(pkr, wrapCallback(_this, function(err, heroData) {
-                this.dungeonData.PVP_Pool = [getBasicInfo(heroData)];
+                this.dungeonData.PVP_Pool = heroData != null ? [getBasicInfo(heroData)] : void 0;
                 return cb('OK');
               }));
             } else {
