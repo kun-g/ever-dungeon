@@ -839,7 +839,7 @@
         if (ret) {
           res = res.concat(ret);
         }
-        return res;
+        return handler(ret);
       },
       args: [],
       needPid: true
