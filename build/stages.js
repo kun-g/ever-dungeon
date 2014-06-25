@@ -2001,7 +2001,6 @@ var data = [
               dungeon: 118,
               description: "hunt112",
               eventName: "event_goblin",
-              "isInfinite":true,
               "formularId":1,
               condition: function (obj, util) { return true;
               },
