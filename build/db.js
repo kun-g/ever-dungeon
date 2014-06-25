@@ -190,9 +190,13 @@ var lua_searchRival =" \
   local key = prefix..board; \
   local rank = redis.call('ZREVRANK', key, name); \
   local rivalLst ={} ; \
+  local lastrank = -1 ; \
   for i,scope in ipairs(config) do \
     local from = math.floor(rank * (scope.base - scope.delt + scope.delt *(2*randLst[i]))); \
-    rivalLst[i] = redis.call('zrange', key, from, from, 'WITHSCORES'); \ \
+    if from ~= rank and lastrank ~= from then \
+      rivalLst[i] = redis.call('zrange', key, from, from, 'WITHSCORES'); \ \
+      lastrank = from
+    end
   end \
   return rivalLst;";
 
