@@ -307,6 +307,68 @@
       return ret;
     };
 
+    Player.prototype.sweepStage = function(stage, multiple) {
+      var cfg, count, dungeon, i, k, p, prize, r, ret, ret_result, stgCfg, v, _i;
+      stgCfg = queryTable(TABLE_STAGE, stage, this.abIndex);
+      if (!stgCfg) {
+        return {
+          code: RET_DungeonNotExist,
+          ret: []
+        };
+      }
+      cfg = queryTable(TABLE_DUNGEON, stgCfg.dungeon, this.abIndex);
+      if (!cfg) {
+        return {
+          code: RET_DungeonNotExist,
+          ret: []
+        };
+      }
+      dungeon = {
+        team: [],
+        quests: [],
+        revive: 0,
+        result: DUNGEON_RESULT_WIN,
+        killingInfo: [],
+        currentLevel: cfg.levelCount,
+        getConfig: function() {
+          return cfg;
+        }
+      };
+      count = 1;
+      if (multiple) {
+        count = 5;
+      }
+      ret_result = RET_OK;
+      prize = [];
+      ret = [];
+      if (multiple && false) {
+        ret_result = RET_VipLevelIsLow;
+      } else if (this.energy < stgCfg.cost * count) {
+        ret_result = RET_NotEnoughEnergy;
+      } else {
+        for (i = _i = 1; 1 <= count ? _i <= count : _i >= count; i = 1 <= count ? ++_i : --_i) {
+          p = this.generateDungeonAward(dungeon, true);
+          r = [];
+          for (k in p) {
+            v = p[k];
+            r = r.concat(v);
+          }
+          prize.push(r);
+          ret = ret.concat(this.claimPrize(r));
+        }
+      }
+      this.log('sweepDungeon', {
+        stage: stage,
+        multiple: multiple,
+        reward: prize
+      });
+      return {
+        code: ret_result,
+        prize: prize,
+        ret: ret
+      };
+    };
+
     Player.prototype.claimLoginReward = function() {
       var dis, ret, reward;
       if (this.loginStreak.date) {
@@ -685,7 +747,6 @@
 
     Player.prototype.stageIsUnlockable = function(stage) {
       var stageConfig;
-      return true;
       stageConfig = queryTable(TABLE_STAGE, stage, this.abIndex);
       if (stageConfig.condition) {
         return stageConfig.condition(this, genUtil());
@@ -755,6 +816,10 @@
             }
           });
         }
+        this.log('stage', {
+          operation: operation,
+          stage: stage
+        });
         return ret;
       }
     };
@@ -1864,10 +1929,10 @@
           }
         }
       }
-      return prize;
+      return helperLib.splicePrize(prize);
     };
 
-    Player.prototype.claimDungeonAward = function(dungeon) {
+    Player.prototype.claimDungeonAward = function(dungeon, isSweep) {
       var goldPrize, k, objective, offlineReward, otherPrize, prize, qid, qst, quest, quests, result, ret, rewardMessage, teammateRewardMessage, wxPrize, xpPrize, _ref7, _ref8;
       if (dungeon == null) {
         return [];
@@ -1906,8 +1971,7 @@
           }
         }
       }
-      prize = this.generateDungeonAward(dungeon);
-      _ref8 = helperLib.splicePrize(prize), goldPrize = _ref8.goldPrize, xpPrize = _ref8.xpPrize, wxPrize = _ref8.wxPrize, otherPrize = _ref8.otherPrize;
+      _ref8 = this.generateDungeonAward(dungeon), goldPrize = _ref8.goldPrize, xpPrize = _ref8.xpPrize, wxPrize = _ref8.wxPrize, otherPrize = _ref8.otherPrize;
       rewardMessage = {
         NTF: Event_DungeonReward,
         arg: {
@@ -1967,12 +2031,16 @@
       if (dungeon.result === DUNGEON_RESULT_WIN && (dungeon.PVP_Pool != null)) {
         dbLib.saveSocre(this.name, dungeon.PVP_Pool[0].name);
       }
-      this.log('finishDungeon', {
-        stage: dungeon.getInitialData().stage,
-        result: result,
-        reward: prize
-      });
-      this.releaseDungeon();
+      if (isSweep) {
+
+      } else {
+        this.log('finishDungeon', {
+          stage: dungeon.getInitialData().stage,
+          result: result,
+          reward: prize
+        });
+        this.releaseDungeon();
+      }
       return ret;
     };
 

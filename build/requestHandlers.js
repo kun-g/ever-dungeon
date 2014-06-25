@@ -722,7 +722,6 @@
           if (result.board != null) {
             board = result.board;
             return async.map(board.name, getPlayerHero, function(err, result) {
-              console.log(err);
               ret.lst = result.map(function(e, i) {
                 var r;
                 r = getBasicInfo(e);
@@ -820,6 +819,27 @@
           };
           return handler([ret]);
         });
+      },
+      args: [],
+      needPid: true
+    },
+    RPC_SweepStage: {
+      id: 35,
+      func: function(arg, player, handler, rpcID, socket) {
+        var code, prize, res, ret, _ref1;
+        _ref1 = player.sweepStage(+arg.stg, arg.mul), code = _ref1.code, prize = _ref1.prize, ret = _ref1.ret;
+        res = {
+          REQ: rpcID,
+          RET: code
+        };
+        if (prize) {
+          res.arg = prize;
+        }
+        res = [res];
+        if (ret) {
+          res = res.concat(ret);
+        }
+        return res;
       },
       args: [],
       needPid: true

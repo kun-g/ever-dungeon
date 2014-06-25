@@ -286,12 +286,12 @@
       this.xp = heroData.exp;
       this.levelUp();
       this.counterAttack = true;
-      this.health = Math.ceil(battleForce * (9 / 18.5));
-      this.attack = Math.ceil(battleForce * (0.1 / 18.5));
+      this.health = Math.ceil(battleForce * (8 / 18.5));
+      this.attack = Math.ceil(battleForce * (0.35 / 18.5));
       this.critical = battleForce * (1 / 18.5);
       this.strong = battleForce * (1 / 18.5);
       this.accuracy = battleForce * (1 / 18.5) + 30;
-      this.reactivity = battleForce * (10 / 18.5) - 50;
+      this.reactivity = battleForce * (1 / 18.5) - 40;
       this.speed = battleForce * (1 / 18.5) + 20;
       this.maxHP = this.health;
       this.equipment = heroData.itm;
@@ -300,7 +300,8 @@
       this.hairStyle = heroData.hst;
       this.hairColor = heroData.hcl;
       this.ref = heroData.ref;
-      return this.id = cid;
+      this.id = cid;
+      return console.log(this.accuracy);
     };
 
     return Mirror;

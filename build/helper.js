@@ -195,8 +195,8 @@
             obj[key] = v.initialValue;
           } else if (v.initialValue === 'length') {
             require('./db').queryLeaderboardLength(key, function(err, result) {
-              console.log('set leadbo', key, result);
-              return obj[key] = +result;
+              obj[key] = +result;
+              return obj.saveDB();
             });
           }
         }
@@ -702,7 +702,7 @@
   exports.intervalEvent = {
     infinityDungeonPrize: {
       time: {
-        hour: 6
+        hour: 11
       },
       func: function(libs) {
         var cfg;
@@ -817,7 +817,7 @@
                   count: 1
                 }
               ],
-              tit: "铁人试炼排行奖励",
+              tit: "狩猎任务排行奖励",
               txt: "恭喜你进入狩猎任务前五，点击领取奖励。"
             }
           }, {
@@ -836,7 +836,7 @@
                   count: 1
                 }
               ],
-              tit: "铁人试炼排行奖励",
+              tit: "狩猎任务排行奖励",
               txt: "恭喜你进入狩猎任务前十，点击领取奖励。"
             }
           }
@@ -883,7 +883,6 @@
           if (!itemFlag[p.value]) {
             itemFlag[p.value] = 0;
           }
-          console.log('x');
           return itemFlag[p.value] += p.count;
         default:
           return otherPrize.push(p);
