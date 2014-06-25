@@ -843,6 +843,9 @@
 
     Player.prototype.startDungeon = function(stage, startInfoOnly, pkr, handler) {
       var dungeonConfig, stageConfig;
+      if (pkr == null) {
+        pkr = null;
+      }
       stageConfig = queryTable(TABLE_STAGE, stage, this.abIndex);
       dungeonConfig = queryTable(TABLE_DUNGEON, stageConfig.dungeon, this.abIndex);
       if (!((stageConfig != null) && (dungeonConfig != null))) {
