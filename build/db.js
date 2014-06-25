@@ -208,8 +208,8 @@ var lua_exchangeScore = " \
   local championRank = redis.call('ZRANK', key, champion); \
   local secondRank = redis.call('ZRANK', key, second); \
   if championRank < secondRank then \
-    redis.call('ZADD',key,second, championRank); \
-    redis.call('ZADD',key,champion, secondRank); \
+    redis.call('ZADD',key, championRank, second); \
+    redis.call('ZADD',key, secondRank, champion); \
     return {championRank,secondRank} ; \
   end \
   return 'noNeed'; ";
