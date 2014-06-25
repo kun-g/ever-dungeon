@@ -519,6 +519,7 @@ exports.initializeDB = function (cfg) {
     };
   });
   dbClient.script('load',lua_exchangeScore, function (err, sha) {
+    console.log('load lua_exchangeScore', err,sha)
     exports.saveSocre= function (champion, second, handler) {
       dbClient.evalsha(sha, 0, 'Arena', champion, second, function (err, ret) {
        if (handler) { handler(err, ret); }
