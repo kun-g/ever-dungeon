@@ -819,7 +819,7 @@
         ret.arg = {
           rnk: player.counters.Arena,
           cpl: !player.counters.currentPKCount ? 0 : void 0,
-          ttl: !player.counters.totalPKCount ? 3 : void 0,
+          ttl: !player.counters.totalPKCount ? 5 : void 0,
           rcv: !player.flags.rcvAward ? true : void 0
         };
         return handler(ret);

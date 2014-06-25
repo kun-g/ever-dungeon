@@ -2049,11 +2049,16 @@
 
     Player.prototype.updatePkInof = function(dungeon) {
       var rivalName;
-      this.counters.currentPKCount++;
+      if (this.counters.currentPKCount != null) {
+        this.counters.currentPKCount++;
+      } else {
+        this.counters.newProperty('currentPKCount', 0);
+      }
       if (dungeon.PVP_Pool != null) {
         rivalName = dungeon.PVP_Pool[0].name;
         if (dungeon.result === DUNGEON_RESULT_WIN) {
           return dbLib.saveSocre(this.name, rivalName, function(err, result) {
+            console.log('saveSocre', result);
             if (result !== 'noNeed') {
               return this.counters.Arena = result[0];
             }
