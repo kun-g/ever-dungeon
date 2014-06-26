@@ -516,7 +516,8 @@ exports.initializeDB = function (cfg) {
   dbClient.script('load',lua_searchRival, function (err, sha) {
     exports.searchRival = function (name, handler) {
       dbClient.evalsha(sha, 0, 'Arena', name, Math.random(), Math.random(), Math.random(), function (err, ret) {
-       if (handler) { handler(err, ret); }
+        console.log('lua_searchRival',err,ret)
+        if (handler) { handler(err, ret); }
       });
     };
   });
