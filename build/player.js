@@ -350,6 +350,8 @@
         ret_result = RET_VipLevelIsLow;
       } else if (this.energy < energyCost) {
         ret_result = RET_NotEnoughEnergy;
+      } else if ((stgCfg.sweepPower == null) && stgCfg.sweepPower > this.createHero().calculatePower()) {
+        ret_result = RET_SweepPowerNotEnough;
       } else {
         itemCostRet = this.claimCost(itemCost.id, itemCost.num);
         if (itemCostRet == null) {
@@ -1892,7 +1894,6 @@
       var cfg, dropInfo, gr, iPrize, infiniteLevel, p, percentage, prize, result, wr, xr, _i, _len, _ref10, _ref7, _ref8, _ref9;
       result = dungeon.result;
       cfg = dungeon.getConfig();
-      dungeon.result = DUNGEON_RESULT_DONE;
       if (result === DUNGEON_RESULT_DONE || (cfg == null)) {
         return headers.splicePrize([]);
       }
