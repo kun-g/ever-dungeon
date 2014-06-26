@@ -308,7 +308,7 @@
     };
 
     Player.prototype.sweepStage = function(stage, multiple) {
-      var cfg, count, dungeon, i, k, p, prize, r, ret, ret_result, stgCfg, v, _i;
+      var cfg, count, dungeon, i, k, p, prize, r, ret, ret_result, stgCfg, totalCost, v, _i;
       stgCfg = queryTable(TABLE_STAGE, stage, this.abIndex);
       if (!stgCfg) {
         return {
@@ -341,11 +341,13 @@
       ret_result = RET_OK;
       prize = [];
       ret = [];
+      totalCost = stgCfg.cost * count;
       if (multiple && false) {
         ret_result = RET_VipLevelIsLow;
-      } else if (this.energy < stgCfg.cost * count) {
+      } else if (this.energy < totalCost) {
         ret_result = RET_NotEnoughEnergy;
       } else {
+        this.costEnergy(totalCost);
         for (i = _i = 1; 1 <= count ? _i <= count : _i >= count; i = 1 <= count ? ++_i : --_i) {
           p = this.generateDungeonAward(dungeon, true);
           r = [];
