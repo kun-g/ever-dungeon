@@ -308,7 +308,7 @@
     };
 
     Player.prototype.sweepStage = function(stage, multiple) {
-      var cfg, count, dungeon, energyCost, i, itemCost, k, p, prize, r, ret, ret_result, stgCfg, v, _i;
+      var cfg, count, dungeon, energyCost, i, itemCost, itemCostRet, k, p, prize, r, ret, ret_result, stgCfg, v, _i;
       stgCfg = queryTable(TABLE_STAGE, stage, this.abIndex);
       if (!stgCfg) {
         return {
@@ -350,27 +350,31 @@
         ret_result = RET_VipLevelIsLow;
       } else if (this.energy < energyCost) {
         ret_result = RET_NotEnoughEnergy;
-      } else if (!this.claimCost(itemCost.id, itemCost.num)) {
-        ret_result = RET_NotEnoughItem;
       } else {
-        this.costEnergy(energyCost);
-        for (i = _i = 1; 1 <= count ? _i <= count : _i >= count; i = 1 <= count ? ++_i : --_i) {
-          p = this.generateDungeonAward(dungeon, true);
-          r = [];
-          for (k in p) {
-            v = p[k];
-            r = r.concat(v);
+        itemCostRet = this.claimCost(itemCost.id, itemCost.num);
+        if (itemCostRet == null) {
+          ret_result = RET_NotEnoughItem;
+        } else {
+          this.costEnergy(energyCost);
+          for (i = _i = 1; 1 <= count ? _i <= count : _i >= count; i = 1 <= count ? ++_i : --_i) {
+            p = this.generateDungeonAward(dungeon, true);
+            r = [];
+            for (k in p) {
+              v = p[k];
+              r = r.concat(v);
+            }
+            prize.push(r);
+            ret = ret.concat(this.claimPrize(r));
           }
-          prize.push(r);
-          ret = ret.concat(this.claimPrize(r));
+          this.log('sweepDungeon', {
+            stage: stage,
+            multiple: multiple,
+            reward: prize
+          });
+          ret = ret.concat(this.syncEnergy());
+          ret = ret.concat(itemCostRet);
         }
       }
-      this.log('sweepDungeon', {
-        stage: stage,
-        multiple: multiple,
-        reward: prize
-      });
-      ret = ret.concat(this.syncEnergy());
       return {
         code: ret_result,
         prize: prize,
