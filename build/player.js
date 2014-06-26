@@ -350,7 +350,8 @@
         ret_result = RET_VipLevelIsLow;
       } else if (this.energy < energyCost) {
         ret_result = RET_NotEnoughEnergy;
-      } else if ((stgCfg.sweepPower == null) && stgCfg.sweepPower > this.createHero().calculatePower()) {
+      } else if (!((stgCfg.sweepPower == null) && stgCfg.sweepPower > this.createHero().calculatePower())) {
+        console.log(stgCfg.sweepPower, this.createHero().calculatePower(), '===========');
         ret_result = RET_SweepPowerNotEnough;
       } else {
         itemCostRet = this.claimCost(itemCost.id, itemCost.num);
