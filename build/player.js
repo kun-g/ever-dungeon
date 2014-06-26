@@ -1090,7 +1090,19 @@
       if (count == null) {
         count = 1;
       }
-      cfg = queryTable(TABLE_COSTS, cost);
+      if (typeof cost === 'number') {
+        cfg = {
+          material: [
+            {
+              type: 0,
+              value: cost,
+              count: count
+            }
+          ]
+        };
+      } else {
+        cfg = queryTable(TABLE_COSTS, cost);
+      }
       if (cfg == null) {
         return null;
       }
