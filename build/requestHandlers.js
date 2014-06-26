@@ -839,10 +839,6 @@
         if (prize) {
           res.arg = prize;
         }
-        res = [res];
-        if (ret) {
-          res = res.concat(ret);
-        }
         return handler(ret);
       },
       args: [],
