@@ -519,7 +519,7 @@ var data = [
 		"idx": 3,
         "style": "map-dungeon7",
 		"title":"dungeonname7.png",
-        "label":"断肠崖",
+        "label":"旋风谷",
 		"desc":"塔伦山脉中最险要的地方，遍布着夺命的悬\n崖，稍不留神就会让你付出惨痛的代价。",
 		"icon":"mapicon4.png",
 		"stage":[
@@ -861,7 +861,7 @@ var data = [
 		"idx": 6,
         "style": "map-dungeon4",
 		"title":"dungeonname4.png",
-        "label":"旋风谷",
+        "label":"断肠崖",
 		"desc":"山谷险要的地势加上诡异的巨大山风，让这\n里成为勇者们永远的噩梦。",
 		"icon":"mapicon4.png",
 		"stage":[
@@ -1502,6 +1502,7 @@ var data = [
                 "hidden":false,
                 "dungeon": 92,
                 "tutorial":2,
+                "sweepPower":100,
                 "cond":
                 { "and": [
                     { "==": [ { "type": "getProperty", "key": "stage.104.state"}, 2 ] }

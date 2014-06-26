@@ -27778,5 +27778,12 @@ exports.data = [
             }
         ],
         "storeOnly": true
+    },
+    {
+        "classId": 871,
+        "label": "扫荡卷轴",
+        "icon": "irfasion-helmetzdl2.png",
+        "category": 4,
+        "description": "可以用于扫荡用的卷轴，只要符合关卡战斗力要求即可进行扫荡。"
     }
 ]
