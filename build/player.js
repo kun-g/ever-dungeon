@@ -343,7 +343,7 @@
       ret = [];
       energyCost = stgCfg.cost * count;
       itemCost = {
-        id: 853,
+        id: 871,
         num: count
       };
       if (multiple && false) {
@@ -1893,7 +1893,7 @@
       result = dungeon.result;
       cfg = dungeon.getConfig();
       if (result === DUNGEON_RESULT_DONE || (cfg == null)) {
-        return [];
+        return headers.splicePrize([]);
       }
       dropInfo = dungeon.killingInfo.reduce((function(r, e) {
         if (e && e.dropInfo) {
