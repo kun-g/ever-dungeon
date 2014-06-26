@@ -356,6 +356,7 @@
           ret_result = RET_NotEnoughItem;
         } else {
           this.costEnergy(energyCost);
+          ret = ret.concat(itemCostRet);
           for (i = _i = 1; 1 <= count ? _i <= count : _i >= count; i = 1 <= count ? ++_i : --_i) {
             p = this.generateDungeonAward(dungeon, true);
             r = [];
@@ -371,7 +372,6 @@
             multiple: multiple,
             reward: prize
           });
-          ret = ret.concat(itemCostRet);
           ret = ret.concat(this.syncEnergy());
         }
       }
