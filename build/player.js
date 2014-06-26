@@ -364,6 +364,7 @@
         multiple: multiple,
         reward: prize
       });
+      ret = ret.concat(this.syncEnergy());
       return {
         code: ret_result,
         prize: prize,
