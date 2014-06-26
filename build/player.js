@@ -1892,6 +1892,7 @@
       var cfg, dropInfo, gr, iPrize, infiniteLevel, p, percentage, prize, result, wr, xr, _i, _len, _ref10, _ref7, _ref8, _ref9;
       result = dungeon.result;
       cfg = dungeon.getConfig();
+      dungeon.result = DUNGEON_RESULT_DONE;
       if (result === DUNGEON_RESULT_DONE || (cfg == null)) {
         return headers.splicePrize([]);
       }
