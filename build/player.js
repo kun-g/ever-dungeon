@@ -371,8 +371,8 @@
             multiple: multiple,
             reward: prize
           });
-          ret = ret.concat(this.syncEnergy());
           ret = ret.concat(itemCostRet);
+          ret = ret.concat(this.syncEnergy());
         }
       }
       return {
