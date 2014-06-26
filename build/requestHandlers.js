@@ -839,7 +839,8 @@
         if (prize) {
           res.arg = prize;
         }
-        return handler(ret);
+        player.saveDB();
+        return handler([res].concat(ret));
       },
       args: [],
       needPid: true
