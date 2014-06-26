@@ -1100,7 +1100,7 @@
             {
               type: 0,
               value: cost,
-              count: count
+              count: 1
             }
           ]
         };
