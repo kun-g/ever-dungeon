@@ -195,7 +195,6 @@
             obj[key] = v.initialValue;
           } else if (v.initialValue === 'length') {
             require('./db').queryLeaderboardLength(key, function(err, result) {
-              console.log('helper.assignLeaderboard', err, result);
               obj[key] = +result;
               return obj.saveDB();
             });
@@ -216,6 +215,7 @@
       }
     };
     return exports.getPositionOnLeaderboard = function(board, name, from, to, cb) {
+      console.log('getPositionOnLeaderboard', board, name, from, to);
       tickLeaderboard(board);
       cfg = localConfig[board];
       return require('./db').queryLeaderboard(cfg.name, name, from, to, function(err, result) {
