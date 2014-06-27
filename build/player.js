@@ -295,7 +295,6 @@
         if (item.date == null) {
           return true;
         }
-        console.log(helperLib.matchDate(item.date, helperLib.currentTime(), item.expiration));
         return helperLib.matchDate(item.date, helperLib.currentTime(), item.expiration);
       });
       rmMSG = itemsNeedRemove.map((function(_this) {
@@ -305,6 +304,85 @@
       })(this));
       ret = ret.concat(rmMSG);
       return ret;
+    };
+
+    Player.prototype.sweepStage = function(stage, multiple) {
+      var cfg, count, dungeon, energyCost, i, itemCost, itemCostRet, k, p, prize, r, ret, ret_result, stgCfg, v, _i;
+      stgCfg = queryTable(TABLE_STAGE, stage, this.abIndex);
+      if (!stgCfg) {
+        return {
+          code: RET_DungeonNotExist,
+          ret: []
+        };
+      }
+      cfg = queryTable(TABLE_DUNGEON, stgCfg.dungeon, this.abIndex);
+      if (!cfg) {
+        return {
+          code: RET_DungeonNotExist,
+          ret: []
+        };
+      }
+      dungeon = {
+        team: [],
+        quests: [],
+        revive: 0,
+        result: DUNGEON_RESULT_WIN,
+        killingInfo: [],
+        currentLevel: cfg.levelCount,
+        getConfig: function() {
+          return cfg;
+        }
+      };
+      count = 1;
+      if (multiple) {
+        count = 5;
+      }
+      ret_result = RET_OK;
+      prize = [];
+      ret = [];
+      energyCost = stgCfg.cost * count;
+      itemCost = {
+        id: 871,
+        num: count
+      };
+      if (multiple && false) {
+        ret_result = RET_VipLevelIsLow;
+      } else if (this.energy < energyCost) {
+        ret_result = RET_NotEnoughEnergy;
+      } else if ((stgCfg.sweepPower == null) && stgCfg.sweepPower > this.createHero().calculatePower()) {
+        ret_result = RET_SweepPowerNotEnough;
+      } else {
+        itemCostRet = this.claimCost({
+          id: itemCost.id
+        }, itemCost.num);
+        if (itemCostRet == null) {
+          ret_result = RET_NotEnoughItem;
+        } else {
+          this.costEnergy(energyCost);
+          ret = ret.concat(itemCostRet);
+          for (i = _i = 1; 1 <= count ? _i <= count : _i >= count; i = 1 <= count ? ++_i : --_i) {
+            p = this.generateDungeonAward(dungeon, true);
+            r = [];
+            for (k in p) {
+              v = p[k];
+              r = r.concat(v);
+            }
+            prize.push(r);
+            ret = ret.concat(this.claimPrize(r));
+          }
+          this.log('sweepDungeon', {
+            stage: stage,
+            multiple: multiple,
+            reward: prize
+          });
+          ret = ret.concat(this.syncEnergy());
+        }
+      }
+      return {
+        code: ret_result,
+        prize: prize,
+        ret: ret
+      };
     };
 
     Player.prototype.claimLoginReward = function() {
@@ -779,8 +857,11 @@
       return ret;
     };
 
-    Player.prototype.startDungeon = function(stage, startInfoOnly, handler) {
+    Player.prototype.startDungeon = function(stage, startInfoOnly, pkr, handler) {
       var dungeonConfig, stageConfig;
+      if (pkr == null) {
+        pkr = null;
+      }
       stageConfig = queryTable(TABLE_STAGE, stage, this.abIndex);
       dungeonConfig = queryTable(TABLE_DUNGEON, stageConfig.dungeon, this.abIndex);
       if (!((stageConfig != null) && (dungeonConfig != null))) {
@@ -897,10 +978,18 @@
             if (stageConfig.event === 'event_daily') {
               _this.dungeonData.baseRank = helperLib.initCalcDungeonBaseRank(_this);
             }
-            if (stageConfig.pvp) {
-              _this.dungeonData.PVP_Pool = team.map(getBasicInfo);
+            return cb();
+          };
+        })(this), (function(_this) {
+          return function(cb) {
+            if ((stageConfig.pvp != null) && (pkr != null)) {
+              return getPlayerHero(pkr, wrapCallback(_this, function(err, heroData) {
+                this.dungeonData.PVP_Pool = heroData != null ? [getBasicInfo(heroData)] : void 0;
+                return cb('OK');
+              }));
+            } else {
+              return cb('OK');
             }
-            return cb('OK');
           };
         })(this)
       ], (function(_this) {
@@ -1008,7 +1097,19 @@
       if (count == null) {
         count = 1;
       }
-      cfg = queryTable(TABLE_COSTS, cost);
+      if (typeof cost === 'object') {
+        cfg = {
+          material: [
+            {
+              type: 0,
+              value: cost.id,
+              count: 1
+            }
+          ]
+        };
+      } else {
+        cfg = queryTable(TABLE_COSTS, cost);
+      }
       if (cfg == null) {
         return null;
       }
@@ -1795,7 +1896,7 @@
       result = dungeon.result;
       cfg = dungeon.getConfig();
       if (result === DUNGEON_RESULT_DONE || (cfg == null)) {
-        return [];
+        return helperLib.splicePrize([]);
       }
       dropInfo = dungeon.killingInfo.reduce((function(r, e) {
         if (e && e.dropInfo) {
@@ -1859,7 +1960,7 @@
           }
         }
       }
-      return prize;
+      return helperLib.splicePrize(prize);
     };
 
     Player.prototype.claimDungeonAward = function(dungeon, isSweep) {
@@ -1901,8 +2002,7 @@
           }
         }
       }
-      prize = this.generateDungeonAward(dungeon);
-      _ref8 = helperLib.splicePrize(prize), goldPrize = _ref8.goldPrize, xpPrize = _ref8.xpPrize, wxPrize = _ref8.wxPrize, otherPrize = _ref8.otherPrize;
+      _ref8 = this.generateDungeonAward(dungeon), goldPrize = _ref8.goldPrize, xpPrize = _ref8.xpPrize, wxPrize = _ref8.wxPrize, otherPrize = _ref8.otherPrize;
       rewardMessage = {
         NTF: Event_DungeonReward,
         arg: {
@@ -1959,6 +2059,7 @@
         });
       }
       ret = ret.concat(this.claimPrize(prize, false));
+      this.updatePkInof(dungeon);
       if (isSweep) {
 
       } else {
@@ -1970,6 +2071,27 @@
         this.releaseDungeon();
       }
       return ret;
+    };
+
+    Player.prototype.updatePkInof = function(dungeon) {
+      var myName, rivalName;
+      if (this.counters.currentPKCount != null) {
+        this.counters.currentPKCount++;
+      } else {
+        this.counters.newProperty('currentPKCount', 0);
+      }
+      if (dungeon.PVP_Pool != null) {
+        myName = this.name;
+        rivalName = dungeon.PVP_Pool[0].nam;
+        if (dungeon.result === DUNGEON_RESULT_WIN) {
+          return dbLib.saveSocre(myName, rivalName, function(err, result) {
+            console.log('saveSocre', myName, rivalName, err, result);
+            if (result !== 'noNeed') {
+              return this.counters.Arena = result[0];
+            }
+          });
+        }
+      }
     };
 
     Player.prototype.whisper = function(name, message, callback) {

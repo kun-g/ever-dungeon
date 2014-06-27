@@ -188,11 +188,18 @@ var lua_searchRival =" \
     return nil \
   end \
   local key = prefix..board; \
-  local rank = redis.call('ZREVRANK', key, name); \
+  local rank = redis.call('ZRANK', key, name); \
   local rivalLst ={} ; \
+  local initRivalLst = redis.call('zrange', key, rank + 1, rank + 3, 'WITHSCORES');  \
+  local len = table.getn(initRivalLst) \
+  for i = 1, len , 2 do \
+    rivalLst[math.ceil(i/2)] = {initRivalLst[i],initRivalLst[i+1]} \
+  end \
   for i,scope in ipairs(config) do \
     local from = math.floor(rank * (scope.base - scope.delt + scope.delt *(2*randLst[i]))); \
-    rivalLst[i] = redis.call('zrange', key, from, from, 'WITHSCORES'); \ \
+    if from ~= rank then \
+      rivalLst[i] = redis.call('zrange', key, from, from, 'WITHSCORES');  \
+    end \
   end \
   return rivalLst;";
 
@@ -203,11 +210,18 @@ var lua_exchangeScore = " \
   local championRank = redis.call('ZRANK', key, champion); \
   local secondRank = redis.call('ZRANK', key, second); \
   if championRank < secondRank then \
-    redis.call('ZADD',key,second, championRank); \
-    redis.call('ZADD',key,champion, secondRank); \
-    return 'exchanged' ; \
+    redis.call('ZADD',key, championRank, second); \
+    redis.call('ZADD',key, secondRank, champion); \
+    return {championRank,secondRank} ; \
   end \
   return 'noNeed'; ";
+
+var lua_getPvpInfo = " \
+  local board, name = ARGV[1],ARGV[2]; \
+  local prefix = 'Leaderboard.'; \
+  local key = prefix..board; \
+  local rank = redis.call('ZREVRANK', key, name); \
+  return 'noFinished'; ";
 
 exports.updateSessionInfo = function (session, obj, handler) {
   dbClient.hmset(makeDBKey([sessionPrefix, session]), obj, handler);
@@ -503,17 +517,45 @@ exports.initializeDB = function (cfg) {
   dbClient.script('load',lua_searchRival, function (err, sha) {
     exports.searchRival = function (name, handler) {
       dbClient.evalsha(sha, 0, 'Arena', name, Math.random(), Math.random(), Math.random(), function (err, ret) {
-       if (handler) { handler(err, ret); }
+        console.log('lua_searchRival',err,ret)
+        if (handler) { handler(err, ret); }
       });
     };
   });
   dbClient.script('load',lua_exchangeScore, function (err, sha) {
-    exports.saveSocre= function (name, handler) {
-      dbClient.evalsha(sha, 0, dbPrefix, champion, second, function (err, ret) {
+    console.log('load lua_exchangeScore', err,sha)
+    exports.saveSocre = function (champion, second, handler) {
+      dbClient.evalsha(sha, 0, 'Arena', champion, second, function (err, ret) {
        if (handler) { handler(err, ret); }
       });
     };
   });
+  dbClient.script('load',lua_getPvpInfo, function (err, sha) {
+    exports.getPvpInfo = function (name, handler) {
+      dbClient.evalsha(sha, 0, 'Arena', name, function (err, ret) {
+       if (handler) { handler(err, ret); }
+      });
+    };
+  });
+  //dbClient.script('load', lua_getMercenary, function (err, sha) {
+  //  exports.findMercenary = function (battleforce, count, range, delta, names handler) {
+  //    dbClient.evalsha(
+  //      sha,
+  //      0,
+  //      battleforce,
+  //      count,
+  //      range,
+  //      delta,
+  //      rand(),
+  //      names,
+  //      5,
+  //      function (err, ret) {
+  //       if (handler) { handler(err, ret); }
+  //      });
+  //  };
+  //});
+
+
 
 //function fetchMessage(name, handler) {
 //  dbClient.smembers(playerMessagePrefix+name, function (err, ids) {

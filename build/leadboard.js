@@ -25,12 +25,12 @@ exports.data = [
         "type":"player",
         "availableCondition":true
     },
-    //{
-    //    "name":"Arena",
-    //    "key":"counters.arena",
-    //    "reverse": true,
-    //    "initialValue": 'length',
-    //    "type":"player",
-    //    "availableCondition":true
-    //},
+    {
+        "name":"Arena",
+        "key":"counters.arena",
+        "reverse": true,
+        "initialValue": 'length',
+        "type":"player",
+        "availableCondition":true
+    },
 ];

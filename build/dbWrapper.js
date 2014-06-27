@@ -166,7 +166,6 @@
         var e, err, vip;
         try {
           vip = playerLib.getVip(rmb);
-          console.log(hero, name);
           hero = JSON.parse(hero);
           hero.vipLevel = +vip.level;
           return hero.blueStar = +blueStar;
@@ -285,6 +284,7 @@
   };
 
   exports.updateLeaderboard = function(board, member, score, callback) {
+    console.log('dbWrapper.updateLeader', board, member, score);
     return dbClient.zadd(makeDBKey([board], LeaderboardPrefix), score, member, callback);
   };
 

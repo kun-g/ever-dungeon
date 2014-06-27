@@ -179,30 +179,29 @@
     });
     exports.assignLeaderboard = function(player) {
       return localConfig.forEach(function(v) {
-        var obj, tmp, _ref;
+        var field, obj, tmp, _ref;
         if (player.type !== v.type) {
           return false;
         }
         tmp = v.key.split('.');
-        key = tmp.pop();
+        field = tmp.pop();
         obj = player;
         if (tmp.length) {
           obj = (_ref = require('./trigger').doGetProperty(player, tmp.join('.'))) != null ? _ref : player;
         }
-        if (v.initialValue && (obj[key] == null)) {
-          obj[key] = 0;
+        if ((v.initialValue != null) && !(typeof obj[field] !== 'undefined' && obj[field])) {
+          obj[field] = 0;
           if (typeof v.initialValue === 'number') {
-            obj[key] = v.initialValue;
+            obj[field] = v.initialValue;
           } else if (v.initialValue === 'length') {
-            require('./db').queryLeaderboardLength(key, function(err, result) {
-              console.log('Leaderboard', result, err);
-              obj[key] = +result;
+            require('./db').queryLeaderboardLength(field, function(err, result) {
+              obj[field] = +result;
               return obj.saveDB();
             });
           }
         }
-        v.func(player.name, obj[key]);
-        return tap(obj, key, function(dummy, value) {
+        v.func(player.name, obj[field]);
+        return tap(obj, field, function(dummy, value) {
           return v.func(player.name, value);
         });
       });
@@ -249,7 +248,7 @@
   exports.warpRivalLst = function(lst) {
     return lst.reduce((function(r, l, i) {
       if (l.length === 2) {
-        r.name.push(l[0]) && r.rnk.push(l[1]);
+        r.name.push(l[0]) && r.rnk.push(+l[1]);
       }
       return r;
     }), {
@@ -652,7 +651,7 @@
     infinite: {
       storeType: "player",
       id: 3,
-      actived: 1,
+      actived: 0,
       canReset: function(obj, util) {
         return util.today.hour() >= 8 && util.diffDay(obj.timestamp.infinite, util.today);
       },
@@ -664,7 +663,7 @@
     hunting: {
       storeType: "player",
       id: 4,
-      actived: 1,
+      actived: 0,
       stages: [121, 122, 123, 125, 126, 127, 128, 129, 130, 131, 132],
       canReset: function(obj, util) {
         return util.diffDay(obj.timestamp.hunting, util.today);
@@ -700,158 +699,7 @@
     }
   };
 
-  exports.intervalEvent = {
-    infinityDungeonPrize: {
-      time: {
-        hour: 11
-      },
-      func: function(libs) {
-        var cfg;
-        cfg = [
-          {
-            from: 0,
-            to: 0,
-            mail: {
-              type: MESSAGE_TYPE_SystemReward,
-              src: MESSAGE_REWARD_TYPE_SYSTEM,
-              prize: [
-                {
-                  type: 2,
-                  count: 50
-                }, {
-                  type: 0,
-                  value: 869,
-                  count: 1
-                }
-              ],
-              tit: "铁人试炼排行奖励",
-              txt: "恭喜你成为铁人试炼冠军，点击领取奖励。"
-            }
-          }, {
-            from: 1,
-            to: 4,
-            mail: {
-              type: MESSAGE_TYPE_SystemReward,
-              src: MESSAGE_REWARD_TYPE_SYSTEM,
-              prize: [
-                {
-                  type: 2,
-                  count: 20
-                }, {
-                  type: 0,
-                  value: 868,
-                  count: 1
-                }
-              ],
-              tit: "铁人试炼排行奖励",
-              txt: "恭喜你进入铁人试炼前五，点击领取奖励。"
-            }
-          }, {
-            from: 5,
-            to: 9,
-            mail: {
-              type: MESSAGE_TYPE_SystemReward,
-              src: MESSAGE_REWARD_TYPE_SYSTEM,
-              prize: [
-                {
-                  type: 2,
-                  count: 10
-                }, {
-                  type: 0,
-                  value: 867,
-                  count: 1
-                }
-              ],
-              tit: "铁人试炼排行奖励",
-              txt: "恭喜你进入铁人试炼前十，点击领取奖励。"
-            }
-          }
-        ];
-        return cfg.forEach(function(e) {
-          return libs.helper.getPositionOnLeaderboard(1, 'nobody', e.from, e.to, function(err, result) {
-            return result.board.name.forEach(function(name) {
-              return libs.db.deliverMessage(name, e.mail);
-            });
-          });
-        });
-      }
-    },
-    killMonsterPrize: {
-      time: {
-        hour: 13
-      },
-      func: function(libs) {
-        var cfg;
-        cfg = [
-          {
-            from: 0,
-            to: 0,
-            mail: {
-              type: MESSAGE_TYPE_SystemReward,
-              src: MESSAGE_REWARD_TYPE_SYSTEM,
-              prize: [
-                {
-                  type: 2,
-                  count: 50
-                }, {
-                  type: 0,
-                  value: 866,
-                  count: 1
-                }
-              ],
-              tit: "狩猎任务排行奖励",
-              txt: "恭喜你成为狩猎任务冠军，点击领取奖励。"
-            }
-          }, {
-            from: 1,
-            to: 4,
-            mail: {
-              type: MESSAGE_TYPE_SystemReward,
-              src: MESSAGE_REWARD_TYPE_SYSTEM,
-              prize: [
-                {
-                  type: 2,
-                  count: 20
-                }, {
-                  type: 0,
-                  value: 865,
-                  count: 1
-                }
-              ],
-              tit: "狩猎任务排行奖励",
-              txt: "恭喜你进入狩猎任务前五，点击领取奖励。"
-            }
-          }, {
-            from: 5,
-            to: 9,
-            mail: {
-              type: MESSAGE_TYPE_SystemReward,
-              src: MESSAGE_REWARD_TYPE_SYSTEM,
-              prize: [
-                {
-                  type: 2,
-                  count: 10
-                }, {
-                  type: 0,
-                  value: 864,
-                  count: 1
-                }
-              ],
-              tit: "狩猎任务排行奖励",
-              txt: "恭喜你进入狩猎任务前十，点击领取奖励。"
-            }
-          }
-        ];
-        return cfg.forEach(function(e) {
-          return libs.helper.getPositionOnLeaderboard(2, 'nobody', e.from, e.to, function(err, result) {
-            return result.board.name.forEach(function(name) {
-              return libs.db.deliverMessage(name, e.mail);
-            });
-          });
-        });
-      }
-    }
-  };
+  exports.intervalEvent = {};
 
   exports.splicePrize = function(prize) {
     var count, goldPrize, id, itemFlag, otherPrize, wxPrize, xpPrize;
@@ -884,7 +732,6 @@
           if (!itemFlag[p.value]) {
             itemFlag[p.value] = 0;
           }
-          console.log('x');
           return itemFlag[p.value] += p.count;
         default:
           return otherPrize.push(p);
@@ -988,6 +835,10 @@
         return ob(obj, arg);
       }
     };
+  };
+
+  exports.dbScripts = {
+    getMercenary: "local battleforce, count, range = ARGV[1], ARGV[2], ARGV[3];\nlocal delta, rand, names, retrys = ARGV[4], ARGV[5], ARGV[6], ARGV[7];\nlocal table = 'Leaderboard.battleForce';\n\nlocal from = battleforce - range;\nlocal to = battleforce + range;\n\nwhile true\n  local list = redis.call('zrevrange', table, from, to);\n  local mercenarys = {}\n  for i, v in ipairs(list) do\n    ;\n  end\n  from = battleforce - range;\n  to = battleforce + range;\n  retrys -= 1;\n  if retrys == 0 return {err='Fail'};\nend\n\n//doFindMercenary = (list, cb) ->\n//  if list.length <= 0\n//    cb(new Error('Empty mercenarylist'))\n//  else\n//    selector = selectRange(list)\n//    battleForce = selector[rand()%selector.length]\n//    list = list.filter((i) -> return i != battleForce; )\n//    mercenaryGet(battleForce, count, (err, mList) ->\n//      if mList == null\n//        dbClient.srem(mercenaryPrefix+'Keys', battleForce, callback)\n//        dbClient.del(mercenaryPrefix+battleForce)\n//        mList = []\n\n//      mList = mList.filter((key) ->\n//        for name in names\n//          if key is name then return false\n//        return true\n//      )\n//      if mList.length is 0\n//        cb(null, list)\n//      else\n//        selectedName = mList[rand()%mList.length]\n//        getPlayerHero(selectedName, (err, hero) ->\n//          if hero\n//            cb(new Error('Done'), hero)\n//          else\n//            logError({action: 'RemoveInvalidMercenary', error: err, name: selectedName})\n//            mercenaryDel(battleForce, selectedName, (err) -> cb(null, list))\n//        )\n//    )\n//actions = [ (cb) -> mercenaryKeyList(cb); ]\n//for i in [0..50]\n//  actions.push(doFindMercenary)\n//async.waterfall(actions, handler)\n"
   };
 
 }).call(this);
