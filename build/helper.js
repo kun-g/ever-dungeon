@@ -205,9 +205,10 @@
         }
         console.log('DebugLeaderboard', '--', key);
         v.func(player.name, obj[key]);
-        return tap(obj, key, function(dummy, value) {
+        tap(obj, key, function(dummy, value) {
           return v.func(player.name, value);
         });
+        return console.log('DebugLeaderboard', 'AfterTap', key);
       });
     };
     tickLeaderboard = function(board, cb) {
