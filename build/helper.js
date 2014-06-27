@@ -186,6 +186,7 @@
         tmp = v.key.split('.');
         key = tmp.pop();
         obj = player;
+        console.log('DebugLeaderboard', key);
         if (tmp.length) {
           obj = (_ref = require('./trigger').doGetProperty(player, tmp.join('.'))) != null ? _ref : player;
         }
@@ -195,11 +196,13 @@
             obj[key] = v.initialValue;
           } else if (v.initialValue === 'length') {
             require('./db').queryLeaderboardLength(key, function(err, result) {
+              console.log('DebugLeaderboard', 'kk-', key);
               obj[key] = +result;
               return obj.saveDB();
             });
           }
         }
+        console.log('DebugLeaderboard', '--', key);
         v.func(player.name, obj[key]);
         return tap(obj, key, function(dummy, value) {
           return v.func(player.name, value);
