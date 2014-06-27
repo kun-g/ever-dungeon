@@ -183,7 +183,7 @@
         if (player.type !== v.type) {
           return false;
         }
-        tmp = v.field.split('.');
+        tmp = v.key.split('.');
         field = tmp.pop();
         obj = player;
         console.log('DebugLeaderboard', field, key);
