@@ -195,6 +195,7 @@
             obj[key] = v.initialValue;
           } else if (v.initialValue === 'length') {
             require('./db').queryLeaderboardLength(key, function(err, result) {
+              console.log('helper.assignLeaderboard', err, result);
               obj[key] = +result;
               return obj.saveDB();
             });
