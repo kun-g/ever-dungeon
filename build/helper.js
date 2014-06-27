@@ -195,6 +195,7 @@
           if (typeof v.initialValue === 'number') {
             obj[key] = v.initialValue;
           } else if (v.initialValue === 'length') {
+            console.log('DebugLeaderboard', 'BeforeQuery', key);
             require('./db').queryLeaderboardLength(key, function(err, result) {
               console.log('DebugLeaderboard', 'kk-', key);
               obj[key] = +result;
