@@ -197,7 +197,7 @@
           } else if (v.initialValue === 'length') {
             console.log('DebugLeaderboard', 'BeforeQuery', key);
             require('./db').queryLeaderboardLength(key, function(err, result) {
-              console.log('DebugLeaderboard', 'kk-', key);
+              console.log('DebugLeaderboard', 'kk-', key, result);
               obj[key] = +result;
               return obj.saveDB();
             });
