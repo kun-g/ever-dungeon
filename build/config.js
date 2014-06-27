@@ -1,5 +1,5 @@
 exports.data = {
-  "ServerID": "0",
+  "ServerID": "1",
   "ServerConfig": [
     {
       "ID": 0,
@@ -30,8 +30,8 @@ exports.data = {
       ]
     }
   ],
-  "ServerName": "Develop",
-  "ServerID": "0",
+  "ServerName": "Master",
+  "ServerID": "1",
   "PayMethod": "PP",
   "Enhance_Rate" : [1, 0.75, 0.70, 0.65, 0.6, 0.55, 0.50, 0.45, 0.40, 0.35],
   "Product_List": [
