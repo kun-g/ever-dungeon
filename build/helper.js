@@ -179,36 +179,36 @@
     });
     exports.assignLeaderboard = function(player) {
       return localConfig.forEach(function(v) {
-        var obj, tmp, _ref;
+        var field, obj, tmp, _ref;
         if (player.type !== v.type) {
           return false;
         }
-        tmp = v.key.split('.');
-        key = tmp.pop();
+        tmp = v.field.split('.');
+        field = tmp.pop();
         obj = player;
-        console.log('DebugLeaderboard', key);
+        console.log('DebugLeaderboard', field, key);
         if (tmp.length) {
           obj = (_ref = require('./trigger').doGetProperty(player, tmp.join('.'))) != null ? _ref : player;
         }
-        if (v.initialValue && !(typeof obj[key] !== 'undefined' && obj[key])) {
-          obj[key] = 0;
+        if (v.initialValue && !(typeof obj[field] !== 'undefined' && obj[field])) {
+          obj[field] = 0;
           if (typeof v.initialValue === 'number') {
-            obj[key] = v.initialValue;
+            obj[field] = v.initialValue;
           } else if (v.initialValue === 'length') {
-            console.log('DebugLeaderboard', 'BeforeQuery', key);
-            require('./db').queryLeaderboardLength(key, function(err, result) {
-              console.log('DebugLeaderboard', 'kk-', key, result);
-              obj[key] = +result;
+            console.log('DebugLeaderboard', 'BeforeQuery', field);
+            require('./db').queryLeaderboardLength(field, function(err, result) {
+              console.log('DebugLeaderboard', 'kk-', key, field, result);
+              obj[field] = +result;
               return obj.saveDB();
             });
           }
         }
-        console.log('DebugLeaderboard', '--', key);
-        v.func(player.name, obj[key]);
-        tap(obj, key, function(dummy, value) {
+        console.log('DebugLeaderboard', '--', field);
+        v.func(player.name, obj[field]);
+        tap(obj, field, function(dummy, value) {
           return v.func(player.name, value);
         });
-        return console.log('DebugLeaderboard', 'AfterTap', key);
+        return console.log('DebugLeaderboard', 'AfterTap', field);
       });
     };
     tickLeaderboard = function(board, cb) {
