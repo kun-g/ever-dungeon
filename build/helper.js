@@ -702,7 +702,7 @@
   exports.intervalEvent = {
     infinityDungeonPrize: {
       time: {
-        hour: 11
+        hour: 13
       },
       func: function(libs) {
         var cfg;
@@ -777,7 +777,7 @@
     },
     killMonsterPrize: {
       time: {
-        hour: 13
+        hour: 22
       },
       func: function(libs) {
         var cfg;
@@ -986,6 +986,10 @@
         return ob(obj, arg);
       }
     };
+  };
+
+  exports.dbScripts = {
+    getMercenary: "local battleforce, count, range = ARGV[1], ARGV[2], ARGV[3];\nlocal delta, rand, names, retrys = ARGV[4], ARGV[5], ARGV[6], ARGV[7];\nlocal table = 'Leaderboard.battleForce';\n\nlocal from = battleforce - range;\nlocal to = battleforce + range;\n\nwhile true\n  local list = redis.call('zrevrange', table, from, to);\n  local mercenarys = {}\n  for i, v in ipairs(list) do\n    ;\n  end\n  from = battleforce - range;\n  to = battleforce + range;\n  retrys -= 1;\n  if retrys == 0 return {err='Fail'};\nend\n\n//doFindMercenary = (list, cb) ->\n//  if list.length <= 0\n//    cb(new Error('Empty mercenarylist'))\n//  else\n//    selector = selectRange(list)\n//    battleForce = selector[rand()%selector.length]\n//    list = list.filter((i) -> return i != battleForce; )\n//    mercenaryGet(battleForce, count, (err, mList) ->\n//      if mList == null\n//        dbClient.srem(mercenaryPrefix+'Keys', battleForce, callback)\n//        dbClient.del(mercenaryPrefix+battleForce)\n//        mList = []\n\n//      mList = mList.filter((key) ->\n//        for name in names\n//          if key is name then return false\n//        return true\n//      )\n//      if mList.length is 0\n//        cb(null, list)\n//      else\n//        selectedName = mList[rand()%mList.length]\n//        getPlayerHero(selectedName, (err, hero) ->\n//          if hero\n//            cb(new Error('Done'), hero)\n//          else\n//            logError({action: 'RemoveInvalidMercenary', error: err, name: selectedName})\n//            mercenaryDel(battleForce, selectedName, (err) -> cb(null, list))\n//        )\n//    )\n//actions = [ (cb) -> mercenaryKeyList(cb); ]\n//for i in [0..50]\n//  actions.push(doFindMercenary)\n//async.waterfall(actions, handler)\n"
   };
 
 }).call(this);
