@@ -1895,7 +1895,7 @@
       result = dungeon.result;
       cfg = dungeon.getConfig();
       if (result === DUNGEON_RESULT_DONE || (cfg == null)) {
-        return headers.splicePrize([]);
+        return helperLib.splicePrize([]);
       }
       dropInfo = dungeon.killingInfo.reduce((function(r, e) {
         if (e && e.dropInfo) {
