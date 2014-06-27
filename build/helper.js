@@ -190,7 +190,7 @@
         if (tmp.length) {
           obj = (_ref = require('./trigger').doGetProperty(player, tmp.join('.'))) != null ? _ref : player;
         }
-        if (v.initialValue && !(typeof obj[field] !== 'undefined' && obj[field])) {
+        if ((v.initialValue != null) && !(typeof obj[field] !== 'undefined' && obj[field])) {
           obj[field] = 0;
           if (typeof v.initialValue === 'number') {
             obj[field] = v.initialValue;
