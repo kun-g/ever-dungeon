@@ -186,7 +186,6 @@
         tmp = v.key.split('.');
         field = tmp.pop();
         obj = player;
-        console.log('DebugLeaderboard', field, key, v.initialValue && !(typeof obj[field] !== 'undefined' && obj[field]));
         if (tmp.length) {
           obj = (_ref = require('./trigger').doGetProperty(player, tmp.join('.'))) != null ? _ref : player;
         }
@@ -195,20 +194,16 @@
           if (typeof v.initialValue === 'number') {
             obj[field] = v.initialValue;
           } else if (v.initialValue === 'length') {
-            console.log('DebugLeaderboard', 'BeforeQuery', field);
             require('./db').queryLeaderboardLength(field, function(err, result) {
-              console.log('DebugLeaderboard', 'kk-', key, field, result);
               obj[field] = +result;
               return obj.saveDB();
             });
           }
         }
-        console.log('DebugLeaderboard', 'Value', field, obj[field]);
         v.func(player.name, obj[field]);
-        tap(obj, field, function(dummy, value) {
+        return tap(obj, field, function(dummy, value) {
           return v.func(player.name, value);
         });
-        return console.log('DebugLeaderboard', 'AfterTap', field);
       });
     };
     tickLeaderboard = function(board, cb) {
@@ -657,7 +652,7 @@
     infinite: {
       storeType: "player",
       id: 3,
-      actived: 1,
+      actived: 0,
       canReset: function(obj, util) {
         return util.today.hour() >= 8 && util.diffDay(obj.timestamp.infinite, util.today);
       },
@@ -669,7 +664,7 @@
     hunting: {
       storeType: "player",
       id: 4,
-      actived: 1,
+      actived: 0,
       stages: [121, 122, 123, 125, 126, 127, 128, 129, 130, 131, 132],
       canReset: function(obj, util) {
         return util.diffDay(obj.timestamp.hunting, util.today);
@@ -705,158 +700,7 @@
     }
   };
 
-  exports.intervalEvent = {
-    infinityDungeonPrize: {
-      time: {
-        hour: 13
-      },
-      func: function(libs) {
-        var cfg;
-        cfg = [
-          {
-            from: 0,
-            to: 0,
-            mail: {
-              type: MESSAGE_TYPE_SystemReward,
-              src: MESSAGE_REWARD_TYPE_SYSTEM,
-              prize: [
-                {
-                  type: 2,
-                  count: 50
-                }, {
-                  type: 0,
-                  value: 869,
-                  count: 1
-                }
-              ],
-              tit: "铁人试炼排行奖励",
-              txt: "恭喜你成为铁人试炼冠军，点击领取奖励。"
-            }
-          }, {
-            from: 1,
-            to: 4,
-            mail: {
-              type: MESSAGE_TYPE_SystemReward,
-              src: MESSAGE_REWARD_TYPE_SYSTEM,
-              prize: [
-                {
-                  type: 2,
-                  count: 20
-                }, {
-                  type: 0,
-                  value: 868,
-                  count: 1
-                }
-              ],
-              tit: "铁人试炼排行奖励",
-              txt: "恭喜你进入铁人试炼前五，点击领取奖励。"
-            }
-          }, {
-            from: 5,
-            to: 9,
-            mail: {
-              type: MESSAGE_TYPE_SystemReward,
-              src: MESSAGE_REWARD_TYPE_SYSTEM,
-              prize: [
-                {
-                  type: 2,
-                  count: 10
-                }, {
-                  type: 0,
-                  value: 867,
-                  count: 1
-                }
-              ],
-              tit: "铁人试炼排行奖励",
-              txt: "恭喜你进入铁人试炼前十，点击领取奖励。"
-            }
-          }
-        ];
-        return cfg.forEach(function(e) {
-          return libs.helper.getPositionOnLeaderboard(1, 'nobody', e.from, e.to, function(err, result) {
-            return result.board.name.forEach(function(name) {
-              return libs.db.deliverMessage(name, e.mail);
-            });
-          });
-        });
-      }
-    },
-    killMonsterPrize: {
-      time: {
-        hour: 22
-      },
-      func: function(libs) {
-        var cfg;
-        cfg = [
-          {
-            from: 0,
-            to: 0,
-            mail: {
-              type: MESSAGE_TYPE_SystemReward,
-              src: MESSAGE_REWARD_TYPE_SYSTEM,
-              prize: [
-                {
-                  type: 2,
-                  count: 50
-                }, {
-                  type: 0,
-                  value: 866,
-                  count: 1
-                }
-              ],
-              tit: "狩猎任务排行奖励",
-              txt: "恭喜你成为狩猎任务冠军，点击领取奖励。"
-            }
-          }, {
-            from: 1,
-            to: 4,
-            mail: {
-              type: MESSAGE_TYPE_SystemReward,
-              src: MESSAGE_REWARD_TYPE_SYSTEM,
-              prize: [
-                {
-                  type: 2,
-                  count: 20
-                }, {
-                  type: 0,
-                  value: 865,
-                  count: 1
-                }
-              ],
-              tit: "狩猎任务排行奖励",
-              txt: "恭喜你进入狩猎任务前五，点击领取奖励。"
-            }
-          }, {
-            from: 5,
-            to: 9,
-            mail: {
-              type: MESSAGE_TYPE_SystemReward,
-              src: MESSAGE_REWARD_TYPE_SYSTEM,
-              prize: [
-                {
-                  type: 2,
-                  count: 10
-                }, {
-                  type: 0,
-                  value: 864,
-                  count: 1
-                }
-              ],
-              tit: "狩猎任务排行奖励",
-              txt: "恭喜你进入狩猎任务前十，点击领取奖励。"
-            }
-          }
-        ];
-        return cfg.forEach(function(e) {
-          return libs.helper.getPositionOnLeaderboard(2, 'nobody', e.from, e.to, function(err, result) {
-            return result.board.name.forEach(function(name) {
-              return libs.db.deliverMessage(name, e.mail);
-            });
-          });
-        });
-      }
-    }
-  };
+  exports.intervalEvent = {};
 
   exports.splicePrize = function(prize) {
     var count, goldPrize, id, itemFlag, otherPrize, wxPrize, xpPrize;

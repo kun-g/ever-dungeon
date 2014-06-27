@@ -295,7 +295,6 @@
         if (item.date == null) {
           return true;
         }
-        console.log(helperLib.matchDate(item.date, helperLib.currentTime(), item.expiration));
         return helperLib.matchDate(item.date, helperLib.currentTime(), item.expiration);
       });
       rmMSG = itemsNeedRemove.map((function(_this) {
@@ -789,7 +788,7 @@
         };
         if (stg.isInfinite) {
           if (this.stage[stage].level == null) {
-            this.stage[stage].level = 0;
+            this.stage[stage].newProperty('level', 0);
           }
           if (state === STAGE_STATE_PASSED) {
             this.stage[stage].level += 1;

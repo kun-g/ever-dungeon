@@ -166,7 +166,6 @@
         var e, err, vip;
         try {
           vip = playerLib.getVip(rmb);
-          console.log(hero, name);
           hero = JSON.parse(hero);
           hero.vipLevel = +vip.level;
           return hero.blueStar = +blueStar;
