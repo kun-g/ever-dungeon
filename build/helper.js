@@ -186,7 +186,7 @@
         tmp = v.key.split('.');
         field = tmp.pop();
         obj = player;
-        console.log('DebugLeaderboard', field, key);
+        console.log('DebugLeaderboard', field, key, v.initialValue && !(typeof obj[field] !== 'undefined' && obj[field]));
         if (tmp.length) {
           obj = (_ref = require('./trigger').doGetProperty(player, tmp.join('.'))) != null ? _ref : player;
         }
