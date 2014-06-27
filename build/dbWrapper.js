@@ -285,7 +285,7 @@
   };
 
   exports.updateLeaderboard = function(board, member, score, callback) {
-    console.log(board, member, score);
+    console.log('dbWrapper.updateLeader', board, member, score);
     return dbClient.zadd(makeDBKey([board], LeaderboardPrefix), score, member, callback);
   };
 
