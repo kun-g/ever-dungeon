@@ -352,7 +352,9 @@
       } else if ((stgCfg.sweepPower == null) && stgCfg.sweepPower > this.createHero().calculatePower()) {
         ret_result = RET_SweepPowerNotEnough;
       } else {
-        itemCostRet = this.claimCost(itemCost.id, itemCost.num);
+        itemCostRet = this.claimCost({
+          id: itemCost.id
+        }, itemCost.num);
         if (itemCostRet == null) {
           ret_result = RET_NotEnoughItem;
         } else {
@@ -1096,12 +1098,12 @@
         count = 1;
       }
       console.log('DebugClaimCost', cost, count);
-      if (typeof cost === 'number') {
+      if (typeof cost === 'Object') {
         cfg = {
           material: [
             {
               type: 0,
-              value: cost,
+              value: cost.id,
               count: 1
             }
           ]
