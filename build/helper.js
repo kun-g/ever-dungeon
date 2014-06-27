@@ -208,6 +208,7 @@
     };
     tickLeaderboard = function(board, cb) {
       cfg = localConfig[board];
+      console.log(localConfig, '----\n', cfg, '----\n');
       if (cfg.resetTime && matchDate(srvCfg[cfg.name], currentTime(), cfg.resetTime)) {
         require('./dbWrapper').removeLeaderboard(cfg.name, cb);
         srvCfg[cfg.name] = currentTime();
