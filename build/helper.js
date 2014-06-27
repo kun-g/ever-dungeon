@@ -203,7 +203,7 @@
             });
           }
         }
-        console.log('DebugLeaderboard', '--', field);
+        console.log('DebugLeaderboard', 'Value', field, obj[field]);
         v.func(player.name, obj[field]);
         tap(obj, field, function(dummy, value) {
           return v.func(player.name, value);
