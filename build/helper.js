@@ -700,7 +700,83 @@
     }
   };
 
-  exports.intervalEvent = {};
+  exports.intervalEvent = {
+    killMonsterPrize: {
+      time: {
+        hour: 22
+      },
+      func: function(libs) {
+        var cfg;
+        cfg = [
+          {
+            from: 0,
+            to: 0,
+            mail: {
+              type: MESSAGE_TYPE_SystemReward,
+              src: MESSAGE_REWARD_TYPE_SYSTEM,
+              prize: [
+                {
+                  type: 2,
+                  count: 50
+                }, {
+                  type: 0,
+                  value: 866,
+                  count: 1
+                }
+              ],
+              tit: "狩猎任务排行奖励",
+              txt: "恭喜你成为狩猎任务冠军，点击领取奖励。"
+            }
+          }, {
+            from: 1,
+            to: 4,
+            mail: {
+              type: MESSAGE_TYPE_SystemReward,
+              src: MESSAGE_REWARD_TYPE_SYSTEM,
+              prize: [
+                {
+                  type: 2,
+                  count: 20
+                }, {
+                  type: 0,
+                  value: 865,
+                  count: 1
+                }
+              ],
+              tit: "狩猎任务排行奖励",
+              txt: "恭喜你进入狩猎任务前五，点击领取奖励。"
+            }
+          }, {
+            from: 5,
+            to: 9,
+            mail: {
+              type: MESSAGE_TYPE_SystemReward,
+              src: MESSAGE_REWARD_TYPE_SYSTEM,
+              prize: [
+                {
+                  type: 2,
+                  count: 10
+                }, {
+                  type: 0,
+                  value: 864,
+                  count: 1
+                }
+              ],
+              tit: "狩猎任务排行奖励",
+              txt: "恭喜你进入狩猎任务前十，点击领取奖励。"
+            }
+          }
+        ];
+        return cfg.forEach(function(e) {
+          return libs.helper.getPositionOnLeaderboard(2, 'nobody', e.from, e.to, function(err, result) {
+            return result.board.name.forEach(function(name) {
+              return libs.db.deliverMessage(name, e.mail);
+            });
+          });
+        });
+      }
+    }
+  };
 
   exports.splicePrize = function(prize) {
     var count, goldPrize, id, itemFlag, otherPrize, wxPrize, xpPrize;
