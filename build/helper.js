@@ -196,7 +196,6 @@
           } else if (v.initialValue === 'length') {
             require('./db').queryLeaderboardLength(key, function(err, result) {
               obj[key] = +result;
-              showMeTheStack();
               return obj.saveDB();
             });
           }
