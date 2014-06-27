@@ -1098,7 +1098,7 @@
         count = 1;
       }
       console.log('DebugClaimCost', cost, count);
-      if (typeof cost === 'Object') {
+      if (typeof cost === 'object') {
         cfg = {
           material: [
             {
