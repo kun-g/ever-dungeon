@@ -331,7 +331,8 @@
         currentLevel: cfg.levelCount,
         getConfig: function() {
           return cfg;
-        }
+        },
+        isSweep: true
       };
       count = 1;
       if (multiple) {
@@ -1907,8 +1908,10 @@
       percentage = 1;
       if (result === DUNGEON_RESULT_WIN) {
         dbLib.incrBluestarBy(this.name, 1);
-        if (cfg.dropID) {
-          dropInfo = dropInfo.concat(cfg.dropID);
+        if (dungeon.isSweep != null) {
+          if (cfg.dropID) {
+            dropInfo = dropInfo.concat(cfg.dropID);
+          }
         }
       } else {
         percentage = (dungeon.currentLevel / cfg.levelCount) * 0.5;
