@@ -1,5 +1,5 @@
 (function() {
-  var actCampaign, conditionCheck, currentTime, dbLib, destroyReactDB, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, tap, tapObject, updateLockStatus;
+  var Leaderboard_Arena, Leaderboard_BattleForce, Leaderboard_InfinityDungeon, Leaderboard_KillingMonster, actCampaign, conditionCheck, currentTime, dbLib, destroyReactDB, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, tap, tapObject, updateLockStatus;
 
   conditionCheck = require('./trigger').conditionCheck;
 
@@ -177,36 +177,29 @@
       }
       return dbLib.setServerConfig('Leaderboard', JSON.stringify(srvCfg));
     });
-    exports.getLeaderboardEvent = function(leaderboardName) {
-      var _ref;
-      return (_ref = localConfig[leaderboardName]) != null ? _ref.event : void 0;
-    };
-    exports.assignLeaderboard = function(player, leaderboardName) {
+    exports.assignLeaderboard = function(player, leaderboardID) {
       var field, obj, tmp, _ref;
-      v = localConfig[leaderboardName];
-      if (v != null) {
-        if (player.type !== v.type) {
-          return false;
-        }
-        tmp = v.key.split('.');
-        field = tmp.pop();
-        obj = player;
-        if (tmp.length) {
-          obj = (_ref = require('./trigger').doGetProperty(player, tmp.join('.'))) != null ? _ref : player;
-        }
-        if ((v.initialValue != null) && !(typeof obj[field] !== 'undefined' && obj[field])) {
-          obj[field] = 0;
-          if (typeof v.initialValue === 'number') {
-            obj[field] = v.initialValue;
-          } else if (v.initialValue === 'length') {
-            require('./db').queryLeaderboardLength(field, function(err, result) {
-              obj[field] = +result;
-              return obj.saveDB();
-            });
-          }
-        }
-        return v.func(player.name, obj[field]);
+      v = localConfig[leaderboardID];
+      if (!((v != null) && player.type === v.type)) {
+        return false;
       }
+      tmp = v.key.split('.');
+      field = tmp.pop();
+      obj = player;
+      if (tmp.length) {
+        obj = (_ref = require('./trigger').doGetProperty(player, tmp.join('.'))) != null ? _ref : player;
+      }
+      if ((v.initialValue != null) && !(typeof obj[field] !== 'undefined' && obj[field])) {
+        if (typeof v.initialValue === 'number') {
+          obj[field] = v.initialValue;
+        } else if (v.initialValue === 'length') {
+          require('./db').queryLeaderboardLength(field, function(err, result) {
+            obj[field] = +result;
+            return player.saveDB();
+          });
+        }
+      }
+      return v.func(player.name, obj[field]);
     };
     tickLeaderboard = function(board, cb) {
       cfg = localConfig[board];
@@ -810,8 +803,17 @@
     return xp;
   };
 
+  Leaderboard_BattleForce = 0;
+
+  Leaderboard_InfinityDungeon = 1;
+
+  Leaderboard_KillingMonster = 2;
+
+  Leaderboard_Arena = 3;
+
   exports.observers = {
     heroxpChanged: function(obj, arg) {
+      obj.onCampaign('Level');
       if (arg.prevLevel !== arg.currentLevel) {
         if (arg.currentLevel === 10) {
           return dbLib.broadcastEvent(BROADCAST_PLAYER_LEVEL, {
@@ -821,24 +823,19 @@
         }
       }
     },
-    leaderboardChanged: function(obj, arg) {
-      var event, eventName;
-      obj[arg.key] = arg.value;
-      if (arg.event != null) {
-        exports.assignLeaderboard(obj, arg.leaderboardName);
-        eventName = exports.getLeaderboardEvent(leaderboardName);
-        if (eventName != null) {
-          event = exports.observers[arg.event];
-          if (event != null) {
-            return event(obj, arg);
-          }
-        }
-      }
+    battleForceChanged: function(obj, arg) {
+      exports.assignLeaderboard(obj, Leaderboard_BattleForce);
+      return obj.updateMercenaryInfo();
     },
-    battleforce: function(obj, arg) {},
-    infinitydungeon: function(obj, arg) {},
-    killMonster: function(obj, arg) {},
-    Arena: function(obj, arg) {}
+    countersChanged: function(obj, arg) {
+      return exports.assignLeaderboard(obj, Leaderboard_KillingMonster);
+    },
+    stageChanged: function(obj, arg) {
+      return exports.assignLeaderboard(obj, Leaderboard_InfinityDungeon);
+    },
+    winningAnPVP: function(obj, arg) {
+      return exports.assignLeaderboard(obj, Leaderboard_Arena);
+    }
   };
 
   exports.initObserveration = function(obj) {

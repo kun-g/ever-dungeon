@@ -464,8 +464,10 @@
       })(this)));
       helperLib.initObserveration(this);
       this.installObserver('heroxpChanged');
-      this.installObserver('leaderboardChanged');
-      this.notify('leaderboardChanged', {});
+      this.installObserver('battleForceChanged');
+      this.installObserver('countersChanged');
+      this.installObserver('stageChanged');
+      this.installObserver('winningAnPVP');
       if (this.isNewPlayer) {
         this.isNewPlayer = false;
       }
@@ -633,7 +635,7 @@
     };
 
     Player.prototype.createHero = function(heroData) {
-      var bag, e, equip, hero, i, _ref7;
+      var bag, bf, e, equip, hero, i, _ref7;
       if (heroData != null) {
         if (this.heroBase[heroData["class"]] != null) {
           return null;
@@ -672,7 +674,11 @@
           this.hero.newProperty('equipment', equip);
         }
         hero = new Hero(this.hero);
-        this.battleForce = hero.calculatePower();
+        bf = hero.calculatePower();
+        if (bf !== this.battleForce) {
+          this.battleForce = bf;
+          this.notify('battleForceChanged');
+        }
         return hero;
       } else {
         throw 'NoHero';
@@ -734,6 +740,10 @@
           delta: point,
           prevLevel: prevLevel,
           currentLevel: currentLevel
+        });
+        this.log('levelChange', {
+          prevLevel: prevLevel,
+          newLevel: currentLevel
         });
       }
       return this.hero.xp;
@@ -1389,17 +1399,8 @@
 
     Player.prototype.onEvent = function(eventID) {
       switch (eventID) {
-        case 'gold':
-        case 'diamond':
-        case 'item':
-          break;
-        case 'level':
-          this.onEvent('power');
-          return this.onCampaign('Level');
         case 'Equipment':
-          return this.onEvent('power');
-        case 'power':
-          return this.updateMercenaryInfo();
+          return this.createHero();
       }
     };
 
