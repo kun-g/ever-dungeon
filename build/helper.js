@@ -178,8 +178,9 @@
       return dbLib.setServerConfig('Leaderboard', JSON.stringify(srvCfg));
     });
     exports.assignLeaderboard = function(player, updateType) {
-      return localConfig.forEach(function(v) {
-        var field, obj, tmp, _ref;
+      var field, obj, tmp, _ref;
+      v = localConfig[updateType];
+      if (v != null) {
         if (player.type !== v.type(updateType === v.name)) {
           return false;
         }
@@ -201,7 +202,7 @@
           }
         }
         return v.func(player.name, obj[field]);
-      });
+      }
     };
     tickLeaderboard = function(board, cb) {
       cfg = localConfig[board];
