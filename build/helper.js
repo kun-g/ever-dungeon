@@ -177,11 +177,15 @@
       }
       return dbLib.setServerConfig('Leaderboard', JSON.stringify(srvCfg));
     });
-    exports.assignLeaderboard = function(player, updateType) {
+    exports.getLeaderboardEvent = function(leaderboardName) {
+      var _ref;
+      return (_ref = localConfig[leaderboardName]) != null ? _ref.event : void 0;
+    };
+    exports.assignLeaderboard = function(player, leaderboardName) {
       var field, obj, tmp, _ref;
-      v = localConfig[updateType];
+      v = localConfig[leaderboardName];
       if (v != null) {
-        if (player.type !== v.type(updateType === v.name)) {
+        if (player.type !== v.type) {
           return false;
         }
         tmp = v.key.split('.');
@@ -818,14 +822,17 @@
       }
     },
     leaderboardChanged: function(obj, arg) {
-      var event;
+      var event, eventName;
       obj[arg.key] = arg.value;
-      exports.assignLeaderboard(obj, arg.event);
       if (arg.event != null) {
-        event = exports.observers[arg.event];
-      }
-      if (event != null) {
-        return event(obj, arg);
+        exports.assignLeaderboard(obj, arg.leaderboardName);
+        eventName = exports.getLeaderboardEvent(leaderboardName);
+        if (eventName != null) {
+          event = exports.observers[arg.event];
+          if (event != null) {
+            return event(obj, arg);
+          }
+        }
       }
     },
     battleforce: function(obj, arg) {},
