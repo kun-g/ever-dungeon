@@ -464,6 +464,7 @@
       })(this)));
       helperLib.initObserveration(this);
       this.installObserver('heroxpChanged');
+      this.installObserver('leaderboardChanged');
       if (this.isNewPlayer) {
         this.isNewPlayer = false;
       }
