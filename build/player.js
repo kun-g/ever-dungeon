@@ -776,11 +776,16 @@
     };
 
     Player.prototype.changeStage = function(stage, state) {
-      var arg, chapter, flag, operation, ret, stg;
+      var arg, chapter, flag, operation, ret, stg, t;
       stg = queryTable(TABLE_STAGE, stage);
       this.stageVersion++;
       if (stg) {
         chapter = stg.chapter;
+        t = {};
+        tapObject(t, console.log);
+        t.newProperty(1, {});
+        console.log(t, t.newProperty);
+        t[1].newProperty('level', 0);
         if (this.stage[stage] == null) {
           this.stage.newProperty(stage, {});
         }
