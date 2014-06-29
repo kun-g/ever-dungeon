@@ -15,7 +15,7 @@ exports.data = [
         "reverse":false,
         "initialValue":0,
         "type":"player",
-        "availableCondition":true
+        "availableCondition":true,
         "event":"",
     },
     {
@@ -25,7 +25,7 @@ exports.data = [
         "reverse":false,
         "initialValue":0,
         "type":"player",
-        "availableCondition":true
+        "availableCondition":true,
         "event":"",
     },
     {
@@ -34,7 +34,7 @@ exports.data = [
         "reverse": true,
         "initialValue": 'length',
         "type":"player",
-        "availableCondition":true
+        "availableCondition":true,
         "event":"",
     },
 ];
