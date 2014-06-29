@@ -774,6 +774,13 @@
       return this.save(handler);
     };
 
+    Player.prototype.modifyCounters = function(propertyName, arg) {
+      this.counters[propertyName] = typeof arg.value === "function" ? arg.value(0) : void 0;
+      if (arg.notify != null) {
+        return this.notify(arg.notify.name, arg.notify.arg);
+      }
+    };
+
     Player.prototype.stageIsUnlockable = function(stage) {
       var stageConfig;
       stageConfig = queryTable(TABLE_STAGE, stage, this.abIndex);
@@ -810,6 +817,9 @@
           }
           if (state === STAGE_STATE_PASSED) {
             this.stage[stage].level += 1;
+            this.notify('stageChanged', {
+              stage: stage
+            });
             if (this.stage[stage].level % 5 === 0) {
               dbLib.broadcastEvent(BROADCAST_INFINITE_LEVEL, {
                 who: this.name,
@@ -1276,6 +1286,9 @@
                   break;
                 case "countUp":
                   this.counters[p.counter]++;
+                  this.notify('countersChanged', {
+                    type: p.counter
+                  });
                   ret = ret.concat(this.syncCounters(true)).concat(this.syncEvent());
               }
           }

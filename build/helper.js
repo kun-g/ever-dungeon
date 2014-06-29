@@ -653,7 +653,8 @@
       },
       reset: function(obj, util) {
         obj.timestamp.newProperty('infinite', util.currentTime());
-        return obj.stage[120].newProperty('level', 0);
+        obj.stage[120].level = 0;
+        return obj.notify('stageChanged');
       }
     },
     hunting: {
@@ -674,7 +675,12 @@
             obj.stage[s].newProperty('level', 0);
           }
         }
-        return obj.counters.newProperty('monster', 0);
+        return obj.modifyCounters('monster', {
+          value: 0,
+          notify: {
+            name: 'countersChanged'
+          }
+        });
       }
     },
     monthCard: {
@@ -828,10 +834,14 @@
       return obj.updateMercenaryInfo();
     },
     countersChanged: function(obj, arg) {
-      return exports.assignLeaderboard(obj, Leaderboard_KillingMonster);
+      if (arg.type === 'monster') {
+        return exports.assignLeaderboard(obj, Leaderboard_KillingMonster);
+      }
     },
     stageChanged: function(obj, arg) {
-      return exports.assignLeaderboard(obj, Leaderboard_InfinityDungeon);
+      if (arg.stage === 120) {
+        return exports.assignLeaderboard(obj, Leaderboard_InfinityDungeon);
+      }
     },
     winningAnPVP: function(obj, arg) {
       return exports.assignLeaderboard(obj, Leaderboard_Arena);
