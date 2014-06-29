@@ -177,10 +177,10 @@
       }
       return dbLib.setServerConfig('Leaderboard', JSON.stringify(srvCfg));
     });
-    exports.assignLeaderboard = function(player) {
+    exports.assignLeaderboard = function(player, updateType) {
       return localConfig.forEach(function(v) {
         var field, obj, tmp, _ref;
-        if (player.type !== v.type) {
+        if (player.type !== v.type(updateType === v.name)) {
           return false;
         }
         tmp = v.key.split('.');
@@ -818,14 +818,19 @@
     },
     leaderboardChanged: function(obj, arg) {
       var event;
-      exports.assignLeaderboard(obj);
+      obj[arg.key] = arg.value;
+      exports.assignLeaderboard(obj, arg.event);
       if (arg.event != null) {
         event = exports.observers[arg.event];
       }
       if (event != null) {
         return event(obj, arg);
       }
-    }
+    },
+    battleforce: function(obj, arg) {},
+    infinitydungeon: function(obj, arg) {},
+    killMonster: function(obj, arg) {},
+    Arena: function(obj, arg) {}
   };
 
   exports.initObserveration = function(obj) {
