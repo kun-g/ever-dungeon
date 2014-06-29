@@ -781,7 +781,6 @@
       this.stageVersion++;
       if (stg) {
         chapter = stg.chapter;
-        tapObject(t, console.log);
         if (this.stage[stage] == null) {
           this.stage.newProperty(stage, {});
         }
