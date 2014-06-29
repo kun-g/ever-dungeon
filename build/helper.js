@@ -200,10 +200,7 @@
             });
           }
         }
-        v.func(player.name, obj[field]);
-        return tap(obj, field, function(dummy, value) {
-          return v.func(player.name, value);
-        });
+        return v.func(player.name, obj[field]);
       });
     };
     tickLeaderboard = function(board, cb) {
@@ -817,6 +814,16 @@
             what: obj.hero["class"]
           });
         }
+      }
+    },
+    leaderboardChanged: function(obj, arg) {
+      var event;
+      exports.assignLeaderboard(obj);
+      if (arg.event != null) {
+        event = exports.observers[arg.event];
+      }
+      if (event != null) {
+        return event(obj, arg);
       }
     }
   };
