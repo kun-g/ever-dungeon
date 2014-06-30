@@ -195,6 +195,7 @@
         } else if (v.initialValue === 'length') {
           require('./db').queryLeaderboardLength(v.name, function(err, result) {
             obj[field] = +result;
+            v.func(player.name, obj[field]);
             return player.saveDB();
           });
         }
