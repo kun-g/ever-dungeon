@@ -682,7 +682,7 @@
           notify: {
             name: 'countersChanged',
             arg: {
-              type: p.counter
+              type: 'monster'
             }
           }
         });
