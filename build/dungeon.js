@@ -227,7 +227,6 @@
           idList = selectFromPool(r.pool, count);
           count = 1;
           proList = (_ref7 = rules.pool[r.pool].property) != null ? _ref7 : [];
-          console.log('-------', rules.pool, r.pool, proList, '----------');
         }
         idList.forEach(function(c) {
           var k, u, v;
@@ -236,12 +235,10 @@
             v = c[k];
             u[k] = v;
           }
-          console.log('bef', u);
           for (k in proList) {
             v = proList[k];
             u[k] = v;
           }
-          console.log('aft', u);
           u.count = count;
           if (r.pos) {
             if (typeof r.pos === 'number') {
@@ -256,6 +253,7 @@
           return result.push(u);
         });
       }
+      console.log('res', result);
       return result;
     };
     result = [];
