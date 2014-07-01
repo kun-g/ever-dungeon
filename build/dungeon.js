@@ -250,7 +250,9 @@
           u = {};
           for (k in c) {
             v = c[k];
-            u[k] = v;
+            if (k !== 'levels') {
+              u[k] = v;
+            }
           }
           for (k in proList) {
             v = proList[k];
