@@ -176,7 +176,7 @@
     _ref5 = rules.levels;
     for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
       l = _ref5[_i];
-      otherKeys = mapDiff(l, ['objects']);
+      otherKeys = mapDiff(l, ['objects', 'levels']);
       levelOtherKey.push(otherKeys);
       levelRule.push(translateRule(l.objects));
     }
