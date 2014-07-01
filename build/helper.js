@@ -1,5 +1,5 @@
 (function() {
-  var Leaderboard_Arena, Leaderboard_BattleForce, Leaderboard_InfinityDungeon, Leaderboard_KillingMonster, actCampaign, conditionCheck, currentTime, dbLib, destroyReactDB, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, tap, tapObject, updateLockStatus;
+  var actCampaign, conditionCheck, currentTime, dbLib, destroyReactDB, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, tap, tapObject, updateLockStatus;
 
   conditionCheck = require('./trigger').conditionCheck;
 
@@ -184,8 +184,8 @@
         return false;
       }
       if (v.key == null) {
-        val = typeof v.initialValue === ('number' != null) ? v.initialValue : void 0;
-        return require('.db').tryAddLeaderboardMember(v.name, player.name, val);
+        val = typeof v.initialValue === ('number' != null) ? v.initialValue : null;
+        return require('./db').tryAddLeaderboardMember(v.name, player.name, val);
       } else {
         tmp = v.key.split('.');
         field = tmp.pop();
@@ -196,12 +196,6 @@
         if ((v.initialValue != null) && !(typeof obj[field] !== 'undefined' && obj[field])) {
           if (typeof v.initialValue === 'number') {
             obj[field] = v.initialValue;
-          } else if (v.initialValue === 'length') {
-            require('./db').queryLeaderboardLength(v.name, function(err, result) {
-              obj[field] = +result;
-              v.func(player.name, obj[field]);
-              return player.saveDB();
-            });
           }
         }
         return v.func(player.name, obj[field]);
@@ -219,7 +213,7 @@
       console.log('getPositionOnLeaderboard', board, name, from, to);
       tickLeaderboard(board);
       cfg = localConfig[board];
-      return require('./db').queryLeaderboard(cfg.name, name, from, to, function(err, result) {
+      return dbLib.queryLeaderboard(cfg.name, name, from, to, function(err, result) {
         result.board = result.board.reduce((function(r, l, i) {
           if (i % 2 === 0) {
             r.name.push(l);
@@ -973,13 +967,12 @@
     return xp;
   };
 
-  Leaderboard_BattleForce = 0;
-
-  Leaderboard_InfinityDungeon = 1;
-
-  Leaderboard_KillingMonster = 2;
-
-  Leaderboard_Arena = 3;
+  exports.LeaderboardIdx = {
+    BattleForce: 0,
+    InfinityDungeon: 1,
+    KillingMonster: 2,
+    Arena: 3
+  };
 
   exports.observers = {
     heroxpChanged: function(obj, arg) {
@@ -994,21 +987,21 @@
       }
     },
     battleForceChanged: function(obj, arg) {
-      exports.assignLeaderboard(obj, Leaderboard_BattleForce);
+      exports.assignLeaderboard(obj, exports.LeaderboardIdx.BattleForce);
       return obj.updateMercenaryInfo();
     },
     countersChanged: function(obj, arg) {
       if (arg.type === 'monster') {
-        return exports.assignLeaderboard(obj, Leaderboard_KillingMonster);
+        return exports.assignLeaderboard(obj, exports.LeaderboardIdx.KillingMonster);
       }
     },
     stageChanged: function(obj, arg) {
       if (arg.stage === 120) {
-        return exports.assignLeaderboard(obj, Leaderboard_InfinityDungeon);
+        return exports.assignLeaderboard(obj, exports.LeaderboardIdx.InfinityDungeon);
       }
     },
     winningAnPVP: function(obj, arg) {
-      return exports.assignLeaderboard(obj, Leaderboard_Arena);
+      return exports.assignLeaderboard(obj, exports.LeaderboardIdx.Arena);
     }
   };
 
@@ -1032,8 +1025,8 @@
   exports.dbScripts = {
     searchRival: " local board, name = ARGV[1], ARGV[2];\n local key = 'Leaderboard.'..board;\n local config = {\n     {base=0.95, delta=0.02, rand= ARGV[3]},\n     {base=0.85, delta=0.03, rand= ARGV[4]},\n     {base=0.50, delta=0.05, rand= ARGV[5]},\n   };\n local count = 3;\n local rank = redis.call('ZRANK', key, name);\n\n local rivalLst = {};\n if rank <= count then\n   for index = 0, rank-1 do \n     table.insert(rivalLst,redis.call('zrange', key, index, index, 'withscores'));\n   end\n   for index = rank+1, count do \n     table.insert(rivalLst,redis.call('zrange', key, index, index, 'withscores'));\n   end\nelse\n   rank = rank - 1;\n   for i, c in ipairs(config) do\n     local from = math.ceil(rank * (c.base-c.delta));\n     local to = math.ceil(rank * (c.base+c.delta));\n     local index = from\n     if  to ~=  from then \n       index = index + c.rand%(to - from);\n     end\n     index = math.ceil(index);\n     rivalLst[count - i + 1] = redis.call('zrange', key, index, index, 'withscores');\n     rank = index - 1;\n   end\n end\n\n return rivalLst;",
     getMercenary: "local battleforce, count, range = ARGV[1], ARGV[2], ARGV[3];\nlocal delta, rand, names, retrys = ARGV[4], ARGV[5], ARGV[6], ARGV[7];\nlocal table = 'Leaderboard.battleForce';\n\nlocal from = battleforce - range;\nlocal to = battleforce + range;\n\nwhile true\n  local list = redis.call('zrevrange', table, from, to);\n  local mercenarys = {}\n  for i, v in ipairs(list) do\n    ;\n  end\n  from = battleforce - range;\n  to = battleforce + range;\n  retrys -= 1;\n  if retrys == 0 return {err='Fail'};\nend\n\n//doFindMercenary = (list, cb) ->\n//  if list.length <= 0\n//    cb(new Error('Empty mercenarylist'))\n//  else\n//    selector = selectRange(list)\n//    battleForce = selector[rand()%selector.length]\n//    list = list.filter((i) -> return i != battleForce; )\n//    mercenaryGet(battleForce, count, (err, mList) ->\n//      if mList == null\n//        dbClient.srem(mercenaryPrefix+'Keys', battleForce, callback)\n//        dbClient.del(mercenaryPrefix+battleForce)\n//        mList = []\n\n//      mList = mList.filter((key) ->\n//        for name in names\n//          if key is name then return false\n//        return true\n//      )\n//      if mList.length is 0\n//        cb(null, list)\n//      else\n//        selectedName = mList[rand()%mList.length]\n//        getPlayerHero(selectedName, (err, hero) ->\n//          if hero\n//            cb(new Error('Done'), hero)\n//          else\n//            logError({action: 'RemoveInvalidMercenary', error: err, name: selectedName})\n//            mercenaryDel(battleForce, selectedName, (err) -> cb(null, list))\n//        )\n//    )\n//actions = [ (cb) -> mercenaryKeyList(cb); ]\n//for i in [0..50]\n//  actions.push(doFindMercenary)\n//async.waterfall(actions, handler)\n",
-    exchangePKRank: "local board, champion, second = ARGV[1], ARGV[2], ARGV[3]; \nlocal prefix = 'Leaderboard.'; \nlocal key = prefix..board; \nlocal championRank = redis.call('ZRANK', key, champion); \nlocal secondRank = redis.call('ZRANK', key, second); \nif championRank < secondRank then \n  redis.call('ZADD',key, championRank, second); \n  redis.call('ZADD',key, secondRank, champion); \n  return {championRank,secondRank} ; \nend \nreturn 'noNeed'; ",
-    tryAddLeaderboardMember: "local board, name, value = ARGV[1], ARGV[2], ARGV[3]; \nlocal prefix = 'Leaderboard.'; \nlocal key = prefix..board; \nlocal score = redis.call('ZSCORE', key, name)\nif score == nil then\n  if value == nil then\n    value = redis.call('ZCARD', key)\n  end\n  redis.call('ZADD', key, name, value)\n  return {\"ok\", value}\nelse\n  return {\"alreadyExist\"}\nend"
+    exchangePKRank: "local board, champion, second = ARGV[1], ARGV[2], ARGV[3]; \nlocal key = 'Leaderboard.'..board; \nlocal championRank = redis.call('ZRANK', key, champion); \nlocal secondRank = redis.call('ZRANK', key, second); \nif championRank > secondRank then \n  redis.call('ZADD', key, championRank, second); \n  redis.call('ZADD', key, secondRank, champion); \n  championRank = secondRank;\nend \nreturn championRank;",
+    tryAddLeaderboardMember: "local board, name, value = ARGV[1], ARGV[2], ARGV[3];\nlocal key = 'Leaderboard.'..board;\nlocal score = redis.call('ZSCORE', key, name)\nif score == false then\n  score = value;\n  if value == 'null' then\n    score = redis.call('ZCARD', key)\n  end\n  redis.call('ZADD', key, score, name);\nend\nreturn score"
   };
 
 }).call(this);

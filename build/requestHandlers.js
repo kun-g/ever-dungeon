@@ -811,18 +811,20 @@
     RPC_PVPInfoUpdate: {
       id: 34,
       func: function(arg, player, handler, rpcID, socket) {
-        var ret;
-        ret = {
-          REQ: rpcID,
-          RET: RET_OK
-        };
-        ret.arg = {
-          rnk: player.counters.Arena,
-          cpl: !player.counters.currentPKCount ? 0 : void 0,
-          ttl: !player.counters.totalPKCount ? 5 : void 0,
-          rcv: !player.flags.rcvAward ? true : void 0
-        };
-        return handler(ret);
+        return helperLib.getPositionOnLeaderboard(helperLib.LeaderboardIdx.Arena, player.name, 0, 0, function(err, result) {
+          var ret;
+          ret = {
+            REQ: rpcID,
+            RET: RET_OK
+          };
+          ret.arg = {
+            rnk: result.rank,
+            cpl: !player.counters.currentPKCount ? 0 : void 0,
+            ttl: !player.counters.totalPKCount ? 5 : void 0,
+            rcv: !player.flags.rcvAward ? true : void 0
+          };
+          return handler(ret);
+        });
       },
       args: [],
       needPid: true

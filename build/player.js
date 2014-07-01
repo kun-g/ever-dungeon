@@ -307,7 +307,7 @@
     };
 
     Player.prototype.sweepStage = function(stage, multiple) {
-      var cfg, count, dungeon, energyCost, i, itemCost, itemCostRet, k, p, prize, r, ret, ret_result, stgCfg, v, _i;
+      var cfg, count, dungeon, energyCost, i, itemCost, itemCostRet, k, p, prize, r, ret, ret_result, stgCfg, v, _base, _base1, _i;
       stgCfg = queryTable(TABLE_STAGE, stage, this.abIndex);
       if (!stgCfg) {
         return {
@@ -346,7 +346,15 @@
         id: 871,
         num: count
       };
-      if (multiple && false) {
+      if ((_base = this.counters).currentPKCount == null) {
+        _base.currentPKCount = 0;
+      }
+      if ((_base1 = this.counters).totalPKCount == null) {
+        _base1.totalPKCount = 5;
+      }
+      if (this.counters.currentPKCount >= this.counters.totalPKCount) {
+        ret_result = RET_NotEnoughTimes;
+      } else if (multiple && false) {
         ret_result = RET_VipLevelIsLow;
       } else if (this.energy < energyCost) {
         ret_result = RET_NotEnoughEnergy;
@@ -1986,7 +1994,7 @@
     };
 
     Player.prototype.claimDungeonAward = function(dungeon, isSweep) {
-      var goldPrize, k, objective, offlineReward, otherPrize, prize, qid, qst, quest, quests, result, ret, rewardMessage, teammateRewardMessage, wxPrize, xpPrize, _ref7, _ref8;
+      var goldPrize, k, objective, otherPrize, prize, qid, qst, quest, quests, result, ret, rewardMessage, wxPrize, xpPrize, _ref7, _ref8;
       if (dungeon == null) {
         return [];
       }
@@ -2035,36 +2043,6 @@
       if (dungeon.result !== DUNGEON_RESULT_FAIL) {
         ret = ret.concat(this.completeStage(dungeon.stage));
       }
-      offlineReward = [
-        {
-          type: PRIZETYPE_EXP,
-          count: Math.ceil(xpPrize.count * TEAMMATE_REWARD_RATIO)
-        }, {
-          type: PRIZETYPE_GOLD,
-          count: Math.ceil(goldPrize.count * TEAMMATE_REWARD_RATIO)
-        }, {
-          type: PRIZETYPE_WXP,
-          count: Math.ceil(wxPrize.count * TEAMMATE_REWARD_RATIO)
-        }
-      ].filter(function(e) {
-        return e.count > 0;
-      });
-      if (offlineReward.length > 0) {
-        teammateRewardMessage = {
-          type: MESSAGE_TYPE_SystemReward,
-          src: MESSAGE_REWARD_TYPE_OFFLINE,
-          prize: offlineReward
-        };
-        dungeon.team.filter((function(_this) {
-          return function(m) {
-            return m.nam !== _this.name;
-          };
-        })(this)).forEach(function(m) {
-          if (m) {
-            return dbLib.deliverMessage(m.nam, teammateRewardMessage);
-          }
-        });
-      }
       result = 'Lost';
       if (dungeon.result === DUNGEON_RESULT_WIN) {
         result = 'Win';
@@ -2097,19 +2075,14 @@
 
     Player.prototype.updatePkInof = function(dungeon) {
       var myName, rivalName;
-      if (this.counters.currentPKCount != null) {
-        this.counters.currentPKCount++;
-      } else {
-        this.counters.newProperty('currentPKCount', 0);
-      }
+      this.counters.currentPKCount++;
+      this.saveDB();
       if (dungeon.PVP_Pool != null) {
         myName = this.name;
         rivalName = dungeon.PVP_Pool[0].nam;
         if (dungeon.result === DUNGEON_RESULT_WIN) {
           return dbLib.saveSocre(myName, rivalName, function(err, result) {
-            if (result !== 'noNeed') {
-              return this.counters.Arena = result[0];
-            }
+            return console.log(err, result);
           });
         }
       }
