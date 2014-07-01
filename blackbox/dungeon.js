@@ -180,6 +180,7 @@
       });
       levelRule.push(translateRule(objs));
     }
+    console.log('levelrul', levelRule);
     globalRule = translateRule(rules.global);
     levelConfig = [];
     for (i in levelRule) {
