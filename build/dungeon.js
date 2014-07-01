@@ -290,6 +290,7 @@
         i++;
       }
     }
+    console.log('the ----res', result);
     return result;
   };
 
@@ -449,7 +450,6 @@
           return _this.rand();
         };
       })(this));
-      console.log('creation', creation);
       arrCollectID = [];
       quests = this.quests != null ? this.quests : [];
       for (qid in quests) {
@@ -470,7 +470,6 @@
           }
         });
       });
-      console.log('unit', this.unitCreation);
       this.initiateHeroes(this.team);
       this.nextLevel();
       return this.replayActionLog();
