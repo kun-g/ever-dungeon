@@ -812,16 +812,16 @@
       id: 34,
       func: function(arg, player, handler, rpcID, socket) {
         return helperLib.getPositionOnLeaderboard(helperLib.LeaderboardIdx.Arena, player.name, 0, 0, function(err, result) {
-          var ret;
+          var ret, _ref1, _ref2;
           ret = {
             REQ: rpcID,
             RET: RET_OK
           };
           ret.arg = {
             rnk: result.rank,
-            cpl: !player.counters.currentPKCount ? 0 : void 0,
-            ttl: !player.counters.totalPKCount ? 5 : void 0,
-            rcv: !player.flags.rcvAward ? true : void 0
+            cpl: (_ref1 = player.counters.currentPKCount) != null ? _ref1 : 0,
+            ttl: (_ref2 = player.counters.totalPKCount) != null ? _ref2 : 5,
+            rcv: player.flags.rcvAward === 1 ? true : false
           };
           return handler(ret);
         });
