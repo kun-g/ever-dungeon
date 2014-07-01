@@ -1,5 +1,6 @@
 (function() {
-  var Bag, Block, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Level, TriggerManager, Wizard, calcInfiniteRank, calcInfiniteX, changeSeed, compete, createUnit, createUnits, criticalFormula, dungeonCSConfig, flagShowRand, genUnitInfo, hitFormula, onEvent, parse, privateRand, seed_random, speedFormula, _ref, _ref1, _ref2, _ref3, _ref4,
+  var Bag, Block, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Level, TriggerManager, Wizard, calcInfiniteRank, calcInfiniteX, changeSeed, compete, createUnit, createUnits, criticalFormula, dungeonCSConfig, flagShowRand, genUnitInfo, hitFormula, mapDiff, onEvent, parse, privateRand, seed_random, speedFormula, _ref, _ref1, _ref2, _ref3, _ref4,
+    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; },
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -44,6 +45,18 @@
   };
 
   flagShowRand = false;
+
+  mapDiff = function(source, excludeLst) {
+    var k, result, v;
+    result = {};
+    for (k in source) {
+      v = source[k];
+      if (__indexOf.call(excludeLst, k) < 0) {
+        result[k] = v;
+      }
+    }
+    return result;
+  };
 
   compete = function(formula, dungeon) {
     return function(p1, p2) {

@@ -401,26 +401,6 @@ mapContact = function (target, source) {
   return target
 }
 
-//coffee code:
-// mapDiff = (source, excludeLst) ->
-//   result ={}
-//   for k, v of source when k not in excludeLst
-//     result[k] =v
-//   return result
-
-//gen by coffee
-mapDiff = function(source, excludeLst) {
-  var result;
-  result = {};
-  for (k in source) {
-    v = source[k];
-    if (__indexOf.call(excludeLst, k) < 0) {
-      result[k] = v;
-    }
-  }
-  return result;
-};
-
 logLevel = 0;
 
 updateStageStatus = function (stageStatus, player, abindex) {
