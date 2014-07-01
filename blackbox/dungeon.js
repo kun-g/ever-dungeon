@@ -1165,7 +1165,7 @@
     };
 
     Level.prototype.createObject = function(arg) {
-      var cfg, k, o, v;
+      var cfg, k, o, skill, v, _i, _len, _ref5, _ref6;
       cfg = {};
       for (k in arg) {
         v = arg[k];
@@ -1174,7 +1174,21 @@
       cfg.rank = this.rank;
       cfg.ref = this.ref;
       o = createUnit(cfg);
+      if (arg.skill != null) {
+        _ref5 = arg.skill;
+        for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+          skill = _ref5[_i];
+          o.installSpell(skill.id, skill.lv);
+        }
+      }
       o.installSpell(DUNGEON_DROP_CARD_SPELL, 1);
+      if (arg.property != null) {
+        _ref6 = arg.property;
+        for (k in _ref6) {
+          v = _ref6[k];
+          o[k] = v;
+        }
+      }
       if (cfg.keyed) {
         this.lockUp(true);
       }
