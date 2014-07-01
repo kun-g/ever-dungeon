@@ -227,7 +227,7 @@
           idList = selectFromPool(r.pool, count);
           count = 1;
           proList = typeof (_base = rules.pool[r.pool]).property === "function" ? _base.property([]) : void 0;
-          console.log('-------', rules.pool, r.pool, '----------');
+          console.log('-------', rules.pool, r.pool, proList, '----------');
         }
         idList.forEach(function(c) {
           var k, u, v;
@@ -236,10 +236,12 @@
             v = c[k];
             u[k] = v;
           }
+          console.log('bef', u);
           for (k in proList) {
             v = proList[k];
             u[k] = v;
           }
+          console.log('aft', u);
           u.count = count;
           if (r.pos) {
             if (typeof r.pos === 'number') {
