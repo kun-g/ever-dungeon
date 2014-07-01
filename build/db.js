@@ -123,7 +123,7 @@ lua_queryLeaderboard = " \
   local key = prefix..board; \
   local opStr1 = 'ZREVRANK'; \
   local opStr2 = 'ZREVRANGE'; \
-  if reverse then \
+  if reverse == 1 then \
     opStr1 = 'ZRANK'; \
     opStr2 = 'ZRANGE'; \
   end \
