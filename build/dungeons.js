@@ -298,12 +298,12 @@ exports.data = [
             }         
         ],
         "dropID": [ 8 ],
-        "prizeWxp":100,
-        "prizeGold": 400,
-        "prizeXp":200,
+        "prizeWxp":20,
+        "prizeGold": 100,
+        "prizeXp":150,
         "wxpRate":1,
-        "goldRate":0.2,
-        "xpRate":0.1,
+        "goldRate":0.5,
+        "xpRate":1,
         "collectId":1001
     },
     {
@@ -492,12 +492,12 @@ exports.data = [
             }
         ],
         "dropID": [ 9 ],
-        "prizeWxp":100,
-        "prizeGold": 400,
+        "prizeWxp":20,
+        "prizeGold": 100,
         "prizeXp":200,
         "wxpRate":1,
-        "goldRate":0.2,
-        "xpRate":0.1
+        "goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 3,
@@ -730,12 +730,12 @@ exports.data = [
             [
                 10
             ],
-        "prizeWxp":100,
-        "prizeGold": 400,
+        "prizeWxp":20,
+        "prizeGold": 100,
         "prizeXp":200,
         "wxpRate":1,
-        "goldRate":0.2,
-        "xpRate":0.1
+        "goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 4,
@@ -1016,10 +1016,10 @@ exports.data = [
             [
                 11
             ],
-        "prizeWxp":100,"prizeGold": 400,
-        "prizeXp":208,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":20,"prizeGold": 100,
+        "prizeXp":250,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 5,
@@ -1179,10 +1179,10 @@ exports.data = [
             [
                 12
             ],
-        "prizeWxp":100,"prizeGold": 400,
-        "prizeXp":200,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":20,"prizeGold": 100,
+        "prizeXp":250,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 6,
@@ -1373,11 +1373,11 @@ exports.data = [
             [
                13
             ],
-        "prizeWxp":100,"prizeGold": 400,
-        "prizeXp":200,
+        "prizeWxp":20,"prizeGold": 100,
+        "prizeXp":250,
         "wxpRate":1,
-        "goldRate":0.2,
-        "xpRate":0.1
+        "goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 7,
@@ -1573,12 +1573,12 @@ exports.data = [
             [
                 14
             ],
-        "prizeWxp":100,
-        "prizeGold": 400,
-        "prizeXp":200,
+        "prizeWxp":20,
+        "prizeGold": 100,
+        "prizeXp":300,
         "wxpRate":1,
-        "goldRate":0.2,
-        "xpRate":0.1
+        "goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 8,
@@ -1784,12 +1784,12 @@ exports.data = [
         "dropID":[
             15
         ],
-        "prizeWxp":170,
-        "prizeGold":680,
-        "prizeXp":340,
+        "prizeWxp":30,
+        "prizeGold":150,
+        "prizeXp":300,
         "wxpRate":1,
-        "goldRate":0.2,
-        "xpRate":0.1
+        "goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 9,
@@ -1976,12 +1976,12 @@ exports.data = [
         "dropID":[
             16
         ],
-        "prizeWxp":170,
-        "prizeGold": 680,
-        "prizeXp":340,
+        "prizeWxp":30,
+        "prizeGold": 150,
+        "prizeXp":350,
         "wxpRate":1,
-        "goldRate":0.2,
-        "xpRate":0.1
+        "goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 10,
@@ -2211,11 +2211,11 @@ exports.data = [
         "dropID":[
             17
             ] ,
-        "prizeWxp":170,
-        "prizeGold": 680,
-        "prizeXp":340,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":30,
+        "prizeGold": 150,
+        "prizeXp":350,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 11,
@@ -2428,11 +2428,11 @@ exports.data = [
         "dropID":[
             18
         ],
-        "prizeWxp":170,
-        "prizeGold": 680,
-        "prizeXp":340,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":30,
+        "prizeGold": 150,
+        "prizeXp":400,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 12,
@@ -2619,10 +2619,10 @@ exports.data = [
         "dropID":[
             19
         ],
-        "prizeWxp":170,"prizeGold": 680,
-        "prizeXp":340,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":30,"prizeGold": 150,
+        "prizeXp":400,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 13,
@@ -2811,11 +2811,11 @@ exports.data = [
         "dropID":[
             20
         ],
-        "prizeWxp":170,"prizeGold": 680,
-        "prizeXp":340,
+        "prizeWxp":30,"prizeGold": 150,
+        "prizeXp":400,
         "collectId":29001,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 14,
@@ -3016,10 +3016,10 @@ exports.data = [
         "dropID":[
             21
         ],
-        "prizeWxp":170,"prizeGold":680,
-        "prizeXp":340,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":30,"prizeGold":150,
+        "prizeXp":450,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 15,
@@ -3206,10 +3206,10 @@ exports.data = [
         "dropID":[
             22
         ],
-        "prizeWxp":235,"prizeGold": 940,
-        "prizeXp":470,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":50,"prizeGold": 200,
+        "prizeXp":500,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 16,
@@ -3412,10 +3412,10 @@ exports.data = [
         "dropID":[
             23
         ],
-        "prizeWxp":235,"prizeGold": 940,
-        "prizeXp":470,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":50,"prizeGold": 200,
+        "prizeXp":500,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 17,
@@ -3650,10 +3650,10 @@ exports.data = [
         "dropID":[
             24
         ],
-        "prizeWxp":10,"prizeGold": 81,
-        "prizeXp":81,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":50,"prizeGold": 200,
+        "prizeXp":500,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 18,
@@ -3920,10 +3920,10 @@ exports.data = [
         "dropID":[
             25
         ],
-        "prizeWxp":235,"prizeGold": 940,
-        "prizeXp":470,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":50,"prizeGold": 200,
+        "prizeXp":500,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 19,
@@ -4126,10 +4126,10 @@ exports.data = [
         "dropID":[
             26
         ],
-        "prizeWxp":235,"prizeGold": 940,
-        "prizeXp":470,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":50,"prizeGold": 200,
+        "prizeXp":500,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 20,
@@ -4331,10 +4331,10 @@ exports.data = [
         "dropID":[
             27
         ],
-        "prizeWxp":235,"prizeGold":940,
-        "prizeXp":470,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":50,"prizeGold":200,
+        "prizeXp":500,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 21,
@@ -4563,10 +4563,10 @@ exports.data = [
         "dropID":[
             28
         ],
-        "prizeWxp":235,"prizeGold": 940,
-        "prizeXp":470,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":50,"prizeGold": 200,
+        "prizeXp":500,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 22,
@@ -4769,10 +4769,10 @@ exports.data = [
         "dropID":[
             29
         ],
-        "prizeWxp":300,"prizeGold": 1200,
+        "prizeWxp":70,"prizeGold": 300,
         "prizeXp":600,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 23,
@@ -4992,10 +4992,10 @@ exports.data = [
         "dropID":[
            30
         ],
-        "prizeWxp":300,"prizeGold": 1200,
+        "prizeWxp":70,"prizeGold": 300,
         "prizeXp":600,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 24,
@@ -5266,10 +5266,10 @@ exports.data = [
         "dropID":[
             31
         ],
-        "prizeWxp":300,"prizeGold": 1200,
+        "prizeWxp":70,"prizeGold": 300,
         "prizeXp":600,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 25,
@@ -5522,10 +5522,10 @@ exports.data = [
         "dropID":[
             32
         ],
-        "prizeWxp":300,"prizeGold": 1200,
+        "prizeWxp":70,"prizeGold": 300,
         "prizeXp":600,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 26,
@@ -5746,10 +5746,10 @@ exports.data = [
         "dropID":[
             33
         ],
-        "prizeWxp":300,"prizeGold": 1200,
+        "prizeWxp":70,"prizeGold": 300,
         "prizeXp":600,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 27,
@@ -5962,10 +5962,10 @@ exports.data = [
         "dropID":[
             34
         ],
-        "prizeWxp":300,"prizeGold": 1200,
+        "prizeWxp":70,"prizeGold": 300,
         "prizeXp":600,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 28,
@@ -6186,10 +6186,10 @@ exports.data = [
         "dropID":[
             35
         ],
-        "prizeWxp":300,"prizeGold": 1200,
+        "prizeWxp":70,"prizeGold": 300,
         "prizeXp":600,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 29,
@@ -6376,10 +6376,10 @@ exports.data = [
         "dropID":[
             36
         ],
-        "prizeWxp":368,"prizeGold":1450,
-        "prizeXp":735,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":100,"prizeGold":400,
+        "prizeXp":800,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 30,
@@ -6591,10 +6591,10 @@ exports.data = [
         "dropID":[
             37
         ],
-        "prizeWxp":368,"prizeGold":1450,
-        "prizeXp":735,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":100,"prizeGold":400,
+        "prizeXp":800,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 31,
@@ -6862,10 +6862,10 @@ exports.data = [
         "dropID":[
             38
         ],
-        "prizeWxp":368,"prizeGold":1450,
-        "prizeXp":735,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":100,"prizeGold":400,
+        "prizeXp":800,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 32,
@@ -7069,10 +7069,10 @@ exports.data = [
         "dropID":[
            39
         ],
-        "prizeWxp":368,"prizeGold":1450,
-        "prizeXp":735,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":100,"prizeGold":400,
+        "prizeXp":800,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 33,
@@ -7293,10 +7293,10 @@ exports.data = [
         "dropID":[
            40
         ],
-        "prizeWxp":368,"prizeGold":1450,
-        "prizeXp":735,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":100,"prizeGold":400,
+        "prizeXp":800,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 34,
@@ -7519,10 +7519,10 @@ exports.data = [
         "dropID":[
             41
         ],
-        "prizeWxp":368,"prizeGold":1450,
-        "prizeXp":735,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":100,"prizeGold":400,
+        "prizeXp":800,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 35,
@@ -7739,10 +7739,10 @@ exports.data = [
         "dropID":[
             42
         ],
-        "prizeWxp":368,"prizeGold":1450,
-        "prizeXp":735,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":100,"prizeGold":400,
+        "prizeXp":800,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 36,
@@ -7949,10 +7949,10 @@ exports.data = [
         "dropID":[
             43
         ],
-        "prizeWxp":435,"prizeGold":1740,
-        "prizeXp":870,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":130,"prizeGold":600,
+        "prizeXp":1000,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 37,
@@ -8174,10 +8174,10 @@ exports.data = [
         "dropID":[
             44
         ],
-        "prizeWxp":435,"prizeGold":1740,
-        "prizeXp":870,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":130,"prizeGold":600,
+        "prizeXp":1000,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 38,
@@ -8394,10 +8394,10 @@ exports.data = [
         "dropID":[
             45
         ],
-        "prizeWxp":435,"prizeGold":1740,
-        "prizeXp":870,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":130,"prizeGold":600,
+        "prizeXp":1000,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 39,
@@ -8617,10 +8617,10 @@ exports.data = [
         "dropID":[
             46
         ],
-        "prizeWxp":435,"prizeGold":1740,
-        "prizeXp":870,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":130,"prizeGold":600,
+        "prizeXp":1000,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 40,
@@ -8883,10 +8883,10 @@ exports.data = [
         "dropID":[
             47
         ],
-        "prizeWxp":435,"prizeGold":1740,
-        "prizeXp":870,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":130,"prizeGold":600,
+        "prizeXp":1000,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 41,
@@ -9145,10 +9145,10 @@ exports.data = [
         "dropID":[
             48
         ],
-        "prizeWxp":435,"prizeGold":1740,
-        "prizeXp":870,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":130,"prizeGold":600,
+        "prizeXp":1000,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 42,
@@ -9383,10 +9383,10 @@ exports.data = [
         "dropID":[
             49
         ],
-        "prizeWxp":435,"prizeGold":1740,
-        "prizeXp":870,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":130,"prizeGold":600,
+        "prizeXp":1000,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 43,
@@ -9614,10 +9614,10 @@ exports.data = [
             50
 
         ],
-        "prizeWxp":500,"prizeGold":2000,
-        "prizeXp":1000,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":160,"prizeGold":800,
+        "prizeXp":1200,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 44,
@@ -9837,10 +9837,10 @@ exports.data = [
         "dropID":[
             51
         ],
-        "prizeWxp":500,"prizeGold":2000,
-        "prizeXp":1000,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":160,"prizeGold":800,
+        "prizeXp":1200,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 45,
@@ -10065,10 +10065,10 @@ exports.data = [
         "dropID":[
             52
         ],
-        "prizeWxp":500,"prizeGold":2000,
-        "prizeXp":1000,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":160,"prizeGold":800,
+        "prizeXp":1200,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 46,
@@ -10302,10 +10302,10 @@ exports.data = [
         "dropID":[
             53
         ],
-        "prizeWxp":500,"prizeGold":2000,
-        "prizeXp":1000,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":160,"prizeGold":800,
+        "prizeXp":1200,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 47,
@@ -10529,10 +10529,10 @@ exports.data = [
         "dropID":[
            54
         ],
-        "prizeWxp":500,"prizeGold":2000,
-        "prizeXp":1000,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":160,"prizeGold":800,
+        "prizeXp":1200,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 48,
@@ -10760,10 +10760,10 @@ exports.data = [
         "dropID":[
             55
         ],
-        "prizeWxp":500,"prizeGold":2000,
-        "prizeXp":1000,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":160,"prizeGold":800,
+        "prizeXp":1200,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 49,
@@ -10990,10 +10990,10 @@ exports.data = [
         "dropID":[
            56
         ],
-        "prizeWxp":500,"prizeGold":2000,
-        "prizeXp":1000,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":160,"prizeGold":800,
+        "prizeXp":1200,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 50,
@@ -11212,10 +11212,10 @@ exports.data = [
         "dropID":[
             57
         ],
-        "prizeWxp":570,"prizeGold":2260,
-        "prizeXp":1130,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":200,"prizeGold":1050,
+        "prizeXp":1400,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 51,
@@ -11445,10 +11445,10 @@ exports.data = [
         "dropID":[
            58
         ],
-        "prizeWxp":570,"prizeGold":2260,
-        "prizeXp":1130,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":200,"prizeGold":1050,
+        "prizeXp":1400,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 52,
@@ -11661,10 +11661,10 @@ exports.data = [
         "dropID":[
             59
         ],
-        "prizeWxp":570,"prizeGold":2260,
-        "prizeXp":1130,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":200,"prizeGold":1050,
+        "prizeXp":1400,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 53,
@@ -11897,10 +11897,10 @@ exports.data = [
         "dropID":[
             60
         ],
-        "prizeWxp":570,"prizeGold":2260,
-        "prizeXp":1130,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":200,"prizeGold":1050,
+        "prizeXp":1400,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 54,
@@ -12126,10 +12126,10 @@ exports.data = [
         "dropID":[
             61
         ],
-        "prizeWxp":570,"prizeGold":2260,
-        "prizeXp":1130,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":200,"prizeGold":1050,
+        "prizeXp":1400,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 55,
@@ -12321,10 +12321,10 @@ exports.data = [
         "dropID":[
            62
         ],
-        "prizeWxp":570,"prizeGold":2260,
-        "prizeXp":1130,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":200,"prizeGold":1050,
+        "prizeXp":1400,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 56,
@@ -12531,10 +12531,10 @@ exports.data = [
         "dropID":[
            63
         ],
-        "prizeWxp":570,"prizeGold":2260,
-        "prizeXp":1130,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":200,"prizeGold":1050,
+        "prizeXp":1400,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 57,
@@ -12747,10 +12747,10 @@ exports.data = [
         "dropID":[
            64
         ],
-        "prizeWxp":630,"prizeGold":2520,
-        "prizeXp":1260,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":250,"prizeGold":1400,
+        "prizeXp":1400,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 58,
@@ -12954,10 +12954,10 @@ exports.data = [
         "dropID":[
             65
         ],
-        "prizeWxp":630,"prizeGold":2520,
-        "prizeXp":1260,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":250,"prizeGold":1400,
+        "prizeXp":1400,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 59,
@@ -13164,10 +13164,10 @@ exports.data = [
         "dropID":[
             66
         ],
-        "prizeWxp":630,"prizeGold":2520,
-        "prizeXp":1260,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":250,"prizeGold":1400,
+        "prizeXp":1400,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 60,
@@ -13380,10 +13380,10 @@ exports.data = [
         "dropID":[
             67
         ],
-        "prizeWxp":630,"prizeGold":2520,
-        "prizeXp":1260,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":250,"prizeGold":1400,
+        "prizeXp":1400,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 61,
@@ -13597,10 +13597,10 @@ exports.data = [
         "dropID":[
             68
         ],
-        "prizeWxp":630,"prizeGold":2520,
-        "prizeXp":1260,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":250,"prizeGold":1400,
+        "prizeXp":1400,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 62,
@@ -13832,10 +13832,10 @@ exports.data = [
         "dropID":[
             69
         ],
-        "prizeWxp":630,"prizeGold":2520,
-        "prizeXp":1260,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":250,"prizeGold":1400,
+        "prizeXp":1400,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 63,
@@ -14026,10 +14026,10 @@ exports.data = [
         "dropID":[
             70
         ],
-        "prizeWxp":630,"prizeGold":2520,
-        "prizeXp":1260,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":250,"prizeGold":1400,
+        "prizeXp":1400,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 64,
@@ -14285,10 +14285,10 @@ exports.data = [
             ],
         "infinity_a":0,
         "infinity_b":0,
-        "prizeWxp":72,
-        "prizeGold":290,
-        "prizeXp":145,
-        "wxpRate":1,"goldRate":0.3,
+        "prizeWxp":0,
+        "prizeGold":100,
+        "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5,
         "xpRate":0.4,
         "rank":4
     },
@@ -14573,10 +14573,10 @@ exports.data = [
             ],
         "infinity_a":0,
         "infinity_b":0,
-        "prizeWxp":125,"prizeGold":460,
-        "prizeXp":230,
-        "wxpRate":1,"goldRate":0.3,
-        "xpRate":0.4,
+        "prizeWxp":0,"prizeGold":150,
+        "prizeXp":0,
+        "wxpRate":0,"goldRate":0.5,
+        "xpRate":0,
         "rank":16
     },
     {
@@ -14844,10 +14844,10 @@ exports.data = [
             ],
         "infinity_a":0,
         "infinity_b":0,
-        "prizeWxp":165,"prizeGold":660,
-        "prizeXp":330,
-        "wxpRate":1,"goldRate":0.3,
-        "xpRate":0.4,
+        "prizeWxp":0,"prizeGold":200,
+        "prizeXp":0,
+        "wxpRate":0,"goldRate":0.5,
+        "xpRate":0,
         "rank":36
     },
     {
@@ -15110,9 +15110,9 @@ exports.data = [
             ],
         "infinity_a":0,
         "infinity_b":0,
-        "prizeWxp":205,"prizeGold":840,
-        "prizeXp":420,
-        "wxpRate":1,"goldRate":0.3,
+        "prizeWxp":0,"prizeGold":300,
+        "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5,
         "xpRate":0.4,
         "rank":75
     },
@@ -15395,9 +15395,9 @@ exports.data = [
             ],
         "infinity_a":0,
         "infinity_b":0,
-        "prizeWxp":260,"prizeGold":1030,
-        "prizeXp":515,
-        "wxpRate":1,"goldRate":0.3,
+        "prizeWxp":0,"prizeGold":400,
+        "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5,
         "xpRate":0.4,
         "rank":110
     },
@@ -15660,10 +15660,10 @@ exports.data = [
             ],
         "infinity_a":0,
         "infinity_b":0,
-        "prizeWxp":300,"prizeGold":1200,
-        "prizeXp":600,
-        "wxpRate":1,"goldRate":0.3,
-        "xpRate":0.4,
+        "prizeWxp":0,"prizeGold":600,
+        "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1,
         "rank":163
     },
     {
@@ -15920,10 +15920,10 @@ exports.data = [
             ],
         "infinity_a":0,
         "infinity_b":0,
-        "prizeWxp":350,"prizeGold":1400,
-        "prizeXp":700,
-        "wxpRate":1,"goldRate":0.3,
-        "xpRate":0.4,
+        "prizeWxp":0,"prizeGold":800,
+        "prizeXp":0,
+        "wxpRate":0,"goldRate":0.5,
+        "xpRate":0,
         "rank":250
     },
     {
@@ -16184,10 +16184,10 @@ exports.data = [
             ],
         "infinity_a":0,
         "infinity_b":0,
-        "prizeWxp":395,"prizeGold":1580,
-        "prizeXp":790,
-        "wxpRate":1,"goldRate":0.3,
-        "xpRate":0.4,
+        "prizeWxp":0,"prizeGold":1050,
+        "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":0,
         "rank":340
     },
     {
@@ -16445,8 +16445,8 @@ exports.data = [
             ],
         "infinity_a":0,
         "infinity_b":0,
-        "prizeWxp":442,"prizeGold":1770,
-        "prizeXp":885,
+        "prizeWxp":0,"prizeGold":1400,
+        "prizeXp":0,
         "wxpRate":1,"goldRate":0.3,
         "xpRate":0.4,
         "rank":458
@@ -17072,8 +17072,8 @@ exports.data = [
         "prizeGold": 400,
         "prizeXp":200,
         "wxpRate":1,
-        "goldRate":0.2,
-        "xpRate":0.1
+        "goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 76,
@@ -17272,8 +17272,8 @@ exports.data = [
         "prizeWxp":0,"prizeGold": 0,
         "prizeXp":0,
         "wxpRate":1,
-        "goldRate":0.2,
-        "xpRate":0.1,
+        "goldRate":0.5,
+        "xpRate":1,
         "triggers": ["dungeon:no.reward.no.result"]
     },
     {
@@ -17536,8 +17536,8 @@ exports.data = [
         ],
         "prizeWxp":0,"prizeGold": 0,
         "prizeXp":0,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1,
         "triggers": ["dungeon:no.reward.no.result"]
     },
     {
@@ -17767,8 +17767,8 @@ exports.data = [
         ],
         "prizeWxp":0,"prizeGold":0,
         "prizeXp":0,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1,
         "triggers": ["dungeon:no.reward.no.result"]
     },
     {
@@ -17996,8 +17996,8 @@ exports.data = [
         ],
         "prizeWxp":0,"prizeGold": 0,
         "prizeXp":0,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1,
         "triggers": ["dungeon:no.reward.no.result"]
     },
     {
@@ -18236,8 +18236,8 @@ exports.data = [
         ],
         "prizeWxp":0,"prizeGold":0,
         "prizeXp":0,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1,
         "triggers": ["dungeon:no.reward.no.result"]
     },
     {
@@ -18503,8 +18503,8 @@ exports.data = [
         ],
         "prizeWxp":0,"prizeGold":0,
         "prizeXp":0,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1,
         "triggers": ["dungeon:no.reward.no.result"]
     },
     {
@@ -18742,8 +18742,8 @@ exports.data = [
         ],
         "prizeWxp":0,"prizeGold":0,
         "prizeXp":0,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1,
         "triggers": ["dungeon:no.reward.no.result"]
     },
     {
@@ -18962,8 +18962,8 @@ exports.data = [
         ],
         "prizeWxp":0,"prizeGold":0,
         "prizeXp":0,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1,
         "triggers": ["dungeon:no.reward.no.result"]
     },
     {
@@ -19160,8 +19160,8 @@ exports.data = [
     "prizeGold": 400,
     "prizeXp":200,
     "wxpRate":1,
-    "goldRate":0.2,
-    "xpRate":0.1
+    "goldRate":0.5,
+    "xpRate":1
 },
     {
         "dungeonId": 85,
@@ -19378,8 +19378,8 @@ exports.data = [
         "prizeGold": 400,
         "prizeXp":200,
         "wxpRate":1,
-        "goldRate":0.2,
-        "xpRate":0.1
+        "goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 86,
@@ -19638,8 +19638,8 @@ exports.data = [
         "prizeGold": 400,
         "prizeXp":200,
         "wxpRate":1,
-        "goldRate":0.2,
-        "xpRate":0.1
+        "goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 87,
@@ -19944,8 +19944,8 @@ exports.data = [
             ],
         "prizeWxp":100,"prizeGold": 400,
         "prizeXp":208,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 88,
@@ -20128,8 +20128,8 @@ exports.data = [
             ],
         "prizeWxp":100,"prizeGold": 400,
         "prizeXp":200,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 89,
@@ -20344,8 +20344,8 @@ exports.data = [
         "prizeWxp":100,"prizeGold": 400,
         "prizeXp":200,
         "wxpRate":1,
-        "goldRate":0.2,
-        "xpRate":0.1
+        "goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 90,
@@ -20567,8 +20567,8 @@ exports.data = [
         "prizeGold": 400,
         "prizeXp":200,
         "wxpRate":1,
-        "goldRate":0.2,
-        "xpRate":0.1
+        "goldRate":0.5,
+        "xpRate":1
     },
     {
     "dungeonId": 91,
@@ -20739,12 +20739,12 @@ exports.data = [
         "dropID":
             [ 8
             ],
-        "prizeWxp":100,
-        "prizeGold": 400,
-        "prizeXp":200,
+        "prizeWxp":20,
+        "prizeGold": 100,
+        "prizeXp":150,
         "wxpRate":1,
-        "goldRate":0.2,
-        "xpRate":0.1
+        "goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 93,
@@ -20937,12 +20937,12 @@ exports.data = [
             [
                   9
             ],
-        "prizeWxp":100,
-        "prizeGold": 400,
+        "prizeWxp":20,
+        "prizeGold": 100,
         "prizeXp":200,
         "wxpRate":1,
-        "goldRate":0.2,
-        "xpRate":0.1
+        "goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 94,
@@ -21151,12 +21151,12 @@ exports.data = [
             [
                 10
             ],
-        "prizeWxp":100,
-        "prizeGold": 400,
+        "prizeWxp":20,
+        "prizeGold": 100,
         "prizeXp":200,
         "wxpRate":1,
-        "goldRate":0.2,
-        "xpRate":0.1
+        "goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 95,
@@ -21377,10 +21377,10 @@ exports.data = [
         "dropID":
             [     11
             ],
-        "prizeWxp":100,"prizeGold": 400,
-        "prizeXp":208,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":20,"prizeGold": 100,
+        "prizeXp":250,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 96,
@@ -21542,8 +21542,8 @@ exports.data = [
             ],
         "prizeWxp":100,"prizeGold": 400,
         "prizeXp":200,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 97,
@@ -21727,11 +21727,11 @@ exports.data = [
             [
                 13
             ],
-        "prizeWxp":100,"prizeGold": 400,
-        "prizeXp":200,
+        "prizeWxp":20,"prizeGold": 100,
+        "prizeXp":250,
         "wxpRate":1,
-        "goldRate":0.2,
-        "xpRate":0.1
+        "goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 98,
@@ -21911,12 +21911,12 @@ exports.data = [
             }
         ],
         "dropID":[ 14 ],
-        "prizeWxp":100,
-        "prizeGold": 400,
-        "prizeXp":200,
+        "prizeWxp":20,
+        "prizeGold": 100,
+        "prizeXp":300,
         "wxpRate":1,
-        "goldRate":0.2,
-        "xpRate":0.1
+        "goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 99,
@@ -22047,12 +22047,12 @@ exports.data = [
             }
         ],
         "dropID":[ 71 ],
-        "prizeWxp":100,
-        "prizeGold": 400,
-        "prizeXp":200,
+        "prizeWxp":10,
+        "prizeGold": 100,
+        "prizeXp":100,
         "wxpRate":1,
-        "goldRate":0.2,
-        "xpRate":0.1
+        "goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 100,
@@ -22192,12 +22192,12 @@ exports.data = [
         ], "dropID":[   71
 
     ],
-        "prizeWxp":100,
-        "prizeGold": 400,
-        "prizeXp":200,
+        "prizeWxp":10,
+        "prizeGold": 100,
+        "prizeXp":100,
         "wxpRate":1,
-        "goldRate":0.2,
-        "xpRate":0.1
+        "goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 101,
@@ -22485,8 +22485,8 @@ exports.data = [
         ],
         "prizeWxp":0,"prizeGold":0,
         "prizeXp":0,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 103,
@@ -22679,8 +22679,8 @@ exports.data = [
         ],
         "prizeWxp":0,"prizeGold":0,
         "prizeXp":0,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     },
     {
         "dungeonId": 104,
@@ -22758,7 +22758,7 @@ exports.data = [
         ],
         "dropID":[ ],
         "prizeWxp":0,"prizeGold":0, "prizeXp":0,
-        "wxpRate":1,"goldRate":0.2, "xpRate":0.1
+        "wxpRate":1,"goldRate":0.5, "xpRate":1
     },
     {
         "dungeonId": 105,
@@ -22880,10 +22880,8 @@ exports.data = [
         ],
         "dropID":[ 80
         ],
-        "prizeWxp":170,"prizeGold":680,
-        "prizeXp":340,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":0,"prizeGold":0, "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5, "xpRate":1
     },
     {
         "dungeonId": 106,
@@ -23022,10 +23020,8 @@ exports.data = [
         ],
         "dropID":[ 81
         ],
-        "prizeWxp":235,"prizeGold": 940,
-        "prizeXp":470,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":0,"prizeGold":0, "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5, "xpRate":1
     },
     {
         "dungeonId": 107,
@@ -23164,10 +23160,8 @@ exports.data = [
         ],
         "dropID":[  82
         ],
-        "prizeWxp":300,"prizeGold": 1200,
-        "prizeXp":600,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":0,"prizeGold":0, "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5, "xpRate":1
     },
     {
         "dungeonId": 108,
@@ -23299,10 +23293,8 @@ exports.data = [
         "dropID":[83
 
         ],
-        "prizeWxp":368,"prizeGold":1450,
-        "prizeXp":735,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":0,"prizeGold":0, "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5, "xpRate":1
     },
     {
         "dungeonId": 109,
@@ -23450,10 +23442,8 @@ exports.data = [
         "dropID":[    84
 
         ],
-        "prizeWxp":435,"prizeGold":1740,
-        "prizeXp":870,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":0,"prizeGold":0, "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5, "xpRate":1
     },
     {
         "dungeonId": 110,
@@ -23613,10 +23603,8 @@ exports.data = [
         "dropID":
             [
             ],
-        "prizeWxp":100,"prizeGold": 400,
-        "prizeXp":200,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":0,"prizeGold":0, "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5, "xpRate":1
     },
     {
         "dungeonId": 111,
@@ -23828,10 +23816,8 @@ exports.data = [
         "dropID":[
 
         ],
-        "prizeWxp":368,"prizeGold":1450,
-        "prizeXp":735,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":0,"prizeGold":0, "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5, "xpRate":1
     },
     {
         "dungeonId": 112,
@@ -24038,10 +24024,8 @@ exports.data = [
         "dropID":[
 
         ],
-        "prizeWxp":630,"prizeGold":2520,
-        "prizeXp":1260,
-        "wxpRate":1,"goldRate":0.2,
-        "xpRate":0.1
+        "prizeWxp":0,"prizeGold":0, "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5, "xpRate":1
     },
     {
         "dungeonId": 113,
@@ -25061,10 +25045,8 @@ exports.data = [
             ],
         "infinity_a":0,
         "infinity_b":0,
-        "prizeWxp":205,"prizeGold":840,
-        "prizeXp":420,
-        "wxpRate":1,"goldRate":0.3,
-        "xpRate":0.4,
+        "prizeWxp":0,"prizeGold":0, "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5, "xpRate":1,
         "rank":15
     },
     {
@@ -26086,10 +26068,8 @@ exports.data = [
             ],
         "infinity_a":0,
         "infinity_b":0,
-        "prizeWxp":205,"prizeGold":840,
-        "prizeXp":420,
-        "wxpRate":1,"goldRate":0.3,
-        "xpRate":0.4,
+        "prizeWxp":0,"prizeGold":0, "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5, "xpRate":1,
         "rank":15
     },
     {
@@ -27111,10 +27091,8 @@ exports.data = [
             ],
         "infinity_a":0,
         "infinity_b":0,
-        "prizeWxp":205,"prizeGold":840,
-        "prizeXp":420,
-        "wxpRate":1,"goldRate":0.3,
-        "xpRate":0.4,
+        "prizeWxp":0,"prizeGold":0, "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5, "xpRate":1,
         "rank":15
     },
     {
@@ -28137,10 +28115,8 @@ exports.data = [
             ],
         "infinity_a":0,
         "infinity_b":0,
-        "prizeWxp":205,"prizeGold":840,
-        "prizeXp":420,
-        "wxpRate":1,"goldRate":0.3,
-        "xpRate":0.4,
+        "prizeWxp":0,"prizeGold":0, "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5, "xpRate":1,
         "rank":15
     },
     {
@@ -28546,15 +28522,211 @@ exports.data = [
                     "id":179,
                     "weight":3
                 }
+            ],
+            "soldierPool":[
+                {
+                    "id":3,
+                    "weight":2
+                },
+                {
+                    "id":4,
+                    "weight":2
+                },
+                {
+                    "id":5,
+                    "weight":2
+                },
+                {
+                    "id":6,
+                    "weight":2
+                },
+                {
+                    "id":7,
+                    "weight":2
+                },
+                {
+                    "id":9,
+                    "weight":2
+                },
+                {
+                    "id":10,
+                    "weight":2
+                },
+                {
+                    "id":11,
+                    "weight":2
+                },
+                {
+                    "id":12,
+                    "weight":2
+                },
+                {
+                    "id":14,
+                    "weight":2
+                },
+                {
+                    "id":15,
+                    "weight":2
+                },
+                {
+                    "id":17,
+                    "weight":2
+                },
+                {
+                    "id":35,
+                    "weight":2
+                },
+                {
+                    "id":36,
+                    "weight":2
+                },
+                {
+                    "id":37,
+                    "weight":2
+                },
+                {
+                    "id":38,
+                    "weight":2
+                },
+                {
+                    "id":39,
+                    "weight":2
+                },
+                {
+                    "id":41,
+                    "weight":2
+                },
+                {
+                    "id":42,
+                    "weight":2
+                },
+                {
+                    "id":43,
+                    "weight":2
+                },
+                {
+                    "id":44,
+                    "weight":2
+                },
+                {
+                    "id":46,
+                    "weight":2
+                },
+                {
+                    "id":47,
+                    "weight":2
+                },
+                {
+                    "id":49,
+                    "weight":2
+                },
+                {
+                    "id":67,
+                    "weight":2
+                },
+                {
+                    "id":68,
+                    "weight":2
+                },
+                {
+                    "id":69,
+                    "weight":2
+                },
+                {
+                    "id":70,
+                    "weight":2
+                },
+                {
+                    "id":71,
+                    "weight":2
+                },
+                {
+                    "id":73,
+                    "weight":2
+                },
+                {
+                    "id":74,
+                    "weight":2
+                },
+                {
+                    "id":75,
+                    "weight":2
+                },
+                {
+                    "id":76,
+                    "weight":2
+                },
+                {
+                    "id":78,
+                    "weight":2
+                },
+                {
+                    "id":79,
+                    "weight":2
+                },
+                {
+                    "id":81,
+                    "weight":2
+                },
+                {
+                    "id":99,
+                    "weight":2
+                },
+                {
+                    "id":100,
+                    "weight":2
+                },
+                {
+                    "id":101,
+                    "weight":2
+                },
+                {
+                    "id":102,
+                    "weight":2
+                },
+                {
+                    "id":103,
+                    "weight":2
+                },
+                {
+                    "id":105,
+                    "weight":2
+                },
+                {
+                    "id":106,
+                    "weight":2
+                },
+                {
+                    "id":107,
+                    "weight":2
+                },
+                {
+                    "id":108,
+                    "weight":2
+                },
+
+                {
+                    "id":110,
+                    "weight":2
+                },
+                {
+                    "id":111,
+                    "weight":2
+                },
+                {
+                    "id":113,
+                    "weight":2
+                }
             ]
         },
         "levels" :[
             {
                 "objects" :[
-                    {"pool":"normalPool","from":0,to:3},
+                    {"pool":"normalPool","from":2,to:5},
                     {"pool":"rangePool","from":0,to:1},
+                    {"pool":"soldierPool","from":2,to:4},
                     {"pool":"PVP","count":1},
-                    {"id": 149,"from":0,to:2}
+                    {"id": 149,"from":0,to:4}
 
                 ]
             }
@@ -29584,10 +29756,8 @@ exports.data = [
             ],
         "infinity_a":0,
         "infinity_b":0,
-        "prizeWxp":205,"prizeGold":840,
-        "prizeXp":420,
-        "wxpRate":1,"goldRate":0.3,
-        "xpRate":0.4,
+        "prizeWxp":0,"prizeGold":0, "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5, "xpRate":1,
         "rank":15
     },
     {
@@ -30609,10 +30779,8 @@ exports.data = [
             ],
         "infinity_a":0,
         "infinity_b":0,
-        "prizeWxp":205,"prizeGold":840,
-        "prizeXp":420,
-        "wxpRate":1,"goldRate":0.3,
-        "xpRate":0.4,
+        "prizeWxp":0,"prizeGold":0, "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5, "xpRate":1,
         "rank":15
     },
     {
@@ -31634,10 +31802,8 @@ exports.data = [
             ],
         "infinity_a":0,
         "infinity_b":0,
-        "prizeWxp":205,"prizeGold":840,
-        "prizeXp":420,
-        "wxpRate":1,"goldRate":0.3,
-        "xpRate":0.4,
+        "prizeWxp":0,"prizeGold":0, "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5, "xpRate":1,
         "rank":15
     },
     {
@@ -32659,10 +32825,8 @@ exports.data = [
             ],
         "infinity_a":0,
         "infinity_b":0,
-        "prizeWxp":205,"prizeGold":840,
-        "prizeXp":420,
-        "wxpRate":1,"goldRate":0.3,
-        "xpRate":0.4,
+        "prizeWxp":0,"prizeGold":0, "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5, "xpRate":1,
         "rank":15
     },
     {
@@ -33684,10 +33848,8 @@ exports.data = [
             ],
         "infinity_a":0,
         "infinity_b":0,
-        "prizeWxp":205,"prizeGold":840,
-        "prizeXp":420,
-        "wxpRate":1,"goldRate":0.3,
-        "xpRate":0.4,
+        "prizeWxp":0,"prizeGold":0, "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5, "xpRate":1,
         "rank":15
     },
     {
@@ -34709,10 +34871,8 @@ exports.data = [
             ],
         "infinity_a":0,
         "infinity_b":0,
-        "prizeWxp":205,"prizeGold":840,
-        "prizeXp":420,
-        "wxpRate":1,"goldRate":0.3,
-        "xpRate":0.4,
+        "prizeWxp":0,"prizeGold":0, "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5, "xpRate":1,
         "rank":15
     },
     {
@@ -35734,10 +35894,8 @@ exports.data = [
             ],
         "infinity_a":0,
         "infinity_b":0,
-        "prizeWxp":205,"prizeGold":840,
-        "prizeXp":420,
-        "wxpRate":1,"goldRate":0.3,
-        "xpRate":0.4,
+        "prizeWxp":0,"prizeGold":0, "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5, "xpRate":1,
         "rank":15
     },
     {
@@ -36759,10 +36917,8 @@ exports.data = [
             ],
         "infinity_a":0,
         "infinity_b":0,
-        "prizeWxp":205,"prizeGold":840,
-        "prizeXp":420,
-        "wxpRate":1,"goldRate":0.3,
-        "xpRate":0.4,
+        "prizeWxp":0,"prizeGold":0, "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5, "xpRate":1,
         "rank":15
     }
 

@@ -498,7 +498,7 @@
       id: 1,
       func: function(arg, player, handler, rpcID, socket) {
         player.dungeonData = {};
-        return player.startDungeon(+arg.stg, arg.initialDataOnly, function(err, evEnter, extraMsg) {
+        return player.startDungeon(+arg.stg, arg.initialDataOnly, arg.pkr, function(err, evEnter, extraMsg) {
           extraMsg = (extraMsg != null ? extraMsg : []).concat(player.syncEnergy());
           if (typeof evEnter === 'number') {
             handler([
@@ -784,7 +784,7 @@
       args: [],
       needPid: true
     },
-    RPC_GetPKInfo: {
+    RPC_GetPkRivals: {
       id: 32,
       func: function(arg, player, handler, rpcID, socket) {
         return dbLib.searchRival(player.name, function(err, rivalLst) {
@@ -798,7 +798,7 @@
             ret.arg = result.map(function(e, i) {
               var r;
               r = getBasicInfo(e);
-              r.rnk = rivalLst.rnk[i];
+              r.rnk = +rivalLst.rnk[i];
               return r;
             });
             return handler([ret]);
@@ -808,60 +808,39 @@
       args: [],
       needPid: true
     },
+    RPC_PVPInfoUpdate: {
+      id: 34,
+      func: function(arg, player, handler, rpcID, socket) {
+        var ret;
+        ret = {
+          REQ: rpcID,
+          RET: RET_OK
+        };
+        ret.arg = {
+          rnk: player.counters.Arena,
+          cpl: !player.counters.currentPKCount ? 0 : void 0,
+          ttl: !player.counters.totalPKCount ? 5 : void 0,
+          rcv: !player.flags.rcvAward ? true : void 0
+        };
+        return handler(ret);
+      },
+      args: [],
+      needPid: true
+    },
     RPC_SweepStage: {
       id: 35,
       func: function(arg, player, handler, rpcID, socket) {
-        var cfg, count, dungeon, i, k, p, prize, r, ret, ret_result, stgCfg, v, _i;
-        stgCfg = queryTable(TABLE_STAGE, +arg.stg, player.abIndex);
-        cfg = queryTable(TABLE_DUNGEON, stgCfg.dungeon, player.abIndex);
-        dungeon = {
-          team: [],
-          quests: [],
-          revive: 0,
-          result: DUNGEON_RESULT_WIN,
-          killingInfo: [],
-          currentLevel: cfg.levelCount,
-          getConfig: function() {
-            return cfg;
-          }
+        var code, prize, res, ret, _ref1;
+        _ref1 = player.sweepStage(+arg.stg, arg.mul), code = _ref1.code, prize = _ref1.prize, ret = _ref1.ret;
+        res = {
+          REQ: rpcID,
+          RET: code
         };
-        count = 1;
-        if (arg.mod) {
-          count = 5;
+        if (prize) {
+          res.arg = prize;
         }
-        ret_result = RET_OK;
-        prize = [];
-        ret = [];
-        if (arg.mod && false) {
-          ret_result = RET_VipLevelIsLow;
-        } else if (player.energy < stgCfg.cost * count) {
-          ret_result = RET_NotEnoughEnergy;
-        } else {
-          for (i = _i = 1; 1 <= count ? _i <= count : _i >= count; i = 1 <= count ? ++_i : --_i) {
-            p = player.generateDungeonAward(dungeon, true);
-            r = [];
-            for (k in p) {
-              v = p[k];
-              if (v.length > 0) {
-                r = r.concat(v);
-              }
-            }
-            prize.push(r);
-            ret = ret.concat(player.claimPrize(r));
-          }
-        }
-        player.log('sweepDungeon', {
-          stage: arg.stg,
-          auto: arg.mod,
-          reward: prize
-        });
-        return handler([
-          {
-            REQ: rpcID,
-            RET: ret_result,
-            arg: prize
-          }
-        ].concat(ret));
+        player.saveDB();
+        return handler([res].concat(ret));
       },
       args: [],
       needPid: true

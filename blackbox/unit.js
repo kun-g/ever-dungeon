@@ -300,8 +300,7 @@
       this.hairStyle = heroData.hst;
       this.hairColor = heroData.hcl;
       this.ref = heroData.ref;
-      this.id = cid;
-      return console.log(this.accuracy);
+      return this.id = cid;
     };
 
     return Mirror;
