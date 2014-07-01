@@ -118,7 +118,7 @@
   };
 
   createUnits = function(rules, randFunc) {
-    var cfg, filterLevels, globalRule, i, k, l, levelConfig, levelRule, objs, otherKeys, placeUnit, r, rand, result, rule, selectFromPool, selectPos, translateRule, v, _i, _j, _k, _len, _len1, _len2, _ref5;
+    var cfg, filterLevels, globalRule, i, l, levelConfig, levelOtherKey, levelRule, otherKeys, placeUnit, r, rand, result, rule, selectFromPool, selectPos, translateRule, _i, _j, _k, _len, _len1, _len2, _ref5;
     rand = function(mod) {
       var r;
       if (mod == null) {
@@ -159,25 +159,13 @@
       });
     };
     levelRule = [];
+    levelOtherKey = [];
     _ref5 = rules.levels;
     for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
       l = _ref5[_i];
-      console.log('l', l);
-      otherKeys = {};
-      for (k in l) {
-        v = l[k];
-        if (k !== 'objects') {
-          otherKeys[k] = v;
-        }
-      }
-      objs = l.objects.map(function(e) {
-        var o, res;
-        o = {};
-        res = mapContact(mapContact(o, e), otherKeys);
-        return res;
-      });
-      console.log('befadd', objs);
-      levelRule.push(translateRule(objs));
+      otherKeys = mapDiff(l, ['objects']);
+      levelOtherKey.push(otherKeys);
+      levelRule.push(translateRule(l.objects));
     }
     console.log('levelrul', levelRule);
     globalRule = translateRule(rules.global);
@@ -245,7 +233,7 @@
           proList = (_ref7 = rules.pool[r.pool].property) != null ? _ref7 : [];
         }
         idList.forEach(function(c) {
-          var u;
+          var k, u, v, _ref8;
           u = {};
           for (k in c) {
             v = c[k];
@@ -254,6 +242,13 @@
           for (k in proList) {
             v = proList[k];
             u[k] = v;
+          }
+          if (levelOtherKey[lConfig.id] != null) {
+            _ref8 = levelOtherKey[lConfig.id];
+            for (k in _ref8) {
+              v = _ref8[k];
+              u[k] = v;
+            }
           }
           u.count = count;
           if (r.pos) {
