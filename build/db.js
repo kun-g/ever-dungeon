@@ -119,10 +119,16 @@ lua_createSessionInfo = " \
 
 lua_queryLeaderboard = " \
   local prefix = 'Leaderboard.'; \
-  local board, name, from, to = ARGV[1], ARGV[2], ARGV[3], ARGV[4]; \
+  local board, reverse, name, from, to = ARGV[1], ARGV[2], ARGV[3], ARGV[4], ARGV[5]; \
   local key = prefix..board; \
-  local rank = redis.call('ZREVRANK', key, name); \
-  local board = redis.call('zrevrange', key, from, to, 'WITHSCORES'); \
+  local opStr1 = 'ZRANK'; \
+  local opStr2 = 'ZRANGE'; \
+  if reverse then \
+    opStr1 = 'ZREVRANK'; \
+    opStr2 = 'ZREVRANGE'; \
+  end \
+  local rank = redis.call(opStr1, key, name); \
+  local board = redis.call(opStr2, key, from, to, 'WITHSCORES'); \
   return {rank, board};";
 
 var lua_fetchMessage = " \
@@ -456,7 +462,7 @@ exports.initializeDB = function (cfg) {
     };
   });
   dbClient.script('load', lua_queryLeaderboard, function (err, sha) {
-    exports.queryLeaderboard = function (board, name, from, to, handler) {
+    exports.queryLeaderboard = function (board, reverse, name, from, to, handler) {
       dbClient.evalsha(sha, 0, board, name, from, to, function (err, ret) {
         if (!err) {
           ret = {

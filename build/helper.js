@@ -213,7 +213,7 @@
       console.log('getPositionOnLeaderboard', board, name, from, to);
       tickLeaderboard(board);
       cfg = localConfig[board];
-      return dbLib.queryLeaderboard(cfg.name, name, from, to, function(err, result) {
+      return dbLib.queryLeaderboard(cfg.name, cfg.reverse, name, from, to, function(err, result) {
         result.board = result.board.reduce((function(r, l, i) {
           if (i % 2 === 0) {
             r.name.push(l);
