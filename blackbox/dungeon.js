@@ -253,7 +253,6 @@
           return result.push(u);
         });
       }
-      console.log('res', result);
       return result;
     };
     result = [];
@@ -291,6 +290,7 @@
         i++;
       }
     }
+    console.log('res', result);
     return result;
   };
 
