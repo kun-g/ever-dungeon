@@ -188,7 +188,7 @@
       var _k, _ref6, _results;
       _results = [];
       for (i = _k = 0, _ref6 = count - 1; 0 <= _ref6 ? _k <= _ref6 : _k >= _ref6; i = 0 <= _ref6 ? ++_k : --_k) {
-        _results.push(selectElementFromWeightArray(rules.pool[poolID], rand()));
+        _results.push(selectElementFromWeightArray(rules.pool[poolID].objects, rand()));
       }
       return _results;
     };
@@ -203,7 +203,7 @@
       return -1;
     };
     placeUnit = function(lRule, lConfig, single) {
-      var count, idList, result, _k, _len2, _ref6;
+      var count, idList, proList, result, _base, _k, _len2, _ref6;
       result = [];
       for (_k = 0, _len2 = lRule.length; _k < _len2; _k++) {
         r = lRule[_k];
@@ -226,12 +226,17 @@
         if (r.pool != null) {
           idList = selectFromPool(r.pool, count);
           count = 1;
+          proList = typeof (_base = rules.pool[r.pool]).property === "function" ? _base.property([]) : void 0;
         }
         idList.forEach(function(c) {
           var k, u, v;
           u = {};
           for (k in c) {
             v = c[k];
+            u[k] = v;
+          }
+          for (k in proList) {
+            v = proList[k];
             u[k] = v;
           }
           u.count = count;
