@@ -174,10 +174,13 @@
         return _results;
       })();
       objs = l.objects.map(function(e) {
-        var o;
+        var o, res;
         o = {};
-        return mapContact(mapContact(o, e), otherKeys);
+        res = mapContact(mapContact(o, e), otherKeys);
+        console.log('append', res);
+        return res;
       });
+      console.log('befadd', objs);
       levelRule.push(translateRule(objs));
     }
     console.log('levelrul', levelRule);
