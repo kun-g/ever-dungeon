@@ -618,7 +618,7 @@ exports.data = [
                 "type":0,
                 "label":"收集圣灵草",
                 "collect":22001,
-                "count":10
+                "count":5
             }
         ],
         "prize":[
@@ -671,7 +671,7 @@ exports.data = [
                 "type":0,
                 "label":"收集火焰魔法结晶",
                 "collect":24001,
-                "count":10
+                "count":5
             }
         ],
         "prize":[
