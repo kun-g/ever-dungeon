@@ -162,6 +162,7 @@
     _ref5 = rules.levels;
     for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
       l = _ref5[_i];
+      console.log('l', l);
       otherKeys = (function() {
         var _j, _len1, _results;
         _results = [];
