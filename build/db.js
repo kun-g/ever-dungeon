@@ -121,11 +121,11 @@ lua_queryLeaderboard = " \
   local prefix = 'Leaderboard.'; \
   local board, reverse, name, from, to = ARGV[1], ARGV[2], ARGV[3], ARGV[4], ARGV[5]; \
   local key = prefix..board; \
-  local opStr1 = 'ZRANK'; \
-  local opStr2 = 'ZRANGE'; \
+  local opStr1 = 'ZREVRANK'; \
+  local opStr2 = 'ZREVRANGE'; \
   if reverse then \
-    opStr1 = 'ZREVRANK'; \
-    opStr2 = 'ZREVRANGE'; \
+    opStr1 = 'ZRANK'; \
+    opStr2 = 'ZRANGE'; \
   end \
   local rank = redis.call(opStr1, key, name); \
   local board = redis.call(opStr2, key, from, to, 'WITHSCORES'); \
