@@ -390,6 +390,14 @@ selectElementFromWeightArray = function (array, randNumber) {
   return null;
 };
 
+mapContact = function (target, source) {
+  if (typeof target != 'object' || typeof source != 'object') {
+    logError({action: 'mapContact', reason: 'invalidate parm'});
+    return null;
+  }
+  for k in source
+    target[k] = source[k];
+  return target
 logLevel = 0;
 
 updateStageStatus = function (stageStatus, player, abindex) {
