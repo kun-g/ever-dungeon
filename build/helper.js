@@ -185,7 +185,7 @@
       }
       if (v.key == null) {
         val = typeof v.initialValue === ('number' != null) ? v.initialValue : null;
-        return require('.db').tryAddLeaderboardMember(v.name, player.name, val);
+        return require('./db').tryAddLeaderboardMember(v.name, player.name, val);
       } else {
         tmp = v.key.split('.');
         field = tmp.pop();
@@ -196,12 +196,6 @@
         if ((v.initialValue != null) && !(typeof obj[field] !== 'undefined' && obj[field])) {
           if (typeof v.initialValue === 'number') {
             obj[field] = v.initialValue;
-          } else if (v.initialValue === 'length') {
-            require('./db').queryLeaderboardLength(v.name, function(err, result) {
-              obj[field] = +result;
-              v.func(player.name, obj[field]);
-              return player.saveDB();
-            });
           }
         }
         return v.func(player.name, obj[field]);
@@ -219,7 +213,7 @@
       console.log('getPositionOnLeaderboard', board, name, from, to);
       tickLeaderboard(board);
       cfg = localConfig[board];
-      return require('./db').queryLeaderboard(cfg.name, name, from, to, function(err, result) {
+      return dbLib.queryLeaderboard(cfg.name, name, from, to, function(err, result) {
         result.board = result.board.reduce((function(r, l, i) {
           if (i % 2 === 0) {
             r.name.push(l);
