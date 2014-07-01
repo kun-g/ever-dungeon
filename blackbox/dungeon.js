@@ -174,7 +174,6 @@
         var o, res;
         o = {};
         res = mapContact(mapContact(o, e), otherKeys);
-        console.log('append', res, '----', e, '----', otherKeys);
         return res;
       });
       console.log('befadd', objs);
@@ -243,8 +242,8 @@
         if (r.pool != null) {
           idList = selectFromPool(r.pool, count);
           count = 1;
-          proList = (_ref7 = rules.pool[r.pool].property) != null ? _ref7 : [];
         }
+        proList = (_ref7 = rules.pool[r.pool].property) != null ? _ref7 : [];
         idList.forEach(function(c) {
           var u;
           u = {};
