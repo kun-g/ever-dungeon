@@ -227,6 +227,7 @@
           idList = selectFromPool(r.pool, count);
           count = 1;
           proList = typeof (_base = rules.pool[r.pool]).property === "function" ? _base.property([]) : void 0;
+          console.log('-------', rules.pool, r.pool, '----------');
         }
         idList.forEach(function(c) {
           var k, u, v;
