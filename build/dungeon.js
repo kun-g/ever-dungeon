@@ -243,7 +243,7 @@
         if (r.pool != null) {
           idList = selectFromPool(r.pool, count);
           count = 1;
-          proList = (_ref7 = mapDiff(rules.pool[r.pool].property, ['objects'])) != null ? _ref7 : [];
+          proList = (_ref7 = mapDiff(rules.pool[r.pool], ['objects'])) != null ? _ref7 : [];
         }
         idList.forEach(function(c) {
           var k, u, v, _ref8;
