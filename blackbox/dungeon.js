@@ -118,7 +118,7 @@
   };
 
   createUnits = function(rules, randFunc) {
-    var cfg, filterLevels, globalRule, i, key, l, levelConfig, levelRule, objs, otherKeys, placeUnit, r, rand, result, rule, selectFromPool, selectPos, translateRule, _i, _j, _k, _len, _len1, _len2, _ref5;
+    var cfg, filterLevels, globalRule, i, k, l, levelConfig, levelRule, objs, otherKeys, placeUnit, r, rand, result, rule, selectFromPool, selectPos, translateRule, v, _i, _j, _k, _len, _len1, _len2, _ref5;
     rand = function(mod) {
       var r;
       if (mod == null) {
@@ -166,9 +166,13 @@
       otherKeys = (function() {
         var _results;
         _results = [];
-        for (key in l) {
+        for (k in l) {
+          v = l[k];
           if (key !== 'objects') {
-            _results.push(key);
+            _results.push({
+              k: k,
+              v: v
+            });
           }
         }
         return _results;
@@ -249,7 +253,7 @@
           proList = (_ref7 = rules.pool[r.pool].property) != null ? _ref7 : [];
         }
         idList.forEach(function(c) {
-          var k, u, v;
+          var u;
           u = {};
           for (k in c) {
             v = c[k];
