@@ -118,7 +118,7 @@
   };
 
   createUnits = function(rules, randFunc) {
-    var cfg, filterLevels, globalRule, i, k, l, levelConfig, levelRule, objs, otherKeys, placeUnit, r, rand, result, rule, selectFromPool, selectPos, translateRule, v, _i, _j, _k, _len, _len1, _len2, _ref5;
+    var cfg, filterLevels, globalRule, i, k, l, levelConfig, levelRule, objs, placeUnit, r, rand, result, rule, selectFromPool, selectPos, translateRule, v, _i, _j, _k, _len, _len1, _len2, _ref5;
     rand = function(mod) {
       var r;
       if (mod == null) {
@@ -163,20 +163,12 @@
     for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
       l = _ref5[_i];
       console.log('l', l);
-      otherKeys = (function() {
-        var _results;
-        _results = [];
-        for (k in l) {
-          v = l[k];
-          if (k !== 'objects') {
-            _results.push({
-              k: k,
-              v: v
-            });
-          }
+      for (k in l) {
+        v = l[k];
+        if (k !== 'objects') {
+          otherKeys[k] = v;
         }
-        return _results;
-      })();
+      }
       objs = l.objects.map(function(e) {
         var o, res;
         o = {};
