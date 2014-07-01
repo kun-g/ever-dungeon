@@ -177,7 +177,7 @@
         var o, res;
         o = {};
         res = mapContact(mapContact(o, e), otherKeys);
-        console.log('append', res);
+        console.log('append', res, '----', e, '----', otherKeys);
         return res;
       });
       console.log('befadd', objs);
