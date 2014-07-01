@@ -399,6 +399,7 @@ mapContact = function (target, source) {
     target[k] = source[k];
   }
   return target
+}
 logLevel = 0;
 
 updateStageStatus = function (stageStatus, player, abindex) {
