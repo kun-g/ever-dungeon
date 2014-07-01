@@ -395,8 +395,9 @@ mapContact = function (target, source) {
     logError({action: 'mapContact', reason: 'invalidate parm'});
     return null;
   }
-  for k in source
+  for(var k in source) {
     target[k] = source[k];
+  }
   return target
 logLevel = 0;
 
