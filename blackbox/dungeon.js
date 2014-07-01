@@ -203,7 +203,7 @@
       return -1;
     };
     placeUnit = function(lRule, lConfig, single) {
-      var count, idList, proList, result, _base, _k, _len2, _ref6;
+      var count, idList, proList, result, _k, _len2, _ref6, _ref7;
       result = [];
       for (_k = 0, _len2 = lRule.length; _k < _len2; _k++) {
         r = lRule[_k];
@@ -226,7 +226,7 @@
         if (r.pool != null) {
           idList = selectFromPool(r.pool, count);
           count = 1;
-          proList = typeof (_base = rules.pool[r.pool]).property === "function" ? _base.property([]) : void 0;
+          proList = (_ref7 = rules.pool[r.pool].property) != null ? _ref7 : [];
           console.log('-------', rules.pool, r.pool, proList, '----------');
         }
         idList.forEach(function(c) {
