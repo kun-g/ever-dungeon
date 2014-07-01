@@ -499,6 +499,14 @@ exports.initializeDB = function (cfg) {
       });
     };
   });
+  dbClient.script('load',require('./helper').dbScripts.tryAddLeaderboardMember, function (err, sha) {
+    exports.tryAddLeaderboardMember = function (board, name, value, handler) {
+      dbClient.evalsha(sha, 0, board, name, value, function (err, ret) {
+       if (handler) { handler(err, ret); }
+      });
+    };
+  });
+ 
   //dbClient.script('load', lua_getMercenary, function (err, sha) {
   //  exports.findMercenary = function (battleforce, count, range, delta, names handler) {
   //    dbClient.evalsha(
