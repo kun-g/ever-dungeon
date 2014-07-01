@@ -168,7 +168,7 @@
         _results = [];
         for (k in l) {
           v = l[k];
-          if (key !== 'objects') {
+          if (k !== 'objects') {
             _results.push({
               k: k,
               v: v
