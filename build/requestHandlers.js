@@ -853,14 +853,13 @@
         var ret;
         switch (arg.typ) {
           case 0:
-            if (!player.flags.rcvAward) {
-              console.log(player.flags.rcvAward, '------------debug');
+            if (!player.flags.rcvAward || true) {
               player.flags.rcvAward = true;
               ret = [
                 {
                   NTF: Event_InventoryUpdateItem,
                   arg: {
-                    dim: player.addMoney(80)
+                    god: player.addGold(80)
                   }
                 }
               ];
