@@ -852,7 +852,7 @@
       func: function(arg, player, handler, rpcID, socket) {
         var ret;
         switch (arg.tpy) {
-          case 1:
+          case 0:
             if (!player.flags.rcvAward) {
               player.flags.rcvAward = true;
               player.saveDB();
