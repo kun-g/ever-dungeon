@@ -491,9 +491,11 @@ exports.initializeDB = function (cfg) {
     };
   });
   dbClient.script('load',require('./helper').dbScripts.exchangePKRank, function (err, sha) {
+    console.log('debugPK------load exchangePKRank', err,sha)
     exports.saveSocre = function (champion, second, handler) {
       dbClient.evalsha(sha, 0, 'Arena', champion, second, function (err, ret) {
-       if (handler) { handler(err, ret); }
+        console.log('debugPK------exec exchangePKRank', err,ret)
+        if (handler) { handler(err, ret); }
       });
     };
   });

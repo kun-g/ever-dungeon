@@ -367,6 +367,7 @@
         if (itemCostRet == null) {
           ret_result = RET_NotEnoughItem;
         } else {
+          this.counters.currentPKCount++;
           this.costEnergy(energyCost);
           ret = ret.concat(itemCostRet);
           for (i = _i = 1; 1 <= count ? _i <= count : _i >= count; i = 1 <= count ? ++_i : --_i) {
@@ -385,6 +386,7 @@
             reward: prize
           });
           ret = ret.concat(this.syncEnergy());
+          this.saveDB();
         }
       }
       return {
@@ -2075,11 +2077,10 @@
 
     Player.prototype.updatePkInof = function(dungeon) {
       var myName, rivalName;
-      this.counters.currentPKCount++;
-      this.saveDB();
       if (dungeon.PVP_Pool != null) {
         myName = this.name;
         rivalName = dungeon.PVP_Pool[0].nam;
+        console.log('debugPK-----updatePkInof----', dungeon.result, myName, rivalName);
         if (dungeon.result === DUNGEON_RESULT_WIN) {
           return dbLib.saveSocre(myName, rivalName, function(err, result) {
             return console.log(err, result);
