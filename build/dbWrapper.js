@@ -33,7 +33,7 @@
 
     DBWrapper.prototype.save = function(handler) {
       var data, k, v;
-      data = this.dumpChanged();
+      data = this.dump();
       if (data) {
         for (k in data) {
           v = data[k];
