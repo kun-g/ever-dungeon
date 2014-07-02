@@ -59,6 +59,7 @@
       return dbClient.hgetall(this.getDBKeyName(), (function(_this) {
         return function(err, attr) {
           var attributes, cb, error, k, ret, v, _i, _len, _ref1;
+          console.log('---------', err, attr, '---------debugLoadDB');
           ret = null;
           if (attr != null) {
             attributes = {};
