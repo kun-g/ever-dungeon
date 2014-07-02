@@ -150,7 +150,7 @@
     Serializer.prototype.dumpChanged = function() {
       var key, ret, val, _ref;
       ret = null;
-      _ref = this.s_attr_dirtyFlag;
+      _ref = this.s_attr_to_save;
       for (key in _ref) {
         val = _ref[key];
         if (ret == null) {
