@@ -771,7 +771,7 @@
     };
 
     Player.prototype.saveDB = function(handler) {
-      return this.save(handler);
+      return this.save2DB(handler);
     };
 
     Player.prototype.modifyCounters = function(propertyName, arg) {

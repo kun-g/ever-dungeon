@@ -31,7 +31,7 @@
       return this.dbKeyName;
     };
 
-    DBWrapper.prototype.save = function(handler) {
+    DBWrapper.prototype.save2DB = function(handler) {
       var data, k, v;
       data = this.dump();
       if (data) {
