@@ -851,7 +851,7 @@
       id: 33,
       func: function(arg, player, handler, rpcID, socket) {
         var ret;
-        switch (arg.tpy) {
+        switch (arg.typ) {
           case 0:
             if (!player.flags.rcvAward) {
               console.log(player.flags.rcvAward, '------------debug');
