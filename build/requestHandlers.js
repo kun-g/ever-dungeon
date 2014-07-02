@@ -846,6 +846,42 @@
       },
       args: [],
       needPid: true
+    },
+    RPC_ReceivePrize: {
+      id: 33,
+      func: function(arg, player, handler, rpcID, socket) {
+        var ret;
+        switch (arg.tpy) {
+          case 1:
+            if (!player.flags.rcvAward) {
+              player.flags.rcvAward = true;
+              player.saveDB();
+              ret = [
+                {
+                  NTF: Event_InventoryUpdateItem,
+                  arg: {
+                    dim: player.addDiamond(80)
+                  }
+                }
+              ];
+              return handler([
+                {
+                  REQ: rpcID,
+                  RET: RET_OK
+                }
+              ].concat(ret));
+            } else {
+              return handler([
+                {
+                  REQ: rpcID,
+                  RET: RET_CantReceivePkAward
+                }
+              ]);
+            }
+        }
+      },
+      args: [],
+      needPid: true
     }
   };
 
