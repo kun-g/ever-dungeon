@@ -715,7 +715,8 @@
       },
       reset: function(obj, util) {
         obj.timestamp.currentPKCount = util.currentTime();
-        return obj.counters.currentPKCount = 0;
+        obj.counters.currentPKCount = 0;
+        return obj.flags.rcvAward = false;
       }
     }
   };

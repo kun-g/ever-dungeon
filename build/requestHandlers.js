@@ -821,7 +821,7 @@
             rnk: result.position,
             cpl: (_ref1 = player.counters.currentPKCount) != null ? _ref1 : 0,
             ttl: (_ref2 = player.counters.totalPKCount) != null ? _ref2 : 5,
-            rcv: (_ref3 = player.flags.rcvAward) != null ? _ref3 : true
+            rcv: (_ref3 = player.flags.rcvAward) != null ? _ref3 : false
           };
           return handler(ret);
         });
@@ -853,7 +853,14 @@
         var ret;
         switch (arg.typ) {
           case 0:
-            if (!player.flags.rcvAward) {
+            if (!((player.counters.totalCount != null) && (player.counters.currentPKCount != null)) || player.counters.totalCount > player.counters.currentPKCount || player.flags.rcvAward) {
+              return handler([
+                {
+                  REQ: rpcID,
+                  RET: RET_CantReceivePkAward
+                }
+              ]);
+            } else {
               player.flags.rcvAward = true;
               ret = [
                 {
@@ -870,13 +877,6 @@
                   RET: RET_OK
                 }
               ].concat(ret));
-            } else {
-              return handler([
-                {
-                  REQ: rpcID,
-                  RET: RET_CantReceivePkAward
-                }
-              ]);
             }
         }
       },
