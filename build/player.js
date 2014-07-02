@@ -307,7 +307,7 @@
     };
 
     Player.prototype.sweepStage = function(stage, multiple) {
-      var cfg, count, dungeon, energyCost, i, itemCost, itemCostRet, k, p, prize, r, ret, ret_result, stgCfg, v, _base, _base1, _i;
+      var cfg, count, dungeon, energyCost, i, itemCost, itemCostRet, k, p, prize, r, ret, ret_result, stgCfg, v, _i;
       stgCfg = queryTable(TABLE_STAGE, stage, this.abIndex);
       if (!stgCfg) {
         return {
@@ -346,15 +346,7 @@
         id: 871,
         num: count
       };
-      if ((_base = this.counters).currentPKCount == null) {
-        _base.currentPKCount = 0;
-      }
-      if ((_base1 = this.counters).totalPKCount == null) {
-        _base1.totalPKCount = 5;
-      }
-      if (this.counters.currentPKCount >= this.counters.totalPKCount) {
-        ret_result = RET_NotEnoughTimes;
-      } else if (multiple && false) {
+      if (multiple && false) {
         ret_result = RET_VipLevelIsLow;
       } else if (this.energy < energyCost) {
         ret_result = RET_NotEnoughEnergy;
@@ -367,7 +359,6 @@
         if (itemCostRet == null) {
           ret_result = RET_NotEnoughItem;
         } else {
-          this.counters.currentPKCount++;
           this.costEnergy(energyCost);
           ret = ret.concat(itemCostRet);
           for (i = _i = 1; 1 <= count ? _i <= count : _i >= count; i = 1 <= count ? ++_i : --_i) {
@@ -386,7 +377,6 @@
             reward: prize
           });
           ret = ret.concat(this.syncEnergy());
-          this.saveDB();
         }
       }
       return {
@@ -912,6 +902,22 @@
       return async.waterfall([
         (function(_this) {
           return function(cb) {
+            var _base, _base1;
+            if ((stageConfig.pvp != null) && (pkr != null)) {
+              if ((_base = _this.counters).currentPKCount == null) {
+                _base.currentPKCount = 0;
+              }
+              if ((_base1 = _this.counters).totalPKCount == null) {
+                _base1.totalPKCount = 5;
+              }
+              if (_this.counters.currentPKCount >= _this.counters.totalPKCount) {
+                cb(RET_NotEnoughTimes);
+              }
+            }
+            return cb('OK');
+          };
+        })(this), (function(_this) {
+          return function(cb) {
             if (_this.dungeonData.stage != null) {
               return cb('OK');
             } else {
@@ -1021,6 +1027,8 @@
             if ((stageConfig.pvp != null) && (pkr != null)) {
               return getPlayerHero(pkr, wrapCallback(_this, function(err, heroData) {
                 this.dungeonData.PVP_Pool = heroData != null ? [getBasicInfo(heroData)] : void 0;
+                this.counters.currentPKCount++;
+                this.saveDB();
                 return cb('OK');
               }));
             } else {
@@ -2080,7 +2088,6 @@
       if (dungeon.PVP_Pool != null) {
         myName = this.name;
         rivalName = dungeon.PVP_Pool[0].nam;
-        console.log('debugPK-----updatePkInof----', dungeon.result, myName, rivalName);
         if (dungeon.result === DUNGEON_RESULT_WIN) {
           return dbLib.saveSocre(myName, rivalName, function(err, result) {
             return console.log(err, result);
