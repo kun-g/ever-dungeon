@@ -821,7 +821,7 @@
             rnk: result.position,
             cpl: (_ref1 = player.counters.currentPKCount) != null ? _ref1 : 0,
             ttl: (_ref2 = player.counters.totalPKCount) != null ? _ref2 : 5,
-            rcv: player.flags.rcvAward
+            rcv: false
           };
           return handler(ret);
         });
