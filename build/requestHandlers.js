@@ -854,16 +854,17 @@
         switch (arg.tpy) {
           case 0:
             if (!player.flags.rcvAward) {
+              console.log(player.flags.rcvAward, '------------debug');
               player.flags.rcvAward = true;
-              player.saveDB();
               ret = [
                 {
                   NTF: Event_InventoryUpdateItem,
                   arg: {
-                    dim: player.addDiamond(80)
+                    dim: player.addMoney(80)
                   }
                 }
               ];
+              player.saveDB();
               return handler([
                 {
                   REQ: rpcID,
