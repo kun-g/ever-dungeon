@@ -119,7 +119,7 @@
     Serializer.prototype.restore = function(data) {
       var k, v;
       console.log('debug restore-----------', data, '----');
-      ShowMeTheStack();
+      showMeTheStack();
       if (data == null) {
         return this;
       }
