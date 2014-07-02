@@ -914,7 +914,7 @@
                 cb(RET_NotEnoughTimes);
               }
             }
-            return cb('OK');
+            return cb();
           };
         })(this), (function(_this) {
           return function(cb) {
