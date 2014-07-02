@@ -2089,6 +2089,7 @@
         myName = this.name;
         rivalName = dungeon.PVP_Pool[0].nam;
         if (dungeon.result === DUNGEON_RESULT_WIN) {
+          console.log('debug pkRank', myName, rivalName, dungeon.result);
           return dbLib.saveSocre(myName, rivalName, function(err, result) {
             return console.log(err, result);
           });
