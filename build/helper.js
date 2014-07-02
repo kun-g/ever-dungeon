@@ -711,7 +711,7 @@
       id: 6,
       actived: 1,
       canReset: function(obj, util) {
-        return util.diffDay(obj.timestamp.weapon, util.today);
+        return util.diffDay(obj.timestamp.currentPKCount, util.today);
       },
       reset: function(obj, util) {
         obj.timestamp.currentPKCount = util.currentTime();
