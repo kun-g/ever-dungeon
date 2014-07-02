@@ -148,11 +148,11 @@
     };
 
     Serializer.prototype.dumpChanged = function() {
-      var key, ret, val, _ref;
+      var key, ret, _i, _len, _ref;
       ret = null;
       _ref = this.s_attr_to_save;
-      for (key in _ref) {
-        val = _ref[key];
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        key = _ref[_i];
         if (ret == null) {
           ret = {};
         }
