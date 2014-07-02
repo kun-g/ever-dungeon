@@ -463,6 +463,7 @@
         }
       }
       if (this.PVP_Pool) {
+        cfg.pool.PVP = {};
         cfg.pool.PVP.objects = this.PVP_Pool.map(function(e) {
           e.weight = 10;
           e.id = e.cid;
