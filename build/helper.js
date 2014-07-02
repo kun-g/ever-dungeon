@@ -705,6 +705,18 @@
         }
         return 1;
       }
+    },
+    pkCounter: {
+      storeType: "player",
+      id: 6,
+      actived: 1,
+      canReset: function(obj, util) {
+        return util.diffDay(obj.timestamp.weapon, util.today);
+      },
+      reset: function(obj, util) {
+        obj.timestamp.currentPKCount = util.currentTime();
+        return obj.counters.currentPKCount = 0;
+      }
     }
   };
 
