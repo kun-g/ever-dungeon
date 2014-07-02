@@ -812,16 +812,16 @@
       id: 34,
       func: function(arg, player, handler, rpcID, socket) {
         return helperLib.getPositionOnLeaderboard(helperLib.LeaderboardIdx.Arena, player.name, 0, 0, function(err, result) {
-          var ret, _ref1, _ref2;
+          var ret;
           ret = {
             REQ: rpcID,
             RET: RET_OK
           };
           ret.arg = {
             rnk: result.position,
-            cpl: (_ref1 = player.counters.currentPKCount) != null ? _ref1 : 0,
-            ttl: (_ref2 = player.counters.totalPKCount) != null ? _ref2 : 5,
-            rcv: false
+            cpl: player.counters.currentPKCount,
+            ttl: player.counters.totalPKCount,
+            rcv: player.flags.rcvAward
           };
           return handler(ret);
         });
@@ -853,7 +853,7 @@
         var ret;
         switch (arg.typ) {
           case 0:
-            if (!player.flags.rcvAward || true) {
+            if (!player.flags.rcvAward) {
               player.flags.rcvAward = true;
               ret = [
                 {
