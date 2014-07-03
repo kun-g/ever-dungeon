@@ -233,6 +233,15 @@ function initShop (data) {
   }
 }
 
+function arenaPirze(rank) {
+  cfg = queryTable(TABLE_ARENA);
+  for (var k in cfg) {
+    if (rank <= k.top) {
+      return k.pirze;
+    }
+  }
+  return []
+}
 var gConfigTable = {};
 initGlobalConfig = function (path, callback) {
   queryTable = function (type, index, abIndex) {
