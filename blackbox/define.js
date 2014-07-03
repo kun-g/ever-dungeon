@@ -233,7 +233,7 @@ function initShop (data) {
   }
 }
 
-function arenaPirze(rank) {
+arenaPirze = function (rank) {
   cfg = queryTable(TABLE_ARENA);
   for (var k in cfg) {
     if (rank <= k.top) {
