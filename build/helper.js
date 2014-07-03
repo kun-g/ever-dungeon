@@ -1,5 +1,5 @@
 (function() {
-  var actCampaign, conditionCheck, currentTime, dbLib, destroyReactDB, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, tap, tapObject, updateLockStatus;
+  var actCampaign, conditionCheck, currentTime, dateInRange, dbLib, destroyReactDB, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, tap, tapObject, updateLockStatus;
 
   conditionCheck = require('./trigger').conditionCheck;
 
@@ -323,6 +323,23 @@
   };
 
   exports.matchDate = matchDate;
+
+  dateInRange = function(date, ranges) {
+    var monthOfDate, range, _i, _len;
+    if (!date) {
+      return false;
+    }
+    monthOfDate = moment(date).date();
+    for (_i = 0, _len = ranges.length; _i < _len; _i++) {
+      range = ranges[_i];
+      if (monthOfDate >= range.from && monthOfDate <= range.to) {
+        return true;
+      }
+    }
+    return false;
+  };
+
+  exports.dateInRange = dateInRange;
 
   genCampaignUtil = function() {
     return {
@@ -651,7 +668,7 @@
       id: 3,
       actived: 1,
       canReset: function(obj, util) {
-        return util.today.hour() >= 8 && util.diffDay(obj.timestamp.infinite, util.today);
+        return util.today.hour() >= 8 && util.diffDate(obj.timestamp.infinite, util.today) >= 14;
       },
       reset: function(obj, util) {
         obj.timestamp.newProperty('infinite', util.currentTime());
@@ -664,10 +681,12 @@
     hunting: {
       storeType: "player",
       id: 4,
-      actived: 1,
+      actived: function(obj, util) {
+        return 1;
+      },
       stages: [121, 122, 123, 125, 126, 127, 128, 129, 130, 131, 132],
       canReset: function(obj, util) {
-        return util.diffDay(obj.timestamp.hunting, util.today);
+        return util.diffDate(obj.timestamp.hunting, util.today) >= 14;
       },
       reset: function(obj, util) {
         var s, stages, _i, _len;
