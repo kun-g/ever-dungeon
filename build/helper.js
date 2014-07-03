@@ -665,7 +665,7 @@
       storeType: "player",
       id: 3,
       actived: function(obj, util) {
-        if (util.dateInRange(util.today, [
+        if (exports.dateInRange(util.today, [
           {
             from: 1,
             to: 6
@@ -697,7 +697,7 @@
       storeType: "player",
       id: 4,
       actived: function(obj, util) {
-        if (util.dateInRange(util.today, [
+        if (exports.dateInRange(util.today, [
           {
             from: 7,
             to: 13
