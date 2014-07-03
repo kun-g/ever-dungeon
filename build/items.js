@@ -27629,7 +27629,7 @@ exports.data = [
             "reactivity": 15
         },
         "storeOnly": true,
-        "expiration": {day: 2}
+        "expiration": {day: 7}
     },
     {
         "classId": 865,
@@ -27658,7 +27658,7 @@ exports.data = [
             "reactivity": 30
         },
         "storeOnly": true,
-        "expiration": {day: 2}
+        "expiration": {day: 7}
     },
     {
         "classId":866,
@@ -27687,7 +27687,7 @@ exports.data = [
             "reactivity": 90
         },
         "storeOnly": true,
-        "expiration": {day: 2}
+        "expiration": {day: 7}
     },
     {
         "classId":867,
@@ -27712,7 +27712,7 @@ exports.data = [
             "reactivity": 5
         },
         "storeOnly": true,
-        "expiration": {day: 2}
+        "expiration": {day: 7}
     },
     {
         "classId": 868,
@@ -27737,7 +27737,7 @@ exports.data = [
             "reactivity": 20
         },
         "storeOnly": true,
-        "expiration": {day: 2}
+        "expiration": {day: 7}
     },
     {
         "classId": 869,
@@ -27762,7 +27762,7 @@ exports.data = [
             "reactivity": 50
         },
         "storeOnly": true,
-        "expiration": {day: 2}
+        "expiration": {day: 7}
     },
     {
         "classId": 870,
