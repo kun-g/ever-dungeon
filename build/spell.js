@@ -708,7 +708,7 @@
             (typeof cmd.routine === "function" ? cmd.routine({
               id: 'DropPrize',
               dropID: a.dropID
-            }) : void 0) && console.log(a);
+            }) : void 0) && console.log(a, 'ttttttttttttttttttttttttttt');
             break;
           case 'rangeAttack':
           case 'attack':
