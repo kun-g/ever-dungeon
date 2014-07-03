@@ -3091,7 +3091,7 @@
         }
         if (env.variable('tar').health <= 0 && (env.variable('cod') == null) && env.variable('tar').dropInfo) {
           env.dungeon.killingInfo.push({
-            dropInfo: env.variable('tar').dropPrize
+            dropInfo: env.variable('tar').dropInfo
           });
         }
         if (src.isVisible) {
