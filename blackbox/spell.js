@@ -705,12 +705,10 @@
             }
             break;
           case 'dropPrize':
-            if (typeof cmd.routine === "function") {
-              cmd.routine({
-                id: 'DropPrize',
-                dropID: a.dropID
-              });
-            }
+            (typeof cmd.routine === "function" ? cmd.routine({
+              id: 'DropPrize',
+              dropID: a.dropID
+            }) : void 0) && console.log(a);
             break;
           case 'rangeAttack':
           case 'attack':
