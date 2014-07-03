@@ -1743,6 +1743,7 @@
       newItem = ret.newItem;
       if (newItem) {
         ret.newItem.enhancement = enhance;
+        ret.newItem.xp = item.xp;
         eh = newItem.enhancement.map(function(e) {
           return {
             id: e.id,

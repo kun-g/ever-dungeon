@@ -699,7 +699,16 @@
             if (typeof cmd.routine === "function") {
               cmd.routine({
                 id: 'DropItem',
-                list: a.dropList
+                list: a.dropList,
+                me: this
+              });
+            }
+            break;
+          case 'dropPrize':
+            if (typeof cmd.routine === "function") {
+              cmd.routine({
+                id: 'DropPrize',
+                dropID: a.dropID
               });
             }
             break;
