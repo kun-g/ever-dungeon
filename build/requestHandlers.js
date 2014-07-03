@@ -498,7 +498,7 @@
       id: 1,
       func: function(arg, player, handler, rpcID, socket) {
         player.dungeonData = {};
-        return player.startDungeon(+arg.stg, arg.initialDataOnly, function(err, evEnter, extraMsg) {
+        return player.startDungeon(+arg.stg, arg.initialDataOnly, arg.pkr, function(err, evEnter, extraMsg) {
           extraMsg = (extraMsg != null ? extraMsg : []).concat(player.syncEnergy());
           if (typeof evEnter === 'number') {
             handler([
@@ -722,7 +722,6 @@
           if (result.board != null) {
             board = result.board;
             return async.map(board.name, getPlayerHero, function(err, result) {
-              console.log(err);
               ret.lst = result.map(function(e, i) {
                 var r;
                 r = getBasicInfo(e);
@@ -769,14 +768,6 @@
       args: [],
       needPid: true
     },
-    RPC_GetPKInfo: {
-      id: 32,
-      func: function(arg, player, handler, rpcID, socket) {
-        return dbLib.queryLeaderboard(2, player.name, 0, 0, function(err, result) {});
-      },
-      args: [],
-      needPid: true
-    },
     RPC_SubmitDailyQuest: {
       id: 29,
       func: function(arg, player, handler, rpcID, socket) {
@@ -804,16 +795,83 @@
             RET: RET_OK
           };
           return async.map(rivalLst.name, getPlayerHero, function(err, result) {
-            console.log(err);
-            ret.lst = result.map(function(e, i) {
+            ret.arg = result.map(function(e, i) {
               var r;
               r = getBasicInfo(e);
-              r.rnk = +board.rnk[i];
+              r.rnk = +rivalLst.rnk[i];
               return r;
             });
             return handler([ret]);
           });
         });
+      },
+      args: [],
+      needPid: true
+    },
+    RPC_PVPInfoUpdate: {
+      id: 34,
+      func: function(arg, player, handler, rpcID, socket) {
+        return helperLib.getPositionOnLeaderboard(helperLib.LeaderboardIdx.Arena, player.name, 0, 0, function(err, result) {
+          var ret, _ref1, _ref2;
+          ret = {
+            REQ: rpcID,
+            RET: RET_OK
+          };
+          ret.arg = {
+            rnk: result.position,
+            cpl: (_ref1 = player.counters.currentPKCount) != null ? _ref1 : 0,
+            ttl: player.getTotalPkTimes(),
+            rcv: (_ref2 = player.flags.rcvAward) != null ? _ref2 : false
+          };
+          return handler(ret);
+        });
+      },
+      args: [],
+      needPid: true
+    },
+    RPC_SweepStage: {
+      id: 35,
+      func: function(arg, player, handler, rpcID, socket) {
+        var code, prize, res, ret, _ref1;
+        _ref1 = player.sweepStage(+arg.stg, arg.mul), code = _ref1.code, prize = _ref1.prize, ret = _ref1.ret;
+        res = {
+          REQ: rpcID,
+          RET: code
+        };
+        if (prize) {
+          res.arg = prize;
+        }
+        player.saveDB();
+        return handler([res].concat(ret));
+      },
+      args: [],
+      needPid: true
+    },
+    RPC_ReceivePrize: {
+      id: 33,
+      func: function(arg, player, handler, rpcID, socket) {
+        switch (arg.typ) {
+          case 0:
+            if (!(player.counters.currentPKCount != null) || player.getTotalPkTimes() > player.counters.currentPKCount || player.flags.rcvAward) {
+              return handler([
+                {
+                  REQ: rpcID,
+                  RET: RET_CantReceivePkAward
+                }
+              ]);
+            } else {
+              player.flags.rcvAward = true;
+              return player.claimPkPrice(function(result) {
+                player.saveDB();
+                return handler([
+                  {
+                    REQ: rpcID,
+                    RET: RET_OK
+                  }
+                ].concat(result));
+              });
+            }
+        }
       },
       args: [],
       needPid: true

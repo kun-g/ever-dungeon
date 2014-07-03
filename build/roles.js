@@ -27,7 +27,7 @@ exports.data = [
 			41,
 			42,
 			43,
-            662,
+            622,
             712
 		],
 		"levelId": 0,
@@ -294,7 +294,7 @@ exports.data = [
 		"avatar": "enemy-goblin2.ccbi",
 		"property": {
 			"health": 0.6,
-			"attack": 0.12,
+			"attack": 0.05,
 			"critical": 2,
 			"strong": 2,
 			"accuracy": 15,
@@ -499,7 +499,7 @@ exports.data = [
 		"avatar": "enemy-archer1.ccbi",
 		"property": {
 			"health": 0.3,
-			"attack": 0.28,
+			"attack": 0.07,
 			"critical": 20,
 			"strong": -40,
 			"accuracy": 60,
@@ -617,7 +617,7 @@ exports.data = [
 		"avatar": "enemy-orcs1.ccbi",
 		"property": {
 			"health": 0.5,
-			"attack": 0.3,
+			"attack": 0.1,
 			"critical": 10,
 			"strong": 0,
 			"accuracy": 40,
@@ -1549,7 +1549,7 @@ exports.data = [
 		"avatar": "enemy-goblin22.ccbi",
 		"property": {
 			"health": 0.6,
-			"attack": 0.12,
+			"attack": 0.05,
 			"critical": 2,
 			"strong": 2,
 			"accuracy": 15,
@@ -1754,7 +1754,7 @@ exports.data = [
 		"avatar": "enemy-archer12.ccbi",
 		"property": {
 			"health": 0.3,
-			"attack": 0.28,
+			"attack": 0.07,
 			"critical": 20,
 			"strong": -40,
 			"accuracy": 60,
@@ -1871,7 +1871,7 @@ exports.data = [
 		"avatar": "enemy-orcs12.ccbi",
 		"property": {
 			"health": 0.5,
-			"attack": 0.3,
+			"attack": 0.1,
 			"critical": 10,
 			"strong": 0,
 			"accuracy": 40,
@@ -2802,7 +2802,7 @@ exports.data = [
 		"avatar": "enemy-goblin23.ccbi",
 		"property": {
 			"health": 0.6,
-			"attack": 0.12,
+			"attack": 0.05,
 			"critical": 2,
 			"strong": 2,
 			"accuracy": 15,
@@ -3006,7 +3006,7 @@ exports.data = [
 		"avatar": "enemy-archer13.ccbi",
 		"property": {
 			"health": 0.3,
-			"attack": 0.28,
+			"attack": 0.07,
 			"critical": 20,
 			"strong": -40,
 			"accuracy": 60,
@@ -3123,7 +3123,7 @@ exports.data = [
 		"avatar": "enemy-orcs13.ccbi",
 		"property": {
 			"health": 0.5,
-			"attack": 0.3,
+			"attack": 0.1,
 			"critical": 10,
 			"strong": 0,
 			"accuracy": 40,
@@ -4052,7 +4052,7 @@ exports.data = [
 		"avatar": "enemy-goblin24.ccbi",
 		"property": {
 			"health": 0.6,
-			"attack": 0.12,
+			"attack": 0.05,
 			"critical": 2,
 			"strong": 2,
 			"accuracy": 15,
@@ -4257,7 +4257,7 @@ exports.data = [
 		"avatar": "enemy-archer14.ccbi",
 		"property": {
 			"health": 0.3,
-			"attack": 0.28,
+			"attack": 0.07,
 			"critical": 20,
 			"strong": -40,
 			"accuracy": 60,
@@ -4374,7 +4374,7 @@ exports.data = [
 		"avatar": "enemy-orcs14.ccbi",
 		"property": {
 			"health": 0.5,
-			"attack": 0.3,
+			"attack": 0.1,
 			"critical": 10,
 			"strong": 0,
 			"accuracy": 40,

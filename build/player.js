@@ -216,6 +216,20 @@
       return 'player';
     };
 
+    Player.prototype.getTotalPkTimes = function() {
+      return 5;
+    };
+
+    Player.prototype.claimPkPrice = function(callback) {
+      console.log('?????', helperLib);
+      return helperLib.getPositionOnLeaderboard(helperLib.LeaderboardIdx.Arena, this.name, 0, 0, function(err, result) {
+        var prize, ret;
+        prize = arenaPirze(result.position + 1);
+        ret = this.claimPrize(prize);
+        return callback(ret);
+      });
+    };
+
     Player.prototype.submitCampaign = function(campaign, handler) {
       var event;
       event = this[campaign];
@@ -295,7 +309,6 @@
         if (item.date == null) {
           return true;
         }
-        console.log(helperLib.matchDate(item.date, helperLib.currentTime(), item.expiration));
         return helperLib.matchDate(item.date, helperLib.currentTime(), item.expiration);
       });
       rmMSG = itemsNeedRemove.map((function(_this) {
@@ -305,6 +318,86 @@
       })(this));
       ret = ret.concat(rmMSG);
       return ret;
+    };
+
+    Player.prototype.sweepStage = function(stage, multiple) {
+      var cfg, count, dungeon, energyCost, i, itemCost, itemCostRet, k, p, prize, r, ret, ret_result, stgCfg, v, _i;
+      stgCfg = queryTable(TABLE_STAGE, stage, this.abIndex);
+      if (!stgCfg) {
+        return {
+          code: RET_DungeonNotExist,
+          ret: []
+        };
+      }
+      cfg = queryTable(TABLE_DUNGEON, stgCfg.dungeon, this.abIndex);
+      if (!cfg) {
+        return {
+          code: RET_DungeonNotExist,
+          ret: []
+        };
+      }
+      dungeon = {
+        team: [],
+        quests: [],
+        revive: 0,
+        result: DUNGEON_RESULT_WIN,
+        killingInfo: [],
+        currentLevel: cfg.levelCount,
+        getConfig: function() {
+          return cfg;
+        },
+        isSweep: true
+      };
+      count = 1;
+      if (multiple) {
+        count = 5;
+      }
+      ret_result = RET_OK;
+      prize = [];
+      ret = [];
+      energyCost = stgCfg.cost * count;
+      itemCost = {
+        id: 871,
+        num: count
+      };
+      if (multiple && false) {
+        ret_result = RET_VipLevelIsLow;
+      } else if (this.energy < energyCost) {
+        ret_result = RET_NotEnoughEnergy;
+      } else if ((stgCfg.sweepPower == null) && stgCfg.sweepPower > this.createHero().calculatePower()) {
+        ret_result = RET_SweepPowerNotEnough;
+      } else {
+        itemCostRet = this.claimCost({
+          id: itemCost.id
+        }, itemCost.num);
+        if (itemCostRet == null) {
+          ret_result = RET_NotEnoughItem;
+        } else {
+          this.costEnergy(energyCost);
+          ret = ret.concat(itemCostRet);
+          for (i = _i = 1; 1 <= count ? _i <= count : _i >= count; i = 1 <= count ? ++_i : --_i) {
+            p = this.generateDungeonAward(dungeon, true);
+            r = [];
+            for (k in p) {
+              v = p[k];
+              r = r.concat(v);
+            }
+            prize.push(r);
+            ret = ret.concat(this.claimPrize(r));
+          }
+          this.log('sweepDungeon', {
+            stage: stage,
+            multiple: multiple,
+            reward: prize
+          });
+          ret = ret.concat(this.syncEnergy());
+        }
+      }
+      return {
+        code: ret_result,
+        prize: prize,
+        ret: ret
+      };
     };
 
     Player.prototype.claimLoginReward = function() {
@@ -385,10 +478,14 @@
       })(this)));
       helperLib.initObserveration(this);
       this.installObserver('heroxpChanged');
+      this.installObserver('battleForceChanged');
+      this.installObserver('countersChanged');
+      this.installObserver('stageChanged');
+      this.installObserver('winningAnPVP');
       if (this.isNewPlayer) {
         this.isNewPlayer = false;
       }
-      helperLib.assignLeaderboard(this);
+      helperLib.assignLeaderboard(this, 3);
       this.inventory.validate();
       if (this.hero != null) {
         this.updateMercenaryInfo();
@@ -552,7 +649,7 @@
     };
 
     Player.prototype.createHero = function(heroData) {
-      var bag, e, equip, hero, i, _ref7;
+      var bag, bf, e, equip, hero, i, _ref7;
       if (heroData != null) {
         if (this.heroBase[heroData["class"]] != null) {
           return null;
@@ -591,7 +688,11 @@
           this.hero.newProperty('equipment', equip);
         }
         hero = new Hero(this.hero);
-        this.battleForce = hero.calculatePower();
+        bf = hero.calculatePower();
+        if (bf !== this.battleForce) {
+          this.battleForce = bf;
+          this.notify('battleForceChanged');
+        }
         return hero;
       } else {
         throw 'NoHero';
@@ -654,6 +755,10 @@
           prevLevel: prevLevel,
           currentLevel: currentLevel
         });
+        this.log('levelChange', {
+          prevLevel: prevLevel,
+          newLevel: currentLevel
+        });
       }
       return this.hero.xp;
     };
@@ -683,9 +788,15 @@
       return this.save(handler);
     };
 
+    Player.prototype.modifyCounters = function(propertyName, arg) {
+      this.counters[propertyName] = typeof arg.value === "function" ? arg.value(0) : void 0;
+      if (arg.notify != null) {
+        return this.notify(arg.notify.name, arg.notify.arg);
+      }
+    };
+
     Player.prototype.stageIsUnlockable = function(stage) {
       var stageConfig;
-      return true;
       stageConfig = queryTable(TABLE_STAGE, stage, this.abIndex);
       if (stageConfig.condition) {
         return stageConfig.condition(this, genUtil());
@@ -705,6 +816,9 @@
         if (this.stage[stage] == null) {
           this.stage.newProperty(stage, {});
         }
+        if (this.stage[stage].newProperty == null) {
+          tapObject(this.stage[stage], console.log);
+        }
         flag = false;
         arg = {
           chp: chapter,
@@ -717,6 +831,9 @@
           }
           if (state === STAGE_STATE_PASSED) {
             this.stage[stage].level += 1;
+            this.notify('stageChanged', {
+              stage: stage
+            });
             if (this.stage[stage].level % 5 === 0) {
               dbLib.broadcastEvent(BROADCAST_INFINITE_LEVEL, {
                 who: this.name,
@@ -755,6 +872,10 @@
             }
           });
         }
+        this.log('stage', {
+          operation: operation,
+          stage: stage
+        });
         return ret;
       }
     };
@@ -776,8 +897,11 @@
       return ret;
     };
 
-    Player.prototype.startDungeon = function(stage, startInfoOnly, handler) {
+    Player.prototype.startDungeon = function(stage, startInfoOnly, pkr, handler) {
       var dungeonConfig, stageConfig;
+      if (pkr == null) {
+        pkr = null;
+      }
       stageConfig = queryTable(TABLE_STAGE, stage, this.abIndex);
       dungeonConfig = queryTable(TABLE_DUNGEON, stageConfig.dungeon, this.abIndex);
       if (!((stageConfig != null) && (dungeonConfig != null))) {
@@ -791,6 +915,22 @@
       }
       return async.waterfall([
         (function(_this) {
+          return function(cb) {
+            var _base, _base1;
+            if ((stageConfig.pvp != null) && (pkr != null)) {
+              if ((_base = _this.counters).currentPKCount == null) {
+                _base.currentPKCount = 0;
+              }
+              if ((_base1 = _this.counters).totalPKCount == null) {
+                _base1.totalPKCount = 5;
+              }
+              if (_this.counters.currentPKCount >= _this.counters.totalPKCount) {
+                cb(RET_NotEnoughTimes);
+              }
+            }
+            return cb();
+          };
+        })(this), (function(_this) {
           return function(cb) {
             if (_this.dungeonData.stage != null) {
               return cb('OK');
@@ -894,10 +1034,20 @@
             if (stageConfig.event === 'event_daily') {
               _this.dungeonData.baseRank = helperLib.initCalcDungeonBaseRank(_this);
             }
-            if (stageConfig.pvp) {
-              _this.dungeonData.PVP_Pool = team.map(getBasicInfo);
+            return cb();
+          };
+        })(this), (function(_this) {
+          return function(cb) {
+            if ((stageConfig.pvp != null) && (pkr != null)) {
+              return getPlayerHero(pkr, wrapCallback(_this, function(err, heroData) {
+                this.dungeonData.PVP_Pool = heroData != null ? [getBasicInfo(heroData)] : void 0;
+                this.counters.currentPKCount++;
+                this.saveDB();
+                return cb('OK');
+              }));
+            } else {
+              return cb('OK');
             }
-            return cb('OK');
           };
         })(this)
       ], (function(_this) {
@@ -1005,7 +1155,19 @@
       if (count == null) {
         count = 1;
       }
-      cfg = queryTable(TABLE_COSTS, cost);
+      if (typeof cost === 'object') {
+        cfg = {
+          material: [
+            {
+              type: 0,
+              value: cost.id,
+              count: 1
+            }
+          ]
+        };
+      } else {
+        cfg = queryTable(TABLE_COSTS, cost);
+      }
       if (cfg == null) {
         return null;
       }
@@ -1156,6 +1318,9 @@
                   break;
                 case "countUp":
                   this.counters[p.counter]++;
+                  this.notify('countersChanged', {
+                    type: p.counter
+                  });
                   ret = ret.concat(this.syncCounters(true)).concat(this.syncEvent());
               }
           }
@@ -1279,17 +1444,8 @@
 
     Player.prototype.onEvent = function(eventID) {
       switch (eventID) {
-        case 'gold':
-        case 'diamond':
-        case 'item':
-          break;
-        case 'level':
-          this.onEvent('power');
-          return this.onCampaign('Level');
         case 'Equipment':
-          return this.onEvent('power');
-        case 'power':
-          return this.updateMercenaryInfo();
+          return this.createHero();
       }
     };
 
@@ -1792,7 +1948,7 @@
       result = dungeon.result;
       cfg = dungeon.getConfig();
       if (result === DUNGEON_RESULT_DONE || (cfg == null)) {
-        return [];
+        return helperLib.splicePrize([]);
       }
       dropInfo = dungeon.killingInfo.reduce((function(r, e) {
         if (e && e.dropInfo) {
@@ -1803,8 +1959,10 @@
       percentage = 1;
       if (result === DUNGEON_RESULT_WIN) {
         dbLib.incrBluestarBy(this.name, 1);
-        if (cfg.dropID) {
-          dropInfo = dropInfo.concat(cfg.dropID);
+        if (dungeon.isSweep != null) {
+          if (cfg.dropID) {
+            dropInfo = dropInfo.concat(cfg.dropID);
+          }
         }
       } else {
         percentage = (dungeon.currentLevel / cfg.levelCount) * 0.5;
@@ -1856,11 +2014,11 @@
           }
         }
       }
-      return prize;
+      return helperLib.splicePrize(prize);
     };
 
-    Player.prototype.claimDungeonAward = function(dungeon) {
-      var goldPrize, k, objective, offlineReward, otherPrize, prize, qid, qst, quest, quests, result, ret, rewardMessage, teammateRewardMessage, wxPrize, xpPrize, _ref7, _ref8;
+    Player.prototype.claimDungeonAward = function(dungeon, isSweep) {
+      var goldPrize, k, objective, otherPrize, prize, qid, qst, quest, quests, result, ret, rewardMessage, wxPrize, xpPrize, _ref7, _ref8;
       if (dungeon == null) {
         return [];
       }
@@ -1898,8 +2056,7 @@
           }
         }
       }
-      prize = this.generateDungeonAward(dungeon);
-      _ref8 = helperLib.splicePrize(prize), goldPrize = _ref8.goldPrize, xpPrize = _ref8.xpPrize, wxPrize = _ref8.wxPrize, otherPrize = _ref8.otherPrize;
+      _ref8 = this.generateDungeonAward(dungeon), goldPrize = _ref8.goldPrize, xpPrize = _ref8.xpPrize, wxPrize = _ref8.wxPrize, otherPrize = _ref8.otherPrize;
       rewardMessage = {
         NTF: Event_DungeonReward,
         arg: {
@@ -1909,36 +2066,6 @@
       ret = ret.concat([rewardMessage]);
       if (dungeon.result !== DUNGEON_RESULT_FAIL) {
         ret = ret.concat(this.completeStage(dungeon.stage));
-      }
-      offlineReward = [
-        {
-          type: PRIZETYPE_EXP,
-          count: Math.ceil(xpPrize.count * TEAMMATE_REWARD_RATIO)
-        }, {
-          type: PRIZETYPE_GOLD,
-          count: Math.ceil(goldPrize.count * TEAMMATE_REWARD_RATIO)
-        }, {
-          type: PRIZETYPE_WXP,
-          count: Math.ceil(wxPrize.count * TEAMMATE_REWARD_RATIO)
-        }
-      ].filter(function(e) {
-        return e.count > 0;
-      });
-      if (offlineReward.length > 0) {
-        teammateRewardMessage = {
-          type: MESSAGE_TYPE_SystemReward,
-          src: MESSAGE_REWARD_TYPE_OFFLINE,
-          prize: offlineReward
-        };
-        dungeon.team.filter((function(_this) {
-          return function(m) {
-            return m.nam !== _this.name;
-          };
-        })(this)).forEach(function(m) {
-          if (m) {
-            return dbLib.deliverMessage(m.nam, teammateRewardMessage);
-          }
-        });
       }
       result = 'Lost';
       if (dungeon.result === DUNGEON_RESULT_WIN) {
@@ -1956,13 +2083,32 @@
         });
       }
       ret = ret.concat(this.claimPrize(prize, false));
-      this.log('finishDungeon', {
-        stage: dungeon.getInitialData().stage,
-        result: result,
-        reward: prize
-      });
-      this.releaseDungeon();
+      this.updatePkInof(dungeon);
+      if (isSweep) {
+
+      } else {
+        this.log('finishDungeon', {
+          stage: dungeon.getInitialData().stage,
+          result: result,
+          reward: prize
+        });
+        this.releaseDungeon();
+      }
       return ret;
+    };
+
+    Player.prototype.updatePkInof = function(dungeon) {
+      var myName, rivalName;
+      if (dungeon.PVP_Pool != null) {
+        myName = this.name;
+        rivalName = dungeon.PVP_Pool[0].nam;
+        if (dungeon.result === DUNGEON_RESULT_WIN) {
+          console.log('debug pkRank', myName, rivalName, dungeon.result);
+          return dbLib.saveSocre(myName, rivalName, function(err, result) {
+            return console.log(err, result);
+          });
+        }
+      }
     };
 
     Player.prototype.whisper = function(name, message, callback) {

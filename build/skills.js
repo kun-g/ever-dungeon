@@ -3066,10 +3066,7 @@ exports.data = [
         "slotId": 0,
         "config": {
             "basic": {
-                "spellAction": 1,
-                "spellEffect": 4,
-                "targetEffect": 0,
-                "targetDelay": 0.3
+                "spellAction": 1
             },
             "triggerCondition": [
                 { "type":"event","event":"onTurnEnd", "eventCount": 5,"reset":true },
@@ -3081,7 +3078,11 @@ exports.data = [
                 "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"},{"type":"shuffle"},{"type":"count","count":1}]
             },
             "action": [
-                { "type": "damage","damageType":"Spell","isRange":true }
+                { "type": "damage","damageType":"Spell","isRange":true },
+                {"type": "playEffect","effect":44,"pos":"self"},
+                {"type": "playEffect","effect":0,"pos":"target","delay":0.6},
+                {"type": "blink","delay":0.6,"time":0.08},
+                {"type":"shock","delay":0.6,"range":5,"time":0.2}
             ],
             "levelConfig" : [
                 { "formular": {"src":{"attack":0.8}} },
@@ -3147,10 +3148,10 @@ exports.data = [
         "config": {
             "basic": {
                 "spellAction":1,
-                "spellEffect": 4,
-                "targetEffect": 3,
+                "spellEffect": 47,
+                "targetEffect": 48,
                 "spellDelay": 0.3,
-                "targetDelay": 0.3
+                "targetDelay": 0.7
             },
             "triggerCondition": [
                 { "type":"event","event":"onTurnEnd", "eventCount": 5,"reset":true },

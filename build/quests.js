@@ -480,6 +480,7 @@ exports.data = [
     },
     {
         "questId":17,
+        "questStage":8,
         "title":"探索密谋森林",
         "desc":"搜索【密谋森林I】寻找相关线索",
         "objects":[
@@ -506,6 +507,7 @@ exports.data = [
     },
     {
         "questId":18,
+        "questStage":8,
         "title":"走丢的雪莉",
         "desc":"雪莉去【密谋森林I】就再也没人见过了，帮村民们去找找吧",
         "objects":[
@@ -531,6 +533,7 @@ exports.data = [
     },
     {
         "questId":19,
+        "questStage":9,
         "title":"狼骑的逆袭",
         "desc":"没有得到教训的狼骑又想卷土重来，去【密谋森林II】击溃它们！",
         "objects":[
@@ -581,6 +584,7 @@ exports.data = [
     },
     {
         "questId":21,
+        "questStage":10,
         "title":"兽族一锅端",
         "desc":"【密谋森林III】中发现有兽族在建哨站，似乎在盘算着什么阴谋！",
         "objects":[
@@ -606,6 +610,7 @@ exports.data = [
     },
     {
         "questId":22,
+        "questStage":10,
         "title":"圣灵草",
         "desc":"又到圣灵草生长的季节，这只在【密谋森林III】中生长的草药，是村庄中最常用的医疗用品。",
         "objects":[
@@ -632,6 +637,7 @@ exports.data = [
     },
     {
         "questId":23,
+        "questStage":11,
         "title":"火焰史莱姆！？",
         "desc":"凶猛的火焰史莱姆出现在【密谋森林IV】中，已经袭击了不少村民了，赶紧去击败它！",
         "objects":[
@@ -657,6 +663,7 @@ exports.data = [
     },
     {
         "questId":24,
+        "questStage":11,
         "title":"火焰魔法结晶",
         "desc":"【密谋森林IV】中的火焰史莱姆的出现，产生了蕴含火焰力量的结晶，采集回来给汤姆大叔瞧瞧。",
         "objects":[
@@ -708,6 +715,7 @@ exports.data = [
     },
     {
         "questId":26,
+        "questStage":12,
         "title":"再战火焰史莱姆",
         "desc":"上次的火焰史莱姆一役没有将它彻底清除，现在它又恢复了，就在【密谋森林V】！",
         "objects":[
@@ -733,6 +741,7 @@ exports.data = [
     },
     {
         "questId":27,
+        "questStage":12,
         "title":"寻找武器锻造学徒",
         "desc":"汤姆大叔的学徒为了寻找锻造材料一个人去了【密谋森林VI】！情况可能非常危险，去把他找回来吧！",
         "objects":[
@@ -783,6 +792,7 @@ exports.data = [
     },
     {
         "questId":29,
+        "questStage":12,
         "title":"寻找密谋森林的最深层入口",
         "desc":"成功通过【密谋森林VI】寻找到最深处的入口",
         "objects":[
@@ -808,6 +818,7 @@ exports.data = [
     },
     {
         "questId":30,
+        "questStage":13,
         "title":"解放密谋森林",
         "desc":"将【密谋森林VII】深处的怪物击败，为森林带来宁静",
         "objects":[
@@ -837,6 +848,7 @@ exports.data = [
     },
     {
         "questId":31,
+        "questStage":13,
         "title":"食人魔终结者",
         "desc":"将【密谋森林VII】中的大小食人魔击倒！",
         "objects":[
@@ -873,6 +885,7 @@ exports.data = [
     },
     {
         "questId":32,
+        "questStage":15,
         "title":"打打打打劫！？",
         "desc":"【湖滨大道I】出现了一伙山贼，找到并击倒他们！",
         "objects":[
@@ -898,6 +911,7 @@ exports.data = [
     },
     {
         "questId":33,
+        "questStage":16,
         "title":"救出商队成员",
         "desc":"商队在途经【湖滨大道II】时受到山贼的袭击，其中一个成员被抓走了，帮商队救出他吧！",
         "objects":[
@@ -923,6 +937,7 @@ exports.data = [
     },
     {
         "questId":34,
+        "questStage":16,
         "title":"商队守卫者I",
         "desc":"【湖滨大道II】上也出现了不少佣兵打劫商团，商团们肃清道路吧！",
         "objects":[
@@ -948,6 +963,7 @@ exports.data = [
     },
     {
         "questId":35,
+        "questStage":16,
         "title":"找寻失踪的宝箱",
         "desc":"商队成员救回了，不过一起的宝箱还没找到，前往【湖滨大道II】替他们找回宝箱。",
         "objects":[
@@ -998,6 +1014,7 @@ exports.data = [
     },
     {
         "questId":37,
+        "questStage":17,
         "title":"商队守卫者II",
         "desc":"肃清【湖滨大道III】上掠夺商队的坏人们！",
         "objects":[
@@ -1024,6 +1041,7 @@ exports.data = [
     {
         "questId":38,
         "title":"迷之怪物",
+        "questStage":17,
         "desc":"【湖滨大道III】出现了一只迷之怪物，袭击商队，并且抢走大量宝物。",
         "objects":[
             {
@@ -1116,6 +1134,7 @@ exports.data = [
     },
     {
         "questId":41,
+        "questStage":18,
         "title":"凑热闹的史莱姆",
         "desc":"原本宁静的【湖滨大道IV】，现在连史莱姆也来凑热闹，一并清除它们！",
         "objects":[
@@ -1142,6 +1161,7 @@ exports.data = [
     {
         "questId":42,
         "title":"迷之怪物II",
+        "questStage":18,
         "desc":"迷之怪物这回出现在了【湖滨大道IV】，趁它还没跑走，速度去击败它！",
         "objects":[
             {
@@ -1166,6 +1186,7 @@ exports.data = [
     },
     {
         "questId":43,
+        "questStage":18,
         "title":"找回商队宝箱",
         "desc":"迷之怪物已经被击倒，但商队的宝箱还在【湖滨大道IV】，去帮他们找回来吧。",
         "objects":[
@@ -1191,6 +1212,7 @@ exports.data = [
     },
     {
         "questId":44,
+        "questStage":19,
         "title":"迎头痛击",
         "desc":"山贼团伙出现在了【湖滨大道V】，前往那里给他们迎头一击！",
         "objects":[
@@ -1216,6 +1238,7 @@ exports.data = [
     },
     {
         "questId":45,
+        "questStage":20,
         "title":"救回雪莉",
         "desc":"山贼们为了报仇，把雪莉抓走了，目前他们在【湖滨大道VI】集结，赶紧把她救回来！",
         "objects":[
@@ -1242,6 +1265,7 @@ exports.data = [
     {
         "questId":46,
         "title":"剿灭山贼",
+        "questStage":20,
         "desc":"山贼头目和残党逃去了【湖滨大道VI】，将他们彻底赶走吧！",
         "objects":[
             {
@@ -1266,6 +1290,7 @@ exports.data = [
     },
     {
         "questId":47,
+        "questStage":21,
         "title":"肃清商旅道路",
         "desc":"商旅道路上只剩下佣兵们在作乱了，把【湖滨大道VII】的佣兵们彻底肃清！",
         "objects":[
@@ -1295,6 +1320,7 @@ exports.data = [
     },
     {
         "questId":48,
+        "questStage":21,
         "title":"佣兵双煞",
         "desc":"游侠兵长与流浪剑士一起出现了，前往【湖滨大道VII】击倒佣兵双煞！",
         "objects":[
@@ -1331,6 +1357,7 @@ exports.data = [
     },
     {
         "questId":49,
+        "questStage":22,
         "title":"探索旋风谷",
         "desc":"前往【旋风谷I】探索，并击倒那里的怪物头领",
         "objects":[
@@ -1356,6 +1383,7 @@ exports.data = [
     },
     {
         "questId":50,
+        "questStage":23,
         "title":"给人添麻烦的考古学家",
         "desc":"顽固的考古学家去了【旋风谷II】考古，近期那边异常危险，去找到他并护送出来。",
         "objects":[
@@ -1406,6 +1434,7 @@ exports.data = [
     },
     {
         "questId":52,
+        "questStage":23,
         "title":"金色食人魔之谜",
         "desc":"有人在【旋风谷II】目击了金色的食人魔，或许就是那边近期异常的根源，前去调查一下吧。",
         "objects":[
@@ -1431,6 +1460,7 @@ exports.data = [
     },
     {
         "questId":53,
+        "questStage":24,
         "title":"金色食人魔之谜II",
         "desc":"另一只金色食人魔目前正在【旋风谷III】徘徊，为保护大家安全，前去击倒它",
         "objects":[
@@ -1456,6 +1486,7 @@ exports.data = [
     },
     {
         "questId":54,
+        "questStage":24,
         "title":"风之草",
         "desc":"【旋风谷III】中生长着一种名叫风之草的草药，商队目前急缺这种草药，拜托你去帮忙采集。",
         "objects":[
@@ -1481,6 +1512,7 @@ exports.data = [
     },
     {
         "questId":55,
+        "questStage":24,
         "title":"风之秘宝",
         "desc":"风之草的药效没有完全激发出来，需要配合【旋风谷III】中的风之秘宝，前往那里找到并带回给商队。",
         "objects":[
@@ -1531,6 +1563,7 @@ exports.data = [
     },
     {
         "questId":57,
+        "questStage":25,
         "title":"野兽集结I",
         "desc":"哥布林们在【旋风谷IV】中集结，非常可疑，前去调查。",
         "objects":[
@@ -1556,6 +1589,7 @@ exports.data = [
     },
     {
         "questId":58,
+        "questStage":25,
         "title":"采集风之结晶",
         "desc":"汤姆大叔需要风之结晶可以在【旋风谷IV】中找到",
         "objects":[
@@ -1581,6 +1615,7 @@ exports.data = [
     },
     {
         "questId":59,
+        "questStage":25,
         "title":"狼骑的复仇",
         "desc":"此前击溃了死灰狼骑的阴谋，这次它们为了报复把卡琳抓去了【旋风谷IV】。",
         "objects":[
@@ -1606,6 +1641,7 @@ exports.data = [
     },
     {
         "questId":60,
+        "questStage":26,
         "title":"野兽集结II",
         "desc":"死灰狼骑再度出现在【旋风谷V】，野兽们蠢蠢欲动，情况非常紧急。",
         "objects":[
@@ -1656,6 +1692,7 @@ exports.data = [
     },
     {
         "questId":62,
+        "questStage":27,
         "title":"野兽集结III",
         "desc":"野兽们在【旋风谷VI】做最后的抵抗，前去击倒它们。",
         "objects":[
@@ -1681,6 +1718,7 @@ exports.data = [
     },
     {
         "questId":63,
+        "questStage":28,
         "title":"野兽们的幕后黑手",
         "desc":"终于找到幕后黑手了，正是躲在【旋风谷VII】的狂暴哥布林，打败它平息这场混乱吧。",
         "objects":[
@@ -1710,6 +1748,7 @@ exports.data = [
     },
     {
         "questId":64,
+        "questStage":28,
         "title":"肃清残余部队",
         "desc":"将【旋风谷VII】的残余部队全部剿灭",
         "objects":[
@@ -1752,6 +1791,7 @@ exports.data = [
     },
     {
         "questId":65,
+        "questStage":29,
         "title":"欢迎来到大草原",
         "desc":"探索【暮色平原I】",
         "objects":[
@@ -1802,6 +1842,7 @@ exports.data = [
     },
     {
         "questId":67,
+        "questStage":30,
         "title":"霸气的蓝裤衩",
         "desc":"【暮色平原II】出现了穿着蓝裤衩的山贼头目，到处打劫，赶紧去击倒这个蓝裤衩吧！",
         "objects":[
@@ -1852,6 +1893,7 @@ exports.data = [
     },
     {
         "questId":69,
+        "questStage":31,
         "title":"暮色前哨战",
         "desc":"佣兵们在【暮色平原III】建立了前哨战，前去看看情况。",
         "objects":[
@@ -1877,6 +1919,7 @@ exports.data = [
     },
     {
         "questId":70,
+        "questStage":31,
         "title":"拯救村民",
         "desc":"佣兵抓走大量村民做人质，前去【暮色平原III】的前哨战搭救他们。",
         "objects":[
@@ -1902,6 +1945,7 @@ exports.data = [
     },
     {
         "questId":71,
+        "questStage":32,
         "title":"剿灭佣兵残党",
         "desc":"前哨战的残党聚集在了【暮色平原IV】，将他们彻底铲除！",
         "objects":[
@@ -1927,6 +1971,7 @@ exports.data = [
     },
     {
         "questId":72,
+        "questStage":33,
         "title":"翡翠突击",
         "desc":"【暮色平原V】上出现了翡翠史莱姆，专门躲在草丛中袭击村民。",
         "objects":[
@@ -1952,6 +1997,7 @@ exports.data = [
     },
     {
         "questId":73,
+        "questStage":33,
         "title":"翠绿怪兽",
         "desc":"【暮色平原V】出现了翠绿色的野兽，异常可怕。",
         "objects":[
@@ -1978,6 +2024,7 @@ exports.data = [
     },
     {
         "questId":74,
+        "questStage":34,
         "title":"翡翠二重奏",
         "desc":"【暮色平原VI】同时出现两只翡翠史莱姆，趁变更多之前消灭它们吧。",
         "objects":[
@@ -2003,6 +2050,7 @@ exports.data = [
     },
     {
         "questId":75,
+        "questStage":35,
         "title":"斗狼之魂",
         "desc":"【暮色平原VII】聚集着大量斗狼，似乎传说中的斗狼之魂即将降临。",
         "objects":[
@@ -2032,6 +2080,7 @@ exports.data = [
     },
     {
         "questId":76,
+        "questStage":35,
         "title":"野兽共斗",
         "desc":"将【暮色平原VII】上的两大怪物击倒。",
         "objects":[
@@ -2068,6 +2117,7 @@ exports.data = [
     },
     {
         "questId":77,
+        "questStage":36,
         "title":"探索兽人营地",
         "desc":"探索【野蛮哨站I】。",
         "objects":[
@@ -2118,6 +2168,7 @@ exports.data = [
     },
     {
         "questId":79,
+        "questStage":37,
         "title":"击破部落哨岗",
         "desc":"将【野蛮哨站II】的前哨岗给击破，保证探查工作的进行",
         "objects":[
@@ -2143,6 +2194,7 @@ exports.data = [
     },
     {
         "questId":80,
+        "questStage":37,
         "title":"找回走失的杰克",
         "desc":"杰克一人去了【野蛮哨站II】找寻自己的父亲，至今没有音讯，前去看看。",
         "objects":[
@@ -2168,6 +2220,7 @@ exports.data = [
     },
     {
         "questId":81,
+        "questStage":38,
         "title":"野蛮哨站的异动",
         "desc":"兽族小队长银灵狼骑兵目前在【野蛮哨站III】，前去探查情况。",
         "objects":[
@@ -2193,6 +2246,7 @@ exports.data = [
     },
     {
         "questId":82,
+        "questStage":38,
         "title":"神秘的佣兵",
         "desc":"在【野蛮哨站III】出现神秘的佣兵剑士，难道和杰克的父亲有什么关系？",
         "objects":[
@@ -2218,6 +2272,7 @@ exports.data = [
     },
     {
         "questId":83,
+        "questStage":39,
         "title":"野蛮哨站调查令I",
         "desc":"前往【野蛮哨站IV】进行深入调查，寻找神秘的佣兵。",
         "objects":[
@@ -2268,6 +2323,7 @@ exports.data = [
     },
     {
         "questId":85,
+        "questStage":40,
         "title":"哥布林酋长的威胁",
         "desc":"哥布林们已经觉察到我们的探查，哥布林酋长正在【野蛮哨站V】集结部队对我们反击，前去击破它们！",
         "objects":[
@@ -2293,6 +2349,7 @@ exports.data = [
     },
     {
         "questId":86,
+        "questStage":40,
         "title":"还魂草传说I",
         "desc":"杰克的父亲为了寻找传说中的还魂草，踏上了佣兵之路，听说这种草生长在【野蛮哨站V】附近。",
         "objects":[
@@ -2318,6 +2375,7 @@ exports.data = [
     } ,
     {
         "questId":87,
+        "questStage":41,
         "title":"野蛮哨站调查令II",
         "desc":"深入调查兽人大本营【野蛮哨站VI】",
         "objects":[
@@ -2343,6 +2401,7 @@ exports.data = [
     },
     {
         "questId":88,
+        "questStage":41,
         "title":"还魂草传说II",
         "desc":"杰克的父亲正是此前的佣兵剑士，但似乎失去了之前的记忆，赶紧去【野蛮哨站VI】把他带回来吧！",
         "objects":[
@@ -2368,6 +2427,7 @@ exports.data = [
     },
     {
         "questId":89,
+        "questStage":41,
         "title":"还魂草传说III",
         "desc":"杰克父亲已经恢复，据说是把迷魂草当成还魂草了，导致失去了理智，去【野蛮哨站VI】把这些害人的植物除尽吧。",
         "objects":[
@@ -2399,6 +2459,7 @@ exports.data = [
     },
     {
         "questId":90,
+        "questStage":42,
         "title":"野蛮哨站幕后黑手",
         "desc":"找到了一直潜伏着的剑士，现在躲在【野蛮哨站VII】，前去击败他！",
         "objects":[
@@ -2428,6 +2489,7 @@ exports.data = [
     },
     {
         "questId":91,
+        "questStage":42,
         "title":"挑战野蛮哨站",
         "desc":"【野蛮哨站VII】中的剑圣与兽族联手，你是否能够通过这个挑战？",
         "objects":[
@@ -2476,6 +2538,7 @@ exports.data = [
     },
     {
         "questId":92,
+        "questStage":43,
         "title":"山贼的节操？",
         "desc":"号称只在山上抢劫的卡斯山贼头目，目前出现在了【断肠崖I】，去给他点教训吧。",
         "objects":[
@@ -2538,6 +2601,7 @@ exports.data = [
     },
     {
         "questId":94,
+        "questStage":48,
         "title":"矿石结晶",
         "desc":"断肠崖的神秘矿石存在结晶，不过在【断肠崖VI】被强力的怪物守护着，去收集带给汤姆大叔吧！",
         "objects":[
@@ -2564,6 +2628,7 @@ exports.data = [
     },
     {
         "questId":95,
+        "questStage":44,
         "title":"山贼的教训！",
         "desc":"卡斯山贼头目在【断肠崖II】招兵买马，看来上次没有尝到教训，再来给他们一记吧！",
         "objects":[
@@ -2582,7 +2647,7 @@ exports.data = [
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.93.complete"}, true ] }
+            { "==": [ { "type": "getProperty", "key": "quests.92.complete"}, true ] }
         ]
         }
 
@@ -2614,6 +2679,7 @@ exports.data = [
     },
     {
         "questId":97,
+        "questStage":45,
         "title":"佣兵剑士的讨伐",
         "desc":"【断肠崖III】上的佣兵剑士，专门抢夺过路行人，比山贼还恶劣，为村民们除害吧！",
         "objects":[
@@ -2632,13 +2698,14 @@ exports.data = [
         ],
         "cond":
         { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.93.complete"}, true ] }
+            { "==": [ { "type": "getProperty", "key": "quests.95.complete"}, true ] }
         ]
         }
 
     },
     {
         "questId":98,
+        "questStage":45,
         "title":"找回失踪的恋人",
         "desc":"雪莉因为与恋人吵架而一个人去了【断肠崖III】，可能会出事情，赶紧帮忙找回她吧。",
         "objects":[
@@ -2664,6 +2731,7 @@ exports.data = [
     },
     {
         "questId":99,
+        "questStage":46,
         "title":"击破黄金史莱姆",
         "desc":"浑身金色的史莱姆出现在了【断肠崖IV】，异常危险，前去击倒它吧！",
         "objects":[
@@ -2689,6 +2757,7 @@ exports.data = [
     },
     {
         "questId":100,
+        "questStage":46,
         "title":"黄金三连星",
         "desc":"金色史莱姆找来小伙伴打算一雪前耻，目前正在【断肠崖IV】，前去击倒它们！",
         "objects":[
@@ -2721,6 +2790,7 @@ exports.data = [
     },
     {
         "questId":101,
+        "questStage":47,
         "title":"断肠崖挑战任务I",
         "desc":"前往【断肠崖V】击倒怪物通过关卡。",
         "objects":[
@@ -2746,6 +2816,7 @@ exports.data = [
     },
     {
         "questId":102,
+        "questStage":48,
         "title":"断肠崖挑战任务II",
         "desc":"前往【断肠崖VI】击倒怪物通过关卡。",
         "objects":[
@@ -2771,6 +2842,7 @@ exports.data = [
     },
     {
         "questId":103,
+        "questStage":49,
         "title":"断肠崖主人",
         "desc":"断肠崖的主人凶恶山贼守在【断肠崖VII】击倒它向下一个地牢迈进吧！",
         "objects":[
@@ -2800,6 +2872,7 @@ exports.data = [
     },
     {
         "questId":104,
+        "questStage":50,
         "title":"密道上的不速之客",
         "desc":"【丛林密道I】中出现了一群山贼，将他们的头目拿下！",
         "objects":[
@@ -2850,6 +2923,7 @@ exports.data = [
     },
     {
         "questId":106,
+        "questStage":51,
         "title":"丛林游击队",
         "desc":"通过【丛林密道II】打倒深处的丛林游击队。",
         "objects":[
@@ -2912,6 +2986,7 @@ exports.data = [
     },
     {
         "questId":108,
+        "questStage":54,
         "title":"密林深处的怪物II",
         "desc":"此前袭击村民的怪物已经锁定行踪，目前在【丛林密道V】，为村民们出口气！",
         "objects":[
@@ -2937,6 +3012,7 @@ exports.data = [
     },
     {
         "questId":109,
+        "questStage":52,
         "title":"哥布林的决心I",
         "desc":"最凶恶的地狱哥布林酋长目前在【丛林密道III】，前去击倒它。",
         "objects":[
@@ -2962,6 +3038,7 @@ exports.data = [
     },
     {
         "questId":110,
+        "questStage":53,
         "title":"哥布林的决心II",
         "desc":"地狱哥布林酋长逃往了【丛林密道IV】，乘胜追击！",
         "objects":[
@@ -2987,6 +3064,7 @@ exports.data = [
     },
     {
         "questId":111,
+        "questStage":54,
         "title":"来自丛林的挑战I",
         "desc":"哥布林与山贼联手，在【丛林密道V】集结，要对你进行挑战！",
         "objects":[
@@ -3012,6 +3090,7 @@ exports.data = [
     },
     {
         "questId":112,
+        "questStage":55,
         "title":"来自丛林的挑战II",
         "desc":"哥布林与山贼联手，在【丛林密道VI】集结，要对你进行挑战！",
         "objects":[
@@ -3037,6 +3116,7 @@ exports.data = [
     },
     {
         "questId":113,
+        "questStage":26,
         "title":"找寻小小哥布林",
         "desc":"汤姆大叔家的小小哥布林走丢了，听说混入【旋风谷V】",
         "objects":[
@@ -3087,6 +3167,7 @@ exports.data = [
     },
     {
         "questId":115,
+        "questStage":56,
         "title":"密林征服者",
         "desc":"将密林深处的食人魔守卫击倒就能到达巫师营地，前去征服密林吧！",
         "objects":[
@@ -3116,6 +3197,7 @@ exports.data = [
     },
     {
         "questId":116,
+        "questStage":57,
         "title":"寻找神秘草",
         "desc":"【巫师营地I】中生长着神秘草，具有很大的药用价值。",
         "objects":[
@@ -3141,6 +3223,7 @@ exports.data = [
     },
     {
         "questId":117,
+        "questStage":57,
         "title":"邪恶巫师的助手",
         "desc":"在【巫师营地I】中，巫师助手血色狼骑击倒！",
         "objects":[
@@ -3191,6 +3274,7 @@ exports.data = [
     },
     {
         "questId":119,
+        "questStage":58,
         "title":"巫师营地调查I",
         "desc":"对【巫师营地II】进行调查",
         "objects":[
@@ -3216,6 +3300,7 @@ exports.data = [
     },
     {
         "questId":120,
+        "questStage":59,
         "title":"巫师营地调查II",
         "desc":"对【巫师营地III】进行调查",
         "objects":[
@@ -3241,6 +3326,7 @@ exports.data = [
     },
     {
         "questId":121,
+        "questStage":60,
         "title":"巫师营地调查III",
         "desc":"对【巫师营地IV】进行调查",
         "objects":[
@@ -3266,6 +3352,7 @@ exports.data = [
     },
     {
         "questId":122,
+        "questStage":61,
         "title":"巫师营地调查IV",
         "desc":"对【巫师营地V】进行调查",
         "objects":[
@@ -3291,6 +3378,7 @@ exports.data = [
     },
     {
         "questId":123,
+        "questStage":62,
         "title":"巫师营地调查V",
         "desc":"对【巫师营地VI】进行调查",
         "objects":[
@@ -3316,6 +3404,7 @@ exports.data = [
     },
     {
         "questId":124,
+        "questStage":63,
         "title":"巫师贴身护卫",
         "desc":"巫师的贴身护卫目前在【巫师营地VII】，击倒他将巫师营地询问巫师下落。",
         "objects":[
@@ -3407,6 +3496,7 @@ exports.data = [
     },
     {
         "questId":127,
+        "questStage":62,
         "title":"被巫师捉走村民的下落",
         "desc":"巫师捉走了大量村民，前去【巫师营地VI】搭救",
         "objects":[

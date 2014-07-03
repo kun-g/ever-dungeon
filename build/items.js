@@ -27778,5 +27778,14 @@ exports.data = [
             }
         ],
         "storeOnly": true
+    },
+    {
+        "classId": 871,
+        "label": "扫荡卷轴",
+        "icon": "item-sdjz.png",
+        "category": 4,
+        "stack": 99,
+        "sellprice": 100,
+        "description": "可以用于扫荡用的卷轴，只要符合关卡战斗力要求即可进行扫荡。"
     }
 ]
