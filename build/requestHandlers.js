@@ -853,7 +853,7 @@
         var ret;
         switch (arg.typ) {
           case 0:
-            if (!(player.counters.currentPKCount != null) || player.getTotalPkTimes() > player.counters.currentPKCount || player.flags.rcvAward) {
+            if (!(!(player.counters.currentPKCount != null) || player.getTotalPkTimes() > player.counters.currentPKCount || player.flags.rcvAward)) {
               return handler([
                 {
                   REQ: rpcID,
@@ -866,7 +866,7 @@
                 {
                   NTF: Event_InventoryUpdateItem,
                   arg: {
-                    dim: player.addMoney(80)
+                    god: player.addGold(80)
                   }
                 }
               ];
