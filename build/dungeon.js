@@ -2691,6 +2691,7 @@
       callback: function(env) {
         var dropID;
         dropID = env.variable('dropID');
+        console.log(env.variable);
         console.log(dropID, '-------DropPrize 1-----');
         if (dropID == null) {
           dropID = env.variable('me');
