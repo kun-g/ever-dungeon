@@ -220,12 +220,13 @@
       return 5;
     };
 
-    Player.prototype.claimPkPrice = function() {
-      var gold;
-      gold = 80;
-      return {
-        god: this.addGold(gold)
-      };
+    Player.prototype.claimPkPrice = function(callback) {
+      return helperLib.getPositionOnLeaderboard(helperLib.LeaderboardIdx.Arena, this.name, 0, 0, function(err, result) {
+        var prize, ret;
+        prize = arenaPirze(result.position + 1);
+        ret = this.claimPrize(prize);
+        return callback(ret);
+      });
     };
 
     Player.prototype.submitCampaign = function(campaign, handler) {

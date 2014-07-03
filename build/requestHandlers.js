@@ -850,7 +850,6 @@
     RPC_ReceivePrize: {
       id: 33,
       func: function(arg, player, handler, rpcID, socket) {
-        var ret;
         switch (arg.typ) {
           case 0:
             if (!(player.counters.currentPKCount != null) || player.getTotalPkTimes() > player.counters.currentPKCount || player.flags.rcvAward) {
@@ -862,17 +861,15 @@
               ]);
             } else {
               player.flags.rcvAward = true;
-              ret = {
-                NTF: Event_InventoryUpdateItem
-              };
-              ret.arg = player.claimPkPrice();
-              player.saveDB();
-              return handler([
-                {
-                  REQ: rpcID,
-                  RET: RET_OK
-                }
-              ].concat([ret]));
+              return player.claimPkPrice(function(result) {
+                player.saveDB();
+                return handler([
+                  {
+                    REQ: rpcID,
+                    RET: RET_OK
+                  }
+                ].concat(result));
+              });
             }
         }
       },
