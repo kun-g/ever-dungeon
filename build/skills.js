@@ -3559,7 +3559,8 @@ exports.data = [
                 { "type": "event", "event": "onBeKill" }
             ],
             "action": [
-                { "type": "dropPrize"} ]
+                { "type": "dropPrize"},
+                {"type": "playEffect","effect":49,"pos":"self"}]
         }
     },
     {
@@ -3568,21 +3569,25 @@ exports.data = [
         "config": {
             "triggerCondition": [
                 { "type": "event", "event": "onBeKill" },
-                { "type": "chance", "chance": 0.3 }
+                { "type": "chance", "chance": 0.25 }
             ],
             "action": [
-                { "type": "dropPrize"} ]
+                { "type": "dropPrize"},
+                {"type": "playEffect","effect":49,"pos":"self"}]
         }
     },
     {
-        "skillId": 154,
+        "skillId": 155,
         "label": "宝箱掉落",
         "config": {
             "triggerCondition": [
                 { "type": "event", "event": "onBeActivate" }
             ],
             "action": [
-                { "type": "dropPrize"} ]
+                { "type": "dropPrize"},
+                {"type":"playAction","motion":1,"pos":"self"},
+                {"type":"delay"},
+                {"type":"kill"}]
         }
     }
 ];

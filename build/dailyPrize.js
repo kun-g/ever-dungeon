@@ -335,7 +335,7 @@ exports.data = [
         "prize": [
             {
                 "type": 2,
-                "count":20
+                "count":100
             }
         ]
     },
@@ -367,7 +367,7 @@ exports.data = [
         "prize": [
             {
                 "type": 2,
-                "count":400
+                "count":250
             }
         ]
     }

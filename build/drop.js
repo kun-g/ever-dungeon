@@ -5187,52 +5187,15 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
-                    "type": 1,
-                    "count": 100
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 150
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 20
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
-                {
                     "weight": 10,
+                    "type": 1,
+                    "count": 20
+                },
+                {
+                    "weight": 5,
                     "type": 0,
                     "value": 853,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 853,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 853,
-                    "count": 5
                 }
             ]
         }
@@ -5242,52 +5205,27 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 100
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 25
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 200
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "weight": 10,
+                    "type": 0,
+                    "value": 802,
+                    "count": 1
+                },
                 {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 20
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                    "weight": 5,
+                    "type": 0,
+                    "value": 807,
+                    "count": 1
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 853,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 853,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 853,
-                    "count": 5
                 }
             ]
         }
@@ -5297,349 +5235,177 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 100
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 200
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 20
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                    "count": 25
+                },
                 {
                     "weight": 10,
                     "type": 0,
-                    "value": 853,
+                    "value": 803,
                     "count": 1
                 },
                 {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 853,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 853,
-                    "count": 5
-                }
-            ]
-        }
-    ],
-    [//94
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 1,
-                    "type": 1,
-                    "count": 100
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 250
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 20
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
-                {
-                    "weight": 10,
-                    "type": 0,
-                    "value": 853,
-                    "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 853,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 853,
-                    "count": 5
-                }
-            ]
-        }
-    ],
-    [//95
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 1,
-                    "type": 1,
-                    "count": 100
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 250
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 20
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
-                {
-                    "weight": 10,
-                    "type": 0,
-                    "value": 853,
-                    "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 853,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 853,
-                    "count": 5
-                }
-            ]
-        }
-    ],
-    [//96
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 1,
-                    "type": 1,
-                    "count": 100
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 250
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 20
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
-                {
-                    "weight": 10,
-                    "type": 0,
-                    "value": 853,
-                    "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 853,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 853,
-                    "count": 5
-                }
-            ]
-        }
-    ],
-    [ //97
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 1,
-                    "type": 1,
-                    "count": 100
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 300
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 20
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
-                {
-                    "weight": 10,
-                    "type": 0,
-                    "value": 853,
-                    "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 853,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 853,
-                    "count": 5
-                }
-            ]
-        }
-    ],
-    [//98
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 1,
-                    "type": 1,
-                    "count": 150
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 300
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 30
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 802,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
                     "value": 807,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 853,
                     "count": 1
+                }
+            ]
+        }
+    ],
+    [ //94
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 20,
+                    "type": 1,
+                    "count": 25
                 },
                 {
-                    "weight": 3,
+                    "weight": 10,
                     "type": 0,
-                    "value": 853,
-                    "count": 3
+                    "value": 804,
+                    "count": 1
                 },
                 {
-                    "weight": 1,
+                    "weight": 5,
+                    "type": 0,
+                    "value": 807,
+                    "count": 1
+                },
+                {
+                    "weight": 10,
                     "type": 0,
                     "value": 853,
-                    "count": 5
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    [ //95
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 20,
+                    "type": 1,
+                    "count": 25
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 805,
+                    "count": 1
+                },
+                {
+                    "weight": 5,
+                    "type": 0,
+                    "value": 808,
+                    "count": 1
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 853,
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    [ //96
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 20,
+                    "type": 1,
+                    "count": 25
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 806,
+                    "count": 1
+                },
+                {
+                    "weight": 5,
+                    "type": 0,
+                    "value": 808,
+                    "count": 1
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 853,
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    [//97
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 20,
+                    "type": 1,
+                    "count": 25
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 802,
+                    "count": 1
+                },
+                {
+                    "weight": 5,
+                    "type": 0,
+                    "value": 809,
+                    "count": 1
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 853,
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    [ //98
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 20,
+                    "type": 1,
+                    "count": 25
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 803,
+                    "count": 1
+                },
+                {
+                    "weight": 5,
+                    "type": 0,
+                    "value": 809,
+                    "count": 1
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 853,
+                    "count": 1
                 }
             ]
         }
@@ -5649,74 +5415,27 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 150
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 350
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 30
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 803,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 807,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                    "count": 40
+                },
                 {
                     "weight": 10,
                     "type": 0,
-                    "value": 853,
+                    "value": 804,
                     "count": 1
                 },
                 {
-                    "weight": 3,
+                    "weight": 5,
                     "type": 0,
-                    "value": 853,
-                    "count": 3
+                    "value": 810,
+                    "count": 1
                 },
                 {
-                    "weight": 1,
+                    "weight": 10,
                     "type": 0,
-                    "value": 853,
-                    "count": 5
+                    "value": 854,
+                    "count": 1
                 }
             ]
         }
@@ -5726,74 +5445,27 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 150
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 350
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 30
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 804,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 807,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                    "count": 40
+                },
                 {
                     "weight": 10,
                     "type": 0,
-                    "value": 853,
+                    "value": 805,
                     "count": 1
                 },
                 {
-                    "weight": 3,
+                    "weight": 5,
                     "type": 0,
-                    "value": 853,
-                    "count": 3
+                    "value": 810,
+                    "count": 1
                 },
                 {
-                    "weight": 1,
+                    "weight": 10,
                     "type": 0,
-                    "value": 853,
-                    "count": 5
+                    "value": 854,
+                    "count": 1
                 }
             ]
         }
@@ -5803,74 +5475,27 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 150
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 30
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 805,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 808,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                    "count": 40
+                },
                 {
                     "weight": 10,
                     "type": 0,
-                    "value": 853,
+                    "value": 806,
                     "count": 1
                 },
                 {
-                    "weight": 3,
+                    "weight": 5,
                     "type": 0,
-                    "value": 853,
-                    "count": 3
+                    "value": 810,
+                    "count": 1
                 },
                 {
-                    "weight": 1,
+                    "weight": 10,
                     "type": 0,
-                    "value": 853,
-                    "count": 5
+                    "value": 854,
+                    "count": 1
                 }
             ]
         }
@@ -5880,74 +5505,27 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 150
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 30
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 806,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 808,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                    "count": 40
+                },
                 {
                     "weight": 10,
                     "type": 0,
-                    "value": 853,
+                    "value": 802,
                     "count": 1
                 },
                 {
-                    "weight": 3,
+                    "weight": 5,
                     "type": 0,
-                    "value": 853,
-                    "count": 3
+                    "value": 811,
+                    "count": 1
                 },
                 {
-                    "weight": 1,
+                    "weight": 10,
                     "type": 0,
-                    "value": 853,
-                    "count": 5
+                    "value": 854,
+                    "count": 1
                 }
             ]
         }
@@ -5957,74 +5535,27 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 150
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 30
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 802,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 809,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                    "count": 40
+                },
                 {
                     "weight": 10,
                     "type": 0,
-                    "value": 853,
+                    "value": 803,
                     "count": 1
                 },
                 {
-                    "weight": 3,
+                    "weight": 5,
                     "type": 0,
-                    "value": 853,
-                    "count": 3
+                    "value": 811,
+                    "count": 1
                 },
                 {
-                    "weight": 1,
+                    "weight": 10,
                     "type": 0,
-                    "value": 853,
-                    "count": 5
+                    "value": 854,
+                    "count": 1
                 }
             ]
         }
@@ -6034,74 +5565,27 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 150
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 450
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 30
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 803,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 809,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                    "count": 40
+                },
                 {
                     "weight": 10,
                     "type": 0,
-                    "value": 853,
+                    "value": 804,
                     "count": 1
                 },
                 {
-                    "weight": 3,
+                    "weight": 5,
                     "type": 0,
-                    "value": 853,
-                    "count": 3
+                    "value": 812,
+                    "count": 1
                 },
                 {
-                    "weight": 1,
+                    "weight": 10,
                     "type": 0,
-                    "value": 853,
-                    "count": 5
+                    "value": 854,
+                    "count": 1
                 }
             ]
         }
@@ -6111,151 +5595,57 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 200
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 40
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 500
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 50
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
-                    "value": 804,
+                    "value": 805,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
-                    "value": 810,
+                    "value": 812,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 854,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 854,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 854,
-                    "count": 5
                 }
             ]
         }
     ],
-    [ //106
+    [//106
         {
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 200
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 70
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 500
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 50
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
-                    "value": 805,
+                    "value": 813,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
-                    "value": 810,
+                    "value": 818,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 854,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 854,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 854,
-                    "count": 5
                 }
             ]
         }
@@ -6265,74 +5655,27 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 200
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 70
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 500
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 50
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
-                    "value": 806,
+                    "value": 814,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
-                    "value": 810,
+                    "value": 818,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 854,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 854,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 854,
-                    "count": 5
                 }
             ]
         }
@@ -6342,74 +5685,27 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 200
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 70
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 500
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 50
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
-                    "value": 802,
+                    "value": 815,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
-                    "value": 811,
+                    "value": 818,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 854,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 854,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 854,
-                    "count": 5
                 }
             ]
         }
@@ -6419,74 +5715,27 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 200
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 70
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 500
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 50
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
-                    "value": 803,
+                    "value": 816,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
-                    "value": 811,
+                    "value": 819,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 854,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 854,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 854,
-                    "count": 5
                 }
             ]
         }
@@ -6496,151 +5745,57 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 200
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 70
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 500
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 50
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
-                    "value": 804,
+                    "value": 817,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
-                    "value": 812,
+                    "value": 819,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 854,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 854,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 854,
-                    "count": 5
                 }
             ]
         }
     ],
-    [ //111
+    [//111
         {
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 200
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 70
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 500
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 50
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
-                    "value": 805,
+                    "value": 813,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
-                    "value": 812,
+                    "value": 820,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 854,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 854,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 854,
-                    "count": 5
                 }
             ]
         }
@@ -6650,74 +5805,27 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 300
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 600
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
                     "count": 70
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
-                    "value": 813,
+                    "value": 814,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
-                    "value": 818,
+                    "value": 820,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 854,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 854,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 854,
-                    "count": 5
                 }
             ]
         }
@@ -6727,228 +5835,87 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 300
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 600
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 70
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 814,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 818,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                    "count": 100
+                },
                 {
                     "weight": 10,
-                    "type": 0,
-                    "value": 854,
-                    "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 854,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 854,
-                    "count": 5
-                }
-            ]
-        }
-    ],
-    [ //114
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 1,
-                    "type": 1,
-                    "count": 300
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 600
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 70
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
                     "type": 0,
                     "value": 815,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
-                    "value": 818,
+                    "value": 821,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
-                    "value": 854,
+                    "value": 855,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 854,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 854,
-                    "count": 5
                 }
             ]
         }
     ],
-    [//115
+    [//114
         {
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 300
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 600
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 70
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 816,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 819,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                    "count": 100
+                },
                 {
                     "weight": 10,
                     "type": 0,
-                    "value": 854,
+                    "value": 816,
                     "count": 1
                 },
                 {
-                    "weight": 3,
+                    "weight": 5,
                     "type": 0,
-                    "value": 854,
-                    "count": 3
+                    "value": 821,
+                    "count": 1
                 },
                 {
-                    "weight": 1,
+                    "weight": 10,
                     "type": 0,
-                    "value": 854,
-                    "count": 5
+                    "value": 855,
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    [ //115
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 20,
+                    "type": 1,
+                    "count": 100
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 817,
+                    "count": 1
+                },
+                {
+                    "weight": 5,
+                    "type": 0,
+                    "value": 821,
+                    "count": 1
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 855,
+                    "count": 1
                 }
             ]
         }
@@ -6958,228 +5925,87 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 300
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 600
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 70
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 817,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 819,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                    "count": 100
+                },
                 {
                     "weight": 10,
-                    "type": 0,
-                    "value": 854,
-                    "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 854,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 854,
-                    "count": 5
-                }
-            ]
-        }
-    ],
-    [//117
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 1,
-                    "type": 1,
-                    "count": 300
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 600
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 70
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
                     "type": 0,
                     "value": 813,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
-                    "value": 820,
+                    "value": 822,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
-                    "value": 854,
+                    "value": 855,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 854,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 854,
-                    "count": 5
                 }
             ]
         }
     ],
-    [//118
+    [ //117
         {
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 300
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 600
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 70
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 814,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 820,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                    "count": 100
+                },
                 {
                     "weight": 10,
                     "type": 0,
-                    "value": 854,
+                    "value": 814,
                     "count": 1
                 },
                 {
-                    "weight": 3,
+                    "weight": 5,
                     "type": 0,
-                    "value": 854,
-                    "count": 3
+                    "value": 822,
+                    "count": 1
                 },
                 {
-                    "weight": 1,
+                    "weight": 10,
                     "type": 0,
-                    "value": 854,
-                    "count": 5
+                    "value": 855,
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    [ //118
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 20,
+                    "type": 1,
+                    "count": 100
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 815,
+                    "count": 1
+                },
+                {
+                    "weight": 5,
+                    "type": 0,
+                    "value": 823,
+                    "count": 1
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 855,
+                    "count": 1
                 }
             ]
         }
@@ -7189,74 +6015,27 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 800
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
                     "count": 100
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
-                    "value": 815,
+                    "value": 816,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
-                    "value": 821,
+                    "value": 823,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 855,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 855,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 855,
-                    "count": 5
                 }
             ]
         }
@@ -7266,228 +6045,87 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 150
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 800
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 100
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
-                    "value": 816,
+                    "value": 824,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
-                    "value": 821,
+                    "value": 830,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 855,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 855,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 855,
-                    "count": 5
                 }
             ]
         }
     ],
-    [ //121
+    [//121
         {
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 150
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 800
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 100
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
-                    "value": 817,
+                    "value": 825,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
-                    "value": 821,
+                    "value": 830,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 855,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 855,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 855,
-                    "count": 5
                 }
             ]
         }
     ],
-    [ //122
+    [//122
         {
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 150
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 800
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 100
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
-                    "value": 813,
+                    "value": 826,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
-                    "value": 822,
+                    "value": 831,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 855,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 855,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 855,
-                    "count": 5
                 }
             ]
         }
@@ -7497,74 +6135,27 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 150
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 800
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 100
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
-                    "value": 814,
+                    "value": 827,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
-                    "value": 822,
+                    "value": 831,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 855,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 855,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 855,
-                    "count": 5
                 }
             ]
         }
@@ -7574,74 +6165,27 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 150
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 800
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 100
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
-                    "value": 815,
+                    "value": 828,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
-                    "value": 823,
+                    "value": 832,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 855,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 855,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 855,
-                    "count": 5
                 }
             ]
         }
@@ -7651,305 +6195,117 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 150
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 800
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 100
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
-                    "value": 816,
+                    "value": 829,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
-                    "value": 823,
+                    "value": 832,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 855,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 855,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 855,
-                    "count": 5
                 }
             ]
         }
     ],
-    [//126
+    [ //126
         {
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 600
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 150
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1000
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 130
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
                     "value": 824,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
-                    "value": 830,
+                    "value": 833,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 855,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 855,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 855,
-                    "count": 5
                 }
             ]
         }
     ],
-    [//127
+    [ //127
         {
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 600
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 200
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1000
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 130
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
                     "value": 825,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
-                    "value": 830,
+                    "value": 834,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
-                    "value": 855,
+                    "value": 856,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 855,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 855,
-                    "count": 5
                 }
             ]
         }
     ],
-    [//128
+    [ //128
         {
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 600
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1000
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 130
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 826,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 831,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                    "count": 200
+                },
                 {
                     "weight": 10,
                     "type": 0,
-                    "value": 855,
+                    "value": 826,
                     "count": 1
                 },
                 {
-                    "weight": 3,
+                    "weight": 5,
                     "type": 0,
-                    "value": 855,
-                    "count": 3
+                    "value": 834,
+                    "count": 1
                 },
                 {
-                    "weight": 1,
+                    "weight": 10,
                     "type": 0,
-                    "value": 855,
-                    "count": 5
+                    "value": 856,
+                    "count": 1
                 }
             ]
         }
@@ -7959,74 +6315,27 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 600
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1000
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 130
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 827,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 831,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                    "count": 200
+                },
                 {
                     "weight": 10,
                     "type": 0,
-                    "value": 855,
+                    "value": 827,
                     "count": 1
                 },
                 {
-                    "weight": 3,
+                    "weight": 5,
                     "type": 0,
-                    "value": 855,
-                    "count": 3
+                    "value": 835,
+                    "count": 1
                 },
                 {
-                    "weight": 1,
+                    "weight": 10,
                     "type": 0,
-                    "value": 855,
-                    "count": 5
+                    "value": 856,
+                    "count": 1
                 }
             ]
         }
@@ -8036,228 +6345,87 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 600
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 200
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1000
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 130
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
                     "value": 828,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
-                    "value": 832,
+                    "value": 835,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
-                    "value": 855,
+                    "value": 856,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 855,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 855,
-                    "count": 5
                 }
             ]
         }
     ],
-    [ //131
+    [  //131
         {
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 600
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 200
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1000
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 130
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
                     "value": 829,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
-                    "value": 832,
+                    "value": 836,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
-                    "value": 855,
+                    "value": 856,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 855,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 855,
-                    "count": 5
                 }
             ]
         }
     ],
-    [ //132
+    [  //132
         {
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 600
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1000
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 130
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 824,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 833,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                    "count": 200
+                },
                 {
                     "weight": 10,
                     "type": 0,
-                    "value": 855,
+                    "value": 824,
                     "count": 1
                 },
                 {
-                    "weight": 3,
+                    "weight": 5,
                     "type": 0,
-                    "value": 855,
-                    "count": 3
+                    "value": 836,
+                    "count": 1
                 },
                 {
-                    "weight": 1,
+                    "weight": 10,
                     "type": 0,
-                    "value": 855,
-                    "count": 5
+                    "value": 856,
+                    "count": 1
                 }
             ]
         }
@@ -8267,151 +6435,57 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 800
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 200
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1200
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 160
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
                     "value": 825,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
-                    "value": 834,
+                    "value": 833,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 856,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 856,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 856,
-                    "count": 5
                 }
             ]
         }
     ],
-    [ //134
+    [//134
         {
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 800
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 260
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1200
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 160
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
-                    "value": 826,
+                    "value": 837,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
-                    "value": 834,
+                    "value": 844,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 856,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 856,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 856,
-                    "count": 5
                 }
             ]
         }
@@ -8421,459 +6495,177 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 800
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1200
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 160
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 827,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 835,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                    "count": 260
+                },
                 {
                     "weight": 10,
                     "type": 0,
-                    "value": 856,
+                    "value": 838,
                     "count": 1
                 },
                 {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 856,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 856,
-                    "count": 5
-                }
-            ]
-        }
-    ],
-    [ //136
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 1,
-                    "type": 1,
-                    "count": 800
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1200
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 160
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 828,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 835,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
-                {
-                    "weight": 10,
-                    "type": 0,
-                    "value": 856,
-                    "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 856,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 856,
-                    "count": 5
-                }
-            ]
-        }
-    ],
-    [  //137
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 1,
-                    "type": 1,
-                    "count": 800
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1200
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 160
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 829,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 836,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
-                {
-                    "weight": 10,
-                    "type": 0,
-                    "value": 856,
-                    "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 856,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 856,
-                    "count": 5
-                }
-            ]
-        }
-    ],
-    [  //138
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 1,
-                    "type": 1,
-                    "count": 800
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1200
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 160
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 824,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 836,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
-                {
-                    "weight": 10,
-                    "type": 0,
-                    "value": 856,
-                    "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 856,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 856,
-                    "count": 5
-                }
-            ]
-        }
-    ],
-    [ //139
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 1,
-                    "type": 1,
-                    "count": 800
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1200
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 160
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 825,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 833,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
-                {
-                    "weight": 10,
-                    "type": 0,
-                    "value": 856,
-                    "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 856,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 856,
-                    "count": 5
-                }
-            ]
-        }
-    ],
-    [//140
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 1,
-                    "type": 1,
-                    "count": 1050
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 200
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 837,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
                     "value": 844,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 856,
                     "count": 1
+                }
+            ]
+        }
+    ],
+    [//136
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 20,
+                    "type": 1,
+                    "count": 260
                 },
                 {
-                    "weight": 3,
+                    "weight": 10,
                     "type": 0,
-                    "value": 856,
-                    "count": 3
+                    "value": 839,
+                    "count": 1
                 },
                 {
-                    "weight": 1,
+                    "weight": 5,
+                    "type": 0,
+                    "value": 845,
+                    "count": 1
+                },
+                {
+                    "weight": 10,
                     "type": 0,
                     "value": 856,
-                    "count": 5
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    [//137
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 20,
+                    "type": 1,
+                    "count": 260
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 840,
+                    "count": 1
+                },
+                {
+                    "weight": 5,
+                    "type": 0,
+                    "value": 845,
+                    "count": 1
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 856,
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    [ //138
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 20,
+                    "type": 1,
+                    "count": 260
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 841,
+                    "count": 1
+                },
+                {
+                    "weight": 5,
+                    "type": 0,
+                    "value": 846,
+                    "count": 1
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 856,
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    [//139
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 20,
+                    "type": 1,
+                    "count": 260
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 842,
+                    "count": 1
+                },
+                {
+                    "weight": 5,
+                    "type": 0,
+                    "value": 847,
+                    "count": 1
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 856,
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    [  //140
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 20,
+                    "type": 1,
+                    "count": 260
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 843,
+                    "count": 1
+                },
+                {
+                    "weight": 5,
+                    "type": 0,
+                    "value": 848,
+                    "count": 1
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 856,
+                    "count": 1
                 }
             ]
         }
@@ -8883,998 +6675,207 @@ exports.data = [
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 1050
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 200
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 838,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 844,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                    "count": 350
+                },
                 {
                     "weight": 10,
-                    "type": 0,
-                    "value": 856,
-                    "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 856,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 856,
-                    "count": 5
-                }
-            ]
-        }
-    ],
-    [//142
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 1,
-                    "type": 1,
-                    "count": 1050
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 200
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 839,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 845,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
-                {
-                    "weight": 10,
-                    "type": 0,
-                    "value": 856,
-                    "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 856,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 856,
-                    "count": 5
-                }
-            ]
-        }
-    ],
-    [//143
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 1,
-                    "type": 1,
-                    "count": 1050
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 200
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 840,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 845,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
-                {
-                    "weight": 10,
-                    "type": 0,
-                    "value": 856,
-                    "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 856,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 856,
-                    "count": 5
-                }
-            ]
-        }
-    ],
-    [ //61
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 1,
-                    "type": 1,
-                    "count": 1050
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 200
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 841,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 846,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
-                {
-                    "weight": 10,
-                    "type": 0,
-                    "value": 856,
-                    "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 856,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 856,
-                    "count": 5
-                }
-            ]
-        }
-    ],
-    [//62
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 1,
-                    "type": 1,
-                    "count": 1050
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 200
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 842,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 847,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
-                {
-                    "weight": 10,
-                    "type": 0,
-                    "value": 856,
-                    "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 856,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 856,
-                    "count": 5
-                }
-            ]
-        }
-    ],
-    [  //63
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 1,
-                    "type": 1,
-                    "count": 1050
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 200
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 843,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 0,
-                    "value": 848,
-                    "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
-                {
-                    "weight": 10,
-                    "type": 0,
-                    "value": 856,
-                    "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 856,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 856,
-                    "count": 5
-                }
-            ]
-        }
-    ],
-    [ //64
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 1,
-                    "type": 1,
-                    "count": 1400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 250
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
                     "type": 0,
                     "value": 837,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
                     "value": 849,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 857,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 857,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 857,
-                    "count": 5
                 }
             ]
         }
     ],
-    [ //65
+    [ //142
         {
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 1400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 350
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 250
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
                     "value": 838,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
                     "value": 849,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 857,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 857,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 857,
-                    "count": 5
                 }
             ]
         }
     ],
-    [ //66
+    [ //143
         {
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 1400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 350
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 250
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
                     "value": 839,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
                     "value": 850,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 857,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 857,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 857,
-                    "count": 5
                 }
             ]
         }
     ],
-    [ //67
+    [ //144
         {
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 1400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 350
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 250
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
                     "value": 840,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
                     "value": 850,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 857,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 857,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 857,
-                    "count": 5
                 }
             ]
         }
     ],
-    [//68
+    [//145
         {
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 1400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 350
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 250
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
                     "value": 841,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
                     "value": 851,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 857,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 857,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 857,
-                    "count": 5
                 }
             ]
         }
     ],
-    [ //69
+    [ //146
         {
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 1400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 350
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 250
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
                     "value": 842,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
                     "value": 851,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 857,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 857,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 857,
-                    "count": 5
                 }
             ]
         }
     ],
-    [ //70
+    [ //147
         {
             "rate": 1,
             "prize": [
                 {
-                    "weight": 1,
+                    "weight": 20,
                     "type": 1,
-                    "count": 1400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
+                    "count": 350
+                },
                 {
-                    "weight": 2,
-                    "type": 3,
-                    "count": 1400
-                }
-            ]
-        },
-        {
-            "rate": 1,
-            "prize": [
-                {
-                    "weight": 2,
-                    "type": 4,
-                    "count": 250
-                }
-            ]
-        },
-        {
-            "rate": 0.8,
-            "prize": [
-                {
-                    "weight": 2,
+                    "weight": 10,
                     "type": 0,
                     "value": 843,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.2,
-            "prize": [
+                },
                 {
-                    "weight": 2,
+                    "weight": 5,
                     "type": 0,
                     "value": 852,
                     "count": 1
-                }
-            ]
-        },
-        {
-            "rate": 0.4,
-            "prize": [
+                },
                 {
                     "weight": 10,
                     "type": 0,
                     "value": 857,
                     "count": 1
-                },
-                {
-                    "weight": 3,
-                    "type": 0,
-                    "value": 857,
-                    "count": 3
-                },
-                {
-                    "weight": 1,
-                    "type": 0,
-                    "value": 857,
-                    "count": 5
                 }
             ]
         }

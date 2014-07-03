@@ -10,6 +10,8 @@ exports.data = [
     {"id":854, "price": {"type": "diamond", "amount": 15},"category":[{"id": 0, "index": 8}]},
     {"id":855, "price": {"type": "diamond", "amount": 30},"category":[{"id": 0, "index": 9}]},
     {"id":856, "price": {"type": "diamond", "amount": 60},"category":[{"id": 0, "index": 10}]},
+    {"id":871, "price": {"type": "diamond", "amount": 30},"category":[{"id": 0, "index": 11}],"count": 5},
+    {"id":871, "price": {"type": "diamond", "amount": 80},"category":[{"id": 0, "index": 12}],"count": 20},
     {"id":857, "price": {"type": "diamond", "amount": 100},"category":[{"id": 0, "index": 58}]},
     {"id":615, "price": {"type": "diamond", "amount": 280},"category":[{"id": 1, "index": 0}]},
     {"id":614, "price": {"type": "diamond", "amount": 880},"category":[{"id": 1, "index": 1}]},

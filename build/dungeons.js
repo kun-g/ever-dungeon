@@ -1619,7 +1619,8 @@ exports.data = [
                     "weight":5
                 }
             ]},
-            "PoolS2":{"objects":[
+            "PoolS2":{
+                "objects":[
                 {"id":14,"weight":2},
                 {"id":15,"weight":2},
                 {"id":6,"weight":2},
@@ -1633,14 +1634,14 @@ exports.data = [
 
         "collectId":17001,
         "global": [
-            {id: 211,from: 1, to: 4,dropPrize:}
+            {id: 211,from: 1, to: 4,dropPrize:92}
         ],
         "levels" :[
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS2","from":10,to:12},
-                     {"pool":"PoolS2R","from":0,to:2},
+                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:92},
+                     {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:92},
                     {
                         "id": 23 ,
                         "count":2,
@@ -1649,8 +1650,10 @@ exports.data = [
                      {
                          "id": 153,
                          "count":1,
-                         "collectId":18001,
-                         "questOnly":true
+                         property:[
+                             {"collectId":18001},
+                             {"questOnly":true}
+                         ]
                      },
                     {
                         "id": 149,
@@ -1661,12 +1664,15 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS2","from":10,to:12},
-                     {"pool":"PoolS2R","from":0,to:2},
+                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:92},
+                     {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:92},
                     {
                         "id": 34,
                         "count":1,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:92}]
                     },
                     {
                         "id": 149,
@@ -1734,14 +1740,15 @@ exports.data = [
             "PoolS2R":{"objects":[
                 {"id":8,"weight":2},
                 {"id":16,"weight":2}]}
-        },
+        }, "global": [
+        {id: 211,from: 1, to: 4,dropPrize:93}],
          
         "levels" :[
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS2","from":10,to:14},
-                     {"pool":"PoolS2R","from":0,to:2},
+                     {"pool":"PoolS2","from":10,to:14,skill:[{id:154}],dropPrize:93},
+                     {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:93},
 
                     {
                         "id": 33 ,
@@ -1757,13 +1764,16 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS2","from":10,to:12},
-                     {"pool":"PoolS2R","from":0,to:2},
+                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:93},
+                     {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:93},
                     {
                         "id": 32,
                         "count":2,
                         "collectId":19001,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:93}]
                     },
                     {
                         "id": 149,
@@ -1831,14 +1841,14 @@ exports.data = [
             "PoolS2R":{"objects":[
                 {"id":8,"weight":2},
                 {"id":16,"weight":2}]}
-        },
-         
+        },"global": [
+        {id: 211,from: 1, to: 4,dropPrize:94}],
         "levels" :[
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS2","from":10,to:12},
-                     {"pool":"PoolS2R","from":0,to:2},
+                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:94},
+                     {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:94},
                     {
                         "id": 54 ,
                         "count":1,
@@ -1859,13 +1869,16 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS2","from":10,to:12},
-                     {"pool":"PoolS2R","from":0,to:2},
+                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:94},
+                     {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:94},
                     {
                         "id": 33,
                         "count":2,
                         "collectId":21001,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:94}]
                     },
                     {
                         "id": 149,
@@ -1939,13 +1952,14 @@ exports.data = [
                 {"id":8,"weight":2},
                 {"id":16,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:95}],
         "levels" :[
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS2","from":10,to:12},
-                     {"pool":"PoolS2R","from":0,to:2},
+                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:95},
+                     {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:95},
                     {
                         "id": 54 ,
                         "count":2,
@@ -1966,12 +1980,15 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS2","from":10,to:12},
-                     {"pool":"PoolS2R","from":0,to:2},
+                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:95},
+                     {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:95},
                     {
                         "id": 55,
                         "count":1,
-                        "keyed":true,
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:95}],
                         "collectId":23001
                     },
                     {
@@ -2054,13 +2071,14 @@ exports.data = [
                 {"id":8,"weight":2},
                 {"id":16,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:96}],
         "levels" :[
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS2","from":10,to:12},
-                     {"pool":"PoolS2R","from":0,to:2},
+                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:96},
+                     {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:96},
                     {
                         "id": 52 ,
                         "count":1,
@@ -2075,13 +2093,15 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS2","from":10,to:12},
-                     {"pool":"PoolS2R","from":0,to:2},
+                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:96},
+                     {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:96},
                     {
                         "id": 55,
                         "count":1,
-                        "keyed":true,
-                        "collectId":26001
+                        "collectId":26001,property:[
+                        {"keyed":true},
+                        {skill:[{id:153}]},
+                        {dropPrize:96}]
                     },
                     {
                         "id": 149,
@@ -2156,17 +2176,21 @@ exports.data = [
                 {"id":8,"weight":2},
                 {"id":16,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:97}],
         "levels" :[
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS2","from":10,to:12},
-                     {"pool":"PoolS2R","from":0,to:2},
+                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:97},
+                     {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:97},
                     {
                         "id": 53 ,
                         "count":1,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:97}]
                     },
                     {
                         "id": 156,
@@ -2183,8 +2207,8 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS2","from":10,to:12},
-                     {"pool":"PoolS2R","from":0,to:2},
+                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:97},
+                     {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:97},
                     {
                         "id": 53,
                         "count":1,
@@ -2269,13 +2293,14 @@ exports.data = [
                 {"id":8,"weight":2},
                 {"id":16,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:98}],
         "levels" :[
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS2","from":10,to:12},
-                     {"pool":"PoolS2R","from":0,to:2},
+                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:98},
+                     {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:98},
                     {
                         "id": 149,
                         "count":2
@@ -2290,8 +2315,8 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":1,to:3},
-                     {"pool":"PoolS2","from":10,to:12},
-                     {"pool":"PoolS2R","from":0,to:2},
+                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:98},
+                     {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:98},
                     {
                         "id": 149,
                         "count":3
@@ -2301,7 +2326,10 @@ exports.data = [
                         "count":1,
                         "pos":12,
                         "collectId":30001,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:98}]
                     },
                     {
                         "id": 34,
@@ -2372,13 +2400,14 @@ exports.data = [
             "PoolS3R":{"objects":[
                 {"id":13,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:99}],
         "levels" :[
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS3","from":10,to:12},
-                     {"pool":"PoolS3R","from":0,to:2},
+                     {"pool":"PoolS3","from":10,to:12,skill:[{id:154}],dropPrize:99},
+                     {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:99},
                     {
                         "id": 149,
                         "count":2
@@ -2393,8 +2422,8 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS3","from":10,to:12},
-                     {"pool":"PoolS3R","from":0,to:2},
+                     {"pool":"PoolS3","from":10,to:12,skill:[{id:154}],dropPrize:99},
+                     {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:99},
                     {
                         "id": 149,
                         "count":2
@@ -2402,8 +2431,11 @@ exports.data = [
                     {
                         "id": 26,
                         "count":1,
-                        "keyed":true,
-                        "collectId":32001
+                        "collectId":32001,
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:99}]
                     }
                 ]
             }
@@ -2465,14 +2497,15 @@ exports.data = [
             "PoolS3R":{"objects":[
                 {"id":13,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:100}],
         "collectId":34001,
         "levels" :[
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS3","from":10,to:12},
-                     {"pool":"PoolS3R","from":0,to:2},
+                     {"pool":"PoolS3","from":10,to:12,skill:[{id:154}],dropPrize:100},
+                     {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:100},
                     {
                         "id": 149,
                         "count":2
@@ -2493,8 +2526,8 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS3","from":10,to:13},
-                     {"pool":"PoolS3R","from":0,to:2},
+                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:100},
+                     {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:100},
                     {
                         "id": 149,
                         "count":2
@@ -2508,7 +2541,10 @@ exports.data = [
                     {
                         "id": 30,
                         "count":2,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:100}]
                     }
                 ]
             }
@@ -2570,14 +2606,15 @@ exports.data = [
             "PoolS3R":{"objects":[
                 {"id":13,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:101}],
         "collectId":37001,
         "levels" :[
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS3","from":10,to:13},
-                     {"pool":"PoolS3R","from":0,to:2},
+                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:101},
+                     {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:101},
                     {
                         "id": 149,
                         "count":2
@@ -2603,8 +2640,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS3","from":10,to:13},
-                     {"pool":"PoolS3R","from":0,to:2},
+                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:101},
+                     {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:101},
                     {
                         "id": 149,
                         "count":2
@@ -2628,7 +2665,10 @@ exports.data = [
                     {
                         "id": 30,
                         "count":1,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:101}]
                     }
                 ]
             }
@@ -2698,12 +2738,13 @@ exports.data = [
             "PoolS3R":{"objects":[
                 {"id":13,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:102}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS3","from":10,to:13},
-                     {"pool":"PoolS3R","from":0,to:2},
+                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:102},
+                     {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:102},
                     {
                         "id": 151,
                         "count":1,
@@ -2734,8 +2775,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS3","from":10,to:13},
-                     {"pool":"PoolS3R","from":0,to:2},
+                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:102},
+                     {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:102},
                     {
                         "id": 149,
                         "count":2
@@ -2767,7 +2808,10 @@ exports.data = [
                     {
                         "id": 30,
                         "count":1,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:102}]
                     }
                 ]
             }
@@ -2838,12 +2882,13 @@ exports.data = [
             "PoolS3R":{"objects":[
                 {"id":13,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:103}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS3","from":10,to:13},
-                     {"pool":"PoolS3R","from":0,to:2},
+                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:103},
+                     {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:103},
                     {
                         "id": 149,
                         "count":2
@@ -2857,13 +2902,16 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS3","from":10,to:13},
-                     {"pool":"PoolS3R","from":0,to:2},
+                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:103},
+                     {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:103},
                     {
                         "id": 28,
                         "count":1,
-                        "keyed":true,
-                        "collectId":44001
+                        "collectId":44001,
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:103}]
                     },
                     {
                         "id": 149,
@@ -2937,12 +2985,13 @@ exports.data = [
             "PoolS3R":{"objects":[
                 {"id":13,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:104}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS3","from":10,to:13},
-                     {"pool":"PoolS3R","from":0,to:2},
+                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:104},
+                     {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:104},
                     {
                         "id": 149,
                         "count":2
@@ -2962,8 +3011,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS3","from":10,to:13},
-                     {"pool":"PoolS3R","from":0,to:2},
+                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:104},
+                     {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:104},
                     {
                         "id": 149,
                         "count":2
@@ -2971,8 +3020,11 @@ exports.data = [
                     {
                         "id": 28,
                         "count":1,
-                        "keyed":true,
-                        "collectId":46001
+                        "collectId":46001,
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:104}]
                     }
                 ]
             }
@@ -3042,12 +3094,13 @@ exports.data = [
             "PoolS3R":{"objects":[
                 {"id":13,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:105}],
         "levels" :[
             {
                 "objects" :[{"pool":"normalPool","from":0,to:2},
-                    {"pool":"PoolS3","from":10,to:13},
-                    {"pool":"PoolS3R","from":0,to:2},
+                    {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:105},
+                    {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:105},
                     {
                         "id": 149,
                         "count":2
@@ -3062,8 +3115,8 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS3","from":10,to:13},
-                     {"pool":"PoolS3R","from":0,to:2},
+                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:105},
+                     {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:105},
                     {
                         "id": 149,
                         "count":2
@@ -3079,8 +3132,11 @@ exports.data = [
                         "id": 137,
                         "count":1,
                         "pos":12,
-                        "keyed":true,
-                        "collectId":47001
+                        "collectId":47001,
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:105}]
                     }
                 ],
                 "exit": 29,
@@ -3145,12 +3201,13 @@ exports.data = [
             "PoolS4R":{"objects":[
                 {"id":40,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:106}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS4","from":10,to:13},
-                     {"pool":"PoolS4R","from":0,to:2},
+                     {"pool":"PoolS4","from":10,to:13,skill:[{id:154}],dropPrize:106},
+                     {"pool":"PoolS4R","from":0,to:2,skill:[{id:154}],dropPrize:106},
                     {
                         "id": 149,
                         "count":2
@@ -3164,8 +3221,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS4","from":10,to:13},
-                     {"pool":"PoolS4R","from":0,to:2},
+                     {"pool":"PoolS4","from":10,to:13,skill:[{id:154}],dropPrize:106},
+                     {"pool":"PoolS4R","from":0,to:2,skill:[{id:154}],dropPrize:106},
                     {
                         "id": 149,
                         "count":2
@@ -3173,8 +3230,11 @@ exports.data = [
                     {
                         "id": 57,
                         "count":1,
-                        "keyed":true,
-                        "collectId": 49001
+                        "collectId": 49001,
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:106}]
                     }
                 ]
             }
@@ -3237,12 +3297,13 @@ exports.data = [
             "PoolS4R":{"objects":[
                 {"id":40,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:107}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS4","from":10,to:13},
-                     {"pool":"PoolS4R","from":0,to:2},
+                     {"pool":"PoolS4","from":10,to:13,skill:[{id:154}],dropPrize:107},
+                     {"pool":"PoolS4R","from":0,to:2,skill:[{id:154}],dropPrize:107},
                     {
                         "id": 149,
                         "count":2
@@ -3261,8 +3322,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS4","from":10,to:13},
-                     {"pool":"PoolS4R","from":0,to:2},
+                     {"pool":"PoolS4","from":10,to:13,skill:[{id:154}],dropPrize:107},
+                     {"pool":"PoolS4R","from":0,to:2,skill:[{id:154}],dropPrize:107},
                     {
                         "id": 149,
                         "count":2
@@ -3270,8 +3331,11 @@ exports.data = [
                     {
                         "id": 66,
                         "count":1,
-                        "keyed":true,
-                        "collectId": 52001
+                        "collectId": 52001,
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:107}]
                     }
                 ]
             }
@@ -3342,12 +3406,13 @@ exports.data = [
             "PoolS4R":{"objects":[
                 {"id":40,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:108}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS4","from":10,to:14},
-                     {"pool":"PoolS4R","from":0,to:2},
+                     {"pool":"PoolS4","from":10,to:14,skill:[{id:154}],dropPrize:108},
+                     {"pool":"PoolS4R","from":0,to:2,skill:[{id:154}],dropPrize:108},
                     {
                         "id": 149,
                         "count":2
@@ -3367,8 +3432,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS4","from":10,to:14},
-                     {"pool":"PoolS4R","from":0,to:2},
+                     {"pool":"PoolS4","from":10,to:14,skill:[{id:154}],dropPrize:108},
+                     {"pool":"PoolS4R","from":0,to:2,skill:[{id:154}],dropPrize:108},
                      {
                          "id": 150,
                          "count":1,
@@ -3394,8 +3459,11 @@ exports.data = [
                     {
                         "id": 66,
                         "count":1,
-                        "keyed":true,
-                        "collectId":53001
+                        "collectId":53001,
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:108}]
                     }
                 ]
             }
@@ -3466,13 +3534,14 @@ exports.data = [
             "PoolS4R":{"objects":[
                 {"id":40,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:109}],
         "collectId":57001,
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS4","from":10,to:14},
-                     {"pool":"PoolS4R","from":0,to:2},
+                     {"pool":"PoolS4","from":10,to:14,skill:[{id:154}],dropPrize:109},
+                     {"pool":"PoolS4R","from":0,to:2,skill:[{id:154}],dropPrize:109},
                     {
                         "id": 145,
                         "count":2,
@@ -3492,8 +3561,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS4","from":10,to:14},
-                     {"pool":"PoolS4R","from":0,to:2},
+                     {"pool":"PoolS4","from":10,to:14,skill:[{id:154}],dropPrize:109},
+                     {"pool":"PoolS4R","from":0,to:2,skill:[{id:154}],dropPrize:109},
                     {
                         "id": 145,
                         "count":3,
@@ -3503,7 +3572,10 @@ exports.data = [
                     {
                         "id": 64,
                         "count":1,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:109}]
                     },
                     {
                         "id": 146,
@@ -3580,12 +3652,13 @@ exports.data = [
             "PoolS4R":{"objects":[
                 {"id":40,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:110}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS4","from":10,to:14},
-                     {"pool":"PoolS4R","from":0,to:2},
+                     {"pool":"PoolS4","from":10,to:14,skill:[{id:154}],dropPrize:110},
+                     {"pool":"PoolS4R","from":0,to:2,skill:[{id:154}],dropPrize:110},
                     {
                         "id": 149,
                         "count":2
@@ -3605,8 +3678,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS4","from":10,to:14},
-                     {"pool":"PoolS4R","from":0,to:2},
+                     {"pool":"PoolS4","from":10,to:14,skill:[{id:154}],dropPrize:110},
+                     {"pool":"PoolS4R","from":0,to:2,skill:[{id:154}],dropPrize:110},
 
                     {
                         "id": 149,
@@ -3615,8 +3688,11 @@ exports.data = [
                     {
                         "id": 64,
                         "count":1,
-                        "keyed":true,
-                        "collectId":60001
+                        "collectId":60001,
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:110}]
                     }
                 ]
             }
@@ -3688,12 +3764,13 @@ exports.data = [
             "PoolS4R":{"objects":[
                 {"id":40,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:111}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS4","from":10,to:14},
-                     {"pool":"PoolS4R","from":0,to:2},
+                     {"pool":"PoolS4","from":10,to:14,skill:[{id:154}],dropPrize:111},
+                     {"pool":"PoolS4R","from":0,to:2,skill:[{id:154}],dropPrize:111},
                     {
                         "id": 149,
                         "count":3
@@ -3708,8 +3785,8 @@ exports.data = [
 
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS4","from":10,to:14},
-                     {"pool":"PoolS4R","from":0,to:2},
+                     {"pool":"PoolS4","from":10,to:14,skill:[{id:154}],dropPrize:111},
+                     {"pool":"PoolS4R","from":0,to:2,skill:[{id:154}],dropPrize:111},
                     {
                         "id": 149,
                         "count":3
@@ -3722,7 +3799,10 @@ exports.data = [
                     {
                         "id": 66,
                         "count":1,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:111}]
                     }
                 ]
             }
@@ -3793,12 +3873,13 @@ exports.data = [
             "PoolS4R":{"objects":[
                 {"id":40,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:112}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS4","from":10,to:14},
-                     {"pool":"PoolS4R","from":0,to:2},
+                     {"pool":"PoolS4","from":10,to:14,skill:[{id:154}],dropPrize:112},
+                     {"pool":"PoolS4R","from":0,to:2,skill:[{id:154}],dropPrize:112},
                     {
                         "id": 149,
                         "count":3
@@ -3817,8 +3898,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS4","from":10,to:14},
-                     {"pool":"PoolS4R","from":0,to:2},
+                     {"pool":"PoolS4","from":10,to:14,skill:[{id:154}],dropPrize:112},
+                     {"pool":"PoolS4R","from":0,to:2,skill:[{id:154}],dropPrize:112},
                      {
                          "id": 149,
                          "count":3
@@ -3834,8 +3915,11 @@ exports.data = [
                         "id": 138,
                         "count":1,
                         "pos":12,
-                        "keyed":true,
-                        "collectId":63001
+                        "collectId":63001,
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:112}]
                     },
                     {
                         "id": 57,
@@ -3917,12 +4001,13 @@ exports.data = [
             "PoolS5R":{"objects":[
                 {"id":45,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:113}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS5","from":10,to:14},
-                     {"pool":"PoolS5R","from":0,to:2},
+                     {"pool":"PoolS5","from":10,to:14,skill:[{id:154}],dropPrize:113},
+                     {"pool":"PoolS5R","from":0,to:2,skill:[{id:154}],dropPrize:113},
                     {
                         "id": 149,
                         "count":3
@@ -3936,8 +4021,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS5","from":10,to:14},
-                     {"pool":"PoolS5R","from":0,to:2},
+                     {"pool":"PoolS5","from":10,to:14,skill:[{id:154}],dropPrize:113},
+                     {"pool":"PoolS5R","from":0,to:2,skill:[{id:154}],dropPrize:113},
                      {
                          "id": 149,
                          "count":2
@@ -3945,7 +4030,10 @@ exports.data = [
                     {
                         "id": 62,
                         "count":2,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:113}]
                     }
                 ]
             }
@@ -4017,12 +4105,13 @@ exports.data = [
             "PoolS5R":{"objects":[
                 {"id":45,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:114}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS5","from":10,to:14},
-                     {"pool":"PoolS5R","from":0,to:2},
+                     {"pool":"PoolS5","from":10,to:14,skill:[{id:154}],dropPrize:114},
+                     {"pool":"PoolS5R","from":0,to:2,skill:[{id:154}],dropPrize:114},
                      {
                          "id": 149,
                          "count":2
@@ -4041,8 +4130,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS5","from":10,to:14},
-                     {"pool":"PoolS5R","from":0,to:2},
+                     {"pool":"PoolS5","from":10,to:14,skill:[{id:154}],dropPrize:114},
+                     {"pool":"PoolS5R","from":0,to:2,skill:[{id:154}],dropPrize:114},
                      {
                          "id": 149,
                          "count":2
@@ -4050,8 +4139,11 @@ exports.data = [
                     {
                         "id": 60,
                         "count":1,
-                        "keyed":true,
-                        "collectId":67001
+                        "collectId":67001,
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:114}]
                     }]
             }
         ],
@@ -4123,12 +4215,13 @@ exports.data = [
             "PoolS5R":{"objects":[
                 {"id":45,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:115}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS5","from":10,to:14},
-                     {"pool":"PoolS5R","from":0,to:2},
+                     {"pool":"PoolS5","from":10,to:14,skill:[{id:154}],dropPrize:115},
+                     {"pool":"PoolS5R","from":0,to:2,skill:[{id:154}],dropPrize:115},
                     {
                         "id":155 ,
                         "count":1,
@@ -4159,8 +4252,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS5","from":10,to:14},
-                     {"pool":"PoolS5R","from":0,to:2},
+                     {"pool":"PoolS5","from":10,to:14,skill:[{id:154}],dropPrize:115},
+                     {"pool":"PoolS5R","from":0,to:2,skill:[{id:154}],dropPrize:115},
                     {
                         "id": 149,
                         "count":3
@@ -4185,7 +4278,10 @@ exports.data = [
                     {
                         "id": 66,
                         "count":1,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:115}]
                     },
                     {
                         "id": 62,
@@ -4263,12 +4359,13 @@ exports.data = [
             "PoolS5R":{"objects":[
                 {"id":45,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:116}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS5","from":10,to:14},
-                     {"pool":"PoolS5R","from":0,to:2},
+                     {"pool":"PoolS5","from":10,to:14,skill:[{id:154}],dropPrize:116},
+                     {"pool":"PoolS5R","from":0,to:2,skill:[{id:154}],dropPrize:116},
                     {
                         "id": 149 ,
                         "count":2
@@ -4282,8 +4379,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS5","from":10,to:14},
-                     {"pool":"PoolS5R","from":0,to:2},
+                     {"pool":"PoolS5","from":10,to:14,skill:[{id:154}],dropPrize:116},
+                     {"pool":"PoolS5R","from":0,to:2,skill:[{id:154}],dropPrize:116},
                     {
                         "id": 149,
                         "count":2
@@ -4296,7 +4393,10 @@ exports.data = [
                     {
                         "id": 62,
                         "count":2,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:116}]
                     }
                 ]
             }
@@ -4368,12 +4468,13 @@ exports.data = [
             "PoolS5R":{"objects":[
                 {"id":45,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:117}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS5","from":10,to:14},
-                     {"pool":"PoolS5R","from":0,to:2},
+                     {"pool":"PoolS5","from":10,to:14,skill:[{id:154}],dropPrize:117},
+                     {"pool":"PoolS5R","from":0,to:2,skill:[{id:154}],dropPrize:117},
                     {
                         "id": 149,
                         "count":3
@@ -4387,8 +4488,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS5","from":10,to:14},
-                     {"pool":"PoolS5R","from":0,to:2},
+                     {"pool":"PoolS5","from":10,to:14,skill:[{id:154}],dropPrize:117},
+                     {"pool":"PoolS5R","from":0,to:2,skill:[{id:154}],dropPrize:117},
                     {
                         "id": 149,
                         "count":3
@@ -4402,8 +4503,11 @@ exports.data = [
                     {
                         "id": 87,
                         "count":1,
-                        "keyed":true,
-                        "collectId":72001
+                        "collectId":72001,
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:117}]
                     }
                 ]
             }
@@ -4475,12 +4579,13 @@ exports.data = [
             "PoolS5R":{"objects":[
                 {"id":45,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:118}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS5","from":10,to:14},
-                     {"pool":"PoolS5R","from":0,to:2},
+                     {"pool":"PoolS5","from":10,to:14,skill:[{id:154}],dropPrize:118},
+                     {"pool":"PoolS5R","from":0,to:2,skill:[{id:154}],dropPrize:118},
                     {
                         "id": 149,
                         "count":3
@@ -4494,8 +4599,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS5","from":10,to:14},
-                     {"pool":"PoolS5R","from":0,to:2},
+                     {"pool":"PoolS5","from":10,to:14,skill:[{id:154}],dropPrize:118},
+                     {"pool":"PoolS5R","from":0,to:2,skill:[{id:154}],dropPrize:118},
                     {
                         "id": 149,
                         "count":3
@@ -4504,7 +4609,10 @@ exports.data = [
                         "id": 87,
                         "count":2,
                         "collectId":74001,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:118}]
                     }
                 ]
             }
@@ -4576,12 +4684,13 @@ exports.data = [
         "PoolS5R":{"objects":[
             {"id":45,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:119}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS5","from":10,to:14},
-                     {"pool":"PoolS5R","from":0,to:2},
+                     {"pool":"PoolS5","from":10,to:14,skill:[{id:154}],dropPrize:119},
+                     {"pool":"PoolS5R","from":0,to:2,skill:[{id:154}],dropPrize:119},
                     {
                         "id": 149,
                         "count":3
@@ -4595,8 +4704,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS5","from":10,to:15},
-                     {"pool":"PoolS5R","from":0,to:2},
+                     {"pool":"PoolS5","from":10,to:15,skill:[{id:154}],dropPrize:119},
+                     {"pool":"PoolS5R","from":0,to:2,skill:[{id:154}],dropPrize:119},
                     {
                         "id": 149,
                         "count":3
@@ -4612,8 +4721,11 @@ exports.data = [
                         "id": 139,
                         "count":1,
                         "pos":12,
-                        "keyed":true,
-                        "collectId":75001
+                        "collectId":75001,
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:119}]
                     }
                 ],
                 "exit": 29,
@@ -4687,12 +4799,13 @@ exports.data = [
             "PoolS6R":{"objects":[
                 {"id":48,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:120}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS6","from":10,to:14},
-                     {"pool":"PoolS6R","from":0,to:2},
+                     {"pool":"PoolS6","from":10,to:14,skill:[{id:154}],dropPrize:120},
+                     {"pool":"PoolS6R","from":0,to:2,skill:[{id:154}],dropPrize:120},
                     {
                         "id": 88 ,
                         "count":1,
@@ -4706,8 +4819,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS6","from":10,to:14},
-                     {"pool":"PoolS6R","from":0,to:2},
+                     {"pool":"PoolS6","from":10,to:14,skill:[{id:154}],dropPrize:120},
+                     {"pool":"PoolS6R","from":0,to:2,skill:[{id:154}],dropPrize:120},
                     {
                         "id": 149,
                         "count":2
@@ -4715,7 +4828,10 @@ exports.data = [
                     {
                         "id": 98 ,
                         "count":1,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:120}]
                     }
                 ]
             }
@@ -4787,12 +4903,13 @@ exports.data = [
             "PoolS6R":{"objects":[
                 {"id":48,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:121}],
         "levels" :[
              {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS6","from":10,to:14},
-                     {"pool":"PoolS6R","from":0,to:2},
+                     {"pool":"PoolS6","from":10,to:14,skill:[{id:154}],dropPrize:121},
+                     {"pool":"PoolS6R","from":0,to:2,skill:[{id:154}],dropPrize:121},
                      {
                          "id":156,
                          "count":1,
@@ -4812,8 +4929,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS6","from":10,to:14},
-                     {"pool":"PoolS6R","from":0,to:2},
+                     {"pool":"PoolS6","from":10,to:14,skill:[{id:154}],dropPrize:121},
+                     {"pool":"PoolS6R","from":0,to:2,skill:[{id:154}],dropPrize:121},
                     {
                         "id":65 ,
                         "count":2,
@@ -4826,7 +4943,10 @@ exports.data = [
                     {
                         "id": 98 ,
                         "count":1,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:121}]
                     }
                 ]
             }
@@ -4897,12 +5017,13 @@ exports.data = [
             "PoolS6R":{"objects":[
                 {"id":48,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:122}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS6","from":10,to:14},
-                     {"pool":"PoolS6R","from":0,to:2},
+                     {"pool":"PoolS6","from":10,to:14,skill:[{id:154}],dropPrize:122},
+                     {"pool":"PoolS6R","from":0,to:2,skill:[{id:154}],dropPrize:122},
                      {
                          "id": 61,
                          "count":1,
@@ -4922,8 +5043,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS6","from":10,to:14},
-                     {"pool":"PoolS6R","from":0,to:2},
+                     {"pool":"PoolS6","from":10,to:14,skill:[{id:154}],dropPrize:122},
+                     {"pool":"PoolS6R","from":0,to:2,skill:[{id:154}],dropPrize:122},
                     {
                         "id": 149,
                         "count":2
@@ -4932,7 +5053,10 @@ exports.data = [
                         "id": 96,
                         "count":1,
                         "collectId":81001,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:122}]
                     }
                 ]
             }
@@ -5004,12 +5128,13 @@ exports.data = [
             "PoolS6R":{"objects":[
                 {"id":48,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:123}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS6","from":10,to:14},
-                     {"pool":"PoolS6R","from":0,to:2},
+                     {"pool":"PoolS6","from":10,to:14,skill:[{id:154}],dropPrize:123},
+                     {"pool":"PoolS6R","from":0,to:2,skill:[{id:154}],dropPrize:123},
                     {
                         "id": 149,
                         "count":2
@@ -5023,8 +5148,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS6","from":10,to:14},
-                     {"pool":"PoolS6R","from":0,to:2},
+                     {"pool":"PoolS6","from":10,to:14,skill:[{id:154}],dropPrize:123},
+                     {"pool":"PoolS6R","from":0,to:2,skill:[{id:154}],dropPrize:123},
                     {
                         "id": 149,
                         "count":2
@@ -5032,7 +5157,10 @@ exports.data = [
                     {
                         "id": 96,
                         "count":1,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:123}]
                     },
                     {
                         "id": 65,
@@ -5108,12 +5236,13 @@ exports.data = [
             "PoolS6R":{"objects":[
                 {"id":48,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:124}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS6","from":10,to:14},
-                     {"pool":"PoolS6R","from":0,to:2},
+                     {"pool":"PoolS6","from":10,to:14,skill:[{id:154}],dropPrize:124},
+                     {"pool":"PoolS6R","from":0,to:2,skill:[{id:154}],dropPrize:124},
                     {
                         "id": 160,
                         "count":1,
@@ -5133,8 +5262,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS6","from":10,to:14},
-                     {"pool":"PoolS6R","from":0,to:2},
+                     {"pool":"PoolS6","from":10,to:14,skill:[{id:154}],dropPrize:124},
+                     {"pool":"PoolS6R","from":0,to:2,skill:[{id:154}],dropPrize:124},
                     {
                         "id": 160,
                         "count":1,
@@ -5149,7 +5278,10 @@ exports.data = [
                         "id": 89,
                         "count":1,
                         "collectId":85001,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:124}]
                     }
                 ]
             }
@@ -5220,13 +5352,14 @@ exports.data = [
             "PoolS6R":{"objects":[
                 {"id":48,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:125}],
         "collectId":87001,
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS6","from":10,to:14},
-                     {"pool":"PoolS6R","from":0,to:2},
+                     {"pool":"PoolS6","from":10,to:14,skill:[{id:154}],dropPrize:125},
+                     {"pool":"PoolS6R","from":0,to:2,skill:[{id:154}],dropPrize:125},
                     {
                         "id": 149,
                         "count":2
@@ -5252,8 +5385,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS6","from":10,to:14},
-                     {"pool":"PoolS6R","from":0,to:2},
+                     {"pool":"PoolS6","from":10,to:14,skill:[{id:154}],dropPrize:125},
+                     {"pool":"PoolS6R","from":0,to:2,skill:[{id:154}],dropPrize:125},
                     {
                         "id": 161,
                         "count":1,
@@ -5267,7 +5400,10 @@ exports.data = [
                     {
                         "id": 89,
                         "count":1,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:125}]
                     },
                     {
                         "id": 87,
@@ -5343,12 +5479,13 @@ exports.data = [
             "PoolS6R":{"objects":[
                 {"id":48,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:126}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS6","from":10,to:14},
-                     {"pool":"PoolS6R","from":0,to:2},
+                     {"pool":"PoolS6","from":10,to:14,skill:[{id:154}],dropPrize:126},
+                     {"pool":"PoolS6R","from":0,to:2,skill:[{id:154}],dropPrize:126},
                     {
                         "id": 149,
                         "count":2
@@ -5362,8 +5499,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS6","from":10,to:12},
-                     {"pool":"PoolS6R","from":0,to:2},
+                     {"pool":"PoolS6","from":10,to:12,skill:[{id:154}],dropPrize:126},
+                     {"pool":"PoolS6R","from":0,to:2,skill:[{id:154}],dropPrize:126},
                     {
                         "id": 65,
                         "count":2,
@@ -5393,8 +5530,11 @@ exports.data = [
                         "id": 140,
                         "count":1,
                         "pos":12,
-                        "keyed":true,
-                        "collectId":90001
+                        "collectId":90001,
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:126}]
                     }
                 ],
                 "exit": 29,
@@ -5466,12 +5606,13 @@ exports.data = [
             "PoolS7R":{"objects":[
                 {"id":72,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:127}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS7","from":10,to:13},
-                     {"pool":"PoolS7R","from":0,to:2},
+                     {"pool":"PoolS7","from":10,to:13,skill:[{id:154}],dropPrize:127},
+                     {"pool":"PoolS7R","from":0,to:2,skill:[{id:154}],dropPrize:127},
                     {
                         "id": 50,
                         "count":4
@@ -5493,8 +5634,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS7","from":10,to:13},
-                     {"pool":"PoolS7R","from":0,to:2},
+                     {"pool":"PoolS7","from":10,to:13,skill:[{id:154}],dropPrize:127},
+                     {"pool":"PoolS7R","from":0,to:2,skill:[{id:154}],dropPrize:127},
                     {
                         "id": 149,
                         "count":2
@@ -5508,8 +5649,11 @@ exports.data = [
                     {
                         "id": 92,
                         "count":1,
-                        "keyed":true,
-                        "collectId":92001
+                        "collectId":92001,
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:127}]
                     }
                 ]
             }
@@ -5580,13 +5724,14 @@ exports.data = [
             "PoolS7R":{"objects":[
                 {"id":72,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:128}],
         "collectId":95001,
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS7","from":10,to:13},
-                     {"pool":"PoolS7R","from":0,to:2},
+                     {"pool":"PoolS7","from":10,to:13,skill:[{id:154}],dropPrize:128},
+                     {"pool":"PoolS7R","from":0,to:2,skill:[{id:154}],dropPrize:128},
                     {
                         "id":152,
                         "count":4,
@@ -5606,8 +5751,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS7","from":10,to:13},
-                     {"pool":"PoolS7R","from":0,to:2},
+                     {"pool":"PoolS7","from":10,to:13,skill:[{id:154}],dropPrize:128},
+                     {"pool":"PoolS7R","from":0,to:2,skill:[{id:154}],dropPrize:128},
                     {
                         "id": 94 ,
                         "count":2,
@@ -5616,7 +5761,10 @@ exports.data = [
                     {
                         "id": 92,
                         "count":1,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:128}]
                     },
                     {
                         "id": 149,
@@ -5690,12 +5838,13 @@ exports.data = [
             "PoolS7R":{"objects":[
                 {"id":72,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:129}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS7","from":10,to:13},
-                     {"pool":"PoolS7R","from":0,to:2},
+                     {"pool":"PoolS7","from":10,to:13,skill:[{id:154}],dropPrize:129},
+                     {"pool":"PoolS7R","from":0,to:2,skill:[{id:154}],dropPrize:129},
                     {
                         "id":144,
                         "count":2,
@@ -5721,13 +5870,16 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS7","from":10,to:13},
-                     {"pool":"PoolS7R","from":0,to:2},
+                     {"pool":"PoolS7","from":10,to:13,skill:[{id:154}],dropPrize:129},
+                     {"pool":"PoolS7R","from":0,to:2,skill:[{id:154}],dropPrize:129},
                     {
                         "id": 61 ,
                         "count":1,
-                        "keyed":true,
-                        "collectId":97001
+                        "collectId":97001,
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:129}]
                     },
                      {
                          "id":144,
@@ -5807,12 +5959,13 @@ exports.data = [
             "PoolS7R":{"objects":[
                 {"id":72,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:130}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS7","from":10,to:13},
-                     {"pool":"PoolS7R","from":0,to:2},
+                     {"pool":"PoolS7","from":10,to:13,skill:[{id:154}],dropPrize:130},
+                     {"pool":"PoolS7R","from":0,to:2,skill:[{id:154}],dropPrize:130},
                     {
                         "id": 149,
                         "count":2
@@ -5833,13 +5986,16 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS7","from":10,to:13},
-                     {"pool":"PoolS7R","from":0,to:2},
+                     {"pool":"PoolS7","from":10,to:13,skill:[{id:154}],dropPrize:130},
+                     {"pool":"PoolS7R","from":0,to:2,skill:[{id:154}],dropPrize:130},
                     {
                         "id": 119 ,
                         "count":1,
-                        "keyed":true,
-                        "collectId":99001
+                        "collectId":99001,
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:130}]
                     },
                     {
                         "id": 119 ,
@@ -5920,13 +6076,14 @@ exports.data = [
             "PoolS7R":{"objects":[
                 {"id":72,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:131}],
         "collectId":101001,
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS7","from":10,to:13},
-                     {"pool":"PoolS7R","from":0,to:2},
+                     {"pool":"PoolS7","from":10,to:13,skill:[{id:154}],dropPrize:131},
+                     {"pool":"PoolS7R","from":0,to:2,skill:[{id:154}],dropPrize:131},
                     {
                         "id": 149,
                         "count":2
@@ -5940,12 +6097,15 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS7","from":10,to:13},
-                     {"pool":"PoolS7R","from":0,to:2},
+                     {"pool":"PoolS7","from":10,to:13,skill:[{id:154}],dropPrize:131},
+                     {"pool":"PoolS7R","from":0,to:2,skill:[{id:154}],dropPrize:131},
                     {
                         "id": 119 ,
                         "count":1,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:131}]
                     },
                     {
                         "id": 149,
@@ -6025,12 +6185,13 @@ exports.data = [
             "PoolS7R":{"objects":[
                 {"id":72,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:132}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS7","from":10,to:13},
-                     {"pool":"PoolS7R","from":0,to:2},
+                     {"pool":"PoolS7","from":10,to:13,skill:[{id:154}],dropPrize:132},
+                     {"pool":"PoolS7R","from":0,to:2,skill:[{id:154}],dropPrize:132},
                     {
                         "id": 149,
                         "count":2
@@ -6044,8 +6205,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS7","from":10,to:13},
-                     {"pool":"PoolS7R","from":0,to:2},
+                     {"pool":"PoolS7","from":10,to:13,skill:[{id:154}],dropPrize:132},
+                     {"pool":"PoolS7R","from":0,to:2,skill:[{id:154}],dropPrize:132},
                     {
                         "id": 61 ,
                         "count":1,
@@ -6054,7 +6215,10 @@ exports.data = [
                     {
                         "id": 92 ,
                         "count":1,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:132}]
                     },
                     {
                         "id": 149,
@@ -6139,12 +6303,13 @@ exports.data = [
             "PoolS7R":{"objects":[
                 {"id":72,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:133}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS7","from":10,to:13},
-                     {"pool":"PoolS7R","from":0,to:2},
+                     {"pool":"PoolS7","from":10,to:13,skill:[{id:154}],dropPrize:133},
+                     {"pool":"PoolS7R","from":0,to:2,skill:[{id:154}],dropPrize:133},
                     {
                         "id": 149,
                         "count":2
@@ -6158,13 +6323,16 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS7","from":10,to:13},
-                     {"pool":"PoolS7R","from":0,to:2},
+                     {"pool":"PoolS7","from":10,to:13,skill:[{id:154}],dropPrize:133},
+                     {"pool":"PoolS7R","from":0,to:2,skill:[{id:154}],dropPrize:133},
                     {
                         "id": 124 ,
                         "count":1,
                         "collectId":103001,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:133}]
                     },
                     {
                         "id": 149,
@@ -6239,12 +6407,13 @@ exports.data = [
                 {"id":77,"weight":2},
                 {"id":104,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:134}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS8","from":10,to:13},
-                     {"pool":"PoolS8R","from":0,to:2},
+                     {"pool":"PoolS8","from":10,to:13,skill:[{id:154}],dropPrize:134},
+                     {"pool":"PoolS8R","from":0,to:2,skill:[{id:154}],dropPrize:134},
                     {
                         "id": 149,
                         "count":2
@@ -6258,13 +6427,16 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS8","from":10,to:13},
-                     {"pool":"PoolS8R","from":0,to:2},
+                     {"pool":"PoolS8","from":10,to:13,skill:[{id:154}],dropPrize:134},
+                     {"pool":"PoolS8R","from":0,to:2,skill:[{id:154}],dropPrize:134},
                     {
                         "id": 124 ,
                         "count":1,
                         "collectId":104001,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:134}]
                     },
                     {
                         "id": 149,
@@ -6339,13 +6511,14 @@ exports.data = [
                 {"id":77,"weight":2},
                 {"id":104,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:135}],
         "collectId":106001,
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS8","from":10,to:13},
-                     {"pool":"PoolS8R","from":0,to:2},
+                     {"pool":"PoolS8","from":10,to:13,skill:[{id:154}],dropPrize:135},
+                     {"pool":"PoolS8R","from":0,to:2,skill:[{id:154}],dropPrize:135},
                     {
                         "id": 149,
                         "count":2
@@ -6365,12 +6538,15 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS8","from":10,to:13},
-                     {"pool":"PoolS8R","from":0,to:2},
+                     {"pool":"PoolS8","from":10,to:13,skill:[{id:154}],dropPrize:135},
+                     {"pool":"PoolS8R","from":0,to:2,skill:[{id:154}],dropPrize:135},
                     {
                         "id": 124 ,
                         "count":1,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:135}]
                     },
                     {
                         "id": 94 ,
@@ -6450,12 +6626,13 @@ exports.data = [
                 {"id":77,"weight":2},
                 {"id":104,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:136}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS8","from":10,to:13},
-                     {"pool":"PoolS8R","from":0,to:2},
+                     {"pool":"PoolS8","from":10,to:13,skill:[{id:154}],dropPrize:136},
+                     {"pool":"PoolS8R","from":0,to:2,skill:[{id:154}],dropPrize:136},
                     {
                         "id": 154,
                         "count":1,
@@ -6475,13 +6652,16 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS8","from":10,to:13},
-                     {"pool":"PoolS8R","from":0,to:2},
+                     {"pool":"PoolS8","from":10,to:13,skill:[{id:154}],dropPrize:136},
+                     {"pool":"PoolS8R","from":0,to:2,skill:[{id:154}],dropPrize:136},
                     {
                         "id": 121 ,
                         "count":1,
                         "collectId":109001,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:136}]
                     },
                     {
                         "id": 149,
@@ -6556,12 +6736,13 @@ exports.data = [
                 {"id":77,"weight":2},
                 {"id":104,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:137}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS8","from":10,to:13},
-                     {"pool":"PoolS8R","from":0,to:2},
+                     {"pool":"PoolS8","from":10,to:13,skill:[{id:154}],dropPrize:137},
+                     {"pool":"PoolS8R","from":0,to:2,skill:[{id:154}],dropPrize:137},
                     {
                         "id": 149,
                         "count":2
@@ -6575,13 +6756,16 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS8","from":10,to:13},
-                     {"pool":"PoolS8R","from":0,to:2},
+                     {"pool":"PoolS8","from":10,to:13,skill:[{id:154}],dropPrize:137},
+                     {"pool":"PoolS8R","from":0,to:2,skill:[{id:154}],dropPrize:137},
                     {
                         "id": 121 ,
                         "count":1,
-                        "keyed":true,
-                        "collectId":110001
+                        "collectId":110001,
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:137}]
                     },
                      {
                          "id": 156,
@@ -6662,13 +6846,14 @@ exports.data = [
                 {"id":77,"weight":2},
                 {"id":104,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:138}],
         "collectId":111001,
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS8","from":10,to:13},
-                     {"pool":"PoolS8R","from":0,to:2},
+                     {"pool":"PoolS8","from":10,to:13,skill:[{id:154}],dropPrize:138},
+                     {"pool":"PoolS8R","from":0,to:2,skill:[{id:154}],dropPrize:138},
                     {
                         "id": 149,
                         "count":2
@@ -6682,8 +6867,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS8","from":10,to:13},
-                     {"pool":"PoolS8R","from":0,to:2},
+                     {"pool":"PoolS8","from":10,to:13,skill:[{id:154}],dropPrize:138},
+                     {"pool":"PoolS8R","from":0,to:2,skill:[{id:154}],dropPrize:138},
                      {
                          "id": 130,
                          "count":1,
@@ -6693,7 +6878,15 @@ exports.data = [
                     {
                         "id": 149,
                         "count":2
-                    }
+                    },
+                     {
+                         "id": 121,
+                         "count":1,
+                         property:[
+                             {"keyed":true},
+                             {skill:[{id:153}]},
+                             {dropPrize:138}]
+                     }
                 ]
             }
         ],
@@ -6763,13 +6956,14 @@ exports.data = [
                 {"id":77,"weight":2},
                 {"id":104,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:139}],
         "collectId":112001,
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS8","from":10,to:13},
-                     {"pool":"PoolS8R","from":0,to:2},
+                     {"pool":"PoolS8","from":10,to:13,skill:[{id:154}],dropPrize:139},
+                     {"pool":"PoolS8R","from":0,to:2,skill:[{id:154}],dropPrize:139},
                     {
                         "id": 149,
                         "count":2
@@ -6783,8 +6977,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS8","from":10,to:13},
-                     {"pool":"PoolS8R","from":0,to:2},
+                     {"pool":"PoolS8","from":10,to:13,skill:[{id:154}],dropPrize:139},
+                     {"pool":"PoolS8R","from":0,to:2,skill:[{id:154}],dropPrize:139},
                     {
                         "id": 121 ,
                         "count":1,
@@ -6793,7 +6987,10 @@ exports.data = [
                     {
                         "id": 124 ,
                         "count":1,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:139}]
                     },
                     {
                         "id": 149,
@@ -6868,12 +7065,13 @@ exports.data = [
                 {"id":77,"weight":2},
                 {"id":104,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:140}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS8","from":10,to:13},
-                     {"pool":"PoolS8R","from":0,to:2},
+                     {"pool":"PoolS8","from":10,to:13,skill:[{id:154}],dropPrize:140},
+                     {"pool":"PoolS8R","from":0,to:2,skill:[{id:154}],dropPrize:140},
                     {
                         "id": 149,
                         "count":2
@@ -6887,13 +7085,16 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS8","from":10,to:13},
-                     {"pool":"PoolS8R","from":0,to:2},
+                     {"pool":"PoolS8","from":10,to:13,skill:[{id:154}],dropPrize:140},
+                     {"pool":"PoolS8R","from":0,to:2,skill:[{id:154}],dropPrize:140},
                     {
                         "id": 130 ,
                         "count":1,
-                        "keyed":true,
-                        "collectId":115001
+                        "collectId":115001,
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:140}]
                     },
                     {
                         "id": 149,
@@ -6967,12 +7168,13 @@ exports.data = [
                 {"id":80,"weight":2},
                 {"id":104,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:141}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS9","from":10,to:13},
-                     {"pool":"PoolS9R","from":0,to:2},
+                     {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:141},
+                     {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:141},
                      {
                          "id": 161,
                          "count":2,
@@ -6992,13 +7194,16 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS9","from":10,to:13},
-                     {"pool":"PoolS9R","from":0,to:2},
+                     {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:141},
+                     {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:141},
                     {
                         "id": 128 ,
                         "count":1,
                         "collectId":117001,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:141}]
                     },
                      {
                          "id": 161,
@@ -7084,13 +7289,14 @@ exports.data = [
                 {"id":80,"weight":2},
                 {"id":104,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:142}],
         "collectId":119001,
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS9","from":10,to:13},
-                     {"pool":"PoolS9R","from":0,to:2},
+                     {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:142},
+                     {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:142},
                     {
                         "id": 149,
                         "count":2
@@ -7104,12 +7310,15 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS9","from":10,to:13},
-                     {"pool":"PoolS9R","from":0,to:2},
+                     {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:142},
+                     {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:142},
                     {
                         "id": 128 ,
                         "count":1,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:142}]
                     },
                     {
                         "id": 97 ,
@@ -7188,13 +7397,14 @@ exports.data = [
                 {"id":80,"weight":2},
                 {"id":104,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:143}],
         "collectId":120001,
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS9","from":10,to:13},
-                     {"pool":"PoolS9R","from":0,to:2},
+                     {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:143},
+                     {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:143},
                     {
                         "id": 149,
                         "count":2
@@ -7208,12 +7418,15 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS9","from":10,to:13},
-                     {"pool":"PoolS9R","from":0,to:2},
+                     {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:143},
+                     {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:143},
                     {
                         "id": 130 ,
                         "count":1,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:143}]
                     },
                     {
                         "id": 149,
@@ -7287,13 +7500,14 @@ exports.data = [
                 {"id":80,"weight":2},
                 {"id":104,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:144}],
         "collectId":121001,
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS9","from":10,to:13},
-                     {"pool":"PoolS9R","from":0,to:2},
+                     {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:144},
+                     {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:144},
                     {
                         "id": 149,
                         "count":2
@@ -7313,12 +7527,15 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS9","from":10,to:13},
-                     {"pool":"PoolS9R","from":0,to:2},
+                     {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:144},
+                     {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:144},
                     {
                         "id": 130 ,
                         "count":1,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:144}]
                     },
                     {
                         "id": 149,
@@ -7392,13 +7609,14 @@ exports.data = [
                 {"id":80,"weight":2},
                 {"id":104,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:145}],
         "collectId":122001,
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS9","from":10,to:13},
-                     {"pool":"PoolS9R","from":0,to:2},
+                     {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:145},
+                     {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:145},
                     {
                         "id": 145,
                         "count":2,
@@ -7418,12 +7636,15 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS9","from":10,to:13},
-                     {"pool":"PoolS9R","from":0,to:2},
+                     {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:145},
+                     {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:145},
                     {
                         "id": 127,
                         "count":2,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:145}]
                     },
                     {
                         "id": 149,
@@ -7503,11 +7724,13 @@ exports.data = [
                 {"id":104,"weight":2}]}
         },
         "collectId":123001,
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:146}],
         "levels" :[
             {
                 "objects" :[{"pool":"normalPool","from":0,to:2},
-                    {"pool":"PoolS9","from":10,to:13},
-                    {"pool":"PoolS9R","from":0,to:2},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
                     {
                         "id": 149,
                         "count":2
@@ -7539,12 +7762,15 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS9","from":10,to:13},
-                     {"pool":"PoolS9R","from":0,to:2},
+                     {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                     {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
                     {
                         "id": 130,
                         "count":2,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:146}]
                     },
                     {
                         "id": 153,
@@ -7629,12 +7855,13 @@ exports.data = [
                 {"id":80,"weight":2},
                 {"id":104,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:147}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS9","from":10,to:13},
-                     {"pool":"PoolS9R","from":0,to:2},
+                     {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:147},
+                     {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:147},
                     {
                         "id": 149,
                         "count":1
@@ -7648,13 +7875,16 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS9","from":10,to:13},
-                     {"pool":"PoolS9R","from":0,to:2},
+                     {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:147},
+                     {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:147},
                     {
                         "id": 93,
                         "count":1,
                         "collectId":124001,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:147}]
                     },
                     {
                         "id": 149,
@@ -14308,12 +14538,13 @@ exports.data = [
             "PoolS1R":{"objects":[
                 {"id":8,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:91}],
         "rank": 1,
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS1","from":8,to:10},
+                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":2
@@ -14327,7 +14558,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS1","from":8,to:10},
+                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":1
@@ -14335,7 +14566,10 @@ exports.data = [
                     {
                         "id": 23,
                         "count":1,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:91}]
                     } ,
                     {
                         "id":163,
@@ -14407,11 +14641,12 @@ exports.data = [
             "PoolS1R":{"objects":[
                 {"id":8,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:91}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS1","from":8,to:10},
+                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":1
@@ -14426,7 +14661,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS1","from":8,to:10},
+                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":1
@@ -14435,7 +14670,10 @@ exports.data = [
                         "id": 23,
                         "count":1,
                         "collectId":156001,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:91}]
                     }
                 ]
             }
@@ -14498,12 +14736,13 @@ exports.data = [
             "PoolS1R":{"objects":[
                 {"id":8,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:91}],
         "rank": 2,
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS1","from":8,to:10},
+                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":1
@@ -14517,7 +14756,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS1","from":8,to:10},
+                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":1
@@ -14525,8 +14764,11 @@ exports.data = [
                     {
                         "id": 25,
                         "count":1,
-                        "keyed":true,
-                        "collectId":157001
+                        "collectId":157001,
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:91}]
                     }
                 ]
             }
@@ -14589,12 +14831,13 @@ exports.data = [
             "PoolS1R":{"objects":[
                 {"id":8,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:91}],
         "rank": 3,
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS1","from":8,to:10},
+                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":3
@@ -14608,7 +14851,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS1","from":8,to:10},
+                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":2
@@ -14621,8 +14864,11 @@ exports.data = [
                     {
                         "id": 25,
                         "count":1,
-                        "keyed":true,
-                        "collectId":159001
+                        "collectId":159001,
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:91}]
                     }
                 ]
             }
@@ -14682,13 +14928,14 @@ exports.data = [
             "PoolS1R":{"objects":[
                 {"id":8,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:91}],
         "rank": 3,
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS1","from":10,to:12},
-                     {"pool":"PoolS1R","from":0,to:1},
+                     {"pool":"PoolS1","from":10,to:12,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1R","from":0,to:1,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":2
@@ -14702,8 +14949,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS1","from":10,to:12},
-                     {"pool":"PoolS1R","from":0,to:1},
+                     {"pool":"PoolS1","from":10,to:12,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1R","from":0,to:1,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 5,
                         "count":2
@@ -14719,8 +14966,11 @@ exports.data = [
                     {
                         "id": 32,
                         "count":1,
-                        "keyed":true,
-                        "collectId":160001
+                        "collectId":160001,
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:91}]
                     }
                 ]
             }
@@ -14786,12 +15036,13 @@ exports.data = [
             "PoolS1R":{"objects":[
                 {"id":8,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:91}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS1","from":10,to:12},
-                     {"pool":"PoolS1R","from":0,to:1},
+                     {"pool":"PoolS1","from":10,to:12,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1R","from":0,to:1,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":2
@@ -14805,8 +15056,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS1","from":10,to:12},
-                     {"pool":"PoolS1R","from":0,to:1},
+                     {"pool":"PoolS1","from":10,to:12,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1R","from":0,to:1,skill:[{id:154}],dropPrize:91},
                      {
                          "id": 149,
                          "count":2
@@ -14814,7 +15065,10 @@ exports.data = [
                     {
                         "id": 32,
                         "count":1,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:91}]
                     },
                     {
                         "id": 165,
@@ -14892,13 +15146,14 @@ exports.data = [
             "PoolS1R":{"objects":[
                 {"id":8,"weight":2}]}
         },
-         
+        "global": [
+            {id: 211,from: 1, to: 4,dropPrize:91}],
         "rank": 9,
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS1","from":10,to:12},
-                     {"pool":"PoolS1R","from":0,to:1},
+                     {"pool":"PoolS1","from":10,to:12,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1R","from":0,to:1,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":2
@@ -14912,8 +15167,8 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:2},
-                     {"pool":"PoolS1","from":10,to:12},
-                     {"pool":"PoolS1R","from":0,to:1},
+                     {"pool":"PoolS1","from":10,to:12,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1R","from":0,to:1,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":2
@@ -14923,7 +15178,10 @@ exports.data = [
                         "pos":12,
                         "count":1,
                         "collectId":163001,
-                        "keyed":true
+                        property:[
+                            {"keyed":true},
+                            {skill:[{id:153}]},
+                            {dropPrize:91}]
                     }
                 ],
                 "entrance":0,
@@ -14977,6 +15235,7 @@ exports.data = [
                 }
             ]}
         },
+
         "levels" :[
             {
                 "objects" :[{"pool":"normalPool","from":0,to:2},
