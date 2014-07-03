@@ -2692,11 +2692,9 @@
         var dropID;
         dropID = env.variable('dropID');
         console.log(env.variable);
-        console.log(dropID, '-------DropPrize 1-----');
         if (dropID == null) {
-          dropID = env.variable('me');
+          dropID = env.variable('me').dropPrize;
         }
-        console.log(dropID, '-------DropPrize 2-----');
         if (dropID != null) {
           return env.dungeon.killingInfo.push({
             dropInfo: dropID
