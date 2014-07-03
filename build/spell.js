@@ -699,16 +699,18 @@
             if (typeof cmd.routine === "function") {
               cmd.routine({
                 id: 'DropItem',
-                list: a.dropList,
-                me: this
+                list: a.dropList
               });
             }
             break;
           case 'dropPrize':
-            (typeof cmd.routine === "function" ? cmd.routine({
-              id: 'DropPrize',
-              dropID: a.dropID
-            }) : void 0) && console.log(a, 'ttttttttttttttttttttttttttt');
+            if (typeof cmd.routine === "function") {
+              cmd.routine({
+                id: 'DropPrize',
+                dropID: a.dropID,
+                me: this
+              });
+            }
             break;
           case 'rangeAttack':
           case 'attack':
