@@ -664,7 +664,24 @@
     infinite: {
       storeType: "player",
       id: 3,
-      actived: 1,
+      actived: function(obj, util) {
+        if (util.dateInRange(util.today, [
+          {
+            from: 1,
+            to: 6
+          }, {
+            from: 14,
+            to: 20
+          }, {
+            from: 28,
+            to: 28
+          }
+        ])) {
+          return 1;
+        } else {
+          return 0;
+        }
+      },
       canReset: function(obj, util) {
         return util.today.hour() >= 8 && util.diffDate(obj.timestamp.infinite, util.today) >= 14;
       },
@@ -680,7 +697,19 @@
       storeType: "player",
       id: 4,
       actived: function(obj, util) {
-        return 1;
+        if (util.dateInRange(util.today, [
+          {
+            from: 7,
+            to: 13
+          }, {
+            from: 21,
+            to: 27
+          }
+        ])) {
+          return 1;
+        } else {
+          return 0;
+        }
       },
       stages: [121, 122, 123, 125, 126, 127, 128, 129, 130, 131, 132],
       canReset: function(obj, util) {
