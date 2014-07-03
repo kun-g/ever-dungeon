@@ -853,7 +853,7 @@
         var ret;
         switch (arg.typ) {
           case 0:
-            if (!(!(player.counters.currentPKCount != null) || player.getTotalPkTimes() > player.counters.currentPKCount || player.flags.rcvAward)) {
+            if (!(player.counters.currentPKCount != null) || player.getTotalPkTimes() > player.counters.currentPKCount || player.flags.rcvAward) {
               return handler([
                 {
                   REQ: rpcID,
