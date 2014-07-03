@@ -2691,9 +2691,11 @@
       callback: function(env) {
         var dropID;
         dropID = env.variable('dropID');
+        console.log(dropID, '-------DropPrize 1-----');
         if (dropID == null) {
           dropID = env.variable('me');
         }
+        console.log(dropID, '-------DropPrize 2-----');
         if (dropID != null) {
           return env.dungeon.killingInfo.push({
             dropInfo: dropID
