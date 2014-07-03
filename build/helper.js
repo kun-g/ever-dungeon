@@ -1,5 +1,5 @@
 (function() {
-  var actCampaign, conditionCheck, currentTime, dateInRange, dbLib, destroyReactDB, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, tap, tapObject, updateLockStatus;
+  var actCampaign, conditionCheck, currentTime, dbLib, destroyReactDB, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, tap, tapObject, updateLockStatus;
 
   conditionCheck = require('./trigger').conditionCheck;
 
@@ -324,7 +324,7 @@
 
   exports.matchDate = matchDate;
 
-  dateInRange = function(date, ranges) {
+  exports.dateInRange = function(date, ranges) {
     var monthOfDate, range, _i, _len;
     if (!date) {
       return false;
@@ -338,8 +338,6 @@
     }
     return false;
   };
-
-  exports.dateInRange = dateInRange;
 
   genCampaignUtil = function() {
     return {
