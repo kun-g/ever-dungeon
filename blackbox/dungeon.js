@@ -2687,7 +2687,7 @@
         ];
       }
     },
-    DropItem: {
+    DropPrize: {
       callback: function(env) {
         var dropID;
         dropID = env.variable('dropID');
