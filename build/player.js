@@ -216,6 +216,10 @@
       return 'player';
     };
 
+    Player.prototype.getTotalPkTimes = function() {
+      return 5;
+    };
+
     Player.prototype.submitCampaign = function(campaign, handler) {
       var event;
       event = this[campaign];
