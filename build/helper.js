@@ -683,7 +683,7 @@
         }
       },
       canReset: function(obj, util) {
-        return util.today.hour() >= 8 && util.diffDate(obj.timestamp.infinite, util.today) >= 14;
+        return util.today.hour() >= 8 && util.diffDay(obj.timestamp.infinite, util.today);
       },
       reset: function(obj, util) {
         obj.timestamp.newProperty('infinite', util.currentTime());
@@ -713,7 +713,7 @@
       },
       stages: [121, 122, 123, 125, 126, 127, 128, 129, 130, 131, 132],
       canReset: function(obj, util) {
-        return util.diffDate(obj.timestamp.hunting, util.today) >= 14;
+        return util.diffDay(obj.timestamp.hunting, util.today);
       },
       reset: function(obj, util) {
         var s, stages, _i, _len;
