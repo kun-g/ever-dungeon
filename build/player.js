@@ -221,6 +221,7 @@
     };
 
     Player.prototype.claimPkPrice = function(callback) {
+      console.log('?????', helperLib);
       return helperLib.getPositionOnLeaderboard(helperLib.LeaderboardIdx.Arena, this.name, 0, 0, function(err, result) {
         var prize, ret;
         prize = arenaPirze(result.position + 1);
