@@ -24,11 +24,16 @@ TABLE_CAMPAIGN = "campaign";
 TABLE_VIP = "vip";
 TABLE_TRIGGER = "triggers";
 TABLE_BROADCAST = "broadcast";
+TABLE_TUTORIAL = "tutorialList";
+TABLE_TUTORIAL_CONFIG = "tutorialConfig";
+TABLE_BAN = "bans";
 TABLE_LEADBOARD = "leadboard";
 TABLE_FACTION = "faction";
-TABLE_COSTS = "costs";
+TABLE_BOUNTY = "bounty";
+TABLE_COST = "costs";
 TABLE_DP = "dailyPrize";
 TABLE_ARENA = "arena";
+
 /*** GAME CONSTANTS ***/
 ItemId_RevivePotion = 540;
 
@@ -137,7 +142,7 @@ ErrorMsgs = [
     "付费信息错误，请联系工作人员",
     "战斗力不足",
     "挑战次数以用尽",
-    "无法领取PK奖励",
+    "无法领取PK奖励"
 ];
 
 /*** ITEM CATEGORY ***/
@@ -223,6 +228,10 @@ MonthCardID = 8;
 /*** Quest Status ***/
 QUESTSTATUS_ONGOING = 0;
 QUESTSTATUS_COMPLETE = 1;
+
+/*** Bounty Status ***/
+BOUNTYSTATUS_ONGOING = 0;
+BOUNTYSTATUS_COMPLETE = 1;
 
 /*** Prize Type ***/
 PRIZETYPE_ITEM = 0;
