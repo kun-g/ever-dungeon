@@ -862,21 +862,17 @@
               ]);
             } else {
               player.flags.rcvAward = true;
-              ret = [
-                {
-                  NTF: Event_InventoryUpdateItem,
-                  arg: {
-                    god: player.addGold(80)
-                  }
-                }
-              ];
+              ret = {
+                NTF: Event_InventoryUpdateItem
+              };
+              ret.arg = player.claimPkPrice();
               player.saveDB();
               return handler([
                 {
                   REQ: rpcID,
                   RET: RET_OK
                 }
-              ].concat(ret));
+              ].concat([ret]));
             }
         }
       },

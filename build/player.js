@@ -220,6 +220,14 @@
       return 5;
     };
 
+    Player.prototype.claimPkPrice = function() {
+      var gold;
+      gold = 80;
+      return {
+        god: this.addGold(gold)
+      };
+    };
+
     Player.prototype.submitCampaign = function(campaign, handler) {
       var event;
       event = this[campaign];
