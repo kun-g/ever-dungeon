@@ -219,7 +219,7 @@
       return -1;
     };
     placeUnit = function(lRule, lConfig, single) {
-      var count, idList, proList, result, _k, _len2, _ref6, _ref7;
+      var count, idList, proList, result, _k, _len2, _ref6;
       result = [];
       for (_k = 0, _len2 = lRule.length; _k < _len2; _k++) {
         r = lRule[_k];
@@ -242,10 +242,10 @@
         if (r.pool != null) {
           idList = selectFromPool(r.pool, count);
           count = 1;
-          proList = (_ref7 = mapDiff(rules.pool[r.pool], ['objects'])) != null ? _ref7 : [];
+          proList = mapDiff(rules.pool[r.pool], ['objects']);
         }
         idList.forEach(function(c) {
-          var k, u, v, _ref8;
+          var k, u, v, _ref7, _ref8;
           u = {};
           for (k in c) {
             v = c[k];
@@ -258,11 +258,16 @@
             u[k] = v;
           }
           if (levelOtherKey[lConfig.id] != null) {
-            _ref8 = levelOtherKey[lConfig.id];
-            for (k in _ref8) {
-              v = _ref8[k];
+            _ref7 = levelOtherKey[lConfig.id];
+            for (k in _ref7) {
+              v = _ref7[k];
               u[k] = v;
             }
+          }
+          _ref8 = mapDiff(r, ['pool', 'levels', 'count']);
+          for (k in _ref8) {
+            v = _ref8[k];
+            u[k] = v;
           }
           u.count = count;
           if (r.pos) {
