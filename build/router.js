@@ -42,6 +42,7 @@ function dispatchCommand (routeTable, req, socket, retValHandler) {
     try {
       logInfo({ type : 'pendingRequest', req : req });
       handler.func(req.arg, player, retValHandler, req.REQ, socket, false, req);
+      player.saveDB()
     } catch (err) {
       logError({
         type : 'Handler Failed',
