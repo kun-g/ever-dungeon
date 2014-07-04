@@ -1,7 +1,5 @@
 (function() {
-  var Serializer, destroyReactDB, g_attr_constructorTable, generateMonitor, objectlize, registerConstructor;
-
-  destroyReactDB = requires('./define').destroyReactDB;
+  var Serializer, g_attr_constructorTable, generateMonitor, objectlize, registerConstructor;
 
   generateMonitor = function(obj) {
     return function(key, val) {
@@ -51,8 +49,7 @@
     }
 
     Serializer.prototype.destroy = function() {
-      this.s_attr_monitor = null;
-      return destroyReactDB(this);
+      return this.s_attr_monitor = null;
     };
 
     Serializer.prototype.attrSave = function(key, restoreFlag) {

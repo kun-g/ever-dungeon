@@ -417,7 +417,7 @@
           };
         }
       }
-      this.loginStreak.date = currentTime(true).valueOf();
+      this.loginStreak['date'] = currentTime(true).valueOf();
       this.log('claimLoginReward', {
         loginStreak: this.loginStreak.count,
         date: currentTime()
@@ -529,7 +529,7 @@
           }
         ];
         if (rec.productID === MonthCardID) {
-          this.counters.monthCard = 30;
+          this.counters['monthCard'] = 30;
           ret = ret.concat(this.syncEvent());
         }
         this.rmb += cfg.rmb;
@@ -659,7 +659,7 @@
         }
         heroData.xp = 0;
         heroData.equipment = [];
-        this.heroBase.heroData["class"] = heroData;
+        this.heroBase[heroData["class"]] = heroData;
         this.switchHero(heroData["class"]);
         return this.createHero();
       } else if (this.hero) {
@@ -688,7 +688,7 @@
           };
           this.save();
         } else {
-          this.hero.equipment = equip;
+          this.hero['equipment'] = equip;
         }
         hero = new Hero(this.hero);
         bf = hero.calculatePower();
@@ -817,7 +817,7 @@
       if (stg) {
         chapter = stg.chapter;
         if (this.stage[stage] == null) {
-          this.stage.stage = {};
+          this.stage[stage] = {};
         }
         flag = false;
         arg = {
@@ -827,7 +827,7 @@
         };
         if (stg.isInfinite) {
           if (this.stage[stage].level == null) {
-            this.stage[stage].level = 0;
+            this.stage[stage]['level'] = 0;
           }
           if (state === STAGE_STATE_PASSED) {
             this.stage[stage].level += 1;

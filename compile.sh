@@ -24,6 +24,11 @@ cp js/*.js $CurrentPWD/build
 cp src/*.js $CurrentPWD/build
 cp src/*.js js/
 cp package.json $CurrentPWD/build
+
+if [ "$1" = "oc" ]
+then
+  exit
+fi
 cd ../data
 SubModuleData=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
 if [ "$1" = "all" ]

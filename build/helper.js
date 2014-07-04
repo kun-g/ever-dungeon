@@ -275,14 +275,14 @@
         e.quest.forEach(function(q) {
           return delete me.quests[q];
         });
-        me[key].status = 'Init';
-        me[key].date = currentTime();
+        me[key]['status'] = 'Init';
+        me[key]['date'] = currentTime();
         if (key === 'event_daily') {
-          me[key].rank = Math.ceil(me.battleForce * 0.04);
+          me[key]['rank'] = Math.ceil(me.battleForce * 0.04);
           if (me[key].rank < 1) {
             me[key].rank = 1;
           }
-          me[key].reward = [
+          me[key]['reward'] = [
             {
               type: PRIZETYPE_DIAMOND,
               count: 50
@@ -296,7 +296,7 @@
       me[key].step = 0;
       goldCount = Math.ceil(me.battleForce);
       diamondCount = Math.ceil(me[key].rank / 10);
-      me[key].stepPrize = [
+      me[key]['stepPrize'] = [
         [
           {
             type: PRIZETYPE_ITEM,
@@ -492,8 +492,8 @@
         return util.diffDay(obj.timestamp.goblin, util.today);
       },
       reset: function(obj, util) {
-        obj.timestamp.goblin = util.currentTime();
-        return obj.counters.goblin = 0;
+        obj.timestamp['goblin'] = util.currentTime();
+        return obj.counters['goblin'] = 0;
       }
     },
     enhance: {
@@ -505,8 +505,8 @@
         return (util.diffDay(obj.timestamp.enhance, util.today)) && (util.today.weekday() === 2 || util.today.weekday() === 4 || util.today.weekday() === 6 || util.today.weekday() === 0);
       },
       reset: function(obj, util) {
-        obj.timestamp.enhance = util.currentTime();
-        return obj.counters.enhance = 0;
+        obj.timestamp['enhance'] = util.currentTime();
+        return obj.counters['enhance'] = 0;
       }
     },
     weapon: {
@@ -518,8 +518,8 @@
         return (util.diffDay(obj.timestamp.weapon, util.today)) && (util.today.weekday() === 1 || util.today.weekday() === 3 || util.today.weekday() === 5 || util.today.weekday() === 0);
       },
       reset: function(obj, util) {
-        obj.timestamp.weapon = util.currentTime();
-        return obj.counters.weapon = 0;
+        obj.timestamp['weapon'] = util.currentTime();
+        return obj.counters['weapon'] = 0;
       }
     },
     infinite: {
@@ -547,8 +547,8 @@
         return util.today.hour() >= 8 && diffDate(obj.timestamp.infinite, util.today) >= 7;
       },
       reset: function(obj, util) {
-        obj.timestamp.infinite = util.currentTime();
-        obj.stage[120].level = 0;
+        obj.timestamp['infinite'] = util.currentTime();
+        obj.stage[120]['level'] = 0;
         return obj.notify('stageChanged', {
           stage: 120
         });
