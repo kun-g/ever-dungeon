@@ -268,7 +268,7 @@
             continue;
           }
           dbLib.deliverMessage(this.name, prize);
-          this.globalPrizeFlag.newProperty(key, true);
+          this.globalPrizeFlag[key] = true;
         }
       }
       if (!moment().isSame(this.infiniteTimer, 'week')) {
@@ -417,7 +417,7 @@
           };
         }
       }
-      this.loginStreak.newProperty('date', currentTime(true).valueOf());
+      this.loginStreak.date = currentTime(true).valueOf();
       this.log('claimLoginReward', {
         loginStreak: this.loginStreak.count,
         date: currentTime()
@@ -830,7 +830,7 @@
         };
         if (stg.isInfinite) {
           if (this.stage[stage].level == null) {
-            this.stage[stage].newProperty('level', 0);
+            this.stage[stage].level = 0;
           }
           if (state === STAGE_STATE_PASSED) {
             this.stage[stage].level += 1;
@@ -1099,7 +1099,7 @@
         return [];
       }
       quest = queryTable(TABLE_QUEST, qid, this.abIndex);
-      this.quests.newProperty(qid, {
+      this.quests[qid] = {
         counters: (function() {
           var _i, _len, _ref7, _results;
           _ref7 = quest.objects;
@@ -1110,7 +1110,7 @@
           }
           return _results;
         })()
-      });
+      };
       this.onEvent('gold');
       this.onEvent('diamond');
       this.onEvent('item');
@@ -1316,7 +1316,7 @@
             case PRIZETYPE_FUNCTION:
               switch (p.func) {
                 case "setFlag":
-                  this.flags.newProperty(p.flag, p.value);
+                  this.flags[p.flag] = p.value;
                   ret = ret.concat(this.syncFlags(true)).concat(this.syncEvent());
                   break;
                 case "countUp":
