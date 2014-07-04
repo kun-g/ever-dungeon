@@ -746,7 +746,7 @@
           case -1:
             if (player.counters.monthCard) {
               player.counters.monthCard--;
-              player.timestamp['monthCard'] = helperLib.currentTime();
+              player.timestamp.newProperty('monthCard', helperLib.currentTime());
               ret = [
                 {
                   NTF: Event_InventoryUpdateItem,

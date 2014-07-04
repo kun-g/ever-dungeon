@@ -146,11 +146,11 @@
             } else {
               tmpCount = left > stack ? stack : left;
               if (count === 1) {
-                bag[e] = item;
+                bag.newProperty(e, item);
               } else {
                 constructor = item.getConstructor();
                 tmp = new constructor(item.dump().save);
-                bag[e] = tmp;
+                bag.newProperty(e, tmp);
               }
             }
             bag[e].count = tmpCount;
