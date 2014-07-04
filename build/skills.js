@@ -3576,7 +3576,7 @@ exports.data = [
         "config": {
             "triggerCondition": [
                 { "type": "event", "event": "onBeDeathStrike" },
-                { "type": "chance", "chance": 0.25 }
+                { "type": "chance", "chance": 0.1 }
             ],
             "targetSelection":{
                 "pool":"self",
