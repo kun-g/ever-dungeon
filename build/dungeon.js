@@ -131,7 +131,7 @@
   };
 
   createUnits = function(rules, randFunc) {
-    var cfg, filterLevels, globalRule, i, l, levelConfig, levelOtherKey, levelRule, otherKeys, placeUnit, r, rand, result, rule, selectFromPool, selectPos, translateRule, _i, _j, _k, _len, _len1, _len2, _ref5;
+    var cfg, filterLevels, gi, globalRule, i, l, levelConfig, levelOtherKey, levelRule, otherKeys, placeUnit, r, rand, result, rule, selectFromPool, selectPos, translateRule, _i, _j, _k, _len, _len1, _len2, _ref5;
     rand = function(mod) {
       var r;
       if (mod == null) {
@@ -292,7 +292,7 @@
     }
     for (_k = 0, _len2 = globalRule.length; _k < _len2; _k++) {
       rule = globalRule[_k];
-      i = 0;
+      gi = 0;
       filterLevels = function() {
         var _ref6, _ref7;
         cfg = levelConfig.filter(function(c) {
@@ -310,14 +310,14 @@
         }
         return cfg;
       };
-      while (i < rule.count) {
+      while (gi < rule.count) {
         cfg = filterLevels();
         if (cfg.length <= 0) {
           break;
         }
         cfg = cfg[rand() % cfg.length];
         result[cfg.id] = result[cfg.id].concat(placeUnit([rule], cfg, true));
-        i++;
+        gi++;
       }
     }
     return result;
