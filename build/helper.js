@@ -1,9 +1,148 @@
 (function() {
-  var actCampaign, conditionCheck, currentTime, dbLib, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, updateLockStatus;
+  var actCampaign, conditionCheck, currentTime, dbLib, destroyReactDB, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, tap, tapObject, updateLockStatus;
 
   conditionCheck = require('./trigger').conditionCheck;
 
   moment = require('moment');
+
+  destroyReactDB = function(obj) {
+    var k, v;
+    if (!obj) {
+      return false;
+    }
+    for (k in obj) {
+      v = obj[k];
+      if (!(typeof v === 'object')) {
+        continue;
+      }
+      destroyReactDB(v);
+      delete obj[k];
+    }
+    if (obj.destroyReactDB) {
+      obj.destroyReactDB();
+    }
+    if (obj.newProperty) {
+      obj.newProperty = null;
+    }
+    if (obj.push) {
+      obj.push = null;
+    }
+    return obj.destroyReactDB = null;
+  };
+
+  exports.destroyReactDB = destroyReactDB;
+
+  tap = function(obj, key, callback, invokeFlag) {
+    var theCB;
+    if (invokeFlag == null) {
+      invokeFlag = false;
+    }
+    if (typeof obj[key] === 'function') {
+      return false;
+    }
+    if (obj.reactDB == null) {
+      Object.defineProperty(obj, 'reactDB', {
+        enumerable: false,
+        configurable: true,
+        value: {}
+      });
+      Object.defineProperty(obj, 'destroyReactDB', {
+        enumerable: false,
+        configurable: true,
+        value: function() {
+          var k, v, _ref;
+          if (!(obj != null ? obj.reactDB : void 0)) {
+            return null;
+          }
+          _ref = obj.reactDB;
+          for (k in _ref) {
+            v = _ref[k];
+            v.value = null;
+            v.hooks = null;
+          }
+          obj.reactDB = null;
+          return obj = null;
+        }
+      });
+    }
+    if (obj.reactDB[key] == null) {
+      obj.reactDB[key] = {
+        value: obj[key],
+        hooks: [callback]
+      };
+      theCB = function(val) {
+        var cb, _i, _len, _ref, _ref1, _ref2;
+        if (((_ref = obj.reactDB) != null ? (_ref1 = _ref[key]) != null ? _ref1.hooks : void 0 : void 0) == null) {
+          return null;
+        }
+        _ref2 = obj.reactDB[key].hooks;
+        for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
+          cb = _ref2[_i];
+          if (cb != null) {
+            cb(key, val);
+          }
+        }
+        return obj.reactDB[key].value = val;
+      };
+      Object.defineProperty(obj, key, {
+        get: function() {
+          var _ref;
+          if ((obj != null ? (_ref = obj.reactDB) != null ? _ref[key] : void 0 : void 0) == null) {
+            return null;
+          }
+          return obj.reactDB[key].value;
+        },
+        set: theCB,
+        enumerable: true,
+        configurable: true
+      });
+      if (typeof obj[key] === 'object') {
+        tapObject(obj[key], theCB);
+      }
+    } else {
+      obj.reactDB[key].hooks.push(callback);
+    }
+    if (invokeFlag) {
+      return callback(key, obj[key]);
+    }
+  };
+
+  tapObject = function(obj, callback) {
+    var config, k, tabNewProperty, theCallback, v;
+    if (obj == null) {
+      return false;
+    }
+    theCallback = function() {
+      return callback(obj);
+    };
+    tabNewProperty = function(key, val) {
+      obj[key] = val;
+      tap(obj, key, theCallback);
+      return callback(obj);
+    };
+    for (k in obj) {
+      v = obj[k];
+      tap(obj, k, theCallback);
+    }
+    config = {
+      value: tabNewProperty,
+      enumerable: false,
+      configurable: true,
+      writable: false
+    };
+    if (obj.newProperty == null) {
+      Object.defineProperty(obj, 'newProperty', config);
+      if (Array.isArray(obj)) {
+        return Object.defineProperty(obj, 'push', {
+          value: function(val) {
+            return this.newProperty(this.length, val);
+          }
+        });
+      }
+    }
+  };
+
+  exports.tap = tap;
 
   dbLib = require('./db');
 
@@ -275,28 +414,28 @@
         e.quest.forEach(function(q) {
           return delete me.quests[q];
         });
-        me[key]['status'] = 'Init';
-        me[key]['date'] = currentTime();
+        me[key].newProperty('status', 'Init');
+        me[key].newProperty('date', currentTime());
         if (key === 'event_daily') {
-          me[key]['rank'] = Math.ceil(me.battleForce * 0.04);
+          me[key].newProperty('rank', Math.ceil(me.battleForce * 0.04));
           if (me[key].rank < 1) {
             me[key].rank = 1;
           }
-          me[key]['reward'] = [
+          me[key].newProperty('reward', [
             {
               type: PRIZETYPE_DIAMOND,
               count: 50
             }
-          ];
+          ]);
         }
       }
     }
     if (e.quest && Array.isArray(e.quest) && me[key].status === 'Init') {
-      me[key].quest = shuffle(e.quest, Math.random()).slice(0, e.steps);
-      me[key].step = 0;
+      me[key].newProperty('quest', shuffle(e.quest, Math.random()).slice(0, e.steps));
+      me[key].newProperty('step', 0);
       goldCount = Math.ceil(me.battleForce);
       diamondCount = Math.ceil(me[key].rank / 10);
-      me[key]['stepPrize'] = [
+      me[key].newProperty('stepPrize', [
         [
           {
             type: PRIZETYPE_ITEM,
@@ -320,7 +459,7 @@
             count: 10
           }
         ]
-      ];
+      ]);
     }
     quest = me[key].quest;
     if (Array.isArray(quest)) {
@@ -492,8 +631,8 @@
         return util.diffDay(obj.timestamp.goblin, util.today);
       },
       reset: function(obj, util) {
-        obj.timestamp['goblin'] = util.currentTime();
-        return obj.counters['goblin'] = 0;
+        obj.timestamp.newProperty('goblin', util.currentTime());
+        return obj.counters.newProperty('goblin', 0);
       }
     },
     enhance: {
@@ -505,8 +644,8 @@
         return (util.diffDay(obj.timestamp.enhance, util.today)) && (util.today.weekday() === 2 || util.today.weekday() === 4 || util.today.weekday() === 6 || util.today.weekday() === 0);
       },
       reset: function(obj, util) {
-        obj.timestamp['enhance'] = util.currentTime();
-        return obj.counters['enhance'] = 0;
+        obj.timestamp.newProperty('enhance', util.currentTime());
+        return obj.counters.newProperty('enhance', 0);
       }
     },
     weapon: {
@@ -518,8 +657,8 @@
         return (util.diffDay(obj.timestamp.weapon, util.today)) && (util.today.weekday() === 1 || util.today.weekday() === 3 || util.today.weekday() === 5 || util.today.weekday() === 0);
       },
       reset: function(obj, util) {
-        obj.timestamp['weapon'] = util.currentTime();
-        return obj.counters['weapon'] = 0;
+        obj.timestamp.newProperty('weapon', util.currentTime());
+        return obj.counters.newProperty('weapon', 0);
       }
     },
     infinite: {
@@ -547,8 +686,8 @@
         return util.today.hour() >= 8 && diffDate(obj.timestamp.infinite, util.today) >= 7;
       },
       reset: function(obj, util) {
-        obj.timestamp['infinite'] = util.currentTime();
-        obj.stage[120]['level'] = 0;
+        obj.timestamp.newProperty('infinite', util.currentTime());
+        obj.stage[120].level = 0;
         return obj.notify('stageChanged', {
           stage: 120
         });
@@ -578,12 +717,12 @@
       },
       reset: function(obj, util) {
         var s, stages, _i, _len;
-        obj.timestamp.hunting = util.currentTime();
+        obj.timestamp.newProperty('hunting', util.currentTime());
         stages = [121, 122, 123, 125, 126, 127, 128, 129, 130, 131, 132];
         for (_i = 0, _len = stages.length; _i < _len; _i++) {
           s = stages[_i];
           if (obj.stage[s]) {
-            obj.stage[s].level = 0;
+            obj.stage[s].newProperty('level', 0);
           }
         }
         return obj.modifyCounters('monster', {
