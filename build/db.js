@@ -119,10 +119,16 @@ lua_createSessionInfo = " \
 
 lua_queryLeaderboard = " \
   local prefix = 'Leaderboard.'; \
-  local board, name, from, to = ARGV[1], ARGV[2], ARGV[3], ARGV[4]; \
+  local board, reverse, name, from, to = ARGV[1], ARGV[2], ARGV[3], ARGV[4], ARGV[5]; \
   local key = prefix..board; \
-  local rank = redis.call('ZREVRANK', key, name); \
-  local board = redis.call('zrevrange', key, from, to, 'WITHSCORES'); \
+  local opStr1 = 'ZREVRANK'; \
+  local opStr2 = 'ZREVRANGE'; \
+  if reverse == '1' then \
+    opStr1 = 'ZRANK'; \
+    opStr2 = 'ZRANGE'; \
+  end \
+  local rank = redis.call(opStr1, key, name); \
+  local board = redis.call(opStr2, key, from, to, 'WITHSCORES'); \
   return {rank, board};";
 
 var lua_fetchMessage = " \
@@ -176,45 +182,6 @@ var lua_fetchMessage = " \
   else \
     return '[]'; \
   end";
-
-var lua_searchRival =" \
-  local randLst ={ ARGV[3], ARGV[4], ARGV[5] } \
-  local prefix = 'Leaderboard.'; \
-  local board, name = ARGV[1], ARGV[2]; \
-  local config ={{base=0.95,delt=0.02}, \
-    {base=0.85,delt=0.03}, \
-    {base=0.50,delt=0.05}}; \
-  if randLst[3] == nil then \
-    return nil \
-  end \
-  local key = prefix..board; \
-  local rank = redis.call('ZRANK', key, name); \
-  local rivalLst ={} ; \
-  local initRivalLst = redis.call('zrange', key, rank + 1, rank + 3, 'WITHSCORES');  \
-  local len = table.getn(initRivalLst) \
-  for i = 1, len , 2 do \
-    rivalLst[math.ceil(i/2)] = {initRivalLst[i],initRivalLst[i+1]} \
-  end \
-  for i,scope in ipairs(config) do \
-    local from = math.floor(rank * (scope.base - scope.delt + scope.delt *(2*randLst[i]))); \
-    if from ~= rank then \
-      rivalLst[i] = redis.call('zrange', key, from, from, 'WITHSCORES');  \
-    end \
-  end \
-  return rivalLst;";
-
-var lua_exchangeScore = " \
-  local board, champion, second = ARGV[1], ARGV[2], ARGV[3]; \
-  local prefix = 'Leaderboard.'; \
-  local key = prefix..board; \
-  local championRank = redis.call('ZRANK', key, champion); \
-  local secondRank = redis.call('ZRANK', key, second); \
-  if championRank < secondRank then \
-    redis.call('ZADD',key, championRank, second); \
-    redis.call('ZADD',key, secondRank, champion); \
-    return {championRank,secondRank} ; \
-  end \
-  return 'noNeed'; ";
 
 var lua_getPvpInfo = " \
   local board, name = ARGV[1],ARGV[2]; \
@@ -466,6 +433,7 @@ exports.initializeDB = function (cfg) {
   ReceiptPrefix = 'Receipt';
 
   authPrefix = 'Auth';
+  var helperLib = require('./helper');
 
   // Scripts
   accountDBClient.script('load', lua_createPassportWithAccount, function (err, sha) {
@@ -495,8 +463,9 @@ exports.initializeDB = function (cfg) {
     };
   });
   dbClient.script('load', lua_queryLeaderboard, function (err, sha) {
-    exports.queryLeaderboard = function (board, name, from, to, handler) {
-      dbClient.evalsha(sha, 0, board, name, from, to, function (err, ret) {
+    exports.queryLeaderboard = function (board, reverse, name, from, to, handler) {
+      dbClient.evalsha(sha, 0, board, reverse, name, from, to, function (err, ret) {
+        console.log('exe lua_queryLeaderboard',err,ret,reverse)
         if (!err) {
           ret = {
             position: ret[0],
@@ -514,61 +483,55 @@ exports.initializeDB = function (cfg) {
       });
     };
   });
-  dbClient.script('load',lua_searchRival, function (err, sha) {
+
+  dbClient.script('load', helperLib.dbScripts.searchRival, function (err, sha) {
     exports.searchRival = function (name, handler) {
       dbClient.evalsha(sha, 0, 'Arena', name, Math.random(), Math.random(), Math.random(), function (err, ret) {
-        console.log('lua_searchRival',err,ret)
         if (handler) { handler(err, ret); }
       });
     };
   });
-  dbClient.script('load',lua_exchangeScore, function (err, sha) {
-    console.log('load lua_exchangeScore', err,sha)
+  dbClient.script('load', helperLib.dbScripts.exchangePKRank, function (err, sha) {
     exports.saveSocre = function (champion, second, handler) {
       dbClient.evalsha(sha, 0, 'Arena', champion, second, function (err, ret) {
-       if (handler) { handler(err, ret); }
+        console.log('debug pkRank exchangePKRank', err, ret)
+        if (handler) { handler(err, ret); }
       });
     };
   });
-  dbClient.script('load',lua_getPvpInfo, function (err, sha) {
+  dbClient.script('load', lua_getPvpInfo, function (err, sha) {
     exports.getPvpInfo = function (name, handler) {
       dbClient.evalsha(sha, 0, 'Arena', name, function (err, ret) {
        if (handler) { handler(err, ret); }
       });
     };
   });
-  //dbClient.script('load', lua_getMercenary, function (err, sha) {
-  //  exports.findMercenary = function (battleforce, count, range, delta, names handler) {
-  //    dbClient.evalsha(
-  //      sha,
-  //      0,
-  //      battleforce,
-  //      count,
-  //      range,
-  //      delta,
-  //      rand(),
-  //      names,
-  //      5,
-  //      function (err, ret) {
-  //       if (handler) { handler(err, ret); }
-  //      });
-  //  };
-  //});
 
-
-
-//function fetchMessage(name, handler) {
-//  dbClient.smembers(playerMessagePrefix+name, function (err, ids) {
-//    async.map(
-//      ids, 
-//      function (id, cb) { dbClient.get(messagePrefix+id, cb); },
-//      function (err, results) {
-//        if (results) results = results.map(JSON.parse);
-//        if (handler) handler(err, results);
-//      });
-//  });
-//}
-//exports.fetchMessage = fetchMessage;
+  dbClient.script('load', helperLib.dbScripts.tryAddLeaderboardMember, function (err, sha) {
+    exports.tryAddLeaderboardMember = function (board, name, value, handler) {
+      dbClient.evalsha(sha, 0, board, name, value, function (err, ret) {
+       if (handler) { handler(err, ret); }
+      });
+    };
+  });
+ 
+  dbClient.script('load', helperLib.dbScripts.getMercenary, function (err, sha) {
+    exports.findMercenary = function (battleforce, count, range, delta, names, handler) {
+      dbClient.evalsha(
+        sha,
+        0,
+        battleforce,
+        count,
+        range,
+        delta,
+        rand(),
+        names,
+        30,
+        function (err, ret) {
+         if (handler) { handler(err, ret); }
+        });
+    };
+  });
 
 };
 

@@ -811,18 +811,20 @@
     RPC_PVPInfoUpdate: {
       id: 34,
       func: function(arg, player, handler, rpcID, socket) {
-        var ret;
-        ret = {
-          REQ: rpcID,
-          RET: RET_OK
-        };
-        ret.arg = {
-          rnk: player.counters.Arena,
-          cpl: !player.counters.currentPKCount ? 0 : void 0,
-          ttl: !player.counters.totalPKCount ? 5 : void 0,
-          rcv: !player.flags.rcvAward ? true : void 0
-        };
-        return handler(ret);
+        return helperLib.getPositionOnLeaderboard(helperLib.LeaderboardIdx.Arena, player.name, 0, 0, function(err, result) {
+          var ret, _ref1, _ref2;
+          ret = {
+            REQ: rpcID,
+            RET: RET_OK
+          };
+          ret.arg = {
+            rnk: result.position,
+            cpl: (_ref1 = player.counters.currentPKCount) != null ? _ref1 : 0,
+            ttl: player.getTotalPkTimes(),
+            rcv: (_ref2 = player.flags.rcvAward) != null ? _ref2 : false
+          };
+          return handler(ret);
+        });
       },
       args: [],
       needPid: true
@@ -841,6 +843,35 @@
         }
         player.saveDB();
         return handler([res].concat(ret));
+      },
+      args: [],
+      needPid: true
+    },
+    RPC_ReceivePrize: {
+      id: 33,
+      func: function(arg, player, handler, rpcID, socket) {
+        switch (arg.typ) {
+          case 0:
+            if (!(player.counters.currentPKCount != null) || player.getTotalPkTimes() > player.counters.currentPKCount || player.flags.rcvAward) {
+              return handler([
+                {
+                  REQ: rpcID,
+                  RET: RET_CantReceivePkAward
+                }
+              ]);
+            } else {
+              player.flags.rcvAward = true;
+              return player.claimPkPrice(function(result) {
+                player.saveDB();
+                return handler([
+                  {
+                    REQ: rpcID,
+                    RET: RET_OK
+                  }
+                ].concat(result));
+              });
+            }
+        }
       },
       args: [],
       needPid: true

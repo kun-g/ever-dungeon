@@ -60,7 +60,7 @@ rand = function() {
 
 isNameValid = function(name) {
   var ban = ['\\.', ' ', '\\?', '@', '!', '#', '\\$', '%', '\\^', '\\\\', '\\\*',
-      '\\]', '\\['
+      '\\]', '\\[', ',',
       ];
   for (var x in ban) {
     var reg = new RegExp(ban[x],'g');
@@ -233,6 +233,16 @@ function initShop (data) {
   }
 }
 
+arenaPirze = function (rank) {
+  cfg = queryTable(TABLE_ARENA);
+  for (var k in cfg) {
+    var v = cfg[k];
+    if (rank <= v.top) {
+      return v.prize;
+    }
+  }
+  return []
+}
 var gConfigTable = {};
 initGlobalConfig = function (path, callback) {
   queryTable = function (type, index, abIndex) {
@@ -267,7 +277,7 @@ initGlobalConfig = function (path, callback) {
     {name:TABLE_STAGE, func: initStageConfig}, {name:TABLE_QUEST}, {name: TABLE_COSTS},
     {name:TABLE_UPGRADE}, {name:TABLE_ENHANCE}, {name: TABLE_CONFIG}, {name: TABLE_VIP},
     {name:TABLE_SKILL}, {name:TABLE_CAMPAIGN}, {name: TABLE_DROP}, {name: TABLE_TRIGGER},
-    {name:TABLE_DP}
+    {name:TABLE_DP},{name:TABLE_ARENA}
   ];
   if (!path) path = "./";
   configTable.forEach(function (e) {
@@ -389,6 +399,17 @@ selectElementFromWeightArray = function (array, randNumber) {
   logError({action: 'selectElementFromWeightArray', reason: 'emptyArray2'});
   return null;
 };
+
+mapContact = function (target, source) {
+  if (typeof target != 'object' || typeof source != 'object') {
+    logError({action: 'mapContact', reason: 'invalidate parm'});
+    return null;
+  }
+  for(var k in source) {
+    target[k] = source[k];
+  }
+  return target
+}
 
 logLevel = 0;
 

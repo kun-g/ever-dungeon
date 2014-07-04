@@ -28,7 +28,7 @@ TABLE_LEADBOARD = "leadboard";
 TABLE_FACTION = "faction";
 TABLE_COSTS = "costs";
 TABLE_DP = "dailyPrize";
-
+TABLE_ARENA = "arena";
 /*** GAME CONSTANTS ***/
 ItemId_RevivePotion = 540;
 
@@ -83,7 +83,8 @@ RET_NeedReceipt = 46;
 RET_InsufficientIngredient = 47;
 RET_InvalidPaymentInfo = 48;
 RET_SweepPowerNotEnough = 49;
-
+RET_NotEnoughTimes = 50;
+RET_CantReceivePkAward = 51;
 ErrorMsgs = [
     "操作成功",
     "金币数量不足",
@@ -135,6 +136,8 @@ ErrorMsgs = [
     "缺少材料",
     "付费信息错误，请联系工作人员",
     "战斗力不足",
+    "挑战次数以用尽",
+    "无法领取PK奖励",
 ];
 
 /*** ITEM CATEGORY ***/

@@ -703,6 +703,15 @@
               });
             }
             break;
+          case 'dropPrize':
+            if (typeof cmd.routine === "function") {
+              cmd.routine({
+                id: 'DropPrize',
+                dropID: a.dropID,
+                me: this
+              });
+            }
+            break;
           case 'rangeAttack':
           case 'attack':
             for (_l = 0, _len3 = target.length; _l < _len3; _l++) {

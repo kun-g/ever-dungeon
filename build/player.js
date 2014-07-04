@@ -216,6 +216,21 @@
       return 'player';
     };
 
+    Player.prototype.getTotalPkTimes = function() {
+      return 5;
+    };
+
+    Player.prototype.claimPkPrice = function(callback) {
+      var me;
+      me = this;
+      return helperLib.getPositionOnLeaderboard(helperLib.LeaderboardIdx.Arena, this.name, 0, 0, function(err, result) {
+        var prize, ret;
+        prize = arenaPirze(result.position + 1);
+        ret = me.claimPrize(prize);
+        return callback(ret);
+      });
+    };
+
     Player.prototype.submitCampaign = function(campaign, handler) {
       var event;
       event = this[campaign];
@@ -331,7 +346,8 @@
         currentLevel: cfg.levelCount,
         getConfig: function() {
           return cfg;
-        }
+        },
+        isSweep: true
       };
       count = 1;
       if (multiple) {
@@ -345,7 +361,9 @@
         id: 871,
         num: count
       };
-      if (multiple && false) {
+      if (this.stage[stage].state !== STAGE_STATE_PASSED) {
+        ret_result = RET_StageIsLocked;
+      } else if (multiple && this.vipLevel() < Sweep_Vip_Level) {
         ret_result = RET_VipLevelIsLow;
       } else if (this.energy < energyCost) {
         ret_result = RET_NotEnoughEnergy;
@@ -463,10 +481,14 @@
       })(this)));
       helperLib.initObserveration(this);
       this.installObserver('heroxpChanged');
+      this.installObserver('battleForceChanged');
+      this.installObserver('countersChanged');
+      this.installObserver('stageChanged');
+      this.installObserver('winningAnPVP');
       if (this.isNewPlayer) {
         this.isNewPlayer = false;
       }
-      helperLib.assignLeaderboard(this);
+      helperLib.assignLeaderboard(this, 3);
       this.inventory.validate();
       if (this.hero != null) {
         this.updateMercenaryInfo();
@@ -630,7 +652,7 @@
     };
 
     Player.prototype.createHero = function(heroData) {
-      var bag, e, equip, hero, i, _ref7;
+      var bag, bf, e, equip, hero, i, _ref7;
       if (heroData != null) {
         if (this.heroBase[heroData["class"]] != null) {
           return null;
@@ -669,7 +691,11 @@
           this.hero.newProperty('equipment', equip);
         }
         hero = new Hero(this.hero);
-        this.battleForce = hero.calculatePower();
+        bf = hero.calculatePower();
+        if (bf !== this.battleForce) {
+          this.battleForce = bf;
+          this.notify('battleForceChanged');
+        }
         return hero;
       } else {
         throw 'NoHero';
@@ -732,6 +758,10 @@
           prevLevel: prevLevel,
           currentLevel: currentLevel
         });
+        this.log('levelChange', {
+          prevLevel: prevLevel,
+          newLevel: currentLevel
+        });
       }
       return this.hero.xp;
     };
@@ -761,6 +791,13 @@
       return this.save(handler);
     };
 
+    Player.prototype.modifyCounters = function(propertyName, arg) {
+      this.counters[propertyName] = typeof arg.value === "function" ? arg.value(0) : void 0;
+      if (arg.notify != null) {
+        return this.notify(arg.notify.name, arg.notify.arg);
+      }
+    };
+
     Player.prototype.stageIsUnlockable = function(stage) {
       var stageConfig;
       stageConfig = queryTable(TABLE_STAGE, stage, this.abIndex);
@@ -782,6 +819,9 @@
         if (this.stage[stage] == null) {
           this.stage.newProperty(stage, {});
         }
+        if (this.stage[stage].newProperty == null) {
+          tapObject(this.stage[stage], console.log);
+        }
         flag = false;
         arg = {
           chp: chapter,
@@ -794,6 +834,9 @@
           }
           if (state === STAGE_STATE_PASSED) {
             this.stage[stage].level += 1;
+            this.notify('stageChanged', {
+              stage: stage
+            });
             if (this.stage[stage].level % 5 === 0) {
               dbLib.broadcastEvent(BROADCAST_INFINITE_LEVEL, {
                 who: this.name,
@@ -875,6 +918,22 @@
       }
       return async.waterfall([
         (function(_this) {
+          return function(cb) {
+            var _base, _base1;
+            if ((stageConfig.pvp != null) && (pkr != null)) {
+              if ((_base = _this.counters).currentPKCount == null) {
+                _base.currentPKCount = 0;
+              }
+              if ((_base1 = _this.counters).totalPKCount == null) {
+                _base1.totalPKCount = 5;
+              }
+              if (_this.counters.currentPKCount >= _this.counters.totalPKCount) {
+                cb(RET_NotEnoughTimes);
+              }
+            }
+            return cb();
+          };
+        })(this), (function(_this) {
           return function(cb) {
             if (_this.dungeonData.stage != null) {
               return cb('OK');
@@ -985,6 +1044,8 @@
             if ((stageConfig.pvp != null) && (pkr != null)) {
               return getPlayerHero(pkr, wrapCallback(_this, function(err, heroData) {
                 this.dungeonData.PVP_Pool = heroData != null ? [getBasicInfo(heroData)] : void 0;
+                this.counters.currentPKCount++;
+                this.saveDB();
                 return cb('OK');
               }));
             } else {
@@ -1260,6 +1321,9 @@
                   break;
                 case "countUp":
                   this.counters[p.counter]++;
+                  this.notify('countersChanged', {
+                    type: p.counter
+                  });
                   ret = ret.concat(this.syncCounters(true)).concat(this.syncEvent());
               }
           }
@@ -1383,17 +1447,8 @@
 
     Player.prototype.onEvent = function(eventID) {
       switch (eventID) {
-        case 'gold':
-        case 'diamond':
-        case 'item':
-          break;
-        case 'level':
-          this.onEvent('power');
-          return this.onCampaign('Level');
         case 'Equipment':
-          return this.onEvent('power');
-        case 'power':
-          return this.updateMercenaryInfo();
+          return this.createHero();
       }
     };
 
@@ -1690,6 +1745,7 @@
       newItem = ret.newItem;
       if (newItem) {
         ret.newItem.enhancement = enhance;
+        ret.newItem.xp = item.xp;
         eh = newItem.enhancement.map(function(e) {
           return {
             id: e.id,
@@ -1907,8 +1963,10 @@
       percentage = 1;
       if (result === DUNGEON_RESULT_WIN) {
         dbLib.incrBluestarBy(this.name, 1);
-        if (cfg.dropID) {
-          dropInfo = dropInfo.concat(cfg.dropID);
+        if (dungeon.isSweep) {
+          if (cfg.dropID) {
+            dropInfo = dropInfo.concat(cfg.dropID);
+          }
         }
       } else {
         percentage = (dungeon.currentLevel / cfg.levelCount) * 0.5;
@@ -1917,23 +1975,25 @@
       xr = ((_ref8 = cfg.xpRate) != null ? _ref8 : 1) * percentage;
       wr = ((_ref9 = cfg.wxpRate) != null ? _ref9 : 1) * percentage;
       prize = helperLib.generatePrize(queryTable(TABLE_DROP), dropInfo);
-      if (cfg.prizeGold) {
-        prize.push({
-          type: PRIZETYPE_GOLD,
-          count: Math.floor(gr * cfg.prizeGold)
-        });
-      }
-      if (cfg.prizeXp) {
-        prize.push({
-          type: PRIZETYPE_EXP,
-          count: Math.floor(xr * cfg.prizeXp)
-        });
-      }
-      if (cfg.prizeWxp) {
-        prize.push({
-          type: PRIZETYPE_WXP,
-          count: Math.floor(wr * cfg.prizeWxp)
-        });
+      if (!dungeon.isSweep) {
+        if (cfg.prizeGold) {
+          prize.push({
+            type: PRIZETYPE_GOLD,
+            count: Math.floor(gr * cfg.prizeGold)
+          });
+        }
+        if (cfg.prizeXp) {
+          prize.push({
+            type: PRIZETYPE_EXP,
+            count: Math.floor(xr * cfg.prizeXp)
+          });
+        }
+        if (cfg.prizeWxp) {
+          prize.push({
+            type: PRIZETYPE_WXP,
+            count: Math.floor(wr * cfg.prizeWxp)
+          });
+        }
       }
       infiniteLevel = dungeon.infiniteLevel;
       if ((infiniteLevel != null) && cfg.infinityPrize && result === DUNGEON_RESULT_WIN) {
@@ -1964,7 +2024,7 @@
     };
 
     Player.prototype.claimDungeonAward = function(dungeon, isSweep) {
-      var goldPrize, k, objective, offlineReward, otherPrize, prize, qid, qst, quest, quests, result, ret, rewardMessage, teammateRewardMessage, wxPrize, xpPrize, _ref7, _ref8;
+      var goldPrize, k, objective, otherPrize, prize, qid, qst, quest, quests, result, ret, rewardMessage, wxPrize, xpPrize, _ref7, _ref8;
       if (dungeon == null) {
         return [];
       }
@@ -2013,36 +2073,6 @@
       if (dungeon.result !== DUNGEON_RESULT_FAIL) {
         ret = ret.concat(this.completeStage(dungeon.stage));
       }
-      offlineReward = [
-        {
-          type: PRIZETYPE_EXP,
-          count: Math.ceil(xpPrize.count * TEAMMATE_REWARD_RATIO)
-        }, {
-          type: PRIZETYPE_GOLD,
-          count: Math.ceil(goldPrize.count * TEAMMATE_REWARD_RATIO)
-        }, {
-          type: PRIZETYPE_WXP,
-          count: Math.ceil(wxPrize.count * TEAMMATE_REWARD_RATIO)
-        }
-      ].filter(function(e) {
-        return e.count > 0;
-      });
-      if (offlineReward.length > 0) {
-        teammateRewardMessage = {
-          type: MESSAGE_TYPE_SystemReward,
-          src: MESSAGE_REWARD_TYPE_OFFLINE,
-          prize: offlineReward
-        };
-        dungeon.team.filter((function(_this) {
-          return function(m) {
-            return m.nam !== _this.name;
-          };
-        })(this)).forEach(function(m) {
-          if (m) {
-            return dbLib.deliverMessage(m.nam, teammateRewardMessage);
-          }
-        });
-      }
       result = 'Lost';
       if (dungeon.result === DUNGEON_RESULT_WIN) {
         result = 'Win';
@@ -2075,20 +2105,13 @@
 
     Player.prototype.updatePkInof = function(dungeon) {
       var myName, rivalName;
-      if (this.counters.currentPKCount != null) {
-        this.counters.currentPKCount++;
-      } else {
-        this.counters.newProperty('currentPKCount', 0);
-      }
       if (dungeon.PVP_Pool != null) {
         myName = this.name;
         rivalName = dungeon.PVP_Pool[0].nam;
         if (dungeon.result === DUNGEON_RESULT_WIN) {
+          console.log('debug pkRank', myName, rivalName, dungeon.result);
           return dbLib.saveSocre(myName, rivalName, function(err, result) {
-            console.log('saveSocre', myName, rivalName, err, result);
-            if (result !== 'noNeed') {
-              return this.counters.Arena = result[0];
-            }
+            return console.log(err, result);
           });
         }
       }
