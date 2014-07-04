@@ -3564,6 +3564,7 @@ exports.data = [
             },
             "action": [
                 { "type": "dropPrize"},
+                {"type":"delay","delay":0.3},
                 {"type": "playEffect","effect":49,"pos":"self"},
                 {"type":"delay"},
                 {"type":"kill"}]
@@ -3583,6 +3584,7 @@ exports.data = [
             },
             "action": [
                 { "type": "dropPrize"},
+                {"type":"delay","delay":0.3},
                 {"type": "playEffect","effect":49,"pos":"self"},
                 {"type":"delay"},
                 {"type":"kill"}]

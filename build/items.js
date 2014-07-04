@@ -27791,7 +27791,7 @@ exports.data = [
     {
         "classId": 872,
         "label": "VIP3宝箱",
-        "icon": "item-vipbox1.png",
+        "icon": "item-vipbox3.png",
         "category": 0,
         "subcategory": 0,
         "description": "内含金块X15，扫荡卷轴X20(每日限购1个)",
@@ -27813,7 +27813,7 @@ exports.data = [
     {
         "classId": 873,
         "label": "VIP4宝箱",
-        "icon": "item-vipbox1.png",
+        "icon": "item-vipbox4.png",
         "category": 0,
         "subcategory": 0,
         "description": "内含金块X20，扫荡卷轴X30(每日限购1个)",
@@ -27835,7 +27835,7 @@ exports.data = [
     {
         "classId": 874,
         "label": "VIP5宝箱",
-        "icon": "item-vipbox1.png",
+        "icon": "item-vipbox5.png",
         "category": 0,
         "subcategory": 0,
         "description": "内含金块X25，扫荡卷轴X40(每日限购1个)",
@@ -27857,7 +27857,7 @@ exports.data = [
     {
         "classId": 875,
         "label": "VIP6宝箱",
-        "icon": "item-vipbox1.png",
+        "icon": "item-vipbox6.png",
         "category": 0,
         "subcategory": 0,
         "description": "内含金块X32，扫荡卷轴X50，大瓶精力药剂X1(每日限购1个)",
@@ -27884,7 +27884,7 @@ exports.data = [
     {
         "classId": 876,
         "label": "VIP7宝箱",
-        "icon": "item-vipbox1.png",
+        "icon": "item-vipbox7.png",
         "category": 0,
         "subcategory": 0,
         "description": "内含金块X40，扫荡卷轴X50，大瓶精力药剂X2(每日限购1个)",
@@ -27911,7 +27911,7 @@ exports.data = [
     {
         "classId": 877,
         "label": "VIP8宝箱",
-        "icon": "item-vipbox1.png",
+        "icon": "item-vipbox8.png",
         "category": 0,
         "subcategory": 0,
         "description": "内含金块X65，扫荡卷轴X70，大瓶精力药剂X3(每日限购1个)",
