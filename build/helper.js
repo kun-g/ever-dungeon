@@ -185,7 +185,7 @@
       }
       if (v.key == null) {
         val = typeof v.initialValue === ('number' != null) ? v.initialValue : null;
-        return require('./db').tryAddLeaderboardMember(v.name, player.name, val);
+        return dbLib.tryAddLeaderboardMember(v.name, player.name, val);
       } else {
         tmp = v.key.split('.');
         field = tmp.pop();
@@ -324,6 +324,21 @@
 
   exports.matchDate = matchDate;
 
+  exports.dateInRange = function(date, ranges) {
+    var monthOfDate, range, _i, _len;
+    if (!date) {
+      return false;
+    }
+    monthOfDate = moment(date).date();
+    for (_i = 0, _len = ranges.length; _i < _len; _i++) {
+      range = ranges[_i];
+      if (monthOfDate >= range.from && monthOfDate <= range.to) {
+        return true;
+      }
+    }
+    return false;
+  };
+
   genCampaignUtil = function() {
     return {
       diffDay: function(date, today) {
@@ -435,8 +450,8 @@
         ], [
           {
             type: PRIZETYPE_ITEM,
-            value: 540,
-            count: 1
+            value: 571,
+            count: 3
           }
         ], [
           {
@@ -649,9 +664,26 @@
     infinite: {
       storeType: "player",
       id: 3,
-      actived: 1,
+      actived: function(obj, util) {
+        if (exports.dateInRange(util.today, [
+          {
+            from: 1,
+            to: 6
+          }, {
+            from: 14,
+            to: 20
+          }, {
+            from: 28,
+            to: 28
+          }
+        ])) {
+          return 1;
+        } else {
+          return 0;
+        }
+      },
       canReset: function(obj, util) {
-        return util.today.hour() >= 8 && util.diffDay(obj.timestamp.infinite, util.today);
+        return util.today.hour() >= 8 && diffDate(obj.timestamp.infinite, util.today) >= 7;
       },
       reset: function(obj, util) {
         obj.timestamp.newProperty('infinite', util.currentTime());
@@ -664,10 +696,24 @@
     hunting: {
       storeType: "player",
       id: 4,
-      actived: 1,
+      actived: function(obj, util) {
+        if (exports.dateInRange(util.today, [
+          {
+            from: 7,
+            to: 13
+          }, {
+            from: 21,
+            to: 27
+          }
+        ])) {
+          return 1;
+        } else {
+          return 0;
+        }
+      },
       stages: [121, 122, 123, 125, 126, 127, 128, 129, 130, 131, 132],
       canReset: function(obj, util) {
-        return util.diffDay(obj.timestamp.hunting, util.today);
+        return diffDate(obj.timestamp.hunting, util.today) >= 7;
       },
       reset: function(obj, util) {
         var s, stages, _i, _len;
@@ -1039,7 +1085,7 @@
 
   exports.dbScripts = {
     searchRival: " local board, name = ARGV[1], ARGV[2];\n local key = 'Leaderboard.'..board;\n local config = {\n     {base=0.95, delta=0.02, rand= ARGV[3]},\n     {base=0.85, delta=0.03, rand= ARGV[4]},\n     {base=0.50, delta=0.05, rand= ARGV[5]},\n   };\n local count = 3;\n local rank = redis.call('ZRANK', key, name);\n\n local rivalLst = {};\n if rank <= count then\n   for index = 0, rank-1 do \n     table.insert(rivalLst,redis.call('zrange', key, index, index, 'withscores'));\n   end\n   for index = rank+1, count do \n     table.insert(rivalLst,redis.call('zrange', key, index, index, 'withscores'));\n   end\nelse\n   rank = rank - 1;\n   for i, c in ipairs(config) do\n     local from = math.ceil(rank * (c.base-c.delta));\n     local to = math.ceil(rank * (c.base+c.delta));\n     local index = from\n     if  to ~=  from then \n       index = index + c.rand%(to - from);\n     end\n     index = math.ceil(index);\n     rivalLst[count - i + 1] = redis.call('zrange', key, index, index, 'withscores');\n     rank = index - 1;\n   end\n end\n\n return rivalLst;",
-    getMercenary: "local battleforce, count, range = ARGV[1], ARGV[2], ARGV[3];\nlocal delta, rand, names, retrys = ARGV[4], ARGV[5], ARGV[6], ARGV[7];\nlocal table = 'Leaderboard.battleForce';\n\nlocal from = battleforce - range;\nlocal to = battleforce + range;\n\nwhile true\n  local list = redis.call('zrevrange', table, from, to);\n  local mercenarys = {}\n  for i, v in ipairs(list) do\n    ;\n  end\n  from = battleforce - range;\n  to = battleforce + range;\n  retrys -= 1;\n  if retrys == 0 return {err='Fail'};\nend\n\n//doFindMercenary = (list, cb) ->\n//  if list.length <= 0\n//    cb(new Error('Empty mercenarylist'))\n//  else\n//    selector = selectRange(list)\n//    battleForce = selector[rand()%selector.length]\n//    list = list.filter((i) -> return i != battleForce; )\n//    mercenaryGet(battleForce, count, (err, mList) ->\n//      if mList == null\n//        dbClient.srem(mercenaryPrefix+'Keys', battleForce, callback)\n//        dbClient.del(mercenaryPrefix+battleForce)\n//        mList = []\n\n//      mList = mList.filter((key) ->\n//        for name in names\n//          if key is name then return false\n//        return true\n//      )\n//      if mList.length is 0\n//        cb(null, list)\n//      else\n//        selectedName = mList[rand()%mList.length]\n//        getPlayerHero(selectedName, (err, hero) ->\n//          if hero\n//            cb(new Error('Done'), hero)\n//          else\n//            logError({action: 'RemoveInvalidMercenary', error: err, name: selectedName})\n//            mercenaryDel(battleForce, selectedName, (err) -> cb(null, list))\n//        )\n//    )\n//actions = [ (cb) -> mercenaryKeyList(cb); ]\n//for i in [0..50]\n//  actions.push(doFindMercenary)\n//async.waterfall(actions, handler)\n",
+    getMercenary: "local battleforce, count, range = ARGV[1], ARGV[2], ARGV[3];\nlocal delta, rand, names, retrys = ARGV[4], ARGV[5], ARGV[6], ARGV[7];\nlocal key = 'Leaderboard.battleforce';\nlocal from = battleforce - range;\nlocal to = battleforce + range;\nlocal nameMask = {}\n\nwhile string.len(names) > 0 do\n  local index = string.find(names, ',');\n  if index == nil then\n    nameMask[names] = 1;\n    break;\n  end\n  local v = string.sub(names, 1, index-1)\n  nameMask[v] = 1;\n  names = string.sub(names, index+1, -1);\nend\n\nlocal ret = {};\nwhile true do\n  local list = redis.call('zrevrangebyscore', key, to, from);\n  local mercenarys = {};\n  for i, name in ipairs(list) do\n    if nameMask[name] ~= 1 then table.insert(mercenarys, name); end\n  end\n\n  local length = table.getn(mercenarys);\n  if length > 0 then\n    local name = mercenarys[rand%length + 1];\n    table.insert(ret, name);\n    nameMask[name] = 1;\n  end\n\n  if table.getn(ret) >= tonumber(count) then break; end\n\n  from = from - delta;\n  if from < 0 then from = 0; end\n  to = to + delta;\n  retrys = retrys - 1;\n  if retrys == 0 then return {err='Fail'}; end\nend\n\nreturn ret;",
     exchangePKRank: "local board, champion, second = ARGV[1], ARGV[2], ARGV[3]; \nlocal key = 'Leaderboard.'..board; \nlocal championRank = redis.call('ZRANK', key, champion); \nlocal secondRank = redis.call('ZRANK', key, second); \nif championRank > secondRank then \n  redis.call('ZADD', key, championRank, second); \n  redis.call('ZADD', key, secondRank, champion); \n  championRank = secondRank;\nend \nreturn championRank;",
     tryAddLeaderboardMember: "local board, name, value = ARGV[1], ARGV[2], ARGV[3];\nlocal key = 'Leaderboard.'..board;\nlocal score = redis.call('ZSCORE', key, name)\nif score == false then\n  score = value;\n  if value == 'null' then\n    score = redis.call('ZCARD', key)\n  end\n  redis.call('ZADD', key, score, name);\nend\nreturn score"
   };

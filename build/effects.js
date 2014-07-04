@@ -199,5 +199,9 @@ exports.data = [
     {
         "effectId":48,
         "file":"effect-mshx.ccbi"
+    },
+    {
+        "effectId":49,
+        "file":"effect-enemyitem.ccbi"
     }
 ]

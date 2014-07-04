@@ -131,7 +131,7 @@
   };
 
   createUnits = function(rules, randFunc) {
-    var cfg, filterLevels, globalRule, i, l, levelConfig, levelOtherKey, levelRule, otherKeys, placeUnit, r, rand, result, rule, selectFromPool, selectPos, translateRule, _i, _j, _k, _len, _len1, _len2, _ref5;
+    var cfg, filterLevels, gi, globalRule, i, l, levelConfig, levelOtherKey, levelRule, otherKeys, placeUnit, r, rand, result, rule, selectFromPool, selectPos, translateRule, _i, _j, _k, _len, _len1, _len2, _ref5;
     rand = function(mod) {
       var r;
       if (mod == null) {
@@ -219,7 +219,7 @@
       return -1;
     };
     placeUnit = function(lRule, lConfig, single) {
-      var count, idList, proList, result, _k, _len2, _ref6, _ref7;
+      var count, idList, proList, result, _k, _len2, _ref6;
       result = [];
       for (_k = 0, _len2 = lRule.length; _k < _len2; _k++) {
         r = lRule[_k];
@@ -242,10 +242,10 @@
         if (r.pool != null) {
           idList = selectFromPool(r.pool, count);
           count = 1;
-          proList = (_ref7 = mapDiff(rules.pool[r.pool], ['objects'])) != null ? _ref7 : [];
+          proList = mapDiff(rules.pool[r.pool], ['objects']);
         }
         idList.forEach(function(c) {
-          var k, u, v, _ref8;
+          var k, u, v, _ref7, _ref8;
           u = {};
           for (k in c) {
             v = c[k];
@@ -258,11 +258,16 @@
             u[k] = v;
           }
           if (levelOtherKey[lConfig.id] != null) {
-            _ref8 = levelOtherKey[lConfig.id];
-            for (k in _ref8) {
-              v = _ref8[k];
+            _ref7 = levelOtherKey[lConfig.id];
+            for (k in _ref7) {
+              v = _ref7[k];
               u[k] = v;
             }
+          }
+          _ref8 = mapDiff(r, ['pool', 'levels', 'count']);
+          for (k in _ref8) {
+            v = _ref8[k];
+            u[k] = v;
           }
           u.count = count;
           if (r.pos) {
@@ -287,7 +292,7 @@
     }
     for (_k = 0, _len2 = globalRule.length; _k < _len2; _k++) {
       rule = globalRule[_k];
-      i = 0;
+      gi = 0;
       filterLevels = function() {
         var _ref6, _ref7;
         cfg = levelConfig.filter(function(c) {
@@ -295,7 +300,7 @@
         });
         if (((_ref6 = rule.levels) != null ? _ref6.from : void 0) != null) {
           cfg = cfg.filter(function(c) {
-            return c.id > rule.levels.from;
+            return c.id >= rule.levels.from;
           });
         }
         if (((_ref7 = rule.levels) != null ? _ref7.to : void 0) != null) {
@@ -305,14 +310,14 @@
         }
         return cfg;
       };
-      while (i < rule.count) {
+      while (gi < rule.count) {
         cfg = filterLevels();
         if (cfg.length <= 0) {
           break;
         }
         cfg = cfg[rand() % cfg.length];
         result[cfg.id] = result[cfg.id].concat(placeUnit([rule], cfg, true));
-        i++;
+        gi++;
       }
     }
     return result;
@@ -2685,6 +2690,21 @@
             pos: env.variable('tarPos')
           }
         ];
+      }
+    },
+    DropPrize: {
+      callback: function(env) {
+        var dropID;
+        dropID = env.variable('dropID');
+        console.log(env.variable);
+        if (dropID == null) {
+          dropID = env.variable('me').dropPrize;
+        }
+        if (dropID != null) {
+          return env.dungeon.killingInfo.push({
+            dropInfo: dropID
+          });
+        }
       }
     },
     DropItem: {

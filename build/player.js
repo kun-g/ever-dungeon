@@ -221,11 +221,12 @@
     };
 
     Player.prototype.claimPkPrice = function(callback) {
-      console.log('?????', helperLib);
+      var me;
+      me = this;
       return helperLib.getPositionOnLeaderboard(helperLib.LeaderboardIdx.Arena, this.name, 0, 0, function(err, result) {
         var prize, ret;
         prize = arenaPirze(result.position + 1);
-        ret = this.claimPrize(prize);
+        ret = me.claimPrize(prize);
         return callback(ret);
       });
     };
@@ -360,7 +361,9 @@
         id: 871,
         num: count
       };
-      if (multiple && false) {
+      if (this.stage[stage].state !== STAGE_STATE_PASSED) {
+        ret_result = RET_StageIsLocked;
+      } else if (multiple && this.vipLevel() < Sweep_Vip_Level) {
         ret_result = RET_VipLevelIsLow;
       } else if (this.energy < energyCost) {
         ret_result = RET_NotEnoughEnergy;
@@ -1742,6 +1745,7 @@
       newItem = ret.newItem;
       if (newItem) {
         ret.newItem.enhancement = enhance;
+        ret.newItem.xp = item.xp;
         eh = newItem.enhancement.map(function(e) {
           return {
             id: e.id,
@@ -1971,23 +1975,25 @@
       xr = ((_ref8 = cfg.xpRate) != null ? _ref8 : 1) * percentage;
       wr = ((_ref9 = cfg.wxpRate) != null ? _ref9 : 1) * percentage;
       prize = helperLib.generatePrize(queryTable(TABLE_DROP), dropInfo);
-      if (cfg.prizeGold) {
-        prize.push({
-          type: PRIZETYPE_GOLD,
-          count: Math.floor(gr * cfg.prizeGold)
-        });
-      }
-      if (cfg.prizeXp) {
-        prize.push({
-          type: PRIZETYPE_EXP,
-          count: Math.floor(xr * cfg.prizeXp)
-        });
-      }
-      if (cfg.prizeWxp) {
-        prize.push({
-          type: PRIZETYPE_WXP,
-          count: Math.floor(wr * cfg.prizeWxp)
-        });
+      if (dungeon.isSweep == null) {
+        if (cfg.prizeGold) {
+          prize.push({
+            type: PRIZETYPE_GOLD,
+            count: Math.floor(gr * cfg.prizeGold)
+          });
+        }
+        if (cfg.prizeXp) {
+          prize.push({
+            type: PRIZETYPE_EXP,
+            count: Math.floor(xr * cfg.prizeXp)
+          });
+        }
+        if (cfg.prizeWxp) {
+          prize.push({
+            type: PRIZETYPE_WXP,
+            count: Math.floor(wr * cfg.prizeWxp)
+          });
+        }
       }
       infiniteLevel = dungeon.infiniteLevel;
       if ((infiniteLevel != null) && cfg.infinityPrize && result === DUNGEON_RESULT_WIN) {

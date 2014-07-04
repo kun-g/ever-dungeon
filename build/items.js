@@ -27629,7 +27629,7 @@ exports.data = [
             "reactivity": 15
         },
         "storeOnly": true,
-        "expiration": {day: 2}
+        "expiration": {day: 7}
     },
     {
         "classId": 865,
@@ -27658,7 +27658,7 @@ exports.data = [
             "reactivity": 30
         },
         "storeOnly": true,
-        "expiration": {day: 2}
+        "expiration": {day: 7}
     },
     {
         "classId":866,
@@ -27687,7 +27687,7 @@ exports.data = [
             "reactivity": 90
         },
         "storeOnly": true,
-        "expiration": {day: 2}
+        "expiration": {day: 7}
     },
     {
         "classId":867,
@@ -27712,7 +27712,7 @@ exports.data = [
             "reactivity": 5
         },
         "storeOnly": true,
-        "expiration": {day: 2}
+        "expiration": {day: 7}
     },
     {
         "classId": 868,
@@ -27737,7 +27737,7 @@ exports.data = [
             "reactivity": 20
         },
         "storeOnly": true,
-        "expiration": {day: 2}
+        "expiration": {day: 7}
     },
     {
         "classId": 869,
@@ -27762,7 +27762,7 @@ exports.data = [
             "reactivity": 50
         },
         "storeOnly": true,
-        "expiration": {day: 2}
+        "expiration": {day: 7}
     },
     {
         "classId": 870,
@@ -27787,5 +27787,152 @@ exports.data = [
         "stack": 99,
         "sellprice": 100,
         "description": "可以用于扫荡用的卷轴，只要符合关卡战斗力要求即可进行扫荡。"
+    },
+    {
+        "classId": 872,
+        "label": "VIP3宝箱",
+        "icon": "item-vipbox3.png",
+        "category": 0,
+        "subcategory": 0,
+        "description": "内含金块X15，扫荡卷轴X20(每日限购1个)",
+        "quality": 1,
+        "prize": [
+            {
+                "type": 0,
+                "count": 15,
+                "value": 28
+            },
+            {
+                "type": 0,
+                "count": 20,
+                "value": 871
+            }
+        ],
+        "storeOnly": true
+    },
+    {
+        "classId": 873,
+        "label": "VIP4宝箱",
+        "icon": "item-vipbox4.png",
+        "category": 0,
+        "subcategory": 0,
+        "description": "内含金块X20，扫荡卷轴X30(每日限购1个)",
+        "quality": 1,
+        "prize": [
+            {
+                "type": 0,
+                "count": 20,
+                "value": 28
+            },
+            {
+                "type": 0,
+                "count": 30,
+                "value": 871
+            }
+        ],
+        "storeOnly": true
+    },
+    {
+        "classId": 874,
+        "label": "VIP5宝箱",
+        "icon": "item-vipbox5.png",
+        "category": 0,
+        "subcategory": 0,
+        "description": "内含金块X25，扫荡卷轴X40(每日限购1个)",
+        "quality": 1,
+        "prize": [
+            {
+                "type": 0,
+                "count": 25,
+                "value": 28
+            },
+            {
+                "type": 0,
+                "count": 40,
+                "value": 871
+            }
+        ],
+        "storeOnly": true
+    },
+    {
+        "classId": 875,
+        "label": "VIP6宝箱",
+        "icon": "item-vipbox6.png",
+        "category": 0,
+        "subcategory": 0,
+        "description": "内含金块X32，扫荡卷轴X50，大瓶精力药剂X1(每日限购1个)",
+        "quality": 1,
+        "prize": [
+            {
+                "type": 0,
+                "count": 32,
+                "value": 28
+            },
+            {
+                "type": 0,
+                "count": 50,
+                "value": 871
+            },
+            {
+                "type": 0,
+                "count": 1,
+                "value": 539
+            }
+        ],
+        "storeOnly": true
+    },
+    {
+        "classId": 876,
+        "label": "VIP7宝箱",
+        "icon": "item-vipbox7.png",
+        "category": 0,
+        "subcategory": 0,
+        "description": "内含金块X40，扫荡卷轴X50，大瓶精力药剂X2(每日限购1个)",
+        "quality": 1,
+        "prize": [
+            {
+                "type": 0,
+                "count": 40,
+                "value": 28
+            },
+            {
+                "type": 0,
+                "count": 60,
+                "value": 871
+            },
+            {
+                "type": 0,
+                "count": 2,
+                "value": 539
+            }
+        ],
+        "storeOnly": true
+    },
+    {
+        "classId": 877,
+        "label": "VIP8宝箱",
+        "icon": "item-vipbox8.png",
+        "category": 0,
+        "subcategory": 0,
+        "description": "内含金块X65，扫荡卷轴X70，大瓶精力药剂X3(每日限购1个)",
+        "quality": 1,
+        "prize": [
+            {
+                "type": 0,
+                "count": 65,
+                "value": 28
+            },
+            {
+                "type": 0,
+                "count": 70,
+                "value": 871
+            },
+            {
+                "type": 0,
+                "count": 3,
+                "value": 539
+            }
+        ],
+        "storeOnly": true
     }
 ]

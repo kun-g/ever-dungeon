@@ -618,7 +618,7 @@ exports.data = [
                 "type":0,
                 "label":"收集圣灵草",
                 "collect":22001,
-                "count":10
+                "count":5
             }
         ],
         "prize":[
@@ -671,7 +671,7 @@ exports.data = [
                 "type":0,
                 "label":"收集火焰魔法结晶",
                 "collect":24001,
-                "count":10
+                "count":5
             }
         ],
         "prize":[
@@ -1194,7 +1194,7 @@ exports.data = [
                 "type":0,
                 "label":"商队宝箱",
                 "collect":43001,
-                "count":5
+                "count":4
             }
         ],
         "prize":[
@@ -1494,7 +1494,7 @@ exports.data = [
                 "type":0,
                 "label":"收集风之草",
                 "collect":54001,
-                "count":10
+                "count":5
             }
         ],
         "prize":[
@@ -1597,7 +1597,7 @@ exports.data = [
                 "type":0,
                 "label":"采集风之结晶",
                 "collect":58001,
-                "count":15
+                "count":5
             }
         ],
         "prize":[
@@ -1927,7 +1927,7 @@ exports.data = [
                 "type":0,
                 "label":"救回被捉走的村民",
                 "collect":70001,
-                "count":8
+                "count":4
             }
         ],
         "prize":[
@@ -2357,7 +2357,7 @@ exports.data = [
                 "type":0,
                 "label":"收集还魂草",
                 "collect":86001,
-                "count":25
+                "count":3
             }
         ],
         "prize":[
@@ -2435,7 +2435,7 @@ exports.data = [
                 "type":0,
                 "label":"销毁迷魂草",
                 "collect":89001,
-                "count":12
+                "count":2
             }
         ],
         "prize":[
@@ -3441,13 +3441,13 @@ exports.data = [
                 "type":0,
                 "label":"收集炼制结晶I",
                 "collect":125001,
-                "count":5
+                "count":2
             },
             {
                 "type":0,
                 "label":"收集炼制结晶II",
                 "collect":125002,
-                "count":5
+                "count":2
             },
             {
                 "type":0,
@@ -3504,7 +3504,7 @@ exports.data = [
                 "type":0,
                 "label":"营救村民",
                 "collect":127001,
-                "count":5
+                "count":3
             }
         ],
         "prize":[
