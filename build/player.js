@@ -1400,9 +1400,9 @@
       this.log('claimQuest', {
         id: qid
       });
-      this.quests.newProperty(qid, {
+      this.quest[qid] = {
         complete: true
-      });
+      };
       return ret.concat(this.updateQuestStatus());
     };
 
@@ -1560,7 +1560,7 @@
                 sta: 0
               });
             }
-            this.equipment.newProperty(item.subcategory, slot);
+            this.equipment[item.subcategory] = slot;
             tmp.sta = 1;
           }
           ret.arg.itm.push(tmp);
@@ -2281,9 +2281,9 @@
       }
       if (this.campaignState[campaignName] == null) {
         if (campaignName === 'Charge' || campaignName === 'DuanwuCharge') {
-          this.campaignState.newProperty(campaignName, {});
+          this.campaignState[campaignName] = {};
         } else {
-          this.campaignState.newProperty(campaignName, 0);
+          this.campaignState[campaignName] = 0;
         }
       }
       return this.campaignState[campaignName];
