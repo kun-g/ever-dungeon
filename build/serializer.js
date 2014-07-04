@@ -1,5 +1,7 @@
 (function() {
-  var Serializer, destroyReactDB, g_attr_constructorTable, generateMonitor, objectlize, registerConstructor;
+  var Serializer, destroyReactDB, g_attr_constructorTable, generateMonitor, objectlize, registerConstructor, tap;
+
+  tap = require('./define').tap;
 
   destroyReactDB = require('./define').destroyReactDB;
 
@@ -62,19 +64,26 @@
       if (this.s_attr_to_save.indexOf(key) !== -1) {
         return false;
       }
+      tap(this, key, this.s_attr_monitor, restoreFlag);
       return this.s_attr_to_save.push(key);
     };
 
     Serializer.prototype.versionControl = function(versionKey, keys) {
-      var versionIncr;
+      var key, versionIncr, _i, _len, _results;
       if (!Array.isArray(keys)) {
         keys = [keys];
       }
-      return versionIncr = (function(_this) {
+      versionIncr = (function(_this) {
         return function() {
           return _this[versionKey]++;
         };
       })(this);
+      _results = [];
+      for (_i = 0, _len = keys.length; _i < _len; _i++) {
+        key = keys[_i];
+        _results.push(tap(this, key, versionIncr));
+      }
+      return _results;
     };
 
     Serializer.prototype.getConstructor = function() {
