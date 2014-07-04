@@ -3056,12 +3056,15 @@
         collectId = env.variable('collectId');
         questInfo = [];
         _ref5 = env.getQuests();
+	console.log(_ref5,'=======')
         for (qid in _ref5) {
           quest = _ref5[qid];
+	console.log(quest,'=======')
           if ((quest != null ? quest.counters : void 0) == null) {
             continue;
           }
           _ref6 = queryTable(TABLE_QUEST, qid, this.abIndex).objects;
+
           for (i in _ref6) {
             objective = _ref6[i];
             if (!(objective.type === QUEST_TYPE_NPC && objective.collect === collectId)) {
