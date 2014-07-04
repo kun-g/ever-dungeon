@@ -529,7 +529,7 @@
           }
         ];
         if (rec.productID === MonthCardID) {
-          this.counters.newProperty('monthCard', 30);
+          this.counters.monthCard = 30;
           ret = ret.concat(this.syncEvent());
         }
         this.rmb += cfg.rmb;
@@ -659,7 +659,7 @@
         }
         heroData.xp = 0;
         heroData.equipment = [];
-        this.heroBase.newProperty(heroData["class"], heroData);
+        this.heroBase.heroData["class"] = heroData;
         this.switchHero(heroData["class"]);
         return this.createHero();
       } else if (this.hero) {
@@ -688,7 +688,7 @@
           };
           this.save();
         } else {
-          this.hero.newProperty('equipment', equip);
+          this.hero.equipment = equip;
         }
         hero = new Hero(this.hero);
         bf = hero.calculatePower();
@@ -708,18 +708,18 @@
         return false;
       }
       if (this.hero != null) {
-        this.heroBase.newProperty(this.hero["class"], {});
+        this.heroBase[this.hero["class"]] = {};
         _ref7 = this.hero;
         for (k in _ref7) {
           v = _ref7[k];
-          this.heroBase[this.hero["class"]].newProperty(k, JSON.parse(JSON.stringify(v)));
+          this.heroBase[this.hero["class"]][k] = JSON.parse(JSON.stringify(v));
         }
       }
       _ref8 = this.heroBase[hClass];
       _results = [];
       for (k in _ref8) {
         v = _ref8[k];
-        _results.push(this.hero.newProperty(k, JSON.parse(JSON.stringify(v))));
+        _results.push(this.hero[k] = JSON.parse(JSON.stringify(v)));
       }
       return _results;
     };
@@ -817,7 +817,7 @@
       if (stg) {
         chapter = stg.chapter;
         if (this.stage[stage] == null) {
-          this.stage.newProperty(stage, {});
+          this.stage.stage = {};
         }
         if (this.stage[stage].newProperty == null) {
           tapObject(this.stage[stage], console.log);
