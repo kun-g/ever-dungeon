@@ -27,7 +27,6 @@ exports.data = [
     },
     {
         "name":"Arena",
-        "key":"counters.arena",
         "reverse": true,
         "initialValue": 'length',
         "type":"player",

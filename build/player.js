@@ -1963,7 +1963,7 @@
       percentage = 1;
       if (result === DUNGEON_RESULT_WIN) {
         dbLib.incrBluestarBy(this.name, 1);
-        if (dungeon.isSweep != null) {
+        if (dungeon.isSweep) {
           if (cfg.dropID) {
             dropInfo = dropInfo.concat(cfg.dropID);
           }
@@ -1975,7 +1975,7 @@
       xr = ((_ref8 = cfg.xpRate) != null ? _ref8 : 1) * percentage;
       wr = ((_ref9 = cfg.wxpRate) != null ? _ref9 : 1) * percentage;
       prize = helperLib.generatePrize(queryTable(TABLE_DROP), dropInfo);
-      if (dungeon.isSweep == null) {
+      if (!dungeon.isSweep) {
         if (cfg.prizeGold) {
           prize.push({
             type: PRIZETYPE_GOLD,
