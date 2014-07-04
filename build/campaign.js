@@ -176,6 +176,41 @@ exports.data = {
                 {"type":0,"value":540,"count":3},
                 {"type":0,"value":539,"count":1}
             ]
+        },
+        {
+            "count": 150,
+            "award": [
+                {"type":0,"value":540,"count":3},
+                {"type":0,"value":539,"count":1},
+                {"type":0,"value":871,"count":10}
+            ]
+        },
+        {
+            "count": 250,
+            "award": [
+                {"type":0,"value":540,"count":3},
+                {"type":0,"value":539,"count":1},
+                {"type":0,"value":871,"count":20}
+            ]
+        },
+        {
+            "count": 400,
+            "award": [
+                {"type":0,"value":540,"count":3},
+                {"type":0,"value":871,"count":30}
+            ]
+        },
+        {
+            "count": 850,
+            "award": [
+                {"type":0,"value":540,"count":3}
+            ]
+        },
+        {
+            "count": 1400,
+            "award": [
+                {"type":0,"value":540,"count":3}
+            ]
         }
     ]
   },

@@ -1181,10 +1181,10 @@ exports.data = [
               "spellEffect": 28
           },
           "installAction":[
-              { "type": "setProperty",  "modifications": {"attack":{"c":4}} }
+              { "type": "setProperty",  "modifications": {"attack":{"c":6}} }
           ],
           "triggerCondition": [
-              {"type": "property", "property":"health","to": 30 },
+              {"type": "property", "property":"health","to": 60 },
               {"type":"event","event":"onBattleTurnEnd"}
           ],
           "targetSelection": {
@@ -1347,7 +1347,7 @@ exports.data = [
                 { "type": "effectCount", "count":1}
             ],
             "action":[
-                {"type": "damage","damageType":"Spell","isRange":true,"delay":0.4,"formular": {"c":25}},
+                {"type": "damage","damageType":"Spell","isRange":true,"delay":0.4,"formular": {"c":35}},
                 {"type": "playEffect","effect":24,"pos":"self"}
             ]
         }
@@ -1375,7 +1375,7 @@ exports.data = [
             "triggerCondition": [
                 {"type": "countDown", "cd": 5 },
                 {"type":"visible"},
-                {"type": "property", "property":"health","to": 80 },
+                {"type": "property", "property":"health","to": 120 },
                 {"type":"event","event":"onBeEndBattleTurn"},
                 {"type":"alive"}
             ],
@@ -1498,7 +1498,7 @@ exports.data = [
                 { "type": "effectCount", "count":1}
             ],
             "action":[
-                {"type": "damage","damageType":"Spell","isRange":true,"delay":0.4,"formular": {"c":55}},
+                {"type": "damage","damageType":"Spell","isRange":true,"delay":0.4,"formular": {"c":75}},
                 {"type": "playEffect","effect":30,"pos":"self"}
             ]
         }
@@ -1562,7 +1562,7 @@ exports.data = [
 
             },
             "action": [
-                {"type": "heal","self":true,"formular": {"tar":{"c":80}}},
+                {"type": "heal","self":true,"formular": {"tar":{"c":100}}},
                 {"type": "setMyMutex", "mutex": "langqun", "count": 9999},
                 {"type":"kill"}
             ]
@@ -1595,7 +1595,7 @@ exports.data = [
             "action":[
                 {"type": "playEffect","effect":28,"pos":"self"},
                 { "type": "setProperty","modifications": {"critical":{"c":5}}},
-                { "type": "setProperty","modifications": {"attack":{"c":10}}}
+                { "type": "setProperty","modifications": {"attack":{"c":15}}}
             ],
             "targetSelection":{ "pool":"self" },
             "uninstallAction": [
@@ -1646,7 +1646,7 @@ exports.data = [
         "skillId": 68,
         "config": {
             "action":[
-                {"type": "damage","damageType":"Bleed","formular": {"src":{"c":10}}}
+                {"type": "damage","damageType":"Bleed","formular": {"src":{"c":20}}}
             ],
             "targetSelection":
             { "pool":"self",
@@ -1700,7 +1700,7 @@ exports.data = [
                 { "type": "effectCount", "count":1}
             ],
             "action":[
-                {"type": "damage","damageType":"Spell","isRange":true,"formular": {"c":100}},
+                {"type": "damage","damageType":"Spell","isRange":true,"formular": {"c":150}},
                 {"type": "playEffect","effect":25,"pos":"self"}
             ]
         }
@@ -1723,7 +1723,7 @@ exports.data = [
                 "filter": [{"type":"alive"},{"type":"visible"}]
             },
             "action": [
-                {"type": "heal","self":true,"formular": {"c":60}}
+                {"type": "heal","self":true,"formular": {"c":80}}
             ]
         }
     },
@@ -1808,7 +1808,7 @@ exports.data = [
         "label":"暴击特效",
         "config": {
             "triggerCondition": [
-                { "type": "event", "event": "onCriticalDamage" }
+                { "type": "event", "event": "onPhysicalDamage" }
             ],
         "action":[
             { "type": "shock", "delay":0.3, "range":5, "time":0.2 }
@@ -3556,11 +3556,17 @@ exports.data = [
         "label": "boss掉落",
         "config": {
             "triggerCondition": [
-                { "type": "event", "event": "onBeKill" }
+                { "type": "event", "event": "onBeDeathStrike" }
             ],
+            "targetSelection":{
+                "pool":"self",
+                "filter": [{"type":"alive"},{"type": "visible"}]
+            },
             "action": [
                 { "type": "dropPrize"},
-                {"type": "playEffect","effect":49,"pos":"self"}]
+                {"type": "playEffect","effect":49,"pos":"self"},
+                {"type":"delay"},
+                {"type":"kill"}]
         }
     },
     {
@@ -3568,12 +3574,18 @@ exports.data = [
         "label": "小兵掉落",
         "config": {
             "triggerCondition": [
-                { "type": "event", "event": "onBeKill" },
+                { "type": "event", "event": "onBeDeathStrike" },
                 { "type": "chance", "chance": 0.25 }
             ],
+            "targetSelection":{
+                "pool":"self",
+                "filter": [{"type":"alive"},{"type": "visible"}]
+            },
             "action": [
                 { "type": "dropPrize"},
-                {"type": "playEffect","effect":49,"pos":"self"}]
+                {"type": "playEffect","effect":49,"pos":"self"},
+                {"type":"delay"},
+                {"type":"kill"}]
         }
     },
     {
@@ -3583,6 +3595,10 @@ exports.data = [
             "triggerCondition": [
                 { "type": "event", "event": "onBeActivate" }
             ],
+            "targetSelection":{
+                "pool":"self",
+                "filter": [{"type":"alive"},{"type": "visible"}]
+            },
             "action": [
                 { "type": "dropPrize"},
                 {"type":"playAction","motion":1,"pos":"self"},

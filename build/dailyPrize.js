@@ -14,13 +14,13 @@ exports.data = [
         "prize": [
             {
                 "type": 0,
-                "value":853,
-                "count":6
+                "value":871,
+                "count":2
             },
             {
                 "type": 0,
-                "value":853,
-                "count":6,
+                "value":871,
+                "count":2,
                 "vip":1
             }
         ]
@@ -75,13 +75,13 @@ exports.data = [
         "prize": [
             {
                 "type": 0,
-                "value":854,
-                "count":10
+                "value":871,
+                "count":4
             },
             {
                 "type": 0,
-                "value":854,
-                "count":10,
+                "value":871,
+                "count":4,
                 "vip":1
             }
         ]
@@ -108,7 +108,7 @@ exports.data = [
                 "type": 0,
                 "value":858,
                 "count":8,
-                "vip":1
+                "vip":2
             }
         ]
     },
@@ -136,14 +136,14 @@ exports.data = [
         "prize": [
             {
                 "type": 0,
-                "value":855,
-                "count":6
+                "value":871,
+                "count":5
             },
             {
                 "type": 0,
-                "value":855,
-                "count":6,
-                "vip":1
+                "value":871,
+                "count":5,
+                "vip":3
             }
         ]
     },
@@ -169,7 +169,7 @@ exports.data = [
                 "type": 0,
                 "value":859,
                 "count":4,
-                "vip":1
+                "vip":4
             }
         ]
     },
@@ -197,14 +197,14 @@ exports.data = [
         "prize": [
             {
                 "type": 0,
-                "value":855,
+                "value":871,
                 "count":10
             },
             {
                 "type": 0,
-                "value":855,
+                "value":871,
                 "count":10,
-                "vip":2
+                "vip":5
             }
         ]
     },
@@ -230,7 +230,7 @@ exports.data = [
                 "type": 0,
                 "value":859,
                 "count":8,
-                "vip":2
+                "vip":6
             }
         ]
     },
@@ -258,14 +258,14 @@ exports.data = [
         "prize": [
             {
                 "type": 0,
-                "value":856,
-                "count":6
+                "value":871,
+                "count":15
             },
             {
                 "type": 0,
-                "value":856,
-                "count":6,
-                "vip":2
+                "value":871,
+                "count":15,
+                "vip":7
             }
         ]
     },
@@ -291,7 +291,7 @@ exports.data = [
                 "type": 0,
                 "value":860,
                 "count":5,
-                "vip":2
+                "vip":8
             }
         ]
     },
@@ -319,14 +319,14 @@ exports.data = [
         "prize": [
             {
                 "type": 0,
-                "value":857,
-                "count":6
+                "value":871,
+                "count":18
             },
             {
                 "type": 0,
-                "value":857,
-                "count":6,
-                "vip":2
+                "value":871,
+                "count":18,
+                "vip":8
             }
         ]
     },
@@ -349,7 +349,7 @@ exports.data = [
             {
                 "type": 2,
                 "count":150,
-                "vip":2
+                "vip":8
             }
         ]
     },
