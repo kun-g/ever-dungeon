@@ -450,8 +450,8 @@
         ], [
           {
             type: PRIZETYPE_ITEM,
-            value: 540,
-            count: 1
+            value: 571,
+            count: 3
           }
         ], [
           {
@@ -683,7 +683,7 @@
         }
       },
       canReset: function(obj, util) {
-        return util.today.hour() >= 8 && util.diffDay(obj.timestamp.infinite, util.today);
+        return util.today.hour() >= 8 && diffDate(obj.timestamp.infinite, util.today) >= 7;
       },
       reset: function(obj, util) {
         obj.timestamp.newProperty('infinite', util.currentTime());
@@ -713,7 +713,7 @@
       },
       stages: [121, 122, 123, 125, 126, 127, 128, 129, 130, 131, 132],
       canReset: function(obj, util) {
-        return util.diffDay(obj.timestamp.hunting, util.today);
+        return util.diffDate(obj.timestamp.hunting, util.today) >= 7;
       },
       reset: function(obj, util) {
         var s, stages, _i, _len;

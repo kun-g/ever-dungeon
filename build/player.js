@@ -361,7 +361,9 @@
         id: 871,
         num: count
       };
-      if (multiple && false) {
+      if (this.stage[stage].state !== STAGE_STATE_PASSED) {
+        ret_result = RET_StageIsLocked;
+      } else if (multiple && this.vipLevel() < Sweep_Vip_Level) {
         ret_result = RET_VipLevelIsLow;
       } else if (this.energy < energyCost) {
         ret_result = RET_NotEnoughEnergy;
