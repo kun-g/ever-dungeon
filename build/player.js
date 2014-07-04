@@ -268,7 +268,7 @@
             continue;
           }
           dbLib.deliverMessage(this.name, prize);
-          this.globalPrizeFlag.newProperty(key, true);
+          this.globalPrizeFlag[key] = true;
         }
       }
       if (!moment().isSame(this.infiniteTimer, 'week')) {
@@ -417,7 +417,7 @@
           };
         }
       }
-      this.loginStreak.newProperty('date', currentTime(true).valueOf());
+      this.loginStreak['date'] = currentTime(true).valueOf();
       this.log('claimLoginReward', {
         loginStreak: this.loginStreak.count,
         date: currentTime()
@@ -529,7 +529,7 @@
           }
         ];
         if (rec.productID === MonthCardID) {
-          this.counters.newProperty('monthCard', 30);
+          this.counters['monthCard'] = 30;
           ret = ret.concat(this.syncEvent());
         }
         this.rmb += cfg.rmb;
@@ -659,7 +659,7 @@
         }
         heroData.xp = 0;
         heroData.equipment = [];
-        this.heroBase.newProperty(heroData["class"], heroData);
+        this.heroBase[heroData["class"]] = heroData;
         this.switchHero(heroData["class"]);
         return this.createHero();
       } else if (this.hero) {
@@ -688,7 +688,7 @@
           };
           this.save();
         } else {
-          this.hero.newProperty('equipment', equip);
+          this.hero['equipment'] = equip;
         }
         hero = new Hero(this.hero);
         bf = hero.calculatePower();
@@ -708,18 +708,18 @@
         return false;
       }
       if (this.hero != null) {
-        this.heroBase.newProperty(this.hero["class"], {});
+        this.heroBase[this.hero["class"]] = {};
         _ref7 = this.hero;
         for (k in _ref7) {
           v = _ref7[k];
-          this.heroBase[this.hero["class"]].newProperty(k, JSON.parse(JSON.stringify(v)));
+          this.heroBase[this.hero["class"]][k] = JSON.parse(JSON.stringify(v));
         }
       }
       _ref8 = this.heroBase[hClass];
       _results = [];
       for (k in _ref8) {
         v = _ref8[k];
-        _results.push(this.hero.newProperty(k, JSON.parse(JSON.stringify(v))));
+        _results.push(this.hero[k] = JSON.parse(JSON.stringify(v)));
       }
       return _results;
     };
@@ -817,10 +817,7 @@
       if (stg) {
         chapter = stg.chapter;
         if (this.stage[stage] == null) {
-          this.stage.newProperty(stage, {});
-        }
-        if (this.stage[stage].newProperty == null) {
-          tapObject(this.stage[stage], console.log);
+          this.stage[stage] = {};
         }
         flag = false;
         arg = {
@@ -830,7 +827,7 @@
         };
         if (stg.isInfinite) {
           if (this.stage[stage].level == null) {
-            this.stage[stage].newProperty('level', 0);
+            this.stage[stage]['level'] = 0;
           }
           if (state === STAGE_STATE_PASSED) {
             this.stage[stage].level += 1;
@@ -1099,7 +1096,7 @@
         return [];
       }
       quest = queryTable(TABLE_QUEST, qid, this.abIndex);
-      this.quests.newProperty(qid, {
+      this.quests[qid] = {
         counters: (function() {
           var _i, _len, _ref7, _results;
           _ref7 = quest.objects;
@@ -1110,7 +1107,7 @@
           }
           return _results;
         })()
-      });
+      };
       this.onEvent('gold');
       this.onEvent('diamond');
       this.onEvent('item');
@@ -1316,7 +1313,7 @@
             case PRIZETYPE_FUNCTION:
               switch (p.func) {
                 case "setFlag":
-                  this.flags.newProperty(p.flag, p.value);
+                  this.flags[p.flag] = p.value;
                   ret = ret.concat(this.syncFlags(true)).concat(this.syncEvent());
                   break;
                 case "countUp":
@@ -1400,9 +1397,9 @@
       this.log('claimQuest', {
         id: qid
       });
-      this.quests.newProperty(qid, {
+      this.quests[qid] = {
         complete: true
-      });
+      };
       return ret.concat(this.updateQuestStatus());
     };
 
@@ -1560,7 +1557,7 @@
                 sta: 0
               });
             }
-            this.equipment.newProperty(item.subcategory, slot);
+            this.equipment[item.subcategory] = slot;
             tmp.sta = 1;
           }
           ret.arg.itm.push(tmp);
@@ -1963,10 +1960,8 @@
       percentage = 1;
       if (result === DUNGEON_RESULT_WIN) {
         dbLib.incrBluestarBy(this.name, 1);
-        if (dungeon.isSweep != null) {
-          if (cfg.dropID) {
-            dropInfo = dropInfo.concat(cfg.dropID);
-          }
+        if (cfg.dropID) {
+          dropInfo = dropInfo.concat(cfg.dropID);
         }
       } else {
         percentage = (dungeon.currentLevel / cfg.levelCount) * 0.5;
@@ -1975,25 +1970,23 @@
       xr = ((_ref8 = cfg.xpRate) != null ? _ref8 : 1) * percentage;
       wr = ((_ref9 = cfg.wxpRate) != null ? _ref9 : 1) * percentage;
       prize = helperLib.generatePrize(queryTable(TABLE_DROP), dropInfo);
-      if (dungeon.isSweep == null) {
-        if (cfg.prizeGold) {
-          prize.push({
-            type: PRIZETYPE_GOLD,
-            count: Math.floor(gr * cfg.prizeGold)
-          });
-        }
-        if (cfg.prizeXp) {
-          prize.push({
-            type: PRIZETYPE_EXP,
-            count: Math.floor(xr * cfg.prizeXp)
-          });
-        }
-        if (cfg.prizeWxp) {
-          prize.push({
-            type: PRIZETYPE_WXP,
-            count: Math.floor(wr * cfg.prizeWxp)
-          });
-        }
+      if (cfg.prizeGold) {
+        prize.push({
+          type: PRIZETYPE_GOLD,
+          count: Math.floor(gr * cfg.prizeGold)
+        });
+      }
+      if (cfg.prizeXp) {
+        prize.push({
+          type: PRIZETYPE_EXP,
+          count: Math.floor(xr * cfg.prizeXp)
+        });
+      }
+      if (cfg.prizeWxp) {
+        prize.push({
+          type: PRIZETYPE_WXP,
+          count: Math.floor(wr * cfg.prizeWxp)
+        });
       }
       infiniteLevel = dungeon.infiniteLevel;
       if ((infiniteLevel != null) && cfg.infinityPrize && result === DUNGEON_RESULT_WIN) {
@@ -2285,9 +2278,9 @@
       }
       if (this.campaignState[campaignName] == null) {
         if (campaignName === 'Charge' || campaignName === 'DuanwuCharge') {
-          this.campaignState.newProperty(campaignName, {});
+          this.campaignState[campaignName] = {};
         } else {
-          this.campaignState.newProperty(campaignName, 0);
+          this.campaignState[campaignName] = 0;
         }
       }
       return this.campaignState[campaignName];
