@@ -300,7 +300,7 @@
         });
         if (((_ref6 = rule.levels) != null ? _ref6.from : void 0) != null) {
           cfg = cfg.filter(function(c) {
-            return c.id > rule.levels.from;
+            return c.id >= rule.levels.from;
           });
         }
         if (((_ref7 = rule.levels) != null ? _ref7.to : void 0) != null) {
