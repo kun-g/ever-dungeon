@@ -1894,7 +1894,7 @@ var data = [
               if (obj.counters.goblin) {
                 obj.counters.goblin++;
               } else {
-                obj.counters.newProperty('goblin', 1);
+                obj.counters['goblin'] = 1;
               }
             }
         },
@@ -1913,7 +1913,7 @@ var data = [
               if (obj.counters.goblin) {
                 obj.counters.goblin++;
               } else {
-                obj.counters.newProperty('goblin', 1);
+                obj.counters['goblin'] = 1;
               }
             }
         },
@@ -1932,7 +1932,7 @@ var data = [
               if (obj.counters.goblin) {
                 obj.counters.goblin++;
               } else {
-                obj.counters.newProperty('goblin', 1);
+                obj.counters['goblin'] = 1;
               }
             }
         },
@@ -2025,7 +2025,7 @@ var data = [
                   //if (obj.counters.goblin) {
                   //    obj.counters.goblin++;
                   //} else {
-                  //    obj.counters.newProperty('goblin', 1);
+                  //    obj.counters['goblin'] = 1;
                   //}
               }
           },
