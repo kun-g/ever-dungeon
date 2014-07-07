@@ -75,6 +75,7 @@
       tickLeaderboard(board);
       cfg = localConfig[board];
       reverse = cfg.reverse ? 1 : 0;
+      console.log('getPositionOnLeaderboard', reverse);
       return dbLib.queryLeaderboard(cfg.name, reverse, name, from, to, function(err, result) {
         result.board = result.board.reduce((function(r, l, i) {
           if (i % 2 === 0) {

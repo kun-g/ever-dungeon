@@ -2459,7 +2459,6 @@
       callback: function(env) {
         var win;
         win = env.isDungeonFinished();
-        console.log('resultCheck', win, env.dungeon.getConfig().collectId);
         if (win) {
           if (env.dungeon.getConfig().collectId) {
             this.routine({
