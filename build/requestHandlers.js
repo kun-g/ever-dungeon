@@ -321,7 +321,13 @@
           }
         });
       },
-      args: ['tp', 'number', 'id', 'string', 'bv', 'string', 'rv', 'number', 'ch', 'string']
+      args: {
+        'tp': 'number',
+        'id': 'string',
+        'bv': 'string',
+        'rv': 'number',
+        'ch': 'string'
+      }
     },
     RPC_Register: {
       id: 101,
@@ -382,7 +388,14 @@
           }
         });
       },
-      args: ['pid', 'string', 'nam', 'string', 'cid', 'number', 'gen', 'number', 'hst', 'number', 'hcl', 'number']
+      args: {
+        'pid': 'string',
+        'nam': 'string',
+        'cid': 'number',
+        'gen': 'number',
+        'hst': 'number',
+        'hcl': 'number'
+      }
     },
     RPC_ValidateName: {
       id: 102,
@@ -396,7 +409,9 @@
           ]);
         });
       },
-      args: ['nam', 'string']
+      args: {
+        'nam': 'string'
+      }
     },
     NTF_Echo: {
       id: 103,
@@ -414,7 +429,9 @@
         }
         return handler([evt]);
       },
-      args: ['sign', 'number']
+      args: {
+        'sign': 'number'
+      }
     },
     RPC_VerifyDungeon: {
       id: 17,
@@ -478,7 +495,7 @@
           return doVerify();
         }
       },
-      args: [],
+      args: {},
       needPid: true
     },
     Request_Stastics: {
@@ -491,7 +508,7 @@
           name: player.name
         });
       },
-      args: [],
+      args: {},
       needPid: true
     },
     RPC_GameStartDungeon: {
@@ -533,7 +550,11 @@
           return player.saveDB();
         });
       },
-      args: ['stg'],
+      args: {
+        'stg': 'string',
+        'initialDataOnly': 'boolean',
+        'pkr': 'string'
+      },
       needPid: true
     },
     RPC_ChargeDiamond: {
@@ -547,7 +568,10 @@
             throw Error('PP25 Payment');
         }
       },
-      args: ['pid', 'string', 'rep', 'string'],
+      args: {
+        'pid': 'string',
+        'rep': 'string'
+      },
       needPid: true
     },
     RPC_VerifyPayment: {
@@ -625,7 +649,7 @@
             return req.end();
         }
       },
-      args: [],
+      args: {},
       needPid: true
     },
     RPC_BindSubAuth: {
@@ -646,11 +670,14 @@
           ]);
         });
       },
-      args: []
+      args: {}
     },
     RPC_Reconnect: {
       id: 104,
-      args: ['pid', 'string'],
+      args: {
+        'pid': 'pid',
+        'string': 'string'
+      },
       func: function(arg, player, handler, rpcID, socket) {
         return async.waterfall([
           function(cbb) {
@@ -735,7 +762,7 @@
           }
         });
       },
-      args: [],
+      args: {},
       needPid: true
     },
     RPC_SubmitBounty: {
@@ -765,7 +792,7 @@
             }
         }
       },
-      args: [],
+      args: {},
       needPid: true
     },
     RPC_SubmitDailyQuest: {
@@ -781,7 +808,7 @@
           return player.saveDB();
         });
       },
-      args: [],
+      args: {},
       needPid: true
     },
     RPC_GetPkRivals: {
@@ -805,7 +832,7 @@
           });
         });
       },
-      args: [],
+      args: {},
       needPid: true
     },
     RPC_PVPInfoUpdate: {
@@ -826,7 +853,7 @@
           return handler(ret);
         });
       },
-      args: [],
+      args: {},
       needPid: true
     },
     RPC_SweepStage: {
@@ -844,7 +871,7 @@
         player.saveDB();
         return handler([res].concat(ret));
       },
-      args: [],
+      args: {},
       needPid: true
     },
     RPC_ReceivePrize: {
@@ -873,7 +900,7 @@
             }
         }
       },
-      args: [],
+      args: {},
       needPid: true
     }
   };

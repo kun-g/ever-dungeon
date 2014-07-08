@@ -43,7 +43,7 @@ exports.data = {
     {"rmb":198,"diamond":2260},
     {"rmb":328,"diamond":3760},
     {"rmb":648,"diamond":7480},
-    {"rmb":25,"diamond":100}
+    {"rmb":25,"diamond":0}
   ],
 
     "InitialEquipment":{
