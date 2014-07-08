@@ -51,7 +51,7 @@ function dispatchCommand (routeTable, req, socket, retValHandler) {
       type : 'Handler Failed',
       cmd : req.CMD,
       error_message : "arg type invalid: arg:"+errorArg.argName+" expected:" 
-              +errorArg.expectType+" actual:" +typeof(errorArg.actualType)});
+              +errorArg.expectType+" actual:" +errorArg.actualType});
   }
 
   if (req == null) {
