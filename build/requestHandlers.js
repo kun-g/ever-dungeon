@@ -551,7 +551,7 @@
         });
       },
       args: {
-        'stg': 'string',
+        'stg': 'number',
         'initialDataOnly': 'boolean',
         'pkr': 'string'
       },
