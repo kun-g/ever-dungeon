@@ -675,7 +675,7 @@
     RPC_Reconnect: {
       id: 104,
       args: {
-        'pid': 'pid',
+        'PID': 'PID',
         'string': 'string'
       },
       func: function(arg, player, handler, rpcID, socket) {
