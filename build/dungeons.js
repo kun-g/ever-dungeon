@@ -1650,10 +1650,10 @@ exports.data = [
                      {
                          "id": 153,
                          "count":1,
-                         property:[
-                             {"collectId":18001},
-                             {"questOnly":true}
-                         ]
+                         property:{
+                             "collectId":18001,
+                             "questOnly":true
+                         }
                      },
                     {
                         "id": 149,
@@ -1669,10 +1669,11 @@ exports.data = [
                     {
                         "id": 34,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:92}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:92
+                        },
                     },
                     {
                         "id": 149,
@@ -1770,10 +1771,10 @@ exports.data = [
                         "id": 32,
                         "count":2,
                         "collectId":19001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:93}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:93}
                     },
                     {
                         "id": 149,
@@ -1875,10 +1876,10 @@ exports.data = [
                         "id": 33,
                         "count":2,
                         "collectId":21001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:94}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:94}
                     },
                     {
                         "id": 149,
@@ -1985,11 +1986,12 @@ exports.data = [
                     {
                         "id": 55,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:95}],
-                        "collectId":23001
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:95,
+                            "collectId":23001
+                        }
                     },
                     {
                         "id": 152,
@@ -2098,10 +2100,10 @@ exports.data = [
                     {
                         "id": 55,
                         "count":1,
-                        "collectId":26001,property:[
-                        {"keyed":true},
-                        {skill:[{id:153}]},
-                        {dropPrize:96}]
+                        "collectId":26001,property:{
+                        "keyed":true,
+                        skill:[{id:153}],
+                        dropPrize:96}
                     },
                     {
                         "id": 149,
@@ -2187,10 +2189,10 @@ exports.data = [
                     {
                         "id": 53 ,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:97}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:97}
                     },
                     {
                         "id": 156,
@@ -2326,10 +2328,10 @@ exports.data = [
                         "count":1,
                         "pos":12,
                         "collectId":30001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:98}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:98}
                     },
                     {
                         "id": 34,
@@ -2432,10 +2434,10 @@ exports.data = [
                         "id": 26,
                         "count":1,
                         "collectId":32001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:99}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:99}
                     }
                 ]
             }
@@ -2541,10 +2543,10 @@ exports.data = [
                     {
                         "id": 30,
                         "count":2,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:100}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:100}
                     }
                 ]
             }
@@ -2665,10 +2667,10 @@ exports.data = [
                     {
                         "id": 30,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:101}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:101}
                     }
                 ]
             }
@@ -2808,10 +2810,10 @@ exports.data = [
                     {
                         "id": 30,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:102}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:102}
                     }
                 ]
             }
@@ -2908,10 +2910,10 @@ exports.data = [
                         "id": 28,
                         "count":1,
                         "collectId":44001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:103}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:103}
                     },
                     {
                         "id": 149,
@@ -3021,10 +3023,10 @@ exports.data = [
                         "id": 28,
                         "count":1,
                         "collectId":46001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:104}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:104}
                     }
                 ]
             }
@@ -3133,10 +3135,10 @@ exports.data = [
                         "count":1,
                         "pos":12,
                         "collectId":47001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:105}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:105}
                     }
                 ],
                 "exit": 29,
@@ -3231,10 +3233,10 @@ exports.data = [
                         "id": 57,
                         "count":1,
                         "collectId": 49001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:106}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:106}
                     }
                 ]
             }
@@ -3332,10 +3334,10 @@ exports.data = [
                         "id": 66,
                         "count":1,
                         "collectId": 52001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:107}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:107}
                     }
                 ]
             }
@@ -3460,10 +3462,10 @@ exports.data = [
                         "id": 66,
                         "count":1,
                         "collectId":53001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:108}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:108}
                     }
                 ]
             }
@@ -3572,10 +3574,10 @@ exports.data = [
                     {
                         "id": 64,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:109}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:109}
                     },
                     {
                         "id": 146,
@@ -3689,10 +3691,10 @@ exports.data = [
                         "id": 64,
                         "count":1,
                         "collectId":60001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:110}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:110}
                     }
                 ]
             }
@@ -3799,10 +3801,10 @@ exports.data = [
                     {
                         "id": 66,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:111}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:111}
                     }
                 ]
             }
@@ -3916,10 +3918,10 @@ exports.data = [
                         "count":1,
                         "pos":12,
                         "collectId":63001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:112}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:112}
                     },
                     {
                         "id": 57,
@@ -4030,10 +4032,10 @@ exports.data = [
                     {
                         "id": 62,
                         "count":2,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:113}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:113}
                     }
                 ]
             }
@@ -4140,10 +4142,10 @@ exports.data = [
                         "id": 60,
                         "count":1,
                         "collectId":67001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:114}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:114}
                     }]
             }
         ],
@@ -4278,10 +4280,10 @@ exports.data = [
                     {
                         "id": 66,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:115}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:115}
                     },
                     {
                         "id": 62,
@@ -4393,10 +4395,10 @@ exports.data = [
                     {
                         "id": 62,
                         "count":2,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:116}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:116}
                     }
                 ]
             }
@@ -4504,10 +4506,10 @@ exports.data = [
                         "id": 87,
                         "count":1,
                         "collectId":72001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:117}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:117}
                     }
                 ]
             }
@@ -4609,10 +4611,10 @@ exports.data = [
                         "id": 87,
                         "count":2,
                         "collectId":74001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:118}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:118}
                     }
                 ]
             }
@@ -4722,10 +4724,10 @@ exports.data = [
                         "count":1,
                         "pos":12,
                         "collectId":75001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:119}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:119}
                     }
                 ],
                 "exit": 29,
@@ -4828,10 +4830,10 @@ exports.data = [
                     {
                         "id": 98 ,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:120}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:120}
                     }
                 ]
             }
@@ -4943,10 +4945,10 @@ exports.data = [
                     {
                         "id": 98 ,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:121}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:121}
                     }
                 ]
             }
@@ -5053,10 +5055,10 @@ exports.data = [
                         "id": 96,
                         "count":1,
                         "collectId":81001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:122}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:122}
                     }
                 ]
             }
@@ -5157,10 +5159,10 @@ exports.data = [
                     {
                         "id": 96,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:123}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:123}
                     },
                     {
                         "id": 65,
@@ -5278,10 +5280,10 @@ exports.data = [
                         "id": 89,
                         "count":1,
                         "collectId":85001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:124}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:124}
                     }
                 ]
             }
@@ -5400,10 +5402,10 @@ exports.data = [
                     {
                         "id": 89,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:125}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:125}
                     },
                     {
                         "id": 87,
@@ -5531,10 +5533,10 @@ exports.data = [
                         "count":1,
                         "pos":12,
                         "collectId":90001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:126}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:126}
                     }
                 ],
                 "exit": 29,
@@ -5650,10 +5652,10 @@ exports.data = [
                         "id": 92,
                         "count":1,
                         "collectId":92001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:127}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:127}
                     }
                 ]
             }
@@ -5761,10 +5763,10 @@ exports.data = [
                     {
                         "id": 92,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:128}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:128}
                     },
                     {
                         "id": 149,
@@ -5876,10 +5878,10 @@ exports.data = [
                         "id": 61 ,
                         "count":1,
                         "collectId":97001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:129}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:129}
                     },
                      {
                          "id":144,
@@ -5992,10 +5994,10 @@ exports.data = [
                         "id": 119 ,
                         "count":1,
                         "collectId":99001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:130}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:130}
                     },
                     {
                         "id": 119 ,
@@ -6102,10 +6104,10 @@ exports.data = [
                     {
                         "id": 119 ,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:131}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:131}
                     },
                     {
                         "id": 149,
@@ -6215,10 +6217,10 @@ exports.data = [
                     {
                         "id": 92 ,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:132}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:132}
                     },
                     {
                         "id": 149,
@@ -6329,10 +6331,10 @@ exports.data = [
                         "id": 124 ,
                         "count":1,
                         "collectId":103001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:133}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:133}
                     },
                     {
                         "id": 149,
@@ -6433,10 +6435,10 @@ exports.data = [
                         "id": 124 ,
                         "count":1,
                         "collectId":104001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:134}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:134}
                     },
                     {
                         "id": 149,
@@ -6543,10 +6545,10 @@ exports.data = [
                     {
                         "id": 124 ,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:135}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:135}
                     },
                     {
                         "id": 94 ,
@@ -6658,10 +6660,10 @@ exports.data = [
                         "id": 121 ,
                         "count":1,
                         "collectId":109001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:136}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:136}
                     },
                     {
                         "id": 149,
@@ -6762,10 +6764,10 @@ exports.data = [
                         "id": 121 ,
                         "count":1,
                         "collectId":110001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:137}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:137}
                     },
                      {
                          "id": 156,
@@ -6882,10 +6884,10 @@ exports.data = [
                      {
                          "id": 121,
                          "count":1,
-                         property:[
-                             {"keyed":true},
-                             {skill:[{id:153}]},
-                             {dropPrize:138}]
+                         property:{
+                             "keyed":true,
+                             skill:[{id:153}],
+                             dropPrize:138}
                      }
                 ]
             }
@@ -6987,10 +6989,10 @@ exports.data = [
                     {
                         "id": 124 ,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:139}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:139}
                     },
                     {
                         "id": 149,
@@ -7091,10 +7093,10 @@ exports.data = [
                         "id": 130 ,
                         "count":1,
                         "collectId":115001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:140}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:140}
                     },
                     {
                         "id": 149,
@@ -7200,10 +7202,10 @@ exports.data = [
                         "id": 128 ,
                         "count":1,
                         "collectId":117001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:141}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:141}
                     },
                      {
                          "id": 161,
@@ -7315,10 +7317,10 @@ exports.data = [
                     {
                         "id": 128 ,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:142}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:142}
                     },
                     {
                         "id": 97 ,
@@ -7423,10 +7425,10 @@ exports.data = [
                     {
                         "id": 130 ,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:143}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:143}
                     },
                     {
                         "id": 149,
@@ -7532,10 +7534,10 @@ exports.data = [
                     {
                         "id": 130 ,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:144}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:144}
                     },
                     {
                         "id": 149,
@@ -7641,10 +7643,10 @@ exports.data = [
                     {
                         "id": 127,
                         "count":2,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:145}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:145}
                     },
                     {
                         "id": 149,
@@ -7767,10 +7769,10 @@ exports.data = [
                     {
                         "id": 130,
                         "count":2,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:146}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:146}
                     },
                     {
                         "id": 153,
@@ -7881,10 +7883,10 @@ exports.data = [
                         "id": 93,
                         "count":1,
                         "collectId":124001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:147}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:147}
                     },
                     {
                         "id": 149,
@@ -14566,10 +14568,10 @@ exports.data = [
                     {
                         "id": 23,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:91}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:91}
                     } ,
                     {
                         "id":163,
@@ -14670,10 +14672,10 @@ exports.data = [
                         "id": 23,
                         "count":1,
                         "collectId":156001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:91}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:91}
                     }
                 ]
             }
@@ -14765,10 +14767,10 @@ exports.data = [
                         "id": 25,
                         "count":1,
                         "collectId":157001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:91}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:91}
                     }
                 ]
             }
@@ -14865,10 +14867,10 @@ exports.data = [
                         "id": 25,
                         "count":1,
                         "collectId":159001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:91}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:91}
                     }
                 ]
             }
@@ -14967,10 +14969,10 @@ exports.data = [
                         "id": 32,
                         "count":1,
                         "collectId":160001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:91}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:91}
                     }
                 ]
             }
@@ -15065,10 +15067,10 @@ exports.data = [
                     {
                         "id": 32,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:91}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:91}
                     },
                     {
                         "id": 165,
@@ -15178,10 +15180,10 @@ exports.data = [
                         "pos":12,
                         "count":1,
                         "collectId":163001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:91}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:91}
                     }
                 ],
                 "entrance":0,

@@ -58,7 +58,7 @@
         stage: [],
         stageVersion: 0,
         quests: {},
-        questsVersion: 0,
+        questVersion: 0,
         energy: ENERGY_MAX,
         energyTime: now.valueOf(),
         mercenary: [],
@@ -1111,6 +1111,7 @@
       this.onEvent('gold');
       this.onEvent('diamond');
       this.onEvent('item');
+      this.questVersion++;
       return packQuestEvent(this.quests, qid, this.questVersion);
     };
 
@@ -1317,11 +1318,19 @@
                   ret = ret.concat(this.syncFlags(true)).concat(this.syncEvent());
                   break;
                 case "countUp":
-                  this.counters[p.counter]++;
-                  this.notify('countersChanged', {
-                    type: p.counter
-                  });
-                  ret = ret.concat(this.syncCounters(true)).concat(this.syncEvent());
+                  if (p.target === 'server') {
+                    gServerObject[p.counter]++;
+                    gServerObject.notify('countersChanged', {
+                      type: p.counter,
+                      delta: 1
+                    });
+                  } else {
+                    this.counters[p.counter]++;
+                    this.notify('countersChanged', {
+                      type: p.counter
+                    });
+                    ret = ret.concat(this.syncCounters(true)).concat(this.syncEvent());
+                  }
               }
           }
         }
@@ -1365,7 +1374,7 @@
         return RET_InventoryFull;
       }
       ret = ret.concat(prize);
-      this.questsVersion++;
+      this.questVersion++;
       _ref7 = quest.objects;
       for (_i = 0, _len = _ref7.length; _i < _len; _i++) {
         obj = _ref7[_i];
@@ -1959,9 +1968,10 @@
       }), []);
       percentage = 1;
       if (result === DUNGEON_RESULT_WIN) {
-        dbLib.incrBluestarBy(this.name, 1);
-        if (cfg.dropID) {
-          dropInfo = dropInfo.concat(cfg.dropID);
+        if (dungeon.isSweep != null) {
+          if (cfg.dropID) {
+            dropInfo = dropInfo.concat(cfg.dropID);
+          }
         }
       } else {
         percentage = (dungeon.currentLevel / cfg.levelCount) * 0.5;
@@ -1970,23 +1980,25 @@
       xr = ((_ref8 = cfg.xpRate) != null ? _ref8 : 1) * percentage;
       wr = ((_ref9 = cfg.wxpRate) != null ? _ref9 : 1) * percentage;
       prize = helperLib.generatePrize(queryTable(TABLE_DROP), dropInfo);
-      if (cfg.prizeGold) {
-        prize.push({
-          type: PRIZETYPE_GOLD,
-          count: Math.floor(gr * cfg.prizeGold)
-        });
-      }
-      if (cfg.prizeXp) {
-        prize.push({
-          type: PRIZETYPE_EXP,
-          count: Math.floor(xr * cfg.prizeXp)
-        });
-      }
-      if (cfg.prizeWxp) {
-        prize.push({
-          type: PRIZETYPE_WXP,
-          count: Math.floor(wr * cfg.prizeWxp)
-        });
+      if (!dungeon.isSweep) {
+        if (cfg.prizeGold) {
+          prize.push({
+            type: PRIZETYPE_GOLD,
+            count: Math.floor(gr * cfg.prizeGold)
+          });
+        }
+        if (cfg.prizeXp) {
+          prize.push({
+            type: PRIZETYPE_EXP,
+            count: Math.floor(xr * cfg.prizeXp)
+          });
+        }
+        if (cfg.prizeWxp) {
+          prize.push({
+            type: PRIZETYPE_WXP,
+            count: Math.floor(wr * cfg.prizeWxp)
+          });
+        }
       }
       infiniteLevel = dungeon.infiniteLevel;
       if ((infiniteLevel != null) && cfg.infinityPrize && result === DUNGEON_RESULT_WIN) {
@@ -2016,8 +2028,33 @@
       return helperLib.splicePrize(prize);
     };
 
+    Player.prototype.updateQuest = function(quests) {
+      var k, objective, qid, qst, quest, _results;
+      _results = [];
+      for (qid in quests) {
+        qst = quests[qid];
+        if (!(((qst != null ? qst.counters : void 0) != null) && this.quests[qid])) {
+          continue;
+        }
+        quest = queryTable(TABLE_QUEST, qid, this.abIndex);
+        _results.push((function() {
+          var _ref7, _results1;
+          _ref7 = quest.objects;
+          _results1 = [];
+          for (k in _ref7) {
+            objective = _ref7[k];
+            if (objective.type === QUEST_TYPE_NPC && (qst.counters[k] != null) && (this.quests[qid].counters != null)) {
+              _results1.push(this.quests[qid].counters[k] = qst.counters[k]);
+            }
+          }
+          return _results1;
+        }).call(this));
+      }
+      return _results;
+    };
+
     Player.prototype.claimDungeonAward = function(dungeon, isSweep) {
-      var goldPrize, k, objective, otherPrize, prize, qid, qst, quest, quests, result, ret, rewardMessage, wxPrize, xpPrize, _ref7, _ref8;
+      var goldPrize, otherPrize, prize, quests, result, ret, rewardMessage, wxPrize, xpPrize, _ref7;
       if (dungeon == null) {
         return [];
       }
@@ -2040,22 +2077,10 @@
       }
       quests = dungeon.quests;
       if (quests) {
-        for (qid in quests) {
-          qst = quests[qid];
-          if (!(((qst != null ? qst.counters : void 0) != null) && this.quests[qid])) {
-            continue;
-          }
-          quest = queryTable(TABLE_QUEST, qid, this.abIndex);
-          _ref7 = quest.objects;
-          for (k in _ref7) {
-            objective = _ref7[k];
-            if (objective.type === QUEST_TYPE_NPC && (qst.counters[k] != null) && (this.quests[qid].counters != null)) {
-              this.quests[qid].counters[k] = qst.counters[k];
-            }
-          }
-        }
+        this.updateQuest(quests);
+        this.questVersion++;
       }
-      _ref8 = this.generateDungeonAward(dungeon), goldPrize = _ref8.goldPrize, xpPrize = _ref8.xpPrize, wxPrize = _ref8.wxPrize, otherPrize = _ref8.otherPrize;
+      _ref7 = this.generateDungeonAward(dungeon), goldPrize = _ref7.goldPrize, xpPrize = _ref7.xpPrize, wxPrize = _ref7.wxPrize, otherPrize = _ref7.otherPrize;
       rewardMessage = {
         NTF: Event_DungeonReward,
         arg: {
