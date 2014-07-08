@@ -430,7 +430,7 @@
         return handler([evt]);
       },
       args: {
-        'sign': 'number'
+        'sign': 'string'
       }
     },
     RPC_VerifyDungeon: {
