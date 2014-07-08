@@ -47,7 +47,7 @@ exports.checkArgs = checkArgs;
 
 function dispatchCommand (routeTable, req, socket, retValHandler) {
   function argErrorHandler(errorArg) {
-    logError({
+    console.log({
       type : 'Handler Failed',
       cmd : req.CMD,
       error_message : "arg type invalid: arg:"+errorArg.argName+" expected:" 
