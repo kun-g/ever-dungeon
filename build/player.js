@@ -386,7 +386,7 @@
             }
             r.filter((function(_this) {
               return function(e) {
-                return !(e.type >= 1 && t.type <= 4 && e.count < 0);
+                return !(e.type >= 1 && e.type <= 4 && e.count < 0);
               };
             })(this));
             prize.push(r);
