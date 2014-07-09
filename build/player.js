@@ -253,7 +253,7 @@
     };
 
     Player.prototype.onLogin = function() {
-      var flag, itemsNeedRemove, key, prize, ret, rmMSG, s, _i, _len, _ref7;
+      var flag, itemsNeedRemove, key, prize, ret, s, _i, _len, _ref7;
       if (!this.lastLogin) {
         return [];
       }
@@ -312,12 +312,11 @@
         }
         return helperLib.matchDate(item.date, helperLib.currentTime(), item.expiration);
       });
-      rmMSG = itemsNeedRemove.map((function(_this) {
-        return function(e) {
-          return _this.removeItem(null, null, _this.queryItemSlot(e));
+      ret = itemsNeedRemove.reduce((function(_this) {
+        return function(pValue, cValue) {
+          return pValue.concat(_this.removeItem(null, null, _this.queryItemSlot(e)));
         };
-      })(this));
-      ret = ret.concat(rmMSG);
+      })(this), ret);
       return ret;
     };
 
@@ -3218,10 +3217,12 @@
           syn: env.variable('version')
         };
         arg.itm = items;
-        return {
-          NTF: Event_InventoryUpdateItem,
-          arg: arg
-        };
+        return [
+          {
+            NTF: Event_InventoryUpdateItem,
+            arg: arg
+          }
+        ];
       }
     },
     UseItem: {
