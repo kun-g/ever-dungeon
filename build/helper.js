@@ -634,8 +634,7 @@
         return obj.counters.dragonQuest0 == null;
       },
       reset: function(obj, util) {
-        var _base;
-        return (_base = obj.counters).dragonQuest0 != null ? _base.dragonQuest0 : _base.dragonQuest0 = 1000;
+        return obj.counters.dragonQuest0 = 1000;
       }
     }
   };
