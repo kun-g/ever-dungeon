@@ -35,6 +35,14 @@ function initiateLogger() {
   logger = {};
   initiateFluentLogger();
   initiateTrinLogger();
+  logger.emit = function (type, log, time) {
+    if (logger.tr_agent) {
+      logger.tr_agent.write(JSON.stringify({type: type, log: log, time: time}));
+    }
+    if (logger.td_agent) {
+      logger.td_agent.emit(type, log, time);
+    }
+  };
 }
 function initiateTrinLogger() {
   var net = require('net')
