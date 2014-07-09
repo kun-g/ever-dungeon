@@ -176,6 +176,41 @@ exports.data = {
                 {"type":0,"value":540,"count":3},
                 {"type":0,"value":539,"count":1}
             ]
+        },
+        {
+            "count": 150,
+            "award": [
+                {"type":0,"value":540,"count":3},
+                {"type":0,"value":539,"count":1},
+                {"type":0,"value":871,"count":10}
+            ]
+        },
+        {
+            "count": 250,
+            "award": [
+                {"type":0,"value":540,"count":3},
+                {"type":0,"value":539,"count":1},
+                {"type":0,"value":871,"count":20}
+            ]
+        },
+        {
+            "count": 400,
+            "award": [
+                {"type":0,"value":540,"count":3},
+                {"type":0,"value":871,"count":30}
+            ]
+        },
+        {
+            "count": 850,
+            "award": [
+                {"type":0,"value":540,"count":3}
+            ]
+        },
+        {
+            "count": 1400,
+            "award": [
+                {"type":0,"value":540,"count":3}
+            ]
         }
     ]
   },
@@ -206,8 +241,8 @@ exports.data = {
         "description":"首次充值即可获得宝石翻倍的奖励，充多少送多少，妈妈再也不用担心我的宝石了！",
         "mailTitle": "《首充翻倍大行动》活动奖励",
         "mailBody": "恭喜你完成活动，点击领取活动奖励！",
-        "date": "2014/06/25",
-        "dateDescription": "截止日期2014年6月25日24时",
+        "date": "2014/10/25",
+        "dateDescription": "截止日期2014年10月25日24时",
         "objective": {
             "6": {
                 "award": [

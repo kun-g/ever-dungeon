@@ -1,5 +1,5 @@
 exports.data = {
-  "ServerID": "1",
+  "ServerID": "0",
   "ServerConfig": [
     {
       "ID": 0,
@@ -30,8 +30,8 @@ exports.data = {
       ]
     }
   ],
-  "ServerName": "Master",
-  "ServerID": "1",
+  "ServerName": "Develop",
+  "ServerID": "0",
   "PayMethod": "PP",
   "Enhance_Rate" : [1, 0.75, 0.70, 0.65, 0.6, 0.55, 0.50, 0.45, 0.40, 0.35],
   "Product_List": [
@@ -43,7 +43,7 @@ exports.data = {
     {"rmb":198,"diamond":2260},
     {"rmb":328,"diamond":3760},
     {"rmb":648,"diamond":7480},
-    {"rmb":25,"diamond":100}
+    {"rmb":25,"diamond":0}
   ],
 
     "InitialEquipment":{

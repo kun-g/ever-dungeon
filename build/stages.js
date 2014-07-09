@@ -296,6 +296,7 @@ var data = [
 		"stage":[
             {
                 "stageId": 8,
+                "sweepPower":300,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -310,6 +311,7 @@ var data = [
             },
             {
                 "stageId": 9,
+                "sweepPower":310,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -323,6 +325,7 @@ var data = [
             },
             {
                 "stageId": 10,
+                "sweepPower":330,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -336,6 +339,7 @@ var data = [
             },
             {
                 "stageId": 11,
+                "sweepPower":350,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -349,6 +353,7 @@ var data = [
             },
             {
                 "stageId": 12,
+                "sweepPower":360,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -362,6 +367,7 @@ var data = [
             },
             {
                 "stageId": 13,
+                "sweepPower":370,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -375,6 +381,7 @@ var data = [
             },
             {
                 "stageId": 14,
+                "sweepPower":400,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -411,6 +418,7 @@ var data = [
 		"stage":[
             {
                 "stageId": 15,
+                "sweepPower":500,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -424,6 +432,7 @@ var data = [
             },
             {
                 "stageId": 16,
+                "sweepPower":600,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -437,6 +446,7 @@ var data = [
             },
             {
                 "stageId": 17,
+                "sweepPower":700,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -450,6 +460,7 @@ var data = [
             },
             {
                 "stageId": 18,
+                "sweepPower":800,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -463,6 +474,7 @@ var data = [
             },
             {
                 "stageId": 19,
+                "sweepPower":900,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -476,6 +488,7 @@ var data = [
             },
             {
                 "stageId": 20,
+                "sweepPower":1000,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -489,6 +502,7 @@ var data = [
             },
             {
                 "stageId": 21,
+                "sweepPower":1100,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -525,6 +539,7 @@ var data = [
 		"stage":[
             {
                 "stageId": 22,
+                "sweepPower":1300,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -538,6 +553,7 @@ var data = [
             },
             {
                 "stageId": 23,
+                "sweepPower":1500,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -551,6 +567,7 @@ var data = [
             },
             {
                 "stageId": 24,
+                "sweepPower":1700,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -564,6 +581,7 @@ var data = [
             },
             {
                 "stageId": 25,
+                "sweepPower":1900,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -577,6 +595,7 @@ var data = [
             },
             {
                 "stageId": 26,
+                "sweepPower":2100,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -590,6 +609,7 @@ var data = [
             },
             {
                 "stageId": 27,
+                "sweepPower":2300,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -603,6 +623,7 @@ var data = [
             },
             {
                 "stageId": 28,
+                "sweepPower":2500,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -639,6 +660,7 @@ var data = [
 		"stage":[
 		    {
 				"stageId": 29,
+                "sweepPower":2800,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -652,6 +674,7 @@ var data = [
             },
 			{
 				"stageId": 30,
+                "sweepPower":3100,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -665,6 +688,7 @@ var data = [
             },
 			{
 				"stageId": 31,
+                "sweepPower":3400,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -678,6 +702,7 @@ var data = [
             },
 			{
 				"stageId": 32,
+                "sweepPower":3700,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -691,6 +716,7 @@ var data = [
             },
 			{
 				"stageId": 33,
+                "sweepPower":4000,
 				"cost": 15,
 				"team": 3,
 			    "hidden":false,
@@ -704,6 +730,7 @@ var data = [
             },
             {
                 "stageId": 34,
+                "sweepPower":4300,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -717,6 +744,7 @@ var data = [
             },
             {
                 "stageId": 35,
+                "sweepPower":4600,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -753,6 +781,7 @@ var data = [
 		"stage":[
 			{
 			    "stageId": 36,
+                "sweepPower":5000,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -766,6 +795,7 @@ var data = [
             },
 			{
 				"stageId": 37,
+                "sweepPower":5300,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -779,6 +809,7 @@ var data = [
             },
 			{
 				"stageId": 38,
+                "sweepPower":5600,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -792,6 +823,7 @@ var data = [
             },
 			{
 				"stageId": 39,
+                "sweepPower":5900,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -805,6 +837,7 @@ var data = [
             },
 			{
 				"stageId": 40,
+                "sweepPower":6200,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -818,6 +851,7 @@ var data = [
             },
             {
                 "stageId": 41,
+                "sweepPower":6500,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -831,6 +865,7 @@ var data = [
             },
             {
                 "stageId": 42,
+                "sweepPower":6800,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -867,6 +902,7 @@ var data = [
 		"stage":[
 			{
 				"stageId": 43,
+                "sweepPower":7100,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -880,6 +916,7 @@ var data = [
             },
 		    {
 				"stageId": 44,
+                "sweepPower":7400,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -893,6 +930,7 @@ var data = [
             },
 			{
 				"stageId": 45,
+                "sweepPower":7700,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -906,6 +944,7 @@ var data = [
             },
 			{
 				"stageId": 46,
+                "sweepPower":8000,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -919,6 +958,7 @@ var data = [
             },
 			{
 				"stageId": 47,
+                "sweepPower":8100,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -932,6 +972,7 @@ var data = [
             },
             {
                 "stageId": 48,
+                "sweepPower":8200,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -945,6 +986,7 @@ var data = [
             },
             {
                 "stageId": 49,
+                "sweepPower":8300,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -981,6 +1023,7 @@ var data = [
 		"stage":[
 		    {
 				"stageId": 50,
+                "sweepPower":8400,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -994,6 +1037,7 @@ var data = [
             },
 			{
 			    "stageId": 51,
+                "sweepPower":8500,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -1007,6 +1051,7 @@ var data = [
             },
 			{
 				"stageId": 52,
+                "sweepPower":8600,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -1020,6 +1065,7 @@ var data = [
             },
 			{
 				"stageId": 53,
+                "sweepPower":8700,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -1033,6 +1079,7 @@ var data = [
             },
 			{
 				"stageId": 54,
+                "sweepPower":8800,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -1046,6 +1093,7 @@ var data = [
             },
             {
                 "stageId": 55,
+                "sweepPower":8900,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -1059,6 +1107,7 @@ var data = [
             },
             {
                 "stageId": 56,
+                "sweepPower":9000,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -1095,6 +1144,7 @@ var data = [
 		"stage":[
     {
 				"stageId": 57,
+        "sweepPower":9500,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -1108,6 +1158,7 @@ var data = [
             },
 			{
         "stageId": 58,
+                "sweepPower":9600,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -1121,6 +1172,7 @@ var data = [
             },
 			{
 				"stageId": 59,
+                "sweepPower":9700,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -1134,6 +1186,7 @@ var data = [
             },
 			{
 				"stageId": 60,
+                "sweepPower":9800,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -1147,6 +1200,7 @@ var data = [
             },
 			{
 				"stageId": 61,
+                "sweepPower":9900,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -1160,6 +1214,7 @@ var data = [
             },
             {
                 "stageId": 62,
+                "sweepPower":10000,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -1173,6 +1228,7 @@ var data = [
             },
             {
                 "stageId": 63,
+                "sweepPower":10100,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -1496,6 +1552,7 @@ var data = [
 
         "stage":[
             {
+                "sweepPower":200,
                 "stageId": 96,
                 "cost": 15,
                 "team": 1,
@@ -1511,6 +1568,7 @@ var data = [
             },
             {
                 "stageId": 97,
+                "sweepPower":200,
                 "cost": 15,
                 "team": 1,
                 "hidden":false,
@@ -1532,6 +1590,7 @@ var data = [
             },
             {
                 "stageId": 98,
+                "sweepPower":200,
                 "cost": 15,
                 "team": 1,
                 "hidden":false,
@@ -1554,6 +1613,7 @@ var data = [
             },
             {
                 "stageId": 99,
+                "sweepPower":200,
                 "cost": 15,
                 "team": 2,
                 "hidden":false,
@@ -1568,6 +1628,7 @@ var data = [
             },
             {
                 "stageId": 100,
+                "sweepPower":200,
                 "cost": 15,
                 "team": 2,
                 "hidden":false,
@@ -1582,6 +1643,7 @@ var data = [
             },
             {
                 "stageId": 101,
+                "sweepPower":200,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -1595,6 +1657,7 @@ var data = [
             },
             {
                 "stageId": 102,
+                "sweepPower":200,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,

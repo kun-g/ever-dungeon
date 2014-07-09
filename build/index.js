@@ -31,11 +31,29 @@ var srvLib = require("./server");
 gServer = new srvLib.Server();
 exports.server = gServer;
 
+function initiateLogger() {
+  logger = {};
+  initiateFluentLogger();
+  initiateTrinLogger();
+}
+function initiateTrinLogger() {
+  var net = require('net')
+  logger.tr_agent = net.connect(9528, 'localhost');
+  function trinLoggerErrorHandler () {
+    logger.tr_agent = null;
+    setTimeout(function () {
+      logError({msg:"Try to reconnect to trin logger.", error: err});
+      initiateTrinLogger();
+    }, 10000);
+  }
+  logger.tr_agent.on('end', trinLoggerErrorHandler);
+  logger.tr_agent.on('error', trinLoggerErrorHandler);
+}
 function initiateFluentLogger() {
-  logger = require('fluent-logger');
-  logger.configure('td.game', {host: 'localhost', port: 9527});
-  logger.on('error', function (err) {
-    logger = null;
+  logger.td_agent = require('fluent-logger');
+  logger.td_agent.configure('td.game', {host: 'localhost', port: 9527});
+  logger.td_agent.on('error', function (err) {
+    logger.td_agent = null;
     setTimeout(function () {
       logError({msg:"Try to reconnect to fluent.", error: err});
       initiateFluentLogger();
@@ -222,6 +240,10 @@ function deliverReceipt (receipt, tunnel, cb) {
   ], cb);
 }
 
+gServerObject = {
+  getType: function () { return 'server'; }
+};
+
 if (config) {
   initiateFluentLogger();
   initServer();
@@ -246,6 +268,21 @@ if (config) {
     var intervalCfg = {};
     var helperLib = require('./helper');
     config = helperLib.intervalEvent;
+    async.series([
+        function (cb) {
+          dbLib.getServerProperty('counters', function (err, arg) {
+            if (arg) {
+              gServerObject.counters = arg;
+            } else {
+              gServerObject.counters = {};
+            }
+          });
+        }],
+        function (err, ret) {
+          var helperLib = require('./helper');
+          helperLib.initCampaign(gServerObject, helperLib.events);
+          helperLib.initObserveration(gServerObject);
+        });
     dbLib.getServerConfig('Interval', function (err, arg) {
       if (arg) { intervalCfg = JSON.parse(arg); }
 
