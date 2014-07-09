@@ -1246,33 +1246,39 @@
               }
               break;
             case PRIZETYPE_GOLD:
-              ret.push({
-                NTF: Event_InventoryUpdateItem,
-                arg: {
-                  syn: this.inventoryVersion,
-                  god: this.addGold(p.count)
-                }
-              });
+              if (p.count > 0) {
+                ret.push({
+                  NTF: Event_InventoryUpdateItem,
+                  arg: {
+                    syn: this.inventoryVersion,
+                    god: this.addGold(p.count)
+                  }
+                });
+              }
               break;
             case PRIZETYPE_DIAMOND:
-              ret.push({
-                NTF: Event_InventoryUpdateItem,
-                arg: {
-                  syn: this.inventoryVersion,
-                  dim: this.addDiamond(p.count)
-                }
-              });
+              if (p.count > 0) {
+                ret.push({
+                  NTF: Event_InventoryUpdateItem,
+                  arg: {
+                    syn: this.inventoryVersion,
+                    dim: this.addDiamond(p.count)
+                  }
+                });
+              }
               break;
             case PRIZETYPE_EXP:
-              ret.push({
-                NTF: Event_RoleUpdate,
-                arg: {
-                  syn: this.heroVersion,
-                  act: {
-                    exp: this.addHeroExp(p.count)
+              if (p.count > 0) {
+                ret.push({
+                  NTF: Event_RoleUpdate,
+                  arg: {
+                    syn: this.heroVersion,
+                    act: {
+                      exp: this.addHeroExp(p.count)
+                    }
                   }
-                }
-              });
+                });
+              }
               break;
             case PRIZETYPE_WXP:
               if (!p.count) {

@@ -926,7 +926,7 @@
     },
     countersChanged: function(obj, arg) {
       if (obj.getType() === 'server') {
-        return dbClient.hincr(makeDBKey([serverObjectPrefix, key]), arg.type, arg.delta, function(err, result) {});
+        return dbClient.hincr(makeDBKey([serverObjectPrefix, 'counters']), arg.type, arg.delta, function(err, result) {});
       } else {
         if (arg.type === 'monster') {
           return exports.assignLeaderboard(obj, exports.LeaderboardIdx.KillingMonster);
