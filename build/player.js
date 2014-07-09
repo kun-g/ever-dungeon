@@ -313,7 +313,7 @@
         return helperLib.matchDate(item.date, helperLib.currentTime(), item.expiration);
       });
       ret = itemsNeedRemove.reduce((function(_this) {
-        return function(pValue, cValue) {
+        return function(pValue, e) {
           return pValue.concat(_this.removeItem(null, null, _this.queryItemSlot(e)));
         };
       })(this), ret);
