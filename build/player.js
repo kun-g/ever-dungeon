@@ -252,6 +252,10 @@
       return helperLib.initCampaign(this, helperLib.events);
     };
 
+    Player.prototype.removeExpiredItem = function() {
+      return true;
+    };
+
     Player.prototype.onLogin = function() {
       var flag, itemsNeedRemove, key, prize, ret, rmMSG, s, _i, _len, _ref7;
       if (!this.lastLogin) {
