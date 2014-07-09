@@ -384,7 +384,7 @@
               v = p[k];
               r = r.concat(v);
             }
-            r.filter((function(_this) {
+            r = r.filter((function(_this) {
               return function(e) {
                 return !(e.type >= 1 && e.type <= 4 && e.count < 0);
               };
