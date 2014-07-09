@@ -253,11 +253,25 @@
     };
 
     Player.prototype.removeExpiredItem = function() {
-      return true;
+      var itemsNeedRemove;
+      itemsNeedRemove = this.inventory.filter(function(item) {
+        if ((item != null ? item.expiration : void 0) == null) {
+          return false;
+        }
+        if (item.date == null) {
+          return true;
+        }
+        return helperLib.matchDate(item.date, helperLib.currentTime(), item.expiration);
+      });
+      return itemsNeedRemove.map((function(_this) {
+        return function(e) {
+          return _this.removeItem(null, null, _this.queryItemSlot(e));
+        };
+      })(this));
     };
 
     Player.prototype.onLogin = function() {
-      var flag, itemsNeedRemove, key, prize, ret, rmMSG, s, _i, _len, _ref7;
+      var flag, key, prize, ret, rmMSG, s, _i, _len, _ref7;
       if (!this.lastLogin) {
         return [];
       }
@@ -307,20 +321,7 @@
           claim: flag
         }
       ];
-      itemsNeedRemove = this.inventory.filter(function(item) {
-        if ((item != null ? item.expiration : void 0) == null) {
-          return false;
-        }
-        if (item.date == null) {
-          return true;
-        }
-        return helperLib.matchDate(item.date, helperLib.currentTime(), item.expiration);
-      });
-      rmMSG = itemsNeedRemove.map((function(_this) {
-        return function(e) {
-          return _this.removeItem(null, null, _this.queryItemSlot(e));
-        };
-      })(this));
+      rmMSG = this.removeExpiredItem();
       ret = ret.concat(rmMSG);
       return ret;
     };
