@@ -3218,12 +3218,10 @@
           syn: env.variable('version')
         };
         arg.itm = items;
-        return [
-          {
-            NTF: Event_InventoryUpdateItem,
-            arg: arg
-          }
-        ];
+        return {
+          NTF: Event_InventoryUpdateItem,
+          arg: arg
+        };
       }
     },
     UseItem: {
