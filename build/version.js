@@ -1,5 +1,5 @@
 exports.data = {
-          "resource_version": 127,
+          "resource_version": 128,
           "quest": "0.0.4",
           "stage": "0.1.5",
           "bin_version": "1.0.7",
