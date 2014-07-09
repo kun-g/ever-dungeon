@@ -384,6 +384,11 @@
               v = p[k];
               r = r.concat(v);
             }
+            r.filter((function(_this) {
+              return function(e) {
+                return !(e.type >= 1 && t.type <= 4 && e.count < 0);
+              };
+            })(this));
             prize.push(r);
             ret = ret.concat(this.claimPrize(r));
           }
@@ -393,11 +398,6 @@
             reward: prize
           });
           ret = ret.concat(this.syncEnergy());
-          prize.filter((function(_this) {
-            return function(e) {
-              return !(e.type >= 1 && t.type <= 4 && e.count < 0);
-            };
-          })(this));
         }
       }
       return {
