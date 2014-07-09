@@ -1,5 +1,6 @@
 (function() {
-  var Bag, Block, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Level, TriggerManager, Wizard, calcInfiniteRank, calcInfiniteX, changeSeed, compete, createUnit, createUnits, criticalFormula, dungeonCSConfig, flagShowRand, genUnitInfo, hitFormula, onEvent, parse, privateRand, seed_random, speedFormula, _ref, _ref1, _ref2, _ref3, _ref4,
+  var Bag, Block, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Level, TriggerManager, Wizard, calcInfiniteRank, calcInfiniteX, changeSeed, compete, createUnit, createUnits, criticalFormula, dungeonCSConfig, flagShowRand, genUnitInfo, hitFormula, mapDiff, onEvent, parse, privateRand, seed_random, speedFormula, _ref, _ref1, _ref2, _ref3, _ref4,
+    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; },
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -44,6 +45,18 @@
   };
 
   flagShowRand = false;
+
+  mapDiff = function(source, excludeLst) {
+    var k, result, v;
+    result = {};
+    for (k in source) {
+      v = source[k];
+      if (__indexOf.call(excludeLst, k) < 0) {
+        result[k] = v;
+      }
+    }
+    return result;
+  };
 
   compete = function(formula, dungeon) {
     return function(p1, p2) {
@@ -118,7 +131,7 @@
   };
 
   createUnits = function(rules, randFunc) {
-    var cfg, filterLevels, globalRule, i, l, levelConfig, levelRule, placeUnit, r, rand, result, rule, selectFromPool, selectPos, translateRule, _i, _j, _k, _len, _len1, _len2, _ref5;
+    var cfg, filterLevels, gi, globalRule, i, l, levelConfig, levelOtherKey, levelRule, otherKeys, placeUnit, r, rand, result, rule, selectFromPool, selectPos, translateRule, _i, _j, _k, _len, _len1, _len2, _ref5;
     rand = function(mod) {
       var r;
       if (mod == null) {
@@ -159,10 +172,13 @@
       });
     };
     levelRule = [];
+    levelOtherKey = [];
     _ref5 = rules.levels;
     for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
       l = _ref5[_i];
       levelRule.push(translateRule(l.objects));
+      otherKeys = mapDiff(l, ['objects', 'levels']);
+      levelOtherKey.push(otherKeys);
     }
     globalRule = translateRule(rules.global);
     levelConfig = [];
@@ -188,7 +204,7 @@
       var _k, _ref6, _results;
       _results = [];
       for (i = _k = 0, _ref6 = count - 1; 0 <= _ref6 ? _k <= _ref6 : _k >= _ref6; i = 0 <= _ref6 ? ++_k : --_k) {
-        _results.push(selectElementFromWeightArray(rules.pool[poolID], rand()));
+        _results.push(selectElementFromWeightArray(rules.pool[poolID].objects, rand()));
       }
       return _results;
     };
@@ -203,7 +219,7 @@
       return -1;
     };
     placeUnit = function(lRule, lConfig, single) {
-      var count, idList, result, _k, _len2, _ref6;
+      var count, idList, proList, result, _k, _len2, _ref6;
       result = [];
       for (_k = 0, _len2 = lRule.length; _k < _len2; _k++) {
         r = lRule[_k];
@@ -226,12 +242,31 @@
         if (r.pool != null) {
           idList = selectFromPool(r.pool, count);
           count = 1;
+          proList = mapDiff(rules.pool[r.pool], ['objects']);
         }
         idList.forEach(function(c) {
-          var k, u, v;
+          var k, u, v, _ref7, _ref8;
           u = {};
           for (k in c) {
             v = c[k];
+            if (k !== 'levels') {
+              u[k] = v;
+            }
+          }
+          for (k in proList) {
+            v = proList[k];
+            u[k] = v;
+          }
+          if (levelOtherKey[lConfig.id] != null) {
+            _ref7 = levelOtherKey[lConfig.id];
+            for (k in _ref7) {
+              v = _ref7[k];
+              u[k] = v;
+            }
+          }
+          _ref8 = mapDiff(r, ['pool', 'levels', 'count']);
+          for (k in _ref8) {
+            v = _ref8[k];
             u[k] = v;
           }
           u.count = count;
@@ -257,7 +292,7 @@
     }
     for (_k = 0, _len2 = globalRule.length; _k < _len2; _k++) {
       rule = globalRule[_k];
-      i = 0;
+      gi = 0;
       filterLevels = function() {
         var _ref6, _ref7;
         cfg = levelConfig.filter(function(c) {
@@ -265,7 +300,7 @@
         });
         if (((_ref6 = rule.levels) != null ? _ref6.from : void 0) != null) {
           cfg = cfg.filter(function(c) {
-            return c.id > rule.levels.from;
+            return c.id >= rule.levels.from;
           });
         }
         if (((_ref7 = rule.levels) != null ? _ref7.to : void 0) != null) {
@@ -275,14 +310,14 @@
         }
         return cfg;
       };
-      while (i < rule.count) {
+      while (gi < rule.count) {
         cfg = filterLevels();
         if (cfg.length <= 0) {
           break;
         }
         cfg = cfg[rand() % cfg.length];
         result[cfg.id] = result[cfg.id].concat(placeUnit([rule], cfg, true));
-        i++;
+        gi++;
       }
     }
     return result;
@@ -433,7 +468,8 @@
         }
       }
       if (this.PVP_Pool) {
-        cfg.pool.PVP = this.PVP_Pool.map(function(e) {
+        cfg.pool.PVP = {};
+        cfg.pool.PVP.objects = this.PVP_Pool.map(function(e) {
           e.weight = 10;
           e.id = e.cid;
           return e;
@@ -1165,7 +1201,7 @@
     };
 
     Level.prototype.createObject = function(arg) {
-      var cfg, k, o, v;
+      var cfg, k, o, skill, v, _i, _len, _ref5, _ref6;
       cfg = {};
       for (k in arg) {
         v = arg[k];
@@ -1174,7 +1210,21 @@
       cfg.rank = this.rank;
       cfg.ref = this.ref;
       o = createUnit(cfg);
+      if (arg.skill != null) {
+        _ref5 = arg.skill;
+        for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+          skill = _ref5[_i];
+          o.installSpell(skill.id, skill.lv);
+        }
+      }
       o.installSpell(DUNGEON_DROP_CARD_SPELL, 1);
+      if (arg.property != null) {
+        _ref6 = arg.property;
+        for (k in _ref6) {
+          v = _ref6[k];
+          o[k] = v;
+        }
+      }
       if (cfg.keyed) {
         this.lockUp(true);
       }
@@ -2640,6 +2690,21 @@
             pos: env.variable('tarPos')
           }
         ];
+      }
+    },
+    DropPrize: {
+      callback: function(env) {
+        var dropID;
+        dropID = env.variable('dropID');
+        console.log(env.variable);
+        if (dropID == null) {
+          dropID = env.variable('me').dropPrize;
+        }
+        if (dropID != null) {
+          return env.dungeon.killingInfo.push({
+            dropInfo: dropID
+          });
+        }
       }
     },
     DropItem: {

@@ -321,7 +321,13 @@
           }
         });
       },
-      args: ['tp', 'number', 'id', 'string', 'bv', 'string', 'rv', 'number', 'ch', 'string']
+      args: {
+        'tp': 'number',
+        'id': 'string',
+        'bv': 'string',
+        'rv': 'number',
+        'ch': 'string'
+      }
     },
     RPC_Register: {
       id: 101,
@@ -382,7 +388,14 @@
           }
         });
       },
-      args: ['pid', 'string', 'nam', 'string', 'cid', 'number', 'gen', 'number', 'hst', 'number', 'hcl', 'number']
+      args: {
+        'pid': 'string',
+        'nam': 'string',
+        'cid': 'number',
+        'gen': 'number',
+        'hst': 'number',
+        'hcl': 'number'
+      }
     },
     RPC_ValidateName: {
       id: 102,
@@ -396,7 +409,9 @@
           ]);
         });
       },
-      args: ['nam', 'string']
+      args: {
+        'nam': 'string'
+      }
     },
     NTF_Echo: {
       id: 103,
@@ -414,7 +429,9 @@
         }
         return handler([evt]);
       },
-      args: ['sign', 'number']
+      args: {
+        'sign': 'string'
+      }
     },
     RPC_VerifyDungeon: {
       id: 17,
@@ -478,7 +495,7 @@
           return doVerify();
         }
       },
-      args: [],
+      args: {},
       needPid: true
     },
     Request_Stastics: {
@@ -491,7 +508,7 @@
           name: player.name
         });
       },
-      args: [],
+      args: {},
       needPid: true
     },
     RPC_GameStartDungeon: {
@@ -533,7 +550,11 @@
           return player.saveDB();
         });
       },
-      args: ['stg'],
+      args: {
+        'stg': 'string',
+        'initialDataOnly': 'boolean',
+        'pkr': 'string'
+      },
       needPid: true
     },
     RPC_ChargeDiamond: {
@@ -547,7 +568,10 @@
             throw Error('PP25 Payment');
         }
       },
-      args: ['pid', 'string', 'rep', 'string'],
+      args: {
+        'pid': 'string',
+        'rep': 'string'
+      },
       needPid: true
     },
     RPC_VerifyPayment: {
@@ -625,7 +649,7 @@
             return req.end();
         }
       },
-      args: [],
+      args: {},
       needPid: true
     },
     RPC_BindSubAuth: {
@@ -646,11 +670,14 @@
           ]);
         });
       },
-      args: []
+      args: {}
     },
     RPC_Reconnect: {
       id: 104,
-      args: ['pid', 'string'],
+      args: {
+        'pid': 'pid',
+        'string': 'string'
+      },
       func: function(arg, player, handler, rpcID, socket) {
         return async.waterfall([
           function(cbb) {
@@ -735,7 +762,7 @@
           }
         });
       },
-      args: [],
+      args: {},
       needPid: true
     },
     RPC_SubmitBounty: {
@@ -745,16 +772,27 @@
         switch (arg.bid) {
           case -1:
             if (player.counters.monthCard) {
-              player.counters.monthCard--;
-              player.timestamp.newProperty('monthCard', helperLib.currentTime());
-              ret = [
-                {
-                  NTF: Event_InventoryUpdateItem,
-                  arg: {
-                    dim: player.addDiamond(80)
+              if (player.counters.monthCard === 30) {
+                ret = [
+                  {
+                    NTF: Event_InventoryUpdateItem,
+                    arg: {
+                      dim: player.addDiamond(180)
+                    }
                   }
-                }
-              ];
+                ];
+              } else {
+                ret = [
+                  {
+                    NTF: Event_InventoryUpdateItem,
+                    arg: {
+                      dim: player.addDiamond(80)
+                    }
+                  }
+                ];
+              }
+              player.counters.monthCard--;
+              player.timestamp['monthCard'] = helperLib.currentTime();
               player.saveDB();
               return handler([
                 {
@@ -765,7 +803,7 @@
             }
         }
       },
-      args: [],
+      args: {},
       needPid: true
     },
     RPC_SubmitDailyQuest: {
@@ -781,7 +819,7 @@
           return player.saveDB();
         });
       },
-      args: [],
+      args: {},
       needPid: true
     },
     RPC_GetPkRivals: {
@@ -805,26 +843,28 @@
           });
         });
       },
-      args: [],
+      args: {},
       needPid: true
     },
     RPC_PVPInfoUpdate: {
       id: 34,
       func: function(arg, player, handler, rpcID, socket) {
-        var ret;
-        ret = {
-          REQ: rpcID,
-          RET: RET_OK
-        };
-        ret.arg = {
-          rnk: player.counters.Arena,
-          cpl: !player.counters.currentPKCount ? 0 : void 0,
-          ttl: !player.counters.totalPKCount ? 5 : void 0,
-          rcv: !player.flags.rcvAward ? true : void 0
-        };
-        return handler(ret);
+        return helperLib.getPositionOnLeaderboard(helperLib.LeaderboardIdx.Arena, player.name, 0, 0, function(err, result) {
+          var ret, _ref1, _ref2;
+          ret = {
+            REQ: rpcID,
+            RET: RET_OK
+          };
+          ret.arg = {
+            rnk: result.position,
+            cpl: (_ref1 = player.counters.currentPKCount) != null ? _ref1 : 0,
+            ttl: player.getTotalPkTimes(),
+            rcv: (_ref2 = player.flags.rcvAward) != null ? _ref2 : false
+          };
+          return handler(ret);
+        });
       },
-      args: [],
+      args: {},
       needPid: true
     },
     RPC_SweepStage: {
@@ -842,7 +882,36 @@
         player.saveDB();
         return handler([res].concat(ret));
       },
-      args: [],
+      args: {},
+      needPid: true
+    },
+    RPC_ReceivePrize: {
+      id: 33,
+      func: function(arg, player, handler, rpcID, socket) {
+        switch (arg.typ) {
+          case 0:
+            if (!(player.counters.currentPKCount != null) || player.getTotalPkTimes() > player.counters.currentPKCount || player.flags.rcvAward) {
+              return handler([
+                {
+                  REQ: rpcID,
+                  RET: RET_CantReceivePkAward
+                }
+              ]);
+            } else {
+              player.flags.rcvAward = true;
+              return player.claimPkPrice(function(result) {
+                player.saveDB();
+                return handler([
+                  {
+                    REQ: rpcID,
+                    RET: RET_OK
+                  }
+                ].concat(result));
+              });
+            }
+        }
+      },
+      args: {},
       needPid: true
     }
   };

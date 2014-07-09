@@ -58,7 +58,7 @@
         stage: [],
         stageVersion: 0,
         quests: {},
-        questsVersion: 0,
+        questVersion: 0,
         energy: ENERGY_MAX,
         energyTime: now.valueOf(),
         mercenary: [],
@@ -216,6 +216,21 @@
       return 'player';
     };
 
+    Player.prototype.getTotalPkTimes = function() {
+      return 5;
+    };
+
+    Player.prototype.claimPkPrice = function(callback) {
+      var me;
+      me = this;
+      return helperLib.getPositionOnLeaderboard(helperLib.LeaderboardIdx.Arena, this.name, 0, 0, function(err, result) {
+        var prize, ret;
+        prize = arenaPirze(result.position + 1);
+        ret = me.claimPrize(prize);
+        return callback(ret);
+      });
+    };
+
     Player.prototype.submitCampaign = function(campaign, handler) {
       var event;
       event = this[campaign];
@@ -253,7 +268,7 @@
             continue;
           }
           dbLib.deliverMessage(this.name, prize);
-          this.globalPrizeFlag.newProperty(key, true);
+          this.globalPrizeFlag[key] = true;
         }
       }
       if (!moment().isSame(this.infiniteTimer, 'week')) {
@@ -331,7 +346,8 @@
         currentLevel: cfg.levelCount,
         getConfig: function() {
           return cfg;
-        }
+        },
+        isSweep: true
       };
       count = 1;
       if (multiple) {
@@ -345,7 +361,9 @@
         id: 871,
         num: count
       };
-      if (multiple && false) {
+      if (this.stage[stage].state !== STAGE_STATE_PASSED) {
+        ret_result = RET_StageIsLocked;
+      } else if (multiple && this.vipLevel() < Sweep_Vip_Level) {
         ret_result = RET_VipLevelIsLow;
       } else if (this.energy < energyCost) {
         ret_result = RET_NotEnoughEnergy;
@@ -399,7 +417,7 @@
           };
         }
       }
-      this.loginStreak.newProperty('date', currentTime(true).valueOf());
+      this.loginStreak['date'] = currentTime(true).valueOf();
       this.log('claimLoginReward', {
         loginStreak: this.loginStreak.count,
         date: currentTime()
@@ -463,10 +481,14 @@
       })(this)));
       helperLib.initObserveration(this);
       this.installObserver('heroxpChanged');
+      this.installObserver('battleForceChanged');
+      this.installObserver('countersChanged');
+      this.installObserver('stageChanged');
+      this.installObserver('winningAnPVP');
       if (this.isNewPlayer) {
         this.isNewPlayer = false;
       }
-      helperLib.assignLeaderboard(this);
+      helperLib.assignLeaderboard(this, 3);
       this.inventory.validate();
       if (this.hero != null) {
         this.updateMercenaryInfo();
@@ -507,7 +529,7 @@
           }
         ];
         if (rec.productID === MonthCardID) {
-          this.counters.newProperty('monthCard', 30);
+          this.counters['monthCard'] = 30;
           ret = ret.concat(this.syncEvent());
         }
         this.rmb += cfg.rmb;
@@ -630,14 +652,14 @@
     };
 
     Player.prototype.createHero = function(heroData) {
-      var bag, e, equip, hero, i, _ref7;
+      var bag, bf, e, equip, hero, i, _ref7;
       if (heroData != null) {
         if (this.heroBase[heroData["class"]] != null) {
           return null;
         }
         heroData.xp = 0;
         heroData.equipment = [];
-        this.heroBase.newProperty(heroData["class"], heroData);
+        this.heroBase[heroData["class"]] = heroData;
         this.switchHero(heroData["class"]);
         return this.createHero();
       } else if (this.hero) {
@@ -666,10 +688,14 @@
           };
           this.save();
         } else {
-          this.hero.newProperty('equipment', equip);
+          this.hero['equipment'] = equip;
         }
         hero = new Hero(this.hero);
-        this.battleForce = hero.calculatePower();
+        bf = hero.calculatePower();
+        if (bf !== this.battleForce) {
+          this.battleForce = bf;
+          this.notify('battleForceChanged');
+        }
         return hero;
       } else {
         throw 'NoHero';
@@ -682,18 +708,18 @@
         return false;
       }
       if (this.hero != null) {
-        this.heroBase.newProperty(this.hero["class"], {});
+        this.heroBase[this.hero["class"]] = {};
         _ref7 = this.hero;
         for (k in _ref7) {
           v = _ref7[k];
-          this.heroBase[this.hero["class"]].newProperty(k, JSON.parse(JSON.stringify(v)));
+          this.heroBase[this.hero["class"]][k] = JSON.parse(JSON.stringify(v));
         }
       }
       _ref8 = this.heroBase[hClass];
       _results = [];
       for (k in _ref8) {
         v = _ref8[k];
-        _results.push(this.hero.newProperty(k, JSON.parse(JSON.stringify(v))));
+        _results.push(this.hero[k] = JSON.parse(JSON.stringify(v)));
       }
       return _results;
     };
@@ -732,6 +758,10 @@
           prevLevel: prevLevel,
           currentLevel: currentLevel
         });
+        this.log('levelChange', {
+          prevLevel: prevLevel,
+          newLevel: currentLevel
+        });
       }
       return this.hero.xp;
     };
@@ -761,6 +791,13 @@
       return this.save(handler);
     };
 
+    Player.prototype.modifyCounters = function(propertyName, arg) {
+      this.counters[propertyName] = typeof arg.value === "function" ? arg.value(0) : void 0;
+      if (arg.notify != null) {
+        return this.notify(arg.notify.name, arg.notify.arg);
+      }
+    };
+
     Player.prototype.stageIsUnlockable = function(stage) {
       var stageConfig;
       stageConfig = queryTable(TABLE_STAGE, stage, this.abIndex);
@@ -780,7 +817,7 @@
       if (stg) {
         chapter = stg.chapter;
         if (this.stage[stage] == null) {
-          this.stage.newProperty(stage, {});
+          this.stage[stage] = {};
         }
         flag = false;
         arg = {
@@ -790,10 +827,13 @@
         };
         if (stg.isInfinite) {
           if (this.stage[stage].level == null) {
-            this.stage[stage].newProperty('level', 0);
+            this.stage[stage]['level'] = 0;
           }
           if (state === STAGE_STATE_PASSED) {
             this.stage[stage].level += 1;
+            this.notify('stageChanged', {
+              stage: stage
+            });
             if (this.stage[stage].level % 5 === 0) {
               dbLib.broadcastEvent(BROADCAST_INFINITE_LEVEL, {
                 who: this.name,
@@ -875,6 +915,22 @@
       }
       return async.waterfall([
         (function(_this) {
+          return function(cb) {
+            var _base, _base1;
+            if ((stageConfig.pvp != null) && (pkr != null)) {
+              if ((_base = _this.counters).currentPKCount == null) {
+                _base.currentPKCount = 0;
+              }
+              if ((_base1 = _this.counters).totalPKCount == null) {
+                _base1.totalPKCount = 5;
+              }
+              if (_this.counters.currentPKCount >= _this.counters.totalPKCount) {
+                cb(RET_NotEnoughTimes);
+              }
+            }
+            return cb();
+          };
+        })(this), (function(_this) {
           return function(cb) {
             if (_this.dungeonData.stage != null) {
               return cb('OK');
@@ -985,6 +1041,8 @@
             if ((stageConfig.pvp != null) && (pkr != null)) {
               return getPlayerHero(pkr, wrapCallback(_this, function(err, heroData) {
                 this.dungeonData.PVP_Pool = heroData != null ? [getBasicInfo(heroData)] : void 0;
+                this.counters.currentPKCount++;
+                this.saveDB();
                 return cb('OK');
               }));
             } else {
@@ -1038,7 +1096,7 @@
         return [];
       }
       quest = queryTable(TABLE_QUEST, qid, this.abIndex);
-      this.quests.newProperty(qid, {
+      this.quests[qid] = {
         counters: (function() {
           var _i, _len, _ref7, _results;
           _ref7 = quest.objects;
@@ -1049,10 +1107,11 @@
           }
           return _results;
         })()
-      });
+      };
       this.onEvent('gold');
       this.onEvent('diamond');
       this.onEvent('item');
+      this.questVersion++;
       return packQuestEvent(this.quests, qid, this.questVersion);
     };
 
@@ -1255,12 +1314,23 @@
             case PRIZETYPE_FUNCTION:
               switch (p.func) {
                 case "setFlag":
-                  this.flags.newProperty(p.flag, p.value);
+                  this.flags[p.flag] = p.value;
                   ret = ret.concat(this.syncFlags(true)).concat(this.syncEvent());
                   break;
                 case "countUp":
-                  this.counters[p.counter]++;
-                  ret = ret.concat(this.syncCounters(true)).concat(this.syncEvent());
+                  if (p.target === 'server') {
+                    gServerObject[p.counter]++;
+                    gServerObject.notify('countersChanged', {
+                      type: p.counter,
+                      delta: 1
+                    });
+                  } else {
+                    this.counters[p.counter]++;
+                    this.notify('countersChanged', {
+                      type: p.counter
+                    });
+                    ret = ret.concat(this.syncCounters(true)).concat(this.syncEvent());
+                  }
               }
           }
         }
@@ -1304,7 +1374,7 @@
         return RET_InventoryFull;
       }
       ret = ret.concat(prize);
-      this.questsVersion++;
+      this.questVersion++;
       _ref7 = quest.objects;
       for (_i = 0, _len = _ref7.length; _i < _len; _i++) {
         obj = _ref7[_i];
@@ -1336,9 +1406,9 @@
       this.log('claimQuest', {
         id: qid
       });
-      this.quests.newProperty(qid, {
+      this.quests[qid] = {
         complete: true
-      });
+      };
       return ret.concat(this.updateQuestStatus());
     };
 
@@ -1383,17 +1453,8 @@
 
     Player.prototype.onEvent = function(eventID) {
       switch (eventID) {
-        case 'gold':
-        case 'diamond':
-        case 'item':
-          break;
-        case 'level':
-          this.onEvent('power');
-          return this.onCampaign('Level');
         case 'Equipment':
-          return this.onEvent('power');
-        case 'power':
-          return this.updateMercenaryInfo();
+          return this.createHero();
       }
     };
 
@@ -1505,7 +1566,7 @@
                 sta: 0
               });
             }
-            this.equipment.newProperty(item.subcategory, slot);
+            this.equipment[item.subcategory] = slot;
             tmp.sta = 1;
           }
           ret.arg.itm.push(tmp);
@@ -1690,6 +1751,7 @@
       newItem = ret.newItem;
       if (newItem) {
         ret.newItem.enhancement = enhance;
+        ret.newItem.xp = item.xp;
         eh = newItem.enhancement.map(function(e) {
           return {
             id: e.id,
@@ -1906,9 +1968,10 @@
       }), []);
       percentage = 1;
       if (result === DUNGEON_RESULT_WIN) {
-        dbLib.incrBluestarBy(this.name, 1);
-        if (cfg.dropID) {
-          dropInfo = dropInfo.concat(cfg.dropID);
+        if (dungeon.isSweep != null) {
+          if (cfg.dropID) {
+            dropInfo = dropInfo.concat(cfg.dropID);
+          }
         }
       } else {
         percentage = (dungeon.currentLevel / cfg.levelCount) * 0.5;
@@ -1917,23 +1980,25 @@
       xr = ((_ref8 = cfg.xpRate) != null ? _ref8 : 1) * percentage;
       wr = ((_ref9 = cfg.wxpRate) != null ? _ref9 : 1) * percentage;
       prize = helperLib.generatePrize(queryTable(TABLE_DROP), dropInfo);
-      if (cfg.prizeGold) {
-        prize.push({
-          type: PRIZETYPE_GOLD,
-          count: Math.floor(gr * cfg.prizeGold)
-        });
-      }
-      if (cfg.prizeXp) {
-        prize.push({
-          type: PRIZETYPE_EXP,
-          count: Math.floor(xr * cfg.prizeXp)
-        });
-      }
-      if (cfg.prizeWxp) {
-        prize.push({
-          type: PRIZETYPE_WXP,
-          count: Math.floor(wr * cfg.prizeWxp)
-        });
+      if (!dungeon.isSweep) {
+        if (cfg.prizeGold) {
+          prize.push({
+            type: PRIZETYPE_GOLD,
+            count: Math.floor(gr * cfg.prizeGold)
+          });
+        }
+        if (cfg.prizeXp) {
+          prize.push({
+            type: PRIZETYPE_EXP,
+            count: Math.floor(xr * cfg.prizeXp)
+          });
+        }
+        if (cfg.prizeWxp) {
+          prize.push({
+            type: PRIZETYPE_WXP,
+            count: Math.floor(wr * cfg.prizeWxp)
+          });
+        }
       }
       infiniteLevel = dungeon.infiniteLevel;
       if ((infiniteLevel != null) && cfg.infinityPrize && result === DUNGEON_RESULT_WIN) {
@@ -1963,8 +2028,33 @@
       return helperLib.splicePrize(prize);
     };
 
+    Player.prototype.updateQuest = function(quests) {
+      var k, objective, qid, qst, quest, _results;
+      _results = [];
+      for (qid in quests) {
+        qst = quests[qid];
+        if (!(((qst != null ? qst.counters : void 0) != null) && this.quests[qid])) {
+          continue;
+        }
+        quest = queryTable(TABLE_QUEST, qid, this.abIndex);
+        _results.push((function() {
+          var _ref7, _results1;
+          _ref7 = quest.objects;
+          _results1 = [];
+          for (k in _ref7) {
+            objective = _ref7[k];
+            if (objective.type === QUEST_TYPE_NPC && (qst.counters[k] != null) && (this.quests[qid].counters != null)) {
+              _results1.push(this.quests[qid].counters[k] = qst.counters[k]);
+            }
+          }
+          return _results1;
+        }).call(this));
+      }
+      return _results;
+    };
+
     Player.prototype.claimDungeonAward = function(dungeon, isSweep) {
-      var goldPrize, k, objective, offlineReward, otherPrize, prize, qid, qst, quest, quests, result, ret, rewardMessage, teammateRewardMessage, wxPrize, xpPrize, _ref7, _ref8;
+      var goldPrize, otherPrize, prize, quests, result, ret, rewardMessage, wxPrize, xpPrize, _ref7;
       if (dungeon == null) {
         return [];
       }
@@ -1987,22 +2077,10 @@
       }
       quests = dungeon.quests;
       if (quests) {
-        for (qid in quests) {
-          qst = quests[qid];
-          if (!(((qst != null ? qst.counters : void 0) != null) && this.quests[qid])) {
-            continue;
-          }
-          quest = queryTable(TABLE_QUEST, qid, this.abIndex);
-          _ref7 = quest.objects;
-          for (k in _ref7) {
-            objective = _ref7[k];
-            if (objective.type === QUEST_TYPE_NPC && (qst.counters[k] != null) && (this.quests[qid].counters != null)) {
-              this.quests[qid].counters[k] = qst.counters[k];
-            }
-          }
-        }
+        this.updateQuest(quests);
+        this.questVersion++;
       }
-      _ref8 = this.generateDungeonAward(dungeon), goldPrize = _ref8.goldPrize, xpPrize = _ref8.xpPrize, wxPrize = _ref8.wxPrize, otherPrize = _ref8.otherPrize;
+      _ref7 = this.generateDungeonAward(dungeon), goldPrize = _ref7.goldPrize, xpPrize = _ref7.xpPrize, wxPrize = _ref7.wxPrize, otherPrize = _ref7.otherPrize;
       rewardMessage = {
         NTF: Event_DungeonReward,
         arg: {
@@ -2012,36 +2090,6 @@
       ret = ret.concat([rewardMessage]);
       if (dungeon.result !== DUNGEON_RESULT_FAIL) {
         ret = ret.concat(this.completeStage(dungeon.stage));
-      }
-      offlineReward = [
-        {
-          type: PRIZETYPE_EXP,
-          count: Math.ceil(xpPrize.count * TEAMMATE_REWARD_RATIO)
-        }, {
-          type: PRIZETYPE_GOLD,
-          count: Math.ceil(goldPrize.count * TEAMMATE_REWARD_RATIO)
-        }, {
-          type: PRIZETYPE_WXP,
-          count: Math.ceil(wxPrize.count * TEAMMATE_REWARD_RATIO)
-        }
-      ].filter(function(e) {
-        return e.count > 0;
-      });
-      if (offlineReward.length > 0) {
-        teammateRewardMessage = {
-          type: MESSAGE_TYPE_SystemReward,
-          src: MESSAGE_REWARD_TYPE_OFFLINE,
-          prize: offlineReward
-        };
-        dungeon.team.filter((function(_this) {
-          return function(m) {
-            return m.nam !== _this.name;
-          };
-        })(this)).forEach(function(m) {
-          if (m) {
-            return dbLib.deliverMessage(m.nam, teammateRewardMessage);
-          }
-        });
       }
       result = 'Lost';
       if (dungeon.result === DUNGEON_RESULT_WIN) {
@@ -2075,20 +2123,13 @@
 
     Player.prototype.updatePkInof = function(dungeon) {
       var myName, rivalName;
-      if (this.counters.currentPKCount != null) {
-        this.counters.currentPKCount++;
-      } else {
-        this.counters.newProperty('currentPKCount', 0);
-      }
       if (dungeon.PVP_Pool != null) {
         myName = this.name;
         rivalName = dungeon.PVP_Pool[0].nam;
         if (dungeon.result === DUNGEON_RESULT_WIN) {
+          console.log('debug pkRank', myName, rivalName, dungeon.result);
           return dbLib.saveSocre(myName, rivalName, function(err, result) {
-            console.log('saveSocre', myName, rivalName, err, result);
-            if (result !== 'noNeed') {
-              return this.counters.Arena = result[0];
-            }
+            return console.log(err, result);
           });
         }
       }
@@ -2262,9 +2303,9 @@
       }
       if (this.campaignState[campaignName] == null) {
         if (campaignName === 'Charge' || campaignName === 'DuanwuCharge') {
-          this.campaignState.newProperty(campaignName, {});
+          this.campaignState[campaignName] = {};
         } else {
-          this.campaignState.newProperty(campaignName, 0);
+          this.campaignState[campaignName] = 0;
         }
       }
       return this.campaignState[campaignName];
