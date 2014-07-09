@@ -321,7 +321,7 @@
     };
 
     Player.prototype.sweepStage = function(stage, multiple) {
-      var cfg, count, dungeon, energyCost, i, itemCost, itemCostRet, k, p, prize, r, ret, ret_result, stgCfg, v, _i, _ref7;
+      var cfg, count, dungeon, energyCost, i, itemCost, itemCostRet, k, p, prize, r, ret, ret_result, stgCfg, v, _i;
       stgCfg = queryTable(TABLE_STAGE, stage, this.abIndex);
       if (!stgCfg) {
         return {
@@ -380,13 +380,8 @@
           for (i = _i = 1; 1 <= count ? _i <= count : _i >= count; i = 1 <= count ? ++_i : --_i) {
             p = this.generateDungeonAward(dungeon, true);
             r = [];
-            _ref7 = p.filter((function(_this) {
-              return function(e) {
-                return !(e.type >= 1 && t.type <= 4 && e.count < 0);
-              };
-            })(this));
-            for (k in _ref7) {
-              v = _ref7[k];
+            for (k in p) {
+              v = p[k];
               r = r.concat(v);
             }
             prize.push(r);
@@ -398,6 +393,11 @@
             reward: prize
           });
           ret = ret.concat(this.syncEnergy());
+          prize.filter((function(_this) {
+            return function(e) {
+              return !(e.type >= 1 && t.type <= 4 && e.count < 0);
+            };
+          })(this));
         }
       }
       return {
