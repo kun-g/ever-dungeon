@@ -27934,35 +27934,5 @@ exports.data = [
             }
         ],
         "storeOnly": true
-    },
-    {
-        "classId": 878,
-        "label": "测试之冠",
-        "icon": "irfasion-helmetsg1.png",
-        "category": 1,
-        "subcategory": 13,
-        "description": "优秀狩猎者的身份证明。",
-        "effecta": [
-            {
-                "part": "helmet",
-                "file": "rfasion-helmetsg1.ccbi"
-            },
-            {
-                "part": "helmet2",
-                "file": "rfasion-helmetsg1-2.ccbi"
-            }
-        ],
-        "basic_properties": {
-            "health": 30,
-            "attack": 10,
-            "speed": 10,
-            "strong": 15,
-            "accuracy": 5,
-            "critical": 5,
-            "reactivity": 15
-        },
-        "storeOnly": true,
-        "expiration": {second: 15}
-    },
- 
+    }
 ]

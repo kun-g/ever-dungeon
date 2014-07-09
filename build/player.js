@@ -252,26 +252,8 @@
       return helperLib.initCampaign(this, helperLib.events);
     };
 
-    Player.prototype.removeExpiredItem = function() {
-      var itemsNeedRemove;
-      itemsNeedRemove = this.inventory.filter(function(item) {
-        if ((item != null ? item.expiration : void 0) == null) {
-          return false;
-        }
-        if (item.date == null) {
-          return true;
-        }
-        return helperLib.matchDate(item.date, helperLib.currentTime(), item.expiration);
-      });
-      return itemsNeedRemove.map((function(_this) {
-        return function(e) {
-          return _this.removeItem(null, null, _this.queryItemSlot(e));
-        };
-      })(this));
-    };
-
     Player.prototype.onLogin = function() {
-      var flag, key, prize, ret, rmMSG, s, _i, _len, _ref7;
+      var flag, itemsNeedRemove, key, prize, ret, rmMSG, s, _i, _len, _ref7;
       if (!this.lastLogin) {
         return [];
       }
@@ -321,7 +303,20 @@
           claim: flag
         }
       ];
-      rmMSG = this.removeExpiredItem();
+      itemsNeedRemove = this.inventory.filter(function(item) {
+        if ((item != null ? item.expiration : void 0) == null) {
+          return false;
+        }
+        if (item.date == null) {
+          return true;
+        }
+        return helperLib.matchDate(item.date, helperLib.currentTime(), item.expiration);
+      });
+      rmMSG = itemsNeedRemove.map((function(_this) {
+        return function(e) {
+          return _this.removeItem(null, null, _this.queryItemSlot(e));
+        };
+      })(this));
       ret = ret.concat(rmMSG);
       return ret;
     };
@@ -3142,11 +3137,21 @@
     }
 
     PlayerEnvironment.prototype.removeItem = function(item, count, slot, allorfail) {
-      var _ref7;
-      return {
+      var k, result, s, _ref7, _ref8;
+      result = {
         ret: (_ref7 = this.player) != null ? _ref7.inventory.remove(item, count, slot, allorfail) : void 0,
         version: this.player.inventoryVersion
       };
+      if (result.ret !== []) {
+        _ref8 = this.player.equipment;
+        for (k in _ref8) {
+          s = _ref8[k];
+          if (s === slot) {
+            delete this.player.equipment[k];
+          }
+        }
+      }
+      return result;
     };
 
     PlayerEnvironment.prototype.translateAction = function(cmd) {
