@@ -58,7 +58,7 @@
         stage: [],
         stageVersion: 0,
         quests: {},
-        questsVersion: 0,
+        questVersion: 0,
         energy: ENERGY_MAX,
         energyTime: now.valueOf(),
         mercenary: [],
@@ -253,7 +253,7 @@
     };
 
     Player.prototype.onLogin = function() {
-      var flag, itemsNeedRemove, key, prize, ret, rmMSG, s, _i, _len, _ref7;
+      var flag, itemsNeedRemove, key, prize, ret, s, _i, _len, _ref7;
       if (!this.lastLogin) {
         return [];
       }
@@ -268,7 +268,7 @@
             continue;
           }
           dbLib.deliverMessage(this.name, prize);
-          this.globalPrizeFlag.newProperty(key, true);
+          this.globalPrizeFlag[key] = true;
         }
       }
       if (!moment().isSame(this.infiniteTimer, 'week')) {
@@ -312,12 +312,11 @@
         }
         return helperLib.matchDate(item.date, helperLib.currentTime(), item.expiration);
       });
-      rmMSG = itemsNeedRemove.map((function(_this) {
-        return function(e) {
-          return _this.removeItem(null, null, _this.queryItemSlot(e));
+      ret = itemsNeedRemove.reduce((function(_this) {
+        return function(pValue, e) {
+          return pValue.concat(_this.removeItem(null, null, _this.queryItemSlot(e)));
         };
-      })(this));
-      ret = ret.concat(rmMSG);
+      })(this), ret);
       return ret;
     };
 
@@ -385,6 +384,11 @@
               v = p[k];
               r = r.concat(v);
             }
+            r = r.filter((function(_this) {
+              return function(e) {
+                return !(e.type >= 1 && e.type <= 4 && e.count <= 0);
+              };
+            })(this));
             prize.push(r);
             ret = ret.concat(this.claimPrize(r));
           }
@@ -417,7 +421,7 @@
           };
         }
       }
-      this.loginStreak.newProperty('date', currentTime(true).valueOf());
+      this.loginStreak['date'] = currentTime(true).valueOf();
       this.log('claimLoginReward', {
         loginStreak: this.loginStreak.count,
         date: currentTime()
@@ -529,7 +533,7 @@
           }
         ];
         if (rec.productID === MonthCardID) {
-          this.counters.newProperty('monthCard', 30);
+          this.counters['monthCard'] = 30;
           ret = ret.concat(this.syncEvent());
         }
         this.rmb += cfg.rmb;
@@ -659,7 +663,7 @@
         }
         heroData.xp = 0;
         heroData.equipment = [];
-        this.heroBase.newProperty(heroData["class"], heroData);
+        this.heroBase[heroData["class"]] = heroData;
         this.switchHero(heroData["class"]);
         return this.createHero();
       } else if (this.hero) {
@@ -688,7 +692,7 @@
           };
           this.save();
         } else {
-          this.hero.newProperty('equipment', equip);
+          this.hero['equipment'] = equip;
         }
         hero = new Hero(this.hero);
         bf = hero.calculatePower();
@@ -708,18 +712,18 @@
         return false;
       }
       if (this.hero != null) {
-        this.heroBase.newProperty(this.hero["class"], {});
+        this.heroBase[this.hero["class"]] = {};
         _ref7 = this.hero;
         for (k in _ref7) {
           v = _ref7[k];
-          this.heroBase[this.hero["class"]].newProperty(k, JSON.parse(JSON.stringify(v)));
+          this.heroBase[this.hero["class"]][k] = JSON.parse(JSON.stringify(v));
         }
       }
       _ref8 = this.heroBase[hClass];
       _results = [];
       for (k in _ref8) {
         v = _ref8[k];
-        _results.push(this.hero.newProperty(k, JSON.parse(JSON.stringify(v))));
+        _results.push(this.hero[k] = JSON.parse(JSON.stringify(v)));
       }
       return _results;
     };
@@ -817,10 +821,7 @@
       if (stg) {
         chapter = stg.chapter;
         if (this.stage[stage] == null) {
-          this.stage.newProperty(stage, {});
-        }
-        if (this.stage[stage].newProperty == null) {
-          tapObject(this.stage[stage], console.log);
+          this.stage[stage] = {};
         }
         flag = false;
         arg = {
@@ -830,7 +831,7 @@
         };
         if (stg.isInfinite) {
           if (this.stage[stage].level == null) {
-            this.stage[stage].newProperty('level', 0);
+            this.stage[stage]['level'] = 0;
           }
           if (state === STAGE_STATE_PASSED) {
             this.stage[stage].level += 1;
@@ -1099,7 +1100,7 @@
         return [];
       }
       quest = queryTable(TABLE_QUEST, qid, this.abIndex);
-      this.quests.newProperty(qid, {
+      this.quests[qid] = {
         counters: (function() {
           var _i, _len, _ref7, _results;
           _ref7 = quest.objects;
@@ -1110,10 +1111,11 @@
           }
           return _results;
         })()
-      });
+      };
       this.onEvent('gold');
       this.onEvent('diamond');
       this.onEvent('item');
+      this.questVersion++;
       return packQuestEvent(this.quests, qid, this.questVersion);
     };
 
@@ -1249,33 +1251,39 @@
               }
               break;
             case PRIZETYPE_GOLD:
-              ret.push({
-                NTF: Event_InventoryUpdateItem,
-                arg: {
-                  syn: this.inventoryVersion,
-                  god: this.addGold(p.count)
-                }
-              });
+              if (p.count > 0) {
+                ret.push({
+                  NTF: Event_InventoryUpdateItem,
+                  arg: {
+                    syn: this.inventoryVersion,
+                    god: this.addGold(p.count)
+                  }
+                });
+              }
               break;
             case PRIZETYPE_DIAMOND:
-              ret.push({
-                NTF: Event_InventoryUpdateItem,
-                arg: {
-                  syn: this.inventoryVersion,
-                  dim: this.addDiamond(p.count)
-                }
-              });
+              if (p.count > 0) {
+                ret.push({
+                  NTF: Event_InventoryUpdateItem,
+                  arg: {
+                    syn: this.inventoryVersion,
+                    dim: this.addDiamond(p.count)
+                  }
+                });
+              }
               break;
             case PRIZETYPE_EXP:
-              ret.push({
-                NTF: Event_RoleUpdate,
-                arg: {
-                  syn: this.heroVersion,
-                  act: {
-                    exp: this.addHeroExp(p.count)
+              if (p.count > 0) {
+                ret.push({
+                  NTF: Event_RoleUpdate,
+                  arg: {
+                    syn: this.heroVersion,
+                    act: {
+                      exp: this.addHeroExp(p.count)
+                    }
                   }
-                }
-              });
+                });
+              }
               break;
             case PRIZETYPE_WXP:
               if (!p.count) {
@@ -1316,15 +1324,23 @@
             case PRIZETYPE_FUNCTION:
               switch (p.func) {
                 case "setFlag":
-                  this.flags.newProperty(p.flag, p.value);
+                  this.flags[p.flag] = p.value;
                   ret = ret.concat(this.syncFlags(true)).concat(this.syncEvent());
                   break;
                 case "countUp":
-                  this.counters[p.counter]++;
-                  this.notify('countersChanged', {
-                    type: p.counter
-                  });
-                  ret = ret.concat(this.syncCounters(true)).concat(this.syncEvent());
+                  if (p.target === 'server') {
+                    gServerObject[p.counter]++;
+                    gServerObject.notify('countersChanged', {
+                      type: p.counter,
+                      delta: 1
+                    });
+                  } else {
+                    this.counters[p.counter]++;
+                    this.notify('countersChanged', {
+                      type: p.counter
+                    });
+                    ret = ret.concat(this.syncCounters(true)).concat(this.syncEvent());
+                  }
               }
           }
         }
@@ -1368,7 +1384,7 @@
         return RET_InventoryFull;
       }
       ret = ret.concat(prize);
-      this.questsVersion++;
+      this.questVersion++;
       _ref7 = quest.objects;
       for (_i = 0, _len = _ref7.length; _i < _len; _i++) {
         obj = _ref7[_i];
@@ -1400,9 +1416,9 @@
       this.log('claimQuest', {
         id: qid
       });
-      this.quests.newProperty(qid, {
+      this.quests[qid] = {
         complete: true
-      });
+      };
       return ret.concat(this.updateQuestStatus());
     };
 
@@ -1560,7 +1576,7 @@
                 sta: 0
               });
             }
-            this.equipment.newProperty(item.subcategory, slot);
+            this.equipment[item.subcategory] = slot;
             tmp.sta = 1;
           }
           ret.arg.itm.push(tmp);
@@ -1962,8 +1978,7 @@
       }), []);
       percentage = 1;
       if (result === DUNGEON_RESULT_WIN) {
-        dbLib.incrBluestarBy(this.name, 1);
-        if (dungeon.isSweep) {
+        if (dungeon.isSweep != null) {
           if (cfg.dropID) {
             dropInfo = dropInfo.concat(cfg.dropID);
           }
@@ -2023,8 +2038,33 @@
       return helperLib.splicePrize(prize);
     };
 
+    Player.prototype.updateQuest = function(quests) {
+      var k, objective, qid, qst, quest, _results;
+      _results = [];
+      for (qid in quests) {
+        qst = quests[qid];
+        if (!(((qst != null ? qst.counters : void 0) != null) && this.quests[qid])) {
+          continue;
+        }
+        quest = queryTable(TABLE_QUEST, qid, this.abIndex);
+        _results.push((function() {
+          var _ref7, _results1;
+          _ref7 = quest.objects;
+          _results1 = [];
+          for (k in _ref7) {
+            objective = _ref7[k];
+            if (objective.type === QUEST_TYPE_NPC && (qst.counters[k] != null) && (this.quests[qid].counters != null)) {
+              _results1.push(this.quests[qid].counters[k] = qst.counters[k]);
+            }
+          }
+          return _results1;
+        }).call(this));
+      }
+      return _results;
+    };
+
     Player.prototype.claimDungeonAward = function(dungeon, isSweep) {
-      var goldPrize, k, objective, otherPrize, prize, qid, qst, quest, quests, result, ret, rewardMessage, wxPrize, xpPrize, _ref7, _ref8;
+      var goldPrize, otherPrize, prize, quests, result, ret, rewardMessage, wxPrize, xpPrize, _ref7;
       if (dungeon == null) {
         return [];
       }
@@ -2047,22 +2087,10 @@
       }
       quests = dungeon.quests;
       if (quests) {
-        for (qid in quests) {
-          qst = quests[qid];
-          if (!(((qst != null ? qst.counters : void 0) != null) && this.quests[qid])) {
-            continue;
-          }
-          quest = queryTable(TABLE_QUEST, qid, this.abIndex);
-          _ref7 = quest.objects;
-          for (k in _ref7) {
-            objective = _ref7[k];
-            if (objective.type === QUEST_TYPE_NPC && (qst.counters[k] != null) && (this.quests[qid].counters != null)) {
-              this.quests[qid].counters[k] = qst.counters[k];
-            }
-          }
-        }
+        this.updateQuest(quests);
+        this.questVersion++;
       }
-      _ref8 = this.generateDungeonAward(dungeon), goldPrize = _ref8.goldPrize, xpPrize = _ref8.xpPrize, wxPrize = _ref8.wxPrize, otherPrize = _ref8.otherPrize;
+      _ref7 = this.generateDungeonAward(dungeon), goldPrize = _ref7.goldPrize, xpPrize = _ref7.xpPrize, wxPrize = _ref7.wxPrize, otherPrize = _ref7.otherPrize;
       rewardMessage = {
         NTF: Event_DungeonReward,
         arg: {
@@ -2285,9 +2313,9 @@
       }
       if (this.campaignState[campaignName] == null) {
         if (campaignName === 'Charge' || campaignName === 'DuanwuCharge') {
-          this.campaignState.newProperty(campaignName, {});
+          this.campaignState[campaignName] = {};
         } else {
-          this.campaignState.newProperty(campaignName, 0);
+          this.campaignState[campaignName] = 0;
         }
       }
       return this.campaignState[campaignName];
@@ -3119,11 +3147,21 @@
     }
 
     PlayerEnvironment.prototype.removeItem = function(item, count, slot, allorfail) {
-      var _ref7;
-      return {
+      var k, result, s, _ref7, _ref8;
+      result = {
         ret: (_ref7 = this.player) != null ? _ref7.inventory.remove(item, count, slot, allorfail) : void 0,
         version: this.player.inventoryVersion
       };
+      if (result.ret !== []) {
+        _ref8 = this.player.equipment;
+        for (k in _ref8) {
+          s = _ref8[k];
+          if (s === slot) {
+            delete this.player.equipment[k];
+          }
+        }
+      }
+      return result;
     };
 
     PlayerEnvironment.prototype.translateAction = function(cmd) {

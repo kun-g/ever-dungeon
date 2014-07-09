@@ -19960,7 +19960,7 @@ exports.data = [
 	},
 	{
 		"classId": 538,
-		"label": "小瓶活力药剂",
+		"label": "小瓶活力剂",
 		"icon": "item-energy1.png",
 		"category": 0,
 		"subcategory": 1,
@@ -19974,7 +19974,7 @@ exports.data = [
 	},
 	{
 		"classId": 539,
-		"label": "大瓶活力药剂",
+		"label": "大瓶活力剂",
 		"icon": "item-energy2.png",
 		"category": 0,
 		"subcategory": 1,
