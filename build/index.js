@@ -1,8 +1,8 @@
 //require('strong-agent').profile();
-require('nodetime').profile({
-  accountKey: 'c82d52d81e9ed18e8550b58bf36f49d47e50a792', 
-  appName: 'DR'
-});
+//require('nodetime').profile({
+//  accountKey: 'c82d52d81e9ed18e8550b58bf36f49d47e50a792', 
+//  appName: 'DR'
+//});
 //var agent = require('webkit-devtools-agent');
 require('./define');
 dbLib = require('./db');
@@ -253,7 +253,7 @@ gServerObject = {
 };
 
 if (config) {
-  initiateFluentLogger();
+  initiateLogger();
   initServer();
   initGlobalConfig(null, function () {
     gServerID = queryTable(TABLE_CONFIG, 'ServerID');
