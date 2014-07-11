@@ -38,7 +38,7 @@ initServer = function () {
     log.logType = type;
 
     if (logger && type) {
-      logger.log(type, log, new Date());
+      logger.emit(type, log, new Date());
     }
     if (logger == null || process.stdout.isTTY || type === 'Error') {
       var util = require('util');
