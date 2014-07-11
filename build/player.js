@@ -2820,10 +2820,10 @@
       me = this;
       myName = this.name;
       filtedName = [this.name];
-      filtedName = filtedName.concat(me.mercenary.map(function(m) {
+      filtedName = filtedName.concat(this.mercenary.map(function(m) {
         return m.name;
       }));
-      filtedName = filtedName.concat(me.contactBook.book);
+      filtedName = filtedName.concat(this.contactBook.book);
       return getMercenaryMember(myName, 3, 30, 1, filtedName, function(err, heroData) {
         console.log(heroData, 'dsdsdf;');
         if (heroData) {
