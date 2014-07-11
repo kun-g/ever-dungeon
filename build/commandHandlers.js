@@ -180,6 +180,7 @@ function handler_doRefreshMercenaryList(arg, player, handler, rpcID) {
     player.log('refreshMercenaryList')
 
     player.replaceMercenary(arg.sid, function (teammate) {
+      console.log('-----------', teammate);
       handler([{REQ : rpcID, RET : RET_OK, arg : getBasicInfo(teammate)}, {NTF: Event_InventoryUpdateItem, arg:{god:player.gold}}]);
     });
   } else {
