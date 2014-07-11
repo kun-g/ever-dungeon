@@ -1,5 +1,5 @@
 (function() {
-  var Bag, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Player, PlayerEnvironment, Serializer, addMercenaryMember, async, createItem, createUnit, currentTime, dbLib, diffDate, genUtil, getPlayerHero, getVip, helperLib, itemLib, moment, playerCSConfig, playerCommandStream, playerMessageFilter, registerConstructor, updateMercenaryMember, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6,
+  var Bag, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Player, PlayerEnvironment, Serializer, addMercenaryMember, async, createItem, createUnit, currentTime, dbLib, diffDate, genUtil, getMercenaryMember, getPlayerHero, getVip, helperLib, itemLib, moment, playerCSConfig, playerCommandStream, playerMessageFilter, registerConstructor, updateMercenaryMember, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -9,7 +9,7 @@
 
   _ref = require('./serializer'), Serializer = _ref.Serializer, registerConstructor = _ref.registerConstructor;
 
-  _ref1 = require('./dbWrapper'), DBWrapper = _ref1.DBWrapper, updateMercenaryMember = _ref1.updateMercenaryMember, addMercenaryMember = _ref1.addMercenaryMember, getPlayerHero = _ref1.getPlayerHero;
+  _ref1 = require('./dbWrapper'), DBWrapper = _ref1.DBWrapper, getMercenaryMember = _ref1.getMercenaryMember, updateMercenaryMember = _ref1.updateMercenaryMember, addMercenaryMember = _ref1.addMercenaryMember, getPlayerHero = _ref1.getPlayerHero;
 
   _ref2 = require('./unit'), createUnit = _ref2.createUnit, Hero = _ref2.Hero;
 
@@ -2696,7 +2696,6 @@
         return;
       }
       if (this.mercenary.length >= MERCENARYLISTLEN) {
-        console.log(this.mercenary, '------------');
         return callback(this.mercenary.map(function(h) {
           return new Hero(h);
         }));
@@ -2708,22 +2707,14 @@
         if (this.contactBook != null) {
           filtedName = filtedName.concat(this.contactBook.book);
         }
-        return dbLib.findMercenary(this.name, 2, 30, 1, filtedName, (function(_this) {
-          return function(err, heroNames) {
-            if (heroNames) {
-              return async.eachSeries(heroNames, function(e, cb) {
-                return getPlayerHero(e, wrapCallback(me, function(err, heroData) {
-                  this.mercenary.push(heroData);
-                  return cb();
-                }));
-              }, function() {
-                return me.requireMercenary(callback);
-              });
-            } else {
-              return callback(null);
-            }
-          };
-        })(this));
+        return getMercenaryMember(this.name, 2, 30, 1, filtedName, function(err, heroData) {
+          if (heroData) {
+            this.mercenary.push(heroData);
+            return this.requireMercenary(callback);
+          } else {
+            return callback(null);
+          }
+        });
       }
     };
 
@@ -2833,7 +2824,7 @@
         return m.name;
       }));
       filtedName = filtedName.concat(me.contactBook.book);
-      return dbLib.findMercenary(myName, 3, 30, 1, filtedName, function(err, heroData) {
+      return getMercenaryMember(myName, 3, 30, 1, filtedName, function(err, heroData) {
         if (heroData) {
           me.mercenary.splice(id, 1, heroData);
         } else {

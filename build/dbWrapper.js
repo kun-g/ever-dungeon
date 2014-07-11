@@ -185,6 +185,25 @@
 
   exports.getPlayerHero = getPlayerHero;
 
+  exports.getMercenaryMember = function(name, count, range, delta, names, handler) {
+    var heros;
+    heros = [];
+    return dbLib.findMercenary(name, count, range, delta, filtedName, (function(_this) {
+      return function(err, heroNames) {
+        if (heroNames) {
+          return async.eachSeries(heroNames, function(e, cb) {
+            return getPlayerHero(e, wrapCallback(me, function(err, heroData) {
+              heros.push(heroData);
+              return cb();
+            }));
+          }, function() {
+            return handle(heros);
+          });
+        }
+      };
+    })(this));
+  };
+
   exports.removeMercenaryMember = function(battleForce, member, handler) {
     return mercenaryDel(battleForce, member, handler);
   };
