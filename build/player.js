@@ -2825,6 +2825,7 @@
       }));
       filtedName = filtedName.concat(me.contactBook.book);
       return getMercenaryMember(myName, 3, 30, 1, filtedName, function(err, heroData) {
+        console.log(heroData, 'dsdsdf;');
         if (heroData) {
           me.mercenary.splice(id, 1, heroData);
         } else {
