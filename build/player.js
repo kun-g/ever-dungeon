@@ -2709,8 +2709,8 @@
         }
         return getMercenaryMember(this.name, 2, 30, 1, filtedName, function(err, heroData) {
           if (heroData) {
-            this.mercenary.push(heroData);
-            return this.requireMercenary(callback);
+            me.mercenary.push(heroData);
+            return me.requireMercenary(callback);
           } else {
             return callback(null);
           }
