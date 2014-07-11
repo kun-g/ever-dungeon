@@ -30201,7 +30201,928 @@ exports.data = [
         "prizeWxp":0,"prizeGold":0, "prizeXp":0,
         "wxpRate":1,"goldRate":0.5, "xpRate":1,
         "rank":15
-    }
+    },
+    {
+        "dungeonId": 127,
+        "levelCount" :2,
+        "pool":{
+            "soldierPool":{"objects":[
+                {
+                    "id":3,
+                    "weight":2
+                },
+                {
+                    "id":4,
+                    "weight":2
+                },
+                {
+                    "id":5,
+                    "weight":2
+                },
+                {
+                    "id":6,
+                    "weight":2
+                },
+                {
+                    "id":7,
+                    "weight":2
+                },
+                {
+                    "id":9,
+                    "weight":2
+                },
+                {
+                    "id":10,
+                    "weight":2
+                },
+                {
+                    "id":11,
+                    "weight":2
+                },
+                {
+                    "id":12,
+                    "weight":2
+                },
+                {
+                    "id":14,
+                    "weight":2
+                },
+                {
+                    "id":15,
+                    "weight":2
+                },
+                {
+                    "id":17,
+                    "weight":2
+                },
+                {
+                    "id":35,
+                    "weight":2
+                },
+                {
+                    "id":36,
+                    "weight":2
+                },
+                {
+                    "id":37,
+                    "weight":2
+                },
+                {
+                    "id":38,
+                    "weight":2
+                },
+                {
+                    "id":39,
+                    "weight":2
+                },
+                {
+                    "id":41,
+                    "weight":2
+                },
+                {
+                    "id":42,
+                    "weight":2
+                },
+                {
+                    "id":43,
+                    "weight":2
+                },
+                {
+                    "id":44,
+                    "weight":2
+                },
+                {
+                    "id":46,
+                    "weight":2
+                },
+                {
+                    "id":47,
+                    "weight":2
+                },
+                {
+                    "id":49,
+                    "weight":2
+                },
+                {
+                    "id":67,
+                    "weight":2
+                },
+                {
+                    "id":68,
+                    "weight":2
+                },
+                {
+                    "id":69,
+                    "weight":2
+                },
+                {
+                    "id":70,
+                    "weight":2
+                },
+                {
+                    "id":71,
+                    "weight":2
+                },
+                {
+                    "id":73,
+                    "weight":2
+                },
+                {
+                    "id":74,
+                    "weight":2
+                },
+                {
+                    "id":75,
+                    "weight":2
+                },
+                {
+                    "id":76,
+                    "weight":2
+                },
+                {
+                    "id":78,
+                    "weight":2
+                },
+                {
+                    "id":79,
+                    "weight":2
+                },
+                {
+                    "id":81,
+                    "weight":2
+                },
+                {
+                    "id":99,
+                    "weight":2
+                },
+                {
+                    "id":100,
+                    "weight":2
+                },
+                {
+                    "id":101,
+                    "weight":2
+                },
+                {
+                    "id":102,
+                    "weight":2
+                },
+                {
+                    "id":103,
+                    "weight":2
+                },
+                {
+                    "id":105,
+                    "weight":2
+                },
+                {
+                    "id":106,
+                    "weight":2
+                },
+                {
+                    "id":107,
+                    "weight":2
+                },
+                {
+                    "id":108,
+                    "weight":2
+                },
 
+                {
+                    "id":110,
+                    "weight":2
+                },
+                {
+                    "id":111,
+                    "weight":2
+                },
+                {
+                    "id":113,
+                    "weight":2
+                }
+            ]},
+            "rangePool":{"objects":[
+                {
+                    "id":8,
+                    "weight":2
+                },
+                {
+                    "id":13,
+                    "weight":2
+                },
+                {
+                    "id":16,
+                    "weight":2
+                },
+                {
+                    "id":40,
+                    "weight":2
+                },
+                {
+                    "id":45,
+                    "weight":2
+                },
+                {
+                    "id":48,
+                    "weight":2
+                },
+                {
+                    "id":72,
+                    "weight":2
+                },
+                {
+                    "id":77,
+                    "weight":2
+                },
+                {
+                    "id":80,
+                    "weight":2
+                },
+                {
+                    "id":104,
+                    "weight":2
+                },
+                {
+                    "id":109,
+                    "weight":2
+                },
+                {
+                    "id":112,
+                    "weight":2
+                }
 
+            ]},
+            "elitePool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2 ,
+                    "keyed":true
+                }
+
+            ]},
+            "bossPool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2,
+                    "keyed":true
+                }
+
+            ]},
+            "normalPool":{"objects":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
+                    "weight":3
+                }
+            ]}
+        },
+        "levels" :[
+            {
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"pool":"elitePool","count":1},
+                    {"id": 149,"from":0,to:2}
+                ]
+            },
+            {
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"pool":"bossPool","count":1},
+                    {"id": 149,"from":0,to:2},
+                    {
+                        "id": 201,
+                        "count":1,
+                        "pos":12,
+                        "keyed":true
+                    }
+                ],
+                "exit": 29,
+                "entrance":0
+            }],
+        "dropID":
+            [
+
+            ],
+        "prizeWxp":0,"prizeGold":0, "prizeXp":0,
+        "wxpRate":1,"goldRate":0.5, "xpRate":1,
+        "rank":500}
 ];
