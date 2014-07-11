@@ -224,9 +224,9 @@ function paymentHandler (request, response) {
       data = null;
       response.end('failed');
     });
+  } else if (request.url.substr(0, 5) === '/jdp?') {
   }
-} else if (request.url.substr(0, 5) === '/jdp?') {
-}
+} 
 
 function deliverReceipt (receipt, tunnel, cb) {
   var receiptInfo = unwrapReceipt(receipt);
