@@ -311,7 +311,7 @@
         ], [
           {
             type: PRIZETYPE_ITEM,
-            value: 571,
+            value: 871,
             count: 3
           }
         ], [
@@ -625,6 +625,17 @@
         obj.counters.currentPKCount = 0;
         return obj.flags.rcvAward = false;
       }
+    },
+    dragonQuest0: {
+      storeType: "server",
+      id: 6,
+      actived: 1,
+      canReset: function(obj, util) {
+        return obj.counters.dragonQuest0 == null;
+      },
+      reset: function(obj, util) {
+        return obj.counters.dragonQuest0 = 1000;
+      }
     }
   };
 
@@ -913,8 +924,12 @@
       return obj.updateMercenaryInfo();
     },
     countersChanged: function(obj, arg) {
-      if (arg.type === 'monster') {
-        return exports.assignLeaderboard(obj, exports.LeaderboardIdx.KillingMonster);
+      if (obj.getType() === 'server') {
+        return dbClient.hincrby(makeDBKey([serverObjectPrefix, 'counters']), arg.type, arg.delta, function(err, result) {});
+      } else {
+        if (arg.type === 'monster') {
+          return exports.assignLeaderboard(obj, exports.LeaderboardIdx.KillingMonster);
+        }
       }
     },
     stageChanged: function(obj, arg) {

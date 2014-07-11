@@ -1673,7 +1673,7 @@ exports.data = [
                             "keyed":true,
                             skill:[{id:153}],
                             dropPrize:92
-                        },
+                        }
                     },
                     {
                         "id": 149,

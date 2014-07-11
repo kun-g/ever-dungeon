@@ -1,5 +1,5 @@
 (function() {
-  var DBWrapper, Player, addMercenaryMember, async, dbLib, getMercenaryMember, getPlayerHero, helperLib, http, https, loadPlayer, loginBy, moment, updateMercenaryMember, wrapReceipt, _ref;
+  var DBWrapper, Player, addMercenaryMember, async, dbLib, getPlayerHero, helperLib, http, https, loadPlayer, loginBy, moment, updateMercenaryMember, wrapReceipt, _ref;
 
   require('./define');
 
@@ -7,7 +7,7 @@
 
   helperLib = require('./helper');
 
-  _ref = require('./dbWrapper'), DBWrapper = _ref.DBWrapper, getMercenaryMember = _ref.getMercenaryMember, updateMercenaryMember = _ref.updateMercenaryMember, addMercenaryMember = _ref.addMercenaryMember, getPlayerHero = _ref.getPlayerHero;
+  _ref = require('./dbWrapper'), DBWrapper = _ref.DBWrapper, updateMercenaryMember = _ref.updateMercenaryMember, addMercenaryMember = _ref.addMercenaryMember, getPlayerHero = _ref.getPlayerHero;
 
   async = require('async');
 
@@ -551,7 +551,7 @@
         });
       },
       args: {
-        'stg': 'string',
+        'stg': 'number',
         'initialDataOnly': 'boolean',
         'pkr': 'string'
       },
@@ -675,7 +675,7 @@
     RPC_Reconnect: {
       id: 104,
       args: {
-        'pid': 'pid',
+        'PID': 'PID',
         'string': 'string'
       },
       func: function(arg, player, handler, rpcID, socket) {
@@ -772,16 +772,27 @@
         switch (arg.bid) {
           case -1:
             if (player.counters.monthCard) {
+              if (player.counters.monthCard === 30) {
+                ret = [
+                  {
+                    NTF: Event_InventoryUpdateItem,
+                    arg: {
+                      dim: player.addDiamond(180)
+                    }
+                  }
+                ];
+              } else {
+                ret = [
+                  {
+                    NTF: Event_InventoryUpdateItem,
+                    arg: {
+                      dim: player.addDiamond(80)
+                    }
+                  }
+                ];
+              }
               player.counters.monthCard--;
               player.timestamp['monthCard'] = helperLib.currentTime();
-              ret = [
-                {
-                  NTF: Event_InventoryUpdateItem,
-                  arg: {
-                    dim: player.addDiamond(80)
-                  }
-                }
-              ];
               player.saveDB();
               return handler([
                 {

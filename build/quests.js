@@ -4477,12 +4477,12 @@ exports.data = [
     {
         "questId":164,
         "title":"冒险征途的里程碑I",
-        "desc":"将角色升至3级",
+        "desc":"将角色升至5级",
         "objects":[
             {
                 "type":4,
-                "label":"升级至3级",
-                "count":3
+                "label":"升级至5级",
+                "count":5
             }
         ],
         "prize":[
@@ -4495,12 +4495,12 @@ exports.data = [
     {
         "questId":165,
         "title":"冒险征途的里程碑II",
-        "desc":"将角色升至5级",
+        "desc":"将角色升至25级",
         "objects":[
             {
                 "type":4,
-                "label":"升级至5级",
-                "count":5
+                "label":"升级至25级",
+                "count":25
             }
         ],
         "prize":[
@@ -4523,12 +4523,12 @@ exports.data = [
     {
         "questId":166,
         "title":"冒险征途的里程碑III",
-        "desc":"将角色升至7级",
+        "desc":"将角色升至35级",
         "objects":[
             {
                 "type":4,
-                "label":"升级至7级",
-                "count":7
+                "label":"升级至35级",
+                "count":35
             }
         ],
         "prize":[
@@ -4555,12 +4555,12 @@ exports.data = [
     {
         "questId":167,
         "title":"冒险征途的里程碑IV",
-        "desc":"将角色升至9级",
+        "desc":"将角色升至40级",
         "objects":[
             {
                 "type":4,
-                "label":"升级至9级",
-                "count":9
+                "label":"升级至40级",
+                "count":40
             }
         ],
         "prize":[
@@ -4587,12 +4587,12 @@ exports.data = [
     {
         "questId":168,
         "title":"冒险征途的里程碑V",
-        "desc":"将角色升至10级",
+        "desc":"将角色升至45级",
         "objects":[
             {
                 "type":4,
-                "label":"升级至10级",
-                "count":10
+                "label":"升级至45级",
+                "count":45
             }
         ],
         "prize":[

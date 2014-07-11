@@ -1,5 +1,5 @@
 (function() {
-  var Bag, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Player, PlayerEnvironment, Serializer, addMercenaryMember, async, createItem, createUnit, currentTime, dbLib, diffDate, genUtil, getMercenaryMember, getPlayerHero, getVip, helperLib, itemLib, moment, playerCSConfig, playerCommandStream, playerMessageFilter, registerConstructor, updateMercenaryMember, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6,
+  var Bag, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Player, PlayerEnvironment, Serializer, addMercenaryMember, async, createItem, createUnit, currentTime, dbLib, diffDate, genUtil, getPlayerHero, getVip, helperLib, itemLib, moment, playerCSConfig, playerCommandStream, playerMessageFilter, registerConstructor, updateMercenaryMember, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -9,7 +9,7 @@
 
   _ref = require('./serializer'), Serializer = _ref.Serializer, registerConstructor = _ref.registerConstructor;
 
-  _ref1 = require('./dbWrapper'), DBWrapper = _ref1.DBWrapper, getMercenaryMember = _ref1.getMercenaryMember, updateMercenaryMember = _ref1.updateMercenaryMember, addMercenaryMember = _ref1.addMercenaryMember, getPlayerHero = _ref1.getPlayerHero;
+  _ref1 = require('./dbWrapper'), DBWrapper = _ref1.DBWrapper, updateMercenaryMember = _ref1.updateMercenaryMember, addMercenaryMember = _ref1.addMercenaryMember, getPlayerHero = _ref1.getPlayerHero;
 
   _ref2 = require('./unit'), createUnit = _ref2.createUnit, Hero = _ref2.Hero;
 
@@ -253,7 +253,7 @@
     };
 
     Player.prototype.onLogin = function() {
-      var flag, itemsNeedRemove, key, prize, ret, rmMSG, s, _i, _len, _ref7;
+      var flag, itemsNeedRemove, key, prize, ret, s, _i, _len, _ref7;
       if (!this.lastLogin) {
         return [];
       }
@@ -312,12 +312,11 @@
         }
         return helperLib.matchDate(item.date, helperLib.currentTime(), item.expiration);
       });
-      rmMSG = itemsNeedRemove.map((function(_this) {
-        return function(e) {
-          return _this.removeItem(null, null, _this.queryItemSlot(e));
+      ret = itemsNeedRemove.reduce((function(_this) {
+        return function(pValue, e) {
+          return pValue.concat(_this.removeItem(null, null, _this.queryItemSlot(e)));
         };
-      })(this));
-      ret = ret.concat(rmMSG);
+      })(this), ret);
       return ret;
     };
 
@@ -385,6 +384,11 @@
               v = p[k];
               r = r.concat(v);
             }
+            r = r.filter((function(_this) {
+              return function(e) {
+                return !(e.type >= 1 && e.type <= 4 && e.count <= 0);
+              };
+            })(this));
             prize.push(r);
             ret = ret.concat(this.claimPrize(r));
           }
@@ -1247,33 +1251,39 @@
               }
               break;
             case PRIZETYPE_GOLD:
-              ret.push({
-                NTF: Event_InventoryUpdateItem,
-                arg: {
-                  syn: this.inventoryVersion,
-                  god: this.addGold(p.count)
-                }
-              });
+              if (p.count > 0) {
+                ret.push({
+                  NTF: Event_InventoryUpdateItem,
+                  arg: {
+                    syn: this.inventoryVersion,
+                    god: this.addGold(p.count)
+                  }
+                });
+              }
               break;
             case PRIZETYPE_DIAMOND:
-              ret.push({
-                NTF: Event_InventoryUpdateItem,
-                arg: {
-                  syn: this.inventoryVersion,
-                  dim: this.addDiamond(p.count)
-                }
-              });
+              if (p.count > 0) {
+                ret.push({
+                  NTF: Event_InventoryUpdateItem,
+                  arg: {
+                    syn: this.inventoryVersion,
+                    dim: this.addDiamond(p.count)
+                  }
+                });
+              }
               break;
             case PRIZETYPE_EXP:
-              ret.push({
-                NTF: Event_RoleUpdate,
-                arg: {
-                  syn: this.heroVersion,
-                  act: {
-                    exp: this.addHeroExp(p.count)
+              if (p.count > 0) {
+                ret.push({
+                  NTF: Event_RoleUpdate,
+                  arg: {
+                    syn: this.heroVersion,
+                    act: {
+                      exp: this.addHeroExp(p.count)
+                    }
                   }
-                }
-              });
+                });
+              }
               break;
             case PRIZETYPE_WXP:
               if (!p.count) {
@@ -1318,11 +1328,19 @@
                   ret = ret.concat(this.syncFlags(true)).concat(this.syncEvent());
                   break;
                 case "countUp":
-                  this.counters[p.counter]++;
-                  this.notify('countersChanged', {
-                    type: p.counter
-                  });
-                  ret = ret.concat(this.syncCounters(true)).concat(this.syncEvent());
+                  if (p.target === 'server') {
+                    gServerObject[p.counter]++;
+                    gServerObject.notify('countersChanged', {
+                      type: p.counter,
+                      delta: 1
+                    });
+                  } else {
+                    this.counters[p.counter]++;
+                    this.notify('countersChanged', {
+                      type: p.counter
+                    });
+                    ret = ret.concat(this.syncCounters(true)).concat(this.syncEvent());
+                  }
               }
           }
         }
@@ -1960,9 +1978,10 @@
       }), []);
       percentage = 1;
       if (result === DUNGEON_RESULT_WIN) {
-        dbLib.incrBluestarBy(this.name, 1);
-        if (cfg.dropID) {
-          dropInfo = dropInfo.concat(cfg.dropID);
+        if (dungeon.isSweep != null) {
+          if (cfg.dropID) {
+            dropInfo = dropInfo.concat(cfg.dropID);
+          }
         }
       } else {
         percentage = (dungeon.currentLevel / cfg.levelCount) * 0.5;
@@ -1971,23 +1990,25 @@
       xr = ((_ref8 = cfg.xpRate) != null ? _ref8 : 1) * percentage;
       wr = ((_ref9 = cfg.wxpRate) != null ? _ref9 : 1) * percentage;
       prize = helperLib.generatePrize(queryTable(TABLE_DROP), dropInfo);
-      if (cfg.prizeGold) {
-        prize.push({
-          type: PRIZETYPE_GOLD,
-          count: Math.floor(gr * cfg.prizeGold)
-        });
-      }
-      if (cfg.prizeXp) {
-        prize.push({
-          type: PRIZETYPE_EXP,
-          count: Math.floor(xr * cfg.prizeXp)
-        });
-      }
-      if (cfg.prizeWxp) {
-        prize.push({
-          type: PRIZETYPE_WXP,
-          count: Math.floor(wr * cfg.prizeWxp)
-        });
+      if (!dungeon.isSweep) {
+        if (cfg.prizeGold) {
+          prize.push({
+            type: PRIZETYPE_GOLD,
+            count: Math.floor(gr * cfg.prizeGold)
+          });
+        }
+        if (cfg.prizeXp) {
+          prize.push({
+            type: PRIZETYPE_EXP,
+            count: Math.floor(xr * cfg.prizeXp)
+          });
+        }
+        if (cfg.prizeWxp) {
+          prize.push({
+            type: PRIZETYPE_WXP,
+            count: Math.floor(wr * cfg.prizeWxp)
+          });
+        }
       }
       infiniteLevel = dungeon.infiniteLevel;
       if ((infiniteLevel != null) && cfg.infinityPrize && result === DUNGEON_RESULT_WIN) {
@@ -2688,7 +2709,7 @@
         if (this.contactBook != null) {
           filtedName = filtedName.concat(this.contactBook.book);
         }
-        return getMercenaryMember(filtedName, this.battleForce - 100, this.battleForce + 100, 30, (function(_this) {
+        return dbLib.findMercenary(this.battleForce, 30, 100, 3, filtedName, (function(_this) {
           return function(err, heroData) {
             if (heroData) {
               _this.mercenary.push(heroData);
@@ -2807,7 +2828,7 @@
         return m.name;
       }));
       filtedName = filtedName.concat(me.contactBook.book);
-      return getMercenaryMember(filtedName, battleForce - 10, battleForce + 200, 30, function(err, heroData) {
+      return dbLib.findMercenary(battleForce + 95, 30, 105, 3, filtedName, function(err, heroData) {
         if (heroData) {
           me.mercenary.splice(id, 1, heroData);
         } else {
@@ -3126,11 +3147,21 @@
     }
 
     PlayerEnvironment.prototype.removeItem = function(item, count, slot, allorfail) {
-      var _ref7;
-      return {
+      var k, result, s, _ref7, _ref8;
+      result = {
         ret: (_ref7 = this.player) != null ? _ref7.inventory.remove(item, count, slot, allorfail) : void 0,
         version: this.player.inventoryVersion
       };
+      if (result.ret !== []) {
+        _ref8 = this.player.equipment;
+        for (k in _ref8) {
+          s = _ref8[k];
+          if (s === slot) {
+            delete this.player.equipment[k];
+          }
+        }
+      }
+      return result;
     };
 
     PlayerEnvironment.prototype.translateAction = function(cmd) {

@@ -56,7 +56,9 @@
           _ref = data.skill;
           for (_i = 0, _len = _ref.length; _i < _len; _i++) {
             s = _ref[_i];
-            this.installSpell(s.id, s.level);
+            if ((s.classLimit == null) || s.classLimit === this["class"]) {
+              this.installSpell(s.id, s.level);
+            }
           }
         }
         this.level += 1;
@@ -286,12 +288,12 @@
       this.xp = heroData.exp;
       this.levelUp();
       this.counterAttack = true;
-      this.health = Math.ceil(battleForce * (8 / 18.5));
-      this.attack = Math.ceil(battleForce * (0.35 / 18.5));
+      this.health = Math.ceil(battleForce * (6 / 18.5));
+      this.attack = Math.ceil(battleForce * (0.3 / 18.5));
       this.critical = battleForce * (1 / 18.5);
       this.strong = battleForce * (1 / 18.5);
       this.accuracy = battleForce * (1 / 18.5) + 30;
-      this.reactivity = battleForce * (1 / 18.5) - 40;
+      this.reactivity = battleForce * (1 / 18.5) - 60;
       this.speed = battleForce * (1 / 18.5) + 20;
       this.maxHP = this.health;
       this.equipment = heroData.itm;
