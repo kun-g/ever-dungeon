@@ -2117,7 +2117,8 @@ exports.data = [
             ],
             "buffType":"RoleBuff",
             "availableCondition": [
-                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 }
+                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 },
+                { "type": "event", "event": "onBeEndBattleTurn", "eventCount": 2 }
             ]
         }
     },
@@ -2155,7 +2156,8 @@ exports.data = [
             ],
             "buffType":"AttackBuff",
             "availableCondition": [
-                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 }
+                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 },
+                { "type": "event", "event": "onBeEndBattleTurn", "eventCount": 2 }
             ]
         }
     },
@@ -2193,7 +2195,8 @@ exports.data = [
             ],
             "buffType":"AttackDebuff",
             "availableCondition": [
-                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 }
+                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 },
+                { "type": "event", "event": "onBeEndBattleTurn", "eventCount": 2 }
             ]
         }
     },
@@ -2580,8 +2583,7 @@ exports.data = [
             ],
             "buffType":"RoleDebuff",
             "availableCondition": [
-                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 },
-                { "type": "event", "event": "onBeEndBattleTurn", "eventCount": 2 }
+                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 }
             ]
         }
     },
@@ -3537,7 +3539,7 @@ exports.data = [
         "label":"pk传送",
         "config": {
             "triggerCondition": [
-                {"type":"event","event":"onBattleTurnEnd"},
+                {"type":"event","event":"onBeBattleTurnEnd"},
                 {"type":"alive"}
             ],
             "targetSelection":{

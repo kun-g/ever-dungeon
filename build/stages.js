@@ -2174,7 +2174,21 @@ var data = [
               initialAction: function (obj) { }
           }
       ]
-  }
+  },
+    {
+        "chapterId": 16,
+        "hidden": true,
+        "label":"世界副本",
+        "stage":[
+            {
+                "stageId": 133,
+                "cost": 0,
+                "team": 1,
+                "hidden":false,
+                "dungeon": 127
+            }
+        ]
+    }
 ];
 for (k in data) {
   data[k].stageId = k;
