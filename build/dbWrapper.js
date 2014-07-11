@@ -197,7 +197,7 @@
               return cb();
             }));
           }, function() {
-            console.log(heros);
+            console.log(heros, '----------------');
             return handler(err, heros);
           });
         }
