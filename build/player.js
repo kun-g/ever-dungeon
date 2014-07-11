@@ -2829,7 +2829,9 @@
       return getMercenaryMember(myName, 3, 30, 1, filtedName, function(err, heroData) {
         console.log(heroData, 'dsdsdf;');
         if (heroData) {
-          me.mercenary.splice(id, 1, heroData);
+          me.mercenary.splice(id, 1, heroData.map(function(h) {
+            return new Hero(h);
+          }));
         } else {
           heroData = me.mercenary[id];
         }
