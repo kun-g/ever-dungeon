@@ -2823,6 +2823,7 @@
       filtedName = filtedName.concat(this.mercenary.map(function(m) {
         return m.name;
       }));
+      console.log(this.contactBook);
       filtedName = filtedName.concat(this.contactBook.book);
       return getMercenaryMember(myName, 3, 30, 1, filtedName, function(err, heroData) {
         console.log(heroData, 'dsdsdf;');
