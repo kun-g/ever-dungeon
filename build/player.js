@@ -2003,12 +2003,12 @@
             count: Math.floor(xr * cfg.prizeXp)
           });
         }
-        if (cfg.prizeWxp) {
-          prize.push({
-            type: PRIZETYPE_WXP,
-            count: Math.floor(wr * cfg.prizeWxp)
-          });
-        }
+      }
+      if (cfg.prizeWxp) {
+        prize.push({
+          type: PRIZETYPE_WXP,
+          count: Math.floor(wr * cfg.prizeWxp)
+        });
       }
       infiniteLevel = dungeon.infiniteLevel;
       if ((infiniteLevel != null) && cfg.infinityPrize && result === DUNGEON_RESULT_WIN) {
@@ -2137,10 +2137,7 @@
         myName = this.name;
         rivalName = dungeon.PVP_Pool[0].nam;
         if (dungeon.result === DUNGEON_RESULT_WIN) {
-          console.log('debug pkRank', myName, rivalName, dungeon.result);
-          return dbLib.saveSocre(myName, rivalName, function(err, result) {
-            return console.log(err, result);
-          });
+          return dbLib.saveSocre(myName, rivalName, function(err, result) {});
         }
       }
     };
@@ -2693,11 +2690,13 @@
     };
 
     Player.prototype.requireMercenary = function(callback) {
-      var filtedName;
+      var filtedName, me;
+      me = this;
       if (!callback) {
         return;
       }
       if (this.mercenary.length >= MERCENARYLISTLEN) {
+        console.log(this.mercenary, '------------');
         return callback(this.mercenary.map(function(h) {
           return new Hero(h);
         }));
@@ -2709,11 +2708,17 @@
         if (this.contactBook != null) {
           filtedName = filtedName.concat(this.contactBook.book);
         }
-        return dbLib.findMercenary(this.battleForce, 30, 100, 3, filtedName, (function(_this) {
-          return function(err, heroData) {
-            if (heroData) {
-              _this.mercenary.push(heroData);
-              return _this.requireMercenary(callback);
+        return dbLib.findMercenary(this.name, 2, 30, 1, filtedName, (function(_this) {
+          return function(err, heroNames) {
+            if (heroNames) {
+              return async.eachSeries(heroNames, function(e, cb) {
+                return getPlayerHero(e, wrapCallback(me, function(err, heroData) {
+                  this.mercenary.push(heroData);
+                  return cb();
+                }));
+              }, function() {
+                return me.requireMercenary(callback);
+              });
             } else {
               return callback(null);
             }
@@ -2820,15 +2825,15 @@
     };
 
     Player.prototype.replaceMercenary = function(id, handler) {
-      var battleForce, filtedName, me;
+      var filtedName, me, myName;
       me = this;
-      battleForce = this.battleForce;
+      myName = this.name;
       filtedName = [this.name];
       filtedName = filtedName.concat(me.mercenary.map(function(m) {
         return m.name;
       }));
       filtedName = filtedName.concat(me.contactBook.book);
-      return dbLib.findMercenary(battleForce + 95, 30, 105, 3, filtedName, function(err, heroData) {
+      return dbLib.findMercenary(myName, 3, 30, 1, filtedName, function(err, heroData) {
         if (heroData) {
           me.mercenary.splice(id, 1, heroData);
         } else {

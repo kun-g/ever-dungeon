@@ -675,8 +675,7 @@
     RPC_Reconnect: {
       id: 104,
       args: {
-        'PID': 'PID',
-        'string': 'string'
+        'PID': 'number'
       },
       func: function(arg, player, handler, rpcID, socket) {
         return async.waterfall([
