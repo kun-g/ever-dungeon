@@ -2709,7 +2709,7 @@
         }
         return getMercenaryMember(this.name, 2, 30, 1, filtedName, function(err, heroData) {
           if (heroData) {
-            me.mercenary.push(heroData);
+            me.mercenary = me.mercenary.concat(heroData);
             return me.requireMercenary(callback);
           } else {
             return callback(null);
