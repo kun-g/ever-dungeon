@@ -2580,7 +2580,8 @@ exports.data = [
             ],
             "buffType":"RoleDebuff",
             "availableCondition": [
-                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 }
+                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 },
+                { "type": "event", "event": "onBeEndBattleTurn", "eventCount": 2 }
             ]
         }
     },
