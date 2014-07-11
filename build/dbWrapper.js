@@ -197,7 +197,7 @@
               return cb();
             }));
           }, function() {
-            return handle(heros);
+            return handler(heros);
           });
         }
       };
