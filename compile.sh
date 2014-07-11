@@ -27,6 +27,7 @@ cp package.js $CurrentPWD/build
 #oc = only compile
 if [ "$1" = "oc" ]
 then
+  cp src/*.js js
   exit
 fi
 
