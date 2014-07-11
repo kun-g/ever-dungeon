@@ -517,11 +517,12 @@ exports.initializeDB = function (cfg) {
   });
  
   dbClient.script('load', helperLib.dbScripts.getMercenary, function (err, sha) {
-    exports.findMercenary = function (battleforce, count, range, delta, names, handler) {
+    console.log(err,sha,'----loading getMercenary');
+    exports.findMercenary = function (name, count, range, delta, names, handler) {
       dbClient.evalsha(
         sha,
         0,
-        battleforce,
+        name,
         count,
         range,
         delta,
