@@ -49,7 +49,7 @@ function initiateTrinLogger() {
   logger.tr_agent = net.connect(9528, 'localhost');
   function trinLoggerErrorHandler () {
     logger.tr_agent = null;
-    setTimeout(function () {
+    setTimeout(function (err) {
       logError({msg:"Try to reconnect to trin logger.", error: err});
       initiateTrinLogger();
     }, 10000);
