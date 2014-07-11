@@ -2709,7 +2709,7 @@
         if (this.contactBook != null) {
           filtedName = filtedName.concat(this.contactBook.book);
         }
-        return dbLib.findMercenary(this.battleForce, 3, 100, 3, filtedName, (function(_this) {
+        return dbLib.findMercenary(this.battleForce, 3, 10, 1, filtedName, (function(_this) {
           return function(err, heroData) {
             if (heroData) {
               _this.mercenary.push(heroData);
