@@ -192,7 +192,7 @@
       return function(err, heroNames) {
         if (heroNames) {
           return async.eachSeries(heroNames, function(e, cb) {
-            return getPlayerHero(e, wrapCallback(me, function(err, heroData) {
+            return getPlayerHero(e, wrapCallback(this, function(err, heroData) {
               heros.push(heroData);
               return cb();
             }));
