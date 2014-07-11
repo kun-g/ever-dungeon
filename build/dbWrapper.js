@@ -197,6 +197,7 @@
               return cb();
             }));
           }, function() {
+            console.log(heros);
             return handler(err, heros);
           });
         }
