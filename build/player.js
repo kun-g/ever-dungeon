@@ -2697,7 +2697,6 @@
         return;
       }
       if (this.mercenary.length >= MERCENARYLISTLEN) {
-        console.log(this.mercenary, 'after');
         return callback(this.mercenary.map(function(h) {
           return new Hero(h);
         }));
@@ -2709,12 +2708,11 @@
         if (this.contactBook != null) {
           filtedName = filtedName.concat(this.contactBook.book);
         }
-        return dbLib.findMercenary(myName, 2, 30, 1, filtedName, (function(_this) {
+        return dbLib.findMercenary(myName, 3, 30, 1, filtedName, (function(_this) {
           return function(err, heroData) {
             if (heroData) {
-              console.log(heroData, _this.mercenary, 'befor');
-              me.mercenary.push(heroData);
-              return me.requireMercenary(callback);
+              _this.mercenary = _this.mercenary.concat(heroData);
+              return _this.requireMercenary(callback);
             } else {
               return callback(null);
             }
