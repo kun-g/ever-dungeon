@@ -2826,14 +2826,13 @@
       if (((_ref7 = this.contactBook) != null ? _ref7.book : void 0) != null) {
         filtedName = filtedName.concat(this.contactBook.book);
       }
-      return getMercenaryMember(myName, 3, 30, 1, filtedName, function(err, heroData) {
-        console.log(heroData, 'dsdsdf;');
+      return getMercenaryMember(myName, 1, 30, 1, filtedName, function(err, heroData) {
         if (heroData) {
-          me.mercenary.splice(id, 1, heroData);
+          me.mercenary.splice(id, 1, heroData[0]);
         } else {
           heroData = me.mercenary[id];
         }
-        return handler(heroData);
+        return handler(heroData[0]);
       });
     };
 
