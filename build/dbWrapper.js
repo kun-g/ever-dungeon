@@ -188,7 +188,7 @@
   exports.getMercenaryMember = function(name, count, range, delta, names, handler) {
     var heros;
     heros = [];
-    return dbLib.findMercenary(name, count, range, delta, filtedName, (function(_this) {
+    return dbLib.findMercenary(name, count, range, delta, names, (function(_this) {
       return function(err, heroNames) {
         if (heroNames) {
           return async.eachSeries(heroNames, function(e, cb) {
