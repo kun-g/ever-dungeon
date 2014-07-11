@@ -193,14 +193,11 @@
         if (heroNames) {
           return async.eachSeries(heroNames, function(e, cb) {
             return getPlayerHero(e, wrapCallback(this, function(err, heroData) {
-              console.log(heroData, 'sdfsdfsf');
               heros.push(heroData);
-              console.log(heros, '000000');
               return cb();
             }));
           }, function() {
-            console.log(heros);
-            return handler(heros);
+            return handler(err, heros);
           });
         }
       };
