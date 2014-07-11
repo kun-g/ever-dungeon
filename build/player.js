@@ -2816,15 +2816,16 @@
     };
 
     Player.prototype.replaceMercenary = function(id, handler) {
-      var filtedName, me, myName;
+      var filtedName, me, myName, _ref7;
       me = this;
       myName = this.name;
       filtedName = [this.name];
       filtedName = filtedName.concat(this.mercenary.map(function(m) {
         return m.name;
       }));
-      console.log(this.contactBook);
-      filtedName = filtedName.concat(this.contactBook.book);
+      if (((_ref7 = this.contactBook) != null ? _ref7.book : void 0) != null) {
+        filtedName = filtedName.concat(this.contactBook.book);
+      }
       return getMercenaryMember(myName, 3, 30, 1, filtedName, function(err, heroData) {
         console.log(heroData, 'dsdsdf;');
         if (heroData) {
