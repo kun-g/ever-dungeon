@@ -1,5 +1,5 @@
 (function() {
-  var Bag, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Player, PlayerEnvironment, Serializer, addMercenaryMember, async, createItem, createUnit, currentTime, dbLib, diffDate, genUtil, getPlayerHero, getVip, helperLib, itemLib, moment, playerCSConfig, playerCommandStream, playerMessageFilter, registerConstructor, updateMercenaryMember, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6,
+  var Bag, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Player, PlayerEnvironment, Serializer, addMercenaryMember, async, createItem, createUnit, currentTime, dbLib, diffDate, genUtil, getMercenaryMember, getPlayerHero, getVip, helperLib, itemLib, moment, playerCSConfig, playerCommandStream, playerMessageFilter, registerConstructor, updateMercenaryMember, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -9,7 +9,7 @@
 
   _ref = require('./serializer'), Serializer = _ref.Serializer, registerConstructor = _ref.registerConstructor;
 
-  _ref1 = require('./dbWrapper'), DBWrapper = _ref1.DBWrapper, updateMercenaryMember = _ref1.updateMercenaryMember, addMercenaryMember = _ref1.addMercenaryMember, getPlayerHero = _ref1.getPlayerHero;
+  _ref1 = require('./dbWrapper'), DBWrapper = _ref1.DBWrapper, getMercenaryMember = _ref1.getMercenaryMember, updateMercenaryMember = _ref1.updateMercenaryMember, addMercenaryMember = _ref1.addMercenaryMember, getPlayerHero = _ref1.getPlayerHero;
 
   _ref2 = require('./unit'), createUnit = _ref2.createUnit, Hero = _ref2.Hero;
 
@@ -2003,12 +2003,12 @@
             count: Math.floor(xr * cfg.prizeXp)
           });
         }
-        if (cfg.prizeWxp) {
-          prize.push({
-            type: PRIZETYPE_WXP,
-            count: Math.floor(wr * cfg.prizeWxp)
-          });
-        }
+      }
+      if (cfg.prizeWxp) {
+        prize.push({
+          type: PRIZETYPE_WXP,
+          count: Math.floor(wr * cfg.prizeWxp)
+        });
       }
       infiniteLevel = dungeon.infiniteLevel;
       if ((infiniteLevel != null) && cfg.infinityPrize && result === DUNGEON_RESULT_WIN) {
@@ -2137,10 +2137,7 @@
         myName = this.name;
         rivalName = dungeon.PVP_Pool[0].nam;
         if (dungeon.result === DUNGEON_RESULT_WIN) {
-          console.log('debug pkRank', myName, rivalName, dungeon.result);
-          return dbLib.saveSocre(myName, rivalName, function(err, result) {
-            return console.log(err, result);
-          });
+          return dbLib.saveSocre(myName, rivalName, function(err, result) {});
         }
       }
     };
@@ -2693,7 +2690,8 @@
     };
 
     Player.prototype.requireMercenary = function(callback) {
-      var filtedName;
+      var filtedName, me;
+      me = this;
       if (!callback) {
         return;
       }
@@ -2709,16 +2707,14 @@
         if (this.contactBook != null) {
           filtedName = filtedName.concat(this.contactBook.book);
         }
-        return dbLib.findMercenary(this.battleForce, 30, 100, 3, filtedName, (function(_this) {
-          return function(err, heroData) {
-            if (heroData) {
-              _this.mercenary.push(heroData);
-              return _this.requireMercenary(callback);
-            } else {
-              return callback(null);
-            }
-          };
-        })(this));
+        return getMercenaryMember(this.name, 2, 30, 1, filtedName, function(err, heroData) {
+          if (heroData) {
+            me.mercenary = me.mercenary.concat(heroData);
+            return me.requireMercenary(callback);
+          } else {
+            return callback(null);
+          }
+        });
       }
     };
 
@@ -2820,21 +2816,23 @@
     };
 
     Player.prototype.replaceMercenary = function(id, handler) {
-      var battleForce, filtedName, me;
+      var filtedName, me, myName, _ref7;
       me = this;
-      battleForce = this.battleForce;
+      myName = this.name;
       filtedName = [this.name];
-      filtedName = filtedName.concat(me.mercenary.map(function(m) {
+      filtedName = filtedName.concat(this.mercenary.map(function(m) {
         return m.name;
       }));
-      filtedName = filtedName.concat(me.contactBook.book);
-      return dbLib.findMercenary(battleForce + 95, 30, 105, 3, filtedName, function(err, heroData) {
+      if (((_ref7 = this.contactBook) != null ? _ref7.book : void 0) != null) {
+        filtedName = filtedName.concat(this.contactBook.book);
+      }
+      return getMercenaryMember(myName, 1, 30, 1, filtedName, function(err, heroData) {
         if (heroData) {
-          me.mercenary.splice(id, 1, heroData);
+          me.mercenary.splice(id, 1, heroData[0]);
         } else {
           heroData = me.mercenary[id];
         }
-        return handler(heroData);
+        return handler(heroData[0]);
       });
     };
 
