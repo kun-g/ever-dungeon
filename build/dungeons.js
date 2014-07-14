@@ -14992,28 +14992,16 @@ exports.data = [
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
-                {
-                    "id":170,
+               {
+                    "id":136,
                     "weight":5
-                },
-                {
-                    "id":182,
-                    "weight":5
-                },
-                {
-                    "id":171,
-                    "weight":1
-                },
-                {
-                    "id":173,
-                    "weight":5
-                },
-                {
-                    "id":174,
-                    "weight":1
                 },
                 {
                     "id":176,
+                    "weight":5
+                },
+                {
+                    "id":177,
                     "weight":5
                 },
                 {
@@ -15021,13 +15009,9 @@ exports.data = [
                     "weight":5
                 },
                 {
-                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185, 
-                    "weight":1
-                },
-                {
-                    "id":172,
+                    "id":179, 
                     "weight":5
-                }
+                }, 
             ]},
             "PoolS1":{"objects":[
                 {"id":3,"weight":2},
