@@ -36,4 +36,13 @@ exports.data = [
         "availableCondition":true,
         "event":"",
     },
+    {
+        "name":"WorldBoss",
+        "reverse": false,
+        "initialValue": 0,
+        "type":"player",
+        "availableCondition":true,
+        "event":"",
+    },
+
 ];
