@@ -38,8 +38,8 @@ exports.data = [
     },
     {
         "name":"WorldBoss",
+        "key":"counters.worldBoss",
         "reverse": false,
-        "initialValue": 0,
         "type":"player",
         "availableCondition":true,
         "event":"",
