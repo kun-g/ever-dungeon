@@ -706,7 +706,7 @@
           }
         ];
         return cfg.forEach(function(e) {
-          return libs.helper.getPositionOnLeaderboard(1, 'nobody', e.from, e.to, function(err, result) {
+          return libs.helper.getPositionOnLeaderboard(exports.LeaderboardIdx.InfinityDungeon, 'nobody', e.from, e.to, function(err, result) {
             return result.board.name.forEach(function(name, idx) {
               e.mail = e.mail + ' from:' + e.from + ' to: ' + e.to + ' rank:' + result.score[idx];
               return libs.db.deliverMessage(name, e.mail);
@@ -782,7 +782,45 @@
           }
         ];
         return cfg.forEach(function(e) {
-          return libs.helper.getPositionOnLeaderboard(2, 'nobody', e.from, e.to, function(err, result) {
+          return libs.helper.getPositionOnLeaderboard(exports.LeaderboardIdx.KillingMonster, 'nobody', e.from, e.to, function(err, result) {
+            return result.board.name.forEach(function(name, idx) {
+              e.mail = e.mail + ' from:' + e.from + ' to: ' + e.to + ' rank:' + result.score[idx];
+              return libs.db.deliverMessage(name, e.mail);
+            });
+          });
+        });
+      }
+    },
+    worldBoss: {
+      time: {
+        minite: 59
+      },
+      func: function(libs) {
+        var cfg;
+        cfg = [
+          {
+            from: 0,
+            to: 0,
+            mail: {
+              type: MESSAGE_TYPE_SystemReward,
+              src: MESSAGE_REWARD_TYPE_SYSTEM,
+              prize: [
+                {
+                  type: 2,
+                  count: 50
+                }, {
+                  type: 0,
+                  value: 869,
+                  count: 1
+                }
+              ],
+              tit: "#TODO title",
+              txt: "#TODO txt"
+            }
+          }
+        ];
+        return cfg.forEach(function(e) {
+          return libs.helper.getPositionOnLeaderboard(exports.LeaderboardIdx.WorldBoss, 'nobody', e.from, e.to, function(err, result) {
             return result.board.name.forEach(function(name, idx) {
               e.mail = e.mail + ' from:' + e.from + ' to: ' + e.to + ' rank:' + result.score[idx];
               return libs.db.deliverMessage(name, e.mail);
@@ -903,8 +941,11 @@
     BattleForce: 0,
     InfinityDungeon: 1,
     KillingMonster: 2,
-    Arena: 3
+    Arena: 3,
+    WorldBoss: 4
   };
+
+  exports.WorldBossDungeonLst = [133];
 
   exports.observers = {
     heroxpChanged: function(obj, arg) {
