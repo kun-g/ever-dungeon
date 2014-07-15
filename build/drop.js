@@ -5632,9 +5632,7 @@ exports.data = [
                     "counter": 148//dungeonid
                 },
             ]
-        }
-    ],
-    [ //149
+        },
         {
             "rate": 1,
             "prize": [
@@ -5648,6 +5646,5 @@ exports.data = [
                 }
             ]
         }
-    ]
-
+    ],
 ]

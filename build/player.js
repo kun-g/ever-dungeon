@@ -318,6 +318,7 @@
           return pValue.concat(_this.removeItem(null, null, _this.queryItemSlot(e)));
         };
       })(this), ret);
+      this.createHero();
       return ret;
     };
 
