@@ -63,13 +63,14 @@ exports.data = [
     },
     {
         "dungeonId": 0,
-        "levelCount" : 3,
+        "levelCount" : 1,
         "levels" :[
             {
-                 "objects" : [
+                "objects" : [
                     {
                         "id": 7,
-                        "count":2
+                        "count":1
+                        property:{ "keyed":true, skill:[{id:153}], dropPrize:148 }
                     },
                     {
                         "id": 149,
@@ -120,9 +121,9 @@ exports.data = [
                 ],
                 "entrance": [17,16,18],
                 "exit":-1,
-                "layout":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                //"layout":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                 "rank": 26,
-                "triggers": ["dungeon:no.reward.no.result"]
+                //"triggers": ["dungeon:no.reward.no.result"]
             }
         ],
         "prizeWxp":0,
@@ -14992,16 +14993,28 @@ exports.data = [
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
-               {
-                    "id":136,
+                {
+                    "id":170,
                     "weight":5
+                },
+                {
+                    "id":182,
+                    "weight":5
+                },
+                {
+                    "id":171,
+                    "weight":1
+                },
+                {
+                    "id":173,
+                    "weight":5
+                },
+                {
+                    "id":174,
+                    "weight":1
                 },
                 {
                     "id":176,
-                    "weight":5
-                },
-                {
-                    "id":177,
                     "weight":5
                 },
                 {
@@ -15009,9 +15022,13 @@ exports.data = [
                     "weight":5
                 },
                 {
-                    "id":179, 
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185, 
+                    "weight":1
+                },
+                {
+                    "id":172,
                     "weight":5
-                }, 
+                }
             ]},
             "PoolS1":{"objects":[
                 {"id":3,"weight":2},
