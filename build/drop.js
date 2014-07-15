@@ -5626,19 +5626,26 @@ exports.data = [
             "prize": [
                 {
                     "weight": 10,
+                    "target": "server",
                     "type": 5,
-                    "func": 'countUp',
+                    "func": "countUp",
                     "counter": 148//dungeonid
                 },
+            ]
+        }
+    ],
+    [ //149
+        {
+            "rate": 1,
+            "prize": [
                 {
                     "weight": 10,
                     "type": 5,
-                    "func": 'updateLeaderboard',
+                    "func": "updateLeaderboard",
                     "counter": 148,   //dungeonid
                     "delta" : 1,
                     "boardId" : 4,
                 }
-
             ]
         }
     ]

@@ -69,8 +69,8 @@ exports.data = [
                 "objects" : [
                     {
                         "id": 7,
-                        "count":1
-                        property:{ "keyed":true, skill:[{id:153}], dropPrize:148 }
+                        "count":1,
+                        property:{ "keyed":true, skill:[{id:153}], dropPrize:[148,149] }
                     },
                     {
                         "id": 149,
