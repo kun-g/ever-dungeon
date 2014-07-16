@@ -70,7 +70,7 @@ exports.data = [
                     {
                         "id": 7,
                         "count":1,
-                        property:{ "keyed":true, skill:[{id:153}], dropPrize:148}
+                        property:{ "keyed":true, skill:[{id:153}], dropInfo:[148]}
                     },
                     {
                         "id": 149,
@@ -30170,7 +30170,7 @@ exports.data = [
         "levelCount" :2,
         "pool":{
             "soldierPool":{
-              property: {dropPrize:147},
+              property: {dropInfo:[148]},
               "objects":[
                 {
                     "id":3,
@@ -30367,7 +30367,7 @@ exports.data = [
                 }
             ]},
             "rangePool":{
-              property: {dropPrize:147},
+              property: {dropInfo:[148]},
               "objects":[
                 {
                     "id":8,
@@ -30420,7 +30420,7 @@ exports.data = [
 
             ]},
             "elitePool":{
-              property: {dropPrize:147},
+              property: {dropInfo:[148]},
               "objects":[
                 {
                     "id":20,
@@ -30720,7 +30720,7 @@ exports.data = [
 
             ]},
             "bossPool":{
-              property: {dropPrize:147},
+              property: {dropInfo:[148]},
               "objects":[
                 {
                     "id":20,
@@ -31020,7 +31020,7 @@ exports.data = [
 
             ]},
             "normalPool":{
-              property: {dropPrize:147},
+              property: {dropInfo:[148]},
               "objects":[
                 {
                     "id":170,

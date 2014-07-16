@@ -5629,7 +5629,7 @@ exports.data = [
                     "target": "server",
                     "type": 5,
                     "func": "countUp",
-                    "counter": 148//dungeonid
+                    "counter": 133//stageid
                 },
             ]
         },
@@ -5640,7 +5640,7 @@ exports.data = [
                     "weight": 10,
                     "type": 5,
                     "func": "updateLeaderboard",
-                    "counter": 148,   //dungeonid
+                    "counter": 133,   //stageid
                     "delta" : 1,
                     "boardId" : 4,
                 }

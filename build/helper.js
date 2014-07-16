@@ -1,5 +1,5 @@
 (function() {
-  var actCampaign, conditionCheck, currentTime, dbLib, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, updateLockStatus;
+  var actCampaign, conditionCheck, currentTime, dbLib, dbWrapper, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, updateLockStatus;
 
   conditionCheck = require('./trigger').conditionCheck;
 
@@ -7,13 +7,23 @@
 
   dbLib = require('./db');
 
+  dbWrapper = require('./dbWrapper');
+
   exports.initLeaderboard = function(config) {
     var cfg, generateHandler, k, key, localConfig, srvCfg, tickLeaderboard, v;
     localConfig = [];
     srvCfg = {};
     generateHandler = function(dbKey, cfg) {
       return function(name, value) {
-        return require('./dbWrapper').updateLeaderboard(dbKey, name, value);
+        return dbWrapper.updateLeaderboard(dbKey, name, value, function(err) {
+          if (err != null) {
+            return logError({
+              action: 'updateLeaderboard',
+              type: 'DB_ERR',
+              error: err
+            });
+          }
+        });
       };
     };
     for (key in config) {
@@ -65,7 +75,7 @@
     tickLeaderboard = function(board, cb) {
       cfg = localConfig[board];
       if (cfg.resetTime && matchDate(srvCfg[cfg.name], currentTime(), cfg.resetTime)) {
-        require('./dbWrapper').removeLeaderboard(cfg.name, cb);
+        dbWrapper.removeLeaderboard(cfg.name, cb);
         srvCfg[cfg.name] = currentTime();
         return dbLib.setServerConfig('Leaderboard', JSON.stringify(srvCfg));
       }

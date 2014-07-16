@@ -285,6 +285,7 @@ if (config) {
             } else {
               gServerObject.counters = {};
             }
+            cb();
           });
         }],
         function (err, ret) {

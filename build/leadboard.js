@@ -37,8 +37,8 @@ exports.data = [
         "event":"",
     },
     {
-        "name":"WorldBoss",
-        "key":"counters.worldBoss",
+        "name":"WorldBoss133",
+        "key":"counters.worldBoss.133",
         "reverse": false,
         "type":"player",
         "availableCondition":true,
