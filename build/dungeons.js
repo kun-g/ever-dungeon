@@ -30169,7 +30169,9 @@ exports.data = [
         "dungeonId": 127,
         "levelCount" :2,
         "pool":{
-            "soldierPool":{"objects":[
+            "soldierPool":{
+              property: {dropPrize:147},
+              "objects":[
                 {
                     "id":3,
                     "weight":2
@@ -30364,7 +30366,9 @@ exports.data = [
                     "weight":2
                 }
             ]},
-            "rangePool":{"objects":[
+            "rangePool":{
+              property: {dropPrize:147},
+              "objects":[
                 {
                     "id":8,
                     "weight":2
@@ -30415,7 +30419,9 @@ exports.data = [
                 }
 
             ]},
-            "elitePool":{"objects":[
+            "elitePool":{
+              property: {dropPrize:147},
+              "objects":[
                 {
                     "id":20,
                     "weight":2,
@@ -30713,7 +30719,9 @@ exports.data = [
                 }
 
             ]},
-            "bossPool":{"objects":[
+            "bossPool":{
+              property: {dropPrize:147},
+              "objects":[
                 {
                     "id":20,
                     "weight":2 ,
@@ -31011,7 +31019,9 @@ exports.data = [
                 }
 
             ]},
-            "normalPool":{"objects":[
+            "normalPool":{
+              property: {dropPrize:147},
+              "objects":[
                 {
                     "id":170,
                     "weight":3

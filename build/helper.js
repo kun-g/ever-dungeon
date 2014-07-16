@@ -949,15 +949,7 @@
 
   exports.observers = {
     heroxpChanged: function(obj, arg) {
-      obj.onCampaign('Level');
-      if (arg.prevLevel !== arg.currentLevel) {
-        if (arg.currentLevel === 10) {
-          return dbLib.broadcastEvent(BROADCAST_PLAYER_LEVEL, {
-            who: obj.name,
-            what: obj.hero["class"]
-          });
-        }
-      }
+      return obj.onCampaign('Level');
     },
     battleForceChanged: function(obj, arg) {
       exports.assignLeaderboard(obj, exports.LeaderboardIdx.BattleForce);
