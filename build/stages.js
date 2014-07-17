@@ -2186,7 +2186,7 @@ var data = [
                 "cost": 0,
                 "team": 1,
                 "hidden":false,
-                "dungeon": 127
+                "dungeon": 127,
                 "condition": function (obj, util) { 
                   if (util.serverObj['133'] == undefined 
                     || util.serverObj['133'] < MAX_BATTLE_TIMES) {
