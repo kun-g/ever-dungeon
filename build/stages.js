@@ -2188,8 +2188,8 @@ var data = [
                 "hidden":false,
                 "dungeon": 127,
                 "condition": function (obj, util) { 
-                  if (util.serverObj['133'] == undefined 
-                    || util.serverObj['133'] < MAX_BATTLE_TIMES) {
+                  if (util.serverObj.counters['133'] == undefined 
+                    || util.serverObj.counters['133'] < MAX_BATTLE_TIMES) {
                     return true;
                   }
                   return false; 

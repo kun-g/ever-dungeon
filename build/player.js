@@ -1333,10 +1333,10 @@
                   break;
                 case "countUp":
                   if (p.target === 'server') {
-                    if (gServerObject[p.counter] == null) {
-                      gServerObject[p.counter] = 0;
+                    if (gServerObject.counters[p.counter] == null) {
+                      gServerObject.counters[p.counter] = 0;
                     }
-                    gServerObject[p.counter]++;
+                    gServerObject.counters[p.counter]++;
                     gServerObject.notify('countersChanged', {
                       type: p.counter,
                       delta: 1
