@@ -553,7 +553,10 @@
       args: {
         'stg': 'number',
         'initialDataOnly': 'boolean',
-        'pkr': 'string'
+        'pkr': {
+          type: 'string',
+          opt: true
+        }
       },
       needPid: true
     },

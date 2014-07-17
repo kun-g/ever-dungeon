@@ -1,3 +1,4 @@
+var MAX_BATTLE_TIMES = 1000;
 var data = [
     {
         "chapterId": 0,
@@ -2186,6 +2187,13 @@ var data = [
                 "team": 1,
                 "hidden":false,
                 "dungeon": 127
+                "condition": function (obj, util) { 
+                  if (util.serverObj['133'] == undefined 
+                    || util.serverObj['133'] < MAX_BATTLE_TIMES) {
+                    return true;
+                  }
+                  return false; 
+                },
             }
         ]
     }

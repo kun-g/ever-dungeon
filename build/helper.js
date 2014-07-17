@@ -215,7 +215,8 @@
         return (date == null) || diffDate(date, today, 'day') !== 0;
       },
       currentTime: currentTime,
-      today: moment()
+      today: moment(),
+      serverObj: gServerObject
     };
   };
 
@@ -954,8 +955,6 @@
     Arena: 3,
     WorldBoss: 4
   };
-
-  exports.WorldBossDungeonLst = [133];
 
   exports.observers = {
     heroxpChanged: function(obj, arg) {

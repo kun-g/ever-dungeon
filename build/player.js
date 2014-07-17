@@ -1,8 +1,7 @@
 (function() {
   var Bag, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Player, PlayerEnvironment, Serializer, addMercenaryMember, async, createItem, createUnit, currentTime, dbLib, diffDate, genUtil, getMercenaryMember, getPlayerHero, getVip, helperLib, itemLib, moment, playerCSConfig, playerCommandStream, playerMessageFilter, registerConstructor, updateMercenaryMember, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6,
     __hasProp = {}.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
   require('./shop');
 
@@ -924,18 +923,6 @@
       }
       return async.waterfall([
         (function(_this) {
-          return function(cb) {
-            var _ref7;
-            if (_ref7 = dungeonConfig.dungeonId, __indexOf.call(helperLib.WorldBossDungeonLst, _ref7) >= 0) {
-              dbLib.getServerProperty('counters', function(err, arg) {
-                if (((arg != null ? arg[dungeonConfig.dungeonId] : void 0) != null) && arg[dungeonConfig.dungeonId] < 1000) {
-                  return cb(RET_DungeonCantOpen);
-                }
-              });
-            }
-            return cb();
-          };
-        })(this), (function(_this) {
           return function(cb) {
             var _base, _base1;
             if ((stageConfig.pvp != null) && (pkr != null)) {
