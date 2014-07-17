@@ -27934,5 +27934,47 @@ exports.data = [
             }
         ],
         "storeOnly": true
+    },
+    {
+        "classId": 878,
+        "label": "圣光之翼",
+        "icon": "item-vipbox8.png",
+        "category": 1,
+        "subcategory": 16,
+        "basic_properties": {
+            "accuracy": 50
+        },
+        "description": "蕴含着神圣光芒的羽翼，能够带来强大的集中力，并且是身份的象征",
+        "effecta": [
+            {
+                "part": "avatar-wing-1",
+                "file": "wing1-1.ccbi"
+            },
+            {
+                "part": "avatar-wing-2",
+                "file": "wing1-1.ccbi"
+            },
+            {
+                "part": "avatar-wing-3",
+                "file": "wing1-1.ccbi"
+            },
+            {
+                "part": "avatar-wing-4",
+                "file": "wing1-1.ccbi"
+            },
+            {
+                "part": "avatar-wing-5",
+                "file": "wing1-1.ccbi"
+            },
+            {
+                "part": "avatar-wing1",
+                "file": "wing1.ccbi"
+            },
+            {
+                "part": "avatar-wing2",
+                "file": "wing1.ccbi"
+            }
+        ],
+        "storeOnly": true
     }
 ]

@@ -5,8 +5,7 @@ exports.data = [
         "reverse":false,
         "initialValue":0,
         "type":"player",
-        "availableCondition":true,
-        "event":"",
+        "availableCondition":true
     },
     {
         "name":"infinitydungeon",
@@ -15,8 +14,7 @@ exports.data = [
         "reverse":false,
         "initialValue":0,
         "type":"player",
-        "availableCondition":true,
-        "event":"",
+        "availableCondition":true
     },
     {
         "name":"killMonster",
@@ -25,15 +23,22 @@ exports.data = [
         "reverse":false,
         "initialValue":0,
         "type":"player",
-        "availableCondition":true,
-        "event":"",
+        "availableCondition":true
     },
     {
         "name":"Arena",
         "reverse": true,
         "initialValue": 'length',
         "type":"player",
+        "availableCondition":true
+    },
+    {
+        "name":"WorldBoss133",
+        "key":"counters.worldBoss.133",
+        "reverse": false,
+        "type":"player",
         "availableCondition":true,
         "event":"",
     },
+
 ];

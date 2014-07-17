@@ -21699,7 +21699,7 @@ exports.data = [
                     {"pool":"normalPool","from":0,to:3},
                     {"pool":"soldierPool","from":5,to:14},
                     {"pool":"rangePool","from":0,to:1},
-                    {"id": 149,"from":0,to:2}
+                    {"id": 212,"from":0,to:2}
 
                 ]
             }
@@ -22007,7 +22007,7 @@ exports.data = [
                     {"pool":"rangePool","from":0,to:1},
                     {"pool":"soldierPool","from":2,to:4},
                     {"pool":"PVP","count":1},
-                    {"id": 149,"from":0,to:4}
+                    {"id": 212,"from":0,to:4}
 
                 ]
             }
@@ -31105,14 +31105,18 @@ exports.data = [
                 "objects" :[
                     {"pool":"normalPool","from":0,to:4},
                     {"pool":"soldierPool","from":8,to:14},
-                    {"pool":"rangePool","from":0,to:3},
+                    {"pool":"rangePool","from":0,to:2},
                     {"pool":"bossPool","count":1},
                     {"id": 149,"from":0,to:2},
                     {
-                        "id": 201,
+                        "id": 213,
                         "count":1,
                         "pos":12,
                         "keyed":true
+                    },
+                    {
+                        "id": 214,
+                        "count":2
                     }
                 ],
                 "exit": 29,
@@ -31124,5 +31128,5 @@ exports.data = [
             ],
         "prizeWxp":0,"prizeGold":0, "prizeXp":0,
         "wxpRate":1,"goldRate":0.5, "xpRate":1,
-        "rank":500}
+        "rank":400}
 ];
