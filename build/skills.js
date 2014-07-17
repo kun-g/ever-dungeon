@@ -1802,7 +1802,10 @@ exports.data = [
                 "filter": [{"type":"alive"},{"type":"visible"}]
             },
         "triggerCondition": [
-            { "type": "event", "event": "onBeDamage" }
+            { "type": "event", "event": "onBePhysicalDamage" },
+            { "type": "event", "event": "onBePhysicalRangeDamage" },
+            { "type": "event", "event": "onBeSpellDamage" },
+            { "type": "event", "event": "onBeSpellRangeDamage" }
         ],
         "action": [
             { "type": "kill"}
@@ -3121,7 +3124,7 @@ exports.data = [
     },
     {
         "skillId": 134,
-        "label":"炎甲ok",
+        "label":"炎甲pk",
         "icon": "skill-mage3.png",
         "desc":"法师使用一层火焰魔法保护自己，当受到攻击时，对敌人造成伤害，伤害值与攻击力有关。",
         "slotId":2,
@@ -3133,7 +3136,7 @@ exports.data = [
                 "targetDelay": 0.3
             },
             "triggerCondition": [
-                { "type": "event", "event": "onBeDamage" },
+                { "type": "event", "event": "onBePhysicalDamage" },
                 { "type": "chance", "chance": 0.3 }
             ],
             "action": [
@@ -3676,7 +3679,10 @@ exports.data = [
         "label": "盾兵减伤",
         "config": {
             "triggerCondition": [
-                { "type": "event", "event": "onBeDamage" }
+                { "type": "event", "event": "onBePhysicalDamage" },
+                { "type": "event", "event": "onBePhysicalRangeDamage" },
+                { "type": "event", "event": "onBeSpellDamage" },
+                { "type": "event", "event": "onBeSpellRangeDamage" }
             ],
             "targetSelection":{
                 "pool":"self",
@@ -3691,7 +3697,6 @@ exports.data = [
     {
         "skillId": 159,
         "label": "盾兵召唤",
-        "config": {
             "config": {
                 "basic" : {
                     "spellEffect": 3
@@ -3713,6 +3718,4 @@ exports.data = [
                 ]
             }
         }
-    }
-
 ];
