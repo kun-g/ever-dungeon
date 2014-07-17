@@ -894,8 +894,14 @@
     };
   };
 
-  exports.generatePrize = function(cfg, dropInfo) {
+  exports.generatePrize = function(cfg, dropInfo, rand) {
     var reward;
+    if (rand == null) {
+      rand = null;
+    }
+    if (rand == null) {
+      rand = Math.random;
+    }
     if (cfg == null) {
       return [];
     }
@@ -905,7 +911,7 @@
       return p && Math.random() < p.rate;
     }).map(function(g) {
       var e;
-      e = selectElementFromWeightArray(g.prize, Math.random());
+      e = selectElementFromWeightArray(g.prize, rand());
       return e;
     });
   };

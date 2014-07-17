@@ -641,7 +641,7 @@
     };
 
     Wizard.prototype.doAction = function(thisSpell, actions, level, target, cmd) {
-      var a, c, cfg, delay, effect, env, formular, formularResult, h, modifications, oldValue, pos, property, spellID, src, t, val, variables, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len16, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _ref3, _s, _t, _u, _v, _w, _x, _y;
+      var a, c, cfg, delay, effect, env, formular, formularResult, h, modifications, oldValue, pos, property, showPrize, spellID, src, t, val, variables, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len16, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _ref3, _s, _t, _u, _v, _w, _x, _y;
       if (actions == null) {
         return false;
       }
@@ -704,11 +704,15 @@
             }
             break;
           case 'dropPrize':
+            if (a.showPrize !== true) {
+              showPrize = false;
+            }
             if (typeof cmd.routine === "function") {
               cmd.routine({
                 id: 'DropPrize',
                 dropID: a.dropID,
-                me: this
+                me: this,
+                showPrize: showPrize
               });
             }
             break;
