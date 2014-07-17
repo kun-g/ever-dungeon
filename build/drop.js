@@ -5642,9 +5642,9 @@ exports.data = [
                     "func": "updateLeaderboard",
                     "counter": 133,   //stageid
                     "delta" : 1,
-                    "boardId" : 4,
+                    "boardId" : 4
                 }
             ]
         }
-    ],
+    ]
 ]

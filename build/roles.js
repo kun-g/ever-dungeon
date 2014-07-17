@@ -7645,7 +7645,7 @@ exports.data = [
                 "level": 1
             }
         ],
-        "dropInfo": [
+        "dropInfo": [ 148
 
         ]
     },
