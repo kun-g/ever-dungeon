@@ -288,8 +288,8 @@
       this.xp = heroData.exp;
       this.levelUp();
       this.counterAttack = true;
-      this.health = Math.ceil(battleForce * (8 / 18.5));
-      this.attack = Math.ceil(battleForce * (0.35 / 18.5));
+      this.health = Math.ceil(battleForce * (6 / 18.5));
+      this.attack = Math.ceil(battleForce * (0.3 / 18.5));
       this.critical = battleForce * (1 / 18.5);
       this.strong = battleForce * (1 / 18.5);
       this.accuracy = battleForce * (1 / 18.5) + 30;

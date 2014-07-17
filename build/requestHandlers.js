@@ -1,5 +1,5 @@
 (function() {
-  var DBWrapper, Player, addMercenaryMember, async, dbLib, getMercenaryMember, getPlayerHero, helperLib, http, https, loadPlayer, loginBy, moment, updateMercenaryMember, wrapReceipt, _ref;
+  var DBWrapper, Player, addMercenaryMember, async, dbLib, getPlayerHero, helperLib, http, https, loadPlayer, loginBy, moment, updateMercenaryMember, wrapReceipt, _ref;
 
   require('./define');
 
@@ -7,7 +7,7 @@
 
   helperLib = require('./helper');
 
-  _ref = require('./dbWrapper'), DBWrapper = _ref.DBWrapper, getMercenaryMember = _ref.getMercenaryMember, updateMercenaryMember = _ref.updateMercenaryMember, addMercenaryMember = _ref.addMercenaryMember, getPlayerHero = _ref.getPlayerHero;
+  _ref = require('./dbWrapper'), DBWrapper = _ref.DBWrapper, updateMercenaryMember = _ref.updateMercenaryMember, addMercenaryMember = _ref.addMercenaryMember, getPlayerHero = _ref.getPlayerHero;
 
   async = require('async');
 
@@ -551,7 +551,7 @@
         });
       },
       args: {
-        'stg': 'string',
+        'stg': 'number',
         'initialDataOnly': 'boolean',
         'pkr': 'string'
       },
@@ -675,8 +675,7 @@
     RPC_Reconnect: {
       id: 104,
       args: {
-        'pid': 'pid',
-        'string': 'string'
+        'PID': 'number'
       },
       func: function(arg, player, handler, rpcID, socket) {
         return async.waterfall([

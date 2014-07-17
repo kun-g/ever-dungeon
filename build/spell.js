@@ -641,7 +641,7 @@
     };
 
     Wizard.prototype.doAction = function(thisSpell, actions, level, target, cmd) {
-      var a, c, cfg, delay, effect, env, formular, formularResult, h, modifications, pos, property, spellID, src, t, val, variables, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len16, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _ref3, _s, _t, _u, _v, _w, _x, _y;
+      var a, c, cfg, delay, effect, env, formular, formularResult, h, modifications, oldValue, pos, property, spellID, src, t, val, variables, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len16, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _ref3, _s, _t, _u, _v, _w, _x, _y;
       if (actions == null) {
         return false;
       }
@@ -1056,14 +1056,25 @@
             if (thisSpell.modifications == null) {
               thisSpell.modifications = {};
             }
+            if (this['buffCommonModifyProperties'] == null) {
+              this['buffCommonModifyProperties'] = {};
+            }
+            oldValue = this['buffCommonModifyProperties'];
             for (property in modifications) {
               formular = modifications[property];
               val = calcFormular(variables, this, null, formular);
-              this[property] += val;
               if (thisSpell.modifications[property] == null) {
                 thisSpell.modifications[property] = 0;
               }
+              if (oldValue[property] == null) {
+                oldValue[property] = {
+                  'val': this[property],
+                  'ref': 0
+                };
+              }
+              oldValue[property]['ref'] += 1;
               thisSpell.modifications[property] += val;
+              this[property] += val;
             }
             break;
           case 'resetProperty':
@@ -1073,7 +1084,16 @@
             _ref2 = thisSpell.modifications;
             for (property in _ref2) {
               val = _ref2[property];
-              this[property] -= val;
+              oldValue = this['buffCommonModifyProperties'][property];
+              if ((oldValue == null) || oldValue['val'] === this[property] - val) {
+                this[property] -= val;
+              }
+              if (oldValue != null) {
+                oldValue['ref'] -= 1;
+                if (oldValue['ref'] === 0) {
+                  delete this['buffCommonModifyProperties'][property];
+                }
+              }
             }
             delete thisSpell.modifications;
             break;

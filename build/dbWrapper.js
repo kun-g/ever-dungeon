@@ -185,80 +185,23 @@
 
   exports.getPlayerHero = getPlayerHero;
 
-  exports.getMercenaryMember = function(names, rangeFrom, rangeTo, count, handler) {
-    var actions, doFindMercenary, i, selectRange, _i;
-    selectRange = function(list) {
-      var selector, trys;
-      selector = [];
-      trys = 30;
-      while (selector.length <= 0 && trys > 0) {
-        selector = list.filter(function(e) {
-          return e <= rangeTo && e >= rangeFrom;
-        });
-        rangeFrom -= 300;
-        rangeTo += 300;
-        trys -= 1;
-      }
-      return selector;
-    };
-    doFindMercenary = function(list, cb) {
-      var battleForce, selector;
-      if (list.length <= 0) {
-        return cb(new Error('Empty mercenarylist'));
-      } else {
-        selector = selectRange(list);
-        battleForce = selector[rand() % selector.length];
-        list = list.filter(function(i) {
-          return i !== battleForce;
-        });
-        return mercenaryGet(battleForce, count, function(err, mList) {
-          var selectedName;
-          if (mList === null) {
-            dbClient.srem(mercenaryPrefix + 'Keys', battleForce, callback);
-            dbClient.del(mercenaryPrefix + battleForce);
-            mList = [];
-          }
-          mList = mList.filter(function(key) {
-            var name, _i, _len;
-            for (_i = 0, _len = names.length; _i < _len; _i++) {
-              name = names[_i];
-              if (key === name) {
-                return false;
-              }
-            }
-            return true;
+  exports.getMercenaryMember = function(name, count, range, delta, names, handler) {
+    var heros;
+    heros = [];
+    return dbLib.findMercenary(name, count, range, delta, names, (function(_this) {
+      return function(err, heroNames) {
+        if (heroNames) {
+          return async.eachSeries(heroNames, function(e, cb) {
+            return getPlayerHero(e, wrapCallback(this, function(err, heroData) {
+              heros = heros.concat(heroData);
+              return cb();
+            }));
+          }, function() {
+            return handler(err, heros);
           });
-          if (mList.length === 0) {
-            return cb(null, list);
-          } else {
-            selectedName = mList[rand() % mList.length];
-            return getPlayerHero(selectedName, function(err, hero) {
-              if (hero) {
-                return cb(new Error('Done'), hero);
-              } else {
-                logError({
-                  action: 'RemoveInvalidMercenary',
-                  error: err,
-                  name: selectedName
-                });
-                return mercenaryDel(battleForce, selectedName, function(err) {
-                  return cb(null, list);
-                });
-              }
-            });
-          }
-        });
-      }
-    };
-    actions = [
-      function(cb) {
-        return mercenaryKeyList(cb);
-      }
-    ];
-    for (i = _i = 0; _i <= 50; i = ++_i) {
-      actions.push(doFindMercenary);
-    }
-    return async.waterfall(actions, handler);
+        }
+      };
+    })(this));
   };
 
   exports.removeMercenaryMember = function(battleForce, member, handler) {
