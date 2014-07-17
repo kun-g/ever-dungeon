@@ -894,8 +894,11 @@
     };
   };
 
-  exports.generatePrize = function(cfg, dropInfo) {
+  exports.generatePrize = function(cfg, dropInfo, rand) {
     var reward;
+    if (rand == null) {
+      rand = null;
+    }
     if (cfg == null) {
       return [];
     }
