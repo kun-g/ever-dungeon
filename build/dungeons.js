@@ -1,76 +1,75 @@
 exports.data = [
     {
     "abtest":[
-    //    {
-    //    "dungeonId": 0,
-    //    "levelCount" : 3,
-    //    "levels" :[
-    //        {
-    //            "objects" : [
-    //                {
-    //                    "id": 7,
-    //                    "count":5
-    //                },
-    //                {
-    //                    "id": 14,
-    //                    "count":2
-
-    //                }
-    //            ],
-    //            "rank": 26
-    //        },
-    //        {
-    //            "objects" : [
-    //                {
-    //                    "id": 7,
-    //                    "count":1
-    //                },
-    //                {
-    //                    "id": 14,
-    //                    "count":3
-    //                },
-    //                {
-    //                    "id": 149,
-    //                    "count":1
-    //                },
-    //                {
-    //                    "id": 4,
-    //                    "count":3
-    //                }
-    //            ],
-    //            "rank": 26
-    //        },
-    //        {
-    //            "objects" : [
-    //                {
-    //                    "id": 134,
-    //                    "count":1
-    //                }
-    //            ],
-    //            "entrance": [17,16,18],
-    //            "exit":-1,
-    //            "layout":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    //            "rank": 26
-    //        }
-    //    ],
-    //    "prizeWxp":0,
-    //    "prizeGold": 0,
-    //    "prizeXp":0,
-    //    "wxpRate":1,
-    //    "goldRate":0.3,
-    //    "triggers": ["dungeon:no.reward.no.result"],
-    //    "xpRate":1
-    //},
-    {
+        {
         "dungeonId": 0,
-        "levelCount" : 1,
+        "levelCount" : 3,
         "levels" :[
             {
                 "objects" : [
                     {
                         "id": 7,
-                        "count":1,
-                        property:{ "keyed":true, skill:[{id:153}], dropInfo:[148]}
+                        "count":5
+                    },
+                    {
+                        "id": 14,
+                        "count":2
+
+                    }
+                ],
+                "rank": 26
+            },
+            {
+                "objects" : [
+                    {
+                        "id": 7,
+                        "count":1
+                    },
+                    {
+                        "id": 14,
+                        "count":3
+                    },
+                    {
+                        "id": 149,
+                        "count":1
+                    },
+                    {
+                        "id": 4,
+                        "count":3
+                    }
+                ],
+                "rank": 26
+            },
+            {
+                "objects" : [
+                    {
+                        "id": 134,
+                        "count":1
+                    }
+                ],
+                "entrance": [17,16,18],
+                "exit":-1,
+                "layout":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                "rank": 26
+            }
+        ],
+        "prizeWxp":0,
+        "prizeGold": 0,
+        "prizeXp":0,
+        "wxpRate":1,
+        "goldRate":0.3,
+        "triggers": ["dungeon:no.reward.no.result"],
+        "xpRate":1
+    },
+    {
+        "dungeonId": 0,
+        "levelCount" : 3,
+        "levels" :[
+            {
+                 "objects" : [
+                    {
+                        "id": 7,
+                        "count":2
                     },
                     {
                         "id": 149,
@@ -87,6 +86,44 @@ exports.data = [
                 ],
                 "rank": 26
             },
+            {
+                 "objects" : [
+                    {
+                        "id": 75,
+                        "count":2
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 44,
+                        "count":2
+                    },
+                    {
+                        "id": 73,
+                        "count":2
+                    } ,
+                    {
+                        "id": 18,
+                        "count":2
+                    }
+                ],
+                "rank": 26
+            },
+            {
+                 "objects" : [
+                    {
+                        "id": 134,
+                        "count":1
+                    }
+                ],
+                "entrance": [17,16,18],
+                "exit":-1,
+                "layout":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                "rank": 26,
+                "triggers": ["dungeon:no.reward.no.result"]
+            }
         ],
         "prizeWxp":0,
         "prizeGold": 0,
@@ -30169,9 +30206,7 @@ exports.data = [
         "dungeonId": 127,
         "levelCount" :2,
         "pool":{
-            "soldierPool":{
-              property: {dropInfo:[148]},
-              "objects":[
+            "soldierPool":{"objects":[
                 {
                     "id":3,
                     "weight":2
@@ -30366,9 +30401,7 @@ exports.data = [
                     "weight":2
                 }
             ]},
-            "rangePool":{
-              property: {dropInfo:[148]},
-              "objects":[
+            "rangePool":{"objects":[
                 {
                     "id":8,
                     "weight":2
@@ -30419,9 +30452,7 @@ exports.data = [
                 }
 
             ]},
-            "elitePool":{
-              property: {dropInfo:[148]},
-              "objects":[
+            "elitePool":{"objects":[
                 {
                     "id":20,
                     "weight":2,
@@ -30719,9 +30750,7 @@ exports.data = [
                 }
 
             ]},
-            "bossPool":{
-              property: {dropInfo:[148]},
-              "objects":[
+            "bossPool":{"objects":[
                 {
                     "id":20,
                     "weight":2 ,
@@ -31019,9 +31048,7 @@ exports.data = [
                 }
 
             ]},
-            "normalPool":{
-              property: {dropInfo:[148]},
-              "objects":[
+            "normalPool":{"objects":[
                 {
                     "id":170,
                     "weight":3
