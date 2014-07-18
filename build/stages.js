@@ -1,4 +1,4 @@
-var MAX_BATTLE_TIMES = 1000;
+var MAX_BATTLE_TIMES = 200;
 var data = [
     {
         "chapterId": 0,

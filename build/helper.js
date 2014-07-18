@@ -801,7 +801,7 @@
         if ((_base = libs.sObj.counters)[stageId] == null) {
           _base[stageId] = 0;
         }
-        if (libs.sObj.counters[stageId] >= 1000) {
+        if (libs.sObj.counters[stageId] >= 200) {
           cfg = [
             {
               from: 0,
@@ -812,15 +812,45 @@
                 prize: [
                   {
                     type: 2,
-                    count: 50
+                    count: 100
                   }, {
                     type: 0,
-                    value: 869,
+                    value: 878,
                     count: 1
                   }
                 ],
-                tit: "#TODO title",
-                txt: "#TODO txt"
+                tit: "邪恶巫师的诡计",
+                txt: "恭喜你获得《邪恶巫师的诡计》第一名，点击领取奖励"
+              }
+            }, {
+              from: 1,
+              to: 9,
+              mail: {
+                type: MESSAGE_TYPE_SystemReward,
+                src: MESSAGE_REWARD_TYPE_SYSTEM,
+                prize: [
+                  {
+                    type: 2,
+                    count: 100
+                  }
+                ],
+                tit: "邪恶巫师的诡计",
+                txt: "恭喜你获得《邪恶巫师的诡计》奖励，点击领取"
+              }
+            }, {
+              from: 10,
+              to: 29,
+              mail: {
+                type: MESSAGE_TYPE_SystemReward,
+                src: MESSAGE_REWARD_TYPE_SYSTEM,
+                prize: [
+                  {
+                    type: 2,
+                    count: 50
+                  }
+                ],
+                tit: "邪恶巫师的诡计",
+                txt: "恭喜你获得《邪恶巫师的诡计》奖励，点击领取"
               }
             }
           ];
