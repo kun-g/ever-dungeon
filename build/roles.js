@@ -7606,9 +7606,9 @@ exports.data = [
         "avatar": "enemy-wlfs1.ccbi",
         "bossFlag": true,
         "property": {
-            "health": 0.7,
-            "attack": 0.54,
-            "critical": -20,
+            "health": 1.3,
+            "attack": 0.7,
+            "critical": 0,
             "strong": -10,
             "accuracy": 20,
             "reactivity": -50,
@@ -7657,8 +7657,8 @@ exports.data = [
         "classType": 1,
         "avatar": "enemy-db1.ccbi",
         "property": {
-            "health": 0.7,
-            "attack": 0.54,
+            "health": 2.2,
+            "attack": 0.1,
             "critical": -20,
             "strong": -10,
             "accuracy": 20,
