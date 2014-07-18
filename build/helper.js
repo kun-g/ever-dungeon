@@ -793,42 +793,56 @@
     },
     worldBoss: {
       time: {
-        minite: 5
+        weekday: 2
       },
       func: function(libs) {
-        var cfg, _base;
-        if ((_base = libs.sObj.counters)['133'] == null) {
-          _base['133'] = 0;
+        var cfg, stageId, _base;
+        stageId = '133';
+        if ((_base = libs.sObj.counters)[stageId] == null) {
+          _base[stageId] = 0;
         }
-        cfg = [
-          {
-            from: 0,
-            to: 0,
-            mail: {
-              type: MESSAGE_TYPE_SystemReward,
-              src: MESSAGE_REWARD_TYPE_SYSTEM,
-              prize: [
-                {
-                  type: 2,
-                  count: 50
-                }, {
-                  type: 0,
-                  value: 869,
-                  count: 1
-                }
-              ],
-              tit: "#TODO title",
-              txt: "#TODO txt"
+        if (libs.sObj.counters[stageId] >= 1000) {
+          cfg = [
+            {
+              from: 0,
+              to: 0,
+              mail: {
+                type: MESSAGE_TYPE_SystemReward,
+                src: MESSAGE_REWARD_TYPE_SYSTEM,
+                prize: [
+                  {
+                    type: 2,
+                    count: 50
+                  }, {
+                    type: 0,
+                    value: 869,
+                    count: 1
+                  }
+                ],
+                tit: "#TODO title",
+                txt: "#TODO txt"
+              }
             }
-          }
-        ];
-        return cfg.forEach(function(e) {
-          return libs.helper.getPositionOnLeaderboard(exports.LeaderboardIdx.WorldBoss, 'nobody', e.from, e.to, function(err, result) {
-            return result.board.name.forEach(function(name, idx) {
-              e.mail = e.mail + ' from:' + e.from + ' to: ' + e.to + ' rank:' + result.score[idx];
-              return libs.db.deliverMessage(name, e.mail);
+          ];
+        }
+        return async.series([
+          function(cb) {
+            cfg.forEach(function(e) {
+              return libs.helper.getPositionOnLeaderboard(exports.LeaderboardIdx.WorldBoss, 'nobody', e.from, e.to, function(err, result) {
+                return result.board.name.forEach(function(name, idx) {
+                  e.mail = e.mail + ' from:' + e.from + ' to: ' + e.to + ' rank:' + result.score[idx];
+                  return libs.db.deliverMessage(name, e.mail);
+                });
+              });
             });
+            return cb();
+          }
+        ], function(err, ret) {
+          sObj.notify('countersChanged', {
+            type: stageId,
+            delta: -libs.sObj.counters[stageId]
           });
+          return libs.sObj.counters[stageId] = 0;
         });
       }
     }
