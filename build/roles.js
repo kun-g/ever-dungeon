@@ -7604,6 +7604,7 @@ exports.data = [
         "faction": "monster",
         "classType": 1,
         "avatar": "enemy-wlfs1.ccbi",
+        "bossFlag": true,
         "property": {
             "health": 0.7,
             "attack": 0.54,

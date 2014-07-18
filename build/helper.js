@@ -894,28 +894,6 @@
     };
   };
 
-  exports.generatePrize = function(cfg, dropInfo, rand) {
-    var reward;
-    if (rand == null) {
-      rand = null;
-    }
-    if (rand == null) {
-      rand = Math.random;
-    }
-    if (cfg == null) {
-      return [];
-    }
-    return reward = dropInfo.reduce((function(r, p) {
-      return r.concat(cfg[p]);
-    }), []).filter(function(p) {
-      return p && Math.random() < p.rate;
-    }).map(function(g) {
-      var e;
-      e = selectElementFromWeightArray(g.prize, rand());
-      return e;
-    });
-  };
-
   updateLockStatus = function(curStatus, target, config) {
     var cfg, id, ret, unlockable;
     if (!curStatus) {

@@ -31116,7 +31116,8 @@ exports.data = [
                     },
                     {
                         "id": 214,
-                        "count":2
+                        "count":2,
+                        skill:[{id:27}]
                     }
                 ],
                 "exit": 29,

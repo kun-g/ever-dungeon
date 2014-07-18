@@ -411,6 +411,27 @@ mapContact = function (target, source) {
   return target
 }
 
+generatePrize = function (cfg, dropInfo,rand) {
+  var reward;
+  if (rand == null || typeof rand == 'undefined') {
+    rand = Math.random;
+  }
+  if (cfg == null || typeof cfg == 'undefined') {
+    return [];
+  }
+  return reward = dropInfo.reduce((function(r, p) {
+    return r.concat(cfg[p]);
+  }), []).filter(function(p) {
+    return p && Math.random() < p.rate;
+  }).map(function(g) {
+    var e;
+    e = selectElementFromWeightArray(g.prize, rand());
+    return e;
+  });
+};
+
+
+
 logLevel = 0;
 
 updateStageStatus = function (stageStatus, player, abindex) {
