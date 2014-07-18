@@ -7607,13 +7607,13 @@ exports.data = [
         "bossFlag": true,
         "property": {
             "health": 1.3,
-            "attack": 1.2,
+            "attack": 0.7,
             "critical": 0,
             "strong": -10,
             "accuracy": 20,
             "reactivity": -50,
             "speed": 0,
-            "counterAttack": true,
+            "counterAttack": false,
             "exp": 0,
             "gold": 0
         },
@@ -7638,7 +7638,7 @@ exports.data = [
                 "level": 1
             },
             {
-                "id": 26,
+                "id": 160,
                 "level": 1
             },
             {
@@ -7657,7 +7657,7 @@ exports.data = [
         "classType": 1,
         "avatar": "enemy-db1.ccbi",
         "property": {
-            "health": 3,
+            "health": 3.5,
             "attack": 0.1,
             "critical": -20,
             "strong": -10,

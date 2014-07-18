@@ -3662,6 +3662,8 @@ exports.data = [
             "triggerCondition": [
                 { "type": "event", "event": "onTeammateBePhysicalDamage" },
                 { "type": "event", "event": "onTeammateBePhysicalRangeDamage" },
+                { "type": "event", "event": "onTeammateBeSpellDamage" },
+                { "type": "event", "event": "onTeammateBeSpellRangeDamage" },
                 { "type": "targetMutex", "mutex": "reinforce" },
                 {"type":"alive"},{"type":"visible"}
             ],
@@ -3717,5 +3719,25 @@ exports.data = [
                     {"type": "createMonster","objectCount":2,"effect":21,"randomPos":true,"monsterID":214}
                 ]
             }
+        },
+    { "skillId": 160,
+        "label":"远程攻击2",
+        "config": {
+            "triggerCondition": [
+                {"type" :"event", "event":"onBattleTurnEnd" },
+                {"type" :"event", "event":"onMoveTurnEnd" }
+            ],
+            "targetSelection": {
+                "pool": "objects",
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"},{"type":"shuffle"},{"type":"count","count":1}]
+            },
+            "action":[
+                {"type": "attack","isRange":true},
+                {"type": "playEffect","effect":10},
+                {"type": "delay","delay":0.5},
+                {"type": "attack","isRange":true},
+                {"type": "playEffect","effect":10}
+            ]
         }
+    }
 ];
