@@ -635,17 +635,6 @@
         obj.counters.currentPKCount = 0;
         return obj.flags.rcvAward = false;
       }
-    },
-    dragonQuest0: {
-      storeType: "server",
-      id: 6,
-      actived: 1,
-      canReset: function(obj, util) {
-        return obj.counters.dragonQuest0 == null;
-      },
-      reset: function(obj, util) {
-        return obj.counters.dragonQuest0 = 1000;
-      }
     }
   };
 
@@ -804,10 +793,13 @@
     },
     worldBoss: {
       time: {
-        minite: 59
+        minite: 5
       },
       func: function(libs) {
-        var cfg;
+        var cfg, _base;
+        if ((_base = libs.sObj.counters)['133'] == null) {
+          _base['133'] = 0;
+        }
         cfg = [
           {
             from: 0,
@@ -964,7 +956,8 @@
     },
     winningAnPVP: function(obj, arg) {
       return exports.assignLeaderboard(obj, exports.LeaderboardIdx.Arena);
-    }
+    },
+    onRestWorldBossCounter: function(obj, arg) {}
   };
 
   exports.initObserveration = function(obj) {
