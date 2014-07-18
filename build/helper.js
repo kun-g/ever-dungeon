@@ -1,5 +1,5 @@
 (function() {
-  var actCampaign, async, conditionCheck, currentTime, dbLib, dbWrapper, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, updateLockStatus;
+  var CONST_MAX_WORLD_BOSS_TIMES, actCampaign, async, conditionCheck, currentTime, dbLib, dbWrapper, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, updateLockStatus;
 
   conditionCheck = require('./trigger').conditionCheck;
 
@@ -10,6 +10,12 @@
   dbWrapper = require('./dbWrapper');
 
   async = require('async');
+
+  CONST_MAX_WORLD_BOSS_TIMES = 200;
+
+  exports.ConstValue = {
+    WorldBossTimes: CONST_MAX_WORLD_BOSS_TIMES
+  };
 
   exports.initLeaderboard = function(config) {
     var cfg, generateHandler, k, key, localConfig, srvCfg, tickLeaderboard, v;
@@ -815,7 +821,7 @@
         if ((_base = libs.sObj.counters)[stageId] == null) {
           _base[stageId] = 0;
         }
-        if (libs.sObj.counters[stageId] >= 200) {
+        if (libs.sObj.counters[stageId] >= CONST_MAX_WORLD_BOSS_TIMES) {
           cfg = [
             {
               from: 0,
