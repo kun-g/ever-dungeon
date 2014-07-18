@@ -1,5 +1,5 @@
 (function() {
-  var actCampaign, conditionCheck, currentTime, dbLib, dbWrapper, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, updateLockStatus;
+  var actCampaign, async, conditionCheck, currentTime, dbLib, dbWrapper, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, updateLockStatus;
 
   conditionCheck = require('./trigger').conditionCheck;
 
@@ -8,6 +8,8 @@
   dbLib = require('./db');
 
   dbWrapper = require('./dbWrapper');
+
+  async = require('async');
 
   exports.initLeaderboard = function(config) {
     var cfg, generateHandler, k, key, localConfig, srvCfg, tickLeaderboard, v;
@@ -288,7 +290,7 @@
         me[key]['status'] = 'Init';
         me[key]['date'] = currentTime();
         if (key === 'event_daily') {
-          me[key]['rank'] = Math.ceil(me.battleForce * 0.04);
+          me[key]['rank'] = Math.ceil(me.battleForce * 0.03);
           if (me[key].rank < 1) {
             me[key].rank = 1;
           }
@@ -708,8 +710,14 @@
         return cfg.forEach(function(e) {
           return libs.helper.getPositionOnLeaderboard(exports.LeaderboardIdx.InfinityDungeon, 'nobody', e.from, e.to, function(err, result) {
             return result.board.name.forEach(function(name, idx) {
-              e.mail = e.mail + ' from:' + e.from + ' to: ' + e.to + ' rank:' + result.score[idx];
-              return libs.db.deliverMessage(name, e.mail);
+              var infoStr;
+              libs.db.deliverMessage(name, e.mail);
+              infoStr = ' from:' + e.from + ' to: ' + e.to + ' rank:' + result.board.score[idx];
+              return logInfo({
+                action: 'leadboradPrize',
+                index: 0,
+                msg: infoStr
+              });
             });
           });
         });
@@ -784,8 +792,14 @@
         return cfg.forEach(function(e) {
           return libs.helper.getPositionOnLeaderboard(exports.LeaderboardIdx.KillingMonster, 'nobody', e.from, e.to, function(err, result) {
             return result.board.name.forEach(function(name, idx) {
-              e.mail = e.mail + ' from:' + e.from + ' to: ' + e.to + ' rank:' + result.score[idx];
-              return libs.db.deliverMessage(name, e.mail);
+              var infoStr;
+              libs.db.deliverMessage(name, e.mail);
+              infoStr = ' from:' + e.from + ' to: ' + e.to + ' rank:' + result.board.score[idx];
+              return logInfo({
+                action: 'leadboradPrize',
+                index: 1,
+                msg: infoStr
+              });
             });
           });
         });
@@ -860,15 +874,21 @@
             cfg.forEach(function(e) {
               return libs.helper.getPositionOnLeaderboard(exports.LeaderboardIdx.WorldBoss, 'nobody', e.from, e.to, function(err, result) {
                 return result.board.name.forEach(function(name, idx) {
-                  e.mail = e.mail + ' from:' + e.from + ' to: ' + e.to + ' rank:' + result.score[idx];
-                  return libs.db.deliverMessage(name, e.mail);
+                  var infoStr;
+                  libs.db.deliverMessage(name, e.mail);
+                  infoStr = ' from:' + e.from + ' to: ' + e.to + ' rank:' + result.board.score[idx];
+                  return logInfo({
+                    action: 'leadboradPrize',
+                    index: 1,
+                    msg: infoStr
+                  });
                 });
               });
             });
             return cb();
           }
         ], function(err, ret) {
-          sObj.notify('countersChanged', {
+          libs.sObj.notify('countersChanged', {
             type: stageId,
             delta: -libs.sObj.counters[stageId]
           });
