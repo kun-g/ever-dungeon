@@ -553,7 +553,10 @@
       args: {
         'stg': 'number',
         'initialDataOnly': 'boolean',
-        'pkr': 'string'
+        'pkr': {
+          type: 'string',
+          opt: true
+        }
       },
       needPid: true
     },
@@ -675,8 +678,7 @@
     RPC_Reconnect: {
       id: 104,
       args: {
-        'PID': 'PID',
-        'string': 'string'
+        'PID': 'number'
       },
       func: function(arg, player, handler, rpcID, socket) {
         return async.waterfall([
@@ -910,6 +912,48 @@
               });
             }
         }
+      },
+      args: {},
+      needPid: true
+    },
+    RPC_WorldStageInfo: {
+      id: 36,
+      func: function(arg, player, handler, rpcID, socket) {
+        return helperLib.getPositionOnLeaderboard(helperLib.LeaderboardIdx.WorldBoss, player.name, 0, 0, function(err, result) {
+          var killTimes, ret, times;
+          if (result != null) {
+            times = gServerObject.counters['133'];
+            if (times == null) {
+              times = 0;
+            }
+            killTimes = player.counters['worldBoss']['133'];
+            if (killTimes == null) {
+              killTimes = 0;
+            }
+            ret = {
+              REQ: rpcID,
+              RET: RET_OK
+            };
+            ret.arg = {
+              prg: {
+                cpl: times,
+                ttl: helperLib.ConstValue.WorldBossTimes
+              },
+              me: {
+                cnt: +killTimes,
+                rnk: +result.position
+              }
+            };
+            return handler(ret);
+          } else {
+            return handler([
+              {
+                REQ: rpcID,
+                RET: RET_Unknown
+              }
+            ]);
+          }
+        });
       },
       args: {},
       needPid: true

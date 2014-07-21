@@ -20,6 +20,7 @@ TEAMMATE_REWARD_RATIO = 0.2;
 //////////////////// Log
 serverType = 'None';
 print = console.log;
+dprint = function(obj) { console.log(requires('util').inspect(obj, true, 10));}
 logger = null;
 initServer = function () {
   var pid = process.pid;
@@ -32,13 +33,12 @@ initServer = function () {
     if (typeof log !== 'object') {
       log = {log:log}; 
     }
-    log.time = (new Date()).valueOf();
+    log.time = new Date();
     log.pid = pid;
     log.server = gServerID;
-    log.logType = type;
 
     if (logger && type) {
-      logger.emit(type, log, new Date());
+      logger.emit(type, log, (new Date()).valueOf());
     }
     if (logger == null || process.stdout.isTTY || type === 'Error') {
       var util = requires('util');
@@ -488,6 +488,7 @@ ACT_TELEPORT = 8;
 ACT_WhiteScreen = 9;
 ACT_Delay = 10;
 ACT_Dialog = 11;
+ACT_DropItem = 12;
 
 ACT_POPHP = 101;
 ACT_POPTEXT = 102;

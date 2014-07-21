@@ -1,5 +1,5 @@
 (function() {
-  var actCampaign, conditionCheck, currentTime, dbLib, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, updateLockStatus;
+  var CONST_MAX_WORLD_BOSS_TIMES, actCampaign, async, conditionCheck, currentTime, dbLib, dbWrapper, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, updateLockStatus;
 
   conditionCheck = require('./trigger').conditionCheck;
 
@@ -7,13 +7,31 @@
 
   dbLib = require('./db');
 
+  dbWrapper = require('./dbWrapper');
+
+  async = require('async');
+
+  CONST_MAX_WORLD_BOSS_TIMES = 200;
+
+  exports.ConstValue = {
+    WorldBossTimes: CONST_MAX_WORLD_BOSS_TIMES
+  };
+
   exports.initLeaderboard = function(config) {
     var cfg, generateHandler, k, key, localConfig, srvCfg, tickLeaderboard, v;
     localConfig = [];
     srvCfg = {};
     generateHandler = function(dbKey, cfg) {
       return function(name, value) {
-        return require('./dbWrapper').updateLeaderboard(dbKey, name, value);
+        return dbWrapper.updateLeaderboard(dbKey, name, value, function(err) {
+          if (err != null) {
+            return logError({
+              action: 'updateLeaderboard',
+              type: 'DB_ERR',
+              error: err
+            });
+          }
+        });
       };
     };
     for (key in config) {
@@ -65,7 +83,7 @@
     tickLeaderboard = function(board, cb) {
       cfg = localConfig[board];
       if (cfg.resetTime && matchDate(srvCfg[cfg.name], currentTime(), cfg.resetTime)) {
-        require('./dbWrapper').removeLeaderboard(cfg.name, cb);
+        dbWrapper.removeLeaderboard(cfg.name, cb);
         srvCfg[cfg.name] = currentTime();
         return dbLib.setServerConfig('Leaderboard', JSON.stringify(srvCfg));
       }
@@ -75,7 +93,6 @@
       tickLeaderboard(board);
       cfg = localConfig[board];
       reverse = cfg.reverse ? 1 : 0;
-      console.log('getPositionOnLeaderboard', reverse);
       return dbLib.queryLeaderboard(cfg.name, reverse, name, from, to, function(err, result) {
         result.board = result.board.reduce((function(r, l, i) {
           if (i % 2 === 0) {
@@ -206,7 +223,8 @@
         return (date == null) || diffDate(date, today, 'day') !== 0;
       },
       currentTime: currentTime,
-      today: moment()
+      today: moment(),
+      serverObj: gServerObject
     };
   };
 
@@ -278,7 +296,7 @@
         me[key]['status'] = 'Init';
         me[key]['date'] = currentTime();
         if (key === 'event_daily') {
-          me[key]['rank'] = Math.ceil(me.battleForce * 0.04);
+          me[key]['rank'] = Math.ceil(me.battleForce * 0.03);
           if (me[key].rank < 1) {
             me[key].rank = 1;
           }
@@ -625,17 +643,6 @@
         obj.counters.currentPKCount = 0;
         return obj.flags.rcvAward = false;
       }
-    },
-    dragonQuest0: {
-      storeType: "server",
-      id: 6,
-      actived: 1,
-      canReset: function(obj, util) {
-        return obj.counters.dragonQuest0 == null;
-      },
-      reset: function(obj, util) {
-        return obj.counters.dragonQuest0 = 1000;
-      }
     }
   };
 
@@ -707,10 +714,16 @@
           }
         ];
         return cfg.forEach(function(e) {
-          return libs.helper.getPositionOnLeaderboard(1, 'nobody', e.from, e.to, function(err, result) {
+          return libs.helper.getPositionOnLeaderboard(exports.LeaderboardIdx.InfinityDungeon, 'nobody', e.from, e.to, function(err, result) {
             return result.board.name.forEach(function(name, idx) {
-              e.mail = e.mail + ' from:' + e.from + ' to: ' + e.to + ' rank:' + result.score[idx];
-              return libs.db.deliverMessage(name, e.mail);
+              var infoStr;
+              libs.db.deliverMessage(name, e.mail);
+              infoStr = ' from:' + e.from + ' to: ' + e.to + ' rank:' + result.board.score[idx];
+              return logInfo({
+                action: 'leadboradPrize',
+                index: 0,
+                msg: infoStr
+              });
             });
           });
         });
@@ -783,12 +796,109 @@
           }
         ];
         return cfg.forEach(function(e) {
-          return libs.helper.getPositionOnLeaderboard(2, 'nobody', e.from, e.to, function(err, result) {
+          return libs.helper.getPositionOnLeaderboard(exports.LeaderboardIdx.KillingMonster, 'nobody', e.from, e.to, function(err, result) {
             return result.board.name.forEach(function(name, idx) {
-              e.mail = e.mail + ' from:' + e.from + ' to: ' + e.to + ' rank:' + result.score[idx];
-              return libs.db.deliverMessage(name, e.mail);
+              var infoStr;
+              libs.db.deliverMessage(name, e.mail);
+              infoStr = ' from:' + e.from + ' to: ' + e.to + ' rank:' + result.board.score[idx];
+              return logInfo({
+                action: 'leadboradPrize',
+                index: 1,
+                msg: infoStr
+              });
             });
           });
+        });
+      }
+    },
+    worldBoss: {
+      time: {
+        weekday: 2
+      },
+      func: function(libs) {
+        var cfg, stageId, _base;
+        stageId = '133';
+        if ((_base = libs.sObj.counters)[stageId] == null) {
+          _base[stageId] = 0;
+        }
+        if (libs.sObj.counters[stageId] >= CONST_MAX_WORLD_BOSS_TIMES) {
+          cfg = [
+            {
+              from: 0,
+              to: 0,
+              mail: {
+                type: MESSAGE_TYPE_SystemReward,
+                src: MESSAGE_REWARD_TYPE_SYSTEM,
+                prize: [
+                  {
+                    type: 2,
+                    count: 100
+                  }, {
+                    type: 0,
+                    value: 878,
+                    count: 1
+                  }
+                ],
+                tit: "邪恶巫师的诡计",
+                txt: "恭喜你获得《邪恶巫师的诡计》第一名，点击领取奖励"
+              }
+            }, {
+              from: 1,
+              to: 9,
+              mail: {
+                type: MESSAGE_TYPE_SystemReward,
+                src: MESSAGE_REWARD_TYPE_SYSTEM,
+                prize: [
+                  {
+                    type: 2,
+                    count: 100
+                  }
+                ],
+                tit: "邪恶巫师的诡计",
+                txt: "恭喜你获得《邪恶巫师的诡计》奖励，点击领取"
+              }
+            }, {
+              from: 10,
+              to: 29,
+              mail: {
+                type: MESSAGE_TYPE_SystemReward,
+                src: MESSAGE_REWARD_TYPE_SYSTEM,
+                prize: [
+                  {
+                    type: 2,
+                    count: 50
+                  }
+                ],
+                tit: "邪恶巫师的诡计",
+                txt: "恭喜你获得《邪恶巫师的诡计》奖励，点击领取"
+              }
+            }
+          ];
+        }
+        return async.series([
+          function(cb) {
+            cfg.forEach(function(e) {
+              return libs.helper.getPositionOnLeaderboard(exports.LeaderboardIdx.WorldBoss, 'nobody', e.from, e.to, function(err, result) {
+                return result.board.name.forEach(function(name, idx) {
+                  var infoStr;
+                  libs.db.deliverMessage(name, e.mail);
+                  infoStr = ' from:' + e.from + ' to: ' + e.to + ' rank:' + result.board.score[idx];
+                  return logInfo({
+                    action: 'leadboradPrize',
+                    index: 1,
+                    msg: infoStr
+                  });
+                });
+              });
+            });
+            return cb();
+          }
+        ], function(err, ret) {
+          libs.sObj.notify('countersChanged', {
+            type: stageId,
+            delta: -libs.sObj.counters[stageId]
+          });
+          return libs.sObj.counters[stageId] = 0;
         });
       }
     }
@@ -904,20 +1014,13 @@
     BattleForce: 0,
     InfinityDungeon: 1,
     KillingMonster: 2,
-    Arena: 3
+    Arena: 3,
+    WorldBoss: 4
   };
 
   exports.observers = {
     heroxpChanged: function(obj, arg) {
-      obj.onCampaign('Level');
-      if (arg.prevLevel !== arg.currentLevel) {
-        if (arg.currentLevel === 10) {
-          return dbLib.broadcastEvent(BROADCAST_PLAYER_LEVEL, {
-            who: obj.name,
-            what: obj.hero["class"]
-          });
-        }
-      }
+      return obj.onCampaign('Level');
     },
     battleForceChanged: function(obj, arg) {
       exports.assignLeaderboard(obj, exports.LeaderboardIdx.BattleForce);
@@ -939,7 +1042,8 @@
     },
     winningAnPVP: function(obj, arg) {
       return exports.assignLeaderboard(obj, exports.LeaderboardIdx.Arena);
-    }
+    },
+    onRestWorldBossCounter: function(obj, arg) {}
   };
 
   exports.initObserveration = function(obj) {
@@ -961,7 +1065,7 @@
 
   exports.dbScripts = {
     searchRival: " local board, name = ARGV[1], ARGV[2];\n local key = 'Leaderboard.'..board;\n local config = {\n     {base=0.95, delta=0.02, rand= ARGV[3]},\n     {base=0.85, delta=0.03, rand= ARGV[4]},\n     {base=0.50, delta=0.05, rand= ARGV[5]},\n   };\n local count = 3;\n local rank = redis.call('ZRANK', key, name);\n\n local rivalLst = {};\n if rank <= count then\n   for index = 0, rank-1 do \n     table.insert(rivalLst,redis.call('zrange', key, index, index, 'withscores'));\n   end\n   for index = rank+1, count do \n     table.insert(rivalLst,redis.call('zrange', key, index, index, 'withscores'));\n   end\nelse\n   rank = rank - 1;\n   for i, c in ipairs(config) do\n     local from = math.ceil(rank * (c.base-c.delta));\n     local to = math.ceil(rank * (c.base+c.delta));\n     local index = from\n     if  to ~=  from then \n       index = index + c.rand%(to - from);\n     end\n     index = math.ceil(index);\n     rivalLst[count - i + 1] = redis.call('zrange', key, index, index, 'withscores');\n     rank = index - 1;\n   end\n end\n\n return rivalLst;",
-    getMercenary: "local battleforce, count, range = ARGV[1], ARGV[2], ARGV[3];\nlocal delta, rand, names, retrys = ARGV[4], ARGV[5], ARGV[6], ARGV[7];\nlocal key = 'Leaderboard.battleforce';\nlocal from = battleforce - range;\nlocal to = battleforce + range;\nlocal nameMask = {}\n\nwhile string.len(names) > 0 do\n  local index = string.find(names, ',');\n  if index == nil then\n    nameMask[names] = 1;\n    break;\n  end\n  local v = string.sub(names, 1, index-1)\n  nameMask[v] = 1;\n  names = string.sub(names, index+1, -1);\nend\n\nlocal ret = {};\nwhile true do\n  local list = redis.call('zrevrangebyscore', key, to, from);\n  local mercenarys = {};\n  for i, name in ipairs(list) do\n    if nameMask[name] ~= 1 then table.insert(mercenarys, name); end\n  end\n\n  local length = table.getn(mercenarys);\n  if length > 0 then\n    local name = mercenarys[rand%length + 1];\n    table.insert(ret, name);\n    nameMask[name] = 1;\n  end\n\n  if table.getn(ret) >= tonumber(count) then break; end\n\n  from = from - delta;\n  if from < 0 then from = 0; end\n  to = to + delta;\n  retrys = retrys - 1;\n  if retrys == 0 then return {err='Fail'}; end\nend\n\nreturn ret;",
+    getMercenary: "local myName, count, range = ARGV[1], ARGV[2], ARGV[3];\nlocal delta, rand, names, retrys = ARGV[4], ARGV[5], ARGV[6], ARGV[7];\nlocal key = 'Leaderboard.battleforce';\nlocal myRange = redis.call('ZRANK', key, myName);\nredis.log(redis.LOG_WARNING, myName, 'my',myRange,'ran',range,'???');\nlocal from = myRange - range;\nlocal to = myRange + range;\nlocal nameMask = {}\n\nwhile string.len(names) > 0 do\n  local index = string.find(names, ',');\n  if index == nil then\n    nameMask[names] = 1;\n    break;\n  end\n  local v = string.sub(names, 1, index-1)\n  nameMask[v] = 1;\n  names = string.sub(names, index+1, -1);\nend\n\nlocal ret = {};\nwhile true do\n  local list = redis.call('zrange', key, from, to);\n  local mercenarys = {};\n  for i, name in ipairs(list) do\n    if nameMask[name] ~= 1 then table.insert(mercenarys, name); end\n  end\n\n  local length = table.getn(mercenarys);\n  if length > 0 then\n    local name = mercenarys[rand%length + 1];\n    table.insert(ret, name);\n    nameMask[name] = 1;\n  end\n\n  if table.getn(ret) >= tonumber(count) then break; end\n\n  from = from - delta;\n  if from < 0 then from = 0; end\n  to = to + delta;\n  retrys = retrys - 1;\n  if retrys == 0 then return {err='Fail'}; end\nend\n\nreturn ret;",
     exchangePKRank: "local board, champion, second = ARGV[1], ARGV[2], ARGV[3]; \nlocal key = 'Leaderboard.'..board; \nlocal championRank = redis.call('ZRANK', key, champion); \nlocal secondRank = redis.call('ZRANK', key, second); \nif championRank > secondRank then \n  redis.call('ZADD', key, championRank, second); \n  redis.call('ZADD', key, secondRank, champion); \n  championRank = secondRank;\nend \nreturn championRank;",
     tryAddLeaderboardMember: "local board, name, value = ARGV[1], ARGV[2], ARGV[3];\nlocal key = 'Leaderboard.'..board;\nlocal score = redis.call('ZSCORE', key, name)\nif score == false then\n  score = value;\n  if value == 'null' then\n    score = redis.call('ZCARD', key)\n  end\n  redis.call('ZADD', key, score, name);\nend\nreturn score"
   };
