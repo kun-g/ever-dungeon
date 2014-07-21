@@ -1,4 +1,5 @@
-    var data = [
+var MAX_BATTLE_TIMES = 200;
+var data = [
     {
         "chapterId": 0,
         "hidden":true,
@@ -2025,7 +2026,7 @@
                   //if (obj.counters.goblin) {
                   //    obj.counters.goblin++;
                   //} else {
-                  //    obj.counters.newProperty('goblin', 1);
+                  //    obj.counters['goblin'] = 1;
                   //}
               }
           },
@@ -2174,7 +2175,28 @@
               initialAction: function (obj) { }
           }
       ]
-  }
+  },
+    {
+        "chapterId": 16,
+        "hidden": true,
+        "label":"世界副本",
+        "stage":[
+            {
+                "stageId": 133,
+                "cost": 0,
+                "team": 1,
+                "hidden":false,
+                "dungeon": 127,
+                "condition": function (obj, util) { 
+                  if (util.serverObj.counters['133'] == undefined 
+                    || util.serverObj.counters['133'] < MAX_BATTLE_TIMES) {
+                    return true;
+                  }
+                  return false; 
+                },
+            }
+        ]
+    }
 ];
 for (k in data) {
   data[k].stageId = k;

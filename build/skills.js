@@ -18,7 +18,8 @@ exports.data = [
         { "type": "countDown", "cd": 10 }
       ],
       "action": [
-        { "type": "installSpell", "spell": 1}
+        { "type": "installSpell", "spell": 1},
+        {"type":"shock","delay":0.3,"range":5,"time":0.2}
       ],
       "levelConfig": [
         {"level": 1},
@@ -2115,7 +2116,8 @@ exports.data = [
             ],
             "buffType":"RoleBuff",
             "availableCondition": [
-                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 }
+                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 },
+                { "type": "event", "event": "onBeEndBattleTurn", "eventCount": 2 }
             ]
         }
     },
@@ -2153,7 +2155,8 @@ exports.data = [
             ],
             "buffType":"AttackBuff",
             "availableCondition": [
-                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 }
+                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 },
+                { "type": "event", "event": "onBeEndBattleTurn", "eventCount": 2 }
             ]
         }
     },
@@ -2191,7 +2194,8 @@ exports.data = [
             ],
             "buffType":"AttackDebuff",
             "availableCondition": [
-                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 }
+                { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 },
+                { "type": "event", "event": "onBeEndBattleTurn", "eventCount": 2 }
             ]
         }
     },
@@ -2954,7 +2958,8 @@ exports.data = [
                 { "type": "chance", "chance": 0.3}
             ],
             "action": [
-                { "type": "installSpell", "spell": 129}
+                { "type": "installSpell", "spell": 129},
+                {"type":"shock","delay":0.3,"range":5,"time":0.2}
             ],
             "levelConfig": [
                 {"level": 1},
@@ -3077,7 +3082,7 @@ exports.data = [
                 "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"},{"type":"shuffle"},{"type":"count","count":1}]
             },
             "action": [
-                { "type": "damage","damageType":"Spell","isRange":true },
+                { "type": "damage","damageType":"Spell","isRange":true,"delay":0.8 },
                 {"type": "playEffect","effect":44,"pos":"self"},
                 {"type": "playEffect","effect":0,"pos":"target","delay":0.6},
                 {"type": "blink","delay":0.6,"time":0.08},
@@ -3533,7 +3538,7 @@ exports.data = [
         "label":"pk传送",
         "config": {
             "triggerCondition": [
-                {"type":"event","event":"onBattleTurnEnd"},
+                {"type":"event","event":"onBeBattleTurnEnd"},
                 {"type":"alive"}
             ],
             "targetSelection":{
