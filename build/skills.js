@@ -3658,6 +3658,7 @@ exports.data = [
             },
             "triggerCondition": [
                 {"type" :"event", "event":"onPhysicalDamage" },
+                {"type" :"event", "event":"onPhysicalRangeDamage" },
                 {"type":"alive"}
             ],
             "targetSelection":{
@@ -3697,6 +3698,7 @@ exports.data = [
         "config": {
             "triggerCondition": [
                 {"type" :"event", "event":"onPhysicalDamage" },
+                {"type" :"event", "event":"onPhysicalRangeDamage" },
                 { "type": "chance", "chance": 0.5 },
                 {"type":"alive"}
             ],
@@ -4008,6 +4010,7 @@ exports.data = [
         "config": {
             "triggerCondition": [
                 {"type" :"event", "event":"onPhysicalDamage" },
+                {"type" :"event", "event":"onPhysicalRangeDamage" },
                 { "type": "chance", "chance": 0.8 }
             ],
             "targetSelection":{
@@ -4278,7 +4281,7 @@ exports.data = [
         "label":"弱变强",
         "config":{
             "triggerCondition":[
-                {"type":"countDown","cd":10},
+                {"type":"countDown","cd":3},
                 {"type":"event","event":"onTurnEnd"}
             ],
             "targetSelection":{
@@ -4305,7 +4308,7 @@ exports.data = [
         "label":"强变弱",
         "config":{
             "triggerCondition":[
-                {"type":"countDown","cd":10},
+                {"type":"countDown","cd":3},
                 {"type":"event","event":"onTurnEnd"}
             ],
             "targetSelection":{

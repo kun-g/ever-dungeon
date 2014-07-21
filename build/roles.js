@@ -7715,5 +7715,49 @@ exports.data = [
                 "level": 1
             }
         ]
-    }
+    },
+    {
+        "classId": 213,
+        "className": "哥布林投矛手x",
+        "faction": "monster",
+        "classType": 1,
+        "avatar": "enemy-goblin2.ccbi",
+        "property": {
+            "health": 2.0,
+            "attack": 0.01,
+            "critical": 2,
+            "strong": 2,
+            "accuracy": 20,
+            "reactivity": -90,
+            "speed": 0,
+            "counterAttack": false,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 2.0,
+            "attack": 0.1,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 10,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundSpawn": "gebulintou.mp3",
+        "soundWound": "gebulinwound.mp3",
+        "soundAttack": "shouren.mp3",
+        "soundDie": "gebulindie.mp3",
+        "effectAttack": 9,
+        "skill": [
+            {
+                "id": 26,
+                "level": 1
+            },
+            {
+                "id": 27,
+                "level": 1
+            }
+        ]
+    },
 ]
