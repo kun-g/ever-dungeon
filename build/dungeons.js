@@ -15548,7 +15548,7 @@ exports.data = [
     },
     {
         "dungeonId": 102,
-        "rank": 1,
+        "rank": 100,
         "levelCount" : 14,
         "pool":{
             "soldierPool":{"objects":[
@@ -16442,113 +16442,71 @@ exports.data = [
         "levels" :[
             {
                 "objects" :[
-                    {"pool":"normalPool","from":0,to:4},
-                    {"pool":"soldierPool","from":8,to:14},
-                    {"pool":"rangePool","from":0,to:3},
-                    {"id": 8,"count":1}
+                    {"id": 8,"count":1,skill:[{id:156}]}
                 ]
             },
             {
                 "objects" :[
-                    {"pool":"normalPool","from":0,to:4},
-                    {"pool":"soldierPool","from":8,to:14},
-                    {"pool":"rangePool","from":0,to:3},
-                    {"id": 201,"count":1}
+                    {"id": 8,"count":1,skill:[{id:157}]}
                 ]
             },
             {
                 "objects" :[
-                    {"pool":"normalPool","from":0,to:4},
-                    {"pool":"soldierPool","from":8,to:14},
-                    {"pool":"rangePool","from":0,to:3},
-                    {"id": 159,"count":1}
+                    {"id": 8,"count":1,skill:[{id:159}]}
                 ]
             },
             {
                 "objects" :[
-                    {"pool":"normalPool","from":0,to:4},
-                    {"pool":"soldierPool","from":8,to:14},
-                    {"pool":"rangePool","from":0,to:3},
-                    {"id": 125,"count":1,skill:[{id:167}]}
+                    {"id": 8,"count":1,skill:[{id:167}]}
                 ]
             },
             {
                 "objects" :[
-                    {"pool":"normalPool","from":0,to:4},
-                    {"pool":"soldierPool","from":8,to:14},
-                    {"pool":"rangePool","from":0,to:3},
-                    {"id": 125,"count":1,skill:[{id:168}]}
+                    {"id": 8,"count":1,skill:[{id:168}]}
                 ]
             },
             {
                 "objects" :[
-                    {"pool":"normalPool","from":0,to:4},
-                    {"pool":"soldierPool","from":8,to:14},
-                    {"pool":"rangePool","from":0,to:3},
-                    {"id": 125,"count":1,skill:[{id:169}]}
+                    {"id": 8,"count":1,skill:[{id:169}]}
                 ]
             },
             {
                 "objects" :[
-                    {"pool":"normalPool","from":0,to:4},
-                    {"pool":"soldierPool","from":8,to:14},
-                    {"pool":"rangePool","from":0,to:3},
                     {"id": 8,"count":1,skill:[{id:177}]}
                 ]
             },
             {
                 "objects" :[
-                    {"pool":"normalPool","from":0,to:4},
-                    {"pool":"soldierPool","from":8,to:14},
-                    {"pool":"rangePool","from":0,to:3},
                     {"id": 8,"count":1,skill:[{id:174}]}
                 ]
             },
             {
                 "objects" :[
-                    {"pool":"normalPool","from":0,to:4},
-                    {"pool":"soldierPool","from":8,to:14},
-                    {"pool":"rangePool","from":0,to:3},
                     {"id": 8,"count":1,skill:[{id:181}]}
                 ]
             },
             {
                 "objects" :[
-                    {"pool":"normalPool","from":0,to:4},
-                    {"pool":"soldierPool","from":8,to:14},
-                    {"pool":"rangePool","from":0,to:3},
                     {"id": 8,"count":1,skill:[{id:184}]}
                 ]
             },
             {
                 "objects" :[
-                    {"pool":"normalPool","from":0,to:4},
-                    {"pool":"soldierPool","from":8,to:14},
-                    {"pool":"rangePool","from":0,to:3},
                     {"id": 8,"count":1,skill:[{id:187}]}
                 ]
             },
             {
                 "objects" :[
-                    {"pool":"normalPool","from":0,to:4},
-                    {"pool":"soldierPool","from":8,to:14},
-                    {"pool":"rangePool","from":0,to:3},
                     {"id": 8,"count":1,skill:[{id:188}]}
                 ]
             },
             {
                 "objects" :[
-                    {"pool":"normalPool","from":0,to:4},
-                    {"pool":"soldierPool","from":8,to:14},
-                    {"pool":"rangePool","from":0,to:3},
                     {"id": 8,"count":1,skill:[{id:185}]}
                 ]
             },
             {
                 "objects" :[
-                    {"pool":"normalPool","from":0,to:4},
-                    {"pool":"soldierPool","from":8,to:14},
-                    {"pool":"rangePool","from":0,to:3},
                     {"id": 8,"count":1,skill:[{id:182}]}
                 ]
             }
