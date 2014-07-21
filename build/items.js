@@ -9,11 +9,11 @@ exports.data = [
 		"stack": 99,
 		"sellprice": 50,
 		"transPrize": [
-			{
-				"type": 0,
-				"value": 853,
-				"count": 1
-			}
+            {
+                "type": 0,
+                "value": 853,
+                "count": 1
+            }
 		]
 	},
 	{
@@ -19960,7 +19960,7 @@ exports.data = [
 	},
 	{
 		"classId": 538,
-		"label": "小瓶活力剂",
+		"label": "小瓶活力药剂",
 		"icon": "item-energy1.png",
 		"category": 0,
 		"subcategory": 1,
@@ -19974,7 +19974,7 @@ exports.data = [
 	},
 	{
 		"classId": 539,
-		"label": "大瓶活力剂",
+		"label": "大瓶活力药剂",
 		"icon": "item-energy2.png",
 		"category": 0,
 		"subcategory": 1,
@@ -27937,44 +27937,34 @@ exports.data = [
     },
     {
         "classId": 878,
-        "label": "圣光之翼",
-        "icon": "item-vipbox8.png",
+        "label": "xxx",
+        "icon": "xxx.png",
         "category": 1,
-        "subcategory": 16,
-        "basic_properties": {
-            "accuracy": 50
-        },
-        "description": "蕴含着神圣光芒的羽翼，能够带来强大的集中力，并且是身份的象征",
-        "effecta": [
+        "subcategory": 1,
+        "description": "侍僧们常年累月祈祷所用的xxx",
+        "effecta":[
             {
-                "part": "avatar-wing-1",
-                "file": "wing1-1.ccbi"
-            },
-            {
-                "part": "avatar-wing-2",
-                "file": "wing1-1.ccbi"
-            },
-            {
-                "part": "avatar-wing-3",
-                "file": "wing1-1.ccbi"
-            },
-            {
-                "part": "avatar-wing-4",
-                "file": "wing1-1.ccbi"
-            },
-            {
-                "part": "avatar-wing-5",
-                "file": "wing1-1.ccbi"
-            },
-            {
-                "part": "avatar-wing1",
-                "file": "wing1.ccbi"
-            },
-            {
-                "part": "avatar-wing2",
-                "file": "wing1.ccbi"
+                "part": "secondaryweapon2",
+                "file": "xxx.ccbi"
             }
         ],
-        "storeOnly": true
+        "classLimit": [
+            2
+        ],
+        "quality": 0,
+        "rank": 1,
+        "upgradeTarget": 98,
+        "basic_properties": {
+            "health": 1,
+            "attack": 1,
+            "speed": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "critical": 1
+        },
+        "autoUse": true,
+        "enhanceID": 2,
+        "forgeID": 19,
+        "forgeTarget": 146
     }
 ]
