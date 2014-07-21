@@ -422,7 +422,7 @@ generatePrize = function (cfg, dropInfo,rand) {
   return reward = dropInfo.reduce((function(r, p) {
     return r.concat(cfg[p]);
   }), []).filter(function(p) {
-    return p && Math.random() < p.rate;
+    return p && rand() < p.rate;
   }).map(function(g) {
     var e;
     e = selectElementFromWeightArray(g.prize, rand());
