@@ -874,32 +874,32 @@
               }
             }
           ];
-        }
-        return async.series([
-          function(cb) {
-            cfg.forEach(function(e) {
-              return libs.helper.getPositionOnLeaderboard(exports.LeaderboardIdx.WorldBoss, 'nobody', e.from, e.to, function(err, result) {
-                return result.board.name.forEach(function(name, idx) {
-                  var infoStr;
-                  libs.db.deliverMessage(name, e.mail);
-                  infoStr = ' from:' + e.from + ' to: ' + e.to + ' rank:' + result.board.score[idx];
-                  return logInfo({
-                    action: 'leadboradPrize',
-                    index: 1,
-                    msg: infoStr
+          return async.series([
+            function(cb) {
+              cfg.forEach(function(e) {
+                return libs.helper.getPositionOnLeaderboard(exports.LeaderboardIdx.WorldBoss, 'nobody', e.from, e.to, function(err, result) {
+                  return result.board.name.forEach(function(name, idx) {
+                    var infoStr;
+                    libs.db.deliverMessage(name, e.mail);
+                    infoStr = ' from:' + e.from + ' to: ' + e.to + ' rank:' + result.board.score[idx];
+                    return logInfo({
+                      action: 'leadboradPrize',
+                      index: 1,
+                      msg: infoStr
+                    });
                   });
                 });
               });
+              return cb();
+            }
+          ], function(err, ret) {
+            libs.sObj.notify('countersChanged', {
+              type: stageId,
+              delta: -libs.sObj.counters[stageId]
             });
-            return cb();
-          }
-        ], function(err, ret) {
-          libs.sObj.notify('countersChanged', {
-            type: stageId,
-            delta: -libs.sObj.counters[stageId]
+            return libs.sObj.counters[stageId] = 0;
           });
-          return libs.sObj.counters[stageId] = 0;
-        });
+        }
       }
     }
   };
@@ -954,6 +954,22 @@
       wxPrize: wxPrize,
       otherPrize: otherPrize
     };
+  };
+
+  exports.generatePrize = function(cfg, dropInfo) {
+    var reward;
+    if (cfg == null) {
+      return [];
+    }
+    return reward = dropInfo.reduce((function(r, p) {
+      return r.concat(cfg[p]);
+    }), []).filter(function(p) {
+      return p && Math.random() < p.rate;
+    }).map(function(g) {
+      var e;
+      e = selectElementFromWeightArray(g.prize, Math.random());
+      return e;
+    });
   };
 
   updateLockStatus = function(curStatus, target, config) {
