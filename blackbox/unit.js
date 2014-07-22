@@ -19,7 +19,7 @@
 
     Unit.prototype.calculatePower = function() {
       var ret;
-      ret = this.health + this.attack * 6 + this.speed * 2 + this.critical * 2 + this.strong * 2 + this.reactivity * 2 + this.accuracy * 2 + (this.level - 1) * 40;
+      ret = this.health + this.attack * 6 + this.speed * 2 + this.critical * 2 + this.strong * 2 + this.reactivity * 2 + this.accuracy * 2;
       if (ret) {
         return ret;
       } else {
