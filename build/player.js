@@ -317,6 +317,7 @@
           return pValue.concat(_this.removeItem(null, null, _this.queryItemSlot(e)));
         };
       })(this), ret);
+      this.createHero();
       return ret;
     };
 
@@ -489,10 +490,13 @@
       this.installObserver('countersChanged');
       this.installObserver('stageChanged');
       this.installObserver('winningAnPVP');
+      helperLib.assignLeaderboard(this, helperLib.LeaderboardIdx.Arena);
+      if (this.counters['worldBoss'] == null) {
+        this.counters['worldBoss'] = {};
+      }
       if (this.isNewPlayer) {
         this.isNewPlayer = false;
       }
-      helperLib.assignLeaderboard(this, 3);
       this.inventory.validate();
       if (this.hero != null) {
         this.updateMercenaryInfo();
@@ -1329,7 +1333,10 @@
                   break;
                 case "countUp":
                   if (p.target === 'server') {
-                    gServerObject[p.counter]++;
+                    if (gServerObject.counters[p.counter] == null) {
+                      gServerObject.counters[p.counter] = 0;
+                    }
+                    gServerObject.counters[p.counter]++;
                     gServerObject.notify('countersChanged', {
                       type: p.counter,
                       delta: 1
@@ -1341,6 +1348,13 @@
                     });
                     ret = ret.concat(this.syncCounters(true)).concat(this.syncEvent());
                   }
+                  break;
+                case "updateLeaderboard":
+                  if (this.counters['worldBoss'][p.counter] == null) {
+                    this.counters['worldBoss'][p.counter] = 0;
+                  }
+                  this.counters['worldBoss'][p.counter] += p.delta;
+                  helperLib.assignLeaderboard(this, p.boardId);
               }
           }
         }
