@@ -39455,13 +39455,13 @@ exports.data = [
                     {
                         "id": 213,
                         "count":1,
-                        "pos":12,
                         "keyed":true
                     },
                     {
                         "id": 214,
                         "count":2,
-                        skill:[{id:27}]
+                        skill:[{id:27}],
+                        "keyed":true
                     }
                 ],
                 "exit": 29,
@@ -39473,5 +39473,5 @@ exports.data = [
             ],
         "prizeWxp":0,"prizeGold":1000, "prizeXp":0,
         "wxpRate":1,"goldRate":1, "xpRate":1,
-        "rank":300}
+        "rank":180}
 ];

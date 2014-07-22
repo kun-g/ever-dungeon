@@ -2183,7 +2183,7 @@ var data = [
         "stage":[
             {
                 "stageId": 133,
-                "cost": 0,
+                "cost": 10,
                 "team": 3,
                 "hidden":false,
                 "dungeon": 127,
