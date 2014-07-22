@@ -27940,7 +27940,7 @@ exports.data = [
         "label": "圣光之翼",
         "icon": "item-wing.png",
         "category": 1,
-        "subcategory": 15,
+        "subcategory": 16,
         "basic_properties": {
             "accuracy": 50
         },
@@ -27975,6 +27975,7 @@ exports.data = [
                 "file": "wing1.ccbi"
             }
         ],
-        "storeOnly": true
+        "storeOnly": true,
+        "expiration": {day: 7}
     }
 ]
