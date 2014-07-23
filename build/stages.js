@@ -48,7 +48,6 @@ var data = [
 		"stage":[
             {
 				"stageId": 1,
-                "sweepPower":200,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -62,7 +61,6 @@ var data = [
             },
             {
                 "stageId": 2,
-                "sweepPower":200,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -77,7 +75,6 @@ var data = [
             },
             {
                 "stageId": 3,
-                "sweepPower":200,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -91,7 +88,6 @@ var data = [
             },
             {
                 "stageId": 4,
-                "sweepPower":200,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -105,7 +101,6 @@ var data = [
             },
             {
                 "stageId": 5,
-                "sweepPower":200,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -119,7 +114,6 @@ var data = [
             },
             {
                 "stageId": 6,
-                "sweepPower":200,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -133,7 +127,6 @@ var data = [
             },
             {
                 "stageId": 7,
-                "sweepPower":200,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -147,7 +140,6 @@ var data = [
             },
             {
                 "stageId":78,
-                "sweepPower":29999,
                 "cost":10,
                 "dungeon":64,
                 "isInfinite":true,
@@ -172,7 +164,6 @@ var data = [
 "stage":[
 {
 "stageId": 1,
-    "sweepPower":200,
 "cost": 15,
 "team": 1,
 "hidden":false,
@@ -186,7 +177,6 @@ var data = [
 },
 {
 "stageId": 2,
-    "sweepPower":200,
 "cost": 15,
 "team": 1,
 "hidden":false,
@@ -209,7 +199,6 @@ var data = [
 },
 {
 "stageId": 3,
-    "sweepPower":200,
 "cost": 15,
 "team": 1,
 "hidden":false,
@@ -231,7 +220,6 @@ var data = [
 },
 {
 "stageId": 4,
-    "sweepPower":200,
 "cost": 15,
 "team": 2,
 "hidden":false,
@@ -245,7 +233,6 @@ var data = [
 },
 {
 "stageId": 5,
-    "sweepPower":200,
 "cost": 15,
 "team": 2,
 "hidden":false,
@@ -259,7 +246,6 @@ var data = [
 },
 {
 "stageId": 6,
-    "sweepPower":200,
 "cost": 15,
 "team": 3,
 "hidden":false,
@@ -273,7 +259,6 @@ var data = [
 },
 {
 "stageId": 7,
-    "sweepPower":200,
 "cost": 15,
 "team": 3,
 "hidden":false,
@@ -287,7 +272,6 @@ var data = [
 },
 {
 "stageId":78,
-    "sweepPower":29999,
 "cost":10,
 "dungeon":64,
 "isInfinite":true,
@@ -1689,7 +1673,6 @@ var data = [
             },
             {
                 "stageId":103,
-                "sweepPower":29999,
                 "cost":10,
                 "dungeon":64,
                 "isInfinite":true,
