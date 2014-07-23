@@ -4131,7 +4131,7 @@ exports.data = [
         "config": {
             "triggerCondition": [
                 {"type" :"event", "event":"onTarget" },
-                { "type": "targetMutex", "mutex": "attack" },
+                { "type": "Mutex", "mutex": "attack" },
                 { "type": "chance", "chance": 0.8 }
             ],
             "targetSelection":{
