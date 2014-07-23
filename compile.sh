@@ -85,7 +85,7 @@ else
 fi
 
 cd data
-git checkout $SubModuleData
+#git checkout $SubModuleData
 
 if [ "$1" = "all" ]
 then
