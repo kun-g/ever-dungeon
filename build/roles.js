@@ -7700,5 +7700,54 @@ exports.data = [
         "dropInfo": [
 
         ]
+    },
+    {
+        "classId": 215,
+        "className": "测试狼王",
+        "faction": "monster",
+        "classType": 1,
+        "avatar": "enemy-wolfboss.ccbi",
+        "property": {
+            "health": 10,
+            "attack": 0.6,
+            "critical": 10,
+            "strong": 20,
+            "accuracy": 60,
+            "reactivity": -40,
+            "speed": 20,
+            "counterAttack": true,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 1.5,
+            "attack": 0.4,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundSpawn": "tulang.mp3",
+        "soundWound": "tulangwound.mp3",
+        "soundAttack": "tulangattack.mp3",
+        "soundDie": "tulangdie.mp3",
+        "effectAttack": 31,
+        "scale": 1.2,
+        "skill": [
+            {
+                "id": 163,
+                "level": 1
+            },
+            {
+                "id": 180,
+                "level": 1
+            },
+            {
+                "id": 184,
+                "level": 1
+            }
+        ]
     }
 ]
