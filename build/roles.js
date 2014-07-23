@@ -7703,12 +7703,12 @@ exports.data = [
     },
     {
         "classId": 215,
-        "className": "测试狼王",
+        "className": "NB蜘蛛",
         "faction": "monster",
         "classType": 1,
-        "avatar": "enemy-wolfboss.ccbi",
+        "avatar": "enemy-spider1.ccbi",
         "property": {
-            "health": 10,
+            "health": 30,
             "attack": 0.6,
             "critical": 10,
             "strong": 20,
@@ -7729,12 +7729,11 @@ exports.data = [
             "reactivity": 1,
             "speed": 1
         },
-        "soundSpawn": "tulang.mp3",
-        "soundWound": "tulangwound.mp3",
-        "soundAttack": "tulangattack.mp3",
-        "soundDie": "tulangdie.mp3",
-        "effectAttack": 31,
-        "scale": 1.2,
+        "soundSpawn": "zhizhu.mp3",
+        "soundWound": "zhizhuwound.mp3",
+        "soundAttack": "zhizhuattack.mp3",
+        "soundDie": "zhizhudie.mp3",
+        "effectAttack": 9,
         "skill": [
             {
                 "id": 163,
@@ -7749,5 +7748,5 @@ exports.data = [
                 "level": 1
             }
         ]
-    }
+    },
 ]

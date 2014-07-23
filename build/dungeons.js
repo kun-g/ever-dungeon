@@ -39444,7 +39444,12 @@ exports.data = [
                     {"pool":"rangePool","from":0,to:1},
                     {"pool":"elitePool","count":1},
                     {"id": 149,"from":0,to:2},
-                    {"id": 215,"count":1}
+                    {
+                        "id": 215,
+                        "count":1,
+                        skill:[{id:27}],
+                        "keyed":true
+                    }
                 ]
             },
             {
