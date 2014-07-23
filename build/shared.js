@@ -56,7 +56,7 @@ RET_ExceedMaxEnhanceLevel = 19;
 RET_SyncError = 20;
 RET_EnhanceFailed = 21;
 RET_DungeonNotExist = 22;
-RET_StageILocked = 23;
+RET_StageIsLocked = 23;
 RET_AppVersionNotMatch = 24;
 RET_ResourceVersionNotMatch = 25;
 RET_AccountHaveNoHero = 26;
@@ -166,7 +166,6 @@ EquipSlot_StoreSuit = 12;//套装
 EquipSlot_StoreHead = 13;//头盔
 EquipSlot_StoreHair = 14;//发型
 EquipSlot_StoreGear = 15;//头饰
-EquipSlot_StoreBack = 16;//背部
 
 /*** 装备类型 ***/
 ITEMSTATUS_NONE = 0;
