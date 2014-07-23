@@ -54,10 +54,7 @@ function initiateTrinLogger() {
   };
   function trinLoggerErrorHandler () {
     logger.tr_agent = null;
-    setTimeout(function (err) {
-      logError({msg:"Try to reconnect to trin logger.", error: err});
-      initiateTrinLogger();
-    }, 10000);
+    setTimeout(function (err) { initiateTrinLogger(); }, 10000);
   }
   socket.on('close', trinLoggerErrorHandler);
   socket.on('error', trinLoggerErrorHandler);
@@ -67,10 +64,7 @@ function initiateFluentLogger() {
   logger.td_agent.configure('td.game', {host: 'localhost', port: 9527});
   logger.td_agent.on('error', function (err) {
     logger.td_agent = null;
-    setTimeout(function () {
-      logError({msg:"Try to reconnect to fluent.", error: err});
-      initiateFluentLogger();
-    }, 10000);
+    setTimeout(function () { initiateFluentLogger(); }, 10000);
   });
 }
 
@@ -166,7 +160,12 @@ function paymentHandler (request, response) {
     });
   } else if (request.url.substr(0, 5) === '/911?') {
     out = urlLib.parse(request.url, true).query;
-    var appKey = 'd30d9f0f53e2654274505e25c27913fe709eb1ad6265e5c5';
+    var appKey = '';
+    if (out.AppId == '115411') {
+      appKey = '77bcc1c2b9cf260b12f124d1c280ae1de639b89e127842b1';
+    } else if (out.AppId == '112988') {
+      appKey = 'd30d9f0f53e2654274505e25c27913fe709eb1ad6265e5c5';
+    }
     var sign = out.AppId+out.Act+out.ProductName+out.ConsumeStreamId+out.CooOrderSerial+
       out.Uin+out.GoodsId+out.GoodsInfo+out.GoodsCount+out.OriginalMoney+out.OrderMoney+
       out.Note+out.PayStatus+out.CreateTime+appKey;
