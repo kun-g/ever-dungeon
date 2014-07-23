@@ -44,7 +44,7 @@
             result = JSON.parse(chunk);
             logInfo({
               action: 'login',
-              type: LOGIN_ACCOUNT_TYPE_91,
+              type: passportType,
               code: result
             });
             if (result.ErrorCode === '1') {

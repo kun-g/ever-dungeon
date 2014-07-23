@@ -4130,15 +4130,16 @@ exports.data = [
         "label":"二次攻击",
         "config": {
             "triggerCondition": [
-                {"type" :"event", "event":"onPhysicalDamage" },
+                {"type" :"event", "event":"onTarget" },
+                { "type": "targetMutex", "mutex": "attack" },
                 { "type": "chance", "chance": 0.8 }
             ],
             "targetSelection":{
-                "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"},{"type":"shuffle"},{"type":"count","count":1}]
+                "pool": "target",
+                "filter": [{"type":"alive"},{"type":"visible"}]
             },
             "action": [
-                {"type": "delay","delay":0.5},
+                {"type": "setMutex", "mutex": "attack", "count": 1 },
                 {"type": "attack"}
             ]
         }
@@ -4155,7 +4156,7 @@ exports.data = [
                 "filter": [{"type":"alive"},{"type":"visible"}]
             },
             "action": [
-                { "type": "installSpell", "spell": 176}
+                { "type": "installSpell", "spell": 182}
             ]
         }
     },
