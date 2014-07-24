@@ -330,7 +330,6 @@
       var cfg, k, t, v, _i, _len, _ref5;
       this.effectCounter = 0;
       this.killingInfo = [];
-      this.prizeInfo = [];
       this.currentLevel = -1;
       this.cardStack = CardStack(5);
       this.actionLog = [];
@@ -2695,31 +2694,16 @@
     },
     DropPrize: {
       callback: function(env) {
-        var drop, dropID, showPrize;
+        var dropID;
         dropID = env.variable('dropID');
         if (dropID == null) {
           dropID = env.variable('me').dropPrize;
         }
-        showPrize = env.variable('showPrize');
         if (dropID != null) {
-          if (showPrize) {
-            return drop = generatePrize(queryTable(TABLE_DROP), env.variable('cid', drop.type), env.dungeon.prizeInfo = env.dungeon.prizeInfo.concat(drop, [dropID], evn.rand));
-          } else {
-            return env.dungeon.killingInfo.push({
-              dropInfo: dropID
-            });
-          }
+          return env.dungeon.killingInfo.push({
+            dropInfo: dropID
+          });
         }
-      },
-      output: function(env) {
-        return [
-          {
-            id: ACT_DropItem,
-            spl: env.variable('motion'),
-            act: env.variable('ref'),
-            cid: env.variable('cid')
-          }
-        ];
       }
     },
     DropItem: {
