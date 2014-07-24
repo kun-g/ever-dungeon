@@ -4131,7 +4131,7 @@ exports.data = [
         "config": {
             "triggerCondition": [
                 {"type" :"event", "event":"onTarget" },
-                { "type": "Mutex", "mutex": "attack" },
+                { "type": "targetMutex", "mutex": "attack" },
                 { "type": "chance", "chance": 0.8 }
             ],
             "targetSelection":{
@@ -4139,7 +4139,7 @@ exports.data = [
                 "filter": [{"type":"alive"},{"type":"visible"}]
             },
             "action": [
-                {"type": "setMutex", "mutex": "attack", "count": 1 },
+                {"type": "setTargetMutex", "mutex": "attack", "count": 1 },
                 {"type": "attack"}
             ]
         }
@@ -4202,7 +4202,7 @@ exports.data = [
         "label":"传送2",
         "config": {
             "triggerCondition": [
-                {"type" :"event", "event":"onTurnEnd" },
+                {"type" :"event", "event":"onBattleTurnEnd" },
                 {"type":"alive"},
                 { "type": "chance", "chance":0.5 }
             ],

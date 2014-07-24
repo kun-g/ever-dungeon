@@ -7712,7 +7712,7 @@ exports.data = [
             "attack": 0.6,
             "critical": 10,
             "strong": 20,
-            "accuracy": 60,
+            "accuracy": 80,
             "reactivity": -40,
             "speed": 20,
             "counterAttack": true,
@@ -7736,11 +7736,11 @@ exports.data = [
         "effectAttack": 9,
         "skill": [
             {
-                "id": 163,
+                "id": 180,
                 "level": 1
             },
             {
-                "id": 180,
+                "id": 187,
                 "level": 1
             },
             {
@@ -7748,5 +7748,5 @@ exports.data = [
                 "level": 1
             }
         ]
-    },
+    }
 ]
