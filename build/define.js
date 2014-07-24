@@ -53,6 +53,7 @@ logError = function(log) {
   if (log.err != null || log.err != undefined){
     log.err = JSON.stringify(log.err);
     print('Error', log); 
+  }
 };
 logInfo = function(log) { print('Info', log); };
 logUser = function(log) { print('User', log); };
