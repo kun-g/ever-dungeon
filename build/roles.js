@@ -7627,11 +7627,9 @@ exports.data = [
             "reactivity": 1,
             "speed": 1
         },
-        "soundSpawn": "shanzeitoumu.mp3",
         "soundWound": "shanzeiroumuwound.mp3",
-        "soundAttack": "shanzeitoumuattack.mp3",
         "soundDie": "shanzeitoumudie.mp3",
-        "effectAttack": 8,
+        "effectAttack": 10,
         "skill": [
             {
                 "id":159,

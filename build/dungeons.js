@@ -139,7 +139,7 @@ exports.data = [
         "dungeonId": 1,
         "levelCount" :6 ,
         "pool":{
-            "normalPool":[
+            "normalPool":{ "objects": [
                 {
                     "id":170,
                     "weight":5
@@ -172,7 +172,7 @@ exports.data = [
                     "id":172,
                     "weight":5
                 }
-            ]
+            ]}
         },
         "rank": 1,
         "levels" :[
@@ -311,7 +311,7 @@ exports.data = [
         "rank": 1,
         "levelCount" : 6,
         "pool":{
-            "normalPool":[
+            "normalPool":{"objects": [
                 {
                     "id":170,
                     "weight":5
@@ -344,7 +344,7 @@ exports.data = [
                     "id":172,
                     "weight":5
                 }
-            ]
+            ]}
         },
         "levels" :[
             {    
@@ -503,7 +503,7 @@ exports.data = [
         "dungeonId": 3,
         "levelCount" : 6,
         "pool":{
-            "normalPool":[
+            "normalPool":{"objects": [
                 {
                     "id":170,
                     "weight":5
@@ -536,7 +536,7 @@ exports.data = [
                     "id":172,
                     "weight":5
                 }
-            ]
+            ] }
         },
         "rank": 2,
         "levels" :[
@@ -741,7 +741,7 @@ exports.data = [
         "dungeonId": 4,
         "levelCount" : 6,
         "pool":{
-            "normalPool":[
+            "normalPool":{"objects": [
                 {
                     "id":170,
                     "weight":5
@@ -774,7 +774,7 @@ exports.data = [
                     "id":172,
                     "weight":5
                 }
-            ]
+            ]}
         },
         "rank": 3,
         "levels" :[
@@ -1025,7 +1025,7 @@ exports.data = [
         "dungeonId": 5,
         "levelCount" : 6,
         "pool":{
-            "normalPool":[
+            "normalPool":{"objects": [
                 {
                     "id":170,
                     "weight":5
@@ -1058,7 +1058,7 @@ exports.data = [
                     "id":172,
                     "weight":5
                 }
-            ]
+            ] }
         },
          
         "rank": 4,
@@ -1189,7 +1189,7 @@ exports.data = [
         "rank": 4,
         "levelCount" : 6,
         "pool":{
-            "normalPool":[
+            "normalPool":{"objects": [
                 {
                     "id":170,
                     "weight":5
@@ -1222,7 +1222,7 @@ exports.data = [
                     "id":172,
                     "weight":5
                 }
-            ]
+            ]}
         },
          
         "levels" :[
@@ -1383,7 +1383,7 @@ exports.data = [
         "dungeonId": 7,
         "levelCount" : 6,
         "pool":{
-            "normalPool":[
+            "normalPool":{"objects": [
                 {
                     "id":170,
                     "weight":3
@@ -1424,7 +1424,7 @@ exports.data = [
                     "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185, 
                     "weight":3
                 }
-            ]
+            ] }
         },
          
         "rank": 5,
