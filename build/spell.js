@@ -711,7 +711,7 @@
                 me: this,
                 showPrize: a.showPrize,
                 motion: a.motion,
-                cid: me.ref
+                cid: this.ref
               });
             }
             break;
