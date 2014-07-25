@@ -246,41 +246,43 @@
         }
         idList.forEach(function(c) {
           var k, u, v, _ref7, _ref8;
-          u = {};
-          for (k in c) {
-            v = c[k];
-            if (k !== 'levels') {
+          if (c != null) {
+            u = {};
+            for (k in c) {
+              v = c[k];
+              if (k !== 'levels') {
+                u[k] = v;
+              }
+            }
+            for (k in proList) {
+              v = proList[k];
               u[k] = v;
             }
-          }
-          for (k in proList) {
-            v = proList[k];
-            u[k] = v;
-          }
-          if (levelOtherKey[lConfig.id] != null) {
-            _ref7 = levelOtherKey[lConfig.id];
-            for (k in _ref7) {
-              v = _ref7[k];
+            if (levelOtherKey[lConfig.id] != null) {
+              _ref7 = levelOtherKey[lConfig.id];
+              for (k in _ref7) {
+                v = _ref7[k];
+                u[k] = v;
+              }
+            }
+            _ref8 = mapDiff(r, ['pool', 'levels', 'count']);
+            for (k in _ref8) {
+              v = _ref8[k];
               u[k] = v;
             }
-          }
-          _ref8 = mapDiff(r, ['pool', 'levels', 'count']);
-          for (k in _ref8) {
-            v = _ref8[k];
-            u[k] = v;
-          }
-          u.count = count;
-          if (r.pos) {
-            if (typeof r.pos === 'number') {
-              u.pos = r.pos;
+            u.count = count;
+            if (r.pos) {
+              if (typeof r.pos === 'number') {
+                u.pos = r.pos;
+              }
+              if (Array.isArray(r.pos)) {
+                u.pos = selectPos(r.pos, lConfig);
+              }
+              lConfig.takenPos[r.pos] = true;
             }
-            if (Array.isArray(r.pos)) {
-              u.pos = selectPos(r.pos, lConfig);
-            }
-            lConfig.takenPos[r.pos] = true;
+            lConfig.total += count;
+            return result.push(u);
           }
-          lConfig.total += count;
-          return result.push(u);
         });
       }
       return result;
