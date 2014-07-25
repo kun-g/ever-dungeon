@@ -2708,7 +2708,11 @@
             drop = generatePrize(queryTable(TABLE_DROP), [dropID], function() {
               return env.rand();
             });
-            env.variable('cid', -1);
+            if (drop[0].type === 1) {
+              env.variable('cid', -1);
+            } else {
+              env.variable('cid', drop[0].value);
+            }
             return env.dungeon.prizeInfo = env.dungeon.prizeInfo.concat(drop);
           } else {
             return env.dungeon.killingInfo.push({
