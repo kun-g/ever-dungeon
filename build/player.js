@@ -1529,7 +1529,7 @@
                   ret: RET_NoKey
                 };
               }
-              prz = generatePrize(queryTable(TABLE_DROP), [item.dropId]);
+              prz = helperLib.generatePrize(queryTable(TABLE_DROP), [item.dropId]);
               prize = this.claimPrize(prz);
               if (!prize) {
                 return {
@@ -2003,8 +2003,7 @@
       gr = ((_ref7 = cfg.goldRate) != null ? _ref7 : 1) * percentage;
       xr = ((_ref8 = cfg.xpRate) != null ? _ref8 : 1) * percentage;
       wr = ((_ref9 = cfg.wxpRate) != null ? _ref9 : 1) * percentage;
-      prize = generatePrize(queryTable(TABLE_DROP), dropInfo);
-      prize = prize.concat(dungeon.prizeInfo);
+      prize = helperLib.generatePrize(queryTable(TABLE_DROP), dropInfo);
       if (!dungeon.isSweep) {
         if (cfg.prizeGold) {
           prize.push({

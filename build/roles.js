@@ -173,11 +173,7 @@ exports.data = [
 			{
 				"id": 29,
 				"level": 1
-			},
-      {
-        "id": 154,
-        "level" : 1
-      }
+			}
 		]
 	},
 	{
@@ -7631,11 +7627,9 @@ exports.data = [
             "reactivity": 1,
             "speed": 1
         },
-        "soundSpawn": "shanzeitoumu.mp3",
         "soundWound": "shanzeiroumuwound.mp3",
-        "soundAttack": "shanzeitoumuattack.mp3",
         "soundDie": "shanzeitoumudie.mp3",
-        "effectAttack": 8,
+        "effectAttack": 10,
         "skill": [
             {
                 "id":159,
@@ -7703,54 +7697,6 @@ exports.data = [
         ],
         "dropInfo": [
 
-        ]
-    },
-    {
-        "classId": 215,
-        "className": "NB蜘蛛",
-        "faction": "monster",
-        "classType": 1,
-        "avatar": "enemy-spider1.ccbi",
-        "property": {
-            "health": 30,
-            "attack": 0.6,
-            "critical": 10,
-            "strong": 20,
-            "accuracy": 100,
-            "reactivity": -40,
-            "speed": 20,
-            "counterAttack": true,
-            "exp": 0,
-            "gold": 0
-        },
-        "xproperty": {
-            "balance": 0.1,
-            "health": 1.5,
-            "attack": 0.4,
-            "critical": 1,
-            "strong": 1,
-            "accuracy": 1.5,
-            "reactivity": 1,
-            "speed": 1
-        },
-        "soundSpawn": "zhizhu.mp3",
-        "soundWound": "zhizhuwound.mp3",
-        "soundAttack": "zhizhuattack.mp3",
-        "soundDie": "zhizhudie.mp3",
-        "effectAttack": 9,
-        "skill": [
-            {
-                "id": 178,
-                "level": 1
-            },
-            {
-                "id": 188,
-                "level": 1
-            },
-            {
-                "id": 173,
-                "level": 1
-            }
         ]
     }
 ]
