@@ -938,6 +938,9 @@
             if (killTimes == null) {
               killTimes = 0;
             }
+            if (killTimes === 0) {
+              result.position = 9999;
+            }
             ret = {
               REQ: rpcID,
               RET: RET_OK
