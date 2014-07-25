@@ -710,7 +710,8 @@
                 dropID: a.dropID,
                 me: this,
                 showPrize: a.showPrize,
-                motion: a.motion
+                motion: a.motion,
+                cid: me.ref
               });
             }
             break;
