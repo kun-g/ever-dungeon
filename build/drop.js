@@ -10,8 +10,9 @@ exports.data = [
 			"prize": [
 				{
 					"weight": 2,
-					"type": 1,
-					"count": 100
+					"type": 0,
+					"count": 100,
+          value:853,
 				}
 			]
 		}

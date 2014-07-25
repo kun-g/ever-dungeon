@@ -3590,14 +3590,14 @@ exports.data = [
         "config": {
             "triggerCondition": [
                 { "type": "event", "event": "onBeDeathStrike" },
-                { "type": "chance", "chance": 0.1 }
+//                { "type": "chance", "chance": 0.1 }
             ],
             "targetSelection":{
                 "pool":"self",
                 "filter": [{"type":"alive"},{"type": "visible"}]
             },
             "action": [
-                { "type": "dropPrize"},
+                { "type": "dropPrize",showPrize:true,dropID:5,motion:1},
                 {"type":"delay","delay":0.3},
                 {"type": "playEffect","effect":49,"pos":"self"},
                 {"type":"delay"},

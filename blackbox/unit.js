@@ -390,7 +390,7 @@
       cfg = queryTable(TABLE_ROLE, config.id);
     }
     if (cfg == null) {
-      throw Error('No such an unit:' + (config != null ? config.id : void 0));
+      throw Error('No such an unit:' + (config != null ? config.id : void 0) + ' cfg: ' + config);
     }
     switch (cfg.classType) {
       case Unit_Enemy:
