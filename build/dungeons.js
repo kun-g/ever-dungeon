@@ -314,35 +314,35 @@ exports.data = [
             "normalPool":{
               objects:[
                 {
-                    "id":211
+                    "id":211,
                     "weight":5
                 },
                 {
-                    "id":211
+                    "id":211,
                     "weight":1
                 },
                 {
-                    "id":211
+                    "id":211,
                     "weight":5
                 },
                 {
-                    "id":211
+                    "id":211,
                     "weight":1
                 },
                 {
-                    "id":211
+                    "id":211,
                     "weight":5
                 },
                 {
-                    "id":211
+                    "id":211,
                     "weight":5
                 },
                 {
-                    "id":211 
+                    "id":211, 
                     "weight":1
                 },
                 {
-                    "id":211
+                    "id":211,
                     "weight":5
                 }
             ],
@@ -353,19 +353,19 @@ exports.data = [
             {    
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
-                        "id":211
+                        "id":211,
                         "count":3
                     },
                     {
-                        "id":211
+                        "id":211,
                         "count":2
                     },
                     {
-                        "id":211
+                        "id":211,
                         "count":1
                     },
                     {
-                        "id":211
+                        "id":211,
                         "count":2
                     }
                 ],
@@ -374,19 +374,19 @@ exports.data = [
             {     
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
-                        "id":211
+                        "id":211,
                         "count":3
                     },
                     {
-                        "id":211
+                        "id":211,
                         "count":1
                     },
                     {
-                        "id":211
+                        "id":211,
                         "count":2
                     },
                     {
-                        "id":211
+                        "id":211,
                         "count":2
                     }
                 ],
@@ -395,23 +395,23 @@ exports.data = [
             {    
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
-                        "id":211
+                        "id":211,
                         "count":2
                     },
                     {
-                        "id":211
+                        "id":211,
                         "count":1
                     },
                     {
-                        "id":211
+                        "id":211,
                         "count":2
                     },
                     {
-                        "id":211
+                        "id":211,
                         "count":2
                     },
                     {
-                        "id":211
+                        "id":211,
                         "count":1,
                         "keyed":true
                     }
@@ -422,23 +422,23 @@ exports.data = [
             {    
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
-                        "id":211
+                        "id":211,
                         "count":1
                     },
                     {
-                        "id":211
+                        "id":211,
                         "count":2
                     },
                     {
-                        "id":211
+                        "id":211,
                         "count":1
                     },
                     {
-                        "id":211
+                        "id":211,
                         "count":3
                     },
                     {
-                        "id":211
+                        "id":211,
                         "count":2
                     }
                 ],
@@ -448,23 +448,23 @@ exports.data = [
             {    
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
-                        "id":211
+                        "id":211,
                         "count":1
                     },
                     {
-                        "id":211
+                        "id":211,
                         "count":1
                     },
                     {
-                        "id":211
+                        "id":211,
                         "count":2
                     },
                     {
-                        "id":211
+                        "id":211,
                         "count":2
                     },
                     {
-                        "id":211
+                        "id":211,
                         "count":2
                     }
                 ],
@@ -474,27 +474,27 @@ exports.data = [
             {    
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
-                        "id":211
+                        "id":211,
                         "count":1
                     },
                     {
-                        "id":211
+                        "id":211,
                         "count":1
                     },
                     {
-                        "id":211
+                        "id":211,
                         "count":1
                     },
                     {
-                        "id":211
+                        "id":211,
                         "count":1
                     },
                     {
-                        "id":211
+                        "id":211,
                         "count":3
                     },
                     {
-                        "id":211
+                        "id":211,
                         "count":1,
                         "collectId":2001,
                         "keyed":true
