@@ -3597,7 +3597,7 @@ exports.data = [
                 "filter": [{"type":"alive"},{"type": "visible"}]
             },
             "action": [
-                { "type": "dropPrize"},
+                { "type": "dropPrize",showPrize:true,dropID:5},
                 {"type":"delay","delay":0.3},
                 {"type": "playEffect","effect":49,"pos":"self"},
                 {"type":"delay"},
