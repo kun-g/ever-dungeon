@@ -3986,22 +3986,23 @@ exports.data = [
     },
     {
         "skillId": 173,
-        "label":"狂暴",
+        "label":"加血减攻",
         "config": {
             "basic" : {
                 "spellEffect": 28
             },
-            "installAction":[
-                { "type": "setProperty",  "modifications": {"attack":{"c":6}} }
-            ],
             "triggerCondition": [
                 {"type": "property", "property":"health","to": 2000 },
-                {"type":"event","event":"onBattleTurnEnd"}
+                {"type":"event","event":"onBattleTurnEnd"},
+                {"type": "myMutex", "mutex": "jiaxuejiangong" }
             ],
             "targetSelection": {
                 "pool": "self"
             },
-            "buffType":"RoleBuff"
+            "action": [
+                {"type": "setMyMutex", "mutex": "jiaxuejiangong", "count": 9999},
+                { "type": "installSpell", "spell": 213}
+            ]
         }
     },
     {
@@ -4315,7 +4316,7 @@ exports.data = [
                 { "type": "event", "event": "onBeSpellRangeDamage" }
             ],
             "availableCondition": [
-                { "type": "effectCount","count":3 }
+                { "type": "effectCount","count": 5}
             ],
             "action": [
                 { "type": "modifyVar", "x": "damage", "formular": {"environment": {"damage":0}} }
@@ -4953,6 +4954,18 @@ exports.data = [
                 { "chance":0.25,"modifications": {"attack":{"src":{"attack":-0.4}}},"eventCount": 3, "level": 3}
             ]
         }
+    },
+    {
+        "skillId": 213,
+        "config": {
+            "installAction":[
+                { "type": "setProperty",  "modifications": {"attack":{"c":-30}} },
+                {"type": "heal", "delay":1.3,"formular": {"src":{"strong":1}, "c":5}}
+            ],
+            "buffType":"RoleBuff",
+            "availableCondition": [
+                { "type": "event", "event": "onEndBattleTurn"}
+            ]
+        }
     }
-
 ];
