@@ -51,7 +51,7 @@
     result = {};
     for (k in source) {
       v = source[k];
-      if (__indexOf.call(excludeLst, k) < 0) {
+      if (__indexOf.call(excludeLst, k) < 0 && (v != null)) {
         result[k] = v;
       }
     }
