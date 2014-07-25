@@ -2705,7 +2705,9 @@
         showPrize = env.variable('showPrize');
         if (dropID != null) {
           if (showPrize) {
-            drop = generatePrize(queryTable(TABLE_DROP), [dropID], env.rand);
+            drop = generatePrize(queryTable(TABLE_DROP), [dropID], function() {
+              return env.rand();
+            });
             env.variable('cid', drop.type);
             env.variable('ref', env.variable('me').ref);
             return env.dungeon.prizeInfo = env.dungeon.prizeInfo.concat(drop);
