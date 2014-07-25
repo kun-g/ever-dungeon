@@ -347,6 +347,7 @@ exports.data = [
                 }
             ],
               skill: [{id: 154, lv: 1}]
+            }
         },
         "levels" :[
             {    
@@ -500,7 +501,6 @@ exports.data = [
                     }
                 ],
                   skill: [{id: 154, lv: 1}]
-
             }
         ],
         "dropID": [ 9 ],
