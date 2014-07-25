@@ -3986,23 +3986,21 @@ exports.data = [
     },
     {
         "skillId": 173,
-        "label":"减攻加血",
-        "config":{
+        "label":"狂暴",
+        "config": {
             "basic" : {
                 "spellEffect": 28
             },
+            "installAction":[
+                { "type": "setProperty",  "modifications": {"attack":{"c":6}} }
+            ],
             "triggerCondition": [
-                {"type": "property", "property":"health","to": 600 },
+                {"type": "property", "property":"health","to": 2000 },
                 {"type":"event","event":"onBattleTurnEnd"}
             ],
-            "targetSelection":{
-                "pool": "self",
-                "filter": [{"type":"alive"},{"type":"visible"}]
+            "targetSelection": {
+                "pool": "self"
             },
-            "Action":[
-                { "type": "setProperty",  "modifications": {"attack":{"c":-30}} },
-                {"type": "heal", "delay":1.3,"formular": {"src":{"strong":1}, "c":5}}
-            ],
             "buffType":"RoleBuff"
         }
     },

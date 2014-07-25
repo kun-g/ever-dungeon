@@ -1,5 +1,23 @@
 #!/bin/bash
 
+OnlyCompile=0
+NotSwitchBranch=0
+
+case "$@" in
+  -n | --notswitchbranch)
+    shift
+    NotSwitchBranch=1
+    ;;
+  -c | --onlycompile)
+    shift
+    OnlyCompile=1
+    ;;
+esac
+
+#echo $NotSwitchBranch
+#echo $OnlyCompile
+#exit
+
 CurrentBranch=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
 
 while [ "$CurrentBranch" = "master" ]; do
