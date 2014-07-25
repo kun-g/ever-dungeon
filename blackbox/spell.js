@@ -712,7 +712,8 @@
                 id: 'DropPrize',
                 dropID: a.dropID,
                 me: this,
-                showPrize: showPrize
+                showPrize: showPrize,
+                motion: a.motion
               });
             }
             break;
