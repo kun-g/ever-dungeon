@@ -311,7 +311,8 @@ exports.data = [
         "rank": 1,
         "levelCount" : 6,
         "pool":{
-            "normalPool":[
+            "normalPool":{
+              objects:[
                 {
                     "id":170,
                     "weight":5
@@ -344,7 +345,8 @@ exports.data = [
                     "id":172,
                     "weight":5
                 }
-            ]
+            ],
+              skill: [{id: 154, lv: 1}]
         },
         "levels" :[
             {    
@@ -365,7 +367,8 @@ exports.data = [
                         "id": 5,
                         "count":2
                     }
-                ]
+                ],
+                  skill: [{id: 154, lv: 1}]
             },
             {     
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -385,7 +388,8 @@ exports.data = [
                         "id": 5,
                         "count":2
                     }
-                ]
+                ],
+                  skill: [{id: 154, lv: 1}]
             },
             {    
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -410,7 +414,9 @@ exports.data = [
                         "count":1,
                         "keyed":true
                     }
-                ]
+                ],
+                  skill: [{id: 154, lv: 1}]
+
             },
             {    
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -434,7 +440,9 @@ exports.data = [
                         "id": 7,
                         "count":2
                     }
-                ]
+                ],
+                  skill: [{id: 154, lv: 1}]
+
             },
             {    
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -458,7 +466,9 @@ exports.data = [
                         "id": 7,
                         "count":2
                     }
-                ]
+                ],
+                  skill: [{id: 154, lv: 1}]
+
             },
             {    
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -488,7 +498,9 @@ exports.data = [
                         "collectId":2001,
                         "keyed":true
                     }
-                ]
+                ],
+                  skill: [{id: 154, lv: 1}]
+
             }
         ],
         "dropID": [ 9 ],
