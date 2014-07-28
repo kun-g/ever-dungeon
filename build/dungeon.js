@@ -51,7 +51,7 @@
     result = {};
     for (k in source) {
       v = source[k];
-      if (__indexOf.call(excludeLst, k) < 0) {
+      if (__indexOf.call(excludeLst, k) < 0 && (v != null)) {
         result[k] = v;
       }
     }
@@ -246,41 +246,43 @@
         }
         idList.forEach(function(c) {
           var k, u, v, _ref7, _ref8;
-          u = {};
-          for (k in c) {
-            v = c[k];
-            if (k !== 'levels') {
+          if (c != null) {
+            u = {};
+            for (k in c) {
+              v = c[k];
+              if (k !== 'levels') {
+                u[k] = v;
+              }
+            }
+            for (k in proList) {
+              v = proList[k];
               u[k] = v;
             }
-          }
-          for (k in proList) {
-            v = proList[k];
-            u[k] = v;
-          }
-          if (levelOtherKey[lConfig.id] != null) {
-            _ref7 = levelOtherKey[lConfig.id];
-            for (k in _ref7) {
-              v = _ref7[k];
+            if (levelOtherKey[lConfig.id] != null) {
+              _ref7 = levelOtherKey[lConfig.id];
+              for (k in _ref7) {
+                v = _ref7[k];
+                u[k] = v;
+              }
+            }
+            _ref8 = mapDiff(r, ['pool', 'levels', 'count']);
+            for (k in _ref8) {
+              v = _ref8[k];
               u[k] = v;
             }
-          }
-          _ref8 = mapDiff(r, ['pool', 'levels', 'count']);
-          for (k in _ref8) {
-            v = _ref8[k];
-            u[k] = v;
-          }
-          u.count = count;
-          if (r.pos) {
-            if (typeof r.pos === 'number') {
-              u.pos = r.pos;
+            u.count = count;
+            if (r.pos) {
+              if (typeof r.pos === 'number') {
+                u.pos = r.pos;
+              }
+              if (Array.isArray(r.pos)) {
+                u.pos = selectPos(r.pos, lConfig);
+              }
+              lConfig.takenPos[r.pos] = true;
             }
-            if (Array.isArray(r.pos)) {
-              u.pos = selectPos(r.pos, lConfig);
-            }
-            lConfig.takenPos[r.pos] = true;
+            lConfig.total += count;
+            return result.push(u);
           }
-          lConfig.total += count;
-          return result.push(u);
         });
       }
       return result;
@@ -330,6 +332,7 @@
       var cfg, k, t, v, _i, _len, _ref5;
       this.effectCounter = 0;
       this.killingInfo = [];
+      this.prizeInfo = [];
       this.currentLevel = -1;
       this.cardStack = CardStack(5);
       this.actionLog = [];
@@ -2694,15 +2697,42 @@
     },
     DropPrize: {
       callback: function(env) {
-        var dropID;
+        var drop, dropID, showPrize;
         dropID = env.variable('dropID');
         if (dropID == null) {
           dropID = env.variable('me').dropPrize;
         }
+        showPrize = env.variable('showPrize');
         if (dropID != null) {
-          return env.dungeon.killingInfo.push({
-            dropInfo: dropID
-          });
+          if (showPrize) {
+            drop = generatePrize(queryTable(TABLE_DROP), [dropID], function() {
+              return env.rand();
+            });
+            if (drop[0].type === 1) {
+              env.variable('cid', -1);
+            } else {
+              env.variable('cid', drop[0].value);
+            }
+            return env.dungeon.prizeInfo = env.dungeon.prizeInfo.concat(drop);
+          } else {
+            return env.dungeon.killingInfo.push({
+              dropInfo: dropID
+            });
+          }
+        }
+      },
+      output: function(env) {
+        if (env.variable('cid') != null) {
+          return [
+            {
+              id: ACT_DropItem,
+              eff: env.variable('effect'),
+              spl: env.variable('motion'),
+              act: env.variable('ref'),
+              cid: env.variable('cid'),
+              pos: env.variable('pos')
+            }
+          ];
         }
       }
     },
