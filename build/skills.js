@@ -3597,9 +3597,9 @@ exports.data = [
                 "filter": [{"type":"alive"},{"type": "visible"}]
             },
             "action": [
-                { "type": "dropPrize",showPrize:true,dropID:5,motion:1,effect: 49},
                 {"type":"delay","delay":0.3},
-                {"type": "playEffect","effect":49,"pos":"self"},
+                { "type": "dropPrize",showPrize:true,dropID:5,motion:1,effect: 49},
+//                {"type": "playEffect","effect":49,"pos":"self"},
                 {"type":"delay"},
                 {"type":"kill"}]
         }
@@ -3617,7 +3617,8 @@ exports.data = [
             },
             "action": [
                 { "type": "dropPrize"},
-                {"type":"playAction","motion":1,"pos":"self"},
+                { "type": "dropPrize",showPrize:true,dropID:5,motion:1,effect: 49},
+ //               {"type":"playAction","motion":1,"pos":"self"},
                 {"type":"delay"},
                 {"type":"kill"}]
         }

@@ -14614,46 +14614,52 @@ exports.data = [
         "pool":{
             "normalPool":{"objects":[
                 {
-                    "id":170,
+                    "id":211
                     "weight":5
                 },
                 {
-                    "id":171,
+                    "id":211
                     "weight":1
                 },
                 {
-                    "id":173,
+                    "id":211
                     "weight":5
                 },
                 {
-                    "id":174,
+                    "id":211
                     "weight":1
                 },
                 {
-                    "id":176,
+                    "id":211
                     "weight":5
                 },
                 {
-                    "id":178,
+                    "id":211
                     "weight":5
                 },
                 {
-                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185, 
+                    "id":211 "weight":3}, {"id":211 "weight":2},{"id":211 "weight":2},{"id":211 "weight":2},{"id":211 "weight":2},{"id":211 "weight":2},{"id":211 
                     "weight":1
                 },
                 {
-                    "id":172,
+                    "id":211
                     "weight":5
                 }
-            ]},
+            ],
+              skill: [{id: 154, lv: 1}]
+            },
             "PoolS1":{"objects":[
-                {"id":3,"weight":2},
-                {"id":4,"weight":2},
-                {"id":5,"weight":2},
-                {"id":6,"weight":2},
-                {"id":7,"weight":2}]},
+                {"id":211"weight":2},
+                {"id":211"weight":2},
+                {"id":211"weight":2},
+                {"id":211"weight":2},
+                {"id":211"weight":2}],
+                skill: [{id: 154, lv: 1}]
+            },
             "PoolS1R":{"objects":[
-                {"id":8,"weight":2}]}
+                {"id":211"weight":2}],
+                 skill: [{id: 154, lv: 1}]
+            }
         },
         "global": [
             {id: 211,from: 1, to: 4,dropPrize:91}],
