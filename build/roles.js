@@ -173,11 +173,7 @@ exports.data = [
 			{
 				"id": 29,
 				"level": 1
-			},
-      {
-        "id": 154,
-        "level" : 1
-      }
+			}
 		]
 	},
 	{
@@ -7702,5 +7698,55 @@ exports.data = [
         "dropInfo": [
 
         ]
-    }
+    },
+    {
+        "classId": 215,
+        "className": "测试怪",
+        "faction": "monster",
+        "classType": 1,
+        "avatar": "enemy-thief13.ccbi",
+        "property": {
+            "health": 10,
+            "attack": 0.05,
+            "critical": 30,
+            "strong": -40,
+            "accuracy": 80,
+            "reactivity": 100,
+            "speed": 40,
+            "counterAttack": true,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 15,
+            "attack": 0.05,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 5,
+            "speed": 1
+        },
+        "soundWound": "daozeiwound.mp3",
+        "soundAttack": "daozeiattack.mp3",
+        "soundDie": "daozeidie.mp3",
+        "effectAttack": 8,
+        "skill": [
+            {
+                "id": 27,
+                "level": 1
+            },
+            {
+                "id": 183,
+                "level": 1
+            },
+            {
+                "id": 178,
+                "level": 1
+            }
+        ],
+        "dropInfo": [
+            90
+        ]
+    },
 ]
