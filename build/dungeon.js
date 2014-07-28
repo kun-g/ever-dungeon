@@ -2729,7 +2729,8 @@
               eff: env.variable('effect'),
               spl: env.variable('motion'),
               act: env.variable('ref'),
-              cid: env.variable('cid')
+              cid: env.variable('cid'),
+              pos: env.variable('pos')
             }
           ];
         }

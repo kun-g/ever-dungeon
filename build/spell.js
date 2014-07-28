@@ -712,7 +712,8 @@
                 showPrize: a.showPrize,
                 motion: a.motion,
                 ref: this.ref,
-                effect: a.effect
+                effect: a.effect,
+                pos: this.pos
               });
             }
             break;
