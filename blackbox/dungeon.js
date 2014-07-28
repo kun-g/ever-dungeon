@@ -2722,7 +2722,7 @@
         }
       },
       output: function(env) {
-        if (env.validate('cid') != null) {
+        if (env.variable('cid') != null) {
           return [
             {
               id: ACT_DropItem,
