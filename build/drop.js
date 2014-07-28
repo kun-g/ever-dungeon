@@ -11,7 +11,7 @@ exports.data = [
 				{
 					"weight": 2,
 					"type": 0,
-					"count": 100,
+					"count": 1,
           value:853,
 				}
 			]
