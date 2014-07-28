@@ -14614,50 +14614,50 @@ exports.data = [
         "pool":{
             "normalPool":{"objects":[
                 {
-                    "id":211
+                    "id":211,
                     "weight":5
                 },
                 {
-                    "id":211
+                    "id":211,
                     "weight":1
                 },
                 {
-                    "id":211
+                    "id":211,
                     "weight":5
                 },
                 {
-                    "id":211
+                    "id":211,
                     "weight":1
                 },
                 {
-                    "id":211
+                    "id":211,
                     "weight":5
                 },
                 {
-                    "id":211
+                    "id":211,
                     "weight":5
                 },
                 {
-                    "id":211 "weight":3}, {"id":211 "weight":2},{"id":211 "weight":2},{"id":211 "weight":2},{"id":211 "weight":2},{"id":211 "weight":2},{"id":211 
+                    "id":211, "weight":3}, {"id":211, "weight":2},{"id":211, "weight":2},{"id":211, "weight":2},{"id":211, "weight":2},{"id":211, "weight":2},{"id":211, 
                     "weight":1
                 },
                 {
-                    "id":211
+                    "id":211,
                     "weight":5
                 }
             ],
               skill: [{id: 154, lv: 1}]
             },
             "PoolS1":{"objects":[
-                {"id":211"weight":2},
-                {"id":211"weight":2},
-                {"id":211"weight":2},
-                {"id":211"weight":2},
-                {"id":211"weight":2}],
+                {"id":211,"weight":2},
+                {"id":211,"weight":2},
+                {"id":211,"weight":2},
+                {"id":211,"weight":2},
+                {"id":211,"weight":2}],
                 skill: [{id: 154, lv: 1}]
             },
             "PoolS1R":{"objects":[
-                {"id":211"weight":2}],
+                {"id":211,"weight":2}],
                  skill: [{id: 154, lv: 1}]
             }
         },
