@@ -2715,7 +2715,6 @@
             }
             return env.dungeon.prizeInfo = env.dungeon.prizeInfo.concat(drop);
           } else {
-            env.variable('cid', -1);
             return env.dungeon.killingInfo.push({
               dropInfo: dropID
             });
@@ -2723,14 +2722,17 @@
         }
       },
       output: function(env) {
-        return [
-          {
-            id: ACT_DropItem,
-            spl: env.variable('motion'),
-            act: env.variable('ref'),
-            cid: env.variable('cid')
-          }
-        ];
+        if (env.validate('cid') != null) {
+          return [
+            {
+              id: ACT_DropItem,
+              eff: env.variable('effect'),
+              spl: env.variable('motion'),
+              act: env.variable('ref'),
+              cid: env.variable('cid')
+            }
+          ];
+        }
       }
     },
     DropItem: {
