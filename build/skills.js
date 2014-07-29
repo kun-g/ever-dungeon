@@ -85,6 +85,7 @@ exports.data = [
           {"type":"alive"}
       ],
       "action": [
+        {"type": "rangeAttEff", "dey": 0.5, "eff":9},
         {"type": "modifyVar", "x": "damage" },
         {"type": "setTargetMutex", "mutex": "reinforce", "count": 1 },
         {"type": "setMyMutex", "mutex": "reinforce", "count": 1 },

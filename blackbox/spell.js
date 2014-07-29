@@ -1133,6 +1133,17 @@
                 dialogId: a.dialogId
               });
             }
+            break;
+          case 'rangeAttackEff':
+            if (typeof cmd.routine === "function") {
+              cmd.routine({
+                id: 'RangeAttackEffect',
+                dey: a.dey,
+                eff: a.eff,
+                src: this,
+                tar: target
+              });
+            }
         }
       }
       if ((thisSpell != null ? thisSpell.effectCount : void 0) != null) {

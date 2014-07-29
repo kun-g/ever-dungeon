@@ -3197,6 +3197,32 @@
             return block.getRef(-1).onEvent('onBeActivate', this);
         }
       }
+    },
+    RangeAttackEffect: {
+      output: function(env) {
+        var src, tar;
+        src = env.variable('src');
+        tar = env.variable('tar');
+        if ((src != null) && (tar != null)) {
+          return [
+            {
+              id: ACT_RangeAttackEffect,
+              dey: env.variable('dey'),
+              eff: env.variable('eff'),
+              src: {
+                act: src.ref,
+                pos: src.pos
+              },
+              tar: tar.map(function(e) {
+                return {
+                  act: e.ref,
+                  pos: e.pos
+                };
+              })
+            }
+          ];
+        }
+      }
     }
   };
 
