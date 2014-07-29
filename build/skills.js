@@ -80,7 +80,7 @@ exports.data = [
       "triggerCondition": [
         { "type": "event", "event": "onTeammateBePhysicalDamage" },
         { "type": "event", "event": "onTeammateBePhysicalRangeDamage" },
-        { "type": "chance", "chance": 0.45 },
+        { "type": "chance", "chance": 1 },
         { "type": "targetMutex", "mutex": "reinforce" },
           {"type":"alive"}
       ],
