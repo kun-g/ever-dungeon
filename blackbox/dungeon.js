@@ -3204,8 +3204,8 @@
         src = env.variable('src');
         tar = env.variable('tar');
         if ((src != null) && (tar != null)) {
-          return [
-            {
+          return tar.map(function(e) {
+            return {
               id: ACT_RangeAttackEffect,
               dey: env.variable('dey'),
               eff: env.variable('eff'),
@@ -3213,14 +3213,12 @@
                 act: src.ref,
                 pos: src.pos
               },
-              tar: tar.map(function(e) {
-                return {
-                  act: e.ref,
-                  pos: e.pos
-                };
-              })
-            }
-          ];
+              tar: {
+                act: e.ref,
+                pos: e.pos
+              }
+            };
+          });
         }
       }
     }
