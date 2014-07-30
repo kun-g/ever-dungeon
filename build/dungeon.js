@@ -2370,7 +2370,28 @@
         }
       },
       output: function(env) {
-        var flag;
+        var flag, rangeEff, src, tar;
+        if (env.variable('isRange') && (env.variable('eff') != null)) {
+          src = env.variable('src');
+          tar = env.variable('tar');
+          rangeEff = [
+            {
+              id: ACT_RangeAttackEffect,
+              dey: env.variable('dey'),
+              eff: env.variable('eff'),
+              src: {
+                act: src.ref,
+                pos: src.pos
+              },
+              tar: {
+                act: tar.ref,
+                pos: tar.pos
+              }
+            }
+          ];
+        } else {
+          rangeEff = [];
+        }
         flag = env.variable('hit') ? HP_RESULT_TYPE_HIT : HP_RESULT_TYPE_MISS;
         return [
           {
@@ -2379,7 +2400,7 @@
             ref: env.variable('tar').ref,
             res: flag
           }
-        ];
+        ].concat(rangeEff);
       }
     },
     ShiftOrder: {
@@ -3204,8 +3225,8 @@
         src = env.variable('src');
         tar = env.variable('tar');
         if ((src != null) && (tar != null)) {
-          return tar.map(function(e) {
-            return {
+          return [
+            {
               id: ACT_RangeAttackEffect,
               dey: env.variable('dey'),
               eff: env.variable('eff'),
@@ -3213,12 +3234,14 @@
                 act: src.ref,
                 pos: src.pos
               },
-              tar: {
-                act: e.ref,
-                pos: e.pos
-              }
-            };
-          });
+              tar: tar.map(function(e) {
+                return {
+                  act: e.ref,
+                  pos: e.pos
+                };
+              })
+            }
+          ];
         }
       }
     }
