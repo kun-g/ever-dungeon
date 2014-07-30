@@ -469,17 +469,23 @@
             initialData = player.dungeonData;
             if (result.RET === RET_OK && (initialData != null)) {
               replay = arg.rep;
+              logInfo('Creating Dungeon');
               dungeon = new dungeonLib.Dungeon(initialData);
+              logInfo('Initializing Dungeon');
               dungeon.initialize();
               try {
+                logInfo('Replay Dungeon');
                 dungeon.replayActionLog(replay);
               } catch (_error) {
                 err = _error;
                 status = 'Replay Failed';
                 dungeon.result = DUNGEON_RESULT_FAIL;
               } finally {
+                logInfo('Claim Dungeon Award');
                 evt = evt.concat(player.claimDungeonAward(dungeon));
+                logInfo('Releasing Dungeon');
                 player.releaseDungeon();
+                logInfo('Saving');
                 player.saveDB();
               }
             }
@@ -672,22 +678,13 @@
           account = player.accountID;
         }
         return dbLib.bindAuth(account, arg.typ, arg.id, arg.pass, function(err, account) {
-          if (account === -1) {
-            return handler([
-              {
-                REQ: rpcID,
-                RET: RET_AccountHaveNoHero
-              }
-            ]);
-          } else {
-            return handler([
-              {
-                REQ: rpcID,
-                RET: RET_OK,
-                aid: account
-              }
-            ]);
-          }
+          return handler([
+            {
+              REQ: rpcID,
+              RET: RET_OK,
+              aid: account
+            }
+          ]);
         });
       },
       args: {}

@@ -2370,28 +2370,7 @@
         }
       },
       output: function(env) {
-        var flag, rangeEff, src, tar;
-        if (env.variable('isRange') && (env.variable('eff') != null)) {
-          src = env.variable('src');
-          tar = env.variable('tar');
-          rangeEff = [
-            {
-              id: ACT_RangeAttackEffect,
-              dey: env.variable('dey'),
-              eff: env.variable('eff'),
-              src: {
-                act: src.ref,
-                pos: src.pos
-              },
-              tar: {
-                act: tar.ref,
-                pos: tar.pos
-              }
-            }
-          ];
-        } else {
-          rangeEff = [];
-        }
+        var flag;
         flag = env.variable('hit') ? HP_RESULT_TYPE_HIT : HP_RESULT_TYPE_MISS;
         return [
           {
@@ -2400,7 +2379,7 @@
             ref: env.variable('tar').ref,
             res: flag
           }
-        ].concat(rangeEff);
+        ];
       }
     },
     ShiftOrder: {
@@ -3216,32 +3195,6 @@
             break;
           case Block_Npc:
             return block.getRef(-1).onEvent('onBeActivate', this);
-        }
-      }
-    },
-    RangeAttackEffect: {
-      output: function(env) {
-        var src, tar;
-        src = env.variable('src');
-        tar = env.variable('tar');
-        if ((src != null) && (tar != null)) {
-          return [
-            {
-              id: ACT_RangeAttackEffect,
-              dey: env.variable('dey'),
-              eff: env.variable('eff'),
-              src: {
-                act: src.ref,
-                pos: src.pos
-              },
-              tar: tar.map(function(e) {
-                return {
-                  act: e.ref,
-                  pos: e.pos
-                };
-              })
-            }
-          ];
         }
       }
     }
