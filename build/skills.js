@@ -85,7 +85,6 @@ exports.data = [
           {"type":"alive"}
       ],
       "action": [
-        {"type": "rangeAttEff", "dey": 0.5, "eff":9},
         {"type": "modifyVar", "x": "damage" },
         {"type": "setTargetMutex", "mutex": "reinforce", "count": 1 },
         {"type": "setMyMutex", "mutex": "reinforce", "count": 1 },
@@ -664,7 +663,8 @@ exports.data = [
           },
           "action":[
               {"type": "rangeAttack"},
-              {"type": "playEffect","delay":1}
+     //         {"type": "playEffect","delay":1},
+              {"type": "rangeAttackEff", "dey": 1},
           ],
         "levelConfig":[
             {"effect":50},

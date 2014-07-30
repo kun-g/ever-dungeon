@@ -1135,6 +1135,9 @@
             }
             break;
           case 'rangeAttackEff':
+            if (level.effect != null) {
+              a.eff = level.effect;
+            }
             if (typeof cmd.routine === "function") {
               cmd.routine({
                 id: 'RangeAttackEffect',
