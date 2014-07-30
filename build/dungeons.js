@@ -38631,12 +38631,6 @@ exports.data = [
                     {"pool":"soldierPool","from":8,to:14},
                     {"pool":"rangePool","from":0,to:1},
                     {"pool":"elitePool","count":1},
-                    {
-                        "id": 215,
-                        "count":1,
-                        "pos": Math.floor(Math.random()*25+5),
-                        "keyed":true
-                    },
                     {"id": 149,"from":0,to:2}
                 ]
             },

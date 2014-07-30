@@ -1141,8 +1141,8 @@
             if (typeof cmd.routine === "function") {
               cmd.routine({
                 id: 'RangeAttackEffect',
-                dey: a.dey,
-                eff: a.eff,
+                dey: a.delay,
+                eff: a.effect,
                 src: this,
                 tar: target
               });

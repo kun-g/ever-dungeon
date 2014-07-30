@@ -224,5 +224,8 @@ exports.data = [
         "radian":0,
         "dirfix":true,
         "flytime":0.5
+    },
+    {	"effectId": 53,
+        "file": "effect-done.ccbi"
     }
 ]
