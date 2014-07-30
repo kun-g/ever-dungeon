@@ -678,13 +678,22 @@
           account = player.accountID;
         }
         return dbLib.bindAuth(account, arg.typ, arg.id, arg.pass, function(err, account) {
-          return handler([
-            {
-              REQ: rpcID,
-              RET: RET_OK,
-              aid: account
-            }
-          ]);
+          if (account === -1) {
+            return handler([
+              {
+                REQ: rpcID,
+                RET: RET_AccountHaveNoHero
+              }
+            ]);
+          } else {
+            return handler([
+              {
+                REQ: rpcID,
+                RET: RET_OK,
+                aid: account
+              }
+            ]);
+          }
         });
       },
       args: {}
