@@ -1136,7 +1136,7 @@
             break;
           case 'rangeAttackEff':
             if (level.effect != null) {
-              a.eff = level.effect;
+              a.effect = level.effect;
             }
             if (typeof cmd.routine === "function") {
               cmd.routine({
