@@ -719,6 +719,12 @@
             break;
           case 'rangeAttack':
           case 'attack':
+            if (level.effect != null) {
+              a.effect = level.effect;
+            }
+            if (level.delay != null) {
+              a.delay = level.delay;
+            }
             for (_l = 0, _len3 = target.length; _l < _len3; _l++) {
               t = target[_l];
               if (typeof cmd.routine === "function") {
@@ -726,7 +732,9 @@
                   id: 'Attack',
                   src: this,
                   tar: t,
-                  isRange: true
+                  isRange: true,
+                  eff: a.effect,
+                  dey: a.delay
                 });
               }
             }
@@ -1131,6 +1139,20 @@
               cmd.routine({
                 id: 'Dialog',
                 dialogId: a.dialogId
+              });
+            }
+            break;
+          case 'rangeAttackEff':
+            if (level.effect != null) {
+              a.effect = level.effect;
+            }
+            if (typeof cmd.routine === "function") {
+              cmd.routine({
+                id: 'RangeAttackEffect',
+                dey: a.delay,
+                eff: a.effect,
+                src: this,
+                tar: target
               });
             }
         }
