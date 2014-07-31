@@ -2398,7 +2398,8 @@
             act: env.variable('src').ref,
             id: ACT_ATTACK,
             ref: env.variable('tar').ref,
-            res: flag
+            res: flag,
+            rng: env.variable('isRange')
           }
         ].concat(rangeEff);
       }
