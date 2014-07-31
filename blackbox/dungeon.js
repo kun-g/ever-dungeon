@@ -2377,7 +2377,7 @@
           rangeEff = [
             {
               id: ACT_RangeAttackEffect,
-              dey: env.variable('dey'),
+              dey: env.variable('effDelay'),
               eff: env.variable('eff'),
               src: {
                 act: src.ref,
@@ -3057,6 +3057,9 @@
         ret = [];
         if (damage > 0) {
           delay = 0.3;
+          if (env.variable('hurtDelay')) {
+            delay = env.variable('hurtDelay');
+          }
           if (env.variable('delay')) {
             delay = env.variable('delay');
           }
