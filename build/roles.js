@@ -7724,7 +7724,7 @@ exports.data = [
             "critical": 1,
             "strong": 1,
             "accuracy": 1,
-            "reactivity": 1,
+            "reactivity": 3,
             "speed": 1
         },
         "soundWound": "liulangwound.mp3",
