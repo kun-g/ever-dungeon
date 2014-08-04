@@ -2202,7 +2202,8 @@
           rid: e.id,
           hp: e.health,
           ref: e.ref,
-          typ: e.type
+          typ: e.type,
+          keyed: e.keyed
         };
         if (e.attack != null) {
           eEv.dc = e.attack;
