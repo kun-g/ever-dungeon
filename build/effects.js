@@ -207,23 +207,23 @@ exports.data = [
     {
         "effectId":50,
         "file":"effect-archer-1-mainweapon.ccbi",
-        "radian":0,
+        "radian":0.2,
         "dirfix":true,
-        "flytime":0.5
+        "flytime":0.3
     },
     {
         "effectId":51,
         "file":"effect-goblin-2-mainweapon.ccbi",
-        "radian":0,
+        "radian":0.2,
         "dirfix":true,
-        "flytime":0.5
+        "flytime":0.3
     },
     {
         "effectId":52,
         "file":"effect-orcs-1-mainweapon.ccbi",
         "radian":0,
         "dirfix":true,
-        "flytime":0.5
+        "flytime":0.3
     },
     {	"effectId": 53,
         "file": "effect-done.ccbi"

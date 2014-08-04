@@ -733,9 +733,8 @@
                   src: this,
                   tar: t,
                   isRange: true,
-                  hurtDelay: a.hurtDelay,
                   eff: a.effect,
-                  effDelay: a.effDelay
+                  dey: a.delay
                 });
               }
             }

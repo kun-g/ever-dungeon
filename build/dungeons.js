@@ -14516,7 +14516,7 @@ exports.data = [
             }
         ],
         "dropID":[ 71 ],
-        "prizeWxp":10,
+        "prizeWxp":80,
         "prizeGold": 100,
         "prizeXp":100,
         "wxpRate":1,
@@ -38631,7 +38631,12 @@ exports.data = [
                     {"pool":"soldierPool","from":8,to:14},
                     {"pool":"rangePool","from":0,to:1},
                     {"pool":"elitePool","count":1},
-                    {"id": 149,"from":0,to:2}
+                    {"id": 149,"from":0,to:2},
+                    {
+                        "id": 215,
+                        "count":1,
+                        "keyed":true
+                    }
                 ]
             },
             {
