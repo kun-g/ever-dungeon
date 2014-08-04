@@ -7706,12 +7706,12 @@ exports.data = [
         "classType": 1,
         "avatar": "enemy-sword2.ccbi",
         "property": {
-            "health": 3.5,
-            "attack": 0.45,
+            "health": 5,
+            "attack": 0.5,
             "critical": 0,
             "strong": 20,
-            "accuracy": 40,
-            "reactivity": -40,
+            "accuracy": 170,
+            "reactivity": 170,
             "speed": 0,
             "counterAttack": true,
             "exp": 0,
@@ -7719,8 +7719,8 @@ exports.data = [
         },
         "xproperty": {
             "balance": 0.1,
-            "health": 1.5,
-            "attack": 0.4,
+            "health": 5,
+            "attack": 0.5,
             "critical": 1,
             "strong": 1,
             "accuracy": 1,
@@ -7737,11 +7737,11 @@ exports.data = [
                 "level": 1
             },
             {
-                "id": 190,
+                "id": 178,
                 "level": 1
             },
             {
-                "id": 191,
+                "id": 171,
                 "level": 1
             },
             {

@@ -4239,12 +4239,11 @@ exports.data = [
                 {"type" :"event", "event":"onPhysicalDamage" }
             ],
             "targetSelection":{
-                "pool": "target",
-                "filter": [{"type":"alive"},{"type":"visible"}]
+                "pool": "object",
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"not-target"}]
             },
             "action": [
-                { "type": "removeSpell", "spell": 186},
-                { "type": "installSpell", "spell": 186}
+                {"type": "damage","damageType":"Physical","delay":0.4,"formular": {"src":{"attack":0.5}}}
             ]
         }
     },
