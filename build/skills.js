@@ -3983,7 +3983,7 @@ exports.data = [
         "config": {
             "action":[
                 {"type": "playEffect","effect":28,"pos":"self"},
-                { "type": "setProperty","modifications": {"attack":{"c":25}}}
+                { "type": "setProperty","modifications": {"attack":{"c":100}}}
             ],
             "targetSelection":{ "pool":"self" },
             "uninstallAction": [
@@ -4112,7 +4112,7 @@ exports.data = [
                 {"type":"alive"}
             ],
             "targetSelection":{
-                "pool": "source",
+                "pool": "sources",
                 "filter": [{"type":"alive"},{"type":"visible"}]
             },
             "action": [
@@ -4246,6 +4246,7 @@ exports.data = [
                 "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"},{"type":"not-target"}]
             },
             "action": [
+                {"type": "playEffect","effect":0,"act":"target","delay":0.6},
                 {"type": "damage","damageType":"Spell","isRange":true,"delay":0.4,"formular": {"src":{"attack":0.5}}}
             ]
         }
