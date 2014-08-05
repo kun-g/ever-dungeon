@@ -227,5 +227,11 @@ exports.data = [
     },
     {	"effectId": 53,
         "file": "effect-done.ccbi"
+    },
+    {	"effectId": 54,
+        "file": "effect-key.ccbi"
+    },
+    {	"effectId": 55,
+        "file": "effect-arrow.ccbi"
     }
 ]
