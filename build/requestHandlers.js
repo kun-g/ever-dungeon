@@ -469,17 +469,23 @@
             initialData = player.dungeonData;
             if (result.RET === RET_OK && (initialData != null)) {
               replay = arg.rep;
+              logInfo('Creating Dungeon');
               dungeon = new dungeonLib.Dungeon(initialData);
+              logInfo('Initializing Dungeon');
               dungeon.initialize();
               try {
+                logInfo('Replay Dungeon');
                 dungeon.replayActionLog(replay);
               } catch (_error) {
                 err = _error;
                 status = 'Replay Failed';
                 dungeon.result = DUNGEON_RESULT_FAIL;
               } finally {
+                logInfo('Claim Dungeon Award');
                 evt = evt.concat(player.claimDungeonAward(dungeon));
+                logInfo('Releasing Dungeon');
                 player.releaseDungeon();
+                logInfo('Saving');
                 player.saveDB();
               }
             }

@@ -733,8 +733,9 @@
                   src: this,
                   tar: t,
                   isRange: true,
+                  hurtDelay: a.hurtDelay,
                   eff: a.effect,
-                  dey: a.delay
+                  effDelay: a.effDelay
                 });
               }
             }
