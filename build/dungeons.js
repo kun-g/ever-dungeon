@@ -38631,7 +38631,7 @@ exports.data = [
                     {"pool":"soldierPool","from":8,to:14},
                     {"pool":"rangePool","from":0,to:1},
                     {"pool":"elitePool","count":1},
-                    {"id": 149,"from":0,to:2},
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
