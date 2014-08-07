@@ -1930,7 +1930,7 @@
     },
     EnterLevel: {
       callback: function(env) {
-        var e, entrance, i, newPosition, o, _i, _j, _k, _l, _len, _len1, _len2, _m, _ref5, _ref6, _ref7, _ref8;
+        var e, entrance, heroInfo, i, newPosition, o, _i, _j, _k, _l, _len, _len1, _len2, _m, _ref5, _ref6, _ref7, _ref8;
         entrance = env.getEntrance();
         env.onEvent('onEnterLevel', this);
         if (env.isLevelInitialized()) {
@@ -1991,9 +1991,28 @@
             o.onEvent('onEnterLevel', this);
           }
         }
-        return this.routine({
+        this.routine({
           id: 'TickSpell'
         });
+        heroInfo = env.getAliveHeroes().filter(function(e) {
+          return (e != null ? e.ref : void 0) != null;
+        }).sort(function(a, b) {
+          return a.order - b.order;
+        }).map(function(h, index) {
+          var k, t, v;
+          t = {};
+          for (k in h) {
+            v = h[k];
+            t[k] = v;
+          }
+          t.order = index;
+          return t;
+        }).map(function(h) {
+          return genUnitInfo(h, true, null);
+        }).filter(function(e) {
+          return e != null;
+        });
+        return env.variable('heroInfo', heroInfo);
       },
       output: function(env) {
         var ev, h, heroInfo, positions, ret, _ref5, _ref6, _ref7, _ref8;
@@ -2023,24 +2042,7 @@
         if (((_ref8 = env.getHeroes()[3]) != null ? _ref8.health : void 0) > 0) {
           ev.pos3 = positions[3];
         }
-        heroInfo = env.getAliveHeroes().filter(function(e) {
-          return (e != null ? e.ref : void 0) != null;
-        }).sort(function(a, b) {
-          return a.order - b.order;
-        }).map(function(h, index) {
-          var k, t, v;
-          t = {};
-          for (k in h) {
-            v = h[k];
-            t[k] = v;
-          }
-          t.order = index;
-          return t;
-        }).map(function(h) {
-          return genUnitInfo(h, true);
-        }).filter(function(e) {
-          return e != null;
-        });
+        heroInfo = env.variable('heroInfo');
         ret = [ev];
         ret = ret.concat(heroInfo);
         return ret;

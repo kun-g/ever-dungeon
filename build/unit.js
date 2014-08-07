@@ -237,6 +237,7 @@
         this.attack = 1;
       }
       this.maxHP = this.health;
+      this.cache = {};
       if (flagCreation) {
         return console.log('Hero ', JSON.stringify(this));
       }
