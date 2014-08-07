@@ -3593,7 +3593,6 @@ exports.data = [
             "action": [
                 {"type":"delay"},
                 {"type": "dropPrize", "showPrize":true, "effect":49,"pos":"self"},
-                {"type":"delay"},
                 {"type":"kill"}]
         }
     },
@@ -3612,7 +3611,6 @@ exports.data = [
             "action": [
                 {"type":"delay"},
                 {"type": "dropPrize", "showPrize":true, "effect":49, "pos":"self"},
-                {"type":"delay"},
                 {"type":"kill"}]
         }
     },

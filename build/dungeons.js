@@ -3,43 +3,43 @@ exports.data = [
     "abtest":[
         {
         "dungeonId": 0,
-        "levelCount" : 1,
+        "levelCount" : 3,
         "levels" :[
-            //{
-            //    "objects" : [
-            //        {
-            //            "id": 7,
-            //            "count":5
-            //        },
-            //        {
-            //            "id": 14,
-            //            "count":2
+            {
+                "objects" : [
+                    {
+                        "id": 7,
+                        "count":5
+                    },
+                    {
+                        "id": 14,
+                        "count":2
 
-            //        }
-            //    ],
-            //    "rank": 26
-            //},
-            //{
-            //    "objects" : [
-            //        {
-            //            "id": 7,
-            //            "count":1
-            //        },
-            //        {
-            //            "id": 14,
-            //            "count":3
-            //        },
-            //        {
-            //            "id": 149,
-            //            "count":1
-            //        },
-            //        {
-            //            "id": 4,
-            //            "count":3
-            //        }
-            //    ],
-            //    "rank": 26
-            //},
+                    }
+                ],
+                "rank": 26
+            },
+            {
+                "objects" : [
+                    {
+                        "id": 7,
+                        "count":1
+                    },
+                    {
+                        "id": 14,
+                        "count":3
+                    },
+                    {
+                        "id": 149,
+                        "count":1
+                    },
+                    {
+                        "id": 4,
+                        "count":3
+                    }
+                ],
+                "rank": 26
+            },
             {
                 "objects" : [
                     {
@@ -63,54 +63,54 @@ exports.data = [
     },
     {
         "dungeonId": 0,
-        "levelCount" : 1,
+        "levelCount" : 3,
         "levels" :[
-            //{
-            //     "objects" : [
-            //        {
-            //            "id": 7,
-            //            "count":2
-            //        },
-            //        {
-            //            "id": 149,
-            //            "count":2
-            //        },
-            //        {
-            //            "id": 37,
-            //            "count":2
-            //        },
-            //        {
-            //            "id": 17,
-            //            "count":2
-            //        }
-            //    ],
-            //    "rank": 26
-            //},
-            //{
-            //     "objects" : [
-            //        {
-            //            "id": 75,
-            //            "count":2
-            //        },
-            //        {
-            //            "id": 149,
-            //            "count":2
-            //        },
-            //        {
-            //            "id": 44,
-            //            "count":2
-            //        },
-            //        {
-            //            "id": 73,
-            //            "count":2
-            //        } ,
-            //        {
-            //            "id": 18,
-            //            "count":2
-            //        }
-            //    ],
-            //    "rank": 26
-            //},
+            {
+                 "objects" : [
+                    {
+                        "id": 7,
+                        "count":2
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 37,
+                        "count":2
+                    },
+                    {
+                        "id": 17,
+                        "count":2
+                    }
+                ],
+                "rank": 26
+            },
+            {
+                 "objects" : [
+                    {
+                        "id": 75,
+                        "count":2
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 44,
+                        "count":2
+                    },
+                    {
+                        "id": 73,
+                        "count":2
+                    } ,
+                    {
+                        "id": 18,
+                        "count":2
+                    }
+                ],
+                "rank": 26
+            },
             {
                  "objects" : [
                     {
@@ -38631,7 +38631,12 @@ exports.data = [
                     {"pool":"soldierPool","from":8,to:14},
                     {"pool":"rangePool","from":0,to:1},
                     {"pool":"elitePool","count":1},
-                    {"id": 149,"from":0,to:2}
+                    {"id": 149,"from":0,to:2},
+                    {
+                        "id": 215,
+                        "count":1,
+                        "keyed":true
+                    }
                 ]
             },
             {
@@ -38650,7 +38655,6 @@ exports.data = [
                         "id": 214,
                         "count":2,
                         skill:[{id:27}],
-                        "pos": Math.floor(Math.random()*25+5),
                         "keyed":true
                     }
                 ],
