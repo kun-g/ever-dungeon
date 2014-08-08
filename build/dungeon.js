@@ -2008,7 +2008,7 @@
           t.order = index;
           return t;
         }).map(function(h) {
-          return genUnitInfo(h, true, null);
+          return genUnitInfo(h, true);
         }).filter(function(e) {
           return e != null;
         });
