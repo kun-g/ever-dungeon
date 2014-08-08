@@ -14516,7 +14516,7 @@ exports.data = [
             }
         ],
         "dropID":[ 71 ],
-        "prizeWxp":10,
+        "prizeWxp":80,
         "prizeGold": 100,
         "prizeXp":100,
         "wxpRate":1,

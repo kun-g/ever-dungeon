@@ -1885,7 +1885,7 @@
         dbLib.broadcastEvent(BROADCAST_ENHANCE, {
           who: this.name,
           what: equip.id,
-          many: level
+          many: level + 1
         });
       }
       eh = equip.enhancement.map(function(e) {
