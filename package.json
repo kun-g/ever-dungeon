@@ -7,16 +7,17 @@
     "test": "test"
   },
   "dependencies": {
-    "fluent-logger": "*",
     "async": "*",
     "bson": "*",
-    "msgpack": "*",
+    "fluent-logger": "*",
+    "gulp": "^3.8.7",
     "hiredis": "~0.1.16",
     "jshint": "~2.3.0",
+    "moment": "~2.5.0",
+    "msgpack": "*",
     "q": "*",
     "redis": "~0.10.1",
-    "strong-agent": "~0.2.20",
-    "moment": "~2.5.0"
+    "strong-agent": "~0.2.20"
   },
   "devDependencies": {
     "benchmark": "^1.0.0",
