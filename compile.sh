@@ -138,3 +138,5 @@ echo 'Commit changes branch:'$CurrentBranch @ $CurrentVersion  Server: $SubModul
 git commit -am "Commit changes branch:"$CurrentBranch" @ "$CurrentVersion" Server:"$SubModuleServer" Table:"$SubModuleData
 
 git push $RemoteRepo
+
+git push github

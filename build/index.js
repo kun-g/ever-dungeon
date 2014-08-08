@@ -49,7 +49,7 @@ function initiateTrinLogger() {
   var socket = dgram.createSocket('udp4');
   logger.tr_agent = {
     write: function (msg) {
-      socket.send(new Buffer(msg), 0, msg.length, 9528, 'localhost');
+      socket.send(new Buffer(msg), 0, msg.length, 9528, '10.4.3.41');
     }
   };
   function trinLoggerErrorHandler () {
