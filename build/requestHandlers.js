@@ -678,7 +678,7 @@
           account = player.accountID;
         }
         return dbLib.bindAuth(account, arg.typ, arg.id, arg.pass, function(err, account) {
-          if (account === -1) {
+          if (account === -1 || account === '-1') {
             return handler([
               {
                 REQ: rpcID,
