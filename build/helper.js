@@ -1,5 +1,5 @@
 (function() {
-  var CONST_MAX_WORLD_BOSS_TIMES, actCampaign, async, conditionCheck, currentTime, dbLib, dbWrapper, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, updateLockStatus;
+  var CONST_MAX_WORLD_BOSS_TIMES, actCampaign, async, checkBounty, conditionCheck, currentTime, dbLib, dbWrapper, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, updateLockStatus;
 
   conditionCheck = require('./trigger').conditionCheck;
 
@@ -452,7 +452,7 @@
 
   exports.proceedCampaign = actCampaign;
 
-  checkBounty(id, today)(function() {
+  checkBounty = function(id, today) {
     var cfg, dayOfYear, nowDayYear, startDates, theDate, validateDate, _i, _j, _len, _len1, _ref, _ref1;
     cfg = queryTable(TABLE_BOUNTY, id);
     if ((cfg != null ? (_ref = cfg.dateInterval) != null ? _ref.startDate : void 0 : void 0) == null) {
@@ -476,7 +476,7 @@
       }
     }
     return false;
-  });
+  };
 
   exports.events = {
     "event_daily": {
