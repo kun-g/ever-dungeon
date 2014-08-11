@@ -233,5 +233,9 @@ exports.data = [
     },
     {	"effectId": 55,
         "file": "effect-arrow.ccbi"
+    },
+    {
+        "effectId": 56,
+        "file": "effect-emoticon.ccbi"
     }
 ]

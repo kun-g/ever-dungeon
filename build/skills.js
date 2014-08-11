@@ -4429,7 +4429,7 @@ exports.data = [
                 {"type":"delay"},
                 {"type": "playEffect","effect":13,"pos":"self","delay":1.5} ,
                 {"type":"playAction","motion":1,"pos":"self"},
-                {"type": "createMonster","objectCount":1,"Pos":self,"monsterID":31},
+                {"type": "createMonster","objectCount":1,"pos":"self","monsterID":31},
                 {"type":"kill"}
             ]
         }
@@ -4450,7 +4450,7 @@ exports.data = [
                 {"type":"delay"},
                 {"type": "playEffect","effect":13,"pos":"self","delay":1.5} ,
                 {"type":"playAction","motion":1,"pos":"self"},
-                {"type": "createMonster","objectCount":1,"Pos":self,"monsterID":19},
+                {"type": "createMonster","objectCount":1,"pos":"self","monsterID":19},
                 {"type":"kill"}
             ]
         }

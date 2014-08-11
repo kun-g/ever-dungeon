@@ -1,5 +1,5 @@
 (function() {
-  var CONST_MAX_WORLD_BOSS_TIMES, actCampaign, async, conditionCheck, currentTime, dbLib, dbWrapper, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, updateLockStatus;
+  var CONST_MAX_WORLD_BOSS_TIMES, actCampaign, async, checkBounty, conditionCheck, currentTime, dbLib, dbWrapper, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, updateLockStatus;
 
   conditionCheck = require('./trigger').conditionCheck;
 
@@ -452,6 +452,32 @@
 
   exports.proceedCampaign = actCampaign;
 
+  checkBounty = function(id, today) {
+    var cfg, dayOfYear, nowDayYear, startDates, theDate, validateDate, _i, _j, _len, _len1, _ref, _ref1;
+    cfg = queryTable(TABLE_BOUNTY, id);
+    if ((cfg != null ? (_ref = cfg.dateInterval) != null ? _ref.startDate : void 0 : void 0) == null) {
+      return false;
+    }
+    startDates = cfg.dateInterval.startDate;
+    nowDayYear = moment(today).dayOfYear();
+    for (_i = 0, _len = startDates.length; _i < _len; _i++) {
+      theDate = startDates[_i];
+      _ref1 = theDate.date;
+      for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
+        validateDate = _ref1[_j];
+        dayOfYear = moment({
+          y: theDate.year,
+          M: theDate.month,
+          d: validateDate
+        }).dayOfYear();
+        if ((dayOfYear - nowDayYear) % cfg.dateInterval.interval === 0) {
+          return true;
+        }
+      }
+    }
+    return false;
+  };
+
   exports.events = {
     "event_daily": {
       "flag": "daily",
@@ -544,18 +570,7 @@
       storeType: "player",
       id: 3,
       actived: function(obj, util) {
-        if (exports.dateInRange(util.today, [
-          {
-            from: 1,
-            to: 6
-          }, {
-            from: 14,
-            to: 20
-          }, {
-            from: 28,
-            to: 28
-          }
-        ])) {
+        if (checkBounty(3, util.today)) {
           return 1;
         } else {
           return 0;
@@ -576,15 +591,7 @@
       storeType: "player",
       id: 4,
       actived: function(obj, util) {
-        if (exports.dateInRange(util.today, [
-          {
-            from: 7,
-            to: 13
-          }, {
-            from: 21,
-            to: 27
-          }
-        ])) {
+        if (checkBounty(4, util.today)) {
           return 1;
         } else {
           return 0;
@@ -633,7 +640,6 @@
     },
     pkCounter: {
       storeType: "player",
-      id: 6,
       actived: 1,
       canReset: function(obj, util) {
         return util.diffDay(obj.timestamp.currentPKCount, util.today);

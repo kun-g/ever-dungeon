@@ -1720,6 +1720,7 @@
       ret = this.removeItem(null, 1, slot);
       newItem = new Item(item.upgradeTarget);
       newItem.enhancement = item.enhancement;
+      newItem.xp = item.xp;
       ret = ret.concat(this.aquireItem(newItem));
       eh = newItem.enhancement.map(function(e) {
         return {
@@ -1736,7 +1737,8 @@
             {
               sid: this.queryItemSlot(newItem),
               stc: 1,
-              eh: eh
+              eh: eh,
+              xp: newItem.xp
             }
           ]
         }
