@@ -4191,6 +4191,7 @@ exports.data = [
     },
     {
     "questId":153,
+    "questStage":104,
     "title":"踏上征程",
     "desc":"击破首个地下城，踏出自己探险的第一步",
     "objects":[
@@ -4217,6 +4218,7 @@ exports.data = [
 },
     {
         "questId":154,
+        "questStage":96,
         "title":"营救阿雅",
         "desc":"听说铁匠汤姆的女儿去【多姆洞穴I】几天没回来了，赶紧去看看吧。",
         "objects":[
@@ -4245,6 +4247,7 @@ exports.data = [
     },
     {
         "questId":155,
+        "questStage":105,
         "title":"铁匠铺重新开业",
         "desc":"帮助汤姆大叔寻找多姆矿石为铁匠铺重新开业做准备。",
         "objects":[
@@ -4269,6 +4272,7 @@ exports.data = [
     },
     {
         "questId":156,
+        "questStage":97,
         "title":"讨伐大型史莱姆",
         "desc":"大型史莱姆是个麻烦，赶紧去【多姆洞穴II】干掉它！",
         "objects":[
@@ -4294,6 +4298,7 @@ exports.data = [
     },
     {
         "questId":157,
+        "questStage":98,
         "title":"黑暗中的利刃",
         "desc":"黑暗中的利刃——哥布林投矛手目前在【多姆洞穴III】胡作非为。",
         "objects":[
@@ -4320,6 +4325,7 @@ exports.data = [
     },
     {
         "questId":158,
+        "questStage":106,
         "title":"汤姆大叔的请求",
         "desc":"寻找汤姆大叔的铁匠学徒，重振铁匠铺！",
         "objects":[
@@ -4347,6 +4353,7 @@ exports.data = [
     },
     {
         "questId":159,
+        "questStage":99,
         "title":"哥布林投矛手的决心",
         "desc":"哥布林投矛手这次在【多姆洞穴IV】，带上你的小伙伴讨伐它吧！",
         "objects":[
@@ -4372,6 +4379,7 @@ exports.data = [
     },
     {
         "questId":160,
+        "questStage":100,
         "title":"暗中的邪恶联盟",
         "desc":"有人发现哥布林与野狼携手，在【多姆洞穴V】伺机而动",
         "objects":[
@@ -4397,6 +4405,7 @@ exports.data = [
     },
     {
         "questId":161,
+        "questStage":107,
         "title":"调查神秘的黑影",
         "desc":"与卡尔和凯瑟琳一起调查怪物异动的根源",
         "objects":[
@@ -4423,6 +4432,7 @@ exports.data = [
     },
     {
         "questId":162,
+        "questStage":101,
         "title":"解救村长",
         "desc":"村长去往了【多姆洞穴VI】，情况似乎不太妙，前去救出村长！",
         "objects":[
@@ -4448,6 +4458,7 @@ exports.data = [
     },
     {
         "questId":163,
+        "questStage":102,
         "title":"多姆村英雄",
         "desc":"将【多姆洞穴VII】中的史莱姆大王击倒，给村庄带来安宁。",
         "objects":[
