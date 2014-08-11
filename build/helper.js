@@ -633,7 +633,6 @@
     },
     pkCounter: {
       storeType: "player",
-      id: 6,
       actived: 1,
       canReset: function(obj, util) {
         return util.diffDay(obj.timestamp.currentPKCount, util.today);

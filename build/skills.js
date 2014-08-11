@@ -195,8 +195,8 @@ exports.data = [
         "targetDelay": 0.9
       },
       "triggerCondition": [
-          {"type": "event", "event": "onCriticalDamage" },
-          {"type": "chance", "chance": 0.8}
+          {"type": "event", "event": "onPhysicalDamage" },
+          {"type": "chance", "chance": 1}
       ],
       "targetSelection": {
           "pool": "objects",
@@ -2826,7 +2826,6 @@ exports.data = [
             },
             "action":[
                 {"type":"delay"} ,
-                {"type":"playEffect","effect":4,"pos":"self"},
                 {"type":"shock","delay":0.3,"range":5,"time":0.2},
                 {"type": "installSpell", "spell": 123}
 
@@ -4194,7 +4193,7 @@ exports.data = [
         "config": {
             "triggerCondition": [
                 {"type": "countDown", "cd": 2 },
-                {"type" :"event", "event":"onTurnEnd" }
+                {"type":"event", "event":"onBeginBattleTurn" }
             ],
             "targetSelection": {
                 "pool": "self",
@@ -4204,7 +4203,7 @@ exports.data = [
                 {"type":"delay"},
                 {"type": "playEffect","effect":13,"pos":"self","delay":1.5} ,
                 {"type":"playAction","motion":1,"pos":"self"},
-                {"type": "setProperty","modifications": {"attack":{"src":{"attack":0.5}}}}
+                { "type": "installSpell", "spell": 265}
             ]
         }
     },
@@ -4263,7 +4262,7 @@ exports.data = [
                 { "type": "effectCount", "count":1}
             ],
             "action":[
-                { "type": "damage","formular": {"environment": {"damage":0.5}} }
+                { "type": "damage","formular": {"c": 120}}
             ]
         }
     },
@@ -4419,7 +4418,7 @@ exports.data = [
         "label":"弱变强",
         "config":{
             "triggerCondition":[
-                {"type":"countDown","cd":10},
+                {"type":"countDown","cd":5},
                 {"type":"event","event":"onTurnEnd"}
             ],
             "targetSelection":{
@@ -4430,14 +4429,8 @@ exports.data = [
                 {"type":"delay"},
                 {"type": "playEffect","effect":13,"pos":"self","delay":1.5} ,
                 {"type":"playAction","motion":1,"pos":"self"},
-                {"type": "setProperty","modifications": {"health":{"src":{"health":0.5}}} },
-                {"type": "setProperty","modifications": {"attack":{"src":{"attack":0.5}}} },
-                {"type": "setProperty","modifications": {"critical":{"src":{"critical":0.5}}} },
-                {"type": "setProperty","modifications": {"strong":{"src":{"strong":0.5}}} },
-                {"type": "setProperty","modifications": {"accuracy":{"src":{"accuracy":0.5}}} },
-                {"type": "setProperty","modifications": {"reactivity":{"src":{"reactivity":0.5}}} },
-                {"type": "setProperty","modifications": {"speed":{"src":{"speed":0.5}}} },
-                {"type": "setScale","modifications": {"scale":{"src":{"scale":0.1}}} }
+                {"type": "createMonster","objectCount":1,"pos":"self","monsterID":31},
+                {"type":"kill"}
             ]
         }
     },
@@ -4446,7 +4439,7 @@ exports.data = [
         "label":"强变弱",
         "config":{
             "triggerCondition":[
-                {"type":"countDown","cd":3},
+                {"type":"countDown","cd":5},
                 {"type":"event","event":"onTurnEnd"}
             ],
             "targetSelection":{
@@ -4457,14 +4450,8 @@ exports.data = [
                 {"type":"delay"},
                 {"type": "playEffect","effect":13,"pos":"self","delay":1.5} ,
                 {"type":"playAction","motion":1,"pos":"self"},
-                {"type": "setProperty","modifications": {"health":{"src":{"health":-0.5}}} },
-                {"type": "setProperty","modifications": {"attack":{"src":{"attack":-0.5}}} },
-                {"type": "setProperty","modifications": {"critical":{"src":{"critical":-0.5}}} },
-                {"type": "setProperty","modifications": {"strong":{"src":{"strong":-0.5}}} },
-                {"type": "setProperty","modifications": {"accuracy":{"src":{"accuracy":-0.5}}} },
-                {"type": "setProperty","modifications": {"reactivity":{"src":{"reactivity":-0.5}}} },
-                {"type": "setProperty","modifications": {"speed":{"src":{"speed":-0.5}}} },
-                {"type": "setScale","modifications": {"scale":{"src":{"scale":-0.1}}} }
+                {"type": "createMonster","objectCount":1,"pos":"self","monsterID":19},
+                {"type":"kill"}
             ]
         }
     },
@@ -6051,6 +6038,19 @@ exports.data = [
             "targetSelection": {
                 "pool": "objects",
                 "filter": [{"type":"same-block"},{"type":"alive"},{"type":"visible"}]
+            }
+        }
+    },
+    {
+        "skillId": 265,
+        "config": {
+            "installAction":[
+                { "type": "setProperty","modifications": {"attack":{"src":{"attack":0.1}}} }
+            ],
+            "targetSelection": {
+                "pool": "self",
+                "filter": [{"type":"alive"},{"type":"visible"}],
+            "buffType":"AttackBuff"
             }
         }
     }

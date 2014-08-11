@@ -741,7 +741,7 @@ exports.data = [
     },
     {
         "questId":27,
-        "questStage":12,
+        "questStage":13,
         "title":"寻找武器锻造学徒",
         "desc":"汤姆大叔的学徒为了寻找锻造材料一个人去了【密谋森林VI】！情况可能非常危险，去把他找回来吧！",
         "objects":[
@@ -792,7 +792,7 @@ exports.data = [
     },
     {
         "questId":29,
-        "questStage":12,
+        "questStage":13,
         "title":"寻找密谋森林的最深层入口",
         "desc":"成功通过【密谋森林VI】寻找到最深处的入口",
         "objects":[
@@ -818,7 +818,7 @@ exports.data = [
     },
     {
         "questId":30,
-        "questStage":13,
+        "questStage":14,
         "title":"解放密谋森林",
         "desc":"将【密谋森林VII】深处的怪物击败，为森林带来宁静",
         "objects":[
@@ -848,7 +848,7 @@ exports.data = [
     },
     {
         "questId":31,
-        "questStage":13,
+        "questStage":14,
         "title":"食人魔终结者",
         "desc":"将【密谋森林VII】中的大小食人魔击倒！",
         "objects":[
