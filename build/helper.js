@@ -1,5 +1,5 @@
 (function() {
-  var CONST_MAX_WORLD_BOSS_TIMES, actCampaign, async, checkBounty, conditionCheck, currentTime, dbLib, dbWrapper, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, updateLockStatus;
+  var CONST_MAX_WORLD_BOSS_TIMES, actCampaign, async, checkBountyValidate, conditionCheck, currentTime, dbLib, dbWrapper, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, updateLockStatus;
 
   conditionCheck = require('./trigger').conditionCheck;
 
@@ -452,16 +452,16 @@
 
   exports.proceedCampaign = actCampaign;
 
-  checkBounty = function(id, today) {
-    var cfg, dayOfYear, nowDayYear, startDates, theDate, validateDate, _i, _j, _len, _len1, _ref, _ref1;
+  checkBountyValidate = function(id, today) {
+    var cfg, dayOfYear, nowDayYear, startDateArray, theDate, validateDate, _i, _j, _len, _len1, _ref, _ref1;
     cfg = queryTable(TABLE_BOUNTY, id);
     if ((cfg != null ? (_ref = cfg.dateInterval) != null ? _ref.startDate : void 0 : void 0) == null) {
       return false;
     }
-    startDates = cfg.dateInterval.startDate;
+    startDateArray = cfg.dateInterval.startDate;
     nowDayYear = moment(today).dayOfYear();
-    for (_i = 0, _len = startDates.length; _i < _len; _i++) {
-      theDate = startDates[_i];
+    for (_i = 0, _len = startDateArray.length; _i < _len; _i++) {
+      theDate = startDateArray[_i];
       _ref1 = theDate.date;
       for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
         validateDate = _ref1[_j];
@@ -570,7 +570,7 @@
       storeType: "player",
       id: 3,
       actived: function(obj, util) {
-        if (checkBounty(3, util.today)) {
+        if (checkBountyValidate(3, util.today)) {
           return 1;
         } else {
           return 0;
@@ -591,7 +591,7 @@
       storeType: "player",
       id: 4,
       actived: function(obj, util) {
-        if (checkBounty(4, util.today)) {
+        if (checkBountyValidate(4, util.today)) {
           return 1;
         } else {
           return 0;

@@ -1639,56 +1639,26 @@ exports.data = [
         "levels" :[
             {
                  "objects" :[
+                     {"pool":"normalPool","from":0,to:4},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:92},
+                     {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:92},
                     {
-                        "id": 15 ,
+                        "id": 23 ,
                         "count":2,
                         "keyed":true
                     },
                      {
-                         "id": 47 ,
-                         "count":2,
-                         "keyed":true
-                     },
-                     {
-                         "id": 79 ,
-                         "count":2,
-                         "keyed":true
-                     },
-                     {
-                         "id": 111 ,
-                         "count":2,
-                         "keyed":true
-                     },
-                     {
-                         "id": 194 ,
-                         "count":2,
-                         "keyed":true
-                     },
-                     {
-                         "id": 6 ,
+                         "id": 153,
                          "count":1,
-                         "keyed":true
+                         property:{
+                             "collectId":18001,
+                             "questOnly":true
+                         }
                      },
-                     {
-                         "id": 38 ,
-                         "count":1,
-                         "keyed":true
-                     },
-                     {
-                         "id": 70 ,
-                         "count":1,
-                         "keyed":true
-                     },
-                     {
-                         "id": 103 ,
-                         "count":1,
-                         "keyed":true
-                     },
-                     {
-                         "id": 206 ,
-                         "count":1,
-                         "keyed":true
-                     }
+                    {
+                        "id": 149,
+                        "count":2
+                    }
                 ]
             },
             {
