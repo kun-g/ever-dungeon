@@ -7627,9 +7627,11 @@ exports.data = [
             "reactivity": 1,
             "speed": 1
         },
+        "soundSpawn": "shanzeitoumu.mp3",
         "soundWound": "shanzeiroumuwound.mp3",
+        "soundAttack": "shanzeitoumuattack.mp3",
         "soundDie": "shanzeitoumudie.mp3",
-        "effectAttack": 10,
+        "effectAttack": 8,
         "skill": [
             {
                 "id":159,
@@ -7698,57 +7700,5 @@ exports.data = [
         "dropInfo": [
 
         ]
-    },
-    {
-        "classId": 215,
-        "className": "测试流浪剑士",
-        "faction": "monster",
-        "classType": 1,
-        "avatar": "enemy-sword2.ccbi",
-        "property": {
-            "health": 5,
-            "attack": 0.5,
-            "critical": 0,
-            "strong": 20,
-            "accuracy": 170,
-            "reactivity": 170,
-            "speed": 0,
-            "counterAttack": true,
-            "exp": 0,
-            "gold": 0
-        },
-        "xproperty": {
-            "balance": 0.1,
-            "health": 5,
-            "attack": 0.5,
-            "critical": 1,
-            "strong": 1,
-            "accuracy": 1,
-            "reactivity": 3,
-            "speed": 1
-        },
-        "soundWound": "liulangwound.mp3",
-        "soundAttack": "liulangattack.mp3",
-        "soundDie": "liulangdie.mp3",
-        "effectAttack": 8,
-        "skill": [
-            {
-                "id": 185,
-                "level": 1
-            },
-            {
-                "id": 178,
-                "level": 1
-            },
-            {
-                "id": 193,
-                "level": 1
-            },
-            {
-                "id": 27,
-                "level": 1
-            }
-        ],
-        "scale": 1.2
     }
 ]

@@ -13208,7 +13208,7 @@ exports.data = [
 		"label": "光明外衣(史诗)",
 		"category": 1,
 		"subcategory": 2,
-		"description": "凝聚光明力量的衣服",
+		"description": "凝聚光明力量的鞋子",
 		"transPrize": [
 			{
 				"type": 2,
