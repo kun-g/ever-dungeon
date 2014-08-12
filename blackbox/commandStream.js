@@ -1,9 +1,9 @@
 (function() {
   var CommandStream, Environment, debug, splLib;
 
-  requires('./define');
+  require('./define');
 
-  splLib = requires('./spell');
+  splLib = require('./spell');
 
   debug = false;
 

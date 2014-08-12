@@ -29,6 +29,7 @@ TABLE_FACTION = "faction";
 TABLE_COSTS = "costs";
 TABLE_DP = "dailyPrize";
 TABLE_ARENA = "arena";
+TABLE_BOUNTY = "bounty";
 /*** GAME CONSTANTS ***/
 ItemId_RevivePotion = 540;
 
@@ -212,9 +213,11 @@ Sweep_Vip_Level = 3;
 LOGIN_ACCOUNT_TYPE_TG = 0;
 LOGIN_ACCOUNT_TYPE_AD = 1;
 LOGIN_ACCOUNT_TYPE_PP =  2;
-LOGIN_ACCOUNT_TYPE_91 =  3;
+LOGIN_ACCOUNT_TYPE_91_iOS =  3;
 LOGIN_ACCOUNT_TYPE_KY =  4;
 LOGIN_ACCOUNT_TYPE_GAMECENTER =  5;
+LOGIN_ACCOUNT_TYPE_91_Android =  6;
+LOGIN_ACCOUNT_TYPE_DK_Android =  7;
 
 Max_tutorialStage = 3;
 
