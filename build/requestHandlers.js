@@ -24,6 +24,35 @@
     passportType = arg.tp;
     passport = arg.id;
     switch (passportType) {
+      case LOGIN_ACCOUNT_TYPE_DK_Android:
+        appID = '3319334';
+        appKey = 'kavpXwRFFa4rjcUy1idmAkph';
+        AppSecret(＝('KvCbUBBpAUvkKkC9844QEb8CB7pHnl5v'));
+        sign = md5Hash(appID + appKey + passport + token + AppSecret);
+        path = 'http://sdk.m.duoku.com/openapi/sdk/checksession?appid=' + appID + '&appkey=' + appKey + '&uid=' + passport + '&sessionid=' + token + '&clientsecret=' + sign;
+        return http.get(path, function(res) {
+          res.setEncoding('utf8');
+          return res.on('data', function(chunk) {
+            var result;
+            result = JSON.parse(chunk);
+            logInfo({
+              action: 'login',
+              type: LOGIN_ACCOUNT_TYPE_DK,
+              code: result
+            });
+            if (result.error_code === 0) {
+              return callback(null);
+            } else {
+              return callback(Error(RET_LoginFailed));
+            }
+          });
+        }).on('error', function(e) {
+          return logError({
+            action: 'login',
+            type: LOGIN_ACCOUNT_TYPE_DK,
+            error: e
+          });
+        });
       case LOGIN_ACCOUNT_TYPE_91_Android:
       case LOGIN_ACCOUNT_TYPE_91_iOS:
         switch (passportType) {
