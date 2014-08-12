@@ -778,7 +778,13 @@ exports.data = [
 		"soundAttack": "bianfuattack.mp3",
 		"soundDie": "bianfudie.mp3",
 		"effectAttack": 9,
-		"scale": 1.2
+		"scale": 1.2,
+        "skill": [
+            {
+                "id": 163,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 21,
@@ -2007,7 +2013,13 @@ exports.data = [
 		"soundAttack": "bianfuattack.mp3",
 		"soundDie": "bianfudie.mp3",
 		"effectAttack": 9,
-		"scale": 1.2
+		"scale": 1.2,
+        "skill": [
+            {
+                "id": 163,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 53,
@@ -3232,7 +3244,13 @@ exports.data = [
 		"soundAttack": "bianfuattack.mp3",
 		"soundDie": "bianfudie.mp3",
 		"effectAttack": 9,
-		"scale": 1.2
+		"scale": 1.2,
+        "skill": [
+            {
+                "id": 163,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 85,
@@ -4457,7 +4475,13 @@ exports.data = [
 		"soundAttack": "bianfuattack.mp3",
 		"soundDie": "bianfudie.mp3",
 		"effectAttack": 9,
-		"scale": 1.2
+		"scale": 1.2,
+        "skill": [
+            {
+                "id": 163,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 117,
@@ -7737,11 +7761,7 @@ exports.data = [
                 "level": 1
             },
             {
-                "id": 178,
-                "level": 1
-            },
-            {
-                "id": 193,
+                "id": 183,
                 "level": 1
             },
             {

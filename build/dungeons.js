@@ -38631,7 +38631,12 @@ exports.data = [
                     {"pool":"soldierPool","from":8,to:14},
                     {"pool":"rangePool","from":0,to:1},
                     {"pool":"elitePool","count":1},
-                    {"id": 149,"from":0,to:2}
+                    {"id": 149,"from":0,to:2},
+                    {
+                        "id": 215,
+                        "count":2,
+                        "keyed":true
+                    }
                 ]
             },
             {
@@ -38643,7 +38648,7 @@ exports.data = [
                     {
                         "id": 213,
                         "count":1,
-                        "pos": Math.floor(Math.random()*25+5),
+                        "pos": [5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29],
                         "keyed":true
                     },
                     {

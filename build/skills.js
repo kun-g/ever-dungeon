@@ -2204,7 +2204,7 @@ exports.data = [
         "skillId":92,
         "config": {
             "installAction":[
-                { "type": "setProperty","modifications": {"attack":{"src":{"attack":-0.5}}} }
+                { "type": "setProperty","modifications": {"attack":{"src":{"attack":-0.4}}} }
             ],
             "uninstallAction": [
                 { "type": "resetProperty" }
@@ -4237,14 +4237,14 @@ exports.data = [
         "label":"溅射",
         "config": {
             "triggerCondition": [
-                {"type" :"event", "event":"onPhysicalDamage" }
+                {"type" :"event", "event":"onAttack" }
             ],
-            "targetSelection":{
-                "pool": "target",
-                "filter": [{"type":"alive"},{"type":"visible"}]
+            "targetSelection": {
+                "pool": "Enemy",
+                "filter": ["alive", "visible"]
             },
             "action": [
-                { "type": "installSpell", "spell": 186}
+                { "type": "damage","formular":{"src":{"attack":1}}}
             ]
         }
     },
