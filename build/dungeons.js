@@ -139,7 +139,7 @@ exports.data = [
         "dungeonId": 1,
         "levelCount" :6 ,
         "pool":{
-            "normalPool":[
+            "normalPool":{ "objects": [
                 {
                     "id":170,
                     "weight":5
@@ -172,7 +172,7 @@ exports.data = [
                     "id":172,
                     "weight":5
                 }
-            ]
+            ]}
         },
         "rank": 1,
         "levels" :[
@@ -311,7 +311,7 @@ exports.data = [
         "rank": 1,
         "levelCount" : 6,
         "pool":{
-            "normalPool":[
+            "normalPool":{"objects": [
                 {
                     "id":170,
                     "weight":5
@@ -344,7 +344,7 @@ exports.data = [
                     "id":172,
                     "weight":5
                 }
-            ]
+            ]}
         },
         "levels" :[
             {    
@@ -503,7 +503,7 @@ exports.data = [
         "dungeonId": 3,
         "levelCount" : 6,
         "pool":{
-            "normalPool":[
+            "normalPool":{"objects": [
                 {
                     "id":170,
                     "weight":5
@@ -536,7 +536,7 @@ exports.data = [
                     "id":172,
                     "weight":5
                 }
-            ]
+            ] }
         },
         "rank": 2,
         "levels" :[
@@ -741,7 +741,7 @@ exports.data = [
         "dungeonId": 4,
         "levelCount" : 6,
         "pool":{
-            "normalPool":[
+            "normalPool":{"objects": [
                 {
                     "id":170,
                     "weight":5
@@ -774,7 +774,7 @@ exports.data = [
                     "id":172,
                     "weight":5
                 }
-            ]
+            ]}
         },
         "rank": 3,
         "levels" :[
@@ -1025,7 +1025,7 @@ exports.data = [
         "dungeonId": 5,
         "levelCount" : 6,
         "pool":{
-            "normalPool":[
+            "normalPool":{"objects": [
                 {
                     "id":170,
                     "weight":5
@@ -1058,7 +1058,7 @@ exports.data = [
                     "id":172,
                     "weight":5
                 }
-            ]
+            ] }
         },
          
         "rank": 4,
@@ -1189,7 +1189,7 @@ exports.data = [
         "rank": 4,
         "levelCount" : 6,
         "pool":{
-            "normalPool":[
+            "normalPool":{"objects": [
                 {
                     "id":170,
                     "weight":5
@@ -1222,7 +1222,7 @@ exports.data = [
                     "id":172,
                     "weight":5
                 }
-            ]
+            ]}
         },
          
         "levels" :[
@@ -1383,7 +1383,7 @@ exports.data = [
         "dungeonId": 7,
         "levelCount" : 6,
         "pool":{
-            "normalPool":[
+            "normalPool":{"objects": [
                 {
                     "id":170,
                     "weight":3
@@ -1424,7 +1424,7 @@ exports.data = [
                     "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185, 
                     "weight":3
                 }
-            ]
+            ] }
         },
          
         "rank": 5,
@@ -1640,7 +1640,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:92},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:92},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:92},
                     {
                         "id": 23 ,
@@ -1664,7 +1664,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:92},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:92},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:92},
                     {
                         "id": 34,
@@ -1748,7 +1748,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:14,skill:[{id:154}],dropPrize:93},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:93},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:93},
 
                     {
@@ -1765,7 +1765,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:93},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:93},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:93},
                     {
                         "id": 32,
@@ -1848,7 +1848,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:94},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:94},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:94},
                     {
                         "id": 54 ,
@@ -1870,7 +1870,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:94},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:94},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:94},
                     {
                         "id": 33,
@@ -1959,7 +1959,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:95},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:95},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:95},
                     {
                         "id": 54 ,
@@ -1981,7 +1981,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:95},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:95},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:95},
                     {
                         "id": 55,
@@ -2079,7 +2079,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:96},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:96},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:96},
                     {
                         "id": 52 ,
@@ -2095,7 +2095,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:96},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:96},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:96},
                     {
                         "id": 55,
@@ -2184,7 +2184,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:97},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:97},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:97},
                     {
                         "id": 53 ,
@@ -2209,7 +2209,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:97},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:97},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:97},
                     {
                         "id": 53,
@@ -2301,7 +2301,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:98},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:98},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:98},
                     {
                         "id": 149,
@@ -2317,7 +2317,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":1,to:3},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:98},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:98},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:98},
                     {
                         "id": 149,
@@ -2408,7 +2408,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:12,skill:[{id:154}],dropPrize:99},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:99},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:99},
                     {
                         "id": 149,
@@ -2424,7 +2424,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:12,skill:[{id:154}],dropPrize:99},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:99},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:99},
                     {
                         "id": 149,
@@ -2506,7 +2506,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:12,skill:[{id:154}],dropPrize:100},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:100},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:100},
                     {
                         "id": 149,
@@ -2528,7 +2528,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:100},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:100},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:100},
                     {
                         "id": 149,
@@ -2615,7 +2615,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:101},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:101},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:101},
                     {
                         "id": 149,
@@ -2642,7 +2642,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:101},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:101},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:101},
                     {
                         "id": 149,
@@ -2745,7 +2745,7 @@ exports.data = [
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:102},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:102},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:102},
                     {
                         "id": 151,
@@ -2777,7 +2777,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:102},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:102},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:102},
                     {
                         "id": 149,
@@ -2889,7 +2889,7 @@ exports.data = [
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:103},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:103},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:103},
                     {
                         "id": 149,
@@ -2904,7 +2904,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:103},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:103},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:103},
                     {
                         "id": 28,
@@ -2992,7 +2992,7 @@ exports.data = [
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:104},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:104},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:104},
                     {
                         "id": 149,
@@ -3013,7 +3013,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:104},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:104},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:104},
                     {
                         "id": 149,
@@ -3101,7 +3101,7 @@ exports.data = [
         "levels" :[
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:105},
+                    {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:105},
                     {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:105},
                     {
                         "id": 149,
@@ -3117,7 +3117,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:105},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:105},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:105},
                     {
                         "id": 149,
@@ -10950,7 +10950,7 @@ exports.data = [
     {
         "dungeonId": 76,
         "rank": 0,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -10990,7 +10990,7 @@ exports.data = [
                     "weight":3
                 },
                 {
-                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185, 
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
                     "weight":3
                 }
             ]}
@@ -11001,7 +11001,7 @@ exports.data = [
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
                         "id": 5,
-                        "count":3,
+                        "count":5,
                         "collectId":129001
                     },
                     {
@@ -11014,121 +11014,41 @@ exports.data = [
                         "collectId":130001
                     },
                     {
-                        "id": 6,
-                        "count":2
+                         "id": 143,
+                         "count":1,
+                         "collectId":128001,
+                         "questOnly":true
+                    },
+                    {
+                         "id": 25,
+                         "count":1,
+                         "keyed":true
+                    },
+                    {
+                         "id": 6,
+                         "count":2
                     }
-                ]
+                 ]
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
                         "id": 5,
-                        "count":3,
+                        "count":5,
                         "collectId":129001
+                    },
+                    {
+                         "id": 149,
+                         "count":2
                     },
                     {
                         "id": 7,
-                        "count":2,
-                        "collectId":130001
-                    },
-                    {
-                        "id": 6,
-                        "count":2
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 5,
-                        "count":2,
-                        "collectId":129001
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 7 ,
-                        "count":2,
-                        "collectId":130001
-                    },
-                    {
-                        "id": 143,
-                        "count":1,
-                        "collectId":128001,
-                        "questOnly":true
-                    },
-                    {
-                        "id": 6,
-                        "count":2
-                    },
-                    {
-                        "id": 25,
-                        "count":1,
-                        "keyed":true
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 5,
                         "count":3,
-                        "collectId":129001
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 7 ,
-                        "count":2,
                         "collectId":130001
                     },
                     {
-                        "id": 6,
-                        "count":2
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 5,
-                        "count":2,
-                        "collectId":129001
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 7 ,
-                        "count":2,
-                        "collectId":130001
-                    },
-                    {
-                        "id": 6,
-                        "count":3
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 5,
-                        "count":2,
-                        "collectId":129001
-                    },
-                    {
-                        "id": 6 ,
-                        "count":2
-                    },
-                    {
-                        "id": 7,
-                        "count":2,
-                        "collectId":130001
+                         "id": 6,
+                         "count":2
                     },
                     {
                         "id": 32,
@@ -11151,7 +11071,7 @@ exports.data = [
     {
         "dungeonId": 77,
         "rank": 0,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -11201,93 +11121,18 @@ exports.data = [
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
-                        "id": 37 ,
-                        "count":3
-                    },
-                    {
-                        "id": 144,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":132001
-                    },
-                    {
-                        "id": 147,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":133001
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 35,
-                        "count":2
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 37 ,
-                        "count":2
-                    },
-                    {
-                        "id": 144,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":132001
-                    },
-                    {
-                        "id": 16,
-                        "count":1
-                    },
-                    {
-                        "id": 147,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":133001
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 35,
-                        "count":3
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 53 ,
-                        "count":1,
-                        "keyed":true
-                    },
-                    {
-                        "id": 144,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":132001
-                    },
-                    {
                         "id": 37,
-                        "count":2
+                        "count":3
                     },
                     {
-                        "id": 156,
+                        "id": 144,
                         "count":1,
-                        "collectId":131001,
-                        "questOnly":true
-                    },
-                    {
-                        "id": 16,
-                        "count":1
+                        "questOnly":true,
+                        "collectId":132001
                     },
                     {
                         "id": 147,
-                        "count":1,
+                        "count":2,
                         "questOnly":true,
                         "collectId":133001
                     },
@@ -11298,70 +11143,21 @@ exports.data = [
                     {
                         "id": 35,
                         "count":2
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 35,
-                        "count":2
                     },
                     {
-                        "id": 37 ,
-                        "count":1
+                         "id": 156,
+                         "count":1,
+                         "collectId":131001,
+                         "questOnly":true
                     },
                     {
-                        "id": 144,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":132001
+                         "id": 16,
+                         "count":1
                     },
                     {
-                        "id": 147,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":133001
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 36,
-                        "count":2
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 35,
-                        "count":2
-                    },
-                    {
-                        "id": 144,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":132001
-                    },
-                    {
-                        "id": 37 ,
-                        "count":2
-                    },
-                    {
-                        "id": 147,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":133001
-                    },
-                    {
-                        "id": 16,
-                        "count":1
-                    },
-                    {
-                        "id": 36,
-                        "count":2
+                         "id": 53 ,
+                         "count":1,
+                         "keyed":true
                     }
                 ]
             },
@@ -11378,13 +11174,13 @@ exports.data = [
                     },
                     {
                         "id": 144,
-                        "count":1,
+                        "count":2,
                         "questOnly":true,
                         "collectId":132001
                     },
                     {
                         "id": 147,
-                        "count":1,
+                        "count":3,
                         "questOnly":true,
                         "collectId":133001
                     },
@@ -11396,6 +11192,10 @@ exports.data = [
                     {
                         "id": 36,
                         "count":1
+                    },
+                    {
+                         "id": 37 ,
+                         "count":2
                     },
                     {
                         "id": 35,
@@ -11415,7 +11215,7 @@ exports.data = [
     {
         "dungeonId": 78,
         "rank": 0,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -11460,8 +11260,6 @@ exports.data = [
                 }
             ]}
         },
-         
-
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -11470,13 +11268,32 @@ exports.data = [
                         "count":2
                     },
                     {
+                         "id": 13,
+                         "count":1
+                    },
+                    {
                         "id": 17,
                         "count":3 ,
                         "collectId":136001
                     },
                     {
+                         "id": 153,
+                         "count":1,
+                         "questOnly":true,
+                         "collectId":134001
+                    },
+                    {
                         "id": 149,
                         "count":2
+                    },
+                    {
+                         "id": 55,
+                         "count":1,
+                         "keyed":true
+                    },
+                    {
+                         "id": 36 ,
+                         "count":1
                     },
                     {
                         "id": 9,
@@ -11484,42 +11301,16 @@ exports.data = [
                     }
                 ]
             },
-
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
                         "id": 17,
-                        "count":2 ,
+                        "count":2,
                         "collectId":136001
                     },
                     {
                         "id": 10,
-                        "count":1
-                    },
-                    {
-                        "id": 13,
-                        "count":1
-                    },
-                    {
-                        "id": 9,
                         "count":2
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 17,
-                        "count":1,
-                        "collectId":136001
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 36 ,
-                        "count":1
                     },
                     {
                         "id": 154,
@@ -11528,88 +11319,10 @@ exports.data = [
                         "collectId":134001
                     },
                     {
-                        "id": 10,
-                        "count":2
-                    },
-                    {
-                        "id": 55,
-                        "count":1,
-                        "keyed":true
-                    },
-                    {
-                        "id": 13,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 17,
-                        "count":1,
-                        "collectId":136001
-                    },
-                    {
-                        "id": 149,
-                        "count":3
-                    },
-                    {
-                        "id": 10,
-                        "count":2
-                    },
-                    {
-                        "id": 13,
-                        "count":1
-                    },
-                    {
-                        "id": 9,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 17,
-                        "count":2,
-                        "collectId":136001
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 153,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":134001
-                    },
-                    {
-                        "id": 10,
-                        "count":2
-                    },
-                    {
-                        "id": 9,
-                        "count":2
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 17,
-                        "count":2,
-                        "collectId":136001
-                    },
-                    {
-                        "id": 10,
-                        "count":2
-                    },
-                    {
-                        "id": 153,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":134001
+                         "id": 155,
+                         "count":1,
+                         "questOnly":true,
+                         "collectId":134001
                     },
                     {
                         "id": 156,
@@ -11630,6 +11343,10 @@ exports.data = [
                     {
                         "id": 13,
                         "count":1
+                    },
+                    {
+                         "id": 9,
+                         "count":2
                     }
                 ]
             }
@@ -11646,7 +11363,7 @@ exports.data = [
     {
         "dungeonId": 79,
         "rank": 0,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -11691,14 +11408,12 @@ exports.data = [
                 }
             ]}
         },
-         
-
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
                         "id": 18,
-                        "count":4,
+                        "count":10,
                         "collectId":139001
                     },
                     {
@@ -11727,108 +11442,7 @@ exports.data = [
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
                         "id": 18,
-                        "count":4,
-                        "collectId":139001
-                    },
-                    {
-                        "id": 40,
-                        "count":1
-                    },
-                    {
-                        "id": 9,
-                        "count":1
-                    },
-                    {
-                        "id": 38,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 18,
-                        "count":5,
-                        "collectId":139001
-                    },
-                    {
-                        "id": 149,
-                        "count":3
-                    },
-                    {
-                        "id": 36 ,
-                        "count":1
-                    },
-                    {
-                        "id": 40,
-                        "count":1
-                    },
-                    {
-                        "id": 64,
-                        "count":1,
-                        "keyed":true
-                    },
-                    {
-                        "id": 38,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 18,
-                        "count":4,
-                        "collectId":139001
-                    },
-                    {
-                        "id": 39,
-                        "count":2
-                    },
-                    {
-                        "id": 11,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":3
-                    },
-                    {
-                        "id": 38,
-                        "count":2
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 18,
-                        "count":5,
-                        "collectId":139001
-                    },
-                    {
-                        "id": 40,
-                        "count":1
-                    },
-                    {
-                        "id": 39,
-                        "count":1
-                    },
-                    {
-                        "id": 11,
-                        "count":1
-                    },
-                    {
-                        "id": 38,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 18,
-                        "count":5,
+                        "count":10,
                         "collectId":139001
                     },
                     {
@@ -11875,7 +11489,7 @@ exports.data = [
     {
         "dungeonId": 80,
         "rank": 0,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -11920,19 +11534,17 @@ exports.data = [
                 }
             ] }
         },
-         
-
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
                         "id": 42,
-                        "count":1,
+                        "count":3,
                         "collectId":142001
                     },
                     {
                         "id": 43,
-                        "count":1
+                        "count":2
                     },
                     {
                         "id": 49 ,
@@ -11944,11 +11556,16 @@ exports.data = [
                     },
                     {
                         "id": 69,
-                        "count":1
+                        "count":2
                     },
                     {
                         "id": 45,
                         "count":1
+                    },
+                    {
+                         "id":63,
+                         "count":1,
+                         "keyed":true
                     }
                 ]
             },
@@ -11956,116 +11573,7 @@ exports.data = [
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
                         "id": 42,
-                        "count":1,
-                        "collectId":142001
-                    },
-                    {
-                        "id": 43,
-                        "count":1
-                    },
-                    {
-                        "id": 49 ,
-                        "count":2
-                    },
-                    {
-                        "id": 12,
-                        "count":2
-                    },
-                    {
-                        "id": 69,
-                        "count":1
-                    },
-                    {
-                        "id": 45,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 42,
-                        "count":1,
-                        "collectId":142001
-                    },
-                    {
-                        "id": 49 ,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":3
-                    },
-                    {
-                        "id": 12,
-                        "count":2
-                    },
-                    {
-                        "id": 43,
-                        "count":1
-                    },
-                    {
-                        "id":63,
-                        "count":1,
-                        "keyed":true
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 42,
-                        "count":2,
-                        "collectId":142001
-                    },
-                    {
-                        "id": 43,
-                        "count":1
-                    },
-                    {
-                        "id": 47 ,
-                        "count":1
-                    },
-                    {
-                        "id": 12,
-                        "count":2
-                    },
-                    {
-                        "id": 69,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 42,
-                        "count":2,
-                        "collectId":142001
-                    },
-                    {
-                        "id": 43,
-                        "count":1
-                    },
-                    {
-                        "id": 47 ,
-                        "count":1
-                    },
-                    {
-                        "id": 12,
-                        "count":2
-                    },
-                    {
-                        "id": 69,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 42,
-                        "count":2,
+                        "count":3,
                         "collectId":142001
                     },
                     {
@@ -12078,7 +11586,7 @@ exports.data = [
                     },
                     {
                         "id": 43,
-                        "count":1
+                        "count":2
                     },
                     {
                         "id": 149,
@@ -12092,7 +11600,7 @@ exports.data = [
                     },
                     {
                         "id": 69,
-                        "count":1
+                        "count":2
                     },
                     {
                         "id": 87,
@@ -12115,7 +11623,7 @@ exports.data = [
     {
         "dungeonId": 81,
         "rank": 0,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -12160,14 +11668,23 @@ exports.data = [
                 }
             ]}
         },
-         
-
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
                         "id": 50,
-                        "count":5
+                        "count":2
+                    },
+                    {
+                         "id": 161,
+                         "count":5,
+                         "collectId":143001,
+                         "questOnly":true
+                    },
+                    {
+                         "id": 48,
+                         "count":2,
+                         "collectId":145001
                     },
                     {
                         "id": 71,
@@ -12184,148 +11701,12 @@ exports.data = [
                     {
                         "id": 79,
                         "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 48,
-                        "count":1,
-                        "collectId":145001
                     },
                     {
-                        "id": 50,
-                        "count":4
-                    },
-                    {
-                        "id": 71,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 81 ,
-                        "count":1
-                    },
-                    {
-                        "id": 79,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 48,
-                        "count":1,
-                        "collectId":145001
-                    },
-                    {
-                        "id": 81 ,
-                        "count":1
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 61,
-                        "count":1,
-                        "collectId":144001,
-                        "questOnly":true
-                    },
-                    {
-                        "id": 71,
-                        "count":1
-                    }, {
-                        "id": 161,
-                        "count":3,
-                        "collectId":143001,
-                        "questOnly":true
-                    },
-                    {
-                        "id": 50,
-                        "count":3
-                    },
-                    {
-                        "id": 89 ,
-                        "count":1,
-                        "keyed":true
-                    },
-                    {
-                        "id": 79,
-                        "count":3
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 48,
-                        "count":1,
-                        "collectId":145001
-                    },
-                    {
-                        "id": 50,
-                        "count":5
-                    }, {
-                        "id": 161,
-                        "count":3,
-                        "collectId":143001,
-                        "questOnly":true
-                    },
-                    {
-                        "id": 81 ,
-                        "count":1
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 79,
-                        "count":1
-                    },
-                    {
-                        "id": 71 ,
-                        "count":2
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 48,
-                        "count":1,
-                        "collectId":145001
-                    }, {
-                        "id": 161,
-                        "count":3,
-                        "collectId":143001,
-                        "questOnly":true
-                    },
-                    {
-                        "id": 50,
-                        "count":5
-                    },
-                    {
-                        "id": 79,
-                        "count":1
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 81 ,
-                        "count":1
-                    },
-                    {
-                        "id": 71 ,
-                        "count":2
+                         "id": 61,
+                         "count":1,
+                         "collectId":144001,
+                         "questOnly":true
                     }
                 ]
             },
@@ -12334,10 +11715,6 @@ exports.data = [
                     {
                         "id": 81 ,
                         "count":2
-                    },
-                    {
-                        "id": 50,
-                        "count":3
                     },
                     {
                         "id": 71 ,
@@ -12345,11 +11722,11 @@ exports.data = [
                     },
                     {
                         "id": 79,
-                        "count":1
+                        "count":2
                     },
                     {
                         "id": 161,
-                        "count":3,
+                        "count":5,
                         "collectId":143001,
                         "questOnly":true
                     },
@@ -12366,6 +11743,11 @@ exports.data = [
                         "id": 87,
                         "count":2,
                         "keyed":true
+                    },
+                    {
+                         "id": 48,
+                         "count":1,
+                         "collectId":145001
                     }
                 ]
             }
@@ -12382,7 +11764,7 @@ exports.data = [
     {
         "dungeonId": 82,
         "rank":0,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -12427,129 +11809,17 @@ exports.data = [
                 }
             ]}
         },
-         
-
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
                         "id": 68,
-                        "count":2,
+                        "count":4,
                         "collectId":148001
                     },
                     {
                         "id": 73,
-                        "count":1
-                    },
-                    {
-                        "id": 74 ,
-                        "count":1
-                    },
-                    {
-                        "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 67,
-                        "count":2
-                    },
-                    {
-                        "id": 77,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 68,
-                        "count":2,
-                        "collectId":148001
-                    },
-                    {
-                        "id": 73,
-                        "count":1
-                    },
-                    {
-                        "id": 74 ,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 67,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 68,
-                        "count":2,
-                        "collectId":148001
-                    },
-                    {
-                        "id": 74,
-                        "count":1
-                    },
-                    {
-                        "id": 67,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 77,
-                        "count":1
-                    },
-                    {
-                        "id": 119,
-                        "count":1,
-                        "keyed":true
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 68,
-                        "count":2,
-                        "collectId":148001
-                    },
-                    {
-                        "id": 74 ,
-                        "count":2
-                    },
-                    {
-                        "id": 73,
-                        "count":1
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 67,
-                        "count":2
-                    }
-                ]
-            },
-
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 68,
-                        "count":2,
-                        "collectId":148001
-                    },
-                    {
-                        "id": 73,
-                        "count":1
                     },
                     {
                         "id": 74 ,
@@ -12566,6 +11836,11 @@ exports.data = [
                     {
                         "id": 77,
                         "count":1
+                    },
+                    {
+                         "id": 119,
+                         "count":1,
+                         "keyed":true
                     }
                 ]
             },
@@ -12588,7 +11863,7 @@ exports.data = [
                     },
                     {
                         "id": 68,
-                        "count":1,
+                        "count":4,
                         "collectId":148001
                     },
                     {
@@ -12599,7 +11874,7 @@ exports.data = [
                     },
                     {
                         "id": 74 ,
-                        "count":1
+                        "count":2
                     },
                     {
                         "id": 94 ,
@@ -12621,7 +11896,7 @@ exports.data = [
     {
         "dungeonId": 83,
         "rank": 0,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -12666,8 +11941,6 @@ exports.data = [
                 }
             ]}
         },
-         
-
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -12681,7 +11954,7 @@ exports.data = [
                     },
                     {
                         "id": 156,
-                        "count":1,
+                        "count":2,
                         "collectId":149001,
                         "questOnly":true
                     },
@@ -12691,113 +11964,17 @@ exports.data = [
                     },
                     {
                         "id": 101 ,
-                        "count":2,
-                        "collectId":151001
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 75,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 44,
-                        "count":1
-                    },
-                    {
-                        "id": 101 ,
-                        "count":2,
-                        "collectId":151001
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 75,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 44,
-                        "count":1
-                    },
-                    {
-                        "id": 157,
-                        "count":1,
-                        "collectId":149001,
-                        "questOnly":true
-                    },
-                    {
-                        "id": 101 ,
-                        "count":2,
+                        "count":5,
                         "collectId":151001
                     },
                     {
-                        "id": 104,
-                        "count":1
+                         "id": 104,
+                         "count":1
                     },
                     {
-                        "id": 95,
-                        "count":1,
-                        "keyed":true
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 75,
-                        "count":2
-                    },
-                    {
-                        "id": 44,
-                        "count":1
-                    },
-                    {
-                        "id": 101 ,
-                        "count":1,
-                        "collectId":151001
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 75,
-                        "count":2
-                    },
-                    {
-                        "id": 44,
-                        "count":1
-                    },
-                    {
-                        "id": 101 ,
-                        "count":2,
-                        "collectId":151001
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 156,
-                        "count":1,
-                        "collectId":149001,
-                        "questOnly":true
-                    },
-                    {
-                        "id": 104,
-                        "count":1
+                         "id": 95,
+                         "count":1,
+                         "keyed":true
                     }
                 ]
             },
@@ -12810,6 +11987,12 @@ exports.data = [
                         "collectId":150001
                     },
                     {
+                         "id": 157,
+                         "count":1,
+                         "collectId":149001,
+                         "questOnly":true
+                    },
+                    {
                         "id": 124 ,
                         "count":1,
                         "keyed":true
@@ -12819,12 +12002,17 @@ exports.data = [
                         "count":2
                     },
                     {
-                        "id": 101 ,
-                        "count":2
+                         "id": 44,
+                         "count":2
                     },
                     {
                         "id": 75,
-                        "count":1
+                        "count":3
+                    },
+                    {
+                         "id": 101 ,
+                         "count":4,
+                         "collectId":151001
                     }
                 ]
             }
@@ -14546,7 +13734,7 @@ exports.data = [
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":2
@@ -14560,7 +13748,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":1
@@ -14648,7 +13836,7 @@ exports.data = [
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":1
@@ -14663,7 +13851,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":1
@@ -14744,7 +13932,7 @@ exports.data = [
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":1
@@ -14758,7 +13946,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":1
@@ -14839,7 +14027,7 @@ exports.data = [
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":3
@@ -14853,7 +14041,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":2
@@ -14936,7 +14124,7 @@ exports.data = [
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":10,to:12,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                      {"pool":"PoolS1R","from":0,to:1,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
@@ -14951,7 +14139,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":10,to:12,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                      {"pool":"PoolS1R","from":0,to:1,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 5,
@@ -15043,7 +14231,7 @@ exports.data = [
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":10,to:12,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                      {"pool":"PoolS1R","from":0,to:1,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
@@ -15058,7 +14246,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":10,to:12,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                      {"pool":"PoolS1R","from":0,to:1,skill:[{id:154}],dropPrize:91},
                      {
                          "id": 149,
@@ -15154,7 +14342,7 @@ exports.data = [
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":10,to:12,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                      {"pool":"PoolS1R","from":0,to:1,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
@@ -15169,7 +14357,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":10,to:12,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                      {"pool":"PoolS1R","from":0,to:1,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
@@ -15328,7 +14516,7 @@ exports.data = [
             }
         ],
         "dropID":[ 71 ],
-        "prizeWxp":10,
+        "prizeWxp":80,
         "prizeGold": 100,
         "prizeXp":100,
         "wxpRate":1,
@@ -39455,6 +38643,7 @@ exports.data = [
                     {
                         "id": 213,
                         "count":1,
+                        "pos": Math.floor(Math.random()*25+5),
                         "keyed":true
                     },
                     {
