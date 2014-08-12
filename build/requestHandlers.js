@@ -40,7 +40,7 @@
               type: LOGIN_ACCOUNT_TYPE_DK,
               code: result
             });
-            if (result.error_code === '0') {
+            if (result.error_code === 0) {
               return callback(null);
             } else {
               return callback(Error(RET_LoginFailed));
