@@ -20,10 +20,39 @@
   Player = require('./player').Player;
 
   loginBy = function(arg, token, callback) {
-    var appID, appKey, options, passport, passportType, path, req, sign;
+    var AppSecret, appID, appKey, options, passport, passportType, path, req, sign;
     passportType = arg.tp;
     passport = arg.id;
     switch (passportType) {
+      case LOGIN_ACCOUNT_TYPE_DK_Android:
+        appID = '3319334';
+        appKey = 'kavpXwRFFa4rjcUy1idmAkph';
+        AppSecret = 'KvCbUBBpAUvkKkC9844QEb8CB7pHnl5v';
+        sign = md5Hash(appID + appKey + passport + token + AppSecret);
+        path = 'http://sdk.m.duoku.com/openapi/sdk/checksession?appid=' + appID + '&appkey=' + appKey + '&uid=' + passport + '&sessionid=' + token + '&clientsecret=' + sign;
+        return http.get(path, function(res) {
+          res.setEncoding('utf8');
+          return res.on('data', function(chunk) {
+            var result;
+            result = JSON.parse(chunk);
+            logInfo({
+              action: 'login',
+              type: passportType,
+              code: result
+            });
+            if (result.error_code === '0') {
+              return callback(null);
+            } else {
+              return callback(Error(RET_LoginFailed));
+            }
+          });
+        }).on('error', function(e) {
+          return logError({
+            action: 'login',
+            type: LOGIN_ACCOUNT_TYPE_DK,
+            error: e
+          });
+        });
       case LOGIN_ACCOUNT_TYPE_91_Android:
       case LOGIN_ACCOUNT_TYPE_91_iOS:
         switch (passportType) {
@@ -184,7 +213,12 @@
               return loginBy(arg, arg.tk, cb);
             }
           }, function(cb) {
-            return loadPlayer(arg.tp, arg.id, cb);
+            var tp;
+            tp = arg.tp;
+            if (arg.atp != null) {
+              tp = arg.atp;
+            }
+            return loadPlayer(tp, arg.id, cb);
           }, function(player, cb) {
             var ev, msg, time;
             if (player) {

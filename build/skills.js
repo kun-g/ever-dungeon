@@ -2204,7 +2204,7 @@ exports.data = [
         "skillId":92,
         "config": {
             "installAction":[
-                { "type": "setProperty","modifications": {"attack":{"src":{"attack":-0.5}}} }
+                { "type": "setProperty","modifications": {"attack":{"src":{"attack":-0.4}}} }
             ],
             "uninstallAction": [
                 { "type": "resetProperty" }
@@ -4192,17 +4192,17 @@ exports.data = [
         "label":"X回合加一次攻击力",
         "config": {
             "triggerCondition": [
-                {"type": "countDown", "cd": 2 },
-                {"type":"event", "event":"onBeginBattleTurn" }
+                {"type": "countDown", "cd": 5 },
+                {"type":"event", "event":"onTurnEnd" }
             ],
             "targetSelection": {
                 "pool": "self",
                 "filter": [{"type":"alive"},{"type":"visible"}]
             },
             "action":[
-                {"type":"delay"},
-                {"type": "playEffect","effect":13,"pos":"self","delay":1.5} ,
-                {"type":"playAction","motion":1,"pos":"self"},
+                {"type": "playEffect","effect":4,"act":"self"},
+                {"type":"shock","delay":0.3,"range":5,"time":0.2},
+                {"type": "delay","delay":0.4},
                 { "type": "installSpell", "spell": 265}
             ]
         }
@@ -4236,15 +4236,25 @@ exports.data = [
         "skillId": 185,
         "label":"溅射",
         "config": {
+            "basic":{
+                "targetEffect": 7,
+                "spellDelay": 0.3,
+                "targetDelay": 0.3
+            },
             "triggerCondition": [
-                {"type" :"event", "event":"onPhysicalDamage" }
+                {"type" :"event", "event": "onTarget"}
             ],
-            "targetSelection":{
-                "pool": "target",
-                "filter": [{"type":"alive"},{"type":"visible"}]
+            "targetSelection": {
+                "pool": "objects",
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"},{"type":"count","count":3}]
             },
             "action": [
-                { "type": "installSpell", "spell": 186}
+                { "type": "modifyVar", "x": "damage", "formular": {"environment": {"damage":0}} },
+                {"type": "delay","delay":0.4},
+                {"type": "playEffect","effect":4,"act":"self"},
+                {"type": "damage","damageType":"Physical","isRange":true,"formular": {"src":{"attack":1}}},
+                {"type": "blink","delay":0.3,"time":0.08},
+                {"type":"shock","delay":0.3,"range":5,"time":0.2}
             ]
         }
     },
@@ -4572,7 +4582,7 @@ exports.data = [
                 "filter": [{"type":"alive"},{"type":"visible"}]
             },
             "triggerCondition": [
-                { "type": "event", "event": "onMonsterShow" },
+                { "type": "event", "event": "onTurnBegin" },
                 {"type":"alive"}
             ],
             "action": [
@@ -6044,14 +6054,17 @@ exports.data = [
     {
         "skillId": 265,
         "config": {
-            "installAction":[
+            "installAction": [
                 { "type": "setProperty","modifications": {"attack":{"src":{"attack":0.1}}} }
             ],
             "targetSelection": {
                 "pool": "self",
-                "filter": [{"type":"alive"},{"type":"visible"}],
-            "buffType":"AttackBuff"
-            }
+                "filter": [{"type":"alive"},{"type":"visible"}]
+            },
+            "buffType":"AttackBuff",
+            "availableCondition": [
+                { "type": "event", "event": "onBeginBattleTurn", "eventCount": 9999 }
+            ]
         }
     }
 ];
