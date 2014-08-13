@@ -213,7 +213,12 @@
               return loginBy(arg, arg.tk, cb);
             }
           }, function(cb) {
-            return loadPlayer(arg.tp, arg.id, cb);
+            var tp;
+            tp = arg.tp;
+            if (arg.atp != null) {
+              tp = arg.atp;
+            }
+            return loadPlayer(tp, arg.id, cb);
           }, function(player, cb) {
             var ev, msg, time;
             if (player) {
