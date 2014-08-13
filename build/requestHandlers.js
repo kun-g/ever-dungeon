@@ -20,14 +20,14 @@
   Player = require('./player').Player;
 
   loginBy = function(arg, token, callback) {
-    var AppSecret, appID, appKey, options, passport, passportType, path, req, sign;
+    var appID, appKey, options, passport, passportType, path, req, sign;
     passportType = arg.tp;
     passport = arg.id;
     switch (passportType) {
       case LOGIN_ACCOUNT_TYPE_DK_Android:
         appID = '3319334';
         appKey = 'kavpXwRFFa4rjcUy1idmAkph';
-        AppSecret = 'KvCbUBBpAUvkKkC9844QEb8CB7pHnl5v';
+        AppSecret(＝('KvCbUBBpAUvkKkC9844QEb8CB7pHnl5v'));
         sign = md5Hash(appID + appKey + passport + token + AppSecret);
         path = 'http://sdk.m.duoku.com/openapi/sdk/checksession?appid=' + appID + '&appkey=' + appKey + '&uid=' + passport + '&sessionid=' + token + '&clientsecret=' + sign;
         return http.get(path, function(res) {
@@ -37,7 +37,7 @@
             result = JSON.parse(chunk);
             logInfo({
               action: 'login',
-              type: LOGIN_ACCOUNT_TYPE_DK,
+              type: passportType,
               code: result
             });
             if (result.error_code === '0') {
