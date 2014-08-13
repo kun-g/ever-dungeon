@@ -49,8 +49,7 @@ function initiateTrinLogger() {
   var socket = dgram.createSocket('udp4');
   logger.tr_agent = {
     write: function (msg) {
-      var buf = new Buffer(msg);
-      socket.send(buf, 0, buf.length, 9528, '10.4.3.41');
+      socket.send(new Buffer(msg), 0, msg.length, 9528, 'localhost');
     }
   };
   function trinLoggerErrorHandler () {
@@ -229,31 +228,7 @@ function paymentHandler (request, response) {
       data = null;
       response.end('failed');
     });
-  } else if (request.url.substr(0, 5) === '/DKP?') {
-    out = urlLib.parse(request.url, true).query;
-    appSecret = 'KvCbUBBpAUvkKkC9844QEb8CB7pHnl5v'
-    var sign = out.amount+out.cardtype+out.orderid+out.result+out.timetamp+appSecret+out.aid;
-    var b = new Buffer(1024);
-    var len = b.write(sign);
-    sign = md5Hash(b.toString('binary', 0, len));
-    var receipt = out.orderid;
-    if (sign === out.client_secret ){ //&& isRMBMatch(out.OrderMoney, receipt)) {
-      if (out.result === '1'){
-          deliverReceipt(receipt, 'DK', function (err) {
-          if (err === null) {
-            logInfo({action: 'AcceptPayment', receipt: receipt, info: out});
-          } else {
-            logError({action: 'AcceptPayment', error:err, info: out, receiptInfo: receiptInfo});
-          }
-        });
-      }
-      return response.end('SUCCESS');
-    } else {
-      logError({action: 'AcceptPayment', error: 'SignMissmatch', info: out, sign: sign});
-      response.end('ERROR_SIGN');
-    }
-    b = null;
-  }else if (request.url.substr(0, 5) === '/jdp?') {
+  } else if (request.url.substr(0, 5) === '/jdp?') {
   }
 } 
 

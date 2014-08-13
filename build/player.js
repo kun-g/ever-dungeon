@@ -1529,7 +1529,7 @@
                   ret: RET_NoKey
                 };
               }
-              prz = generatePrize(queryTable(TABLE_DROP), [item.dropId]);
+              prz = helperLib.generatePrize(queryTable(TABLE_DROP), [item.dropId]);
               prize = this.claimPrize(prz);
               if (!prize) {
                 return {
@@ -1736,8 +1736,7 @@
             {
               sid: this.queryItemSlot(newItem),
               stc: 1,
-              eh: eh,
-              xp: newItem.xp
+              eh: eh
             }
           ]
         }
@@ -1761,7 +1760,8 @@
           sid: this.queryItemSlot(newItem),
           stc: 1,
           sta: 1,
-          eh: eh
+          eh: eh,
+          xp: newItem.xp
         },
         res: ret
       };
@@ -1789,8 +1789,7 @@
             itm: [
               {
                 sid: this.queryItemSlot(newItem),
-                eh: eh,
-                xp: newItem.xp
+                eh: eh
               }
             ]
           }
@@ -1886,7 +1885,7 @@
         dbLib.broadcastEvent(BROADCAST_ENHANCE, {
           who: this.name,
           what: equip.id,
-          many: level + 1
+          many: level
         });
       }
       eh = equip.enhancement.map(function(e) {
@@ -2004,8 +2003,7 @@
       gr = ((_ref7 = cfg.goldRate) != null ? _ref7 : 1) * percentage;
       xr = ((_ref8 = cfg.xpRate) != null ? _ref8 : 1) * percentage;
       wr = ((_ref9 = cfg.wxpRate) != null ? _ref9 : 1) * percentage;
-      prize = generatePrize(queryTable(TABLE_DROP), dropInfo);
-      prize = prize.concat(dungeon.prizeInfo);
+      prize = helperLib.generatePrize(queryTable(TABLE_DROP), dropInfo);
       if (!dungeon.isSweep) {
         if (cfg.prizeGold) {
           prize.push({
