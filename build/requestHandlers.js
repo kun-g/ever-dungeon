@@ -706,20 +706,8 @@
     RPC_BindSubAuth: {
       id: 105,
       func: function(arg, player, handler, rpcID, socket) {
-        var account;
-        account = -1;
-        if (player) {
-          account = player.accountID;
-        }
-        return dbLib.bindAuth(account, arg.typ, arg.id, arg.pass, function(err, account) {
-          if (account === -1 || account === '-1') {
-            return handler([
-              {
-                REQ: rpcID,
-                RET: RET_AccountHaveNoHero
-              }
-            ]);
-          } else {
+        if (player != null) {
+          return dbLib.bindAuth(player.account, arg.typ, arg.id, arg.pass, function(err, account) {
             return handler([
               {
                 REQ: rpcID,
@@ -727,8 +715,15 @@
                 aid: account
               }
             ]);
-          }
-        });
+          });
+        } else {
+          return handler([
+            {
+              REQ: rpcID,
+              RET: RET_AccountHaveNoHero
+            }
+          ]);
+        }
       },
       args: {}
     },
