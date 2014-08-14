@@ -14,9 +14,10 @@ exports.data = {
               {
                   "name":"revive",
                   "data":3
-              }
+              },
               {
-                  "name":
+                  "name":"energy2",
+                  "data":1
               }
           ]
       },

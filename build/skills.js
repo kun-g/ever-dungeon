@@ -4707,9 +4707,9 @@ exports.data = [
                 {"type":"visible"}
             ],
             "levelConfig":[
-                { "modifications": {"attack":{"src":{"attack":visibleMonsterCount*0.03}}}, "level": 1},
-                { "modifications": {"attack":{"src":{"attack":visibleMonsterCount*0.05}}}, "level": 2},
-                { "modifications": {"attack":{"src":{"attack":visibleMonsterCount*0.08}}}, "level": 3}
+                { "modifications": {"attack":{"src":{"attack":0.03}}}, "level": 1},
+                { "modifications": {"attack":{"src":{"attack":0.05}}}, "level": 2},
+                { "modifications": {"attack":{"src":{"attack":0.08}}}, "level": 3}
             ]
         }
     },
