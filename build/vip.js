@@ -1,16 +1,90 @@
 exports.data = {
   "VIP": {
     "requirement": [ 
-      { "rmb": 0 },
-      { "rmb": 30 },
-      { "rmb": 100 },
-        { "rmb": 150 },
-        { "rmb": 250 },
-        { "rmb": 400 },
-        { "rmb": 850 },
-        { "rmb": 1400 },
-        { "rmb": 2500 }
+      {
+          "rmb": 0
+      },
+      {
+          "rmb": 30,
+          "privilege":[
+              {
+                  "name":"chest_vip",
+                  "data":1
+              },
+              {
+                  "name":"revive",
+                  "data":3
+              }
+              {
+                  "name":
+              }
+          ]
+      },
+      {
+          "rmb": 100,
+          "privilege":[
+              {
+                  "name":"pvp_count",
+                  "data":5
+              }
+          ]
+      },
+        {
+            "rmb": 150,
+            "privilege":[
+                {
+                    "name":"pvp_count",
+                    "data":5
+                }
+            ]
+        },
+        {
+            "rmb": 250,
+            "privilege":[
+                {
+                    "name":"pvp_count",
+                    "data":5
+                }
+            ]
+        },
+        {
+            "rmb": 400,
+            "privilege":[
+                {
+                    "name":"pvp_count",
+                    "data":5
+                }
+            ]
+        },
+        {
+            "rmb": 850,
+            "privilege":[
+                {
+                    "name":"pvp_count",
+                    "data":5
+                }
+            ]
+        },
+        {
+            "rmb": 1400,
+            "privilege":[
+                {
+                    "name":"pvp_count",
+                    "data":5
+                }
+            ]
+        },
+        {
+            "rmb": 2500,
+            "privilege":[
+                {
+                    "name":"pvp_count",
+                    "data":5
+                }
+            ]
+        }
     ],
+
     "levels": [
       { "desc":"无权限"},
       { "desc":"1.可购买vip1宝箱\n2.赠送复活药水3瓶\n3.赠送大精力药水1瓶\n4.赠送额外宝石100个"},

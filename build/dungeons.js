@@ -38667,5 +38667,73 @@ exports.data = [
             ],
         "prizeWxp":0,"prizeGold":1000, "prizeXp":0,
         "wxpRate":1,"goldRate":1, "xpRate":1,
-        "rank":230}
+        "rank":230},
+    {
+        "dungeonId": 128,
+        "rank": 100,
+        "levelCount" :1,
+        "levels" :[
+            {
+                "objects" :[
+                    {
+                        "id": 15 ,
+                        "count":2,
+                        "keyed":true
+                    },
+                    {
+                        "id": 47 ,
+                        "count":2,
+                        "keyed":true
+                    },
+                    {
+                        "id": 79 ,
+                        "count":2,
+                        "keyed":true
+                    },
+                    {
+                        "id": 111 ,
+                        "count":2,
+                        "keyed":true
+                    },
+                    {
+                        "id": 194 ,
+                        "count":2,
+                        "keyed":true
+                    },
+                    {
+                        "id": 6 ,
+                        "count":1,
+                        "keyed":true
+                    },
+                    {
+                        "id": 38 ,
+                        "count":1,
+                        "keyed":true
+                    },
+                    {
+                        "id": 70 ,
+                        "count":1,
+                        "keyed":true
+                    },
+                    {
+                        "id": 103 ,
+                        "count":1,
+                        "keyed":true
+                    },
+                    {
+                        "id": 206 ,
+                        "count":1,
+                        "keyed":true
+                    }
+                ]
+            }
+        ],
+        "dropID":[
+            19
+        ],
+        "prizeWxp":30,"prizeGold": 150,
+        "prizeXp":400,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
+    }
 ];

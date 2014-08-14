@@ -2825,10 +2825,8 @@ exports.data = [
                 "filter": [{"type":"alive"}]
             },
             "action":[
-                {"type":"delay"} ,
-                {"type":"shock","delay":0.3,"range":5,"time":0.2},
+                {"type":"delay"},
                 {"type": "installSpell", "spell": 123}
-
             ]
         }
     },
@@ -4709,9 +4707,9 @@ exports.data = [
                 {"type":"visible"}
             ],
             "levelConfig":[
-                { "modifications": {"attack":{"src":{"attack":1}}}, "level": 1},
-                { "modifications": {"attack":{"src":{"attack":1}}}, "level": 2},
-                { "modifications": {"attack":{"src":{"attack":1}}}, "level": 3}
+                { "modifications": {"attack":{"src":{"attack":visibleMonsterCount*0.03}}}, "level": 1},
+                { "modifications": {"attack":{"src":{"attack":visibleMonsterCount*0.05}}}, "level": 2},
+                { "modifications": {"attack":{"src":{"attack":visibleMonsterCount*0.08}}}, "level": 3}
             ]
         }
     },
@@ -4724,7 +4722,6 @@ exports.data = [
         "config": {
             "triggerCondition": [
                 { "type": "event", "event": "onPhysicalDamage" },
-                { "type": "chance", "chance": 0.3 },
                 {"type":"alive"}
             ],
             "targetSelection": {
@@ -4750,26 +4747,29 @@ exports.data = [
             "basic" : {
                 "buffEffect": 36
             },
+            "triggerCondition": [
+                { "type": "event", "event": "onBePhysicalDamage" },
+                { "type": "event", "event": "onBePhysicalRangeDamage" },
+                { "type": "event", "event": "onBeSpellDamage" },
+                { "type": "event", "event": "onBeSpellRangeDamage" },
+                {"type":"alive"}
+            ],
             "targetSelection":
             {
                 "pool":"self",
                 "filter": [{"type":"alive"}]
             },
-            "installAction":[
-                { "type": "setProperty" }
-            ],
-            "uninstallAction": [
-                { "type": "resetProperty" }
-            ],
-            "buffType":"DeDebuff",
             "availableCondition": [
                 { "type":"event", "event":"onBattleTurnEnd" ,"count":1},
-                {"type":"visible"}
+                {"type":"alive"},{"type":"visible"}
+            ],
+            "action": [
+                { "type": "modifyVar", "x": "damage" }
             ],
             "levelConfig":[
-                { "modifications": {"attack":{"src":{"attack":1}}}, "level": 1},
-                { "modifications": {"attack":{"src":{"attack":1}}}, "level": 2},
-                { "modifications": {"attack":{"src":{"attack":1}}}, "level": 3}
+                { "formular": {"environment": {"damage":1.2}}, "chance":0.25, "level": 1},
+                { "formular": {"environment": {"damage":1.3}}, "chance":0.3, "level": 2},
+                { "formular": {"environment": {"damage":1.35}}, "chance":0.5, "level": 3}
             ]
         }
     },

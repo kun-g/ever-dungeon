@@ -2221,6 +2221,27 @@ var data = [
                 }
             }
         ]
+    },
+    {
+        "chapterId": 17,
+        "hidden": true,
+        "label":"测试副本",
+        "stage":[
+            {
+                "stageId": 134,
+                "cost": 0,
+                "team": 3,
+                "hidden":false,
+                "dungeon": 128,
+                "condition": function (obj, util) {
+                    if (util.serverObj.counters['133'] == undefined
+                        || util.serverObj.counters['133'] < MAX_BATTLE_TIMES) {
+                        return true;
+                    }
+                    return false;
+                }
+            }
+        ]
     }
 ];
 for (k in data) {
