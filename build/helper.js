@@ -231,7 +231,7 @@
   exports.genUtil = genCampaignUtil;
 
   initCampaign = function(me, allCampaign, abIndex) {
-    var actived, count, e, evt, key, ret, util, _ref;
+    var actived, count, e, evt, key, ret, totalCount, util, _ref;
     ret = [];
     util = genCampaignUtil();
     for (key in allCampaign) {
@@ -256,11 +256,12 @@
               }
             };
             count = (_ref = me.counters[key]) != null ? _ref : 0;
-            if (typeof count === 'function') {
-              count = count(me, util);
+            totalCount = e.count;
+            if (typeof totalCount === 'function') {
+              totalCount = totalCount(me, util);
             }
             if (e.count) {
-              evt.arg.cnt = e.count - count;
+              evt.arg.cnt = totalCount - count;
             }
             if (key === 'hunting') {
               if (!moment().isSame(gHuntingInfo.timestamp, 'day') || (gHuntingInfo.timestamp == null)) {
