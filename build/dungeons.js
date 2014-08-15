@@ -38634,7 +38634,13 @@ exports.data = [
                     {"id": 149,"from":0,to:2},
                     {
                         "id": 215,
-                        "count":2,
+                        "count":1,
+                        "keyed":true
+                    },
+                    {
+                        "id": 20,
+                        "count":1,
+                        skill:[{id:27}],
                         "keyed":true
                     }
                 ]

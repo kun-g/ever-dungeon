@@ -172,8 +172,10 @@ exports.data = [
         { "type": "damage","damageType":"Spell","isRange":true,"delay":0.8},
         {"type": "playEffect","effect":44,"act":"self"},
         {"type": "playEffect","effect":0,"act":"target","delay":0.6},
-          {"type": "blink","delay":0.6,"time":0.08},
-          {"type":"shock","delay":0.6,"range":5,"time":0.2}
+        {"type":"showBubble","bubbleType":1,effect:56,"content":"fuck you","act":"self"},
+        {"type": "blink","delay":0.6,"time":0.08},
+        {"type":"shock","delay":0.6,"range":5,"time":0.2},
+
       ],
       "levelConfig" : [
         { "formular": {"src":{"attack":0.8}} },
@@ -4240,7 +4242,7 @@ exports.data = [
                 "targetDelay": 0.3
             },
             "triggerCondition": [
-                {"type" :"event", "event": "onTarget"}
+                {"type" :"event", "event": "onPhysicalDamage"}
             ],
             "targetSelection": {
                 "pool": "objects",

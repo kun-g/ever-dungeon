@@ -18,6 +18,10 @@ exports.data = {
               {
                   "name":"energy2",
                   "data":1
+              },
+              {
+                  "name":"gem",
+                  "data":100
               }
           ]
       },
@@ -25,8 +29,20 @@ exports.data = {
           "rmb": 100,
           "privilege":[
               {
-                  "name":"pvp_count",
-                  "data":5
+                  "name":"chest_vip",
+                  "data":2
+              },
+              {
+                  "name":"revive",
+                  "data":3
+              },
+              {
+                  "name":"energy2",
+                  "data":1
+              },
+              {
+                  "name":"gem",
+                  "data":300
               }
           ]
       },
@@ -34,8 +50,23 @@ exports.data = {
             "rmb": 150,
             "privilege":[
                 {
-                    "name":"pvp_count",
-                    "data":5
+                    "name":"chest_vip",
+                    "data":3
+                },
+                {
+                    "name":"ContinuousRaids"
+                },
+                {
+                    "name":"revive",
+                    "data":3
+                },
+                {
+                    "name":"energy2",
+                    "data":1
+                },
+                {
+                    "name":"sdjz",
+                    "data":10
                 }
             ]
         },
@@ -43,8 +74,24 @@ exports.data = {
             "rmb": 250,
             "privilege":[
                 {
-                    "name":"pvp_count",
-                    "data":5
+                    "name":"chest_vip",
+                    "data":4
+                },
+                {
+                    "name":"pkCount",
+                    "data":6
+                },
+                {
+                    "name":"revive",
+                    "data":3
+                },
+                {
+                    "name":"energy2",
+                    "data":1
+                },
+                {
+                    "name":"sdjz",
+                    "data":20
                 }
             ]
         },
@@ -52,8 +99,24 @@ exports.data = {
             "rmb": 400,
             "privilege":[
                 {
-                    "name":"pvp_count",
+                    "name":"chest_vip",
                     "data":5
+                },
+                {
+                    "name":"pkCount",
+                    "data":7
+                },
+                {
+                    "name":"revive",
+                    "data":3
+                },
+                {
+                    "name":"tuHaoCount",
+                    "data":4
+                },
+                {
+                    "name":"sdjz",
+                    "data":30
                 }
             ]
         },
@@ -61,8 +124,24 @@ exports.data = {
             "rmb": 850,
             "privilege":[
                 {
-                    "name":"pvp_count",
-                    "data":5
+                    "name":"chest_vip",
+                    "data":6
+                },
+                {
+                    "name":"pkCount",
+                    "data":8
+                },
+                {
+                    "name":"revive",
+                    "data":3
+                },
+                {
+                    "name":"EquipmentRobbers",
+                    "data":4
+                },
+                {
+                    "name":"EvilChieftains",
+                    "data":4
                 }
             ]
         },
@@ -70,7 +149,23 @@ exports.data = {
             "rmb": 1400,
             "privilege":[
                 {
-                    "name":"pvp_count",
+                    "name":"chest_vip",
+                    "data":7
+                },
+                {
+                    "name":"pkCount",
+                    "data":9
+                },
+                {
+                    "name":"revive",
+                    "data":3
+                },
+                {
+                    "name":"EquipmentRobbers",
+                    "data":5
+                },
+                {
+                    "name":"EvilChieftains",
                     "data":5
                 }
             ]
@@ -79,7 +174,15 @@ exports.data = {
             "rmb": 2500,
             "privilege":[
                 {
-                    "name":"pvp_count",
+                    "name":"chest_vip",
+                    "data":8
+                },
+                {
+                    "name":"pkCount",
+                    "data":10
+                },
+                {
+                    "name":"tuHaoCount",
                     "data":5
                 }
             ]
