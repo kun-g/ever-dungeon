@@ -217,7 +217,7 @@
     };
 
     Player.prototype.getTotalPkTimes = function() {
-      return getPrivilege('pkCount');
+      return this.getPrivilege('pkCount');
     };
 
     Player.prototype.claimPkPrice = function(callback) {
