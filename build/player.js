@@ -2242,33 +2242,33 @@
     };
 
     Player.prototype.vipOperation = function(op) {
-      var cfg, level, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref7, _ref8, _ref9;
+      var cfg, level, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref20, _ref21, _ref22, _ref23, _ref24, _ref7, _ref8, _ref9;
       _ref7 = getVip(this.rmb), level = _ref7.level, cfg = _ref7.cfg;
       switch (op) {
         case 'vipLevel':
           return level;
         case 'chest_vip':
-          return cfg != null ? (_ref8 = cfg.privilege) != null ? typeof _ref8.chest_vip === "function" ? _ref8.chest_vip(0) : void 0 : void 0 : void 0;
+          return (_ref8 = cfg != null ? (_ref9 = cfg.privilege) != null ? _ref9.chest_vip : void 0 : void 0) != null ? _ref8 : 0;
         case 'ContinuousRaids':
-          return cfg != null ? (_ref9 = cfg.privilege) != null ? typeof _ref9.ContinuousRaids === "function" ? _ref9.ContinuousRaids(false) : void 0 : void 0 : void 0;
+          return (_ref10 = cfg != null ? (_ref11 = cfg.privilege) != null ? _ref11.ContinuousRaids : void 0 : void 0) != null ? _ref10 : false;
         case 'pkCount':
-          return cfg != null ? (_ref10 = cfg.privilege) != null ? typeof _ref10.pkCount === "function" ? _ref10.pkCount(0) : void 0 : void 0 : void 0;
+          return (_ref12 = cfg != null ? (_ref13 = cfg.privilege) != null ? _ref13.pkCount : void 0 : void 0) != null ? _ref12 : 0;
         case 'tuHaoCount':
-          return cfg != null ? (_ref11 = cfg.privilege) != null ? typeof _ref11.tuHaoCount === "function" ? _ref11.tuHaoCount(0) : void 0 : void 0 : void 0;
+          return (_ref14 = cfg != null ? (_ref15 = cfg.privilege) != null ? _ref15.tuHaoCount : void 0 : void 0) != null ? _ref14 : 0;
         case 'EquipmentRobbers':
-          return cfg != null ? (_ref12 = cfg.privilege) != null ? typeof _ref12.EquipmentRobbers === "function" ? _ref12.EquipmentRobbers(0) : void 0 : void 0 : void 0;
+          return (_ref16 = cfg != null ? (_ref17 = cfg.privilege) != null ? _ref17.EquipmentRobbers : void 0 : void 0) != null ? _ref16 : 0;
         case 'EvilChieftains':
-          return cfg != null ? (_ref13 = cfg.privilege) != null ? typeof _ref13.EvilChieftains === "function" ? _ref13.EvilChieftains(0) : void 0 : void 0 : void 0;
+          return (_ref18 = cfg != null ? (_ref19 = cfg.privilege) != null ? _ref19.EvilChieftains : void 0 : void 0) != null ? _ref18 : 0;
         case 'blueStarCost':
-          return (_ref14 = cfg != null ? cfg.blueStarCost : void 0) != null ? _ref14 : 0;
+          return (_ref20 = cfg != null ? cfg.blueStarCost : void 0) != null ? _ref20 : 0;
         case 'goldAdjust':
-          return (_ref15 = cfg != null ? cfg.goldAdjust : void 0) != null ? _ref15 : 0;
+          return (_ref21 = cfg != null ? cfg.goldAdjust : void 0) != null ? _ref21 : 0;
         case 'expAdjust':
-          return (_ref16 = cfg != null ? cfg.expAdjust : void 0) != null ? _ref16 : 0;
+          return (_ref22 = cfg != null ? cfg.expAdjust : void 0) != null ? _ref22 : 0;
         case 'wxpAdjust':
-          return (_ref17 = cfg != null ? cfg.wxpAdjust : void 0) != null ? _ref17 : 0;
+          return (_ref23 = cfg != null ? cfg.wxpAdjust : void 0) != null ? _ref23 : 0;
         case 'energyLimit':
-          return ((_ref18 = cfg != null ? cfg.energyLimit : void 0) != null ? _ref18 : 0) + ENERGY_MAX;
+          return ((_ref24 = cfg != null ? cfg.energyLimit : void 0) != null ? _ref24 : 0) + ENERGY_MAX;
       }
     };
 
