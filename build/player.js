@@ -217,7 +217,7 @@
     };
 
     Player.prototype.getTotalPkTimes = function() {
-      return 5;
+      return getPrivilege('pkCount');
     };
 
     Player.prototype.claimPkPrice = function(callback) {
@@ -559,7 +559,7 @@
         });
         postPaymentInfo(this.createHero().level, myReceipt, payment.paymentType);
         this.saveDB();
-        return dbWrapper.updateReceipt(myReceipt, RECEIPT_STATE_CLAIMED, function(err) {
+        return dbLib.updateReceipt(myReceipt, RECEIPT_STATE_CLAIMED, function(err) {
           return cb(err, ret);
         });
       } else {
@@ -1720,7 +1720,6 @@
       ret = this.removeItem(null, 1, slot);
       newItem = new Item(item.upgradeTarget);
       newItem.enhancement = item.enhancement;
-      newItem.xp = item.xp;
       ret = ret.concat(this.aquireItem(newItem));
       eh = newItem.enhancement.map(function(e) {
         return {
@@ -1737,7 +1736,8 @@
             {
               sid: this.queryItemSlot(newItem),
               stc: 1,
-              eh: eh
+              eh: eh,
+              xp: newItem.xp
             }
           ]
         }
@@ -1761,8 +1761,7 @@
           sid: this.queryItemSlot(newItem),
           stc: 1,
           sta: 1,
-          eh: eh,
-          xp: newItem.xp
+          eh: eh
         },
         res: ret
       };
@@ -1790,7 +1789,8 @@
             itm: [
               {
                 sid: this.queryItemSlot(newItem),
-                eh: eh
+                eh: eh,
+                xp: newItem.xp
               }
             ]
           }
@@ -2242,21 +2242,33 @@
     };
 
     Player.prototype.vipOperation = function(op) {
-      var cfg, level, _ref10, _ref11, _ref12, _ref7, _ref8, _ref9;
+      var cfg, level, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref7, _ref8, _ref9;
       _ref7 = getVip(this.rmb), level = _ref7.level, cfg = _ref7.cfg;
       switch (op) {
         case 'vipLevel':
           return level;
+        case 'chest_vip':
+          return cfg != null ? (_ref8 = cfg.privilege) != null ? typeof _ref8.chest_vip === "function" ? _ref8.chest_vip(0) : void 0 : void 0 : void 0;
+        case 'ContinuousRaids':
+          return cfg != null ? (_ref9 = cfg.privilege) != null ? typeof _ref9.ContinuousRaids === "function" ? _ref9.ContinuousRaids(false) : void 0 : void 0 : void 0;
+        case 'pkCount':
+          return cfg != null ? (_ref10 = cfg.privilege) != null ? typeof _ref10.pkCount === "function" ? _ref10.pkCount(0) : void 0 : void 0 : void 0;
+        case 'tuHaoCount':
+          return cfg != null ? (_ref11 = cfg.privilege) != null ? typeof _ref11.tuHaoCount === "function" ? _ref11.tuHaoCount(0) : void 0 : void 0 : void 0;
+        case 'EquipmentRobbers':
+          return cfg != null ? (_ref12 = cfg.privilege) != null ? typeof _ref12.EquipmentRobbers === "function" ? _ref12.EquipmentRobbers(0) : void 0 : void 0 : void 0;
+        case 'EvilChieftains':
+          return cfg != null ? (_ref13 = cfg.privilege) != null ? typeof _ref13.EvilChieftains === "function" ? _ref13.EvilChieftains(0) : void 0 : void 0 : void 0;
         case 'blueStarCost':
-          return (_ref8 = cfg != null ? cfg.blueStarCost : void 0) != null ? _ref8 : 0;
+          return (_ref14 = cfg != null ? cfg.blueStarCost : void 0) != null ? _ref14 : 0;
         case 'goldAdjust':
-          return (_ref9 = cfg != null ? cfg.goldAdjust : void 0) != null ? _ref9 : 0;
+          return (_ref15 = cfg != null ? cfg.goldAdjust : void 0) != null ? _ref15 : 0;
         case 'expAdjust':
-          return (_ref10 = cfg != null ? cfg.expAdjust : void 0) != null ? _ref10 : 0;
+          return (_ref16 = cfg != null ? cfg.expAdjust : void 0) != null ? _ref16 : 0;
         case 'wxpAdjust':
-          return (_ref11 = cfg != null ? cfg.wxpAdjust : void 0) != null ? _ref11 : 0;
+          return (_ref17 = cfg != null ? cfg.wxpAdjust : void 0) != null ? _ref17 : 0;
         case 'energyLimit':
-          return ((_ref12 = cfg != null ? cfg.energyLimit : void 0) != null ? _ref12 : 0) + ENERGY_MAX;
+          return ((_ref18 = cfg != null ? cfg.energyLimit : void 0) != null ? _ref18 : 0) + ENERGY_MAX;
       }
     };
 
@@ -2282,6 +2294,10 @@
 
     Player.prototype.energyLimit = function() {
       return this.vipOperation('energyLimit');
+    };
+
+    Player.prototype.getPrivilege = function(name) {
+      return this.vipOperation(name);
     };
 
     Player.prototype.hireFriend = function(name, handler) {
@@ -3302,7 +3318,7 @@
   };
 
   getVip = function(rmb) {
-    var i, level, lv, tbl, _ref7;
+    var i, level, levelCfg, lv, tbl, _ref7;
     tbl = queryTable(TABLE_VIP, "VIP", this.abIndex);
     if (tbl == null) {
       return {
@@ -3318,6 +3334,8 @@
         level = i;
       }
     }
+    levelCfg = tbl.levels[level];
+    levelCfg.privilege = tbl.requirement[level].privilege;
     return {
       level: level,
       cfg: tbl.levels[level]

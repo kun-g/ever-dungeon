@@ -92,20 +92,6 @@
 
   exports.DBWrapper = DBWrapper;
 
-  exports.updateReceipt = function(receipt, state, handler) {
-    var dbKey;
-    dbKey = makeDBKey([receipt], ReceiptPrefix);
-    return accountDBClient.hgetall(dbKey, function(err, ret) {
-      if (err) {
-        return handler(err);
-      }
-      return accountDBClient.hmset(dbKey, {
-        time: moment().format('YYYYMMDDHHMMSS'),
-        state: state
-      }, handler);
-    });
-  };
-
   exports.getReceipt = function(receipt, handler) {
     var dbKey;
     dbKey = makeDBKey([receipt], ReceiptPrefix);

@@ -3251,35 +3251,6 @@
           ];
         }
       }
-    },
-    ShowBubble: {
-      output: function(env) {
-        if (env.variable('pos') != null) {
-          return [
-            {
-              id: ACT_Bubble,
-              pos: env.variable('pos'),
-              eff: env.variable('eff'),
-              typ: env.variable('typ'),
-              cont: env.variable('cont'),
-              dey: env.variable('dey'),
-              dur: env.variable('dur')
-            }
-          ];
-        } else {
-          return [
-            {
-              id: ACT_Bubble,
-              act: env.variable('act'),
-              eff: env.variable('eff'),
-              typ: env.variable('typ'),
-              cont: env.variable('cont'),
-              dey: env.variable('dey'),
-              dur: env.variable('dur')
-            }
-          ];
-        }
-      }
     }
   };
 

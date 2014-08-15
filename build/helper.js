@@ -1,5 +1,5 @@
 (function() {
-  var CONST_MAX_WORLD_BOSS_TIMES, actCampaign, async, conditionCheck, currentTime, dbLib, dbWrapper, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, updateLockStatus;
+  var CONST_MAX_WORLD_BOSS_TIMES, actCampaign, async, checkBountyValidate, conditionCheck, currentTime, dbLib, dbWrapper, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, updateLockStatus;
 
   conditionCheck = require('./trigger').conditionCheck;
 
@@ -256,6 +256,9 @@
               }
             };
             count = (_ref = me.counters[key]) != null ? _ref : 0;
+            if (typeof count === 'function') {
+              count = count(me, util);
+            }
             if (e.count) {
               evt.arg.cnt = e.count - count;
             }
@@ -452,6 +455,32 @@
 
   exports.proceedCampaign = actCampaign;
 
+  checkBountyValidate = function(id, today) {
+    var cfg, dayOfYear, nowDayYear, startDateArray, theDate, validateDate, _i, _j, _len, _len1, _ref, _ref1;
+    cfg = queryTable(TABLE_BOUNTY, id);
+    if ((cfg != null ? (_ref = cfg.dateInterval) != null ? _ref.startDate : void 0 : void 0) == null) {
+      return false;
+    }
+    startDateArray = cfg.dateInterval.startDate;
+    nowDayYear = moment(today).dayOfYear();
+    for (_i = 0, _len = startDateArray.length; _i < _len; _i++) {
+      theDate = startDateArray[_i];
+      _ref1 = theDate.date;
+      for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
+        validateDate = _ref1[_j];
+        dayOfYear = moment({
+          y: theDate.year,
+          M: theDate.month,
+          d: validateDate
+        }).dayOfYear();
+        if ((dayOfYear - nowDayYear) % cfg.dateInterval.interval === 0) {
+          return true;
+        }
+      }
+    }
+    return false;
+  };
+
   exports.events = {
     "event_daily": {
       "flag": "daily",
@@ -505,7 +534,9 @@
       storeType: "player",
       id: 0,
       actived: 1,
-      count: 3,
+      count: function(obj, util) {
+        return obj.getPrivilege('tuHaoCount');
+      },
       canReset: function(obj, util) {
         return util.diffDay(obj.timestamp.goblin, util.today);
       },
@@ -518,7 +549,9 @@
       storeType: "player",
       id: 1,
       actived: 1,
-      count: 3,
+      count: function(obj, util) {
+        return obj.getPrivilege('EvilChieftains');
+      },
       canReset: function(obj, util) {
         return (util.diffDay(obj.timestamp.enhance, util.today)) && (util.today.weekday() === 2 || util.today.weekday() === 4 || util.today.weekday() === 6 || util.today.weekday() === 0);
       },
@@ -531,7 +564,9 @@
       storeType: "player",
       id: 2,
       actived: 1,
-      count: 3,
+      count: function(obj, util) {
+        return obj.getPrivilege('EquipmentRobbers');
+      },
       canReset: function(obj, util) {
         return (util.diffDay(obj.timestamp.weapon, util.today)) && (util.today.weekday() === 1 || util.today.weekday() === 3 || util.today.weekday() === 5 || util.today.weekday() === 0);
       },
@@ -544,18 +579,7 @@
       storeType: "player",
       id: 3,
       actived: function(obj, util) {
-        if (exports.dateInRange(util.today, [
-          {
-            from: 1,
-            to: 6
-          }, {
-            from: 14,
-            to: 20
-          }, {
-            from: 28,
-            to: 28
-          }
-        ])) {
+        if (checkBountyValidate(3, util.today)) {
           return 1;
         } else {
           return 0;
@@ -576,15 +600,7 @@
       storeType: "player",
       id: 4,
       actived: function(obj, util) {
-        if (exports.dateInRange(util.today, [
-          {
-            from: 7,
-            to: 13
-          }, {
-            from: 21,
-            to: 27
-          }
-        ])) {
+        if (checkBountyValidate(4, util.today)) {
           return 1;
         } else {
           return 0;
@@ -633,7 +649,6 @@
     },
     pkCounter: {
       storeType: "player",
-      id: 6,
       actived: 1,
       canReset: function(obj, util) {
         return util.diffDay(obj.timestamp.currentPKCount, util.today);
@@ -1064,9 +1079,10 @@
   };
 
   exports.dbScripts = {
-    searchRival: " local board, name = ARGV[1], ARGV[2];\n local key = 'Leaderboard.'..board;\n local config = {\n     {base=0.95, delta=0.02, rand= ARGV[3]},\n     {base=0.85, delta=0.03, rand= ARGV[4]},\n     {base=0.50, delta=0.05, rand= ARGV[5]},\n   };\n local count = 3;\n local rank = redis.call('ZRANK', key, name);\n\n local rivalLst = {};\n if rank <= count then\n   for index = 0, rank-1 do \n     table.insert(rivalLst,redis.call('zrange', key, index, index, 'withscores'));\n   end\n   for index = rank+1, count do \n     table.insert(rivalLst,redis.call('zrange', key, index, index, 'withscores'));\n   end\nelse\n   rank = rank - 1;\n   for i, c in ipairs(config) do\n     local from = math.ceil(rank * (c.base-c.delta));\n     local to = math.ceil(rank * (c.base+c.delta));\n     local index = from\n     if  to ~=  from then \n       index = index + c.rand%(to - from);\n     end\n     index = math.ceil(index);\n     rivalLst[count - i + 1] = redis.call('zrange', key, index, index, 'withscores');\n     rank = index - 1;\n   end\n end\n\n return rivalLst;",
-    getMercenary: "local myName, count, range = ARGV[1], ARGV[2], ARGV[3];\nlocal delta, rand, names, retrys = ARGV[4], ARGV[5], ARGV[6], ARGV[7];\nlocal key = 'Leaderboard.battleforce';\nlocal myRange = redis.call('ZRANK', key, myName);\nredis.log(redis.LOG_WARNING, myName, 'my',myRange,'ran',range,'???');\nlocal from = myRange - range;\nlocal to = myRange + range;\nlocal nameMask = {}\n\nwhile string.len(names) > 0 do\n  local index = string.find(names, ',');\n  if index == nil then\n    nameMask[names] = 1;\n    break;\n  end\n  local v = string.sub(names, 1, index-1)\n  nameMask[v] = 1;\n  names = string.sub(names, index+1, -1);\nend\n\nlocal ret = {};\nwhile true do\n  local list = redis.call('zrange', key, from, to);\n  local mercenarys = {};\n  for i, name in ipairs(list) do\n    if nameMask[name] ~= 1 then table.insert(mercenarys, name); end\n  end\n\n  local length = table.getn(mercenarys);\n  if length > 0 then\n    local name = mercenarys[rand%length + 1];\n    table.insert(ret, name);\n    nameMask[name] = 1;\n  end\n\n  if table.getn(ret) >= tonumber(count) then break; end\n\n  from = from - delta;\n  if from < 0 then from = 0; end\n  to = to + delta;\n  retrys = retrys - 1;\n  if retrys == 0 then return {err='Fail'}; end\nend\n\nreturn ret;",
+    searchRival: " local board, name = ARGV[1], ARGV[2];\n local key = 'Leaderboard.'..board;\n local config = {\n     {base=0.95, delta=0.02, rand= ARGV[3]},\n     {base=0.85, delta=0.03, rand= ARGV[4]},\n     {base=0.50, delta=0.05, rand= ARGV[5]},\n   };\n local count = 3;\n local rank = redis.call('ZRANK', key, name);\n\n local rivalLst = {};\n --redis.log(redis.LOG_WARNING, rank, 'b', board, '@', count);\n if rank <= count then\n   for index = 0, rank-1 do \n     table.insert(rivalLst,redis.call('zrange', key, index, index, 'withscores'));\n   end\n   for index = rank+1, count do \n     table.insert(rivalLst,redis.call('zrange', key, index, index, 'withscores'));\n   end\nelse\n   rank = rank - 1;\n   for i, c in ipairs(config) do\n     local from = math.ceil(rank * (c.base-c.delta));\n     local to = math.ceil(rank * (c.base+c.delta));\n     local index = from\n     if  to ~=  from then \n       index = index + c.rand%(to - from);\n     end\n     index = math.ceil(index);\n     rivalLst[count - i + 1] = redis.call('zrange', key, index, index, 'withscores');\n     rank = index - 1;\n   end\n end\n\n return rivalLst;",
+    getMercenary: "local myName, count, range = ARGV[1], ARGV[2], ARGV[3];\nlocal delta, rand, names, retrys = ARGV[4], ARGV[5], ARGV[6], ARGV[7];\nlocal key = 'Leaderboard.battleforce';\nlocal myRange = redis.call('ZRANK', key, myName);\nlocal from = myRange - range;\nlocal to = myRange + range;\nlocal nameMask = {}\n\nwhile string.len(names) > 0 do\n  local index = string.find(names, ',');\n  if index == nil then\n    nameMask[names] = 1;\n    break;\n  end\n  local v = string.sub(names, 1, index-1)\n  nameMask[v] = 1;\n  names = string.sub(names, index+1, -1);\nend\n\nlocal ret = {};\nwhile true do\n  local list = redis.call('zrange', key, from, to);\n  local mercenarys = {};\n  for i, name in ipairs(list) do\n    if nameMask[name] ~= 1 then table.insert(mercenarys, name); end\n  end\n\n  local length = table.getn(mercenarys);\n  if length > 0 then\n    local name = mercenarys[rand%length + 1];\n    table.insert(ret, name);\n    nameMask[name] = 1;\n  end\n\n  if table.getn(ret) >= tonumber(count) then break; end\n\n  from = from - delta;\n  if from < 0 then from = 0; end\n  to = to + delta;\n  retrys = retrys - 1;\n  if retrys == 0 then return {err='Fail'}; end\nend\n\nreturn ret;",
     exchangePKRank: "local board, champion, second = ARGV[1], ARGV[2], ARGV[3]; \nlocal key = 'Leaderboard.'..board; \nlocal championRank = redis.call('ZRANK', key, champion); \nlocal secondRank = redis.call('ZRANK', key, second); \nif championRank > secondRank then \n  redis.call('ZADD', key, championRank, second); \n  redis.call('ZADD', key, secondRank, champion); \n  championRank = secondRank;\nend \nreturn championRank;",
+    updateReceipt: "local receipt, state, time = ARGV[1], ARGV[2], ARGV[3]; \nlocal key = 'Receipt.'..receipt; \nlocal indexKey = '';\n\nif redis.call('EXISTS', key) ~= 1 then\n  local id, productID, serverID, tunnel = ARGV[4], ARGV[5], ARGV[6], ARGV[7];\n  local year, month, day = ARGV[8], ARGV[9], ARGV[10];\n  redis.call('HSET', key, 'id', id); \n  redis.call('HSET', key, 'productID', productID);\n  redis.call('HSET', key, 'serverID', serverID);\n  redis.call('HSET', key, 'tunnel', tunnel);\n  redis.call('HSET', key, 'creationTime', time);\n\n  redis.call('sadd', 'receipt_index_by_time:'..year..'_'..month..'_'..day, receipt);\n  redis.call('sadd', 'receipt_index_by_id:'..id, receipt);\n  redis.call('sadd', 'receipt_index_by_product:'..productID, receipt);\n  redis.call('sadd', 'receipt_index_by_tunnel:'..tunnel, receipt);\n  redis.call('sadd', 'receipt_index_by_server:'..serverID, receipt);\nelse\n  local oldState = redis.call('hget', key, 'state');\n  redis.call('srem', 'receipt_index_by_state:'..oldState, receipt);\nend\n\nredis.call('sadd', 'receipt_index_by_state:'..state, receipt);\nredis.call('HSET', key, 'state', state);\nredis.call('HSET', key, 'time_'..state, time);\nreturn state",
     tryAddLeaderboardMember: "local board, name, value = ARGV[1], ARGV[2], ARGV[3];\nlocal key = 'Leaderboard.'..board;\nlocal score = redis.call('ZSCORE', key, name)\nif score == false then\n  score = value;\n  if value == 'null' then\n    score = redis.call('ZCARD', key)\n  end\n  redis.call('ZADD', key, score, name);\nend\nreturn score"
   };
 

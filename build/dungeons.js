@@ -5426,7 +5426,7 @@ exports.data = [
     {
         "dungeonId": 42,
         "rank": 163,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -6133,7 +6133,7 @@ exports.data = [
         "dungeonId": 48,
         "rank":240,
         "collectId":102001,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -7557,7 +7557,7 @@ exports.data = [
     {
         "dungeonId": 61,
         "rank": 360,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -38631,18 +38631,7 @@ exports.data = [
                     {"pool":"soldierPool","from":8,to:14},
                     {"pool":"rangePool","from":0,to:1},
                     {"pool":"elitePool","count":1},
-                    {"id": 149,"from":0,to:2},
-                    {
-                        "id": 215,
-                        "count":1,
-                        "keyed":true
-                    },
-                    {
-                        "id": 20,
-                        "count":1,
-                        skill:[{id:27}],
-                        "keyed":true
-                    }
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {

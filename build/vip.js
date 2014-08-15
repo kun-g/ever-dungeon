@@ -10,18 +10,6 @@ exports.data = {
               {
                   "name":"chest_vip",
                   "data":1
-              },
-              {
-                  "name":"revive",
-                  "data":3
-              },
-              {
-                  "name":"energy2",
-                  "data":1
-              },
-              {
-                  "name":"gem",
-                  "data":100
               }
           ]
       },
@@ -31,18 +19,6 @@ exports.data = {
               {
                   "name":"chest_vip",
                   "data":2
-              },
-              {
-                  "name":"revive",
-                  "data":3
-              },
-              {
-                  "name":"energy2",
-                  "data":1
-              },
-              {
-                  "name":"gem",
-                  "data":300
               }
           ]
       },
@@ -54,19 +30,8 @@ exports.data = {
                     "data":3
                 },
                 {
-                    "name":"ContinuousRaids"
-                },
-                {
-                    "name":"revive",
-                    "data":3
-                },
-                {
-                    "name":"energy2",
-                    "data":1
-                },
-                {
-                    "name":"sdjz",
-                    "data":10
+                    "name":"ContinuousRaids",
+                    "data":true
                 }
             ]
         },
@@ -80,18 +45,6 @@ exports.data = {
                 {
                     "name":"pkCount",
                     "data":6
-                },
-                {
-                    "name":"revive",
-                    "data":3
-                },
-                {
-                    "name":"energy2",
-                    "data":1
-                },
-                {
-                    "name":"sdjz",
-                    "data":20
                 }
             ]
         },
@@ -107,16 +60,8 @@ exports.data = {
                     "data":7
                 },
                 {
-                    "name":"revive",
-                    "data":3
-                },
-                {
                     "name":"tuHaoCount",
                     "data":4
-                },
-                {
-                    "name":"sdjz",
-                    "data":30
                 }
             ]
         },
@@ -130,10 +75,6 @@ exports.data = {
                 {
                     "name":"pkCount",
                     "data":8
-                },
-                {
-                    "name":"revive",
-                    "data":3
                 },
                 {
                     "name":"EquipmentRobbers",
@@ -155,10 +96,6 @@ exports.data = {
                 {
                     "name":"pkCount",
                     "data":9
-                },
-                {
-                    "name":"revive",
-                    "data":3
                 },
                 {
                     "name":"EquipmentRobbers",

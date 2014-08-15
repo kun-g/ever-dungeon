@@ -641,7 +641,7 @@
     };
 
     Wizard.prototype.doAction = function(thisSpell, actions, level, target, cmd) {
-      var a, c, cfg, delay, effect, env, formular, formularResult, h, modifications, pos, property, spellID, src, t, val, variables, _aa, _ab, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len16, _len17, _len18, _len19, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _ref3, _s, _t, _u, _v, _w, _x, _y, _z;
+      var a, c, cfg, delay, effect, env, formular, formularResult, h, modifications, pos, property, spellID, src, t, val, variables, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len16, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _ref3, _s, _t, _u, _v, _w, _x, _y;
       if (actions == null) {
         return false;
       }
@@ -1155,97 +1155,6 @@
                 src: this,
                 tar: target
               });
-            }
-            break;
-          case 'showBubble':
-            pos = getProperty(a.pos, level.pos);
-            if (pos != null) {
-              if (pos === 'self') {
-                if (typeof cmd.routine === "function") {
-                  cmd.routine({
-                    id: 'ShowBubble',
-                    pos: this.pos,
-                    eff: a.effect,
-                    typ: a.bubbleType,
-                    cont: a.content,
-                    dey: a.delay,
-                    dur: a.duration
-                  });
-                }
-              } else if (pos === 'target') {
-                for (_z = 0, _len17 = target.length; _z < _len17; _z++) {
-                  t = target[_z];
-                  if (typeof cmd.routine === "function") {
-                    cmd.routine({
-                      id: 'ShowBubble',
-                      pos: t.pos,
-                      eff: a.effect,
-                      typ: a.bubbleType,
-                      cont: a.content,
-                      dey: a.delay,
-                      dur: a.duration
-                    });
-                  }
-                }
-              } else if (typeof pos === 'number') {
-                if (typeof cmd.routine === "function") {
-                  cmd.routine({
-                    id: 'ShowBubble',
-                    pos: pos,
-                    eff: a.effect,
-                    typ: a.bubbleType,
-                    cont: a.content,
-                    dey: a.delay,
-                    dur: a.duration
-                  });
-                }
-              } else if (Array.isArray(pos)) {
-                for (_aa = 0, _len18 = pos.length; _aa < _len18; _aa++) {
-                  pos = pos[_aa];
-                  if (typeof cmd.routine === "function") {
-                    cmd.routine({
-                      id: 'ShowBubble',
-                      pos: pos,
-                      eff: a.effect,
-                      typ: a.bubbleType,
-                      cont: a.content,
-                      dey: a.delay,
-                      dur: a.duration
-                    });
-                  }
-                }
-              }
-            } else {
-              switch (a.act) {
-                case 'self':
-                  if (typeof cmd.routine === "function") {
-                    cmd.routine({
-                      id: 'ShowBubble',
-                      act: this.ref,
-                      eff: a.effect,
-                      typ: a.bubbleType,
-                      cont: a.content,
-                      dey: a.delay,
-                      dur: a.duration
-                    });
-                  }
-                  break;
-                case 'target':
-                  for (_ab = 0, _len19 = target.length; _ab < _len19; _ab++) {
-                    t = target[_ab];
-                    if (typeof cmd.routine === "function") {
-                      cmd.routine({
-                        id: 'ShowBubble',
-                        act: t.ref,
-                        eff: a.effect,
-                        typ: a.bubbleType,
-                        cont: a.content,
-                        dey: a.delay,
-                        dur: a.duration
-                      });
-                    }
-                  }
-              }
             }
         }
       }
