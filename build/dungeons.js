@@ -5426,7 +5426,7 @@ exports.data = [
     {
         "dungeonId": 42,
         "rank": 163,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -6133,7 +6133,7 @@ exports.data = [
         "dungeonId": 48,
         "rank":240,
         "collectId":102001,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -7557,7 +7557,7 @@ exports.data = [
     {
         "dungeonId": 61,
         "rank": 360,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -38631,12 +38631,7 @@ exports.data = [
                     {"pool":"soldierPool","from":8,to:14},
                     {"pool":"rangePool","from":0,to:1},
                     {"pool":"elitePool","count":1},
-                    {"id": 149,"from":0,to:2},
-                    {
-                        "id": 215,
-                        "count":2,
-                        "keyed":true
-                    }
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
@@ -38667,5 +38662,73 @@ exports.data = [
             ],
         "prizeWxp":0,"prizeGold":1000, "prizeXp":0,
         "wxpRate":1,"goldRate":1, "xpRate":1,
-        "rank":230}
+        "rank":230},
+    {
+        "dungeonId": 128,
+        "rank": 100,
+        "levelCount" :1,
+        "levels" :[
+            {
+                "objects" :[
+                    {
+                        "id": 15 ,
+                        "count":2,
+                        "keyed":true
+                    },
+                    {
+                        "id": 47 ,
+                        "count":2,
+                        "keyed":true
+                    },
+                    {
+                        "id": 79 ,
+                        "count":2,
+                        "keyed":true
+                    },
+                    {
+                        "id": 111 ,
+                        "count":2,
+                        "keyed":true
+                    },
+                    {
+                        "id": 194 ,
+                        "count":2,
+                        "keyed":true
+                    },
+                    {
+                        "id": 6 ,
+                        "count":1,
+                        "keyed":true
+                    },
+                    {
+                        "id": 38 ,
+                        "count":1,
+                        "keyed":true
+                    },
+                    {
+                        "id": 70 ,
+                        "count":1,
+                        "keyed":true
+                    },
+                    {
+                        "id": 103 ,
+                        "count":1,
+                        "keyed":true
+                    },
+                    {
+                        "id": 206 ,
+                        "count":1,
+                        "keyed":true
+                    }
+                ]
+            }
+        ],
+        "dropID":[
+            19
+        ],
+        "prizeWxp":30,"prizeGold": 150,
+        "prizeXp":400,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
+    }
 ];

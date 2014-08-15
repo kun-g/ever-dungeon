@@ -1,5 +1,5 @@
 (function() {
-  var DBWrapper, Serializer, async, dbLib, gLoadingRecord, getPlayerHero, makeDBKey, moment, registerConstructor, _ref,
+  var DBWrapper, Serializer, async, dbLib, gLoadingRecord, getPlayerHero, makeDBKey, mercenaryAdd, mercenaryDel, mercenaryDemote, mercenaryGet, mercenaryKeyList, moment, registerConstructor, _ref,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -92,10 +92,64 @@
 
   exports.DBWrapper = DBWrapper;
 
+  exports.updateReceipt = function(receipt, state, handler) {
+    var dbKey;
+    dbKey = makeDBKey([receipt], ReceiptPrefix);
+    return accountDBClient.hgetall(dbKey, function(err, ret) {
+      if (err) {
+        return handler(err);
+      }
+      return accountDBClient.hmset(dbKey, {
+        time: moment().format('YYYYMMDDHHMMSS'),
+        state: state
+      }, handler);
+    });
+  };
+
   exports.getReceipt = function(receipt, handler) {
     var dbKey;
     dbKey = makeDBKey([receipt], ReceiptPrefix);
     return accountDBClient.hgetall(dbKey, handler);
+  };
+
+  mercenaryKeyList = function(callback) {
+    return dbClient.smembers(mercenaryPrefix + 'Keys', callback);
+  };
+
+  mercenaryGet = function(key, count, callback) {
+    return dbClient.zrange(mercenaryPrefix + key, 0, count, callback);
+  };
+
+  mercenaryDel = function(battleForce, member, callback) {
+    return async.series([
+      function(cb) {
+        return dbClient.zrem(mercenaryPrefix + battleForce, member, cb);
+      }, function(cb) {
+        return mercenaryGet(battleForce, -1, cb);
+      }
+    ], function(err, result) {
+      var list;
+      if (!err) {
+        list = result[1];
+        if (!list || list.length <= 0) {
+          dbClient.srem(mercenaryPrefix + 'Keys', battleForce, callback);
+          return dbClient.del(mercenaryPrefix + battleForce);
+        }
+      } else {
+        if (callback) {
+          return callback(err, result);
+        }
+      }
+    });
+  };
+
+  mercenaryAdd = function(battleForce, member, callback) {
+    dbClient.zadd(mercenaryPrefix + battleForce, 0, member, callback);
+    return dbClient.sadd(mercenaryPrefix + 'Keys', battleForce);
+  };
+
+  mercenaryDemote = function(key, member, callback) {
+    return dbClient.zincrby(mercenaryPrefix + key, 1, member, callback);
   };
 
   getPlayerHero = function(name, callback) {

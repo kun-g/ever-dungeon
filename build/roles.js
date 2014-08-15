@@ -7770,5 +7770,110 @@ exports.data = [
             }
         ],
         "scale": 1.2
+    },
+    {
+        "classId": 216,
+        "className": "狂战士",
+        "faction": "hero",
+        "classType": 0,
+        "avatar": "avatar1.ccbi",
+        "emblem": [
+            "emblem-warrior.png",
+            "emblem-warrior2.png"
+        ],
+        "property": {
+            "health": 35,
+            "attack": 3,
+            "critical": 2,
+            "strong": 4,
+            "accuracy": 2,
+            "reactivity": 1,
+            "speed": 2,
+            "activeSpell": 0
+        },
+        "defaultArmors": [
+            6,
+            10,
+            11,
+            879,
+            880,
+            881,
+            882,
+            662,
+            712,
+            883
+        ],
+        "levelId": 0,
+        "transId":197
+    },
+    {
+        "classId": 217,
+        "className": "魔导师",
+        "faction": "hero",
+        "classType": 0,
+        "avatar": "avatar2.ccbi",
+        "emblem": [
+            "emblem-mage.png",
+            "emblem-mage2.png"
+        ],
+        "property": {
+            "health": 21,
+            "attack": 5,
+            "critical": 4,
+            "strong": 2,
+            "accuracy": 2,
+            "reactivity": 2,
+            "speed": 2,
+            "activeSpell": 5
+        },
+        "defaultArmors": [
+            6,
+            10,
+            11,
+            884,
+            885,
+            886,
+            887,
+            652,
+            742,
+            888
+        ],
+        "levelId": 0,
+        "transId":198
+    },
+    {
+        "classId": 218,
+        "className": "主教",
+        "faction": "hero",
+        "classType": 0,
+        "avatar": "avatar3.ccbi",
+        "emblem": [
+            "emblem-priest.png",
+            "emblem-priest2.png"
+        ],
+        "property": {
+            "health": 25,
+            "attack": 2,
+            "critical": 2,
+            "strong": 4,
+            "accuracy": 4,
+            "reactivity": 3,
+            "speed": 6,
+            "activeSpell": 8
+        },
+        "defaultArmors": [
+            6,
+            10,
+            11,
+            889,
+            890,
+            891,
+            892,
+            682,
+            772,
+            893
+        ],
+        "levelId": 0,
+        "transId":199
     }
 ]
