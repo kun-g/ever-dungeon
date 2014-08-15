@@ -217,7 +217,7 @@
     };
 
     Player.prototype.getTotalPkTimes = function() {
-      return this.getPrivilege('pkCount');
+      return 5;
     };
 
     Player.prototype.claimPkPrice = function(callback) {
@@ -559,7 +559,7 @@
         });
         postPaymentInfo(this.createHero().level, myReceipt, payment.paymentType);
         this.saveDB();
-        return dbLib.updateReceipt(myReceipt, RECEIPT_STATE_CLAIMED, function(err) {
+        return dbWrapper.updateReceipt(myReceipt, RECEIPT_STATE_CLAIMED, function(err) {
           return cb(err, ret);
         });
       } else {
@@ -2242,33 +2242,21 @@
     };
 
     Player.prototype.vipOperation = function(op) {
-      var cfg, level, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref20, _ref21, _ref22, _ref23, _ref24, _ref7, _ref8, _ref9;
+      var cfg, level, _ref10, _ref11, _ref12, _ref7, _ref8, _ref9;
       _ref7 = getVip(this.rmb), level = _ref7.level, cfg = _ref7.cfg;
       switch (op) {
         case 'vipLevel':
           return level;
-        case 'chest_vip':
-          return (_ref8 = cfg != null ? (_ref9 = cfg.privilege) != null ? _ref9.chest_vip : void 0 : void 0) != null ? _ref8 : 0;
-        case 'ContinuousRaids':
-          return (_ref10 = cfg != null ? (_ref11 = cfg.privilege) != null ? _ref11.ContinuousRaids : void 0 : void 0) != null ? _ref10 : false;
-        case 'pkCount':
-          return (_ref12 = cfg != null ? (_ref13 = cfg.privilege) != null ? _ref13.pkCount : void 0 : void 0) != null ? _ref12 : 0;
-        case 'tuHaoCount':
-          return (_ref14 = cfg != null ? (_ref15 = cfg.privilege) != null ? _ref15.tuHaoCount : void 0 : void 0) != null ? _ref14 : 0;
-        case 'EquipmentRobbers':
-          return (_ref16 = cfg != null ? (_ref17 = cfg.privilege) != null ? _ref17.EquipmentRobbers : void 0 : void 0) != null ? _ref16 : 0;
-        case 'EvilChieftains':
-          return (_ref18 = cfg != null ? (_ref19 = cfg.privilege) != null ? _ref19.EvilChieftains : void 0 : void 0) != null ? _ref18 : 0;
         case 'blueStarCost':
-          return (_ref20 = cfg != null ? cfg.blueStarCost : void 0) != null ? _ref20 : 0;
+          return (_ref8 = cfg != null ? cfg.blueStarCost : void 0) != null ? _ref8 : 0;
         case 'goldAdjust':
-          return (_ref21 = cfg != null ? cfg.goldAdjust : void 0) != null ? _ref21 : 0;
+          return (_ref9 = cfg != null ? cfg.goldAdjust : void 0) != null ? _ref9 : 0;
         case 'expAdjust':
-          return (_ref22 = cfg != null ? cfg.expAdjust : void 0) != null ? _ref22 : 0;
+          return (_ref10 = cfg != null ? cfg.expAdjust : void 0) != null ? _ref10 : 0;
         case 'wxpAdjust':
-          return (_ref23 = cfg != null ? cfg.wxpAdjust : void 0) != null ? _ref23 : 0;
+          return (_ref11 = cfg != null ? cfg.wxpAdjust : void 0) != null ? _ref11 : 0;
         case 'energyLimit':
-          return ((_ref24 = cfg != null ? cfg.energyLimit : void 0) != null ? _ref24 : 0) + ENERGY_MAX;
+          return ((_ref12 = cfg != null ? cfg.energyLimit : void 0) != null ? _ref12 : 0) + ENERGY_MAX;
       }
     };
 
@@ -2294,10 +2282,6 @@
 
     Player.prototype.energyLimit = function() {
       return this.vipOperation('energyLimit');
-    };
-
-    Player.prototype.getPrivilege = function(name) {
-      return this.vipOperation(name);
     };
 
     Player.prototype.hireFriend = function(name, handler) {
@@ -3318,7 +3302,7 @@
   };
 
   getVip = function(rmb) {
-    var i, level, levelCfg, lv, tbl, _ref7;
+    var i, level, lv, tbl, _ref7;
     tbl = queryTable(TABLE_VIP, "VIP", this.abIndex);
     if (tbl == null) {
       return {
@@ -3334,8 +3318,6 @@
         level = i;
       }
     }
-    levelCfg = tbl.levels[level];
-    levelCfg.privilege = tbl.requirement[level].privilege;
     return {
       level: level,
       cfg: tbl.levels[level]
