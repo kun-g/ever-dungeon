@@ -576,14 +576,14 @@
 
     Dungeon.prototype.getAliveHeroes = function() {
       return this.heroes.filter(function(h) {
-        return (h.health != null) && h.health > 0;
+        return h.isAlive();
       });
     };
 
     Dungeon.prototype.getMonsters = function() {
       var _ref5;
       return (_ref5 = this.level) != null ? _ref5.getMonsters().filter(function(o) {
-        return o.health > 0;
+        return o.isAlive();
       }) : void 0;
     };
 
@@ -821,7 +821,7 @@
         case DUNGEON_ACTION_CAST_SPELL:
           hero = this.heroes[0];
           ret = [];
-          if (hero.health > 0) {
+          if (hero.isAlive()) {
             cmd = DungeonCommandStream({
               id: 'BeginTurn',
               type: 'Spell',
@@ -1013,7 +1013,7 @@
       _ref5 = this.refList;
       for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
         o = _ref5[_i];
-        if (o.health > 0) {
+        if (o.isAlive()) {
           return o;
         }
       }
@@ -2030,16 +2030,16 @@
           }
           return _results;
         })();
-        if (((_ref5 = env.getHeroes()[0]) != null ? _ref5.health : void 0) > 0) {
+        if ((_ref5 = env.getHeroes()[0]) != null ? _ref5.isAlive() : void 0) {
           ev.pos = positions[0];
         }
-        if (((_ref6 = env.getHeroes()[1]) != null ? _ref6.health : void 0) > 0) {
+        if ((_ref6 = env.getHeroes()[1]) != null ? _ref6.isAlive() : void 0) {
           ev.pos1 = positions[1];
         }
-        if (((_ref7 = env.getHeroes()[2]) != null ? _ref7.health : void 0) > 0) {
+        if ((_ref7 = env.getHeroes()[2]) != null ? _ref7.isAlive() : void 0) {
           ev.pos2 = positions[2];
         }
-        if (((_ref8 = env.getHeroes()[3]) != null ? _ref8.health : void 0) > 0) {
+        if ((_ref8 = env.getHeroes()[3]) != null ? _ref8.isAlive() : void 0) {
           ev.pos3 = positions[3];
         }
         heroInfo = env.variable('heroInfo');
@@ -2346,7 +2346,7 @@
         var src, tar;
         src = env.variable('src');
         tar = env.variable('tar');
-        if (!(src.health > 0 && tar.health > 0)) {
+        if (!(src.isAlive() && tar.isAlive())) {
           return this.suicide();
         }
         env.variable('damage', src.attack);
@@ -2654,6 +2654,9 @@
     },
     Kill: {
       callback: function(env) {
+        if (!env.variable('obj').isAlive()) {
+          return this.suicide();
+        }
         env.variable('tar').health = 0;
         if (!env.variable('tar').isVisible) {
           env.variable('tar').dead = true;
@@ -2680,7 +2683,7 @@
       callback: function(env) {
         var availableSlot, obj, slot;
         obj = env.variable('obj');
-        if (!(obj.health > 0)) {
+        if (!obj.isAlive()) {
           return this.suicide();
         }
         slot = env.variable('tarPos');
@@ -2702,7 +2705,7 @@
         env.getBlock(obj.pos).removeRef(obj);
         env.getBlock(slot).addRef(obj);
         obj.pos = slot;
-        if (!(env.variable('obj').health > 0)) {
+        if (!env.variable('obj').isAlive()) {
           return this.suicide();
         }
         return this.routine({
@@ -3024,7 +3027,7 @@
         var damageType, isRange, _ref5;
         damageType = env.variable('damageType');
         isRange = env.variable('isRange');
-        if (!(((_ref5 = env.variable('tar')) != null ? _ref5.health : void 0) > 0)) {
+        if (!((_ref5 = env.variable('tar')) != null ? _ref5.isAlive() : void 0)) {
           return this.suicide();
         }
         if (damageType === 'Physical') {
@@ -3045,7 +3048,7 @@
         if (env.variable('critical')) {
           onEvent('CriticalDamage', this, env.variable('src'), env.variable('tar'));
         }
-        if (env.variable('tar').health <= 0) {
+        if (!env.variable('tar').isAlive()) {
           return this.next({
             id: 'Dead',
             tar: env.variable('tar'),
@@ -3089,7 +3092,7 @@
       callback: function(env) {
         var exit, keys, oldStatues;
         keys = env.getObjects().filter(function(m) {
-          return (m.health != null) && m.health > 0;
+          return m.isAlive();
         }).filter(function(m) {
           return (m.keyed != null) && m.keyed;
         });
@@ -3163,10 +3166,10 @@
           });
         }
         onEvent('Kill', this, killer, src);
-        if (env.getBlock(src.pos) && src.health <= 0) {
+        if (env.getBlock(src.pos) && !src.isAlive()) {
           env.getBlock(src.pos).removeRef(src);
         }
-        if (env.variable('tar').health <= 0 && (env.variable('cod') == null) && env.variable('tar').dropInfo) {
+        if (!env.variable('tar').isAlive() && (env.variable('cod') == null) && env.variable('tar').dropInfo) {
           env.dungeon.killingInfo.push({
             dropInfo: env.variable('tar').dropInfo
           });
@@ -3181,7 +3184,7 @@
       output: function(env) {
         var ret;
         ret = [];
-        if (env.variable('tar').isVisible && env.variable('tar').health <= 0) {
+        if (env.variable('tar').isVisible && !env.variable('tar').isAlive()) {
           ret.push({
             act: env.variable('tar').ref,
             id: ACT_DEAD
