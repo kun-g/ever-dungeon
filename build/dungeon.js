@@ -2654,7 +2654,7 @@
     },
     Kill: {
       callback: function(env) {
-        if (!env.variable('obj').isAlive()) {
+        if (!env.variable('tar').isAlive()) {
           return this.suicide();
         }
         env.variable('tar').health = 0;
