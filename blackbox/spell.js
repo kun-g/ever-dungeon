@@ -361,7 +361,7 @@
       preCD = thisSpell.cd;
       if (isReset) {
         thisSpell.cd = cd;
-      } else if (!isAlive()) {
+      } else if (!this.isAlive()) {
         thisSpell.cd = -1;
       } else {
         if (thisSpell.cd !== 0) {
