@@ -1633,8 +1633,9 @@
       return this.dungeon.factionHeal(src, dst, flag);
     };
 
-    DungeonEnvironment.prototype.getObjectAtBlock = function(block) {
-      return this.getBlock(block).getRef(-1);
+    DungeonEnvironment.prototype.getFirstObjectAtBlock = function(block) {
+      var _ref5;
+      return (_ref5 = this.getBlock(block).getRef(-1)) != null ? _ref5[0] : void 0;
     };
 
     DungeonEnvironment.prototype.getCurrentLevel = function() {
@@ -2244,7 +2245,7 @@
         env.onEvent('onTouchBlock', this);
         block = env.getBlock(env.variable('block'));
         if (block.explored) {
-          tar = env.getObjectAtBlock(env.variable('block'));
+          tar = env.getFirstObjectAtBlock(env.variable('block'));
           aliveHeroes = env.getAliveHeroes().filter(function(h) {
             return h != null;
           }).sort(function(a, b) {
@@ -2278,7 +2279,7 @@
     InitiateAttack: {
       callback: function(env) {
         var a, aliveHeroes, attackActions, cmd, enemy, hero, _i, _len;
-        enemy = env.getObjectAtBlock(env.variable('block'));
+        enemy = env.getFirstObjectAtBlock(env.variable('block'));
         aliveHeroes = env.getAliveHeroes().filter(function(h) {
           return h != null;
         }).sort(function(a, b) {
