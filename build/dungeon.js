@@ -1003,29 +1003,39 @@
     };
 
     Block.prototype.getRef = function(index) {
-      var o, _i, _len, _ref5;
+      var o, objLst;
       if (index == null) {
         return this.refList;
       }
       if (index !== -1) {
         return this.refList[index];
       }
-      _ref5 = this.refList;
-      for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
-        o = _ref5[_i];
-        if (o.isAlive()) {
-          return o;
+      objLst = (function() {
+        var _i, _len, _ref5, _results;
+        _ref5 = this.refList;
+        _results = [];
+        for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+          o = _ref5[_i];
+          if (o.isAlive()) {
+            _results.push(o);
+          }
         }
+        return _results;
+      }).call(this);
+      if (objLst.length === 0) {
+        return null;
+      } else {
+        return objLst;
       }
-      return null;
     };
 
     Block.prototype.getType = function() {
+      var _ref5;
       if (this.tileType === Block_Exit || this.tileType === Block_LockedExit || this.getRef(-1) === null) {
         return this.tileType;
       }
-      if (this.getRef(-1) != null) {
-        return this.getRef(-1).blockType;
+      if (((_ref5 = this.getRef(-1)) != null ? _ref5[0] : void 0) != null) {
+        return this.getRef(-1)[0].blockType;
       }
     };
 
@@ -2139,7 +2149,7 @@
     },
     OpenBlock: {
       callback: function(env) {
-        var block, e;
+        var block, npc, _i, _len, _ref5, _results;
         if (env.getBlock(env.variable('block')) == null) {
           return this.suicide();
         }
@@ -2150,17 +2160,26 @@
         });
         block = env.getBlock(env.variable('block'));
         if (block.getType() === Block_Npc || block.getType() === Block_Enemy) {
-          e = block.getRef(-1);
-          this.routine({
-            id: 'UnitInfo',
-            unit: e
-          });
-          env.variable('monster', e);
-          env.variable('tar', e);
-          e.onEvent('onShow', this);
-          env.onEvent('onMonsterShow', this);
-          if ((e != null ? e.isVisible : void 0) !== true) {
-            return e.isVisible = true;
+          if (block.getRef(-1) !== null) {
+            _ref5 = block.getRef(-1);
+            _results = [];
+            for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+              npc = _ref5[_i];
+              this.routine({
+                id: 'UnitInfo',
+                unit: npc
+              });
+              env.variable('monster', npc);
+              env.variable('tar', npc);
+              npc.onEvent('onShow', this);
+              env.onEvent('onMonsterShow', this);
+              if ((npc != null ? npc.isVisible : void 0) !== true) {
+                _results.push(npc.isVisible = true);
+              } else {
+                _results.push(void 0);
+              }
+            }
+            return _results;
           }
         }
       }
@@ -3206,7 +3225,7 @@
     },
     ActivateMechanism: {
       callback: function(env) {
-        var block;
+        var block, npc, _i, _len, _ref5, _results;
         block = env.getBlock(env.variable('block'));
         if (!block.explored) {
           return this.suicide();
@@ -3225,7 +3244,13 @@
             }
             break;
           case Block_Npc:
-            return block.getRef(-1).onEvent('onBeActivate', this);
+            _ref5 = block.getRef(-1);
+            _results = [];
+            for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+              npc = _ref5[_i];
+              _results.push(npc.onEvent('onBeActivate', this));
+            }
+            return _results;
         }
       }
     },
