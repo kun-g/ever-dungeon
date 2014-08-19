@@ -387,7 +387,7 @@
             }
             r = r.filter((function(_this) {
               return function(e) {
-                return !(e.type >= 1 && e.type <= 4 && e.count <= 0);
+                return !(e.type >= PRIZETYPE_GOLD && e.type <= PRIZETYPE_WXP && e.count <= 0);
               };
             })(this));
             prize.push(r);
@@ -559,7 +559,7 @@
         });
         postPaymentInfo(this.createHero().level, myReceipt, payment.paymentType);
         this.saveDB();
-        return dbWrapper.updateReceipt(myReceipt, RECEIPT_STATE_CLAIMED, function(err) {
+        return dbLib.updateReceipt(myReceipt, RECEIPT_STATE_CLAIMED, function(err) {
           return cb(err, ret);
         });
       } else {
@@ -1927,6 +1927,11 @@
         };
       }
       item = this.getItemAt(slot);
+      if (item == null) {
+        return {
+          ret: RET_Unknown
+        };
+      }
       count = item.count;
       if ((item != null ? item.transPrize : void 0) || (item != null ? item.sellprice : void 0)) {
         ret = this.removeItem(null, null, slot);

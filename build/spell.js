@@ -72,6 +72,10 @@
       };
     }
 
+    Wizard.prototype.isAlive = function() {
+      return this.health > 0;
+    };
+
     Wizard.prototype.installSpell = function(spellID, level, cmd, delay) {
       var cfg, levelConfig;
       if (delay == null) {
@@ -333,7 +337,7 @@
       if (!cfg.triggerCondition) {
         return [true, 'NoCD'];
       }
-      if (!(this.health > 0)) {
+      if (!this.isAlive()) {
         return [false, 'Dead'];
       }
       cdConfig = (function() {
@@ -357,7 +361,7 @@
       preCD = thisSpell.cd;
       if (isReset) {
         thisSpell.cd = cd;
-      } else if (this.health <= 0) {
+      } else if (!this.isAlive()) {
         thisSpell.cd = -1;
       } else {
         if (thisSpell.cd !== 0) {
@@ -577,7 +581,7 @@
             }
             break;
           case 'alive':
-            if (!(this.health > 0)) {
+            if (!this.isAlive()) {
               return [false, 'Dead'];
             }
             break;

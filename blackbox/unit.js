@@ -230,7 +230,7 @@
       this.level = 0;
       this.levelUp();
       this.gearUp();
-      if (this.health <= 0) {
+      if (!this.isAlive()) {
         this.health = 1;
       }
       if (this.attack <= 0) {
