@@ -644,38 +644,38 @@
     Dungeon.prototype.explore = function(tar) {
       var access, i, n, nx, ny, _i, _ref5;
       if (this.level.blocks[tar].explored) {
-        return 0;
+        return ExploreResult_Explored;
       }
       if (tar === this.getEntrance()) {
-        return 1;
+        return ExploreResult_Entrance;
       }
       if (Array.isArray(this.getEntrance()) && this.getEntrance().indexOf(tar) !== -1) {
-        return 1;
+        return ExploreResult_Entrance;
       }
       access = false;
       for (i = _i = 0; _i <= 3; i = ++_i) {
         nx = tar % DG_LEVELWIDTH;
         ny = Math.floor(tar / DG_LEVELWIDTH);
         switch (i) {
-          case 0:
+          case UP:
             ny--;
             break;
-          case 1:
+          case RIGHT:
             nx++;
             break;
-          case 2:
+          case DOWN:
             ny++;
             break;
-          case 3:
+          case LEFT:
             nx--;
         }
         n = nx + ny * DG_LEVELWIDTH;
         if ((_ref5 = this.level.blocks[n]) != null ? _ref5.explored : void 0) {
-          return 1;
+          return ExploreResult_Entrance;
         }
       }
       this.onReplayMissMatch();
-      return -1;
+      return ExploreResult_DeadEnd;
     };
 
     Dungeon.prototype.getRank = function() {
@@ -2076,12 +2076,12 @@
       },
       output: function(env) {
         switch (env.variable('exploreResult')) {
-          case -1:
+          case ExploreResult_DeadEnd:
             return {
               id: ACT_POPTEXT,
               arg: 'Invalid move'
             };
-          case 0:
+          case ExploreResult_Explored:
             return {
               id: ACT_POPTEXT,
               arg: 'Explored block'
