@@ -10668,7 +10668,7 @@ exports.data = [
 		"basic_properties": {
 			"health": 25,
 			"attack": 8,
-			"reactivity": 7,
+			"accuracy": 7,
 			"critical": 4
 		},
 		"storeOnly": true,
