@@ -509,7 +509,7 @@
     };
 
     Dungeon.prototype.initiateHeroes = function(team) {
-      var e, ref;
+      var dummyHero, e, ref;
       if (!team) {
         team = [];
       }
@@ -533,7 +533,9 @@
         }
         return _results;
       })();
-      this.heroes.push(new Hero({}));
+      dummyHero = new Hero({});
+      dummyHero.health = 0;
+      this.heroes.push(dummyHero);
       return this.heroes.forEach(function(e) {
         return e.faction = 'hero';
       });
@@ -566,8 +568,8 @@
       };
     };
 
-    Dungeon.prototype.getHeroes = function(all) {
-      if (all) {
+    Dungeon.prototype.getHeroes = function(withDummy) {
+      if (withDummy) {
         return this.heroes;
       } else {
         return this.heroes.slice(0, this.heroes.length - 1);
@@ -575,8 +577,8 @@
     };
 
     Dungeon.prototype.getAliveHeroes = function() {
-      return this.heroes.filter(function(h) {
-        return h.isAlive();
+      return this.getHeroes().filter(function(hero) {
+        return hero.isAlive();
       });
     };
 

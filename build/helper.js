@@ -231,7 +231,7 @@
   exports.genUtil = genCampaignUtil;
 
   initCampaign = function(me, allCampaign, abIndex) {
-    var actived, count, e, evt, key, ret, util, _ref;
+    var actived, count, e, evt, key, ret, totalCount, util, _ref;
     ret = [];
     util = genCampaignUtil();
     for (key in allCampaign) {
@@ -256,8 +256,12 @@
               }
             };
             count = (_ref = me.counters[key]) != null ? _ref : 0;
+            totalCount = e.count;
+            if (typeof totalCount === 'function') {
+              totalCount = totalCount(me, util);
+            }
             if (e.count) {
-              evt.arg.cnt = e.count - count;
+              evt.arg.cnt = totalCount - count;
             }
             if (key === 'hunting') {
               if (!moment().isSame(gHuntingInfo.timestamp, 'day') || (gHuntingInfo.timestamp == null)) {
@@ -531,7 +535,9 @@
       storeType: "player",
       id: 0,
       actived: 1,
-      count: 3,
+      count: function(obj, util) {
+        return obj.getPrivilege('tuHaoCount');
+      },
       canReset: function(obj, util) {
         return util.diffDay(obj.timestamp.goblin, util.today);
       },
@@ -544,7 +550,9 @@
       storeType: "player",
       id: 1,
       actived: 1,
-      count: 3,
+      count: function(obj, util) {
+        return obj.getPrivilege('EvilChieftains');
+      },
       canReset: function(obj, util) {
         return (util.diffDay(obj.timestamp.enhance, util.today)) && (util.today.weekday() === 2 || util.today.weekday() === 4 || util.today.weekday() === 6 || util.today.weekday() === 0);
       },
@@ -557,7 +565,9 @@
       storeType: "player",
       id: 2,
       actived: 1,
-      count: 3,
+      count: function(obj, util) {
+        return obj.getPrivilege('EquipmentRobbers');
+      },
       canReset: function(obj, util) {
         return (util.diffDay(obj.timestamp.weapon, util.today)) && (util.today.weekday() === 1 || util.today.weekday() === 3 || util.today.weekday() === 5 || util.today.weekday() === 0);
       },
