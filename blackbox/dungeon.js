@@ -534,6 +534,7 @@
         return _results;
       })();
       dummyHero = new Hero({});
+      dummyHero.health = 0;
       this.heroes.push(dummyHero);
       return this.heroes.forEach(function(e) {
         return e.faction = 'hero';
