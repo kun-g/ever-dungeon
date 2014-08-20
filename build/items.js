@@ -21697,7 +21697,7 @@ exports.data = [
 		"icon": "irfasion-helmet1.png",
 		"category": 1,
 		"subcategory": 13,
-		"description": "将职业练至10级的身份证明。",
+		"description": "将职业练至45级的身份证明。",
 		"effecta": [
 			{
 				"part": "helmet",
@@ -27568,7 +27568,7 @@ exports.data = [
         "icon": "irfasion-helmet1.png",
         "category": 1,
         "subcategory": 13,
-        "description": "将职业练至10级的身份证明。",
+        "description": "将职业练至45级的身份证明。",
         "effecta": [
             {
                 "part": "helmet",

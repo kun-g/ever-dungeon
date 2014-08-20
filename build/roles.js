@@ -1,107 +1,109 @@
 exports.data = [
-	{
-		"classId": 0,
-		"className": "战士",
-		"faction": "hero",
-		"classType": 0,
-		"avatar": "avatar.ccbi",
-		"emblem": [
-			"emblem-warrior.png",
-			"emblem-warrior2.png"
-		],
-		"property": {
-			"health": 35,
-			"attack": 3,
-			"critical": 2,
-			"strong": 4,
-			"accuracy": 2,
-			"reactivity": 1,
-			"speed": 2,
-			"activeSpell": 0
-		},
-		"defaultArmors": [
-			6,
-			10,
-			11,
-			40,
-			41,
-			42,
-			43,
+    {
+        "classId": 0,
+        "className": "战士",
+        "faction": "hero",
+        "classType": 0,
+        "avatar": "avatar1.ccbi",
+        "emblem": [
+            "emblem-warrior.png",
+            "emblem-warrior2.png"
+        ],
+        "property": {
+            "health": 35,
+            "attack": 3,
+            "critical": 2,
+            "strong": 4,
+            "accuracy": 2,
+            "reactivity": 1,
+            "speed": 2,
+            "activeSpell": 0
+        },
+        "defaultArmors": [
+            6,
+            10,
+            11,
+            879,
+            880,
+            881,
+            882,
             662,
-            712
-		],
-		"levelId": 0,
+            712,
+            883
+        ],
+        "levelId": 0,
         "transId":197
-	},
-	{
-		"classId": 1,
-		"className": "法师",
-		"faction": "hero",
-		"classType": 0,
-		"avatar": "avatar.ccbi",
-		"emblem": [
-			"emblem-mage.png",
-			"emblem-mage2.png"
-		],
-		"property": {
-			"health": 21,
-			"attack": 5,
-			"critical": 4,
-			"strong": 2,
-			"accuracy": 2,
-			"reactivity": 2,
-			"speed": 2,
-			"activeSpell": 5
-		},
-		"defaultArmors": [
-			6,
-			10,
-			11,
-			32,
-			33,
-			34,
-            35,
-			652,
-            742
-		],
-		"levelId": 0,
+    },
+    {
+        "classId": 1,
+        "className": "法师",
+        "faction": "hero",
+        "classType": 0,
+        "avatar": "avatar2.ccbi",
+        "emblem": [
+            "emblem-mage.png",
+            "emblem-mage2.png"
+        ],
+        "property": {
+            "health": 21,
+            "attack": 5,
+            "critical": 4,
+            "strong": 2,
+            "accuracy": 2,
+            "reactivity": 2,
+            "speed": 2,
+            "activeSpell": 5
+        },
+        "defaultArmors": [
+            6,
+            10,
+            11,
+            884,
+            885,
+            886,
+            887,
+            652,
+            742,
+            888
+        ],
+        "levelId": 0,
         "transId":198
-
-	},
-	{
-		"classId": 2,
-		"className": "牧师",
-		"faction": "hero",
-		"classType": 0,
-		"avatar": "avatar.ccbi",
-		"emblem": [
-			"emblem-priest.png",
-			"emblem-priest2.png"
-		],
-		"property": {
-			"health": 25,
-			"attack": 2,
-			"critical": 2,
-			"strong": 4,
-			"accuracy": 4,
-			"reactivity": 3,
-			"speed": 6,
-			"activeSpell": 8
-		},
-		"defaultArmors": [
-			6,
-			10,
-			11,
-			36,
-			37,
-			38,
-			39,
+    },
+    {
+        "classId": 2,
+        "className": "牧师",
+        "faction": "hero",
+        "classType": 0,
+        "avatar": "avatar3.ccbi",
+        "emblem": [
+            "emblem-priest.png",
+            "emblem-priest2.png"
+        ],
+        "property": {
+            "health": 25,
+            "attack": 2,
+            "critical": 2,
+            "strong": 4,
+            "accuracy": 4,
+            "reactivity": 3,
+            "speed": 6,
+            "activeSpell": 8
+        },
+        "defaultArmors": [
+            6,
+            10,
+            11,
+            889,
+            890,
+            891,
+            892,
             682,
-            772
-		],
-		"levelId": 0,
+            772,
+            893
+        ],
+        "levelId": 0,
         "transId":199
-	},
+    },
 	{
 		"classId": 3,
 		"className": "蝙蝠",

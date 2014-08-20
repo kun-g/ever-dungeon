@@ -6077,7 +6077,8 @@ exports.data = [
                 {"type" :"event", "event":"onCriticalDamage" }
             ],
             "action": [
-                {"type":"playEffect","effect":60,"act":"self"}
+                {"type":"playEffect","effect":60,"act":"self"},
+                { "type": "shock", "delay":0.3, "range":5, "time":0.2 }
             ]
         }
     },
@@ -6089,7 +6090,8 @@ exports.data = [
                 {"type" :"event", "event":"onCriticalDamage" }
             ],
             "action": [
-                {"type":"playEffect","effect":61,"act":"self"}
+                {"type":"playEffect","effect":61,"act":"self"},
+                { "type": "shock", "delay":0.3, "range":5, "time":0.2 }
             ]
         }
     },
@@ -6102,7 +6104,8 @@ exports.data = [
             ],
             "action": [
                 {"type": "playEffect","effect":63,"pos":"target"},
-                {"type":"playEffect","effect":62,"act":"self"}
+                {"type":"playEffect","effect":62,"act":"self"},
+                { "type": "shock", "delay":0.3, "range":5, "time":0.2 }
             ]
         }
     },
