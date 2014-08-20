@@ -28011,6 +28011,10 @@ exports.data = [
             {
                 "part": "lefthand",
                 "file": "f-warriorn-lefthand1.ccbi"
+            },
+            {
+                "part": "lefthand2",
+                "file": "f-warriorn-lefthand1.ccbi"
             }
         ]
     },
@@ -28022,6 +28026,10 @@ exports.data = [
         "effecta": [
             {
                 "part": "secondaryweapon2",
+                "file": "f-warriorn-weapon21.ccbi"
+            },
+            {
+                "part": "secondaryweapon2-2",
                 "file": "f-warriorn-weapon21.ccbi"
             }
         ]
@@ -28088,6 +28096,10 @@ exports.data = [
             },
             {
                 "part": "lefthand",
+                "file": "f-magen-lefthand1.ccbi"
+            },
+            {
+                "part": "lefthand2",
                 "file": "f-magen-lefthand1.ccbi"
             }
         ]
@@ -28166,6 +28178,10 @@ exports.data = [
             },
             {
                 "part": "lefthand",
+                "file": "f-priestn-lefthand1.ccbi"
+            },
+            {
+                "part": "lefthand2",
                 "file": "f-priestn-lefthand1.ccbi"
             }
         ]
