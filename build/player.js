@@ -924,22 +924,6 @@
       return async.waterfall([
         (function(_this) {
           return function(cb) {
-            var _base, _base1;
-            if ((stageConfig.pvp != null) && (pkr != null)) {
-              if ((_base = _this.counters).currentPKCount == null) {
-                _base.currentPKCount = 0;
-              }
-              if ((_base1 = _this.counters).totalPKCount == null) {
-                _base1.totalPKCount = 5;
-              }
-              if (_this.counters.currentPKCount >= _this.counters.totalPKCount) {
-                cb(RET_NotEnoughTimes);
-              }
-            }
-            return cb();
-          };
-        })(this), (function(_this) {
-          return function(cb) {
             if (_this.dungeonData.stage != null) {
               return cb('OK');
             } else {
@@ -1049,8 +1033,6 @@
             if ((stageConfig.pvp != null) && (pkr != null)) {
               return getPlayerHero(pkr, wrapCallback(_this, function(err, heroData) {
                 this.dungeonData.PVP_Pool = heroData != null ? [getBasicInfo(heroData)] : void 0;
-                this.counters.currentPKCount++;
-                this.saveDB();
                 return cb('OK');
               }));
             } else {
