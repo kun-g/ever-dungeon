@@ -28081,30 +28081,15 @@ exports.data = [
             {
                 "part": "mainweapon",
                 "file": "f-warriorn-mainweapon1.ccbi"
-            },
-            {
-                "part": "mainweapontx",
-                "file": "f-warriorn-mainweapontx.ccbi"
-            },
-            {
-                "part": "baojitx",
-                "file": "f-warriorn-mainweapontxb.ccbi"
             }
         ],
         "effectm": [
             {
                 "part": "mainweapon",
                 "file": "m-warriorn-mainweapon1.ccbi"
-            },
-            {
-                "part": "mainweapontx",
-                "file": "m-warriorn-mainweapontx.ccbi"
-            },
-            {
-                "part": "baojitx",
-                "file": "m-warriorn-mainweapontxb.ccbi"
             }
         ],
+        "effectAttack": 57,
         "soundAttack": "attackzhanshi.mp3"
     },
     {
@@ -28228,30 +28213,15 @@ exports.data = [
             {
                 "part": "mainweapon",
                 "file": "f-magen-mainweapon1.ccbi"
-            },
-            {
-                "part": "mainweapontx",
-                "file": "f-magen-mainweapontx.ccbi"
-            },
-            {
-                "part": "baojitx",
-                "file": "f-magen-mainweapontxb.ccbi"
             }
         ],
         "effectm": [
-            {
-                "part": "mainweapon",
-                "file": "m-magen-mainweapon1.ccbi"
-            },
-            {
-                "part": "mainweapontx",
-                "file": "m-magen-mainweapontx.ccbi"
-            },
-            {
-                "part": "baojitx",
-                "file": "m-magen-mainweapontxb.ccbi"
-            }
-        ],
+        {
+            "part": "mainweapon",
+            "file": "m-magen-mainweapon1.ccbi"
+        }
+    ],
+        "effectAttack": 58,
         "soundAttack": "attackzhanshi.mp3"
     },
     {
@@ -28383,28 +28353,12 @@ exports.data = [
             {
                 "part": "mainweapon",
                 "file": "f-priestn-mainweapon1.ccbi"
-            },
-            {
-                "part": "mainweapontx",
-                "file": "f-priestn-mainweapontx.ccbi"
-            },
-            {
-                "part": "baojitx",
-                "file": "f-priestn-mainweapontxb.ccbi"
             }
         ],
         "effectm": [
             {
                 "part": "mainweapon",
                 "file": "m-priestn-mainweapon1.ccbi"
-            },
-            {
-                "part": "mainweapontx",
-                "file": "m-priestn-mainweapontx.ccbi"
-            },
-            {
-                "part": "baojitx",
-                "file": "m-priestn-mainweapontxb.ccbi"
             }
         ],
         "effectAttack": 59,
@@ -28803,28 +28757,12 @@ exports.data = [
             {
                 "part": "mainweapon",
                 "file": "f-priestn2-mainweapon1.ccbi"
-            },
-            {
-                "part": "mainweapontx",
-                "file": "f-priestn2-mainweapontx.ccbi"
-            },
-            {
-                "part": "baojitx",
-                "file": "f-priestn2-mainweapontxb.ccbi"
             }
         ],
         "effectm": [
             {
                 "part": "mainweapon",
                 "file": "m-priestn2-mainweapon1.ccbi"
-            },
-            {
-                "part": "mainweapontx",
-                "file": "m-priestn-mainweapontx.ccbi"
-            },
-            {
-                "part": "baojitx",
-                "file": "m-priestn-mainweapontxb.ccbi"
             }
         ],
         "effectAttack": 59,
