@@ -8,9 +8,7 @@ exports.data = [
                     {"id":195, "level": 1,"classLimit":0},
                     {"id":201, "level": 1,"classLimit":1},
                     {"id":207, "level": 1,"classLimit":2},
-                    {"id":266, "classLimit":0},
-                    {"id":267, "classLimit":1},
-                    {"id":268, "classLimit":2}
+                    {"id":76}
                 ]
             },
             {
