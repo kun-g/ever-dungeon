@@ -13,6 +13,7 @@
     var io;
     io = require('socket.io');
     return io.listen(port).on('connection', function(socket) {
+      console.log('Connection');
       return socket.on('request', function(request) {
         return console.log(request);
       });
@@ -119,7 +120,7 @@
       });
       return setInterval(((function(_this) {
         return function() {
-          return that.updateBackendStatus();
+          return _this.updateBackendStatus();
         };
       })(this)), 10000);
     }
