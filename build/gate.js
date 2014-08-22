@@ -14,10 +14,23 @@
     io = require('socket.io');
     return io.listen(port).on('connection', function(socket) {
       console.log('Connection');
-      return socket.on('request', function(request) {
-        return console.log(request);
+      socket.encoder = new SimpleProtocolEncoder();
+      socket.decoder = new SimpleProtocolDecoder();
+      socket.encoder.setFlag('size');
+      socket.server = backendManager.createConnection(socket);
+      if (socket.server == null) {
+        return;
+      }
+      c.encoder.pipe(c.server);
+      c.server.pipe(c);
+      socket.decoder.on('request', function(request) {
+        return socket.emit('response', request);
       });
-    });
+      return socket.on('request', function(request) {
+        console.log(request);
+        return c.encoder.writeObject(request);
+      });
+    }).set('log level', 0);
   };
 
   startTcpServer = function(port, backendManager) {
