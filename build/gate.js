@@ -9,6 +9,48 @@
 
   net = require('net');
 
+  startSocketIOServer = function(servers, port) {
+    var io;
+    io = require('socket.io');
+    return io.listen(port, function(socket) {
+      return socket.on('request', function(request) {
+        return console.log(request);
+      });
+    });
+  };
+
+  startTcpServer = function(port, backendManager) {
+    var server;
+    server = net.createServer(function(c) {
+      c.decoder = new SimpleProtocolDecoder();
+      c.encoder = new SimpleProtocolEncoder();
+      c.encoder.setFlag('size');
+      c.pipe(c.decoder);
+      c.server = backendManager.createConnection(c);
+      if (c.server == null) {
+        return;
+      }
+      c.encoder.pipe(c.server);
+      c.server.pipe(c);
+      return c.decoder.on('request', function(request) {
+        if (request) {
+          if (request.CMD === 101) {
+            console.log({
+              request: request,
+              ip: c.remoteAddress
+            });
+          }
+          return c.encoder.writeObject(request);
+        } else {
+          c.destroy();
+          return c = null;
+        }
+      });
+    });
+    server.listen(port, console.log);
+    return server.on('error', console.log);
+  };
+
   backendManager = {
     currIndex: 0,
     backends: [],
@@ -90,47 +132,5 @@
     backendManager.init(gServerConfig.Gate);
     return startSocketIOServer(backendManager, 7757);
   });
-
-  startSocketIOServer = function(servers, port) {
-    var io;
-    io = require('socket.io');
-    return io.listen(port, function(socket) {
-      return socket.on('request', function(request) {
-        return console.log(request);
-      });
-    });
-  };
-
-  startTcpServer = function(port, backendManager) {
-    var server;
-    server = net.createServer(function(c) {
-      c.decoder = new SimpleProtocolDecoder();
-      c.encoder = new SimpleProtocolEncoder();
-      c.encoder.setFlag('size');
-      c.pipe(c.decoder);
-      c.server = backendManager.createConnection(c);
-      if (c.server == null) {
-        return;
-      }
-      c.encoder.pipe(c.server);
-      c.server.pipe(c);
-      return c.decoder.on('request', function(request) {
-        if (request) {
-          if (request.CMD === 101) {
-            console.log({
-              request: request,
-              ip: c.remoteAddress
-            });
-          }
-          return c.encoder.writeObject(request);
-        } else {
-          c.destroy();
-          return c = null;
-        }
-      });
-    });
-    server.listen(port, console.log);
-    return server.on('error', console.log);
-  };
 
 }).call(this);
