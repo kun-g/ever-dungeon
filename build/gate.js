@@ -12,7 +12,7 @@
   startSocketIOServer = function(servers, port) {
     var io;
     io = require('socket.io');
-    return io.listen(port, function(socket) {
+    return io.listen(port).on('connection', function(socket) {
       return socket.on('request', function(request) {
         return console.log(request);
       });
