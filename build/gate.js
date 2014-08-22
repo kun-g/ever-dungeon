@@ -9,29 +9,6 @@
 
   net = require('net');
 
-  require('nodetime').profile({
-    accountKey: 'c82d52d81e9ed18e8550b58bf36f49d47e50a792',
-    appName: 'Gate'
-  });
-
-  initGlobalConfig(null, function() {
-    var gServerConfig, gServerID;
-    gServerID = queryTable(TABLE_CONFIG, 'ServerID');
-    gServerConfig = queryTable(TABLE_CONFIG, 'ServerConfig')[gServerID];
-    backendManager.init(gServerConfig.Gate);
-    return startSocketIOServer(backendManager, 7757);
-  });
-
-  startSocketIOServer = function(servers, port) {
-    var io;
-    io = require('socket.io');
-    return io.listen(port, function(socket) {
-      return socket.on('request', function(request) {
-        return console.log(request);
-      });
-    });
-  };
-
   backendManager = {
     currIndex: 0,
     backends: [],
@@ -104,6 +81,24 @@
         };
       })(this)), 10000);
     }
+  };
+
+  initGlobalConfig(null, function() {
+    var gServerConfig, gServerID;
+    gServerID = queryTable(TABLE_CONFIG, 'ServerID');
+    gServerConfig = queryTable(TABLE_CONFIG, 'ServerConfig')[gServerID];
+    backendManager.init(gServerConfig.Gate);
+    return startSocketIOServer(backendManager, 7757);
+  });
+
+  startSocketIOServer = function(servers, port) {
+    var io;
+    io = require('socket.io');
+    return io.listen(port, function(socket) {
+      return socket.on('request', function(request) {
+        return console.log(request);
+      });
+    });
   };
 
   startTcpServer = function(port, backendManager) {
