@@ -49,7 +49,16 @@ initServer = function () {
   };
 };
 
-logError = function(log) { print('Error', log); };
+logError = function(log) {
+  if (log.err == null || log.err == undefined){
+    log.err ={};
+  }
+  if (log.stack != null && log.stack != undefined){
+    log.err.stack = log.stack;
+  }
+  log.err = JSON.stringify(log.err);
+  print('Error', log); 
+};
 logInfo = function(log) { print('Info', log); };
 logUser = function(log) { print('User', log); };
 logWarn = function(log) { print('Warn', log); };
@@ -196,6 +205,42 @@ initStageConfig = function (cfg) {
   return ret;
 };
 
+function initVipConfig (cfg){
+  var ret = {};
+  var VIP = {};
+  var requirement = [];
+  var levels = [];
+  VIP.requirement = requirement;
+  VIP.levels = levels;
+  ret.VIP = VIP;
+  if (cfg.VIP){
+    var c = cfg;
+    if (c.VIP.requirement) {
+      var requirementCount = c.VIP.requirement.length;
+      //init
+      for (var kk in c.VIP.requirement){
+        ret.VIP.requirement[kk] = {};
+        ret.VIP.requirement[kk].rmb = c.VIP.requirement[kk].rmb;
+        ret.VIP.requirement[kk].privilege = [];
+      }
+      //
+      for (var k = 0;k < c.VIP.requirement.length;k++){
+        var privil = c.VIP.requirement[k].privilege;
+        if (privil){
+          for (var i = 0;i < privil.length;i++)
+            for (var j = k;j < requirementCount;j++){
+                ret.VIP.requirement[j].privilege[privil[i].name] = privil[i].data;
+            }
+        }
+      }
+    }
+    if (c.VIP.levels){
+      ret.VIP.levels = c.VIP.levels;
+    }
+  }
+  return ret;
+}
+
 prepareForABtest = function (cfg) {
   var ret = [];
   var maxABIndex = 0;
@@ -261,6 +306,7 @@ initGlobalConfig = function (path, callback) {
         switch (type) {
           case TABLE_ITEM:
           case TABLE_ROLE: 
+          case TABLE_DUNGEON: 
             return JSON.parse(JSON.stringify(cfg[index])); //TODO: hotfix
             break;
           default:
@@ -275,9 +321,9 @@ initGlobalConfig = function (path, callback) {
     {name:TABLE_ROLE}, {name:TABLE_LEVEL}, {name:TABLE_VERSION}, {name:TABLE_FACTION},
     {name:TABLE_ITEM}, {name:TABLE_CARD}, {name:TABLE_DUNGEON, func:varifyDungeonConfig},
     {name:TABLE_STAGE, func: initStageConfig}, {name:TABLE_QUEST}, {name: TABLE_COSTS},
-    {name:TABLE_UPGRADE}, {name:TABLE_ENHANCE}, {name: TABLE_CONFIG}, {name: TABLE_VIP},
+    {name:TABLE_UPGRADE}, {name:TABLE_ENHANCE}, {name: TABLE_CONFIG}, {name: TABLE_VIP, func:initVipConfig},
     {name:TABLE_SKILL}, {name:TABLE_CAMPAIGN}, {name: TABLE_DROP}, {name: TABLE_TRIGGER},
-    {name:TABLE_DP},{name:TABLE_ARENA}
+    {name:TABLE_DP},{name:TABLE_ARENA},{name:TABLE_BOUNTY}
   ];
   if (!path) path = "./";
   configTable.forEach(function (e) {
@@ -411,6 +457,27 @@ mapContact = function (target, source) {
   return target
 }
 
+generatePrize = function (cfg, dropInfo,rand) {
+  var reward;
+  if (rand == null || typeof rand == 'undefined') {
+    rand = Math.random;
+  }
+  if (cfg == null || typeof cfg == 'undefined') {
+    return [];
+  }
+  return reward = dropInfo.reduce((function(r, p) {
+    return r.concat(cfg[p]);
+  }), []).filter(function(p) {
+    return p && rand() < p.rate;
+  }).map(function(g) {
+    var e;
+    e = selectElementFromWeightArray(g.prize, rand());
+    return e;
+  });
+};
+
+
+
 logLevel = 0;
 
 updateStageStatus = function (stageStatus, player, abindex) {
@@ -488,6 +555,7 @@ ACT_TELEPORT = 8;
 ACT_WhiteScreen = 9;
 ACT_Delay = 10;
 ACT_Dialog = 11;
+ACT_DropItem = 12;
 
 ACT_POPHP = 101;
 ACT_POPTEXT = 102;
@@ -495,11 +563,13 @@ ACT_DROPITEM = 103;
 ACT_EFFECT = 104;
 ACT_SkillCD = 105;
 ACT_EventDummy = 106;
+ACT_RangeAttackEffect = 107;
 ACT_PlaySound = 108;
 ACT_ChangeBGM = 109;
 ACT_Shock = 110;
 ACT_Blink = 111;
 ACT_Tutorial = 112;
+ACT_Bubble = 113;
 
 ACT_Block = 201;
 ACT_Enemy = 202;
@@ -546,6 +616,11 @@ UP = 0;
 RIGHT = 1;
 DOWN  = 2;
 LEFT  = 3;
+
+ExploreResult_Explored = 0
+ExploreResult_Entrance = 1
+ExploreResult_DeadEnd = -1
+
 
 isInstantAction = function (act) { return act > 100; };
 

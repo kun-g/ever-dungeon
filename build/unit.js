@@ -19,7 +19,7 @@
 
     Unit.prototype.calculatePower = function() {
       var ret;
-      ret = this.health + this.attack * 6 + this.speed * 2 + this.critical * 2 + this.strong * 2 + this.reactivity * 2 + this.accuracy * 2 + (this.level - 1) * 40;
+      ret = this.health + this.attack * 6 + this.speed * 2 + this.critical * 2 + this.strong * 2 + this.reactivity * 2 + this.accuracy * 2;
       if (ret) {
         return ret;
       } else {
@@ -230,7 +230,7 @@
       this.level = 0;
       this.levelUp();
       this.gearUp();
-      if (this.health <= 0) {
+      if (!this.isAlive()) {
         this.health = 1;
       }
       if (this.attack <= 0) {
@@ -390,7 +390,7 @@
       cfg = queryTable(TABLE_ROLE, config.id);
     }
     if (cfg == null) {
-      throw Error('No such an unit:' + (config != null ? config.id : void 0));
+      throw Error('No such an unit:' + (config != null ? config.id : void 0) + ' cfg: ' + config);
     }
     switch (cfg.classType) {
       case Unit_Enemy:

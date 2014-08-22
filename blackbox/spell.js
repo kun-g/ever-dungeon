@@ -72,6 +72,10 @@
       };
     }
 
+    Wizard.prototype.isAlive = function() {
+      return this.health > 0;
+    };
+
     Wizard.prototype.installSpell = function(spellID, level, cmd, delay) {
       var cfg, levelConfig;
       if (delay == null) {
@@ -333,7 +337,7 @@
       if (!cfg.triggerCondition) {
         return [true, 'NoCD'];
       }
-      if (!(this.health > 0)) {
+      if (!this.isAlive()) {
         return [false, 'Dead'];
       }
       cdConfig = (function() {
@@ -357,7 +361,7 @@
       preCD = thisSpell.cd;
       if (isReset) {
         thisSpell.cd = cd;
-      } else if (this.health <= 0) {
+      } else if (!this.isAlive()) {
         thisSpell.cd = -1;
       } else {
         if (thisSpell.cd !== 0) {
@@ -577,7 +581,7 @@
             }
             break;
           case 'alive':
-            if (!(this.health > 0)) {
+            if (!this.isAlive()) {
               return [false, 'Dead'];
             }
             break;
@@ -641,7 +645,7 @@
     };
 
     Wizard.prototype.doAction = function(thisSpell, actions, level, target, cmd) {
-      var a, c, cfg, delay, effect, env, formular, formularResult, h, modifications, oldValue, pos, property, spellID, src, t, val, variables, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len16, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _ref3, _s, _t, _u, _v, _w, _x, _y;
+      var a, c, cfg, delay, effect, env, formular, formularResult, h, modifications, pos, property, spellID, src, t, val, variables, _aa, _ab, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len16, _len17, _len18, _len19, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _ref3, _s, _t, _u, _v, _w, _x, _y, _z;
       if (actions == null) {
         return false;
       }
@@ -708,12 +712,23 @@
               cmd.routine({
                 id: 'DropPrize',
                 dropID: a.dropID,
-                me: this
+                me: this,
+                showPrize: a.showPrize,
+                motion: a.motion,
+                ref: this.ref,
+                effect: a.effect,
+                pos: this.pos
               });
             }
             break;
           case 'rangeAttack':
           case 'attack':
+            if (level.effect != null) {
+              a.effect = level.effect;
+            }
+            if (level.delay != null) {
+              a.delay = level.delay;
+            }
             for (_l = 0, _len3 = target.length; _l < _len3; _l++) {
               t = target[_l];
               if (typeof cmd.routine === "function") {
@@ -721,7 +736,10 @@
                   id: 'Attack',
                   src: this,
                   tar: t,
-                  isRange: true
+                  isRange: true,
+                  hurtDelay: a.hurtDelay,
+                  eff: a.effect,
+                  effDelay: a.effDelay
                 });
               }
             }
@@ -1056,25 +1074,14 @@
             if (thisSpell.modifications == null) {
               thisSpell.modifications = {};
             }
-            if (this['buffCommonModifyProperties'] == null) {
-              this['buffCommonModifyProperties'] = {};
-            }
-            oldValue = this['buffCommonModifyProperties'];
             for (property in modifications) {
               formular = modifications[property];
               val = calcFormular(variables, this, null, formular);
+              this[property] += val;
               if (thisSpell.modifications[property] == null) {
                 thisSpell.modifications[property] = 0;
               }
-              if (oldValue[property] == null) {
-                oldValue[property] = {
-                  'val': this[property],
-                  'ref': 0
-                };
-              }
-              oldValue[property]['ref'] += 1;
               thisSpell.modifications[property] += val;
-              this[property] += val;
             }
             break;
           case 'resetProperty':
@@ -1084,16 +1091,7 @@
             _ref2 = thisSpell.modifications;
             for (property in _ref2) {
               val = _ref2[property];
-              oldValue = this['buffCommonModifyProperties'][property];
-              if ((oldValue == null) || oldValue['val'] === this[property] - val) {
-                this[property] -= val;
-              }
-              if (oldValue != null) {
-                oldValue['ref'] -= 1;
-                if (oldValue['ref'] === 0) {
-                  delete this['buffCommonModifyProperties'][property];
-                }
-              }
+              this[property] -= val;
             }
             delete thisSpell.modifications;
             break;
@@ -1147,6 +1145,111 @@
                 id: 'Dialog',
                 dialogId: a.dialogId
               });
+            }
+            break;
+          case 'rangeAttackEff':
+            if (level.effect != null) {
+              a.effect = level.effect;
+            }
+            if (typeof cmd.routine === "function") {
+              cmd.routine({
+                id: 'RangeAttackEffect',
+                dey: a.delay,
+                eff: a.effect,
+                src: this,
+                tar: target
+              });
+            }
+            break;
+          case 'showBubble':
+            pos = getProperty(a.pos, level.pos);
+            if (pos != null) {
+              if (pos === 'self') {
+                if (typeof cmd.routine === "function") {
+                  cmd.routine({
+                    id: 'ShowBubble',
+                    pos: this.pos,
+                    eff: a.effect,
+                    typ: a.bubbleType,
+                    cont: a.content,
+                    dey: a.delay,
+                    dur: a.duration
+                  });
+                }
+              } else if (pos === 'target') {
+                for (_z = 0, _len17 = target.length; _z < _len17; _z++) {
+                  t = target[_z];
+                  if (typeof cmd.routine === "function") {
+                    cmd.routine({
+                      id: 'ShowBubble',
+                      pos: t.pos,
+                      eff: a.effect,
+                      typ: a.bubbleType,
+                      cont: a.content,
+                      dey: a.delay,
+                      dur: a.duration
+                    });
+                  }
+                }
+              } else if (typeof pos === 'number') {
+                if (typeof cmd.routine === "function") {
+                  cmd.routine({
+                    id: 'ShowBubble',
+                    pos: pos,
+                    eff: a.effect,
+                    typ: a.bubbleType,
+                    cont: a.content,
+                    dey: a.delay,
+                    dur: a.duration
+                  });
+                }
+              } else if (Array.isArray(pos)) {
+                for (_aa = 0, _len18 = pos.length; _aa < _len18; _aa++) {
+                  pos = pos[_aa];
+                  if (typeof cmd.routine === "function") {
+                    cmd.routine({
+                      id: 'ShowBubble',
+                      pos: pos,
+                      eff: a.effect,
+                      typ: a.bubbleType,
+                      cont: a.content,
+                      dey: a.delay,
+                      dur: a.duration
+                    });
+                  }
+                }
+              }
+            } else {
+              switch (a.act) {
+                case 'self':
+                  if (typeof cmd.routine === "function") {
+                    cmd.routine({
+                      id: 'ShowBubble',
+                      act: this.ref,
+                      eff: a.effect,
+                      typ: a.bubbleType,
+                      cont: a.content,
+                      dey: a.delay,
+                      dur: a.duration
+                    });
+                  }
+                  break;
+                case 'target':
+                  for (_ab = 0, _len19 = target.length; _ab < _len19; _ab++) {
+                    t = target[_ab];
+                    if (typeof cmd.routine === "function") {
+                      cmd.routine({
+                        id: 'ShowBubble',
+                        act: t.ref,
+                        eff: a.effect,
+                        typ: a.bubbleType,
+                        cont: a.content,
+                        dey: a.delay,
+                        dur: a.duration
+                      });
+                    }
+                  }
+              }
             }
         }
       }

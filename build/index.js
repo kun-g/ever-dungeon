@@ -10,7 +10,7 @@ dbWrapper = require('./dbWrapper');
 http = require('http');
 var domain = require('domain').create();
 domain.on('error', function (err) {
-  console.log("UnhandledError", err.message, err.stack);
+  console.log("UnhandledError", err, err.message, err.stack);
 });
 
 //playerCounter = 0;
@@ -49,15 +49,13 @@ function initiateTrinLogger() {
   var socket = dgram.createSocket('udp4');
   logger.tr_agent = {
     write: function (msg) {
-      socket.send(new Buffer(msg), 0, msg.length, 9528, 'localhost');
+      var buf = new Buffer(msg);
+      socket.send(buf, 0, buf.length, 9528, '10.4.3.41');
     }
   };
   function trinLoggerErrorHandler () {
     logger.tr_agent = null;
-    setTimeout(function (err) {
-      logError({msg:"Try to reconnect to trin logger.", error: err});
-      initiateTrinLogger();
-    }, 10000);
+    setTimeout(function (err) { initiateTrinLogger(); }, 10000);
   }
   socket.on('close', trinLoggerErrorHandler);
   socket.on('error', trinLoggerErrorHandler);
@@ -67,10 +65,7 @@ function initiateFluentLogger() {
   logger.td_agent.configure('td.game', {host: 'localhost', port: 9527});
   logger.td_agent.on('error', function (err) {
     logger.td_agent = null;
-    setTimeout(function () {
-      logError({msg:"Try to reconnect to fluent.", error: err});
-      initiateFluentLogger();
-    }, 10000);
+    setTimeout(function () { initiateFluentLogger(); }, 10000);
   });
 }
 
@@ -166,7 +161,12 @@ function paymentHandler (request, response) {
     });
   } else if (request.url.substr(0, 5) === '/911?') {
     out = urlLib.parse(request.url, true).query;
-    var appKey = 'd30d9f0f53e2654274505e25c27913fe709eb1ad6265e5c5';
+    var appKey = '';
+    if (out.AppId == '115411') {
+      appKey = '77bcc1c2b9cf260b12f124d1c280ae1de639b89e127842b1';
+    } else if (out.AppId == '112988') {
+      appKey = 'd30d9f0f53e2654274505e25c27913fe709eb1ad6265e5c5';
+    }
     var sign = out.AppId+out.Act+out.ProductName+out.ConsumeStreamId+out.CooOrderSerial+
       out.Uin+out.GoodsId+out.GoodsInfo+out.GoodsCount+out.OriginalMoney+out.OrderMoney+
       out.Note+out.PayStatus+out.CreateTime+appKey;
@@ -229,7 +229,31 @@ function paymentHandler (request, response) {
       data = null;
       response.end('failed');
     });
-  } else if (request.url.substr(0, 5) === '/jdp?') {
+  } else if (request.url.substr(0, 5) === '/DKP?') {
+    out = urlLib.parse(request.url, true).query;
+    appSecret = 'KvCbUBBpAUvkKkC9844QEb8CB7pHnl5v'
+    var sign = out.amount+out.cardtype+out.orderid+out.result+out.timetamp+appSecret+out.aid;
+    var b = new Buffer(1024);
+    var len = b.write(sign);
+    sign = md5Hash(b.toString('binary', 0, len));
+    var receipt = out.orderid;
+    if (sign === out.client_secret ){ //&& isRMBMatch(out.OrderMoney, receipt)) {
+      if (out.result === '1'){
+          deliverReceipt(receipt, 'DK', function (err) {
+          if (err === null) {
+            logInfo({action: 'AcceptPayment', receipt: receipt, info: out});
+          } else {
+            logError({action: 'AcceptPayment', error:err, info: out, receiptInfo: receiptInfo});
+          }
+        });
+      }
+      return response.end('SUCCESS');
+    } else {
+      logError({action: 'AcceptPayment', error: 'SignMissmatch', info: out, sign: sign});
+      response.end('ERROR_SIGN');
+    }
+    b = null;
+  }else if (request.url.substr(0, 5) === '/jdp?') {
   }
 } 
 
@@ -247,10 +271,10 @@ function deliverReceipt (receipt, tunnel, cb) {
         };
 
   async.waterfall([
-    function (cb) { dbWrapper.updateReceipt(receipt, RECEIPT_STATE_AUTHORIZED, cb); },
+    function (cb) { dbLib.updateReceipt(receipt, RECEIPT_STATE_AUTHORIZED, cb); },
     function (_, cb) { dbLib.getPlayerNameByID(receiptInfo.id, serverName, cb); },
     function (name, cb) { dbLib.deliverMessage(name, message, cb, serverName); },
-    function (_, cb) { dbWrapper.updateReceipt(receipt, RECEIPT_STATE_DELIVERED, cb); }
+    function (_, cb) { dbLib.updateReceipt(receipt, RECEIPT_STATE_DELIVERED, cb); }
   ], cb);
 }
 
@@ -290,12 +314,15 @@ if (config) {
             } else {
               gServerObject.counters = {};
             }
+            cb();
           });
         }],
         function (err, ret) {
           var helperLib = require('./helper');
           helperLib.initCampaign(gServerObject, helperLib.events);
           helperLib.initObserveration(gServerObject);
+
+          gServerObject.installObserver('countersChanged');
         });
     dbLib.getServerConfig('Interval', function (err, arg) {
       if (arg) { intervalCfg = JSON.parse(arg); }
@@ -311,7 +338,7 @@ if (config) {
           if (helperLib.matchDate(now, now, cfg.time) &&
               (!intervalCfg[key] || !moment().isSame(intervalCfg[key], 'day'))
             ) {
-            cfg.func({helper: helperLib, db: require('./db')});
+            cfg.func({helper: helperLib, db: require('./db'), sObj: gServerObject});
             intervalCfg[key] = helperLib.currentTime();
             flag = true;
           }

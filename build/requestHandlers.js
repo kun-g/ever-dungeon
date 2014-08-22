@@ -1,5 +1,5 @@
 (function() {
-  var DBWrapper, Player, addMercenaryMember, async, dbLib, getPlayerHero, helperLib, http, https, loadPlayer, loginBy, moment, updateMercenaryMember, wrapReceipt, _ref;
+  var DBWrapper, Player, async, dbLib, getPlayerHero, helperLib, http, https, loadPlayer, loginBy, moment, wrapReceipt, _ref;
 
   require('./define');
 
@@ -7,7 +7,7 @@
 
   helperLib = require('./helper');
 
-  _ref = require('./dbWrapper'), DBWrapper = _ref.DBWrapper, updateMercenaryMember = _ref.updateMercenaryMember, addMercenaryMember = _ref.addMercenaryMember, getPlayerHero = _ref.getPlayerHero;
+  _ref = require('./dbWrapper'), DBWrapper = _ref.DBWrapper, getPlayerHero = _ref.getPlayerHero;
 
   async = require('async');
 
@@ -20,15 +20,16 @@
   Player = require('./player').Player;
 
   loginBy = function(arg, token, callback) {
-    var appID, appKey, options, passport, passportType, path, req, sign;
+    var AppSecret, appID, appKey, options, passport, passportType, path, req, sign;
     passportType = arg.tp;
     passport = arg.id;
     switch (passportType) {
-      case LOGIN_ACCOUNT_TYPE_91:
-        appID = '112988';
-        appKey = 'd30d9f0f53e2654274505e25c27913fe709eb1ad6265e5c5';
-        sign = md5Hash(appID + '4' + passport + token + appKey);
-        path = 'http://service.sj.91.com/usercenter/AP.aspx?Act=4&AppId=112988&Uin=' + passport + '&Sign=' + sign + '&SessionID=' + token;
+      case LOGIN_ACCOUNT_TYPE_DK_Android:
+        appID = '3319334';
+        appKey = 'kavpXwRFFa4rjcUy1idmAkph';
+        AppSecret = 'KvCbUBBpAUvkKkC9844QEb8CB7pHnl5v';
+        sign = md5Hash(appID + appKey + passport + token + AppSecret);
+        path = 'http://sdk.m.duoku.com/openapi/sdk/checksession?appid=' + appID + '&appkey=' + appKey + '&uid=' + passport + '&sessionid=' + token + '&clientsecret=' + sign;
         return http.get(path, function(res) {
           res.setEncoding('utf8');
           return res.on('data', function(chunk) {
@@ -36,7 +37,43 @@
             result = JSON.parse(chunk);
             logInfo({
               action: 'login',
-              type: LOGIN_ACCOUNT_TYPE_91,
+              type: passportType,
+              code: result
+            });
+            if (result.error_code === '0') {
+              return callback(null);
+            } else {
+              return callback(Error(RET_LoginFailed));
+            }
+          });
+        }).on('error', function(e) {
+          return logError({
+            action: 'login',
+            type: LOGIN_ACCOUNT_TYPE_DK,
+            error: e
+          });
+        });
+      case LOGIN_ACCOUNT_TYPE_91_Android:
+      case LOGIN_ACCOUNT_TYPE_91_iOS:
+        switch (passportType) {
+          case LOGIN_ACCOUNT_TYPE_91_Android:
+            appID = '115411';
+            appKey = '77bcc1c2b9cf260b12f124d1c280ae1de639b89e127842b1';
+            break;
+          case LOGIN_ACCOUNT_TYPE_91_iOS:
+            appID = '112988';
+            appKey = 'd30d9f0f53e2654274505e25c27913fe709eb1ad6265e5c5';
+        }
+        sign = md5Hash(appID + '4' + passport + token + appKey);
+        path = 'http://service.sj.91.com/usercenter/AP.aspx?Act=4&AppId=' + appID + '&Uin=' + passport + '&Sign=' + sign + '&SessionID=' + token;
+        return http.get(path, function(res) {
+          res.setEncoding('utf8');
+          return res.on('data', function(chunk) {
+            var result;
+            result = JSON.parse(chunk);
+            logInfo({
+              action: 'login',
+              type: passportType,
               code: result
             });
             if (result.ErrorCode === '1') {
@@ -176,7 +213,12 @@
               return loginBy(arg, arg.tk, cb);
             }
           }, function(cb) {
-            return loadPlayer(arg.tp, arg.id, cb);
+            var tp;
+            tp = arg.tp;
+            if (arg.atp != null) {
+              tp = arg.atp;
+            }
+            return loadPlayer(tp, arg.id, cb);
           }, function(player, cb) {
             var ev, msg, time;
             if (player) {
@@ -461,17 +503,23 @@
             initialData = player.dungeonData;
             if (result.RET === RET_OK && (initialData != null)) {
               replay = arg.rep;
+              logInfo('Creating Dungeon');
               dungeon = new dungeonLib.Dungeon(initialData);
+              logInfo('Initializing Dungeon');
               dungeon.initialize();
               try {
+                logInfo('Replay Dungeon');
                 dungeon.replayActionLog(replay);
               } catch (_error) {
                 err = _error;
                 status = 'Replay Failed';
                 dungeon.result = DUNGEON_RESULT_FAIL;
               } finally {
+                logInfo('Claim Dungeon Award');
                 evt = evt.concat(player.claimDungeonAward(dungeon));
+                logInfo('Releasing Dungeon');
                 player.releaseDungeon();
+                logInfo('Saving');
                 player.saveDB();
               }
             }
@@ -553,7 +601,10 @@
       args: {
         'stg': 'number',
         'initialDataOnly': 'boolean',
-        'pkr': 'string'
+        'pkr': {
+          type: 'string',
+          opt: true
+        }
       },
       needPid: true
     },
@@ -655,20 +706,24 @@
     RPC_BindSubAuth: {
       id: 105,
       func: function(arg, player, handler, rpcID, socket) {
-        var account;
-        account = -1;
-        if (player) {
-          account = player.accountID;
-        }
-        return dbLib.bindAuth(account, arg.typ, arg.id, arg.pass, function(err, account) {
+        if (player != null) {
+          return dbLib.bindAuth(player.accountID, arg.typ, arg.id, arg.pass, function(err, account) {
+            return handler([
+              {
+                REQ: rpcID,
+                RET: RET_OK,
+                aid: account
+              }
+            ]);
+          });
+        } else {
           return handler([
             {
               REQ: rpcID,
-              RET: RET_OK,
-              aid: account
+              RET: RET_AccountHaveNoHero
             }
           ]);
-        });
+        }
       },
       args: {}
     },
@@ -909,6 +964,51 @@
               });
             }
         }
+      },
+      args: {},
+      needPid: true
+    },
+    RPC_WorldStageInfo: {
+      id: 36,
+      func: function(arg, player, handler, rpcID, socket) {
+        return helperLib.getPositionOnLeaderboard(helperLib.LeaderboardIdx.WorldBoss, player.name, 0, 0, function(err, result) {
+          var killTimes, ret, times;
+          if (result != null) {
+            times = gServerObject.counters['133'];
+            if (times == null) {
+              times = 0;
+            }
+            killTimes = player.counters['worldBoss']['133'];
+            if (killTimes == null) {
+              killTimes = 0;
+            }
+            if (killTimes === 0) {
+              result.position = 9999;
+            }
+            ret = {
+              REQ: rpcID,
+              RET: RET_OK
+            };
+            ret.arg = {
+              prg: {
+                cpl: times,
+                ttl: helperLib.ConstValue.WorldBossTimes
+              },
+              me: {
+                cnt: +killTimes,
+                rnk: +result.position
+              }
+            };
+            return handler(ret);
+          } else {
+            return handler([
+              {
+                REQ: rpcID,
+                RET: RET_Unknown
+              }
+            ]);
+          }
+        });
       },
       args: {},
       needPid: true
