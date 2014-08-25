@@ -295,9 +295,9 @@ exports.data = [
                     "speed": 1
                 },
                 "skill": [
-                    {"id":200, "level": 1,"classLimit":0},
-                    {"id":206, "level": 1,"classLimit":1},
-                    {"id":211, "level": 1,"classLimit":2}
+                    {"id":200, "level": 3,"classLimit":0},
+                    {"id":206, "level": 3,"classLimit":1},
+                    {"id":211, "level": 3,"classLimit":2}
                 ]
             },
             {
