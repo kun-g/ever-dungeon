@@ -4539,7 +4539,7 @@ exports.data = [
                 "pool": "self"
             },
             "triggerCondition": [
-                { "type": "event", "event": "onPhysicalDamage", "count": 1 }
+                { "type": "event", "event": "onPhysicalDamage" }
             ],
             "installAction": [
                 { "type": "removeSpell", "spell": 269},
@@ -4669,7 +4669,7 @@ exports.data = [
                 "spellDelay": 0.3
             },
             "triggerCondition": [
-                { "type": "event", "event": "onEndBattleTurn", "count": 1  }
+                { "type": "event", "event": "onTurnEnd" }
             ],
             "targetSelection": {
                 "pool": "self",
@@ -4697,8 +4697,7 @@ exports.data = [
             ],
             "buffType":"AttackDebuff",
             "availableCondition": [
-                { "type":"event", "event":"onBattleTurnEnd" },
-                { "type":"event", "event":"onMoveTurnEnd" },
+                { "type": "effectCount","count":1 },
                 {"type":"visible"}
             ],
             "levelConfig":[
@@ -6126,6 +6125,9 @@ exports.data = [
                 { "type": "event", "event": "onBePhysicalRangeDamage" },
                 { "type": "event", "event": "onBeSpellDamage" },
                 { "type": "event", "event": "onBeSpellRangeDamage" }
+            ],
+            "availableCondition": [
+                { "type": "effectCount","count":1 }
             ],
             "levelConfig":[
                 { "modifications": {"attack":{"c":{"environment":{"damage":0.5}}}}, "level": 1},
