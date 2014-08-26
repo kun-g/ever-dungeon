@@ -2152,7 +2152,7 @@
     },
     OpenBlock: {
       callback: function(env) {
-        var block, npc, _i, _len, _ref5, _results;
+        var aliveHeroes, block, hero, npc, _i, _j, _len, _len1, _ref5, _results;
         if (env.getBlock(env.variable('block')) == null) {
           return this.suicide();
         }
@@ -2162,6 +2162,11 @@
           block: env.variable('block')
         });
         block = env.getBlock(env.variable('block'));
+        aliveHeroes = env.getAliveHeroes().filter(function(h) {
+          return h != null;
+        }).sort(function(a, b) {
+          return a.order - b.order;
+        });
         if (block.getType() === Block_Npc || block.getType() === Block_Enemy) {
           if (block.getRef(-1) !== null) {
             _ref5 = block.getRef(-1);
@@ -2175,6 +2180,10 @@
               env.variable('monster', npc);
               env.variable('tar', npc);
               npc.onEvent('onShow', this);
+              for (_j = 0, _len1 = aliveHeroes.length; _j < _len1; _j++) {
+                hero = aliveHeroes[_j];
+                onEvent("MonsterShow", this, hero, npc);
+              }
               env.onEvent('onMonsterShow', this);
               if ((npc != null ? npc.isVisible : void 0) !== true) {
                 _results.push(npc.isVisible = true);
