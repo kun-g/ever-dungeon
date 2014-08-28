@@ -1,3 +1,21 @@
+function checkGoblin(obj, util) {
+    dungeon.monsterCount * dungeon.getMonters(1).attck*3
+    return obj.counters.goblin < obj.getPrivilege("tuHaoCount") || !obj.counters.goblin;
+}
+function checkEvilChief(obj, util) {
+    return ( obj.counters.enhance < obj.getPrivilege("EvilChieftains") ) &&
+        ( util.today.weekday() === 2 ||
+          util.today.weekday() === 4 ||
+          util.today.weekday() === 6 ||
+          util.today.weekday() === 0 );
+}
+function checkEquipmentRobbers(obj, util) {
+    return ( obj.counters.weapon < obj.getPrivilege("EquipmentRobbers")) &&
+        ( util.today.weekday() === 1 ||
+          util.today.weekday() === 3 ||
+          util.today.weekday() === 5 ||
+          util.today.weekday() === 0 );
+}
 var MAX_BATTLE_TIMES = 200;
 var data = [
     {
@@ -1815,13 +1833,7 @@ var data = [
           dungeon: 105,
           description: "Enhance1",
           eventName: "event_enhance",
-          condition: function (obj, util) {
-            return ( obj.counters.enhance < 3 ) &&
-              ( util.today.weekday() === 2 ||
-                util.today.weekday() === 4 ||
-                util.today.weekday() === 6 ||
-                util.today.weekday() === 0 );
-          },
+          condition: checkEvilChief,
           initialAction: function (obj) {
             obj.counters.enhance++;
           }
@@ -1834,13 +1846,7 @@ var data = [
           dungeon: 106,
           eventName: "event_enhance",
           description: "Enhance2",
-          condition: function (obj, util) {
-            return ( obj.counters.enhance < 3 ) &&
-              ( util.today.weekday() === 2 ||
-                util.today.weekday() === 4 ||
-                util.today.weekday() === 6 ||
-                util.today.weekday() === 0 );
-          },
+          condition: checkEvilChief,
           initialAction: function (obj) {
             obj.counters.enhance++;
           }
@@ -1853,13 +1859,7 @@ var data = [
           dungeon: 107,
           description: "Enhance3",
           eventName: "event_enhance",
-          condition: function (obj, util) {
-            return ( obj.counters.enhance < 3 ) &&
-              ( util.today.weekday() === 2 ||
-                util.today.weekday() === 4 ||
-                util.today.weekday() === 6 ||
-                util.today.weekday() === 0 );
-          },
+          condition: checkEvilChief,
           initialAction: function (obj) {
             obj.counters.enhance++;
           }
@@ -1872,13 +1872,7 @@ var data = [
           dungeon: 108,
           description: "Enhance4",
           eventName: "event_enhance",
-          condition: function (obj, util) {
-            return ( obj.counters.enhance < 3 ) &&
-              ( util.today.weekday() === 2 ||
-                util.today.weekday() === 4 ||
-                util.today.weekday() === 6 ||
-                util.today.weekday() === 0 );
-          },
+          condition: checkEvilChief,
           initialAction: function (obj) {
             obj.counters.enhance++;
           }
@@ -1891,13 +1885,7 @@ var data = [
           dungeon: 109,
           description: "Enhance5",
           eventName: "event_enhance",
-          condition: function (obj, util) {
-            return ( obj.counters.enhance < 3 ) &&
-              ( util.today.weekday() === 2 ||
-                util.today.weekday() === 4 ||
-                util.today.weekday() === 6 ||
-                util.today.weekday() === 0 );
-          },
+          condition: checkEvilChief,
           initialAction: function (obj) {
             obj.counters.enhance++;
           }
@@ -1913,9 +1901,7 @@ var data = [
             dungeon: 102,
             description: "Goblin1",
             eventName: "event_goblin",
-            condition: function (obj, util) {
-              return obj.counters.goblin < 3 || !obj.counters.goblin;
-            },
+            condition: checkGoblin, 
             initialAction: function (obj) {
               if (obj.counters.goblin) {
                 obj.counters.goblin++;
@@ -1932,9 +1918,7 @@ var data = [
             dungeon: 103,
             description: "Goblin2",
             eventName: "event_goblin",
-            condition: function (obj, util) {
-              return obj.counters.goblin < 3 || !obj.counters.goblin;
-            },
+            condition: checkGoblin,
             initialAction: function (obj) {
               if (obj.counters.goblin) {
                 obj.counters.goblin++;
@@ -1951,9 +1935,7 @@ var data = [
             dungeon: 104,
             description: "Goblin3",
             eventName: "event_goblin",
-            condition: function (obj, util) {
-              return obj.counters.goblin < 3 || !obj.counters.goblin;
-            },
+            condition: checkGoblin,
             initialAction: function (obj) {
               if (obj.counters.goblin) {
                 obj.counters.goblin++;
@@ -1970,13 +1952,7 @@ var data = [
               dungeon: 110,
               description: "wxp1",
               eventName: "event_weapon",
-              condition: function (obj, util) {
-                return ( obj.counters.weapon < 3 ) &&
-                  ( util.today.weekday() === 1 ||
-                    util.today.weekday() === 3 ||
-                    util.today.weekday() === 5 ||
-                    util.today.weekday() === 0 );
-              },
+              condition: checkEquipmentRobbers,
               initialAction: function (obj) {
                 obj.counters.weapon++;
               }
@@ -1989,13 +1965,7 @@ var data = [
               dungeon: 111,
               description: "wxp2",
               eventName: "event_weapon",
-              condition: function (obj, util) {
-                return ( obj.counters.weapon < 3 ) &&
-                  ( util.today.weekday() === 1 ||
-                    util.today.weekday() === 3 ||
-                    util.today.weekday() === 5 ||
-                    util.today.weekday() === 0 );
-              },
+              condition: checkEquipmentRobbers,
               initialAction: function (obj) {
                 obj.counters.weapon++;
               }
@@ -2008,13 +1978,7 @@ var data = [
               dungeon: 112,
               description: "wxp3",
               eventName: "event_weapon",
-              condition: function (obj, util) {
-                return ( obj.counters.weapon < 3 ) &&
-                  ( util.today.weekday() === 1 ||
-                    util.today.weekday() === 3 ||
-                    util.today.weekday() === 5 ||
-                    util.today.weekday() === 0 );
-              },
+              condition: checkEquipmentRobbers,
               initialAction: function (obj) {
                 obj.counters.weapon++;
               }
@@ -2091,9 +2055,16 @@ var data = [
               description: "hunt112",
               eventName: "event_goblin",
               "formularId":1,
-              condition: function (obj, util) { return true;
+              condition: function (obj, util) { 
+                  return obj.counters.currentPKCount < obj.getTotalPkTimes();
               },
-              initialAction: function (obj) { }
+              initialAction: function (obj) { 
+                  if (obj.counters.currentPKCount) {
+                      obj.counters.currentPKCount++;
+                  } else {
+                      obj.counters['currentPKCount'] = 1;
+                  }
+              }
           },
           {
               stageId: 125,

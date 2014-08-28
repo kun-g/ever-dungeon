@@ -4473,7 +4473,7 @@ exports.data = [
         "config": {
             "basic" : {
                 "spellAction": 2,
-                "spellEffect": 13,
+                "spellEffect": 45,
                 "spellDelay": 0.3
             },
             "targetSelection": {
@@ -4535,11 +4535,18 @@ exports.data = [
         "desc":"狂战士将累积受到的伤害在下一轮攻击中反馈给敌人。",
         "slotId": 1 ,
         "config": {
+            "basic" : {
+                "spellAction":4,
+                "spellEffect": 9,
+                "targetEffect": 1 ,
+                "spellDelay": 0,
+                "targetDelay": 0
+            },
             "targetSelection": {
                 "pool": "self"
             },
             "triggerCondition": [
-                { "type": "event", "event": "onPhysicalDamage" }
+                { "type": "event", "event": "onPhysicalDamage", "count": 1 }
             ],
             "installAction": [
                 { "type": "removeSpell", "spell": 269},
@@ -4571,20 +4578,19 @@ exports.data = [
                 "targetDelay": 0
             },
             "targetSelection": {
-                "pool": "source",
+                "pool": "Enemy",
                 "filter": [{"type":"alive"},{"type":"visible"}]
             },
             "triggerCondition": [
                 { "type": "event", "event": "onMonsterShow" },
-                { "type": "chance" },
-                { "type": "alive" }
+                {"type":"alive"}
             ],
             "action": [
                 { "type": "resetProperty" }
             ],
             "levelConfig": [
                 { "chance":0.3,"modifications": {"accuracy":{"c":-10}}, "level": 1},
-                { "chance":0.4,"modifications": {"accuracy":{"c":-10}}, "level": 2},
+                { "chance":0.4,"modifications": {"accuracy":{"c":10}}, "level": 2},
                 { "chance":0.4,"modifications": {"accuracy":{"c":-15}}, "level": 3}
             ]
         }
@@ -4610,7 +4616,6 @@ exports.data = [
             "triggerCondition": [
                 { "type": "event", "event": "onTeammateBePhysicalDamage" },
                 { "type": "event", "event": "onTeammateBePhysicalRangeDamage" },
-                { "type": "chance" },
                 {"type":"alive"}
             ],
             "action": [
@@ -4642,7 +4647,7 @@ exports.data = [
             ],
             "targetSelection": {
                 "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"},{"type":"shuffle"},{"type":"count","count":3}]
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"},{"type":"shuffle"}]
             },
             "action": [
                 { "type": "damage","damageType":"Spell","isRange":true,"delay":0.8},
@@ -4652,9 +4657,9 @@ exports.data = [
                 {"type":"shock","delay":0.6,"range":5,"time":0.2}
             ],
             "levelConfig" : [
-                { "formular": {"src":{"attack":0.3}}, "level": 1},
-                { "formular": {"src":{"attack":0.45}}, "level": 2},
-                { "formular": {"src":{"attack":0.6}}, "level": 3}
+                { "count":2,"formular": {"src":{"attack":0.4}}, "level": 1},
+                { "count":3,"formular": {"src":{"attack":0.4}}, "level": 2},
+                { "count":4,"formular": {"src":{"attack":0.55}}, "level": 3}
             ]
         }
     },
@@ -4671,7 +4676,7 @@ exports.data = [
                 "spellDelay": 0.3
             },
             "triggerCondition": [
-                { "type": "event", "event": "onTurnEnd" }
+                { "type": "event", "event": "onEndBattleTurn", "count": 1  }
             ],
             "targetSelection": {
                 "pool": "self",
@@ -4699,7 +4704,8 @@ exports.data = [
             ],
             "buffType":"AttackDebuff",
             "availableCondition": [
-                { "type": "effectCount","count":1 },
+                { "type":"event", "event":"onBattleTurnEnd" },
+                { "type":"event", "event":"onMoveTurnEnd" },
                 {"type":"visible"}
             ],
             "levelConfig":[
@@ -4756,7 +4762,7 @@ exports.data = [
                 "filter": [{"type":"alive"}]
             },
             "availableCondition": [
-                { "type":"event", "event":"onBattleTurnEnd" ,"eventCount":1},
+                { "type":"event", "event":"onBattleTurnEnd" ,"count":1},
                 {"type":"alive"},{"type":"visible"}
             ],
             "action": [
@@ -4783,8 +4789,7 @@ exports.data = [
             },
             "triggerCondition": [
                 {"type": "event", "event": "onAttack" },
-                {"type": "event", "event": "onSpell" },
-                { "type": "chance" }
+                {"type": "event", "event": "onSpell" }
             ],
             "targetSelection": {
                 "pool": "objects",
@@ -4845,8 +4850,7 @@ exports.data = [
                 "targetDelay": 0.3
             },
             "triggerCondition": [
-                { "type": "event", "event": "onKill" },
-                { "type": "chance" }
+                { "type": "event", "event": "onKill" }
             ],
             "action": [
                 {"type": "playEffect","effect":4,"act":"self"},
@@ -4859,9 +4863,7 @@ exports.data = [
                 "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"}]
             },
             "levelConfig" : [
-                { "chance":0.1,"level": 1 },
-                { "chance":0.15,"level": 2 },
-                { "chance":0.2,"level": 3 }
+                { "level": 1 }, { "level": 2 }, { "level": 3 }
             ]
         }
     },
@@ -4879,9 +4881,9 @@ exports.data = [
                 { "type": "event", "event": "onBeginBattleTurn", "eventCount": 2 }
             ],
             "levelConfig" : [
-                { "modifications": [{"attack":{"src":{"attack":0.3}}},{"speed":{"src":{"speed":0},"c":10}}]},
-                { "modifications": [{"attack":{"src":{"attack":0.4}}},{"speed":{"src":{"speed":0},"c":15}}]},
-                { "modifications": [{"attack":{"src":{"attack":0.5}}},{"speed":{"src":{"speed":0},"c":25}}]}
+                { "chance":0.1,"modifications": [{"attack":{"src":{"attack":0.3}}},{"speed":{"src":{"speed":0},"c":10}}]},
+                { "chance":0.15,"modifications": [{"attack":{"src":{"attack":0.4}}},{"speed":{"src":{"speed":0},"c":15}}]},
+                { "chance":0.2,"modifications": [{"attack":{"src":{"attack":0.5}}},{"speed":{"src":{"speed":0},"c":25}}]}
             ]
         }
     },
@@ -4937,16 +4939,10 @@ exports.data = [
             "triggerCondition": [
                 { "type": "event", "event": "onBePhysicalDamage" },
                 { "type": "event", "event": "onBePhysicalRangeDamage" },
-                { "type": "chance" },
                 {"type":"alive"}
             ],
             "action": [
                 { "type": "installSpell", "spell": 212}
-            ],
-            "levelConfig":[
-                { "chance":0.15, "level": 1},
-                { "chance":0.15, "level": 2},
-                { "chance":0.25, "level": 3}
             ]
         }
     },
@@ -4964,9 +4960,9 @@ exports.data = [
                 { "type": "event", "event": "onEndBattleTurn"}
             ],
             "levelConfig":[
-                { "modifications": {"attack":{"src":{"attack":-0.2}}},"eventCount": 2, "level": 1},
-                { "modifications": {"attack":{"src":{"attack":-0.3}}},"eventCount": 3, "level": 2},
-                { "modifications": {"attack":{"src":{"attack":-0.4}}},"eventCount": 3, "level": 3}
+                { "chance":0.15,"modifications": {"attack":{"src":{"attack":-0.2}}},"eventCount": 2, "level": 1},
+                { "chance":0.15,"modifications": {"attack":{"src":{"attack":-0.3}}},"eventCount": 3, "level": 2},
+                { "chance":0.25,"modifications": {"attack":{"src":{"attack":-0.4}}},"eventCount": 3, "level": 3}
             ]
         }
     },
@@ -6081,8 +6077,7 @@ exports.data = [
                 {"type" :"event", "event":"onCriticalDamage" }
             ],
             "action": [
-                {"type":"playEffect","effect":60,"act":"self"},
-                { "type": "shock", "delay":0.3, "range":5, "time":0.2 }
+                {"type":"playEffect","effect":60,"act":"self"}
             ]
         }
     },
@@ -6094,8 +6089,7 @@ exports.data = [
                 {"type" :"event", "event":"onCriticalDamage" }
             ],
             "action": [
-                {"type":"playEffect","effect":61,"act":"self"},
-                { "type": "shock", "delay":0.3, "range":5, "time":0.2 }
+                {"type":"playEffect","effect":61,"act":"self"}
             ]
         }
     },
@@ -6108,8 +6102,7 @@ exports.data = [
             ],
             "action": [
                 {"type": "playEffect","effect":63,"pos":"target"},
-                {"type":"playEffect","effect":62,"act":"self"},
-                { "type": "shock", "delay":0.3, "range":5, "time":0.2 }
+                {"type":"playEffect","effect":62,"act":"self"}
             ]
         }
     },
@@ -6118,21 +6111,18 @@ exports.data = [
         "label":"198-血之狂怒",
         "config": {
             "action":[
-                {"type": "playEffect","effect":13,"pos":"self","delay":1.5},
                 { "type": "setProperty"}
             ],
             "targetSelection":{ "pool":"Self" },
             "uninstallAction": [
-                { "type": "resetProperty" }
+                { "type": "resetProperty" },
+                { "type": "shock", "delay":0.3, "range":5, "time":0.2 }
             ],
             "triggerCondition": [
                 { "type": "event", "event": "onBePhysicalDamage" },
                 { "type": "event", "event": "onBePhysicalRangeDamage" },
                 { "type": "event", "event": "onBeSpellDamage" },
                 { "type": "event", "event": "onBeSpellRangeDamage" }
-            ],
-            "availableCondition": [
-                { "type": "effectCount","count":1 }
             ],
             "levelConfig":[
                 { "modifications": {"attack":{"c":{"environment":{"damage":0.5}}}}, "level": 1},

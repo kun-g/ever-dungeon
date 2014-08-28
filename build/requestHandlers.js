@@ -20,10 +20,44 @@
   Player = require('./player').Player;
 
   loginBy = function(arg, token, callback) {
-    var AppSecret, appID, appKey, options, passport, passportType, path, req, sign;
+    var AppSecret, appID, appKey, options, passport, passportType, path, req, sign, teebikURL;
     passportType = arg.tp;
     passport = arg.id;
     switch (passportType) {
+      case LOGIN_ACCOUNT_TYPE_TB_IOS:
+      case LOGIN_ACCOUNT_TYPE_TB_Android:
+        switch (passportType) {
+          case LOGIN_ACCOUNT_TYPE_TB_IOS:
+            teebikURL = 'sdk.ios.teebik.com';
+            break;
+          case LOGIN_ACCOUNT_TYPE_TB_Android:
+            teebikURL = 'sdk.android.teebik.com';
+        }
+        sign = md5Hash(token + passport);
+        path = 'http://' + teebikURL + '/check/user?token=' + appID + '&uid=' + passport + '&Sign=' + sign;
+        return http.get(path, function(res) {
+          res.setEncoding('utf8');
+          return res.on('data', function(chunk) {
+            var result;
+            result = JSON.parse(chunk);
+            logInfo({
+              action: 'login',
+              type: passportType,
+              code: result
+            });
+            if (result.success === 1) {
+              return callback(null);
+            } else {
+              return callback(Error(RET_LoginFailed));
+            }
+          });
+        }).on('error', function(e) {
+          return logError({
+            action: 'login',
+            type: LOGIN_ACCOUNT_TYPE_TB,
+            error: e
+          });
+        });
       case LOGIN_ACCOUNT_TYPE_DK_Android:
         appID = '3319334';
         appKey = 'kavpXwRFFa4rjcUy1idmAkph';
