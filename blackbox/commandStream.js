@@ -1,11 +1,11 @@
 (function() {
-  var CommandStream, Environment, isDebug, splLib;
+  var CommandStream, Environment, debug, splLib;
 
   requires('./define');
 
   splLib = requires('./spell');
 
-  isDebug = false;
+  debug = false;
 
   CommandStream = (function() {
     function CommandStream(cmd, parent, config, environment) {
@@ -64,7 +64,7 @@
     CommandStream.prototype.process = function() {
       var routine, _i, _len, _ref;
       if (this.active && (this.getCallback(this.cmd.id) != null)) {
-        if (isDebug) {
+        if (debug) {
           console.log('Processing:', this.cmd.id);
         }
         if (this.getEnvironment() != null) {
