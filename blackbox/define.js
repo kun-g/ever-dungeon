@@ -1,5 +1,5 @@
-require('./shared');
-var triggerLib = require('./trigger');
+requires('./shared');
+var triggerLib = requires('./trigger');
 
 DUNGEON_RESULT_DONE = 2;
 DUNGEON_RESULT_WIN = 1;
@@ -20,11 +20,11 @@ TEAMMATE_REWARD_RATIO = 0.2;
 //////////////////// Log
 serverType = 'None';
 print = console.log;
-dprint = function(obj) { console.log(require('util').inspect(obj, true, 10));}
+dprint = function(obj) { console.log(requires('util').inspect(obj, true, 10));}
 logger = null;
 initServer = function () {
   var pid = process.pid;
-  async = require('async');
+  async = requires('async');
   print = function (type, log) {
     if (log == null) {
       log = type;
@@ -41,7 +41,7 @@ initServer = function () {
       logger.emit(type, log, (new Date()).valueOf());
     }
     if (logger == null || process.stdout.isTTY || type === 'Error') {
-      var util = require('util');
+      var util = requires('util');
       var config = {depth : 11};
       //if (process.stdout.isTTY) config.colors = true;
       console.log(util.inspect(log, config));
@@ -291,7 +291,7 @@ initGlobalConfig = function (path, callback) {
   ];
   if (!path) path = "./";
   configTable.forEach(function (e) {
-    gConfigTable[e.name] = require(path+e.name).data;
+    gConfigTable[e.name] = requires(path+e.name).data;
     if (!gConfigTable[e.name]) throw Error("Table not found"+e.name);
     if (e.func) gConfigTable[e.name] = e.func(gConfigTable[e.name]);
     gConfigTable[e.name] = prepareForABtest(gConfigTable[e.name]);
@@ -304,7 +304,7 @@ showMeTheStack = function () {try {a = b;} catch (err) {console.log(err.stack);}
 //////////// exit routine
 onDBShutDown = function () { };
 onAllDataSaved = function () {
-  require('./db').releaseDB();
+  requires('./db').releaseDB();
 };
 onNetworkShutDown = function () {
   if (dbClient && savingAllPlayer != null) {

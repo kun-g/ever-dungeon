@@ -4,25 +4,25 @@
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-  require('./define');
+  requires('./define');
 
-  require('./shared');
+  requires('./shared');
 
-  Wizard = require('./spell').Wizard;
+  Wizard = requires('./spell').Wizard;
 
-  DBWrapper = require('./dbWrapper').DBWrapper;
+  DBWrapper = requires('./serializer').Serializer;
 
-  _ref = require('./unit'), createUnit = _ref.createUnit, Hero = _ref.Hero;
+  _ref = requires('./unit'), createUnit = _ref.createUnit, Hero = _ref.Hero;
 
-  _ref1 = require('./item'), Item = _ref1.Item, Card = _ref1.Card;
+  _ref1 = requires('./item'), Item = _ref1.Item, Card = _ref1.Card;
 
-  _ref2 = require('./commandStream'), CommandStream = _ref2.CommandStream, Environment = _ref2.Environment;
+  _ref2 = requires('./commandStream'), CommandStream = _ref2.CommandStream, Environment = _ref2.Environment;
 
-  _ref3 = require('./container'), Bag = _ref3.Bag, CardStack = _ref3.CardStack;
+  _ref3 = requires('./container'), Bag = _ref3.Bag, CardStack = _ref3.CardStack;
 
-  _ref4 = require('./trigger'), parse = _ref4.parse, TriggerManager = _ref4.TriggerManager;
+  _ref4 = requires('./trigger'), parse = _ref4.parse, TriggerManager = _ref4.TriggerManager;
 
-  seed_random = require('./seed-random');
+  seed_random = requires('./seed-random');
 
   speedFormula = {
     'a': 1,
