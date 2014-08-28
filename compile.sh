@@ -66,7 +66,7 @@ SOURCES=(
 "trigger.js"
 )
 
-DST_BOX='blackbox/'
+DST_BOX="blackbox/"
 for itm in ${SOURCES[*]}
 do
   cp -f build/${itm} ${DST_BOX}${itm}
