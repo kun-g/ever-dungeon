@@ -22,7 +22,7 @@
 
   _ref4 = require('./trigger'), parse = _ref4.parse, TriggerManager = _ref4.TriggerManager;
 
-  seed_random = require('./seed-random');
+  seed_random = require('./seed_random');
 
   speedFormula = {
     'a': 1,

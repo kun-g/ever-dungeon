@@ -924,22 +924,6 @@
       return async.waterfall([
         (function(_this) {
           return function(cb) {
-            var _base, _base1;
-            if ((stageConfig.pvp != null) && (pkr != null)) {
-              if ((_base = _this.counters).currentPKCount == null) {
-                _base.currentPKCount = 0;
-              }
-              if ((_base1 = _this.counters).totalPKCount == null) {
-                _base1.totalPKCount = 5;
-              }
-              if (_this.counters.currentPKCount >= _this.counters.totalPKCount) {
-                cb(RET_NotEnoughTimes);
-              }
-            }
-            return cb();
-          };
-        })(this), (function(_this) {
-          return function(cb) {
             if (_this.dungeonData.stage != null) {
               return cb('OK');
             } else {
@@ -1049,8 +1033,6 @@
             if ((stageConfig.pvp != null) && (pkr != null)) {
               return getPlayerHero(pkr, wrapCallback(_this, function(err, heroData) {
                 this.dungeonData.PVP_Pool = heroData != null ? [getBasicInfo(heroData)] : void 0;
-                this.counters.currentPKCount++;
-                this.saveDB();
                 return cb('OK');
               }));
             } else {
@@ -2257,13 +2239,13 @@
         case 'ContinuousRaids':
           return (_ref10 = cfg != null ? (_ref11 = cfg.privilege) != null ? _ref11.ContinuousRaids : void 0 : void 0) != null ? _ref10 : false;
         case 'pkCount':
-          return (_ref12 = cfg != null ? (_ref13 = cfg.privilege) != null ? _ref13.pkCount : void 0 : void 0) != null ? _ref12 : 0;
+          return (_ref12 = cfg != null ? (_ref13 = cfg.privilege) != null ? _ref13.pkCount : void 0 : void 0) != null ? _ref12 : 5;
         case 'tuHaoCount':
-          return (_ref14 = cfg != null ? (_ref15 = cfg.privilege) != null ? _ref15.tuHaoCount : void 0 : void 0) != null ? _ref14 : 0;
+          return (_ref14 = cfg != null ? (_ref15 = cfg.privilege) != null ? _ref15.tuHaoCount : void 0 : void 0) != null ? _ref14 : 3;
         case 'EquipmentRobbers':
-          return (_ref16 = cfg != null ? (_ref17 = cfg.privilege) != null ? _ref17.EquipmentRobbers : void 0 : void 0) != null ? _ref16 : 0;
+          return (_ref16 = cfg != null ? (_ref17 = cfg.privilege) != null ? _ref17.EquipmentRobbers : void 0 : void 0) != null ? _ref16 : 3;
         case 'EvilChieftains':
-          return (_ref18 = cfg != null ? (_ref19 = cfg.privilege) != null ? _ref19.EvilChieftains : void 0 : void 0) != null ? _ref18 : 0;
+          return (_ref18 = cfg != null ? (_ref19 = cfg.privilege) != null ? _ref19.EvilChieftains : void 0 : void 0) != null ? _ref18 : 3;
         case 'blueStarCost':
           return (_ref20 = cfg != null ? cfg.blueStarCost : void 0) != null ? _ref20 : 0;
         case 'goldAdjust':
@@ -3281,14 +3263,14 @@
         var count, e, item, ret, _i, _len, _ref7, _results;
         count = (_ref7 = env.variable('count')) != null ? _ref7 : 1;
         item = createItem(env.variable('item'));
+        if (item == null) {
+          return showMeTheStack();
+        }
         if (item.expiration) {
           item.date = helperLib.currentTime(true).valueOf();
           item.attrSave('date');
         }
-        if (item == null) {
-          return showMeTheStack();
-        }
-        ret = env.player.inventory.add(item, count, env.variable('allorfail'));
+        ret = env.player.inventory.add(item, count, true);
         this.routine({
           id: 'ItemChange',
           ret: ret,
