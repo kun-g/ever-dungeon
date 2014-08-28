@@ -4566,7 +4566,7 @@ exports.data = [
             "basic" : {
                 "spellAction":4,
                 "spellEffect": 9,
-                "targetEffect": 1 ,
+                "targetEffect": 15,
                 "spellDelay": 0,
                 "targetDelay": 0
             },
@@ -4665,11 +4665,6 @@ exports.data = [
         "desc":"场上敌人越多,魔导师的攻击力也随之增强。",
         "slotId": 1,
         "config": {
-            "basic" : {
-                "spellAction": 2,
-                "spellEffect": 45,
-                "spellDelay": 0.3
-            },
             "triggerCondition": [
                 { "type": "event", "event": "onTurnEnd" }
             ],
@@ -4679,7 +4674,8 @@ exports.data = [
             },
             "action": [
                 { "type": "removeSpell", "spell": 203},
-                { "type": "installSpell", "spell": 203}
+                { "type": "installSpell", "spell": 203},
+                { "type": "playEffect", "effect":13,"pos":"self"}
             ],
             "levelConfig" : [
                 {"level": 1},
@@ -4703,9 +4699,9 @@ exports.data = [
                 {"type":"visible"}
             ],
             "levelConfig":[
-                { "modifications": {"attack":{"src":{"attack":{"visibleMonster":0.03}}}}, "level": 1},
-                { "modifications": {"attack":{"src":{"attack":{"visibleMonster":0.05}}}}, "level": 2},
-                { "modifications": {"attack":{"src":{"attack":{"visibleMonster":0.08}}}}, "level": 3}
+                { "modifications": {"attack":{"src":{"attack":{"visibleMonsterCount":0.03}}}}, "level": 1},
+                { "modifications": {"attack":{"src":{"attack":{"visibleMonsterCount":0.05}}}}, "level": 2},
+                { "modifications": {"attack":{"src":{"attack":{"visibleMonsterCount":0.08}}}}, "level": 3}
             ]
         }
     },
@@ -4788,15 +4784,20 @@ exports.data = [
             ],
             "targetSelection": {
                 "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"}]
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"},{"type":"count","count":2}]
             },
             "action": [
-                { "type": "setCount" }
+                { "type": "delay"},
+                { "type": "damage","damageType":"Spell","isRange":true,"delay":0.8},
+                { "type": "playEffect","effect":44,"act":"self"},
+                { "type": "playEffect","effect":0,"act":"target","delay":0.6},
+                { "type": "blink","delay":0.6,"time":0.08},
+                { "type": "shock","delay":0.6,"range":5,"time":0.2}
             ],
             "levelConfig":[
-                { "chance":0.2,"modifications": {"count":{"src":{"c":1}}}, "level": 1},
-                { "chance":0.25,"modifications": {"count":{"src":{"c":1}}}, "level": 2},
-                { "chance":0.3,"modifications": {"count":{"src":{"c":2}}}, "level": 3}
+                { "chance":0.1,"formular": {"src":{"attack":0.3}}, "level": 1},
+                { "chance":0.2,"formular": {"src":{"attack":0.45}}, "level": 2},
+                { "chance":0.3,"formular": {"src":{"attack":0.6}}, "level": 3}
             ]
         }
     },
@@ -4879,9 +4880,9 @@ exports.data = [
                 { "type": "event", "event": "onBeginBattleTurn", "eventCount": 2 }
             ],
             "levelConfig" : [
-                { "modifications": [{"attack":{"src":{"attack":0.3}}},{"speed":{"src":{"speed":0},"c":10}}]},
-                { "modifications": [{"attack":{"src":{"attack":0.4}}},{"speed":{"src":{"speed":0},"c":15}}]},
-                { "modifications": [{"attack":{"src":{"attack":0.5}}},{"speed":{"src":{"speed":0},"c":25}}]}
+                { "modifications": {"attack":{"src":{"attack":0.3}},"speed":{"src":{"c":10}}}},
+                { "modifications": {"attack":{"src":{"attack":0.4}},"speed":{"src":{"c":15}}}},
+                { "modifications": {"attack":{"src":{"attack":0.5}},"speed":{"src":{"c":25}}}}
             ]
         }
     },
@@ -4961,12 +4962,13 @@ exports.data = [
             ],
             "buffType":"AttackDebuff",
             "availableCondition": [
-                { "type": "event", "event": "onEndBattleTurn"}
+                { "type": "event", "event": "onEndBattleTurn"},
+                { "type": "eventCount" }
             ],
             "levelConfig":[
-                { "modifications": {"attack":{"src":{"attack":-0.2}}},"eventCount": 2, "level": 1},
-                { "modifications": {"attack":{"src":{"attack":-0.3}}},"eventCount": 3, "level": 2},
-                { "modifications": {"attack":{"src":{"attack":-0.4}}},"eventCount": 3, "level": 3}
+                { "modifications": {"attack":{"src":{"attack":-0.2}}},"count": 2, "level": 1},
+                { "modifications": {"attack":{"src":{"attack":-0.3}}},"count": 3, "level": 2},
+                { "modifications": {"attack":{"src":{"attack":-0.4}}},"count": 3, "level": 3}
             ]
         }
     },
@@ -6135,9 +6137,9 @@ exports.data = [
                 { "type": "effectCount","count":1 }
             ],
             "levelConfig":[
-                { "modifications": {"attack":{"c":{"environment":{"damage":0.5}}}}, "level": 1},
-                { "modifications": {"attack":{"c":{"environment":{"damage":0.8}}}}, "level": 2},
-                { "modifications": {"attack":{"c":{"environment":{"damage":1.2}}}}, "level": 3}
+                { "modifications": {"attack":{"environment":{"damage":0.5}}}, "level": 1},
+                { "modifications": {"attack":{"environment":{"damage":0.8}}}, "level": 2},
+                { "modifications": {"attack":{"environment":{"damage":1.2}}}, "level": 3}
             ]
         }
     }
