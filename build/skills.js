@@ -4502,7 +4502,7 @@ exports.data = [
             "uninstallAction": [
                 { "type": "resetProperty" }
             ],
-            "buffType":"AttackDebuff",
+            "buffType":"AttackBuff",
             "availableCondition": [
                 { "type": "event", "event": "onEndBattleTurn", "eventCount": 2 }
             ],
@@ -4547,7 +4547,8 @@ exports.data = [
             ],
             "action": [
                 { "type": "removeSpell", "spell": 269},
-                { "type": "installSpell", "spell": 269}
+                { "type": "installSpell", "spell": 269},
+                {"type":"delay"}
             ],
             "levelConfig": [
                 {"level": 1},
@@ -4666,7 +4667,8 @@ exports.data = [
         "slotId": 1,
         "config": {
             "triggerCondition": [
-                { "type": "event", "event": "onTurnEnd" }
+                { "type": "event", "event": "onTurnEnd" },
+                {"type":"alive"}
             ],
             "targetSelection": {
                 "pool": "self",
@@ -4674,8 +4676,7 @@ exports.data = [
             },
             "action": [
                 { "type": "removeSpell", "spell": 203},
-                { "type": "installSpell", "spell": 203},
-                { "type": "playEffect", "effect":13,"pos":"self"}
+                { "type": "installSpell", "spell": 203}
             ],
             "levelConfig" : [
                 {"level": 1},
@@ -4693,15 +4694,15 @@ exports.data = [
             "uninstallAction": [
                 { "type": "resetProperty" }
             ],
-            "buffType":"AttackDebuff",
+            "buffType":"AttackBuff",
             "availableCondition": [
                 { "type": "effectCount","count":1 },
                 {"type":"visible"}
             ],
             "levelConfig":[
-                { "modifications": {"attack":{"src":{"attack":{"visibleMonsterCount":0.03}}}}, "level": 1},
-                { "modifications": {"attack":{"src":{"attack":{"visibleMonsterCount":0.05}}}}, "level": 2},
-                { "modifications": {"attack":{"src":{"attack":{"visibleMonsterCount":0.08}}}}, "level": 3}
+                { "modifications": {"attack":{"environment":{"visibleMonsterCount":15}}}, "level": 1},
+                { "modifications": {"attack":{"environment":{"visibleMonsterCount":30}}}, "level": 2},
+                { "modifications": {"attack":{"environment":{"visibleMonsterCount":50}}}, "level": 3}
             ]
         }
     },
@@ -4714,7 +4715,8 @@ exports.data = [
         "config": {
             "triggerCondition": [
                 { "type": "event", "event": "onPhysicalDamage" },
-                {"type":"alive"}
+                { "type": "chance" },
+                { "type":"alive" }
             ],
             "targetSelection": {
                 "pool": "target",
@@ -4727,9 +4729,9 @@ exports.data = [
                 {"type":"playAction","motion":1,"pos":"self"}
             ],
             "levelConfig" : [
-                {"level": 1},
-                {"level": 2},
-                {"level": 3}
+                { "chance":0.25 },
+                { "chance":0.3 },
+                { "chance":0.5 }
             ]
         }
     },
@@ -4759,9 +4761,9 @@ exports.data = [
                 { "type": "modifyVar", "x": "damage" }
             ],
             "levelConfig":[
-                { "formular": {"environment": {"damage":1.2}}, "chance":0.25, "level": 1},
-                { "formular": {"environment": {"damage":1.3}}, "chance":0.3, "level": 2},
-                { "formular": {"environment": {"damage":1.35}}, "chance":0.5, "level": 3}
+                { "formular": {"environment": {"damage":1.2}}},
+                { "formular": {"environment": {"damage":1.3}}},
+                { "formular": {"environment": {"damage":1.35}}}
             ]
         }
     },
@@ -4875,7 +4877,7 @@ exports.data = [
             "uninstallAction": [
                 { "type": "resetProperty" }
             ],
-            "buffType":"DeBuff",
+            "buffType":"AttackBuff",
             "availableCondition": [
                 { "type": "event", "event": "onBeginBattleTurn", "eventCount": 2 }
             ],
@@ -6120,7 +6122,7 @@ exports.data = [
         "label":"198-血之狂怒",
         "config": {
             "action":[
-                {"type": "playEffect","effect":13,"pos":"self","delay":1.5},
+                {"type": "playEffect","effect":13,"act":"self"},
                 { "type": "setProperty"}
             ],
             "targetSelection":{ "pool":"Self" },
@@ -6136,6 +6138,7 @@ exports.data = [
             "availableCondition": [
                 { "type": "effectCount","count":1 }
             ],
+            "buffType":"AttackBuff",
             "levelConfig":[
                 { "modifications": {"attack":{"environment":{"damage":0.5}}}, "level": 1},
                 { "modifications": {"attack":{"environment":{"damage":0.8}}}, "level": 2},
