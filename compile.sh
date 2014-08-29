@@ -49,7 +49,6 @@ then
   exit
 fi
 
-
 cd ..
 
 echo '===== Updating black box ====='
@@ -139,4 +138,7 @@ git commit -am "Commit changes branch:"$CurrentBranch" @ "$CurrentVersion" Serve
 
 git push $RemoteRepo
 
-git push github
+if [ $CurrentBranch = master ]
+then
+  git push github
+fi
