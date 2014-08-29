@@ -1,5 +1,5 @@
 (function() {
-  var DBWrapper, Player, async, dbLib, getPlayerHero, helperLib, http, https, loadPlayer, loginBy, moment, wrapReceipt, _ref;
+  var DBWrapper, Player, async, dbLib, getPlayerHero, helperLib, http, https, loadPlayer, loginBy, moment, querystring, wrapReceipt, _ref;
 
   require('./define');
 
@@ -14,6 +14,8 @@
   http = require('http');
 
   https = require('https');
+
+  querystring = require('querystring');
 
   moment = require('moment');
 
