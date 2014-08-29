@@ -20,7 +20,7 @@
   Player = require('./player').Player;
 
   loginBy = function(arg, token, callback) {
-    var AppSecret, appID, appKey, options, passport, passportType, path, req, sign, teebikURL;
+    var AppSecret, appID, appKey, options, passport, passportType, path, req, requestObj, sign, teebikURL;
     passportType = arg.tp;
     passport = arg.id;
     switch (passportType) {
@@ -33,9 +33,13 @@
           case LOGIN_ACCOUNT_TYPE_TB_Android:
             teebikURL = 'sdk.android.teebik.com';
         }
-        token = new Buffer(token, 'base64').toString();
-        sign = md5Hash(token + passport);
-        path = 'http://' + teebikURL + '/check/user?token=' + appID + '&uid=' + passport + '&Sign=' + sign;
+        requestObj = {
+          uid: passport,
+          token: token,
+          sign: sign
+        };
+        sign = md5Hash(token + '|' + passport);
+        path = 'http://' + teebikURL + '/check/user?' + querystring.stringify(requestObj);
         return http.get(path, function(res) {
           res.setEncoding('utf8');
           return res.on('data', function(chunk) {
