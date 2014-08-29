@@ -33,6 +33,7 @@
           case LOGIN_ACCOUNT_TYPE_TB_Android:
             teebikURL = 'sdk.android.teebik.com';
         }
+        token = new Buffer(token, 'base64').toString();
         sign = md5Hash(token + passport);
         path = 'http://' + teebikURL + '/check/user?token=' + appID + '&uid=' + passport + '&Sign=' + sign;
         return http.get(path, function(res) {
@@ -54,7 +55,7 @@
         }).on('error', function(e) {
           return logError({
             action: 'login',
-            type: LOGIN_ACCOUNT_TYPE_TB,
+            type: "LOGIN_ACCOUNT_TYPE_TB",
             error: e
           });
         });
@@ -83,7 +84,7 @@
         }).on('error', function(e) {
           return logError({
             action: 'login',
-            type: LOGIN_ACCOUNT_TYPE_DK,
+            type: "LOGIN_ACCOUNT_TYPE_DK",
             error: e
           });
         });
@@ -119,7 +120,7 @@
         }).on('error', function(e) {
           return logError({
             action: 'login',
-            type: LOGIN_ACCOUNT_TYPE_91,
+            type: "LOGIN_ACCOUNT_TYPE_91",
             error: e
           });
         });
@@ -148,7 +149,7 @@
         }).on('error', function(e) {
           return logError({
             action: 'login',
-            type: LOGIN_ACCOUNT_TYPE_91,
+            type: "LOGIN_ACCOUNT_TYPE_KY",
             error: e
           });
         });
@@ -182,7 +183,7 @@
         req.on('error', function(e) {
           return logError({
             action: 'login',
-            type: LOGIN_ACCOUNT_TYPE_PP,
+            type: "LOGIN_ACCOUNT_TYPE_PP",
             error: e
           });
         });
