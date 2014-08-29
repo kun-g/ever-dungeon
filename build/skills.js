@@ -3560,7 +3560,7 @@ exports.data = [
         "label":"pk传送",
         "config": {
             "triggerCondition": [
-                {"type":"event","event":"onBeBattleTurnEnd"},
+                {"type":"event","event":"onBeEndBattleTurn"},
                 {"type":"alive"}
             ],
             "targetSelection":{

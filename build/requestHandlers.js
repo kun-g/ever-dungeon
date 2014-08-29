@@ -489,7 +489,7 @@
         reward = [];
         replay = [];
         status = 'OK';
-        fileList = ["define", "serializer", "spell", "unit", "container", "item", "seed-random", "commandStream", "dungeon", "trigger"];
+        fileList = ["define", "serializer", "spell", "unit", "container", "item", "seed_random", "commandStream", "dungeon", "trigger"];
         doVerify = function() {
           var dungeon, err, f, _i, _len;
           if (player.dungeon) {
