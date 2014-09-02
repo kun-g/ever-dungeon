@@ -4671,8 +4671,8 @@ exports.data = [
         "slotId": 1,
         "config": {
             "triggerCondition": [
-                { "type": "event", "event": "onTurnBegin" },
-                {"type":"alive"}
+                { "type": "event", "event": "onTurnEnd" },
+                { "type":"alive" }
             ],
             "targetSelection": {
                 "pool": "self",
@@ -4727,12 +4727,12 @@ exports.data = [
             "action": [
                 {"type":"delay"},
                 { "type": "installSpell", "spell": 205},
-                {"type": "playEffect","effect":36,"act":"target"}
+                {"type": "playEffect","effect":36,"pos":"target"}
             ],
             "levelConfig" : [
-                { "chance":0.25, "level": 1 },
-                { "chance":0.3, "level": 2 },
-                { "chance":0.5, "level": 3 }
+                { "chance":0, "level": 1 },
+                { "chance":0, "level": 2 },
+                { "chance":0, "level": 3 }
             ]
         }
     },
@@ -6136,7 +6136,6 @@ exports.data = [
                 { "type": "event", "event": "onBeSpellDamage" },
                 { "type": "event", "event": "onBeSpellRangeDamage" }
             ],
-            "buffType":"AttackBuff",
             "levelConfig":[
                 { "modifications": {"attack":{"environment":{"damage":0.5}}}, "level": 1 },
                 { "modifications": {"attack":{"environment":{"damage":0.8}}}, "level": 2 },
