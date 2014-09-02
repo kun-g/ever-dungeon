@@ -4699,7 +4699,7 @@ exports.data = [
             ],
             "buffType":"AttackBuff",
             "availableCondition": [
-                { "type": "effectCount","count":1 }
+                { "type": "event", "event": "onEndBattleTurn", "eventCount": 1 }
             ],
             "levelConfig":[
                 { "modifications": {"attack":{"environment":{"visibleMonsterCount":15}}}, "level": 1},
@@ -4730,9 +4730,9 @@ exports.data = [
                 {"type": "playEffect","effect":36,"pos":"target"}
             ],
             "levelConfig" : [
-                { "chance":0, "level": 1 },
-                { "chance":0, "level": 2 },
-                { "chance":0, "level": 3 }
+                { "chance":0.25, "level": 1 },
+                { "chance":0.3, "level": 2 },
+                { "chance":0.5, "level": 3 }
             ]
         }
     },
@@ -4781,12 +4781,14 @@ exports.data = [
                 "targetDelay": 0.9
             },
             "triggerCondition": [
-                {"type": "event", "event": "onTarget" },
+                { "type": "event", "event": "onPhysicalDamage" },
+                { "type": "event", "event": "onSpellDamage"  },
+                { "type": "event", "event": "onSpellRangeDamage" },
                 { "type": "chance" }
             ],
             "targetSelection": {
                 "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"},{"type":"count","count":2}]
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"}]
             },
             "action": [
                 { "type": "delay"},
