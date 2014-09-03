@@ -4671,7 +4671,7 @@ exports.data = [
         "slotId": 1,
         "config": {
             "triggerCondition": [
-                { "type": "event", "event": "onTurnEnd" },
+                { "type": "event", "event": "onTurnBegin" },
                 { "type":"alive" }
             ],
             "targetSelection": {
