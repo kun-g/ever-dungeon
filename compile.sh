@@ -69,12 +69,28 @@ DST_BOX="blackbox/"
 for itm in ${SOURCES[*]}
 do
   cp -f build/${itm} ${DST_BOX}${itm}
-  sed -i "s/require(/requires(/g" ${DST_BOX}${itm}
-  sed -i "s/var\ dbLib/\/\/var\ dbLib/g" ${DST_BOX}${itm}
-  sed -i "s/dbWrapper'/serializer'/g" ${DST_BOX}${itm}
-  sed -i "s/\.DBWrapper/\.Serializer/g" ${DST_BOX}${itm}
-#  sed -ig 's/exports\.fileVersion = -1/exports\.fileVersion = '$CurrentVersion'/g' ${DST_BOX}${itm}
+
+  f=$DST_BOX$itm
+  LibName=`echo "$itm" | sed -e 's/\(\w\+\).js/lib\u\1/'`
+
+  sed -i '1s/^/'$LibName' = {};\n/' $f 
+  sed -i 's/exports/'$LibName'/' $f 
+  sed -i "s/DBWrapper = require('\.\/dbWrapper').DBWrapper;//" $f
+  sed -i "s/require('\.\/shared');//g" $f
+  sed -i "s/async = require('async');//g" $f
+  sed -i "s/require('\.\/define');//g" $f
+  sed -i "s/require('\.\/\(.*\)')/lib\u\1/g" $f
+  sed -i "s/require('\(.*\)')/lib\u\1/g" $f
 done
+
+cd $DST_BOX
+
+ls *.js | jsbcc -p
+rm -rf before_compile
+mkdir before_compile
+mv *.js before_compile
+
+cd ../
 
 echo '===== Setting up variables ====='
 if [ $CurrentBranch = develop ]
