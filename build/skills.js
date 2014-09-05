@@ -659,13 +659,16 @@ exports.data = [
     "config": {
           "triggerCondition": [
               {"type" :"event", "event":"onBattleTurnEnd" },
-              {"type" :"event", "event":"onMoveTurnEnd" }
+              {"type" :"event", "event":"onMoveTurnEnd" },
+              { "type": "chance", "chance": 0.8 },
+              { "type": "targetMutex", "mutex": "range" }
           ],
           "targetSelection": {
               "pool": "objects",
               "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"},{"type":"shuffle"},{"type":"count","count":1}]
           },
           "action":[
+              {"type":"castSpell","spell":270},
               {"type": "rangeAttack", "hurtDelay": 0.6, "effDelay": 0.3}
           ],
         "levelConfig":[
@@ -6128,6 +6131,19 @@ exports.data = [
                 { "modifications": {"attack":{"c":{"environment":{"damage":0.5}}}}, "level": 1},
                 { "modifications": {"attack":{"c":{"environment":{"damage":0.8}}}}, "level": 2},
                 { "modifications": {"attack":{"c":{"environment":{"damage":1.2}}}}, "level": 3}
+            ]
+        }
+    },
+    {
+        "skillId": 270,
+        "label":"26远程攻击",
+        "config": {
+            "targetSelection": {
+                "pool": "objects",
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"}]
+            },
+            "action": [
+                {"type": "setTargetMutex", "mutex": "range", "count": 1 }
             ]
         }
     }
