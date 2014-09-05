@@ -83,14 +83,14 @@ do
   sed -i "s/require('\(.*\)')/lib\u\1/g" $f
 done
 
-cd $DST_BOX
-
-ls *.js | $JSBCC -p
-rm -rf before_compile
-mkdir before_compile
-mv *.js before_compile
-
-cd ../
+#cd $DST_BOX
+#
+#ls *.js | $JSBCC -p
+#rm -rf before_compile
+#mkdir before_compile
+#mv *.js before_compile
+#
+#cd ../
 
 echo '===== Setting up variables ====='
 if [ $CurrentBranch = develop ]
