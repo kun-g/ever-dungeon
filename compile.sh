@@ -1,4 +1,4 @@
-#!/bin/bash
+##!/bin/bash
 
 OnlyCompile=0
 NotSwitchBranch=0
@@ -85,7 +85,7 @@ done
 
 cd $DST_BOX
 
-ls *.js | jsbcc -p
+ls *.js | $JSBCC -p
 rm -rf before_compile
 mkdir before_compile
 mv *.js before_compile
