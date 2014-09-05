@@ -921,6 +921,9 @@
     RPC_GetPkRivals: {
       id: 32,
       func: function(arg, player, handler, rpcID, socket) {
+        deliverReceipt('0000433800011398341956PP25', 'PP25', function(err) {
+          return console.log(err);
+        });
         return dbLib.searchRival(player.name, function(err, rivalLst) {
           var ret;
           rivalLst = helperLib.warpRivalLst(rivalLst);
