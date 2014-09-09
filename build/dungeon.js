@@ -22,7 +22,7 @@
 
   _ref4 = require('./trigger'), parse = _ref4.parse, TriggerManager = _ref4.TriggerManager;
 
-  seed_random = require('./seed_random');
+  seed_random = require('./seed-random');
 
   speedFormula = {
     'a': 1,
@@ -2152,7 +2152,7 @@
     },
     OpenBlock: {
       callback: function(env) {
-        var aliveHeroes, block, blockType, hero, npc, who, _i, _j, _len, _len1, _ref5, _results;
+        var block, npc, _i, _len, _ref5, _results;
         if (env.getBlock(env.variable('block')) == null) {
           return this.suicide();
         }
@@ -2162,15 +2162,8 @@
           block: env.variable('block')
         });
         block = env.getBlock(env.variable('block'));
-        aliveHeroes = env.getAliveHeroes().filter(function(h) {
-          return h != null;
-        }).sort(function(a, b) {
-          return a.order - b.order;
-        });
-        blockType = block.getType();
         if (block.getType() === Block_Npc || block.getType() === Block_Enemy) {
           if (block.getRef(-1) !== null) {
-            who = blockType === Block_Npc ? 'Npc' : 'Monster';
             _ref5 = block.getRef(-1);
             _results = [];
             for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
@@ -2182,11 +2175,7 @@
               env.variable('monster', npc);
               env.variable('tar', npc);
               npc.onEvent('onShow', this);
-              for (_j = 0, _len1 = aliveHeroes.length; _j < _len1; _j++) {
-                hero = aliveHeroes[_j];
-                onEvent(who + 'Show', this, hero, npc);
-              }
-              env.onEvent('on' + who + 'Show', this);
+              env.onEvent('onMonsterShow', this);
               if ((npc != null ? npc.isVisible : void 0) !== true) {
                 _results.push(npc.isVisible = true);
               } else {
