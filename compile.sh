@@ -1,4 +1,4 @@
-##!/bin/bash
+#!/bin/bash
 SED=${SED:-sed}
 
 OnlyCompile=0
