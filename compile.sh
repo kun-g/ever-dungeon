@@ -1,4 +1,5 @@
 ##!/bin/bash
+SED=${SED:-sed}
 
 OnlyCompile=0
 NotSwitchBranch=0
@@ -71,16 +72,16 @@ do
   cp -f build/${itm} ${DST_BOX}${itm}
 
   f=$DST_BOX$itm
-  LibName=`echo "$itm" | sed -e 's/\(\w\+\).js/lib\u\1/'`
+  LibName=`echo "$itm" | $SED -e 's/\(\w\+\).js/lib\u\1/'`
 
-  sed -i '1s/^/'$LibName' = {};\n/' $f 
-  sed -i 's/exports/'$LibName'/' $f 
-  sed -i "s/DBWrapper = require('\.\/dbWrapper').DBWrapper;//" $f
-  sed -i "s/require('\.\/shared');//g" $f
-  sed -i "s/async = require('async');//g" $f
-  sed -i "s/require('\.\/define');//g" $f
-  sed -i "s/require('\.\/\(.*\)')/lib\u\1/g" $f
-  sed -i "s/require('\(.*\)')/lib\u\1/g" $f
+  $SED -i '1s/^/'$LibName' = {};\n/' $f 
+  $SED -i 's/exports/'$LibName'/' $f 
+  $SED -i "s/DBWrapper = require('\.\/dbWrapper').DBWrapper;//" $f
+  $SED -i "s/require('\.\/shared');//g" $f
+  $SED -i "s/async = require('async');//g" $f
+  $SED -i "s/require('\.\/define');//g" $f
+  $SED -i "s/require('\.\/\(.*\)')/lib\u\1/g" $f
+  $SED -i "s/require('\(.*\)')/lib\u\1/g" $f
 done
 
 #cd $DST_BOX
@@ -141,11 +142,11 @@ cp data/stable/*.js build/
 
 CurrentVersion=`redis-cli -h 10.4.3.41 --raw get $VersionKey`
 echo 'Current version: '$CurrentVersion
-sed -ig 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
-sed -ig 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
-sed -ig 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
-sed -ig 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
-sed -ig 's/"DataVer": .*,/"DataVer": "'$SubModuleData'",/g' $ConfigFile
+$SED -ig 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
+$SED -ig 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
+$SED -ig 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
+$SED -ig 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
+$SED -ig 's/"DataVer": .*,/"DataVer": "'$SubModuleData'",/g' $ConfigFile
 
 # Commit
 echo '===== Commit the changes ====='
