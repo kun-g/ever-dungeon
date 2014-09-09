@@ -1,5 +1,5 @@
 (function() {
-  var DBWrapper, Player, async, dbLib, getPlayerHero, helperLib, http, https, loadPlayer, loginBy, moment, wrapReceipt, _ref;
+  var DBWrapper, Player, async, dbLib, getPlayerHero, helperLib, http, https, loadPlayer, loginBy, moment, querystring, wrapReceipt, _ref;
 
   require('./define');
 
@@ -15,15 +15,56 @@
 
   https = require('https');
 
+  querystring = require('querystring');
+
   moment = require('moment');
 
   Player = require('./player').Player;
 
   loginBy = function(arg, token, callback) {
-    var AppSecret, appID, appKey, options, passport, passportType, path, req, sign;
+    var AppSecret, appID, appKey, options, passport, passportType, path, req, requestObj, sign, teebikURL;
     passportType = arg.tp;
     passport = arg.id;
     switch (passportType) {
+      case LOGIN_ACCOUNT_TYPE_TB_IOS:
+      case LOGIN_ACCOUNT_TYPE_TB_Android:
+        switch (passportType) {
+          case LOGIN_ACCOUNT_TYPE_TB_IOS:
+            teebikURL = 'sdk.ios.teebik.com';
+            break;
+          case LOGIN_ACCOUNT_TYPE_TB_Android:
+            teebikURL = 'sdk.android.teebik.com';
+        }
+        sign = md5Hash(token + '|' + passport);
+        requestObj = {
+          uid: passport,
+          token: token,
+          sign: sign
+        };
+        path = 'http://' + teebikURL + '/check/user?' + querystring.stringify(requestObj);
+        return http.get(path, function(res) {
+          res.setEncoding('utf8');
+          return res.on('data', function(chunk) {
+            var result;
+            result = JSON.parse(chunk);
+            logInfo({
+              action: 'login',
+              type: passportType,
+              code: result
+            });
+            if (result.success === 1) {
+              return callback(null);
+            } else {
+              return callback(Error(RET_LoginFailed));
+            }
+          });
+        }).on('error', function(e) {
+          return logError({
+            action: 'login',
+            type: "LOGIN_ACCOUNT_TYPE_TB",
+            error: e
+          });
+        });
       case LOGIN_ACCOUNT_TYPE_DK_Android:
         appID = '3319334';
         appKey = 'kavpXwRFFa4rjcUy1idmAkph';
@@ -49,7 +90,7 @@
         }).on('error', function(e) {
           return logError({
             action: 'login',
-            type: LOGIN_ACCOUNT_TYPE_DK,
+            type: "LOGIN_ACCOUNT_TYPE_DK",
             error: e
           });
         });
@@ -85,7 +126,7 @@
         }).on('error', function(e) {
           return logError({
             action: 'login',
-            type: LOGIN_ACCOUNT_TYPE_91,
+            type: "LOGIN_ACCOUNT_TYPE_91",
             error: e
           });
         });
@@ -114,7 +155,7 @@
         }).on('error', function(e) {
           return logError({
             action: 'login',
-            type: LOGIN_ACCOUNT_TYPE_91,
+            type: "LOGIN_ACCOUNT_TYPE_KY",
             error: e
           });
         });
@@ -148,7 +189,7 @@
         req.on('error', function(e) {
           return logError({
             action: 'login',
-            type: LOGIN_ACCOUNT_TYPE_PP,
+            type: "LOGIN_ACCOUNT_TYPE_PP",
             error: e
           });
         });
@@ -156,6 +197,7 @@
         return req.end();
       case LOGIN_ACCOUNT_TYPE_AD:
       case LOGIN_ACCOUNT_TYPE_GAMECENTER:
+      case LOGIN_ACCOUNT_TYPE_Android:
         return callback(null);
       default:
         return callback(Error(RET_Issue33));
@@ -489,7 +531,7 @@
         reward = [];
         replay = [];
         status = 'OK';
-        fileList = ["define", "serializer", "spell", "unit", "container", "item", "seed-random", "commandStream", "dungeon", "trigger"];
+        fileList = ["define", "serializer", "spell", "unit", "container", "item", "seed_random", "commandStream", "dungeon", "trigger"];
         doVerify = function() {
           var dungeon, err, f, _i, _len;
           if (player.dungeon) {
