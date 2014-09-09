@@ -1,4 +1,23 @@
-#!/bin/bash
+##!/bin/bash
+SED=${SED:-sed}
+
+OnlyCompile=0
+NotSwitchBranch=0
+
+case "$@" in
+  -n | --notswitchbranch)
+    shift
+    NotSwitchBranch=1
+    ;;
+  -c | --onlycompile)
+    shift
+    OnlyCompile=1
+    ;;
+esac
+
+#echo $NotSwitchBranch
+#echo $OnlyCompile
+#exit
 
 CurrentBranch=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
 
@@ -22,7 +41,14 @@ SubModuleServer=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
 gulp compile
 cp js/*.js $CurrentPWD/build
 cp src/*.js $CurrentPWD/build
-cp package.json $CurrentPWD/build
+cp package.js $CurrentPWD/build
+
+#oc = only compile
+if [ "$1" = "oc" ]
+then
+  cp src/*.js js
+  exit
+fi
 
 cd ..
 
@@ -44,12 +70,28 @@ DST_BOX="blackbox/"
 for itm in ${SOURCES[*]}
 do
   cp -f build/${itm} ${DST_BOX}${itm}
-  sed -i "s/require(/requires(/g" ${DST_BOX}${itm}
-  sed -i "s/var\ dbLib/\/\/var\ dbLib/g" ${DST_BOX}${itm}
-  sed -i "s/dbWrapper'/serializer'/g" ${DST_BOX}${itm}
-  sed -i "s/\.DBWrapper/\.Serializer/g" ${DST_BOX}${itm}
-#  sed -ig 's/exports\.fileVersion = -1/exports\.fileVersion = '$CurrentVersion'/g' ${DST_BOX}${itm}
+
+  f=$DST_BOX$itm
+  LibName=`echo "$itm" | $SED -e 's/\(\w\+\).js/lib\u\1/'`
+
+  $SED -i '1s/^/'$LibName' = {};\n/' $f 
+  $SED -i 's/exports/'$LibName'/' $f 
+  $SED -i "s/DBWrapper = require('\.\/dbWrapper').DBWrapper;//" $f
+  $SED -i "s/require('\.\/shared');//g" $f
+  $SED -i "s/async = require('async');//g" $f
+  $SED -i "s/require('\.\/define');//g" $f
+  $SED -i "s/require('\.\/\(.*\)')/lib\u\1/g" $f
+  $SED -i "s/require('\(.*\)')/lib\u\1/g" $f
 done
+
+#cd $DST_BOX
+#
+#ls *.js | $JSBCC -p
+#rm -rf before_compile
+#mkdir before_compile
+#mv *.js before_compile
+#
+#cd ../
 
 echo '===== Setting up variables ====='
 if [ $CurrentBranch = develop ]
@@ -100,11 +142,11 @@ cp data/stable/*.js build/
 
 CurrentVersion=`redis-cli -h 10.4.3.41 --raw get $VersionKey`
 echo 'Current version: '$CurrentVersion
-sed -ig 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
-sed -ig 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
-sed -ig 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
-sed -ig 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
-sed -ig 's/"DataVer": .*,/"DataVer": "'$SubModuleData'",/g' $ConfigFile
+$SED -ig 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
+$SED -ig 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
+$SED -ig 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
+$SED -ig 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
+$SED -ig 's/"DataVer": .*,/"DataVer": "'$SubModuleData'",/g' $ConfigFile
 
 # Commit
 echo '===== Commit the changes ====='
