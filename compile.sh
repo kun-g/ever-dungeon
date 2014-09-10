@@ -140,6 +140,8 @@ cp data/table/*.js build/
 cp data/stable/*.js build/
 
 
+echo 'get VersionInfo by redis-cli from 10.4.3.41, if this step cost so much time, may be
+your vpn is stop'
 CurrentVersion=`redis-cli -h 10.4.3.41 --raw get $VersionKey`
 echo 'Current version: '$CurrentVersion
 $SED -ig 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
