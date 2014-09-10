@@ -171,7 +171,7 @@ exports.data = [
 		"effectAttack": 9,
 		"skill": [
 			{
-				"id": 29,
+				"id": 164,
 				"level": 1
 			}
 		]
@@ -1406,7 +1406,7 @@ exports.data = [
 		"effectAttack": 9,
 		"skill": [
 			{
-				"id": 29,
+				"id": 164,
 				"level": 1
 			}
 		],
@@ -2641,7 +2641,7 @@ exports.data = [
 		"effectAttack": 9,
 		"skill": [
 			{
-				"id": 29,
+				"id": 165,
 				"level": 1
 			}
 		],
@@ -3287,8 +3287,8 @@ exports.data = [
 		"effectAttack": 9,
 		"skill": [
 			{
-				"id": 29,
-				"level": 1
+				"id": 165,
+				"level": 2
 			}
 		],
 		"scale": 1.2
@@ -3872,7 +3872,7 @@ exports.data = [
 		"effectAttack": 9,
 		"skill": [
 			{
-				"id": 29,
+				"id": 165,
 				"level": 1
 			}
 		]
@@ -4518,8 +4518,8 @@ exports.data = [
 		"effectAttack": 9,
 		"skill": [
 			{
-				"id": 29,
-				"level": 1
+				"id": 165,
+				"level": 2
 			}
 		],
 		"scale": 1.2
@@ -7308,7 +7308,7 @@ exports.data = [
         "effectAttack": 9,
         "skill": [
             {
-                "id": 29,
+                "id": 165,
                 "level": 1
             }
         ],

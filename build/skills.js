@@ -3822,8 +3822,7 @@ exports.data = [
             },
             "triggerCondition": [
                 {"type" :"event", "event":"onPhysicalDamage" },
-                { "type": "chance", "chance": 0.8 },
-                {"type":"alive"}
+                { "type": "chance", "chance": 0.3 }
             ],
             "targetSelection":{
                 "pool":"target",
@@ -3839,9 +3838,9 @@ exports.data = [
         "label":"中毒",
         "config": {
             "triggerCondition": [
-                {"type" :"event", "event":"onPhysicalDamage" },
-                { "type": "chance", "chance": 0.5 },
-                {"type":"alive"}
+                { "type" :"event", "event":"onPhysicalDamage" },
+                { "type": "chance" },
+                { "type":"alive" }
             ],
             "targetSelection":{
                 "pool":"target",
@@ -3851,13 +3850,16 @@ exports.data = [
                 {"type":"delay"},
                 {"type": "installSpell", "spell": 94},
                 {"type": "playEffect","effect":36,"pos":"target","delay":2.0}
+            ],
+            "levelConfig": [
+                { "chance": 0.3, "level": 1 },
+                { "chance": 0.5, "level": 2 }
             ]
         }
     },
     {
         "skillId": 166,
         "config": {
-            "buffEffect": 36,
             "installAction":[
                 {
                     "type": "setProperty","modifications": {"speed":{"src":{"speed":-0.5}}}
