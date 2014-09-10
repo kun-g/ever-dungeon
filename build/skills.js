@@ -659,16 +659,13 @@ exports.data = [
     "config": {
           "triggerCondition": [
               {"type" :"event", "event":"onBattleTurnEnd" },
-              {"type" :"event", "event":"onMoveTurnEnd" },
-              { "type": "chance", "chance": 0.8 },
-              { "type": "targetMutex", "mutex": "range" }
+              {"type" :"event", "event":"onMoveTurnEnd" }
           ],
           "targetSelection": {
               "pool": "objects",
               "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"},{"type":"shuffle"},{"type":"count","count":1}]
           },
           "action":[
-              {"type":"castSpell","spell":270},
               {"type": "rangeAttack", "hurtDelay": 0.6, "effDelay": 0.3}
           ],
         "levelConfig":[
@@ -3822,7 +3819,8 @@ exports.data = [
             },
             "triggerCondition": [
                 {"type" :"event", "event":"onPhysicalDamage" },
-                { "type": "chance", "chance": 0.3 }
+                { "type": "chance", "chance": 0.8 },
+                {"type":"alive"}
             ],
             "targetSelection":{
                 "pool":"target",
@@ -3838,9 +3836,9 @@ exports.data = [
         "label":"中毒",
         "config": {
             "triggerCondition": [
-                { "type" :"event", "event":"onPhysicalDamage" },
-                { "type": "chance" },
-                { "type":"alive" }
+                {"type" :"event", "event":"onPhysicalDamage" },
+                { "type": "chance", "chance": 0.5 },
+                {"type":"alive"}
             ],
             "targetSelection":{
                 "pool":"target",
@@ -3850,16 +3848,13 @@ exports.data = [
                 {"type":"delay"},
                 {"type": "installSpell", "spell": 94},
                 {"type": "playEffect","effect":36,"pos":"target","delay":2.0}
-            ],
-            "levelConfig": [
-                { "chance": 0.3, "level": 1 },
-                { "chance": 0.5, "level": 2 }
             ]
         }
     },
     {
         "skillId": 166,
         "config": {
+            "buffEffect": 36,
             "installAction":[
                 {
                     "type": "setProperty","modifications": {"speed":{"src":{"speed":-0.5}}}
@@ -6133,19 +6128,6 @@ exports.data = [
                 { "modifications": {"attack":{"c":{"environment":{"damage":0.5}}}}, "level": 1},
                 { "modifications": {"attack":{"c":{"environment":{"damage":0.8}}}}, "level": 2},
                 { "modifications": {"attack":{"c":{"environment":{"damage":1.2}}}}, "level": 3}
-            ]
-        }
-    },
-    {
-        "skillId": 270,
-        "label":"26远程攻击",
-        "config": {
-            "targetSelection": {
-                "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"}]
-            },
-            "action": [
-                {"type": "setTargetMutex", "mutex": "range", "count": 1 }
             ]
         }
     }
