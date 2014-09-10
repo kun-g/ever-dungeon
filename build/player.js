@@ -2346,7 +2346,7 @@
         return null;
       }
       if (this.campaignState[campaignName] == null) {
-        if (campaignName === 'Charge' || campaignName === 'DuanwuCharge') {
+        if (campaignName === 'Charge' || campaignName === 'DuanwuCharge' || campaignName === 'ZhongQiuCharge') {
           this.campaignState[campaignName] = {};
         } else {
           this.campaignState[campaignName] = 0;
@@ -2402,7 +2402,7 @@
     };
 
     Player.prototype.onCampaign = function(state, data) {
-      var config, level, o, r, reward, rmb, _i, _len, _ref10, _ref11, _ref12, _ref13, _ref14, _ref7, _ref8, _ref9, _results;
+      var config, level, o, r, reward, rmb, _i, _len, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref7, _ref8, _ref9, _results;
       reward = [];
       switch (state) {
         case 'Friend':
@@ -2444,7 +2444,20 @@
               this.setCampaignState('DuanwuCharge', state);
             }
           }
-          _ref10 = this.getCampaignConfig('TotalCharge'), config = _ref10.config, level = _ref10.level;
+          _ref10 = this.getCampaignConfig('ZhongQiuCharge'), config = _ref10.config, level = _ref10.level;
+          if ((config != null) && (level != null)) {
+            rmb = data;
+            state = this.getCampaignState('ZhongQiuCharge');
+            o = level[rmb];
+            if (!state[rmb] && (o != null)) {
+              reward.push({
+                cfg: config,
+                lv: o
+              });
+              this.setCampaignState('ZhongQiuCharge', state);
+            }
+          }
+          _ref11 = this.getCampaignConfig('TotalCharge'), config = _ref11.config, level = _ref11.level;
           if ((config != null) && (level != null) && this.rmb >= level.count) {
             if (this.getCampaignState('TotalCharge') != null) {
               this.setCampaignState('TotalCharge', this.getCampaignState('TotalCharge') + 1);
@@ -2456,7 +2469,7 @@
               lv: level
             });
           }
-          _ref11 = this.getCampaignConfig('FirstCharge'), config = _ref11.config, level = _ref11.level;
+          _ref12 = this.getCampaignConfig('FirstCharge'), config = _ref12.config, level = _ref12.level;
           if ((config != null) && (level != null)) {
             rmb = data;
             if (level[rmb] != null) {
@@ -2469,7 +2482,7 @@
           }
           break;
         case 'Level':
-          _ref12 = this.getCampaignConfig('LevelUp'), config = _ref12.config, level = _ref12.level;
+          _ref13 = this.getCampaignConfig('LevelUp'), config = _ref13.config, level = _ref13.level;
           if ((config != null) && (level != null) && this.createHero().level >= level.count) {
             if (this.getCampaignState('LevelUp') != null) {
               this.setCampaignState('LevelUp', this.getCampaignState('LevelUp') + 1);
@@ -2483,7 +2496,7 @@
           }
           break;
         case 'Stage':
-          _ref13 = this.getCampaignConfig('Stage'), config = _ref13.config, level = _ref13.level;
+          _ref14 = this.getCampaignConfig('Stage'), config = _ref14.config, level = _ref14.level;
           if ((config != null) && (level != null) && data === level.count) {
             this.setCampaignState('Stage', this.getCampaignState('Stage') + 1);
             reward.push({
@@ -2493,7 +2506,7 @@
           }
           break;
         case 'BattleForce':
-          _ref14 = this.getCampaignConfig('BattleForce'), config = _ref14.config, level = _ref14.level;
+          _ref15 = this.getCampaignConfig('BattleForce'), config = _ref15.config, level = _ref15.level;
           if ((config != null) && (level != null) && this.createHero().calculatePower() >= level.count) {
             this.setCampaignState('BattleForce', this.getCampaignState('BattleForce') + 1);
             reward.push({

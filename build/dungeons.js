@@ -139,7 +139,7 @@ exports.data = [
         "dungeonId": 1,
         "levelCount" :6 ,
         "pool":{
-            "normalPool":[
+            "normalPool":{ "objects": [
                 {
                     "id":170,
                     "weight":5
@@ -172,7 +172,7 @@ exports.data = [
                     "id":172,
                     "weight":5
                 }
-            ]
+            ]}
         },
         "rank": 1,
         "levels" :[
@@ -311,7 +311,7 @@ exports.data = [
         "rank": 1,
         "levelCount" : 6,
         "pool":{
-            "normalPool":[
+            "normalPool":{"objects": [
                 {
                     "id":170,
                     "weight":5
@@ -344,7 +344,7 @@ exports.data = [
                     "id":172,
                     "weight":5
                 }
-            ]
+            ]}
         },
         "levels" :[
             {    
@@ -503,7 +503,7 @@ exports.data = [
         "dungeonId": 3,
         "levelCount" : 6,
         "pool":{
-            "normalPool":[
+            "normalPool":{"objects": [
                 {
                     "id":170,
                     "weight":5
@@ -536,7 +536,7 @@ exports.data = [
                     "id":172,
                     "weight":5
                 }
-            ]
+            ] }
         },
         "rank": 2,
         "levels" :[
@@ -741,7 +741,7 @@ exports.data = [
         "dungeonId": 4,
         "levelCount" : 6,
         "pool":{
-            "normalPool":[
+            "normalPool":{"objects": [
                 {
                     "id":170,
                     "weight":5
@@ -774,7 +774,7 @@ exports.data = [
                     "id":172,
                     "weight":5
                 }
-            ]
+            ]}
         },
         "rank": 3,
         "levels" :[
@@ -1025,7 +1025,7 @@ exports.data = [
         "dungeonId": 5,
         "levelCount" : 6,
         "pool":{
-            "normalPool":[
+            "normalPool":{"objects": [
                 {
                     "id":170,
                     "weight":5
@@ -1058,7 +1058,7 @@ exports.data = [
                     "id":172,
                     "weight":5
                 }
-            ]
+            ] }
         },
          
         "rank": 4,
@@ -1189,7 +1189,7 @@ exports.data = [
         "rank": 4,
         "levelCount" : 6,
         "pool":{
-            "normalPool":[
+            "normalPool":{"objects": [
                 {
                     "id":170,
                     "weight":5
@@ -1222,7 +1222,7 @@ exports.data = [
                     "id":172,
                     "weight":5
                 }
-            ]
+            ]}
         },
          
         "levels" :[
@@ -1383,7 +1383,7 @@ exports.data = [
         "dungeonId": 7,
         "levelCount" : 6,
         "pool":{
-            "normalPool":[
+            "normalPool":{"objects": [
                 {
                     "id":170,
                     "weight":3
@@ -1424,7 +1424,7 @@ exports.data = [
                     "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185, 
                     "weight":3
                 }
-            ]
+            ] }
         },
          
         "rank": 5,
@@ -1640,7 +1640,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:92},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:92},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:92},
                     {
                         "id": 23 ,
@@ -1650,10 +1650,10 @@ exports.data = [
                      {
                          "id": 153,
                          "count":1,
-                         property:[
-                             {"collectId":18001},
-                             {"questOnly":true}
-                         ]
+                         property:{
+                             "collectId":18001,
+                             "questOnly":true
+                         }
                      },
                     {
                         "id": 149,
@@ -1664,15 +1664,16 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:92},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:92},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:92},
                     {
                         "id": 34,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:92}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:92
+                        }
                     },
                     {
                         "id": 149,
@@ -1747,7 +1748,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:14,skill:[{id:154}],dropPrize:93},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:93},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:93},
 
                     {
@@ -1764,16 +1765,16 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:93},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:93},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:93},
                     {
                         "id": 32,
                         "count":2,
                         "collectId":19001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:93}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:93}
                     },
                     {
                         "id": 149,
@@ -1847,7 +1848,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:94},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:94},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:94},
                     {
                         "id": 54 ,
@@ -1869,16 +1870,16 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:94},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:94},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:94},
                     {
                         "id": 33,
                         "count":2,
                         "collectId":21001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:94}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:94}
                     },
                     {
                         "id": 149,
@@ -1958,7 +1959,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:95},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:95},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:95},
                     {
                         "id": 54 ,
@@ -1980,16 +1981,17 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:95},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:95},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:95},
                     {
                         "id": 55,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:95}],
-                        "collectId":23001
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:95,
+                            "collectId":23001
+                        }
                     },
                     {
                         "id": 152,
@@ -2077,7 +2079,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:96},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:96},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:96},
                     {
                         "id": 52 ,
@@ -2093,15 +2095,15 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:96},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:96},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:96},
                     {
                         "id": 55,
                         "count":1,
-                        "collectId":26001,property:[
-                        {"keyed":true},
-                        {skill:[{id:153}]},
-                        {dropPrize:96}]
+                        "collectId":26001,property:{
+                        "keyed":true,
+                        skill:[{id:153}],
+                        dropPrize:96}
                     },
                     {
                         "id": 149,
@@ -2182,15 +2184,15 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:97},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:97},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:97},
                     {
                         "id": 53 ,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:97}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:97}
                     },
                     {
                         "id": 156,
@@ -2207,7 +2209,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:97},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:97},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:97},
                     {
                         "id": 53,
@@ -2299,7 +2301,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:98},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:98},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:98},
                     {
                         "id": 149,
@@ -2315,7 +2317,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":1,to:3},
-                     {"pool":"PoolS2","from":10,to:12,skill:[{id:154}],dropPrize:98},
+                     {"pool":"PoolS2","from":5,to:7,skill:[{id:154}],dropPrize:98},
                      {"pool":"PoolS2R","from":0,to:2,skill:[{id:154}],dropPrize:98},
                     {
                         "id": 149,
@@ -2326,10 +2328,10 @@ exports.data = [
                         "count":1,
                         "pos":12,
                         "collectId":30001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:98}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:98}
                     },
                     {
                         "id": 34,
@@ -2406,7 +2408,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:12,skill:[{id:154}],dropPrize:99},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:99},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:99},
                     {
                         "id": 149,
@@ -2422,7 +2424,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:12,skill:[{id:154}],dropPrize:99},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:99},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:99},
                     {
                         "id": 149,
@@ -2432,10 +2434,10 @@ exports.data = [
                         "id": 26,
                         "count":1,
                         "collectId":32001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:99}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:99}
                     }
                 ]
             }
@@ -2504,7 +2506,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:12,skill:[{id:154}],dropPrize:100},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:100},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:100},
                     {
                         "id": 149,
@@ -2526,7 +2528,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:100},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:100},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:100},
                     {
                         "id": 149,
@@ -2541,10 +2543,10 @@ exports.data = [
                     {
                         "id": 30,
                         "count":2,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:100}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:100}
                     }
                 ]
             }
@@ -2613,7 +2615,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:101},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:101},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:101},
                     {
                         "id": 149,
@@ -2640,7 +2642,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:101},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:101},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:101},
                     {
                         "id": 149,
@@ -2665,10 +2667,10 @@ exports.data = [
                     {
                         "id": 30,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:101}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:101}
                     }
                 ]
             }
@@ -2743,7 +2745,7 @@ exports.data = [
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:102},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:102},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:102},
                     {
                         "id": 151,
@@ -2775,7 +2777,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:102},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:102},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:102},
                     {
                         "id": 149,
@@ -2808,10 +2810,10 @@ exports.data = [
                     {
                         "id": 30,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:102}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:102}
                     }
                 ]
             }
@@ -2887,7 +2889,7 @@ exports.data = [
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:103},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:103},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:103},
                     {
                         "id": 149,
@@ -2902,16 +2904,16 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:103},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:103},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:103},
                     {
                         "id": 28,
                         "count":1,
                         "collectId":44001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:103}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:103}
                     },
                     {
                         "id": 149,
@@ -2990,7 +2992,7 @@ exports.data = [
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:104},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:104},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:104},
                     {
                         "id": 149,
@@ -3011,7 +3013,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:104},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:104},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:104},
                     {
                         "id": 149,
@@ -3021,10 +3023,10 @@ exports.data = [
                         "id": 28,
                         "count":1,
                         "collectId":46001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:104}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:104}
                     }
                 ]
             }
@@ -3099,7 +3101,7 @@ exports.data = [
         "levels" :[
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:105},
+                    {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:105},
                     {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:105},
                     {
                         "id": 149,
@@ -3115,7 +3117,7 @@ exports.data = [
             {
                  "objects" :[
                      {"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS3","from":10,to:13,skill:[{id:154}],dropPrize:105},
+                     {"pool":"PoolS3","from":6,to:9,skill:[{id:154}],dropPrize:105},
                      {"pool":"PoolS3R","from":0,to:2,skill:[{id:154}],dropPrize:105},
                     {
                         "id": 149,
@@ -3133,10 +3135,10 @@ exports.data = [
                         "count":1,
                         "pos":12,
                         "collectId":47001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:105}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:105}
                     }
                 ],
                 "exit": 29,
@@ -3231,10 +3233,10 @@ exports.data = [
                         "id": 57,
                         "count":1,
                         "collectId": 49001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:106}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:106}
                     }
                 ]
             }
@@ -3332,10 +3334,10 @@ exports.data = [
                         "id": 66,
                         "count":1,
                         "collectId": 52001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:107}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:107}
                     }
                 ]
             }
@@ -3460,10 +3462,10 @@ exports.data = [
                         "id": 66,
                         "count":1,
                         "collectId":53001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:108}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:108}
                     }
                 ]
             }
@@ -3572,10 +3574,10 @@ exports.data = [
                     {
                         "id": 64,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:109}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:109}
                     },
                     {
                         "id": 146,
@@ -3689,10 +3691,10 @@ exports.data = [
                         "id": 64,
                         "count":1,
                         "collectId":60001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:110}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:110}
                     }
                 ]
             }
@@ -3799,10 +3801,10 @@ exports.data = [
                     {
                         "id": 66,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:111}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:111}
                     }
                 ]
             }
@@ -3916,10 +3918,10 @@ exports.data = [
                         "count":1,
                         "pos":12,
                         "collectId":63001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:112}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:112}
                     },
                     {
                         "id": 57,
@@ -4030,10 +4032,10 @@ exports.data = [
                     {
                         "id": 62,
                         "count":2,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:113}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:113}
                     }
                 ]
             }
@@ -4140,10 +4142,10 @@ exports.data = [
                         "id": 60,
                         "count":1,
                         "collectId":67001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:114}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:114}
                     }]
             }
         ],
@@ -4278,10 +4280,10 @@ exports.data = [
                     {
                         "id": 66,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:115}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:115}
                     },
                     {
                         "id": 62,
@@ -4393,10 +4395,10 @@ exports.data = [
                     {
                         "id": 62,
                         "count":2,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:116}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:116}
                     }
                 ]
             }
@@ -4504,10 +4506,10 @@ exports.data = [
                         "id": 87,
                         "count":1,
                         "collectId":72001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:117}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:117}
                     }
                 ]
             }
@@ -4609,10 +4611,10 @@ exports.data = [
                         "id": 87,
                         "count":2,
                         "collectId":74001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:118}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:118}
                     }
                 ]
             }
@@ -4722,10 +4724,10 @@ exports.data = [
                         "count":1,
                         "pos":12,
                         "collectId":75001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:119}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:119}
                     }
                 ],
                 "exit": 29,
@@ -4828,10 +4830,10 @@ exports.data = [
                     {
                         "id": 98 ,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:120}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:120}
                     }
                 ]
             }
@@ -4943,10 +4945,10 @@ exports.data = [
                     {
                         "id": 98 ,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:121}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:121}
                     }
                 ]
             }
@@ -5053,10 +5055,10 @@ exports.data = [
                         "id": 96,
                         "count":1,
                         "collectId":81001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:122}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:122}
                     }
                 ]
             }
@@ -5157,10 +5159,10 @@ exports.data = [
                     {
                         "id": 96,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:123}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:123}
                     },
                     {
                         "id": 65,
@@ -5278,10 +5280,10 @@ exports.data = [
                         "id": 89,
                         "count":1,
                         "collectId":85001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:124}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:124}
                     }
                 ]
             }
@@ -5400,10 +5402,10 @@ exports.data = [
                     {
                         "id": 89,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:125}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:125}
                     },
                     {
                         "id": 87,
@@ -5424,7 +5426,7 @@ exports.data = [
     {
         "dungeonId": 42,
         "rank": 163,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -5531,10 +5533,10 @@ exports.data = [
                         "count":1,
                         "pos":12,
                         "collectId":90001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:126}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:126}
                     }
                 ],
                 "exit": 29,
@@ -5650,10 +5652,10 @@ exports.data = [
                         "id": 92,
                         "count":1,
                         "collectId":92001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:127}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:127}
                     }
                 ]
             }
@@ -5761,10 +5763,10 @@ exports.data = [
                     {
                         "id": 92,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:128}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:128}
                     },
                     {
                         "id": 149,
@@ -5876,10 +5878,10 @@ exports.data = [
                         "id": 61 ,
                         "count":1,
                         "collectId":97001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:129}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:129}
                     },
                      {
                          "id":144,
@@ -5992,10 +5994,10 @@ exports.data = [
                         "id": 119 ,
                         "count":1,
                         "collectId":99001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:130}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:130}
                     },
                     {
                         "id": 119 ,
@@ -6102,10 +6104,10 @@ exports.data = [
                     {
                         "id": 119 ,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:131}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:131}
                     },
                     {
                         "id": 149,
@@ -6129,9 +6131,9 @@ exports.data = [
     },
     {
         "dungeonId": 48,
-        "rank":235,
+        "rank":240,
         "collectId":102001,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -6215,10 +6217,10 @@ exports.data = [
                     {
                         "id": 92 ,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:132}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:132}
                     },
                     {
                         "id": 149,
@@ -6248,7 +6250,7 @@ exports.data = [
     },
     {
         "dungeonId": 49,
-        "rank": 254,
+        "rank": 260,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -6329,10 +6331,10 @@ exports.data = [
                         "id": 124 ,
                         "count":1,
                         "collectId":103001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:133}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:133}
                     },
                     {
                         "id": 149,
@@ -6351,7 +6353,7 @@ exports.data = [
     },
     {
         "dungeonId": 50,
-        "rank": 265,
+        "rank": 250,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -6433,10 +6435,10 @@ exports.data = [
                         "id": 124 ,
                         "count":1,
                         "collectId":104001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:134}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:134}
                     },
                     {
                         "id": 149,
@@ -6455,7 +6457,7 @@ exports.data = [
     },
     {
         "dungeonId": 51,
-        "rank": 275,
+        "rank": 250,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -6543,10 +6545,10 @@ exports.data = [
                     {
                         "id": 124 ,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:135}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:135}
                     },
                     {
                         "id": 94 ,
@@ -6570,7 +6572,7 @@ exports.data = [
     },
     {
         "dungeonId": 52,
-        "rank": 285,
+        "rank": 270,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -6658,10 +6660,10 @@ exports.data = [
                         "id": 121 ,
                         "count":1,
                         "collectId":109001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:136}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:136}
                     },
                     {
                         "id": 149,
@@ -6680,7 +6682,7 @@ exports.data = [
     },
     {
         "dungeonId": 53,
-        "rank": 292,
+        "rank": 280,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -6762,10 +6764,10 @@ exports.data = [
                         "id": 121 ,
                         "count":1,
                         "collectId":110001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:137}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:137}
                     },
                      {
                          "id": 156,
@@ -6882,10 +6884,10 @@ exports.data = [
                      {
                          "id": 121,
                          "count":1,
-                         property:[
-                             {"keyed":true},
-                             {skill:[{id:153}]},
-                             {dropPrize:138}]
+                         property:{
+                             "keyed":true,
+                             skill:[{id:153}],
+                             dropPrize:138}
                      }
                 ]
             }
@@ -6987,10 +6989,10 @@ exports.data = [
                     {
                         "id": 124 ,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:139}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:139}
                     },
                     {
                         "id": 149,
@@ -7009,7 +7011,7 @@ exports.data = [
     },
     {
         "dungeonId": 56,
-        "rank": 350,
+        "rank": 340,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -7091,10 +7093,10 @@ exports.data = [
                         "id": 130 ,
                         "count":1,
                         "collectId":115001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:140}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:140}
                     },
                     {
                         "id": 149,
@@ -7113,7 +7115,7 @@ exports.data = [
     },
     {
         "dungeonId": 57,
-        "rank": 380,
+        "rank": 320,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -7200,10 +7202,10 @@ exports.data = [
                         "id": 128 ,
                         "count":1,
                         "collectId":117001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:141}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:141}
                     },
                      {
                          "id": 161,
@@ -7234,7 +7236,7 @@ exports.data = [
     },
     {
         "dungeonId": 58,
-        "rank": 400,
+        "rank": 340,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -7315,10 +7317,10 @@ exports.data = [
                     {
                         "id": 128 ,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:142}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:142}
                     },
                     {
                         "id": 97 ,
@@ -7342,7 +7344,7 @@ exports.data = [
     },
     {
         "dungeonId": 59,
-        "rank": 430,
+        "rank": 340,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -7423,10 +7425,10 @@ exports.data = [
                     {
                         "id": 130 ,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:143}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:143}
                     },
                     {
                         "id": 149,
@@ -7445,7 +7447,7 @@ exports.data = [
     },
     {
         "dungeonId": 60,
-        "rank": 450,
+        "rank": 360,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -7532,10 +7534,10 @@ exports.data = [
                     {
                         "id": 130 ,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:144}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:144}
                     },
                     {
                         "id": 149,
@@ -7554,8 +7556,8 @@ exports.data = [
     },
     {
         "dungeonId": 61,
-        "rank": 500,
-        "levelCount" : 6,
+        "rank": 360,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -7641,10 +7643,10 @@ exports.data = [
                     {
                         "id": 127,
                         "count":2,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:145}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:145}
                     },
                     {
                         "id": 149,
@@ -7668,7 +7670,7 @@ exports.data = [
     },
     {
         "dungeonId": 62,
-        "rank": 520,
+        "rank": 380,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -7767,10 +7769,10 @@ exports.data = [
                     {
                         "id": 130,
                         "count":2,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:146}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:146}
                     },
                     {
                         "id": 153,
@@ -7800,7 +7802,7 @@ exports.data = [
     },
     {
         "dungeonId": 63,
-        "rank": 550,
+        "rank": 400,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -7881,10 +7883,10 @@ exports.data = [
                         "id": 93,
                         "count":1,
                         "collectId":124001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:147}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:147}
                     },
                     {
                         "id": 149,
@@ -9794,7 +9796,7 @@ exports.data = [
         "prizeXp":0,
         "wxpRate":0,"goldRate":0.5,
         "xpRate":0,
-        "rank":280
+        "rank":250
     },
     {
         "dungeonId": 71,
@@ -10058,7 +10060,7 @@ exports.data = [
         "prizeXp":0,
         "wxpRate":1,"goldRate":0.5,
         "xpRate":0,
-        "rank":440
+        "rank":320
     },
     {
         "dungeonId": 72,
@@ -10319,7 +10321,7 @@ exports.data = [
         "prizeXp":0,
         "wxpRate":1,"goldRate":0.3,
         "xpRate":0.4,
-        "rank":558
+        "rank":380
     },
     {
         "dungeonId": 73,
@@ -10948,7 +10950,7 @@ exports.data = [
     {
         "dungeonId": 76,
         "rank": 0,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -10988,7 +10990,7 @@ exports.data = [
                     "weight":3
                 },
                 {
-                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185, 
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
                     "weight":3
                 }
             ]}
@@ -10999,7 +11001,7 @@ exports.data = [
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
                         "id": 5,
-                        "count":3,
+                        "count":5,
                         "collectId":129001
                     },
                     {
@@ -11012,121 +11014,41 @@ exports.data = [
                         "collectId":130001
                     },
                     {
-                        "id": 6,
-                        "count":2
+                         "id": 143,
+                         "count":1,
+                         "collectId":128001,
+                         "questOnly":true
+                    },
+                    {
+                         "id": 25,
+                         "count":1,
+                         "keyed":true
+                    },
+                    {
+                         "id": 6,
+                         "count":2
                     }
-                ]
+                 ]
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
                         "id": 5,
-                        "count":3,
+                        "count":5,
                         "collectId":129001
+                    },
+                    {
+                         "id": 149,
+                         "count":2
                     },
                     {
                         "id": 7,
-                        "count":2,
-                        "collectId":130001
-                    },
-                    {
-                        "id": 6,
-                        "count":2
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 5,
-                        "count":2,
-                        "collectId":129001
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 7 ,
-                        "count":2,
-                        "collectId":130001
-                    },
-                    {
-                        "id": 143,
-                        "count":1,
-                        "collectId":128001,
-                        "questOnly":true
-                    },
-                    {
-                        "id": 6,
-                        "count":2
-                    },
-                    {
-                        "id": 25,
-                        "count":1,
-                        "keyed":true
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 5,
                         "count":3,
-                        "collectId":129001
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 7 ,
-                        "count":2,
                         "collectId":130001
                     },
                     {
-                        "id": 6,
-                        "count":2
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 5,
-                        "count":2,
-                        "collectId":129001
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 7 ,
-                        "count":2,
-                        "collectId":130001
-                    },
-                    {
-                        "id": 6,
-                        "count":3
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 5,
-                        "count":2,
-                        "collectId":129001
-                    },
-                    {
-                        "id": 6 ,
-                        "count":2
-                    },
-                    {
-                        "id": 7,
-                        "count":2,
-                        "collectId":130001
+                         "id": 6,
+                         "count":2
                     },
                     {
                         "id": 32,
@@ -11149,7 +11071,7 @@ exports.data = [
     {
         "dungeonId": 77,
         "rank": 0,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -11199,93 +11121,18 @@ exports.data = [
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
-                        "id": 37 ,
-                        "count":3
-                    },
-                    {
-                        "id": 144,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":132001
-                    },
-                    {
-                        "id": 147,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":133001
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 35,
-                        "count":2
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 37 ,
-                        "count":2
-                    },
-                    {
-                        "id": 144,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":132001
-                    },
-                    {
-                        "id": 16,
-                        "count":1
-                    },
-                    {
-                        "id": 147,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":133001
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 35,
-                        "count":3
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 53 ,
-                        "count":1,
-                        "keyed":true
-                    },
-                    {
-                        "id": 144,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":132001
-                    },
-                    {
                         "id": 37,
-                        "count":2
+                        "count":3
                     },
                     {
-                        "id": 156,
+                        "id": 144,
                         "count":1,
-                        "collectId":131001,
-                        "questOnly":true
-                    },
-                    {
-                        "id": 16,
-                        "count":1
+                        "questOnly":true,
+                        "collectId":132001
                     },
                     {
                         "id": 147,
-                        "count":1,
+                        "count":2,
                         "questOnly":true,
                         "collectId":133001
                     },
@@ -11296,70 +11143,21 @@ exports.data = [
                     {
                         "id": 35,
                         "count":2
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 35,
-                        "count":2
                     },
                     {
-                        "id": 37 ,
-                        "count":1
+                         "id": 156,
+                         "count":1,
+                         "collectId":131001,
+                         "questOnly":true
                     },
                     {
-                        "id": 144,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":132001
+                         "id": 16,
+                         "count":1
                     },
                     {
-                        "id": 147,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":133001
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 36,
-                        "count":2
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 35,
-                        "count":2
-                    },
-                    {
-                        "id": 144,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":132001
-                    },
-                    {
-                        "id": 37 ,
-                        "count":2
-                    },
-                    {
-                        "id": 147,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":133001
-                    },
-                    {
-                        "id": 16,
-                        "count":1
-                    },
-                    {
-                        "id": 36,
-                        "count":2
+                         "id": 53 ,
+                         "count":1,
+                         "keyed":true
                     }
                 ]
             },
@@ -11376,13 +11174,13 @@ exports.data = [
                     },
                     {
                         "id": 144,
-                        "count":1,
+                        "count":2,
                         "questOnly":true,
                         "collectId":132001
                     },
                     {
                         "id": 147,
-                        "count":1,
+                        "count":3,
                         "questOnly":true,
                         "collectId":133001
                     },
@@ -11394,6 +11192,10 @@ exports.data = [
                     {
                         "id": 36,
                         "count":1
+                    },
+                    {
+                         "id": 37 ,
+                         "count":2
                     },
                     {
                         "id": 35,
@@ -11413,7 +11215,7 @@ exports.data = [
     {
         "dungeonId": 78,
         "rank": 0,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -11458,8 +11260,6 @@ exports.data = [
                 }
             ]}
         },
-         
-
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -11468,13 +11268,32 @@ exports.data = [
                         "count":2
                     },
                     {
+                         "id": 13,
+                         "count":1
+                    },
+                    {
                         "id": 17,
                         "count":3 ,
                         "collectId":136001
                     },
                     {
+                         "id": 153,
+                         "count":1,
+                         "questOnly":true,
+                         "collectId":134001
+                    },
+                    {
                         "id": 149,
                         "count":2
+                    },
+                    {
+                         "id": 55,
+                         "count":1,
+                         "keyed":true
+                    },
+                    {
+                         "id": 36 ,
+                         "count":1
                     },
                     {
                         "id": 9,
@@ -11482,42 +11301,16 @@ exports.data = [
                     }
                 ]
             },
-
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
                         "id": 17,
-                        "count":2 ,
+                        "count":2,
                         "collectId":136001
                     },
                     {
                         "id": 10,
-                        "count":1
-                    },
-                    {
-                        "id": 13,
-                        "count":1
-                    },
-                    {
-                        "id": 9,
                         "count":2
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 17,
-                        "count":1,
-                        "collectId":136001
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 36 ,
-                        "count":1
                     },
                     {
                         "id": 154,
@@ -11526,88 +11319,10 @@ exports.data = [
                         "collectId":134001
                     },
                     {
-                        "id": 10,
-                        "count":2
-                    },
-                    {
-                        "id": 55,
-                        "count":1,
-                        "keyed":true
-                    },
-                    {
-                        "id": 13,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 17,
-                        "count":1,
-                        "collectId":136001
-                    },
-                    {
-                        "id": 149,
-                        "count":3
-                    },
-                    {
-                        "id": 10,
-                        "count":2
-                    },
-                    {
-                        "id": 13,
-                        "count":1
-                    },
-                    {
-                        "id": 9,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 17,
-                        "count":2,
-                        "collectId":136001
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 153,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":134001
-                    },
-                    {
-                        "id": 10,
-                        "count":2
-                    },
-                    {
-                        "id": 9,
-                        "count":2
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 17,
-                        "count":2,
-                        "collectId":136001
-                    },
-                    {
-                        "id": 10,
-                        "count":2
-                    },
-                    {
-                        "id": 153,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":134001
+                         "id": 155,
+                         "count":1,
+                         "questOnly":true,
+                         "collectId":134001
                     },
                     {
                         "id": 156,
@@ -11628,6 +11343,10 @@ exports.data = [
                     {
                         "id": 13,
                         "count":1
+                    },
+                    {
+                         "id": 9,
+                         "count":2
                     }
                 ]
             }
@@ -11644,7 +11363,7 @@ exports.data = [
     {
         "dungeonId": 79,
         "rank": 0,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -11689,14 +11408,12 @@ exports.data = [
                 }
             ]}
         },
-         
-
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
                         "id": 18,
-                        "count":4,
+                        "count":10,
                         "collectId":139001
                     },
                     {
@@ -11725,108 +11442,7 @@ exports.data = [
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
                         "id": 18,
-                        "count":4,
-                        "collectId":139001
-                    },
-                    {
-                        "id": 40,
-                        "count":1
-                    },
-                    {
-                        "id": 9,
-                        "count":1
-                    },
-                    {
-                        "id": 38,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 18,
-                        "count":5,
-                        "collectId":139001
-                    },
-                    {
-                        "id": 149,
-                        "count":3
-                    },
-                    {
-                        "id": 36 ,
-                        "count":1
-                    },
-                    {
-                        "id": 40,
-                        "count":1
-                    },
-                    {
-                        "id": 64,
-                        "count":1,
-                        "keyed":true
-                    },
-                    {
-                        "id": 38,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 18,
-                        "count":4,
-                        "collectId":139001
-                    },
-                    {
-                        "id": 39,
-                        "count":2
-                    },
-                    {
-                        "id": 11,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":3
-                    },
-                    {
-                        "id": 38,
-                        "count":2
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 18,
-                        "count":5,
-                        "collectId":139001
-                    },
-                    {
-                        "id": 40,
-                        "count":1
-                    },
-                    {
-                        "id": 39,
-                        "count":1
-                    },
-                    {
-                        "id": 11,
-                        "count":1
-                    },
-                    {
-                        "id": 38,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 18,
-                        "count":5,
+                        "count":10,
                         "collectId":139001
                     },
                     {
@@ -11873,7 +11489,7 @@ exports.data = [
     {
         "dungeonId": 80,
         "rank": 0,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -11918,19 +11534,17 @@ exports.data = [
                 }
             ] }
         },
-         
-
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
                         "id": 42,
-                        "count":1,
+                        "count":3,
                         "collectId":142001
                     },
                     {
                         "id": 43,
-                        "count":1
+                        "count":2
                     },
                     {
                         "id": 49 ,
@@ -11942,11 +11556,16 @@ exports.data = [
                     },
                     {
                         "id": 69,
-                        "count":1
+                        "count":2
                     },
                     {
                         "id": 45,
                         "count":1
+                    },
+                    {
+                         "id":63,
+                         "count":1,
+                         "keyed":true
                     }
                 ]
             },
@@ -11954,116 +11573,7 @@ exports.data = [
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
                         "id": 42,
-                        "count":1,
-                        "collectId":142001
-                    },
-                    {
-                        "id": 43,
-                        "count":1
-                    },
-                    {
-                        "id": 49 ,
-                        "count":2
-                    },
-                    {
-                        "id": 12,
-                        "count":2
-                    },
-                    {
-                        "id": 69,
-                        "count":1
-                    },
-                    {
-                        "id": 45,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 42,
-                        "count":1,
-                        "collectId":142001
-                    },
-                    {
-                        "id": 49 ,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":3
-                    },
-                    {
-                        "id": 12,
-                        "count":2
-                    },
-                    {
-                        "id": 43,
-                        "count":1
-                    },
-                    {
-                        "id":63,
-                        "count":1,
-                        "keyed":true
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 42,
-                        "count":2,
-                        "collectId":142001
-                    },
-                    {
-                        "id": 43,
-                        "count":1
-                    },
-                    {
-                        "id": 47 ,
-                        "count":1
-                    },
-                    {
-                        "id": 12,
-                        "count":2
-                    },
-                    {
-                        "id": 69,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 42,
-                        "count":2,
-                        "collectId":142001
-                    },
-                    {
-                        "id": 43,
-                        "count":1
-                    },
-                    {
-                        "id": 47 ,
-                        "count":1
-                    },
-                    {
-                        "id": 12,
-                        "count":2
-                    },
-                    {
-                        "id": 69,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 42,
-                        "count":2,
+                        "count":3,
                         "collectId":142001
                     },
                     {
@@ -12076,7 +11586,7 @@ exports.data = [
                     },
                     {
                         "id": 43,
-                        "count":1
+                        "count":2
                     },
                     {
                         "id": 149,
@@ -12090,7 +11600,7 @@ exports.data = [
                     },
                     {
                         "id": 69,
-                        "count":1
+                        "count":2
                     },
                     {
                         "id": 87,
@@ -12113,7 +11623,7 @@ exports.data = [
     {
         "dungeonId": 81,
         "rank": 0,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -12158,14 +11668,23 @@ exports.data = [
                 }
             ]}
         },
-         
-
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
                         "id": 50,
-                        "count":5
+                        "count":2
+                    },
+                    {
+                         "id": 161,
+                         "count":5,
+                         "collectId":143001,
+                         "questOnly":true
+                    },
+                    {
+                         "id": 48,
+                         "count":2,
+                         "collectId":145001
                     },
                     {
                         "id": 71,
@@ -12182,148 +11701,12 @@ exports.data = [
                     {
                         "id": 79,
                         "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 48,
-                        "count":1,
-                        "collectId":145001
                     },
                     {
-                        "id": 50,
-                        "count":4
-                    },
-                    {
-                        "id": 71,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 81 ,
-                        "count":1
-                    },
-                    {
-                        "id": 79,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 48,
-                        "count":1,
-                        "collectId":145001
-                    },
-                    {
-                        "id": 81 ,
-                        "count":1
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 61,
-                        "count":1,
-                        "collectId":144001,
-                        "questOnly":true
-                    },
-                    {
-                        "id": 71,
-                        "count":1
-                    }, {
-                        "id": 161,
-                        "count":3,
-                        "collectId":143001,
-                        "questOnly":true
-                    },
-                    {
-                        "id": 50,
-                        "count":3
-                    },
-                    {
-                        "id": 89 ,
-                        "count":1,
-                        "keyed":true
-                    },
-                    {
-                        "id": 79,
-                        "count":3
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 48,
-                        "count":1,
-                        "collectId":145001
-                    },
-                    {
-                        "id": 50,
-                        "count":5
-                    }, {
-                        "id": 161,
-                        "count":3,
-                        "collectId":143001,
-                        "questOnly":true
-                    },
-                    {
-                        "id": 81 ,
-                        "count":1
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 79,
-                        "count":1
-                    },
-                    {
-                        "id": 71 ,
-                        "count":2
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 48,
-                        "count":1,
-                        "collectId":145001
-                    }, {
-                        "id": 161,
-                        "count":3,
-                        "collectId":143001,
-                        "questOnly":true
-                    },
-                    {
-                        "id": 50,
-                        "count":5
-                    },
-                    {
-                        "id": 79,
-                        "count":1
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 81 ,
-                        "count":1
-                    },
-                    {
-                        "id": 71 ,
-                        "count":2
+                         "id": 61,
+                         "count":1,
+                         "collectId":144001,
+                         "questOnly":true
                     }
                 ]
             },
@@ -12332,10 +11715,6 @@ exports.data = [
                     {
                         "id": 81 ,
                         "count":2
-                    },
-                    {
-                        "id": 50,
-                        "count":3
                     },
                     {
                         "id": 71 ,
@@ -12343,11 +11722,11 @@ exports.data = [
                     },
                     {
                         "id": 79,
-                        "count":1
+                        "count":2
                     },
                     {
                         "id": 161,
-                        "count":3,
+                        "count":5,
                         "collectId":143001,
                         "questOnly":true
                     },
@@ -12364,6 +11743,11 @@ exports.data = [
                         "id": 87,
                         "count":2,
                         "keyed":true
+                    },
+                    {
+                         "id": 48,
+                         "count":1,
+                         "collectId":145001
                     }
                 ]
             }
@@ -12380,7 +11764,7 @@ exports.data = [
     {
         "dungeonId": 82,
         "rank":0,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -12425,129 +11809,17 @@ exports.data = [
                 }
             ]}
         },
-         
-
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
                     {
                         "id": 68,
-                        "count":2,
+                        "count":4,
                         "collectId":148001
                     },
                     {
                         "id": 73,
-                        "count":1
-                    },
-                    {
-                        "id": 74 ,
-                        "count":1
-                    },
-                    {
-                        "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 67,
-                        "count":2
-                    },
-                    {
-                        "id": 77,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 68,
-                        "count":2,
-                        "collectId":148001
-                    },
-                    {
-                        "id": 73,
-                        "count":1
-                    },
-                    {
-                        "id": 74 ,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 67,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 68,
-                        "count":2,
-                        "collectId":148001
-                    },
-                    {
-                        "id": 74,
-                        "count":1
-                    },
-                    {
-                        "id": 67,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 77,
-                        "count":1
-                    },
-                    {
-                        "id": 119,
-                        "count":1,
-                        "keyed":true
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 68,
-                        "count":2,
-                        "collectId":148001
-                    },
-                    {
-                        "id": 74 ,
-                        "count":2
-                    },
-                    {
-                        "id": 73,
-                        "count":1
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 67,
-                        "count":2
-                    }
-                ]
-            },
-
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 68,
-                        "count":2,
-                        "collectId":148001
-                    },
-                    {
-                        "id": 73,
-                        "count":1
                     },
                     {
                         "id": 74 ,
@@ -12564,6 +11836,11 @@ exports.data = [
                     {
                         "id": 77,
                         "count":1
+                    },
+                    {
+                         "id": 119,
+                         "count":1,
+                         "keyed":true
                     }
                 ]
             },
@@ -12586,7 +11863,7 @@ exports.data = [
                     },
                     {
                         "id": 68,
-                        "count":1,
+                        "count":4,
                         "collectId":148001
                     },
                     {
@@ -12597,7 +11874,7 @@ exports.data = [
                     },
                     {
                         "id": 74 ,
-                        "count":1
+                        "count":2
                     },
                     {
                         "id": 94 ,
@@ -12619,7 +11896,7 @@ exports.data = [
     {
         "dungeonId": 83,
         "rank": 0,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
                 {
@@ -12664,8 +11941,6 @@ exports.data = [
                 }
             ]}
         },
-         
-
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -12679,7 +11954,7 @@ exports.data = [
                     },
                     {
                         "id": 156,
-                        "count":1,
+                        "count":2,
                         "collectId":149001,
                         "questOnly":true
                     },
@@ -12689,113 +11964,17 @@ exports.data = [
                     },
                     {
                         "id": 101 ,
-                        "count":2,
-                        "collectId":151001
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 75,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 44,
-                        "count":1
-                    },
-                    {
-                        "id": 101 ,
-                        "count":2,
-                        "collectId":151001
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 75,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 44,
-                        "count":1
-                    },
-                    {
-                        "id": 157,
-                        "count":1,
-                        "collectId":149001,
-                        "questOnly":true
-                    },
-                    {
-                        "id": 101 ,
-                        "count":2,
+                        "count":5,
                         "collectId":151001
                     },
                     {
-                        "id": 104,
-                        "count":1
+                         "id": 104,
+                         "count":1
                     },
                     {
-                        "id": 95,
-                        "count":1,
-                        "keyed":true
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 75,
-                        "count":2
-                    },
-                    {
-                        "id": 44,
-                        "count":1
-                    },
-                    {
-                        "id": 101 ,
-                        "count":1,
-                        "collectId":151001
-                    }
-                ]
-            },
-            {
-                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 75,
-                        "count":2
-                    },
-                    {
-                        "id": 44,
-                        "count":1
-                    },
-                    {
-                        "id": 101 ,
-                        "count":2,
-                        "collectId":151001
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 156,
-                        "count":1,
-                        "collectId":149001,
-                        "questOnly":true
-                    },
-                    {
-                        "id": 104,
-                        "count":1
+                         "id": 95,
+                         "count":1,
+                         "keyed":true
                     }
                 ]
             },
@@ -12808,6 +11987,12 @@ exports.data = [
                         "collectId":150001
                     },
                     {
+                         "id": 157,
+                         "count":1,
+                         "collectId":149001,
+                         "questOnly":true
+                    },
+                    {
                         "id": 124 ,
                         "count":1,
                         "keyed":true
@@ -12817,12 +12002,17 @@ exports.data = [
                         "count":2
                     },
                     {
-                        "id": 101 ,
-                        "count":2
+                         "id": 44,
+                         "count":2
                     },
                     {
                         "id": 75,
-                        "count":1
+                        "count":3
+                    },
+                    {
+                         "id": 101 ,
+                         "count":4,
+                         "collectId":151001
                     }
                 ]
             }
@@ -14544,7 +13734,7 @@ exports.data = [
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":2
@@ -14558,7 +13748,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":1
@@ -14566,10 +13756,10 @@ exports.data = [
                     {
                         "id": 23,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:91}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:91}
                     } ,
                     {
                         "id":163,
@@ -14646,7 +13836,7 @@ exports.data = [
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":1
@@ -14661,7 +13851,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":1
@@ -14670,10 +13860,10 @@ exports.data = [
                         "id": 23,
                         "count":1,
                         "collectId":156001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:91}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:91}
                     }
                 ]
             }
@@ -14742,7 +13932,7 @@ exports.data = [
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":1
@@ -14756,7 +13946,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":1
@@ -14765,10 +13955,10 @@ exports.data = [
                         "id": 25,
                         "count":1,
                         "collectId":157001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:91}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:91}
                     }
                 ]
             }
@@ -14837,7 +14027,7 @@ exports.data = [
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":3
@@ -14851,7 +14041,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":8,to:10,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
                         "count":2
@@ -14865,10 +14055,10 @@ exports.data = [
                         "id": 25,
                         "count":1,
                         "collectId":159001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:91}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:91}
                     }
                 ]
             }
@@ -14934,7 +14124,7 @@ exports.data = [
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":10,to:12,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                      {"pool":"PoolS1R","from":0,to:1,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
@@ -14949,7 +14139,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":10,to:12,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                      {"pool":"PoolS1R","from":0,to:1,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 5,
@@ -14967,10 +14157,10 @@ exports.data = [
                         "id": 32,
                         "count":1,
                         "collectId":160001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:91}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:91}
                     }
                 ]
             }
@@ -15041,7 +14231,7 @@ exports.data = [
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":10,to:12,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                      {"pool":"PoolS1R","from":0,to:1,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
@@ -15056,7 +14246,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":10,to:12,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                      {"pool":"PoolS1R","from":0,to:1,skill:[{id:154}],dropPrize:91},
                      {
                          "id": 149,
@@ -15065,10 +14255,10 @@ exports.data = [
                     {
                         "id": 32,
                         "count":1,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:91}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:91}
                     },
                     {
                         "id": 165,
@@ -15152,7 +14342,7 @@ exports.data = [
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":10,to:12,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                      {"pool":"PoolS1R","from":0,to:1,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
@@ -15167,7 +14357,7 @@ exports.data = [
             },
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
-                     {"pool":"PoolS1","from":10,to:12,skill:[{id:154}],dropPrize:91},
+                     {"pool":"PoolS1","from":4,to:6,skill:[{id:154}],dropPrize:91},
                      {"pool":"PoolS1R","from":0,to:1,skill:[{id:154}],dropPrize:91},
                     {
                         "id": 149,
@@ -15178,10 +14368,10 @@ exports.data = [
                         "pos":12,
                         "count":1,
                         "collectId":163001,
-                        property:[
-                            {"keyed":true},
-                            {skill:[{id:153}]},
-                            {dropPrize:91}]
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:91}
                     }
                 ],
                 "entrance":0,
@@ -15326,7 +14516,7 @@ exports.data = [
             }
         ],
         "dropID":[ 71 ],
-        "prizeWxp":10,
+        "prizeWxp":80,
         "prizeGold": 100,
         "prizeXp":100,
         "wxpRate":1,
@@ -15549,8 +14739,850 @@ exports.data = [
     {
         "dungeonId": 102,
         "rank": 1,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
+            "soldierPool":{"objects":[
+                {
+                    "id":3,
+                    "weight":2
+                },
+                {
+                    "id":4,
+                    "weight":2
+                },
+                {
+                    "id":5,
+                    "weight":2
+                },
+                {
+                    "id":6,
+                    "weight":2
+                },
+                {
+                    "id":7,
+                    "weight":2
+                },
+                {
+                    "id":9,
+                    "weight":2
+                },
+                {
+                    "id":10,
+                    "weight":2
+                },
+                {
+                    "id":11,
+                    "weight":2
+                },
+                {
+                    "id":12,
+                    "weight":2
+                },
+                {
+                    "id":14,
+                    "weight":2
+                },
+                {
+                    "id":15,
+                    "weight":2
+                },
+                {
+                    "id":17,
+                    "weight":2
+                },
+                {
+                    "id":35,
+                    "weight":2
+                },
+                {
+                    "id":36,
+                    "weight":2
+                },
+                {
+                    "id":37,
+                    "weight":2
+                },
+                {
+                    "id":38,
+                    "weight":2
+                },
+                {
+                    "id":39,
+                    "weight":2
+                },
+                {
+                    "id":41,
+                    "weight":2
+                },
+                {
+                    "id":42,
+                    "weight":2
+                },
+                {
+                    "id":43,
+                    "weight":2
+                },
+                {
+                    "id":44,
+                    "weight":2
+                },
+                {
+                    "id":46,
+                    "weight":2
+                },
+                {
+                    "id":47,
+                    "weight":2
+                },
+                {
+                    "id":49,
+                    "weight":2
+                },
+                {
+                    "id":67,
+                    "weight":2
+                },
+                {
+                    "id":68,
+                    "weight":2
+                },
+                {
+                    "id":69,
+                    "weight":2
+                },
+                {
+                    "id":70,
+                    "weight":2
+                },
+                {
+                    "id":71,
+                    "weight":2
+                },
+                {
+                    "id":73,
+                    "weight":2
+                },
+                {
+                    "id":74,
+                    "weight":2
+                },
+                {
+                    "id":75,
+                    "weight":2
+                },
+                {
+                    "id":76,
+                    "weight":2
+                },
+                {
+                    "id":78,
+                    "weight":2
+                },
+                {
+                    "id":79,
+                    "weight":2
+                },
+                {
+                    "id":81,
+                    "weight":2
+                },
+                {
+                    "id":99,
+                    "weight":2
+                },
+                {
+                    "id":100,
+                    "weight":2
+                },
+                {
+                    "id":101,
+                    "weight":2
+                },
+                {
+                    "id":102,
+                    "weight":2
+                },
+                {
+                    "id":103,
+                    "weight":2
+                },
+                {
+                    "id":105,
+                    "weight":2
+                },
+                {
+                    "id":106,
+                    "weight":2
+                },
+                {
+                    "id":107,
+                    "weight":2
+                },
+                {
+                    "id":108,
+                    "weight":2
+                },
+
+                {
+                    "id":110,
+                    "weight":2
+                },
+                {
+                    "id":111,
+                    "weight":2
+                },
+                {
+                    "id":113,
+                    "weight":2
+                }
+            ]},
+            "rangePool":{"objects":[
+                {
+                    "id":8,
+                    "weight":2
+                },
+                {
+                    "id":13,
+                    "weight":2
+                },
+                {
+                    "id":16,
+                    "weight":2
+                },
+                {
+                    "id":40,
+                    "weight":2
+                },
+                {
+                    "id":45,
+                    "weight":2
+                },
+                {
+                    "id":48,
+                    "weight":2
+                },
+                {
+                    "id":72,
+                    "weight":2
+                },
+                {
+                    "id":77,
+                    "weight":2
+                },
+                {
+                    "id":80,
+                    "weight":2
+                },
+                {
+                    "id":104,
+                    "weight":2
+                },
+                {
+                    "id":109,
+                    "weight":2
+                },
+                {
+                    "id":112,
+                    "weight":2
+                }
+
+            ]},
+            "elitePool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2 ,
+                    "keyed":true
+                }
+
+            ]},
+            "bossPool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2,
+                    "keyed":true
+                }
+
+            ]},
             "normalPool":{"objects":[
                 {
                     "id":170,
@@ -15589,7 +15621,7 @@ exports.data = [
                     "weight":3
                 },
                 {
-                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185, 
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
                     "weight":3
                 }
             ]}
@@ -15597,168 +15629,24 @@ exports.data = [
         "global": [
             {id: 188,from: 8, to: 13}
             ],
-            "levels" :[
+        "levels" :[
             {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                {
-                    "id": 39,
-                    "count":2
-                },
-                {
-                    "id":47 ,
-                    "count":1
-                },
-                {
-                    "id": 149,
-                    "count":3
-                },
-                {
-                    "id": 12,
-                    "count":2
-                },
-                {
-                    "id": 69,
-                    "count":1
-                },
-                {
-                    "id": 45,
-                    "count":1
-                }
-            ]
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"id": 149,"from":0,to:2}
+                ]
             },
             {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                {
-                    "id": 39,
-                    "count":1
-                },
-                {
-                    "id": 47 ,
-                    "count":2
-                },
-                {
-                    "id": 149,
-                    "count":3
-                },
-                {
-                    "id": 12,
-                    "count":2
-                },
-                {
-                    "id": 69,
-                    "count":1
-                }
-            ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                {
-                    "id": 39,
-                    "count":1
-                },
-                {
-                    "id": 47 ,
-                    "count":1
-                },
-                {
-                    "id": 12,
-                    "count":2
-                },
-                {
-                    "id":59,
-                    "count":1
-                },
-                {
-                    "id":62,
-                    "count":1
-                }
-            ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                {
-                    "id": 42,
-                    "count":2
-                },
-                {
-                    "id": 47 ,
-                    "count":1
-                },
-                {
-                    "id": 12,
-                    "count":2
-                },
-                {
-                    "id": 69,
-                    "count":1
-                },
-                {
-                    "id": 45,
-                    "count":1
-                }
-            ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                {
-                    "id": 42,
-                    "count":2
-                },
-                {
-                    "id": 47 ,
-                    "count":1
-                },
-                {
-                    "id": 12,
-                    "count":2
-                },
-                {
-                    "id": 69,
-                    "count":1
-                },
-                {
-                    "id": 45,
-                    "count":1
-                }
-            ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                {
-                    "id": 42,
-                    "count":2
-                },
-                {
-                    "id": 149,
-                    "count":3
-                },
-                {
-                    "id": 47 ,
-                    "count":1
-                },
-                {
-                    "id": 12,
-                    "count":1
-                },
-                {
-                    "id": 69,
-                    "count":1
-                },
-                {
-                    "id": 60,
-                    "count":1
-                },
-                {
-                    "id": 45,
-                    "count":1
-                },
-                {
-                    "id": 66,
-                    "count":1
-                }
-            ]
-            }
-        ],
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"pool":"bossPool","count":1},
+                    {"id": 149,"from":0,to:2}
+                ]
+            }],
         "dropID":[
 
         ],
@@ -15769,9 +15657,851 @@ exports.data = [
     },
     {
         "dungeonId": 103,
-        "rank": 70,
-        "levelCount" : 6,
+        "rank": 90,
+        "levelCount" : 2,
         "pool":{
+            "soldierPool":{"objects":[
+                {
+                    "id":3,
+                    "weight":2
+                },
+                {
+                    "id":4,
+                    "weight":2
+                },
+                {
+                    "id":5,
+                    "weight":2
+                },
+                {
+                    "id":6,
+                    "weight":2
+                },
+                {
+                    "id":7,
+                    "weight":2
+                },
+                {
+                    "id":9,
+                    "weight":2
+                },
+                {
+                    "id":10,
+                    "weight":2
+                },
+                {
+                    "id":11,
+                    "weight":2
+                },
+                {
+                    "id":12,
+                    "weight":2
+                },
+                {
+                    "id":14,
+                    "weight":2
+                },
+                {
+                    "id":15,
+                    "weight":2
+                },
+                {
+                    "id":17,
+                    "weight":2
+                },
+                {
+                    "id":35,
+                    "weight":2
+                },
+                {
+                    "id":36,
+                    "weight":2
+                },
+                {
+                    "id":37,
+                    "weight":2
+                },
+                {
+                    "id":38,
+                    "weight":2
+                },
+                {
+                    "id":39,
+                    "weight":2
+                },
+                {
+                    "id":41,
+                    "weight":2
+                },
+                {
+                    "id":42,
+                    "weight":2
+                },
+                {
+                    "id":43,
+                    "weight":2
+                },
+                {
+                    "id":44,
+                    "weight":2
+                },
+                {
+                    "id":46,
+                    "weight":2
+                },
+                {
+                    "id":47,
+                    "weight":2
+                },
+                {
+                    "id":49,
+                    "weight":2
+                },
+                {
+                    "id":67,
+                    "weight":2
+                },
+                {
+                    "id":68,
+                    "weight":2
+                },
+                {
+                    "id":69,
+                    "weight":2
+                },
+                {
+                    "id":70,
+                    "weight":2
+                },
+                {
+                    "id":71,
+                    "weight":2
+                },
+                {
+                    "id":73,
+                    "weight":2
+                },
+                {
+                    "id":74,
+                    "weight":2
+                },
+                {
+                    "id":75,
+                    "weight":2
+                },
+                {
+                    "id":76,
+                    "weight":2
+                },
+                {
+                    "id":78,
+                    "weight":2
+                },
+                {
+                    "id":79,
+                    "weight":2
+                },
+                {
+                    "id":81,
+                    "weight":2
+                },
+                {
+                    "id":99,
+                    "weight":2
+                },
+                {
+                    "id":100,
+                    "weight":2
+                },
+                {
+                    "id":101,
+                    "weight":2
+                },
+                {
+                    "id":102,
+                    "weight":2
+                },
+                {
+                    "id":103,
+                    "weight":2
+                },
+                {
+                    "id":105,
+                    "weight":2
+                },
+                {
+                    "id":106,
+                    "weight":2
+                },
+                {
+                    "id":107,
+                    "weight":2
+                },
+                {
+                    "id":108,
+                    "weight":2
+                },
+
+                {
+                    "id":110,
+                    "weight":2
+                },
+                {
+                    "id":111,
+                    "weight":2
+                },
+                {
+                    "id":113,
+                    "weight":2
+                }
+            ]},
+            "rangePool":{"objects":[
+                {
+                    "id":8,
+                    "weight":2
+                },
+                {
+                    "id":13,
+                    "weight":2
+                },
+                {
+                    "id":16,
+                    "weight":2
+                },
+                {
+                    "id":40,
+                    "weight":2
+                },
+                {
+                    "id":45,
+                    "weight":2
+                },
+                {
+                    "id":48,
+                    "weight":2
+                },
+                {
+                    "id":72,
+                    "weight":2
+                },
+                {
+                    "id":77,
+                    "weight":2
+                },
+                {
+                    "id":80,
+                    "weight":2
+                },
+                {
+                    "id":104,
+                    "weight":2
+                },
+                {
+                    "id":109,
+                    "weight":2
+                },
+                {
+                    "id":112,
+                    "weight":2
+                }
+
+            ]},
+            "elitePool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2 ,
+                    "keyed":true
+                }
+
+            ]},
+            "bossPool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2,
+                    "keyed":true
+                }
+
+            ]},
             "normalPool":{"objects":[
                 {
                     "id":170,
@@ -15810,7 +16540,7 @@ exports.data = [
                     "weight":3
                 },
                 {
-                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185, 
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
                     "weight":3
                 }
             ]}
@@ -15820,139 +16550,22 @@ exports.data = [
         ],
         "levels" :[
             {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                {
-                    "id": 68,
-                    "count":2
-                },
-                {
-                    "id": 74 ,
-                    "count":2
-                },
-                {
-                    "id": 149,
-                    "count":2
-                },
-                {
-                    "id": 67,
-                    "count":2
-                }
-            ]
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"id": 149,"from":0,to:2}
+                ]
             },
             {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                {
-                    "id": 68,
-                    "count":2
-                },
-                {
-                    "id": 74 ,
-                    "count":3
-                },
-                {
-                    "id": 67,
-                    "count":2
-                },
-                {
-                    "id": 149,
-                    "count":2
-                },
-                {
-                    "id": 72,
-                    "count":1
-                }
-            ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                {
-                    "id": 68,
-                    "count":2
-                },
-                {
-                    "id": 74,
-                    "count":1
-                },
-                {
-                    "id": 67,
-                    "count":2
-                },
-                {
-                    "id": 72,
-                    "count":1
-                },
-                {
-                    "id": 149,
-                    "count":2
-                },
-                {
-                    "id": 92,
-                    "count":1,
-                    "keyed":true
-                }
-            ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                {
-                    "id": 68,
-                    "count":3
-                },
-                {
-                    "id": 74,
-                    "count":3
-                },
-                {
-                    "id": 67,
-                    "count":2
-                }
-            ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                {
-                    "id": 68,
-                    "count":2
-                },
-                {
-                    "id": 74 ,
-                    "count":3
-                },
-                {
-                    "id": 149,
-                    "count":2
-                },
-                {
-                    "id": 67,
-                    "count":2
-                }
-            ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                {
-                    "id": 68,
-                    "count":1
-                },
-                {
-                    "id": 74 ,
-                    "count":2
-                },
-                {
-                    "id": 67,
-                    "count":2
-                },
-                {
-                    "id": 149,
-                    "count":2
-                },
-                {
-                    "id": 72,
-                    "count":1
-                }
-            ]
-            }
-        ],
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"pool":"bossPool","count":1},
+                    {"id": 149,"from":0,to:2}
+                ]
+            }],
         "dropID":[
 
         ],
@@ -15963,78 +16576,915 @@ exports.data = [
     },
     {
         "dungeonId": 104,
-        "rank": 250,
-        "levelCount" : 6,
+        "rank": 270,
+        "levelCount" : 2,
         "pool":{
+            "soldierPool":{"objects":[
+                {
+                    "id":3,
+                    "weight":2
+                },
+                {
+                    "id":4,
+                    "weight":2
+                },
+                {
+                    "id":5,
+                    "weight":2
+                },
+                {
+                    "id":6,
+                    "weight":2
+                },
+                {
+                    "id":7,
+                    "weight":2
+                },
+                {
+                    "id":9,
+                    "weight":2
+                },
+                {
+                    "id":10,
+                    "weight":2
+                },
+                {
+                    "id":11,
+                    "weight":2
+                },
+                {
+                    "id":12,
+                    "weight":2
+                },
+                {
+                    "id":14,
+                    "weight":2
+                },
+                {
+                    "id":15,
+                    "weight":2
+                },
+                {
+                    "id":17,
+                    "weight":2
+                },
+                {
+                    "id":35,
+                    "weight":2
+                },
+                {
+                    "id":36,
+                    "weight":2
+                },
+                {
+                    "id":37,
+                    "weight":2
+                },
+                {
+                    "id":38,
+                    "weight":2
+                },
+                {
+                    "id":39,
+                    "weight":2
+                },
+                {
+                    "id":41,
+                    "weight":2
+                },
+                {
+                    "id":42,
+                    "weight":2
+                },
+                {
+                    "id":43,
+                    "weight":2
+                },
+                {
+                    "id":44,
+                    "weight":2
+                },
+                {
+                    "id":46,
+                    "weight":2
+                },
+                {
+                    "id":47,
+                    "weight":2
+                },
+                {
+                    "id":49,
+                    "weight":2
+                },
+                {
+                    "id":67,
+                    "weight":2
+                },
+                {
+                    "id":68,
+                    "weight":2
+                },
+                {
+                    "id":69,
+                    "weight":2
+                },
+                {
+                    "id":70,
+                    "weight":2
+                },
+                {
+                    "id":71,
+                    "weight":2
+                },
+                {
+                    "id":73,
+                    "weight":2
+                },
+                {
+                    "id":74,
+                    "weight":2
+                },
+                {
+                    "id":75,
+                    "weight":2
+                },
+                {
+                    "id":76,
+                    "weight":2
+                },
+                {
+                    "id":78,
+                    "weight":2
+                },
+                {
+                    "id":79,
+                    "weight":2
+                },
+                {
+                    "id":81,
+                    "weight":2
+                },
+                {
+                    "id":99,
+                    "weight":2
+                },
+                {
+                    "id":100,
+                    "weight":2
+                },
+                {
+                    "id":101,
+                    "weight":2
+                },
+                {
+                    "id":102,
+                    "weight":2
+                },
+                {
+                    "id":103,
+                    "weight":2
+                },
+                {
+                    "id":105,
+                    "weight":2
+                },
+                {
+                    "id":106,
+                    "weight":2
+                },
+                {
+                    "id":107,
+                    "weight":2
+                },
+                {
+                    "id":108,
+                    "weight":2
+                },
+
+                {
+                    "id":110,
+                    "weight":2
+                },
+                {
+                    "id":111,
+                    "weight":2
+                },
+                {
+                    "id":113,
+                    "weight":2
+                }
+            ]},
+            "rangePool":{"objects":[
+                {
+                    "id":8,
+                    "weight":2
+                },
+                {
+                    "id":13,
+                    "weight":2
+                },
+                {
+                    "id":16,
+                    "weight":2
+                },
+                {
+                    "id":40,
+                    "weight":2
+                },
+                {
+                    "id":45,
+                    "weight":2
+                },
+                {
+                    "id":48,
+                    "weight":2
+                },
+                {
+                    "id":72,
+                    "weight":2
+                },
+                {
+                    "id":77,
+                    "weight":2
+                },
+                {
+                    "id":80,
+                    "weight":2
+                },
+                {
+                    "id":104,
+                    "weight":2
+                },
+                {
+                    "id":109,
+                    "weight":2
+                },
+                {
+                    "id":112,
+                    "weight":2
+                }
+
+            ]},
+            "elitePool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2 ,
+                    "keyed":true
+                }
+
+            ]},
+            "bossPool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2,
+                    "keyed":true
+                }
+
+            ]},
             "normalPool":{"objects":[
-                { "id":170, "weight":3 },
-                { "id":171, "weight":3 },
-                { "id":172, "weight":3 },
-                { "id":173, "weight":3 },
-                { "id":174, "weight":3 },
-                { "id":175, "weight":3 },
-                { "id":176, "weight":3 },
-                { "id":177, "weight":3 },
-                { "id":178, "weight":3 },
-                { "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,  "weight":3 }
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
+                    "weight":3
+                }
             ]}
         },
         "global": [
         {id: 190,from: 8, to: 13}
     ],
-        "levels": [
-            {"normalCount":1,
-                "objects" :
-            [
-              { "id": 49 , "count":2 },
-              { "id": 42, "count":1 }, { "id": 43, "count":1 },
-              { "id": 12, "count":2 },
-              { "id": 69, "count":1 },
-              { "id": 45, "count":1 }
-          ]},
-            {"normalCount":1,
-                "objects" :
-                    [
-              { "id": 42, "count":1 }, { "id": 43, "count":1 },
-              { "id": 149 , "count":2 },
-              { "id": 12, "count":2 },
-              { "id": 69, "count":1 },
-              { "id": 45, "count":1 }
-          ]},
-            {"normalCount":1,
-                "objects" :
-          [
-                  { "id": 49 , "count":2 },
-              { "id": 42, "count":1 }, { "id": 43, "count":1 },
-              { "id": 149, "count":3 },
-              { "id": 12, "count":2 },
-              { "id":63, "count":1 }
-          ]}, {"normalCount":1,
-                "objects":
-          [
-              { "id": 42, "count":2 }, { "id": 43, "count":1 },
-              { "id": 47 , "count":1 },
-              { "id": 12, "count":2 },
-              { "id": 69, "count":1 }
-          ]},
-{"normalCount":1,
-    "objects" :
-        [
-              { "id": 42, "count":2 }, { "id": 43, "count":1 },
-              { "id": 47 , "count":1 },
-              { "id": 12, "count":2 },
-              { "id": 69, "count":1 }
-          ]},
-            {"normalCount":1,
-                "objects" :
-          [
-              { "id": 42, "count":2 }, { "id": 43, "count":1 },
-              { "id": 47 , "count":1 },
-              { "id": 12, "count":1 },
-              { "id": 149, "count":3 },
-              { "id": 69, "count":1 }
-          ]}
-        ],
+        "levels" :[
+            {
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"id": 149,"from":0,to:2}
+                ]
+            },
+            {
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"pool":"bossPool","count":1},
+                    {"id": 149,"from":0,to:2}
+                ]
+            }],
         "dropID":[ ],
         "prizeWxp":0,"prizeGold":0, "prizeXp":0,
         "wxpRate":1,"goldRate":0.5, "xpRate":1
@@ -16042,110 +17492,908 @@ exports.data = [
     {
         "dungeonId": 105,
         "rank": 10,
-        "levelCount" : 3,
+        "levelCount" : 2,
         "pool":{
+            "soldierPool":{"objects":[
+                {
+                    "id":3,
+                    "weight":2
+                },
+                {
+                    "id":4,
+                    "weight":2
+                },
+                {
+                    "id":5,
+                    "weight":2
+                },
+                {
+                    "id":6,
+                    "weight":2
+                },
+                {
+                    "id":7,
+                    "weight":2
+                },
+                {
+                    "id":9,
+                    "weight":2
+                },
+                {
+                    "id":10,
+                    "weight":2
+                },
+                {
+                    "id":11,
+                    "weight":2
+                },
+                {
+                    "id":12,
+                    "weight":2
+                },
+                {
+                    "id":14,
+                    "weight":2
+                },
+                {
+                    "id":15,
+                    "weight":2
+                },
+                {
+                    "id":17,
+                    "weight":2
+                },
+                {
+                    "id":35,
+                    "weight":2
+                },
+                {
+                    "id":36,
+                    "weight":2
+                },
+                {
+                    "id":37,
+                    "weight":2
+                },
+                {
+                    "id":38,
+                    "weight":2
+                },
+                {
+                    "id":39,
+                    "weight":2
+                },
+                {
+                    "id":41,
+                    "weight":2
+                },
+                {
+                    "id":42,
+                    "weight":2
+                },
+                {
+                    "id":43,
+                    "weight":2
+                },
+                {
+                    "id":44,
+                    "weight":2
+                },
+                {
+                    "id":46,
+                    "weight":2
+                },
+                {
+                    "id":47,
+                    "weight":2
+                },
+                {
+                    "id":49,
+                    "weight":2
+                },
+                {
+                    "id":67,
+                    "weight":2
+                },
+                {
+                    "id":68,
+                    "weight":2
+                },
+                {
+                    "id":69,
+                    "weight":2
+                },
+                {
+                    "id":70,
+                    "weight":2
+                },
+                {
+                    "id":71,
+                    "weight":2
+                },
+                {
+                    "id":73,
+                    "weight":2
+                },
+                {
+                    "id":74,
+                    "weight":2
+                },
+                {
+                    "id":75,
+                    "weight":2
+                },
+                {
+                    "id":76,
+                    "weight":2
+                },
+                {
+                    "id":78,
+                    "weight":2
+                },
+                {
+                    "id":79,
+                    "weight":2
+                },
+                {
+                    "id":81,
+                    "weight":2
+                },
+                {
+                    "id":99,
+                    "weight":2
+                },
+                {
+                    "id":100,
+                    "weight":2
+                },
+                {
+                    "id":101,
+                    "weight":2
+                },
+                {
+                    "id":102,
+                    "weight":2
+                },
+                {
+                    "id":103,
+                    "weight":2
+                },
+                {
+                    "id":105,
+                    "weight":2
+                },
+                {
+                    "id":106,
+                    "weight":2
+                },
+                {
+                    "id":107,
+                    "weight":2
+                },
+                {
+                    "id":108,
+                    "weight":2
+                },
+
+                {
+                    "id":110,
+                    "weight":2
+                },
+                {
+                    "id":111,
+                    "weight":2
+                },
+                {
+                    "id":113,
+                    "weight":2
+                }
+            ]},
+            "rangePool":{"objects":[
+                {
+                    "id":8,
+                    "weight":2
+                },
+                {
+                    "id":13,
+                    "weight":2
+                },
+                {
+                    "id":16,
+                    "weight":2
+                },
+                {
+                    "id":40,
+                    "weight":2
+                },
+                {
+                    "id":45,
+                    "weight":2
+                },
+                {
+                    "id":48,
+                    "weight":2
+                },
+                {
+                    "id":72,
+                    "weight":2
+                },
+                {
+                    "id":77,
+                    "weight":2
+                },
+                {
+                    "id":80,
+                    "weight":2
+                },
+                {
+                    "id":104,
+                    "weight":2
+                },
+                {
+                    "id":109,
+                    "weight":2
+                },
+                {
+                    "id":112,
+                    "weight":2
+                }
+
+            ]},
+            "elitePool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2 ,
+                    "keyed":true
+                }
+
+            ]},
+            "bossPool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2,
+                    "keyed":true
+                }
+
+            ]},
             "normalPool":{"objects":[
                 {
                     "id":170,
-                    "weight":1
+                    "weight":3
                 },
                 {
                     "id":171,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":172,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":173,
-                    "weight":1
+                    "weight":3
                 },
                 {
                     "id":174,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":175,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":176,
-                    "weight":1
+                    "weight":3
                 },
                 {
                     "id":177,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":178,
-                    "weight":1
+                    "weight":3
                 },
                 {
-                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185, 
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
                     "weight":3
                 }
             ]}
         },
         "levels" :[
             {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 35,
-                        "count":2
-                    },
-                    {
-                        "id": 36 ,
-                        "count":2
-                    },
-                    {
-                        "id": 37,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 16,
-                        "count":1
-                    }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 35,
-                        "count":2
-                    },
-                    {
-                        "id": 36 ,
-                        "count":3
-                    },
-                    {
-                        "id": 37,
-                        "count":2
-                    }
-                ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 35,
-                        "count":2
-                    },
-                    {
-                        "id": 36 ,
-                        "count":2
-                    },
-                    {
-                        "id": 37,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"id": 149,"from":0,to:2},
                     {
                         "id": 135,
                         "count":1,
@@ -16164,48 +18412,890 @@ exports.data = [
     },
     {
         "dungeonId": 106,
-        "rank": 30,
-        "levelCount" : 3,
+        "rank": 50,
+        "levelCount" : 2,
         "pool":{
+            "soldierPool":{"objects":[
+                {
+                    "id":3,
+                    "weight":2
+                },
+                {
+                    "id":4,
+                    "weight":2
+                },
+                {
+                    "id":5,
+                    "weight":2
+                },
+                {
+                    "id":6,
+                    "weight":2
+                },
+                {
+                    "id":7,
+                    "weight":2
+                },
+                {
+                    "id":9,
+                    "weight":2
+                },
+                {
+                    "id":10,
+                    "weight":2
+                },
+                {
+                    "id":11,
+                    "weight":2
+                },
+                {
+                    "id":12,
+                    "weight":2
+                },
+                {
+                    "id":14,
+                    "weight":2
+                },
+                {
+                    "id":15,
+                    "weight":2
+                },
+                {
+                    "id":17,
+                    "weight":2
+                },
+                {
+                    "id":35,
+                    "weight":2
+                },
+                {
+                    "id":36,
+                    "weight":2
+                },
+                {
+                    "id":37,
+                    "weight":2
+                },
+                {
+                    "id":38,
+                    "weight":2
+                },
+                {
+                    "id":39,
+                    "weight":2
+                },
+                {
+                    "id":41,
+                    "weight":2
+                },
+                {
+                    "id":42,
+                    "weight":2
+                },
+                {
+                    "id":43,
+                    "weight":2
+                },
+                {
+                    "id":44,
+                    "weight":2
+                },
+                {
+                    "id":46,
+                    "weight":2
+                },
+                {
+                    "id":47,
+                    "weight":2
+                },
+                {
+                    "id":49,
+                    "weight":2
+                },
+                {
+                    "id":67,
+                    "weight":2
+                },
+                {
+                    "id":68,
+                    "weight":2
+                },
+                {
+                    "id":69,
+                    "weight":2
+                },
+                {
+                    "id":70,
+                    "weight":2
+                },
+                {
+                    "id":71,
+                    "weight":2
+                },
+                {
+                    "id":73,
+                    "weight":2
+                },
+                {
+                    "id":74,
+                    "weight":2
+                },
+                {
+                    "id":75,
+                    "weight":2
+                },
+                {
+                    "id":76,
+                    "weight":2
+                },
+                {
+                    "id":78,
+                    "weight":2
+                },
+                {
+                    "id":79,
+                    "weight":2
+                },
+                {
+                    "id":81,
+                    "weight":2
+                },
+                {
+                    "id":99,
+                    "weight":2
+                },
+                {
+                    "id":100,
+                    "weight":2
+                },
+                {
+                    "id":101,
+                    "weight":2
+                },
+                {
+                    "id":102,
+                    "weight":2
+                },
+                {
+                    "id":103,
+                    "weight":2
+                },
+                {
+                    "id":105,
+                    "weight":2
+                },
+                {
+                    "id":106,
+                    "weight":2
+                },
+                {
+                    "id":107,
+                    "weight":2
+                },
+                {
+                    "id":108,
+                    "weight":2
+                },
+
+                {
+                    "id":110,
+                    "weight":2
+                },
+                {
+                    "id":111,
+                    "weight":2
+                },
+                {
+                    "id":113,
+                    "weight":2
+                }
+            ]},
+            "rangePool":{"objects":[
+                {
+                    "id":8,
+                    "weight":2
+                },
+                {
+                    "id":13,
+                    "weight":2
+                },
+                {
+                    "id":16,
+                    "weight":2
+                },
+                {
+                    "id":40,
+                    "weight":2
+                },
+                {
+                    "id":45,
+                    "weight":2
+                },
+                {
+                    "id":48,
+                    "weight":2
+                },
+                {
+                    "id":72,
+                    "weight":2
+                },
+                {
+                    "id":77,
+                    "weight":2
+                },
+                {
+                    "id":80,
+                    "weight":2
+                },
+                {
+                    "id":104,
+                    "weight":2
+                },
+                {
+                    "id":109,
+                    "weight":2
+                },
+                {
+                    "id":112,
+                    "weight":2
+                }
+
+            ]},
+            "elitePool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2 ,
+                    "keyed":true
+                }
+
+            ]},
+            "bossPool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2,
+                    "keyed":true
+                }
+
+            ]},
             "normalPool":{"objects":[
                 {
                     "id":170,
-                    "weight":1
+                    "weight":3
                 },
                 {
                     "id":171,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":172,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":173,
-                    "weight":1
+                    "weight":3
                 },
                 {
                     "id":174,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":175,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":176,
-                    "weight":1
+                    "weight":3
                 },
                 {
                     "id":177,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":178,
-                    "weight":1
+                    "weight":3
                 },
                 {
-                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185, 
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
                     "weight":3
                 }
             ]}
@@ -16213,84 +19303,25 @@ exports.data = [
 
         "levels" :[
             {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 17,
-                        "count":1
-                    },
-                    {
-                        "id": 10,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 13,
-                        "count":1
-                    },
-                    {
-                        "id": 9,
-                        "count":1
-                    },
-                    {
-                        "id": 38,
-                        "count":1
-                    }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 17,
-                        "count":1
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 10,
-                        "count":2
-                    },
-                    {
-                        "id": 9,
-                        "count":1
-                    },
-                    {
-                        "id": 38,
-                        "count":2
-                    }
-                ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 17,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 10,
-                        "count":1
-                    },
+
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"id": 149,"from":0,to:2},
                     {
                         "id": 137,
                         "count":1,
                         "pos":12,
                         "keyed":true
-                    },
-                    {
-                        "id": 13,
-                        "count":2
-                    },
-                    {
-                        "id": 38,
-                        "count":1
                     }
                 ],
                 "exit": 29,
@@ -16304,48 +19335,890 @@ exports.data = [
     },
     {
         "dungeonId": 107,
-        "rank": 120,
-        "levelCount" : 3,
+        "rank": 140,
+        "levelCount" : 2,
         "pool":{
+            "soldierPool":{"objects":[
+                {
+                    "id":3,
+                    "weight":2
+                },
+                {
+                    "id":4,
+                    "weight":2
+                },
+                {
+                    "id":5,
+                    "weight":2
+                },
+                {
+                    "id":6,
+                    "weight":2
+                },
+                {
+                    "id":7,
+                    "weight":2
+                },
+                {
+                    "id":9,
+                    "weight":2
+                },
+                {
+                    "id":10,
+                    "weight":2
+                },
+                {
+                    "id":11,
+                    "weight":2
+                },
+                {
+                    "id":12,
+                    "weight":2
+                },
+                {
+                    "id":14,
+                    "weight":2
+                },
+                {
+                    "id":15,
+                    "weight":2
+                },
+                {
+                    "id":17,
+                    "weight":2
+                },
+                {
+                    "id":35,
+                    "weight":2
+                },
+                {
+                    "id":36,
+                    "weight":2
+                },
+                {
+                    "id":37,
+                    "weight":2
+                },
+                {
+                    "id":38,
+                    "weight":2
+                },
+                {
+                    "id":39,
+                    "weight":2
+                },
+                {
+                    "id":41,
+                    "weight":2
+                },
+                {
+                    "id":42,
+                    "weight":2
+                },
+                {
+                    "id":43,
+                    "weight":2
+                },
+                {
+                    "id":44,
+                    "weight":2
+                },
+                {
+                    "id":46,
+                    "weight":2
+                },
+                {
+                    "id":47,
+                    "weight":2
+                },
+                {
+                    "id":49,
+                    "weight":2
+                },
+                {
+                    "id":67,
+                    "weight":2
+                },
+                {
+                    "id":68,
+                    "weight":2
+                },
+                {
+                    "id":69,
+                    "weight":2
+                },
+                {
+                    "id":70,
+                    "weight":2
+                },
+                {
+                    "id":71,
+                    "weight":2
+                },
+                {
+                    "id":73,
+                    "weight":2
+                },
+                {
+                    "id":74,
+                    "weight":2
+                },
+                {
+                    "id":75,
+                    "weight":2
+                },
+                {
+                    "id":76,
+                    "weight":2
+                },
+                {
+                    "id":78,
+                    "weight":2
+                },
+                {
+                    "id":79,
+                    "weight":2
+                },
+                {
+                    "id":81,
+                    "weight":2
+                },
+                {
+                    "id":99,
+                    "weight":2
+                },
+                {
+                    "id":100,
+                    "weight":2
+                },
+                {
+                    "id":101,
+                    "weight":2
+                },
+                {
+                    "id":102,
+                    "weight":2
+                },
+                {
+                    "id":103,
+                    "weight":2
+                },
+                {
+                    "id":105,
+                    "weight":2
+                },
+                {
+                    "id":106,
+                    "weight":2
+                },
+                {
+                    "id":107,
+                    "weight":2
+                },
+                {
+                    "id":108,
+                    "weight":2
+                },
+
+                {
+                    "id":110,
+                    "weight":2
+                },
+                {
+                    "id":111,
+                    "weight":2
+                },
+                {
+                    "id":113,
+                    "weight":2
+                }
+            ]},
+            "rangePool":{"objects":[
+                {
+                    "id":8,
+                    "weight":2
+                },
+                {
+                    "id":13,
+                    "weight":2
+                },
+                {
+                    "id":16,
+                    "weight":2
+                },
+                {
+                    "id":40,
+                    "weight":2
+                },
+                {
+                    "id":45,
+                    "weight":2
+                },
+                {
+                    "id":48,
+                    "weight":2
+                },
+                {
+                    "id":72,
+                    "weight":2
+                },
+                {
+                    "id":77,
+                    "weight":2
+                },
+                {
+                    "id":80,
+                    "weight":2
+                },
+                {
+                    "id":104,
+                    "weight":2
+                },
+                {
+                    "id":109,
+                    "weight":2
+                },
+                {
+                    "id":112,
+                    "weight":2
+                }
+
+            ]},
+            "elitePool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2 ,
+                    "keyed":true
+                }
+
+            ]},
+            "bossPool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2,
+                    "keyed":true
+                }
+
+            ]},
             "normalPool":{"objects":[
                 {
                     "id":170,
-                    "weight":1
+                    "weight":3
                 },
                 {
                     "id":171,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":172,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":173,
-                    "weight":1
+                    "weight":3
                 },
                 {
                     "id":174,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":175,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":176,
-                    "weight":1
+                    "weight":3
                 },
                 {
                     "id":177,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":178,
-                    "weight":1
+                    "weight":3
                 },
                 {
-                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185, 
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
                     "weight":3
                 }
             ]}
@@ -16353,79 +20226,19 @@ exports.data = [
 
         "levels" :[
             {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 18,
-                        "count":4
-                    },
-                    {
-                        "id": 39,
-                        "count":2
-                    },
-                    {
-                        "id": 11,
-                        "count":2
-                    },
-                    {
-                        "id": 38,
-                        "count":2
-                    }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 18,
-                        "count":5
-                    },
-                    {
-                        "id": 40,
-                        "count":1
-                    },
-                    {
-                        "id": 39,
-                        "count":1
-                    },
-                    {
-                        "id": 11,
-                        "count":1
-                    },
-                    {
-                        "id": 149,
-                        "count":3
-                    },
-                    {
-                        "id": 38,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 18,
-                        "count":5
-                    },
-                    {
-                        "id": 40,
-                        "count":1
-                    },
-                    {
-                        "id": 39,
-                        "count":1
-                    },
-                    {
-                        "id": 11,
-                        "count":1
-                    },
-                    {
-                        "id": 149,
-                        "count":3
-                    },
-                    {
-                        "id": 38,
-                        "count":1
-                    },
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"id": 149,"from":0,to:2},
                     {
                         "id": 200,
                         "count":1,
@@ -16444,48 +20257,890 @@ exports.data = [
     },
     {
         "dungeonId": 108,
-        "rank": 190,
-        "levelCount" : 3,
+        "rank": 210,
+        "levelCount" : 2,
         "pool":{
+            "soldierPool":{"objects":[
+                {
+                    "id":3,
+                    "weight":2
+                },
+                {
+                    "id":4,
+                    "weight":2
+                },
+                {
+                    "id":5,
+                    "weight":2
+                },
+                {
+                    "id":6,
+                    "weight":2
+                },
+                {
+                    "id":7,
+                    "weight":2
+                },
+                {
+                    "id":9,
+                    "weight":2
+                },
+                {
+                    "id":10,
+                    "weight":2
+                },
+                {
+                    "id":11,
+                    "weight":2
+                },
+                {
+                    "id":12,
+                    "weight":2
+                },
+                {
+                    "id":14,
+                    "weight":2
+                },
+                {
+                    "id":15,
+                    "weight":2
+                },
+                {
+                    "id":17,
+                    "weight":2
+                },
+                {
+                    "id":35,
+                    "weight":2
+                },
+                {
+                    "id":36,
+                    "weight":2
+                },
+                {
+                    "id":37,
+                    "weight":2
+                },
+                {
+                    "id":38,
+                    "weight":2
+                },
+                {
+                    "id":39,
+                    "weight":2
+                },
+                {
+                    "id":41,
+                    "weight":2
+                },
+                {
+                    "id":42,
+                    "weight":2
+                },
+                {
+                    "id":43,
+                    "weight":2
+                },
+                {
+                    "id":44,
+                    "weight":2
+                },
+                {
+                    "id":46,
+                    "weight":2
+                },
+                {
+                    "id":47,
+                    "weight":2
+                },
+                {
+                    "id":49,
+                    "weight":2
+                },
+                {
+                    "id":67,
+                    "weight":2
+                },
+                {
+                    "id":68,
+                    "weight":2
+                },
+                {
+                    "id":69,
+                    "weight":2
+                },
+                {
+                    "id":70,
+                    "weight":2
+                },
+                {
+                    "id":71,
+                    "weight":2
+                },
+                {
+                    "id":73,
+                    "weight":2
+                },
+                {
+                    "id":74,
+                    "weight":2
+                },
+                {
+                    "id":75,
+                    "weight":2
+                },
+                {
+                    "id":76,
+                    "weight":2
+                },
+                {
+                    "id":78,
+                    "weight":2
+                },
+                {
+                    "id":79,
+                    "weight":2
+                },
+                {
+                    "id":81,
+                    "weight":2
+                },
+                {
+                    "id":99,
+                    "weight":2
+                },
+                {
+                    "id":100,
+                    "weight":2
+                },
+                {
+                    "id":101,
+                    "weight":2
+                },
+                {
+                    "id":102,
+                    "weight":2
+                },
+                {
+                    "id":103,
+                    "weight":2
+                },
+                {
+                    "id":105,
+                    "weight":2
+                },
+                {
+                    "id":106,
+                    "weight":2
+                },
+                {
+                    "id":107,
+                    "weight":2
+                },
+                {
+                    "id":108,
+                    "weight":2
+                },
+
+                {
+                    "id":110,
+                    "weight":2
+                },
+                {
+                    "id":111,
+                    "weight":2
+                },
+                {
+                    "id":113,
+                    "weight":2
+                }
+            ]},
+            "rangePool":{"objects":[
+                {
+                    "id":8,
+                    "weight":2
+                },
+                {
+                    "id":13,
+                    "weight":2
+                },
+                {
+                    "id":16,
+                    "weight":2
+                },
+                {
+                    "id":40,
+                    "weight":2
+                },
+                {
+                    "id":45,
+                    "weight":2
+                },
+                {
+                    "id":48,
+                    "weight":2
+                },
+                {
+                    "id":72,
+                    "weight":2
+                },
+                {
+                    "id":77,
+                    "weight":2
+                },
+                {
+                    "id":80,
+                    "weight":2
+                },
+                {
+                    "id":104,
+                    "weight":2
+                },
+                {
+                    "id":109,
+                    "weight":2
+                },
+                {
+                    "id":112,
+                    "weight":2
+                }
+
+            ]},
+            "elitePool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2 ,
+                    "keyed":true
+                }
+
+            ]},
+            "bossPool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2,
+                    "keyed":true
+                }
+
+            ]},
             "normalPool":{"objects":[
                 {
                     "id":170,
-                    "weight":1
+                    "weight":3
                 },
                 {
                     "id":171,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":172,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":173,
-                    "weight":1
+                    "weight":3
                 },
                 {
                     "id":174,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":175,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":176,
-                    "weight":1
+                    "weight":3
                 },
                 {
                     "id":177,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":178,
-                    "weight":1
+                    "weight":3
                 },
                 {
-                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185, 
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
                     "weight":3
                 }
             ]}
@@ -16493,71 +21148,19 @@ exports.data = [
 
         "levels" :[
             {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 42,
-                        "count":2
-                    },
-                    {
-                        "id": 43,
-                        "count":1
-                    },
-                    {
-                        "id": 47 ,
-                        "count":1
-                    },
-                    {
-                        "id": 46,
-                        "count":1
-                    }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 42,
-                        "count":2
-                    },
-                    {
-                        "id": 43,
-                        "count":1
-                    },
-                    {
-                        "id": 47 ,
-                        "count":2
-                    },
-                    {
-                        "id": 46,
-                        "count":2
-                    },
-                    {
-                        "id": 45,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 42,
-                        "count":2
-                    },
-                    {
-                        "id": 47 ,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":3
-                    },
-                    {
-                        "id": 43,
-                        "count":1
-                    },
-                    {
-                        "id": 46,
-                        "count":2
-                    },
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"id": 149,"from":0,to:2},
                     {
                         "id": 201,
                         "count":1,
@@ -16577,48 +21180,890 @@ exports.data = [
     },
     {
         "dungeonId": 109,
-        "rank": 300,
-        "levelCount" : 3,
+        "rank": 320,
+        "levelCount" : 2,
         "pool":{
+            "soldierPool":{"objects":[
+                {
+                    "id":3,
+                    "weight":2
+                },
+                {
+                    "id":4,
+                    "weight":2
+                },
+                {
+                    "id":5,
+                    "weight":2
+                },
+                {
+                    "id":6,
+                    "weight":2
+                },
+                {
+                    "id":7,
+                    "weight":2
+                },
+                {
+                    "id":9,
+                    "weight":2
+                },
+                {
+                    "id":10,
+                    "weight":2
+                },
+                {
+                    "id":11,
+                    "weight":2
+                },
+                {
+                    "id":12,
+                    "weight":2
+                },
+                {
+                    "id":14,
+                    "weight":2
+                },
+                {
+                    "id":15,
+                    "weight":2
+                },
+                {
+                    "id":17,
+                    "weight":2
+                },
+                {
+                    "id":35,
+                    "weight":2
+                },
+                {
+                    "id":36,
+                    "weight":2
+                },
+                {
+                    "id":37,
+                    "weight":2
+                },
+                {
+                    "id":38,
+                    "weight":2
+                },
+                {
+                    "id":39,
+                    "weight":2
+                },
+                {
+                    "id":41,
+                    "weight":2
+                },
+                {
+                    "id":42,
+                    "weight":2
+                },
+                {
+                    "id":43,
+                    "weight":2
+                },
+                {
+                    "id":44,
+                    "weight":2
+                },
+                {
+                    "id":46,
+                    "weight":2
+                },
+                {
+                    "id":47,
+                    "weight":2
+                },
+                {
+                    "id":49,
+                    "weight":2
+                },
+                {
+                    "id":67,
+                    "weight":2
+                },
+                {
+                    "id":68,
+                    "weight":2
+                },
+                {
+                    "id":69,
+                    "weight":2
+                },
+                {
+                    "id":70,
+                    "weight":2
+                },
+                {
+                    "id":71,
+                    "weight":2
+                },
+                {
+                    "id":73,
+                    "weight":2
+                },
+                {
+                    "id":74,
+                    "weight":2
+                },
+                {
+                    "id":75,
+                    "weight":2
+                },
+                {
+                    "id":76,
+                    "weight":2
+                },
+                {
+                    "id":78,
+                    "weight":2
+                },
+                {
+                    "id":79,
+                    "weight":2
+                },
+                {
+                    "id":81,
+                    "weight":2
+                },
+                {
+                    "id":99,
+                    "weight":2
+                },
+                {
+                    "id":100,
+                    "weight":2
+                },
+                {
+                    "id":101,
+                    "weight":2
+                },
+                {
+                    "id":102,
+                    "weight":2
+                },
+                {
+                    "id":103,
+                    "weight":2
+                },
+                {
+                    "id":105,
+                    "weight":2
+                },
+                {
+                    "id":106,
+                    "weight":2
+                },
+                {
+                    "id":107,
+                    "weight":2
+                },
+                {
+                    "id":108,
+                    "weight":2
+                },
+
+                {
+                    "id":110,
+                    "weight":2
+                },
+                {
+                    "id":111,
+                    "weight":2
+                },
+                {
+                    "id":113,
+                    "weight":2
+                }
+            ]},
+            "rangePool":{"objects":[
+                {
+                    "id":8,
+                    "weight":2
+                },
+                {
+                    "id":13,
+                    "weight":2
+                },
+                {
+                    "id":16,
+                    "weight":2
+                },
+                {
+                    "id":40,
+                    "weight":2
+                },
+                {
+                    "id":45,
+                    "weight":2
+                },
+                {
+                    "id":48,
+                    "weight":2
+                },
+                {
+                    "id":72,
+                    "weight":2
+                },
+                {
+                    "id":77,
+                    "weight":2
+                },
+                {
+                    "id":80,
+                    "weight":2
+                },
+                {
+                    "id":104,
+                    "weight":2
+                },
+                {
+                    "id":109,
+                    "weight":2
+                },
+                {
+                    "id":112,
+                    "weight":2
+                }
+
+            ]},
+            "elitePool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2 ,
+                    "keyed":true
+                }
+
+            ]},
+            "bossPool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2,
+                    "keyed":true
+                }
+
+            ]},
             "normalPool":{"objects":[
                 {
                     "id":170,
-                    "weight":1
+                    "weight":3
                 },
                 {
                     "id":171,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":172,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":173,
-                    "weight":1
+                    "weight":3
                 },
                 {
                     "id":174,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":175,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":176,
-                    "weight":1
+                    "weight":3
                 },
                 {
                     "id":177,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":178,
-                    "weight":1
+                    "weight":3
                 },
                 {
-                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185, 
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
                     "weight":3
                 }
             ]}
@@ -16626,87 +22071,19 @@ exports.data = [
 
         "levels" :[
             {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 48,
-                        "count":1
-                    },
-                    {
-                        "id": 50,
-                        "count":4
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 79,
-                        "count":1
-                    },
-                    {
-                        "id": 81 ,
-                        "count":1
-                    },
-                    {
-                        "id": 71 ,
-                        "count":2
-                    }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 48,
-                        "count":2
-                    },
-                    {
-                        "id": 50,
-                        "count":3
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 79,
-                        "count":1
-                    },
-                    {
-                        "id": 81 ,
-                        "count":2
-                    },
-                    {
-                        "id": 71 ,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 48,
-                        "count":2
-                    },
-                    {
-                        "id": 50,
-                        "count":3
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 79,
-                        "count":1
-                    },
-                    {
-                        "id": 81 ,
-                        "count":2
-                    },
-                    {
-                        "id": 71 ,
-                        "count":1
-                    },
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"id": 149,"from":0,to:2},
                     {
                         "id": 202,
                         "count":1,
@@ -16726,40 +22103,890 @@ exports.data = [
     },
     {
         "dungeonId": 110,
-        "levelCount" : 6,
+        "levelCount" : 2,
         "pool":{
+            "soldierPool":{"objects":[
+                {
+                    "id":3,
+                    "weight":2
+                },
+                {
+                    "id":4,
+                    "weight":2
+                },
+                {
+                    "id":5,
+                    "weight":2
+                },
+                {
+                    "id":6,
+                    "weight":2
+                },
+                {
+                    "id":7,
+                    "weight":2
+                },
+                {
+                    "id":9,
+                    "weight":2
+                },
+                {
+                    "id":10,
+                    "weight":2
+                },
+                {
+                    "id":11,
+                    "weight":2
+                },
+                {
+                    "id":12,
+                    "weight":2
+                },
+                {
+                    "id":14,
+                    "weight":2
+                },
+                {
+                    "id":15,
+                    "weight":2
+                },
+                {
+                    "id":17,
+                    "weight":2
+                },
+                {
+                    "id":35,
+                    "weight":2
+                },
+                {
+                    "id":36,
+                    "weight":2
+                },
+                {
+                    "id":37,
+                    "weight":2
+                },
+                {
+                    "id":38,
+                    "weight":2
+                },
+                {
+                    "id":39,
+                    "weight":2
+                },
+                {
+                    "id":41,
+                    "weight":2
+                },
+                {
+                    "id":42,
+                    "weight":2
+                },
+                {
+                    "id":43,
+                    "weight":2
+                },
+                {
+                    "id":44,
+                    "weight":2
+                },
+                {
+                    "id":46,
+                    "weight":2
+                },
+                {
+                    "id":47,
+                    "weight":2
+                },
+                {
+                    "id":49,
+                    "weight":2
+                },
+                {
+                    "id":67,
+                    "weight":2
+                },
+                {
+                    "id":68,
+                    "weight":2
+                },
+                {
+                    "id":69,
+                    "weight":2
+                },
+                {
+                    "id":70,
+                    "weight":2
+                },
+                {
+                    "id":71,
+                    "weight":2
+                },
+                {
+                    "id":73,
+                    "weight":2
+                },
+                {
+                    "id":74,
+                    "weight":2
+                },
+                {
+                    "id":75,
+                    "weight":2
+                },
+                {
+                    "id":76,
+                    "weight":2
+                },
+                {
+                    "id":78,
+                    "weight":2
+                },
+                {
+                    "id":79,
+                    "weight":2
+                },
+                {
+                    "id":81,
+                    "weight":2
+                },
+                {
+                    "id":99,
+                    "weight":2
+                },
+                {
+                    "id":100,
+                    "weight":2
+                },
+                {
+                    "id":101,
+                    "weight":2
+                },
+                {
+                    "id":102,
+                    "weight":2
+                },
+                {
+                    "id":103,
+                    "weight":2
+                },
+                {
+                    "id":105,
+                    "weight":2
+                },
+                {
+                    "id":106,
+                    "weight":2
+                },
+                {
+                    "id":107,
+                    "weight":2
+                },
+                {
+                    "id":108,
+                    "weight":2
+                },
+
+                {
+                    "id":110,
+                    "weight":2
+                },
+                {
+                    "id":111,
+                    "weight":2
+                },
+                {
+                    "id":113,
+                    "weight":2
+                }
+            ]},
+            "rangePool":{"objects":[
+                {
+                    "id":8,
+                    "weight":2
+                },
+                {
+                    "id":13,
+                    "weight":2
+                },
+                {
+                    "id":16,
+                    "weight":2
+                },
+                {
+                    "id":40,
+                    "weight":2
+                },
+                {
+                    "id":45,
+                    "weight":2
+                },
+                {
+                    "id":48,
+                    "weight":2
+                },
+                {
+                    "id":72,
+                    "weight":2
+                },
+                {
+                    "id":77,
+                    "weight":2
+                },
+                {
+                    "id":80,
+                    "weight":2
+                },
+                {
+                    "id":104,
+                    "weight":2
+                },
+                {
+                    "id":109,
+                    "weight":2
+                },
+                {
+                    "id":112,
+                    "weight":2
+                }
+
+            ]},
+            "elitePool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2 ,
+                    "keyed":true
+                }
+
+            ]},
+            "bossPool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2,
+                    "keyed":true
+                }
+
+            ]},
             "normalPool":{"objects":[
                 {
                     "id":170,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":171,
-                    "weight":1
-                },
-                {
-                    "id":173,
-                    "weight":5
-                },
-                {
-                    "id":174,
-                    "weight":1
-                },
-                {
-                    "id":176,
-                    "weight":5
-                },
-                {
-                    "id":178,
-                    "weight":5
-                },
-                {
-                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185, 
-                    "weight":1
+                    "weight":3
                 },
                 {
                     "id":172,
-                    "weight":5
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
+                    "weight":3
                 }
             ]}
         },
@@ -16769,116 +22996,22 @@ exports.data = [
             {id: 191,from: 4, to:6}],
         "levels" :[
             {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 5,
-                        "count":3
-                    },
-                    {
-                        "id": 149,
-                        "count":1
-                    },
-                    {
-                        "id": 7 ,
-                        "count":4
-                    }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 5,
-                        "count":3
-                    },
-                    {
-                        "id": 7 ,
-                        "count":4
-                    }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"pool":"bossPool","count":1},
+                    {"id": 149,"from":0,to:2}
                 ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 5,
-                        "count":3
-                    },
-                    {
-                        "id": 149,
-                        "count":1
-                    },
-                    {
-                        "id": 7 ,
-                        "count":3
-                    },
-                    {
-                        "id": 23,
-                        "count":1,
-                        "keyed":true
-                    }
-                ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 5,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":1
-                    },
-                    {
-                        "id": 7 ,
-                        "count":3
-                    },
-                    {
-                        "id": 6,
-                        "count":2
-                    }
-                ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 5,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 7 ,
-                        "count":2
-                    },
-                    {
-                        "id": 6,
-                        "count":3
-                    }
-                ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 5,
-                        "count":2
-                    },
-                    {
-                        "id": 6 ,
-                        "count":2
-                    },
-                    {
-                        "id": 7,
-                        "count":2
-                    },
-                    {
-                        "id": 32,
-                        "count":1,
-                        "keyed":true
-                    }
-                ]
-            }
-        ],
+            }],
         "dropID":
             [
             ],
@@ -16887,9 +23020,851 @@ exports.data = [
     },
     {
         "dungeonId": 111,
-        "rank": 70,
-        "levelCount" : 6,
+        "rank": 90,
+        "levelCount" : 2,
         "pool":{
+            "soldierPool":{"objects":[
+                {
+                    "id":3,
+                    "weight":2
+                },
+                {
+                    "id":4,
+                    "weight":2
+                },
+                {
+                    "id":5,
+                    "weight":2
+                },
+                {
+                    "id":6,
+                    "weight":2
+                },
+                {
+                    "id":7,
+                    "weight":2
+                },
+                {
+                    "id":9,
+                    "weight":2
+                },
+                {
+                    "id":10,
+                    "weight":2
+                },
+                {
+                    "id":11,
+                    "weight":2
+                },
+                {
+                    "id":12,
+                    "weight":2
+                },
+                {
+                    "id":14,
+                    "weight":2
+                },
+                {
+                    "id":15,
+                    "weight":2
+                },
+                {
+                    "id":17,
+                    "weight":2
+                },
+                {
+                    "id":35,
+                    "weight":2
+                },
+                {
+                    "id":36,
+                    "weight":2
+                },
+                {
+                    "id":37,
+                    "weight":2
+                },
+                {
+                    "id":38,
+                    "weight":2
+                },
+                {
+                    "id":39,
+                    "weight":2
+                },
+                {
+                    "id":41,
+                    "weight":2
+                },
+                {
+                    "id":42,
+                    "weight":2
+                },
+                {
+                    "id":43,
+                    "weight":2
+                },
+                {
+                    "id":44,
+                    "weight":2
+                },
+                {
+                    "id":46,
+                    "weight":2
+                },
+                {
+                    "id":47,
+                    "weight":2
+                },
+                {
+                    "id":49,
+                    "weight":2
+                },
+                {
+                    "id":67,
+                    "weight":2
+                },
+                {
+                    "id":68,
+                    "weight":2
+                },
+                {
+                    "id":69,
+                    "weight":2
+                },
+                {
+                    "id":70,
+                    "weight":2
+                },
+                {
+                    "id":71,
+                    "weight":2
+                },
+                {
+                    "id":73,
+                    "weight":2
+                },
+                {
+                    "id":74,
+                    "weight":2
+                },
+                {
+                    "id":75,
+                    "weight":2
+                },
+                {
+                    "id":76,
+                    "weight":2
+                },
+                {
+                    "id":78,
+                    "weight":2
+                },
+                {
+                    "id":79,
+                    "weight":2
+                },
+                {
+                    "id":81,
+                    "weight":2
+                },
+                {
+                    "id":99,
+                    "weight":2
+                },
+                {
+                    "id":100,
+                    "weight":2
+                },
+                {
+                    "id":101,
+                    "weight":2
+                },
+                {
+                    "id":102,
+                    "weight":2
+                },
+                {
+                    "id":103,
+                    "weight":2
+                },
+                {
+                    "id":105,
+                    "weight":2
+                },
+                {
+                    "id":106,
+                    "weight":2
+                },
+                {
+                    "id":107,
+                    "weight":2
+                },
+                {
+                    "id":108,
+                    "weight":2
+                },
+
+                {
+                    "id":110,
+                    "weight":2
+                },
+                {
+                    "id":111,
+                    "weight":2
+                },
+                {
+                    "id":113,
+                    "weight":2
+                }
+            ]},
+            "rangePool":{"objects":[
+                {
+                    "id":8,
+                    "weight":2
+                },
+                {
+                    "id":13,
+                    "weight":2
+                },
+                {
+                    "id":16,
+                    "weight":2
+                },
+                {
+                    "id":40,
+                    "weight":2
+                },
+                {
+                    "id":45,
+                    "weight":2
+                },
+                {
+                    "id":48,
+                    "weight":2
+                },
+                {
+                    "id":72,
+                    "weight":2
+                },
+                {
+                    "id":77,
+                    "weight":2
+                },
+                {
+                    "id":80,
+                    "weight":2
+                },
+                {
+                    "id":104,
+                    "weight":2
+                },
+                {
+                    "id":109,
+                    "weight":2
+                },
+                {
+                    "id":112,
+                    "weight":2
+                }
+
+            ]},
+            "elitePool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2 ,
+                    "keyed":true
+                }
+
+            ]},
+            "bossPool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2,
+                    "keyed":true
+                }
+
+            ]},
             "normalPool":{"objects":[
                 {
                     "id":170,
@@ -16928,7 +23903,7 @@ exports.data = [
                     "weight":3
                 },
                 {
-                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185, 
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
                     "weight":3
                 }
             ]}
@@ -16937,161 +23912,22 @@ exports.data = [
             {id: 192,from: 4, to:6}],
         "levels" :[
             {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 39,
-                        "count":3
-                    },
-                    {
-                        "id":47 ,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":3
-                    },
-                    {
-                        "id": 12,
-                        "count":2
-                    },
-                    {
-                        "id": 69,
-                        "count":1
-                    }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 39,
-                        "count":3
-                    },
-                    {
-                        "id": 47 ,
-                        "count":2
-                    },
-                    {
-                        "id": 12,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":3
-                    },
-                    {
-                        "id": 69,
-                        "count":1
-                    }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"pool":"bossPool","count":1},
+                    {"id": 149,"from":0,to:2}
                 ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 39,
-                        "count":1
-                    },
-                    {
-                        "id": 47 ,
-                        "count":1
-                    },
-                    {
-                        "id": 12,
-                        "count":2
-                    },
-                    {
-                        "id":86,
-                        "count":1,
-                        "keyed":true
-                    },
-                    {
-                        "id":62,
-                        "count":1,
-                        "keyed":true
-                    }
-                ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 39,
-                        "count":2
-                    },
-                    {
-                        "id": 47 ,
-                        "count":1
-                    },
-                    {
-                        "id": 12,
-                        "count":2
-                    },
-                    {
-                        "id": 69,
-                        "count":1
-                    },
-                    {
-                        "id": 45,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 39,
-                        "count":2
-                    },
-                    {
-                        "id": 47 ,
-                        "count":1
-                    },
-                    {
-                        "id": 149,
-                        "count":3
-                    },
-                    {
-                        "id": 12,
-                        "count":2
-                    },
-                    {
-                        "id": 69,
-                        "count":1
-                    },
-                    {
-                        "id": 45,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 39,
-                        "count":2
-                    },
-                    {
-                        "id": 47 ,
-                        "count":1
-                    },
-                    {
-                        "id": 12,
-                        "count":1
-                    },
-                    {
-                        "id": 69,
-                        "count":1
-                    },
-                    {
-                        "id": 60,
-                        "count":1,
-                        "keyed":true
-                    },
-                    {
-                        "id": 45,
-                        "count":1
-                    }
-                ]
-            }
-        ],
+            }],
         "dropID":[
 
         ],
@@ -17100,48 +23936,890 @@ exports.data = [
     },
     {
         "dungeonId": 112,
-        "rank": 250,
-        "levelCount" : 6,
+        "rank": 270,
+        "levelCount" : 2,
         "pool":{
+            "soldierPool":{"objects":[
+                {
+                    "id":3,
+                    "weight":2
+                },
+                {
+                    "id":4,
+                    "weight":2
+                },
+                {
+                    "id":5,
+                    "weight":2
+                },
+                {
+                    "id":6,
+                    "weight":2
+                },
+                {
+                    "id":7,
+                    "weight":2
+                },
+                {
+                    "id":9,
+                    "weight":2
+                },
+                {
+                    "id":10,
+                    "weight":2
+                },
+                {
+                    "id":11,
+                    "weight":2
+                },
+                {
+                    "id":12,
+                    "weight":2
+                },
+                {
+                    "id":14,
+                    "weight":2
+                },
+                {
+                    "id":15,
+                    "weight":2
+                },
+                {
+                    "id":17,
+                    "weight":2
+                },
+                {
+                    "id":35,
+                    "weight":2
+                },
+                {
+                    "id":36,
+                    "weight":2
+                },
+                {
+                    "id":37,
+                    "weight":2
+                },
+                {
+                    "id":38,
+                    "weight":2
+                },
+                {
+                    "id":39,
+                    "weight":2
+                },
+                {
+                    "id":41,
+                    "weight":2
+                },
+                {
+                    "id":42,
+                    "weight":2
+                },
+                {
+                    "id":43,
+                    "weight":2
+                },
+                {
+                    "id":44,
+                    "weight":2
+                },
+                {
+                    "id":46,
+                    "weight":2
+                },
+                {
+                    "id":47,
+                    "weight":2
+                },
+                {
+                    "id":49,
+                    "weight":2
+                },
+                {
+                    "id":67,
+                    "weight":2
+                },
+                {
+                    "id":68,
+                    "weight":2
+                },
+                {
+                    "id":69,
+                    "weight":2
+                },
+                {
+                    "id":70,
+                    "weight":2
+                },
+                {
+                    "id":71,
+                    "weight":2
+                },
+                {
+                    "id":73,
+                    "weight":2
+                },
+                {
+                    "id":74,
+                    "weight":2
+                },
+                {
+                    "id":75,
+                    "weight":2
+                },
+                {
+                    "id":76,
+                    "weight":2
+                },
+                {
+                    "id":78,
+                    "weight":2
+                },
+                {
+                    "id":79,
+                    "weight":2
+                },
+                {
+                    "id":81,
+                    "weight":2
+                },
+                {
+                    "id":99,
+                    "weight":2
+                },
+                {
+                    "id":100,
+                    "weight":2
+                },
+                {
+                    "id":101,
+                    "weight":2
+                },
+                {
+                    "id":102,
+                    "weight":2
+                },
+                {
+                    "id":103,
+                    "weight":2
+                },
+                {
+                    "id":105,
+                    "weight":2
+                },
+                {
+                    "id":106,
+                    "weight":2
+                },
+                {
+                    "id":107,
+                    "weight":2
+                },
+                {
+                    "id":108,
+                    "weight":2
+                },
+
+                {
+                    "id":110,
+                    "weight":2
+                },
+                {
+                    "id":111,
+                    "weight":2
+                },
+                {
+                    "id":113,
+                    "weight":2
+                }
+            ]},
+            "rangePool":{"objects":[
+                {
+                    "id":8,
+                    "weight":2
+                },
+                {
+                    "id":13,
+                    "weight":2
+                },
+                {
+                    "id":16,
+                    "weight":2
+                },
+                {
+                    "id":40,
+                    "weight":2
+                },
+                {
+                    "id":45,
+                    "weight":2
+                },
+                {
+                    "id":48,
+                    "weight":2
+                },
+                {
+                    "id":72,
+                    "weight":2
+                },
+                {
+                    "id":77,
+                    "weight":2
+                },
+                {
+                    "id":80,
+                    "weight":2
+                },
+                {
+                    "id":104,
+                    "weight":2
+                },
+                {
+                    "id":109,
+                    "weight":2
+                },
+                {
+                    "id":112,
+                    "weight":2
+                }
+
+            ]},
+            "elitePool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2 ,
+                    "keyed":true
+                }
+
+            ]},
+            "bossPool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2,
+                    "keyed":true
+                }
+
+            ]},
             "normalPool":{"objects":[
                 {
                     "id":170,
-                    "weight":1
+                    "weight":3
                 },
                 {
                     "id":171,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":172,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":173,
-                    "weight":1
+                    "weight":3
                 },
                 {
                     "id":174,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":175,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":176,
-                    "weight":1
+                    "weight":3
                 },
                 {
                     "id":177,
-                    "weight":5
+                    "weight":3
                 },
                 {
                     "id":178,
-                    "weight":1
+                    "weight":3
                 },
                 {
-                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185, 
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
                     "weight":3
                 }
             ]}
@@ -17150,156 +24828,22 @@ exports.data = [
             {id: 193,from: 4, to:6}],
         "levels" :[
             {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 78,
-                        "count":2
-                    },
-                    {
-                        "id": 80 ,
-                        "count":1
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 101 ,
-                        "count":2
-                    },
-                    {
-                        "id": 103,
-                        "count":2
-                    }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"id": 149,"from":0,to:2}
                 ]
             },
             {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 78,
-                        "count":2
-                    },
-                    {
-                        "id": 80 ,
-                        "count":1
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 101 ,
-                        "count":2
-                    },
-                    {
-                        "id": 103,
-                        "count":2
-                    }
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:3},
+                    {"pool":"bossPool","count":1},
+                    {"id": 149,"from":0,to:2}
                 ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 78,
-                        "count":2
-                    },
-                    {
-                        "id": 101 ,
-                        "count":2
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 103,
-                        "count":2
-                    },
-                    {
-                        "id": 128,
-                        "count":1,
-                        "keyed":true
-                    }
-                ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 78,
-                        "count":2
-                    },
-                    {
-                        "id": 103,
-                        "count":1
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 111 ,
-                        "count":1
-                    },
-                    {
-                        "id": 80,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 78,
-                        "count":2
-                    },
-                    {
-                        "id": 103,
-                        "count":1
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 111 ,
-                        "count":2
-                    },
-                    {
-                        "id": 80,
-                        "count":1
-                    }
-                ]
-            },
-            {
-                "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {
-                        "id": 130 ,
-                        "count":1,
-                        "keyed":true
-                    },
-                    {
-                        "id": 78,
-                        "count":2
-                    },
-                    {
-                        "id": 103,
-                        "count":1
-                    },
-                    {
-                        "id": 149,
-                        "count":2
-                    },
-                    {
-                        "id": 111 ,
-                        "count":2
-                    },
-                    {
-                        "id": 80,
-                        "count":1
-                    }
-                ]
-            }
-        ],
+            }],
         "dropID":[
 
         ],
@@ -17308,7 +24852,7 @@ exports.data = [
     },
     {
         "dungeonId": 113,
-        "levelCount" :3,
+        "levelCount" :2,
         "pool":{
             "soldierPool":{"objects":[
                 {
@@ -18202,15 +25746,6 @@ exports.data = [
                     {"pool":"normalPool","from":0,to:4},
                     {"pool":"soldierPool","from":8,to:14},
                     {"pool":"rangePool","from":0,to:3},
-                    {"id": 149,"from":0,to:2}
-                ]
-            },
-            {
-                "objects" :[
-                    {"pool":"normalPool","from":0,to:4},
-                    {"pool":"soldierPool","from":8,to:14},
-                    {"pool":"rangePool","from":0,to:3},
-                    {"pool":"elitePool","count":1},
                     {"id": 149,"from":0,to:2}
                 ]
             },
@@ -21697,7 +29232,7 @@ exports.data = [
                     {"pool":"normalPool","from":0,to:3},
                     {"pool":"soldierPool","from":5,to:14},
                     {"pool":"rangePool","from":0,to:1},
-                    {"id": 149,"from":0,to:2}
+                    {"id": 212,"from":0,to:2}
 
                 ]
             }
@@ -22005,7 +29540,7 @@ exports.data = [
                     {"pool":"rangePool","from":0,to:1},
                     {"pool":"soldierPool","from":2,to:4},
                     {"pool":"PVP","count":1},
-                    {"id": 149,"from":0,to:4}
+                    {"id": 212,"from":0,to:4}
 
                 ]
             }
@@ -30199,7 +37734,1001 @@ exports.data = [
         "prizeWxp":0,"prizeGold":0, "prizeXp":0,
         "wxpRate":1,"goldRate":0.5, "xpRate":1,
         "rank":15
+    },
+    {
+        "dungeonId": 127,
+        "levelCount" :2,
+        "pool":{
+            "soldierPool":{"objects":[
+                {
+                    "id":3,
+                    "weight":2
+                },
+                {
+                    "id":4,
+                    "weight":2
+                },
+                {
+                    "id":5,
+                    "weight":2
+                },
+                {
+                    "id":6,
+                    "weight":2
+                },
+                {
+                    "id":7,
+                    "weight":2
+                },
+                {
+                    "id":9,
+                    "weight":2
+                },
+                {
+                    "id":10,
+                    "weight":2
+                },
+                {
+                    "id":11,
+                    "weight":2
+                },
+                {
+                    "id":12,
+                    "weight":2
+                },
+                {
+                    "id":14,
+                    "weight":2
+                },
+                {
+                    "id":15,
+                    "weight":2
+                },
+                {
+                    "id":17,
+                    "weight":2
+                },
+                {
+                    "id":35,
+                    "weight":2
+                },
+                {
+                    "id":36,
+                    "weight":2
+                },
+                {
+                    "id":37,
+                    "weight":2
+                },
+                {
+                    "id":38,
+                    "weight":2
+                },
+                {
+                    "id":39,
+                    "weight":2
+                },
+                {
+                    "id":41,
+                    "weight":2
+                },
+                {
+                    "id":42,
+                    "weight":2
+                },
+                {
+                    "id":43,
+                    "weight":2
+                },
+                {
+                    "id":44,
+                    "weight":2
+                },
+                {
+                    "id":46,
+                    "weight":2
+                },
+                {
+                    "id":47,
+                    "weight":2
+                },
+                {
+                    "id":49,
+                    "weight":2
+                },
+                {
+                    "id":67,
+                    "weight":2
+                },
+                {
+                    "id":68,
+                    "weight":2
+                },
+                {
+                    "id":69,
+                    "weight":2
+                },
+                {
+                    "id":70,
+                    "weight":2
+                },
+                {
+                    "id":71,
+                    "weight":2
+                },
+                {
+                    "id":73,
+                    "weight":2
+                },
+                {
+                    "id":74,
+                    "weight":2
+                },
+                {
+                    "id":75,
+                    "weight":2
+                },
+                {
+                    "id":76,
+                    "weight":2
+                },
+                {
+                    "id":78,
+                    "weight":2
+                },
+                {
+                    "id":79,
+                    "weight":2
+                },
+                {
+                    "id":81,
+                    "weight":2
+                },
+                {
+                    "id":99,
+                    "weight":2
+                },
+                {
+                    "id":100,
+                    "weight":2
+                },
+                {
+                    "id":101,
+                    "weight":2
+                },
+                {
+                    "id":102,
+                    "weight":2
+                },
+                {
+                    "id":103,
+                    "weight":2
+                },
+                {
+                    "id":105,
+                    "weight":2
+                },
+                {
+                    "id":106,
+                    "weight":2
+                },
+                {
+                    "id":107,
+                    "weight":2
+                },
+                {
+                    "id":108,
+                    "weight":2
+                },
+
+                {
+                    "id":110,
+                    "weight":2
+                },
+                {
+                    "id":111,
+                    "weight":2
+                },
+                {
+                    "id":113,
+                    "weight":2
+                }
+            ]},
+            "rangePool":{"objects":[
+                {
+                    "id":8,
+                    "weight":2
+                },
+                {
+                    "id":13,
+                    "weight":2
+                },
+                {
+                    "id":16,
+                    "weight":2
+                },
+                {
+                    "id":40,
+                    "weight":2
+                },
+                {
+                    "id":45,
+                    "weight":2
+                },
+                {
+                    "id":48,
+                    "weight":2
+                },
+                {
+                    "id":72,
+                    "weight":2
+                },
+                {
+                    "id":77,
+                    "weight":2
+                },
+                {
+                    "id":80,
+                    "weight":2
+                },
+                {
+                    "id":104,
+                    "weight":2
+                },
+                {
+                    "id":109,
+                    "weight":2
+                },
+                {
+                    "id":112,
+                    "weight":2
+                }
+
+            ]},
+            "elitePool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2 ,
+                    "keyed":true
+                }
+
+            ]},
+            "bossPool":{"objects":[
+                {
+                    "id":20,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":21,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":22,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":23,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":24,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":25,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":26,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":27,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":28,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":29,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":30,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":31,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":32,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":33,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":34,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":52,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":53,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":54,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":55,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":56,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":57,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":58,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":59,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":60,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":61,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":62,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":63,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":64,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":65,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":66,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":84,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":85,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":86,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":87,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":88,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":89,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":90,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":91,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":92,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":94,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":95,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":96,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":98,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":117,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":118,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":119,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":120,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":121,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":123,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":124,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2,
+                    "keyed":true
+                }
+
+            ]},
+            "normalPool":{"objects":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
+                    "weight":3
+                }
+            ]}
+        },
+        "levels" :[
+            {
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:1},
+                    {"pool":"elitePool","count":1},
+                    {"id": 149,"from":0,to:2}
+                ]
+            },
+            {
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":8,to:14},
+                    {"pool":"rangePool","from":0,to:1},
+                    {"id": 149,"from":0,to:2},
+                    {
+                        "id": 213,
+                        "count":1,
+                        "pos": [5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29],
+                        "keyed":true
+                    },
+                    {
+                        "id": 214,
+                        "count":2,
+                        skill:[{id:27}],
+                        "keyed":true
+                    }
+                ],
+                "exit": 29,
+                "entrance":0
+            }],
+        "dropID":
+            [
+
+            ],
+        "prizeWxp":0,"prizeGold":1000, "prizeXp":0,
+        "wxpRate":1,"goldRate":1, "xpRate":1,
+        "rank":230},
+    {
+        "dungeonId": 128,
+        "rank": 100,
+        "levelCount" :1,
+        "levels" :[
+            {
+                "objects" :[
+                    {
+                        "id": 15 ,
+                        "count":2,
+                        "keyed":true
+                    },
+                    {
+                        "id": 47 ,
+                        "count":2,
+                        "keyed":true
+                    },
+                    {
+                        "id": 79 ,
+                        "count":2,
+                        "keyed":true
+                    },
+                    {
+                        "id": 111 ,
+                        "count":2,
+                        "keyed":true
+                    },
+                    {
+                        "id": 194 ,
+                        "count":2,
+                        "keyed":true
+                    },
+                    {
+                        "id": 6 ,
+                        "count":1,
+                        "keyed":true
+                    },
+                    {
+                        "id": 38 ,
+                        "count":1,
+                        "keyed":true
+                    },
+                    {
+                        "id": 70 ,
+                        "count":1,
+                        "keyed":true
+                    },
+                    {
+                        "id": 103 ,
+                        "count":1,
+                        "keyed":true
+                    },
+                    {
+                        "id": 206 ,
+                        "count":1,
+                        "keyed":true
+                    }
+                ]
+            }
+        ],
+        "dropID":[
+            19
+        ],
+        "prizeWxp":30,"prizeGold": 150,
+        "prizeXp":400,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
     }
-
-
 ];

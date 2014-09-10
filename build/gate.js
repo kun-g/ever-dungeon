@@ -21,14 +21,14 @@
       if (socket.server == null) {
         return;
       }
-      c.encoder.pipe(c.server);
-      c.server.pipe(c);
+      socket.encoder.pipe(socket.server);
+      socket.server.pipe(socket.decoder);
       socket.decoder.on('request', function(request) {
         return socket.emit('response', request);
       });
       return socket.on('request', function(request) {
-        console.log(request);
-        return c.encoder.writeObject(request);
+        console.log('reqeust', request);
+        return socket.encoder.writeObject(request);
       });
     }).set('log level', 0);
   };
@@ -131,6 +131,7 @@
           alive: false
         };
       });
+      this.updateBackendStatus();
       return setInterval(((function(_this) {
         return function() {
           return _this.updateBackendStatus();

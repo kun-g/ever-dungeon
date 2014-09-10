@@ -741,7 +741,7 @@ exports.data = [
     },
     {
         "questId":27,
-        "questStage":12,
+        "questStage":13,
         "title":"寻找武器锻造学徒",
         "desc":"汤姆大叔的学徒为了寻找锻造材料一个人去了【密谋森林VI】！情况可能非常危险，去把他找回来吧！",
         "objects":[
@@ -792,7 +792,7 @@ exports.data = [
     },
     {
         "questId":29,
-        "questStage":12,
+        "questStage":13,
         "title":"寻找密谋森林的最深层入口",
         "desc":"成功通过【密谋森林VI】寻找到最深处的入口",
         "objects":[
@@ -818,7 +818,7 @@ exports.data = [
     },
     {
         "questId":30,
-        "questStage":13,
+        "questStage":14,
         "title":"解放密谋森林",
         "desc":"将【密谋森林VII】深处的怪物击败，为森林带来宁静",
         "objects":[
@@ -848,7 +848,7 @@ exports.data = [
     },
     {
         "questId":31,
-        "questStage":13,
+        "questStage":14,
         "title":"食人魔终结者",
         "desc":"将【密谋森林VII】中的大小食人魔击倒！",
         "objects":[
@@ -1358,8 +1358,8 @@ exports.data = [
     {
         "questId":49,
         "questStage":22,
-        "title":"探索旋风谷",
-        "desc":"前往【旋风谷I】探索，并击倒那里的怪物头领",
+        "title":"探索断肠崖",
+        "desc":"前往【断肠崖I】探索，并击倒那里的怪物头领",
         "objects":[
             {
                 "type":0,
@@ -1385,7 +1385,7 @@ exports.data = [
         "questId":50,
         "questStage":23,
         "title":"给人添麻烦的考古学家",
-        "desc":"顽固的考古学家去了【旋风谷II】考古，近期那边异常危险，去找到他并护送出来。",
+        "desc":"顽固的考古学家去了【断肠崖II】考古，近期那边异常危险，去找到他并护送出来。",
         "objects":[
             {
                 "type":0,
@@ -1410,7 +1410,7 @@ exports.data = [
     {
         "questId":51,
         "title":"考古学家的委托",
-        "desc":"旋风谷是曾经的古战场，因此有大量骷髅尸体，收集骷髅来做考古素材吧。",
+        "desc":"断肠崖是曾经的古战场，因此有大量骷髅尸体，收集骷髅来做考古素材吧。",
         "objects":[
             {
                 "type":0,
@@ -1436,7 +1436,7 @@ exports.data = [
         "questId":52,
         "questStage":23,
         "title":"金色食人魔之谜",
-        "desc":"有人在【旋风谷II】目击了金色的食人魔，或许就是那边近期异常的根源，前去调查一下吧。",
+        "desc":"有人在【断肠崖II】目击了金色的食人魔，或许就是那边近期异常的根源，前去调查一下吧。",
         "objects":[
             {
                 "type":0,
@@ -1462,7 +1462,7 @@ exports.data = [
         "questId":53,
         "questStage":24,
         "title":"金色食人魔之谜II",
-        "desc":"另一只金色食人魔目前正在【旋风谷III】徘徊，为保护大家安全，前去击倒它",
+        "desc":"另一只金色食人魔目前正在【断肠崖III】徘徊，为保护大家安全，前去击倒它",
         "objects":[
             {
                 "type":0,
@@ -1488,7 +1488,7 @@ exports.data = [
         "questId":54,
         "questStage":24,
         "title":"风之草",
-        "desc":"【旋风谷III】中生长着一种名叫风之草的草药，商队目前急缺这种草药，拜托你去帮忙采集。",
+        "desc":"【断肠崖III】中生长着一种名叫风之草的草药，商队目前急缺这种草药，拜托你去帮忙采集。",
         "objects":[
             {
                 "type":0,
@@ -1514,7 +1514,7 @@ exports.data = [
         "questId":55,
         "questStage":24,
         "title":"风之秘宝",
-        "desc":"风之草的药效没有完全激发出来，需要配合【旋风谷III】中的风之秘宝，前往那里找到并带回给商队。",
+        "desc":"风之草的药效没有完全激发出来，需要配合【断肠崖III】中的风之秘宝，前往那里找到并带回给商队。",
         "objects":[
             {
                 "type":0,
@@ -1565,11 +1565,11 @@ exports.data = [
         "questId":57,
         "questStage":25,
         "title":"野兽集结I",
-        "desc":"哥布林们在【旋风谷IV】中集结，非常可疑，前去调查。",
+        "desc":"哥布林们在【断肠崖IV】中集结，非常可疑，前去调查。",
         "objects":[
             {
                 "type":0,
-                "label":"调查旋风谷IV",
+                "label":"调查断肠崖IV",
                 "collect":57001,
                 "count":1
             }
@@ -1591,7 +1591,7 @@ exports.data = [
         "questId":58,
         "questStage":25,
         "title":"采集风之结晶",
-        "desc":"汤姆大叔需要风之结晶可以在【旋风谷IV】中找到",
+        "desc":"汤姆大叔需要风之结晶可以在【断肠崖IV】中找到",
         "objects":[
             {
                 "type":0,
@@ -1617,7 +1617,7 @@ exports.data = [
         "questId":59,
         "questStage":25,
         "title":"狼骑的复仇",
-        "desc":"此前击溃了死灰狼骑的阴谋，这次它们为了报复把卡琳抓去了【旋风谷IV】。",
+        "desc":"此前击溃了死灰狼骑的阴谋，这次它们为了报复把卡琳抓去了【断肠崖IV】。",
         "objects":[
             {
                 "type":0,
@@ -1643,7 +1643,7 @@ exports.data = [
         "questId":60,
         "questStage":26,
         "title":"野兽集结II",
-        "desc":"死灰狼骑再度出现在【旋风谷V】，野兽们蠢蠢欲动，情况非常紧急。",
+        "desc":"死灰狼骑再度出现在【断肠崖V】，野兽们蠢蠢欲动，情况非常紧急。",
         "objects":[
             {
                 "type":0,
@@ -1668,7 +1668,7 @@ exports.data = [
     {
         "questId":61,
         "title":"死灰哥布林投矛手",
-        "desc":"旋风谷中出现大量哥布林，率先剿灭死灰哥布林投矛手，给它们造成打击。",
+        "desc":"断肠崖中出现大量哥布林，率先剿灭死灰哥布林投矛手，给它们造成打击。",
         "objects":[
             {
                 "type":0,
@@ -1694,11 +1694,11 @@ exports.data = [
         "questId":62,
         "questStage":27,
         "title":"野兽集结III",
-        "desc":"野兽们在【旋风谷VI】做最后的抵抗，前去击倒它们。",
+        "desc":"野兽们在【断肠崖VI】做最后的抵抗，前去击倒它们。",
         "objects":[
             {
                 "type":0,
-                "label":"将旋风谷VI的野兽清除",
+                "label":"将断肠崖VI的野兽清除",
                 "collect":62001,
                 "count":1
             }
@@ -1720,7 +1720,7 @@ exports.data = [
         "questId":63,
         "questStage":28,
         "title":"野兽们的幕后黑手",
-        "desc":"终于找到幕后黑手了，正是躲在【旋风谷VII】的狂暴哥布林，打败它平息这场混乱吧。",
+        "desc":"终于找到幕后黑手了，正是躲在【断肠崖VII】的狂暴哥布林，打败它平息这场混乱吧。",
         "objects":[
             {
                 "type":0,
@@ -1750,7 +1750,7 @@ exports.data = [
         "questId":64,
         "questStage":28,
         "title":"肃清残余部队",
-        "desc":"将【旋风谷VII】的残余部队全部剿灭",
+        "desc":"将【断肠崖VII】的残余部队全部剿灭",
         "objects":[
             {
                 "type":0,
@@ -2540,7 +2540,7 @@ exports.data = [
         "questId":92,
         "questStage":43,
         "title":"山贼的节操？",
-        "desc":"号称只在山上抢劫的卡斯山贼头目，目前出现在了【断肠崖I】，去给他点教训吧。",
+        "desc":"号称只在山上抢劫的卡斯山贼头目，目前出现在了【旋风谷I】，去给他点教训吧。",
         "objects":[
             {
                 "type":0,
@@ -2565,7 +2565,7 @@ exports.data = [
     {
         "questId":93,
         "title":"山崖矿石寻找之旅",
-        "desc":"断肠崖的独有矿石让汤姆大叔激动不已，收集齐3种矿石给他吧！",
+        "desc":"旋风谷的独有矿石让汤姆大叔激动不已，收集齐3种矿石给他吧！",
         "objects":[
             {
                 "type":0,
@@ -2603,7 +2603,7 @@ exports.data = [
         "questId":94,
         "questStage":48,
         "title":"矿石结晶",
-        "desc":"断肠崖的神秘矿石存在结晶，不过在【断肠崖VI】被强力的怪物守护着，去收集带给汤姆大叔吧！",
+        "desc":"旋风谷的神秘矿石存在结晶，不过在【旋风谷VI】被强力的怪物守护着，去收集带给汤姆大叔吧！",
         "objects":[
             {
                 "type":0,
@@ -2630,11 +2630,11 @@ exports.data = [
         "questId":95,
         "questStage":44,
         "title":"山贼的教训！",
-        "desc":"卡斯山贼头目在【断肠崖II】招兵买马，看来上次没有尝到教训，再来给他们一记吧！",
+        "desc":"卡斯山贼头目在【旋风谷II】招兵买马，看来上次没有尝到教训，再来给他们一记吧！",
         "objects":[
             {
                 "type":0,
-                "label":"击破断肠崖II",
+                "label":"击破旋风谷II",
                 "collect":95001,
                 "count":1
             }
@@ -2681,7 +2681,7 @@ exports.data = [
         "questId":97,
         "questStage":45,
         "title":"佣兵剑士的讨伐",
-        "desc":"【断肠崖III】上的佣兵剑士，专门抢夺过路行人，比山贼还恶劣，为村民们除害吧！",
+        "desc":"【旋风谷III】上的佣兵剑士，专门抢夺过路行人，比山贼还恶劣，为村民们除害吧！",
         "objects":[
             {
                 "type":0,
@@ -2707,7 +2707,7 @@ exports.data = [
         "questId":98,
         "questStage":45,
         "title":"找回失踪的恋人",
-        "desc":"雪莉因为与恋人吵架而一个人去了【断肠崖III】，可能会出事情，赶紧帮忙找回她吧。",
+        "desc":"雪莉因为与恋人吵架而一个人去了【旋风谷III】，可能会出事情，赶紧帮忙找回她吧。",
         "objects":[
             {
                 "type":0,
@@ -2733,7 +2733,7 @@ exports.data = [
         "questId":99,
         "questStage":46,
         "title":"击破黄金史莱姆",
-        "desc":"浑身金色的史莱姆出现在了【断肠崖IV】，异常危险，前去击倒它吧！",
+        "desc":"浑身金色的史莱姆出现在了【旋风谷IV】，异常危险，前去击倒它吧！",
         "objects":[
             {
                 "type":0,
@@ -2759,7 +2759,7 @@ exports.data = [
         "questId":100,
         "questStage":46,
         "title":"黄金三连星",
-        "desc":"金色史莱姆找来小伙伴打算一雪前耻，目前正在【断肠崖IV】，前去击倒它们！",
+        "desc":"金色史莱姆找来小伙伴打算一雪前耻，目前正在【旋风谷IV】，前去击倒它们！",
         "objects":[
             {
                 "type":0,
@@ -2791,12 +2791,12 @@ exports.data = [
     {
         "questId":101,
         "questStage":47,
-        "title":"断肠崖挑战任务I",
-        "desc":"前往【断肠崖V】击倒怪物通过关卡。",
+        "title":"旋风谷挑战任务I",
+        "desc":"前往【旋风谷V】击倒怪物通过关卡。",
         "objects":[
             {
                 "type":0,
-                "label":"通过断肠崖V",
+                "label":"通过旋风谷V",
                 "collect":101001,
                 "count":1
             }
@@ -2817,12 +2817,12 @@ exports.data = [
     {
         "questId":102,
         "questStage":48,
-        "title":"断肠崖挑战任务II",
-        "desc":"前往【断肠崖VI】击倒怪物通过关卡。",
+        "title":"旋风谷挑战任务II",
+        "desc":"前往【旋风谷VI】击倒怪物通过关卡。",
         "objects":[
             {
                 "type":0,
-                "label":"通过断肠崖VI",
+                "label":"通过旋风谷VI",
                 "collect":102001,
                 "count":1
             }
@@ -2843,8 +2843,8 @@ exports.data = [
     {
         "questId":103,
         "questStage":49,
-        "title":"断肠崖主人",
-        "desc":"断肠崖的主人凶恶山贼守在【断肠崖VII】击倒它向下一个地牢迈进吧！",
+        "title":"旋风谷主人",
+        "desc":"旋风谷的主人凶恶山贼守在【旋风谷VII】击倒它向下一个地牢迈进吧！",
         "objects":[
             {
                 "type":0,
@@ -4191,6 +4191,7 @@ exports.data = [
     },
     {
     "questId":153,
+    "questStage":104,
     "title":"踏上征程",
     "desc":"击破首个地下城，踏出自己探险的第一步",
     "objects":[
@@ -4217,6 +4218,7 @@ exports.data = [
 },
     {
         "questId":154,
+        "questStage":96,
         "title":"营救阿雅",
         "desc":"听说铁匠汤姆的女儿去【多姆洞穴I】几天没回来了，赶紧去看看吧。",
         "objects":[
@@ -4245,6 +4247,7 @@ exports.data = [
     },
     {
         "questId":155,
+        "questStage":105,
         "title":"铁匠铺重新开业",
         "desc":"帮助汤姆大叔寻找多姆矿石为铁匠铺重新开业做准备。",
         "objects":[
@@ -4269,6 +4272,7 @@ exports.data = [
     },
     {
         "questId":156,
+        "questStage":97,
         "title":"讨伐大型史莱姆",
         "desc":"大型史莱姆是个麻烦，赶紧去【多姆洞穴II】干掉它！",
         "objects":[
@@ -4294,6 +4298,7 @@ exports.data = [
     },
     {
         "questId":157,
+        "questStage":98,
         "title":"黑暗中的利刃",
         "desc":"黑暗中的利刃——哥布林投矛手目前在【多姆洞穴III】胡作非为。",
         "objects":[
@@ -4320,6 +4325,7 @@ exports.data = [
     },
     {
         "questId":158,
+        "questStage":106,
         "title":"汤姆大叔的请求",
         "desc":"寻找汤姆大叔的铁匠学徒，重振铁匠铺！",
         "objects":[
@@ -4347,6 +4353,7 @@ exports.data = [
     },
     {
         "questId":159,
+        "questStage":99,
         "title":"哥布林投矛手的决心",
         "desc":"哥布林投矛手这次在【多姆洞穴IV】，带上你的小伙伴讨伐它吧！",
         "objects":[
@@ -4372,6 +4379,7 @@ exports.data = [
     },
     {
         "questId":160,
+        "questStage":100,
         "title":"暗中的邪恶联盟",
         "desc":"有人发现哥布林与野狼携手，在【多姆洞穴V】伺机而动",
         "objects":[
@@ -4397,6 +4405,7 @@ exports.data = [
     },
     {
         "questId":161,
+        "questStage":107,
         "title":"调查神秘的黑影",
         "desc":"与卡尔和凯瑟琳一起调查怪物异动的根源",
         "objects":[
@@ -4423,6 +4432,7 @@ exports.data = [
     },
     {
         "questId":162,
+        "questStage":101,
         "title":"解救村长",
         "desc":"村长去往了【多姆洞穴VI】，情况似乎不太妙，前去救出村长！",
         "objects":[
@@ -4448,6 +4458,7 @@ exports.data = [
     },
     {
         "questId":163,
+        "questStage":102,
         "title":"多姆村英雄",
         "desc":"将【多姆洞穴VII】中的史莱姆大王击倒，给村庄带来安宁。",
         "objects":[
@@ -4477,12 +4488,12 @@ exports.data = [
     {
         "questId":164,
         "title":"冒险征途的里程碑I",
-        "desc":"将角色升至3级",
+        "desc":"将角色升至5级",
         "objects":[
             {
                 "type":4,
-                "label":"升级至3级",
-                "count":3
+                "label":"升级至5级",
+                "count":5
             }
         ],
         "prize":[
@@ -4495,12 +4506,12 @@ exports.data = [
     {
         "questId":165,
         "title":"冒险征途的里程碑II",
-        "desc":"将角色升至5级",
+        "desc":"将角色升至25级",
         "objects":[
             {
                 "type":4,
-                "label":"升级至5级",
-                "count":5
+                "label":"升级至25级",
+                "count":25
             }
         ],
         "prize":[
@@ -4523,12 +4534,12 @@ exports.data = [
     {
         "questId":166,
         "title":"冒险征途的里程碑III",
-        "desc":"将角色升至7级",
+        "desc":"将角色升至35级",
         "objects":[
             {
                 "type":4,
-                "label":"升级至7级",
-                "count":7
+                "label":"升级至35级",
+                "count":35
             }
         ],
         "prize":[
@@ -4555,12 +4566,12 @@ exports.data = [
     {
         "questId":167,
         "title":"冒险征途的里程碑IV",
-        "desc":"将角色升至9级",
+        "desc":"将角色升至40级",
         "objects":[
             {
                 "type":4,
-                "label":"升级至9级",
-                "count":9
+                "label":"升级至40级",
+                "count":40
             }
         ],
         "prize":[
@@ -4587,12 +4598,12 @@ exports.data = [
     {
         "questId":168,
         "title":"冒险征途的里程碑V",
-        "desc":"将角色升至10级",
+        "desc":"将角色升至45级",
         "objects":[
             {
                 "type":4,
-                "label":"升级至10级",
-                "count":10
+                "label":"升级至45级",
+                "count":45
             }
         ],
         "prize":[

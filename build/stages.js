@@ -1,3 +1,21 @@
+function checkGoblin(obj, util) {
+    return obj.counters.goblin < obj.getPrivilege("tuHaoCount") || !obj.counters.goblin;
+}
+function checkEvilChief(obj, util) {
+    return ( obj.counters.enhance < obj.getPrivilege("EvilChieftains") ) &&
+        ( util.today.weekday() === 2 ||
+          util.today.weekday() === 4 ||
+          util.today.weekday() === 6 ||
+          util.today.weekday() === 0 );
+}
+function checkEquipmentRobbers(obj, util) {
+    return ( obj.counters.weapon < obj.getPrivilege("EquipmentRobbers")) &&
+        ( util.today.weekday() === 1 ||
+          util.today.weekday() === 3 ||
+          util.today.weekday() === 5 ||
+          util.today.weekday() === 0 );
+}
+var MAX_BATTLE_TIMES = 200;
 var data = [
     {
         "chapterId": 0,
@@ -47,6 +65,7 @@ var data = [
 		"stage":[
             {
 				"stageId": 1,
+                "sweepPower":200,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
@@ -60,6 +79,7 @@ var data = [
             },
             {
                 "stageId": 2,
+                "sweepPower":200,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -74,6 +94,7 @@ var data = [
             },
             {
                 "stageId": 3,
+                "sweepPower":200,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -87,6 +108,7 @@ var data = [
             },
             {
                 "stageId": 4,
+                "sweepPower":200,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -100,6 +122,7 @@ var data = [
             },
             {
                 "stageId": 5,
+                "sweepPower":200,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -113,6 +136,7 @@ var data = [
             },
             {
                 "stageId": 6,
+                "sweepPower":200,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -126,6 +150,7 @@ var data = [
             },
             {
                 "stageId": 7,
+                "sweepPower":200,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
@@ -139,6 +164,7 @@ var data = [
             },
             {
                 "stageId":78,
+                "sweepPower":29999,
                 "cost":10,
                 "dungeon":64,
                 "isInfinite":true,
@@ -163,6 +189,7 @@ var data = [
 "stage":[
 {
 "stageId": 1,
+    "sweepPower":200,
 "cost": 15,
 "team": 1,
 "hidden":false,
@@ -176,6 +203,7 @@ var data = [
 },
 {
 "stageId": 2,
+    "sweepPower":200,
 "cost": 15,
 "team": 1,
 "hidden":false,
@@ -198,6 +226,7 @@ var data = [
 },
 {
 "stageId": 3,
+    "sweepPower":200,
 "cost": 15,
 "team": 1,
 "hidden":false,
@@ -219,6 +248,7 @@ var data = [
 },
 {
 "stageId": 4,
+    "sweepPower":200,
 "cost": 15,
 "team": 2,
 "hidden":false,
@@ -232,6 +262,7 @@ var data = [
 },
 {
 "stageId": 5,
+    "sweepPower":200,
 "cost": 15,
 "team": 2,
 "hidden":false,
@@ -245,6 +276,7 @@ var data = [
 },
 {
 "stageId": 6,
+    "sweepPower":200,
 "cost": 15,
 "team": 3,
 "hidden":false,
@@ -258,6 +290,7 @@ var data = [
 },
 {
 "stageId": 7,
+    "sweepPower":200,
 "cost": 15,
 "team": 3,
 "hidden":false,
@@ -271,6 +304,7 @@ var data = [
 },
 {
 "stageId":78,
+    "sweepPower":29999,
 "cost":10,
 "dungeon":64,
 "isInfinite":true,
@@ -293,6 +327,7 @@ var data = [
         "label":"密谋森林",
 		"desc":"阴森诡异的密谋森林，吞噬了很多勇者的生\n命，因此很少有人再敢靠近它。",
 		"icon":"mapicon1.png",
+        "theme":1,
 		"stage":[
             {
                 "stageId": 8,
@@ -415,6 +450,7 @@ var data = [
         "label":"湖滨大道",
 		"desc":"沿着凯多湖边一直蔓延的湖滨大道，由于年\n久失修，如今成为了盗贼们的聚集地。",
 		"icon":"mapicon7.png",
+        "theme":1,
 		"stage":[
             {
                 "stageId": 15,
@@ -531,11 +567,12 @@ var data = [
 	{
         "chapterId":4,
 		"idx": 3,
-        "style": "map-dungeon7",
-		"title":"dungeonname7.png",
-        "label":"旋风谷",
+        "style": "map-dungeon4",
+		"title":"dungeonname4.png",
+        "label":"断肠崖",
 		"desc":"塔伦山脉中最险要的地方，遍布着夺命的悬\n崖，稍不留神就会让你付出惨痛的代价。",
 		"icon":"mapicon4.png",
+        "theme":0,
 		"stage":[
             {
                 "stageId": 22,
@@ -657,6 +694,7 @@ var data = [
         "label":"暮色平原",
 		"desc":"表面上一片祥和的大草原，但却暗潮涌动\n潜伏的怪物们会告诫你不要小看这片平原。",
 		"icon":"mapicon3.png",
+        "theme":1,
 		"stage":[
 		    {
 				"stageId": 29,
@@ -778,6 +816,7 @@ var data = [
         "label":"野蛮哨站",
 		"desc":"兽人的哨站，存放着兽人抢夺村庄的战利品，\n重兵把守，勇者们几乎都是有去无回。",
 		"icon":"mapicon5.png",
+        "theme":2,
 		"stage":[
 			{
 			    "stageId": 36,
@@ -894,11 +933,12 @@ var data = [
 	{
 		"chapterId": 7,
 		"idx": 6,
-        "style": "map-dungeon4",
-		"title":"dungeonname4.png",
-        "label":"断肠崖",
+        "style": "map-dungeon7",
+		"title":"dungeonname7.png",
+        "label":"旋风谷",
 		"desc":"山谷险要的地势加上诡异的巨大山风，让这\n里成为勇者们永远的噩梦。",
 		"icon":"mapicon4.png",
+        "theme":0,
 		"stage":[
 			{
 				"stageId": 43,
@@ -1020,6 +1060,7 @@ var data = [
         "label":"丛林密道",
 		"desc":"不见天日的丛林中，隐藏着的古老密道，现\n在已经荒废并且成为怪物们的巢穴。",
 		"icon":"mapicon1.png",
+        "theme":1,
 		"stage":[
 		    {
 				"stageId": 50,
@@ -1141,6 +1182,7 @@ var data = [
         "label":"巫师营地",
 		"desc":"巫师掌控着的地盘，营地中驻扎着巫师手下\n的邪恶军团，是一支极具威胁的军队。",
 		"icon":"mapicon5.png",
+        "theme":2,
 		"stage":[
     {
 				"stageId": 57,
@@ -1549,7 +1591,7 @@ var data = [
         "label":"多姆洞穴",
         "desc":"似乎是天然形成的洞穴，出没着一些危险的\n野生怪物，让不少旅人有去无回。",
         "icon":"mapicon2.png",
-
+        "theme":0,
         "stage":[
             {
                 "sweepPower":200,
@@ -1672,6 +1714,7 @@ var data = [
             },
             {
                 "stageId":103,
+                "sweepPower":29999,
                 "cost":10,
                 "dungeon":64,
                 "isInfinite":true,
@@ -1789,13 +1832,7 @@ var data = [
           dungeon: 105,
           description: "Enhance1",
           eventName: "event_enhance",
-          condition: function (obj, util) {
-            return ( obj.counters.enhance < 3 ) &&
-              ( util.today.weekday() === 2 ||
-                util.today.weekday() === 4 ||
-                util.today.weekday() === 6 ||
-                util.today.weekday() === 0 );
-          },
+          condition: checkEvilChief,
           initialAction: function (obj) {
             obj.counters.enhance++;
           }
@@ -1808,13 +1845,7 @@ var data = [
           dungeon: 106,
           eventName: "event_enhance",
           description: "Enhance2",
-          condition: function (obj, util) {
-            return ( obj.counters.enhance < 3 ) &&
-              ( util.today.weekday() === 2 ||
-                util.today.weekday() === 4 ||
-                util.today.weekday() === 6 ||
-                util.today.weekday() === 0 );
-          },
+          condition: checkEvilChief,
           initialAction: function (obj) {
             obj.counters.enhance++;
           }
@@ -1827,13 +1858,7 @@ var data = [
           dungeon: 107,
           description: "Enhance3",
           eventName: "event_enhance",
-          condition: function (obj, util) {
-            return ( obj.counters.enhance < 3 ) &&
-              ( util.today.weekday() === 2 ||
-                util.today.weekday() === 4 ||
-                util.today.weekday() === 6 ||
-                util.today.weekday() === 0 );
-          },
+          condition: checkEvilChief,
           initialAction: function (obj) {
             obj.counters.enhance++;
           }
@@ -1846,13 +1871,7 @@ var data = [
           dungeon: 108,
           description: "Enhance4",
           eventName: "event_enhance",
-          condition: function (obj, util) {
-            return ( obj.counters.enhance < 3 ) &&
-              ( util.today.weekday() === 2 ||
-                util.today.weekday() === 4 ||
-                util.today.weekday() === 6 ||
-                util.today.weekday() === 0 );
-          },
+          condition: checkEvilChief,
           initialAction: function (obj) {
             obj.counters.enhance++;
           }
@@ -1865,13 +1884,7 @@ var data = [
           dungeon: 109,
           description: "Enhance5",
           eventName: "event_enhance",
-          condition: function (obj, util) {
-            return ( obj.counters.enhance < 3 ) &&
-              ( util.today.weekday() === 2 ||
-                util.today.weekday() === 4 ||
-                util.today.weekday() === 6 ||
-                util.today.weekday() === 0 );
-          },
+          condition: checkEvilChief,
           initialAction: function (obj) {
             obj.counters.enhance++;
           }
@@ -1887,14 +1900,12 @@ var data = [
             dungeon: 102,
             description: "Goblin1",
             eventName: "event_goblin",
-            condition: function (obj, util) {
-              return obj.counters.goblin < 3 || !obj.counters.goblin;
-            },
+            condition: checkGoblin, 
             initialAction: function (obj) {
               if (obj.counters.goblin) {
                 obj.counters.goblin++;
               } else {
-                obj.counters.newProperty('goblin', 1);
+                obj.counters['goblin'] = 1;
               }
             }
         },
@@ -1906,14 +1917,12 @@ var data = [
             dungeon: 103,
             description: "Goblin2",
             eventName: "event_goblin",
-            condition: function (obj, util) {
-              return obj.counters.goblin < 3 || !obj.counters.goblin;
-            },
+            condition: checkGoblin,
             initialAction: function (obj) {
               if (obj.counters.goblin) {
                 obj.counters.goblin++;
               } else {
-                obj.counters.newProperty('goblin', 1);
+                obj.counters['goblin'] = 1;
               }
             }
         },
@@ -1925,14 +1934,12 @@ var data = [
             dungeon: 104,
             description: "Goblin3",
             eventName: "event_goblin",
-            condition: function (obj, util) {
-              return obj.counters.goblin < 3 || !obj.counters.goblin;
-            },
+            condition: checkGoblin,
             initialAction: function (obj) {
               if (obj.counters.goblin) {
                 obj.counters.goblin++;
               } else {
-                obj.counters.newProperty('goblin', 1);
+                obj.counters['goblin'] = 1;
               }
             }
         },
@@ -1944,13 +1951,7 @@ var data = [
               dungeon: 110,
               description: "wxp1",
               eventName: "event_weapon",
-              condition: function (obj, util) {
-                return ( obj.counters.weapon < 3 ) &&
-                  ( util.today.weekday() === 1 ||
-                    util.today.weekday() === 3 ||
-                    util.today.weekday() === 5 ||
-                    util.today.weekday() === 0 );
-              },
+              condition: checkEquipmentRobbers,
               initialAction: function (obj) {
                 obj.counters.weapon++;
               }
@@ -1963,13 +1964,7 @@ var data = [
               dungeon: 111,
               description: "wxp2",
               eventName: "event_weapon",
-              condition: function (obj, util) {
-                return ( obj.counters.weapon < 3 ) &&
-                  ( util.today.weekday() === 1 ||
-                    util.today.weekday() === 3 ||
-                    util.today.weekday() === 5 ||
-                    util.today.weekday() === 0 );
-              },
+              condition: checkEquipmentRobbers,
               initialAction: function (obj) {
                 obj.counters.weapon++;
               }
@@ -1982,13 +1977,7 @@ var data = [
               dungeon: 112,
               description: "wxp3",
               eventName: "event_weapon",
-              condition: function (obj, util) {
-                return ( obj.counters.weapon < 3 ) &&
-                  ( util.today.weekday() === 1 ||
-                    util.today.weekday() === 3 ||
-                    util.today.weekday() === 5 ||
-                    util.today.weekday() === 0 );
-              },
+              condition: checkEquipmentRobbers,
               initialAction: function (obj) {
                 obj.counters.weapon++;
               }
@@ -2025,7 +2014,7 @@ var data = [
                   //if (obj.counters.goblin) {
                   //    obj.counters.goblin++;
                   //} else {
-                  //    obj.counters.newProperty('goblin', 1);
+                  //    obj.counters['goblin'] = 1;
                   //}
               }
           },
@@ -2065,9 +2054,16 @@ var data = [
               description: "hunt112",
               eventName: "event_goblin",
               "formularId":1,
-              condition: function (obj, util) { return true;
+              condition: function (obj, util) { 
+                  return obj.counters.currentPKCount < obj.getTotalPkTimes();
               },
-              initialAction: function (obj) { }
+              initialAction: function (obj) { 
+                  if (obj.counters.currentPKCount) {
+                      obj.counters.currentPKCount++;
+                  } else {
+                      obj.counters['currentPKCount'] = 1;
+                  }
+              }
           },
           {
               stageId: 125,
@@ -2174,7 +2170,49 @@ var data = [
               initialAction: function (obj) { }
           }
       ]
-  }
+  },
+    {
+        "chapterId": 16,
+        "hidden": true,
+        "label":"世界副本",
+        "stage":[
+            {
+                "stageId": 133,
+                "cost": 10,
+                "team": 3,
+                "hidden":false,
+                "dungeon": 127,
+                "condition": function (obj, util) { 
+                  if (util.serverObj.counters['133'] == undefined 
+                    || util.serverObj.counters['133'] < MAX_BATTLE_TIMES) {
+                    return true;
+                  }
+                  return false; 
+                }
+            }
+        ]
+    },
+    {
+        "chapterId": 17,
+        "hidden": true,
+        "label":"测试副本",
+        "stage":[
+            {
+                "stageId": 134,
+                "cost": 0,
+                "team": 3,
+                "hidden":false,
+                "dungeon": 128,
+                "condition": function (obj, util) {
+                    if (util.serverObj.counters['133'] == undefined
+                        || util.serverObj.counters['133'] < MAX_BATTLE_TIMES) {
+                        return true;
+                    }
+                    return false;
+                }
+            }
+        ]
+    }
 ];
 for (k in data) {
   data[k].stageId = k;

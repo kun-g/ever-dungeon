@@ -203,5 +203,67 @@ exports.data = [
     {
         "effectId":49,
         "file":"effect-enemyitem.ccbi"
+    },
+    {
+        "effectId":50,
+        "file":"effect-archer-1-mainweapon.ccbi",
+        "radian":0.3,
+        "dirfix":true,
+        "flytime":0.3
+    },
+    {
+        "effectId":51,
+        "file":"effect-goblin-2-mainweapon.ccbi",
+        "radian":0.3,
+        "dirfix":true,
+        "flytime":0.3
+    },
+    {
+        "effectId":52,
+        "file":"effect-orcs-1-mainweapon.ccbi",
+        "radian":0,
+        "dirfix":true,
+        "flytime":0.3
+    },
+    {	"effectId": 53,
+        "file": "effect-done.ccbi"
+    },
+    {	"effectId": 54,
+        "file": "effect-key.ccbi"
+    },
+    {	"effectId": 55,
+        "file": "effect-arrow.ccbi"
+    },
+    {
+        "effectId": 56,
+        "file": "effect-emoticon.ccbi"
+    },
+    {
+        "effectId": 57,
+        "file": "f-warriorn-mainweapontx.ccbi"
+    },
+    {
+        "effectId": 58,
+        "file": "f-magen-mainweapontx.ccbi"
+    },
+    {
+        "effectId": 59,
+        "file": "f-priestn-mainweapontx.ccbi"
+    },
+    {
+        "effectId": 60,
+        "file": "f-warriorn-mainweapontxb.ccbi"
+    },
+    {
+        "effectId": 61,
+        "file": "f-magen-mainweapontxb.ccbi"
+    },
+    {
+        "effectId": 62,
+        "file": "f-priestn-mainweapontxb.ccbi"
+    },
+    {
+        "effectId": 63,
+        "file": "effect-priestn-attack.ccbi"
     }
 ]

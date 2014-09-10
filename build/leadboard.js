@@ -32,4 +32,14 @@ exports.data = [
         "type":"player",
         "availableCondition":true
     },
+    {
+        "name":"WorldBoss133",
+        "key":"counters.worldBoss.133",
+        "resetTime": { weekday: 9, minute: 5},
+        "reverse": false,
+        "type":"player",
+        "availableCondition":true,
+        "event":"",
+    },
+
 ];

@@ -10668,7 +10668,7 @@ exports.data = [
 		"basic_properties": {
 			"health": 25,
 			"attack": 8,
-			"reactivity": 7,
+			"accuracy": 7,
 			"critical": 4
 		},
 		"storeOnly": true,
@@ -13208,7 +13208,7 @@ exports.data = [
 		"label": "光明外衣(史诗)",
 		"category": 1,
 		"subcategory": 2,
-		"description": "凝聚光明力量的鞋子",
+		"description": "凝聚光明力量的衣服",
 		"transPrize": [
 			{
 				"type": 2,
@@ -19960,7 +19960,7 @@ exports.data = [
 	},
 	{
 		"classId": 538,
-		"label": "小瓶活力药剂",
+		"label": "小瓶活力剂",
 		"icon": "item-energy1.png",
 		"category": 0,
 		"subcategory": 1,
@@ -19974,7 +19974,7 @@ exports.data = [
 	},
 	{
 		"classId": 539,
-		"label": "大瓶活力药剂",
+		"label": "大瓶活力剂",
 		"icon": "item-energy2.png",
 		"category": 0,
 		"subcategory": 1,
@@ -21697,7 +21697,7 @@ exports.data = [
 		"icon": "irfasion-helmet1.png",
 		"category": 1,
 		"subcategory": 13,
-		"description": "将职业练至10级的身份证明。",
+		"description": "将职业练至45级的身份证明。",
 		"effecta": [
 			{
 				"part": "helmet",
@@ -27568,7 +27568,7 @@ exports.data = [
         "icon": "irfasion-helmet1.png",
         "category": 1,
         "subcategory": 13,
-        "description": "将职业练至10级的身份证明。",
+        "description": "将职业练至45级的身份证明。",
         "effecta": [
             {
                 "part": "helmet",
@@ -27934,5 +27934,282 @@ exports.data = [
             }
         ],
         "storeOnly": true
+    },
+    {
+        "classId": 878,
+        "label": "圣光之翼",
+        "icon": "item-wing.png",
+        "category": 1,
+        "subcategory": 16,
+        "basic_properties": {
+            "accuracy": 50
+        },
+        "description": "蕴含着神圣光芒的羽翼，能够带来强大的集中力，并且是身份的象征",
+        "effecta": [
+            {
+                "part": "avatar-wing-1",
+                "file": "wing1-1.ccbi"
+            },
+            {
+                "part": "avatar-wing-2",
+                "file": "wing1-1.ccbi"
+            },
+            {
+                "part": "avatar-wing-3",
+                "file": "wing1-1.ccbi"
+            },
+            {
+                "part": "avatar-wing-4",
+                "file": "wing1-1.ccbi"
+            },
+            {
+                "part": "avatar-wing-5",
+                "file": "wing1-1.ccbi"
+            },
+            {
+                "part": "avatar-wing1",
+                "file": "wing1.ccbi"
+            },
+            {
+                "part": "avatar-wing2",
+                "file": "wing1.ccbi"
+            }
+        ],
+        "storeOnly": true,
+        "expiration": {day: 7}
+    },
+    {
+        "classId": 879,
+        "label": "狂战士下身",
+        "category": 1,
+        "subcategory": 4,
+        "effecta": [
+            {
+                "part": "leftleg",
+                "file": "f-warriorn-leftleg1.ccbi"
+            },
+            {
+                "part": "rightleg",
+                "file": "f-warriorn-rightleg1.ccbi"
+            }
+        ]
+    },
+    {
+        "classId": 880,
+        "label": "狂战士上身",
+        "category": 1,
+        "subcategory": 2,
+        "effecta": [
+            {
+                "part": "chest",
+                "file": "f-warriorn-chest1.ccbi"
+            },
+            {
+                "part": "righthand",
+                "file": "f-warriorn-righthand1.ccbi"
+            },
+            {
+                "part": "lefthand",
+                "file": "f-warriorn-lefthand1.ccbi"
+            }
+        ]
+    },
+    {
+        "classId": 881,
+        "label": "狂战士副手",
+        "category": 1,
+        "subcategory": 1,
+        "effecta": [
+            {
+                "part": "secondaryweapon2",
+                "file": "f-warriorn-weapon21.ccbi"
+            }
+        ]
+    },
+    {
+        "classId": 882,
+        "label": "狂战士主手",
+        "category": 1,
+        "subcategory": 0,
+        "effecta": [
+            {
+                "part": "mainweapon",
+                "file": "f-warriorn-mainweapon1.ccbi"
+            }
+        ],
+        "effectAttack": 57,
+        "soundAttack": "attackzhanshi.mp3"
+    },
+    {
+        "classId": 883,
+        "label": "狂战士头盔",
+        "category": 1,
+        "subcategory": 13,
+        "effecta": [
+            {
+                "part": "helmet",
+                "file": "f-warriorn-helmet1.ccbi"
+            },
+            {
+                "part": "helmet2",
+                "file": "f-warriorn-helmet1-2.ccbi"
+            }
+        ]
+    },
+    {
+        "classId": 884,
+        "label": "魔导师下身",
+        "category": 1,
+        "subcategory": 4,
+        "effecta": [
+            {
+                "part": "leftleg",
+                "file": "f-magen-leftleg1.ccbi"
+            },
+            {
+                "part": "rightleg",
+                "file": "f-magen-rightleg1.ccbi"
+            }
+        ]
+    },
+    {
+        "classId": 885,
+        "label": "魔导师上身",
+        "category": 1,
+        "subcategory": 2,
+        "effecta": [
+            {
+                "part": "chest",
+                "file": "f-magen-chest1.ccbi"
+            },
+            {
+                "part": "righthand",
+                "file": "f-magen-righthand1.ccbi"
+            },
+            {
+                "part": "lefthand",
+                "file": "f-magen-lefthand1.ccbi"
+            }
+        ]
+    },
+    {
+        "classId": 886,
+        "label": "魔导师副手",
+        "category": 1,
+        "subcategory": 1,
+        "effecta": [
+            {
+                "part": "weapon4",
+                "file": "f-magen-weapon41.ccbi"
+            }
+        ]
+    },
+    {
+        "classId": 887,
+        "label": "魔导师主手",
+        "category": 1,
+        "subcategory": 0,
+        "effecta": [
+            {
+                "part": "mainweapon",
+                "file": "f-magen-mainweapon1.ccbi"
+            }
+        ],
+        "effectAttack": 58,
+        "soundAttack": "attackzhanshi.mp3"
+    },
+    {
+        "classId": 888,
+        "label": "魔导师头盔",
+        "category": 1,
+        "subcategory": 13,
+        "effecta": [
+            {
+                "part": "helmet",
+                "file": "f-magen-helmet1.ccbi"
+            },
+            {
+                "part": "helmet3",
+                "file": "f-magen-helmet1-3.ccbi"
+            }
+        ]
+    },
+    {
+        "classId": 889,
+        "label": "主教下身",
+        "category": 1,
+        "subcategory": 4,
+        "effecta": [
+            {
+                "part": "leftleg",
+                "file": "f-priestn-leftleg1.ccbi"
+            },
+            {
+                "part": "rightleg",
+                "file": "f-priestn-rightleg1.ccbi"
+            }
+        ]
+    },
+    {
+        "classId": 890,
+        "label": "主教上身",
+        "category": 1,
+        "subcategory": 2,
+        "effecta": [
+            {
+                "part": "chest",
+                "file": "f-priestn-chest1.ccbi"
+            },
+            {
+                "part": "righthand",
+                "file": "f-priestn-righthand1.ccbi"
+            },
+            {
+                "part": "lefthand",
+                "file": "f-priestn-lefthand1.ccbi"
+            }
+        ]
+    },
+    {
+        "classId": 891,
+        "label": "主教副手",
+        "category": 1,
+        "subcategory": 1,
+        "effecta": [
+            {
+                "part": "weapon4",
+                "file": "f-priestn-weapon41.ccbi"
+            },
+            {
+                "part": "weapon4-2",
+                "file": "f-priestn-weapon41-2.ccbi"
+            }
+        ]
+    },
+    {
+        "classId": 892,
+        "label": "主教主手",
+        "category": 1,
+        "subcategory": 0,
+        "effecta": [
+            {
+                "part": "mainweapon",
+                "file": "f-priestn-mainweapon1.ccbi"
+            }
+        ],
+        "effectAttack": 59,
+        "soundAttack": "attackzhanshi.mp3"
+    },
+    {
+        "classId": 893,
+        "label": "主教头盔",
+        "category": 1,
+        "subcategory": 13,
+        "effecta": [
+            {
+                "part": "helmet",
+                "file": "f-priestn-helmet1.ccbi"
+            }
+        ]
     }
 ]

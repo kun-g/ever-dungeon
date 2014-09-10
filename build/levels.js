@@ -297,7 +297,7 @@ exports.data = [
                 "skill": [
                     {"id":4, "level": 1,"classLimit":0},
                     {"id":6, "level": 1,"classLimit":1},
-                    {"id":1, "level": 1,"classLimit":2}
+                    {"id":11, "level": 1,"classLimit":2}
                 ]
             },
             {
@@ -580,8 +580,8 @@ exports.data = [
                 },
                 "skill": [
                     {"id":3, "level": 3,"classLimit":0},
-                    {"id":7, "level": 1,"classLimit":1},
-                    {"id":10, "level": 1,"classLimit":2}
+                    {"id":7, "level": 3,"classLimit":1},
+                    {"id":10, "level": 3,"classLimit":2}
                 ]
             },
             {
