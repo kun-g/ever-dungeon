@@ -559,7 +559,7 @@
         });
         postPaymentInfo(this.createHero().level, myReceipt, payment.paymentType);
         this.saveDB();
-        return dbLib.updateReceipt(myReceipt, RECEIPT_STATE_CLAIMED, rec.id, rec.productID, rec.serverID, rec.tunnel, function(err) {
+        return dbLib.updateReceipt(myReceipt, RECEIPT_STATE_CLAIMED, function(err) {
           return cb(err, ret);
         });
       } else {

@@ -197,7 +197,6 @@
         return req.end();
       case LOGIN_ACCOUNT_TYPE_AD:
       case LOGIN_ACCOUNT_TYPE_GAMECENTER:
-      case LOGIN_ACCOUNT_TYPE_Android:
         return callback(null);
       default:
         return callback(Error(RET_Issue33));
