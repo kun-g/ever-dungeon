@@ -327,10 +327,6 @@ exports.data = [
 			{
 				"id": 27,
 				"level": 1
-			},
-			{
-				"id": 28,
-				"level": 1
 			}
 		]
 	},
@@ -708,7 +704,13 @@ exports.data = [
 			"speed": 1
 		},
 		"effectAttack": 8,
-		"collectId": 51001
+		"collectId": 51001,
+        "skill": [
+            {
+                "id": 187,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 19,
@@ -1565,7 +1567,7 @@ exports.data = [
 				"level": 1
 			},
 			{
-				"id": 28,
+				"id": 177,
 				"level": 1
 			}
 		]
@@ -1943,7 +1945,13 @@ exports.data = [
 			"speed": 1
 		},
 		"effectAttack": 8,
-		"collectId": 84001
+		"collectId": 84001,
+        "skill": [
+            {
+                "id": 187,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 51,
@@ -2799,7 +2807,7 @@ exports.data = [
 				"level": 1
 			},
 			{
-				"id": 28,
+				"id": 177,
 				"level": 1
 			}
 		]
@@ -3174,7 +3182,13 @@ exports.data = [
 			"reactivity": 1,
 			"speed": 1
 		},
-		"effectAttack": 9
+		"effectAttack": 9,
+        "skill": [
+            {
+                "id": 187,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 83,
@@ -4405,7 +4419,13 @@ exports.data = [
 			"reactivity": 1,
 			"speed": 1
 		},
-		"effectAttack": 9
+		"effectAttack": 9,
+        "skill": [
+            {
+                "id": 187,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 115,

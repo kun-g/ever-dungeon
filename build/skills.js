@@ -3603,7 +3603,7 @@ exports.data = [
         "config": {
             "triggerCondition": [
                 { "type": "event", "event": "onBeDeathStrike" },
-                { "type": "chance", "chance": 0.1 }
+                { "type": "chance", "chance": 0.05 }
             ],
             "targetSelection":{
                 "pool":"self",
@@ -4976,8 +4976,8 @@ exports.data = [
         "label":"加血减攻II",
         "config": {
             "installAction":[
-                { "type": "setProperty",  "modifications": {"attack":{"c":-30}} },
-                {"type": "heal", "delay":1.3,"formular": { "c":300}}
+                { "type": "setProperty",  "modifications": {"attack":{"src":{"attack":-0.5}}} },
+                { "type": "heal", "delay":1.3,"formular": { "src":{"health":1}} }
             ],
             "targetSelection": {
                 "pool": "self",
@@ -5008,8 +5008,8 @@ exports.data = [
         "label":"减血加攻II",
         "config": {
             "installAction":[
-                { "type": "setProperty",  "modifications": {"attack":{"c":50}} },
-                {"type": "damage", "delay":1.3,"formular": { "c":300}}
+                { "type": "setProperty",  "modifications": {"attack":{"src":{"attack":1}}} },
+                {"type": "damage", "delay":1.3,"formular": {"src":{"health":-0.5}} }
             ],
             "targetSelection": {
                 "pool": "self",
@@ -5026,8 +5026,8 @@ exports.data = [
         "label":"加血加攻II",
         "config": {
             "installAction":[
-                { "type": "setProperty",  "modifications": {"attack":{"c":30}} },
-                {"type": "heal", "delay":1.3,"formular": { "c":300}}
+                { "type": "setProperty",  "modifications": {"attack":{"src":{"attack":0.5}}} },
+                {"type": "heal", "delay":1.3,"formular": {"src":{"health":0.5}} }
             ],
             "targetSelection": {
                 "pool": "self",
