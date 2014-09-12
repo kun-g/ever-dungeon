@@ -37,7 +37,7 @@ function initiateLogger() {
   initiateTrinLogger();
   logger.emit = function (type, log, time) {
     if (logger.tr_agent) {
-      logger.tr_agent.write(JSON.stringify({type: type, log: log, time: time}));
+      logger.tr_agent.write(JSON.stringify({type: type, log: log, time: time.valueOf()}));
     }
     if (logger.td_agent) {
       logger.td_agent.emit(type, log, time);
@@ -259,15 +259,15 @@ function paymentHandler (request, response) {
     if (out.app_id === 'com.tringame.pocketdungeonTDTB'){
       token = '';
     }
-    var sign = out.order_id+'|'+out.app_id+'|'+out.product_name+'|'+out.uid+'|'+out.goods_count
-      +'|'+original_money+'|'+out.order_money+'|'+out.pay_status+'|'+out.create_time+'|'+token;
+    var sign = out.order_id+out.app_id+out.product_name+out.uid+out.goods_count+original_money+out.order_money+
+    out.pay_status+out.create_time+token;
     var b = new Buffer(1024);
     var len = b.write(sign);
     sign = md5Hash(b.toString('binary', 0, len));
     var receipt = out.orderid;
     if ((sign === out.md5) && isRMBMatch(out.order_money, receipt)) {
       if (out.pay_status === 0){
-          deliverReceipt(receipt, 'TBK', function (err) {
+          deliverReceipt(receipt, 'DK', function (err) {
           if (err === null) {
             logInfo({action: 'AcceptPayment', receipt: receipt, info: out});
           } else {
