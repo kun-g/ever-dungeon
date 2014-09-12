@@ -1,4 +1,3 @@
-libTrigger = {};
 (function() {
   var TriggerManager, bindVariable, branch, calculate, conditionCheck, doAction, doGetProperty, doLoop, filterObject, getTypeof, getVar, parse;
 
@@ -207,7 +206,7 @@ libTrigger = {};
     return result;
   };
 
-  libTrigger.filterObject = filterObject;
+  exports.filterObject = filterObject;
 
   doGetProperty = function(obj, key) {
     var k, properties, _i, _len;
@@ -223,7 +222,7 @@ libTrigger = {};
     return obj;
   };
 
-  libTrigger.doGetProperty = doGetProperty;
+  exports.doGetProperty = doGetProperty;
 
   conditionCheck = function(conditionFormular, variables, cmd) {
     var c, k;
@@ -265,7 +264,7 @@ libTrigger = {};
     }
   };
 
-  libTrigger.conditionCheck = conditionCheck;
+  exports.conditionCheck = conditionCheck;
 
   parse = function(expr, variable, cmd) {
     if (Array.isArray(expr)) {
@@ -571,10 +570,10 @@ libTrigger = {};
 
   })();
 
-  libTrigger.parse = parse;
+  exports.parse = parse;
 
-  libTrigger.TriggerManager = TriggerManager;
+  exports.TriggerManager = TriggerManager;
 
-  libTrigger.fileVersion = -1;
+  exports.fileVersion = -1;
 
 }).call(this);

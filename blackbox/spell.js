@@ -1,10 +1,9 @@
-libSpell = {};
 (function() {
   var Wizard, calcFormular, getLevelConfig, getProperty, getSpellConfig, plusThemAll, triggerLib;
 
-  
+  requires('./define');
 
-  triggerLib = libTrigger;
+  triggerLib = requires('./trigger');
 
   getSpellConfig = function(spellID) {
     var cfg;
@@ -1263,8 +1262,8 @@ libSpell = {};
 
   })();
 
-  libSpell.Wizard = Wizard;
+  exports.Wizard = Wizard;
 
-  libSpell.fileVersion = -1;
+  exports.fileVersion = -1;
 
 }).call(this);

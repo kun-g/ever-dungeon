@@ -1,29 +1,28 @@
-libDungeon = {};
 (function() {
   var Bag, Block, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Level, TriggerManager, Wizard, calcInfiniteRank, calcInfiniteX, changeSeed, compete, createUnit, createUnits, criticalFormula, dungeonCSConfig, flagShowRand, genUnitInfo, hitFormula, mapDiff, onEvent, parse, privateRand, seed_random, speedFormula, _ref, _ref1, _ref2, _ref3, _ref4,
     __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; },
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-  
+  requires('./define');
 
-  
+  requires('./shared');
 
-  Wizard = libSpell.Wizard;
+  Wizard = requires('./spell').Wizard;
 
-  
+  DBWrapper = requires('./serializer').Serializer;
 
-  _ref = libUnit, createUnit = _ref.createUnit, Hero = _ref.Hero;
+  _ref = requires('./unit'), createUnit = _ref.createUnit, Hero = _ref.Hero;
 
-  _ref1 = libItem, Item = _ref1.Item, Card = _ref1.Card;
+  _ref1 = requires('./item'), Item = _ref1.Item, Card = _ref1.Card;
 
-  _ref2 = libCommandStream, CommandStream = _ref2.CommandStream, Environment = _ref2.Environment;
+  _ref2 = requires('./commandStream'), CommandStream = _ref2.CommandStream, Environment = _ref2.Environment;
 
-  _ref3 = libContainer, Bag = _ref3.Bag, CardStack = _ref3.CardStack;
+  _ref3 = requires('./container'), Bag = _ref3.Bag, CardStack = _ref3.CardStack;
 
-  _ref4 = libTrigger, parse = _ref4.parse, TriggerManager = _ref4.TriggerManager;
+  _ref4 = requires('./trigger'), parse = _ref4.parse, TriggerManager = _ref4.TriggerManager;
 
-  seed_random = libSeed_random;
+  seed_random = requires('./seed-random');
 
   speedFormula = {
     'a': 1,
@@ -326,7 +325,7 @@ libDungeon = {};
     return result;
   };
 
-  libDungeon.createUnits = createUnits;
+  exports.createUnits = createUnits;
 
   Dungeon = (function() {
     function Dungeon(data) {
@@ -981,7 +980,7 @@ libDungeon = {};
 
   })();
 
-  libDungeon.Dungeon = Dungeon;
+  exports.Dungeon = Dungeon;
 
   Block = (function(_super) {
     __extends(Block, _super);
@@ -1217,7 +1216,7 @@ libDungeon = {};
     };
 
     Level.prototype.createObject = function(arg) {
-      var cfg, k, o, skill, v, _i, _j, _len, _len1, _ref5, _ref6, _ref7, _ref8;
+      var cfg, k, o, skill, v, _i, _len, _ref5, _ref6;
       cfg = {};
       for (k in arg) {
         v = arg[k];
@@ -1233,18 +1232,11 @@ libDungeon = {};
           o.installSpell(skill.id, skill.lv);
         }
       }
-      if (((_ref6 = arg.property) != null ? _ref6.skill : void 0) != null) {
-        _ref7 = arg.property.skill;
-        for (_j = 0, _len1 = _ref7.length; _j < _len1; _j++) {
-          skill = _ref7[_j];
-          o.installSpell(skill.id, skill.lv);
-        }
-      }
       o.installSpell(DUNGEON_DROP_CARD_SPELL, 1);
       if (arg.property != null) {
-        _ref8 = arg.property;
-        for (k in _ref8) {
-          v = _ref8[k];
+        _ref6 = arg.property;
+        for (k in _ref6) {
+          v = _ref6[k];
           o[k] = v;
         }
       }
@@ -2160,7 +2152,7 @@ libDungeon = {};
     },
     OpenBlock: {
       callback: function(env) {
-        var aliveHeroes, block, blockType, hero, npc, who, _i, _j, _len, _len1, _ref5, _results;
+        var block, npc, _i, _len, _ref5, _results;
         if (env.getBlock(env.variable('block')) == null) {
           return this.suicide();
         }
@@ -2170,15 +2162,8 @@ libDungeon = {};
           block: env.variable('block')
         });
         block = env.getBlock(env.variable('block'));
-        aliveHeroes = env.getAliveHeroes().filter(function(h) {
-          return h != null;
-        }).sort(function(a, b) {
-          return a.order - b.order;
-        });
-        blockType = block.getType();
         if (block.getType() === Block_Npc || block.getType() === Block_Enemy) {
           if (block.getRef(-1) !== null) {
-            who = blockType === Block_Npc ? 'Npc' : 'Monster';
             _ref5 = block.getRef(-1);
             _results = [];
             for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
@@ -2190,11 +2175,7 @@ libDungeon = {};
               env.variable('monster', npc);
               env.variable('tar', npc);
               npc.onEvent('onShow', this);
-              for (_j = 0, _len1 = aliveHeroes.length; _j < _len1; _j++) {
-                hero = aliveHeroes[_j];
-                onEvent(who + 'Show', this, hero, npc);
-              }
-              env.onEvent('on' + who + 'Show', this);
+              env.onEvent('onMonsterShow', this);
               if ((npc != null ? npc.isVisible : void 0) !== true) {
                 _results.push(npc.isVisible = true);
               } else {
@@ -3357,10 +3338,10 @@ libDungeon = {};
     return env.onEvent(evt, cmd);
   };
 
-  libDungeon.DungeonEnvironment = DungeonEnvironment;
+  exports.DungeonEnvironment = DungeonEnvironment;
 
-  libDungeon.DungeonCommandStream = DungeonCommandStream;
+  exports.DungeonCommandStream = DungeonCommandStream;
 
-  libDungeon.fileVersion = -1;
+  exports.fileVersion = -1;
 
 }).call(this);
