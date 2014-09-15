@@ -281,6 +281,31 @@ function paymentHandler (request, response) {
       response.end('{"success": 0, "msg": "ERROR_MD5"}');
     }
     b = null;
+  } else if (request.url.substr(0, 5) === '/mo9?') {
+    out = urlLib.parse(request.url, true).query;
+
+    var sign = out.amount+out.app_id+out.currency+out.invoice+out.item_name+out.lc+out.notify_url+out.pay_to_email+
+    out.payer_id+out.req_amount+out.req_currency+out.trade_no+out.trade_status+out.version;
+    var b = new Buffer(1024);
+    var len = b.write(sign);
+    sign = md5Hash(b.toString('binary', 0, len));
+    var receipt = out.invoice;
+    if ((sign === out.md5) && isRMBMatch(out.amount, receipt)) {
+      if (out.trade_status === "TRADE_SUCCESS"){
+          deliverReceipt(receipt, 'mo', function (err) {
+          if (err === null) {
+            logInfo({action: 'AcceptPayment', receipt: receipt, info: out});
+          } else {
+            logError({action: 'AcceptPayment', error:err, info: out, receiptInfo: receiptInfo});
+          }
+        });
+      }
+      return response.end('{"OK"}');
+    } else {
+      logError({action: 'AcceptPayment', error: 'SignMissmatch', info: out, sign: sign});
+      response.end('{"ILLEGAL SIGN"}');
+    }
+    b = null;
   } else if (request.url.substr(0, 5) === '/jdp?') {
   }
 } 
