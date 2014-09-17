@@ -802,24 +802,23 @@
     Player.prototype.modifyCounters = function(propertyName, arg) {
       this.counters[propertyName] = typeof arg.value === "function" ? arg.value(0) : void 0;
       if (arg.notify != null) {
-        this.notify(arg.notify.name, arg.notify.arg);
+        return this.notify(arg.notify.name, arg.notify.arg);
       }
-      return {
-        stageIsUnlockable: function(stage) {
-          var stageConfig;
-          if (getPowerLimit(stage) > this.createHero().calculatePower()) {
-            return false;
-          }
-          stageConfig = queryTable(TABLE_STAGE, stage, this.abIndex);
-          if (stageConfig.condition) {
-            return stageConfig.condition(this, genUtil());
-          }
-          if (stageConfig.event) {
-            return (this[stageConfig.event] != null) && this[stageConfig.event].status === 'Ready';
-          }
-          return this.stage[stage] && this.stage[stage].state !== STAGE_STATE_INACTIVE;
-        }
-      };
+    };
+
+    Player.prototype.stageIsUnlockable = function(stage) {
+      var stageConfig;
+      if (getPowerLimit(stage) > this.createHero().calculatePower()) {
+        return false;
+      }
+      stageConfig = queryTable(TABLE_STAGE, stage, this.abIndex);
+      if (stageConfig.condition) {
+        return stageConfig.condition(this, genUtil());
+      }
+      if (stageConfig.event) {
+        return (this[stageConfig.event] != null) && this[stageConfig.event].status === 'Ready';
+      }
+      return this.stage[stage] && this.stage[stage].state !== STAGE_STATE_INACTIVE;
     };
 
     Player.prototype.changeStage = function(stage, state) {
