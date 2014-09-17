@@ -1052,31 +1052,33 @@
           if (err !== 'OK') {
             ret = err;
             err = new Error(err);
-          } else if (_this.dungeon != null) {
-            if (stageConfig.initialAction) {
-              stageConfig.initialAction(_this, genUtil);
-            }
-            if (stageConfig.eventName) {
-              msg = _this.syncEvent();
-            }
-            _this.loadDungeon();
-            _this.log('startDungeon', {
-              dungeonData: _this.dungeonData,
-              err: err
-            });
-            ret = startInfoOnly ? _this.dungeon.getInitialData() : _this.dungeonAction({
-              CMD: RPC_GameStartDungeon
-            });
           } else {
-            _this.logError('startDungeon', {
-              reason: 'NoDungeon',
-              err: err,
-              data: _this.dungeonData,
-              dungeon: _this.dungeon
-            });
-            _this.releaseDungeon();
-            err = new Error(RET_Unknown);
-            ret = RET_Unknown;
+            _this.loadDungeon();
+            if (_this.dungeon != null) {
+              if (stageConfig.initialAction) {
+                stageConfig.initialAction(_this, genUtil);
+              }
+              if (stageConfig.eventName) {
+                msg = _this.syncEvent();
+              }
+              _this.log('startDungeon', {
+                dungeonData: _this.dungeonData,
+                err: err
+              });
+              ret = startInfoOnly ? _this.dungeon.getInitialData() : _this.dungeonAction({
+                CMD: RPC_GameStartDungeon
+              });
+            } else {
+              _this.logError('startDungeon', {
+                reason: 'NoDungeon',
+                err: err,
+                data: _this.dungeonData,
+                dungeon: _this.dungeon
+              });
+              _this.releaseDungeon();
+              err = new Error(RET_Unknown);
+              ret = RET_Unknown;
+            }
           }
           if (handler != null) {
             return handler(err, ret, msg);
