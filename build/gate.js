@@ -74,9 +74,11 @@
         }
         releaseSocket = function() {
           if (nc) {
+            console.log('--------nc---destroy');
             nc.destroy();
             nc = null;
           }
+          console.log('--------socket---destroy');
           return socket.destroy();
         };
         if (nc) {
