@@ -4288,14 +4288,14 @@ exports.data = [
                 "targetEffect": 22
             },
             "triggerCondition": [
-                {"type" :"event", "event": "onBeDeathStrike"}
+                {"type" :"event", "event": "onBeKill"}
             ],
             "targetSelection": {
-                "pool": "self"
+                "pool": "target"
             },
             "action":[
                 { "type": "modifyVar", "x": "damage", "formular": {"environment": {"damage":0}} },
-                {"type": "resurrect"}
+                { "type": "resurrect"}
             ],
             "availableCondition": [
                 { "type": "effectCount","count":1 }
