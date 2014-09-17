@@ -3585,7 +3585,7 @@ exports.data = [
         "label": "boss掉落",
         "config": {
             "triggerCondition": [
-                { "type": "event", "event": "onBeDeathStrike" }
+                { "type": "event", "event": "onBeKill" }
             ],
             "targetSelection":{
                 "pool":"self",
@@ -3594,7 +3594,7 @@ exports.data = [
             "action": [
                 {"type":"delay"},
                 {"type": "dropPrize", "showPrize":true, "effect":49,"pos":"self"},
-                {"type":"kill"}]
+            ]
         }
     },
     {
@@ -3602,7 +3602,7 @@ exports.data = [
         "label": "小兵掉落",
         "config": {
             "triggerCondition": [
-                { "type": "event", "event": "onBeDeathStrike" },
+                { "type": "event", "event": "onBeKill" },
                 { "type": "chance", "chance": 0.05 }
             ],
             "targetSelection":{
@@ -3611,8 +3611,8 @@ exports.data = [
             },
             "action": [
                 {"type":"delay"},
-                {"type": "dropPrize", "showPrize":true, "effect":49, "pos":"self"},
-                {"type":"kill"}]
+                {"type": "dropPrize", "showPrize":true, "effect":49, "pos":"self"}
+            ]
         }
     },
     {
