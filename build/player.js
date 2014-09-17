@@ -808,8 +808,9 @@
         stageIsUnlockable: function(stage) {
           var stageConfig;
           if (getPowerLimit(stage) > this.createHero().calculatePower()) {
-            stageConfig = queryTable(TABLE_STAGE, stage, this.abIndex);
+            return false;
           }
+          stageConfig = queryTable(TABLE_STAGE, stage, this.abIndex);
           if (stageConfig.condition) {
             return stageConfig.condition(this, genUtil());
           }
