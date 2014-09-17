@@ -244,12 +244,12 @@ function initVipConfig (cfg){
 var powerLimitInfo = {};
 function initPowerLimit(cfg) {
 	cfg.forEach(function (bounty) {
-		bounty.level(function (level) {
+		bounty.level.forEach(function (level) {
 			var powerLimit = 0;
 			if (typeof level.powerLimit == 'number') {
 				powerLimit = level.powerLimit;
 			}
-			gpowerLimitInfo[level.stage] = powerLimit;
+			powerLimitInfo[level.stage] = powerLimit;
 		})
 	})
 	return cfg;
