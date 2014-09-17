@@ -8,8 +8,11 @@
   };
 
   Serializer = (function() {
-    function Serializer(data, cfg) {
+    function Serializer(data, cfg, versionCfg) {
       var flags, k, v;
+      if (versionCfg == null) {
+        versionCfg = {};
+      }
       this.s_attr_to_save = [];
       this.s_attr_dirtyFlag = {};
       this.s_attr_monitor = generateMonitor(this);
@@ -35,6 +38,10 @@
         this[k] = v;
         flags[k] = true;
       }
+      for (k in versionCfg) {
+        v = versionCfg[k];
+        this.versionControl(k, v);
+      }
       for (k in cfg) {
         v = cfg[k];
         this.attrSave(k, flags[k]);
@@ -53,6 +60,18 @@
         return false;
       }
       return this.s_attr_to_save.push(key);
+    };
+
+    Serializer.prototype.versionControl = function(versionKey, keys) {
+      var versionIncr;
+      if (!Array.isArray(keys)) {
+        keys = [keys];
+      }
+      return versionIncr = (function(_this) {
+        return function() {
+          return _this[versionKey]++;
+        };
+      })(this);
     };
 
     Serializer.prototype.getConstructor = function() {

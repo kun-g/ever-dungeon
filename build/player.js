@@ -33,7 +33,7 @@
     __extends(Player, _super);
 
     function Player(data) {
-      var cfg, now;
+      var cfg, now, versionCfg;
       this.type = 'player';
       now = new Date();
       cfg = {
@@ -81,9 +81,17 @@
         heroVersion: 1,
         stageVersion: 1,
         questVersion: 1,
-        abIndex: rand()
+        abIndex: rand(),
+        energyVersion: 1
       };
-      Player.__super__.constructor.call(this, data, cfg);
+      versionCfg = {
+        inventoryVersion: ['gold', 'diamond', 'inventory', 'equipment'],
+        heroVersion: ['heroIndex', 'hero', 'heroBase'],
+        stageVersion: 'stage',
+        questVersion: 'quests',
+        energyVersion: ['energy', 'energyTime']
+      };
+      Player.__super__.constructor.call(this, data, cfg, versionCfg);
     }
 
     Player.prototype.setName = function(name) {
@@ -729,13 +737,12 @@
         return this[type];
       }
       if (point + this[type] < 0) {
-        return this[type];
+        return false;
       }
       this[type] = Math.floor(this[type] + point);
       if (type === 'diamond') {
         this.costedDiamond += point;
       }
-      this.inventoryVersion += 1;
       return this[type];
     };
 
@@ -3170,7 +3177,6 @@
             delete this.player.equipment[k];
           }
         }
-        this.inventoryVersion += 1;
       }
       return result;
     };
@@ -3254,7 +3260,7 @@
     },
     AquireItem: {
       callback: function(env) {
-        var count, e, item, ret, _i, _len, _ref7;
+        var count, e, item, ret, _i, _len, _ref7, _results;
         count = (_ref7 = env.variable('count')) != null ? _ref7 : 1;
         item = createItem(env.variable('item'));
         if (item == null) {
@@ -3271,16 +3277,17 @@
           version: env.player.inventoryVersion
         });
         if (ret) {
+          _results = [];
           for (_i = 0, _len = ret.length; _i < _len; _i++) {
             e = ret[_i];
             if (env.player.getItemAt(e.slot).autoUse) {
-              this.next({
+              _results.push(this.next({
                 id: 'UseItem',
                 slot: e.slot
-              });
+              }));
             }
           }
-          return this.inventoryVersion += 1;
+          return _results;
         }
       }
     },
