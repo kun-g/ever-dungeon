@@ -255,7 +255,7 @@ function initPowerLimit(cfg) {
 	return cfg;
 }
 
-function getPowerLimit(stageId){
+getPowerLimit = function(stageId){
 	var powerLimit = powerLimitInfo[stageId];
 	if (powerLimit == null) {
 		return 0;
