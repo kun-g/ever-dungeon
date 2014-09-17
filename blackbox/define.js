@@ -241,7 +241,7 @@ function initVipConfig (cfg){
   return ret;
 }
 
-var = powerLimitInfo = {};
+var powerLimitInfo = {};
 function initPowerLimit(cfg) {
 	cfg.forEach(function (bounty) {
 		bounty.level(function (level) {
@@ -250,8 +250,9 @@ function initPowerLimit(cfg) {
 				powerLimit = level.powerLimit;
 			}
 			gpowerLimitInfo[level.stage] = powerLimit;
+		})
 	})
-	return cfg
+	return cfg;
 }
 
 function getPowerLimit(stageId){
