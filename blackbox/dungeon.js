@@ -2113,7 +2113,7 @@
       }
     },
     SpellState: {
-      callBack: function(env) {
+      callback: function(env) {
         var state;
         state = env.variable('wizard').calcBuffState();
         return env.variable('state', state);

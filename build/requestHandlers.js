@@ -650,23 +650,6 @@
       },
       needPid: true
     },
-    RPC_ChargeDiamond: {
-      id: 15,
-      func: function(arg, player, handle, rpcID, socket) {
-        switch (arg.stp) {
-          case 'AppStore':
-            throw Error('AppStore Payment');
-            break;
-          case 'PP25':
-            throw Error('PP25 Payment');
-        }
-      },
-      args: {
-        'pid': 'string',
-        'rep': 'string'
-      },
-      needPid: true
-    },
     RPC_VerifyPayment: {
       id: 15,
       func: function(arg, player, handler, rpcID, socket) {
