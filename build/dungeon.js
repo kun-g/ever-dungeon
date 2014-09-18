@@ -2113,6 +2113,11 @@
       }
     },
     SpellState: {
+      callBack: function(env) {
+        var state;
+        state = env.variable('wizard').calcBuffState();
+        return env.variable('state', state);
+      },
       output: function(env) {
         var actor, bid, effect, ev, ret;
         ret = genUnitInfo(env.variable('wizard'), false, env.variable('state'));
