@@ -107,6 +107,7 @@
         if (flagCreation) {
           console.log('xProperty ', JSON.stringify(xproperty));
         }
+        this.originAttack = this.attack;
       }
       if (roleConfig.skill != null) {
         _ref1 = roleConfig.skill;
@@ -302,7 +303,8 @@
       this.hairStyle = heroData.hst;
       this.hairColor = heroData.hcl;
       this.ref = heroData.ref;
-      return this.id = cid;
+      this.id = cid;
+      return this.originAttack = this.attack;
     };
 
     return Mirror;
