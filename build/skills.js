@@ -4259,19 +4259,24 @@ exports.data = [
     },
     {
         "skillId": 186,
+        "label": "202-魔力漩涡",
         "config": {
-            "basic" : {
-                "buffEffect": 36
-            },
-            "targetSelection":{
-                "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"},{"type":"not-me"}]
-            },
-            "availableCondition": [
-                { "type": "effectCount", "count":1}
+            "triggerCondition": [
+                { "type": "event", "event": "onKill" },
+                { "type": "event", "event": "onTeammateKill" },
+                { "type": "alive" }
             ],
-            "action":[
-                { "type": "damage","formular": {"c": 120}}
+            "targetSelection": {
+                "pool": "self",
+                "filter": [{"type":"alive"},{"type":"visible"}]
+            },
+            "action": [
+                { "type": "installSpell", "spell": 203 }
+            ],
+            "levelConfig" : [
+                {"level": 1},
+                {"level": 2},
+                {"level": 3}
             ]
         }
     },
@@ -4670,15 +4675,22 @@ exports.data = [
         "desc":"场上敌人越多,魔导师的攻击力也随之增强。",
         "slotId": 1,
         "config": {
+            "triggerCondition": [
+                { "type": "event", "event": "onMonsterShow" },
+                { "type": "alive" }
+            ],
             "targetSelection": {
                 "pool": "self",
                 "filter": [{"type":"alive"},{"type":"visible"}]
             },
             "installAction": [
-                { "type": "removeSpell", "spell": 203},
-                { "type": "installSpell", "spell": 203},
-                { "type": "removeSpell", "spell": 271},
-                { "type": "installSpell", "spell": 271}
+                { "type": "removeSpell", "spell": 186},
+                { "type": "installSpell", "spell": 186}
+            ],
+            "action": [
+                { "type": "delay"},
+                { "type": "playEffect","effect":69,"act":"target" },
+                { "type": "installSpell", "spell": 203 }
             ],
             "levelConfig" : [
                 {"level": 1},
@@ -4690,12 +4702,7 @@ exports.data = [
     {
         "skillId": 203,
         "config": {
-            "triggerCondition": [
-                { "type": "event", "event": "onMonsterShow" },
-                { "type": "alive" }
-            ],
-            "action":[
-                { "type": "playEffect","effect":69,"act":"target" },
+            "installAction":[
                 { "type": "setProperty" }
             ],
             "targetSelection":{ "pool":"Self" },
@@ -6171,14 +6178,8 @@ exports.data = [
     },
     {
         "skillId": 271,
-        "label":"202-魔力漩涡",
         "config": {
-            "triggerCondition": [
-                { "type": "event", "event": "onKill" },
-                { "type": "event", "event": "onTeammateKill" },
-                { "type": "alive" }
-            ],
-            "action":[
+            "installAction":[
                 { "type": "setProperty" }
             ],
             "targetSelection":{ "pool":"Self" },

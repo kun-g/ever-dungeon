@@ -107,7 +107,6 @@
         if (flagCreation) {
           console.log('xProperty ', JSON.stringify(xproperty));
         }
-        this.originAttack = this.attack;
       }
       if (roleConfig.skill != null) {
         _ref1 = roleConfig.skill;
@@ -238,6 +237,7 @@
         this.attack = 1;
       }
       this.maxHP = this.health;
+      this.originAttack = this.attack;
       if (flagCreation) {
         return console.log('Hero ', JSON.stringify(this));
       }
