@@ -3,6 +3,8 @@
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
+  require('./define');
+
   require('./shop');
 
   moment = require('moment');
@@ -808,6 +810,9 @@
 
     Player.prototype.stageIsUnlockable = function(stage) {
       var stageConfig;
+      if (getPowerLimit(stage) > this.createHero().calculatePower()) {
+        return false;
+      }
       stageConfig = queryTable(TABLE_STAGE, stage, this.abIndex);
       if (stageConfig.condition) {
         return stageConfig.condition(this, genUtil());
@@ -1044,34 +1049,36 @@
         return function(err) {
           var msg, ret;
           msg = [];
-          if (stageConfig.initialAction) {
-            stageConfig.initialAction(_this, genUtil);
-          }
-          if (stageConfig.eventName) {
-            msg = _this.syncEvent();
-          }
-          _this.loadDungeon();
-          _this.log('startDungeon', {
-            dungeonData: _this.dungeonData,
-            err: err
-          });
           if (err !== 'OK') {
             ret = err;
             err = new Error(err);
-          } else if (_this.dungeon != null) {
-            ret = startInfoOnly ? _this.dungeon.getInitialData() : _this.dungeonAction({
-              CMD: RPC_GameStartDungeon
-            });
           } else {
-            _this.logError('startDungeon', {
-              reason: 'NoDungeon',
-              err: err,
-              data: _this.dungeonData,
-              dungeon: _this.dungeon
-            });
-            _this.releaseDungeon();
-            err = new Error(RET_Unknown);
-            ret = RET_Unknown;
+            _this.loadDungeon();
+            if (_this.dungeon != null) {
+              if (stageConfig.initialAction) {
+                stageConfig.initialAction(_this, genUtil);
+              }
+              if (stageConfig.eventName) {
+                msg = _this.syncEvent();
+              }
+              _this.log('startDungeon', {
+                dungeonData: _this.dungeonData,
+                err: err
+              });
+              ret = startInfoOnly ? _this.dungeon.getInitialData() : _this.dungeonAction({
+                CMD: RPC_GameStartDungeon
+              });
+            } else {
+              _this.logError('startDungeon', {
+                reason: 'NoDungeon',
+                err: err,
+                data: _this.dungeonData,
+                dungeon: _this.dungeon
+              });
+              _this.releaseDungeon();
+              err = new Error(RET_Unknown);
+              ret = RET_Unknown;
+            }
           }
           if (handler != null) {
             return handler(err, ret, msg);

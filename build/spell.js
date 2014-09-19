@@ -180,7 +180,6 @@
       return typeof cmd.routine === "function" ? cmd.routine({
         id: 'SpellState',
         wizard: this,
-        state: this.calcBuffState(),
         effect: this.calcEffectState(spellID)
       }) : void 0;
     };

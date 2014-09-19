@@ -171,7 +171,7 @@ exports.data = [
 		"effectAttack": 9,
 		"skill": [
 			{
-				"id": 29,
+				"id": 164,
 				"level": 1
 			}
 		]
@@ -326,10 +326,6 @@ exports.data = [
 			},
 			{
 				"id": 27,
-				"level": 1
-			},
-			{
-				"id": 28,
 				"level": 1
 			}
 		]
@@ -708,7 +704,13 @@ exports.data = [
 			"speed": 1
 		},
 		"effectAttack": 8,
-		"collectId": 51001
+		"collectId": 51001,
+        "skill": [
+            {
+                "id": 187,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 19,
@@ -1133,7 +1135,10 @@ exports.data = [
 		"soundDie": "liulangdie.mp3",
 		"effectAttack": 8,
 		"skill": [
-
+            {
+                "id": 109,
+                "level": 1
+            }
 		],
 		"scale": 1.2
 	},
@@ -1406,7 +1411,7 @@ exports.data = [
 		"effectAttack": 9,
 		"skill": [
 			{
-				"id": 29,
+				"id": 164,
 				"level": 1
 			}
 		],
@@ -1519,7 +1524,13 @@ exports.data = [
 		"soundWound": "gebulinwound.mp3",
 		"soundAttack": "gebulinattack.mp3",
 		"soundDie": "gebulindie.mp3",
-		"effectAttack": 9
+		"effectAttack": 9,
+        "skill": [
+            {
+                "id": 173,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 40,
@@ -1565,7 +1576,7 @@ exports.data = [
 				"level": 1
 			},
 			{
-				"id": 28,
+				"id": 177,
 				"level": 1
 			}
 		]
@@ -1713,9 +1724,10 @@ exports.data = [
 		"soundDie": "liulangdie.mp3",
 		"effectAttack": 8,
 		"skill": [
-			{
-
-			}
+            {
+                "id": 180,
+                "level": 1
+            }
 		]
 	},
 	{
@@ -1943,7 +1955,13 @@ exports.data = [
 			"speed": 1
 		},
 		"effectAttack": 8,
-		"collectId": 84001
+		"collectId": 84001,
+        "skill": [
+            {
+                "id": 187,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 51,
@@ -2368,7 +2386,10 @@ exports.data = [
 		"soundDie": "liulangdie.mp3",
 		"effectAttack": 8,
 		"skill": [
-
+            {
+                "id": 66,
+                "level": 1
+            }
 		],
 		"scale": 1.2
 	},
@@ -2641,7 +2662,7 @@ exports.data = [
 		"effectAttack": 9,
 		"skill": [
 			{
-				"id": 29,
+				"id": 165,
 				"level": 1
 			}
 		],
@@ -2754,7 +2775,13 @@ exports.data = [
 		"soundAttack": "gebulinattack.mp3",
 		"soundDie": "gebulindie.mp3",
 		"effectAttack": 9,
-		"collectId": 78001
+		"collectId": 78001,
+        "skill": [
+            {
+                "id": 174,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 72,
@@ -2799,7 +2826,7 @@ exports.data = [
 				"level": 1
 			},
 			{
-				"id": 28,
+				"id": 177,
 				"level": 1
 			}
 		]
@@ -2947,7 +2974,10 @@ exports.data = [
 		"soundDie": "liulangdie.mp3",
 		"effectAttack": 8,
 		"skill": [
-
+            {
+                "id": 180,
+                "level": 1
+            }
 		]
 	},
 	{
@@ -3174,7 +3204,13 @@ exports.data = [
 			"reactivity": 1,
 			"speed": 1
 		},
-		"effectAttack": 9
+		"effectAttack": 9,
+        "skill": [
+            {
+                "id": 187,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 83,
@@ -3287,8 +3323,8 @@ exports.data = [
 		"effectAttack": 9,
 		"skill": [
 			{
-				"id": 29,
-				"level": 1
+				"id": 165,
+				"level": 2
 			}
 		],
 		"scale": 1.2
@@ -3599,7 +3635,10 @@ exports.data = [
 		"soundDie": "liulangdie.mp3",
 		"effectAttack": 8,
 		"skill": [
-
+            {
+                "id": 183,
+                "level": 1
+            }
 		],
 		"scale": 1.2
 	},
@@ -3872,7 +3911,7 @@ exports.data = [
 		"effectAttack": 9,
 		"skill": [
 			{
-				"id": 29,
+				"id": 165,
 				"level": 1
 			}
 		]
@@ -3984,7 +4023,13 @@ exports.data = [
 		"soundWound": "gebulinwound.mp3",
 		"soundAttack": "gebulinattack.mp3",
 		"soundDie": "gebulindie.mp3",
-		"effectAttack": 9
+		"effectAttack": 9,
+        "skill": [
+            {
+                "id": 175,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 104,
@@ -4178,7 +4223,10 @@ exports.data = [
 		"soundDie": "liulangdie.mp3",
 		"effectAttack": 8,
 		"skill": [
-
+            {
+                "id": 180,
+                "level": 1
+            }
 		]
 	},
 	{
@@ -4405,7 +4453,13 @@ exports.data = [
 			"reactivity": 1,
 			"speed": 1
 		},
-		"effectAttack": 9
+		"effectAttack": 9,
+        "skill": [
+            {
+                "id": 187,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 115,
@@ -4518,8 +4572,8 @@ exports.data = [
 		"effectAttack": 9,
 		"skill": [
 			{
-				"id": 29,
-				"level": 1
+				"id": 165,
+				"level": 2
 			}
 		],
 		"scale": 1.2
@@ -4830,7 +4884,10 @@ exports.data = [
 		"soundDie": "liulangdie.mp3",
 		"effectAttack": 8,
 		"skill": [
-
+            {
+                "id": 185,
+                "level": 1
+            }
 		],
 		"scale": 1.2
 	},
@@ -7308,7 +7365,7 @@ exports.data = [
         "effectAttack": 9,
         "skill": [
             {
-                "id": 29,
+                "id": 165,
                 "level": 1
             }
         ],

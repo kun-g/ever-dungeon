@@ -1,4 +1,4 @@
-##!/bin/bash
+#!/bin/bash
 SED=${SED:-sed}
 
 OnlyCompile=0
@@ -71,17 +71,23 @@ for itm in ${SOURCES[*]}
 do
   cp -f build/${itm} ${DST_BOX}${itm}
 
-  f=$DST_BOX$itm
-  LibName=`echo "$itm" | $SED -e 's/\(\w\+\).js/lib\u\1/'`
+##  f=$DST_BOX$itm
+##  LibName=`echo "$itm" | $SED -e 's/\(\w\+\).js/lib\u\1/'`
+##
+##  $SED -i '1s/^/'$LibName' = {};\n/' $f 
+##  $SED -i 's/exports/'$LibName'/' $f 
+##  $SED -i "s/DBWrapper = require('\.\/dbWrapper').DBWrapper;//" $f
+##  $SED -i "s/require('\.\/shared');//g" $f
+##  $SED -i "s/async = require('async');//g" $f
+##  $SED -i "s/require('\.\/define');//g" $f
+##  $SED -i "s/require('\.\/\(.*\)')/lib\u\1/g" $f
+##  $SED -i "s/require('\(.*\)')/lib\u\1/g" $f
 
-  $SED -i '1s/^/'$LibName' = {};\n/' $f 
-  $SED -i 's/exports/'$LibName'/' $f 
-  $SED -i "s/DBWrapper = require('\.\/dbWrapper').DBWrapper;//" $f
-  $SED -i "s/require('\.\/shared');//g" $f
-  $SED -i "s/async = require('async');//g" $f
-  $SED -i "s/require('\.\/define');//g" $f
-  $SED -i "s/require('\.\/\(.*\)')/lib\u\1/g" $f
-  $SED -i "s/require('\(.*\)')/lib\u\1/g" $f
+	sed -i "s/require(/requires(/g" ${DST_BOX}${itm}
+	sed -i "s/var\ dbLib/\/\/var\ dbLib/g" ${DST_BOX}${itm}
+	sed -i "s/dbWrapper'/serializer'/g" ${DST_BOX}${itm}
+	sed -i "s/\.DBWrapper/\.Serializer/g" ${DST_BOX}${itm}
+
 done
 
 #cd $DST_BOX
@@ -140,6 +146,8 @@ cp data/table/*.js build/
 cp data/stable/*.js build/
 
 
+echo 'get VersionInfo by redis-cli from 10.4.3.41, if this step cost so much time, may be
+your vpn is stop'
 CurrentVersion=`redis-cli -h 10.4.3.41 --raw get $VersionKey`
 echo 'Current version: '$CurrentVersion
 $SED -ig 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile

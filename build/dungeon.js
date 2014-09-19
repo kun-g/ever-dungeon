@@ -1216,7 +1216,7 @@
     };
 
     Level.prototype.createObject = function(arg) {
-      var cfg, k, o, skill, v, _i, _len, _ref5, _ref6;
+      var cfg, k, o, skill, v, _i, _j, _len, _len1, _ref5, _ref6, _ref7, _ref8;
       cfg = {};
       for (k in arg) {
         v = arg[k];
@@ -1232,11 +1232,18 @@
           o.installSpell(skill.id, skill.lv);
         }
       }
+      if (((_ref6 = arg.property) != null ? _ref6.skill : void 0) != null) {
+        _ref7 = arg.property.skill;
+        for (_j = 0, _len1 = _ref7.length; _j < _len1; _j++) {
+          skill = _ref7[_j];
+          o.installSpell(skill.id, skill.lv);
+        }
+      }
       o.installSpell(DUNGEON_DROP_CARD_SPELL, 1);
       if (arg.property != null) {
-        _ref6 = arg.property;
-        for (k in _ref6) {
-          v = _ref6[k];
+        _ref8 = arg.property;
+        for (k in _ref8) {
+          v = _ref8[k];
           o[k] = v;
         }
       }
@@ -2106,6 +2113,11 @@
       }
     },
     SpellState: {
+      callback: function(env) {
+        var state;
+        state = env.variable('wizard').calcBuffState();
+        return env.variable('state', state);
+      },
       output: function(env) {
         var actor, bid, effect, ev, ret;
         ret = genUnitInfo(env.variable('wizard'), false, env.variable('state'));

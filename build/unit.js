@@ -339,6 +339,7 @@
       if (cfg != null) {
         this.initWithConfig(cfg);
       }
+      this.maxHP = this.health;
       if (flagCreation) {
         return console.log('Monster ', JSON.stringify(this));
       }
