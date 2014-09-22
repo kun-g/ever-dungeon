@@ -4271,7 +4271,7 @@ exports.data = [
                 "filter": [{"type":"alive"},{"type":"visible"}]
             },
             "action": [
-                { "type": "installSpell", "spell": 203 }
+                { "type": "installSpell", "spell": 271 }
             ],
             "levelConfig" : [
                 {"level": 1},
@@ -4684,7 +4684,6 @@ exports.data = [
                 "filter": [{"type":"alive"},{"type":"visible"}]
             },
             "installAction": [
-                { "type": "removeSpell", "spell": 186},
                 { "type": "installSpell", "spell": 186}
             ],
             "action": [
