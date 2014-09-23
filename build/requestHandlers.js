@@ -197,7 +197,6 @@
         return req.end();
       case LOGIN_ACCOUNT_TYPE_AD:
       case LOGIN_ACCOUNT_TYPE_GAMECENTER:
-      case LOGIN_ACCOUNT_TYPE_Android:
         return callback(null);
       default:
         return callback(Error(RET_Issue33));
@@ -226,29 +225,6 @@
       func: function(arg, dummy, handle, rpcID, socket, registerFlag) {
         return async.waterfall([
           function(cb) {
-            var current, limit, _ref1;
-            if (arg.bv == null) {
-              cb(Error(RET_AppVersionNotMatch));
-              return logError({
-                action: 'login',
-                reason: 'noBinaryVersion'
-              });
-            } else {
-              current = queryTable(TABLE_VERSION, 'bin_version');
-              limit = queryTable(TABLE_VERSION, 'bin_version_need');
-              if (!((limit <= (_ref1 = arg.bv) && _ref1 <= current))) {
-                return cb(Error(RET_AppVersionNotMatch));
-              } else {
-                return cb(null);
-              }
-            }
-          }, function(cb) {
-            if (+arg.rv !== queryTable(TABLE_VERSION, 'resource_version')) {
-              return cb(Error(RET_ResourceVersionNotMatch));
-            } else {
-              return cb(null);
-            }
-          }, function(cb) {
             if (registerFlag) {
               return cb(null);
             } else {
@@ -510,6 +486,9 @@
           evt.rv = queryTable(TABLE_VERSION, 'resource_version');
           evt.rvurl = queryTable(TABLE_VERSION, 'url');
           evt.bvurl = queryTable(TABLE_VERSION, 'bin_url');
+          evt.nv = queryTable(TABLE_VERSION, 'needed_version');
+          evt.lv = queryTable(TABLE_VERSION, 'last_version');
+          evt.url = queryTable(TABLE_VERSION, 'url');
         }
         return handler([evt]);
       },
@@ -650,6 +629,23 @@
       },
       needPid: true
     },
+    RPC_ChargeDiamond: {
+      id: 15,
+      func: function(arg, player, handle, rpcID, socket) {
+        switch (arg.stp) {
+          case 'AppStore':
+            throw Error('AppStore Payment');
+            break;
+          case 'PP25':
+            throw Error('PP25 Payment');
+        }
+      },
+      args: {
+        'pid': 'string',
+        'rep': 'string'
+      },
+      needPid: true
+    },
     RPC_VerifyPayment: {
       id: 15,
       func: function(arg, player, handler, rpcID, socket) {
@@ -662,7 +658,7 @@
         switch (arg.stp) {
           case 'AppStore':
             options = {
-              hostname: 'sandbox.itunes.apple.com',
+              hostname: 'buy.itunes.apple.com',
               port: 443,
               path: '/verifyReceipt',
               method: 'POST'
