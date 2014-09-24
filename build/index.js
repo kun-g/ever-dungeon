@@ -285,8 +285,6 @@ function paymentHandler (request, response) {
 
     });
 
-
-
     /*
     var token = '';
     if (out.app_id === 'com.tringame.pocketdungeonTDTB'){
@@ -311,11 +309,6 @@ function paymentHandler (request, response) {
       }
       return response.end('{"success": 1, "msg": "success"}');
       */
-    } else {
-      logError({action: 'AcceptPayment', error: 'SignMissmatch', info: out, sign: sign});
-      response.end('{"success": 0, "msg": "ERROR_MD5"}');
-    }
-
   } else if (request.url.substr(0, 5) === '/jdp?') {
   }
 } 
