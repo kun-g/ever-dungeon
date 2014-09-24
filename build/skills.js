@@ -658,14 +658,18 @@ exports.data = [
     "label":"远程攻击",
     "config": {
           "triggerCondition": [
-              {"type" :"event", "event":"onBattleTurnEnd" },
-              {"type" :"event", "event":"onMoveTurnEnd" }
+              { "type": "event", "event":"onBattleTurnEnd" },
+              { "type": "event", "event":"onMoveTurnEnd" },
+              { "type": "chance", "chance": 0.8 },
+              { "type": "targetMutex", "mutex": "range" },
+              { "type": "alive"}
           ],
           "targetSelection": {
               "pool": "objects",
               "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"},{"type":"shuffle"},{"type":"count","count":1}]
           },
           "action":[
+              {"type":"castSpell","spell":270},
               {"type": "rangeAttack", "hurtDelay": 0.6, "effDelay": 0.3}
           ],
         "levelConfig":[
@@ -3582,7 +3586,7 @@ exports.data = [
         "label": "boss掉落",
         "config": {
             "triggerCondition": [
-                { "type": "event", "event": "onBeDeathStrike" }
+                { "type": "event", "event": "onBeKill" }
             ],
             "targetSelection":{
                 "pool":"self",
@@ -3590,8 +3594,8 @@ exports.data = [
             },
             "action": [
                 {"type":"delay"},
-                {"type": "dropPrize", "showPrize":true, "effect":49,"pos":"self"},
-                {"type":"kill"}]
+                {"type": "dropPrize", "showPrize":true, "effect":49,"pos":"self"}
+            ]
         }
     },
     {
@@ -3599,8 +3603,8 @@ exports.data = [
         "label": "小兵掉落",
         "config": {
             "triggerCondition": [
-                { "type": "event", "event": "onBeDeathStrike" },
-                { "type": "chance", "chance": 0.1 }
+                { "type": "event", "event": "onBeKill" },
+                { "type": "chance", "chance": 0.05 }
             ],
             "targetSelection":{
                 "pool":"self",
@@ -3608,8 +3612,8 @@ exports.data = [
             },
             "action": [
                 {"type":"delay"},
-                {"type": "dropPrize", "showPrize":true, "effect":49, "pos":"self"},
-                {"type":"kill"}]
+                {"type": "dropPrize", "showPrize":true, "effect":49, "pos":"self"}
+            ]
         }
     },
     {
@@ -3805,7 +3809,7 @@ exports.data = [
                 "filter": [{"type":"alive"},{"type": "visible"}]
             },
             "action": [
-                {"type": "heal","formular":{"src":{"attack":1}}}
+                {"type": "heal","formular":{"environment": {"damage":1}}}
             ]
         }
     },
@@ -3819,8 +3823,7 @@ exports.data = [
             },
             "triggerCondition": [
                 {"type" :"event", "event":"onPhysicalDamage" },
-                { "type": "chance", "chance": 0.8 },
-                {"type":"alive"}
+                { "type": "chance", "chance": 0.3 }
             ],
             "targetSelection":{
                 "pool":"target",
@@ -3836,9 +3839,9 @@ exports.data = [
         "label":"中毒",
         "config": {
             "triggerCondition": [
-                {"type" :"event", "event":"onPhysicalDamage" },
-                { "type": "chance", "chance": 0.5 },
-                {"type":"alive"}
+                { "type" :"event", "event":"onPhysicalDamage" },
+                { "type": "chance" },
+                { "type":"alive" }
             ],
             "targetSelection":{
                 "pool":"target",
@@ -3848,13 +3851,16 @@ exports.data = [
                 {"type":"delay"},
                 {"type": "installSpell", "spell": 94},
                 {"type": "playEffect","effect":36,"pos":"target","delay":2.0}
+            ],
+            "levelConfig": [
+                { "chance": 0.3, "level": 1 },
+                { "chance": 0.5, "level": 2 }
             ]
         }
     },
     {
         "skillId": 166,
         "config": {
-            "buffEffect": 36,
             "installAction":[
                 {
                     "type": "setProperty","modifications": {"speed":{"src":{"speed":-0.5}}}
@@ -4280,10 +4286,7 @@ exports.data = [
         "label":"死后复活一次",
         "config": {
             "basic": {
-                "spellAction": 1,
-                "targetEffect": 1,
-                "spellDelay": 0.3,
-                "targetDelay": 0.3
+                "targetEffect": 22
             },
             "triggerCondition": [
                 {"type" :"event", "event": "onBeDeathStrike"}
@@ -4292,11 +4295,8 @@ exports.data = [
                 "pool": "self"
             },
             "action":[
-                {"type": "playEffect","effect":4,"act":"self"},
-                {"type":"delay","delay":0.4},
                 { "type": "modifyVar", "x": "damage", "formular": {"environment": {"damage":0}} },
-                {"type": "heal","self":true,"formular": {"tar":{"strong":1}}},
-                {"type":"shock","delay":0.3,"range":5,"time":0.2}
+                { "type": "resurrect"}
             ],
             "availableCondition": [
                 { "type": "effectCount","count":1 }
@@ -4971,8 +4971,8 @@ exports.data = [
         "label":"加血减攻II",
         "config": {
             "installAction":[
-                { "type": "setProperty",  "modifications": {"attack":{"c":-30}} },
-                {"type": "heal", "delay":1.3,"formular": { "c":300}}
+                { "type": "setProperty",  "modifications": {"attack":{"src":{"attack":-0.5}}} },
+                { "type": "heal", "delay":1.3,"formular": { "src":{"health":1}} }
             ],
             "targetSelection": {
                 "pool": "self",
@@ -5003,8 +5003,8 @@ exports.data = [
         "label":"减血加攻II",
         "config": {
             "installAction":[
-                { "type": "setProperty",  "modifications": {"attack":{"c":50}} },
-                {"type": "damage", "delay":1.3,"formular": { "c":300}}
+                { "type": "setProperty",  "modifications": {"attack":{"src":{"attack":1}}} },
+                {"type": "damage", "delay":1.3,"formular": {"src":{"health":-0.5}} }
             ],
             "targetSelection": {
                 "pool": "self",
@@ -5021,8 +5021,8 @@ exports.data = [
         "label":"加血加攻II",
         "config": {
             "installAction":[
-                { "type": "setProperty",  "modifications": {"attack":{"c":30}} },
-                {"type": "heal", "delay":1.3,"formular": { "c":300}}
+                { "type": "setProperty",  "modifications": {"attack":{"src":{"attack":0.5}}} },
+                {"type": "heal", "delay":1.3,"formular": {"src":{"health":0.5}} }
             ],
             "targetSelection": {
                 "pool": "self",
@@ -6128,6 +6128,19 @@ exports.data = [
                 { "modifications": {"attack":{"c":{"environment":{"damage":0.5}}}}, "level": 1},
                 { "modifications": {"attack":{"c":{"environment":{"damage":0.8}}}}, "level": 2},
                 { "modifications": {"attack":{"c":{"environment":{"damage":1.2}}}}, "level": 3}
+            ]
+        }
+    },
+    {
+        "skillId": 270,
+        "label":"26远程攻击",
+        "config": {
+            "targetSelection": {
+                "pool": "objects",
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"}]
+            },
+            "action": [
+                {"type": "setTargetMutex", "mutex": "range", "count": 1 }
             ]
         }
     }
