@@ -253,23 +253,32 @@ function paymentHandler (request, response) {
       response.end('ERROR_SIGN');
     }
     b = null;
-  } else if (request.url.substr(0, 4) === '/TBK') {
+  } else if (request.url.substr(0, 5) === '/TBK?') {
+      console.log(request.url);
+    var query = urlLib.parse(request.url, true).query;
+    var receipt = query.receipt;
     var data = new Buffer(0);
     request.on('data', function (chunk) { data = Buffer.concat([data, chunk]); });
     request.on('end', function (chunk) {
-        console.log(data.toString());
-        return;
-
-        /*
       data = 'pay?'+data.toString();
+      var token = "c2a8c153eec815118179f46e0dbfd99e";
       var out = urlLib.parse(data, true).query;
-      if (out.sign) {
-        var cipher = rsaLib.createPublicKey(ppKey);
-        var info = cipher.publicDecrypt(new Buffer(out.sign, 'base64'), null, 'utf8');
-        info = JSON.parse(info);
-        var receipt = info.billno;
-        if (out.order_id === info.order_id && out.amount === info.amount && isRMBMatch(info.amount, info.billno)) {
-          deliverReceipt(receipt, 'PP25', function (err) {
+
+      if (out.type) {
+          var sign = out.order_id+'|'+out.app_id+'|'+out.product_name+'|'+out.uid+'|'+out.goods_count
+        +'|'+original_money+'|'+out.order_money+'|'+out.pay_status+'|'+out.create_time
+        +'|'+out.type+'|'+out.value+'|'+token;
+      } else {
+          var sign = out.order_id+'|'+out.app_id+'|'+out.product_name+'|'+out.uid+'|'+out.goods_count
+        +'|'+original_money+'|'+out.order_money+'|'+out.pay_status+'|'+out.create_time+'|'+token;
+      }
+
+      var b = new Buffer(1024);
+      var len = b.write(sign);
+      sign = md5Hash(b.toString('binary', 0, len));
+
+      if ((sign === out.md5) && isRMBMatch(out.order_money, receipt)) {
+          deliverReceipt(receipt, 'TBK', function (err) {
             if (err === null) {
               logInfo({action: 'AcceptPayment', receipt: receipt, info: info});
               return response.end('success');
@@ -278,37 +287,14 @@ function paymentHandler (request, response) {
               response.end('fail');
             }
           });
-        }
+          logInfo({action: 'AcceptPayment', receipt: receipt, info: info});
+          response.end(JSON.stringify({success:1, msg: "OK"});
+      } else {
+          logError({action: 'AcceptPayment', error:err, data: data});
+          response.end(JSON.stringify({success:0, msg: "Arguments miss match."});
       }
-      */
       data = null;
-
     });
-
-    /*
-    var token = '';
-    if (out.app_id === 'com.tringame.pocketdungeonTDTB'){
-      token = '';
-    }
-
-    var sign = out.order_id+'|'+out.app_id+'|'+out.product_name+'|'+out.uid+'|'+out.goods_count
-      +'|'+original_money+'|'+out.order_money+'|'+out.pay_status+'|'+out.create_time+'|'+token;
-    var b = new Buffer(1024);
-    var len = b.write(sign);
-    sign = md5Hash(b.toString('binary', 0, len));
-    var receipt = out.orderid;
-    if ((sign === out.md5) && isRMBMatch(out.order_money, receipt)) {
-      if (out.pay_status === 0){
-          deliverReceipt(receipt, 'TBK', function (err) {
-          if (err === null) {
-            logInfo({action: 'AcceptPayment', receipt: receipt, info: out});
-          } else {
-            logError({action: 'AcceptPayment', error:err, info: out, receiptInfo: receiptInfo});
-          }
-        });
-      }
-      return response.end('{"success": 1, "msg": "success"}');
-      */
   } else if (request.url.substr(0, 5) === '/jdp?') {
   }
 } 
