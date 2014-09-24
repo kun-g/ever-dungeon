@@ -253,12 +253,46 @@ function paymentHandler (request, response) {
       response.end('ERROR_SIGN');
     }
     b = null;
-  } else if (request.url.substr(0, 5) === '/TBK?') {
-    out = urlLib.parse(request.url, true).query;
+  } else if (request.url.substr(0, 4) === '/TBK') {
+    var data = new Buffer(0);
+    request.on('data', function (chunk) { data = Buffer.concat([data, chunk]); });
+    request.on('end', function (chunk) {
+        console.log(data.toString());
+        return;
+
+        /*
+      data = 'pay?'+data.toString();
+      var out = urlLib.parse(data, true).query;
+      if (out.sign) {
+        var cipher = rsaLib.createPublicKey(ppKey);
+        var info = cipher.publicDecrypt(new Buffer(out.sign, 'base64'), null, 'utf8');
+        info = JSON.parse(info);
+        var receipt = info.billno;
+        if (out.order_id === info.order_id && out.amount === info.amount && isRMBMatch(info.amount, info.billno)) {
+          deliverReceipt(receipt, 'PP25', function (err) {
+            if (err === null) {
+              logInfo({action: 'AcceptPayment', receipt: receipt, info: info});
+              return response.end('success');
+            } else {
+              logError({action: 'AcceptPayment', error:err, data: data});
+              response.end('fail');
+            }
+          });
+        }
+      }
+      */
+      data = null;
+
+    });
+
+
+
+    /*
     var token = '';
     if (out.app_id === 'com.tringame.pocketdungeonTDTB'){
       token = '';
     }
+
     var sign = out.order_id+'|'+out.app_id+'|'+out.product_name+'|'+out.uid+'|'+out.goods_count
       +'|'+original_money+'|'+out.order_money+'|'+out.pay_status+'|'+out.create_time+'|'+token;
     var b = new Buffer(1024);
@@ -276,11 +310,12 @@ function paymentHandler (request, response) {
         });
       }
       return response.end('{"success": 1, "msg": "success"}');
+      */
     } else {
       logError({action: 'AcceptPayment', error: 'SignMissmatch', info: out, sign: sign});
       response.end('{"success": 0, "msg": "ERROR_MD5"}');
     }
-    b = null;
+
   } else if (request.url.substr(0, 5) === '/jdp?') {
   }
 } 

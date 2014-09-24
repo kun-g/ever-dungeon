@@ -145,7 +145,7 @@
     gServerID = queryTable(TABLE_CONFIG, 'ServerID');
     gServerConfig = queryTable(TABLE_CONFIG, 'ServerConfig')[gServerID];
     backendManager.init(gServerConfig.Gate);
-    return startSocketIOServer(backendManager, 7757);
+    return startTcpServer(7757, backendManager);
   });
 
 }).call(this);
