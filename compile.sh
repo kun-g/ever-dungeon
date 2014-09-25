@@ -11,32 +11,23 @@ while [ "$CurrentBranch" = "master" ]; do
   esac
 done
 
-VersionFile="build/version.js"
-TarConfigFile="build/config.js"
-if [ "$1" = "teebik" ]
-then
-  ConfigFile="build/tbConfig.js"
-else
-  ConfigFile="build/tgConfig.js"
-fi
-
 CurrentPWD=`pwd`
 
-echo '===== Compiling ====='
-cd server
-SubModuleServer=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
-gulp compile
-
-cd ../data
-SubModuleData=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
-if [ "$2" = "all" ]
-then
-	echo "Fetching table"
-	git pull
-fi
-
-cd ..
-
+###echo '===== Compiling ====='
+###cd server
+###SubModuleServer=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
+###gulp compile
+###
+###cd ../data
+###SubModuleData=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
+###if [ "$2" = "all" ]
+###then
+###	echo "Fetching table"
+###	git pull
+###fi
+###
+###cd ..
+###
 echo '===== Updating black box ====='
 SOURCES=(
 "define.js"
@@ -72,43 +63,71 @@ cp src/*.js js/
 cp package.json $CurrentPWD/build
 cd ..
 
-echo '===== Setting up variables ====='
-if [ $CurrentBranch = develop ]
-then
-  CDNVersionBucket='hotupdate'
-  RemoteRepo='origin'
-  UpdateUrl='http://hotupdate.qiniudn.com/'
-  ServerConfiguration='Develop'
-  ServerID=0
-elif [ $CurrentBranch = master ]
-then
-  CDNVersionBucket='drhu'
-  RemoteRepo='deploy0'
-  UpdateUrl='http://drhu.qiniudn.com/'
-  ServerConfiguration='Master'
-  ServerID=1
-elif [[ $CurrentBranch = localWork ]]
-then
-  CDNVersionBucket='hotupdate'
-  RemoteRepo='deploy'
-  UpdateUrl='http://hotupdate.qiniudn.com/'
-  ServerConfiguration='Develop'
-  ServerID=0
-else
-  echo 'Invalid target branch'
-  exit
-fi
+###echo '===== Setting up variables ====='
+###if [ $CurrentBranch = develop ]
+###then
+###  CDNVersionBucket='hotupdate'
+###  RemoteRepo='origin'
+###  UpdateUrl='http://hotupdate.qiniudn.com/'
+###  ServerConfiguration='Develop'
+###  ServerID=0
+###elif [ $CurrentBranch = master ]
+###then
+###  CDNVersionBucket='drhu'
+###  RemoteRepo='deploy0'
+###  UpdateUrl='http://drhu.qiniudn.com/'
+###  ServerConfiguration='Master'
+###  ServerID=1
+###elif [[ $CurrentBranch = localWork ]]
+###then
+###  CDNVersionBucket='hotupdate'
+###  RemoteRepo='deploy'
+###  UpdateUrl='http://hotupdate.qiniudn.com/'
+###  ServerConfiguration='Develop'
+###  ServerID=0
+###else
+###  echo 'Invalid target branch'
+###  exit
+###fi
+###
+###
+###VersionFile="build/version.js"
+###CurrentVersion='not set'
+####CurrentVersion=`curl -s $UpdateUrl/version`
+####echo 'Current version: '$CurrentVersion
+###sed -ig 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
+###sed -ig 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
+###sed -ig 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
+###sed -ig 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
+###
+echo 'mulity version '
+SEARCH_DIR=(
+"build"
+)
+
+#if file name with -trin ,then it must be mulity version file.
+#but if can't find file's name with -xxx. use xxx-trin as default
+
+for dir in ${SEARCH_DIR[*]}
+do
+  mulityVersionFileList=`(ls $dir *-trin.*)`
+  for fileWithPath in $mulityVersionFileList
+  do
+	  file=`(basename $fileWithPath | sed -e 's/-trin//g')`
+	  wantFile=`(echo $fileWithPath | sed -e 's/-trin/-'$1'/g')`
+	  if [ -b $wantFile]
+	  then
+		  sourceFile=$wantFile
+	  else
+		  sourceFile=$fileWithPath
+	  fi
+	  targetFile=$dir/$file
+	  echo cp $sourceFile $targetfile
+	  cp $sourceFile $targetfile
+  done
+done
 
 
-CurrentVersion='not set'
-#CurrentVersion=`curl -s $UpdateUrl/version`
-#echo 'Current version: '$CurrentVersion
-#sed -ig 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
-#sed -ig 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
-#sed -ig 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
-#sed -ig 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
-
-cp $ConfigFile $TarConfigFile
 # Commit
 echo '===== Commit the changes ====='
 echo 'Commit changes branch:'$CurrentBranch @ $CurrentVersion  Server: $SubModuleServer Table: $SubModuleData
