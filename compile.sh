@@ -112,21 +112,18 @@ for dir in ${SEARCH_DIR[*]}
 do
   mulityVersionFileList=`(ls $dir/*-trin.*)`
 
-  echo $mulityVersionFileList
-
   for fileWithPath in $mulityVersionFileList
   do
-          file=`(basename $fileWithPath | sed -e 's/-trin//g')`
+          targetFile=`(basename $fileWithPath | sed -e 's/-trin//g')`
           wantFile=`(echo $fileWithPath | sed -e 's/-trin/-'$1'/g')`
-          if [ -b $wantFile ]
+          if [ -e $wantFile ]
           then
         	  sourceFile=$wantFile
           else
         	  sourceFile=$fileWithPath
           fi
-          echo $wantFile '-----'
-          targetFile=$dir/$file
-          echo cp $sourceFile $targetfile
+          echo $wantFile '-----' $file
+          echo cp $sourceFile $targetFile
           #cp $sourceFile $targetfile
   done
 done
