@@ -4657,9 +4657,9 @@ exports.data = [
             },
             "action": [
                 { "type": "damage","damageType":"Spell","isRange":true,"delay":0.8},
-                {"type": "playEffect","effect":65,"act":"target","delay":0.6},
-                {"type": "blink","delay":0.6,"time":0.08},
-                {"type":"shock","delay":0.6,"range":5,"time":0.2}
+                { "type": "playEffect","effect":65,"act":"target","delay":0.6},
+                { "type": "blink","delay":0.6,"time":0.08},
+                { "type": "shock","delay":0.6,"range":5,"time":0.2}
             ],
             "levelConfig" : [
                 { "formular": {"src":{"attack":0.3}}, "level": 1},
@@ -4687,8 +4687,6 @@ exports.data = [
                 { "type": "installSpell", "spell": 186}
             ],
             "action": [
-                { "type": "delay"},
-                { "type": "playEffect","effect":69,"act":"target" },
                 { "type": "installSpell", "spell": 203 }
             ],
             "levelConfig" : [
@@ -4702,11 +4700,12 @@ exports.data = [
         "skillId": 203,
         "config": {
             "installAction":[
+                { "type": "playEffect","effect":69,"act":"target" },
                 { "type": "setProperty" }
             ],
             "targetSelection":{ "pool":"Self" },
-            "uninstallAction": [
-                { "type": "resetProperty" }
+            "availableCondition": [
+                { "type": "event", "event": "onBeginBattleTurn", "eventCount": 9999 }
             ],
             "buffType":"AttackBuff",
             "levelConfig":[
@@ -4784,31 +4783,25 @@ exports.data = [
         "desc":"大法师释放的法术和攻击有几率攻击复数敌人。",
         "slotId": 3,
         "config":{
-            "basic":{
-                "spellEffect": 29,
-                "spellDelay": 0.6,
-                "targetDelay": 0.9
-            },
             "triggerCondition": [
-                { "type": "event", "event": "onPhysicalDamage" },
+                { "type": "event", "event": "onTarget" },
+                { "type": "event", "event": "onBeginSpellTurn"},
                 { "type": "chance" }
             ],
             "targetSelection": {
                 "pool": "objects",
-                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"}]
+                "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"attackable"},{"type":"count","count":2}]
             },
             "action": [
-                { "type": "delay"},
                 { "type": "damage","damageType":"Spell","isRange":true,"delay":0.8},
-                { "type": "playEffect","effect":44,"act":"self"},
-                { "type": "playEffect","effect":0,"act":"target","delay":0.6},
+                { "type": "playEffect","effect":65,"act":"target","delay":0.6},
                 { "type": "blink","delay":0.6,"time":0.08},
                 { "type": "shock","delay":0.6,"range":5,"time":0.2}
             ],
             "levelConfig":[
-                { "chance":0,"formular": {"src":{"attack":0.3}}, "level": 1},
-                { "chance":0,"formular": {"src":{"attack":0.45}}, "level": 2},
-                { "chance":0,"formular": {"src":{"attack":0.6}}, "level": 3}
+                { "chance":0.2,"formular": {"src":{"attack":0.3}}, "level": 1},
+                { "chance":0.25,"formular": {"src":{"attack":0.45}}, "level": 2},
+                { "chance":0.3,"formular": {"src":{"attack":0.6}}, "level": 3}
             ]
         }
     },
@@ -6182,8 +6175,8 @@ exports.data = [
                 { "type": "setProperty" }
             ],
             "targetSelection":{ "pool":"Self" },
-            "uninstallAction": [
-                { "type": "resetProperty" }
+            "availableCondition": [
+                { "type": "event", "event": "onBeginBattleTurn", "eventCount": 9999 }
             ],
             "buffType":"AttackBuff",
             "levelConfig":[
