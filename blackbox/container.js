@@ -31,6 +31,13 @@
           if (item == null) {
             return null;
           }
+          if ((item.id == null) || (item.getConfig() == null)) {
+            logInfo({
+              action: 'clearSlot',
+              index: index
+            });
+            _this.removeItemAt(index);
+          }
           if (item.count <= 0) {
             item.count = 1;
             logInfo({
@@ -45,13 +52,6 @@
               origin: _this.queryItemSlot(item)
             });
             item.slot[_this.type] = index;
-          }
-          if (item.id == null) {
-            logInfo({
-              action: 'clearSlot',
-              index: index
-            });
-            _this.removeItemAt(index);
           }
           return item;
         };
