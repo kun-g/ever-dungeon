@@ -121,9 +121,10 @@ do
 	  else
 		  sourceFile=$fileWithPath
 	  fi
+	  echo $file '-----'
 	  targetFile=$dir/$file
 	  echo cp $sourceFile $targetfile
-	  cp $sourceFile $targetfile
+	  #cp $sourceFile $targetfile
   done
 done
 
