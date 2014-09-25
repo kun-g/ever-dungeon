@@ -114,7 +114,7 @@ do
 
   for fileWithPath in $mulityVersionFileList
   do
-          targetFile=`(basename $fileWithPath | sed -e 's/-trin//g')`
+          targetFile=`(echo $fileWithPath | sed -e 's/-trin//g')`
           wantFile=`(echo $fileWithPath | sed -e 's/-trin/-'$1'/g')`
           if [ -e $wantFile ]
           then
