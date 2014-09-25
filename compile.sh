@@ -110,7 +110,7 @@ SEARCH_DIR=(
 
 for dir in ${SEARCH_DIR[*]}
 do
-  mulityVersionFileList=`(ls $dir *-trin.*)`
+  mulityVersionFileList=`(ls $dir/*-trin.*)`
 
   echo $mulityVersionFileList
 
