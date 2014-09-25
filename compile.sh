@@ -122,7 +122,6 @@ do
           else
         	  sourceFile=$fileWithPath
           fi
-          echo $wantFile '-----' $targetFile
           echo cp $sourceFile $targetFile
           #cp $sourceFile $targetfile
   done
