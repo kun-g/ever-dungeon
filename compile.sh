@@ -27,13 +27,9 @@ cd server
 SubModuleServer=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
 gulp compile
 
-if [ "$1" = "oc" ]
-then
-  exit
-fi
 cd ../data
 SubModuleData=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
-if [ "$1" = "all" ]
+if [ "$2" = "all" ]
 then
 	echo "Fetching table"
 	git pull
@@ -104,12 +100,13 @@ else
 fi
 
 
-CurrentVersion=`curl -s $UpdateUrl/version`
-echo 'Current version: '$CurrentVersion
-sed -ig 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
-sed -ig 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
-sed -ig 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
-sed -ig 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
+CurrentVersion='not set'
+#CurrentVersion=`curl -s $UpdateUrl/version`
+#echo 'Current version: '$CurrentVersion
+#sed -ig 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
+#sed -ig 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
+#sed -ig 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
+#sed -ig 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
 
 cp $ConfigFile $TarConfigFile
 # Commit
