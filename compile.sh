@@ -115,7 +115,7 @@ do
   do
 	  file=`(basename $fileWithPath | sed -e 's/-trin//g')`
 	  wantFile=`(echo $fileWithPath | sed -e 's/-trin/-'$1'/g')`
-	  if [ -b $wantFile]
+	  if [ -b $wantFile ]
 	  then
 		  sourceFile=$wantFile
 	  else
