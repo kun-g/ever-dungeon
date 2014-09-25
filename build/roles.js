@@ -1,109 +1,107 @@
 exports.data = [
-    {
-        "classId": 0,
-        "className": "狂战士",
-        "faction": "hero",
-        "classType": 0,
-        "avatar": "avatar1.ccbi",
-        "emblem": [
-            "emblem-warrior.png",
-            "emblem-warrior2.png"
-        ],
-        "property": {
-            "health": 35,
-            "attack": 3,
-            "critical": 2,
-            "strong": 4,
-            "accuracy": 2,
-            "reactivity": 1,
-            "speed": 2,
-            "activeSpell": 195
-        },
-        "defaultArmors": [
-            6,
-            10,
-            11,
-            879,
-            880,
-            881,
-            882,
+	{
+		"classId": 0,
+		"className": "战士",
+		"faction": "hero",
+		"classType": 0,
+		"avatar": "avatar.ccbi",
+		"emblem": [
+			"emblem-warrior.png",
+			"emblem-warrior2.png"
+		],
+		"property": {
+			"health": 35,
+			"attack": 3,
+			"critical": 2,
+			"strong": 4,
+			"accuracy": 2,
+			"reactivity": 1,
+			"speed": 2,
+			"activeSpell": 0
+		},
+		"defaultArmors": [
+			6,
+			10,
+			11,
+			40,
+			41,
+			42,
+			43,
             662,
-            712,
-            883
-        ],
-        "levelId": 0,
+            712
+		],
+		"levelId": 0,
         "transId":197
-    },
-    {
-        "classId": 1,
-        "className": "魔导师",
-        "faction": "hero",
-        "classType": 0,
-        "avatar": "avatar2.ccbi",
-        "emblem": [
-            "emblem-mage.png",
-            "emblem-mage2.png"
-        ],
-        "property": {
-            "health": 21,
-            "attack": 5,
-            "critical": 4,
-            "strong": 2,
-            "accuracy": 2,
-            "reactivity": 2,
-            "speed": 2,
-            "activeSpell": 201
-        },
-        "defaultArmors": [
-            6,
-            10,
-            11,
-            884,
-            885,
-            886,
-            887,
-            652,
-            742,
-            888
-        ],
-        "levelId": 0,
+	},
+	{
+		"classId": 1,
+		"className": "法师",
+		"faction": "hero",
+		"classType": 0,
+		"avatar": "avatar.ccbi",
+		"emblem": [
+			"emblem-mage.png",
+			"emblem-mage2.png"
+		],
+		"property": {
+			"health": 21,
+			"attack": 5,
+			"critical": 4,
+			"strong": 2,
+			"accuracy": 2,
+			"reactivity": 2,
+			"speed": 2,
+			"activeSpell": 5
+		},
+		"defaultArmors": [
+			6,
+			10,
+			11,
+			32,
+			33,
+			34,
+            35,
+			652,
+            742
+		],
+		"levelId": 0,
         "transId":198
-    },
-    {
-        "classId": 2,
-        "className": "主教",
-        "faction": "hero",
-        "classType": 0,
-        "avatar": "avatar3.ccbi",
-        "emblem": [
-            "emblem-priest.png",
-            "emblem-priest2.png"
-        ],
-        "property": {
-            "health": 25,
-            "attack": 2,
-            "critical": 2,
-            "strong": 4,
-            "accuracy": 4,
-            "reactivity": 3,
-            "speed": 6,
-            "activeSpell": 207
-        },
-        "defaultArmors": [
-            6,
-            10,
-            11,
-            904,
-            905,
-            906,
-            907,
+
+	},
+	{
+		"classId": 2,
+		"className": "牧师",
+		"faction": "hero",
+		"classType": 0,
+		"avatar": "avatar.ccbi",
+		"emblem": [
+			"emblem-priest.png",
+			"emblem-priest2.png"
+		],
+		"property": {
+			"health": 25,
+			"attack": 2,
+			"critical": 2,
+			"strong": 4,
+			"accuracy": 4,
+			"reactivity": 3,
+			"speed": 6,
+			"activeSpell": 8
+		},
+		"defaultArmors": [
+			6,
+			10,
+			11,
+			36,
+			37,
+			38,
+			39,
             682,
-            772,
-            908
-        ],
-        "levelId": 0,
+            772
+		],
+		"levelId": 0,
         "transId":199
-    },
+	},
 	{
 		"classId": 3,
 		"className": "蝙蝠",
@@ -173,7 +171,7 @@ exports.data = [
 		"effectAttack": 9,
 		"skill": [
 			{
-				"id": 29,
+				"id": 164,
 				"level": 1
 			}
 		]
@@ -328,10 +326,6 @@ exports.data = [
 			},
 			{
 				"id": 27,
-				"level": 1
-			},
-			{
-				"id": 28,
 				"level": 1
 			}
 		]
@@ -710,7 +704,13 @@ exports.data = [
 			"speed": 1
 		},
 		"effectAttack": 8,
-		"collectId": 51001
+		"collectId": 51001,
+        "skill": [
+            {
+                "id": 187,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 19,
@@ -1135,7 +1135,10 @@ exports.data = [
 		"soundDie": "liulangdie.mp3",
 		"effectAttack": 8,
 		"skill": [
-
+            {
+                "id": 109,
+                "level": 1
+            }
 		],
 		"scale": 1.2
 	},
@@ -1408,7 +1411,7 @@ exports.data = [
 		"effectAttack": 9,
 		"skill": [
 			{
-				"id": 29,
+				"id": 164,
 				"level": 1
 			}
 		],
@@ -1521,7 +1524,13 @@ exports.data = [
 		"soundWound": "gebulinwound.mp3",
 		"soundAttack": "gebulinattack.mp3",
 		"soundDie": "gebulindie.mp3",
-		"effectAttack": 9
+		"effectAttack": 9,
+        "skill": [
+            {
+                "id": 173,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 40,
@@ -1567,7 +1576,7 @@ exports.data = [
 				"level": 1
 			},
 			{
-				"id": 28,
+				"id": 177,
 				"level": 1
 			}
 		]
@@ -1715,9 +1724,10 @@ exports.data = [
 		"soundDie": "liulangdie.mp3",
 		"effectAttack": 8,
 		"skill": [
-			{
-
-			}
+            {
+                "id": 180,
+                "level": 1
+            }
 		]
 	},
 	{
@@ -1945,7 +1955,13 @@ exports.data = [
 			"speed": 1
 		},
 		"effectAttack": 8,
-		"collectId": 84001
+		"collectId": 84001,
+        "skill": [
+            {
+                "id": 187,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 51,
@@ -2370,7 +2386,10 @@ exports.data = [
 		"soundDie": "liulangdie.mp3",
 		"effectAttack": 8,
 		"skill": [
-
+            {
+                "id": 66,
+                "level": 1
+            }
 		],
 		"scale": 1.2
 	},
@@ -2643,7 +2662,7 @@ exports.data = [
 		"effectAttack": 9,
 		"skill": [
 			{
-				"id": 29,
+				"id": 165,
 				"level": 1
 			}
 		],
@@ -2756,7 +2775,13 @@ exports.data = [
 		"soundAttack": "gebulinattack.mp3",
 		"soundDie": "gebulindie.mp3",
 		"effectAttack": 9,
-		"collectId": 78001
+		"collectId": 78001,
+        "skill": [
+            {
+                "id": 174,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 72,
@@ -2801,7 +2826,7 @@ exports.data = [
 				"level": 1
 			},
 			{
-				"id": 28,
+				"id": 177,
 				"level": 1
 			}
 		]
@@ -2949,7 +2974,10 @@ exports.data = [
 		"soundDie": "liulangdie.mp3",
 		"effectAttack": 8,
 		"skill": [
-
+            {
+                "id": 180,
+                "level": 1
+            }
 		]
 	},
 	{
@@ -3176,7 +3204,13 @@ exports.data = [
 			"reactivity": 1,
 			"speed": 1
 		},
-		"effectAttack": 9
+		"effectAttack": 9,
+        "skill": [
+            {
+                "id": 187,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 83,
@@ -3289,8 +3323,8 @@ exports.data = [
 		"effectAttack": 9,
 		"skill": [
 			{
-				"id": 29,
-				"level": 1
+				"id": 165,
+				"level": 2
 			}
 		],
 		"scale": 1.2
@@ -3601,7 +3635,10 @@ exports.data = [
 		"soundDie": "liulangdie.mp3",
 		"effectAttack": 8,
 		"skill": [
-
+            {
+                "id": 183,
+                "level": 1
+            }
 		],
 		"scale": 1.2
 	},
@@ -3874,7 +3911,7 @@ exports.data = [
 		"effectAttack": 9,
 		"skill": [
 			{
-				"id": 29,
+				"id": 165,
 				"level": 1
 			}
 		]
@@ -3986,7 +4023,13 @@ exports.data = [
 		"soundWound": "gebulinwound.mp3",
 		"soundAttack": "gebulinattack.mp3",
 		"soundDie": "gebulindie.mp3",
-		"effectAttack": 9
+		"effectAttack": 9,
+        "skill": [
+            {
+                "id": 175,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 104,
@@ -4180,7 +4223,10 @@ exports.data = [
 		"soundDie": "liulangdie.mp3",
 		"effectAttack": 8,
 		"skill": [
-
+            {
+                "id": 180,
+                "level": 1
+            }
 		]
 	},
 	{
@@ -4407,7 +4453,13 @@ exports.data = [
 			"reactivity": 1,
 			"speed": 1
 		},
-		"effectAttack": 9
+		"effectAttack": 9,
+        "skill": [
+            {
+                "id": 187,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 115,
@@ -4520,8 +4572,8 @@ exports.data = [
 		"effectAttack": 9,
 		"skill": [
 			{
-				"id": 29,
-				"level": 1
+				"id": 165,
+				"level": 2
 			}
 		],
 		"scale": 1.2
@@ -4832,7 +4884,10 @@ exports.data = [
 		"soundDie": "liulangdie.mp3",
 		"effectAttack": 8,
 		"skill": [
-
+            {
+                "id": 185,
+                "level": 1
+            }
 		],
 		"scale": 1.2
 	},
@@ -7310,7 +7365,7 @@ exports.data = [
         "effectAttack": 9,
         "skill": [
             {
-                "id": 29,
+                "id": 165,
                 "level": 1
             }
         ],

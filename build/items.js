@@ -27983,7 +27983,7 @@ exports.data = [
         "label": "狂战士下身",
         "category": 1,
         "subcategory": 4,
-        "effectf": [
+        "effecta": [
             {
                 "part": "leftleg",
                 "file": "f-warriorn-leftleg1.ccbi"
@@ -27992,16 +27992,6 @@ exports.data = [
                 "part": "rightleg",
                 "file": "f-warriorn-rightleg1.ccbi"
             }
-        ],
-        "effectm": [
-            {
-                "part": "leftleg",
-                "file": "m-warriorn-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "m-warriorn-rightleg1.ccbi"
-            }
         ]
     },
     {
@@ -28009,7 +27999,7 @@ exports.data = [
         "label": "狂战士上身",
         "category": 1,
         "subcategory": 2,
-        "effectf": [
+        "effecta": [
             {
                 "part": "chest",
                 "file": "f-warriorn-chest1.ccbi"
@@ -28021,28 +28011,6 @@ exports.data = [
             {
                 "part": "lefthand",
                 "file": "f-warriorn-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "f-warriorn-lefthand1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "chest",
-                "file": "m-warriorn-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "m-warriorn-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "m-warriorn-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "m-warriorn-lefthand1.ccbi"
             }
         ]
     },
@@ -28051,24 +28019,10 @@ exports.data = [
         "label": "狂战士副手",
         "category": 1,
         "subcategory": 1,
-        "effectf": [
+        "effecta": [
             {
                 "part": "secondaryweapon2",
                 "file": "f-warriorn-weapon21.ccbi"
-            },
-            {
-                "part": "secondaryweapon2-2",
-                "file": "f-warriorn-weapon21.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "secondaryweapon2",
-                "file": "m-warriorn-weapon21.ccbi"
-            },
-            {
-                "part": "secondaryweapon2-2",
-                "file": "m-warriorn-weapon21.ccbi"
             }
         ]
     },
@@ -28077,19 +28031,13 @@ exports.data = [
         "label": "狂战士主手",
         "category": 1,
         "subcategory": 0,
-        "effectf": [
+        "effecta": [
             {
                 "part": "mainweapon",
                 "file": "f-warriorn-mainweapon1.ccbi"
             }
         ],
-        "effectm": [
-            {
-                "part": "mainweapon",
-                "file": "m-warriorn-mainweapon1.ccbi"
-            }
-        ],
-        "effectAttack": 8,
+        "effectAttack": 57,
         "soundAttack": "attackzhanshi.mp3"
     },
     {
@@ -28097,7 +28045,7 @@ exports.data = [
         "label": "狂战士头盔",
         "category": 1,
         "subcategory": 13,
-        "effectf": [
+        "effecta": [
             {
                 "part": "helmet",
                 "file": "f-warriorn-helmet1.ccbi"
@@ -28106,16 +28054,6 @@ exports.data = [
                 "part": "helmet2",
                 "file": "f-warriorn-helmet1-2.ccbi"
             }
-        ],
-        "effectm": [
-            {
-                "part": "helmet",
-                "file": "m-warriorn-helmet1.ccbi"
-            },
-            {
-                "part": "helmet2",
-                "file": "m-warriorn-helmet1-2.ccbi"
-            }
         ]
     },
     {
@@ -28123,7 +28061,7 @@ exports.data = [
         "label": "魔导师下身",
         "category": 1,
         "subcategory": 4,
-        "effectf": [
+        "effecta": [
             {
                 "part": "leftleg",
                 "file": "f-magen-leftleg1.ccbi"
@@ -28132,16 +28070,6 @@ exports.data = [
                 "part": "rightleg",
                 "file": "f-magen-rightleg1.ccbi"
             }
-        ],
-        "effectm": [
-            {
-                "part": "leftleg",
-                "file": "m-magen-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "m-magen-rightleg1.ccbi"
-            }
         ]
     },
     {
@@ -28149,7 +28077,7 @@ exports.data = [
         "label": "魔导师上身",
         "category": 1,
         "subcategory": 2,
-        "effectf": [
+        "effecta": [
             {
                 "part": "chest",
                 "file": "f-magen-chest1.ccbi"
@@ -28161,28 +28089,6 @@ exports.data = [
             {
                 "part": "lefthand",
                 "file": "f-magen-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "f-magen-lefthand1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "chest",
-                "file": "m-magen-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "m-magen-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "m-magen-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "m-magen-lefthand1.ccbi"
             }
         ]
     },
@@ -28191,16 +28097,10 @@ exports.data = [
         "label": "魔导师副手",
         "category": 1,
         "subcategory": 1,
-        "effectf": [
+        "effecta": [
             {
                 "part": "weapon4",
                 "file": "f-magen-weapon41.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "weapon4",
-                "file": "m-magen-weapon41.ccbi"
             }
         ]
     },
@@ -28209,19 +28109,13 @@ exports.data = [
         "label": "魔导师主手",
         "category": 1,
         "subcategory": 0,
-        "effectf": [
+        "effecta": [
             {
                 "part": "mainweapon",
                 "file": "f-magen-mainweapon1.ccbi"
             }
         ],
-        "effectm": [
-        {
-            "part": "mainweapon",
-            "file": "m-magen-mainweapon1.ccbi"
-        }
-    ],
-        "effectAttack": 10,
+        "effectAttack": 58,
         "soundAttack": "attackzhanshi.mp3"
     },
     {
@@ -28229,7 +28123,7 @@ exports.data = [
         "label": "魔导师头盔",
         "category": 1,
         "subcategory": 13,
-        "effectf": [
+        "effecta": [
             {
                 "part": "helmet",
                 "file": "f-magen-helmet1.ccbi"
@@ -28238,16 +28132,6 @@ exports.data = [
                 "part": "helmet3",
                 "file": "f-magen-helmet1-3.ccbi"
             }
-        ],
-        "effectm": [
-            {
-                "part": "helmet",
-                "file": "m-magen-helmet1.ccbi"
-            },
-            {
-                "part": "helmet3",
-                "file": "m-magen-helmet1-3.ccbi"
-            }
         ]
     },
     {
@@ -28255,7 +28139,7 @@ exports.data = [
         "label": "主教下身",
         "category": 1,
         "subcategory": 4,
-        "effectf": [
+        "effecta": [
             {
                 "part": "leftleg",
                 "file": "f-priestn-leftleg1.ccbi"
@@ -28264,16 +28148,6 @@ exports.data = [
                 "part": "rightleg",
                 "file": "f-priestn-rightleg1.ccbi"
             }
-        ],
-        "effectm": [
-            {
-                "part": "leftleg",
-                "file": "m-priestn-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "m-priestn-rightleg1.ccbi"
-            }
         ]
     },
     {
@@ -28281,7 +28155,7 @@ exports.data = [
         "label": "主教上身",
         "category": 1,
         "subcategory": 2,
-        "effectf": [
+        "effecta": [
             {
                 "part": "chest",
                 "file": "f-priestn-chest1.ccbi"
@@ -28293,28 +28167,6 @@ exports.data = [
             {
                 "part": "lefthand",
                 "file": "f-priestn-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "f-priestn-lefthand1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "chest",
-                "file": "m-priestn-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "m-priestn-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "m-priestn-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "m-priestn-lefthand1.ccbi"
             }
         ]
     },
@@ -28323,7 +28175,7 @@ exports.data = [
         "label": "主教副手",
         "category": 1,
         "subcategory": 1,
-        "effectf": [
+        "effecta": [
             {
                 "part": "weapon4",
                 "file": "f-priestn-weapon41.ccbi"
@@ -28332,16 +28184,6 @@ exports.data = [
                 "part": "weapon4-2",
                 "file": "f-priestn-weapon41-2.ccbi"
             }
-        ],
-        "effectm": [
-            {
-                "part": "weapon4",
-                "file": "m-priestn-weapon41.ccbi"
-            },
-            {
-                "part": "weapon4-2",
-                "file": "m-priestn-weapon41-2.ccbi"
-            }
         ]
     },
     {
@@ -28349,19 +28191,13 @@ exports.data = [
         "label": "主教主手",
         "category": 1,
         "subcategory": 0,
-        "effectf": [
+        "effecta": [
             {
                 "part": "mainweapon",
                 "file": "f-priestn-mainweapon1.ccbi"
             }
         ],
-        "effectm": [
-            {
-                "part": "mainweapon",
-                "file": "m-priestn-mainweapon1.ccbi"
-            }
-        ],
-        "effectAttack": 9,
+        "effectAttack": 59,
         "soundAttack": "attackzhanshi.mp3"
     },
     {
@@ -28369,1632 +28205,10 @@ exports.data = [
         "label": "主教头盔",
         "category": 1,
         "subcategory": 13,
-        "effectf": [
+        "effecta": [
             {
                 "part": "helmet",
                 "file": "f-priestn-helmet1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "helmet",
-                "file": "m-priestn-helmet1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 894,
-        "label": "狂战士下身2",
-        "category": 1,
-        "subcategory": 4,
-        "effectf": [
-            {
-                "part": "leftleg",
-                "file": "f-warriorn2-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "f-warriorn2-rightleg1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "leftleg",
-                "file": "m-warriorn2-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "m-warriorn2-rightleg1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 895,
-        "label": "狂战士上身2",
-        "category": 1,
-        "subcategory": 2,
-        "effectf": [
-            {
-                "part": "chest",
-                "file": "f-warriorn2-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "f-warriorn2-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "f-warriorn2-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "f-warriorn2-lefthand1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "chest",
-                "file": "m-warriorn2-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "m-warriorn2-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "m-warriorn2-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "m-warriorn2-lefthand1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 896,
-        "label": "狂战士副手2",
-        "category": 1,
-        "subcategory": 1,
-        "effectf": [
-            {
-                "part": "secondaryweapon2",
-                "file": "f-warriorn2-weapon21.ccbi"
-            },
-            {
-                "part": "secondaryweapon2-2",
-                "file": "f-warriorn2-weapon21.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "secondaryweapon2",
-                "file": "m-warriorn2-weapon21.ccbi"
-            },
-            {
-                "part": "secondaryweapon2-2",
-                "file": "m-warriorn2-weapon21.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 897,
-        "label": "狂战士主手2",
-        "category": 1,
-        "subcategory": 0,
-        "effectf": [
-            {
-                "part": "mainweapon",
-                "file": "f-warriorn2-mainweapon1.ccbi"
-            }
-        ],
-        "effectm": [
-        {
-            "part": "mainweapon",
-            "file": "m-warriorn2-mainweapon1.ccbi"
-        }
-    ],
-        "effectAttack": 8,
-        "soundAttack": "attackzhanshi.mp3"
-    },
-    {
-        "classId": 898,
-        "label": "狂战士头盔2",
-        "category": 1,
-        "subcategory": 13,
-        "effectf": [
-            {
-                "part": "helmet",
-                "file": "f-warriorn2-helmet1.ccbi"
-            },
-            {
-                "part": "helmet2",
-                "file": "f-warriorn2-helmet1-2.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "helmet",
-                "file": "m-warriorn2-helmet1.ccbi"
-            },
-            {
-                "part": "helmet2",
-                "file": "m-warriorn2-helmet1-2.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 899,
-        "label": "魔导师下身2",
-        "category": 1,
-        "subcategory": 4,
-        "effectf": [
-            {
-                "part": "leftleg",
-                "file": "f-magen2-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "f-magen2-rightleg1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "leftleg",
-                "file": "m-magen2-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "m-magen2-rightleg1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 900,
-        "label": "魔导师上身2",
-        "category": 1,
-        "subcategory": 2,
-        "effectf": [
-            {
-                "part": "chest",
-                "file": "f-magen2-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "f-magen2-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "f-magen2-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "f-magen2-lefthand1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "chest",
-                "file": "m-magen2-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "m-magen2-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "m-magen2-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "m-magen2-lefthand1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 901,
-        "label": "魔导师副手2",
-        "category": 1,
-        "subcategory": 1,
-        "effectf": [
-            {
-                "part": "weapon4",
-                "file": "f-magen2-weapon41.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "weapon4",
-                "file": "m-magen2-weapon41.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 902,
-        "label": "魔导师主手2",
-        "category": 1,
-        "subcategory": 0,
-        "effectf": [
-            {
-                "part": "mainweapon",
-                "file": "f-magen2-mainweapon1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "mainweapon",
-                "file": "m-magen2-mainweapon1.ccbi"
-            }
-        ],
-        "effectAttack": 10,
-        "soundAttack": "attackzhanshi.mp3"
-    },
-    {
-        "classId": 903,
-        "label": "魔导师头盔2",
-        "category": 1,
-        "subcategory": 13,
-        "effectf": [
-            {
-                "part": "helmet",
-                "file": "f-magen2-helmet1.ccbi"
-            },
-            {
-                "part": "helmet3",
-                "file": "f-magen2-helmet1-3.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "helmet",
-                "file": "m-magen2-helmet1.ccbi"
-            },
-            {
-                "part": "helmet3",
-                "file": "m-magen2-helmet1-3.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 904,
-        "label": "主教下身2",
-        "category": 1,
-        "subcategory": 4,
-        "effectf": [
-            {
-                "part": "leftleg",
-                "file": "f-priestn2-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "f-priestn2-rightleg1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "leftleg",
-                "file": "m-priestn2-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "m-priestn2-rightleg1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 905,
-        "label": "主教上身2",
-        "category": 1,
-        "subcategory": 2,
-        "effectf": [
-            {
-                "part": "chest",
-                "file": "f-priestn2-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "f-priestn2-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "f-priestn2-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "f-priestn2-lefthand1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "chest",
-                "file": "m-priestn2-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "m-priestn2-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "m-priestn2-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "m-priestn2-lefthand1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 906,
-        "label": "主教副手2",
-        "category": 1,
-        "subcategory": 1,
-        "effectf": [
-            {
-                "part": "weapon4",
-                "file": "f-priestn2-weapon41.ccbi"
-            },
-            {
-                "part": "weapon4-2",
-                "file": "f-priestn2-weapon41-2.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "weapon4",
-                "file": "m-priestn2-weapon41.ccbi"
-            },
-            {
-                "part": "weapon4-2",
-                "file": "m-priestn2-weapon41-2.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 907,
-        "label": "主教主手2",
-        "category": 1,
-        "subcategory": 0,
-        "effectf": [
-            {
-                "part": "mainweapon",
-                "file": "f-priestn2-mainweapon1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "mainweapon",
-                "file": "m-priestn2-mainweapon1.ccbi"
-            }
-        ],
-        "effectAttack": 9,
-        "soundAttack": "attackzhanshi.mp3"
-    },
-    {
-        "classId": 908,
-        "label": "主教头盔2",
-        "category": 1,
-        "subcategory": 13,
-        "effectf": [
-            {
-                "part": "helmet",
-                "file": "f-priestn2-helmet1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "helmet",
-                "file": "m-priestn2-helmet1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 909,
-        "label": "狂战士下身3",
-        "category": 1,
-        "subcategory": 4,
-        "effectf": [
-            {
-                "part": "leftleg",
-                "file": "f-warriorn3-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "f-warriorn3-rightleg1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "leftleg",
-                "file": "m-warriorn3-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "m-warriorn3-rightleg1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 910,
-        "label": "狂战士上身3",
-        "category": 1,
-        "subcategory": 2,
-        "effectf": [
-            {
-                "part": "chest",
-                "file": "f-warriorn3-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "f-warriorn3-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "f-warriorn3-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "f-warriorn3-lefthand1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "chest",
-                "file": "m-warriorn3-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "m-warriorn3-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "m-warriorn3-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "m-warriorn3-lefthand1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 911,
-        "label": "狂战士副手3",
-        "category": 1,
-        "subcategory": 1,
-        "effectf": [
-            {
-                "part": "secondaryweapon2",
-                "file": "f-warriorn3-weapon21.ccbi"
-            },
-            {
-                "part": "secondaryweapon2-2",
-                "file": "f-warriorn3-weapon21.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "secondaryweapon2",
-                "file": "m-warriorn3-weapon21.ccbi"
-            },
-            {
-                "part": "secondaryweapon2-2",
-                "file": "m-warriorn3-weapon21.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 912,
-        "label": "狂战士主手3",
-        "category": 1,
-        "subcategory": 0,
-        "effectf": [
-            {
-                "part": "mainweapon",
-                "file": "f-warriorn3-mainweapon1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "mainweapon",
-                "file": "m-warriorn3-mainweapon1.ccbi"
-            }
-        ],
-        "effectAttack": 8,
-        "soundAttack": "attackzhanshi.mp3"
-    },
-    {
-        "classId": 913,
-        "label": "狂战士头盔3",
-        "category": 1,
-        "subcategory": 13,
-        "effectf": [
-            {
-                "part": "helmet",
-                "file": "f-warriorn3-helmet1.ccbi"
-            },
-            {
-                "part": "helmet2",
-                "file": "f-warriorn3-helmet1-2.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "helmet",
-                "file": "m-warriorn3-helmet1.ccbi"
-            },
-            {
-                "part": "helmet2",
-                "file": "m-warriorn3-helmet1-2.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 914,
-        "label": "魔导师下身3",
-        "category": 1,
-        "subcategory": 4,
-        "effectf": [
-            {
-                "part": "leftleg",
-                "file": "f-magen3-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "f-magen3-rightleg1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "leftleg",
-                "file": "m-magen3-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "m-magen3-rightleg1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 915,
-        "label": "魔导师上身3",
-        "category": 1,
-        "subcategory": 2,
-        "effectf": [
-            {
-                "part": "chest",
-                "file": "f-magen3-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "f-magen3-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "f-magen3-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "f-magen3-lefthand1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "chest",
-                "file": "m-magen3-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "m-magen3-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "m-magen3-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "m-magen3-lefthand1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 916,
-        "label": "魔导师副手3",
-        "category": 1,
-        "subcategory": 1,
-        "effectf": [
-            {
-                "part": "weapon4",
-                "file": "f-magen3-weapon41.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "weapon4",
-                "file": "m-magen3-weapon41.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 917,
-        "label": "魔导师主手3",
-        "category": 1,
-        "subcategory": 0,
-        "effectf": [
-            {
-                "part": "mainweapon",
-                "file": "f-magen3-mainweapon1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "mainweapon",
-                "file": "m-magen3-mainweapon1.ccbi"
-            }
-        ],
-        "effectAttack": 10,
-        "soundAttack": "attackzhanshi.mp3"
-    },
-    {
-        "classId": 918,
-        "label": "魔导师头盔3",
-        "category": 1,
-        "subcategory": 13,
-        "effectf": [
-            {
-                "part": "helmet",
-                "file": "f-magen3-helmet1.ccbi"
-            },
-            {
-                "part": "helmet3",
-                "file": "f-magen3-helmet1-3.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "helmet",
-                "file": "m-magen3-helmet1.ccbi"
-            },
-            {
-                "part": "helmet3",
-                "file": "m-magen3-helmet1-3.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 919,
-        "label": "主教下身3",
-        "category": 1,
-        "subcategory": 4,
-        "effectf": [
-            {
-                "part": "leftleg",
-                "file": "f-priestn3-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "f-priestn3-rightleg1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "leftleg",
-                "file": "m-priestn3-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "m-priestn3-rightleg1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 920,
-        "label": "主教上身3",
-        "category": 1,
-        "subcategory": 2,
-        "effectf": [
-            {
-                "part": "chest",
-                "file": "f-priestn3-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "f-priestn3-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "f-priestn3-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "f-priestn3-lefthand1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "chest",
-                "file": "m-priestn3-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "m-priestn3-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "m-priestn3-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "m-priestn3-lefthand1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 921,
-        "label": "主教副手3",
-        "category": 1,
-        "subcategory": 1,
-        "effectf": [
-            {
-                "part": "weapon4",
-                "file": "f-priestn3-weapon41.ccbi"
-            },
-            {
-                "part": "weapon4-2",
-                "file": "f-priestn3-weapon41-2.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "weapon4",
-                "file": "m-priestn3-weapon41.ccbi"
-            },
-            {
-                "part": "weapon4-2",
-                "file": "m-priestn3-weapon41-2.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 922,
-        "label": "主教主手3",
-        "category": 1,
-        "subcategory": 0,
-        "effectf": [
-            {
-                "part": "mainweapon",
-                "file": "f-priestn3-mainweapon1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "mainweapon",
-                "file": "m-priestn3-mainweapon1.ccbi"
-            }
-        ],
-        "effectAttack": 9,
-        "soundAttack": "attackzhanshi.mp3"
-    },
-    {
-        "classId": 923,
-        "label": "主教头盔3",
-        "category": 1,
-        "subcategory": 13,
-        "effectf": [
-            {
-                "part": "helmet",
-                "file": "f-priestn3-helmet1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "helmet",
-                "file": "m-priestn3-helmet1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 924,
-        "label": "狂战士下身4",
-        "category": 1,
-        "subcategory": 4,
-        "effectf": [
-            {
-                "part": "leftleg",
-                "file": "f-warriorn4-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "f-warriorn4-rightleg1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "leftleg",
-                "file": "m-warriorn4-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "m-warriorn4-rightleg1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 925,
-        "label": "狂战士上身4",
-        "category": 1,
-        "subcategory": 2,
-        "effectf": [
-            {
-                "part": "chest",
-                "file": "f-warriorn4-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "f-warriorn4-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "f-warriorn4-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "f-warriorn4-lefthand1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "chest",
-                "file": "m-warriorn4-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "m-warriorn4-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "m-warriorn4-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "m-warriorn4-lefthand1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 926,
-        "label": "狂战士副手4",
-        "category": 1,
-        "subcategory": 1,
-        "effectf": [
-            {
-                "part": "secondaryweapon2",
-                "file": "f-warriorn4-weapon21.ccbi"
-            },
-            {
-                "part": "secondaryweapon2-2",
-                "file": "f-warriorn4-weapon21.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "secondaryweapon2",
-                "file": "m-warriorn4-weapon21.ccbi"
-            },
-            {
-                "part": "secondaryweapon2-2",
-                "file": "m-warriorn4-weapon21.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 927,
-        "label": "狂战士主手4",
-        "category": 1,
-        "subcategory": 0,
-        "effectf": [
-            {
-                "part": "mainweapon",
-                "file": "f-warriorn4-mainweapon1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "mainweapon",
-                "file": "m-warriorn4-mainweapon1.ccbi"
-            }
-        ],
-        "effectAttack": 8,
-        "soundAttack": "attackzhanshi.mp3"
-    },
-    {
-        "classId": 928,
-        "label": "狂战士头盔4",
-        "category": 1,
-        "subcategory": 13,
-        "effectf": [
-            {
-                "part": "helmet",
-                "file": "f-warriorn4-helmet1.ccbi"
-            },
-            {
-                "part": "helmet2",
-                "file": "f-warriorn4-helmet1-2.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "helmet",
-                "file": "m-warriorn4-helmet1.ccbi"
-            },
-            {
-                "part": "helmet2",
-                "file": "m-warriorn4-helmet1-2.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 929,
-        "label": "魔导师下身4",
-        "category": 1,
-        "subcategory": 4,
-        "effectf": [
-            {
-                "part": "leftleg",
-                "file": "f-magen4-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "f-magen4-rightleg1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "leftleg",
-                "file": "m-magen4-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "m-magen4-rightleg1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 930,
-        "label": "魔导师上身4",
-        "category": 1,
-        "subcategory": 2,
-        "effectf": [
-            {
-                "part": "chest",
-                "file": "f-magen4-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "f-magen4-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "f-magen4-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "f-magen4-lefthand1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "chest",
-                "file": "m-magen4-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "m-magen4-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "m-magen4-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "m-magen4-lefthand1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 931,
-        "label": "魔导师副手4",
-        "category": 1,
-        "subcategory": 1,
-        "effectf": [
-            {
-                "part": "weapon4",
-                "file": "f-magen4-weapon41.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "weapon4",
-                "file": "m-magen4-weapon41.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 932,
-        "label": "魔导师主手4",
-        "category": 1,
-        "subcategory": 0,
-        "effectf": [
-            {
-                "part": "mainweapon",
-                "file": "f-magen4-mainweapon1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "mainweapon",
-                "file": "m-magen4-mainweapon1.ccbi"
-            }
-        ],
-        "effectAttack": 10,
-        "soundAttack": "attackzhanshi.mp3"
-    },
-    {
-        "classId": 933,
-        "label": "魔导师头盔4",
-        "category": 1,
-        "subcategory": 13,
-        "effectf": [
-            {
-                "part": "helmet",
-                "file": "f-magen4-helmet1.ccbi"
-            },
-            {
-                "part": "helmet3",
-                "file": "f-magen4-helmet1-3.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "helmet",
-                "file": "m-magen4-helmet1.ccbi"
-            },
-            {
-                "part": "helmet3",
-                "file": "m-magen4-helmet1-3.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 934,
-        "label": "主教下身4",
-        "category": 1,
-        "subcategory": 4,
-        "effectf": [
-            {
-                "part": "leftleg",
-                "file": "f-priestn4-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "f-priestn4-rightleg1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "leftleg",
-                "file": "m-priestn4-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "m-priestn4-rightleg1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 935,
-        "label": "主教上身4",
-        "category": 1,
-        "subcategory": 2,
-        "effectf": [
-            {
-                "part": "chest",
-                "file": "f-priestn4-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "f-priestn4-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "f-priestn4-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "f-priestn4-lefthand1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "chest",
-                "file": "m-priestn4-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "m-priestn4-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "m-priestn4-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "m-priestn4-lefthand1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 936,
-        "label": "主教副手4",
-        "category": 1,
-        "subcategory": 1,
-        "effectf": [
-            {
-                "part": "weapon4",
-                "file": "f-priestn4-weapon41.ccbi"
-            },
-            {
-                "part": "weapon4-2",
-                "file": "f-priestn4-weapon41-2.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "weapon4",
-                "file": "m-priestn4-weapon41.ccbi"
-            },
-            {
-                "part": "weapon4-2",
-                "file": "m-priestn4-weapon41-2.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 937,
-        "label": "主教主手4",
-        "category": 1,
-        "subcategory": 0,
-        "effectf": [
-            {
-                "part": "mainweapon",
-                "file": "f-priestn4-mainweapon1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "mainweapon",
-                "file": "m-priestn4-mainweapon1.ccbi"
-            }
-        ],
-        "effectAttack": 9,
-        "soundAttack": "attackzhanshi.mp3"
-    },
-    {
-        "classId": 938,
-        "label": "主教头盔4",
-        "category": 1,
-        "subcategory": 13,
-        "effectf": [
-            {
-                "part": "helmet",
-                "file": "f-priestn4-helmet1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "helmet",
-                "file": "m-priestn4-helmet1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 939,
-        "label": "狂战士下身5",
-        "category": 1,
-        "subcategory": 4,
-        "effectf": [
-            {
-                "part": "leftleg",
-                "file": "f-warriorn5-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "f-warriorn5-rightleg1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "leftleg",
-                "file": "m-warriorn5-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "m-warriorn5-rightleg1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 940,
-        "label": "狂战士上身5",
-        "category": 1,
-        "subcategory": 2,
-        "effectf": [
-            {
-                "part": "chest",
-                "file": "f-warriorn5-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "f-warriorn5-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "f-warriorn5-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "f-warriorn5-lefthand1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "chest",
-                "file": "m-warriorn5-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "m-warriorn5-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "m-warriorn5-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "m-warriorn5-lefthand1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 941,
-        "label": "狂战士副手5",
-        "category": 1,
-        "subcategory": 1,
-        "effectf": [
-            {
-                "part": "secondaryweapon2",
-                "file": "f-warriorn5-weapon21.ccbi"
-            },
-            {
-                "part": "secondaryweapon2-2",
-                "file": "f-warriorn5-weapon21.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "secondaryweapon2",
-                "file": "m-warriorn5-weapon21.ccbi"
-            },
-            {
-                "part": "secondaryweapon2-2",
-                "file": "m-warriorn5-weapon21.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 942,
-        "label": "狂战士主手5",
-        "category": 1,
-        "subcategory": 0,
-        "effectf": [
-            {
-                "part": "mainweapon",
-                "file": "f-warriorn5-mainweapon1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "mainweapon",
-                "file": "m-warriorn5-mainweapon1.ccbi"
-            }
-        ],
-        "effectAttack": 8,
-        "soundAttack": "attackzhanshi.mp3"
-    },
-    {
-        "classId": 943,
-        "label": "狂战士头盔5",
-        "category": 1,
-        "subcategory": 13,
-        "effectf": [
-            {
-                "part": "helmet",
-                "file": "f-warriorn5-helmet1.ccbi"
-            },
-            {
-                "part": "helmet2",
-                "file": "f-warriorn5-helmet1-2.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "helmet",
-                "file": "m-warriorn5-helmet1.ccbi"
-            },
-            {
-                "part": "helmet2",
-                "file": "m-warriorn5-helmet1-2.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 944,
-        "label": "魔导师下身5",
-        "category": 1,
-        "subcategory": 4,
-        "effectf": [
-            {
-                "part": "leftleg",
-                "file": "f-magen5-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "f-magen5-rightleg1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "leftleg",
-                "file": "m-magen5-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "m-magen5-rightleg1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 945,
-        "label": "魔导师上身5",
-        "category": 1,
-        "subcategory": 2,
-        "effectf": [
-            {
-                "part": "chest",
-                "file": "f-magen5-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "f-magen5-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "f-magen5-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "f-magen5-lefthand1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "chest",
-                "file": "m-magen5-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "m-magen5-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "m-magen5-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "m-magen5-lefthand1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 946,
-        "label": "魔导师副手5",
-        "category": 1,
-        "subcategory": 1,
-        "effectf": [
-            {
-                "part": "weapon4",
-                "file": "f-magen5-weapon41.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "weapon4",
-                "file": "m-magen5-weapon41.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 947,
-        "label": "魔导师主手5",
-        "category": 1,
-        "subcategory": 0,
-        "effectf": [
-            {
-                "part": "mainweapon",
-                "file": "f-magen5-mainweapon1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "mainweapon",
-                "file": "m-magen5-mainweapon1.ccbi"
-            }
-        ],
-        "effectAttack": 10,
-        "soundAttack": "attackzhanshi.mp3"
-    },
-    {
-        "classId": 948,
-        "label": "魔导师头盔5",
-        "category": 1,
-        "subcategory": 13,
-        "effectf": [
-            {
-                "part": "helmet",
-                "file": "f-magen5-helmet1.ccbi"
-            },
-            {
-                "part": "helmet3",
-                "file": "f-magen5-helmet1-3.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "helmet",
-                "file": "m-magen5-helmet1.ccbi"
-            },
-            {
-                "part": "helmet3",
-                "file": "m-magen5-helmet1-3.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 949,
-        "label": "主教下身5",
-        "category": 1,
-        "subcategory": 4,
-        "effectf": [
-            {
-                "part": "leftleg",
-                "file": "f-priestn5-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "f-priestn5-rightleg1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "leftleg",
-                "file": "m-priestn5-leftleg1.ccbi"
-            },
-            {
-                "part": "rightleg",
-                "file": "m-priestn5-rightleg1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 950,
-        "label": "主教上身5",
-        "category": 1,
-        "subcategory": 2,
-        "effectf": [
-            {
-                "part": "chest",
-                "file": "f-priestn5-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "f-priestn5-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "f-priestn5-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "f-priestn5-lefthand1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "chest",
-                "file": "m-priestn5-chest1.ccbi"
-            },
-            {
-                "part": "righthand",
-                "file": "m-priestn5-righthand1.ccbi"
-            },
-            {
-                "part": "lefthand",
-                "file": "m-priestn5-lefthand1.ccbi"
-            },
-            {
-                "part": "lefthand2",
-                "file": "m-priestn5-lefthand1.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 951,
-        "label": "主教副手5",
-        "category": 1,
-        "subcategory": 1,
-        "effectf": [
-            {
-                "part": "weapon4",
-                "file": "f-priestn5-weapon41.ccbi"
-            },
-            {
-                "part": "weapon4-2",
-                "file": "f-priestn5-weapon41-2.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "weapon4",
-                "file": "m-priestn5-weapon41.ccbi"
-            },
-            {
-                "part": "weapon4-2",
-                "file": "m-priestn5-weapon41-2.ccbi"
-            }
-        ]
-    },
-    {
-        "classId": 952,
-        "label": "主教主手5",
-        "category": 1,
-        "subcategory": 0,
-        "effectf": [
-            {
-                "part": "mainweapon",
-                "file": "f-priestn5-mainweapon1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "mainweapon",
-                "file": "m-priestn5-mainweapon1.ccbi"
-            }
-        ],
-        "effectAttack": 9,
-        "soundAttack": "attackzhanshi.mp3"
-    },
-    {
-        "classId": 953,
-        "label": "主教头盔5",
-        "category": 1,
-        "subcategory": 13,
-        "effectf": [
-            {
-                "part": "helmet",
-                "file": "f-priestn5-helmet1.ccbi"
-            }
-        ],
-        "effectm": [
-            {
-                "part": "helmet",
-                "file": "m-priestn5-helmet1.ccbi"
             }
         ]
     }

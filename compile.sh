@@ -12,7 +12,13 @@ while [ "$CurrentBranch" = "master" ]; do
 done
 
 VersionFile="build/version.js"
-ConfigFile="build/config.js"
+TarConfigFile="build/config.js"
+if [ "$1" = "teebik" ]
+then
+  ConfigFile="build/tbConfig.js"
+else
+  ConfigFile="build/tgConfig.js"
+fi
 
 CurrentPWD=`pwd`
 
@@ -105,6 +111,7 @@ sed -ig 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $Ve
 sed -ig 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
 sed -ig 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
 
+cp $ConfigFile $TarConfigFile
 # Commit
 echo '===== Commit the changes ====='
 echo 'Commit changes branch:'$CurrentBranch @ $CurrentVersion  Server: $SubModuleServer Table: $SubModuleData

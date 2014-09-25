@@ -1,83 +1,77 @@
 exports.data = {
-  "Charge": {
-    "show": true,
-    "title": "充值就得奖",
-      "banner":"event-banner-wzydr.png",
-    "description": "单笔充值达到6元，12元，30元，68元，128元，198元，328元，648元分别得到奖励。\n\n***奖励内容：\n\n充值6元，即可获得\n\n##[{\"type\":2,\"count\":60},{\"type\":0,\"value\":0,\"count\":5},{\"type\":0,\"value\":540,\"count\":1}]\n\n** \n充值12元，即可获得\n\n##[{\"type\":2,\"count\":130},{\"type\":0,\"value\":0,\"count\":10},{\"type\":0,\"value\":540,\"count\":2}]\n\n** \n充值30元，即可获得\n\n##[{\"type\":2,\"count\":330},{\"type\":0,\"value\":0,\"count\":20},{\"type\":0,\"value\":540,\"count\":2},{\"type\":0,\"value\":534,\"count\":3}]\n\n** \n充值68元，即可获得\n\n##[{\"type\":2,\"count\":760},{\"type\":0,\"value\":0,\"count\":30},{\"type\":0,\"value\":552,\"count\":1},{\"type\":0,\"value\":540,\"count\":5},{\"type\":0,\"value\":535,\"count\":3},{\"type\":0,\"value\":536,\"count\":1}]\n\n** \n充值128元，即可获得\n\n##[{\"type\":2,\"count\":1460},{\"type\":0,\"value\":0,\"count\":30},{\"type\":0,\"value\":552,\"count\":1},{\"type\":0,\"value\":530,\"count\":2},{\"type\":0,\"value\":540,\"count\":5},{\"type\":0,\"value\":535,\"count\":5},{\"type\":0,\"value\":536,\"count\":5}]\n\n** \n充值198元，即可获得\n\n##[{\"type\":2,\"count\":2260},{\"type\":0,\"value\":0,\"count\":50},{\"type\":0,\"value\":551,\"count\":1},{\"type\":0,\"value\":530,\"count\":2},{\"type\":0,\"value\":540,\"count\":10},{\"type\":0,\"value\":536,\"count\":10},{\"type\":0,\"value\":537,\"count\":10}]\n\n** \n充值328元，即可获得\n\n##[{\"type\":2,\"count\":3760},{\"type\":0,\"value\":0,\"count\":50},{\"type\":0,\"value\":551,\"count\":1},{\"type\":0,\"value\":552,\"count\":1},{\"type\":0,\"value\":532,\"count\":2},{\"type\":0,\"value\":537,\"count\":15}]\n\n** \n充值648元，即可获得\n\n##[{\"type\":2,\"count\":7480}, {\"type\":0,\"value\":0,\"count\":80},{\"type\":0,\"value\":551,\"count\":1},{\"type\":0,\"value\":552,\"count\":1},{\"type\":0,\"value\":533,\"count\":1},{\"type\":0,\"value\":532,\"count\":2},{\"type\":0,\"value\":537,\"count\":20}]",
-      "mailTitle": "《充值就得奖》活动奖励",
-      "mailBody": "恭喜你完成活动，点击领取活动奖励！",
-      "date": "2014/05/05",
-      "dateDescription": "截止日期2014年5月5日24时",
-    "objective": {
-      "6": {
-        "award": [
-            {"type":0,"value":0,"count":5},
-            {"type":0,"value":540,"count":1}
-        ]
-      },
-      "12": {
-        "award": [
-            {"type":0,"value":0,"count":10},
-            {"type":0,"value":540,"count":2}
-        ]
-      },
-        "30": {
-            "award": [
-                {"type":0,"value":0,"count":20},
-                {"type":0,"value":540,"count":2},
-                {"type":0,"value":534,"count":3}
-            ]
-        },
-        "68": {
-            "award": [
-                {"type":0,"value":0,"count":30},
-                {"type":0,"value":552,"count":1},
-                {"type":0,"value":540,"count":5},
-                {"type":0,"value":535,"count":3},
-                {"type":0,"value":536,"count":1}
-            ]
-        },
-        "128": {
-            "award": [
-                {"type":0,"value":0,"count":30},
-                {"type":0,"value":552,"count":1},
-                {"type":0,"value":530,"count":2},
-                {"type":0,"value":540,"count":5},
-                {"type":0,"value":535,"count":5},
-                {"type":0,"value":536,"count":5}
-            ]
-        },
-        "198": {
-            "award": [
-                {"type":0,"value":0,"count":50},
-                {"type":0,"value":551,"count":1},
-                {"type":0,"value":530,"count":2},
-                {"type":0,"value":540,"count":10},
-                {"type":0,"value":536,"count":10},
-                {"type":0,"value":537,"count":10}
-            ]
-        },
-        "328": {
-            "award": [
-                {"type":0,"value":0,"count":50},
-                {"type":0,"value":551,"count":1},
-                {"type":0,"value":552,"count":1},
-                {"type":0,"value":532,"count":2},
-                {"type":0,"value":537,"count":15}
-            ]
-        },
-        "648": {
-            "award": [
-                {"type":0,"value":0,"count":80},
-                {"type":0,"value":551,"count":1},
-                {"type":0,"value":552,"count":1},
-                {"type":0,"value":533,"count":1},
-                {"type":0,"value":532,"count":2},
-                {"type":0,"value":537,"count":20}
-            ]
+    "Charge": {
+        "show": true,
+        "title": "中秋充值奖励",
+        "banner":"event-banner-wzydr.png",
+        "description": "单笔充值达到6元，12元，30元，68元，128元，198元，328元，648元分别得到奖励。\n\n***奖励内容：\n\n** \n充值6元，即可获得\n\n##[{\"type\":2,\"count\":60},{\"type\":0,\"value\":853,\"count\":5},{\"type\":0,\"value\":540,\"count\":2}]\n\n** \n充值12元，即可获得\n\n##[{\"type\":2,\"count\":130},{\"type\":0,\"value\":853,\"count\":10},{\"type\":0,\"value\":540,\"count\":2},{\"type\":0,\"value\":538,\"count\":1}]\n\n** \n充值30元，即可获得\n\n##[{\"type\":2,\"count\":330},{\"type\":0,\"value\":871,\"count\":5},{\"type\":0,\"value\":540,\"count\":3},{\"type\":0,\"value\":538,\"count\":1}]\n\n** \n充值68元，即可获得\n\n##[{\"type\":2,\"count\":760},{\"type\":0,\"value\":871,\"count\":5},{\"type\":0,\"value\":538,\"count\":1},{\"type\":0,\"value\":540,\"count\":3},{\"type\":0,\"value\":860,\"count\":1}]\n\n** \n充值128元，即可获得\n\n##[{\"type\":2,\"count\":1460},{\"type\":0,\"value\":871,\"count\":10},{\"type\":0,\"value\":539,\"count\":1},{\"type\":0,\"value\":860,\"count\":3},{\"type\":0,\"value\":552,\"count\":1}]\n\n** \n充值198元，即可获得\n\n##[{\"type\":2,\"count\":2260},{\"type\":0,\"value\":871,\"count\":20},{\"type\":0,\"value\":539,\"count\":1},{\"type\":0,\"value\":552,\"count\":1},{\"type\":0,\"value\":860,\"count\":6}]\n\n** \n充值328元，即可获得\n\n##[{\"type\":2,\"count\":3760},{\"type\":0,\"value\":871,\"count\":20},{\"type\":0,\"value\":28,\"count\":4},{\"type\":0,\"value\":551,\"count\":1},{\"type\":0,\"value\":860,\"count\":10}]\n\n** \n充值648元，即可获得\n\n##[{\"type\":2,\"count\":7480}, {\"type\":0,\"value\":871,\"count\":30},{\"type\":0,\"value\":28,\"count\":10},{\"type\":0,\"value\":552,\"count\":1},{\"type\":0,\"value\":551,\"count\":1},{\"type\":0,\"value\":860,\"count\":20}]",
+        "mailTitle": "《中秋充值》活动奖励",
+        "mailBody": "恭喜你完成活动，点击领取活动奖励！",
+        "date": "2014/09/15",
+        "dateDescription": "截止日期2014年9月15日24时",
+        "objective": {
+            "6": {
+                "award": [
+                    {"type":0,"value":853,"count":5},
+                    {"type":0,"value":540,"count":2}
+                ]
+            },
+            "12": {
+                "award": [
+                    {"type":0,"value":853,"count":10},
+                    {"type":0,"value":540,"count":2},
+                    {"type":0,"value":538,"count":1}
+                ]
+            },
+            "30": {
+                "award": [
+                    {"type":0,"value":871,"count":5},
+                    {"type":0,"value":540,"count":3},
+                    {"type":0,"value":538,"count":1}
+                ]
+            },
+            "68": {
+                "award": [
+                    {"type":0,"value":871,"count":5},
+                    {"type":0,"value":538,"count":1},
+                    {"type":0,"value":540,"count":4},
+                    {"type":0,"value":860,"count":1}
+                ]
+            },
+            "128": {
+                "award": [
+                    {"type":0,"value":871,"count":10},
+                    {"type":0,"value":539,"count":1},
+                    {"type":0,"value":860,"count":3},
+                    {"type":0,"value":552,"count":1}
+                ]
+            },
+            "198": {
+                "award": [
+                    {"type":0,"value":871,"count":20},
+                    {"type":0,"value":539,"count":1},
+                    {"type":0,"value":552,"count":1},
+                    {"type":0,"value":860,"count":6}
+                ]
+            },
+            "328": {
+                "award": [
+                    {"type":0,"value":871,"count":20},
+                    {"type":0,"value":28,"count":4},
+                    {"type":0,"value":551,"count":1},
+                    {"type":0,"value":860,"count":10}
+                ]
+            },
+            "648": {
+                "award": [
+                    {"type":0,"value":871,"count":30},
+                    {"type":0,"value":28,"count":10},
+                    {"type":0,"value":552,"count":1},
+                    {"type":0,"value":551,"count":1},
+                    {"type":0,"value":860,"count":20}
+                ]
+            }
         }
-    }
-  },
+    },
     "DuanwuCharge": {
         "show": true,
         "title": "端午粽子派送",
