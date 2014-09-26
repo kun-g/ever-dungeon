@@ -1,12 +1,11 @@
-libItem = {};
 (function() {
   var Card, Item, Serializer, registerConstructor, _ref,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-  
+  require('./define');
 
-  _ref = libSerializer, Serializer = _ref.Serializer, registerConstructor = _ref.registerConstructor;
+  _ref = require('./serializer'), Serializer = _ref.Serializer, registerConstructor = _ref.registerConstructor;
 
   Item = (function(_super) {
     __extends(Item, _super);
@@ -77,10 +76,10 @@ libItem = {};
 
   registerConstructor(Item);
 
-  libItem.Item = Item;
+  exports.Item = Item;
 
-  libItem.Card = Card;
+  exports.Card = Card;
 
-  libItem.fileVersion = -1;
+  exports.fileVersion = -1;
 
 }).call(this);

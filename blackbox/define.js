@@ -1,6 +1,5 @@
-libDefine = {};
-
-var triggerLib = libTrigger;
+require('./shared');
+var triggerLib = require('./trigger');
 
 DUNGEON_RESULT_DONE = 2;
 DUNGEON_RESULT_WIN = 1;
@@ -21,11 +20,11 @@ TEAMMATE_REWARD_RATIO = 0.2;
 //////////////////// Log
 serverType = 'None';
 print = console.log;
-dprint = function(obj) { console.log(libUtil.inspect(obj, true, 10));}
+dprint = function(obj) { console.log(require('util').inspect(obj, true, 10));}
 logger = null;
 initServer = function () {
   var pid = process.pid;
-  
+  async = require('async');
   print = function (type, log) {
     if (log == null) {
       log = type;
@@ -42,7 +41,7 @@ initServer = function () {
       logger.emit(type, log, new Date());
     }
     if (logger == null || process.stdout.isTTY || type === 'Error') {
-      var util = libUtil;
+      var util = require('util');
       var config = {depth : 11};
       //if (process.stdout.isTTY) config.colors = true;
       console.log(util.inspect(log, config));
@@ -341,7 +340,7 @@ showMeTheStack = function () {try {a = b;} catch (err) {console.log(err.stack);}
 //////////// exit routine
 onDBShutDown = function () { };
 onAllDataSaved = function () {
-  libDb.releaseDB();
+  require('./db').releaseDB();
 };
 onNetworkShutDown = function () {
   if (dbClient && savingAllPlayer != null) {
@@ -351,7 +350,7 @@ onNetworkShutDown = function () {
   }
 };
 
-libDefine.initStageConfig = initStageConfig;
+exports.initStageConfig = initStageConfig;
 
 QUEST_TYPE_NPC = 0;
 QUEST_TYPE_ITEM = 1;
@@ -648,4 +647,4 @@ Event_UpdateStoreInfo = 10;
 Event_Fail = 11;
 Event_UpdateQuest = 19;
 
-libDefine.fileVersion = -1;
+exports.fileVersion = -1;
