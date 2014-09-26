@@ -237,6 +237,7 @@
         this.attack = 1;
       }
       this.maxHP = this.health;
+      this.originAttack = this.attack;
       if (flagCreation) {
         return console.log('Hero ', JSON.stringify(this));
       }
@@ -302,7 +303,8 @@
       this.hairStyle = heroData.hst;
       this.hairColor = heroData.hcl;
       this.ref = heroData.ref;
-      return this.id = cid;
+      this.id = cid;
+      return this.originAttack = this.attack;
     };
 
     return Mirror;
@@ -339,6 +341,7 @@
       if (cfg != null) {
         this.initWithConfig(cfg);
       }
+      this.maxHP = this.health;
       if (flagCreation) {
         return console.log('Monster ', JSON.stringify(this));
       }

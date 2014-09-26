@@ -5,7 +5,7 @@ exports.data = {
           "rmb": 0
       },
       {
-          "rmb": 4.99,
+          "rmb": 30,
           "privilege":[
               {
                   "name":"chest_vip",
@@ -14,7 +14,7 @@ exports.data = {
           ]
       },
       {
-          "rmb": 15.99,
+          "rmb": 100,
           "privilege":[
               {
                   "name":"chest_vip",
@@ -23,7 +23,7 @@ exports.data = {
           ]
       },
         {
-            "rmb": 23.99,
+            "rmb": 150,
             "privilege":[
                 {
                     "name":"chest_vip",
@@ -36,7 +36,7 @@ exports.data = {
             ]
         },
         {
-            "rmb": 39.99,
+            "rmb": 250,
             "privilege":[
                 {
                     "name":"chest_vip",
@@ -49,7 +49,7 @@ exports.data = {
             ]
         },
         {
-            "rmb": 64.99,
+            "rmb": 400,
             "privilege":[
                 {
                     "name":"chest_vip",
@@ -66,7 +66,7 @@ exports.data = {
             ]
         },
         {
-            "rmb": 137.99,
+            "rmb": 850,
             "privilege":[
                 {
                     "name":"chest_vip",
@@ -87,7 +87,7 @@ exports.data = {
             ]
         },
         {
-            "rmb": 227.99,
+            "rmb": 1400,
             "privilege":[
                 {
                     "name":"chest_vip",
@@ -108,7 +108,7 @@ exports.data = {
             ]
         },
         {
-            "rmb": 407.99,
+            "rmb": 2500,
             "privilege":[
                 {
                     "name":"chest_vip",
