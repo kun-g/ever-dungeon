@@ -115,6 +115,7 @@ do
   for fileWithPath in $mulityVersionFileList
   do
           targetFile=`(echo $fileWithPath | sed -e 's/-trin//g')`
+					removeFils=`(echo $fileWithPath | sed -e 's/-trin/-*/g')`
           wantFile=`(echo $fileWithPath | sed -e 's/-trin/-'$1'/g')`
           if [ -e $wantFile ]
           then
@@ -123,6 +124,7 @@ do
         	  sourceFile=$fileWithPath
           fi
           echo cp $sourceFile $targetFile
+					echo rm $removeFils
           #cp $sourceFile $targetfile
   done
 done
