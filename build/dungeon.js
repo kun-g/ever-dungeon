@@ -1216,7 +1216,7 @@
     };
 
     Level.prototype.createObject = function(arg) {
-      var cfg, k, o, skill, v, _i, _len, _ref5, _ref6;
+      var cfg, k, o, skill, v, _i, _j, _len, _len1, _ref5, _ref6, _ref7, _ref8;
       cfg = {};
       for (k in arg) {
         v = arg[k];
@@ -1232,11 +1232,18 @@
           o.installSpell(skill.id, skill.lv);
         }
       }
+      if (((_ref6 = arg.property) != null ? _ref6.skill : void 0) != null) {
+        _ref7 = arg.property.skill;
+        for (_j = 0, _len1 = _ref7.length; _j < _len1; _j++) {
+          skill = _ref7[_j];
+          o.installSpell(skill.id, skill.lv);
+        }
+      }
       o.installSpell(DUNGEON_DROP_CARD_SPELL, 1);
       if (arg.property != null) {
-        _ref6 = arg.property;
-        for (k in _ref6) {
-          v = _ref6[k];
+        _ref8 = arg.property;
+        for (k in _ref8) {
+          v = _ref8[k];
           o[k] = v;
         }
       }
@@ -2106,6 +2113,11 @@
       }
     },
     SpellState: {
+      callback: function(env) {
+        var state;
+        state = env.variable('wizard').calcBuffState();
+        return env.variable('state', state);
+      },
       output: function(env) {
         var actor, bid, effect, ev, ret;
         ret = genUnitInfo(env.variable('wizard'), false, env.variable('state'));
@@ -2152,7 +2164,7 @@
     },
     OpenBlock: {
       callback: function(env) {
-        var block, npc, _i, _len, _ref5, _results;
+        var aliveHeroes, block, blockType, hero, npc, who, _i, _j, _len, _len1, _ref5, _results;
         if (env.getBlock(env.variable('block')) == null) {
           return this.suicide();
         }
@@ -2162,8 +2174,15 @@
           block: env.variable('block')
         });
         block = env.getBlock(env.variable('block'));
+        aliveHeroes = env.getAliveHeroes().filter(function(h) {
+          return h != null;
+        }).sort(function(a, b) {
+          return a.order - b.order;
+        });
+        blockType = block.getType();
         if (block.getType() === Block_Npc || block.getType() === Block_Enemy) {
           if (block.getRef(-1) !== null) {
+            who = blockType === Block_Npc ? 'Npc' : 'Monster';
             _ref5 = block.getRef(-1);
             _results = [];
             for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
@@ -2175,7 +2194,11 @@
               env.variable('monster', npc);
               env.variable('tar', npc);
               npc.onEvent('onShow', this);
-              env.onEvent('onMonsterShow', this);
+              for (_j = 0, _len1 = aliveHeroes.length; _j < _len1; _j++) {
+                hero = aliveHeroes[_j];
+                onEvent(who + 'Show', this, hero, npc);
+              }
+              env.onEvent('on' + who + 'Show', this);
               if ((npc != null ? npc.isVisible : void 0) !== true) {
                 _results.push(npc.isVisible = true);
               } else {
