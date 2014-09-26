@@ -133,6 +133,6 @@ done
 # Commit
 echo '===== Commit the changes ====='
 echo 'Commit changes branch:'$CurrentBranch @ $CurrentVersion  Server: $SubModuleServer Table: $SubModuleData
-git commit -am "Commit changes branch:"$CurrentBranch" @ "$CurrentVersion" Server:"$SubModuleServer" Table:"$SubModuleData
+git commit -am "Commit changes branch:$CurrentBranch @ $CurrentVersion Server:$SubModuleServer Table:$SubModuleData"
 
 git push $RemoteRepo

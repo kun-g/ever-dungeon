@@ -285,8 +285,6 @@
       if (this.loginStreak.date && moment().isSame(this.loginStreak.date, 'month')) {
         if (moment().isSame(this.loginStreak.date, 'day')) {
           flag = false;
-        } else {
-          this.loginStreak.count += 1;
         }
       } else {
         this.loginStreak.count = 0;
@@ -299,7 +297,7 @@
       ret = [
         {
           NTF: Event_CampaignLoginStreak,
-          day: this.loginStreak.count,
+          day: this.loginStreak.count + 1,
           claim: flag
         }
       ];
@@ -423,6 +421,7 @@
         }
       }
       this.loginStreak['date'] = currentTime(true).valueOf();
+      this.loginStreak.count += 1;
       this.log('claimLoginReward', {
         loginStreak: this.loginStreak.count,
         date: currentTime()
@@ -514,14 +513,14 @@
 
     Player.prototype.handleReceipt = function(payment, tunnel, cb) {
       var cfg, flag, myReceipt, productList, rec, ret;
-      productList = queryTable(TABLE_CONFIG, 'Product_List');
+      productList = queryTable(TABLE_IAP, 'list');
       myReceipt = payment.receipt;
       rec = unwrapReceipt(myReceipt);
       cfg = productList[rec.productID];
       flag = true;
       this.log('charge', {
-        rmb: cfg.rmb,
-        diamond: cfg.diamond,
+        rmb: cfg.price,
+        diamond: cfg.gem,
         tunnel: tunnel,
         action: 'charge',
         match: flag,
@@ -532,7 +531,7 @@
           {
             NTF: Event_InventoryUpdateItem,
             arg: {
-              dim: this.addDiamond(cfg.diamond)
+              dim: this.addDiamond(cfg.gem)
             }
           }
         ];
@@ -540,8 +539,8 @@
           this.counters['monthCard'] = 30;
           ret = ret.concat(this.syncEvent());
         }
-        this.rmb += cfg.rmb;
-        this.onCampaign('RMB', cfg.rmb);
+        this.rmb += cfg.price;
+        this.onCampaign('RMB', cfg.price);
         ret.push({
           NTF: Event_PlayerInfo,
           arg: {
