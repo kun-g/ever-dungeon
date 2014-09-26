@@ -1001,6 +1001,7 @@ exports.data = [
                         "id": 23,
                         "count":1,
                         "questOnly":true,
+                        "keyed":true,
                         "collectId":11001
                     },
                     {
@@ -14049,7 +14050,8 @@ exports.data = [
                     {
                         "id": 23,
                         "count":1,
-                        "questOnly":true
+                        "questOnly":true,
+                        "keyed":true
                     },
                     {
                         "id": 25,

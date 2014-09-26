@@ -593,6 +593,7 @@
         case 'PP25':
         case 'ND91':
         case 'KY':
+        case 'Teebik':
           myReceipt = payment.receipt;
           return async.waterfall([
             function(cb) {
