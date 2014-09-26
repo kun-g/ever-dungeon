@@ -13,21 +13,21 @@ done
 
 CurrentPWD=`pwd`
 
-###echo '===== Compiling ====='
-###cd server
-###SubModuleServer=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
-###gulp compile
-###
-###cd ../data
-###SubModuleData=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
-###if [ "$2" = "all" ]
-###then
-###	echo "Fetching table"
-###	git pull
-###fi
-###
-###cd ..
-###
+echo '===== Compiling ====='
+cd server
+SubModuleServer=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
+gulp compile
+
+cd ../data
+SubModuleData=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
+if [ "$2" = "all" ]
+then
+	echo "Fetching table"
+	git pull
+fi
+
+cd ..
+
 echo '===== Updating black box ====='
 SOURCES=(
 "define.js"
@@ -63,43 +63,43 @@ cp src/*.js js/
 cp package.json $CurrentPWD/build
 cd ..
 
-###echo '===== Setting up variables ====='
-###if [ $CurrentBranch = develop ]
-###then
-###  CDNVersionBucket='hotupdate'
-###  RemoteRepo='origin'
-###  UpdateUrl='http://hotupdate.qiniudn.com/'
-###  ServerConfiguration='Develop'
-###  ServerID=0
-###elif [ $CurrentBranch = master ]
-###then
-###  CDNVersionBucket='drhu'
-###  RemoteRepo='deploy0'
-###  UpdateUrl='http://drhu.qiniudn.com/'
-###  ServerConfiguration='Master'
-###  ServerID=1
-###elif [[ $CurrentBranch = localWork ]]
-###then
-###  CDNVersionBucket='hotupdate'
-###  RemoteRepo='deploy'
-###  UpdateUrl='http://hotupdate.qiniudn.com/'
-###  ServerConfiguration='Develop'
-###  ServerID=0
-###else
-###  echo 'Invalid target branch'
-###  exit
-###fi
-###
-###
-###VersionFile="build/version.js"
-###CurrentVersion='not set'
-####CurrentVersion=`curl -s $UpdateUrl/version`
-####echo 'Current version: '$CurrentVersion
-###sed -ig 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
-###sed -ig 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
-###sed -ig 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
-###sed -ig 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
-###
+echo '===== Setting up variables ====='
+if [ $CurrentBranch = develop ]
+then
+  CDNVersionBucket='hotupdate'
+  RemoteRepo='origin'
+  UpdateUrl='http://hotupdate.qiniudn.com/'
+  ServerConfiguration='Develop'
+  ServerID=0
+elif [ $CurrentBranch = master ]
+then
+  CDNVersionBucket='drhu'
+  RemoteRepo='deploy0'
+  UpdateUrl='http://drhu.qiniudn.com/'
+  ServerConfiguration='Master'
+  ServerID=1
+elif [[ $CurrentBranch = localWork ]]
+then
+  CDNVersionBucket='hotupdate'
+  RemoteRepo='deploy'
+  UpdateUrl='http://hotupdate.qiniudn.com/'
+  ServerConfiguration='Develop'
+  ServerID=0
+else
+  echo 'Invalid target branch'
+  exit
+fi
+
+
+VersionFile="build/version.js"
+CurrentVersion='not set'
+#CurrentVersion=`curl -s $UpdateUrl/version`
+#echo 'Current version: '$CurrentVersion
+sed -ig 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
+sed -ig 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
+sed -ig 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
+sed -ig 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
+
 echo 'mulity version '
 SEARCH_DIR=(
 "build"
@@ -123,9 +123,9 @@ do
           else
         	  sourceFile=$fileWithPath
           fi
-          echo cp $sourceFile $targetFile
-					echo rm $removeFils
-          #cp $sourceFile $targetfile
+
+          cp $sourceFile $targetFile 
+					rm $removeFils 
   done
 done
 
