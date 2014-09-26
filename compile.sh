@@ -92,16 +92,21 @@ fi
 
 
 echo 'mulity version '
-applyMulityVersion $1 build/
+./applyMulityVersion $1 build/
 
 VersionFile="build/version.js"
-CurrentVersion='not set'
+ConfigFile="build/config.js"
+CurrentVersion=153
 #CurrentVersion=`curl -s $UpdateUrl/version`
 #echo 'Current version: '$CurrentVersion
 sed -ig 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
+echo sed -ig 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
 sed -ig 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
+echo sed -ig 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
 sed -ig 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
+echo sed -ig 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
 sed -ig 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
+echo sed -ig 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
 
 # Commit
 echo '===== Commit the changes ====='
