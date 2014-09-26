@@ -91,6 +91,9 @@ else
 fi
 
 
+echo 'mulity version '
+applyMulityVersion $1 build/
+
 VersionFile="build/version.js"
 CurrentVersion='not set'
 #CurrentVersion=`curl -s $UpdateUrl/version`
@@ -99,36 +102,6 @@ sed -ig 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
 sed -ig 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
 sed -ig 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
 sed -ig 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
-
-echo 'mulity version '
-SEARCH_DIR=(
-"build"
-)
-
-#if file name with -trin ,then it must be mulity version file.
-#but if can't find file's name with -xxx. use xxx-trin as default
-
-for dir in ${SEARCH_DIR[*]}
-do
-  mulityVersionFileList=`(ls $dir/*-trin.*)`
-
-  for fileWithPath in $mulityVersionFileList
-  do
-          targetFile=`(echo $fileWithPath | sed -e 's/-trin//g')`
-					removeFils=`(echo $fileWithPath | sed -e 's/-trin/-*/g')`
-          wantFile=`(echo $fileWithPath | sed -e 's/-trin/-'$1'/g')`
-          if [ -e $wantFile ]
-          then
-        	  sourceFile=$wantFile
-          else
-        	  sourceFile=$fileWithPath
-          fi
-
-          cp $sourceFile $targetFile 
-					rm $removeFils 
-  done
-done
-
 
 # Commit
 echo '===== Commit the changes ====='

@@ -284,14 +284,14 @@ function paymentHandler (request, response) {
       if ((sign === out.md5) && isRMBMatch(out.order_money, receipt)) {
           deliverReceipt(receipt, 'TBK', function (err) {
             if (err === null) {
-              logInfo({action: 'AcceptPayment', receipt: receipt, info: info});
+              logInfo({action: 'AcceptPayment', receipt: receipt, info: out});
               return response.end('success');
             } else {
               logError({action: 'AcceptPayment', error:err, data: data});
               response.end('fail');
             }
           });
-          logInfo({action: 'AcceptPayment', receipt: receipt, info: info});
+          logInfo({action: 'AcceptPayment', receipt: receipt, info: out});
           response.end(JSON.stringify({success:1, msg: "OK"}));
       } else {
           logError({action: 'AcceptPayment', error: 'Fail', data: data});

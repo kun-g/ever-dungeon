@@ -1,9 +1,37 @@
 exports.data = {
-  "ServerID": 0,
+  "ServerID": 2,
   "ServerName": "Develop",
   "ServerConfig": [
     {
       "ID": 0,
+      "Name": "Develop",
+      "DB": {
+        "Account": { "IP": "localhost", "PORT": 6379 },
+        "Role": { "IP": "localhost", "PORT": 6379},
+        "Publisher": { "IP": "localhost", "PORT": 6379},
+        "Subscriber": { "IP": "localhost", "PORT": 6379}
+      },
+      "Gate": [
+        {"ip": "localhost", "port": 7756},
+        {"ip": "localhost", "port": 7758}
+      ]
+    },
+    {
+      "ID": 1,
+      "Name": "Master",
+      "DB": {
+        "Account": { "IP": "10.4.4.188", "PORT": 6380 },
+        "Role": { "IP": "10.4.4.188", "PORT": 6381 },
+        "Publisher": { "IP": "10.4.4.188", "PORT": 6380 },
+        "Subscriber": { "IP": "10.4.4.188", "PORT": 6380 }
+      },
+      "Gate": [
+        {"ip": "10.4.4.188", "port": 7756},
+        {"ip": "10.4.2.185", "port": 7756}
+      ]
+    },
+    {
+      "ID": 2,
       "Name": "Develop",
       "DB": {
         "Account": { "IP": "192.168.128.9", "PORT": 6380 },
@@ -13,7 +41,22 @@ exports.data = {
       },
       "Gate": [
         {"ip": "192.168.128.9", "port": 7756},
-        {"ip": "192.168.128.10", "port": 7756},
+        {"ip": "192.168.128.10", "port": 7756}
+        {"ip": "192.168.128.11", "port": 7756}
+      ]
+    },
+	{
+      "ID": 3,
+      "Name": "Develop",
+      "DB": {
+        "Account": { "IP": "192.168.128.9", "PORT": 6380 },
+        "Role": { "IP": "192.168.128.10", "PORT": 6380 },
+        "Publisher": { "IP": "192.168.128.9", "PORT": 6380 },
+        "Subscriber": { "IP": "192.168.128.9", "PORT": 6380 }
+      },
+      "Gate": [
+        {"ip": "192.168.128.9", "port": 7756},
+        {"ip": "192.168.128.10", "port": 7756}
         {"ip": "192.168.128.11", "port": 7756}
       ]
     }
@@ -22,15 +65,15 @@ exports.data = {
   "PayMethod": "PP",
   "Enhance_Rate" : [1, 0.75, 0.70, 0.65, 0.6, 0.55, 0.50, 0.45, 0.40, 0.35],
   "Product_List": [
-    {"rmb":0.99,"diamond":120},
-    {"rmb":1.99,"diamond":258},
-    {"rmb":4.99,"diamond":650},
-    {"rmb":9.99,"diamond":1310},
-    {"rmb":19.99,"diamond":2650},
-    {"rmb":29.99,"diamond":4340},
-    {"rmb":49.99,"diamond":7400},
-    {"rmb":99.99,"diamond":15420},
-    {"rmb":3.99,"diamond":2500}
+    {"rmb":6,"diamond":60},
+    {"rmb":12,"diamond":130},
+    {"rmb":30,"diamond":330},
+    {"rmb":68,"diamond":760},
+    {"rmb":128,"diamond":1460},
+    {"rmb":198,"diamond":2260},
+    {"rmb":328,"diamond":3760},
+    {"rmb":648,"diamond":7480},
+    {"rmb":25,"diamond":0}
   ],
 
     "InitialEquipment":{
@@ -71,5 +114,5 @@ exports.data = {
 
     "Global_Material_ID" : [558, 559, 560, 561, 562],
     "Global_Enhancement_GEM_Index" : [3, 4, 5, 26, 27, 392, 393],
-  "Auth_API_Server": "192.168.128.11"
+  "Auth_API_Server": "10.4.2.185"
 }
