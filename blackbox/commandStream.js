@@ -1,9 +1,10 @@
+libCommandStream = {};
 (function() {
   var CommandStream, Environment, isDebug, splLib;
 
-  requires('./define');
+  
 
-  splLib = requires('./spell');
+  splLib = libSpell;
 
   isDebug = false;
 
@@ -203,10 +204,10 @@
 
   })();
 
-  exports.CommandStream = CommandStream;
+  libCommandStream.CommandStream = CommandStream;
 
-  exports.Environment = Environment;
+  libCommandStream.Environment = Environment;
 
-  exports.fileVersion = -1;
+  libCommandStream.fileVersion = -1;
 
 }).call(this);

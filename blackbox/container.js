@@ -1,11 +1,12 @@
+libContainer = {};
 (function() {
   var Bag, CONTAINER_TYPE_BAG, CONTAINER_TYPE_CARD_STACK, CONTAINER_TYPE_FURANCE, CardStack, PlayerBag, STACK_TYPE_MULTIPLE_STACK, STACK_TYPE_SINGLE_STACK, Serializer, objectlize, registerConstructor, _ref,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-  requires('./define');
+  
 
-  _ref = requires('./serializer'), Serializer = _ref.Serializer, registerConstructor = _ref.registerConstructor, objectlize = _ref.objectlize;
+  _ref = libSerializer, Serializer = _ref.Serializer, registerConstructor = _ref.registerConstructor, objectlize = _ref.objectlize;
 
   STACK_TYPE_SINGLE_STACK = 1;
 
@@ -346,12 +347,12 @@
     return bag;
   };
 
-  exports.Bag = PlayerBag;
+  libContainer.Bag = PlayerBag;
 
-  exports.CardStack = CardStack;
+  libContainer.CardStack = CardStack;
 
   registerConstructor(Bag);
 
-  exports.fileVersion = -1;
+  libContainer.fileVersion = -1;
 
 }).call(this);

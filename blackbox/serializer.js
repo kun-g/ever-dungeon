@@ -1,3 +1,4 @@
+libSerializer = {};
 (function() {
   var Serializer, g_attr_constructorTable, generateMonitor, objectlize, registerConstructor;
 
@@ -192,12 +193,12 @@
 
   g_attr_constructorTable = {};
 
-  exports.Serializer = Serializer;
+  libSerializer.Serializer = Serializer;
 
-  exports.registerConstructor = registerConstructor;
+  libSerializer.registerConstructor = registerConstructor;
 
-  exports.objectlize = objectlize;
+  libSerializer.objectlize = objectlize;
 
-  exports.fileVersion = -1;
+  libSerializer.fileVersion = -1;
 
 }).call(this);

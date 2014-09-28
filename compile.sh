@@ -36,7 +36,7 @@ SOURCES=(
 "unit.js"
 "container.js"
 "item.js"
-"seed-random.js"
+"seed_random.js"
 "commandStream.js"
 "dungeon.js"
 "trigger.js"
