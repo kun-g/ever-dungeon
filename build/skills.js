@@ -1833,7 +1833,7 @@ exports.data = [
                 "spellAction": "bj"
             },
             "triggerCondition": [
-                { "type": "event", "event": "onPhysicalDamage" }
+                { "type": "event", "event": "onTarget" }
             ],
         "action":[
             { "type": "shock", "delay":0.3, "range":5, "time":0.2 }
