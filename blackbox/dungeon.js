@@ -1,29 +1,28 @@
-libDungeon = {};
 (function() {
   var Bag, Block, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Level, TriggerManager, Wizard, calcInfiniteRank, calcInfiniteX, changeSeed, compete, createUnit, createUnits, criticalFormula, dungeonCSConfig, flagShowRand, genUnitInfo, hitFormula, mapDiff, onEvent, parse, privateRand, seed_random, speedFormula, _ref, _ref1, _ref2, _ref3, _ref4,
     __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; },
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-  
+  requires('./define');
 
-  
+  requires('./shared');
 
-  Wizard = libSpell.Wizard;
+  Wizard = requires('./spell').Wizard;
 
-  
+  DBWrapper = requires('./serializer').Serializer;
 
-  _ref = libUnit, createUnit = _ref.createUnit, Hero = _ref.Hero;
+  _ref = requires('./unit'), createUnit = _ref.createUnit, Hero = _ref.Hero;
 
-  _ref1 = libItem, Item = _ref1.Item, Card = _ref1.Card;
+  _ref1 = requires('./item'), Item = _ref1.Item, Card = _ref1.Card;
 
-  _ref2 = libCommandStream, CommandStream = _ref2.CommandStream, Environment = _ref2.Environment;
+  _ref2 = requires('./commandStream'), CommandStream = _ref2.CommandStream, Environment = _ref2.Environment;
 
-  _ref3 = libContainer, Bag = _ref3.Bag, CardStack = _ref3.CardStack;
+  _ref3 = requires('./container'), Bag = _ref3.Bag, CardStack = _ref3.CardStack;
 
-  _ref4 = libTrigger, parse = _ref4.parse, TriggerManager = _ref4.TriggerManager;
+  _ref4 = requires('./trigger'), parse = _ref4.parse, TriggerManager = _ref4.TriggerManager;
 
-  seed_random = libSeed_random;
+  seed_random = requires('./seed_random');
 
   speedFormula = {
     'a': 1,
@@ -326,7 +325,7 @@ libDungeon = {};
     return result;
   };
 
-  libDungeon.createUnits = createUnits;
+  exports.createUnits = createUnits;
 
   Dungeon = (function() {
     function Dungeon(data) {
@@ -981,7 +980,7 @@ libDungeon = {};
 
   })();
 
-  libDungeon.Dungeon = Dungeon;
+  exports.Dungeon = Dungeon;
 
   Block = (function(_super) {
     __extends(Block, _super);
@@ -3362,10 +3361,10 @@ libDungeon = {};
     return env.onEvent(evt, cmd);
   };
 
-  libDungeon.DungeonEnvironment = DungeonEnvironment;
+  exports.DungeonEnvironment = DungeonEnvironment;
 
-  libDungeon.DungeonCommandStream = DungeonCommandStream;
+  exports.DungeonCommandStream = DungeonCommandStream;
 
-  libDungeon.fileVersion = -1;
+  exports.fileVersion = -1;
 
 }).call(this);
