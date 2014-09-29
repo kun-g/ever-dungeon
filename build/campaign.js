@@ -270,7 +270,7 @@ exports.data = {
         "show": true,
         "title": "首充翻倍大行动",
         "banner":"event-banner-scfb.png",
-        "description":"首次充值即可获得宝石翻倍的奖励，充多少送多少，妈妈再也不用担心我的宝石了！",
+        "description":["首次充值即可获得宝石翻倍的奖励，充多少送多少，妈妈再也不用担心我的宝石了！"],
         "mailTitle": "《首充翻倍大行动》活动奖励",
         "mailBody": "恭喜你完成活动，点击领取活动奖励！",
         "date": "2014/10/25",
