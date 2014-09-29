@@ -9,7 +9,7 @@ exports.data = {
         },
         {
             "price": 1.99,
-            "gem": 258
+            "gem": 260
         },
         {
             "price": 4.99,
