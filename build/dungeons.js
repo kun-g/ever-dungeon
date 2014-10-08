@@ -18398,14 +18398,17 @@ exports.data = [
                         "id": 135,
                         "count":1,
                         "pos":12,
-                        "keyed":true
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:80}
                     }
                 ],
                 "exit": 29,
                 "entrance":0
             }
         ],
-        "dropID":[ 80
+        "dropID":[
         ],
         "prizeWxp":0,"prizeGold":0, "prizeXp":0,
         "wxpRate":1,"goldRate":0.5, "xpRate":1
@@ -19321,14 +19324,17 @@ exports.data = [
                         "id": 137,
                         "count":1,
                         "pos":12,
-                        "keyed":true
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:81}
                     }
                 ],
                 "exit": 29,
                 "entrance":0
             }
         ],
-        "dropID":[ 81
+        "dropID":[
         ],
         "prizeWxp":0,"prizeGold":0, "prizeXp":0,
         "wxpRate":1,"goldRate":0.5, "xpRate":1
@@ -20243,14 +20249,17 @@ exports.data = [
                         "id": 200,
                         "count":1,
                         "pos":12,
-                        "keyed":true
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:82}
                     }
                 ],
                 "exit": 29,
                 "entrance":0
             }
         ],
-        "dropID":[  82
+        "dropID":[
         ],
         "prizeWxp":0,"prizeGold":0, "prizeXp":0,
         "wxpRate":1,"goldRate":0.5, "xpRate":1
@@ -21165,14 +21174,17 @@ exports.data = [
                         "id": 201,
                         "count":1,
                         "pos":12,
-                        "keyed":true
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:83}
                     }
                 ],
                 "exit": 29,
                 "entrance":0
             }
         ],
-        "dropID":[83
+        "dropID":[
 
         ],
         "prizeWxp":0,"prizeGold":0, "prizeXp":0,
@@ -22088,14 +22100,17 @@ exports.data = [
                         "id": 202,
                         "count":1,
                         "pos":12,
-                        "keyed":true
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:84}
                     }
                 ],
                 "exit": 29,
                 "entrance":0
             }
         ],
-        "dropID":[    84
+        "dropID":[
 
         ],
         "prizeWxp":0,"prizeGold":0, "prizeXp":0,

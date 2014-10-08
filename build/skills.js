@@ -658,10 +658,11 @@ exports.data = [
     "label":"远程攻击",
     "config": {
           "triggerCondition": [
-              {"type" :"event", "event":"onBattleTurnEnd" },
-              {"type" :"event", "event":"onMoveTurnEnd" },
+              { "type": "event", "event":"onBattleTurnEnd" },
+              { "type": "event", "event":"onMoveTurnEnd" },
               { "type": "chance", "chance": 0.8 },
-              { "type": "targetMutex", "mutex": "range" }
+              { "type": "targetMutex", "mutex": "range" },
+              { "type": "alive"}
           ],
           "targetSelection": {
               "pool": "objects",
@@ -3585,7 +3586,7 @@ exports.data = [
         "label": "boss掉落",
         "config": {
             "triggerCondition": [
-                { "type": "event", "event": "onBeDeathStrike" }
+                { "type": "event", "event": "onBeKill" }
             ],
             "targetSelection":{
                 "pool":"self",
@@ -3593,8 +3594,8 @@ exports.data = [
             },
             "action": [
                 {"type":"delay"},
-                {"type": "dropPrize", "showPrize":true, "effect":49,"pos":"self"},
-                {"type":"kill"}]
+                {"type": "dropPrize", "showPrize":true, "effect":49,"pos":"self"}
+            ]
         }
     },
     {
@@ -3602,7 +3603,7 @@ exports.data = [
         "label": "小兵掉落",
         "config": {
             "triggerCondition": [
-                { "type": "event", "event": "onBeDeathStrike" },
+                { "type": "event", "event": "onBeKill" },
                 { "type": "chance", "chance": 0.05 }
             ],
             "targetSelection":{
@@ -3611,8 +3612,8 @@ exports.data = [
             },
             "action": [
                 {"type":"delay"},
-                {"type": "dropPrize", "showPrize":true, "effect":49, "pos":"self"},
-                {"type":"kill"}]
+                {"type": "dropPrize", "showPrize":true, "effect":49, "pos":"self"}
+            ]
         }
     },
     {
@@ -3808,7 +3809,7 @@ exports.data = [
                 "filter": [{"type":"alive"},{"type": "visible"}]
             },
             "action": [
-                {"type": "heal","formular":{"src":{"attack":1}}}
+                {"type": "heal","formular":{"environment": {"damage":1}}}
             ]
         }
     },
@@ -4285,10 +4286,7 @@ exports.data = [
         "label":"死后复活一次",
         "config": {
             "basic": {
-                "spellAction": 1,
-                "targetEffect": 1,
-                "spellDelay": 0.3,
-                "targetDelay": 0.3
+                "targetEffect": 22
             },
             "triggerCondition": [
                 {"type" :"event", "event": "onBeDeathStrike"}
@@ -4297,11 +4295,8 @@ exports.data = [
                 "pool": "self"
             },
             "action":[
-                {"type": "playEffect","effect":4,"act":"self"},
-                {"type":"delay","delay":0.4},
                 { "type": "modifyVar", "x": "damage", "formular": {"environment": {"damage":0}} },
-                {"type": "heal","self":true,"formular": {"tar":{"strong":1}}},
-                {"type":"shock","delay":0.3,"range":5,"time":0.2}
+                { "type": "resurrect"}
             ],
             "availableCondition": [
                 { "type": "effectCount","count":1 }

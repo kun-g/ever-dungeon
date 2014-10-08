@@ -17,18 +17,24 @@
           id: data
         };
       }
+      if (data.id === 907) {
+        console.log("The 907 is comming");
+        showMeTheStack();
+      }
       cfg = {
         slot: [],
         count: 1,
         id: data.id
       };
       this.id = data.id;
-      if (this.getConfig().category === ITEM_EQUIPMENT) {
-        cfg.xp = 0;
-        cfg.enhancement = [];
-      }
-      if (this.getConfig().expiration) {
-        cfg.date = -1;
+      if (this.getConfig()) {
+        if (this.getConfig().category === ITEM_EQUIPMENT) {
+          cfg.xp = 0;
+          cfg.enhancement = [];
+        }
+        if (this.getConfig().expiration) {
+          cfg.date = -1;
+        }
       }
       Item.__super__.constructor.call(this, data, cfg, {});
       if (this.id != null) {
