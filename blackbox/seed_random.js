@@ -1,3 +1,4 @@
+libSeed_random = {};
 var width = 256;// each RC4 output is 0 <= x < 256
 var chunks = 6;// at least six RC4 outputs for each double
 var significance = 52;// there are 52 significant digits in a double
@@ -101,7 +102,7 @@ startdenom = Math.pow(width, chunks);
 significance = Math.pow(2, significance);
 overflow = significance * 2;
 
-exports.seedrandom = function (seed, overRideGlobal) {
+libSeed_random.seedrandom = function (seed, overRideGlobal) {
   if (!seed) {
     if (overRideGlobal) {
       Math.random = oldRandom;
@@ -146,4 +147,4 @@ exports.seedrandom = function (seed, overRideGlobal) {
   // Return the seed that was used
   return random;
 };
-exports.fileVersion = -1
+libSeed_random.fileVersion = -1
