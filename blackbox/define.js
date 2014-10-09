@@ -1,5 +1,6 @@
-requires('./shared');
-var triggerLib = requires('./trigger');
+libDefine = {};
+
+var triggerLib = libTrigger;
 
 DUNGEON_RESULT_DONE = 2;
 DUNGEON_RESULT_WIN = 1;
@@ -20,11 +21,11 @@ TEAMMATE_REWARD_RATIO = 0.2;
 //////////////////// Log
 serverType = 'None';
 print = console.log;
-dprint = function(obj) { console.log(requires('util').inspect(obj, true, 10));}
+dprint = function(obj) { console.log(libUtil.inspect(obj, true, 10));}
 logger = null;
 initServer = function () {
   var pid = process.pid;
-  async = requires('async');
+  
   print = function (type, log) {
     if (log == null) {
       log = type;
@@ -41,7 +42,7 @@ initServer = function () {
       logger.emit(type, log, new Date());
     }
     if (logger == null || process.stdout.isTTY || type === 'Error') {
-      var util = requires('util');
+      var util = libUtil;
       var config = {depth : 11};
       //if (process.stdout.isTTY) config.colors = true;
       console.log(util.inspect(log, config));
@@ -350,7 +351,7 @@ initGlobalConfig = function (path, callback) {
   ];
   if (!path) path = "./";
   configTable.forEach(function (e) {
-    gConfigTable[e.name] = requires(path+e.name).data;
+    gConfigTable[e.name] = require(path+e.name).data;
     if (!gConfigTable[e.name]) throw Error("Table not found"+e.name);
     if (e.func) gConfigTable[e.name] = e.func(gConfigTable[e.name]);
     gConfigTable[e.name] = prepareForABtest(gConfigTable[e.name]);
@@ -363,7 +364,7 @@ showMeTheStack = function () {try {a = b;} catch (err) {console.log(err.stack);}
 //////////// exit routine
 onDBShutDown = function () { };
 onAllDataSaved = function () {
-  requires('./db').releaseDB();
+  libDb.releaseDB();
 };
 onNetworkShutDown = function () {
   if (dbClient && savingAllPlayer != null) {
@@ -373,7 +374,7 @@ onNetworkShutDown = function () {
   }
 };
 
-exports.initStageConfig = initStageConfig;
+libDefine.initStageConfig = initStageConfig;
 
 QUEST_TYPE_NPC = 0;
 QUEST_TYPE_ITEM = 1;
@@ -671,4 +672,4 @@ Event_UpdateStoreInfo = 10;
 Event_Fail = 11;
 Event_UpdateQuest = 19;
 
-exports.fileVersion = -1;
+libDefine.fileVersion = -1;
