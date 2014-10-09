@@ -1641,8 +1641,9 @@ exports.data = [
                 "filter": [{"type":"alive"}]
             },
             "action": [
-                {"type": "installSpell","spell": 67},
-                {"type": "installSpell","spell": 68}
+                { "type": "tremble", "delay":0.3, "range":10, "time":0.4, "act":"target" },
+                { "type": "installSpell","spell": 67 },
+                { "type": "installSpell","spell": 68 }
             ]
         }
     },
@@ -2197,6 +2198,7 @@ exports.data = [
 
             "action":[
                 {"type":"delay"},
+                { "type": "tremble", "delay":0.3, "range":10, "time":0.4, "act":"target" },
                 { "type": "installSpell", "spell": 92,"delay":1.5} ,
                 {"type": "playEffect","effect":38,"pos":"target","delay":1.5},
                 {"type":"playAction","motion":1,"pos":"self"},
@@ -2236,6 +2238,7 @@ exports.data = [
             },
             "action":[
                 {"type":"delay"},
+                { "type": "tremble", "delay":0.3, "range":10, "time":0.4, "act":"target" },
                 {"type": "installSpell", "spell": 94},
                 {"type": "playEffect","effect":36,"pos":"target","delay":2.0},
                 {"type":"playAction","motion":1,"pos":"self"},
