@@ -255,7 +255,7 @@
     };
 
     Player.prototype.onLogin = function() {
-      var flag, itemsNeedRemove, key, loginStreakCount, prize, ret, s, _i, _len, _ref7;
+      var flag, itemsNeedRemove, key, prize, ret, s, _i, _len, _ref7;
       if (!this.lastLogin) {
         return [];
       }
@@ -284,25 +284,22 @@
         }
       }
       flag = true;
-      loginStreakCount = this.loginStreak.count;
       if (this.loginStreak.date && moment().isSame(this.loginStreak.date, 'month')) {
         if (moment().isSame(this.loginStreak.date, 'day')) {
           flag = false;
-        } else {
-          loginStreakCount += 1;
         }
       } else {
         this.loginStreak.count = 0;
       }
       this.log('onLogin', {
-        loginStreak: loginStreakCount,
+        loginStreak: this.loginStreak.count,
         date: this.lastLogin
       });
       this.onCampaign('RMB');
       ret = [
         {
           NTF: Event_CampaignLoginStreak,
-          day: loginStreakCount,
+          day: this.loginStreak.count,
           claim: flag
         }
       ];
