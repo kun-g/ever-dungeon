@@ -74,7 +74,7 @@
         creationDate: now.valueOf(),
         isNewPlayer: true,
         loginStreak: {
-          count: 0
+          count: -1
         },
         accountID: -1,
         campaignState: {},
@@ -289,7 +289,7 @@
           flag = false;
         }
       } else {
-        this.loginStreak.count = 0;
+        this.loginStreak.count = -1;
       }
       this.log('onLogin', {
         loginStreak: this.loginStreak.count,
