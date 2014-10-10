@@ -118,7 +118,7 @@ fi
 
 
 echo 'mulity version '
-./applyMulityVersion $1 build/
+./applyMultiVersion.sh $1 build/
 
 VersionFile="build/version.js"
 ConfigFile="build/config.js"

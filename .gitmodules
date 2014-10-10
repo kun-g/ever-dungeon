@@ -1,6 +1,6 @@
 [submodule "data"]
 	path = data
-	url = git@github.com:kun-g/ever-dungeon-data.git
+	url = https://ijovi23@github.com/kun-g/ever-dungeon-data.git
 [submodule "server"]
 	path = server
-	url = git@github.com:kun-g/cheer.git
+	url = https://github.com/kun-g/cheer.git
