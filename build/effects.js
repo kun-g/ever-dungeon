@@ -265,5 +265,9 @@ exports.data = [
     {
         "effectId": 63,
         "file": "effect-priestn-attack.ccbi"
+    },
+    {
+        "effectId": 64,
+        "file": "effect-baoji.ccbi"
     }
 ]

@@ -302,7 +302,7 @@
       ret = [
         {
           NTF: Event_CampaignLoginStreak,
-          day: this.loginStreak.count,
+          day: loginStreakCount,
           claim: flag
         }
       ];
