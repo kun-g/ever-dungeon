@@ -74,7 +74,7 @@
         creationDate: now.valueOf(),
         isNewPlayer: true,
         loginStreak: {
-          count: -1
+          count: 0
         },
         accountID: -1,
         campaignState: {},
@@ -289,7 +289,7 @@
           flag = false;
         }
       } else {
-        this.loginStreak.count = -1;
+        this.loginStreak.count = 0;
       }
       this.log('onLogin', {
         loginStreak: this.loginStreak.count,
@@ -423,7 +423,6 @@
         }
       }
       this.loginStreak['date'] = currentTime(true).valueOf();
-      this.loginStreak.count += 1;
       this.log('claimLoginReward', {
         loginStreak: this.loginStreak.count,
         date: currentTime()
@@ -434,6 +433,7 @@
           return !e.vip || _this.vipLevel() >= e.vip;
         };
       })(this)));
+      this.loginStreak.count += 1;
       if (this.loginStreak.count >= queryTable(TABLE_DP).length) {
         this.loginStreak.count = 0;
       }
