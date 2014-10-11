@@ -276,42 +276,42 @@ exports.data = {
         "date": "2014/10/25",
         "dateDescription": "截止日期2014年10月25日24时",
         "objective": {
-            "6": {
+            "0": {
                 "award": [
                     {"type":2,"count":60}
                 ]
             },
-            "12": {
+            "1": {
                 "award": [
                     {"type":2,"count":130}
                 ]
             },
-            "30": {
+            "2": {
                 "award": [
                     {"type":2,"count":330}
                 ]
             },
-            "68": {
+            "3": {
                 "award": [
                     {"type":2,"count":760}
                 ]
             },
-            "128": {
+            "4": {
                 "award": [
                     {"type":2,"count":1460}
                 ]
             },
-            "198": {
+            "5": {
                 "award": [
                     {"type":2,"count":2260}
                 ]
             },
-            "328": {
+            "6": {
                 "award": [
                     {"type":2,"count":3760}
                 ]
             },
-            "648": {
+            "7": {
                 "award": [
                     {"type":2,"count":7480}
                 ]

@@ -542,7 +542,7 @@
           ret = ret.concat(this.syncEvent());
         }
         this.rmb += cfg.price;
-        this.onCampaign('RMB', cfg.price);
+        this.onCampaign('RMB', rec.productID);
         ret.push({
           NTF: Event_PlayerInfo,
           arg: {
@@ -2447,7 +2447,7 @@
           }
           _ref11 = this.getCampaignConfig('FirstCharge'), config = _ref11.config, level = _ref11.level;
           if ((config != null) && (level != null)) {
-            rmb = data;
+            rmb = String(data);
             if (level[rmb] != null) {
               reward.push({
                 cfg: config,
@@ -2494,6 +2494,7 @@
       _results = [];
       for (_i = 0, _len = reward.length; _i < _len; _i++) {
         r = reward[_i];
+        console.log('reward', JSON.stringify(reward));
         _results.push(dbLib.deliverMessage(this.name, {
           type: MESSAGE_TYPE_SystemReward,
           src: MESSAGE_REWARD_TYPE_SYSTEM,

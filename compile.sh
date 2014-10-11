@@ -63,6 +63,7 @@ cp src/*.js js/
 cp package.json $CurrentPWD/build
 cd ..
 
+exit
 echo '===== Setting up variables ====='
 if [ $CurrentBranch = develop ]
 then
