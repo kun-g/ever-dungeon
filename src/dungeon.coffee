@@ -1119,7 +1119,10 @@ dungeonCSConfig = {
       env.getBlock(env.variable('block')).explored = true
       @routine({id: 'BlockInfo', block: env.variable('block')})
       block = env.getBlock(env.variable('block'))
-      if block.getType() is Block_Npc or block.getType() is Block_Enemy
+      blockType = block.getType()
+      
+      if blockType is Block_Npc or blockType is Block_Enemy
+        who = if block is Block_Npc then "Npc" else "Monster"
         e = block.getRef(-1)
         e.onEvent('Show', @)
         env.variable('monster', e)

@@ -1,23 +1,5 @@
 #!/bin/bash
 
-OnlyCompile=0
-NotSwitchBranch=0
-
-case "$@" in
-  -n | --notswitchbranch)
-    shift
-    NotSwitchBranch=1
-    ;;
-  -c | --onlycompile)
-    shift
-    OnlyCompile=1
-    ;;
-esac
-
-#echo $NotSwitchBranch
-#echo $OnlyCompile
-#exit
-
 CurrentBranch=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
 
 while [ "$CurrentBranch" = "master" ]; do
@@ -29,26 +11,20 @@ while [ "$CurrentBranch" = "master" ]; do
   esac
 done
 
-VersionFile="build/version.js"
-ConfigFile="build/config.js"
-
 CurrentPWD=`pwd`
 
 echo '===== Compiling ====='
 cd server
 SubModuleServer=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
 gulp compile
-cp js/*.js $CurrentPWD/build
-cp src/*.js $CurrentPWD/build
-cp package.js $CurrentPWD/build
 
-#oc = only compile
-if [ "$1" = "oc" ]
+cd ../data
+SubModuleData=`git branch | awk 'BEGIN{FS=" "}{if ($1=="*") print $2}'`
+if [ "$2" = "all" ]
 then
-  cp src/*.js js
-  exit
+	echo "Fetching table"
+	git pull
 fi
-
 
 cd ..
 
@@ -60,7 +36,7 @@ SOURCES=(
 "unit.js"
 "container.js"
 "item.js"
-"seed-random.js"
+"seed_random.js"
 "commandStream.js"
 "dungeon.js"
 "trigger.js"
@@ -77,66 +53,65 @@ do
 #  sed -ig 's/exports\.fileVersion = -1/exports\.fileVersion = '$CurrentVersion'/g' ${DST_BOX}${itm}
 done
 
+cp data/table/*.js build/
+cp data/stable/*.js build/
+
+cd server
+cp js/*.js $CurrentPWD/build
+cp src/*.js $CurrentPWD/build
+cp src/*.js js/
+cp package.json $CurrentPWD/build
+cd ..
+
+exit
 echo '===== Setting up variables ====='
 if [ $CurrentBranch = develop ]
 then
   CDNVersionBucket='hotupdate'
   RemoteRepo='origin'
-  UpdateUrl='http://hotupdate.qiniudn.com'
+  UpdateUrl='http://hotupdate.qiniudn.com/'
   ServerConfiguration='Develop'
-  VersionKey='LocalVersion'
   ServerID=0
-  SubModuleData='develop'
 elif [ $CurrentBranch = master ]
 then
   CDNVersionBucket='drhu'
   RemoteRepo='deploy0'
-  UpdateUrl='http://drhu.qiniudn.com'
+  UpdateUrl='http://drhu.qiniudn.com/'
   ServerConfiguration='Master'
-  VersionKey='MasterVersion'
   ServerID=1
-  SubModuleData='master'
 elif [[ $CurrentBranch = localWork ]]
 then
   CDNVersionBucket='hotupdate'
-  RemoteRepo='origin'
-  UpdateUrl='http://hotupdate.qiniudn.com'
+  RemoteRepo='deploy'
+  UpdateUrl='http://hotupdate.qiniudn.com/'
   ServerConfiguration='Develop'
-  VersionKey='LocalVersion'
   ServerID=0
-  SubModuleData='develop'
 else
   echo 'Invalid target branch'
   exit
 fi
 
-cd data
-#git checkout $SubModuleData
 
-if [ "$1" = "all" ]
-then
-	echo "Fetching table"
-	git pull
-fi
+echo 'mulity version '
+./applyMulityVersion $1 build/
 
-cd ..
-cp data/table/*.js build/
-cp data/stable/*.js build/
-
-
-CurrentVersion=`redis-cli -h 10.4.3.41 --raw get $VersionKey`
-echo 'Current version: '$CurrentVersion
+VersionFile="build/version.js"
+ConfigFile="build/config.js"
+CurrentVersion=153
+#CurrentVersion=`curl -s $UpdateUrl/version`
+#echo 'Current version: '$CurrentVersion
 sed -ig 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
+echo sed -ig 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
 sed -ig 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
+echo sed -ig 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
 sed -ig 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
+echo sed -ig 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
 sed -ig 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
-sed -ig 's/"DataVer": .*,/"DataVer": "'$SubModuleData'",/g' $ConfigFile
+echo sed -ig 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
 
 # Commit
 echo '===== Commit the changes ====='
 echo 'Commit changes branch:'$CurrentBranch @ $CurrentVersion  Server: $SubModuleServer Table: $SubModuleData
-git commit -am "Commit changes branch:"$CurrentBranch" @ "$CurrentVersion" Server:"$SubModuleServer" Table:"$SubModuleData
+git commit -am "Commit changes branch:$CurrentBranch @ $CurrentVersion Server:$SubModuleServer Table:$SubModuleData"
 
 git push $RemoteRepo
-
-git push github

@@ -1,3 +1,4 @@
+libTrigger = {};
 (function() {
   var TriggerManager, bindVariable, branch, calculate, conditionCheck, doAction, doGetProperty, doLoop, filterObject, getTypeof, getVar, parse;
 
@@ -25,7 +26,7 @@
             _results = [];
             for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
               p = result[_j];
-              if (p.health > 0) {
+              if (p.isAlive()) {
                 _results.push(p);
               }
             }
@@ -206,7 +207,7 @@
     return result;
   };
 
-  exports.filterObject = filterObject;
+  libTrigger.filterObject = filterObject;
 
   doGetProperty = function(obj, key) {
     var k, properties, _i, _len;
@@ -222,7 +223,7 @@
     return obj;
   };
 
-  exports.doGetProperty = doGetProperty;
+  libTrigger.doGetProperty = doGetProperty;
 
   conditionCheck = function(conditionFormular, variables, cmd) {
     var c, k;
@@ -264,7 +265,7 @@
     }
   };
 
-  exports.conditionCheck = conditionCheck;
+  libTrigger.conditionCheck = conditionCheck;
 
   parse = function(expr, variable, cmd) {
     if (Array.isArray(expr)) {
@@ -570,10 +571,10 @@
 
   })();
 
-  exports.parse = parse;
+  libTrigger.parse = parse;
 
-  exports.TriggerManager = TriggerManager;
+  libTrigger.TriggerManager = TriggerManager;
 
-  exports.fileVersion = -1;
+  libTrigger.fileVersion = -1;
 
 }).call(this);

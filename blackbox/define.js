@@ -1,5 +1,6 @@
-requires('./shared');
-var triggerLib = requires('./trigger');
+libDefine = {};
+
+var triggerLib = libTrigger;
 
 DUNGEON_RESULT_DONE = 2;
 DUNGEON_RESULT_WIN = 1;
@@ -20,11 +21,11 @@ TEAMMATE_REWARD_RATIO = 0.2;
 //////////////////// Log
 serverType = 'None';
 print = console.log;
-dprint = function(obj) { console.log(requires('util').inspect(obj, true, 10));}
+dprint = function(obj) { console.log(libUtil.inspect(obj, true, 10));}
 logger = null;
 initServer = function () {
   var pid = process.pid;
-  async = requires('async');
+  
   print = function (type, log) {
     if (log == null) {
       log = type;
@@ -38,10 +39,10 @@ initServer = function () {
     log.server = gServerID;
 
     if (logger && type) {
-      logger.emit(type, log, (new Date()).valueOf());
+      logger.emit(type, log, new Date());
     }
     if (logger == null || process.stdout.isTTY || type === 'Error') {
-      var util = requires('util');
+      var util = libUtil;
       var config = {depth : 11};
       //if (process.stdout.isTTY) config.colors = true;
       console.log(util.inspect(log, config));
@@ -205,6 +206,65 @@ initStageConfig = function (cfg) {
   return ret;
 };
 
+function initVipConfig (cfg){
+  var ret = {};
+  var VIP = {};
+  var requirement = [];
+  var levels = [];
+  VIP.requirement = requirement;
+  VIP.levels = levels;
+  ret.VIP = VIP;
+  if (cfg.VIP){
+    var c = cfg;
+    if (c.VIP.requirement) {
+      var requirementCount = c.VIP.requirement.length;
+      //init
+      for (var kk in c.VIP.requirement){
+        ret.VIP.requirement[kk] = {};
+        ret.VIP.requirement[kk].rmb = c.VIP.requirement[kk].rmb;
+        ret.VIP.requirement[kk].privilege = [];
+      }
+      //
+      for (var k = 0;k < c.VIP.requirement.length;k++){
+        var privil = c.VIP.requirement[k].privilege;
+        if (privil){
+          for (var i = 0;i < privil.length;i++)
+            for (var j = k;j < requirementCount;j++){
+                ret.VIP.requirement[j].privilege[privil[i].name] = privil[i].data;
+            }
+        }
+      }
+    }
+    if (c.VIP.levels){
+      ret.VIP.levels = c.VIP.levels;
+    }
+  }
+  return ret;
+}
+
+var powerLimitInfo = {};
+function initPowerLimit(cfg) {
+	cfg.forEach(function (bounty) {
+		bounty.level.forEach(function (level) {
+			var powerLimit = 0;
+			if (typeof level.powerLimit == 'number') {
+				powerLimit = level.powerLimit;
+			}
+			powerLimitInfo[level.stage] = powerLimit;
+		})
+	})
+	return cfg;
+}
+
+getPowerLimit = function(stageId){
+	var powerLimit = powerLimitInfo[stageId];
+	if (powerLimit == null) {
+		return 0;
+	}
+	else{
+		return powerLimit;
+	}
+}
 prepareForABtest = function (cfg) {
   var ret = [];
   var maxABIndex = 0;
@@ -285,13 +345,13 @@ initGlobalConfig = function (path, callback) {
     {name:TABLE_ROLE}, {name:TABLE_LEVEL}, {name:TABLE_VERSION}, {name:TABLE_FACTION},
     {name:TABLE_ITEM}, {name:TABLE_CARD}, {name:TABLE_DUNGEON, func:varifyDungeonConfig},
     {name:TABLE_STAGE, func: initStageConfig}, {name:TABLE_QUEST}, {name: TABLE_COSTS},
-    {name:TABLE_UPGRADE}, {name:TABLE_ENHANCE}, {name: TABLE_CONFIG}, {name: TABLE_VIP},
+    {name:TABLE_UPGRADE}, {name:TABLE_ENHANCE}, {name: TABLE_CONFIG}, {name: TABLE_VIP, func:initVipConfig},
     {name:TABLE_SKILL}, {name:TABLE_CAMPAIGN}, {name: TABLE_DROP}, {name: TABLE_TRIGGER},
-    {name:TABLE_DP},{name:TABLE_ARENA},{name:TABLE_BOUNTY}
+    {name:TABLE_DP},{name:TABLE_ARENA},{name:TABLE_BOUNTY, func:initPowerLimit}, {name:TABLE_IAP},
   ];
   if (!path) path = "./";
   configTable.forEach(function (e) {
-    gConfigTable[e.name] = requires(path+e.name).data;
+    gConfigTable[e.name] = require(path+e.name).data;
     if (!gConfigTable[e.name]) throw Error("Table not found"+e.name);
     if (e.func) gConfigTable[e.name] = e.func(gConfigTable[e.name]);
     gConfigTable[e.name] = prepareForABtest(gConfigTable[e.name]);
@@ -304,7 +364,7 @@ showMeTheStack = function () {try {a = b;} catch (err) {console.log(err.stack);}
 //////////// exit routine
 onDBShutDown = function () { };
 onAllDataSaved = function () {
-  requires('./db').releaseDB();
+  libDb.releaseDB();
 };
 onNetworkShutDown = function () {
   if (dbClient && savingAllPlayer != null) {
@@ -314,7 +374,7 @@ onNetworkShutDown = function () {
   }
 };
 
-exports.initStageConfig = initStageConfig;
+libDefine.initStageConfig = initStageConfig;
 
 QUEST_TYPE_NPC = 0;
 QUEST_TYPE_ITEM = 1;
@@ -533,6 +593,8 @@ ACT_ChangeBGM = 109;
 ACT_Shock = 110;
 ACT_Blink = 111;
 ACT_Tutorial = 112;
+ACT_Bubble = 113;
+ACT_Tremble = 114;
 
 ACT_Block = 201;
 ACT_Enemy = 202;
@@ -580,6 +642,11 @@ RIGHT = 1;
 DOWN  = 2;
 LEFT  = 3;
 
+ExploreResult_Explored = 0
+ExploreResult_Entrance = 1
+ExploreResult_DeadEnd = -1
+
+
 isInstantAction = function (act) { return act > 100; };
 
 RPC_GameStartDungeon = 1;
@@ -605,4 +672,4 @@ Event_UpdateStoreInfo = 10;
 Event_Fail = 11;
 Event_UpdateQuest = 19;
 
-exports.fileVersion = -1;
+libDefine.fileVersion = -1;

@@ -1,11 +1,12 @@
+libUnit = {};
 (function() {
   var Hero, Mirror, Monster, Npc, Unit, Wizard, createUnit, flagCreation,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-  requires('./define');
+  
 
-  Wizard = requires('./spell').Wizard;
+  Wizard = libSpell.Wizard;
 
   flagCreation = false;
 
@@ -230,13 +231,14 @@
       this.level = 0;
       this.levelUp();
       this.gearUp();
-      if (this.health <= 0) {
+      if (!this.isAlive()) {
         this.health = 1;
       }
       if (this.attack <= 0) {
         this.attack = 1;
       }
       this.maxHP = this.health;
+      this.originAttack = this.attack;
       if (flagCreation) {
         return console.log('Hero ', JSON.stringify(this));
       }
@@ -302,7 +304,8 @@
       this.hairStyle = heroData.hst;
       this.hairColor = heroData.hcl;
       this.ref = heroData.ref;
-      return this.id = cid;
+      this.id = cid;
+      return this.originAttack = this.attack;
     };
 
     return Mirror;
@@ -339,6 +342,7 @@
       if (cfg != null) {
         this.initWithConfig(cfg);
       }
+      this.maxHP = this.health;
       if (flagCreation) {
         return console.log('Monster ', JSON.stringify(this));
       }
@@ -402,10 +406,10 @@
     }
   };
 
-  exports.createUnit = createUnit;
+  libUnit.createUnit = createUnit;
 
-  exports.Hero = Hero;
+  libUnit.Hero = Hero;
 
-  exports.fileVersion = -1;
+  libUnit.fileVersion = -1;
 
 }).call(this);

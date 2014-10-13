@@ -1,28 +1,29 @@
+libDungeon = {};
 (function() {
   var Bag, Block, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Level, TriggerManager, Wizard, calcInfiniteRank, calcInfiniteX, changeSeed, compete, createUnit, createUnits, criticalFormula, dungeonCSConfig, flagShowRand, genUnitInfo, hitFormula, mapDiff, onEvent, parse, privateRand, seed_random, speedFormula, _ref, _ref1, _ref2, _ref3, _ref4,
     __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; },
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-  requires('./define');
+  
 
-  requires('./shared');
+  
 
-  Wizard = requires('./spell').Wizard;
+  Wizard = libSpell.Wizard;
 
-  DBWrapper = requires('./serializer').Serializer;
+  
 
-  _ref = requires('./unit'), createUnit = _ref.createUnit, Hero = _ref.Hero;
+  _ref = libUnit, createUnit = _ref.createUnit, Hero = _ref.Hero;
 
-  _ref1 = requires('./item'), Item = _ref1.Item, Card = _ref1.Card;
+  _ref1 = libItem, Item = _ref1.Item, Card = _ref1.Card;
 
-  _ref2 = requires('./commandStream'), CommandStream = _ref2.CommandStream, Environment = _ref2.Environment;
+  _ref2 = libCommandStream, CommandStream = _ref2.CommandStream, Environment = _ref2.Environment;
 
-  _ref3 = requires('./container'), Bag = _ref3.Bag, CardStack = _ref3.CardStack;
+  _ref3 = libContainer, Bag = _ref3.Bag, CardStack = _ref3.CardStack;
 
-  _ref4 = requires('./trigger'), parse = _ref4.parse, TriggerManager = _ref4.TriggerManager;
+  _ref4 = libTrigger, parse = _ref4.parse, TriggerManager = _ref4.TriggerManager;
 
-  seed_random = requires('./seed-random');
+  seed_random = libSeed_random;
 
   speedFormula = {
     'a': 1,
@@ -325,7 +326,7 @@
     return result;
   };
 
-  exports.createUnits = createUnits;
+  libDungeon.createUnits = createUnits;
 
   Dungeon = (function() {
     function Dungeon(data) {
@@ -509,7 +510,7 @@
     };
 
     Dungeon.prototype.initiateHeroes = function(team) {
-      var e, ref;
+      var dummyHero, e, ref;
       if (!team) {
         team = [];
       }
@@ -533,7 +534,9 @@
         }
         return _results;
       })();
-      this.heroes.push(new Hero({}));
+      dummyHero = new Hero({});
+      dummyHero.health = 0;
+      this.heroes.push(dummyHero);
       return this.heroes.forEach(function(e) {
         return e.faction = 'hero';
       });
@@ -566,8 +569,8 @@
       };
     };
 
-    Dungeon.prototype.getHeroes = function(all) {
-      if (all) {
+    Dungeon.prototype.getHeroes = function(withDummy) {
+      if (withDummy) {
         return this.heroes;
       } else {
         return this.heroes.slice(0, this.heroes.length - 1);
@@ -575,15 +578,15 @@
     };
 
     Dungeon.prototype.getAliveHeroes = function() {
-      return this.heroes.filter(function(h) {
-        return (h.health != null) && h.health > 0;
+      return this.getHeroes().filter(function(hero) {
+        return hero.isAlive();
       });
     };
 
     Dungeon.prototype.getMonsters = function() {
       var _ref5;
       return (_ref5 = this.level) != null ? _ref5.getMonsters().filter(function(o) {
-        return o.health > 0;
+        return o.isAlive();
       }) : void 0;
     };
 
@@ -644,38 +647,38 @@
     Dungeon.prototype.explore = function(tar) {
       var access, i, n, nx, ny, _i, _ref5;
       if (this.level.blocks[tar].explored) {
-        return 0;
+        return ExploreResult_Explored;
       }
       if (tar === this.getEntrance()) {
-        return 1;
+        return ExploreResult_Entrance;
       }
       if (Array.isArray(this.getEntrance()) && this.getEntrance().indexOf(tar) !== -1) {
-        return 1;
+        return ExploreResult_Entrance;
       }
       access = false;
       for (i = _i = 0; _i <= 3; i = ++_i) {
         nx = tar % DG_LEVELWIDTH;
         ny = Math.floor(tar / DG_LEVELWIDTH);
         switch (i) {
-          case 0:
+          case UP:
             ny--;
             break;
-          case 1:
+          case RIGHT:
             nx++;
             break;
-          case 2:
+          case DOWN:
             ny++;
             break;
-          case 3:
+          case LEFT:
             nx--;
         }
         n = nx + ny * DG_LEVELWIDTH;
         if ((_ref5 = this.level.blocks[n]) != null ? _ref5.explored : void 0) {
-          return 1;
+          return ExploreResult_Entrance;
         }
       }
       this.onReplayMissMatch();
-      return -1;
+      return ExploreResult_DeadEnd;
     };
 
     Dungeon.prototype.getRank = function() {
@@ -821,7 +824,7 @@
         case DUNGEON_ACTION_CAST_SPELL:
           hero = this.heroes[0];
           ret = [];
-          if (hero.health > 0) {
+          if (hero.isAlive()) {
             cmd = DungeonCommandStream({
               id: 'BeginTurn',
               type: 'Spell',
@@ -978,7 +981,7 @@
 
   })();
 
-  exports.Dungeon = Dungeon;
+  libDungeon.Dungeon = Dungeon;
 
   Block = (function(_super) {
     __extends(Block, _super);
@@ -1003,29 +1006,39 @@
     };
 
     Block.prototype.getRef = function(index) {
-      var o, _i, _len, _ref5;
+      var o, objLst;
       if (index == null) {
         return this.refList;
       }
       if (index !== -1) {
         return this.refList[index];
       }
-      _ref5 = this.refList;
-      for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
-        o = _ref5[_i];
-        if (o.health > 0) {
-          return o;
+      objLst = (function() {
+        var _i, _len, _ref5, _results;
+        _ref5 = this.refList;
+        _results = [];
+        for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+          o = _ref5[_i];
+          if (o.isAlive()) {
+            _results.push(o);
+          }
         }
+        return _results;
+      }).call(this);
+      if (objLst.length === 0) {
+        return null;
+      } else {
+        return objLst;
       }
-      return null;
     };
 
     Block.prototype.getType = function() {
+      var _ref5;
       if (this.tileType === Block_Exit || this.tileType === Block_LockedExit || this.getRef(-1) === null) {
         return this.tileType;
       }
-      if (this.getRef(-1) != null) {
-        return this.getRef(-1).blockType;
+      if (((_ref5 = this.getRef(-1)) != null ? _ref5[0] : void 0) != null) {
+        return this.getRef(-1)[0].blockType;
       }
     };
 
@@ -1204,7 +1217,7 @@
     };
 
     Level.prototype.createObject = function(arg) {
-      var cfg, k, o, skill, v, _i, _len, _ref5, _ref6;
+      var cfg, k, o, skill, v, _i, _j, _len, _len1, _ref5, _ref6, _ref7, _ref8;
       cfg = {};
       for (k in arg) {
         v = arg[k];
@@ -1220,11 +1233,18 @@
           o.installSpell(skill.id, skill.lv);
         }
       }
+      if (((_ref6 = arg.property) != null ? _ref6.skill : void 0) != null) {
+        _ref7 = arg.property.skill;
+        for (_j = 0, _len1 = _ref7.length; _j < _len1; _j++) {
+          skill = _ref7[_j];
+          o.installSpell(skill.id, skill.lv);
+        }
+      }
       o.installSpell(DUNGEON_DROP_CARD_SPELL, 1);
       if (arg.property != null) {
-        _ref6 = arg.property;
-        for (k in _ref6) {
-          v = _ref6[k];
+        _ref8 = arg.property;
+        for (k in _ref8) {
+          v = _ref8[k];
           o[k] = v;
         }
       }
@@ -1448,6 +1468,13 @@
             delay: a.delay,
             range: a.range
           }) : void 0;
+        case 'tremble':
+          return typeof cmd.routine === "function" ? cmd.routine({
+            id: 'Tremble',
+            time: a.time,
+            delay: a.delay,
+            range: a.range
+          }) : void 0;
         case 'blink':
           return typeof cmd.routine === "function" ? cmd.routine({
             id: 'Blink',
@@ -1623,8 +1650,9 @@
       return this.dungeon.factionHeal(src, dst, flag);
     };
 
-    DungeonEnvironment.prototype.getObjectAtBlock = function(block) {
-      return this.getBlock(block).getRef(-1);
+    DungeonEnvironment.prototype.getFirstObjectAtBlock = function(block) {
+      var _ref5;
+      return (_ref5 = this.getBlock(block).getRef(-1)) != null ? _ref5[0] : void 0;
     };
 
     DungeonEnvironment.prototype.getCurrentLevel = function() {
@@ -2030,16 +2058,16 @@
           }
           return _results;
         })();
-        if (((_ref5 = env.getHeroes()[0]) != null ? _ref5.health : void 0) > 0) {
+        if ((_ref5 = env.getHeroes()[0]) != null ? _ref5.isAlive() : void 0) {
           ev.pos = positions[0];
         }
-        if (((_ref6 = env.getHeroes()[1]) != null ? _ref6.health : void 0) > 0) {
+        if ((_ref6 = env.getHeroes()[1]) != null ? _ref6.isAlive() : void 0) {
           ev.pos1 = positions[1];
         }
-        if (((_ref7 = env.getHeroes()[2]) != null ? _ref7.health : void 0) > 0) {
+        if ((_ref7 = env.getHeroes()[2]) != null ? _ref7.isAlive() : void 0) {
           ev.pos2 = positions[2];
         }
-        if (((_ref8 = env.getHeroes()[3]) != null ? _ref8.health : void 0) > 0) {
+        if ((_ref8 = env.getHeroes()[3]) != null ? _ref8.isAlive() : void 0) {
           ev.pos3 = positions[3];
         }
         heroInfo = env.variable('heroInfo');
@@ -2065,12 +2093,12 @@
       },
       output: function(env) {
         switch (env.variable('exploreResult')) {
-          case -1:
+          case ExploreResult_DeadEnd:
             return {
               id: ACT_POPTEXT,
               arg: 'Invalid move'
             };
-          case 0:
+          case ExploreResult_Explored:
             return {
               id: ACT_POPTEXT,
               arg: 'Explored block'
@@ -2093,6 +2121,11 @@
       }
     },
     SpellState: {
+      callback: function(env) {
+        var state;
+        state = env.variable('wizard').calcBuffState();
+        return env.variable('state', state);
+      },
       output: function(env) {
         var actor, bid, effect, ev, ret;
         ret = genUnitInfo(env.variable('wizard'), false, env.variable('state'));
@@ -2139,7 +2172,7 @@
     },
     OpenBlock: {
       callback: function(env) {
-        var block, e;
+        var aliveHeroes, block, blockType, hero, npc, who, _i, _j, _len, _len1, _ref5, _results;
         if (env.getBlock(env.variable('block')) == null) {
           return this.suicide();
         }
@@ -2149,18 +2182,38 @@
           block: env.variable('block')
         });
         block = env.getBlock(env.variable('block'));
+        aliveHeroes = env.getAliveHeroes().filter(function(h) {
+          return h != null;
+        }).sort(function(a, b) {
+          return a.order - b.order;
+        });
+        blockType = block.getType();
         if (block.getType() === Block_Npc || block.getType() === Block_Enemy) {
-          e = block.getRef(-1);
-          this.routine({
-            id: 'UnitInfo',
-            unit: e
-          });
-          env.variable('monster', e);
-          env.variable('tar', e);
-          e.onEvent('onShow', this);
-          env.onEvent('onMonsterShow', this);
-          if ((e != null ? e.isVisible : void 0) !== true) {
-            return e.isVisible = true;
+          if (block.getRef(-1) !== null) {
+            who = blockType === Block_Npc ? 'Npc' : 'Monster';
+            _ref5 = block.getRef(-1);
+            _results = [];
+            for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+              npc = _ref5[_i];
+              this.routine({
+                id: 'UnitInfo',
+                unit: npc
+              });
+              env.variable('monster', npc);
+              env.variable('tar', npc);
+              npc.onEvent('onShow', this);
+              for (_j = 0, _len1 = aliveHeroes.length; _j < _len1; _j++) {
+                hero = aliveHeroes[_j];
+                onEvent(who + 'Show', this, hero, npc);
+              }
+              env.onEvent('on' + who + 'Show', this);
+              if ((npc != null ? npc.isVisible : void 0) !== true) {
+                _results.push(npc.isVisible = true);
+              } else {
+                _results.push(void 0);
+              }
+            }
+            return _results;
           }
         }
       }
@@ -2225,7 +2278,7 @@
         env.onEvent('onTouchBlock', this);
         block = env.getBlock(env.variable('block'));
         if (block.explored) {
-          tar = env.getObjectAtBlock(env.variable('block'));
+          tar = env.getFirstObjectAtBlock(env.variable('block'));
           aliveHeroes = env.getAliveHeroes().filter(function(h) {
             return h != null;
           }).sort(function(a, b) {
@@ -2259,7 +2312,7 @@
     InitiateAttack: {
       callback: function(env) {
         var a, aliveHeroes, attackActions, cmd, enemy, hero, _i, _len;
-        enemy = env.getObjectAtBlock(env.variable('block'));
+        enemy = env.getFirstObjectAtBlock(env.variable('block'));
         aliveHeroes = env.getAliveHeroes().filter(function(h) {
           return h != null;
         }).sort(function(a, b) {
@@ -2346,7 +2399,7 @@
         var src, tar;
         src = env.variable('src');
         tar = env.variable('tar');
-        if (!(src.health > 0 && tar.health > 0)) {
+        if (!(src.isAlive() && tar.isAlive())) {
           return this.suicide();
         }
         env.variable('damage', src.attack);
@@ -2582,6 +2635,21 @@
         return [evt];
       }
     },
+    Tremble: {
+      output: function(env) {
+        var evt;
+        evt = {
+          id: ACT_Tremble,
+          act: env.variable('act'),
+          dey: env.variable('delay'),
+          tim: env.variable('time')
+        };
+        if (env.variable('range') != null) {
+          evt.rag = env.variable('range');
+        }
+        return [evt];
+      }
+    },
     Dialog: {
       output: function(env) {
         return [
@@ -2654,6 +2722,9 @@
     },
     Kill: {
       callback: function(env) {
+        if (!env.variable('tar').isAlive()) {
+          return this.suicide();
+        }
         env.variable('tar').health = 0;
         if (!env.variable('tar').isVisible) {
           env.variable('tar').dead = true;
@@ -2680,7 +2751,7 @@
       callback: function(env) {
         var availableSlot, obj, slot;
         obj = env.variable('obj');
-        if (!(obj.health > 0)) {
+        if (!obj.isAlive()) {
           return this.suicide();
         }
         slot = env.variable('tarPos');
@@ -2702,7 +2773,7 @@
         env.getBlock(obj.pos).removeRef(obj);
         env.getBlock(slot).addRef(obj);
         obj.pos = slot;
-        if (!(env.variable('obj').health > 0)) {
+        if (!env.variable('obj').isAlive()) {
           return this.suicide();
         }
         return this.routine({
@@ -3024,7 +3095,7 @@
         var damageType, isRange, _ref5;
         damageType = env.variable('damageType');
         isRange = env.variable('isRange');
-        if (!(((_ref5 = env.variable('tar')) != null ? _ref5.health : void 0) > 0)) {
+        if (!((_ref5 = env.variable('tar')) != null ? _ref5.isAlive() : void 0)) {
           return this.suicide();
         }
         if (damageType === 'Physical') {
@@ -3045,7 +3116,7 @@
         if (env.variable('critical')) {
           onEvent('CriticalDamage', this, env.variable('src'), env.variable('tar'));
         }
-        if (env.variable('tar').health <= 0) {
+        if (!env.variable('tar').isAlive()) {
           return this.next({
             id: 'Dead',
             tar: env.variable('tar'),
@@ -3089,7 +3160,7 @@
       callback: function(env) {
         var exit, keys, oldStatues;
         keys = env.getObjects().filter(function(m) {
-          return (m.health != null) && m.health > 0;
+          return m.isAlive();
         }).filter(function(m) {
           return (m.keyed != null) && m.keyed;
         });
@@ -3163,10 +3234,10 @@
           });
         }
         onEvent('Kill', this, killer, src);
-        if (env.getBlock(src.pos) && src.health <= 0) {
+        if (env.getBlock(src.pos) && !src.isAlive()) {
           env.getBlock(src.pos).removeRef(src);
         }
-        if (env.variable('tar').health <= 0 && (env.variable('cod') == null) && env.variable('tar').dropInfo) {
+        if (!env.variable('tar').isAlive() && (env.variable('cod') == null) && env.variable('tar').dropInfo) {
           env.dungeon.killingInfo.push({
             dropInfo: env.variable('tar').dropInfo
           });
@@ -3181,7 +3252,7 @@
       output: function(env) {
         var ret;
         ret = [];
-        if (env.variable('tar').isVisible && env.variable('tar').health <= 0) {
+        if (env.variable('tar').isVisible && !env.variable('tar').isAlive()) {
           ret.push({
             act: env.variable('tar').ref,
             id: ACT_DEAD
@@ -3203,7 +3274,7 @@
     },
     ActivateMechanism: {
       callback: function(env) {
-        var block;
+        var block, npc, _i, _len, _ref5, _results;
         block = env.getBlock(env.variable('block'));
         if (!block.explored) {
           return this.suicide();
@@ -3222,7 +3293,13 @@
             }
             break;
           case Block_Npc:
-            return block.getRef(-1).onEvent('onBeActivate', this);
+            _ref5 = block.getRef(-1);
+            _results = [];
+            for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+              npc = _ref5[_i];
+              _results.push(npc.onEvent('onBeActivate', this));
+            }
+            return _results;
         }
       }
     },
@@ -3247,6 +3324,35 @@
                   pos: e.pos
                 };
               })
+            }
+          ];
+        }
+      }
+    },
+    ShowBubble: {
+      output: function(env) {
+        if (env.variable('pos') != null) {
+          return [
+            {
+              id: ACT_Bubble,
+              pos: env.variable('pos'),
+              eff: env.variable('eff'),
+              typ: env.variable('typ'),
+              cont: env.variable('cont'),
+              dey: env.variable('dey'),
+              dur: env.variable('dur')
+            }
+          ];
+        } else {
+          return [
+            {
+              id: ACT_Bubble,
+              act: env.variable('act'),
+              eff: env.variable('eff'),
+              typ: env.variable('typ'),
+              cont: env.variable('cont'),
+              dey: env.variable('dey'),
+              dur: env.variable('dur')
             }
           ];
         }
@@ -3278,10 +3384,10 @@
     return env.onEvent(evt, cmd);
   };
 
-  exports.DungeonEnvironment = DungeonEnvironment;
+  libDungeon.DungeonEnvironment = DungeonEnvironment;
 
-  exports.DungeonCommandStream = DungeonCommandStream;
+  libDungeon.DungeonCommandStream = DungeonCommandStream;
 
-  exports.fileVersion = -1;
+  libDungeon.fileVersion = -1;
 
 }).call(this);
