@@ -1467,13 +1467,6 @@
             delay: a.delay,
             range: a.range
           }) : void 0;
-        case 'tremble':
-          return typeof cmd.routine === "function" ? cmd.routine({
-            id: 'Tremble',
-            time: a.time,
-            delay: a.delay,
-            range: a.range
-          }) : void 0;
         case 'blink':
           return typeof cmd.routine === "function" ? cmd.routine({
             id: 'Blink',
@@ -2625,21 +2618,6 @@
         var evt;
         evt = {
           id: ACT_Shock,
-          dey: env.variable('delay'),
-          tim: env.variable('time')
-        };
-        if (env.variable('range') != null) {
-          evt.rag = env.variable('range');
-        }
-        return [evt];
-      }
-    },
-    Tremble: {
-      output: function(env) {
-        var evt;
-        evt = {
-          id: ACT_Tremble,
-          act: env.variable('act'),
           dey: env.variable('delay'),
           tim: env.variable('time')
         };
