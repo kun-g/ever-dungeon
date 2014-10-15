@@ -14,7 +14,7 @@ do
   for fileWithPath in $multiVersionFileList
   do
     targetFile=`(echo $fileWithPath | $SED -e 's/-multi//g')`
-    removeFiles=`(echo $fileWithPath | $SED -e 's/-multi/-multi-*/g')`
+    removeFiles=`(echo $fileWithPath | $SED -e 's/-multi/-multi*/g')`
     wantedFile=`(echo $fileWithPath | $SED -e 's/-multi/-multi-'$1'/g')`
     if [ -e $wantedFile ]
     then
