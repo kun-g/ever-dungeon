@@ -26,7 +26,7 @@ libTrigger = {};
             _results = [];
             for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
               p = result[_j];
-              if (p.health > 0) {
+              if (p.isAlive()) {
                 _results.push(p);
               }
             }

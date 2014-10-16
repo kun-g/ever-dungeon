@@ -73,6 +73,10 @@ libSpell = {};
       };
     }
 
+    Wizard.prototype.isAlive = function() {
+      return this.health > 0;
+    };
+
     Wizard.prototype.installSpell = function(spellID, level, cmd, delay) {
       var cfg, levelConfig;
       if (delay == null) {
@@ -177,7 +181,6 @@ libSpell = {};
       return typeof cmd.routine === "function" ? cmd.routine({
         id: 'SpellState',
         wizard: this,
-        state: this.calcBuffState(),
         effect: this.calcEffectState(spellID)
       }) : void 0;
     };
@@ -334,7 +337,7 @@ libSpell = {};
       if (!cfg.triggerCondition) {
         return [true, 'NoCD'];
       }
-      if (!(this.health > 0)) {
+      if (!this.isAlive()) {
         return [false, 'Dead'];
       }
       cdConfig = (function() {
@@ -358,7 +361,7 @@ libSpell = {};
       preCD = thisSpell.cd;
       if (isReset) {
         thisSpell.cd = cd;
-      } else if (this.health <= 0) {
+      } else if (!this.isAlive()) {
         thisSpell.cd = -1;
       } else {
         if (thisSpell.cd !== 0) {
@@ -578,7 +581,7 @@ libSpell = {};
             }
             break;
           case 'alive':
-            if (!(this.health > 0)) {
+            if (!this.isAlive()) {
               return [false, 'Dead'];
             }
             break;
@@ -642,7 +645,7 @@ libSpell = {};
     };
 
     Wizard.prototype.doAction = function(thisSpell, actions, level, target, cmd) {
-      var a, c, cfg, delay, effect, env, formular, formularResult, h, modifications, pos, property, spellID, src, t, val, variables, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len16, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _ref3, _s, _t, _u, _v, _w, _x, _y;
+      var a, c, cfg, delay, effect, env, formular, formularResult, h, modifications, pos, property, spellID, src, t, val, variables, _aa, _ab, _ac, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len16, _len17, _len18, _len19, _len2, _len20, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _ref3, _s, _t, _u, _v, _w, _x, _y, _z;
       if (actions == null) {
         return false;
       }
@@ -817,6 +820,34 @@ libSpell = {};
               }
             }
             break;
+          case 'tremble':
+            switch (a.act) {
+              case 'self':
+                if (typeof cmd.routine === "function") {
+                  cmd.routine({
+                    id: 'Tremble',
+                    act: this.ref,
+                    time: a.time,
+                    delay: a.delay,
+                    range: a.range
+                  });
+                }
+                break;
+              case 'target':
+                for (_o = 0, _len6 = target.length; _o < _len6; _o++) {
+                  t = target[_o];
+                  if (typeof cmd.routine === "function") {
+                    cmd.routine({
+                      id: 'Tremble',
+                      act: t.ref,
+                      time: a.time,
+                      delay: a.delay,
+                      range: a.range
+                    });
+                  }
+                }
+            }
+            break;
           case 'blink':
             if (typeof cmd.routine === "function") {
               cmd.routine({
@@ -862,8 +893,8 @@ libSpell = {};
             break;
           case 'chainBlock':
             _ref = a.source;
-            for (_o = 0, _len6 = _ref.length; _o < _len6; _o++) {
-              src = _ref[_o];
+            for (_p = 0, _len7 = _ref.length; _p < _len7; _p++) {
+              src = _ref[_p];
               cmd.routine({
                 id: 'ChainBlock',
                 src: src,
@@ -878,8 +909,8 @@ libSpell = {};
             env.newFaction(a.name);
             break;
           case 'changeFaction':
-            for (_p = 0, _len7 = target.length; _p < _len7; _p++) {
-              t = target[_p];
+            for (_q = 0, _len8 = target.length; _q < _len8; _q++) {
+              t = target[_q];
               t.faction = a.faction;
             }
             break;
@@ -901,8 +932,8 @@ libSpell = {};
                 });
               }
             } else {
-              for (_q = 0, _len8 = target.length; _q < _len8; _q++) {
-                t = target[_q];
+              for (_r = 0, _len9 = target.length; _r < _len9; _r++) {
+                t = target[_r];
                 if (typeof cmd.routine === "function") {
                   cmd.routine({
                     id: 'Heal',
@@ -916,14 +947,14 @@ libSpell = {};
             }
             break;
           case 'removeSpell':
-            for (_r = 0, _len9 = target.length; _r < _len9; _r++) {
-              t = target[_r];
+            for (_s = 0, _len10 = target.length; _s < _len10; _s++) {
+              t = target[_s];
               t.removeSpell(a.spell, cmd);
             }
             break;
           case 'installSpell':
-            for (_s = 0, _len10 = target.length; _s < _len10; _s++) {
-              t = target[_s];
+            for (_t = 0, _len11 = target.length; _t < _len11; _t++) {
+              t = target[_t];
               delay = 0;
               if (thisSpell != null) {
                 delay = thisSpell.delay;
@@ -935,8 +966,8 @@ libSpell = {};
             }
             break;
           case 'damage':
-            for (_t = 0, _len11 = target.length; _t < _len11; _t++) {
-              t = target[_t];
+            for (_u = 0, _len12 = target.length; _u < _len12; _u++) {
+              t = target[_u];
               if (typeof cmd.routine === "function") {
                 cmd.routine({
                   id: 'Damage',
@@ -960,8 +991,8 @@ libSpell = {};
                 });
               }
             } else if (a.pos === 'target') {
-              for (_u = 0, _len12 = target.length; _u < _len12; _u++) {
-                t = target[_u];
+              for (_v = 0, _len13 = target.length; _v < _len13; _v++) {
+                t = target[_v];
                 if (typeof cmd.routine === "function") {
                   cmd.routine({
                     id: 'SpellAction',
@@ -997,8 +1028,8 @@ libSpell = {};
                   });
                 }
               } else if (pos === 'target') {
-                for (_v = 0, _len13 = target.length; _v < _len13; _v++) {
-                  t = target[_v];
+                for (_w = 0, _len14 = target.length; _w < _len14; _w++) {
+                  t = target[_w];
                   if (typeof cmd.routine === "function") {
                     cmd.routine({
                       id: 'Effect',
@@ -1018,8 +1049,8 @@ libSpell = {};
                   });
                 }
               } else if (Array.isArray(pos)) {
-                for (_w = 0, _len14 = pos.length; _w < _len14; _w++) {
-                  pos = pos[_w];
+                for (_x = 0, _len15 = pos.length; _x < _len15; _x++) {
+                  pos = pos[_x];
                   if (typeof cmd.routine === "function") {
                     cmd.routine({
                       id: 'Effect',
@@ -1043,8 +1074,8 @@ libSpell = {};
                   }
                   break;
                 case 'target':
-                  for (_x = 0, _len15 = target.length; _x < _len15; _x++) {
-                    t = target[_x];
+                  for (_y = 0, _len16 = target.length; _y < _len16; _y++) {
+                    t = target[_y];
                     if (typeof cmd.routine === "function") {
                       cmd.routine({
                         id: 'Effect',
@@ -1099,8 +1130,8 @@ libSpell = {};
             } else {
               _buffType = ['RoleBuff', 'HealthBuff', 'AttackBuff'];
             }
-            for (_y = 0, _len16 = target.length; _y < _len16; _y++) {
-              h = target[_y];
+            for (_z = 0, _len17 = target.length; _z < _len17; _z++) {
+              h = target[_z];
               _ref3 = h.wSpellDB;
               for (spellID in _ref3) {
                 thisSpell = _ref3[spellID];
@@ -1156,6 +1187,97 @@ libSpell = {};
                 src: this,
                 tar: target
               });
+            }
+            break;
+          case 'showBubble':
+            pos = getProperty(a.pos, level.pos);
+            if (pos != null) {
+              if (pos === 'self') {
+                if (typeof cmd.routine === "function") {
+                  cmd.routine({
+                    id: 'ShowBubble',
+                    pos: this.pos,
+                    eff: a.effect,
+                    typ: a.bubbleType,
+                    cont: a.content,
+                    dey: a.delay,
+                    dur: a.duration
+                  });
+                }
+              } else if (pos === 'target') {
+                for (_aa = 0, _len18 = target.length; _aa < _len18; _aa++) {
+                  t = target[_aa];
+                  if (typeof cmd.routine === "function") {
+                    cmd.routine({
+                      id: 'ShowBubble',
+                      pos: t.pos,
+                      eff: a.effect,
+                      typ: a.bubbleType,
+                      cont: a.content,
+                      dey: a.delay,
+                      dur: a.duration
+                    });
+                  }
+                }
+              } else if (typeof pos === 'number') {
+                if (typeof cmd.routine === "function") {
+                  cmd.routine({
+                    id: 'ShowBubble',
+                    pos: pos,
+                    eff: a.effect,
+                    typ: a.bubbleType,
+                    cont: a.content,
+                    dey: a.delay,
+                    dur: a.duration
+                  });
+                }
+              } else if (Array.isArray(pos)) {
+                for (_ab = 0, _len19 = pos.length; _ab < _len19; _ab++) {
+                  pos = pos[_ab];
+                  if (typeof cmd.routine === "function") {
+                    cmd.routine({
+                      id: 'ShowBubble',
+                      pos: pos,
+                      eff: a.effect,
+                      typ: a.bubbleType,
+                      cont: a.content,
+                      dey: a.delay,
+                      dur: a.duration
+                    });
+                  }
+                }
+              }
+            } else {
+              switch (a.act) {
+                case 'self':
+                  if (typeof cmd.routine === "function") {
+                    cmd.routine({
+                      id: 'ShowBubble',
+                      act: this.ref,
+                      eff: a.effect,
+                      typ: a.bubbleType,
+                      cont: a.content,
+                      dey: a.delay,
+                      dur: a.duration
+                    });
+                  }
+                  break;
+                case 'target':
+                  for (_ac = 0, _len20 = target.length; _ac < _len20; _ac++) {
+                    t = target[_ac];
+                    if (typeof cmd.routine === "function") {
+                      cmd.routine({
+                        id: 'ShowBubble',
+                        act: t.ref,
+                        eff: a.effect,
+                        typ: a.bubbleType,
+                        cont: a.content,
+                        dey: a.delay,
+                        dur: a.duration
+                      });
+                    }
+                  }
+              }
             }
         }
       }
