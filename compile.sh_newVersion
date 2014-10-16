@@ -125,14 +125,14 @@ ConfigFile="build/config.js"
 CurrentVersion=153
 #CurrentVersion=`curl -s $UpdateUrl/version`
 #echo 'Current version: '$CurrentVersion
-sed -ig 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
-echo sed -ig 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
-sed -ig 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
-echo sed -ig 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
-sed -ig 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
-echo sed -ig 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
-sed -ig 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
-echo sed -ig 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
+$SED -ig 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
+echo $SED -ig 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
+$SED -ig 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
+echo $SED -ig 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
+$SED -ig 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
+echo $SED -ig 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
+$SED -ig 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
+echo $SED -ig 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
 
 # Commit
 echo '===== Commit the changes ====='
