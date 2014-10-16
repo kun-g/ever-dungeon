@@ -1,4 +1,5 @@
 libTrigger = {};
+libTrigger = {};
 (function() {
   var TriggerManager, bindVariable, branch, calculate, conditionCheck, doAction, doGetProperty, doLoop, filterObject, getTypeof, getVar, parse;
 

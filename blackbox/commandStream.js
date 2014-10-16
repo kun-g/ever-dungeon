@@ -1,4 +1,5 @@
 libCommandStream = {};
+libCommandStream = {};
 (function() {
   var CommandStream, Environment, isDebug, splLib;
 

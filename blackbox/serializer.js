@@ -1,4 +1,5 @@
 libSerializer = {};
+libSerializer = {};
 (function() {
   var Serializer, g_attr_constructorTable, generateMonitor, objectlize, registerConstructor;
 

@@ -1,4 +1,5 @@
 libSpell = {};
+libSpell = {};
 (function() {
   var Wizard, calcFormular, getLevelConfig, getProperty, getSpellConfig, plusThemAll, triggerLib;
 
