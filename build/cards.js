@@ -80,5 +80,85 @@ exports.data = [
         "func": "Card_polymorph",
         "image": "card3.png",
         "desc": "是全体敌人陷入中毒状态"
+    },
+    {
+        "classId": 10,
+        "name": "单个闪电",
+        "stack": 9,
+        "func": 243,
+        "image": "card3.png",
+        "desc": "远程攻击1名敌人"
+    },
+    {
+        "classId": 11,
+        "name": "多个闪电",
+        "stack": 9,
+        "func": 244,
+        "image": "card3.png",
+        "desc": "远程攻击多名敌人"
+    },
+    {
+        "classId": 12,
+        "name": "固定范围攻击",
+        "stack": 9,
+        "func": 245,
+        "image": "card3.png",
+        "desc": "固定范围攻击"
+    },
+    {
+        "classId": 13,
+        "name": "随机范围攻击",
+        "stack": 9,
+        "func": 247,
+        "image": "card3.png",
+        "desc": "随机范围攻击"
+    },
+    {
+        "classId": 14,
+        "name": "全屏攻击",
+        "stack": 9,
+        "func": 248,
+        "image": "card3.png",
+        "desc": "全屏攻击"
+    },
+    {
+        "classId": 15,
+        "name": "虚弱药水",
+        "stack": 9,
+        "func": 249,
+        "image": "card3.png",
+        "desc": "敌方全体降攻击"
+    },
+    {
+        "classId": 16,
+        "name": "致盲药水",
+        "stack": 9,
+        "func": 251,
+        "image": "card3.png",
+        "desc": "敌方全体致盲"
+    },
+    {
+        "classId": 17,
+        "name": "无敌药水",
+        "stack": 9,
+        "func": 252,
+        "image": "card3.png",
+        "desc": "我方全体无敌"
+    },
+    {
+        "classId": 18,
+        "name": "XX药水",
+        "stack": 9,
+        "func": 253,
+        "image": "card3.png",
+        "desc": "我方全体攻击吸收"
+    },
+    {
+        "classId": 19,
+        "name": "金币",
+        "stack": 9,
+        "func": 254,
+        "image": "card3.png",
+        "desc": "获得随机金币"
     }
 ]

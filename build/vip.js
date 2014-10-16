@@ -1,16 +1,131 @@
 exports.data = {
   "VIP": {
     "requirement": [ 
-      { "rmb": 0 },
-      { "rmb": 30 },
-      { "rmb": 100 },
-        { "rmb": 150 },
-        { "rmb": 250 },
-        { "rmb": 400 },
-        { "rmb": 850 },
-        { "rmb": 1400 },
-        { "rmb": 2500 }
+      {
+          "rmb": 0
+      },
+      {
+          "rmb": 4.99,
+          "privilege":[
+              {
+                  "name":"chest_vip",
+                  "data":1
+              }
+          ]
+      },
+      {
+          "rmb": 15.99,
+          "privilege":[
+              {
+                  "name":"chest_vip",
+                  "data":2
+              }
+          ]
+      },
+        {
+            "rmb": 23.99,
+            "privilege":[
+                {
+                    "name":"chest_vip",
+                    "data":3
+                },
+                {
+                    "name":"ContinuousRaids",
+                    "data":true
+                }
+            ]
+        },
+        {
+            "rmb": 39.99,
+            "privilege":[
+                {
+                    "name":"chest_vip",
+                    "data":4
+                },
+                {
+                    "name":"pkCount",
+                    "data":6
+                }
+            ]
+        },
+        {
+            "rmb": 64.99,
+            "privilege":[
+                {
+                    "name":"chest_vip",
+                    "data":5
+                },
+                {
+                    "name":"pkCount",
+                    "data":7
+                },
+                {
+                    "name":"tuHaoCount",
+                    "data":4
+                }
+            ]
+        },
+        {
+            "rmb": 137.99,
+            "privilege":[
+                {
+                    "name":"chest_vip",
+                    "data":6
+                },
+                {
+                    "name":"pkCount",
+                    "data":8
+                },
+                {
+                    "name":"EquipmentRobbers",
+                    "data":4
+                },
+                {
+                    "name":"EvilChieftains",
+                    "data":4
+                }
+            ]
+        },
+        {
+            "rmb": 227.99,
+            "privilege":[
+                {
+                    "name":"chest_vip",
+                    "data":7
+                },
+                {
+                    "name":"pkCount",
+                    "data":9
+                },
+                {
+                    "name":"EquipmentRobbers",
+                    "data":5
+                },
+                {
+                    "name":"EvilChieftains",
+                    "data":5
+                }
+            ]
+        },
+        {
+            "rmb": 407.99,
+            "privilege":[
+                {
+                    "name":"chest_vip",
+                    "data":8
+                },
+                {
+                    "name":"pkCount",
+                    "data":10
+                },
+                {
+                    "name":"tuHaoCount",
+                    "data":5
+                }
+            ]
+        }
     ],
+
     "levels": [
       { "desc":"无权限"},
       { "desc":"1.可购买vip1宝箱\n2.赠送复活药水3瓶\n3.赠送大精力药水1瓶\n4.赠送额外宝石100个"},

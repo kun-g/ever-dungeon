@@ -126,13 +126,13 @@ CurrentVersion=153
 #CurrentVersion=`curl -s $UpdateUrl/version`
 #echo 'Current version: '$CurrentVersion
 $SED -ig 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
-echo $SED -ig 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
+echo $SED -i 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
 $SED -ig 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
-echo $SED -ig 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
+echo $SED -i 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
 $SED -ig 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
-echo $SED -ig 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
+echo $SED -i 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
 $SED -ig 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
-echo $SED -ig 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
+echo $SED -i 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
 
 # Commit
 echo '===== Commit the changes ====='
