@@ -1,5 +1,5 @@
 exports.data = {
-  "ServerID": "0",
+  "ServerID": 0,
   "ServerName": "Develop",
   "ServerConfig": [
     {
