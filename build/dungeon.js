@@ -2447,8 +2447,15 @@
         } else {
           rangeEff = [];
         }
-        flag = env.variable('critical') ? HP_RESULT_TYPE_CRITICAL : HP_RESULT_TYPE_HIT;
-        flag = env.variable('hit') ? HP_RESULT_TYPE_HIT : HP_RESULT_TYPE_MISS;
+        if (env.variable('critical')) {
+          flag = HP_RESULT_TYPE_CRITICAL;
+        } else {
+          if (env.variable('hit')) {
+            flag = HP_RESULT_TYPE_HIT;
+          } else {
+            flag = HP_RESULT_TYPE_MISS;
+          }
+        }
         return [
           {
             act: env.variable('src').ref,
