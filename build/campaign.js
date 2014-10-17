@@ -1,3 +1,4 @@
+iaplist = require('./iaplist').data.list;
 exports.data = {
     "Charge": {
         "show": true,
@@ -275,47 +276,7 @@ exports.data = {
         "mailBody": "恭喜你完成活动，点击领取活动奖励！",
         "date": "2014/10/25",
         "dateDescription": "截止日期2014年10月25日24时",
-        "objective": {
-            "0": {
-                "award": [
-                    {"type":2,"count":60}
-                ]
-            },
-            "1": {
-                "award": [
-                    {"type":2,"count":130}
-                ]
-            },
-            "2": {
-                "award": [
-                    {"type":2,"count":330}
-                ]
-            },
-            "3": {
-                "award": [
-                    {"type":2,"count":760}
-                ]
-            },
-            "4": {
-                "award": [
-                    {"type":2,"count":1460}
-                ]
-            },
-            "5": {
-                "award": [
-                    {"type":2,"count":2260}
-                ]
-            },
-            "6": {
-                "award": [
-                    {"type":2,"count":3760}
-                ]
-            },
-            "7": {
-                "award": [
-                    {"type":2,"count":7480}
-                ]
-            }
-        }
+        // iaplist.list will modify by initCampaignTable =>{award:[{type:2,count:60}}
+        "objective" : iaplist,
     }
 };

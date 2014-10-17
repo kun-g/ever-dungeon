@@ -1830,18 +1830,9 @@ exports.data = [
         "skillId": 76,
         "label":"暴击特效",
         "config": {
-            "basic": {
-                "spellAction": "bj",
-                "targetEffect": 64,
-                "spellDelay": 0.5,
-                "targetDelay": 0.5
-            },
             "triggerCondition": [
-                { "type": "event", "event": "onTarget" }
+                { "type": "event", "event": "onCriticalDamage" }
             ],
-            "targetSelection":{
-                "pool":"target"
-            },
         "action":[
             { "type": "shock", "delay":0.3, "range":5, "time":0.2 }
         ]

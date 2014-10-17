@@ -134,7 +134,7 @@
       if (type && type === 'error') {
         return logError(msg);
       } else {
-
+        return logUser(msg);
       }
     };
 
@@ -2494,7 +2494,6 @@
       _results = [];
       for (_i = 0, _len = reward.length; _i < _len; _i++) {
         r = reward[_i];
-        console.log('reward', JSON.stringify(reward));
         _results.push(dbLib.deliverMessage(this.name, {
           type: MESSAGE_TYPE_SystemReward,
           src: MESSAGE_REWARD_TYPE_SYSTEM,
