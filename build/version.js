@@ -6,8 +6,8 @@ exports.data = {
     "bin_version_need": "1.0.6",
 
     "url": "http://hotupdate.qiniudn.com/",
-    "needed_version": "1.1.3",
-    "last_version": "1.1.3",
+    "needed_version": "1.0.12",
+    "last_version": "1.0.12",
     "branch": "develop",
 
     "bin_url": "http://fir.im/rX4"
