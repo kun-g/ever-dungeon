@@ -16,6 +16,7 @@ do
     targetFile=`(echo $fileWithPath | $SED -e 's/-multi//g')`
     removeFiles=`(echo $fileWithPath | $SED -e 's/-multi/-multi*/g')`
     wantedFile=`(echo $fileWithPath | $SED -e 's/-multi/-multi-'$1'/g')`
+		echo $wantedFile "00000"
     if [ -e $wantedFile ]
     then
       sourceFile=$wantedFile
