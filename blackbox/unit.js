@@ -1,5 +1,4 @@
 libUnit = {};
-libUnit = {};
 (function() {
   var Hero, Mirror, Monster, Npc, Unit, Wizard, createUnit, flagCreation,
     __hasProp = {}.hasOwnProperty,

@@ -1,5 +1,4 @@
 libItem = {};
-libItem = {};
 (function() {
   var Card, Item, Serializer, registerConstructor, _ref,
     __hasProp = {}.hasOwnProperty,
