@@ -1,6 +1,4 @@
 libDefine = {};
-libDefine = {};
-libDefine = {};
 
 var triggerLib = libTrigger;
 

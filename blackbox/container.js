@@ -1,6 +1,4 @@
 libContainer = {};
-libContainer = {};
-libContainer = {};
 (function() {
   var Bag, CONTAINER_TYPE_BAG, CONTAINER_TYPE_CARD_STACK, CONTAINER_TYPE_FURANCE, CardStack, PlayerBag, STACK_TYPE_MULTIPLE_STACK, STACK_TYPE_SINGLE_STACK, Serializer, objectlize, registerConstructor, _ref,
     __hasProp = {}.hasOwnProperty,
