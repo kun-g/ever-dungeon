@@ -5,6 +5,7 @@ SEARCH_DIR=($@)
 #if file name with -multi ,then it must be multiple version file.
 #but if can't find file's name includes -multy-xxx, use -multi as default
 
+echo $SED
 
 for ((i=1; i <${#SEARCH_DIR[@]}; i++))
 do
