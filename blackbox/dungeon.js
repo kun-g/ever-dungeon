@@ -102,7 +102,7 @@ libDungeon = {};
       var ret;
       ret = randomFunc();
       if (flagShowRand) {
-        debug('Rand:', ret);
+        console.log('Rand:', ret);
       }
       return ret;
     };
@@ -760,7 +760,7 @@ libDungeon = {};
         r = this.rand();
         if (r !== randNumber) {
           if (randNumber !== r) {
-            debug('Unmatched rand number', action, arg, randNumber, r);
+            console.log('Unmatched rand number', action, arg, randNumber, r);
           }
           return this.onReplayMissMatch();
         }
@@ -1375,7 +1375,7 @@ libDungeon = {};
           }
           strUp += ' ';
         }
-        debug(strUp);
+        console.log(strUp);
         str = '  ';
         for (i in row) {
           e = row[i];
@@ -1408,7 +1408,7 @@ libDungeon = {};
               str += e + ' ';
           }
         }
-        _results.push(debug(str));
+        _results.push(console.log(str));
       }
       return _results;
     };
@@ -2448,13 +2448,14 @@ libDungeon = {};
         } else {
           rangeEff = [];
         }
-        if (env.variable('hit')) {
-          flag = HP_RESULT_TYPE_HIT;
-          if (env.variable('critical')) {
-            flag = HP_RESULT_TYPE_CRITICAL;
-          }
+        if (env.variable('critical')) {
+          flag = HP_RESULT_TYPE_CRITICAL;
         } else {
-          flag = HP_RESULT_TYPE_MISS;
+          if (env.variable('hit')) {
+            flag = HP_RESULT_TYPE_HIT;
+          } else {
+            flag = HP_RESULT_TYPE_MISS;
+          }
         }
         return [
           {
@@ -3124,14 +3125,13 @@ libDungeon = {};
           onEvent('CriticalDamage', this, env.variable('src'), env.variable('tar'));
         }
         if (!env.variable('tar').isAlive()) {
-          this.next({
+          return this.next({
             id: 'Dead',
             tar: env.variable('tar'),
             killer: env.variable('src'),
             damage: env.variable('damage')
           });
         }
-        return this.getPrevCommand('Attack').cmd.critical = env.variable('critical');
       },
       output: function(env) {
         var damage, delay, flag, ret;

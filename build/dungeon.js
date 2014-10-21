@@ -2447,13 +2447,14 @@
         } else {
           rangeEff = [];
         }
-        if (env.variable('hit')) {
-          flag = HP_RESULT_TYPE_HIT;
-          if (env.variable('critical')) {
-            flag = HP_RESULT_TYPE_CRITICAL;
-          }
+        if (env.variable('critical')) {
+          flag = HP_RESULT_TYPE_CRITICAL;
         } else {
-          flag = HP_RESULT_TYPE_MISS;
+          if (env.variable('hit')) {
+            flag = HP_RESULT_TYPE_HIT;
+          } else {
+            flag = HP_RESULT_TYPE_MISS;
+          }
         }
         return [
           {
@@ -3123,14 +3124,13 @@
           onEvent('CriticalDamage', this, env.variable('src'), env.variable('tar'));
         }
         if (!env.variable('tar').isAlive()) {
-          this.next({
+          return this.next({
             id: 'Dead',
             tar: env.variable('tar'),
             killer: env.variable('src'),
             damage: env.variable('damage')
           });
         }
-        return this.getPrevCommand('Attack').cmd.critical = env.variable('critical');
       },
       output: function(env) {
         var damage, delay, flag, ret;
