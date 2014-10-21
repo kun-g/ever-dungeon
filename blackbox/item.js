@@ -19,7 +19,7 @@ libItem = {};
         };
       }
       if (data.id === 907) {
-        console.log("The 907 is comming");
+        debug("The 907 is comming");
         showMeTheStack();
       }
       cfg = {

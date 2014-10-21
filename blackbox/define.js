@@ -20,8 +20,8 @@ ENERGY_RATE = 360000; // 1min
 TEAMMATE_REWARD_RATIO = 0.2;
 //////////////////// Log
 serverType = 'None';
-print = console.log;
-dprint = function(obj) { console.log(libUtil.inspect(obj, true, 10));}
+print = debug;
+dprint = function(obj) { debug(libUtil.inspect(obj, true, 10));}
 logger = null;
 initServer = function () {
   var pid = process.pid;
@@ -45,7 +45,7 @@ initServer = function () {
       var util = libUtil;
       var config = {depth : 11};
       //if (process.stdout.isTTY) config.colors = true;
-      console.log(util.inspect(log, config));
+      debug(util.inspect(log, config));
     }
   };
 };
@@ -366,7 +366,7 @@ initGlobalConfig = function (path, callback) {
   callback();
 };
 
-showMeTheStack = function () {try {a = b;} catch (err) {console.log(err.stack);}};
+showMeTheStack = function () {try {a = b;} catch (err) {debug(err.stack);}};
 
 //////////// exit routine
 onDBShutDown = function () { };

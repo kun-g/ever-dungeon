@@ -102,7 +102,7 @@ libDungeon = {};
       var ret;
       ret = randomFunc();
       if (flagShowRand) {
-        console.log('Rand:', ret);
+        debug('Rand:', ret);
       }
       return ret;
     };
@@ -760,7 +760,7 @@ libDungeon = {};
         r = this.rand();
         if (r !== randNumber) {
           if (randNumber !== r) {
-            console.log('Unmatched rand number', action, arg, randNumber, r);
+            debug('Unmatched rand number', action, arg, randNumber, r);
           }
           return this.onReplayMissMatch();
         }
@@ -1375,7 +1375,7 @@ libDungeon = {};
           }
           strUp += ' ';
         }
-        console.log(strUp);
+        debug(strUp);
         str = '  ';
         for (i in row) {
           e = row[i];
@@ -1408,7 +1408,7 @@ libDungeon = {};
               str += e + ' ';
           }
         }
-        _results.push(console.log(str));
+        _results.push(debug(str));
       }
       return _results;
     };
