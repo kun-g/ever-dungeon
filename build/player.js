@@ -255,7 +255,7 @@
     };
 
     Player.prototype.onLogin = function() {
-      var flag, itemsNeedRemove, key, loginStreakCount, prize, ret, s, _i, _len, _ref7;
+      var flag, itemsNeedRemove, key, prize, ret, s, _i, _len, _ref7;
       if (!this.lastLogin) {
         return [];
       }
@@ -284,18 +284,15 @@
         }
       }
       flag = true;
-      loginStreakCount = this.loginStreak.count;
       if (this.loginStreak.date && moment().isSame(this.loginStreak.date, 'month')) {
         if (moment().isSame(this.loginStreak.date, 'day')) {
           flag = false;
-        } else {
-          loginStreakCount += 1;
         }
       } else {
         this.loginStreak.count = 0;
       }
       this.log('onLogin', {
-        loginStreak: loginStreakCount,
+        loginStreak: this.loginStreak.count,
         date: this.lastLogin
       });
       this.onCampaign('RMB');
@@ -426,7 +423,6 @@
         }
       }
       this.loginStreak['date'] = currentTime(true).valueOf();
-      this.loginStreak.count += 1;
       this.log('claimLoginReward', {
         loginStreak: this.loginStreak.count,
         date: currentTime()
@@ -437,6 +433,7 @@
           return !e.vip || _this.vipLevel() >= e.vip;
         };
       })(this)));
+      this.loginStreak.count += 1;
       if (this.loginStreak.count >= queryTable(TABLE_DP).length) {
         this.loginStreak.count = 0;
       }
@@ -545,7 +542,7 @@
           ret = ret.concat(this.syncEvent());
         }
         this.rmb += cfg.price;
-        this.onCampaign('RMB', cfg.price);
+        this.onCampaign('RMB', rec.productID);
         ret.push({
           NTF: Event_PlayerInfo,
           arg: {
@@ -2450,7 +2447,7 @@
           }
           _ref11 = this.getCampaignConfig('FirstCharge'), config = _ref11.config, level = _ref11.level;
           if ((config != null) && (level != null)) {
-            rmb = data;
+            rmb = String(data);
             if (level[rmb] != null) {
               reward.push({
                 cfg: config,
