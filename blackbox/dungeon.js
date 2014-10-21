@@ -1468,6 +1468,13 @@ libDungeon = {};
             delay: a.delay,
             range: a.range
           }) : void 0;
+        case 'tremble':
+          return typeof cmd.routine === "function" ? cmd.routine({
+            id: 'Tremble',
+            time: a.time,
+            delay: a.delay,
+            range: a.range
+          }) : void 0;
         case 'blink':
           return typeof cmd.routine === "function" ? cmd.routine({
             id: 'Blink',
@@ -2441,8 +2448,14 @@ libDungeon = {};
         } else {
           rangeEff = [];
         }
-        flag = env.variable('critical') ? HP_RESULT_TYPE_CRITICAL : HP_RESULT_TYPE_HIT;
-        flag = env.variable('hit') ? HP_RESULT_TYPE_HIT : HP_RESULT_TYPE_MISS;
+        if (env.variable('hit')) {
+          flag = HP_RESULT_TYPE_HIT;
+          if (env.variable('critical')) {
+            flag = HP_RESULT_TYPE_CRITICAL;
+          }
+        } else {
+          flag = HP_RESULT_TYPE_MISS;
+        }
         return [
           {
             act: env.variable('src').ref,
@@ -2620,6 +2633,21 @@ libDungeon = {};
         var evt;
         evt = {
           id: ACT_Shock,
+          dey: env.variable('delay'),
+          tim: env.variable('time')
+        };
+        if (env.variable('range') != null) {
+          evt.rag = env.variable('range');
+        }
+        return [evt];
+      }
+    },
+    Tremble: {
+      output: function(env) {
+        var evt;
+        evt = {
+          id: ACT_Tremble,
+          act: env.variable('act'),
           dey: env.variable('delay'),
           tim: env.variable('time')
         };
@@ -3096,13 +3124,14 @@ libDungeon = {};
           onEvent('CriticalDamage', this, env.variable('src'), env.variable('tar'));
         }
         if (!env.variable('tar').isAlive()) {
-          return this.next({
+          this.next({
             id: 'Dead',
             tar: env.variable('tar'),
             killer: env.variable('src'),
             damage: env.variable('damage')
           });
         }
+        return this.getPrevCommand('Attack').cmd.critical = env.variable('critical');
       },
       output: function(env) {
         var damage, delay, flag, ret;
