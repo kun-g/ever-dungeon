@@ -3098,7 +3098,7 @@
     },
     Damage: {
       callback: function(env) {
-        var damageType, isRange, _ref5;
+        var damageType, isRange, _ref5, _ref6, _ref7;
         damageType = env.variable('damageType');
         isRange = env.variable('isRange');
         if (!((_ref5 = env.variable('tar')) != null ? _ref5.isAlive() : void 0)) {
@@ -3130,7 +3130,7 @@
             damage: env.variable('damage')
           });
         }
-        return this.getPrevCommand('Attack').cmd.critical = env.variable('critical');
+        return (_ref6 = this.getPrevCommand('Attack')) != null ? (_ref7 = _ref6.cmd) != null ? _ref7.critical = env.variable('critical') : void 0 : void 0;
       },
       output: function(env) {
         var damage, delay, flag, ret;
