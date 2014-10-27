@@ -1001,7 +1001,6 @@ exports.data = [
                         "id": 23,
                         "count":1,
                         "questOnly":true,
-                        "keyed":true,
                         "collectId":11001
                     },
                     {
@@ -1635,7 +1634,7 @@ exports.data = [
 
         "collectId":17001,
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:92}
+            {id: 211,from: 1, to: 4,dropPrize:92}
         ],
         "levels" :[
             {
@@ -1743,7 +1742,7 @@ exports.data = [
                 {"id":8,"weight":2},
                 {"id":16,"weight":2}]}
         }, "global": [
-        {id: 211,from: 0, to: 2,dropPrize:93}],
+        {id: 211,from: 1, to: 4,dropPrize:93}],
          
         "levels" :[
             {
@@ -1844,7 +1843,7 @@ exports.data = [
                 {"id":8,"weight":2},
                 {"id":16,"weight":2}]}
         },"global": [
-        {id: 211,from: 0, to: 2,dropPrize:94}],
+        {id: 211,from: 1, to: 4,dropPrize:94}],
         "levels" :[
             {
                  "objects" :[
@@ -1955,7 +1954,7 @@ exports.data = [
                 {"id":16,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:95}],
+            {id: 211,from: 1, to: 4,dropPrize:95}],
         "levels" :[
             {
                  "objects" :[
@@ -2075,7 +2074,7 @@ exports.data = [
                 {"id":16,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:96}],
+            {id: 211,from: 1, to: 4,dropPrize:96}],
         "levels" :[
             {
                  "objects" :[
@@ -2180,7 +2179,7 @@ exports.data = [
                 {"id":16,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:97}],
+            {id: 211,from: 1, to: 4,dropPrize:97}],
         "levels" :[
             {
                  "objects" :[
@@ -2297,7 +2296,7 @@ exports.data = [
                 {"id":16,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:98}],
+            {id: 211,from: 1, to: 4,dropPrize:98}],
         "levels" :[
             {
                  "objects" :[
@@ -2404,7 +2403,7 @@ exports.data = [
                 {"id":13,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:99}],
+            {id: 211,from: 1, to: 4,dropPrize:99}],
         "levels" :[
             {
                  "objects" :[
@@ -2501,7 +2500,7 @@ exports.data = [
                 {"id":13,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:100}],
+            {id: 211,from: 1, to: 4,dropPrize:100}],
         "collectId":34001,
         "levels" :[
             {
@@ -2610,7 +2609,7 @@ exports.data = [
                 {"id":13,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:101}],
+            {id: 211,from: 1, to: 4,dropPrize:101}],
         "collectId":37001,
         "levels" :[
             {
@@ -2742,7 +2741,7 @@ exports.data = [
                 {"id":13,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:102}],
+            {id: 211,from: 1, to: 4,dropPrize:102}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -2886,7 +2885,7 @@ exports.data = [
                 {"id":13,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:103}],
+            {id: 211,from: 1, to: 4,dropPrize:103}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -2989,7 +2988,7 @@ exports.data = [
                 {"id":13,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:104}],
+            {id: 211,from: 1, to: 4,dropPrize:104}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -3098,7 +3097,7 @@ exports.data = [
                 {"id":13,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:105}],
+            {id: 211,from: 1, to: 4,dropPrize:105}],
         "levels" :[
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -3205,7 +3204,7 @@ exports.data = [
                 {"id":40,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:106}],
+            {id: 211,from: 1, to: 4,dropPrize:106}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -3301,7 +3300,7 @@ exports.data = [
                 {"id":40,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:107}],
+            {id: 211,from: 1, to: 4,dropPrize:107}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -3410,7 +3409,7 @@ exports.data = [
                 {"id":40,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:108}],
+            {id: 211,from: 1, to: 4,dropPrize:108}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -3538,7 +3537,7 @@ exports.data = [
                 {"id":40,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:109}],
+            {id: 211,from: 1, to: 4,dropPrize:109}],
         "collectId":57001,
         "levels" :[
             {
@@ -3656,7 +3655,7 @@ exports.data = [
                 {"id":40,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:110}],
+            {id: 211,from: 1, to: 4,dropPrize:110}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -3768,7 +3767,7 @@ exports.data = [
                 {"id":40,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:111}],
+            {id: 211,from: 1, to: 4,dropPrize:111}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -3877,7 +3876,7 @@ exports.data = [
                 {"id":40,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:112}],
+            {id: 211,from: 1, to: 4,dropPrize:112}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -4005,7 +4004,7 @@ exports.data = [
                 {"id":45,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:113}],
+            {id: 211,from: 1, to: 4,dropPrize:113}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -4109,7 +4108,7 @@ exports.data = [
                 {"id":45,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:114}],
+            {id: 211,from: 1, to: 4,dropPrize:114}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -4219,7 +4218,7 @@ exports.data = [
                 {"id":45,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:115}],
+            {id: 211,from: 1, to: 4,dropPrize:115}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -4363,7 +4362,7 @@ exports.data = [
                 {"id":45,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:116}],
+            {id: 211,from: 1, to: 4,dropPrize:116}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -4472,7 +4471,7 @@ exports.data = [
                 {"id":45,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:117}],
+            {id: 211,from: 1, to: 4,dropPrize:117}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -4583,7 +4582,7 @@ exports.data = [
                 {"id":45,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:118}],
+            {id: 211,from: 1, to: 4,dropPrize:118}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -4688,7 +4687,7 @@ exports.data = [
             {"id":45,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:119}],
+            {id: 211,from: 1, to: 4,dropPrize:119}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -4803,7 +4802,7 @@ exports.data = [
                 {"id":48,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:120}],
+            {id: 211,from: 1, to: 4,dropPrize:120}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -4907,7 +4906,7 @@ exports.data = [
                 {"id":48,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:121}],
+            {id: 211,from: 1, to: 4,dropPrize:121}],
         "levels" :[
              {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -5021,7 +5020,7 @@ exports.data = [
                 {"id":48,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:122}],
+            {id: 211,from: 1, to: 4,dropPrize:122}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -5132,7 +5131,7 @@ exports.data = [
                 {"id":48,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:123}],
+            {id: 211,from: 1, to: 4,dropPrize:123}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -5240,7 +5239,7 @@ exports.data = [
                 {"id":48,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:124}],
+            {id: 211,from: 1, to: 4,dropPrize:124}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -5356,7 +5355,7 @@ exports.data = [
                 {"id":48,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:125}],
+            {id: 211,from: 1, to: 4,dropPrize:125}],
         "collectId":87001,
         "levels" :[
             {
@@ -5483,7 +5482,7 @@ exports.data = [
                 {"id":48,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:126}],
+            {id: 211,from: 1, to: 4,dropPrize:126}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -5610,7 +5609,7 @@ exports.data = [
                 {"id":72,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:127}],
+            {id: 211,from: 1, to: 4,dropPrize:127}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -5728,7 +5727,7 @@ exports.data = [
                 {"id":72,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:128}],
+            {id: 211,from: 1, to: 4,dropPrize:128}],
         "collectId":95001,
         "levels" :[
             {
@@ -5842,7 +5841,7 @@ exports.data = [
                 {"id":72,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:129}],
+            {id: 211,from: 1, to: 4,dropPrize:129}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -5963,7 +5962,7 @@ exports.data = [
                 {"id":72,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:130}],
+            {id: 211,from: 1, to: 4,dropPrize:130}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -6080,7 +6079,7 @@ exports.data = [
                 {"id":72,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:131}],
+            {id: 211,from: 1, to: 4,dropPrize:131}],
         "collectId":101001,
         "levels" :[
             {
@@ -6189,7 +6188,7 @@ exports.data = [
                 {"id":72,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:132}],
+            {id: 211,from: 1, to: 4,dropPrize:132}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -6307,7 +6306,7 @@ exports.data = [
                 {"id":72,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:133}],
+            {id: 211,from: 1, to: 4,dropPrize:133}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -6411,7 +6410,7 @@ exports.data = [
                 {"id":104,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:134}],
+            {id: 211,from: 1, to: 4,dropPrize:134}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -6515,7 +6514,7 @@ exports.data = [
                 {"id":104,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:135}],
+            {id: 211,from: 1, to: 4,dropPrize:135}],
         "collectId":106001,
         "levels" :[
             {
@@ -6630,7 +6629,7 @@ exports.data = [
                 {"id":104,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:136}],
+            {id: 211,from: 1, to: 4,dropPrize:136}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -6740,7 +6739,7 @@ exports.data = [
                 {"id":104,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:137}],
+            {id: 211,from: 1, to: 4,dropPrize:137}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -6850,7 +6849,7 @@ exports.data = [
                 {"id":104,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:138}],
+            {id: 211,from: 1, to: 4,dropPrize:138}],
         "collectId":111001,
         "levels" :[
             {
@@ -6960,7 +6959,7 @@ exports.data = [
                 {"id":104,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:139}],
+            {id: 211,from: 1, to: 4,dropPrize:139}],
         "collectId":112001,
         "levels" :[
             {
@@ -7069,7 +7068,7 @@ exports.data = [
                 {"id":104,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:140}],
+            {id: 211,from: 1, to: 4,dropPrize:140}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -7172,7 +7171,7 @@ exports.data = [
                 {"id":104,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:141}],
+            {id: 211,from: 1, to: 4,dropPrize:141}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -7293,7 +7292,7 @@ exports.data = [
                 {"id":104,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:142}],
+            {id: 211,from: 1, to: 4,dropPrize:142}],
         "collectId":119001,
         "levels" :[
             {
@@ -7401,7 +7400,7 @@ exports.data = [
                 {"id":104,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:143}],
+            {id: 211,from: 1, to: 4,dropPrize:143}],
         "collectId":120001,
         "levels" :[
             {
@@ -7504,7 +7503,7 @@ exports.data = [
                 {"id":104,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:144}],
+            {id: 211,from: 1, to: 4,dropPrize:144}],
         "collectId":121001,
         "levels" :[
             {
@@ -7613,7 +7612,7 @@ exports.data = [
                 {"id":104,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:145}],
+            {id: 211,from: 1, to: 4,dropPrize:145}],
         "collectId":122001,
         "levels" :[
             {
@@ -7728,7 +7727,7 @@ exports.data = [
         },
         "collectId":123001,
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:146}],
+            {id: 211,from: 1, to: 4,dropPrize:146}],
         "levels" :[
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -7859,7 +7858,7 @@ exports.data = [
                 {"id":104,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:147}],
+            {id: 211,from: 1, to: 4,dropPrize:147}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -13730,7 +13729,7 @@ exports.data = [
                 {"id":8,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:91}],
+            {id: 211,from: 1, to: 4,dropPrize:91}],
         "rank": 1,
         "levels" :[
             {
@@ -13833,7 +13832,7 @@ exports.data = [
                 {"id":8,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:91}],
+            {id: 211,from: 1, to: 4,dropPrize:91}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -13928,7 +13927,7 @@ exports.data = [
                 {"id":8,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:91}],
+            {id: 211,from: 1, to: 4,dropPrize:91}],
         "rank": 2,
         "levels" :[
             {
@@ -14023,7 +14022,7 @@ exports.data = [
                 {"id":8,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:91}],
+            {id: 211,from: 1, to: 4,dropPrize:91}],
         "rank": 3,
         "levels" :[
             {
@@ -14050,8 +14049,7 @@ exports.data = [
                     {
                         "id": 23,
                         "count":1,
-                        "questOnly":true,
-                        "keyed":true
+                        "questOnly":true
                     },
                     {
                         "id": 25,
@@ -14121,7 +14119,7 @@ exports.data = [
                 {"id":8,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:91}],
+            {id: 211,from: 1, to: 4,dropPrize:91}],
         "rank": 3,
         "levels" :[
             {
@@ -14229,7 +14227,7 @@ exports.data = [
                 {"id":8,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:91}],
+            {id: 211,from: 1, to: 4,dropPrize:91}],
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -14339,7 +14337,7 @@ exports.data = [
                 {"id":8,"weight":2}]}
         },
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:91}],
+            {id: 211,from: 1, to: 4,dropPrize:91}],
         "rank": 9,
         "levels" :[
             {
@@ -18400,17 +18398,14 @@ exports.data = [
                         "id": 135,
                         "count":1,
                         "pos":12,
-                        property:{
-                            "keyed":true,
-                            skill:[{id:153}],
-                            dropPrize:80}
+                        "keyed":true
                     }
                 ],
                 "exit": 29,
                 "entrance":0
             }
         ],
-        "dropID":[
+        "dropID":[ 80
         ],
         "prizeWxp":0,"prizeGold":0, "prizeXp":0,
         "wxpRate":1,"goldRate":0.5, "xpRate":1
@@ -19326,17 +19321,14 @@ exports.data = [
                         "id": 137,
                         "count":1,
                         "pos":12,
-                        property:{
-                            "keyed":true,
-                            skill:[{id:153}],
-                            dropPrize:81}
+                        "keyed":true
                     }
                 ],
                 "exit": 29,
                 "entrance":0
             }
         ],
-        "dropID":[
+        "dropID":[ 81
         ],
         "prizeWxp":0,"prizeGold":0, "prizeXp":0,
         "wxpRate":1,"goldRate":0.5, "xpRate":1
@@ -20251,17 +20243,14 @@ exports.data = [
                         "id": 200,
                         "count":1,
                         "pos":12,
-                        property:{
-                            "keyed":true,
-                            skill:[{id:153}],
-                            dropPrize:82}
+                        "keyed":true
                     }
                 ],
                 "exit": 29,
                 "entrance":0
             }
         ],
-        "dropID":[
+        "dropID":[  82
         ],
         "prizeWxp":0,"prizeGold":0, "prizeXp":0,
         "wxpRate":1,"goldRate":0.5, "xpRate":1
@@ -21176,17 +21165,14 @@ exports.data = [
                         "id": 201,
                         "count":1,
                         "pos":12,
-                        property:{
-                            "keyed":true,
-                            skill:[{id:153}],
-                            dropPrize:83}
+                        "keyed":true
                     }
                 ],
                 "exit": 29,
                 "entrance":0
             }
         ],
-        "dropID":[
+        "dropID":[83
 
         ],
         "prizeWxp":0,"prizeGold":0, "prizeXp":0,
@@ -22102,17 +22088,14 @@ exports.data = [
                         "id": 202,
                         "count":1,
                         "pos":12,
-                        property:{
-                            "keyed":true,
-                            skill:[{id:153}],
-                            dropPrize:84}
+                        "keyed":true
                     }
                 ],
                 "exit": 29,
                 "entrance":0
             }
         ],
-        "dropID":[
+        "dropID":[    84
 
         ],
         "prizeWxp":0,"prizeGold":0, "prizeXp":0,

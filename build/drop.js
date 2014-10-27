@@ -297,7 +297,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -308,7 +308,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -354,7 +354,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -365,7 +365,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -411,7 +411,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -422,7 +422,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -468,7 +468,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -479,7 +479,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -525,7 +525,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -536,7 +536,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -582,7 +582,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -593,7 +593,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -639,7 +639,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -650,7 +650,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -696,7 +696,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -707,7 +707,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -753,7 +753,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -764,7 +764,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -810,7 +810,7 @@ exports.data = [
 			]
         },
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -821,7 +821,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -867,7 +867,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -878,7 +878,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -924,7 +924,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -935,7 +935,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -981,7 +981,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -992,7 +992,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -1038,7 +1038,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -1049,7 +1049,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -1095,7 +1095,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -1106,7 +1106,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -1152,7 +1152,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -1163,7 +1163,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -1209,7 +1209,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -1220,7 +1220,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -1266,7 +1266,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -1277,7 +1277,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -1323,7 +1323,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -1334,7 +1334,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -1380,7 +1380,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -1391,7 +1391,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -1437,7 +1437,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -1448,7 +1448,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -1494,7 +1494,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -1505,7 +1505,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -1551,7 +1551,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -1562,7 +1562,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -1608,7 +1608,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -1619,7 +1619,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -1665,7 +1665,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -1676,7 +1676,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -1722,7 +1722,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -1733,7 +1733,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -1779,7 +1779,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -1790,7 +1790,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -1836,7 +1836,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -1847,7 +1847,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -1893,7 +1893,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -1904,7 +1904,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -1950,7 +1950,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -1961,7 +1961,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -2007,7 +2007,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -2018,7 +2018,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -2064,7 +2064,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -2075,7 +2075,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -2121,7 +2121,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -2132,7 +2132,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -2178,7 +2178,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -2189,7 +2189,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -2235,7 +2235,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -2246,7 +2246,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -2292,7 +2292,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -2303,7 +2303,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -2349,7 +2349,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -2360,7 +2360,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -2406,7 +2406,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -2417,7 +2417,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -2463,7 +2463,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -2474,7 +2474,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -2520,7 +2520,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -2531,7 +2531,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -2577,7 +2577,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -2588,7 +2588,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -2634,7 +2634,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -2645,7 +2645,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -2691,7 +2691,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -2702,7 +2702,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -2748,7 +2748,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -2759,7 +2759,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -2805,7 +2805,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -2816,7 +2816,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -2862,7 +2862,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -2873,7 +2873,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -2919,7 +2919,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -2930,7 +2930,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -2976,7 +2976,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -2987,7 +2987,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -3033,7 +3033,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -3044,7 +3044,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -3090,7 +3090,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -3101,7 +3101,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -3147,7 +3147,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -3158,7 +3158,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -3204,7 +3204,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -3215,7 +3215,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -3261,7 +3261,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -3272,7 +3272,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -3318,7 +3318,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -3329,7 +3329,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -3375,7 +3375,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -3386,7 +3386,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -3432,7 +3432,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.4,
+			"rate": 0.8,
 			"prize": [
 				{
 					"weight": 2,
@@ -3443,7 +3443,7 @@ exports.data = [
 			]
 		},
 		{
-			"rate": 0.1,
+			"rate": 0.2,
 			"prize": [
 				{
 					"weight": 2,
@@ -3747,7 +3747,7 @@ exports.data = [
             ]
         },
         {
-            "rate": 0.1,
+            "rate": 0.2,
             "prize": [
                 {
                     "weight": 18,
