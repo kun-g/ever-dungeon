@@ -1,5 +1,5 @@
 (function() {
-  var DBWrapper, Player, addMercenaryMember, async, dbLib, getPlayerHero, helperLib, http, https, loadPlayer, loginBy, moment, updateMercenaryMember, wrapReceipt, _ref;
+  var DBWrapper, Player, async, dbLib, getPlayerHero, helperLib, http, https, loadPlayer, loginBy, moment, querystring, wrapReceipt, _ref;
 
   require('./define');
 
@@ -7,7 +7,7 @@
 
   helperLib = require('./helper');
 
-  _ref = require('./dbWrapper'), DBWrapper = _ref.DBWrapper, updateMercenaryMember = _ref.updateMercenaryMember, addMercenaryMember = _ref.addMercenaryMember, getPlayerHero = _ref.getPlayerHero;
+  _ref = require('./dbWrapper'), DBWrapper = _ref.DBWrapper, getPlayerHero = _ref.getPlayerHero;
 
   async = require('async');
 
@@ -15,15 +15,85 @@
 
   https = require('https');
 
+  querystring = require('querystring');
+
   moment = require('moment');
 
   Player = require('./player').Player;
 
   loginBy = function(arg, token, callback) {
-    var appID, appKey, options, passport, passportType, path, req, sign;
+    var AppSecret, appID, appKey, options, passport, passportType, path, req, requestObj, sign, teebikURL;
     passportType = arg.tp;
     passport = arg.id;
     switch (passportType) {
+      case LOGIN_ACCOUNT_TYPE_TB_IOS:
+      case LOGIN_ACCOUNT_TYPE_TB_Android:
+        switch (passportType) {
+          case LOGIN_ACCOUNT_TYPE_TB_IOS:
+            teebikURL = 'sdk.ios.teebik.com';
+            break;
+          case LOGIN_ACCOUNT_TYPE_TB_Android:
+            teebikURL = 'sdk.android.teebik.com';
+        }
+        sign = md5Hash(token + '|' + passport);
+        requestObj = {
+          uid: passport,
+          token: token,
+          sign: sign
+        };
+        path = 'http://' + teebikURL + '/check/user?' + querystring.stringify(requestObj);
+        return http.get(path, function(res) {
+          res.setEncoding('utf8');
+          return res.on('data', function(chunk) {
+            var result;
+            result = JSON.parse(chunk);
+            logInfo({
+              action: 'login',
+              type: passportType,
+              code: result
+            });
+            if (result.success === 1) {
+              return callback(null);
+            } else {
+              return callback(Error(RET_LoginFailed));
+            }
+          });
+        }).on('error', function(e) {
+          return logError({
+            action: 'login',
+            type: "LOGIN_ACCOUNT_TYPE_TB",
+            error: e
+          });
+        });
+      case LOGIN_ACCOUNT_TYPE_DK_Android:
+        appID = '3319334';
+        appKey = 'kavpXwRFFa4rjcUy1idmAkph';
+        AppSecret = 'KvCbUBBpAUvkKkC9844QEb8CB7pHnl5v';
+        sign = md5Hash(appID + appKey + passport + token + AppSecret);
+        path = 'http://sdk.m.duoku.com/openapi/sdk/checksession?appid=' + appID + '&appkey=' + appKey + '&uid=' + passport + '&sessionid=' + token + '&clientsecret=' + sign;
+        return http.get(path, function(res) {
+          res.setEncoding('utf8');
+          return res.on('data', function(chunk) {
+            var result;
+            result = JSON.parse(chunk);
+            logInfo({
+              action: 'login',
+              type: passportType,
+              code: result
+            });
+            if (result.error_code === '0') {
+              return callback(null);
+            } else {
+              return callback(Error(RET_LoginFailed));
+            }
+          });
+        }).on('error', function(e) {
+          return logError({
+            action: 'login',
+            type: "LOGIN_ACCOUNT_TYPE_DK",
+            error: e
+          });
+        });
       case LOGIN_ACCOUNT_TYPE_91_Android:
       case LOGIN_ACCOUNT_TYPE_91_iOS:
         switch (passportType) {
@@ -56,7 +126,7 @@
         }).on('error', function(e) {
           return logError({
             action: 'login',
-            type: LOGIN_ACCOUNT_TYPE_91,
+            type: "LOGIN_ACCOUNT_TYPE_91",
             error: e
           });
         });
@@ -85,7 +155,7 @@
         }).on('error', function(e) {
           return logError({
             action: 'login',
-            type: LOGIN_ACCOUNT_TYPE_91,
+            type: "LOGIN_ACCOUNT_TYPE_KY",
             error: e
           });
         });
@@ -119,7 +189,7 @@
         req.on('error', function(e) {
           return logError({
             action: 'login',
-            type: LOGIN_ACCOUNT_TYPE_PP,
+            type: "LOGIN_ACCOUNT_TYPE_PP",
             error: e
           });
         });
@@ -127,6 +197,7 @@
         return req.end();
       case LOGIN_ACCOUNT_TYPE_AD:
       case LOGIN_ACCOUNT_TYPE_GAMECENTER:
+      case LOGIN_ACCOUNT_TYPE_Android:
         return callback(null);
       default:
         return callback(Error(RET_Issue33));
@@ -155,36 +226,18 @@
       func: function(arg, dummy, handle, rpcID, socket, registerFlag) {
         return async.waterfall([
           function(cb) {
-            var current, limit, _ref1;
-            if (arg.bv == null) {
-              cb(Error(RET_AppVersionNotMatch));
-              return logError({
-                action: 'login',
-                reason: 'noBinaryVersion'
-              });
-            } else {
-              current = queryTable(TABLE_VERSION, 'bin_version');
-              limit = queryTable(TABLE_VERSION, 'bin_version_need');
-              if (!((limit <= (_ref1 = arg.bv) && _ref1 <= current))) {
-                return cb(Error(RET_AppVersionNotMatch));
-              } else {
-                return cb(null);
-              }
-            }
-          }, function(cb) {
-            if (+arg.rv !== queryTable(TABLE_VERSION, 'resource_version')) {
-              return cb(Error(RET_ResourceVersionNotMatch));
-            } else {
-              return cb(null);
-            }
-          }, function(cb) {
             if (registerFlag) {
               return cb(null);
             } else {
               return loginBy(arg, arg.tk, cb);
             }
           }, function(cb) {
-            return loadPlayer(arg.tp, arg.id, cb);
+            var tp;
+            tp = arg.tp;
+            if (arg.atp != null) {
+              tp = arg.atp;
+            }
+            return loadPlayer(tp, arg.id, cb);
           }, function(player, cb) {
             var ev, msg, time;
             if (player) {
@@ -430,6 +483,13 @@
           evt.rv = queryTable(TABLE_VERSION, 'resource_version');
           evt.rvurl = queryTable(TABLE_VERSION, 'url');
           evt.bvurl = queryTable(TABLE_VERSION, 'bin_url');
+          evt.nv = queryTable(TABLE_VERSION, 'needed_version');
+          evt.lv = queryTable(TABLE_VERSION, 'last_version');
+          evt.sv = queryTable(TABLE_VERSION, 'suggest_version');
+          evt.url = queryTable(TABLE_VERSION, 'url');
+          if (queryTable(TABLE_VERSION, 'branch')) {
+            evt.br = queryTable(TABLE_VERSION, 'branch');
+          }
         }
         return handler([evt]);
       },
@@ -451,7 +511,7 @@
         reward = [];
         replay = [];
         status = 'OK';
-        fileList = ["define", "serializer", "spell", "unit", "container", "item", "seed-random", "commandStream", "dungeon", "trigger"];
+        fileList = ["define", "serializer", "spell", "unit", "container", "item", "seed_random", "commandStream", "dungeon", "trigger"];
         doVerify = function() {
           var dungeon, err, f, _i, _len;
           if (player.dungeon) {
@@ -570,23 +630,6 @@
       },
       needPid: true
     },
-    RPC_ChargeDiamond: {
-      id: 15,
-      func: function(arg, player, handle, rpcID, socket) {
-        switch (arg.stp) {
-          case 'AppStore':
-            throw Error('AppStore Payment');
-            break;
-          case 'PP25':
-            throw Error('PP25 Payment');
-        }
-      },
-      args: {
-        'pid': 'string',
-        'rep': 'string'
-      },
-      needPid: true
-    },
     RPC_VerifyPayment: {
       id: 15,
       func: function(arg, player, handler, rpcID, socket) {
@@ -599,7 +642,7 @@
         switch (arg.stp) {
           case 'AppStore':
             options = {
-              hostname: 'sandbox.itunes.apple.com',
+              hostname: 'buy.itunes.apple.com',
               port: 443,
               path: '/verifyReceipt',
               method: 'POST'
@@ -668,20 +711,8 @@
     RPC_BindSubAuth: {
       id: 105,
       func: function(arg, player, handler, rpcID, socket) {
-        var account;
-        account = -1;
-        if (player) {
-          account = player.accountID;
-        }
-        return dbLib.bindAuth(account, arg.typ, arg.id, arg.pass, function(err, account) {
-          if (account === -1 || account === '-1') {
-            return handler([
-              {
-                REQ: rpcID,
-                RET: RET_AccountHaveNoHero
-              }
-            ]);
-          } else {
+        if (player != null) {
+          return dbLib.bindAuth(player.accountID, arg.typ, arg.id, arg.pass, function(err, account) {
             return handler([
               {
                 REQ: rpcID,
@@ -689,8 +720,15 @@
                 aid: account
               }
             ]);
-          }
-        });
+          });
+        } else {
+          return handler([
+            {
+              REQ: rpcID,
+              RET: RET_AccountHaveNoHero
+            }
+          ]);
+        }
       },
       args: {}
     },

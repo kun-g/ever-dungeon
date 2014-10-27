@@ -3,6 +3,8 @@
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
+  require('./define');
+
   require('./shop');
 
   moment = require('moment');
@@ -51,14 +53,11 @@
         gold: 0,
         diamond: 0,
         equipment: {},
-        inventoryVersion: 0,
         heroBase: {},
         heroIndex: -1,
         hero: {},
         stage: [],
-        stageVersion: 0,
         quests: {},
-        questVersion: 0,
         energy: ENERGY_MAX,
         energyTime: now.valueOf(),
         mercenary: [],
@@ -81,8 +80,8 @@
         heroVersion: 1,
         stageVersion: 1,
         questVersion: 1,
-        abIndex: rand(),
-        energyVersion: 1
+        energyVersion: 1,
+        abIndex: rand()
       };
       versionCfg = {
         inventoryVersion: ['gold', 'diamond', 'inventory', 'equipment'],
@@ -132,7 +131,7 @@
       if (type && type === 'error') {
         return logError(msg);
       } else {
-
+        return logUser(msg);
       }
     };
 
@@ -217,7 +216,7 @@
     };
 
     Player.prototype.getTotalPkTimes = function() {
-      return 5;
+      return this.getPrivilege('pkCount');
     };
 
     Player.prototype.claimPkPrice = function(callback) {
@@ -285,14 +284,12 @@
       if (this.loginStreak.date && moment().isSame(this.loginStreak.date, 'month')) {
         if (moment().isSame(this.loginStreak.date, 'day')) {
           flag = false;
-        } else {
-          this.loginStreak.count += 1;
         }
       } else {
         this.loginStreak.count = 0;
       }
       this.log('onLogin', {
-        loginStreak: this.loginStreak,
+        loginStreak: this.loginStreak.count,
         date: this.lastLogin
       });
       this.onCampaign('RMB');
@@ -387,7 +384,7 @@
             }
             r = r.filter((function(_this) {
               return function(e) {
-                return !(e.type >= 1 && e.type <= 4 && e.count <= 0);
+                return !(e.type >= PRIZETYPE_GOLD && e.type <= PRIZETYPE_WXP && e.count <= 0);
               };
             })(this));
             prize.push(r);
@@ -433,6 +430,7 @@
           return !e.vip || _this.vipLevel() >= e.vip;
         };
       })(this)));
+      this.loginStreak.count += 1;
       if (this.loginStreak.count >= queryTable(TABLE_DP).length) {
         this.loginStreak.count = 0;
       }
@@ -514,14 +512,14 @@
 
     Player.prototype.handleReceipt = function(payment, tunnel, cb) {
       var cfg, flag, myReceipt, productList, rec, ret;
-      productList = queryTable(TABLE_CONFIG, 'Product_List');
+      productList = queryTable(TABLE_IAP, 'list');
       myReceipt = payment.receipt;
       rec = unwrapReceipt(myReceipt);
       cfg = productList[rec.productID];
       flag = true;
       this.log('charge', {
-        rmb: cfg.rmb,
-        diamond: cfg.diamond,
+        rmb: cfg.price,
+        diamond: cfg.gem,
         tunnel: tunnel,
         action: 'charge',
         match: flag,
@@ -532,7 +530,7 @@
           {
             NTF: Event_InventoryUpdateItem,
             arg: {
-              dim: this.addDiamond(cfg.diamond)
+              dim: this.addDiamond(cfg.gem)
             }
           }
         ];
@@ -540,8 +538,8 @@
           this.counters['monthCard'] = 30;
           ret = ret.concat(this.syncEvent());
         }
-        this.rmb += cfg.rmb;
-        this.onCampaign('RMB', cfg.rmb);
+        this.rmb += cfg.price;
+        this.onCampaign('RMB', rec.productID);
         ret.push({
           NTF: Event_PlayerInfo,
           arg: {
@@ -559,7 +557,7 @@
         });
         postPaymentInfo(this.createHero().level, myReceipt, payment.paymentType);
         this.saveDB();
-        return dbWrapper.updateReceipt(myReceipt, RECEIPT_STATE_CLAIMED, function(err) {
+        return dbLib.updateReceipt(myReceipt, RECEIPT_STATE_CLAIMED, rec.id, rec.productID, rec.serverID, rec.tunnel, function(err) {
           return cb(err, ret);
         });
       } else {
@@ -594,6 +592,7 @@
         case 'PP25':
         case 'ND91':
         case 'KY':
+        case 'Teebik':
           myReceipt = payment.receipt;
           return async.waterfall([
             function(cb) {
@@ -842,6 +841,9 @@
 
     Player.prototype.stageIsUnlockable = function(stage) {
       var stageConfig;
+      if (getPowerLimit(stage) > this.createHero().calculatePower()) {
+        return false;
+      }
       stageConfig = queryTable(TABLE_STAGE, stage, this.abIndex);
       if (stageConfig.condition) {
         return stageConfig.condition(this, genUtil());
@@ -958,22 +960,6 @@
       return async.waterfall([
         (function(_this) {
           return function(cb) {
-            var _base, _base1;
-            if ((stageConfig.pvp != null) && (pkr != null)) {
-              if ((_base = _this.counters).currentPKCount == null) {
-                _base.currentPKCount = 0;
-              }
-              if ((_base1 = _this.counters).totalPKCount == null) {
-                _base1.totalPKCount = 5;
-              }
-              if (_this.counters.currentPKCount >= _this.counters.totalPKCount) {
-                cb(RET_NotEnoughTimes);
-              }
-            }
-            return cb();
-          };
-        })(this), (function(_this) {
-          return function(cb) {
             if (_this.dungeonData.stage != null) {
               return cb('OK');
             } else {
@@ -1083,8 +1069,6 @@
             if ((stageConfig.pvp != null) && (pkr != null)) {
               return getPlayerHero(pkr, wrapCallback(_this, function(err, heroData) {
                 this.dungeonData.PVP_Pool = heroData != null ? [getBasicInfo(heroData)] : void 0;
-                this.counters.currentPKCount++;
-                this.saveDB();
                 return cb('OK');
               }));
             } else {
@@ -1096,34 +1080,36 @@
         return function(err) {
           var msg, ret;
           msg = [];
-          if (stageConfig.initialAction) {
-            stageConfig.initialAction(_this, genUtil);
-          }
-          if (stageConfig.eventName) {
-            msg = _this.syncEvent();
-          }
-          _this.loadDungeon();
-          _this.log('startDungeon', {
-            dungeonData: _this.dungeonData,
-            err: err
-          });
           if (err !== 'OK') {
             ret = err;
             err = new Error(err);
-          } else if (_this.dungeon != null) {
-            ret = startInfoOnly ? _this.dungeon.getInitialData() : _this.dungeonAction({
-              CMD: RPC_GameStartDungeon
-            });
           } else {
-            _this.logError('startDungeon', {
-              reason: 'NoDungeon',
-              err: err,
-              data: _this.dungeonData,
-              dungeon: _this.dungeon
-            });
-            _this.releaseDungeon();
-            err = new Error(RET_Unknown);
-            ret = RET_Unknown;
+            _this.loadDungeon();
+            if (_this.dungeon != null) {
+              if (stageConfig.initialAction) {
+                stageConfig.initialAction(_this, genUtil);
+              }
+              if (stageConfig.eventName) {
+                msg = _this.syncEvent();
+              }
+              _this.log('startDungeon', {
+                dungeonData: _this.dungeonData,
+                err: err
+              });
+              ret = startInfoOnly ? _this.dungeon.getInitialData() : _this.dungeonAction({
+                CMD: RPC_GameStartDungeon
+              });
+            } else {
+              _this.logError('startDungeon', {
+                reason: 'NoDungeon',
+                err: err,
+                data: _this.dungeonData,
+                dungeon: _this.dungeon
+              });
+              _this.releaseDungeon();
+              err = new Error(RET_Unknown);
+              ret = RET_Unknown;
+            }
           }
           if (handler != null) {
             return handler(err, ret, msg);
@@ -1232,37 +1218,39 @@
       ret = [];
       for (_i = 0, _len = prize.length; _i < _len; _i++) {
         p = prize[_i];
-        if (p != null) {
-          switch (p.type) {
-            case PRIZETYPE_ITEM:
-              retRM = this.inventory.remove(p.value, p.count * count, null, true);
-              if (!(retRM && retRM.length > 0)) {
-                return null;
+        if (!(p != null)) {
+          continue;
+        }
+        this.inventoryVersion++;
+        switch (p.type) {
+          case PRIZETYPE_ITEM:
+            retRM = this.inventory.remove(p.value, p.count * count, null, true);
+            if (!(retRM && retRM.length > 0)) {
+              return null;
+            }
+            ret = this.doAction({
+              id: 'ItemChange',
+              ret: retRM,
+              version: this.inventoryVersion
+            });
+            break;
+          case PRIZETYPE_GOLD:
+            ret.push({
+              NTF: Event_InventoryUpdateItem,
+              arg: {
+                syn: this.inventoryVersion,
+                god: this.addGold(-p.count * count)
               }
-              ret = this.doAction({
-                id: 'ItemChange',
-                ret: retRM,
-                version: this.inventoryVersion
-              });
-              break;
-            case PRIZETYPE_GOLD:
-              ret.push({
-                NTF: Event_InventoryUpdateItem,
-                arg: {
-                  syn: this.inventoryVersion,
-                  god: this.addGold(-p.count * count)
-                }
-              });
-              break;
-            case PRIZETYPE_DIAMOND:
-              ret.push({
-                NTF: Event_InventoryUpdateItem,
-                arg: {
-                  syn: this.inventoryVersion,
-                  dim: this.addDiamond(-p.count * count)
-                }
-              });
-          }
+            });
+            break;
+          case PRIZETYPE_DIAMOND:
+            ret.push({
+              NTF: Event_InventoryUpdateItem,
+              arg: {
+                syn: this.inventoryVersion,
+                dim: this.addDiamond(-p.count * count)
+              }
+            });
         }
       }
       return ret;
@@ -1280,117 +1268,119 @@
       ret = [];
       for (_i = 0, _len = prize.length; _i < _len; _i++) {
         p = prize[_i];
-        if (p != null) {
-          switch (p.type) {
-            case PRIZETYPE_ITEM:
-              ret = this.aquireItem(p.value, p.count, allOrFail);
-              if (!(ret && ret.length > 0)) {
-                return [];
-              }
-              break;
-            case PRIZETYPE_GOLD:
-              if (p.count > 0) {
-                ret.push({
-                  NTF: Event_InventoryUpdateItem,
-                  arg: {
-                    syn: this.inventoryVersion,
-                    god: this.addGold(p.count)
+        if (!(p != null)) {
+          continue;
+        }
+        this.inventoryVersion++;
+        switch (p.type) {
+          case PRIZETYPE_ITEM:
+            ret = this.aquireItem(p.value, p.count, allOrFail);
+            if (!(ret && ret.length > 0)) {
+              return [];
+            }
+            break;
+          case PRIZETYPE_GOLD:
+            if (p.count > 0) {
+              ret.push({
+                NTF: Event_InventoryUpdateItem,
+                arg: {
+                  syn: this.inventoryVersion,
+                  god: this.addGold(p.count)
+                }
+              });
+            }
+            break;
+          case PRIZETYPE_DIAMOND:
+            if (p.count > 0) {
+              ret.push({
+                NTF: Event_InventoryUpdateItem,
+                arg: {
+                  syn: this.inventoryVersion,
+                  dim: this.addDiamond(p.count)
+                }
+              });
+            }
+            break;
+          case PRIZETYPE_EXP:
+            if (p.count > 0) {
+              ret.push({
+                NTF: Event_RoleUpdate,
+                arg: {
+                  syn: this.heroVersion,
+                  act: {
+                    exp: this.addHeroExp(p.count)
                   }
+                }
+              });
+            }
+            break;
+          case PRIZETYPE_WXP:
+            if (!p.count) {
+              continue;
+            }
+            equipUpdate = [];
+            _ref7 = this.equipment;
+            for (i in _ref7) {
+              k = _ref7[i];
+              e = this.getItemAt(k);
+              if (e == null) {
+                logError({
+                  action: 'claimPrize',
+                  reason: 'equipmentNotExist',
+                  name: this.name,
+                  equipSlot: k,
+                  index: i
                 });
-              }
-              break;
-            case PRIZETYPE_DIAMOND:
-              if (p.count > 0) {
-                ret.push({
-                  NTF: Event_InventoryUpdateItem,
-                  arg: {
-                    syn: this.inventoryVersion,
-                    dim: this.addDiamond(p.count)
-                  }
-                });
-              }
-              break;
-            case PRIZETYPE_EXP:
-              if (p.count > 0) {
-                ret.push({
-                  NTF: Event_RoleUpdate,
-                  arg: {
-                    syn: this.heroVersion,
-                    act: {
-                      exp: this.addHeroExp(p.count)
-                    }
-                  }
-                });
-              }
-              break;
-            case PRIZETYPE_WXP:
-              if (!p.count) {
+                delete this.equipment[k];
                 continue;
               }
-              equipUpdate = [];
-              _ref7 = this.equipment;
-              for (i in _ref7) {
-                k = _ref7[i];
-                e = this.getItemAt(k);
-                if (e == null) {
-                  logError({
-                    action: 'claimPrize',
-                    reason: 'equipmentNotExist',
-                    name: this.name,
-                    equipSlot: k,
-                    index: i
-                  });
-                  delete this.equipment[k];
-                  continue;
+              e.xp = e.xp + p.count;
+              equipUpdate.push({
+                sid: k,
+                xp: e.xp
+              });
+            }
+            if (equipUpdate.length > 0) {
+              ret.push({
+                NTF: Event_InventoryUpdateItem,
+                arg: {
+                  syn: this.inventoryVersion,
+                  itm: equipUpdate
                 }
-                e.xp = e.xp + p.count;
-                equipUpdate.push({
-                  sid: k,
-                  xp: e.xp
-                });
-              }
-              if (equipUpdate.length > 0) {
-                ret.push({
-                  NTF: Event_InventoryUpdateItem,
-                  arg: {
-                    syn: this.inventoryVersion,
-                    itm: equipUpdate
+              });
+            }
+            break;
+          case PRIZETYPE_FUNCTION:
+            switch (p.func) {
+              case "setFlag":
+                this.flags[p.flag] = p.value;
+                ret = ret.concat(this.syncFlags(true)).concat(this.syncEvent());
+                break;
+              case "countUp":
+                if (p.target === 'server') {
+                  if (gServerObject.counters[p.counter] == null) {
+                    gServerObject.counters[p.counter] = 0;
                   }
-                });
-              }
-              break;
-            case PRIZETYPE_FUNCTION:
-              switch (p.func) {
-                case "setFlag":
-                  this.flags[p.flag] = p.value;
-                  ret = ret.concat(this.syncFlags(true)).concat(this.syncEvent());
-                  break;
-                case "countUp":
-                  if (p.target === 'server') {
-                    if (gServerObject.counters[p.counter] == null) {
-                      gServerObject.counters[p.counter] = 0;
-                    }
-                    gServerObject.counters[p.counter]++;
-                    gServerObject.notify('countersChanged', {
-                      type: p.counter,
-                      delta: 1
-                    });
-                  } else {
-                    this.counters[p.counter]++;
-                    this.notify('countersChanged', {
-                      type: p.counter
-                    });
-                    ret = ret.concat(this.syncCounters(true)).concat(this.syncEvent());
-                  }
-                  break;
-                case "updateLeaderboard":
-                  if (this.counters['worldBoss'][p.counter] == null) {
-                    this.counters['worldBoss'][p.counter] = 0;
-                  }
-                  this.counters['worldBoss'][p.counter] += p.delta;
-                  helperLib.assignLeaderboard(this, p.boardId);
-              }
-          }
+                  gServerObject.counters[p.counter]++;
+                  gServerObject.notify('countersChanged', {
+                    type: p.counter,
+                    delta: 1
+                  });
+                } else {
+                  this.counters[p.counter]++;
+                  this.notify('countersChanged', {
+                    type: p.counter
+                  });
+                  ret = ret.concat(this.syncCounters(true)).concat(this.syncEvent());
+                }
+                break;
+              case "updateLeaderboard":
+                if (this.counters['worldBoss'][p.counter] == null) {
+                  this.counters['worldBoss'][p.counter] = 0;
+                }
+                this.counters['worldBoss'][p.counter] += p.delta;
+                helperLib.assignLeaderboard(this, p.boardId);
+            }
         }
       }
       return ret;
@@ -1961,6 +1951,11 @@
         };
       }
       item = this.getItemAt(slot);
+      if (item == null) {
+        return {
+          ret: RET_Unknown
+        };
+      }
       count = item.count;
       if ((item != null ? item.transPrize : void 0) || (item != null ? item.sellprice : void 0)) {
         ret = this.removeItem(null, null, slot);
@@ -2122,6 +2117,7 @@
       if (dungeon.revive > 0) {
         ret = this.inventory.removeById(ItemId_RevivePotion, dungeon.revive, true);
         if (!ret || ret.length === 0) {
+          this.inventoryVersion++;
           return {
             NTF: Event_DungeonReward,
             arg: {
@@ -2276,21 +2272,33 @@
     };
 
     Player.prototype.vipOperation = function(op) {
-      var cfg, level, _ref10, _ref11, _ref12, _ref7, _ref8, _ref9;
+      var cfg, level, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref20, _ref21, _ref22, _ref23, _ref24, _ref7, _ref8, _ref9;
       _ref7 = getVip(this.rmb), level = _ref7.level, cfg = _ref7.cfg;
       switch (op) {
         case 'vipLevel':
           return level;
+        case 'chest_vip':
+          return (_ref8 = cfg != null ? (_ref9 = cfg.privilege) != null ? _ref9.chest_vip : void 0 : void 0) != null ? _ref8 : 0;
+        case 'ContinuousRaids':
+          return (_ref10 = cfg != null ? (_ref11 = cfg.privilege) != null ? _ref11.ContinuousRaids : void 0 : void 0) != null ? _ref10 : false;
+        case 'pkCount':
+          return (_ref12 = cfg != null ? (_ref13 = cfg.privilege) != null ? _ref13.pkCount : void 0 : void 0) != null ? _ref12 : 5;
+        case 'tuHaoCount':
+          return (_ref14 = cfg != null ? (_ref15 = cfg.privilege) != null ? _ref15.tuHaoCount : void 0 : void 0) != null ? _ref14 : 3;
+        case 'EquipmentRobbers':
+          return (_ref16 = cfg != null ? (_ref17 = cfg.privilege) != null ? _ref17.EquipmentRobbers : void 0 : void 0) != null ? _ref16 : 3;
+        case 'EvilChieftains':
+          return (_ref18 = cfg != null ? (_ref19 = cfg.privilege) != null ? _ref19.EvilChieftains : void 0 : void 0) != null ? _ref18 : 3;
         case 'blueStarCost':
-          return (_ref8 = cfg != null ? cfg.blueStarCost : void 0) != null ? _ref8 : 0;
+          return (_ref20 = cfg != null ? cfg.blueStarCost : void 0) != null ? _ref20 : 0;
         case 'goldAdjust':
-          return (_ref9 = cfg != null ? cfg.goldAdjust : void 0) != null ? _ref9 : 0;
+          return (_ref21 = cfg != null ? cfg.goldAdjust : void 0) != null ? _ref21 : 0;
         case 'expAdjust':
-          return (_ref10 = cfg != null ? cfg.expAdjust : void 0) != null ? _ref10 : 0;
+          return (_ref22 = cfg != null ? cfg.expAdjust : void 0) != null ? _ref22 : 0;
         case 'wxpAdjust':
-          return (_ref11 = cfg != null ? cfg.wxpAdjust : void 0) != null ? _ref11 : 0;
+          return (_ref23 = cfg != null ? cfg.wxpAdjust : void 0) != null ? _ref23 : 0;
         case 'energyLimit':
-          return ((_ref12 = cfg != null ? cfg.energyLimit : void 0) != null ? _ref12 : 0) + ENERGY_MAX;
+          return ((_ref24 = cfg != null ? cfg.energyLimit : void 0) != null ? _ref24 : 0) + ENERGY_MAX;
       }
     };
 
@@ -2316,6 +2324,10 @@
 
     Player.prototype.energyLimit = function() {
       return this.vipOperation('energyLimit');
+    };
+
+    Player.prototype.getPrivilege = function(name) {
+      return this.vipOperation(name);
     };
 
     Player.prototype.hireFriend = function(name, handler) {
@@ -2471,7 +2483,7 @@
           }
           _ref11 = this.getCampaignConfig('FirstCharge'), config = _ref11.config, level = _ref11.level;
           if ((config != null) && (level != null)) {
-            rmb = data;
+            rmb = String(data);
             if (level[rmb] != null) {
               reward.push({
                 cfg: config,
@@ -3294,14 +3306,14 @@
         var count, e, item, ret, _i, _len, _ref7, _results;
         count = (_ref7 = env.variable('count')) != null ? _ref7 : 1;
         item = createItem(env.variable('item'));
+        if (item == null) {
+          return showMeTheStack();
+        }
         if (item.expiration) {
           item.date = helperLib.currentTime(true).valueOf();
           item.attrSave('date');
         }
-        if (item == null) {
-          return showMeTheStack();
-        }
-        ret = env.player.inventory.add(item, count, env.variable('allorfail'));
+        ret = env.player.inventory.add(item, count, true);
         this.routine({
           id: 'ItemChange',
           ret: ret,
@@ -3336,7 +3348,7 @@
   };
 
   getVip = function(rmb) {
-    var i, level, lv, tbl, _ref7;
+    var i, level, levelCfg, lv, tbl, _ref7;
     tbl = queryTable(TABLE_VIP, "VIP", this.abIndex);
     if (tbl == null) {
       return {
@@ -3352,6 +3364,8 @@
         level = i;
       }
     }
+    levelCfg = tbl.levels[level];
+    levelCfg.privilege = tbl.requirement[level].privilege;
     return {
       level: level,
       cfg: tbl.levels[level]
