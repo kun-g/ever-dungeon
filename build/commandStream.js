@@ -1,11 +1,11 @@
 (function() {
-  var CommandStream, Environment, isDebug, splLib;
+  var CommandStream, Environment, debug, splLib;
 
   require('./define');
 
   splLib = require('./spell');
 
-  isDebug = false;
+  debug = false;
 
   CommandStream = (function() {
     function CommandStream(cmd, parent, config, environment) {
@@ -64,7 +64,7 @@
     CommandStream.prototype.process = function() {
       var routine, _i, _len, _ref;
       if (this.active && (this.getCallback(this.cmd.id) != null)) {
-        if (isDebug) {
+        if (debug) {
           console.log('Processing:', this.cmd.id);
         }
         if (this.getEnvironment() != null) {
@@ -119,16 +119,6 @@
 
     CommandStream.prototype.suicide = function() {
       return this.active = false;
-    };
-
-    CommandStream.prototype.getPrevCommand = function(id) {
-      if (!this.parent) {
-        return null;
-      }
-      if (this.parent.cmd.id === id) {
-        return this.parent;
-      }
-      return this.parent.getPrevCommand(id);
     };
 
     CommandStream.prototype.next = function(c, config) {

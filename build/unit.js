@@ -230,14 +230,13 @@
       this.level = 0;
       this.levelUp();
       this.gearUp();
-      if (!this.isAlive()) {
+      if (this.health <= 0) {
         this.health = 1;
       }
       if (this.attack <= 0) {
         this.attack = 1;
       }
       this.maxHP = this.health;
-      this.originAttack = this.attack;
       if (flagCreation) {
         return console.log('Hero ', JSON.stringify(this));
       }
@@ -303,8 +302,7 @@
       this.hairStyle = heroData.hst;
       this.hairColor = heroData.hcl;
       this.ref = heroData.ref;
-      this.id = cid;
-      return this.originAttack = this.attack;
+      return this.id = cid;
     };
 
     return Mirror;
@@ -341,7 +339,6 @@
       if (cfg != null) {
         this.initWithConfig(cfg);
       }
-      this.maxHP = this.health;
       if (flagCreation) {
         return console.log('Monster ', JSON.stringify(this));
       }

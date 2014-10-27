@@ -231,14 +231,13 @@ libUnit = {};
       this.level = 0;
       this.levelUp();
       this.gearUp();
-      if (!this.isAlive()) {
+      if (this.health <= 0) {
         this.health = 1;
       }
       if (this.attack <= 0) {
         this.attack = 1;
       }
       this.maxHP = this.health;
-      this.originAttack = this.attack;
       if (flagCreation) {
         return debug('Hero ', JSON.stringify(this));
       }
@@ -304,8 +303,7 @@ libUnit = {};
       this.hairStyle = heroData.hst;
       this.hairColor = heroData.hcl;
       this.ref = heroData.ref;
-      this.id = cid;
-      return this.originAttack = this.attack;
+      return this.id = cid;
     };
 
     return Mirror;
@@ -342,7 +340,6 @@ libUnit = {};
       if (cfg != null) {
         this.initWithConfig(cfg);
       }
-      this.maxHP = this.health;
       if (flagCreation) {
         return debug('Monster ', JSON.stringify(this));
       }

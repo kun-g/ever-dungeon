@@ -3,8 +3,6 @@
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-  require('./define');
-
   require('./shop');
 
   moment = require('moment');
@@ -134,7 +132,7 @@
       if (type && type === 'error') {
         return logError(msg);
       } else {
-        return logUser(msg);
+
       }
     };
 
@@ -219,7 +217,7 @@
     };
 
     Player.prototype.getTotalPkTimes = function() {
-      return this.getPrivilege('pkCount');
+      return 5;
     };
 
     Player.prototype.claimPkPrice = function(callback) {
@@ -287,12 +285,14 @@
       if (this.loginStreak.date && moment().isSame(this.loginStreak.date, 'month')) {
         if (moment().isSame(this.loginStreak.date, 'day')) {
           flag = false;
+        } else {
+          this.loginStreak.count += 1;
         }
       } else {
         this.loginStreak.count = 0;
       }
       this.log('onLogin', {
-        loginStreak: this.loginStreak.count,
+        loginStreak: this.loginStreak,
         date: this.lastLogin
       });
       this.onCampaign('RMB');
@@ -387,7 +387,7 @@
             }
             r = r.filter((function(_this) {
               return function(e) {
-                return !(e.type >= PRIZETYPE_GOLD && e.type <= PRIZETYPE_WXP && e.count <= 0);
+                return !(e.type >= 1 && e.type <= 4 && e.count <= 0);
               };
             })(this));
             prize.push(r);
@@ -433,7 +433,6 @@
           return !e.vip || _this.vipLevel() >= e.vip;
         };
       })(this)));
-      this.loginStreak.count += 1;
       if (this.loginStreak.count >= queryTable(TABLE_DP).length) {
         this.loginStreak.count = 0;
       }
@@ -515,14 +514,14 @@
 
     Player.prototype.handleReceipt = function(payment, tunnel, cb) {
       var cfg, flag, myReceipt, productList, rec, ret;
-      productList = queryTable(TABLE_IAP, 'list');
+      productList = queryTable(TABLE_CONFIG, 'Product_List');
       myReceipt = payment.receipt;
       rec = unwrapReceipt(myReceipt);
       cfg = productList[rec.productID];
       flag = true;
       this.log('charge', {
-        rmb: cfg.price,
-        diamond: cfg.gem,
+        rmb: cfg.rmb,
+        diamond: cfg.diamond,
         tunnel: tunnel,
         action: 'charge',
         match: flag,
@@ -533,7 +532,7 @@
           {
             NTF: Event_InventoryUpdateItem,
             arg: {
-              dim: this.addDiamond(cfg.gem)
+              dim: this.addDiamond(cfg.diamond)
             }
           }
         ];
@@ -541,8 +540,8 @@
           this.counters['monthCard'] = 30;
           ret = ret.concat(this.syncEvent());
         }
-        this.rmb += cfg.price;
-        this.onCampaign('RMB', rec.productID);
+        this.rmb += cfg.rmb;
+        this.onCampaign('RMB', cfg.rmb);
         ret.push({
           NTF: Event_PlayerInfo,
           arg: {
@@ -560,7 +559,7 @@
         });
         postPaymentInfo(this.createHero().level, myReceipt, payment.paymentType);
         this.saveDB();
-        return dbLib.updateReceipt(myReceipt, RECEIPT_STATE_CLAIMED, rec.id, rec.productID, rec.serverID, rec.tunnel, function(err) {
+        return dbWrapper.updateReceipt(myReceipt, RECEIPT_STATE_CLAIMED, function(err) {
           return cb(err, ret);
         });
       } else {
@@ -595,7 +594,6 @@
         case 'PP25':
         case 'ND91':
         case 'KY':
-        case 'Teebik':
           myReceipt = payment.receipt;
           return async.waterfall([
             function(cb) {
@@ -661,16 +659,64 @@
       return this.purchasedCount[id] += count;
     };
 
-    Player.prototype.createHero = function(heroData) {
-      var bag, bf, e, equip, hero, i, _ref7;
+    Player.prototype.createPlayer = function(arg, account, cb) {
+      var k, p, prize;
+      this.setName(arg.nam);
+      this.accountID = account;
+      this.initialize();
+      this.createHero({
+        name: arg.nam,
+        "class": arg.cid,
+        gender: arg.gen,
+        hairStyle: arg.hst,
+        hairColor: arg.hcl
+      });
+      prize = queryTable(TABLE_CONFIG, 'InitialEquipment');
+      for (k in prize) {
+        p = prize[k];
+        this.claimPrize(p.filter((function(_this) {
+          return function(e) {
+            return isClassMatch(arg.cid, e.classLimit);
+          };
+        })(this)));
+      }
+      logUser({
+        name: arg.nam,
+        action: 'register',
+        "class": arg.cid,
+        gender: arg.gen,
+        hairStyle: arg.hst,
+        hairColor: arg.hcl
+      });
+      return this.saveDB(cb);
+    };
+
+    Player.prototype.createHero = function(heroData, isSwitch) {
+      var bag, bf, e, equip, hero, i, k, p, prize, _ref7;
       if (heroData != null) {
         if (this.heroBase[heroData["class"]] != null) {
           return null;
         }
-        heroData.xp = 0;
-        heroData.equipment = [];
-        this.heroBase[heroData["class"]] = heroData;
-        this.switchHero(heroData["class"]);
+        if (isSwitch === true) {
+          heroData.xp = this.hero.xp;
+          prize = queryTable(TABLE_CONFIG, 'InitialEquipment');
+          heroData.equipment = [];
+          this.heroBase[heroData["class"]] = heroData;
+          this.switchHero(heroData["class"]);
+          for (k in prize) {
+            p = prize[k];
+            this.claimPrize(p.filter((function(_this) {
+              return function(e) {
+                return isClassMatch(heroData["class"], e.classLimit);
+              };
+            })(this)));
+          }
+        } else {
+          heroData.xp = 0;
+          heroData.equipment = [];
+          this.heroBase[heroData["class"]] = heroData;
+          this.switchHero(heroData["class"]);
+        }
         return this.createHero();
       } else if (this.hero) {
         bag = this.inventory;
@@ -685,21 +731,7 @@
             });
           }
         }
-        if (this.hero.wSpellDB) {
-          this.hero = {
-            xp: this.hero.xp,
-            name: this.name,
-            "class": this.hero["class"],
-            gender: this.hero.gender,
-            hairStyle: this.hero.hairStyle,
-            hairColor: this.hero.hairColor,
-            equipment: equip,
-            equipSlot: this.equipment
-          };
-          this.save();
-        } else {
-          this.hero['equipment'] = equip;
-        }
+        this.hero['equipment'] = equip;
         hero = new Hero(this.hero);
         bf = hero.calculatePower();
         if (bf !== this.battleForce) {
@@ -810,9 +842,6 @@
 
     Player.prototype.stageIsUnlockable = function(stage) {
       var stageConfig;
-      if (getPowerLimit(stage) > this.createHero().calculatePower()) {
-        return false;
-      }
       stageConfig = queryTable(TABLE_STAGE, stage, this.abIndex);
       if (stageConfig.condition) {
         return stageConfig.condition(this, genUtil());
@@ -929,6 +958,22 @@
       return async.waterfall([
         (function(_this) {
           return function(cb) {
+            var _base, _base1;
+            if ((stageConfig.pvp != null) && (pkr != null)) {
+              if ((_base = _this.counters).currentPKCount == null) {
+                _base.currentPKCount = 0;
+              }
+              if ((_base1 = _this.counters).totalPKCount == null) {
+                _base1.totalPKCount = 5;
+              }
+              if (_this.counters.currentPKCount >= _this.counters.totalPKCount) {
+                cb(RET_NotEnoughTimes);
+              }
+            }
+            return cb();
+          };
+        })(this), (function(_this) {
+          return function(cb) {
             if (_this.dungeonData.stage != null) {
               return cb('OK');
             } else {
@@ -1038,6 +1083,8 @@
             if ((stageConfig.pvp != null) && (pkr != null)) {
               return getPlayerHero(pkr, wrapCallback(_this, function(err, heroData) {
                 this.dungeonData.PVP_Pool = heroData != null ? [getBasicInfo(heroData)] : void 0;
+                this.counters.currentPKCount++;
+                this.saveDB();
                 return cb('OK');
               }));
             } else {
@@ -1049,36 +1096,34 @@
         return function(err) {
           var msg, ret;
           msg = [];
+          if (stageConfig.initialAction) {
+            stageConfig.initialAction(_this, genUtil);
+          }
+          if (stageConfig.eventName) {
+            msg = _this.syncEvent();
+          }
+          _this.loadDungeon();
+          _this.log('startDungeon', {
+            dungeonData: _this.dungeonData,
+            err: err
+          });
           if (err !== 'OK') {
             ret = err;
             err = new Error(err);
+          } else if (_this.dungeon != null) {
+            ret = startInfoOnly ? _this.dungeon.getInitialData() : _this.dungeonAction({
+              CMD: RPC_GameStartDungeon
+            });
           } else {
-            _this.loadDungeon();
-            if (_this.dungeon != null) {
-              if (stageConfig.initialAction) {
-                stageConfig.initialAction(_this, genUtil);
-              }
-              if (stageConfig.eventName) {
-                msg = _this.syncEvent();
-              }
-              _this.log('startDungeon', {
-                dungeonData: _this.dungeonData,
-                err: err
-              });
-              ret = startInfoOnly ? _this.dungeon.getInitialData() : _this.dungeonAction({
-                CMD: RPC_GameStartDungeon
-              });
-            } else {
-              _this.logError('startDungeon', {
-                reason: 'NoDungeon',
-                err: err,
-                data: _this.dungeonData,
-                dungeon: _this.dungeon
-              });
-              _this.releaseDungeon();
-              err = new Error(RET_Unknown);
-              ret = RET_Unknown;
-            }
+            _this.logError('startDungeon', {
+              reason: 'NoDungeon',
+              err: err,
+              data: _this.dungeonData,
+              dungeon: _this.dungeon
+            });
+            _this.releaseDungeon();
+            err = new Error(RET_Unknown);
+            ret = RET_Unknown;
           }
           if (handler != null) {
             return handler(err, ret, msg);
@@ -1916,11 +1961,6 @@
         };
       }
       item = this.getItemAt(slot);
-      if (item == null) {
-        return {
-          ret: RET_Unknown
-        };
-      }
       count = item.count;
       if ((item != null ? item.transPrize : void 0) || (item != null ? item.sellprice : void 0)) {
         ret = this.removeItem(null, null, slot);
@@ -2236,33 +2276,21 @@
     };
 
     Player.prototype.vipOperation = function(op) {
-      var cfg, level, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref20, _ref21, _ref22, _ref23, _ref24, _ref7, _ref8, _ref9;
+      var cfg, level, _ref10, _ref11, _ref12, _ref7, _ref8, _ref9;
       _ref7 = getVip(this.rmb), level = _ref7.level, cfg = _ref7.cfg;
       switch (op) {
         case 'vipLevel':
           return level;
-        case 'chest_vip':
-          return (_ref8 = cfg != null ? (_ref9 = cfg.privilege) != null ? _ref9.chest_vip : void 0 : void 0) != null ? _ref8 : 0;
-        case 'ContinuousRaids':
-          return (_ref10 = cfg != null ? (_ref11 = cfg.privilege) != null ? _ref11.ContinuousRaids : void 0 : void 0) != null ? _ref10 : false;
-        case 'pkCount':
-          return (_ref12 = cfg != null ? (_ref13 = cfg.privilege) != null ? _ref13.pkCount : void 0 : void 0) != null ? _ref12 : 5;
-        case 'tuHaoCount':
-          return (_ref14 = cfg != null ? (_ref15 = cfg.privilege) != null ? _ref15.tuHaoCount : void 0 : void 0) != null ? _ref14 : 3;
-        case 'EquipmentRobbers':
-          return (_ref16 = cfg != null ? (_ref17 = cfg.privilege) != null ? _ref17.EquipmentRobbers : void 0 : void 0) != null ? _ref16 : 3;
-        case 'EvilChieftains':
-          return (_ref18 = cfg != null ? (_ref19 = cfg.privilege) != null ? _ref19.EvilChieftains : void 0 : void 0) != null ? _ref18 : 3;
         case 'blueStarCost':
-          return (_ref20 = cfg != null ? cfg.blueStarCost : void 0) != null ? _ref20 : 0;
+          return (_ref8 = cfg != null ? cfg.blueStarCost : void 0) != null ? _ref8 : 0;
         case 'goldAdjust':
-          return (_ref21 = cfg != null ? cfg.goldAdjust : void 0) != null ? _ref21 : 0;
+          return (_ref9 = cfg != null ? cfg.goldAdjust : void 0) != null ? _ref9 : 0;
         case 'expAdjust':
-          return (_ref22 = cfg != null ? cfg.expAdjust : void 0) != null ? _ref22 : 0;
+          return (_ref10 = cfg != null ? cfg.expAdjust : void 0) != null ? _ref10 : 0;
         case 'wxpAdjust':
-          return (_ref23 = cfg != null ? cfg.wxpAdjust : void 0) != null ? _ref23 : 0;
+          return (_ref11 = cfg != null ? cfg.wxpAdjust : void 0) != null ? _ref11 : 0;
         case 'energyLimit':
-          return ((_ref24 = cfg != null ? cfg.energyLimit : void 0) != null ? _ref24 : 0) + ENERGY_MAX;
+          return ((_ref12 = cfg != null ? cfg.energyLimit : void 0) != null ? _ref12 : 0) + ENERGY_MAX;
       }
     };
 
@@ -2288,10 +2316,6 @@
 
     Player.prototype.energyLimit = function() {
       return this.vipOperation('energyLimit');
-    };
-
-    Player.prototype.getPrivilege = function(name) {
-      return this.vipOperation(name);
     };
 
     Player.prototype.hireFriend = function(name, handler) {
@@ -2447,7 +2471,7 @@
           }
           _ref11 = this.getCampaignConfig('FirstCharge'), config = _ref11.config, level = _ref11.level;
           if ((config != null) && (level != null)) {
-            rmb = String(data);
+            rmb = data;
             if (level[rmb] != null) {
               reward.push({
                 cfg: config,
@@ -3270,14 +3294,14 @@
         var count, e, item, ret, _i, _len, _ref7, _results;
         count = (_ref7 = env.variable('count')) != null ? _ref7 : 1;
         item = createItem(env.variable('item'));
-        if (item == null) {
-          return showMeTheStack();
-        }
         if (item.expiration) {
           item.date = helperLib.currentTime(true).valueOf();
           item.attrSave('date');
         }
-        ret = env.player.inventory.add(item, count, true);
+        if (item == null) {
+          return showMeTheStack();
+        }
+        ret = env.player.inventory.add(item, count, env.variable('allorfail'));
         this.routine({
           id: 'ItemChange',
           ret: ret,
@@ -3312,7 +3336,7 @@
   };
 
   getVip = function(rmb) {
-    var i, level, levelCfg, lv, tbl, _ref7;
+    var i, level, lv, tbl, _ref7;
     tbl = queryTable(TABLE_VIP, "VIP", this.abIndex);
     if (tbl == null) {
       return {
@@ -3328,8 +3352,6 @@
         level = i;
       }
     }
-    levelCfg = tbl.levels[level];
-    levelCfg.privilege = tbl.requirement[level].privilege;
     return {
       level: level,
       cfg: tbl.levels[level]
