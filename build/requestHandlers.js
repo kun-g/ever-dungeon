@@ -405,9 +405,36 @@
           }, function(account, cb) {
             return dbLib.createNewPlayer(account, gServerName, name, cb);
           }, function(account, cb) {
-            var player;
+            var k, p, player, prize;
             player = new Player();
-            return player.createPlayer(arg, account, cb);
+            player.setName(name);
+            player.accountID = account;
+            player.initialize();
+            player.createHero({
+              name: name,
+              "class": arg.cid,
+              gender: arg.gen,
+              hairStyle: arg.hst,
+              hairColor: arg.hcl
+            });
+            prize = queryTable(TABLE_CONFIG, 'InitialEquipment');
+            for (k in prize) {
+              p = prize[k];
+              player.claimPrize(p.filter((function(_this) {
+                return function(e) {
+                  return isClassMatch(arg.cid, e.classLimit);
+                };
+              })(this)));
+            }
+            logUser({
+              name: name,
+              action: 'register',
+              "class": arg.cid,
+              gender: arg.gen,
+              hairStyle: arg.hst,
+              hairColor: arg.hcl
+            });
+            return player.saveDB(cb);
           }
         ], function(err, result) {
           if (err) {
@@ -429,29 +456,6 @@
         'gen': 'number',
         'hst': 'number',
         'hcl': 'number'
-      }
-    },
-    RPC_SwitchHero: {
-      id: 106,
-      func: function(arg, player, handler, rpcID, socket) {
-        var oldHero;
-        oldHero = player.createHero();
-        player.createHero({
-          name: oldHero.name,
-          "class": arg.cid,
-          gender: oldHero.gender,
-          hairStyle: oldHero.hairStyle,
-          hairColor: oldHero.hairColor
-        }, true);
-        return handle([
-          {
-            REQ: rpcID,
-            RET: RET_OK
-          }
-        ]);
-      },
-      args: {
-        'cid': 'number'
       }
     },
     RPC_ValidateName: {
@@ -485,7 +489,6 @@
           evt.bvurl = queryTable(TABLE_VERSION, 'bin_url');
           evt.nv = queryTable(TABLE_VERSION, 'needed_version');
           evt.lv = queryTable(TABLE_VERSION, 'last_version');
-          evt.sv = queryTable(TABLE_VERSION, 'suggest_version');
           evt.url = queryTable(TABLE_VERSION, 'url');
           if (queryTable(TABLE_VERSION, 'branch')) {
             evt.br = queryTable(TABLE_VERSION, 'branch');
