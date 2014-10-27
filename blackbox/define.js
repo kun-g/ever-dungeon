@@ -20,8 +20,8 @@ ENERGY_RATE = 360000; // 1min
 TEAMMATE_REWARD_RATIO = 0.2;
 //////////////////// Log
 serverType = 'None';
-print = console.log;
-dprint = function(obj) { console.log(libUtil.inspect(obj, true, 10));}
+print = debug;
+dprint = function(obj) { debug(libUtil.inspect(obj, true, 10));}
 logger = null;
 initServer = function () {
   var pid = process.pid;
@@ -45,7 +45,7 @@ initServer = function () {
       var util = libUtil;
       var config = {depth : 11};
       //if (process.stdout.isTTY) config.colors = true;
-      console.log(util.inspect(log, config));
+      debug(util.inspect(log, config));
     }
   };
 };
@@ -301,7 +301,14 @@ function initShop (data) {
     }
   }
 }
-
+function initCampaignTable(data) {
+    firstChangeObj = data['FirstCharge']['objective'];
+    firstChangeObj = firstChangeObj.map(function(elm) {
+        return {award:[{type:2,count:elm.gem}]};
+    });
+    data['FirstCharge']['objective'] = firstChangeObj;
+    return data;
+}
 arenaPirze = function (rank) {
   cfg = queryTable(TABLE_ARENA);
   for (var k in cfg) {
@@ -346,7 +353,7 @@ initGlobalConfig = function (path, callback) {
     {name:TABLE_ITEM}, {name:TABLE_CARD}, {name:TABLE_DUNGEON, func:varifyDungeonConfig},
     {name:TABLE_STAGE, func: initStageConfig}, {name:TABLE_QUEST}, {name: TABLE_COSTS},
     {name:TABLE_UPGRADE}, {name:TABLE_ENHANCE}, {name: TABLE_CONFIG}, {name: TABLE_VIP, func:initVipConfig},
-    {name:TABLE_SKILL}, {name:TABLE_CAMPAIGN}, {name: TABLE_DROP}, {name: TABLE_TRIGGER},
+    {name:TABLE_SKILL}, {name:TABLE_CAMPAIGN, func:initCampaignTable}, {name: TABLE_DROP}, {name: TABLE_TRIGGER},
     {name:TABLE_DP},{name:TABLE_ARENA},{name:TABLE_BOUNTY, func:initPowerLimit}, {name:TABLE_IAP},
   ];
   if (!path) path = "./";
@@ -359,7 +366,7 @@ initGlobalConfig = function (path, callback) {
   callback();
 };
 
-showMeTheStack = function () {try {a = b;} catch (err) {console.log(err.stack);}};
+showMeTheStack = function () {try {a = b;} catch (err) {debug(err.stack);}};
 
 //////////// exit routine
 onDBShutDown = function () { };

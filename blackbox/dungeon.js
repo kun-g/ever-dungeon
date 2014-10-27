@@ -102,7 +102,7 @@ libDungeon = {};
       var ret;
       ret = randomFunc();
       if (flagShowRand) {
-        console.log('Rand:', ret);
+        debug('Rand:', ret);
       }
       return ret;
     };
@@ -760,7 +760,7 @@ libDungeon = {};
         r = this.rand();
         if (r !== randNumber) {
           if (randNumber !== r) {
-            console.log('Unmatched rand number', action, arg, randNumber, r);
+            debug('Unmatched rand number', action, arg, randNumber, r);
           }
           return this.onReplayMissMatch();
         }
@@ -1375,7 +1375,7 @@ libDungeon = {};
           }
           strUp += ' ';
         }
-        console.log(strUp);
+        debug(strUp);
         str = '  ';
         for (i in row) {
           e = row[i];
@@ -1408,7 +1408,7 @@ libDungeon = {};
               str += e + ' ';
           }
         }
-        _results.push(console.log(str));
+        _results.push(debug(str));
       }
       return _results;
     };
@@ -2448,14 +2448,13 @@ libDungeon = {};
         } else {
           rangeEff = [];
         }
-        if (env.variable('critical')) {
-          flag = HP_RESULT_TYPE_CRITICAL;
-        } else {
-          if (env.variable('hit')) {
-            flag = HP_RESULT_TYPE_HIT;
-          } else {
-            flag = HP_RESULT_TYPE_MISS;
+        if (env.variable('hit')) {
+          flag = HP_RESULT_TYPE_HIT;
+          if (env.variable('critical')) {
+            flag = HP_RESULT_TYPE_CRITICAL;
           }
+        } else {
+          flag = HP_RESULT_TYPE_MISS;
         }
         return [
           {
@@ -3100,7 +3099,7 @@ libDungeon = {};
     },
     Damage: {
       callback: function(env) {
-        var damageType, isRange, _ref5;
+        var damageType, isRange, _ref5, _ref6, _ref7;
         damageType = env.variable('damageType');
         isRange = env.variable('isRange');
         if (!((_ref5 = env.variable('tar')) != null ? _ref5.isAlive() : void 0)) {
@@ -3125,13 +3124,14 @@ libDungeon = {};
           onEvent('CriticalDamage', this, env.variable('src'), env.variable('tar'));
         }
         if (!env.variable('tar').isAlive()) {
-          return this.next({
+          this.next({
             id: 'Dead',
             tar: env.variable('tar'),
             killer: env.variable('src'),
             damage: env.variable('damage')
           });
         }
+        return (_ref6 = this.getPrevCommand('Attack')) != null ? (_ref7 = _ref6.cmd) != null ? _ref7.critical = env.variable('critical') : void 0 : void 0;
       },
       output: function(env) {
         var damage, delay, flag, ret;

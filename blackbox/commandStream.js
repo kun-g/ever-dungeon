@@ -44,7 +44,7 @@ libCommandStream = {};
         }
       } catch (_error) {
         error = _error;
-        console.log('Failed to get', id, 'from', this.config);
+        debug('Failed to get', id, 'from', this.config);
         return null;
       }
     };
@@ -66,7 +66,7 @@ libCommandStream = {};
       var routine, _i, _len, _ref;
       if (this.active && (this.getCallback(this.cmd.id) != null)) {
         if (isDebug) {
-          console.log('Processing:', this.cmd.id);
+          debug('Processing:', this.cmd.id);
         }
         if (this.getEnvironment() != null) {
           this.getEnvironment().setVariableField(this.cmd);
@@ -88,7 +88,7 @@ libCommandStream = {};
       if (placeHolder == null) {
         placeHolder = '';
       }
-      console.log(placeHolder + this.cmd.id);
+      debug(placeHolder + this.cmd.id);
       _ref = this.cmdRoutine;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         r = _ref[_i];
@@ -120,6 +120,16 @@ libCommandStream = {};
 
     CommandStream.prototype.suicide = function() {
       return this.active = false;
+    };
+
+    CommandStream.prototype.getPrevCommand = function(id) {
+      if (!this.parent) {
+        return null;
+      }
+      if (this.parent.cmd.id === id) {
+        return this.parent;
+      }
+      return this.parent.getPrevCommand(id);
     };
 
     CommandStream.prototype.next = function(c, config) {

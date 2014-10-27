@@ -64,7 +64,7 @@ libUnit = {};
         }
         this.level += 1;
         if (flagCreation) {
-          _results.push(console.log('LevelUp ', JSON.stringify(data.property)));
+          _results.push(debug('LevelUp ', JSON.stringify(data.property)));
         } else {
           _results.push(void 0);
         }
@@ -90,7 +90,7 @@ libUnit = {};
       this.faction = roleConfig.faction;
       this.dropInfo = roleConfig.dropInfo;
       if (flagCreation) {
-        console.log('Property ', JSON.stringify(roleConfig.property));
+        debug('Property ', JSON.stringify(roleConfig.property));
       }
       if ((roleConfig.xproperty != null) && (this.rank != null) > 0) {
         this.health = Math.ceil(this.health * this.rank);
@@ -103,10 +103,10 @@ libUnit = {};
         }
         this.modifyProperty(xproperty);
         if (flagCreation) {
-          console.log('xRank ', this.rank);
+          debug('xRank ', this.rank);
         }
         if (flagCreation) {
-          console.log('xProperty ', JSON.stringify(xproperty));
+          debug('xProperty ', JSON.stringify(xproperty));
         }
       }
       if (roleConfig.skill != null) {
@@ -154,7 +154,7 @@ libUnit = {};
           this.modifyProperty(equipment.basic_properties);
         }
         if (flagCreation) {
-          console.log('Equipment ', JSON.stringify(equipment));
+          debug('Equipment ', JSON.stringify(equipment));
         }
         if (e.eh != null) {
           _results.push((function() {
@@ -169,7 +169,7 @@ libUnit = {};
               }
               this.modifyProperty(enhance.property[enhancement.level]);
               if (flagCreation) {
-                _results1.push(console.log('Enhancement ', JSON.stringify(enhance.property[enhancement.level])));
+                _results1.push(debug('Enhancement ', JSON.stringify(enhance.property[enhancement.level])));
               } else {
                 _results1.push(void 0);
               }
@@ -240,7 +240,7 @@ libUnit = {};
       this.maxHP = this.health;
       this.originAttack = this.attack;
       if (flagCreation) {
-        return console.log('Hero ', JSON.stringify(this));
+        return debug('Hero ', JSON.stringify(this));
       }
     };
 
@@ -344,7 +344,7 @@ libUnit = {};
       }
       this.maxHP = this.health;
       if (flagCreation) {
-        return console.log('Monster ', JSON.stringify(this));
+        return debug('Monster ', JSON.stringify(this));
       }
     };
 
