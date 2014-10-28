@@ -268,34 +268,6 @@ exports.data = [
     },
     {
         "effectId": 64,
-        "file": "effect-bihu.ccbi"
-    },
-    {
-        "effectId": 65,
-        "file": "effect-bingjian.ccbi"
-    },
-    {
-        "effectId": 66,
-        "file": "effect-fennuzhiyan.ccbi"
-    },
-    {
-        "effectId": 67,
-        "file": "effect-fangzhu.ccbi"
-    },
-    {
-        "effectId": 68,
-        "file": "effect-paoxiao.ccbi"
-    },
-    {
-        "effectId": 69,
-        "file": "effect-xuli2.ccbi"
-    },
-    {
-        "effectId": 70,
-        "file": "effect-siwangzuzhou.ccbi"
-    },
-    {
-        "effectId": 71,
-        "file": "effect-kuangre.ccbi"
+        "file": "effect-baoji.ccbi"
     }
 ]

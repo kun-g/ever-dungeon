@@ -405,7 +405,7 @@
           }, function(account, cb) {
             return dbLib.createNewPlayer(account, gServerName, name, cb);
           }, function(account, cb) {
-            var p, player, prize, _i, _len, _ref1;
+            var k, p, player, prize;
             player = new Player();
             player.setName(name);
             player.accountID = account;
@@ -417,12 +417,14 @@
               hairStyle: arg.hst,
               hairColor: arg.hcl
             });
-            prize = (_ref1 = queryTable(TABLE_ROLE, arg.cid)) != null ? _ref1.initialEquipment : void 0;
-            if (prize != null) {
-              for (_i = 0, _len = prize.length; _i < _len; _i++) {
-                p = prize[_i];
-                player.claimPrize(p);
-              }
+            prize = queryTable(TABLE_CONFIG, 'InitialEquipment');
+            for (k in prize) {
+              p = prize[k];
+              player.claimPrize(p.filter((function(_this) {
+                return function(e) {
+                  return isClassMatch(arg.cid, e.classLimit);
+                };
+              })(this)));
             }
             logUser({
               name: name,
@@ -487,7 +489,6 @@
           evt.bvurl = queryTable(TABLE_VERSION, 'bin_url');
           evt.nv = queryTable(TABLE_VERSION, 'needed_version');
           evt.lv = queryTable(TABLE_VERSION, 'last_version');
-          evt.sv = queryTable(TABLE_VERSION, 'suggest_version');
           evt.url = queryTable(TABLE_VERSION, 'url');
           if (queryTable(TABLE_VERSION, 'branch')) {
             evt.br = queryTable(TABLE_VERSION, 'branch');
