@@ -57,10 +57,6 @@ libSpell = {};
 
   calcFormular = function(e, s, t, config) {
     var c;
-    if (config.func) {
-      c = config.c ? config.c : {};
-      return config.func.apply(null, [e, s, t, c]);
-    }
     c = config.c ? config.c : 0;
     return Math.ceil(plusThemAll(config.environment, e) + plusThemAll(config.src, s) + plusThemAll(config.tar, t) + c);
   };
@@ -1108,7 +1104,7 @@ libSpell = {};
             }
             for (property in modifications) {
               formular = modifications[property];
-              val = calcFormular(variables, this, target, formular);
+              val = calcFormular(variables, this, null, formular);
               this[property] += val;
               if (thisSpell.modifications[property] == null) {
                 thisSpell.modifications[property] = 0;
