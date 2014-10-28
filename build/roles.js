@@ -39,7 +39,6 @@ exports.data = [
             {"type":0,"value":622,"count":1},
         ],
  
-        "initialEquipment":
         "levelId": 0,
         "transId":197
     },
