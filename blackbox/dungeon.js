@@ -2448,15 +2448,7 @@ libDungeon = {};
         } else {
           rangeEff = [];
         }
-        if (env.variable('critical')) {
-          flag = HP_RESULT_TYPE_CRITICAL;
-        } else {
-          if (env.variable('hit')) {
-            flag = HP_RESULT_TYPE_HIT;
-          } else {
-            flag = HP_RESULT_TYPE_MISS;
-          }
-        }
+        flag = env.variable('hit') ? HP_RESULT_TYPE_HIT : HP_RESULT_TYPE_MISS;
         return [
           {
             act: env.variable('src').ref,

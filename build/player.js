@@ -53,14 +53,11 @@
         gold: 0,
         diamond: 0,
         equipment: {},
-        inventoryVersion: 0,
         heroBase: {},
         heroIndex: -1,
         hero: {},
         stage: [],
-        stageVersion: 0,
         quests: {},
-        questVersion: 0,
         energy: ENERGY_MAX,
         energyTime: now.valueOf(),
         mercenary: [],
@@ -83,8 +80,8 @@
         heroVersion: 1,
         stageVersion: 1,
         questVersion: 1,
-        abIndex: rand(),
-        energyVersion: 1
+        energyVersion: 1,
+        abIndex: rand()
       };
       versionCfg = {
         inventoryVersion: ['gold', 'diamond', 'inventory', 'equipment'],
@@ -134,7 +131,7 @@
       if (type && type === 'error') {
         return logError(msg);
       } else {
-
+        return logUser(msg);
       }
     };
 
@@ -154,7 +151,7 @@
     };
 
     Player.prototype.migrate = function() {
-      var cfg, enhanceID, flag, item, lv, p, prize, slot, _i, _ref7;
+      var cfg, enhanceID, flag, item, lv, p, prize, slot, _i, _ref7, _ref8;
       flag = false;
       _ref7 = this.inventory.container;
       for (slot in _ref7) {
@@ -193,17 +190,15 @@
           }
         }
       }
-      prize = queryTable(TABLE_CONFIG, 'InitialEquipment');
+      prize = (_ref8 = queryTable(TABLE_ROLE, this.hero["class"])) != null ? _ref8.initialEquipment : void 0;
       for (slot = _i = 0; _i <= 5; slot = ++_i) {
         if (!(this.equipment[slot] == null)) {
           continue;
         }
         flag = true;
-        this.claimPrize(prize[slot].filter((function(_this) {
-          return function(e) {
-            return isClassMatch(_this.hero["class"], e.classLimit);
-          };
-        })(this)));
+        if (prize != null) {
+          this.claimPrize(prize[slot]);
+        }
       }
       return flag;
     };
@@ -255,7 +250,7 @@
     };
 
     Player.prototype.onLogin = function() {
-      var flag, itemsNeedRemove, key, loginStreakCount, prize, ret, s, _i, _len, _ref7;
+      var flag, itemsNeedRemove, key, prize, ret, s, _i, _len, _ref7;
       if (!this.lastLogin) {
         return [];
       }
@@ -284,18 +279,15 @@
         }
       }
       flag = true;
-      loginStreakCount = this.loginStreak.count;
       if (this.loginStreak.date && moment().isSame(this.loginStreak.date, 'month')) {
         if (moment().isSame(this.loginStreak.date, 'day')) {
           flag = false;
-        } else {
-          loginStreakCount += 1;
         }
       } else {
         this.loginStreak.count = 0;
       }
       this.log('onLogin', {
-        loginStreak: loginStreakCount,
+        loginStreak: this.loginStreak.count,
         date: this.lastLogin
       });
       this.onCampaign('RMB');
@@ -426,7 +418,6 @@
         }
       }
       this.loginStreak['date'] = currentTime(true).valueOf();
-      this.loginStreak.count += 1;
       this.log('claimLoginReward', {
         loginStreak: this.loginStreak.count,
         date: currentTime()
@@ -437,6 +428,7 @@
           return !e.vip || _this.vipLevel() >= e.vip;
         };
       })(this)));
+      this.loginStreak.count += 1;
       if (this.loginStreak.count >= queryTable(TABLE_DP).length) {
         this.loginStreak.count = 0;
       }
@@ -545,7 +537,7 @@
           ret = ret.concat(this.syncEvent());
         }
         this.rmb += cfg.price;
-        this.onCampaign('RMB', cfg.price);
+        this.onCampaign('RMB', rec.productID);
         ret.push({
           NTF: Event_PlayerInfo,
           arg: {
@@ -1190,37 +1182,39 @@
       ret = [];
       for (_i = 0, _len = prize.length; _i < _len; _i++) {
         p = prize[_i];
-        if (p != null) {
-          switch (p.type) {
-            case PRIZETYPE_ITEM:
-              retRM = this.inventory.remove(p.value, p.count * count, null, true);
-              if (!(retRM && retRM.length > 0)) {
-                return null;
+        if (!(p != null)) {
+          continue;
+        }
+        this.inventoryVersion++;
+        switch (p.type) {
+          case PRIZETYPE_ITEM:
+            retRM = this.inventory.remove(p.value, p.count * count, null, true);
+            if (!(retRM && retRM.length > 0)) {
+              return null;
+            }
+            ret = this.doAction({
+              id: 'ItemChange',
+              ret: retRM,
+              version: this.inventoryVersion
+            });
+            break;
+          case PRIZETYPE_GOLD:
+            ret.push({
+              NTF: Event_InventoryUpdateItem,
+              arg: {
+                syn: this.inventoryVersion,
+                god: this.addGold(-p.count * count)
               }
-              ret = this.doAction({
-                id: 'ItemChange',
-                ret: retRM,
-                version: this.inventoryVersion
-              });
-              break;
-            case PRIZETYPE_GOLD:
-              ret.push({
-                NTF: Event_InventoryUpdateItem,
-                arg: {
-                  syn: this.inventoryVersion,
-                  god: this.addGold(-p.count * count)
-                }
-              });
-              break;
-            case PRIZETYPE_DIAMOND:
-              ret.push({
-                NTF: Event_InventoryUpdateItem,
-                arg: {
-                  syn: this.inventoryVersion,
-                  dim: this.addDiamond(-p.count * count)
-                }
-              });
-          }
+            });
+            break;
+          case PRIZETYPE_DIAMOND:
+            ret.push({
+              NTF: Event_InventoryUpdateItem,
+              arg: {
+                syn: this.inventoryVersion,
+                dim: this.addDiamond(-p.count * count)
+              }
+            });
         }
       }
       return ret;
@@ -1238,117 +1232,119 @@
       ret = [];
       for (_i = 0, _len = prize.length; _i < _len; _i++) {
         p = prize[_i];
-        if (p != null) {
-          switch (p.type) {
-            case PRIZETYPE_ITEM:
-              ret = this.aquireItem(p.value, p.count, allOrFail);
-              if (!(ret && ret.length > 0)) {
-                return [];
-              }
-              break;
-            case PRIZETYPE_GOLD:
-              if (p.count > 0) {
-                ret.push({
-                  NTF: Event_InventoryUpdateItem,
-                  arg: {
-                    syn: this.inventoryVersion,
-                    god: this.addGold(p.count)
+        if (!(p != null)) {
+          continue;
+        }
+        this.inventoryVersion++;
+        switch (p.type) {
+          case PRIZETYPE_ITEM:
+            ret = this.aquireItem(p.value, p.count, allOrFail);
+            if (!(ret && ret.length > 0)) {
+              return [];
+            }
+            break;
+          case PRIZETYPE_GOLD:
+            if (p.count > 0) {
+              ret.push({
+                NTF: Event_InventoryUpdateItem,
+                arg: {
+                  syn: this.inventoryVersion,
+                  god: this.addGold(p.count)
+                }
+              });
+            }
+            break;
+          case PRIZETYPE_DIAMOND:
+            if (p.count > 0) {
+              ret.push({
+                NTF: Event_InventoryUpdateItem,
+                arg: {
+                  syn: this.inventoryVersion,
+                  dim: this.addDiamond(p.count)
+                }
+              });
+            }
+            break;
+          case PRIZETYPE_EXP:
+            if (p.count > 0) {
+              ret.push({
+                NTF: Event_RoleUpdate,
+                arg: {
+                  syn: this.heroVersion,
+                  act: {
+                    exp: this.addHeroExp(p.count)
                   }
+                }
+              });
+            }
+            break;
+          case PRIZETYPE_WXP:
+            if (!p.count) {
+              continue;
+            }
+            equipUpdate = [];
+            _ref7 = this.equipment;
+            for (i in _ref7) {
+              k = _ref7[i];
+              e = this.getItemAt(k);
+              if (e == null) {
+                logError({
+                  action: 'claimPrize',
+                  reason: 'equipmentNotExist',
+                  name: this.name,
+                  equipSlot: k,
+                  index: i
                 });
-              }
-              break;
-            case PRIZETYPE_DIAMOND:
-              if (p.count > 0) {
-                ret.push({
-                  NTF: Event_InventoryUpdateItem,
-                  arg: {
-                    syn: this.inventoryVersion,
-                    dim: this.addDiamond(p.count)
-                  }
-                });
-              }
-              break;
-            case PRIZETYPE_EXP:
-              if (p.count > 0) {
-                ret.push({
-                  NTF: Event_RoleUpdate,
-                  arg: {
-                    syn: this.heroVersion,
-                    act: {
-                      exp: this.addHeroExp(p.count)
-                    }
-                  }
-                });
-              }
-              break;
-            case PRIZETYPE_WXP:
-              if (!p.count) {
+                delete this.equipment[k];
                 continue;
               }
-              equipUpdate = [];
-              _ref7 = this.equipment;
-              for (i in _ref7) {
-                k = _ref7[i];
-                e = this.getItemAt(k);
-                if (e == null) {
-                  logError({
-                    action: 'claimPrize',
-                    reason: 'equipmentNotExist',
-                    name: this.name,
-                    equipSlot: k,
-                    index: i
-                  });
-                  delete this.equipment[k];
-                  continue;
+              e.xp = e.xp + p.count;
+              equipUpdate.push({
+                sid: k,
+                xp: e.xp
+              });
+            }
+            if (equipUpdate.length > 0) {
+              ret.push({
+                NTF: Event_InventoryUpdateItem,
+                arg: {
+                  syn: this.inventoryVersion,
+                  itm: equipUpdate
                 }
-                e.xp = e.xp + p.count;
-                equipUpdate.push({
-                  sid: k,
-                  xp: e.xp
-                });
-              }
-              if (equipUpdate.length > 0) {
-                ret.push({
-                  NTF: Event_InventoryUpdateItem,
-                  arg: {
-                    syn: this.inventoryVersion,
-                    itm: equipUpdate
+              });
+            }
+            break;
+          case PRIZETYPE_FUNCTION:
+            switch (p.func) {
+              case "setFlag":
+                this.flags[p.flag] = p.value;
+                ret = ret.concat(this.syncFlags(true)).concat(this.syncEvent());
+                break;
+              case "countUp":
+                if (p.target === 'server') {
+                  if (gServerObject.counters[p.counter] == null) {
+                    gServerObject.counters[p.counter] = 0;
                   }
-                });
-              }
-              break;
-            case PRIZETYPE_FUNCTION:
-              switch (p.func) {
-                case "setFlag":
-                  this.flags[p.flag] = p.value;
-                  ret = ret.concat(this.syncFlags(true)).concat(this.syncEvent());
-                  break;
-                case "countUp":
-                  if (p.target === 'server') {
-                    if (gServerObject.counters[p.counter] == null) {
-                      gServerObject.counters[p.counter] = 0;
-                    }
-                    gServerObject.counters[p.counter]++;
-                    gServerObject.notify('countersChanged', {
-                      type: p.counter,
-                      delta: 1
-                    });
-                  } else {
-                    this.counters[p.counter]++;
-                    this.notify('countersChanged', {
-                      type: p.counter
-                    });
-                    ret = ret.concat(this.syncCounters(true)).concat(this.syncEvent());
-                  }
-                  break;
-                case "updateLeaderboard":
-                  if (this.counters['worldBoss'][p.counter] == null) {
-                    this.counters['worldBoss'][p.counter] = 0;
-                  }
-                  this.counters['worldBoss'][p.counter] += p.delta;
-                  helperLib.assignLeaderboard(this, p.boardId);
-              }
-          }
+                  gServerObject.counters[p.counter]++;
+                  gServerObject.notify('countersChanged', {
+                    type: p.counter,
+                    delta: 1
+                  });
+                } else {
+                  this.counters[p.counter]++;
+                  this.notify('countersChanged', {
+                    type: p.counter
+                  });
+                  ret = ret.concat(this.syncCounters(true)).concat(this.syncEvent());
+                }
+                break;
+              case "updateLeaderboard":
+                if (this.counters['worldBoss'][p.counter] == null) {
+                  this.counters['worldBoss'][p.counter] = 0;
+                }
+                this.counters['worldBoss'][p.counter] += p.delta;
+                helperLib.assignLeaderboard(this, p.boardId);
+            }
         }
       }
       return ret;
@@ -2085,6 +2081,7 @@
       if (dungeon.revive > 0) {
         ret = this.inventory.removeById(ItemId_RevivePotion, dungeon.revive, true);
         if (!ret || ret.length === 0) {
+          this.inventoryVersion++;
           return {
             NTF: Event_DungeonReward,
             arg: {
@@ -2450,7 +2447,7 @@
           }
           _ref11 = this.getCampaignConfig('FirstCharge'), config = _ref11.config, level = _ref11.level;
           if ((config != null) && (level != null)) {
-            rmb = data;
+            rmb = String(data);
             if (level[rmb] != null) {
               reward.push({
                 cfg: config,

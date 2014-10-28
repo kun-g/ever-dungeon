@@ -22,7 +22,7 @@
   Player = require('./player').Player;
 
   loginBy = function(arg, token, callback) {
-    var AppSecret, appID, appKey, options, passport, passportType, path, req, requestObj, sign, teebikURL;
+    var AppSecret, appID, appKey, options, passport, passportType, path, postBody, req, requestObj, sign, strBody, teebikURL;
     passportType = arg.tp;
     passport = arg.id;
     switch (passportType) {
@@ -160,27 +160,44 @@
           });
         });
       case LOGIN_ACCOUNT_TYPE_PP:
+        appID = 2739;
+        appKey = '01aee5718a33bcbbe790bc0ca7cfb7ee';
+        postBody = {
+          'id': Math.round((new Date()).getTime() / 1000),
+          'service': 'account.verifySession',
+          'game': {
+            'gameId': appID
+          },
+          'data': {
+            'sid': token
+          },
+          'encrypt': 'MD5',
+          'sign': md5Hash('sid=' + token + appKey)
+        };
+        strBody = JSON.stringify(postBody);
         options = {
           host: 'passport_i.25pp.com',
           port: 8080,
           method: 'POST',
-          path: '/index?tunnel-command=2852126756',
+          path: '/account?tunnel-command=2852126760',
           headers: {
-            'Content-Length': 32
+            'Content-Type': 'application/json',
+            'Content-Length': strBody.length
           }
         };
         req = http.request(options, function(res) {
           res.setEncoding('utf8');
           return res.on('data', function(chunk) {
-            var result;
-            result = JSON.parse('{' + chunk + '}');
+            var identifier, result;
+            result = JSON.parse(chunk);
             logInfo({
               action: 'login',
               type: LOGIN_ACCOUNT_TYPE_PP,
-              code: result.status
+              code: result.state
             });
-            if (result.status === 0) {
-              return callback(null);
+            if (result.state.code === 1) {
+              identifier = result.data.creator + result.data.accountId;
+              return callback(null, identifier);
             } else {
               return callback(Error(RET_LoginFailed));
             }
@@ -193,7 +210,7 @@
             error: e
           });
         });
-        req.write(token);
+        req.write(strBody);
         return req.end();
       case LOGIN_ACCOUNT_TYPE_AD:
       case LOGIN_ACCOUNT_TYPE_GAMECENTER:
@@ -231,13 +248,18 @@
             } else {
               return loginBy(arg, arg.tk, cb);
             }
-          }, function(cb) {
-            var tp;
+          }, function(identifier, cb) {
+            var id, tp;
             tp = arg.tp;
             if (arg.atp != null) {
               tp = arg.atp;
             }
-            return loadPlayer(tp, arg.id, cb);
+            id = arg.id;
+            if (identifier) {
+              id = identifier;
+              arg.id = id;
+            }
+            return loadPlayer(tp, id, cb);
           }, function(player, cb) {
             var ev, msg, time;
             if (player) {
@@ -405,7 +427,7 @@
           }, function(account, cb) {
             return dbLib.createNewPlayer(account, gServerName, name, cb);
           }, function(account, cb) {
-            var k, p, player, prize;
+            var p, player, prize, _i, _len, _ref1;
             player = new Player();
             player.setName(name);
             player.accountID = account;
@@ -417,14 +439,12 @@
               hairStyle: arg.hst,
               hairColor: arg.hcl
             });
-            prize = queryTable(TABLE_CONFIG, 'InitialEquipment');
-            for (k in prize) {
-              p = prize[k];
-              player.claimPrize(p.filter((function(_this) {
-                return function(e) {
-                  return isClassMatch(arg.cid, e.classLimit);
-                };
-              })(this)));
+            prize = (_ref1 = queryTable(TABLE_ROLE, arg.cid)) != null ? _ref1.initialEquipment : void 0;
+            if (prize != null) {
+              for (_i = 0, _len = prize.length; _i < _len; _i++) {
+                p = prize[_i];
+                player.claimPrize(p);
+              }
             }
             logUser({
               name: name,
@@ -489,6 +509,7 @@
           evt.bvurl = queryTable(TABLE_VERSION, 'bin_url');
           evt.nv = queryTable(TABLE_VERSION, 'needed_version');
           evt.lv = queryTable(TABLE_VERSION, 'last_version');
+          evt.sv = queryTable(TABLE_VERSION, 'suggest_version');
           evt.url = queryTable(TABLE_VERSION, 'url');
           if (queryTable(TABLE_VERSION, 'branch')) {
             evt.br = queryTable(TABLE_VERSION, 'branch');

@@ -30,6 +30,16 @@ exports.data = [
             999,
             1029
         ],
+        "initialEquipment":[
+            {"type":0,"value":43,"count":1},
+            {"type":0,"value":42,"count":1},
+            {"type":0,"value":41,"count":1},
+            {"type":0,"value":712,"count":1},
+            {"type":0,"value":40,"count":1},
+            {"type":0,"value":622,"count":1},
+        ],
+ 
+        "initialEquipment":
         "levelId": 0,
         "transId":197
     },
@@ -64,6 +74,16 @@ exports.data = [
             1179,
             1209
         ],
+        "initialEquipment":[
+            {"type":0,"value":35,"count":1},
+            {"type":0,"value":34,"count":1},
+            {"type":0,"value":33,"count":1},
+            {"type":0,"value":742,"count":1},
+            {"type":0,"value":32,"count":1},
+            {"type":0,"value":652,"count":1},
+        ],
+
+
         "levelId": 0,
         "transId":198
     },
@@ -98,6 +118,15 @@ exports.data = [
             1359,
             1389
         ],
+        "initialEquipment":[
+            {"type":0,"value":39, "count":1},
+            {"type":0,"value":38,"count":1},
+            {"type":0,"value":37,"count":1},
+            {"type":0,"value":772,"count":1},
+            {"type":0,"value":36,"count":1},
+            {"type":0,"value":682,"count":1}
+        ],
+ 
         "levelId": 0,
         "transId":199
     },
