@@ -1,43 +1,44 @@
 exports.data = {
-    "channel": "Default-CH",
-    "currency": "CNY",
-    "symbol": "￥",
+    "channel": "Teebik",
+    "currency": "USD",
+    "symbol": "$",
     "list":[
         {
-            "price": 6,
-            "gem": 60
+            "price": 0.99,
+            "gem": 120
         },
         {
-            "price": 12,
-            "gem": 130
+            "price": 1.99,
+            "gem": 260
         },
         {
-            "price": 30,
-            "gem": 330
+            "price": 4.99,
+            "gem": 650
         },
         {
-            "price": 68,
-            "gem": 760
+            "price": 9.99,
+            "gem": 1310
         },
         {
-            "price": 128,
-            "gem": 1460
+            "price": 19.99,
+            "gem": 2650
         },
         {
-            "price": 198,
-            "gem": 328
+            "price": 29.99,
+            "gem": 4340
         },
         {
-            "price": 328,
-            "gem": 3760
+            "price": 49.99,
+            "gem": 7400
         },
         {
-            "price": 648,
-            "gem": 7480
+            "price": 99.99,
+            "gem": 15420
         },
         {
-            "price": 25,
-            "gem": 0
+            "price": 3.99,
+            "gem": 0,
+            "enable": true
         }
     ]
 };
