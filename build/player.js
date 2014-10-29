@@ -151,7 +151,7 @@
     };
 
     Player.prototype.migrate = function() {
-      var cfg, enhanceID, flag, item, lv, p, prize, slot, _i, _ref7;
+      var cfg, enhanceID, flag, item, lv, p, prize, slot, _i, _ref7, _ref8;
       flag = false;
       _ref7 = this.inventory.container;
       for (slot in _ref7) {
@@ -190,17 +190,15 @@
           }
         }
       }
-      prize = queryTable(TABLE_CONFIG, 'InitialEquipment');
+      prize = (_ref8 = queryTable(TABLE_ROLE, this.hero["class"])) != null ? _ref8.initialEquipment : void 0;
       for (slot = _i = 0; _i <= 5; slot = ++_i) {
         if (!(this.equipment[slot] == null)) {
           continue;
         }
         flag = true;
-        this.claimPrize(prize[slot].filter((function(_this) {
-          return function(e) {
-            return isClassMatch(_this.hero["class"], e.classLimit);
-          };
-        })(this)));
+        if (prize != null) {
+          this.claimPrize(prize[slot]);
+        }
       }
       return flag;
     };
