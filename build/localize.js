@@ -227,7 +227,7 @@ exports.data = {
         "uiChargeDiamond7":"$49.99",
         "uiChargeDiamond8":"$99.99",
         "uiChargeDiamond9":"$3.99",
-        "uiChargeDiamondSuc":"充值成功\n若出现未到账情况请重启游戏",
+        "uiChargeDiamondSuc":"充值成功",
         "uiChargeDiamondCancel":"充值取消",
         "uiChargeDiamondFail":"充值失败",
         "uiChargeDiamondMaxVip":"您已经获得最高等级VIP",
