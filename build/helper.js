@@ -1,5 +1,5 @@
 (function() {
-  var CONST_MAX_WORLD_BOSS_TIMES, actCampaign, async, checkBountyValidate, conditionCheck, currentTime, dbLib, dbWrapper, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, should, updateLockStatus;
+  var CONST_MAX_WORLD_BOSS_TIMES, actCampaign, async, checkBountyValidate, conditionCheck, currentTime, dbLib, dbWrapper, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, updateLockStatus;
 
   conditionCheck = require('./trigger').conditionCheck;
 
@@ -10,10 +10,6 @@
   dbWrapper = require('./dbWrapper');
 
   async = require('async');
-
-  should = require('should');
-
-  installVersion;
 
   CONST_MAX_WORLD_BOSS_TIMES = 200;
 
