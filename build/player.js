@@ -151,7 +151,7 @@
     };
 
     Player.prototype.migrate = function() {
-      var cfg, enhanceID, flag, item, lv, p, prize, slot, _i, _ref7;
+      var cfg, enhanceID, flag, item, lv, p, prize, slot, _i, _ref7, _ref8;
       flag = false;
       _ref7 = this.inventory.container;
       for (slot in _ref7) {
@@ -190,17 +190,15 @@
           }
         }
       }
-      prize = queryTable(TABLE_CONFIG, 'InitialEquipment');
+      prize = (_ref8 = queryTable(TABLE_ROLE, this.hero["class"])) != null ? _ref8.initialEquipment : void 0;
       for (slot = _i = 0; _i <= 5; slot = ++_i) {
         if (!(this.equipment[slot] == null)) {
           continue;
         }
         flag = true;
-        this.claimPrize(prize[slot].filter((function(_this) {
-          return function(e) {
-            return isClassMatch(_this.hero["class"], e.classLimit);
-          };
-        })(this)));
+        if (prize != null) {
+          this.claimPrize(prize[slot]);
+        }
       }
       return flag;
     };
@@ -659,7 +657,7 @@
     };
 
     Player.prototype.createPlayer = function(arg, account, cb) {
-      var k, p, prize;
+      var k, p, prize, _ref7;
       this.setName(arg.nam);
       this.accountID = account;
       this.initialize();
@@ -670,7 +668,7 @@
         hairStyle: arg.hst,
         hairColor: arg.hcl
       });
-      prize = queryTable(TABLE_CONFIG, 'InitialEquipment');
+      prize = (_ref7 = queryTable(TABLE_ROLE, this.hero["class"])) != null ? _ref7.initialEquipment : void 0;
       for (k in prize) {
         p = prize[k];
         this.claimPrize(p.filter((function(_this) {
@@ -691,14 +689,14 @@
     };
 
     Player.prototype.createHero = function(heroData, isSwitch) {
-      var bag, bf, e, equip, hero, i, k, p, prize, _ref7;
+      var bag, bf, e, equip, hero, i, k, p, prize, _ref7, _ref8;
       if (heroData != null) {
         if (this.heroBase[heroData["class"]] != null) {
           return null;
         }
         if (isSwitch === true) {
           heroData.xp = this.hero.xp;
-          prize = queryTable(TABLE_CONFIG, 'InitialEquipment');
+          prize = (_ref7 = queryTable(TABLE_ROLE, this.hero["class"])) != null ? _ref7.initialEquipment : void 0;
           heroData.equipment = [];
           this.heroBase[heroData["class"]] = heroData;
           this.switchHero(heroData["class"]);
@@ -720,9 +718,9 @@
       } else if (this.hero) {
         bag = this.inventory;
         equip = [];
-        _ref7 = this.equipment;
-        for (i in _ref7) {
-          e = _ref7[i];
+        _ref8 = this.equipment;
+        for (i in _ref8) {
+          e = _ref8[i];
           if (bag.get(e) != null) {
             equip.push({
               cid: bag.get(e).classId,
