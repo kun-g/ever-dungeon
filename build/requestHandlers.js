@@ -443,7 +443,7 @@
           hairStyle: oldHero.hairStyle,
           hairColor: oldHero.hairColor
         }, true);
-        return handle([
+        return handler([
           {
             REQ: rpcID,
             RET: RET_OK
