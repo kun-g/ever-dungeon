@@ -255,11 +255,13 @@
               tp = arg.atp;
             }
             id = arg.id;
-            if (identifier) {
+            if (typeof identifier === 'function') {
+              return loadPlayer(tp, id, identifier);
+            } else {
               id = identifier;
               arg.id = id;
+              return loadPlayer(tp, id, cb);
             }
-            return loadPlayer(tp, id, cb);
           }, function(player, cb) {
             var ev, msg, time;
             if (player) {
