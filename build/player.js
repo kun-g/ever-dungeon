@@ -657,7 +657,7 @@
     };
 
     Player.prototype.createPlayer = function(arg, account, cb) {
-      var k, p, prize, _ref7;
+      var p, prize, _i, _len, _ref7;
       this.setName(arg.nam);
       this.accountID = account;
       this.initialize();
@@ -668,14 +668,10 @@
         hairStyle: arg.hst,
         hairColor: arg.hcl
       });
-      prize = (_ref7 = queryTable(TABLE_ROLE, this.hero["class"])) != null ? _ref7.initialEquipment : void 0;
-      for (k in prize) {
-        p = prize[k];
-        this.claimPrize(p.filter((function(_this) {
-          return function(e) {
-            return isClassMatch(arg.cid, e.classLimit);
-          };
-        })(this)));
+      prize = (_ref7 = queryTable(TABLE_ROLE, arg.cid)) != null ? _ref7.initialEquipment : void 0;
+      for (_i = 0, _len = prize.length; _i < _len; _i++) {
+        p = prize[_i];
+        this.claimPrize(p);
       }
       logUser({
         name: arg.nam,
@@ -689,24 +685,20 @@
     };
 
     Player.prototype.createHero = function(heroData, isSwitch) {
-      var bag, bf, e, equip, hero, i, k, p, prize, _ref7, _ref8;
+      var bag, bf, e, equip, hero, i, p, prize, _i, _len, _ref7, _ref8;
       if (heroData != null) {
         if (this.heroBase[heroData["class"]] != null) {
           return null;
         }
         if (isSwitch === true) {
           heroData.xp = this.hero.xp;
-          prize = (_ref7 = queryTable(TABLE_ROLE, this.hero["class"])) != null ? _ref7.initialEquipment : void 0;
           heroData.equipment = [];
           this.heroBase[heroData["class"]] = heroData;
           this.switchHero(heroData["class"]);
-          for (k in prize) {
-            p = prize[k];
-            this.claimPrize(p.filter((function(_this) {
-              return function(e) {
-                return isClassMatch(heroData["class"], e.classLimit);
-              };
-            })(this)));
+          prize = (_ref7 = queryTable(TABLE_ROLE, heroData["class"])) != null ? _ref7.initialEquipment : void 0;
+          for (_i = 0, _len = prize.length; _i < _len; _i++) {
+            p = prize[_i];
+            this.claimPrize(p);
           }
         } else {
           heroData.xp = 0;
