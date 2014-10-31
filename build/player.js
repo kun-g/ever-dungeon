@@ -760,7 +760,8 @@
       _results = [];
       for (k in _ref8) {
         v = _ref8[k];
-        _results.push(this.hero[k] = JSON.parse(JSON.stringify(v)));
+        this.hero[k] = JSON.parse(JSON.stringify(v));
+        _results.push(this.save());
       }
       return _results;
     };
