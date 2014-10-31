@@ -687,7 +687,7 @@
     Player.prototype.createHero = function(heroData, isSwitch) {
       var bag, bf, e, equip, hero, i, p, prize, _i, _len, _ref7, _ref8;
       if (heroData != null) {
-        if (this.heroBase[heroData["class"]] != null) {
+        if ((this.heroBase[heroData["class"]] != null) && heroData["class"] === this.hero["class"]) {
           return null;
         }
         if (isSwitch === true) {
@@ -727,6 +727,7 @@
           this.battleForce = bf;
           this.notify('battleForceChanged');
         }
+        this.save();
         return hero;
       } else {
         throw 'NoHero';
@@ -734,7 +735,7 @@
     };
 
     Player.prototype.switchHero = function(hClass) {
-      var k, v, _ref7, _ref8;
+      var k, v, _ref7, _ref8, _results;
       if (this.heroBase[hClass] == null) {
         return false;
       }
@@ -747,11 +748,12 @@
         }
       }
       _ref8 = this.heroBase[hClass];
+      _results = [];
       for (k in _ref8) {
         v = _ref8[k];
-        this.hero[k] = JSON.parse(JSON.stringify(v));
+        _results.push(this.hero[k] = JSON.parse(JSON.stringify(v)));
       }
-      return this.save();
+      return _results;
     };
 
     Player.prototype.addMoney = function(type, point) {
