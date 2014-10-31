@@ -744,7 +744,7 @@
     };
 
     Player.prototype.switchHero = function(hClass) {
-      var k, v, _ref7, _ref8, _results;
+      var k, v, _ref7, _ref8;
       if (this.heroBase[hClass] == null) {
         return false;
       }
@@ -757,13 +757,11 @@
         }
       }
       _ref8 = this.heroBase[hClass];
-      _results = [];
       for (k in _ref8) {
         v = _ref8[k];
         this.hero[k] = JSON.parse(JSON.stringify(v));
-        _results.push(this.save());
       }
-      return _results;
+      return this.save();
     };
 
     Player.prototype.addMoney = function(type, point) {
