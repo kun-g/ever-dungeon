@@ -717,12 +717,12 @@
           heroData.equipment = [];
           this.heroBase[heroData["class"]] = heroData;
           this.switchHero(heroData["class"]);
+          this.putOnEquipmentAfterSwitched(heroData["class"]);
         } else {
           heroData.xp = 0;
           heroData.equipment = [];
           this.heroBase[heroData["class"]] = heroData;
           this.switchHero(heroData["class"]);
-          this.putOnEquipmentAfterSwitched(heroData["class"]);
         }
         return this.createHero();
       } else if (this.hero) {
