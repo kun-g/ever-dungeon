@@ -29398,7 +29398,7 @@ exports.data = [
         "label": "勇者战甲",
         "category": 1,
         "subcategory": 2,
-        "description": "被世人所认可的勇者穿戴的铠甲",
+        "description": "为lv1",
         "effectf": [
             {
                 "part": "chest",
@@ -29476,7 +29476,7 @@ exports.data = [
         "label": "勇者战甲",
         "category": 1,
         "subcategory": 2,
-        "description": "被世人所认可的勇者穿戴的铠甲",
+        "description": "勇者战甲lv2",
         "effectf": [
             {
                 "part": "chest",
@@ -29556,7 +29556,7 @@ exports.data = [
         "label": "勇者战甲",
         "category": 1,
         "subcategory": 2,
-        "description": "被世人所认可的勇者穿戴的铠甲",
+        "description": "勇者战甲lv3",
         "effectf": [
             {
                 "part": "chest",
@@ -29636,7 +29636,7 @@ exports.data = [
         "label": "勇者战甲",
         "category": 1,
         "subcategory": 2,
-        "description": "被世人所认可的勇者穿戴的铠甲",
+        "description": "勇者战甲lv4",
         "effectf": [
             {
                 "part": "chest",
@@ -29716,7 +29716,7 @@ exports.data = [
         "label": "勇者战甲",
         "category": 1,
         "subcategory": 2,
-        "description": "被世人所认可的勇者穿戴的铠甲",
+        "description": "勇者战甲lv5",
         "effectf": [
             {
                 "part": "chest",
@@ -29796,7 +29796,7 @@ exports.data = [
         "label": "勇者战甲",
         "category": 1,
         "subcategory": 2,
-        "description": "被世人所认可的勇者穿戴的铠甲",
+        "description": "勇者战甲lv6",
         "effectf": [
             {
                 "part": "chest",
@@ -31775,7 +31775,7 @@ exports.data = [
         "label": "勇士利斧",
         "category": 1,
         "subcategory": 1,
-        "description": "只有勇敢的战士才能挥舞的斧头",
+        "description": "勇士利斧lv1",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -31819,7 +31819,7 @@ exports.data = [
         "label": "勇士利斧",
         "category": 1,
         "subcategory": 1,
-        "description": "只有勇敢的战士才能挥舞的斧头",
+        "description": "勇士利斧lv2",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -31865,7 +31865,7 @@ exports.data = [
         "label": "勇士利斧",
         "category": 1,
         "subcategory": 1,
-        "description": "只有勇敢的战士才能挥舞的斧头",
+        "description": "勇士利斧lv3",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -31911,7 +31911,7 @@ exports.data = [
         "label": "勇士利斧",
         "category": 1,
         "subcategory": 1,
-        "description": "只有勇敢的战士才能挥舞的斧头",
+        "description": "勇士利斧lv4",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -31957,7 +31957,7 @@ exports.data = [
         "label": "勇士利斧",
         "category": 1,
         "subcategory": 1,
-        "description": "只有勇敢的战士才能挥舞的斧头",
+        "description": "勇士利斧lv5",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -32003,7 +32003,7 @@ exports.data = [
         "label": "勇士利斧",
         "category": 1,
         "subcategory": 1,
-        "description": "只有勇敢的战士才能挥舞的斧头",
+        "description": "勇士利斧lv6",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -33130,7 +33130,7 @@ exports.data = [
         "label": "勇者大剑",
         "category": 1,
         "subcategory": 0,
-        "description": "拥有他，会获得勇往直前的力量",
+        "description": "勇者大剑lv1",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33169,7 +33169,7 @@ exports.data = [
         "label": "勇者大剑",
         "category": 1,
         "subcategory": 0,
-        "description": "拥有他，会获得勇往直前的力量",
+        "description": "勇者大剑lv2",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33210,7 +33210,7 @@ exports.data = [
         "label": "勇者大剑",
         "category": 1,
         "subcategory": 0,
-        "description": "拥有他，会获得勇往直前的力量",
+        "description": "勇者大剑lv3",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33251,7 +33251,7 @@ exports.data = [
         "label": "勇者大剑",
         "category": 1,
         "subcategory": 0,
-        "description": "拥有他，会获得勇往直前的力量",
+        "description": "勇者大剑lv4",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33292,7 +33292,7 @@ exports.data = [
         "label": "勇者大剑",
         "category": 1,
         "subcategory": 0,
-        "description": "拥有他，会获得勇往直前的力量",
+        "description": "勇者大剑lv5",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33333,7 +33333,7 @@ exports.data = [
         "label": "勇者大剑",
         "category": 1,
         "subcategory": 0,
-        "description": "拥有他，会获得勇往直前的力量",
+        "description": "勇者大剑lv6",
         "effectf": [
             {
                 "part": "mainweapon",
