@@ -685,7 +685,7 @@
     };
 
     Player.prototype.createHero = function(heroData, isSwitch) {
-      var bag, bf, e, equip, hero, i, p, prize, _i, _len, _ref7, _ref8;
+      var bag, bf, e, equip, hero, i, p, prize, ret, _i, _len, _ref7, _ref8, _ref9;
       if (heroData != null) {
         if ((this.heroBase[heroData["class"]] != null) && heroData["class"] === this.hero["class"]) {
           return null;
@@ -698,7 +698,12 @@
           prize = (_ref7 = queryTable(TABLE_ROLE, heroData["class"])) != null ? _ref7.initialEquipment : void 0;
           for (_i = 0, _len = prize.length; _i < _len; _i++) {
             p = prize[_i];
-            this.claimPrize(p);
+            ret = this.claimPrize(p);
+            if ((_ref8 = ret.itm) != null) {
+              _ref8.forEach(function(item) {
+                return this.useItem(item.sid);
+              });
+            }
           }
         } else {
           heroData.xp = 0;
@@ -710,9 +715,9 @@
       } else if (this.hero) {
         bag = this.inventory;
         equip = [];
-        _ref8 = this.equipment;
-        for (i in _ref8) {
-          e = _ref8[i];
+        _ref9 = this.equipment;
+        for (i in _ref9) {
+          e = _ref9[i];
           if (bag.get(e) != null) {
             equip.push({
               cid: bag.get(e).classId,
