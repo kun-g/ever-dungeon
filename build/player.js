@@ -684,27 +684,37 @@
       return this.saveDB(cb);
     };
 
+    Player.prototype.putOnEquipmentAfterSwitched = function() {
+      var equipmentList, p, prize, ret, _i, _len, _ref7, _ref8;
+      equipmentList = [];
+      if (equipmentList.length === 0) {
+        prize = (_ref7 = queryTable(TABLE_ROLE, heroData["class"])) != null ? _ref7.initialEquipment : void 0;
+        for (_i = 0, _len = prize.length; _i < _len; _i++) {
+          p = prize[_i];
+          ret = this.claimPrize(p);
+          if ((_ref8 = ret.itm) != null) {
+            _ref8.forEach(function(item) {
+              return this.useItem(item.sid);
+            });
+          }
+        }
+      }
+      return equipmentList.forEach(function(item) {
+        return this.useItem(item.sid);
+      });
+    };
+
     Player.prototype.createHero = function(heroData, isSwitch) {
-      var bag, bf, e, equip, hero, i, p, prize, ret, _i, _len, _ref7, _ref8, _ref9;
+      var bag, bf, e, equip, hero, i, _ref7;
       if (heroData != null) {
         if ((this.heroBase[heroData["class"]] != null) && heroData["class"] === this.hero["class"]) {
           return null;
         }
-        if (isSwitch === true) {
+        if (isSwitch) {
           heroData.xp = this.hero.xp;
           heroData.equipment = [];
           this.heroBase[heroData["class"]] = heroData;
           this.switchHero(heroData["class"]);
-          prize = (_ref7 = queryTable(TABLE_ROLE, heroData["class"])) != null ? _ref7.initialEquipment : void 0;
-          for (_i = 0, _len = prize.length; _i < _len; _i++) {
-            p = prize[_i];
-            ret = this.claimPrize(p);
-            if ((_ref8 = ret.itm) != null) {
-              _ref8.forEach(function(item) {
-                return this.useItem(item.sid);
-              });
-            }
-          }
         } else {
           heroData.xp = 0;
           heroData.equipment = [];
@@ -715,9 +725,9 @@
       } else if (this.hero) {
         bag = this.inventory;
         equip = [];
-        _ref9 = this.equipment;
-        for (i in _ref9) {
-          e = _ref9[i];
+        _ref7 = this.equipment;
+        for (i in _ref7) {
+          e = _ref7[i];
           if (bag.get(e) != null) {
             equip.push({
               cid: bag.get(e).classId,

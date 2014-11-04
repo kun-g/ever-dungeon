@@ -274,8 +274,8 @@ exports.data = {
         "description":["首次充值即可获得宝石翻倍的奖励，充多少送多少，妈妈再也不用担心我的宝石了！"],
         "mailTitle": "《首充翻倍大行动》活动奖励",
         "mailBody": "恭喜你完成活动，点击领取活动奖励！",
-        "date": "2014/10/25",
-        "dateDescription": "截止日期2014年10月25日24时",
+        "date": "2016/12/25",
+        "dateDescription": "截止日期2016年12月25日24时",
         // iaplist.list will modify by initCampaignTable =>{award:[{type:2,count:60}}
         "objective" : iaplist,
     }
