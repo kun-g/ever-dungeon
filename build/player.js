@@ -684,24 +684,26 @@
       return this.saveDB(cb);
     };
 
-    Player.prototype.putOnEquipmentAfterSwitched = function() {
-      var equipmentList, p, prize, ret, _i, _len, _ref7, _ref8;
-      equipmentList = [];
+    Player.prototype.putOnEquipmentAfterSwitched = function(heroClass) {
+      var equipmentList, p, prize, ret, _i, _len, _ref7, _ref8, _results;
+      equipmentList = this.inventory.filter(function(item) {
+        console.log(item, '-------------------');
+        return (item != null) && item["class"] === heroClass;
+      });
       if (equipmentList.length === 0) {
         prize = (_ref7 = queryTable(TABLE_ROLE, heroData["class"])) != null ? _ref7.initialEquipment : void 0;
+        _results = [];
         for (_i = 0, _len = prize.length; _i < _len; _i++) {
           p = prize[_i];
           ret = this.claimPrize(p);
-          if ((_ref8 = ret.itm) != null) {
-            _ref8.forEach(function(item) {
-              return this.useItem(item.sid);
-            });
-          }
+          _results.push((_ref8 = ret.itm) != null ? _ref8.forEach(function(item) {
+            return this.useItem(item.sid);
+          }) : void 0);
         }
+        return _results;
+      } else {
+        return this.equipment = equipmentList;
       }
-      return equipmentList.forEach(function(item) {
-        return this.useItem(item.sid);
-      });
     };
 
     Player.prototype.createHero = function(heroData, isSwitch) {
@@ -720,6 +722,7 @@
           heroData.equipment = [];
           this.heroBase[heroData["class"]] = heroData;
           this.switchHero(heroData["class"]);
+          this.putOnEquipmentAfterSwitched(heroData["class"]);
         }
         return this.createHero();
       } else if (this.hero) {
