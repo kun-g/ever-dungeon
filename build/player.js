@@ -687,11 +687,10 @@
     Player.prototype.putOnEquipmentAfterSwitched = function(heroClass) {
       var equipmentList, p, prize, ret, _i, _len, _ref7, _ref8, _results;
       equipmentList = this.inventory.filter(function(item) {
-        console.log(item, '-------------------');
-        return (item != null) && item["class"] === heroClass;
+        return (item != null) && item.classLimit.indexOf(heroClass) !== -1;
       });
       if (equipmentList.length === 0) {
-        prize = (_ref7 = queryTable(TABLE_ROLE, heroData["class"])) != null ? _ref7.initialEquipment : void 0;
+        prize = (_ref7 = queryTable(TABLE_ROLE, heroClass)) != null ? _ref7.initialEquipment : void 0;
         _results = [];
         for (_i = 0, _len = prize.length; _i < _len; _i++) {
           p = prize[_i];
