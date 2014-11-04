@@ -38,7 +38,6 @@ exports.data = [
             {"type":0,"value":40,"count":1},
             {"type":0,"value":622,"count":1}
         ],
- 
         "levelId": 0,
         "transId":197
     },
@@ -81,8 +80,6 @@ exports.data = [
             {"type":0,"value":32,"count":1},
             {"type":0,"value":652,"count":1}
         ],
-
-
         "levelId": 0,
         "transId":198
     },
@@ -125,7 +122,6 @@ exports.data = [
             {"type":0,"value":36,"count":1},
             {"type":0,"value":682,"count":1}
         ],
- 
         "levelId": 0,
         "transId":199
     },
