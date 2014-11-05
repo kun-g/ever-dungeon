@@ -316,6 +316,10 @@
       return this.container.filter(func);
     };
 
+    Bag.prototype.reduce = function(func) {
+      return this.container.reduce(func);
+    };
+
     return Bag;
 
   })(Serializer);
