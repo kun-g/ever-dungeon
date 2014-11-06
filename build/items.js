@@ -28005,7 +28005,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 1,
@@ -28051,7 +28051,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 2,
@@ -28099,7 +28099,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 3,
@@ -28147,7 +28147,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 4,
@@ -28195,7 +28195,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 5,
@@ -28243,7 +28243,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 6,
@@ -28290,7 +28290,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 2,
@@ -28336,7 +28336,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 3,
@@ -28384,7 +28384,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 4,
@@ -28432,7 +28432,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 5,
@@ -28480,7 +28480,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 6,
@@ -28528,7 +28528,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 7,
@@ -28575,7 +28575,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 3,
@@ -28621,7 +28621,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 4,
@@ -28669,7 +28669,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 5,
@@ -28717,7 +28717,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 6,
@@ -28765,7 +28765,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 7,
@@ -28813,7 +28813,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 8,
@@ -28838,7 +28838,7 @@ exports.data = [
         "label": "屠龙者战靴",
         "category": 1,
         "subcategory": 4,
-        "description": "屠龙者战靴lv4",
+        "description": "穿上它，才能拥有与巨龙相抗衡的速度",
         "effectf": [
             {
                 "part": "leftleg",
@@ -28860,7 +28860,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 4,
@@ -28884,7 +28884,7 @@ exports.data = [
         "label": "屠龙者战靴",
         "category": 1,
         "subcategory": 4,
-        "description": "屠龙者战靴lv5",
+        "description": "穿上它，才能拥有与巨龙相抗衡的速度",
         "effectf": [
             {
                 "part": "leftleg",
@@ -28906,7 +28906,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 5,
@@ -28932,7 +28932,7 @@ exports.data = [
         "label": "屠龙者战靴",
         "category": 1,
         "subcategory": 4,
-        "description": "屠龙者战靴lv6",
+        "description": "穿上它，才能拥有与巨龙相抗衡的速度",
         "effectf": [
             {
                 "part": "leftleg",
@@ -28954,7 +28954,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 6,
@@ -28980,7 +28980,7 @@ exports.data = [
         "label": "屠龙者战靴",
         "category": 1,
         "subcategory": 4,
-        "description": "屠龙者战靴lv7",
+        "description": "穿上它，才能拥有与巨龙相抗衡的速度",
         "effectf": [
             {
                 "part": "leftleg",
@@ -29002,7 +29002,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 7,
@@ -29028,7 +29028,7 @@ exports.data = [
         "label": "屠龙者战靴",
         "category": 1,
         "subcategory": 4,
-        "description": "屠龙者战靴lv8",
+        "description": "穿上它，才能拥有与巨龙相抗衡的速度",
         "effectf": [
             {
                 "part": "leftleg",
@@ -29050,7 +29050,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 8,
@@ -29076,7 +29076,7 @@ exports.data = [
         "label": "屠龙者战靴",
         "category": 1,
         "subcategory": 4,
-        "description": "屠龙者战靴lv9",
+        "description": "穿上它，才能拥有与巨龙相抗衡的速度",
         "effectf": [
             {
                 "part": "leftleg",
@@ -29098,7 +29098,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 9,
@@ -29145,7 +29145,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 5,
@@ -29191,7 +29191,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 6,
@@ -29237,7 +29237,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 7,
@@ -29283,7 +29283,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 8,
@@ -29329,7 +29329,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 9,
@@ -29375,7 +29375,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 10,
@@ -29452,7 +29452,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 1,
@@ -29530,7 +29530,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 2,
@@ -29610,7 +29610,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 3,
@@ -29690,7 +29690,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 4,
@@ -29770,7 +29770,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 5,
@@ -29850,7 +29850,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 6,
@@ -29929,7 +29929,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 2,
@@ -30007,7 +30007,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 3,
@@ -30087,7 +30087,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 4,
@@ -30167,7 +30167,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 5,
@@ -30247,7 +30247,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 6,
@@ -30327,7 +30327,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 7,
@@ -30406,7 +30406,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 3,
@@ -30486,7 +30486,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 4,
@@ -30566,7 +30566,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 5,
@@ -30646,7 +30646,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 6,
@@ -30726,7 +30726,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 7,
@@ -30806,7 +30806,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 8,
@@ -30831,7 +30831,7 @@ exports.data = [
         "label": "屠龙者战铠",
         "category": 1,
         "subcategory": 2,
-        "description": "屠龙者战铠lv4",
+        "description": "威武非凡，屠龙者的身份证明",
         "effectf": [
             {
                 "part": "chest",
@@ -30885,7 +30885,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 4,
@@ -30909,7 +30909,7 @@ exports.data = [
         "label": "屠龙者战铠",
         "category": 1,
         "subcategory": 2,
-        "description": "屠龙者战铠lv5",
+        "description": "威武非凡，屠龙者的身份证明",
         "effectf": [
             {
                 "part": "chest",
@@ -30963,7 +30963,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 5,
@@ -30989,7 +30989,7 @@ exports.data = [
         "label": "屠龙者战铠",
         "category": 1,
         "subcategory": 2,
-        "description": "屠龙者战铠lv6",
+        "description": "威武非凡，屠龙者的身份证明",
         "effectf": [
             {
                 "part": "chest",
@@ -31043,7 +31043,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 6,
@@ -31069,7 +31069,7 @@ exports.data = [
         "label": "屠龙者战铠",
         "category": 1,
         "subcategory": 2,
-        "description": "屠龙者战铠lv7",
+        "description": "威武非凡，屠龙者的身份证明",
         "effectf": [
             {
                 "part": "chest",
@@ -31123,7 +31123,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 7,
@@ -31149,7 +31149,7 @@ exports.data = [
         "label": "屠龙者战铠",
         "category": 1,
         "subcategory": 2,
-        "description": "屠龙者战铠lv8",
+        "description": "威武非凡，屠龙者的身份证明",
         "effectf": [
             {
                 "part": "chest",
@@ -31203,7 +31203,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 8,
@@ -31229,7 +31229,7 @@ exports.data = [
         "label": "屠龙者战铠",
         "category": 1,
         "subcategory": 2,
-        "description": "屠龙者战铠lv9",
+        "description": "威武非凡，屠龙者的身份证明",
         "effectf": [
             {
                 "part": "chest",
@@ -31283,7 +31283,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 9,
@@ -31362,7 +31362,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 5,
@@ -31440,7 +31440,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 6,
@@ -31518,7 +31518,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 7,
@@ -31596,7 +31596,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 8,
@@ -31674,7 +31674,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 9,
@@ -31752,7 +31752,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 10,
@@ -31797,7 +31797,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 1,
@@ -31841,7 +31841,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 2,
@@ -31887,7 +31887,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 3,
@@ -31933,7 +31933,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 4,
@@ -31979,7 +31979,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 5,
@@ -32025,7 +32025,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 6,
@@ -32070,7 +32070,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 2,
@@ -32114,7 +32114,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 3,
@@ -32160,7 +32160,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 4,
@@ -32206,7 +32206,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 5,
@@ -32252,7 +32252,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 6,
@@ -32298,7 +32298,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 7,
@@ -32343,7 +32343,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 3,
@@ -32387,7 +32387,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 4,
@@ -32433,7 +32433,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 5,
@@ -32479,7 +32479,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 6,
@@ -32525,7 +32525,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 7,
@@ -32571,7 +32571,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 8,
@@ -32594,7 +32594,7 @@ exports.data = [
         "label": "屠龙巨斧",
         "category": 1,
         "subcategory": 1,
-        "description": "屠龙巨斧lv4",
+        "description": "令巨龙都感到害怕的恐怖巨斧",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -32616,7 +32616,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 4,
@@ -32638,7 +32638,7 @@ exports.data = [
         "label": "屠龙巨斧",
         "category": 1,
         "subcategory": 1,
-        "description": "屠龙巨斧lv5",
+        "description": "令巨龙都感到害怕的恐怖巨斧",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -32660,7 +32660,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 5,
@@ -32684,7 +32684,7 @@ exports.data = [
         "label": "屠龙巨斧",
         "category": 1,
         "subcategory": 1,
-        "description": "屠龙巨斧lv6",
+        "description": "令巨龙都感到害怕的恐怖巨斧",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -32706,7 +32706,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 6,
@@ -32730,7 +32730,7 @@ exports.data = [
         "label": "屠龙巨斧",
         "category": 1,
         "subcategory": 1,
-        "description": "屠龙巨斧lv7",
+        "description": "令巨龙都感到害怕的恐怖巨斧",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -32752,7 +32752,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 7,
@@ -32776,7 +32776,7 @@ exports.data = [
         "label": "屠龙巨斧",
         "category": 1,
         "subcategory": 1,
-        "description": "屠龙巨斧lv8",
+        "description": "令巨龙都感到害怕的恐怖巨斧",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -32798,7 +32798,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 8,
@@ -32822,7 +32822,7 @@ exports.data = [
         "label": "屠龙巨斧",
         "category": 1,
         "subcategory": 1,
-        "description": "屠龙巨斧lv9",
+        "description": "令巨龙都感到害怕的恐怖巨斧",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -32844,7 +32844,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 9,
@@ -32889,7 +32889,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 5,
@@ -32933,7 +32933,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 6,
@@ -32977,7 +32977,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 7,
@@ -33021,7 +33021,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 8,
@@ -33065,7 +33065,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 9,
@@ -33109,7 +33109,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 10,
@@ -33146,7 +33146,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 1,
@@ -33185,7 +33185,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 2,
@@ -33226,7 +33226,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 3,
@@ -33267,7 +33267,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 4,
@@ -33308,7 +33308,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 5,
@@ -33349,7 +33349,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 6,
@@ -33389,7 +33389,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 2,
@@ -33428,7 +33428,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 3,
@@ -33469,7 +33469,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 4,
@@ -33510,7 +33510,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 5,
@@ -33551,7 +33551,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 6,
@@ -33592,7 +33592,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 7,
@@ -33632,7 +33632,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 3,
@@ -33671,7 +33671,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 4,
@@ -33712,7 +33712,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 5,
@@ -33753,7 +33753,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 6,
@@ -33794,7 +33794,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 7,
@@ -33835,7 +33835,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 8,
@@ -33859,7 +33859,7 @@ exports.data = [
         "label": "屠龙之刃",
         "category": 1,
         "subcategory": 0,
-        "description": "屠龙之刃lv4",
+        "description": "锋利至极，能轻易刺破龙鳞",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33875,7 +33875,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 4,
@@ -33898,7 +33898,7 @@ exports.data = [
         "label": "屠龙之刃",
         "category": 1,
         "subcategory": 0,
-        "description": "屠龙之刃lv5",
+        "description": "锋利至极，能轻易刺破龙鳞",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33914,7 +33914,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 5,
@@ -33939,7 +33939,7 @@ exports.data = [
         "label": "屠龙之刃",
         "category": 1,
         "subcategory": 0,
-        "description": "屠龙之刃lv6",
+        "description": "锋利至极，能轻易刺破龙鳞",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33955,7 +33955,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 6,
@@ -33980,7 +33980,7 @@ exports.data = [
         "label": "屠龙之刃",
         "category": 1,
         "subcategory": 0,
-        "description": "屠龙之刃lv7",
+        "description": "锋利至极，能轻易刺破龙鳞",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33996,7 +33996,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 7,
@@ -34021,7 +34021,7 @@ exports.data = [
         "label": "屠龙之刃",
         "category": 1,
         "subcategory": 0,
-        "description": "屠龙之刃lv8",
+        "description": "锋利至极，能轻易刺破龙鳞",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -34037,7 +34037,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 8,
@@ -34062,7 +34062,7 @@ exports.data = [
         "label": "屠龙之刃",
         "category": 1,
         "subcategory": 0,
-        "description": "屠龙之刃lv9",
+        "description": "锋利至极，能轻易刺破龙鳞",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -34078,7 +34078,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 9,
@@ -34118,7 +34118,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 5,
@@ -34157,7 +34157,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 6,
@@ -34196,7 +34196,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 7,
@@ -34235,7 +34235,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 8,
@@ -34274,7 +34274,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 9,
@@ -34313,7 +34313,7 @@ exports.data = [
         "effectAttack": 8,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 10,
@@ -34338,7 +34338,7 @@ exports.data = [
         "subcategory": 3,
         "description": "勇者的象征",
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 1,
@@ -34364,7 +34364,7 @@ exports.data = [
         "subcategory": 3,
         "description": "勇者的象征",
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 2,
@@ -34392,7 +34392,7 @@ exports.data = [
         "subcategory": 3,
         "description": "勇者的象征",
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 3,
@@ -34420,7 +34420,7 @@ exports.data = [
         "subcategory": 3,
         "description": "勇者的象征",
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 4,
@@ -34448,7 +34448,7 @@ exports.data = [
         "subcategory": 3,
         "description": "勇者的象征",
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 5,
@@ -34476,7 +34476,7 @@ exports.data = [
         "subcategory": 3,
         "description": "勇者的象征",
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 6,
@@ -34503,7 +34503,7 @@ exports.data = [
         "subcategory": 3,
         "description": "勇猛角斗士的标志，见证了角斗士的杀戮",
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 2,
@@ -34529,7 +34529,7 @@ exports.data = [
         "subcategory": 3,
         "description": "勇猛角斗士的标志，见证了角斗士的杀戮",
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 3,
@@ -34557,7 +34557,7 @@ exports.data = [
         "subcategory": 3,
         "description": "勇猛角斗士的标志，见证了角斗士的杀戮",
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 4,
@@ -34585,7 +34585,7 @@ exports.data = [
         "subcategory": 3,
         "description": "勇猛角斗士的标志，见证了角斗士的杀戮",
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 5,
@@ -34613,7 +34613,7 @@ exports.data = [
         "subcategory": 3,
         "description": "勇猛角斗士的标志，见证了角斗士的杀戮",
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 6,
@@ -34641,7 +34641,7 @@ exports.data = [
         "subcategory": 3,
         "description": "勇猛角斗士的标志，见证了角斗士的杀戮",
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 7,
@@ -34668,7 +34668,7 @@ exports.data = [
         "subcategory": 3,
         "description": "精美的戒指，却带有一股令人不安的气息",
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 3,
@@ -34694,7 +34694,7 @@ exports.data = [
         "subcategory": 3,
         "description": "精美的戒指，却带有一股令人不安的气息",
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 4,
@@ -34722,7 +34722,7 @@ exports.data = [
         "subcategory": 3,
         "description": "精美的戒指，却带有一股令人不安的气息",
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 5,
@@ -34750,7 +34750,7 @@ exports.data = [
         "subcategory": 3,
         "description": "精美的戒指，却带有一股令人不安的气息",
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 6,
@@ -34778,7 +34778,7 @@ exports.data = [
         "subcategory": 3,
         "description": "精美的戒指，却带有一股令人不安的气息",
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 7,
@@ -34806,7 +34806,7 @@ exports.data = [
         "subcategory": 3,
         "description": "精美的戒指，却带有一股令人不安的气息",
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 8,
@@ -34831,9 +34831,9 @@ exports.data = [
         "icon": "er041.png",
         "category": 1,
         "subcategory": 3,
-        "description": "屠龙指环lv4",
+        "description": "能力的证明，强大的象征",
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 4,
@@ -34857,9 +34857,9 @@ exports.data = [
         "icon": "er041.png",
         "category": 1,
         "subcategory": 3,
-        "description": "屠龙指环lv5",
+        "description": "能力的证明，强大的象征",
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 5,
@@ -34885,9 +34885,9 @@ exports.data = [
         "icon": "er041.png",
         "category": 1,
         "subcategory": 3,
-        "description": "屠龙指环lv6",
+        "description": "能力的证明，强大的象征",
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 6,
@@ -34913,9 +34913,9 @@ exports.data = [
         "icon": "er041.png",
         "category": 1,
         "subcategory": 3,
-        "description": "屠龙指环lv7",
+        "description": "能力的证明，强大的象征",
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 7,
@@ -34941,9 +34941,9 @@ exports.data = [
         "icon": "er041.png",
         "category": 1,
         "subcategory": 3,
-        "description": "屠龙指环lv8",
+        "description": "能力的证明，强大的象征",
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 8,
@@ -34969,9 +34969,9 @@ exports.data = [
         "icon": "er041.png",
         "category": 1,
         "subcategory": 3,
-        "description": "屠龙指环lv9",
+        "description": "能力的证明，强大的象征",
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 9,
@@ -34998,7 +34998,7 @@ exports.data = [
         "subcategory": 3,
         "description": "撕裂者玺戒lv5",
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 5,
@@ -35024,7 +35024,7 @@ exports.data = [
         "subcategory": 3,
         "description": "撕裂者玺戒lv6",
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 6,
@@ -35050,7 +35050,7 @@ exports.data = [
         "subcategory": 3,
         "description": "撕裂者玺戒lv7",
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 7,
@@ -35076,7 +35076,7 @@ exports.data = [
         "subcategory": 3,
         "description": "撕裂者玺戒lv8",
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 8,
@@ -35102,7 +35102,7 @@ exports.data = [
         "subcategory": 3,
         "description": "撕裂者玺戒lv9",
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 9,
@@ -35128,7 +35128,7 @@ exports.data = [
         "subcategory": 3,
         "description": "撕裂者玺戒lv10",
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 10,
@@ -35153,7 +35153,7 @@ exports.data = [
         "subcategory": 5,
         "description": "为消灭怪物的狂战士带来无穷的勇气",
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 1,
@@ -35180,7 +35180,7 @@ exports.data = [
         "subcategory": 5,
         "description": "为消灭怪物的狂战士带来无穷的勇气",
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 2,
@@ -35209,7 +35209,7 @@ exports.data = [
         "subcategory": 5,
         "description": "为消灭怪物的狂战士带来无穷的勇气",
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 3,
@@ -35238,7 +35238,7 @@ exports.data = [
         "subcategory": 5,
         "description": "为消灭怪物的狂战士带来无穷的勇气",
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 4,
@@ -35267,7 +35267,7 @@ exports.data = [
         "subcategory": 5,
         "description": "为消灭怪物的狂战士带来无穷的勇气",
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 5,
@@ -35296,7 +35296,7 @@ exports.data = [
         "subcategory": 5,
         "description": "为消灭怪物的狂战士带来无穷的勇气",
         "classLimit": [
-            0
+            216
         ],
         "quality": 0,
         "rank": 6,
@@ -35324,7 +35324,7 @@ exports.data = [
         "subcategory": 5,
         "description": "角斗士的信念和力量的源泉",
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 2,
@@ -35351,7 +35351,7 @@ exports.data = [
         "subcategory": 5,
         "description": "角斗士的信念和力量的源泉",
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 3,
@@ -35380,7 +35380,7 @@ exports.data = [
         "subcategory": 5,
         "description": "角斗士的信念和力量的源泉",
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 4,
@@ -35409,7 +35409,7 @@ exports.data = [
         "subcategory": 5,
         "description": "角斗士的信念和力量的源泉",
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 5,
@@ -35438,7 +35438,7 @@ exports.data = [
         "subcategory": 5,
         "description": "角斗士的信念和力量的源泉",
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 6,
@@ -35467,7 +35467,7 @@ exports.data = [
         "subcategory": 5,
         "description": "角斗士的信念和力量的源泉",
         "classLimit": [
-            0
+            216
         ],
         "quality": 1,
         "rank": 7,
@@ -35493,9 +35493,9 @@ exports.data = [
         "icon": "ewn031.png",
         "category": 1,
         "subcategory": 5,
-        "description": "深渊之心lv3",
+        "description": "没有人可以挣脱深渊的引力",
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 3,
@@ -35520,9 +35520,9 @@ exports.data = [
         "icon": "ewn031.png",
         "category": 1,
         "subcategory": 5,
-        "description": "深渊之心lv4",
+        "description": "没有人可以挣脱深渊的引力",
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 4,
@@ -35549,9 +35549,9 @@ exports.data = [
         "icon": "ewn031.png",
         "category": 1,
         "subcategory": 5,
-        "description": "深渊之心lv5",
+        "description": "没有人可以挣脱深渊的引力",
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 5,
@@ -35578,9 +35578,9 @@ exports.data = [
         "icon": "ewn031.png",
         "category": 1,
         "subcategory": 5,
-        "description": "深渊之心lv6",
+        "description": "没有人可以挣脱深渊的引力",
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 6,
@@ -35607,9 +35607,9 @@ exports.data = [
         "icon": "ewn031.png",
         "category": 1,
         "subcategory": 5,
-        "description": "深渊之心lv7",
+        "description": "没有人可以挣脱深渊的引力",
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 7,
@@ -35636,9 +35636,9 @@ exports.data = [
         "icon": "ewn031.png",
         "category": 1,
         "subcategory": 5,
-        "description": "深渊之心lv8",
+        "description": "没有人可以挣脱深渊的引力",
         "classLimit": [
-            0
+            216
         ],
         "quality": 2,
         "rank": 8,
@@ -35666,7 +35666,7 @@ exports.data = [
         "subcategory": 5,
         "description": "屠龙之心lv4",
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 4,
@@ -35693,7 +35693,7 @@ exports.data = [
         "subcategory": 5,
         "description": "屠龙之心lv5",
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 5,
@@ -35722,7 +35722,7 @@ exports.data = [
         "subcategory": 5,
         "description": "屠龙之心lv6",
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 6,
@@ -35751,7 +35751,7 @@ exports.data = [
         "subcategory": 5,
         "description": "屠龙之心lv7",
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 7,
@@ -35780,7 +35780,7 @@ exports.data = [
         "subcategory": 5,
         "description": "屠龙之心lv8",
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 8,
@@ -35809,7 +35809,7 @@ exports.data = [
         "subcategory": 5,
         "description": "屠龙之心lv9",
         "classLimit": [
-            0
+            216
         ],
         "quality": 3,
         "rank": 9,
@@ -35837,7 +35837,7 @@ exports.data = [
         "subcategory": 5,
         "description": "阿瑞斯之心lv5",
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 5,
@@ -35864,7 +35864,7 @@ exports.data = [
         "subcategory": 5,
         "description": "阿瑞斯之心lv6",
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 6,
@@ -35891,7 +35891,7 @@ exports.data = [
         "subcategory": 5,
         "description": "阿瑞斯之心lv7",
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 7,
@@ -35918,7 +35918,7 @@ exports.data = [
         "subcategory": 5,
         "description": "阿瑞斯之心lv8",
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 8,
@@ -35945,7 +35945,7 @@ exports.data = [
         "subcategory": 5,
         "description": "阿瑞斯之心lv9",
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 9,
@@ -35972,7 +35972,7 @@ exports.data = [
         "subcategory": 5,
         "description": "阿瑞斯之心lv10",
         "classLimit": [
-            0
+            216
         ],
         "quality": 4,
         "rank": 10,
@@ -36017,7 +36017,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 1,
@@ -36064,7 +36064,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 2,
@@ -36113,7 +36113,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 3,
@@ -36162,7 +36162,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 4,
@@ -36211,7 +36211,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 5,
@@ -36260,7 +36260,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 6,
@@ -36308,7 +36308,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 2,
@@ -36355,7 +36355,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 3,
@@ -36404,7 +36404,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 4,
@@ -36453,7 +36453,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 5,
@@ -36502,7 +36502,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 6,
@@ -36551,7 +36551,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 7,
@@ -36599,7 +36599,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 3,
@@ -36646,7 +36646,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 4,
@@ -36695,7 +36695,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 5,
@@ -36744,7 +36744,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 6,
@@ -36793,7 +36793,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 7,
@@ -36842,7 +36842,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 8,
@@ -36890,7 +36890,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 4,
@@ -36937,7 +36937,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 5,
@@ -36986,7 +36986,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 6,
@@ -37035,7 +37035,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 7,
@@ -37084,7 +37084,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 8,
@@ -37133,7 +37133,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 9,
@@ -37181,7 +37181,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 5,
@@ -37228,7 +37228,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 6,
@@ -37275,7 +37275,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 7,
@@ -37322,7 +37322,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 8,
@@ -37369,7 +37369,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 9,
@@ -37416,7 +37416,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 10,
@@ -37494,7 +37494,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 1,
@@ -37572,7 +37572,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 2,
@@ -37652,7 +37652,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 3,
@@ -37732,7 +37732,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 4,
@@ -37812,7 +37812,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 5,
@@ -37892,7 +37892,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 6,
@@ -37971,7 +37971,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 2,
@@ -38049,7 +38049,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 3,
@@ -38129,7 +38129,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 4,
@@ -38209,7 +38209,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 5,
@@ -38289,7 +38289,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 6,
@@ -38369,7 +38369,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 7,
@@ -38448,7 +38448,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 3,
@@ -38526,7 +38526,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 4,
@@ -38606,7 +38606,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 5,
@@ -38686,7 +38686,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 6,
@@ -38766,7 +38766,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 7,
@@ -38846,7 +38846,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 8,
@@ -38925,7 +38925,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 4,
@@ -39003,7 +39003,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 5,
@@ -39083,7 +39083,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 6,
@@ -39163,7 +39163,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 7,
@@ -39243,7 +39243,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 8,
@@ -39323,7 +39323,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 9,
@@ -39402,7 +39402,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 5,
@@ -39480,7 +39480,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 6,
@@ -39558,7 +39558,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 7,
@@ -39636,7 +39636,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 8,
@@ -39714,7 +39714,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 9,
@@ -39792,7 +39792,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 10,
@@ -39829,7 +39829,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 1,
@@ -39866,7 +39866,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 2,
@@ -39905,7 +39905,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 3,
@@ -39944,7 +39944,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 4,
@@ -39983,7 +39983,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 5,
@@ -40022,7 +40022,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 6,
@@ -40060,7 +40060,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 2,
@@ -40097,7 +40097,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 3,
@@ -40136,7 +40136,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 4,
@@ -40175,7 +40175,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 5,
@@ -40214,7 +40214,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 6,
@@ -40253,7 +40253,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 7,
@@ -40291,7 +40291,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 3,
@@ -40328,7 +40328,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 4,
@@ -40367,7 +40367,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 5,
@@ -40406,7 +40406,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 6,
@@ -40445,7 +40445,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 7,
@@ -40484,7 +40484,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 8,
@@ -40522,7 +40522,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 4,
@@ -40559,7 +40559,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 5,
@@ -40598,7 +40598,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 6,
@@ -40637,7 +40637,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 7,
@@ -40676,7 +40676,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 8,
@@ -40715,7 +40715,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 9,
@@ -40753,7 +40753,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 5,
@@ -40790,7 +40790,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 6,
@@ -40827,7 +40827,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 7,
@@ -40864,7 +40864,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 8,
@@ -40901,7 +40901,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 9,
@@ -40938,7 +40938,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 10,
@@ -40972,6 +40972,9 @@ exports.data = [
                 "part": "mainweapon",
                 "file": "m-magen5-mainweapon1.ccbi"
             }
+        ],
+        "classLimit": [
+            217
         ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
@@ -41007,6 +41010,9 @@ exports.data = [
                 "part": "mainweapon",
                 "file": "m-magen5-mainweapon1.ccbi"
             }
+        ],
+        "classLimit": [
+            217
         ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
@@ -41045,6 +41051,9 @@ exports.data = [
                 "file": "m-magen5-mainweapon1.ccbi"
             }
         ],
+        "classLimit": [
+            217
+        ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
         "quality": 0,
@@ -41081,6 +41090,9 @@ exports.data = [
                 "part": "mainweapon",
                 "file": "m-magen5-mainweapon1.ccbi"
             }
+        ],
+        "classLimit": [
+            217
         ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
@@ -41119,6 +41131,9 @@ exports.data = [
                 "file": "m-magen5-mainweapon1.ccbi"
             }
         ],
+        "classLimit": [
+            217
+        ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
         "quality": 0,
@@ -41156,6 +41171,9 @@ exports.data = [
                 "file": "m-magen5-mainweapon1.ccbi"
             }
         ],
+        "classLimit": [
+            217
+        ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
         "quality": 0,
@@ -41192,6 +41210,9 @@ exports.data = [
                 "file": "m-magen4-mainweapon1.ccbi"
             }
         ],
+        "classLimit": [
+            217
+        ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
         "quality": 1,
@@ -41226,6 +41247,9 @@ exports.data = [
                 "part": "mainweapon",
                 "file": "m-magen4-mainweapon1.ccbi"
             }
+        ],
+        "classLimit": [
+            217
         ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
@@ -41274,6 +41298,9 @@ exports.data = [
             "accuracy": 128,
             "critical": 108
         },
+        "classLimit": [
+            217
+        ],
         "storeOnly": true,
         "autoUse": true,
         "enhanceID": 4,
@@ -41300,6 +41327,9 @@ exports.data = [
                 "part": "mainweapon",
                 "file": "m-magen4-mainweapon1.ccbi"
             }
+        ],
+        "classLimit": [
+            217
         ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
@@ -41338,6 +41368,9 @@ exports.data = [
                 "file": "m-magen4-mainweapon1.ccbi"
             }
         ],
+        "classLimit": [
+            217
+        ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
         "quality": 1,
@@ -41375,6 +41408,9 @@ exports.data = [
                 "file": "m-magen4-mainweapon1.ccbi"
             }
         ],
+        "classLimit": [
+            217
+        ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
         "quality": 1,
@@ -41411,6 +41447,9 @@ exports.data = [
                 "file": "m-magen3-mainweapon1.ccbi"
             }
         ],
+        "classLimit": [
+            217
+        ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
         "quality": 2,
@@ -41445,6 +41484,9 @@ exports.data = [
                 "part": "mainweapon",
                 "file": "m-magen3-mainweapon1.ccbi"
             }
+        ],
+        "classLimit": [
+            217
         ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
@@ -41483,6 +41525,9 @@ exports.data = [
                 "file": "m-magen3-mainweapon1.ccbi"
             }
         ],
+        "classLimit": [
+            217
+        ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
         "quality": 2,
@@ -41519,6 +41564,9 @@ exports.data = [
                 "part": "mainweapon",
                 "file": "m-magen3-mainweapon1.ccbi"
             }
+        ],
+        "classLimit": [
+            217
         ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
@@ -41557,6 +41605,9 @@ exports.data = [
                 "file": "m-magen3-mainweapon1.ccbi"
             }
         ],
+        "classLimit": [
+            217
+        ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
         "quality": 2,
@@ -41594,6 +41645,9 @@ exports.data = [
                 "file": "m-magen3-mainweapon1.ccbi"
             }
         ],
+        "classLimit": [
+            217
+        ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
         "quality": 2,
@@ -41630,6 +41684,9 @@ exports.data = [
                 "file": "m-magen2-mainweapon1.ccbi"
             }
         ],
+        "classLimit": [
+            217
+        ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
         "quality": 3,
@@ -41664,6 +41721,9 @@ exports.data = [
                 "part": "mainweapon",
                 "file": "m-magen2-mainweapon1.ccbi"
             }
+        ],
+        "classLimit": [
+            217
         ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
@@ -41702,6 +41762,9 @@ exports.data = [
                 "file": "m-magen2-mainweapon1.ccbi"
             }
         ],
+        "classLimit": [
+            217
+        ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
         "quality": 3,
@@ -41738,6 +41801,9 @@ exports.data = [
                 "part": "mainweapon",
                 "file": "m-magen2-mainweapon1.ccbi"
             }
+        ],
+        "classLimit": [
+            217
         ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
@@ -41776,6 +41842,9 @@ exports.data = [
                 "file": "m-magen2-mainweapon1.ccbi"
             }
         ],
+        "classLimit": [
+            217
+        ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
         "quality": 3,
@@ -41813,6 +41882,9 @@ exports.data = [
                 "file": "m-magen2-mainweapon1.ccbi"
             }
         ],
+        "classLimit": [
+            217
+        ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
         "quality": 3,
@@ -41849,6 +41921,9 @@ exports.data = [
                 "file": "m-magen-mainweapon1.ccbi"
             }
         ],
+        "classLimit": [
+            217
+        ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
         "quality": 4,
@@ -41883,6 +41958,9 @@ exports.data = [
                 "part": "mainweapon",
                 "file": "m-magen-mainweapon1.ccbi"
             }
+        ],
+        "classLimit": [
+            217
         ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
@@ -41919,6 +41997,9 @@ exports.data = [
                 "file": "m-magen-mainweapon1.ccbi"
             }
         ],
+        "classLimit": [
+            217
+        ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
         "quality": 4,
@@ -41953,6 +42034,9 @@ exports.data = [
                 "part": "mainweapon",
                 "file": "m-magen-mainweapon1.ccbi"
             }
+        ],
+        "classLimit": [
+            217
         ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
@@ -41989,6 +42073,9 @@ exports.data = [
                 "file": "m-magen-mainweapon1.ccbi"
             }
         ],
+        "classLimit": [
+            217
+        ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
         "quality": 4,
@@ -42024,6 +42111,9 @@ exports.data = [
                 "file": "m-magen-mainweapon1.ccbi"
             }
         ],
+        "classLimit": [
+            217
+        ],
         "effectAttack": 10,
         "soundAttack": "attackzhanshi.mp3",
         "quality": 4,
@@ -42048,7 +42138,7 @@ exports.data = [
         "subcategory": 3,
         "description": "奥术戒指lv1",
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 1,
@@ -42073,7 +42163,7 @@ exports.data = [
         "subcategory": 3,
         "description": "奥术戒指lv2",
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 2,
@@ -42100,7 +42190,7 @@ exports.data = [
         "subcategory": 3,
         "description": "奥术戒指lv3",
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 3,
@@ -42127,7 +42217,7 @@ exports.data = [
         "subcategory": 3,
         "description": "奥术戒指lv4",
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 4,
@@ -42154,7 +42244,7 @@ exports.data = [
         "subcategory": 3,
         "description": "奥术戒指lv5",
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 5,
@@ -42181,7 +42271,7 @@ exports.data = [
         "subcategory": 3,
         "description": "奥术戒指lv6",
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 6,
@@ -42207,7 +42297,7 @@ exports.data = [
         "subcategory": 3,
         "description": "燃灵戒指lv2",
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 2,
@@ -42232,7 +42322,7 @@ exports.data = [
         "subcategory": 3,
         "description": "燃灵戒指lv3",
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 3,
@@ -42259,7 +42349,7 @@ exports.data = [
         "subcategory": 3,
         "description": "燃灵戒指lv4",
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 4,
@@ -42286,7 +42376,7 @@ exports.data = [
         "subcategory": 3,
         "description": "燃灵戒指lv5",
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 5,
@@ -42313,7 +42403,7 @@ exports.data = [
         "subcategory": 3,
         "description": "燃灵戒指lv6",
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 6,
@@ -42340,7 +42430,7 @@ exports.data = [
         "subcategory": 3,
         "description": "燃灵戒指lv7",
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 7,
@@ -42366,7 +42456,7 @@ exports.data = [
         "subcategory": 3,
         "description": "湮灭戒指lv3",
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 3,
@@ -42391,7 +42481,7 @@ exports.data = [
         "subcategory": 3,
         "description": "湮灭戒指lv4",
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 4,
@@ -42418,7 +42508,7 @@ exports.data = [
         "subcategory": 3,
         "description": "湮灭戒指lv5",
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 5,
@@ -42445,7 +42535,7 @@ exports.data = [
         "subcategory": 3,
         "description": "湮灭戒指lv6",
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 6,
@@ -42472,7 +42562,7 @@ exports.data = [
         "subcategory": 3,
         "description": "湮灭戒指lv4",
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 7,
@@ -42499,7 +42589,7 @@ exports.data = [
         "subcategory": 3,
         "description": "湮灭戒指lv4",
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 8,
@@ -42525,7 +42615,7 @@ exports.data = [
         "subcategory": 3,
         "description": "落日戒指lv4",
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 4,
@@ -42550,7 +42640,7 @@ exports.data = [
         "subcategory": 3,
         "description": "落日戒指lv5",
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 5,
@@ -42577,7 +42667,7 @@ exports.data = [
         "subcategory": 3,
         "description": "落日戒指lv6",
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 6,
@@ -42604,7 +42694,7 @@ exports.data = [
         "subcategory": 3,
         "description": "落日戒指lv7",
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 7,
@@ -42631,7 +42721,7 @@ exports.data = [
         "subcategory": 3,
         "description": "落日戒指lv8",
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 8,
@@ -42658,7 +42748,7 @@ exports.data = [
         "subcategory": 3,
         "description": "落日戒指lv9",
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 9,
@@ -42684,7 +42774,7 @@ exports.data = [
         "subcategory": 3,
         "description": "龙灵法戒lv5",
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 5,
@@ -42709,7 +42799,7 @@ exports.data = [
         "subcategory": 3,
         "description": "龙灵法戒lv6",
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 6,
@@ -42734,7 +42824,7 @@ exports.data = [
         "subcategory": 3,
         "description": "龙灵法戒lv7",
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 7,
@@ -42759,7 +42849,7 @@ exports.data = [
         "subcategory": 3,
         "description": "龙灵法戒lv8",
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 8,
@@ -42784,7 +42874,7 @@ exports.data = [
         "subcategory": 3,
         "description": "龙灵法戒lv9",
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 9,
@@ -42809,7 +42899,7 @@ exports.data = [
         "subcategory": 3,
         "description": "龙灵法戒lv10",
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 10,
@@ -42833,7 +42923,7 @@ exports.data = [
         "subcategory": 5,
         "description": "奥术护符lv1",
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 1,
@@ -42859,7 +42949,7 @@ exports.data = [
         "subcategory": 5,
         "description": "奥术护符lv2",
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 2,
@@ -42887,7 +42977,7 @@ exports.data = [
         "subcategory": 5,
         "description": "奥术护符lv3",
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 3,
@@ -42915,7 +43005,7 @@ exports.data = [
         "subcategory": 5,
         "description": "奥术护符lv4",
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 4,
@@ -42943,7 +43033,7 @@ exports.data = [
         "subcategory": 5,
         "description": "奥术护符lv5",
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 5,
@@ -42971,7 +43061,7 @@ exports.data = [
         "subcategory": 5,
         "description": "奥术护符lv6",
         "classLimit": [
-            1
+            217
         ],
         "quality": 0,
         "rank": 6,
@@ -42998,7 +43088,7 @@ exports.data = [
         "subcategory": 5,
         "description": "燃灵护符lv2",
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 2,
@@ -43024,7 +43114,7 @@ exports.data = [
         "subcategory": 5,
         "description": "燃灵护符lv3",
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 3,
@@ -43052,7 +43142,7 @@ exports.data = [
         "subcategory": 5,
         "description": "燃灵护符lv4",
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 4,
@@ -43080,7 +43170,7 @@ exports.data = [
         "subcategory": 5,
         "description": "燃灵护符lv5",
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 5,
@@ -43108,7 +43198,7 @@ exports.data = [
         "subcategory": 5,
         "description": "燃灵护符lv6",
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 6,
@@ -43136,7 +43226,7 @@ exports.data = [
         "subcategory": 5,
         "description": "燃灵护符lv7",
         "classLimit": [
-            1
+            217
         ],
         "quality": 1,
         "rank": 7,
@@ -43163,7 +43253,7 @@ exports.data = [
         "subcategory": 5,
         "description": "湮灭护符lv3",
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 3,
@@ -43189,7 +43279,7 @@ exports.data = [
         "subcategory": 5,
         "description": "湮灭护符lv4",
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 4,
@@ -43217,7 +43307,7 @@ exports.data = [
         "subcategory": 5,
         "description": "湮灭护符lv5",
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 5,
@@ -43245,7 +43335,7 @@ exports.data = [
         "subcategory": 5,
         "description": "湮灭护符lv6",
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 6,
@@ -43273,7 +43363,7 @@ exports.data = [
         "subcategory": 5,
         "description": "湮灭护符lv7",
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 7,
@@ -43301,7 +43391,7 @@ exports.data = [
         "subcategory": 5,
         "description": "湮灭护符lv8",
         "classLimit": [
-            1
+            217
         ],
         "quality": 2,
         "rank": 8,
@@ -43328,7 +43418,7 @@ exports.data = [
         "subcategory": 5,
         "description": "落日护符lv4",
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 4,
@@ -43354,7 +43444,7 @@ exports.data = [
         "subcategory": 5,
         "description": "落日护符lv5",
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 5,
@@ -43382,7 +43472,7 @@ exports.data = [
         "subcategory": 5,
         "description": "落日护符lv6",
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 6,
@@ -43410,7 +43500,7 @@ exports.data = [
         "subcategory": 5,
         "description": "落日护符lv7",
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 7,
@@ -43438,7 +43528,7 @@ exports.data = [
         "subcategory": 5,
         "description": "落日护符lv8",
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 8,
@@ -43466,7 +43556,7 @@ exports.data = [
         "subcategory": 5,
         "description": "落日护符lv9",
         "classLimit": [
-            1
+            217
         ],
         "quality": 3,
         "rank": 9,
@@ -43493,7 +43583,7 @@ exports.data = [
         "subcategory": 5,
         "description": "龙灵护符lv5",
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 5,
@@ -43519,7 +43609,7 @@ exports.data = [
         "subcategory": 5,
         "description": "龙灵护符lv6",
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 6,
@@ -43545,7 +43635,7 @@ exports.data = [
         "subcategory": 5,
         "description": "龙灵护符lv7",
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 7,
@@ -43571,7 +43661,7 @@ exports.data = [
         "subcategory": 5,
         "description": "龙灵护符lv8",
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 8,
@@ -43597,7 +43687,7 @@ exports.data = [
         "subcategory": 5,
         "description": "龙灵护符lv9",
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 9,
@@ -43623,7 +43713,7 @@ exports.data = [
         "subcategory": 5,
         "description": "龙灵护符lv10",
         "classLimit": [
-            1
+            217
         ],
         "quality": 4,
         "rank": 10,
@@ -43667,7 +43757,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 1,
@@ -43712,7 +43802,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 2,
@@ -43759,7 +43849,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 3,
@@ -43806,7 +43896,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 4,
@@ -43853,7 +43943,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 5,
@@ -43900,7 +43990,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 6,
@@ -43946,7 +44036,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 2,
@@ -43991,7 +44081,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 3,
@@ -44038,7 +44128,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 4,
@@ -44085,7 +44175,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 5,
@@ -44132,7 +44222,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 6,
@@ -44179,7 +44269,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 7,
@@ -44225,7 +44315,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 3,
@@ -44270,7 +44360,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 4,
@@ -44317,7 +44407,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 5,
@@ -44364,7 +44454,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 6,
@@ -44411,7 +44501,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 7,
@@ -44458,7 +44548,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 8,
@@ -44504,7 +44594,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 4,
@@ -44549,7 +44639,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 5,
@@ -44596,7 +44686,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 6,
@@ -44643,7 +44733,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 7,
@@ -44690,7 +44780,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 8,
@@ -44737,7 +44827,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 9,
@@ -44783,7 +44873,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 5,
@@ -44828,7 +44918,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 6,
@@ -44873,7 +44963,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 7,
@@ -44918,7 +45008,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 8,
@@ -44963,7 +45053,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 9,
@@ -45008,7 +45098,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 10,
@@ -45076,7 +45166,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 1,
@@ -45146,7 +45236,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 2,
@@ -45218,7 +45308,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 3,
@@ -45290,7 +45380,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 4,
@@ -45362,7 +45452,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 5,
@@ -45434,7 +45524,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 6,
@@ -45505,7 +45595,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 2,
@@ -45575,7 +45665,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 3,
@@ -45647,7 +45737,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 4,
@@ -45719,7 +45809,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 5,
@@ -45791,7 +45881,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 6,
@@ -45863,7 +45953,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 7,
@@ -45934,7 +46024,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 3,
@@ -46004,7 +46094,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 4,
@@ -46076,7 +46166,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 5,
@@ -46148,7 +46238,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 6,
@@ -46220,7 +46310,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 7,
@@ -46292,7 +46382,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 8,
@@ -46363,7 +46453,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 4,
@@ -46433,7 +46523,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 5,
@@ -46505,7 +46595,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 6,
@@ -46577,7 +46667,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 7,
@@ -46649,7 +46739,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 8,
@@ -46721,7 +46811,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 9,
@@ -46792,7 +46882,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 5,
@@ -46862,7 +46952,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 6,
@@ -46932,7 +47022,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 7,
@@ -47002,7 +47092,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 8,
@@ -47072,7 +47162,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 9,
@@ -47142,7 +47232,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 10,
@@ -47187,7 +47277,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 1,
@@ -47234,7 +47324,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 2,
@@ -47283,7 +47373,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 3,
@@ -47332,7 +47422,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 4,
@@ -47381,7 +47471,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 5,
@@ -47430,7 +47520,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 6,
@@ -47478,7 +47568,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 2,
@@ -47525,7 +47615,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 3,
@@ -47574,7 +47664,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 4,
@@ -47623,7 +47713,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 5,
@@ -47672,7 +47762,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 6,
@@ -47721,7 +47811,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 7,
@@ -47769,7 +47859,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 3,
@@ -47816,7 +47906,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 4,
@@ -47865,7 +47955,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 5,
@@ -47914,7 +48004,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 6,
@@ -47963,7 +48053,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 7,
@@ -48012,7 +48102,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 8,
@@ -48060,7 +48150,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 4,
@@ -48107,7 +48197,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 5,
@@ -48156,7 +48246,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 6,
@@ -48205,7 +48295,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 7,
@@ -48254,7 +48344,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 8,
@@ -48303,7 +48393,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 9,
@@ -48351,7 +48441,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 5,
@@ -48398,7 +48488,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 6,
@@ -48445,7 +48535,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 7,
@@ -48492,7 +48582,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 8,
@@ -48539,7 +48629,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 9,
@@ -48586,7 +48676,7 @@ exports.data = [
             }
         ],
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 10,
@@ -48626,7 +48716,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 1,
@@ -48664,7 +48754,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 2,
@@ -48704,7 +48794,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 3,
@@ -48744,7 +48834,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 4,
@@ -48784,7 +48874,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 5,
@@ -48824,7 +48914,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 6,
@@ -48863,7 +48953,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 2,
@@ -48901,7 +48991,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 3,
@@ -48941,7 +49031,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 4,
@@ -48981,7 +49071,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 5,
@@ -49021,7 +49111,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 6,
@@ -49061,7 +49151,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 7,
@@ -49100,7 +49190,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 3,
@@ -49138,7 +49228,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 4,
@@ -49178,7 +49268,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 5,
@@ -49218,7 +49308,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 6,
@@ -49258,7 +49348,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 7,
@@ -49298,7 +49388,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 8,
@@ -49337,7 +49427,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 4,
@@ -49375,7 +49465,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 5,
@@ -49415,7 +49505,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 6,
@@ -49455,7 +49545,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 7,
@@ -49495,7 +49585,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 8,
@@ -49535,7 +49625,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 9,
@@ -49574,7 +49664,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 5,
@@ -49612,7 +49702,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 6,
@@ -49650,7 +49740,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 7,
@@ -49688,7 +49778,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 8,
@@ -49726,7 +49816,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 9,
@@ -49764,7 +49854,7 @@ exports.data = [
         "effectAttack": 9,
         "soundAttack": "attackzhanshi.mp3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 10,
@@ -49788,7 +49878,7 @@ exports.data = [
         "subcategory": 3,
         "description": "圣徒之戒lv1",
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 1,
@@ -49814,7 +49904,7 @@ exports.data = [
         "subcategory": 3,
         "description": "圣徒之戒lv2",
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 2,
@@ -49842,7 +49932,7 @@ exports.data = [
         "subcategory": 3,
         "description": "圣徒之戒lv3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 3,
@@ -49870,7 +49960,7 @@ exports.data = [
         "subcategory": 3,
         "description": "圣徒之戒lv4",
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 4,
@@ -49898,7 +49988,7 @@ exports.data = [
         "subcategory": 3,
         "description": "圣徒之戒lv5",
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 5,
@@ -49926,7 +50016,7 @@ exports.data = [
         "subcategory": 3,
         "description": "圣徒之戒lv6",
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 6,
@@ -49953,7 +50043,7 @@ exports.data = [
         "subcategory": 3,
         "description": "祈求者之戒lv2",
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 2,
@@ -49979,7 +50069,7 @@ exports.data = [
         "subcategory": 3,
         "description": "祈求者之戒lv3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 3,
@@ -50007,7 +50097,7 @@ exports.data = [
         "subcategory": 3,
         "description": "祈求者之戒lv4",
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 4,
@@ -50035,7 +50125,7 @@ exports.data = [
         "subcategory": 3,
         "description": "祈求者之戒lv5",
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 5,
@@ -50063,7 +50153,7 @@ exports.data = [
         "subcategory": 3,
         "description": "祈求者之戒lv6",
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 6,
@@ -50091,7 +50181,7 @@ exports.data = [
         "subcategory": 3,
         "description": "祈求者之戒lv7",
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 7,
@@ -50118,7 +50208,7 @@ exports.data = [
         "subcategory": 3,
         "description": "祈求者之戒lv3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 3,
@@ -50144,7 +50234,7 @@ exports.data = [
         "subcategory": 3,
         "description": "祈求者之戒lv4",
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 4,
@@ -50172,7 +50262,7 @@ exports.data = [
         "subcategory": 3,
         "description": "祈求者之戒lv5",
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 5,
@@ -50200,7 +50290,7 @@ exports.data = [
         "subcategory": 3,
         "description": "祈求者之戒lv6",
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 6,
@@ -50228,7 +50318,7 @@ exports.data = [
         "subcategory": 3,
         "description": "祈求者之戒lv7",
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 7,
@@ -50256,7 +50346,7 @@ exports.data = [
         "subcategory": 3,
         "description": "祈求者之戒lv8",
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 8,
@@ -50283,7 +50373,7 @@ exports.data = [
         "subcategory": 3,
         "description": "神圣之戒lv4",
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 4,
@@ -50309,7 +50399,7 @@ exports.data = [
         "subcategory": 3,
         "description": "神圣之戒lv5",
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 5,
@@ -50337,7 +50427,7 @@ exports.data = [
         "subcategory": 3,
         "description": "神圣之戒lv6",
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 6,
@@ -50365,7 +50455,7 @@ exports.data = [
         "subcategory": 3,
         "description": "神圣之戒lv7",
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 7,
@@ -50393,7 +50483,7 @@ exports.data = [
         "subcategory": 3,
         "description": "神圣之戒lv8",
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 8,
@@ -50421,7 +50511,7 @@ exports.data = [
         "subcategory": 3,
         "description": "神圣之戒lv9",
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 9,
@@ -50448,7 +50538,7 @@ exports.data = [
         "subcategory": 3,
         "description": "生命指轮lv5",
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 5,
@@ -50474,7 +50564,7 @@ exports.data = [
         "subcategory": 3,
         "description": "生命指轮lv6",
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 6,
@@ -50500,7 +50590,7 @@ exports.data = [
         "subcategory": 3,
         "description": "生命指轮lv7",
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 7,
@@ -50526,7 +50616,7 @@ exports.data = [
         "subcategory": 3,
         "description": "生命指轮lv8",
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 8,
@@ -50552,7 +50642,7 @@ exports.data = [
         "subcategory": 3,
         "description": "生命指轮lv9",
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 9,
@@ -50578,7 +50668,7 @@ exports.data = [
         "subcategory": 3,
         "description": "生命指轮lv10",
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 10,
@@ -50603,7 +50693,7 @@ exports.data = [
         "subcategory": 5,
         "description": "圣徒之证lv1",
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 1,
@@ -50629,7 +50719,7 @@ exports.data = [
         "subcategory": 5,
         "description": "圣徒之证lv2",
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 2,
@@ -50657,7 +50747,7 @@ exports.data = [
         "subcategory": 5,
         "description": "圣徒之证lv3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 3,
@@ -50685,7 +50775,7 @@ exports.data = [
         "subcategory": 5,
         "description": "圣徒之证lv4",
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 4,
@@ -50713,7 +50803,7 @@ exports.data = [
         "subcategory": 5,
         "description": "圣徒之证lv5",
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 5,
@@ -50741,7 +50831,7 @@ exports.data = [
         "subcategory": 5,
         "description": "圣徒之证lv6",
         "classLimit": [
-            2
+            218
         ],
         "quality": 0,
         "rank": 6,
@@ -50768,7 +50858,7 @@ exports.data = [
         "subcategory": 5,
         "description": "祈求者之证lv2",
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 2,
@@ -50794,7 +50884,7 @@ exports.data = [
         "subcategory": 5,
         "description": "祈求者之证lv3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 3,
@@ -50822,7 +50912,7 @@ exports.data = [
         "subcategory": 5,
         "description": "祈求者之证lv4",
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 4,
@@ -50850,7 +50940,7 @@ exports.data = [
         "subcategory": 5,
         "description": "祈求者之证lv5",
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 5,
@@ -50878,7 +50968,7 @@ exports.data = [
         "subcategory": 5,
         "description": "祈求者之证lv6",
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 6,
@@ -50906,7 +50996,7 @@ exports.data = [
         "subcategory": 5,
         "description": "祈求者之证lv7",
         "classLimit": [
-            2
+            218
         ],
         "quality": 1,
         "rank": 7,
@@ -50933,7 +51023,7 @@ exports.data = [
         "subcategory": 5,
         "description": "神谕者之证lv3",
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 3,
@@ -50959,7 +51049,7 @@ exports.data = [
         "subcategory": 5,
         "description": "神谕者之证lv4",
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 4,
@@ -50987,7 +51077,7 @@ exports.data = [
         "subcategory": 5,
         "description": "神谕者之证lv5",
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 5,
@@ -51015,7 +51105,7 @@ exports.data = [
         "subcategory": 5,
         "description": "神谕者之证lv6",
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 6,
@@ -51043,7 +51133,7 @@ exports.data = [
         "subcategory": 5,
         "description": "神谕者之证lv7",
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 7,
@@ -51071,7 +51161,7 @@ exports.data = [
         "subcategory": 5,
         "description": "神谕者之证lv8",
         "classLimit": [
-            2
+            218
         ],
         "quality": 2,
         "rank": 8,
@@ -51098,7 +51188,7 @@ exports.data = [
         "subcategory": 5,
         "description": "神圣之证lv4",
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 4,
@@ -51124,7 +51214,7 @@ exports.data = [
         "subcategory": 5,
         "description": "神圣之证lv5",
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 5,
@@ -51152,7 +51242,7 @@ exports.data = [
         "subcategory": 5,
         "description": "神圣之证lv6",
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 6,
@@ -51180,7 +51270,7 @@ exports.data = [
         "subcategory": 5,
         "description": "神圣之证lv7",
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 7,
@@ -51208,7 +51298,7 @@ exports.data = [
         "subcategory": 5,
         "description": "神圣之证lv8",
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 8,
@@ -51236,7 +51326,7 @@ exports.data = [
         "subcategory": 5,
         "description": "神圣之证lv9",
         "classLimit": [
-            2
+            218
         ],
         "quality": 3,
         "rank": 9,
@@ -51263,7 +51353,7 @@ exports.data = [
         "subcategory": 5,
         "description": "黎明的曙光lv5",
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 5,
@@ -51289,7 +51379,7 @@ exports.data = [
         "subcategory": 5,
         "description": "黎明的曙光lv6",
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 6,
@@ -51315,7 +51405,7 @@ exports.data = [
         "subcategory": 5,
         "description": "黎明的曙光lv7",
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 7,
@@ -51341,7 +51431,7 @@ exports.data = [
         "subcategory": 5,
         "description": "黎明的曙光lv8",
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 8,
@@ -51367,7 +51457,7 @@ exports.data = [
         "subcategory": 5,
         "description": "黎明的曙光lv9",
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 9,
@@ -51393,7 +51483,7 @@ exports.data = [
         "subcategory": 5,
         "description": "黎明的曙光lv10",
         "classLimit": [
-            2
+            218
         ],
         "quality": 4,
         "rank": 10,
