@@ -28268,7 +28268,7 @@ exports.data = [
         "label": "角斗士战靴",
         "category": 1,
         "subcategory": 4,
-        "description": "角斗士战靴lv2",
+        "description": "沉重的铁靴，角斗士们的最爱",
         "effectf": [
             {
                 "part": "leftleg",
@@ -28314,7 +28314,7 @@ exports.data = [
         "label": "角斗士战靴",
         "category": 1,
         "subcategory": 4,
-        "description": "角斗士战靴lv3",
+        "description": "沉重的铁靴，角斗士们的最爱",
         "effectf": [
             {
                 "part": "leftleg",
@@ -28362,7 +28362,7 @@ exports.data = [
         "label": "角斗士战靴",
         "category": 1,
         "subcategory": 4,
-        "description": "角斗士战靴lv4",
+        "description": "沉重的铁靴，角斗士们的最爱",
         "effectf": [
             {
                 "part": "leftleg",
@@ -28410,7 +28410,7 @@ exports.data = [
         "label": "角斗士战靴",
         "category": 1,
         "subcategory": 4,
-        "description": "角斗士战靴lv5",
+        "description": "沉重的铁靴，角斗士们的最爱",
         "effectf": [
             {
                 "part": "leftleg",
@@ -28458,7 +28458,7 @@ exports.data = [
         "label": "角斗士战靴",
         "category": 1,
         "subcategory": 4,
-        "description": "角斗士战靴lv6",
+        "description": "沉重的铁靴，角斗士们的最爱",
         "effectf": [
             {
                 "part": "leftleg",
@@ -28506,7 +28506,7 @@ exports.data = [
         "label": "角斗士战靴",
         "category": 1,
         "subcategory": 4,
-        "description": "角斗士战靴lv7",
+        "description": "沉重的铁靴，角斗士们的最爱",
         "effectf": [
             {
                 "part": "leftleg",
@@ -28553,7 +28553,7 @@ exports.data = [
         "label": "深渊战靴",
         "category": 1,
         "subcategory": 4,
-        "description": "深渊战靴lv3",
+            "description": "工艺精良，设计华丽，且不失实用",
         "effectf": [
             {
                 "part": "leftleg",
@@ -28599,7 +28599,7 @@ exports.data = [
         "label": "深渊战靴",
         "category": 1,
         "subcategory": 4,
-        "description": "深渊战靴lv4",
+        "description": "工艺精良，设计华丽，且不失实用",
         "effectf": [
             {
                 "part": "leftleg",
@@ -28647,7 +28647,7 @@ exports.data = [
         "label": "深渊战靴",
         "category": 1,
         "subcategory": 4,
-        "description": "深渊战靴lv5",
+        "description": "工艺精良，设计华丽，且不失实用",
         "effectf": [
             {
                 "part": "leftleg",
@@ -28695,7 +28695,7 @@ exports.data = [
         "label": "深渊战靴",
         "category": 1,
         "subcategory": 4,
-        "description": "深渊战靴lv6",
+        "description": "工艺精良，设计华丽，且不失实用",
         "effectf": [
             {
                 "part": "leftleg",
@@ -28743,7 +28743,7 @@ exports.data = [
         "label": "深渊战靴",
         "category": 1,
         "subcategory": 4,
-        "description": "深渊战靴lv7",
+        "description": "工艺精良，设计华丽，且不失实用",
         "effectf": [
             {
                 "part": "leftleg",
@@ -28791,7 +28791,7 @@ exports.data = [
         "label": "深渊战靴",
         "category": 1,
         "subcategory": 4,
-        "description": "深渊战靴lv8",
+        "description": "工艺精良，设计华丽，且不失实用",
         "effectf": [
             {
                 "part": "leftleg",
@@ -29398,7 +29398,7 @@ exports.data = [
         "label": "勇者战甲",
         "category": 1,
         "subcategory": 2,
-        "description": "为lv1",
+        "description": "被世人所认可的勇者穿戴的铠甲",
         "effectf": [
             {
                 "part": "chest",
@@ -29476,7 +29476,7 @@ exports.data = [
         "label": "勇者战甲",
         "category": 1,
         "subcategory": 2,
-        "description": "勇者战甲lv2",
+        "description": "被世人所认可的勇者穿戴的铠甲",
         "effectf": [
             {
                 "part": "chest",
@@ -29556,7 +29556,7 @@ exports.data = [
         "label": "勇者战甲",
         "category": 1,
         "subcategory": 2,
-        "description": "勇者战甲lv3",
+        "description": "被世人所认可的勇者穿戴的铠甲",
         "effectf": [
             {
                 "part": "chest",
@@ -29636,7 +29636,7 @@ exports.data = [
         "label": "勇者战甲",
         "category": 1,
         "subcategory": 2,
-        "description": "勇者战甲lv4",
+        "description": "被世人所认可的勇者穿戴的铠甲",
         "effectf": [
             {
                 "part": "chest",
@@ -29716,7 +29716,7 @@ exports.data = [
         "label": "勇者战甲",
         "category": 1,
         "subcategory": 2,
-        "description": "勇者战甲lv5",
+        "description": "被世人所认可的勇者穿戴的铠甲",
         "effectf": [
             {
                 "part": "chest",
@@ -29796,7 +29796,7 @@ exports.data = [
         "label": "勇者战甲",
         "category": 1,
         "subcategory": 2,
-        "description": "勇者战甲lv6",
+        "description": "被世人所认可的勇者穿戴的铠甲",
         "effectf": [
             {
                 "part": "chest",
@@ -29875,7 +29875,7 @@ exports.data = [
         "label": "角斗士战甲",
         "category": 1,
         "subcategory": 2,
-        "description": "角斗士战甲lv2",
+        "description": "厚重的战甲，在战场上角斗士们的生存保障",
         "effectf": [
             {
                 "part": "chest",
@@ -29953,7 +29953,7 @@ exports.data = [
         "label": "角斗士战甲",
         "category": 1,
         "subcategory": 2,
-        "description": "角斗士战甲lv3",
+        "description": "厚重的战甲，在战场上角斗士们的生存保障",
         "effectf": [
             {
                 "part": "chest",
@@ -30033,7 +30033,7 @@ exports.data = [
         "label": "角斗士战甲",
         "category": 1,
         "subcategory": 2,
-        "description": "角斗士战甲lv4",
+        "description": "厚重的战甲，在战场上角斗士们的生存保障",
         "effectf": [
             {
                 "part": "chest",
@@ -30113,7 +30113,7 @@ exports.data = [
         "label": "角斗士战甲",
         "category": 1,
         "subcategory": 2,
-        "description": "角斗士战甲lv5",
+        "description": "厚重的战甲，在战场上角斗士们的生存保障",
         "effectf": [
             {
                 "part": "chest",
@@ -30193,7 +30193,7 @@ exports.data = [
         "label": "角斗士战甲",
         "category": 1,
         "subcategory": 2,
-        "description": "角斗士战甲lv6",
+        "description": "厚重的战甲，在战场上角斗士们的生存保障",
         "effectf": [
             {
                 "part": "chest",
@@ -30273,7 +30273,7 @@ exports.data = [
         "label": "角斗士战甲",
         "category": 1,
         "subcategory": 2,
-        "description": "角斗士战甲lv7",
+        "description": "厚重的战甲，在战场上角斗士们的生存保障",
         "effectf": [
             {
                 "part": "chest",
@@ -30352,7 +30352,7 @@ exports.data = [
         "label": "深渊战铠",
         "category": 1,
         "subcategory": 2,
-        "description": "深渊战铠lv3",
+        "description": "未知的深渊材料打造，质量优异，可以应对各种战斗",
         "effectf": [
             {
                 "part": "chest",
@@ -30432,7 +30432,7 @@ exports.data = [
         "label": "深渊战铠",
         "category": 1,
         "subcategory": 2,
-        "description": "深渊战铠lv4",
+        "description": "未知的深渊材料打造，质量优异，可以应对各种战斗",
         "effectf": [
             {
                 "part": "chest",
@@ -30512,7 +30512,7 @@ exports.data = [
         "label": "深渊战铠",
         "category": 1,
         "subcategory": 2,
-        "description": "深渊战铠lv5",
+        "description": "未知的深渊材料打造，质量优异，可以应对各种战斗",
         "effectf": [
             {
                 "part": "chest",
@@ -30592,7 +30592,7 @@ exports.data = [
         "label": "深渊战铠",
         "category": 1,
         "subcategory": 2,
-        "description": "深渊战铠lv6",
+        "description": "未知的深渊材料打造，质量优异，可以应对各种战斗",
         "effectf": [
             {
                 "part": "chest",
@@ -30672,7 +30672,7 @@ exports.data = [
         "label": "深渊战铠",
         "category": 1,
         "subcategory": 2,
-        "description": "深渊战铠lv7",
+        "description": "未知的深渊材料打造，质量优异，可以应对各种战斗",
         "effectf": [
             {
                 "part": "chest",
@@ -30752,7 +30752,7 @@ exports.data = [
         "label": "深渊战铠",
         "category": 1,
         "subcategory": 2,
-        "description": "深渊战铠lv8",
+        "description": "未知的深渊材料打造，质量优异，可以应对各种战斗",
         "effectf": [
             {
                 "part": "chest",
@@ -31775,7 +31775,7 @@ exports.data = [
         "label": "勇士利斧",
         "category": 1,
         "subcategory": 1,
-        "description": "勇士利斧lv1",
+        "description": "只有勇敢的战士才能挥舞的斧头",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -31819,7 +31819,7 @@ exports.data = [
         "label": "勇士利斧",
         "category": 1,
         "subcategory": 1,
-        "description": "勇士利斧lv2",
+        "description": "只有勇敢的战士才能挥舞的斧头",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -31865,7 +31865,7 @@ exports.data = [
         "label": "勇士利斧",
         "category": 1,
         "subcategory": 1,
-        "description": "勇士利斧lv3",
+        "description": "只有勇敢的战士才能挥舞的斧头",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -31911,7 +31911,7 @@ exports.data = [
         "label": "勇士利斧",
         "category": 1,
         "subcategory": 1,
-        "description": "勇士利斧lv4",
+        "description": "只有勇敢的战士才能挥舞的斧头",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -31957,7 +31957,7 @@ exports.data = [
         "label": "勇士利斧",
         "category": 1,
         "subcategory": 1,
-        "description": "勇士利斧lv5",
+        "description": "只有勇敢的战士才能挥舞的斧头",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -32003,7 +32003,7 @@ exports.data = [
         "label": "勇士利斧",
         "category": 1,
         "subcategory": 1,
-        "description": "勇士利斧lv6",
+        "description": "只有勇敢的战士才能挥舞的斧头",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -32048,7 +32048,7 @@ exports.data = [
         "label": "角斗士巨斧",
         "category": 1,
         "subcategory": 1,
-        "description": "角斗士巨斧lv2",
+        "description": "挥舞起来，能撕碎敌人",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -32092,7 +32092,7 @@ exports.data = [
         "label": "角斗士巨斧",
         "category": 1,
         "subcategory": 1,
-        "description": "角斗士巨斧lv3",
+        "description": "挥舞起来，能撕碎敌人",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -32138,7 +32138,7 @@ exports.data = [
         "label": "角斗士巨斧",
         "category": 1,
         "subcategory": 1,
-        "description": "角斗士巨斧lv4",
+        "description": "挥舞起来，能撕碎敌人",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -32184,7 +32184,7 @@ exports.data = [
         "label": "角斗士巨斧",
         "category": 1,
         "subcategory": 1,
-        "description": "角斗士巨斧lv5",
+        "description": "挥舞起来，能撕碎敌人",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -32230,7 +32230,7 @@ exports.data = [
         "label": "角斗士巨斧",
         "category": 1,
         "subcategory": 1,
-        "description": "角斗士巨斧lv6",
+        "description": "挥舞起来，能撕碎敌人",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -32276,7 +32276,7 @@ exports.data = [
         "label": "角斗士巨斧",
         "category": 1,
         "subcategory": 1,
-        "description": "角斗士巨斧lv7",
+        "description": "挥舞起来，能撕碎敌人",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -32321,7 +32321,7 @@ exports.data = [
         "label": "深渊之镰",
         "category": 1,
         "subcategory": 1,
-        "description": "深渊之镰lv3",
+        "description": "收割生命的利器",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -32365,7 +32365,7 @@ exports.data = [
         "label": "深渊之镰",
         "category": 1,
         "subcategory": 1,
-        "description": "深渊之镰lv4",
+        "description": "收割生命的利器",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -32411,7 +32411,7 @@ exports.data = [
         "label": "深渊之镰",
         "category": 1,
         "subcategory": 1,
-        "description": "深渊之镰lv5",
+        "description": "收割生命的利器",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -32457,7 +32457,7 @@ exports.data = [
         "label": "深渊之镰",
         "category": 1,
         "subcategory": 1,
-        "description": "深渊之镰lv6",
+        "description": "收割生命的利器",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -32503,7 +32503,7 @@ exports.data = [
         "label": "深渊之镰",
         "category": 1,
         "subcategory": 1,
-        "description": "深渊之镰lv7",
+        "description": "收割生命的利器",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -32549,7 +32549,7 @@ exports.data = [
         "label": "深渊之镰",
         "category": 1,
         "subcategory": 1,
-        "description": "深渊之镰lv8",
+        "description": "收割生命的利器",
         "effectf": [
             {
                 "part": "secondaryweapon2",
@@ -33130,7 +33130,7 @@ exports.data = [
         "label": "勇者大剑",
         "category": 1,
         "subcategory": 0,
-        "description": "勇者大剑lv1",
+        "description": "拥有他，会获得勇往直前的力量",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33169,7 +33169,7 @@ exports.data = [
         "label": "勇者大剑",
         "category": 1,
         "subcategory": 0,
-        "description": "勇者大剑lv2",
+        "description": "拥有他，会获得勇往直前的力量",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33210,7 +33210,7 @@ exports.data = [
         "label": "勇者大剑",
         "category": 1,
         "subcategory": 0,
-        "description": "勇者大剑lv3",
+        "description": "拥有他，会获得勇往直前的力量",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33251,7 +33251,7 @@ exports.data = [
         "label": "勇者大剑",
         "category": 1,
         "subcategory": 0,
-        "description": "勇者大剑lv4",
+        "description": "拥有他，会获得勇往直前的力量",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33292,7 +33292,7 @@ exports.data = [
         "label": "勇者大剑",
         "category": 1,
         "subcategory": 0,
-        "description": "勇者大剑lv5",
+        "description": "拥有他，会获得勇往直前的力量",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33333,7 +33333,7 @@ exports.data = [
         "label": "勇者大剑",
         "category": 1,
         "subcategory": 0,
-        "description": "勇者大剑lv6",
+        "description": "拥有他，会获得勇往直前的力量",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33373,7 +33373,7 @@ exports.data = [
         "label": "角斗士大剑",
         "category": 1,
         "subcategory": 0,
-        "description": "角斗士大剑lv2",
+        "description": "角斗士不可缺少的利器，能斩破一切阻碍",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33412,7 +33412,7 @@ exports.data = [
         "label": "角斗士大剑",
         "category": 1,
         "subcategory": 0,
-        "description": "角斗士大剑lv3",
+        "description": "角斗士不可缺少的利器，能斩破一切阻碍",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33453,7 +33453,7 @@ exports.data = [
         "label": "角斗士大剑",
         "category": 1,
         "subcategory": 0,
-        "description": "角斗士大剑lv4",
+        "description": "角斗士不可缺少的利器，能斩破一切阻碍",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33494,7 +33494,7 @@ exports.data = [
         "label": "角斗士大剑",
         "category": 1,
         "subcategory": 0,
-        "description": "角斗士大剑lv5",
+        "description": "角斗士不可缺少的利器，能斩破一切阻碍",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33535,7 +33535,7 @@ exports.data = [
         "label": "角斗士大剑",
         "category": 1,
         "subcategory": 0,
-        "description": "角斗士大剑lv6",
+        "description": "角斗士不可缺少的利器，能斩破一切阻碍",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33576,7 +33576,7 @@ exports.data = [
         "label": "角斗士大剑",
         "category": 1,
         "subcategory": 0,
-        "description": "角斗士大剑lv7",
+        "description": "角斗士不可缺少的利器，能斩破一切阻碍",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33616,7 +33616,7 @@ exports.data = [
         "label": "深渊之刃",
         "category": 1,
         "subcategory": 0,
-        "description": "深渊之刃lv3",
+        "description": "一击之下，将敌人打进无尽深渊",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33655,7 +33655,7 @@ exports.data = [
         "label": "深渊之刃",
         "category": 1,
         "subcategory": 0,
-        "description": "深渊之刃lv4",
+        "description": "一击之下，将敌人打进无尽深渊",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33696,7 +33696,7 @@ exports.data = [
         "label": "深渊之刃",
         "category": 1,
         "subcategory": 0,
-        "description": "深渊之刃lv5",
+        "description": "一击之下，将敌人打进无尽深渊",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33737,7 +33737,7 @@ exports.data = [
         "label": "深渊之刃",
         "category": 1,
         "subcategory": 0,
-        "description": "深渊之刃lv6",
+        "description": "一击之下，将敌人打进无尽深渊",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33778,7 +33778,7 @@ exports.data = [
         "label": "深渊之刃",
         "category": 1,
         "subcategory": 0,
-        "description": "深渊之刃lv7",
+        "description": "一击之下，将敌人打进无尽深渊",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -33819,7 +33819,7 @@ exports.data = [
         "label": "深渊之刃",
         "category": 1,
         "subcategory": 0,
-        "description": "深渊之刃lv8",
+        "description": "一击之下，将敌人打进无尽深渊",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -34501,7 +34501,7 @@ exports.data = [
         "icon": "er021.png",
         "category": 1,
         "subcategory": 3,
-        "description": "角斗士指环lv2",
+        "description": "勇猛角斗士的标志，见证了角斗士的杀戮",
         "classLimit": [
             0
         ],
@@ -34527,7 +34527,7 @@ exports.data = [
         "icon": "er021.png",
         "category": 1,
         "subcategory": 3,
-        "description": "角斗士指环lv3",
+        "description": "勇猛角斗士的标志，见证了角斗士的杀戮",
         "classLimit": [
             0
         ],
@@ -34555,7 +34555,7 @@ exports.data = [
         "icon": "er021.png",
         "category": 1,
         "subcategory": 3,
-        "description": "角斗士指环lv4",
+        "description": "勇猛角斗士的标志，见证了角斗士的杀戮",
         "classLimit": [
             0
         ],
@@ -34583,7 +34583,7 @@ exports.data = [
         "icon": "er021.png",
         "category": 1,
         "subcategory": 3,
-        "description": "角斗士指环lv5",
+        "description": "勇猛角斗士的标志，见证了角斗士的杀戮",
         "classLimit": [
             0
         ],
@@ -34611,7 +34611,7 @@ exports.data = [
         "icon": "er021.png",
         "category": 1,
         "subcategory": 3,
-        "description": "角斗士指环lv6",
+        "description": "勇猛角斗士的标志，见证了角斗士的杀戮",
         "classLimit": [
             0
         ],
@@ -34639,7 +34639,7 @@ exports.data = [
         "icon": "er021.png",
         "category": 1,
         "subcategory": 3,
-        "description": "角斗士指环lv7",
+        "description": "勇猛角斗士的标志，见证了角斗士的杀戮",
         "classLimit": [
             0
         ],
@@ -34666,7 +34666,7 @@ exports.data = [
         "icon": "er031.png",
         "category": 1,
         "subcategory": 3,
-        "description": "深渊指环lv3",
+        "description": "精美的戒指，却带有一股令人不安的气息",
         "classLimit": [
             0
         ],
@@ -34692,7 +34692,7 @@ exports.data = [
         "icon": "er031.png",
         "category": 1,
         "subcategory": 3,
-        "description": "深渊指环lv4",
+        "description": "精美的戒指，却带有一股令人不安的气息",
         "classLimit": [
             0
         ],
@@ -34720,7 +34720,7 @@ exports.data = [
         "icon": "er031.png",
         "category": 1,
         "subcategory": 3,
-        "description": "深渊指环lv5",
+        "description": "精美的戒指，却带有一股令人不安的气息",
         "classLimit": [
             0
         ],
@@ -34748,7 +34748,7 @@ exports.data = [
         "icon": "er031.png",
         "category": 1,
         "subcategory": 3,
-        "description": "深渊指环lv6",
+        "description": "精美的戒指，却带有一股令人不安的气息",
         "classLimit": [
             0
         ],
@@ -34776,7 +34776,7 @@ exports.data = [
         "icon": "er031.png",
         "category": 1,
         "subcategory": 3,
-        "description": "深渊指环lv7",
+        "description": "精美的戒指，却带有一股令人不安的气息",
         "classLimit": [
             0
         ],
@@ -34804,7 +34804,7 @@ exports.data = [
         "icon": "er031.png",
         "category": 1,
         "subcategory": 3,
-        "description": "深渊指环lv8",
+        "description": "精美的戒指，却带有一股令人不安的气息",
         "classLimit": [
             0
         ],
@@ -35322,7 +35322,7 @@ exports.data = [
         "icon": "ewn021.png",
         "category": 1,
         "subcategory": 5,
-        "description": "角斗士之心lv2",
+        "description": "角斗士的信念和力量的源泉",
         "classLimit": [
             0
         ],
@@ -35349,7 +35349,7 @@ exports.data = [
         "icon": "ewn021.png",
         "category": 1,
         "subcategory": 5,
-        "description": "角斗士之心lv3",
+        "description": "角斗士的信念和力量的源泉",
         "classLimit": [
             0
         ],
@@ -35378,7 +35378,7 @@ exports.data = [
         "icon": "ewn021.png",
         "category": 1,
         "subcategory": 5,
-        "description": "角斗士之心lv4",
+        "description": "角斗士的信念和力量的源泉",
         "classLimit": [
             0
         ],
@@ -35407,7 +35407,7 @@ exports.data = [
         "icon": "ewn021.png",
         "category": 1,
         "subcategory": 5,
-        "description": "角斗士之心lv5",
+        "description": "角斗士的信念和力量的源泉",
         "classLimit": [
             0
         ],
@@ -35436,7 +35436,7 @@ exports.data = [
         "icon": "ewn021.png",
         "category": 1,
         "subcategory": 5,
-        "description": "角斗士之心lv6",
+        "description": "角斗士的信念和力量的源泉",
         "classLimit": [
             0
         ],
@@ -35465,7 +35465,7 @@ exports.data = [
         "icon": "ewn021.png",
         "category": 1,
         "subcategory": 5,
-        "description": "角斗士之心lv7",
+        "description": "角斗士的信念和力量的源泉",
         "classLimit": [
             0
         ],
@@ -51409,5 +51409,566 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true
+    },
+    {
+        "classId": 1419,
+        "label": "狼牙粉末",
+        "icon": "item-sjw1.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "土狼牙齿碾碎后的粉末",
+        "stack": 99,
+        "sellprice": 50,
+        "quality": 0
+    },
+    {
+        "classId": 1420,
+        "label": "黄铜块",
+        "icon": "item-sjw2.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "一整块黄铜，可以用来锻造装备",
+        "stack": 99,
+        "sellprice": 50,
+        "quality": 0
+    },
+    {
+        "classId": 1421,
+        "label": "土狼皮",
+        "icon": "item-sjw3.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "土狼被杀死后剥下来的皮，似乎记录些什么",
+        "stack": 99,
+        "sellprice": 50,
+        "quality": 0
+    },
+    {
+        "classId": 1422,
+        "label": "普通木块",
+        "icon": "item-sjw4.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "一块比较好的锻造原料",
+        "stack": 99,
+        "sellprice": 50,
+        "quality": 0
+    },
+    {
+        "classId": 1423,
+        "label": "紫色粉末",
+        "icon": "item-sjw5.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "蕴含特殊力量的粉末",
+        "stack": 99,
+        "sellprice": 50,
+        "quality": 0
+    },
+    {
+        "classId": 1424,
+        "label": "麻布",
+        "icon": "item-sjw6.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "不知道被谁掉落在地下城的麻布",
+        "stack": 99,
+        "sellprice": 50,
+        "quality": 0
+    },
+    {
+        "classId": 1425,
+        "label": "结实的绳子",
+        "icon": "item-sjw7.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "非常结实、坚韧的绳子",
+        "stack": 99,
+        "sellprice": 50,
+        "quality": 0
+    },
+    {
+        "classId": 1426,
+        "label": "狼尾草",
+        "icon": "item-sjw8.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "一种生长在土狼窝附近的植物",
+        "stack": 99,
+        "sellprice": 50,
+        "quality": 0
+    },
+    {
+        "classId": 1427,
+        "label": "生锈黄铜戒",
+        "icon": "item-sjw9.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "一枚古老的黄铜戒指，已经可以看到上面的锈迹",
+        "stack": 99,
+        "sellprice": 50,
+        "quality": 0
+    },
+    {
+        "classId": 1428,
+        "label": "斑驳蓝水晶",
+        "icon": "item-sjw10.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "蕴含少量魔力的蓝水晶",
+        "stack": 99,
+        "sellprice": 50,
+        "quality": 0
+    },
+    {
+        "classId": 1429,
+        "label": "血色战旗",
+        "icon": "item-sjw11.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "被鲜血染红的旗子",
+        "stack": 99,
+        "sellprice": 50,
+        "quality": 0
+    },
+    {
+        "classId": 1430,
+        "label": "黑曜石",
+        "icon": "item-sjg1.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "具有特殊用途的宝石",
+        "stack": 99,
+        "sellprice": 100,
+        "quality": 1
+    },
+    {
+        "classId": 1431,
+        "label": "草木之晶",
+        "icon": "item-sjg2.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "散发着清新的草木气息的晶石",
+        "stack": 99,
+        "sellprice": 100,
+        "quality": 1
+    },
+    {
+        "classId": 1432,
+        "label": "魔力水晶",
+        "icon": "item-sjg3.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "蕴含较多魔力的水晶",
+        "stack": 99,
+        "sellprice": 100,
+        "quality": 1
+    },
+    {
+        "classId": 1433,
+        "label": "强化卷轴",
+        "icon": "item-sjg4.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "可以对装备进行强化的卷轴",
+        "stack": 99,
+        "sellprice": 100,
+        "quality": 1
+    },
+    {
+        "classId": 1434,
+        "label": "捆兽绳",
+        "icon": "item-sjg5.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "附加了魔法的绳子，可以用来捕捉强大的野兽",
+        "stack": 99,
+        "sellprice": 100,
+        "quality": 1
+    },
+    {
+        "classId": 1435,
+        "label": "梧桐木",
+        "icon": "item-sjg6.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "较好的锻造原料",
+        "stack": 99,
+        "sellprice": 100,
+        "quality": 1
+    },
+    {
+        "classId": 1436,
+        "label": "魔纹兽皮",
+        "icon": "item-sjg7.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "强大的法师从魔兽上剥下来的皮毛，并在上面描绘了魔纹",
+        "stack": 99,
+        "sellprice": 100,
+        "quality": 1
+    },
+    {
+        "classId": 1437,
+        "label": "精铁戒指",
+        "icon": "item-sjg8.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "精铁打造的戒指，有很大的利用价值",
+        "stack": 99,
+        "sellprice": 100,
+        "quality": 1
+    },
+    {
+        "classId": 1438,
+        "label": "魔法师日记",
+        "icon": "item-sjg9.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "记录着魔法心得的日记残页",
+        "stack": 99,
+        "sellprice": 100,
+        "quality": 1
+    },
+    {
+        "classId": 1439,
+        "label": "药剂瓶",
+        "icon": "item-sjg10.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "装有魔法师实验药剂的瓶子",
+        "stack": 99,
+        "sellprice": 100,
+        "quality": 1
+    },
+    {
+        "classId": 1440,
+        "label": "魔法吊坠",
+        "icon": "item-sjg11.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "负载魔力的银质吊坠",
+        "stack": 99,
+        "sellprice": 100,
+        "quality": 1
+    },
+    {
+        "classId": 1441,
+        "label": "华贵胸针",
+        "icon": "item-sjb1.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "非常昂贵的胸针，应该是古老贵族的物品",
+        "stack": 99,
+        "sellprice": 200,
+        "quality": 2
+    },
+    {
+        "classId": 1442,
+        "label": "精美丝绸",
+        "icon": "item-sjb2.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "来自遥远东方的布料，异常珍贵",
+        "stack": 99,
+        "sellprice": 200,
+        "quality": 2
+    },
+    {
+        "classId": 1443,
+        "label": "真钢锭",
+        "icon": "item-sjb3.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "经过千锤百炼后的金属块，十分优良的锻造材料",
+        "stack": 99,
+        "sellprice": 200,
+        "quality": 2
+    },
+    {
+        "classId": 1444,
+        "label": "邪恶笔记",
+        "icon": "item-sjb4.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "邪恶法师的笔记，记录着邪恶法师所有的魔法",
+        "stack": 99,
+        "sellprice": 200,
+        "quality": 2
+    },
+    {
+        "classId": 1445,
+        "label": "深海之晶",
+        "icon": "item-sjb5.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "深海里的结晶，可以感受得到里面汹涌澎湃的水元素",
+        "stack": 99,
+        "sellprice": 200,
+        "quality": 2
+    },
+    {
+        "classId": 1446,
+        "label": "奇美拉之眼",
+        "icon": "item-sjb6.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "可怕的双头怪物的眼睛",
+        "stack": 99,
+        "sellprice": 200,
+        "quality": 2
+    },
+    {
+        "classId": 1447,
+        "label": "万年古木",
+        "icon": "item-sjb7.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "从远古时代就存在的老树上掉落的树枝",
+        "stack": 99,
+        "sellprice": 200,
+        "quality": 2
+    },
+    {
+        "classId": 1448,
+        "label": "生命之种",
+        "icon": "item-sjb8.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "生命之树的种子",
+        "stack": 99,
+        "sellprice": 200,
+        "quality": 2
+    },
+    {
+        "classId": 1449,
+        "label": "烈焰花",
+        "icon": "item-sjb9.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "绽放时会燃起火焰的花朵",
+        "stack": 99,
+        "sellprice": 200,
+        "quality": 2
+    },
+    {
+        "classId": 1450,
+        "label": "精金块",
+        "icon": "item-sjb10.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "非常稀少的锻造材料，本身就价值连城",
+        "stack": 99,
+        "sellprice": 200,
+        "quality": 2
+    },
+    {
+        "classId": 1451,
+        "label": "邪恶之珠",
+        "icon": "item-sjb11.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "拥有邪恶气息的宝珠",
+        "stack": 99,
+        "sellprice": 200,
+        "quality": 2
+    },
+    {
+        "classId": 1452,
+        "label": "光明宝典",
+        "icon": "item-sjb12.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "能给人们带来温暖的宝书，象征着希望",
+        "stack": 99,
+        "sellprice": 200,
+        "quality": 2
+    },
+    {
+        "classId": 1453,
+        "label": "不死鸟羽毛",
+        "icon": "item-sjb13.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "传说中不死鸟掉落的羽毛，蕴含强大的力量",
+        "stack": 99,
+        "sellprice": 200,
+        "quality": 2
+    },
+    {
+        "classId": 1454,
+        "label": "大地之晶",
+        "icon": "item-sjp1.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "蕴含着大地之力的晶体，能感受到一股厚重的气息",
+        "stack": 99,
+        "sellprice": 400,
+        "quality": 3
+    },
+    {
+        "classId": 1455,
+        "label": "屠龙勋章",
+        "icon": "item-sjp2.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "能力的证明，象征着拥有战胜龙的力量",
+        "stack": 99,
+        "sellprice": 400,
+        "quality": 3
+    },
+    {
+        "classId": 1456,
+        "label": "战争圣典",
+        "icon": "item-sjp3.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "军事家们梦寐以求的圣书，象征着胜利和荣耀",
+        "stack": 99,
+        "sellprice": 400,
+        "quality": 3
+    },
+    {
+        "classId": 1457,
+        "label": "女皇头冠",
+        "icon": "item-sjp4.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "历史上唯一一位女皇的皇冠",
+        "stack": 99,
+        "sellprice": 400,
+        "quality": 3
+    },
+    {
+        "classId": 1458,
+        "label": "潘多拉魔盒",
+        "icon": "item-sjp5.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "传说中打开后能释放人世间所有的邪恶的盒子",
+        "stack": 99,
+        "sellprice": 400,
+        "quality": 3
+    },
+    {
+        "classId": 1459,
+        "label": "撒旦之心",
+        "icon": "item-sjp6.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "据说是强大恶魔的心脏，拥有强大的力量",
+        "stack": 99,
+        "sellprice": 400,
+        "quality": 3
+    },
+    {
+        "classId": 1460,
+        "label": "君主腰牌",
+        "icon": "item-sjp7.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "能统帅千军万马的腰牌，拥有无上权威",
+        "stack": 99,
+        "sellprice": 400,
+        "quality": 3
+    },
+    {
+        "classId": 1461,
+        "label": "火焰之晶",
+        "icon": "item-sjp8.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "蕴含着火焰的晶体，具有毁灭一切的力量",
+        "stack": 99,
+        "sellprice": 400,
+        "quality": 3
+    },
+    {
+        "classId": 1462,
+        "label": "怨灵魔珠",
+        "icon": "item-sjp9.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "远古时期邪恶的法师为了获得强大力量而用来在战场上收集灵魂的珠子",
+        "stack": 99,
+        "sellprice": 400,
+        "quality": 3
+    },
+    {
+        "classId": 1463,
+        "label": "永恒夜之石",
+        "icon": "item-sjp10.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "可以吸收月光的神奇宝石，具有神秘的力量",
+        "stack": 99,
+        "sellprice": 400,
+        "quality": 3
+    },
+    {
+        "classId": 1464,
+        "label": "缚龙索",
+        "icon": "item-sjp11.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "连强大的龙都能束缚的缎带",
+        "stack": 99,
+        "sellprice": 400,
+        "quality": 3
+    },
+    {
+        "classId": 1465,
+        "label": "胜利皇冠",
+        "icon": "item-sjp12.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "胜利女神的皇冠,象征着智慧与胜利",
+        "stack": 99,
+        "sellprice": 400,
+        "quality": 3
+    },
+    {
+        "classId": 1466,
+        "label": "恶龙之齿",
+        "icon": "item-sjp13.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "消灭恶龙后获得的牙齿，依旧拥有令人心悸的气息",
+        "stack": 99,
+        "sellprice": 400,
+        "quality": 3
+    },
+    {
+        "classId": 1467,
+        "label": "恐怖利刃",
+        "icon": "item-sjp14.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "据说是恶魔所使用的武器，不知为何遗留在地下城",
+        "stack": 99,
+        "sellprice": 400,
+        "quality": 3
+    },
+    {
+        "classId": 1468,
+        "label": "恶魔之眼",
+        "icon": "item-sjp15.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "散发着可怕气息的珠子，据说是恶魔的眼珠",
+        "stack": 99,
+        "sellprice": 400,
+        "quality": 3
+    },
+    {
+        "classId": 1469,
+        "label": "龙血之瓶",
+        "icon": "item-sjp16.png",
+        "category": 2,
+        "subcategory": 0,
+        "description": "装有龙的精血的瓶子",
+        "stack": 99,
+        "sellprice": 400,
+        "quality": 3
     }
 ]
