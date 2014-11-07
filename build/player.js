@@ -755,11 +755,11 @@
       }
     };
 
-    Player.prototype.checkSwitchHero = function(classId) {
+    Player.prototype.switchHeroType = function(classId) {
       if (Math.abs(classId - this.hero["class"]) > 100) {
-        return this.flags.verticalChange || false;
+        return 'verticalChange';
       } else {
-        return this.flags.horizonChange || false;
+        return 'horizonChange';
       }
     };
 
