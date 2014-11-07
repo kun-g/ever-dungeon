@@ -436,7 +436,8 @@
       func: function(arg, player, handler, rpcID, socket) {
         var oldHero, ret, type;
         type = player.switchHeroType(arg.cid);
-        if (player.flags[type]) {
+        if (player.flags[type] || true) {
+          player.flags[type] = false;
           oldHero = player.createHero();
           player.createHero({
             name: oldHero.name,
@@ -445,7 +446,6 @@
             hairStyle: oldHero.hairStyle,
             hairColor: oldHero.hairColor
           }, true);
-          player.flags[type] = false;
           ret = [
             {
               REQ: rpcID,
