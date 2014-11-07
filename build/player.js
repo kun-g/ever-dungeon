@@ -755,6 +755,14 @@
       }
     };
 
+    Player.prototype.checkSwitchHero = function(classId) {
+      if (Math.abs(classId - this.hero["class"]) > 100) {
+        return this.flags.verticalChange || false;
+      } else {
+        return this.flags.horizonChange || false;
+      }
+    };
+
     Player.prototype.switchHero = function(hClass) {
       var k, v, _ref7, _ref8, _results;
       if (this.heroBase[hClass] == null) {

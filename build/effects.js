@@ -297,9 +297,5 @@ exports.data = [
     {
         "effectId": 71,
         "file": "effect-kuangre.ccbi"
-    },
-    {
-        "effectId": 72,
-        "file": "effect-baoji.ccbi"
     }
 ]
