@@ -6182,7 +6182,7 @@ exports.data = [
                 { "modifications": {"attack":{"src":{"originAttack":-0.08}}}, "level": 3}
             ]
         }
-    }
+    },
 	{
         "skillId": 272,
         "config": {
