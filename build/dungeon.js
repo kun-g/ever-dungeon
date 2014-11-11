@@ -2815,7 +2815,8 @@
           {
             act: env.variable('obj').ref,
             id: ACT_TELEPORT,
-            pos: env.variable('tarPos')
+            pos: env.variable('tarPos'),
+            hide: evn.variable('hiding')
           }
         ];
       }
