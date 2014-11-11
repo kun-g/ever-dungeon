@@ -182,14 +182,11 @@
     return o;
   };
 
-  registerConstructor = function(func, funcname) {
+  registerConstructor = function(func) {
     var constructor;
     constructor = func.prototype.constructor;
-    if (!funcname) {
-      funcname = constructor.name;
-    }
     if (typeof constructor === 'function') {
-      return g_attr_constructorTable[funcname] = func;
+      return g_attr_constructorTable[constructor.name] = func;
     }
   };
 
