@@ -2398,7 +2398,7 @@
         var src, tar;
         src = env.variable('src');
         tar = env.variable('tar');
-        if (!(src.isAlive() && tar.isAlive())) {
+        if (!(src.isAlive() && tar.isAlive() && src.isVisible && tar.isVisible)) {
           return this.suicide();
         }
         env.variable('damage', src.attack);
