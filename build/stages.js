@@ -2200,7 +2200,7 @@ var data = [
             {
                 "stageId": 134,
                 "cost": 0,
-                "team": 3,
+                "team": 1,
                 "hidden":false,
                 "dungeon": 128,
                 "condition": function (obj, util) {
