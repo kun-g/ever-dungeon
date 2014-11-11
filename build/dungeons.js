@@ -38682,61 +38682,71 @@ exports.data = [
         "rank":230},
     {
         "dungeonId": 128,
-        "rank": 100,
+        "rank": 5,
         "levelCount" :1,
         "levels" :[
             {
                 "objects" :[
                     {
-                        "id": 15 ,
-                        "count":2,
-                        "keyed":true
+                        "id": 22,
+                        "count":10,
+                        "keyed":true,
+						skill:[{id:272}],
                     },
-                    {
-                        "id": 47 ,
-                        "count":2,
-                        "keyed":true
-                    },
-                    {
-                        "id": 79 ,
-                        "count":2,
-                        "keyed":true
-                    },
-                    {
-                        "id": 111 ,
-                        "count":2,
-                        "keyed":true
-                    },
-                    {
-                        "id": 194 ,
-                        "count":2,
-                        "keyed":true
-                    },
-                    {
-                        "id": 6 ,
-                        "count":1,
-                        "keyed":true
-                    },
-                    {
-                        "id": 38 ,
-                        "count":1,
-                        "keyed":true
-                    },
-                    {
-                        "id": 70 ,
-                        "count":1,
-                        "keyed":true
-                    },
-                    {
-                        "id": 103 ,
-                        "count":1,
-                        "keyed":true
-                    },
-                    {
-                        "id": 206 ,
-                        "count":1,
-                        "keyed":true
-                    }
+                    //{
+                    //    "id": 47 ,
+                    //    "count":2,
+                    //    "keyed":true,
+					//	skill:[{id:272}],
+                    //},
+                    //{
+                    //    "id": 79 ,
+                    //    "count":2,
+                    //    "keyed":true,
+					//	skill:[{id:272}],
+                    //},
+                    //{
+                    //    "id": 111 ,
+                    //    "count":2,
+                    //    "keyed":true,
+					//	skill:[{id:272}],
+                    //},
+                    //{
+                    //    "id": 194 ,
+                    //    "count":2,
+                    //    "keyed":true,
+					//	skill:[{id:272}],
+                    //},
+                    //{
+                    //    "id": 6 ,
+                    //    "count":1,
+                    //    "keyed":true,
+					//	skill:[{id:272}],
+                    //},
+                    //{
+                    //    "id": 38 ,
+                    //    "count":1,
+                    //    "keyed":true,
+					//	skill:[{id:272}],
+                    //},
+                    //{
+                    //    "id": 70 ,
+                    //    "count":1,
+                    //    "keyed":true,
+					//	skill:[{id:272}],
+                    //},
+                    //{
+                    //    "id": 103 ,
+                    //    "count":1,
+                    //    "keyed":true,
+					//	skill:[{id:272}],
+                    //},
+                    //{
+                    //    "id": 206 ,
+                    //    "count":1,
+                    //    "keyed":true,
+					//	skill:[{id:272}],
+                    //}
                 ]
             }
         ],

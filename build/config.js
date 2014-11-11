@@ -44,6 +44,7 @@ exports.data = {
     {"rmb":648,"diamond":7480},
     {"rmb":25,"diamond":0}
   ],
+
   "Global_Blue_Star_RewardTable" : [ ],
   "Global_Recyclable_Enhancement" : [ 0, 1, 2, 3, 4, 5, 6 ],
   "Global_Recycle_Config" : [

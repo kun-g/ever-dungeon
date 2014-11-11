@@ -98,9 +98,7 @@ exports.data = {
         "sceneForgeCannotEnhanceAgain":"该装备无法再强化",
         "sceneForgeNoEnoughDiamond":"强化宝石的数量不足",
         "sceneForgeSelEquip":"请选择装备",
-        "sceneForgeBuyStone":"强化石不足\n立即花费{#1}宝石买齐材料并强化？",
         "sceneForgeBuyStuff":"材料不足\n立即花费{#1}宝石买齐材料？",
-        "sceneForgeBuyAllStuff":"材料不足\n立即花费{#1}宝石买齐全部材料后升阶？",
         "sceneForgeChargeForStuff":"材料不足，且没有足够宝石来购买材料\n立即去充值页面？",
         "sceneForgeForge":"升阶成功！",
         "sceneForgeNoEnoughStuff":"材料不足！",
@@ -180,7 +178,7 @@ exports.data = {
         "sharedErrorMsgs10":"缺少装备",
         "sharedErrorMsgs11":"缺少强化宝石",
         "sharedErrorMsgs12":"装备无法再次升级",//10
-        "sharedErrorMsgs13":"数据同步发生错误",
+        "sharedErrorMsgs13":"发生了什么错误",
         "sharedErrorMsgs14":"道具数量不足",
         "sharedErrorMsgs15":"聊天信息发送过于频繁，请稍等片刻",
         "sharedErrorMsgs16":"服务器状态异常，请稍后再试",
@@ -229,7 +227,7 @@ exports.data = {
         "uiChargeDiamond7":"328元",
         "uiChargeDiamond8":"648元",
         "uiChargeDiamond9":"25元",
-        "uiChargeDiamondSuc":"充值成功\n若出现未到账情况请重启游戏",
+        "uiChargeDiamondSuc":"充值成功",
         "uiChargeDiamondCancel":"充值取消",
         "uiChargeDiamondFail":"充值失败",
         "uiChargeDiamondMaxVip":"您已经获得最高等级VIP",
@@ -251,11 +249,6 @@ exports.data = {
         "xitemCoin":"金币",
         "xitemDiamond":"宝石",
         "xitemExp":"经验",
-        "xitemProficiency":"熟练",
-        "showCommentTitle": "评分送宝石",
-        "showCommentContent": "跳转到商店页面对我们的游戏进行\n评价吧，评价完成之后可以免费获\n得{#1}宝石哦！！",
-        "showCommentBtnCancel": "下次再说",
-        "showCommentBtnGo": "　现在就去评价！",
-        "showCommentBtnNever": "很残忍地拒绝"
+        "xitemProficiency":"熟练"
     }
 };
