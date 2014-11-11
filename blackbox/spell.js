@@ -1277,7 +1277,6 @@ libSpell = {};
             }
         }
       }
-      cmd.print();
       if ((thisSpell != null ? thisSpell.effectCount : void 0) != null) {
         return thisSpell.effectCount += 1;
       }

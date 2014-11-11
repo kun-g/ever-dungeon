@@ -12,7 +12,7 @@ libUnit = {};
 
   makeBasicCommand = libCommandStream.makeCommand;
 
-  flagCreation = true;
+  flagCreation = false;
 
   Unit = (function(_super) {
     __extends(Unit, _super);
@@ -153,7 +153,6 @@ libUnit = {};
         if (!(e)) {
           continue;
         }
-        debug('-------gearUp', e.property);
         if (e.property != null) {
           this.modifyProperty(e.property());
         }
