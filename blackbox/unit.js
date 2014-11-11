@@ -153,7 +153,6 @@ libUnit = {};
         if (!(e)) {
           continue;
         }
-        debug(e.property());
         if (e.property != null) {
           this.modifyProperty(e.property());
         }

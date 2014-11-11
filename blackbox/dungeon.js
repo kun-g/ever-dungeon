@@ -2780,8 +2780,10 @@ libDungeon = {};
             hidePlace = availableSlot.filter(function(e) {
               return !e.explored;
             });
+            debug(hidePlace,'-----');
             if (hidePlace.length > 0) {
               availableSlot = hidePlace;
+              debug('hidePlace', hidePlace);
               obj.isVisible = false;
             } else {
               env.variable('hiding', false);
@@ -2789,10 +2791,12 @@ libDungeon = {};
             }
           }
           slot = env.randMember(availableSlot);
+          debug('111', availableSlot, slot);
           if (slot != null) {
             slot = slot.pos;
           }
         }
+        debug(slot, env.variable('hiding'), isHiding);
         if (slot == null) {
           return this.suicide();
         }
