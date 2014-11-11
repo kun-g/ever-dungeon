@@ -2765,7 +2765,7 @@ libDungeon = {};
     },
     TeleportObject: {
       callback: function(env) {
-        var availableSlot, hidePlace, obj, slot;
+        var availableSlot, hidePlace, isHiding, obj, slot;
         obj = env.variable('obj');
         if (!obj.isAlive()) {
           return this.suicide();
@@ -2791,10 +2791,10 @@ libDungeon = {};
         if (slot == null) {
           return this.suicide();
         }
-        debug(env.variable('hiding'),'=========');
         env.variable('orgPos', obj.pos);
         env.variable('tarPos', slot);
-        if (!env.variable('hiding')) {
+        isHiding = env.variable('hiding');
+        if (!isHiding) {
           env.getBlock(slot).explored = true;
         }
         env.getBlock(obj.pos).removeRef(obj);
@@ -2803,10 +2803,12 @@ libDungeon = {};
         if (!env.variable('obj').isAlive()) {
           return this.suicide();
         }
-        return this.routine({
-          id: 'BlockInfo',
-          block: env.variable('tarPos')
-        });
+        if (!isHiding) {
+          return this.routine({
+            id: 'BlockInfo',
+            block: env.variable('tarPos')
+          });
+        }
       },
       output: function(env) {
         return [
