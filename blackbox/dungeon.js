@@ -2771,11 +2771,13 @@ libDungeon = {};
           return this.suicide();
         }
         slot = env.variable('tarPos');
+        isHiding = env.variable('hiding');
         if (slot == null) {
           availableSlot = env.getBlock().filter(function(e) {
             return e.getType() === Block_Empty;
           });
-          if (env.variable('hiding')) {
+          if (isHiding) {
+            obj.isVisible = false;
             hidePlace = availableSlot.filter(function(e) {
               return !e.explored;
             });
@@ -2793,7 +2795,6 @@ libDungeon = {};
         }
         env.variable('orgPos', obj.pos);
         env.variable('tarPos', slot);
-        isHiding = env.variable('hiding');
         if (!isHiding) {
           env.getBlock(slot).explored = true;
         }

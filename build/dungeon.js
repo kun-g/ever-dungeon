@@ -2811,6 +2811,9 @@
         }
       },
       output: function(env) {
+        if (evn.variable('hiding')) {
+          return [];
+        }
         return [
           {
             act: env.variable('obj').ref,
