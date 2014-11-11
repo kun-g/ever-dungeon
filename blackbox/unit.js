@@ -1,12 +1,16 @@
 libUnit = {};
 (function() {
-  var Hero, Mirror, Monster, Npc, Unit, Wizard, createUnit, flagCreation,
+  var Hero, Mirror, Monster, Npc, Unit, Wizard, createUnit, flagCreation, installCommandExtention, makeBasicCommand, unit_command_config, _,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
   
 
   Wizard = libSpell.Wizard;
+
+  _ = libUnderscore;
+
+  makeBasicCommand = libCommandStream.makeCommand;
 
   flagCreation = false;
 
@@ -138,7 +142,7 @@ libUnit = {};
     };
 
     Unit.prototype.gearUp = function() {
-      var e, enhance, enhancement, equipment, k, _ref, _results;
+      var e, enhance, enhancement, equipment, k, s, _i, _len, _ref, _ref1, _results;
       if (this.equipment == null) {
         return false;
       }
@@ -150,21 +154,30 @@ libUnit = {};
           continue;
         }
         equipment = queryTable(TABLE_ITEM, e.cid);
-        if (equipment.basic_properties != null) {
-          this.modifyProperty(equipment.basic_properties);
+        if (equipment.property != null) {
+          this.modifyProperty(equipment.property());
+        }
+        if (equipment.skill != null) {
+          _ref1 = equipment.skill;
+          for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
+            s = _ref1[_i];
+            if ((s.classLimit == null) || s.classLimit === this["class"]) {
+              this.installSpell(s.id, s.level);
+            }
+          }
         }
         if (flagCreation) {
           debug('Equipment ', JSON.stringify(equipment));
         }
         if (e.eh != null) {
           _results.push((function() {
-            var _i, _len, _ref1, _ref2, _results1;
-            _ref1 = e.eh;
+            var _j, _len1, _ref2, _ref3, _results1;
+            _ref2 = e.eh;
             _results1 = [];
-            for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-              enhancement = _ref1[_i];
+            for (_j = 0, _len1 = _ref2.length; _j < _len1; _j++) {
+              enhancement = _ref2[_j];
               enhance = queryTable(TABLE_ENHANCE, enhancement.id);
-              if ((enhance != null ? (_ref2 = enhance.property) != null ? _ref2[enhancement.level] : void 0 : void 0) == null) {
+              if ((enhance != null ? (_ref3 = enhance.property) != null ? _ref3[enhancement.level] : void 0 : void 0) == null) {
                 continue;
               }
               this.modifyProperty(enhance.property[enhancement.level]);
@@ -191,9 +204,19 @@ libUnit = {};
       return false;
     };
 
+    Unit.prototype.getCommandConfig = function(commandName) {
+      return unit_command_config[commandName];
+    };
+
     return Unit;
 
   })(Wizard);
+
+  installCommandExtention = libCommandStream.installCommandExtention;
+
+  installCommandExtention(Unit);
+
+  unit_command_config = {};
 
   Hero = (function(_super) {
     __extends(Hero, _super);

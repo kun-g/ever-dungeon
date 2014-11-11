@@ -6183,4 +6183,19 @@ exports.data = [
             ]
         }
     }
+	{
+        "skillId": 272,
+        "config": {
+            "action":[
+                { "type":"hide" },
+            ],
+            "targetSelection":{ "pool":"Self" },
+            "triggerCondition": [
+                { "type": "event", "event": "onBePhysicalDamage" },
+                { "type": "event", "event": "onBePhysicalRangeDamage" },
+                { "type": "event", "event": "onBeSpellDamage" },
+                { "type": "event", "event": "onBeSpellRangeDamage" }
+            ],
+		}
+    }
 ];

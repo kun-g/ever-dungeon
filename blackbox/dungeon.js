@@ -2754,9 +2754,17 @@ libDungeon = {};
         });
       }
     },
+    Hide: {
+      callback: function(env) {
+        return this.routine({
+          id: 'TeleportObject',
+          hiding: true
+        });
+      }
+    },
     TeleportObject: {
       callback: function(env) {
-        var availableSlot, obj, slot;
+        var available, availableSlot, backup, obj, slot;
         obj = env.variable('obj');
         if (!obj.isAlive()) {
           return this.suicide();
@@ -2766,6 +2774,15 @@ libDungeon = {};
           availableSlot = env.getBlock().filter(function(e) {
             return e.getType() === Block_Empty;
           });
+          if (env.variable('hiding')) {
+            backup = availableSlot;
+            availableSlot = availableSlot.filter(function(e) {
+              return !e.explored;
+            });
+            if (available.length <= 0) {
+              available = backup;
+            }
+          }
           slot = env.randMember(availableSlot);
           if (slot != null) {
             slot = slot.pos;
@@ -2776,7 +2793,9 @@ libDungeon = {};
         }
         env.variable('orgPos', obj.pos);
         env.variable('tarPos', slot);
-        env.getBlock(slot).explored = true;
+        if (!env.variable('hiding')) {
+          env.getBlock(slot).explored = true;
+        }
         env.getBlock(obj.pos).removeRef(obj);
         env.getBlock(slot).addRef(obj);
         obj.pos = slot;
