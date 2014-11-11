@@ -1280,6 +1280,7 @@ libSpell = {};
       if ((thisSpell != null ? thisSpell.effectCount : void 0) != null) {
         return thisSpell.effectCount += 1;
       }
+      cmd.print();
     };
 
     return Wizard;
