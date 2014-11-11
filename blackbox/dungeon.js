@@ -2812,6 +2812,9 @@ libDungeon = {};
         }
       },
       output: function(env) {
+        if (env.variable('hiding')) {
+          return [];
+        }
         return [
           {
             act: env.variable('obj').ref,
