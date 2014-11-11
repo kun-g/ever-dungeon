@@ -2968,7 +2968,6 @@
           if (!((e != null) && (bag.queryItemSlot(e) != null))) {
             return null;
           }
-          console.log('X', e);
           ret = {
             sid: bag.queryItemSlot(e),
             cid: e.id,

@@ -152,7 +152,6 @@
         if (!(e)) {
           continue;
         }
-        console.log(e.property());
         if (e.property != null) {
           this.modifyProperty(e.property());
         }
