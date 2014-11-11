@@ -38682,7 +38682,7 @@ exports.data = [
         "rank":230},
     {
         "dungeonId": 128,
-        "rank": 100,
+        "rank": 5,
         "levelCount" :1,
         "levels" :[
             {

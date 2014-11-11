@@ -2757,7 +2757,8 @@
       callback: function(env) {
         return this.routine({
           id: 'TeleportObject',
-          hiding: true
+          hiding: true,
+          obj: env.variable('obj')
         });
       }
     },
