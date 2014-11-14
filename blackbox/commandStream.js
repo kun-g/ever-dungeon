@@ -224,7 +224,7 @@ libCommandStream = {};
       if (!(array.length >= count)) {
         return [];
       }
-      if (array.length === count) {
+      if (array.length === count && count !== 1) {
         return array;
       }
       indexes = (function() {

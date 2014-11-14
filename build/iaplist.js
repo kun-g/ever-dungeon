@@ -37,7 +37,7 @@ exports.data = {
         },
         {
             "price": 25,
-            "gem": 2500
+            "gem": 0
         }
     ]
 };
