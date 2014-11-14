@@ -758,10 +758,8 @@ libDungeon = {};
       }
       if (replayMode) {
         r = this.rand();
-        if (r !== randNumber) {
-          if (randNumber !== r) {
+        if (true) {
             debug('Unmatched rand number', action, arg, randNumber, r);
-          }
           return this.onReplayMissMatch();
         }
       } else {
