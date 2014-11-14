@@ -1,5 +1,5 @@
 (function() {
-  var CONST_MAX_WORLD_BOSS_TIMES, actCampaign, async, checkBountyValidate, conditionCheck, currentTime, dbLib, dbWrapper, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, updateLockStatus;
+  var CONST_MAX_WORLD_BOSS_TIMES, actCampaign, addFeature, addVersionControl, async, checkBountyValidate, conditionCheck, currentTime, dbLib, dbWrapper, diffDate, genCampaignUtil, initCampaign, initDailyEvent, makeVersionRecoder, matchDate, moment, registerVersionControl, updateLockStatus;
 
   conditionCheck = require('./trigger').conditionCheck;
 
@@ -10,6 +10,78 @@
   dbWrapper = require('./dbWrapper');
 
   async = require('async');
+
+  addFeature = function(obj, key, type, hooks) {
+    var config, func;
+    config = {
+      enumerable: false,
+      configurable: true
+    };
+    if (key === 'set') {
+      func = function(val) {
+        hooks.forEach(function(fun) {
+          return fun(obj, key, val);
+        });
+        return obj[key] = value;
+      };
+    } else if (key === 'get') {
+      func = function() {
+        var val;
+        val = obj[key];
+        return hooks.forEach(function(fun) {
+          return fun(obj, key, val);
+        });
+      };
+    }
+    if (func != null) {
+      config[key] = func;
+    }
+    return Object.defineProperty(obj, key, config);
+  };
+
+  makeVersionRecoder = function(key) {
+    return function() {
+      return key += 1;
+    };
+  };
+
+  registerVersionControl = function(obj, versionKeyList, versionRecoderList) {
+    var charIdx, versionKey, _i, _len, _results;
+    _results = [];
+    for (_i = 0, _len = versionKeyList.length; _i < _len; _i++) {
+      versionKey = versionKeyList[_i];
+      charIdx = versionKey.indexOf('@');
+      if (charIdx === -1) {
+        _results.push(addFeature(obj, versionKey, 'set', versionRecoderList));
+      } else {
+        _results.push(addVersionControl(obj[versionKey], versionKey.substr(charIdx + 1), versionRecoderList));
+      }
+    }
+    return _results;
+  };
+
+  addVersionControl = function(obj, cfgKey, versionRecoderList) {
+    var cfgInfo, versionKeyList, versionStore, _results;
+    if (versionRecoderList == null) {
+      versionRecoderList = [];
+    }
+    cfgInfo = versionDiscribe[cfgKey] != null;
+    if (cfgInfo == null) {
+      return;
+    }
+    if (typeof cfgInfo === 'object') {
+      _results = [];
+      for (versionStore in cfgInfo) {
+        versionKeyList = cfgInfo[versionStore];
+        obj[versionStore] = 0;
+        versionRecoderList.push(makeVersionRecoder(obj[versionStore]));
+        _results.push(registerVersionControl(obj, versionKeyList, versionRecoderList));
+      }
+      return _results;
+    } else {
+      return registerVersionControl(obj[cfgKey], cfgInfo, versionRecoderList);
+    }
+  };
 
   CONST_MAX_WORLD_BOSS_TIMES = 200;
 
