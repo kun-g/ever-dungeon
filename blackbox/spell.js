@@ -15,56 +15,6 @@ libSpell = {};
     return cfg.config;
   };
 
-  getProperty = function(origin, backup) {
-    if (backup != null) {
-      return backup;
-    } else {
-      return origin;
-    }
-  };
-
-  getLevelConfig = function(cfg, level) {
-    level -= 1;
-    if (cfg.levelConfig && (cfg.levelConfig[level] != null)) {
-      return cfg.levelConfig[level];
-    } else {
-      return {};
-    }
-  };
-
-  plusThemAll = function(config, env) {
-    var e, k, sum, v, _i, _len, _ref;
-    if (!((config != null) && (env != null))) {
-      return 0;
-    }
-    sum = 0;
-    if (Array.isArray(env)) {
-      for (_i = 0, _len = env.length; _i < _len; _i++) {
-        e = env[_i];
-        sum += plusThemAll(config, e);
-      }
-    } else {
-      sum = (_ref = config.c) != null ? _ref : 0;
-      for (k in config) {
-        v = config[k];
-        if (env[k] != null) {
-          sum += env[k] * v;
-        }
-      }
-    }
-    return sum;
-  };
-
-  calcFormular = function(e, s, t, config) {
-    var c;
-    if (config.func) {
-      c = config.c ? config.c : {};
-      return config.func.apply(null, [e, s, t, c]);
-    }
-    c = config.c ? config.c : 0;
-    return Math.ceil(plusThemAll(config.environment, e) + plusThemAll(config.src, s) + plusThemAll(config.tar, t) + c);
-  };
-
   Wizard = (function() {
     function Wizard() {
       this.wSpellDB = {};
@@ -103,7 +53,7 @@ libSpell = {};
       };
       this.setupTriggerCondition(spellID, cfg.triggerCondition, levelConfig, cmd);
       this.setupAvailableCondition(spellID, cfg.availableCondition, levelConfig, cmd);
-      this.doAction(this.wSpellDB[spellID], cfg.installAction, levelConfig, this.selectTarget(cfg, cmd), cmd);
+      this.doAction(this.wSpellDB[spellID], cfg.installAction, levelConfig, this.selectTarget(cfg.targetSelection, cmd), cmd);
       return this.spellStateChanged(spellID, cmd);
     };
 
@@ -211,7 +161,7 @@ libSpell = {};
         }
       }
       if (cfg.uninstallAction != null) {
-        this.doAction(this.wSpellDB[spellID], cfg.uninstallAction, {}, this.selectTarget(cfg, cmd), cmd);
+        this.doAction(this.wSpellDB[spellID], cfg.uninstallAction, {}, this.selectTarget(cfg.targetSelection, cmd), cmd);
       }
       delete this.wSpellDB[spellID];
       return this.spellStateChanged(spellID, cmd);
@@ -268,7 +218,8 @@ libSpell = {};
         return 'InvalidLevel';
       }
       level = getLevelConfig(cfg, level);
-      target = this.selectTarget(cfg, cmd);
+      this.initializeVariable(cfg.variable, thisSpell, cmd);
+      target = this.selectTarget(cfg.targetSelection, cmd);
       _ref = this.triggerCheck(thisSpell, cfg.triggerCondition, level, target, cmd), canTrigger = _ref[0], reason = _ref[1];
       if (!canTrigger) {
         return reason;
@@ -511,18 +462,34 @@ libSpell = {};
       return res;
     };
 
-    Wizard.prototype.selectTarget = function(cfg, cmd) {
+    Wizard.prototype.initializeVariable = function(cfg, thisSpell, cmd) {
+      var key, val;
+      for (key in cfg) {
+        val = cfg[key];
+        if (val.action) {
+          switch (val.action) {
+            case 'select-target':
+              thisSpell.variable[key] = this.selectTarget(val, cmd);
+          }
+        } else {
+          thisSpell.variable[key] = val;
+        }
+      }
+      return debug(cfg);
+    };
+
+    Wizard.prototype.selectTarget = function(targetSelection, cmd) {
       var b, blocks, env, pool;
-      if (!((cfg.targetSelection != null) && cfg.targetSelection.pool)) {
+      if (!((targetSelection != null) && targetSelection.pool)) {
         return [];
       }
-      if (!(cfg.targetSelection.pool === 'self' || (cmd != null))) {
+      if (!(targetSelection.pool === 'self' || (cmd != null))) {
         return [];
       }
       if (cmd != null) {
         env = cmd.getEnvironment();
       }
-      switch (cfg.targetSelection.pool) {
+      switch (targetSelection.pool) {
         case 'self':
           pool = this;
           break;
@@ -536,7 +503,7 @@ libSpell = {};
           pool = env.getObjects();
           break;
         case 'blocks':
-          blocks = cfg.targetSelection.blocks;
+          blocks = targetSelection.blocks;
           pool = blocks != null ? (function() {
             var _i, _len, _results;
             _results = [];
@@ -553,8 +520,8 @@ libSpell = {};
       if (!Array.isArray(pool)) {
         pool = [pool];
       }
-      if ((cfg.targetSelection.filter != null) && pool.length > 0) {
-        pool = triggerLib.filterObject(this, pool, cfg.targetSelection.filter, env);
+      if ((targetSelection.filter != null) && pool.length > 0) {
+        pool = triggerLib.filterObject(this, pool, targetSelection.filter, env);
       }
       if (pool == null) {
         pool = [];
@@ -648,8 +615,21 @@ libSpell = {};
       return -1;
     };
 
+    Wizard.prototype.getTarget = function(targetConfig, target, thisSpell, cmd) {
+      if (!targetConfig) {
+        return target;
+      }
+      if (typeof targetConfig === 'object') {
+        return this.selectTarget(targetConfig, cmd);
+      }
+      if (typeof targetConfig === 'string') {
+        return triggerLib.doGetProperty(thisSpell.variable, targetConfig);
+      }
+      return [];
+    };
+
     Wizard.prototype.doAction = function(thisSpell, actions, level, target, cmd) {
-      var a, c, cfg, delay, effect, env, formular, formularResult, h, modifications, pos, property, spellID, src, t, val, variables, _aa, _ab, _ac, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len16, _len17, _len18, _len19, _len2, _len20, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _ref3, _s, _t, _u, _v, _w, _x, _y, _z;
+      var a, c, cfg, delay, effect, env, formular, formularResult, h, localTarget, modifications, pos, property, spellID, src, t, val, variables, _aa, _ab, _ac, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len16, _len17, _len18, _len19, _len2, _len20, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _ref3, _s, _t, _u, _v, _w, _x, _y, _z;
       if (actions == null) {
         return false;
       }
@@ -733,8 +713,12 @@ libSpell = {};
             if (level.delay != null) {
               a.delay = level.delay;
             }
-            for (_l = 0, _len3 = target.length; _l < _len3; _l++) {
-              t = target[_l];
+            localTarget = target;
+            if (a.target) {
+              localTarget = this.selectTarget(a.target, cmd);
+            }
+            for (_l = 0, _len3 = localTarget.length; _l < _len3; _l++) {
+              t = localTarget[_l];
               if (typeof cmd.routine === "function") {
                 cmd.routine({
                   id: 'Attack',
@@ -779,6 +763,14 @@ libSpell = {};
               cmd.routine({
                 id: 'Resurrect',
                 tar: target
+              });
+            }
+            break;
+          case 'hide':
+            if (typeof cmd.routine === "function") {
+              cmd.routine({
+                id: 'Hide',
+                obj: this
               });
             }
             break;
@@ -1297,5 +1289,55 @@ libSpell = {};
   libSpell.Wizard = Wizard;
 
   libSpell.fileVersion = -1;
+
+  getProperty = function(origin, backup) {
+    if (backup != null) {
+      return backup;
+    } else {
+      return origin;
+    }
+  };
+
+  getLevelConfig = function(cfg, level) {
+    level -= 1;
+    if (cfg.levelConfig && (cfg.levelConfig[level] != null)) {
+      return cfg.levelConfig[level];
+    } else {
+      return {};
+    }
+  };
+
+  plusThemAll = function(config, env) {
+    var e, k, sum, v, _i, _len, _ref;
+    if (!((config != null) && (env != null))) {
+      return 0;
+    }
+    sum = 0;
+    if (Array.isArray(env)) {
+      for (_i = 0, _len = env.length; _i < _len; _i++) {
+        e = env[_i];
+        sum += plusThemAll(config, e);
+      }
+    } else {
+      sum = (_ref = config.c) != null ? _ref : 0;
+      for (k in config) {
+        v = config[k];
+        if (env[k] != null) {
+          sum += env[k] * v;
+        }
+      }
+    }
+    return sum;
+  };
+
+  calcFormular = function(e, s, t, config) {
+    var c;
+    if (config.func) {
+      c = config.c ? config.c : {};
+      return config.func.apply(null, [e, s, t, c]);
+    }
+    c = config.c ? config.c : 0;
+    return Math.ceil(plusThemAll(config.environment, e) + plusThemAll(config.src, s) + plusThemAll(config.tar, t) + c);
+  };
 
 }).call(this);

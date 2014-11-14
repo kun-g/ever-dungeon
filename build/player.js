@@ -2157,7 +2157,7 @@
         });
       }
       quests = dungeon.quests;
-      if (quests) {
+      if (quests && dungeon.result !== DUNGEON_RESULT_FAIL) {
         this.updateQuest(quests);
         this.questVersion++;
       }
