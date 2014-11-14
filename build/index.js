@@ -70,7 +70,7 @@ function initiateFluentLogger() {
 }
 
 var config = {
-  port: 7756, 
+  port: 7790, 
   type : 'Worker',
   handler: require("./commandHandlers").route,
   init : function () {
