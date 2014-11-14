@@ -6,29 +6,15 @@ exports.data = {
       "ID": 0,
       "Name": "Develop",
       "DB": {
-        "Account": { "IP": "localhost", "PORT": 6380 },
-        "Role": { "IP": "localhost", "PORT": 6380},
-        "Publisher": { "IP": "localhost", "PORT": 6380},
-        "Subscriber": { "IP": "localhost", "PORT": 6380}
+        "Account": { "IP": "localhost", "PORT": 7380 },
+        "Role": { "IP": "localhost", "PORT": 7380},
+        "Publisher": { "IP": "localhost", "PORT": 7380},
+        "Subscriber": { "IP": "localhost", "PORT": 7380}
       },
       "Gate": [
-        {"ip": "localhost", "port": 7756},
-        {"ip": "localhost", "port": 7758}
-      ]
-    },
-    {
-      "ID": 1,
-      "Name": "Master",
-      "DB": {
-        "Account": { "IP": "10.4.4.188", "PORT": 6380 },
-        "Role": { "IP": "10.4.4.188", "PORT": 6381 },
-        "Publisher": { "IP": "10.4.4.188", "PORT": 6380 },
-        "Subscriber": { "IP": "10.4.4.188", "PORT": 6380 }
-      },
-      "Gate": [
-        {"ip": "10.4.4.188", "port": 7756},
-        {"ip": "10.4.2.185", "port": 7756}
-      ]
+        {"ip": "localhost", "port": 7790},
+      ],
+      "gateListenPort ":7799,
     },
   ],
   "PayMethod": "PP",
