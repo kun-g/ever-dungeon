@@ -757,10 +757,8 @@
       }
       if (replayMode) {
         r = this.rand();
-        if (r !== randNumber) {
-          if (randNumber !== r) {
+        if (false) {
             console.log('Unmatched rand number', action, arg, randNumber, r);
-          }
           return this.onReplayMissMatch();
         }
       } else {
