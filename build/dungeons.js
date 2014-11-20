@@ -38679,7 +38679,9 @@ exports.data = [
             ],
         "prizeWxp":0,"prizeGold":1000, "prizeXp":0,
         "wxpRate":1,"goldRate":1, "xpRate":1,
-        "rank":230},
+        "rank":230
+
+    },
     {
         "dungeonId": 128,
         "rank": 100,
@@ -38688,56 +38690,53 @@ exports.data = [
             {
                 "objects" :[
                     {
-                        "id": 15 ,
-                        "count":2,
-                        "keyed":true
-                    },
-                    {
-                        "id": 47 ,
-                        "count":2,
-                        "keyed":true
-                    },
-                    {
-                        "id": 79 ,
-                        "count":2,
-                        "keyed":true
-                    },
-                    {
-                        "id": 111 ,
-                        "count":2,
-                        "keyed":true
-                    },
-                    {
-                        "id": 194 ,
-                        "count":2,
-                        "keyed":true
-                    },
-                    {
-                        "id": 6 ,
+                        "id": 222,
                         "count":1,
                         "keyed":true
                     },
                     {
-                        "id": 38 ,
+                        "id": 223,
                         "count":1,
                         "keyed":true
                     },
                     {
-                        "id": 70 ,
+                        "id": 224,
                         "count":1,
                         "keyed":true
                     },
                     {
-                        "id": 103 ,
+                        "id": 225,
                         "count":1,
                         "keyed":true
                     },
                     {
-                        "id": 206 ,
+                        "id": 226,
+                        "count":1,
+                        "keyed":true
+                    },
+                    {
+                        "id": 227,
+                        "count":1,
+                        "keyed":true
+                    },
+                    {
+                        "id": 228,
+                        "count":1,
+                        "keyed":true
+                    },
+                    {
+                        "id": 229,
+                        "count":1,
+                        "keyed":true
+                    },
+                    {
+                        "id": 230,
                         "count":1,
                         "keyed":true
                     }
-                ]
+                ],
+                "exit": 29,
+                "entrance":0
             }
         ],
         "dropID":[

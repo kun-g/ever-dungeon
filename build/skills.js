@@ -1830,17 +1830,9 @@ exports.data = [
         "skillId": 76,
         "label":"暴击特效",
         "config": {
-            "basic": {
-                "targetEffect": 72,
-                "spellDelay": 0.5,
-                "targetDelay": 0.5
-            },
             "triggerCondition": [
                 { "type": "event", "event": "onCriticalDamage" }
             ],
-            "targetSelection":{
-                "pool":"target"
-            },
             "action":[
                 { "type": "shock", "delay":0.3, "range":5, "time":0.2 }
             ]
@@ -6225,7 +6217,7 @@ exports.data = [
             },
             "triggerCondition": [
                 { "type":"event","event":"onTurnEnd", "eventCount": 5,"reset":true },
-                { "type": "chance", "chance": 0.3},
+                { "type": "chance", "chance": 1},
                 {"type":"alive"}
             ],
             "action": [
@@ -6298,8 +6290,8 @@ exports.data = [
                 { "type": "installSpell", "spell": 277}
             ],
             "levelConfig": [
-                { "chance":0.3, "level": 1},
-                { "chance":0.4, "level": 2}
+                { "chance":1, "level": 1},
+                { "chance":1, "level": 2}
             ]
         }
     },
@@ -6358,8 +6350,8 @@ exports.data = [
                 { "type": "shock","delay":0.6,"range":5,"time":0.2}
             ],
             "levelConfig": [
-                { "chance":0.2,"formular": {"src":{"attack":0.5}}, "level": 1},
-                { "chance":0.25,"formular": {"src":{"attack":0.7}}, "level": 2}
+                { "chance":1,"formular": {"src":{"attack":0.5}}, "level": 1},
+                { "chance":1,"formular": {"src":{"attack":0.7}}, "level": 2}
             ]
         }
     },
@@ -6375,7 +6367,7 @@ exports.data = [
             },
             "triggerCondition": [
                 { "type":"event","event":"onTurnEnd", "eventCount": 5,"reset":true },
-                { "type": "chance", "chance": 0.3},
+                { "type": "chance", "chance": 1},
                 {"type":"alive"}
             ],
             "targetSelection": {
@@ -6484,7 +6476,7 @@ exports.data = [
         "slotId": 3,
         "config":{
             "triggerCondition": [
-                { "type": "event", "event": "onCriticalDamage" }
+                { "type": "event", "event": "onTarget" }
             ],
             "targetSelection": {
                 "pool": "target",
@@ -6548,7 +6540,7 @@ exports.data = [
             },
             "triggerCondition": [
                 { "type":"event","event":"onTurnEnd", "eventCount": 8,"reset":true },
-                { "type": "chance", "chance": 0.3},
+                { "type": "chance"},
                 {"type":"alive"}
             ],
             "action": [
@@ -6562,8 +6554,8 @@ exports.data = [
                 "filter": [{"type":"alive"},{"type":"visible"},{"type":"target-faction-with-flag","flag":"healable"}]
             },
             "levelConfig" : [
-                { "chance":0.1,"level": 1 },
-                { "chance":0.15,"level": 2 }
+                { "chance":1,"level": 1 },
+                { "chance":1,"level": 2 }
             ]
         }
     },
@@ -6616,8 +6608,8 @@ exports.data = [
                 {"type": "setTargetMutex", "mutex": "fangzhu", "count": 3 }
             ],
             "levelConfig":[
-                { "chance":0.15, "level": 1},
-                { "chance":0.15, "level": 2}
+                { "chance":1, "level": 1},
+                { "chance":1, "level": 2}
             ]
         }
     },
@@ -6749,7 +6741,8 @@ exports.data = [
             "triggerCondition": [
                 {"type" :"event", "event":"onBattleTurnEnd" },
                 {"type":"alive"},
-                { "type": "chance", "chance":0.5 }
+                { "type": "chance", "chance":0.5 },
+                {"type":"visible"}
             ],
             "targetSelection":{
                 "pool":"self",
@@ -6758,12 +6751,10 @@ exports.data = [
             "action": [
                 {"type": "delay"},
                 {"type":"playEffect","effect":20,"pos":"self"},
-                {"type":"playAction","motion":6,"pos":"self"},
                 {"type": "delay"},
                 {"type": "randTeleport"},
                 {"type": "delay"},
-                {"type":"playEffect","effect":21,"pos":"self"},
-                {"type":"playAction","motion":5,"pos":"self"}
+                {"type":"playEffect","effect":21,"pos":"self"}
             ]
         }
     },
@@ -6816,7 +6807,7 @@ exports.data = [
         "desc": "大幅提升伤害与暴击，命中降低",
         "config": {
             "basic" : {
-                "spellAction": 2,
+//                "spellAction": 1,
                 "spellEffect": 66,
                 "spellDelay": 0.3
             },
@@ -6830,10 +6821,6 @@ exports.data = [
             ],
             "action": [
                 { "type": "installSpell", "spell": 299}
-            ],
-            "levelConfig": [
-                {"level": 1},
-                {"level": 2}
             ]
         }
     },
@@ -6859,13 +6846,14 @@ exports.data = [
         "label":"大地一击",
         "desc":"对全体造成伤害",
         "config": {
-            "basic": {
-                "spellAction": 1
-            },
+//            "basic": {
+//                "spellAction": 1
+//            },
             "triggerCondition": [
                 { "type":"event","event":"onTurnEnd", "eventCount": 5,"reset":true },
                 { "type": "chance", "chance": 0.3},
-                {"type":"alive"}
+                {"type":"alive"},
+                {"type":"visible"}
             ],
             "targetSelection": {
                 "pool": "objects",
@@ -6923,7 +6911,7 @@ exports.data = [
         "slotId": 0,
         "config": {
             "basic": {
-                "spellAction":1,
+//                "spellAction":1,
                 "spellEffect": 47,
                 "targetEffect": 48,
                 "spellDelay": 0.3,
@@ -6932,7 +6920,8 @@ exports.data = [
             "triggerCondition": [
                 { "type":"event","event":"onTurnEnd", "eventCount": 5,"reset":true },
                 { "type": "chance", "chance": 0.3},
-                {"type":"alive"}
+                {"type":"alive"},
+                {"type":"visible"}
             ],
             "targetSelection": {
                 "pool": "self",
@@ -7102,13 +7091,14 @@ exports.data = [
         "label":"熔岩喷射",
         "desc":"从地底召唤出熔岩，对全屏造成多段伤害",
         "config": {
-            "basic": {
-                "spellAction": 1
-            },
+//            "basic": {
+//                "spellAction": 1
+//            },
             "triggerCondition": [
                 { "type":"event","event":"onTurnEnd", "eventCount": 5,"reset":true },
                 { "type": "chance", "chance": 0.3},
-                {"type":"alive"}
+                {"type":"alive"},
+                {"type":"visible"}
             ],
             "targetSelection": {
                 "pool": "objects",
@@ -7260,7 +7250,8 @@ exports.data = [
             "triggerCondition": [
                 { "type":"event","event":"onTurnEnd", "eventCount": 5,"reset":true },
                 { "type": "chance", "chance": 0.3},
-                {"type":"alive"}
+                {"type":"alive"},
+                {"type":"visible"}
             ],
             "targetSelection":{
                 "pool": "objects",
@@ -7295,7 +7286,8 @@ exports.data = [
             "triggerCondition": [
                 { "type":"event","event":"onTurnEnd", "eventCount": 5,"reset":true },
                 { "type": "chance", "chance": 0.3},
-                {"type":"alive"}
+                {"type":"alive"},
+                {"type":"visible"}
             ],
             "targetSelection": {
                 "pool": "objects",
@@ -7304,8 +7296,7 @@ exports.data = [
             "action":[
                 {"type":"delay"},
                 {"type":"clearBuff","delay":1.8} ,
-                {"type": "playEffect","effect":41,"pos":"target","delay":1.8},
-                {"type":"playAction","motion":1,"pos":"self"}
+                {"type": "playEffect","effect":41,"pos":"target","delay":1.8}
             ]
         }
     }

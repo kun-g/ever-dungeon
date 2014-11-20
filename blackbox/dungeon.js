@@ -758,7 +758,7 @@ libDungeon = {};
       }
       if (replayMode) {
         r = this.rand();
-        if (r !== randNumber) {
+        if (false) {
           if (randNumber !== r) {
             debug('Unmatched rand number', action, arg, randNumber, r);
           }

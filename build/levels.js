@@ -2713,7 +2713,7 @@ exports.data = [
         "levelData":[
             {
                 "xp":0,
-                "skill": [{"id":27},{"id":152},{"id":273, "level": 2},{"id":276, "level": 2},{"id":278, "level": 2}]
+                "skill": [{"id":27},{"id":152}]
             },
             {
                 "xp":250,
@@ -2746,7 +2746,7 @@ exports.data = [
         "levelData":[
             {
                 "xp":0,
-                "skill": [{"id":27},{"id":152},{"id":279, "level": 2},{"id":280, "level": 2},{"id":284, "level": 2}]
+                "skill": [{"id":27},{"id":152}]
             },
             {
                 "xp":250,
@@ -2779,7 +2779,7 @@ exports.data = [
         "levelData":[
             {
                 "xp":0,
-                "skill": [{"id":27},{"id":152},{"id":285, "level": 2},{"id":286, "level": 2},{"id":288, "level": 2}]
+                "skill": [{"id":27},{"id":152}]
             },
             {
                 "xp":250,
