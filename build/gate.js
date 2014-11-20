@@ -48,10 +48,12 @@
       c.server.pipe(c);
       return c.decoder.on('request', function(request) {
         if (request) {
-          request.address = {
-            ip: c.remoteAddress,
-            port: c.remotePort
-          };
+          if (request.CMD === 101) {
+            console.log({
+              request: request,
+              ip: c.remoteAddress
+            });
+          }
           return c.encoder.writeObject(request);
         } else {
           c.destroy();
@@ -139,11 +141,12 @@
   };
 
   initGlobalConfig(null, function() {
-    var gServerConfig, gServerID;
+    var gServerConfig, gServerID, port, _ref1;
     gServerID = queryTable(TABLE_CONFIG, 'ServerID');
     gServerConfig = queryTable(TABLE_CONFIG, 'ServerConfig')[gServerID];
     backendManager.init(gServerConfig.Gate);
-    return startTcpServer(7757, backendManager);
+    port = (_ref1 = gServerConfig.gateListenPort) != null ? _ref1 : 7757;
+    return startTcpServer(port, backendManager);
   });
 
 }).call(this);
