@@ -2399,7 +2399,7 @@ libDungeon = {};
         var src, tar;
         src = env.variable('src');
         tar = env.variable('tar');
-        if (!(src.isAlive() && tar.isAlive() && src.isVisible && tar.isVisible)) {
+        if (!(src.isAlive() && tar.isAlive())) {
           return this.suicide();
         }
         env.variable('damage', src.attack);
@@ -2754,40 +2754,18 @@ libDungeon = {};
         });
       }
     },
-    Hide: {
-      callback: function(env) {
-        return this.routine({
-          id: 'TeleportObject',
-          hiding: true,
-          obj: env.variable('obj')
-        });
-      }
-    },
     TeleportObject: {
       callback: function(env) {
-        var availableSlot, hidePlace, isHiding, obj, slot;
+        var availableSlot, obj, slot;
         obj = env.variable('obj');
         if (!obj.isAlive()) {
           return this.suicide();
         }
         slot = env.variable('tarPos');
-        isHiding = env.variable('hiding');
         if (slot == null) {
           availableSlot = env.getBlock().filter(function(e) {
             return e.getType() === Block_Empty;
           });
-          if (isHiding) {
-            hidePlace = availableSlot.filter(function(e) {
-              return !e.explored;
-            });
-            if (hidePlace.length > 0) {
-              availableSlot = hidePlace;
-              obj.isVisible = false;
-            } else {
-              env.variable('hiding', false);
-              isHiding = false;
-            }
-          }
           slot = env.randMember(availableSlot);
           if (slot != null) {
             slot = slot.pos;
@@ -2798,29 +2776,24 @@ libDungeon = {};
         }
         env.variable('orgPos', obj.pos);
         env.variable('tarPos', slot);
-        if (!isHiding) {
-          env.getBlock(slot).explored = true;
-        }
+        env.getBlock(slot).explored = true;
         env.getBlock(obj.pos).removeRef(obj);
         env.getBlock(slot).addRef(obj);
         obj.pos = slot;
         if (!env.variable('obj').isAlive()) {
           return this.suicide();
         }
-        if (!isHiding) {
-          return this.routine({
-            id: 'BlockInfo',
-            block: env.variable('tarPos')
-          });
-        }
+        return this.routine({
+          id: 'BlockInfo',
+          block: env.variable('tarPos')
+        });
       },
       output: function(env) {
         return [
           {
             act: env.variable('obj').ref,
             id: ACT_TELEPORT,
-            pos: env.variable('tarPos'),
-            hide: env.variable('hiding')
+            pos: env.variable('tarPos')
           }
         ];
       }
