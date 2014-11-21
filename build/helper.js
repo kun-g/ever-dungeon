@@ -15,12 +15,48 @@
 
   watch = WatchJS.watch, unwatch = WatchJS.unwatch;
 
+  exports.versionAdd = function(obj) {
+    return Object.defineProperty(obj, 'observe', {
+      enumerable: false,
+      configurable: false,
+      value: function(key, callback) {
+        var oldValue, value;
+        if (typeof callback !== 'function') {
+          throw 'why? where is my function?';
+        }
+        value = obj[key];
+        if (value == null) {
+          throw 'why? where is my key?';
+        }
+        oldValue = value;
+        console.log('add cb ', key, callback);
+        return Object.defineProperty(obj, key, {
+          enumerable: false,
+          configurable: true,
+          get: function() {
+            console.log('get---');
+            return value;
+          },
+          set: function(val) {
+            console.log('set ', oldValue, 'to', value);
+            oldValue = value;
+            value = val;
+            return callback(obj, key, oldValue, value);
+          }
+        });
+      }
+    });
+  };
+
   Object.defineProperty(Object.prototype, 'observers', {
     enumerable: false,
     configurable: false,
     value: function(key, callback, singleton) {
       if (singleton == null) {
         singleton = false;
+      }
+      if (this[key] == null) {
+        this[key] = 0;
       }
       console.log('add cb ', key, singleton, callback);
       return watch(this, key, callback, 1, singleton);
