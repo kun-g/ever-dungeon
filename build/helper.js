@@ -1,5 +1,5 @@
 (function() {
-  var CONST_MAX_WORLD_BOSS_TIMES, WatchJS, actCampaign, addFeature, async, checkBountyValidate, conditionCheck, currentTime, dbLib, dbWrapper, diffDate, genCampaignUtil, initCampaign, initDailyEvent, makeVersionRecoder, matchDate, moment, unwatch, updateLockStatus, watch;
+  var CONST_MAX_WORLD_BOSS_TIMES, Proxy, ProxyHandler, actCampaign, async, checkBountyValidate, conditionCheck, currentTime, dbLib, dbWrapper, defineHideProperty, defineObjFunction, defineObjProperty, diffDate, genCampaignUtil, initCampaign, initDailyEvent, makeVersionRecoder, matchDate, moment, updateLockStatus, updateVersion;
 
   conditionCheck = require('./trigger').conditionCheck;
 
@@ -11,165 +11,209 @@
 
   async = require('async');
 
-  WatchJS = require('./watch');
-
-  watch = WatchJS.watch, unwatch = WatchJS.unwatch;
-
-  exports.versionAdd = function(obj) {
-    return Object.defineProperty(obj, 'observe', {
+  defineObjProperty = function(obj, name, value, configurable) {
+    if (obj.hasOwnProperty(name) && !configurable) {
+      return;
+    }
+    return Object.defineProperty(obj, name, {
       enumerable: false,
-      configurable: false,
-      value: function(key, callback) {
-        var oldValue, value;
-        if (typeof callback !== 'function') {
-          throw 'why? where is my function?';
-        }
-        value = obj[key];
-        if (value == null) {
-          throw 'why? where is my key?';
-        }
-        oldValue = value;
-        console.log('add cb ', key, callback);
-        return Object.defineProperty(obj, key, {
-          enumerable: false,
-          configurable: true,
-          get: function() {
-            console.log('get---');
-            return value;
-          },
-          set: function(val) {
-            console.log('set ', oldValue, 'to', value);
-            oldValue = value;
-            value = val;
-            return callback(obj, key, oldValue, value);
-          }
-        });
-      }
+      configurable: configurable,
+      value: value
     });
   };
 
-  Object.defineProperty(Object.prototype, 'observers', {
-    enumerable: false,
-    configurable: false,
-    value: function(key, callback, singleton) {
-      if (singleton == null) {
-        singleton = false;
-      }
-      if (this[key] == null) {
-        this[key] = 0;
-      }
-      console.log('add cb ', key, singleton, callback);
-      return watch(this, key, callback, 1, singleton);
-    }
-  });
+  defineHideProperty = function(obj, name, value) {
+    return defineObjProperty(obj, name, value, true);
+  };
 
-  addFeature = function(obj, key, hooks, type) {
-    var config, hookName;
-    if (type == null) {
-      type = 'set';
-    }
-    hookName = '___' + type + 'hooks';
-    if (obj.hasOwnProperty(hookName)) {
-      hooks = obj[hookName].concat(hooks);
-    }
-    Object.defineProperty(obj, hookName, {
-      enumerable: false,
-      configurable: true,
-      value: hooks
-    });
-    config = {
-      enumerable: false,
-      configurable: true,
-      set: function(val) {
-        var _ref;
-        if ((_ref = obj['___sethooks']) != null) {
-          _ref.forEach(function(fun) {
-            return fun(obj, key, val);
-          });
-        }
-        return val;
+  defineObjFunction = function(obj, name, value) {
+    return defineObjProperty(obj, name, value, false);
+  };
+
+  Proxy = require('../../addon/proxy/nodeproxy');
+
+  ProxyHandler = function(target) {
+    return {
+      hasOwn: function(name) {
+        return {}.hasOwnProperty.call(target, name);
       },
-      get: function() {
-        var val, _ref;
-        val = this;
-        if ((_ref = obj['___gethooks']) != null) {
-          _ref.forEach(function(fun) {
-            return fun(obj, key, val);
-          });
+      enumerate: function() {
+        var name, result;
+        result = [];
+        for (name in target) {
+          result.push(name);
         }
-        return val;
+        return result;
+      },
+      get: function(receiver, name) {
+        var prop;
+        prop = target[name];
+        if (name === "valueOf" || name === "toString") {
+          return function() {
+            return target[name]();
+          };
+        } else if (name === 'inspect') {
+          return function() {
+            return target;
+          };
+        } else if (name === 'constructor') {
+          return target.constructor;
+        }
+        return prop;
+      },
+      set: function(receiver, name, val) {
+        var oldval, __map;
+        if (name === '__updateVersionMap' || name === '__parentCBLst') {
+          target[name] = val;
+          return true;
+        }
+        if (typeof val === 'object' && !Proxy.isProxy(val)) {
+          val = setupVersionControl(val, typeof update !== "undefined" && update !== null ? update.sub : void 0);
+        }
+        oldval = target[name];
+        __map = target.__updateVersionMap;
+        if (oldval != null) {
+          if (typeof oldval.removeParent === "function") {
+            oldval.removeParent(target, name);
+          }
+        }
+        if (typeof val.addParent === "function") {
+          val.addParent(target, name);
+        }
+        if (Array.isArray(target)) {
+          if (name === 'length') {
+            target.length = val;
+            if (oldval > val) {
+              updateVersion(oldval, val, name, __map, target);
+            }
+            return true;
+          }
+        }
+        if (oldval !== val) {
+          updateVersion(oldval, val, name, __map, target);
+        }
+        target[name] = val;
+        return true;
       }
     };
-    return Object.defineProperty(obj, key, config);
   };
 
-  makeVersionRecoder = function(obj, key, msg) {
+  updateVersion = function(oldval, val, name, __map, target) {
+    var update;
+    update = __map != null ? __map[name] : void 0;
+    if (!((__map != null) && (update == null))) {
+      target.onChange(name);
+    }
+    return typeof target.__observerCB === "function" ? target.__observerCB() : void 0;
+  };
+
+  makeVersionRecoder = function(obj, key) {
     var func;
     func = function(pro, act, newv, oldv) {
-      console.log(pro, act, '---', key);
-      WatchJS.noMore = true;
       return obj[key] += 1;
-    };
-    func.toString = function() {
-      return '[function for :' + key + ']';
     };
     return func;
   };
 
   exports.addVersionControl = function(versionConfig) {
-    var registerVersionControl, setupVersionControl;
-    setupVersionControl = function(obj, cfgKey, parentVersionRecoder) {
-      var cb, cfgInfo, versionKeyList, versionStore, _results;
-      if (parentVersionRecoder == null) {
-        parentVersionRecoder = null;
-      }
-      cfgInfo = versionConfig[cfgKey];
-      if (cfgInfo == null) {
-        return;
-      }
-      if (typeof cfgInfo === 'object' && !Array.isArray(cfgInfo)) {
-        _results = [];
-        for (versionStore in cfgInfo) {
-          versionKeyList = cfgInfo[versionStore];
-          if (obj[versionStore] == null) {
-            obj[versionStore] = 0;
-          }
-          cb = makeVersionRecoder(obj, versionStore, versionStore);
-          _results.push(registerVersionControl(obj, versionKeyList, cb, parentVersionRecoder));
+    var createProxy, setupVersionControl;
+    setupVersionControl = function(obj, cfgKey) {
+      var cb, keyLst, propName, subVer, versionCBMap, versionCfg, versionStoreName, _i, _len, _ref;
+      versionCfg = versionConfig[cfgKey];
+      obj = obj || {};
+      defineHideProperty(obj, '__parentCBLst', []);
+      defineObjFunction(obj, 'addParent', function(parent, name) {
+        if (obj.__parentCBLst == null) {
+          obj.__parentCBLst = [];
         }
-        return _results;
+        obj.removeParent(parent, name);
+        return obj.__parentCBLst.push({
+          obj: parent,
+          key: name
+        });
+      });
+      defineObjFunction(obj, 'removeParent', function(parent, name) {
+        var element, idx, _i, _len, _ref;
+        idx = -1;
+        _ref = obj.__parentCBLst;
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+          element = _ref[_i];
+          if (element.obj === parent && element.key === name) {
+            idx += 1;
+            break;
+          }
+        }
+        return obj.__parentCBLst.splice(idx, 1);
+      });
+      defineObjFunction(obj, 'observe', function(key, func) {
+        var value;
+        if (typeof func !== 'function') {
+          throw 'Yo! function, OK?';
+        }
+        value = obj[key];
+        if (value == null) {
+          throw 'What The Huck? where is key?';
+        }
+        return defineHideProperty(obj, '__observerCB', func);
+      });
+      defineObjFunction(obj, 'onChange', function(name) {
+        var _ref;
+        if ((_ref = obj.__updateVersionMap) != null) {
+          if (typeof _ref[name] === "function") {
+            _ref[name]();
+          }
+        }
+        return obj.__parentCBLst.forEach(function(cb) {
+          return cb.obj.onChange(cb.key);
+        });
+      });
+      versionCBMap = null;
+      if (versionCfg != null) {
+        versionCBMap = {};
+        for (versionStoreName in versionCfg) {
+          keyLst = versionCfg[versionStoreName];
+          if (obj[versionStoreName] == null) {
+            obj[versionStoreName] = 0;
+          }
+          cb = makeVersionRecoder(obj, versionStoreName);
+          for (_i = 0, _len = keyLst.length; _i < _len; _i++) {
+            propName = keyLst[_i];
+            subVer = null;
+            if (propName.indexOf('@') !== -1) {
+              _ref = propName.split('@'), propName = _ref[0], subVer = _ref[1];
+              cb.sub = subVer;
+            }
+            if (typeof obj[propName] === 'object') {
+              obj[propName] = setupVersionControl(obj[propName], subVer);
+              obj[propName].addParent(obj, propName);
+            }
+            versionCBMap[propName] = cb;
+          }
+        }
       } else {
-        return registerVersionControl(obj[cfgKey], cfgInfo, null, parentVersionRecoder);
-      }
-    };
-    registerVersionControl = function(obj, versionKeyList, whenChange, notify) {
-      var cfgKey, charIdx, keyOfObj, versionKey, _i, _len, _ref, _results;
-      _results = [];
-      for (_i = 0, _len = versionKeyList.length; _i < _len; _i++) {
-        versionKey = versionKeyList[_i];
-        charIdx = versionKey.indexOf('@');
-        if (charIdx === -1) {
-          if (whenChange != null) {
-            obj.observers(versionKey, whenChange, true);
+        for (propName in obj) {
+          if (typeof obj[propName] === 'object') {
+            obj[propName] = setupVersionControl(obj[propName]);
+            obj[propName].addParent(obj, propName);
           }
-          if (notify != null) {
-            _results.push(obj.observers(versionKey, notify));
-          } else {
-            _results.push(void 0);
-          }
-        } else {
-          _ref = versionKey.split('@'), keyOfObj = _ref[0], cfgKey = _ref[1];
-          _results.push(setupVersionControl(obj[keyOfObj], cfgKey, whenChange));
         }
       }
-      return _results;
+      defineHideProperty(obj, '__updateVersionMap', versionCBMap);
+      return createProxy(obj);
+    };
+    createProxy = function(obj, onlyThisLevel) {
+      if (onlyThisLevel == null) {
+        onlyThisLevel = true;
+      }
+      if (typeof obj !== 'object') {
+        return obj;
+      }
+      if (Proxy.isProxy(obj)) {
+        return obj;
+      }
+      return Proxy = Proxy.create(ProxyHandler(obj), obj.constructor.prototype);
     };
     return setupVersionControl;
-  };
-
-  exports.newProperty = function(obj, pro, value) {
-    obj = Object(obj);
-    return obj.observers;
   };
 
   CONST_MAX_WORLD_BOSS_TIMES = 200;
