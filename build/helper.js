@@ -30,7 +30,7 @@
     return defineObjProperty(obj, name, value, false);
   };
 
-  Proxy = require('../../addon/proxy/nodeproxy');
+  Proxy = require('../addon/proxy/nodeproxy');
 
   ProxyHandler = function(target) {
     return {
