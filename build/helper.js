@@ -211,7 +211,7 @@
       if (Proxy.isProxy(obj)) {
         return obj;
       }
-      return Proxy = Proxy.create(ProxyHandler(obj), obj.constructor.prototype);
+      return Proxy.create(ProxyHandler(obj), obj.constructor.prototype);
     };
     return setupVersionControl;
   };
