@@ -77,14 +77,12 @@
       },
       set: function(receiver, name, val) {
         var oldval, __map, _ref;
-        console.log('--------set', name, val);
         if (name === '__updateVersionMap' || name === '__parentCBLst') {
           target[name] = val;
           return true;
         }
         __map = target.__updateVersionMap;
         if ((val != null) && typeof val === 'object' && !Proxy.isProxy(val) && isInVersion(filter)) {
-          console.log('setup -----------', name);
           val = setup(val, __map != null ? (_ref = __map[name]) != null ? _ref.sub : void 0 : void 0);
         }
         oldval = target[name];
