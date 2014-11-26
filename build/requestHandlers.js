@@ -1,5 +1,5 @@
 (function() {
-  var DBWrapper, Player, async, dbLib, getPlayerHero, helperLib, http, https, loadPlayer, loginBy, moment, querystring, wrapReceipt, _ref;
+  var DBWrapper, async, dbLib, getPlayerHero, helperLib, http, https, loadPlayer, loginBy, moment, newPlayer, querystring, wrapReceipt, _ref;
 
   require('./define');
 
@@ -19,7 +19,7 @@
 
   moment = require('moment');
 
-  Player = require('./player').Player;
+  newPlayer = require('./player').newPlayer;
 
   loginBy = function(arg, token, callback) {
     var AppSecret, appID, appKey, options, passport, passportType, path, postBody, req, requestObj, sign, strBody, teebikURL;
@@ -430,7 +430,7 @@
             return dbLib.createNewPlayer(account, gServerName, name, cb);
           }, function(account, cb) {
             var player;
-            player = new Player();
+            player = newPlayer();
             return player.createPlayer(arg, account, cb);
           }
         ], function(err, result) {
