@@ -93,8 +93,10 @@
             oldval.removeParent(target, name);
           }
         }
-        if (typeof val.addParent === "function") {
-          val.addParent(target, name);
+        if (val != null) {
+          if (typeof val.addParent === "function") {
+            val.addParent(target, name);
+          }
         }
         if (Array.isArray(target)) {
           if (name === 'length') {
