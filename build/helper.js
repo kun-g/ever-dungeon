@@ -83,7 +83,7 @@
           return true;
         }
         __map = target.__updateVersionMap;
-        if (typeof val === 'object' && !Proxy.isProxy(val) && isInVersion(filter)) {
+        if ((val != null) && typeof val === 'object' && !Proxy.isProxy(val) && isInVersion(filter)) {
           console.log('setup -----------', name);
           val = setup(val, __map != null ? (_ref = __map[name]) != null ? _ref.sub : void 0 : void 0);
         }
@@ -218,6 +218,9 @@
       return createProxy(obj, versionCfg);
     };
     createProxy = function(obj, versionCfg) {
+      if (obj != null) {
+        return obj;
+      }
       if (typeof obj !== 'object') {
         return obj;
       }
