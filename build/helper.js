@@ -215,20 +215,14 @@
       defineHideProperty(obj, '__updateVersionMap', versionCBMap);
       return createProxy(obj);
     };
-    createProxy = function(obj, onlyThisLevel) {
-      if (onlyThisLevel == null) {
-        onlyThisLevel = true;
-      }
+    createProxy = function(obj, versionCBMap) {
       if (typeof obj !== 'object') {
         return obj;
       }
       if (Proxy.isProxy(obj)) {
         return obj;
       }
-      return Proxy.create(ProxyHandler(obj, {
-        setup: setupVersionControl,
-        filter: versionCBMap
-      }), obj.constructor.prototype);
+      return Proxy.create(ProxyHandler(obj, setupVersionControl, versionCBMap), obj.constructor.prototype);
     };
     return setupVersionControl;
   };
