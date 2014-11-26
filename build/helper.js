@@ -85,7 +85,7 @@
         __map = target.__updateVersionMap;
         if (typeof val === 'object' && !Proxy.isProxy(val) && isInVersion(filter)) {
           console.log('setup -----------', name);
-          val = setup(val, setup, __map != null ? (_ref = __map[name]) != null ? _ref.sub : void 0 : void 0);
+          val = setup(val, __map != null ? (_ref = __map[name]) != null ? _ref.sub : void 0 : void 0);
         }
         oldval = target[name];
         if (oldval != null) {
