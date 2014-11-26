@@ -1055,6 +1055,19 @@
       },
       args: {},
       needPid: true
+    },
+    RPC_just4debug: {
+      id: 37,
+      func: function(arg, player, handler, rpcID, socket) {
+        return handler([
+          {
+            REQ: rpcID,
+            RET: RET_OK
+          }
+        ]);
+      },
+      args: {},
+      needPid: true
     }
   };
 
