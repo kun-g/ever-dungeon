@@ -1,5 +1,5 @@
 (function() {
-  var CONST_MAX_WORLD_BOSS_TIMES, Proxy, ProxyHandler, actCampaign, async, checkBountyValidate, conditionCheck, currentTime, dbLib, dbWrapper, defineHideProperty, defineObjFunction, defineObjProperty, diffDate, genCampaignUtil, initCampaign, initDailyEvent, makeVersionRecoder, matchDate, moment, updateLockStatus, updateVersion;
+  var CONST_MAX_WORLD_BOSS_TIMES, Proxy, ProxyHandler, actCampaign, async, checkBountyValidate, conditionCheck, currentTime, dbLib, dbWrapper, defineHideProperty, defineObjFunction, defineObjProperty, diffDate, genCampaignUtil, initCampaign, initDailyEvent, isInVersion, makeVersionRecoder, matchDate, moment, updateLockStatus, updateVersion;
 
   conditionCheck = require('./trigger').conditionCheck;
 
@@ -32,7 +32,21 @@
 
   Proxy = require('../addon/proxy/nodeproxy');
 
-  ProxyHandler = function(target) {
+  isInVersion = function(filter, key) {
+    var keyLst, _versionName;
+    if (filter == null) {
+      return true;
+    }
+    for (_versionName in filter) {
+      keyLst = filter[_versionName];
+      if (keyLst.indexOf(key) !== -1) {
+        return true;
+      }
+    }
+    return false;
+  };
+
+  ProxyHandler = function(target, setup, filter) {
     return {
       hasOwn: function(name) {
         return {}.hasOwnProperty.call(target, name);
@@ -62,16 +76,16 @@
         return prop;
       },
       set: function(receiver, name, val) {
-        var oldval, __map;
+        var oldval, __map, _ref;
         if (name === '__updateVersionMap' || name === '__parentCBLst') {
           target[name] = val;
           return true;
         }
-        if (typeof val === 'object' && !Proxy.isProxy(val)) {
-          val = setupVersionControl(val, typeof update !== "undefined" && update !== null ? update.sub : void 0);
+        __map = target.__updateVersionMap;
+        if (typeof val === 'object' && !Proxy.isProxy(val) && isInVersion(filter)) {
+          val = setup(val, setup, __map != null ? (_ref = __map[name]) != null ? _ref.sub : void 0 : void 0);
         }
         oldval = target[name];
-        __map = target.__updateVersionMap;
         if (oldval != null) {
           if (typeof oldval.removeParent === "function") {
             oldval.removeParent(target, name);
@@ -211,7 +225,10 @@
       if (Proxy.isProxy(obj)) {
         return obj;
       }
-      return Proxy.create(ProxyHandler(obj), obj.constructor.prototype);
+      return Proxy.create(ProxyHandler(obj, {
+        setup: setupVersionControl,
+        filter: versionCBMap
+      }), obj.constructor.prototype);
     };
     return setupVersionControl;
   };
