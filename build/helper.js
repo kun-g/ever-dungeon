@@ -218,10 +218,7 @@
       return createProxy(obj, versionCfg);
     };
     createProxy = function(obj, versionCfg) {
-      if (obj != null) {
-        return obj;
-      }
-      if (typeof obj !== 'object') {
+      if (!((obj != null) && typeof obj === 'object')) {
         return obj;
       }
       if (Proxy.isProxy(obj)) {
