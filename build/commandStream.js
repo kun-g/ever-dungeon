@@ -1,51 +1,11 @@
 (function() {
-  var Command, CommandStream, Environment, command_config, extention, installExtention, isDebug, isRequirementMatched, makeCommand, _;
+  var CommandStream, Environment, isDebug, splLib;
 
-  _ = require('./underscore');
+  require('./define');
+
+  splLib = require('./spell');
 
   isDebug = false;
-
-  Command = (function() {
-    function Command(config, parent) {
-      this.config = config;
-      this.parent = parent;
-    }
-
-    Command.prototype.execute = function(a, b) {
-      this.parameters = arguments;
-      if (this.config.execute) {
-        return this.config.execute.apply(this, arguments);
-      }
-    };
-
-    Command.prototype.undo = function() {
-      if (this.config.undo) {
-        return this.config.undo.apply(this, this.parameters);
-      }
-    };
-
-    Command.prototype.translate = function() {
-      if (this.config.translate) {
-        return this.config.translate.apply(this, this.parameters);
-      }
-    };
-
-    Command.prototype.next = function(cmd) {
-      var newCommand, old;
-      old = this.nextCMD;
-      newCommand = new Command;
-      this.nextCMD = new CommandStream(c, this.parent, config);
-      this.nextCMD.predecessor = this;
-      if (old != null) {
-        this.nextCMD.nextCMD = old;
-        old.predecessor = this.nextCMD;
-      }
-      return this.nextCMD;
-    };
-
-    return Command;
-
-  })();
 
   CommandStream = (function() {
     function CommandStream(cmd, parent, config, environment) {
@@ -223,7 +183,7 @@
       if (!(array.length >= count)) {
         return [];
       }
-      if (array.length === count && count !== 1) {
+      if (array.length === count) {
         return array;
       }
       indexes = (function() {
@@ -253,146 +213,9 @@
 
   })();
 
-  command_config = {
-    modify_property: {
-      description: '修改属性',
-      parameters: {
-        property: '属性对象'
-      },
-      execute: function(parameter) {
-        var key, obj, p, _ref, _results;
-        obj = parameter.obj;
-        this.backup = {};
-        _ref = parameter.property;
-        _results = [];
-        for (key in _ref) {
-          p = _ref[key];
-          this.backup[key] = obj[key];
-          _results.push(obj[key] = p);
-        }
-        return _results;
-      },
-      undo: function(parameter) {
-        var k, obj, p, _ref, _results;
-        obj = parameter.obj;
-        _ref = this.backup;
-        _results = [];
-        for (k in _ref) {
-          p = _ref[k];
-          if (p != null) {
-            _results.push(obj[k] = p);
-          } else {
-            _results.push(delete obj[k]);
-          }
-        }
-        return _results;
-      },
-      translate: function(obj) {
-        return JSON.stringify(obj);
-      }
-    },
-    incress_property: {
-      execute: function(parameter) {
-        var k, originProperty, v, _ref;
-        originProperty = _(parameter.obj).pick(_(parameter.property).keys());
-        _ref = parameter.property;
-        for (k in _ref) {
-          v = _ref[k];
-          if (originProperty[k]) {
-            v = originProperty[k] + v;
-          }
-          originProperty[k] = v;
-        }
-        this.cmd_modifyProperty = makeCommand('modify_property');
-        return this.cmd_modifyProperty.execute({
-          obj: parameter.obj,
-          property: originProperty
-        });
-      },
-      undo: function() {
-        return this.cmd_modifyProperty.undo();
-      }
-    }
-  };
-
-  makeCommand = function(name) {
-    return new Command(command_config[name]);
-  };
-
-  extention = {
-    interfaces: {
-      makeCommand: function(commandName) {
-        if (!this.getCommandConfig(commandName)) {
-          return null;
-        }
-        return new Command(this.getCommandConfig(commandName));
-      },
-      executeCommand: function(commandName, parameter) {
-        var cmd, command, k, localParameter, _results;
-        if (_(commandName).isArray()) {
-          _results = [];
-          for (k in commandName) {
-            cmd = commandName[k];
-            _results.push(this.executeCommand(cmd.type, cmd));
-          }
-          return _results;
-        } else {
-          command = this.makeCommand(commandName);
-          if (!command) {
-            throw new Error('Command(' + commandName + ') is not supported.', commandName);
-          }
-          localParameter = _({
-            obj: this
-          }).extend(parameter);
-          return command.execute(localParameter);
-        }
-      },
-      getCommandConfig: function(commandName) {
-        return this.command_config[commandName];
-      }
-    }
-  };
-
-  isRequirementMatched = function(obj, config) {
-    if (!config) {
-      return true;
-    }
-    obj = obj.prototype;
-    return config.reduce((function(r, l) {
-      return r && typeof obj[l.field] === l.type;
-    }), true);
-  };
-
-  installExtention = function(obj, config) {
-    var field, value, _ref, _results;
-    if (!isRequirementMatched(obj, config.requirement)) {
-      throw new Error('Install extention failed');
-    }
-    _ref = config.interfaces;
-    _results = [];
-    for (field in _ref) {
-      value = _ref[field];
-      if (obj.prototype[field]) {
-        continue;
-      }
-      _results.push(obj.prototype[field] = value);
-    }
-    return _results;
-  };
-
   exports.CommandStream = CommandStream;
 
   exports.Environment = Environment;
-
-  exports.Command = Command;
-
-  exports.makeCommand = makeCommand;
-
-  exports.command_config = command_config;
-
-  exports.installCommandExtention = function(obj) {
-    return installExtention(obj, extention);
-  };
 
   exports.fileVersion = -1;
 
