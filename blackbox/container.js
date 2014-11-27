@@ -24,9 +24,16 @@ libContainer = {};
         stackType: 0
       };
       Bag.__super__.constructor.call(this, data, cfg, {});
+      isA = Array.isArray(this.container);
+      debug('----------->>>?????',isA,data);
+      if(!isA){
+          showMeTheStack();
+      }
+
     }
 
     Bag.prototype.validate = function() {
+        debug(typeof this.container, '?????????', Array.isArray(this.container))
       return this.container.map((function(_this) {
         return function(item, index) {
           if (item == null) {
