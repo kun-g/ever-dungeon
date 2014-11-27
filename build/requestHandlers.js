@@ -429,7 +429,7 @@
           }, function(account, cb) {
             return dbLib.createNewPlayer(account, gServerName, name, cb);
           }, function(account, cb) {
-            var k, p, player, prize;
+            var k, p, player, prize, _ref1;
             player = new Player();
             player.setName(name);
             player.accountID = account;
@@ -441,7 +441,7 @@
               hairStyle: arg.hst,
               hairColor: arg.hcl
             });
-            prize = queryTable(TABLE_CONFIG, 'InitialEquipment');
+            prize = (_ref1 = queryTable(TABLE_ROLE, arg.cid)) != null ? _ref1.initialEquipment : void 0;
             for (k in prize) {
               p = prize[k];
               player.claimPrize(p.filter((function(_this) {
