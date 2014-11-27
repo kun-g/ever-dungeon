@@ -653,7 +653,6 @@
       }
       this.setName(arg.nam);
       this.accountID = account;
-      this.initialize();
       this.createHero({
         name: arg.nam,
         "class": arg.cid,
@@ -661,6 +660,7 @@
         hairStyle: arg.hst,
         hairColor: arg.hcl
       });
+      this.initialize();
       prize = (_ref7 = queryTable(TABLE_ROLE, arg.cid)) != null ? _ref7.initialEquipment : void 0;
       for (_i = 0, _len = prize.length; _i < _len; _i++) {
         p = prize[_i];
