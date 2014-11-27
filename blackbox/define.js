@@ -153,7 +153,6 @@ getBasicInfo = function (hero) {
 
   var ret = grabAndTranslate(hero, translateTable);
 
-  debug('=============hero:', hero, 'ret',ret);
   if (hero.equipment) {
     var item = [];
     for (var k in hero.equipment) {
