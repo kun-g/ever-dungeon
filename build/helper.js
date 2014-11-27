@@ -30,20 +30,6 @@
     return defineObjProperty(obj, name, value, false);
   };
 
-  defineObjFunction(Object.prototype, 'map', function(func) {
-    var key, result, value, _results;
-    if (typeof func !== 'function') {
-      throw 'need a function';
-    }
-    result = {};
-    _results = [];
-    for (key in this) {
-      value = this[key];
-      _results.push(result[key] = func(value, key));
-    }
-    return _results;
-  });
-
   Proxy = require('../addon/proxy/nodeproxy');
 
   isInVersion = function(filter, key) {
@@ -203,7 +189,7 @@
         for (versionStoreName in versionCfg) {
           keyLst = versionCfg[versionStoreName];
           if (obj[versionStoreName] == null) {
-            obj[versionStoreName] = 1;
+            obj[versionStoreName] = 0;
           }
           cb = makeVersionRecoder(obj, versionStoreName);
           for (_i = 0, _len = keyLst.length; _i < _len; _i++) {
