@@ -18,10 +18,19 @@ var Proxy = require('../addon/proxy/nodeproxy')
 oldArrayCheck = Array.isArray;
 Array.isArray = function(obj) {
     if(typeof obj == "undefined" && obj != null && Proxy.isProxy(obj)) {
-        return obj.isArray(); // when i create a proxy in helper.coffee, i add this function to object
+        return obj.isArray; // when i create a proxy in helper.coffee, i add this check  to getter
     }
     return oldArrayCheck(obj);
 }
+
+oldJSONStr = JSON.stringify;
+JSON.stringify = function(obj) {
+    if(typeof obj == "undefined" && obj != null && Proxy.isProxy(obj)) {
+        return oldJSONStr(obj.__originObj); // when i create a proxy in helper.coffee, i add this check  to getter
+    }
+    return oldJSONStr(obj);
+}
+
 
 //playerCounter = 0;
 //memwatch = require('memwatch');

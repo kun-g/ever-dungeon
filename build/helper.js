@@ -80,12 +80,17 @@
           return function() {
             return target[name]();
           };
+        }
+        if (name === 'isArray') {
+          return Array.isArray(target);
         } else if (name === 'inspect') {
           return function() {
             return target;
           };
         } else if (name === 'constructor') {
           return target.constructor;
+        } else if (name === '__originObj') {
+          return target;
         }
         return prop;
       },
@@ -122,7 +127,6 @@
         if (oldval !== val) {
           updateVersion(oldval, val, name, __map, target);
         }
-        target[name] = val;
         return true;
       }
     };
@@ -232,17 +236,12 @@
       return createProxy(obj, versionCfg);
     };
     createProxy = function(obj, versionCfg) {
-      var isA;
       if (!((obj != null) && typeof obj === 'object')) {
         return obj;
       }
       if (Proxy.isProxy(obj)) {
         return obj;
       }
-      isA = Array.isArray(obj);
-      obj.isArray = function() {
-        return isA;
-      };
       return Proxy.create(ProxyHandler(obj, setupVersionControl, versionCfg), obj.constructor.prototype);
     };
     return setupVersionControl;
