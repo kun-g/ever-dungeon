@@ -17,7 +17,7 @@ var Proxy = require('../addon/proxy/nodeproxy')
 // Array.isArray(new Proxy([] ,{}}) ==> false . so Array.isArray must be overrided
 oldArrayCheck = Array.isArray;
 Array.isArray = function(obj) {
-    if(Proxy.isProxy(obj)) {
+    if(typeof obj == "undefined" && obj != null && Proxy.isProxy(obj)) {
         return obj.isArray(); // when i create a proxy in helper.coffee, i add this function to object
     }
     return oldArrayCheck(obj);
