@@ -262,7 +262,7 @@ function loadPlayer(name, handler) {
         }
       }
       var playerLib = require('./player');
-      p = playerLib.newPlayer(attributes);
+      p = new playerLib.Player(attributes);
       p.initialize();
     }
     if (handler) handler(err, p);

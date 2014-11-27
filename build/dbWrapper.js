@@ -185,8 +185,6 @@
           }, function() {
             return handler(err, heros);
           });
-        } else {
-          return handler('find nothing', null);
         }
       };
     })(this));
