@@ -85,6 +85,7 @@ libSerializer = {};
         _constructor_: this.constructor.name,
         save: {}
       };
+      debug('----------------????', this.constructor.name, this.s_attr_to_save);
       _ref = this.s_attr_to_save;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         key = _ref[_i];

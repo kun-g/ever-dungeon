@@ -1,5 +1,5 @@
 (function() {
-  var DBWrapper, Player, async, dbLib, getPlayerHero, helperLib, http, https, loadPlayer, loginBy, moment, querystring, wrapReceipt, _ref;
+  var DBWrapper, async, dbLib, getPlayerHero, helperLib, http, https, loadPlayer, loginBy, moment, newPlayer, querystring, wrapReceipt, _ref;
 
   require('./define');
 
@@ -19,7 +19,7 @@
 
   moment = require('moment');
 
-  Player = require('./player').Player;
+  newPlayer = require('./player').newPlayer;
 
   loginBy = function(arg, token, callback) {
     var AppSecret, appID, appKey, options, passport, passportType, path, postBody, req, requestObj, sign, strBody, teebikURL;
@@ -429,36 +429,9 @@
           }, function(account, cb) {
             return dbLib.createNewPlayer(account, gServerName, name, cb);
           }, function(account, cb) {
-            var k, p, player, prize, _ref1;
-            player = new Player();
-            player.setName(name);
-            player.accountID = account;
-            player.initialize();
-            player.createHero({
-              name: name,
-              "class": arg.cid,
-              gender: arg.gen,
-              hairStyle: arg.hst,
-              hairColor: arg.hcl
-            });
-            prize = (_ref1 = queryTable(TABLE_ROLE, arg.cid)) != null ? _ref1.initialEquipment : void 0;
-            for (k in prize) {
-              p = prize[k];
-              player.claimPrize(p.filter((function(_this) {
-                return function(e) {
-                  return isClassMatch(arg.cid, e.classLimit);
-                };
-              })(this)));
-            }
-            logUser({
-              name: name,
-              action: 'register',
-              "class": arg.cid,
-              gender: arg.gen,
-              hairStyle: arg.hst,
-              hairColor: arg.hcl
-            });
-            return player.saveDB(cb);
+            var player;
+            player = newPlayer();
+            return player.createPlayer(arg, account, cb);
           }
         ], function(err, result) {
           if (err) {
@@ -480,6 +453,42 @@
         'gen': 'number',
         'hst': 'number',
         'hcl': 'number'
+      }
+    },
+    RPC_SwitchHero: {
+      id: 106,
+      func: function(arg, player, handler, rpcID, socket) {
+        var oldHero, ret, type;
+        type = player.switchHeroType(arg.cid);
+        if (player.flags[type] || true) {
+          player.flags[type] = false;
+          oldHero = player.createHero();
+          player.createHero({
+            name: oldHero.name,
+            "class": arg.cid,
+            gender: oldHero.gender,
+            hairStyle: oldHero.hairStyle,
+            hairColor: oldHero.hairColor
+          }, true);
+          ret = [
+            {
+              REQ: rpcID,
+              RET: RET_OK
+            }
+          ];
+          ret.concat(player.syncFlags(true));
+        } else {
+          ret = [
+            {
+              REQ: rpcID,
+              RET: RET_NotEnoughItem
+            }
+          ];
+        }
+        return handler(ret);
+      },
+      args: {
+        'cid': 'number'
       }
     },
     RPC_ValidateName: {
@@ -564,6 +573,7 @@
                 err = _error;
                 status = 'Replay Failed';
                 dungeon.result = DUNGEON_RESULT_FAIL;
+                result.RET = RET_Unknown;
               } finally {
                 logInfo('Claim Dungeon Award');
                 evt = evt.concat(player.claimDungeonAward(dungeon));
