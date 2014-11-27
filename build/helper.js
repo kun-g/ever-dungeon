@@ -1,5 +1,5 @@
 (function() {
-  var CONST_MAX_WORLD_BOSS_TIMES, actCampaign, async, checkBountyValidate, conditionCheck, currentTime, dbLib, dbWrapper, diffDate, genCampaignUtil, initCampaign, initDailyEvent, matchDate, moment, updateLockStatus;
+  var CONST_MAX_WORLD_BOSS_TIMES, Proxy, ProxyHandler, actCampaign, async, checkBountyValidate, conditionCheck, currentTime, dbLib, dbWrapper, defineHideProperty, defineObjFunction, defineObjProperty, diffDate, genCampaignUtil, initCampaign, initDailyEvent, isInVersion, makeVersionRecoder, matchDate, moment, updateLockStatus, updateVersion;
 
   conditionCheck = require('./trigger').conditionCheck;
 
@@ -10,6 +10,224 @@
   dbWrapper = require('./dbWrapper');
 
   async = require('async');
+
+  defineObjProperty = function(obj, name, value, configurable) {
+    if (obj.hasOwnProperty(name) && !configurable) {
+      return;
+    }
+    return Object.defineProperty(obj, name, {
+      enumerable: false,
+      configurable: configurable,
+      value: value
+    });
+  };
+
+  defineHideProperty = function(obj, name, value) {
+    return defineObjProperty(obj, name, value, true);
+  };
+
+  defineObjFunction = function(obj, name, value) {
+    return defineObjProperty(obj, name, value, false);
+  };
+
+  Proxy = require('../addon/proxy/nodeproxy');
+
+  isInVersion = function(filter, key) {
+    var keyLst, _versionName;
+    if (filter == null) {
+      return true;
+    }
+    for (_versionName in filter) {
+      keyLst = filter[_versionName];
+      if (keyLst.indexOf(key) !== -1) {
+        return true;
+      }
+    }
+    return false;
+  };
+
+  ProxyHandler = function(target, setup, filter) {
+    return {
+      hasOwn: function(name) {
+        return {}.hasOwnProperty.call(target, name);
+      },
+      enumerate: function() {
+        var name, result;
+        result = [];
+        for (name in target) {
+          result.push(name);
+        }
+        return result;
+      },
+      get: function(receiver, name) {
+        var prop;
+        prop = target[name];
+        if (name === "valueOf" || name === "toString") {
+          return function() {
+            return target[name]();
+          };
+        } else if (name === 'inspect') {
+          return function() {
+            return target;
+          };
+        } else if (name === 'constructor') {
+          return target.constructor;
+        }
+        return prop;
+      },
+      set: function(receiver, name, val) {
+        var oldval, __map, _ref;
+        if (name === '__updateVersionMap' || name === '__parentCBLst') {
+          target[name] = val;
+          return true;
+        }
+        __map = target.__updateVersionMap;
+        if ((val != null) && typeof val === 'object' && !Proxy.isProxy(val) && isInVersion(filter)) {
+          val = setup(val, __map != null ? (_ref = __map[name]) != null ? _ref.sub : void 0 : void 0);
+        }
+        oldval = target[name];
+        if (oldval != null) {
+          if (typeof oldval.removeParent === "function") {
+            oldval.removeParent(target, name);
+          }
+        }
+        if (val != null) {
+          if (typeof val.addParent === "function") {
+            val.addParent(target, name);
+          }
+        }
+        if (Array.isArray(target)) {
+          if (name === 'length') {
+            target.length = val;
+            if (oldval > val) {
+              updateVersion(oldval, val, name, __map, target);
+            }
+            return true;
+          }
+        }
+        if (oldval !== val) {
+          updateVersion(oldval, val, name, __map, target);
+        }
+        target[name] = val;
+        return true;
+      }
+    };
+  };
+
+  updateVersion = function(oldval, val, name, __map, target) {
+    var update;
+    update = __map != null ? __map[name] : void 0;
+    if (!((__map != null) && (update == null))) {
+      target.onChange(name);
+    }
+    return typeof target.__observerCB === "function" ? target.__observerCB() : void 0;
+  };
+
+  makeVersionRecoder = function(obj, key) {
+    var func;
+    func = function(pro, act, newv, oldv) {
+      return obj[key] += 1;
+    };
+    return func;
+  };
+
+  exports.addVersionControl = function(versionConfig) {
+    var createProxy, setupVersionControl;
+    setupVersionControl = function(obj, cfgKey) {
+      var cb, keyLst, propName, subVer, versionCBMap, versionCfg, versionStoreName, _i, _len, _ref;
+      versionCfg = versionConfig[cfgKey];
+      obj = obj || {};
+      defineHideProperty(obj, '__parentCBLst', []);
+      defineObjFunction(obj, 'addParent', function(parent, name) {
+        if (obj.__parentCBLst == null) {
+          obj.__parentCBLst = [];
+        }
+        obj.removeParent(parent, name);
+        return obj.__parentCBLst.push({
+          obj: parent,
+          key: name
+        });
+      });
+      defineObjFunction(obj, 'removeParent', function(parent, name) {
+        var element, idx, _i, _len, _ref;
+        idx = -1;
+        _ref = obj.__parentCBLst;
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+          element = _ref[_i];
+          if (element.obj === parent && element.key === name) {
+            idx += 1;
+            break;
+          }
+        }
+        return obj.__parentCBLst.splice(idx, 1);
+      });
+      defineObjFunction(obj, 'observe', function(key, func) {
+        var value;
+        if (typeof func !== 'function') {
+          throw 'Yo! function, OK?';
+        }
+        value = obj[key];
+        if (value == null) {
+          throw 'What The Huck? where is key?';
+        }
+        return defineHideProperty(obj, '__observerCB', func);
+      });
+      defineObjFunction(obj, 'onChange', function(name) {
+        var _ref;
+        if ((_ref = obj.__updateVersionMap) != null) {
+          if (typeof _ref[name] === "function") {
+            _ref[name]();
+          }
+        }
+        return obj.__parentCBLst.forEach(function(cb) {
+          return cb.obj.onChange(cb.key);
+        });
+      });
+      versionCBMap = null;
+      if (versionCfg != null) {
+        versionCBMap = {};
+        for (versionStoreName in versionCfg) {
+          keyLst = versionCfg[versionStoreName];
+          if (obj[versionStoreName] == null) {
+            obj[versionStoreName] = 1;
+          }
+          cb = makeVersionRecoder(obj, versionStoreName);
+          for (_i = 0, _len = keyLst.length; _i < _len; _i++) {
+            propName = keyLst[_i];
+            subVer = null;
+            if (propName.indexOf('@') !== -1) {
+              _ref = propName.split('@'), propName = _ref[0], subVer = _ref[1];
+              cb.sub = subVer;
+            }
+            if (typeof obj[propName] === 'object') {
+              obj[propName] = setupVersionControl(obj[propName], subVer);
+              obj[propName].addParent(obj, propName);
+            }
+            versionCBMap[propName] = cb;
+          }
+        }
+      } else {
+        for (propName in obj) {
+          if (typeof obj[propName] === 'object') {
+            obj[propName] = setupVersionControl(obj[propName]);
+            obj[propName].addParent(obj, propName);
+          }
+        }
+      }
+      defineHideProperty(obj, '__updateVersionMap', versionCBMap);
+      return createProxy(obj, versionCfg);
+    };
+    createProxy = function(obj, versionCfg) {
+      if (!((obj != null) && typeof obj === 'object')) {
+        return obj;
+      }
+      if (Proxy.isProxy(obj)) {
+        return obj;
+      }
+      return Proxy.create(ProxyHandler(obj, setupVersionControl, versionCfg), obj.constructor.prototype);
+    };
+    return setupVersionControl;
+  };
 
   CONST_MAX_WORLD_BOSS_TIMES = 200;
 
