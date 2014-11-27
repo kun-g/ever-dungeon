@@ -3413,7 +3413,7 @@
   registerConstructor(Player);
 
   exports.newPlayer = function(attributes) {
-    return new Player(attributes);
+    return setupVersionControl(new Player(attributes), 'player');
   };
 
   exports.playerMessageFilter = playerMessageFilter;
