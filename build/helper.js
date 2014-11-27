@@ -127,6 +127,7 @@
         if (oldval !== val) {
           updateVersion(oldval, val, name, __map, target);
         }
+        target[name] = val;
         return true;
       }
     };
