@@ -189,7 +189,7 @@
         for (versionStoreName in versionCfg) {
           keyLst = versionCfg[versionStoreName];
           if (obj[versionStoreName] == null) {
-            obj[versionStoreName] = 0;
+            obj[versionStoreName] = 1;
           }
           cb = makeVersionRecoder(obj, versionStoreName);
           for (_i = 0, _len = keyLst.length; _i < _len; _i++) {
