@@ -13,15 +13,16 @@ domain.on('error', function (err) {
   console.log("UnhandledError", err, err.message, err.stack);
 });
 
+var Proxy = require('../addon/proxy/nodeproxy')
 // Array.isArray(new Proxy([] ,{}}) ==> false . so Array.isArray must be overrided
 oldArrayCheck = Array.isArray;
 Array.isArray = function(obj) {
-    isA = oldArrayCheck(obj);
-    if (!isA) {
-        return typeof(obj.isArray) === 'function' && obj.isArray();
+    if(Proxy.isProxy(obj) {
+        return obj.isArray(); // when i create a proxy in helper.coffee, i add this function to object
     }
-    return isA;
+    return oldArrayCheck(obj);
 }
+
 //playerCounter = 0;
 //memwatch = require('memwatch');
 //var tmp = new memwatch.HeapDiff();
