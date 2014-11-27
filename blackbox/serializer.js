@@ -85,7 +85,6 @@ libSerializer = {};
         _constructor_: this.constructor.name,
         save: {}
       };
-      debug('----------------????', this.constructor.name, this.s_attr_to_save);
       _ref = this.s_attr_to_save;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         key = _ref[_i];
@@ -184,11 +183,14 @@ libSerializer = {};
     return o;
   };
 
-  registerConstructor = function(func) {
+  registerConstructor = function(func, funcname) {
     var constructor;
     constructor = func.prototype.constructor;
+    if (!funcname) {
+      funcname = constructor.name;
+    }
     if (typeof constructor === 'function') {
-      return g_attr_constructorTable[constructor.name] = func;
+      return g_attr_constructorTable[funcname] = func;
     }
   };
 
