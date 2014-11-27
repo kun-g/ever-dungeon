@@ -317,6 +317,13 @@ libContainer = {};
       return this.container.filter(func);
     };
 
+    Bag.prototype.reduce = function(func, init) {
+      if (init == null) {
+        init = 0;
+      }
+      return this.container.reduce(func, init);
+    };
+
     return Bag;
 
   })(Serializer);

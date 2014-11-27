@@ -13,6 +13,15 @@ domain.on('error', function (err) {
   console.log("UnhandledError", err, err.message, err.stack);
 });
 
+// Array.isArray(new Proxy([] ,{}}) ==> false . so Array.isArray must be overrided
+oldArrayCheck = Array.isArray;
+Array.isArray = function(obj) {
+    isA = oldArrayCheck(obj);
+    if (!isA) {
+        return typeof(obj.isArray) === 'function' && obj.isArray();
+    }
+    return isA;
+}
 //playerCounter = 0;
 //memwatch = require('memwatch');
 //var tmp = new memwatch.HeapDiff();
