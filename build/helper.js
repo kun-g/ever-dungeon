@@ -1,5 +1,5 @@
 (function() {
-  var CONST_MAX_WORLD_BOSS_TIMES, Proxy, ProxyHandler, actCampaign, async, checkBountyValidate, conditionCheck, currentTime, dbLib, dbWrapper, defineHideProperty, defineObjFunction, defineObjProperty, diffDate, genCampaignUtil, initCampaign, initDailyEvent, isInVersion, makeVersionRecoder, matchDate, moment, updateLockStatus, updateVersion;
+  var CONST_MAX_WORLD_BOSS_TIMES, Proxy, ProxyHandler, actCampaign, async, canProxy, checkBountyValidate, conditionCheck, currentTime, dbLib, dbWrapper, defineHideProperty, defineObjFunction, defineObjProperty, diffDate, genCampaignUtil, initCampaign, initDailyEvent, isInVersion, makeVersionRecoder, matchDate, moment, updateLockStatus, updateVersion;
 
   conditionCheck = require('./trigger').conditionCheck;
 
@@ -44,6 +44,10 @@
       }
     }
     return false;
+  };
+
+  canProxy = function(obj) {
+    return (obj != null) && typeof obj === 'object' && !Proxy.isProxy(obj);
   };
 
   ProxyHandler = function(target, setup, filter) {
@@ -92,7 +96,7 @@
           return true;
         }
         __map = target.__updateVersionMap;
-        if ((val != null) && typeof val === 'object' && !Proxy.isProxy(val) && isInVersion(filter)) {
+        if (canProxy(val) && isInVersion(filter)) {
           val = setup(val, __map != null ? (_ref = __map[name]) != null ? _ref.sub : void 0 : void 0);
         }
         oldval = target[name];
@@ -146,6 +150,9 @@
     var createProxy, setupVersionControl;
     setupVersionControl = function(obj, cfgKey) {
       var cb, keyLst, propName, subVer, versionCBMap, versionCfg, versionStoreName, _i, _len, _ref;
+      if (!canProxy(obj)) {
+        return obj;
+      }
       versionCfg = versionConfig[cfgKey];
       obj = obj || {};
       defineHideProperty(obj, '__parentCBLst', []);
@@ -229,10 +236,7 @@
       return createProxy(obj, versionCfg);
     };
     createProxy = function(obj, versionCfg) {
-      if (!((obj != null) && typeof obj === 'object')) {
-        return obj;
-      }
-      if (Proxy.isProxy(obj)) {
+      if (!canProxy(obj)) {
         return obj;
       }
       return Proxy.create(ProxyHandler(obj, setupVersionControl, versionCfg), obj.constructor.prototype);
