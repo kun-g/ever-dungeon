@@ -60,7 +60,7 @@
         return v = (function() {
           var _results;
           _results = [];
-          for (name in targe) {
+          for (name in target) {
             _results.push(name);
           }
           return _results;
