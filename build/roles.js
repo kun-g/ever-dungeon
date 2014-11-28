@@ -27,9 +27,17 @@ exports.data = [
 			41,
 			42,
 			43,
-            662,
+            622,
             712
 		],
+        "initialEquipment":[
+            {"type":0,"value":43,"count":1},
+            {"type":0,"value":42,"count":1},
+            {"type":0,"value":41,"count":1},
+            {"type":0,"value":712,"count":1},
+            {"type":0,"value":40,"count":1},
+            {"type":0,"value":622,"count":1}
+        ],
 		"levelId": 0,
         "transId":197
 	},
@@ -64,6 +72,14 @@ exports.data = [
 			652,
             742
 		],
+        "initialEquipment":[
+            {"type":0,"value":35,"count":1},
+            {"type":0,"value":34,"count":1},
+            {"type":0,"value":33,"count":1},
+            {"type":0,"value":742,"count":1},
+            {"type":0,"value":32,"count":1},
+            {"type":0,"value":652,"count":1}
+        ],
 		"levelId": 0,
         "transId":198
 
@@ -99,6 +115,14 @@ exports.data = [
             682,
             772
 		],
+        "initialEquipment":[
+            {"type":0,"value":39, "count":1},
+            {"type":0,"value":38,"count":1},
+            {"type":0,"value":37,"count":1},
+            {"type":0,"value":772,"count":1},
+            {"type":0,"value":36,"count":1},
+            {"type":0,"value":682,"count":1}
+        ],
 		"levelId": 0,
         "transId":199
 	},
@@ -7782,17 +7806,18 @@ exports.data = [
     },
     {
         "classId": 215,
-        "className": "测试流浪剑士",
+        "className": "大宗师",
         "faction": "monster",
         "classType": 1,
-        "avatar": "enemy-sword2.ccbi",
+        "skeleton": "master.json",
+        "atlas": "master.atlas",
         "property": {
             "health": 5,
-            "attack": 0.5,
-            "critical": 0,
-            "strong": 20,
-            "accuracy": 170,
-            "reactivity": 170,
+            "attack": 0.6,
+            "critical": 30,
+            "strong": 0,
+            "accuracy": 70,
+            "reactivity": -40,
             "speed": 0,
             "counterAttack": true,
             "exp": 0,
@@ -7800,12 +7825,12 @@ exports.data = [
         },
         "xproperty": {
             "balance": 0.1,
-            "health": 5,
-            "attack": 0.5,
+            "health": 1.5,
+            "attack": 0.4,
             "critical": 1,
             "strong": 1,
             "accuracy": 1,
-            "reactivity": 3,
+            "reactivity": 1,
             "speed": 1
         },
         "soundWound": "liulangwound.mp3",
@@ -7814,19 +7839,34 @@ exports.data = [
         "effectAttack": 8,
         "skill": [
             {
-                "id": 185,
+                "id": 321,
                 "level": 1
             },
             {
-                "id": 183,
+                "id": 323,
                 "level": 1
             },
             {
                 "id": 27,
                 "level": 1
+            },
+            {
+                "id": 324,
+                "level": 1
+            },
+            {
+                "id": 325,
+                "level": 1
+            },
+            {
+                "id": 326,
+                "level": 1
+            },
+            {
+                "id": 328,
+                "level": 1
             }
-        ],
-        "scale": 1.2
+        ]
     },
     {
         "classId": 216,
@@ -7846,22 +7886,29 @@ exports.data = [
             "accuracy": 2,
             "reactivity": 1,
             "speed": 2,
-            "activeSpell": 0
+            "activeSpell": 195
         },
         "defaultArmors": [
             6,
             10,
             11,
             879,
-            880,
-            881,
-            882,
-            662,
-            712,
-            883
+            909,
+            939,
+            969,
+            999,
+            1029
+        ],
+        "initialEquipment":[
+            {"type":0,"value":969,"count":1},
+            {"type":0,"value":939,"count":1},
+            {"type":0,"value":909,"count":1},
+            {"type":0,"value":999,"count":1},
+            {"type":0,"value":879,"count":1},
+            {"type":0,"value":1029,"count":1}
         ],
         "levelId": 0,
-        "transId":197
+        "transId":219
     },
     {
         "classId": 217,
@@ -7881,22 +7928,29 @@ exports.data = [
             "accuracy": 2,
             "reactivity": 2,
             "speed": 2,
-            "activeSpell": 5
+            "activeSpell": 201
         },
         "defaultArmors": [
             6,
             10,
             11,
-            884,
-            885,
-            886,
-            887,
-            652,
-            742,
-            888
+            1059,
+            1089,
+            1119,
+            1149,
+            1179,
+            1209
+        ],
+        "initialEquipment":[
+            {"type":0,"value":1149,"count":1},
+            {"type":0,"value":1119,"count":1},
+            {"type":0,"value":1089,"count":1},
+            {"type":0,"value":1179,"count":1},
+            {"type":0,"value":1059,"count":1},
+            {"type":0,"value":1209,"count":1}
         ],
         "levelId": 0,
-        "transId":198
+        "transId":220
     },
     {
         "classId": 218,
@@ -7916,21 +7970,726 @@ exports.data = [
             "accuracy": 4,
             "reactivity": 3,
             "speed": 6,
-            "activeSpell": 8
+            "activeSpell": 207
         },
         "defaultArmors": [
             6,
             10,
             11,
-            889,
-            890,
-            891,
-            892,
-            682,
-            772,
-            893
+            1239,
+            1269,
+            1299,
+            1329,
+            1359,
+            1389
+        ],
+        "initialEquipment":[
+            {"type":0,"value":1329,"count":1},
+            {"type":0,"value":1299,"count":1},
+            {"type":0,"value":1269,"count":1},
+            {"type":0,"value":1359,"count":1},
+            {"type":0,"value":1239,"count":1},
+            {"type":0,"value":1389,"count":1}
         ],
         "levelId": 0,
-        "transId":199
+        "transId":221
+    },
+    {
+        "classId": 219,
+        "className": "pk狂战士",
+        "faction": "monster",
+        "classType": 4,
+        "avatar": "avatar1.ccbi",
+        "emblem": [
+            "emblem-warrior.png",
+            "emblem-warrior2.png"
+        ],
+        "defaultArmors": [
+            6,
+            10,
+            11,
+            879,
+            909,
+            939,
+            969,
+            999,
+            1029
+        ],
+        "property": {
+            "keyd":true,
+            "counterAttack": true
+        },
+        "levelId": 4
+    },
+    {
+        "classId": 220,
+        "className": "pk魔导师",
+        "faction": "monster",
+        "classType": 4,
+        "avatar": "avatar2.ccbi",
+        "emblem": [
+            "emblem-mage.png",
+            "emblem-mage2.png"
+        ],
+        "defaultArmors": [
+            6,
+            10,
+            11,
+            1059,
+            1089,
+            1119,
+            1149,
+            1179,
+            1209
+        ],
+        "property": {
+            "keyd":true,
+            "counterAttack": true
+        },
+        "levelId": 5
+    },
+    {
+        "classId": 221,
+        "className": "pk主教",
+        "faction": "monster",
+        "classType": 4,
+        "avatar": "avatar3.ccbi",
+        "emblem": [
+            "emblem-priest.png",
+            "emblem-priest2.png"
+        ],
+        "defaultArmors": [
+            6,
+            10,
+            11,
+            1239,
+            1269,
+            1299,
+            1329,
+            1359,
+            1389
+        ],
+        "property": {
+            "keyd":true,
+            "counterAttack": true
+        },
+        "levelId": 6
+    },
+    {
+        "classId": 222,
+        "className": "小恶魔",
+        "faction": "monster",
+        "classType": 1,
+        "skeleton": "newboss7.json",
+        "atlas": "newboss7.atlas",
+        "property": {
+            "health": 2,
+            "attack": 0.45,
+            "critical": 20,
+            "strong": -20,
+            "accuracy": 80,
+            "reactivity": -10,
+            "speed": -10,
+            "counterAttack": true,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.2,
+            "health": 1.5,
+            "attack": 0.4,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundSpawn": "bianfu.mp3",
+        "soundWound": "bianfuwound.mp3",
+        "soundAttack": "bianfuattack.mp3",
+        "soundDie": "bianfudie.mp3",
+        "effectAttack": 9,
+        "skill": [
+            {
+                "id": 290,
+                "level": 1
+            },
+            {
+                "id": 292,
+                "level": 1
+            }
+        ]
+    },
+    {
+        "classId": 223,
+        "className": "恶灵骑士",
+        "faction": "monster",
+        "classType": 1,
+        "skeleton": "newboss5.json",
+        "atlas": "newboss5.atlas",
+        "property": {
+            "health": 3.5,
+            "attack": 0.1,
+            "critical": -20,
+            "strong": 0,
+            "accuracy": 100,
+            "reactivity": -70,
+            "speed": 20,
+            "counterAttack": true,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 2,
+            "attack": 0.4,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundSpawn": "tulang.mp3",
+        "soundWound": "tulangwound.mp3",
+        "soundAttack": "tulangattack.mp3",
+        "soundDie": "tulangdie.mp3",
+        "effectAttack": 31,
+        "skill": [
+            {
+                "id": 293,
+                "level": 2
+            }
+        ]
+    },
+    {
+        "classId": 224,
+        "className": "蜥蜴人弓箭手",
+        "faction": "monster",
+        "classType": 1,
+        "skeleton": "newenemy1.json",
+        "atlas": "newenemy1.atlas",
+        "property": {
+            "health": 2.5,
+            "attack": 0.1,
+            "critical": 10,
+            "strong": 20,
+            "accuracy": 40,
+            "reactivity": -80,
+            "speed": -40,
+            "counterAttack": false,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 2,
+            "attack": 0.4,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundWound": "shourenwound.mp3",
+        "soundAttack": "shourenattack.mp3",
+        "soundDie": "shourendie.mp3",
+        "effectAttack": 9,
+        "skill": [
+            {
+                "id": 26,
+                "level": 1
+            },
+            {
+                "id": 27,
+                "level": 1
+            },
+            {
+                "id": 296,
+                "level": 1
+            },
+            {
+                "id": 298,
+                "level": 1
+            }
+        ]
+    },
+    {
+        "classId": 225,
+        "className": "岩石巨人",
+        "faction": "monster",
+        "classType": 1,
+        "skeleton": "newboss3.json",
+        "atlas": "newboss3.atlas",
+        "property": {
+            "health": 4,
+            "attack": 0.1,
+            "critical": 10,
+            "strong": -10,
+            "accuracy": 100,
+            "reactivity": -60,
+            "speed": -20,
+            "counterAttack": true,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 2,
+            "attack": 0.4,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundSpawn": "shirenmo.mp3",
+        "soundWound": "shirenmodie.mp3",
+        "soundAttack": "shirenmo.mp3",
+        "effectAttack": 9,
+        "skill": [
+            {
+                "id": 300,
+                "level": 3
+            },
+            {
+                "id": 301,
+                "level": 3
+            },
+            {
+                "id": 303,
+                "level": 3
+            }
+        ]
+    },
+    {
+        "classId": 226,
+        "className": "宫廷弩手",
+        "faction": "monster",
+        "classType": 1,
+        "skeleton": "newenemy2.json",
+        "atlas": "newenemy2.atlas",
+        "property": {
+            "health": 0.3,
+            "attack": 0.07,
+            "critical": 10,
+            "strong": -30,
+            "accuracy": 70,
+            "reactivity": -40,
+            "speed": -20,
+            "counterAttack": false,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 1.5,
+            "attack": 0.4,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundWound": "shanzeiroumuwound.mp3",
+        "soundDie": "shanzeitoumudie.mp3",
+        "effectAttack": 10,
+        "skill": [
+            {
+                "id": 304,
+                "level": 1
+            },
+            {
+                "id": 27,
+                "level": 1
+            }
+        ]
+    },
+    {
+        "classId": 227,
+        "className": "地狱三头犬",
+        "faction": "monster",
+        "classType": 1,
+        "skeleton": "newboss8.json",
+        "atlas": "newboss8.atlas",
+        "property": {
+            "health": 10,
+            "attack": 0.2,
+            "critical": 10,
+            "strong": 20,
+            "accuracy": 100,
+            "reactivity": -40,
+            "speed": 20,
+            "counterAttack": true,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 1.5,
+            "attack": 0.4,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundSpawn": "tulang.mp3",
+        "soundWound": "tulangwound.mp3",
+        "soundAttack": "tulangattack.mp3",
+        "soundDie": "tulangdie.mp3",
+        "effectAttack": 31,
+        "skill": [
+            {
+                "id": 306,
+                "level": 1
+            },
+            {
+                "id": 307,
+                "level": 1
+            },
+            {
+                "id": 309,
+                "level": 1
+            },
+            {
+                "id": 310,
+                "level": 1
+            }
+        ]
+    },
+    {
+        "classId": 228,
+        "className": "恶魔领主",
+        "faction": "monster",
+        "classType": 1,
+        "skeleton": "newboss4.json",
+        "atlas": "newboss4.atlas",
+        "property": {
+            "health": 3.5,
+            "attack": 0.25,
+            "critical": -20,
+            "strong": 10,
+            "accuracy": 100,
+            "reactivity": -50,
+            "speed": 0,
+            "counterAttack": true,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 2,
+            "attack": 0.4,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundSpawn": "shanzeitoumu.mp3",
+        "soundWound": "shanzeiroumuwound.mp3",
+        "soundAttack": "shanzeitoumuattack.mp3",
+        "soundDie": "shanzeitoumudie.mp3",
+        "effectAttack": 8,
+        "skill": [
+            {
+                "id": 311,
+                "level": 1
+            },
+            {
+                "id": 306,
+                "level": 1
+            },
+            {
+                "id": 312,
+                "level": 1
+            }
+        ]
+    },
+    {
+        "classId": 229,
+        "className": "堕落天使",
+        "faction": "monster",
+        "classType": 1,
+        "skeleton": "newboss6.json",
+        "atlas": "newboss6.atlas",
+        "property": {
+            "health": 3.5,
+            "attack": 0.22,
+            "critical": 0,
+            "strong": 20,
+            "accuracy": 100,
+            "reactivity": -40,
+            "speed": 0,
+            "counterAttack": true,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 2,
+            "attack": 0.4,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundWound": "liulangwound.mp3",
+        "soundAttack": "liulangattack.mp3",
+        "soundDie": "liulangdie.mp3",
+        "effectAttack": 8,
+        "skill": [
+            {
+                "id": 314,
+                "level": 1
+            },
+            {
+                "id": 317,
+                "level": 1
+            }
+        ]
+    },
+    {
+        "classId": 230,
+        "className": "骷髅王",
+        "faction": "monster",
+        "classType": 1,
+        "skeleton": "newboss2.json",
+        "atlas": "newboss2.atlas",
+        "property": {
+            "health": 3.5,
+            "attack": 0.15,
+            "critical": 0,
+            "strong": 0,
+            "accuracy": 100,
+            "reactivity": -40,
+            "speed": 0,
+            "counterAttack": true,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 2,
+            "attack": 0.4,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "effectAttack": 8,
+        "skill": [
+            {
+                "id": 318,
+                "level": 1
+            },
+            {
+                "id": 320,
+                "level": 1
+            },
+            {
+                "id": 295,
+                "level": 1
+            }
+        ]
+    },
+    {
+        "classId": 231,
+        "className": "骑士长",
+        "faction": "monster",
+        "classType": 1,
+        "skeleton": "newboss1.json",
+        "atlas": "newboss1.atlas",
+        "property": {
+            "health": 1.5,
+            "attack": 0.06,
+            "critical": 0,
+            "strong": 0,
+            "accuracy": 40,
+            "reactivity": -40,
+            "speed": 0,
+            "counterAttack": true,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 1.5,
+            "attack": 0.4,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "effectAttack": 8,
+        "skill": [
+            {
+                "id": 318,
+                "level": 1
+            },
+            {
+                "id": 295,
+                "level": 1
+            }
+        ]
+    },
+    {
+        "classId": 232,
+        "className": "剑兵1",
+        "faction": "monster",
+        "classType": 1,
+        "avatar": "enemy-sword1.ccbi",
+        "property": {
+            "health": 0.6,
+            "attack": 0.35,
+            "critical": 20,
+            "strong": -20,
+            "accuracy": 40,
+            "reactivity": -50,
+            "speed": -20,
+            "counterAttack": true,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 1.5,
+            "attack": 0.4,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundWound": "liulangwound.mp3",
+        "soundAttack": "liulangattack.mp3",
+        "soundDie": "liulangdie.mp3",
+        "effectAttack": 8,
+        "skill": [
+            {
+                "id": 185,
+                "level": 1
+            }
+        ]
+    },
+    {
+        "classId": 233,
+        "className": "剑兵2",
+        "faction": "monster",
+        "classType": 1,
+        "avatar": "enemy-sword12.ccbi",
+        "property": {
+            "health": 0.6,
+            "attack": 0.35,
+            "critical": 20,
+            "strong": -20,
+            "accuracy": 40,
+            "reactivity": -50,
+            "speed": -20,
+            "counterAttack": true,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 1.5,
+            "attack": 0.4,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundWound": "liulangwound.mp3",
+        "soundAttack": "liulangattack.mp3",
+        "soundDie": "liulangdie.mp3",
+        "effectAttack": 8,
+        "skill": [
+            {
+                "id": 185,
+                "level": 1
+            }
+        ]
+    },
+    {
+        "classId": 234,
+        "className": "剑兵3",
+        "faction": "monster",
+        "classType": 1,
+        "avatar": "enemy-sword13.ccbi",
+        "property": {
+            "health": 0.6,
+            "attack": 0.35,
+            "critical": 20,
+            "strong": -20,
+            "accuracy": 40,
+            "reactivity": -50,
+            "speed": -20,
+            "counterAttack": true,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 1.5,
+            "attack": 0.4,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundWound": "liulangwound.mp3",
+        "soundAttack": "liulangattack.mp3",
+        "soundDie": "liulangdie.mp3",
+        "effectAttack": 8,
+        "skill": [
+            {
+                "id": 185,
+                "level": 1
+            }
+        ]
+    },
+    {
+        "classId": 235,
+        "className": "剑兵4",
+        "faction": "monster",
+        "classType": 1,
+        "avatar": "enemy-sword14.ccbi",
+        "property": {
+            "health": 0.6,
+            "attack": 0.35,
+            "critical": 20,
+            "strong": -20,
+            "accuracy": 40,
+            "reactivity": -50,
+            "speed": -20,
+            "counterAttack": true,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 1.5,
+            "attack": 0.4,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundWound": "liulangwound.mp3",
+        "soundAttack": "liulangattack.mp3",
+        "soundDie": "liulangdie.mp3",
+        "effectAttack": 8,
+        "skill": [
+            {
+                "id": 185,
+                "level": 1
+            }
+        ]
     }
 ]

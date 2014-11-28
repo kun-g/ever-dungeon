@@ -3947,7 +3947,7 @@ exports.data = [
     {
         "dungeonId": 29,
         "collectId":65001,
-        "rank": 78,
+        "rank": 70,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -4051,7 +4051,7 @@ exports.data = [
     },
     {
         "dungeonId": 30,
-        "rank": 84,
+        "rank": 75,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -4160,7 +4160,7 @@ exports.data = [
     },
     {
         "dungeonId": 31,
-        "rank": 90,
+        "rank": 80,
         "collectId":69001,
         "levelCount" : 2,
         "pool":{
@@ -4304,7 +4304,7 @@ exports.data = [
     },
     {
         "dungeonId": 32,
-        "rank": 97,
+        "rank": 85,
         "collectId":71001,
         "levelCount" : 2,
         "pool":{
@@ -4414,7 +4414,7 @@ exports.data = [
     },
     {
         "dungeonId": 33,
-        "rank": 103,
+        "rank": 90,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -4525,7 +4525,7 @@ exports.data = [
     },
     {
         "dungeonId": 34,
-        "rank": 109,
+        "rank": 95,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -4630,7 +4630,7 @@ exports.data = [
     },
     {
         "dungeonId": 35,
-        "rank": 114,
+        "rank": 100,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -4745,7 +4745,7 @@ exports.data = [
     },
     {
         "dungeonId": 36,
-        "rank": 120,
+        "rank": 100,
         "collectId":77001,
         "levelCount" : 2,
         "pool":{
@@ -4849,7 +4849,7 @@ exports.data = [
     },
     {
         "dungeonId": 37,
-        "rank": 130,
+        "rank": 110,
         "collectId":79001,
         "levelCount" : 2,
         "pool":{
@@ -4964,7 +4964,7 @@ exports.data = [
     },
     {
         "dungeonId": 38,
-        "rank": 135,
+        "rank": 120,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -5074,7 +5074,7 @@ exports.data = [
     },
     {
         "dungeonId": 39,
-        "rank": 140,
+        "rank": 130,
         "collectId":83001,
         "levelCount" : 2,
         "pool":{
@@ -5183,7 +5183,7 @@ exports.data = [
     },
     {
         "dungeonId": 40,
-        "rank": 150,
+        "rank": 140,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -5299,7 +5299,7 @@ exports.data = [
     },
     {
         "dungeonId": 41,
-        "rank": 160,
+        "rank": 150,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -5426,7 +5426,7 @@ exports.data = [
     },
     {
         "dungeonId": 42,
-        "rank": 163,
+        "rank": 160,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -5554,7 +5554,7 @@ exports.data = [
     },
     {
         "dungeonId": 43,
-        "rank": 173,
+        "rank": 160,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -5672,7 +5672,7 @@ exports.data = [
     },
     {
         "dungeonId": 44,
-        "rank": 180,
+        "rank": 170,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -5786,7 +5786,7 @@ exports.data = [
     },
     {
         "dungeonId": 45,
-        "rank": 192,
+        "rank": 180,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -5907,7 +5907,7 @@ exports.data = [
     },
     {
         "dungeonId": 46,
-        "rank": 200,
+        "rank": 190,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -6024,7 +6024,7 @@ exports.data = [
     },
     {
         "dungeonId": 47,
-        "rank": 220,
+        "rank": 200,
         "levelCount" :2,
         "pool":{
             "normalPool":{"objects":[
@@ -6132,7 +6132,7 @@ exports.data = [
     },
     {
         "dungeonId": 48,
-        "rank":240,
+        "rank":210,
         "collectId":102001,
         "levelCount" : 2,
         "pool":{
@@ -6251,7 +6251,7 @@ exports.data = [
     },
     {
         "dungeonId": 49,
-        "rank": 260,
+        "rank": 220,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -6354,7 +6354,7 @@ exports.data = [
     },
     {
         "dungeonId": 50,
-        "rank": 250,
+        "rank": 220,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -6458,7 +6458,7 @@ exports.data = [
     },
     {
         "dungeonId": 51,
-        "rank": 250,
+        "rank": 225,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -6573,7 +6573,7 @@ exports.data = [
     },
     {
         "dungeonId": 52,
-        "rank": 270,
+        "rank": 230,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -6683,7 +6683,7 @@ exports.data = [
     },
     {
         "dungeonId": 53,
-        "rank": 280,
+        "rank": 235,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -6793,7 +6793,7 @@ exports.data = [
     },
     {
         "dungeonId": 54,
-        "rank": 300,
+        "rank": 240,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -6903,7 +6903,7 @@ exports.data = [
     },
     {
         "dungeonId": 55,
-        "rank": 330,
+        "rank": 250,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -7012,7 +7012,7 @@ exports.data = [
     },
     {
         "dungeonId": 56,
-        "rank": 340,
+        "rank": 260,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -7116,7 +7116,7 @@ exports.data = [
     },
     {
         "dungeonId": 57,
-        "rank": 320,
+        "rank": 260,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -7237,7 +7237,7 @@ exports.data = [
     },
     {
         "dungeonId": 58,
-        "rank": 340,
+        "rank": 265,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -7345,7 +7345,7 @@ exports.data = [
     },
     {
         "dungeonId": 59,
-        "rank": 340,
+        "rank": 270,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -7448,7 +7448,7 @@ exports.data = [
     },
     {
         "dungeonId": 60,
-        "rank": 360,
+        "rank": 275,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -7557,7 +7557,7 @@ exports.data = [
     },
     {
         "dungeonId": 61,
-        "rank": 360,
+        "rank": 280,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -7671,7 +7671,7 @@ exports.data = [
     },
     {
         "dungeonId": 62,
-        "rank": 380,
+        "rank": 290,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -7803,7 +7803,7 @@ exports.data = [
     },
     {
         "dungeonId": 63,
-        "rank": 400,
+        "rank": 300,
         "levelCount" : 2,
         "pool":{
             "normalPool":{"objects":[
@@ -8987,7 +8987,7 @@ exports.data = [
         "prizeXp":0,
         "wxpRate":1,"goldRate":0.5,
         "xpRate":0.4,
-        "rank":95
+        "rank":85
     },
     {
         "dungeonId": 68,
@@ -9272,7 +9272,7 @@ exports.data = [
         "prizeXp":0,
         "wxpRate":1,"goldRate":0.5,
         "xpRate":0.4,
-        "rank":130
+        "rank":120
     },
     {
         "dungeonId": 69,
@@ -9537,7 +9537,7 @@ exports.data = [
         "prizeXp":0,
         "wxpRate":1,"goldRate":0.5,
         "xpRate":1,
-        "rank":193
+        "rank":180
     },
     {
         "dungeonId": 70,
@@ -9797,7 +9797,7 @@ exports.data = [
         "prizeXp":0,
         "wxpRate":0,"goldRate":0.5,
         "xpRate":0,
-        "rank":250
+        "rank":240
     },
     {
         "dungeonId": 71,
@@ -10061,7 +10061,7 @@ exports.data = [
         "prizeXp":0,
         "wxpRate":1,"goldRate":0.5,
         "xpRate":0,
-        "rank":320
+        "rank":280
     },
     {
         "dungeonId": 72,
@@ -10322,7 +10322,7 @@ exports.data = [
         "prizeXp":0,
         "wxpRate":1,"goldRate":0.3,
         "xpRate":0.4,
-        "rank":380
+        "rank":320
     },
     {
         "dungeonId": 73,
@@ -10996,7 +10996,7 @@ exports.data = [
                 }
             ]}
         },
-         
+
         "levels" :[
             {
                  "objects" :[{"pool":"normalPool","from":0,to:4},
@@ -38679,65 +38679,2171 @@ exports.data = [
             ],
         "prizeWxp":0,"prizeGold":1000, "prizeXp":0,
         "wxpRate":1,"goldRate":1, "xpRate":1,
-        "rank":230},
+        "rank":230
+
+    },
     {
         "dungeonId": 128,
+        "rank": 300,
+        "levelCount" : 2,
+        "pool":{
+            "normalPool":{"objects":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
+                    "weight":3
+                }
+            ]},
+            "PoolS9":{"objects":[
+                {"id":82,"weight":2},
+                {"id":99,"weight":2},
+                {"id":100,"weight":2},
+                {"id":111,"weight":2},
+                {"id":76,"weight":2},
+                {"id":196,"weight":2}]},
+            "PoolS9R":{"objects":[
+                {"id":129,"weight":2}]}
+        },
+        "collectId":123001,
+        "global": [
+            {id: 211,from: 0, to: 2,dropPrize:146}],
+        "levels" :[
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 156,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 157,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 152,
+                        "count":2,
+                        "collectId":125003,
+                        "keyed":true
+                    },
+                    {
+                        "id": 127,
+                        "count":1,
+                        "keyed":true
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 130,
+                        "count":2,
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:146}
+                    },
+                    {
+                        "id": 153,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 97,
+                        "count":3,
+                        "keyed":true
+                    }
+                ]
+            }
+        ],
+        "dropID":[
+            69
+        ],
+        "prizeWxp":250,"prizeGold":1600,
+        "prizeXp":1500,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
+    },
+    {
+        "dungeonId": 129,
+        "rank": 305,
+        "levelCount" : 2,
+        "pool":{
+            "normalPool":{"objects":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
+                    "weight":3
+                }
+            ]},
+            "PoolS9":{"objects":[
+                {"id":82,"weight":2},
+                {"id":99,"weight":2},
+                {"id":100,"weight":2},
+                {"id":111,"weight":2},
+                {"id":76,"weight":2},
+                {"id":196,"weight":2}]},
+            "PoolS9R":{"objects":[
+                {"id":129,"weight":2}]}
+        },
+        "collectId":123001,
+        "global": [
+            {id: 211,from: 0, to: 2,dropPrize:146}],
+        "levels" :[
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 156,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 157,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 152,
+                        "count":2,
+                        "collectId":125003,
+                        "keyed":true
+                    },
+                    {
+                        "id": 127,
+                        "count":1,
+                        "keyed":true
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 130,
+                        "count":2,
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:146}
+                    },
+                    {
+                        "id": 153,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 97,
+                        "count":3,
+                        "keyed":true
+                    }
+                ]
+            }
+        ],
+        "dropID":[
+            69
+        ],
+        "prizeWxp":250,"prizeGold":1600,
+        "prizeXp":1500,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
+    },
+    {
+        "dungeonId": 130,
+        "rank": 310,
+        "levelCount" : 2,
+        "pool":{
+            "normalPool":{"objects":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
+                    "weight":3
+                }
+            ]},
+            "PoolS9":{"objects":[
+                {"id":82,"weight":2},
+                {"id":99,"weight":2},
+                {"id":100,"weight":2},
+                {"id":111,"weight":2},
+                {"id":76,"weight":2},
+                {"id":196,"weight":2}]},
+            "PoolS9R":{"objects":[
+                {"id":129,"weight":2}]}
+        },
+        "collectId":123001,
+        "global": [
+            {id: 211,from: 0, to: 2,dropPrize:146}],
+        "levels" :[
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 156,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 157,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 152,
+                        "count":2,
+                        "collectId":125003,
+                        "keyed":true
+                    },
+                    {
+                        "id": 127,
+                        "count":1,
+                        "keyed":true
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 130,
+                        "count":2,
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:146}
+                    },
+                    {
+                        "id": 153,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 97,
+                        "count":3,
+                        "keyed":true
+                    }
+                ]
+            }
+        ],
+        "dropID":[
+            69
+        ],
+        "prizeWxp":250,"prizeGold":1600,
+        "prizeXp":1500,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
+    },
+    {
+        "dungeonId": 131,
+        "rank": 315,
+        "levelCount" : 2,
+        "pool":{
+            "normalPool":{"objects":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
+                    "weight":3
+                }
+            ]},
+            "PoolS9":{"objects":[
+                {"id":82,"weight":2},
+                {"id":99,"weight":2},
+                {"id":100,"weight":2},
+                {"id":111,"weight":2},
+                {"id":76,"weight":2},
+                {"id":196,"weight":2}]},
+            "PoolS9R":{"objects":[
+                {"id":129,"weight":2}]}
+        },
+        "collectId":123001,
+        "global": [
+            {id: 211,from: 0, to: 2,dropPrize:146}],
+        "levels" :[
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 156,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 157,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 152,
+                        "count":2,
+                        "collectId":125003,
+                        "keyed":true
+                    },
+                    {
+                        "id": 127,
+                        "count":1,
+                        "keyed":true
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 130,
+                        "count":2,
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:146}
+                    },
+                    {
+                        "id": 153,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 97,
+                        "count":3,
+                        "keyed":true
+                    }
+                ]
+            }
+        ],
+        "dropID":[
+            69
+        ],
+        "prizeWxp":250,"prizeGold":1600,
+        "prizeXp":1500,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
+    },
+    {
+        "dungeonId": 132,
+        "rank": 320,
+        "levelCount" : 2,
+        "pool":{
+            "normalPool":{"objects":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
+                    "weight":3
+                }
+            ]},
+            "PoolS9":{"objects":[
+                {"id":82,"weight":2},
+                {"id":99,"weight":2},
+                {"id":100,"weight":2},
+                {"id":111,"weight":2},
+                {"id":76,"weight":2},
+                {"id":196,"weight":2}]},
+            "PoolS9R":{"objects":[
+                {"id":129,"weight":2}]}
+        },
+        "collectId":123001,
+        "global": [
+            {id: 211,from: 0, to: 2,dropPrize:146}],
+        "levels" :[
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 156,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 157,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 152,
+                        "count":2,
+                        "collectId":125003,
+                        "keyed":true
+                    },
+                    {
+                        "id": 127,
+                        "count":1,
+                        "keyed":true
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 130,
+                        "count":2,
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:146}
+                    },
+                    {
+                        "id": 153,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 97,
+                        "count":3,
+                        "keyed":true
+                    }
+                ]
+            }
+        ],
+        "dropID":[
+            69
+        ],
+        "prizeWxp":250,"prizeGold":1600,
+        "prizeXp":1500,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
+    },
+    {
+        "dungeonId": 133,
+        "rank": 330,
+        "levelCount" : 2,
+        "pool":{
+            "normalPool":{"objects":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
+                    "weight":3
+                }
+            ]},
+            "PoolS9":{"objects":[
+                {"id":82,"weight":2},
+                {"id":99,"weight":2},
+                {"id":100,"weight":2},
+                {"id":111,"weight":2},
+                {"id":76,"weight":2},
+                {"id":196,"weight":2}]},
+            "PoolS9R":{"objects":[
+                {"id":129,"weight":2}]}
+        },
+        "collectId":123001,
+        "global": [
+            {id: 211,from: 0, to: 2,dropPrize:146}],
+        "levels" :[
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 156,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 157,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 152,
+                        "count":2,
+                        "collectId":125003,
+                        "keyed":true
+                    },
+                    {
+                        "id": 127,
+                        "count":1,
+                        "keyed":true
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 130,
+                        "count":2,
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:146}
+                    },
+                    {
+                        "id": 153,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 97,
+                        "count":3,
+                        "keyed":true
+                    }
+                ]
+            }
+        ],
+        "dropID":[
+            69
+        ],
+        "prizeWxp":250,"prizeGold":1600,
+        "prizeXp":1500,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
+    },
+    {
+        "dungeonId": 134,
+        "rank": 340,
+        "levelCount" : 2,
+        "pool":{
+            "normalPool":{"objects":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
+                    "weight":3
+                }
+            ]},
+            "PoolS9":{"objects":[
+                {"id":82,"weight":2},
+                {"id":99,"weight":2},
+                {"id":100,"weight":2},
+                {"id":111,"weight":2},
+                {"id":76,"weight":2},
+                {"id":196,"weight":2}]},
+            "PoolS9R":{"objects":[
+                {"id":129,"weight":2}]}
+        },
+        "collectId":123001,
+        "global": [
+            {id: 211,from: 0, to: 2,dropPrize:146}],
+        "levels" :[
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 156,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 157,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 152,
+                        "count":2,
+                        "collectId":125003,
+                        "keyed":true
+                    },
+                    {
+                        "id": 127,
+                        "count":1,
+                        "keyed":true
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 130,
+                        "count":2,
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:146}
+                    },
+                    {
+                        "id": 153,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 97,
+                        "count":3,
+                        "keyed":true
+                    }
+                ]
+            }
+        ],
+        "dropID":[
+            69
+        ],
+        "prizeWxp":250,"prizeGold":1600,
+        "prizeXp":1500,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
+    },
+    {
+        "dungeonId": 135,
+        "levelCount" :5,
+        "pool":{
+            "soldierPool":{"objects":[
+                {
+                    "id":103,
+                    "weight":2
+                },
+                {
+                    "id":78,
+                    "weight":2
+                },
+                {
+                    "id":101,
+                    "weight":2
+                },
+                {
+                    "id":104,
+                    "weight":2
+                },
+                {
+                    "id":80,
+                    "weight":2
+                },
+                {
+                    "id":111,
+                    "weight":2
+                } ,
+                {
+                    "id":110,
+                    "weight":2
+                }
+            ]},
+            "elitePool":{"objects":[
+                {
+                    "id":120,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2  ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":127,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2  ,
+                    "keyed":true
+                }
+            ]},
+            "bossPool":{"objects":[
+                {
+                    "id":128,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":97,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2 ,
+                    "keyed":true
+                }
+            ]},
+            "normalPool":{"objects":[
+                {
+                    "id":170,
+                    "weight":3
+                },
+                {
+                    "id":171,
+                    "weight":3
+                },
+                {
+                    "id":172,
+                    "weight":3
+                },
+                {
+                    "id":173,
+                    "weight":3
+                },
+                {
+                    "id":174,
+                    "weight":3
+                },
+                {
+                    "id":175,
+                    "weight":3
+                },
+                {
+                    "id":176,
+                    "weight":3
+                },
+                {
+                    "id":177,
+                    "weight":3
+                },
+                {
+                    "id":178,
+                    "weight":3
+                },
+                {
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
+                    "weight":3
+                }
+            ]}
+        },
+
+        "levels" :[
+            {
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2}
+                ]
+            },
+            {
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2}
+                ]
+            },
+            {
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"id": 149,"from":0,to:2}
+                ]
+            },
+            {
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"pool":"elitePool","count":1},
+                    {"id": 149,"from":0,to:2}
+                ]
+            },
+            {
+                "objects" :[
+                    {"pool":"normalPool","from":0,to:4},
+                    {"pool":"soldierPool","from":6,to:9},
+                    {"pool":"bossPool","count":1},
+                    {"id": 149,"from":0,to:2}
+                ]
+            }],
+        "dropID":
+            [
+                79
+            ],
+        "infinityPrize":
+            [
+                {
+                    "level":1,
+                    "type":0,
+                    "value":538,
+                    "count": 1
+                },
+                {
+                    "level":2,
+                    "type":2,
+                    "count": 20
+                },
+                {
+                    "level":5,
+                    "type":1,
+                    "count":4000
+                },
+                {
+                    "level":7,
+                    "type":0,
+                    "value":857,
+                    "count":3
+                },
+                {
+                    "level":9,
+                    "type":0,
+                    "value":540,
+                    "count": 1
+                },
+                {
+                    "level":10,
+                    "type":2,
+                    "count": 20
+                },
+                {
+                    "level":15,
+                    "type":1,
+                    "count": 7000
+                },
+                {
+                    "level":20,
+                    "type":0,
+                    "value":857,
+                    "count": 5
+                },
+                {
+                    "level":25,
+                    "type":0,
+                    "value":540,
+                    "count": 1
+                },
+                {
+                    "level":30,
+                    "type":0,
+                    "value":538,
+                    "count": 1
+                },
+                {
+                    "level":35,
+                    "type":1,
+                    "count": 10000
+                },
+                {
+                    "level":45,
+                    "type":2,
+                    "count": 30
+                },
+                {
+                    "level":55,
+                    "type":2,
+                    "count": 30
+                },
+                {
+                    "level":65,
+                    "type":2,
+                    "count": 30
+                },
+                {
+                    "level":75,
+                    "type":2,
+                    "count": 30
+                }
+            ],
+        "infinity_a":0,
+        "infinity_b":0,
+        "prizeWxp":0,"prizeGold":1600,
+        "prizeXp":0,
+        "wxpRate":1,"goldRate":0.3,
+        "xpRate":0.4,
+        "rank":360
+    },
+    {
+        "dungeonId": 136,
+        "rank": 340,
+        "levelCount" : 2,
+        "pool":{
+            "normalPool":{"objects":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
+                    "weight":3
+                }
+            ]},
+            "PoolS9":{"objects":[
+                {"id":106,"weight":2},
+                {"id":105,"weight":2},
+                {"id":232,"weight":2},
+                {"id":108,"weight":2}]},
+            "PoolS9R":{"objects":[
+                {"id":109,"weight":2},
+                {"id":226,"weight":2}]}
+        },
+        "collectId":123001,
+        "global": [
+            {id: 211,from: 0, to: 2,dropPrize:146}],
+        "levels" :[
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 156,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 157,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 152,
+                        "count":2,
+                        "collectId":125003,
+                        "keyed":true
+                    },
+                    {
+                        "id": 127,
+                        "count":1,
+                        "keyed":true
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 130,
+                        "count":2,
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:146}
+                    },
+                    {
+                        "id": 153,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 97,
+                        "count":3,
+                        "keyed":true
+                    }
+                ]
+            }
+        ],
+        "dropID":[
+            69
+        ],
+        "prizeWxp":250,"prizeGold":1800,
+        "prizeXp":1600,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
+    },
+    {
+        "dungeonId": 137,
+        "rank": 345,
+        "levelCount" : 2,
+        "pool":{
+            "normalPool":{"objects":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
+                    "weight":3
+                }
+            ]},
+            "PoolS9":{"objects":[
+                {"id":106,"weight":2},
+                {"id":105,"weight":2},
+                {"id":232,"weight":2},
+                {"id":108,"weight":2}]},
+            "PoolS9R":{"objects":[
+                {"id":109,"weight":2},
+                {"id":226,"weight":2}]}
+        },
+        "collectId":123001,
+        "global": [
+            {id: 211,from: 0, to: 2,dropPrize:146}],
+        "levels" :[
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 156,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 157,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 152,
+                        "count":2,
+                        "collectId":125003,
+                        "keyed":true
+                    },
+                    {
+                        "id": 127,
+                        "count":1,
+                        "keyed":true
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 130,
+                        "count":2,
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:146}
+                    },
+                    {
+                        "id": 153,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 97,
+                        "count":3,
+                        "keyed":true
+                    }
+                ]
+            }
+        ],
+        "dropID":[
+            69
+        ],
+        "prizeWxp":250,"prizeGold":1800,
+        "prizeXp":1600,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
+    },
+    {
+        "dungeonId": 138,
+        "rank": 350,
+        "levelCount" : 2,
+        "pool":{
+            "normalPool":{"objects":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
+                    "weight":3
+                }
+            ]},
+            "PoolS9":{"objects":[
+                {"id":106,"weight":2},
+                {"id":105,"weight":2},
+                {"id":232,"weight":2},
+                {"id":108,"weight":2}]},
+            "PoolS9R":{"objects":[
+                {"id":109,"weight":2},
+                {"id":226,"weight":2}]}
+        },
+        "collectId":123001,
+        "global": [
+            {id: 211,from: 0, to: 2,dropPrize:146}],
+        "levels" :[
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 156,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 157,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 152,
+                        "count":2,
+                        "collectId":125003,
+                        "keyed":true
+                    },
+                    {
+                        "id": 127,
+                        "count":1,
+                        "keyed":true
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 130,
+                        "count":2,
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:146}
+                    },
+                    {
+                        "id": 153,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 97,
+                        "count":3,
+                        "keyed":true
+                    }
+                ]
+            }
+        ],
+        "dropID":[
+            69
+        ],
+        "prizeWxp":250,"prizeGold":1800,
+        "prizeXp":1600,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
+    },
+    {
+        "dungeonId": 139,
+        "rank": 355,
+        "levelCount" : 2,
+        "pool":{
+            "normalPool":{"objects":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
+                    "weight":3
+                }
+            ]},
+            "PoolS9":{"objects":[
+                {"id":106,"weight":2},
+                {"id":105,"weight":2},
+                {"id":232,"weight":2},
+                {"id":108,"weight":2}]},
+            "PoolS9R":{"objects":[
+                {"id":109,"weight":2},
+                {"id":226,"weight":2}]}
+        },
+        "collectId":123001,
+        "global": [
+            {id: 211,from: 0, to: 2,dropPrize:146}],
+        "levels" :[
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 156,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 157,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 152,
+                        "count":2,
+                        "collectId":125003,
+                        "keyed":true
+                    },
+                    {
+                        "id": 127,
+                        "count":1,
+                        "keyed":true
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 130,
+                        "count":2,
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:146}
+                    },
+                    {
+                        "id": 153,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 97,
+                        "count":3,
+                        "keyed":true
+                    }
+                ]
+            }
+        ],
+        "dropID":[
+            69
+        ],
+        "prizeWxp":250,"prizeGold":1800,
+        "prizeXp":1600,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
+    },
+    {
+        "dungeonId": 140,
+        "rank": 360,
+        "levelCount" : 2,
+        "pool":{
+            "normalPool":{"objects":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
+                    "weight":3
+                }
+            ]},
+            "PoolS9":{"objects":[
+                {"id":106,"weight":2},
+                {"id":105,"weight":2},
+                {"id":232,"weight":2},
+                {"id":108,"weight":2}]},
+            "PoolS9R":{"objects":[
+                {"id":109,"weight":2},
+                {"id":226,"weight":2}]}
+        },
+        "collectId":123001,
+        "global": [
+            {id: 211,from: 0, to: 2,dropPrize:146}],
+        "levels" :[
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 156,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 157,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 152,
+                        "count":2,
+                        "collectId":125003,
+                        "keyed":true
+                    },
+                    {
+                        "id": 127,
+                        "count":1,
+                        "keyed":true
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 130,
+                        "count":2,
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:146}
+                    },
+                    {
+                        "id": 153,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 97,
+                        "count":3,
+                        "keyed":true
+                    }
+                ]
+            }
+        ],
+        "dropID":[
+            69
+        ],
+        "prizeWxp":250,"prizeGold":1800,
+        "prizeXp":1600,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
+    },
+    {
+        "dungeonId": 141,
+        "rank": 370,
+        "levelCount" : 2,
+        "pool":{
+            "normalPool":{"objects":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
+                    "weight":3
+                }
+            ]},
+            "PoolS9":{"objects":[
+                {"id":106,"weight":2},
+                {"id":105,"weight":2},
+                {"id":232,"weight":2},
+                {"id":108,"weight":2}]},
+            "PoolS9R":{"objects":[
+                {"id":109,"weight":2},
+                {"id":226,"weight":2}]}
+        },
+        "collectId":123001,
+        "global": [
+            {id: 211,from: 0, to: 2,dropPrize:146}],
+        "levels" :[
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 156,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 157,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 152,
+                        "count":2,
+                        "collectId":125003,
+                        "keyed":true
+                    },
+                    {
+                        "id": 127,
+                        "count":1,
+                        "keyed":true
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 130,
+                        "count":2,
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:146}
+                    },
+                    {
+                        "id": 153,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 97,
+                        "count":3,
+                        "keyed":true
+                    }
+                ]
+            }
+        ],
+        "dropID":[
+            69
+        ],
+        "prizeWxp":250,"prizeGold":1800,
+        "prizeXp":1600,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
+    },
+    {
+        "dungeonId": 142,
+        "rank": 380,
+        "levelCount" : 2,
+        "pool":{
+            "normalPool":{"objects":[
+                {
+                    "id":170,
+                    "weight":1
+                },
+                {
+                    "id":171,
+                    "weight":5
+                },
+                {
+                    "id":172,
+                    "weight":5
+                },
+                {
+                    "id":173,
+                    "weight":1
+                },
+                {
+                    "id":174,
+                    "weight":5
+                },
+                {
+                    "id":175,
+                    "weight":5
+                },
+                {
+                    "id":176,
+                    "weight":1
+                },
+                {
+                    "id":177,
+                    "weight":5
+                },
+                {
+                    "id":178,
+                    "weight":1
+                },
+                {
+                    "id":179, "weight":3}, {"id":180, "weight":2},{"id":181, "weight":2},{"id":182, "weight":2},{"id":183, "weight":2},{"id":184, "weight":2},{"id":185,
+                    "weight":3
+                }
+            ]},
+            "PoolS9":{"objects":[
+                {"id":106,"weight":2},
+                {"id":105,"weight":2},
+                {"id":232,"weight":2},
+                {"id":108,"weight":2}]},
+            "PoolS9R":{"objects":[
+                {"id":109,"weight":2},
+                {"id":226,"weight":2}]}
+        },
+        "collectId":123001,
+        "global": [
+            {id: 211,from: 0, to: 2,dropPrize:146}],
+        "levels" :[
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 156,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 157,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 152,
+                        "count":2,
+                        "collectId":125003,
+                        "keyed":true
+                    },
+                    {
+                        "id": 127,
+                        "count":1,
+                        "keyed":true
+                    }
+                ]
+            },
+            {
+                "objects" :[{"pool":"normalPool","from":0,to:4},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {
+                        "id": 130,
+                        "count":2,
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:146}
+                    },
+                    {
+                        "id": 153,
+                        "count":1,
+                        "questOnly":true,
+                        "collectId":127001
+                    },
+                    {
+                        "id": 149,
+                        "count":2
+                    },
+                    {
+                        "id": 97,
+                        "count":3,
+                        "keyed":true
+                    }
+                ]
+            }
+        ],
+        "dropID":[
+            69
+        ],
+        "prizeWxp":250,"prizeGold":1800,
+        "prizeXp":1600,
+        "wxpRate":1,"goldRate":0.5,
+        "xpRate":1
+    },
+    {
+        "dungeonId": 143,
         "rank": 100,
         "levelCount" :1,
         "levels" :[
             {
                 "objects" :[
                     {
-                        "id": 15 ,
-                        "count":2,
+                        "id": 222,
+                        "count":0,
                         "keyed":true
                     },
                     {
-                        "id": 47 ,
-                        "count":2,
+                        "id": 223,
+                        "count":0,
                         "keyed":true
                     },
                     {
-                        "id": 79 ,
-                        "count":2,
+                        "id": 224,
+                        "count":0,
                         "keyed":true
                     },
                     {
-                        "id": 111 ,
-                        "count":2,
+                        "id": 225,
+                        "count":0,
                         "keyed":true
                     },
                     {
-                        "id": 194 ,
-                        "count":2,
+                        "id": 226,
+                        "count":0,
                         "keyed":true
                     },
                     {
-                        "id": 6 ,
-                        "count":1,
+                        "id": 227,
+                        "count":0,
                         "keyed":true
                     },
                     {
-                        "id": 38 ,
-                        "count":1,
+                        "id": 228,
+                        "count":0,
                         "keyed":true
                     },
                     {
-                        "id": 70 ,
-                        "count":1,
+                        "id": 229,
+                        "count":0,
                         "keyed":true
                     },
                     {
-                        "id": 103 ,
-                        "count":1,
+                        "id": 230,
+                        "count":0,
                         "keyed":true
                     },
                     {
-                        "id": 206 ,
+                        "id": 215,
                         "count":1,
                         "keyed":true
                     }
-                ]
+                ],
+                "exit": 29,
+                "entrance":0
             }
         ],
         "dropID":[

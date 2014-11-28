@@ -1310,7 +1310,7 @@ var data = [
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
-				"dungeon": 76,
+				"dungeon": 128,
                 "cond":
                 { "and": [
                     { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
@@ -1323,7 +1323,7 @@ var data = [
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
-				"dungeon": 77,
+				"dungeon": 129,
                 "cond":
                 { "and": [
                     { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
@@ -1336,7 +1336,7 @@ var data = [
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
-				"dungeon": 78,
+				"dungeon": 130,
                 "cond":
                 { "and": [
                     { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
@@ -1349,7 +1349,7 @@ var data = [
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
-				"dungeon": 79,
+				"dungeon": 131,
                 "cond":
                 { "and": [
                     { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
@@ -1362,7 +1362,7 @@ var data = [
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
-				"dungeon": 80,
+				"dungeon": 132,
                 "cond":
                 { "and": [
                     { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
@@ -1375,7 +1375,7 @@ var data = [
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
-                "dungeon":81,
+                "dungeon":133,
                 "cond":
                 { "and": [
                     { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
@@ -1388,7 +1388,7 @@ var data = [
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
-                "dungeon": 82,
+                "dungeon": 134,
                 "cond":
                 { "and": [
                     { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
@@ -1399,7 +1399,7 @@ var data = [
             {
                 "stageId":87,
                 "cost":10,
-                "dungeon":83,
+                "dungeon": 135,
                 "isInfinite":true,
                 "cond":
                 { "and": [
@@ -1424,7 +1424,7 @@ var data = [
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
-				"dungeon": 84,
+				"dungeon": 136,
                 "cond":
                 { "and": [
                     { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
@@ -1437,7 +1437,7 @@ var data = [
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
-				"dungeon":85,
+				"dungeon": 137,
                 "cond":
                 { "and": [
                     { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
@@ -1450,7 +1450,7 @@ var data = [
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
-				"dungeon":86,
+				"dungeon": 138,
                 "cond":
                 { "and": [
                     { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
@@ -1459,11 +1459,11 @@ var data = [
 
             },
 			{
-				"stageId":74,
+				"stageId": 74,
 				"cost": 15,
 				"team": 3,
 				"hidden":false,
-				"dungeon": 87,
+				"dungeon": 139,
                 "cond":
                 { "and": [
                     { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
@@ -1472,11 +1472,11 @@ var data = [
 
             },
 			{
-			    "stageId":75,
+			    "stageId": 75,
 			    "cost": 15,
 			    "team": 3,
 			    "hidden":false,
-			    "dungeon": 88,
+			    "dungeon": 140,
                 "cond":
                 { "and": [
                     { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
@@ -1485,11 +1485,11 @@ var data = [
 
             },
             {
-                "stageId":76,
+                "stageId": 76,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
-                "dungeon": 89,
+                "dungeon": 141,
                 "cond":
                 { "and": [
                     { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
@@ -1498,11 +1498,11 @@ var data = [
 
             },
             {
-                "stageId":77,
+                "stageId": 77,
                 "cost": 15,
                 "team": 3,
                 "hidden":false,
-                "dungeon": 90,
+                "dungeon": 142,
                 "cond":
                 { "and": [
                     { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
@@ -2202,7 +2202,7 @@ var data = [
                 "cost": 0,
                 "team": 3,
                 "hidden":false,
-                "dungeon": 128,
+                "dungeon": 143,
                 "condition": function (obj, util) {
                     if (util.serverObj.counters['133'] == undefined
                         || util.serverObj.counters['133'] < MAX_BATTLE_TIMES) {

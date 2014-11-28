@@ -426,7 +426,294 @@ exports.data = [
             { "type": 1, "count":200},
             { "type":0,"value":856,"count":5}
         ]
+    },
+    {
+        "costId":45,
+        "material":[
+            { "type": 1, "count":100000},
+            { "type":0,"value":1419,"count":2},
+            { "type":0,"value":1420,"count":2},
+            { "type":0,"value":1421,"count":2},
+            { "type":0,"value":1422,"count":2},
+            { "type":0,"value":1423,"count":2},
+            { "type":0,"value":1424,"count":2}
+        ]
+    },
+    {
+        "costId":46,
+        "material":[
+            { "type": 1, "count":100000},
+            { "type":0,"value":1419,"count":2},
+            { "type":0,"value":1420,"count":2},
+            { "type":0,"value":1421,"count":2},
+            { "type":0,"value":1422,"count":2},
+            { "type":0,"value":1424,"count":2},
+            { "type":0,"value":1425,"count":2}
+        ]
+    },
+    {
+        "costId":47,
+        "material":[
+            { "type": 1, "count":100000},
+            { "type":0,"value":1419,"count":2},
+            { "type":0,"value":1420,"count":2},
+            { "type":0,"value":1421,"count":2},
+            { "type":0,"value":1422,"count":2},
+            { "type":0,"value":1425,"count":2},
+            { "type":0,"value":1426,"count":2}
+        ]
+    },
+    {
+        "costId":48,
+        "material":[
+            { "type": 1, "count":100000},
+            { "type":0,"value":1419,"count":2},
+            { "type":0,"value":1420,"count":2},
+            { "type":0,"value":1421,"count":2},
+            { "type":0,"value":1422,"count":2},
+            { "type":0,"value":1426,"count":2},
+            { "type":0,"value":1427,"count":2}
+        ]
+    },
+    {
+        "costId":49,
+        "material":[
+            { "type": 1, "count":100000},
+            { "type":0,"value":1419,"count":2},
+            { "type":0,"value":1420,"count":2},
+            { "type":0,"value":1421,"count":2},
+            { "type":0,"value":1422,"count":2},
+            { "type":0,"value":1427,"count":2},
+            { "type":0,"value":1428,"count":2}
+        ]
+    },
+    {
+        "costId":50,
+        "material":[
+            { "type": 1, "count":100000},
+            { "type":0,"value":1419,"count":2},
+            { "type":0,"value":1420,"count":2},
+            { "type":0,"value":1421,"count":2},
+            { "type":0,"value":1422,"count":2},
+            { "type":0,"value":1428,"count":2},
+            { "type":0,"value":1429,"count":2}
+        ]
+    },
+    {
+        "costId":51,
+        "material":[
+            { "type": 1, "count":150000},
+            { "type":0,"value":1430,"count":4},
+            { "type":0,"value":1431,"count":4},
+            { "type":0,"value":1432,"count":4},
+            { "type":0,"value":1433,"count":4},
+            { "type":0,"value":1434,"count":4},
+            { "type":0,"value":1435,"count":4}
+        ]
+    },
+    {
+        "costId":52,
+        "material":[
+            { "type": 1, "count":150000},
+            { "type":0,"value":1430,"count":4},
+            { "type":0,"value":1431,"count":4},
+            { "type":0,"value":1432,"count":4},
+            { "type":0,"value":1433,"count":4},
+            { "type":0,"value":1435,"count":4},
+            { "type":0,"value":1436,"count":4}
+        ]
+    },
+    {
+        "costId":53,
+        "material":[
+            { "type": 1, "count":150000},
+            { "type":0,"value":1430,"count":4},
+            { "type":0,"value":1431,"count":4},
+            { "type":0,"value":1432,"count":4},
+            { "type":0,"value":1433,"count":4},
+            { "type":0,"value":1436,"count":4},
+            { "type":0,"value":1437,"count":4}
+        ]
+    },
+    {
+        "costId":54,
+        "material":[
+            { "type": 1, "count":150000},
+            { "type":0,"value":1430,"count":4},
+            { "type":0,"value":1431,"count":4},
+            { "type":0,"value":1432,"count":4},
+            { "type":0,"value":1433,"count":4},
+            { "type":0,"value":1437,"count":4},
+            { "type":0,"value":1438,"count":4}
+        ]
+    },
+    {
+        "costId":55,
+        "material":[
+            { "type": 1, "count":150000},
+            { "type":0,"value":1430,"count":4},
+            { "type":0,"value":1431,"count":4},
+            { "type":0,"value":1432,"count":4},
+            { "type":0,"value":1433,"count":4},
+            { "type":0,"value":1438,"count":4},
+            { "type":0,"value":1439,"count":4}
+        ]
+    },
+    {
+        "costId":56,
+        "material":[
+            { "type": 1, "count":150000},
+            { "type":0,"value":1430,"count":4},
+            { "type":0,"value":1431,"count":4},
+            { "type":0,"value":1432,"count":4},
+            { "type":0,"value":1433,"count":4},
+            { "type":0,"value":1439,"count":4},
+            { "type":0,"value":1440,"count":4}
+        ]
+    },
+    {
+        "costId":57,
+        "material":[
+            { "type": 1, "count":200000},
+            { "type":0,"value":1441,"count":6},
+            { "type":0,"value":1442,"count":6},
+            { "type":0,"value":1443,"count":6},
+            { "type":0,"value":1447,"count":6},
+            { "type":0,"value":1449,"count":6},
+            { "type":0,"value":1451,"count":6}
+        ]
+    },
+    {
+        "costId":58,
+        "material":[
+            { "type": 1, "count":200000},
+            { "type":0,"value":1441,"count":6},
+            { "type":0,"value":1442,"count":6},
+            { "type":0,"value":1443,"count":6},
+            { "type":0,"value":1448,"count":6},
+            { "type":0,"value":1450,"count":6},
+            { "type":0,"value":1452,"count":6}
+        ]
+    },
+    {
+        "costId":59,
+        "material":[
+            { "type": 1, "count":200000},
+            { "type":0,"value":1441,"count":6},
+            { "type":0,"value":1442,"count":6},
+            { "type":0,"value":1443,"count":6},
+            { "type":0,"value":1447,"count":6},
+            { "type":0,"value":1448,"count":6},
+            { "type":0,"value":1453,"count":6}
+        ]
+    },
+    {
+        "costId":60,
+        "material":[
+            { "type": 1, "count":200000},
+            { "type":0,"value":1444,"count":6},
+            { "type":0,"value":1445,"count":6},
+            { "type":0,"value":1446,"count":6},
+            { "type":0,"value":1447,"count":6},
+            { "type":0,"value":1449,"count":6},
+            { "type":0,"value":1451,"count":6}
+        ]
+    },
+    {
+        "costId":61,
+        "material":[
+            { "type": 1, "count":200000},
+            { "type":0,"value":1444,"count":6},
+            { "type":0,"value":1445,"count":6},
+            { "type":0,"value":1446,"count":6},
+            { "type":0,"value":1448,"count":6},
+            { "type":0,"value":1450,"count":6},
+            { "type":0,"value":1452,"count":6}
+        ]
+    },
+    {
+        "costId":62,
+        "material":[
+            { "type": 1, "count":200000},
+            { "type":0,"value":1444,"count":6},
+            { "type":0,"value":1445,"count":6},
+            { "type":0,"value":1446,"count":6},
+            { "type":0,"value":1449,"count":6},
+            { "type":0,"value":1450,"count":6},
+            { "type":0,"value":1453,"count":6}
+        ]
+    },
+    {
+        "costId":63,
+        "material":[
+            { "type": 1, "count":300000},
+            { "type":0,"value":1454,"count":8},
+            { "type":0,"value":1455,"count":8},
+            { "type":0,"value":1456,"count":8},
+            { "type":0,"value":1461,"count":8},
+            { "type":0,"value":1463,"count":8},
+            { "type":0,"value":1465,"count":8}
+        ]
+    },
+    {
+        "costId":64,
+        "material":[
+            { "type": 1, "count":300000},
+            { "type":0,"value":1455,"count":8},
+            { "type":0,"value":1456,"count":8},
+            { "type":0,"value":1457,"count":8},
+            { "type":0,"value":1462,"count":8},
+            { "type":0,"value":1464,"count":8},
+            { "type":0,"value":1466,"count":8}
+        ]
+    },
+    {
+        "costId":65,
+        "material":[
+            { "type": 1, "count":300000},
+            { "type":0,"value":1456,"count":8},
+            { "type":0,"value":1457,"count":8},
+            { "type":0,"value":1458,"count":8},
+            { "type":0,"value":1467,"count":8},
+            { "type":0,"value":1468,"count":8},
+            { "type":0,"value":1469,"count":8}
+        ]
+    },
+    {
+        "costId":66,
+        "material":[
+            { "type": 1, "count":300000},
+            { "type":0,"value":1457,"count":8},
+            { "type":0,"value":1458,"count":8},
+            { "type":0,"value":1459,"count":8},
+            { "type":0,"value":1461,"count":8},
+            { "type":0,"value":1463,"count":8},
+            { "type":0,"value":1465,"count":8}
+        ]
+    },
+    {
+        "costId":67,
+        "material":[
+            { "type": 1, "count":300000},
+            { "type":0,"value":1458,"count":8},
+            { "type":0,"value":1459,"count":8},
+            { "type":0,"value":1460,"count":8},
+            { "type":0,"value":1462,"count":8},
+            { "type":0,"value":1464,"count":8},
+            { "type":0,"value":1466,"count":8}
+        ]
+    },
+    {
+        "costId":68,
+        "material":[
+            { "type": 1, "count":300000},
+            { "type":0,"value":1459,"count":8},
+            { "type":0,"value":1460,"count":8},
+            { "type":0,"value":1454,"count":8},
+            { "type":0,"value":1467,"count":8},
+            { "type":0,"value":1468,"count":8},
+            { "type":0,"value":1469,"count":8}
+        ]
     }
-
 ]
 

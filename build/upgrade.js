@@ -48,5 +48,55 @@ exports.data = [
         "upgradeId":9,
         "xp":12500,
         "cost":23000
+    },
+    {
+        "upgradeId":10,
+        "xp":0,
+        "cost":0
+    },
+    {
+        "upgradeId":11,
+        "xp":20000,
+        "cost":25000
+    },
+    {
+        "upgradeId":12,
+        "xp":22000,
+        "cost":32000
+    },
+    {
+        "upgradeId":13,
+        "xp":25000,
+        "cost":40000
+    },
+    {
+        "upgradeId":14,
+        "xp":30000,
+        "cost":100000
+    },
+    {
+        "upgradeId":15,
+        "xp":30000,
+        "cost":53000
+    },
+    {
+        "upgradeId":16,
+        "xp":30000,
+        "cost":64000
+    },
+    {
+        "upgradeId":17,
+        "xp":32000,
+        "cost":78000
+    },
+    {
+        "upgradeId":18,
+        "xp":32000,
+        "cost":90000
+    },
+    {
+        "upgradeId":19,
+        "xp":35000,
+        "cost":120000
     }
 ]

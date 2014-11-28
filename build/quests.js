@@ -5001,5 +5001,28 @@ exports.data = [
             { "==": [ { "type": "getProperty", "key": "quests.181.complete"}, true ] }
         ]
         }
+    },
+    {
+        "questId":183,
+        "title":"评分送宝石",
+        "desc":"跳转到商店页面对我们的游戏进行评价吧，评价完成之后可以免费获得100宝石哦！！\n(注：每个玩家只能获得一次)",
+        "objects":[
+            {
+                "type":6,
+                "label":"给游戏评分",
+                "count":1
+            }
+        ],
+        "prize":[
+            {
+                "type":2,
+                "count":100
+            }
+        ],
+        "cond":
+        { "and": [
+            { "==": [ { "type": "getProperty", "key": "quests.164.complete"}, true ] }
+        ]
+        }
     }
 ]
