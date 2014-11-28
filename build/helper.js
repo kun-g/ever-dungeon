@@ -1,5 +1,5 @@
 (function() {
-  var CONST_MAX_WORLD_BOSS_TIMES, Proxy, ProxyHandler, actCampaign, async, canProxy, checkBountyValidate, conditionCheck, currentTime, dbLib, dbWrapper, defineHideProperty, defineObjFunction, defineObjProperty, diffDate, genCampaignUtil, initCampaign, initDailyEvent, isInVersion, makeVersionRecoder, matchDate, moment, updateLockStatus, updateVersion;
+  var CONST_MAX_WORLD_BOSS_TIMES, Proxy, ProxyHandler, actCampaign, async, canProxy, checkBountyValidate, conditionCheck, currentTime, dbLib, dbWrapper, defineHideProperty, defineObjFunction, defineObjProperty, diffDate, genCampaignUtil, initCampaign, initDailyEvent, isInVersion, isNotNulObj, makeVersionRecoder, matchDate, moment, updateLockStatus, updateVersion;
 
   conditionCheck = require('./trigger').conditionCheck;
 
@@ -46,8 +46,12 @@
     return false;
   };
 
+  isNotNulObj = function(obj) {
+    return (obj != null) && typeof obj === 'object';
+  };
+
   canProxy = function(obj) {
-    return (obj != null) && typeof obj === 'object' && !Proxy.isProxy(obj);
+    return isNotNulObj(obj) && !Proxy.isProxy(obj);
   };
 
   ProxyHandler = function(target, setup, filter) {
@@ -217,7 +221,7 @@
               _ref = propName.split('@'), propName = _ref[0], subVer = _ref[1];
               cb.sub = subVer;
             }
-            if (typeof obj[propName] === 'object') {
+            if (isNotNulObj(obj[propName])) {
               obj[propName] = setupVersionControl(obj[propName], subVer);
               obj[propName].addParent(obj, propName);
             }
@@ -226,7 +230,7 @@
         }
       } else {
         for (propName in obj) {
-          if (typeof obj[propName] === 'object') {
+          if (isNotNulObj(obj[propName])) {
             obj[propName] = setupVersionControl(obj[propName]);
             obj[propName].addParent(obj, propName);
           }
