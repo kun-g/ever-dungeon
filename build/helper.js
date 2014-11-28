@@ -30,20 +30,6 @@
     return defineObjProperty(obj, name, value, false);
   };
 
-  defineObjFunction(Object.prototype, 'map', function(func) {
-    var key, result, value, _results;
-    if (typeof func !== 'function') {
-      throw 'need a function';
-    }
-    result = {};
-    _results = [];
-    for (key in this) {
-      value = this[key];
-      _results.push(result[key] = func(value, key));
-    }
-    return _results;
-  });
-
   Proxy = require('../addon/proxy/nodeproxy');
 
   isInVersion = function(filter, key) {
@@ -66,33 +52,38 @@
         return {}.hasOwnProperty.call(target, name);
       },
       enumerate: function() {
-        var name, result;
-        result = [];
-        for (name in target) {
-          result.push(name);
-        }
-        return result;
+        var name, v;
+        return v = (function() {
+          var _results;
+          _results = [];
+          for (name in targe) {
+            _results.push(name);
+          }
+          return _results;
+        })();
       },
       get: function(receiver, name) {
         var prop;
         prop = target[name];
-        if (name === "valueOf" || name === "toString") {
-          return function() {
-            return target[name]();
-          };
-        }
-        if (name === 'isArray') {
-          return Array.isArray(target);
-        } else if (name === 'inspect') {
-          return function() {
+        switch (name) {
+          case 'valueOf':
+          case 'toString':
+            return function() {
+              return target[name]();
+            };
+          case 'isArray':
+            return Array.isArray(target);
+          case 'inspect':
+            return function() {
+              return target;
+            };
+          case 'constructor':
+            return target.constructor;
+          case '__originObj':
             return target;
-          };
-        } else if (name === 'constructor') {
-          return target.constructor;
-        } else if (name === '__originObj') {
-          return target;
+          default:
+            return prop;
         }
-        return prop;
       },
       set: function(receiver, name, val) {
         var oldval, __map, _ref;
@@ -145,6 +136,7 @@
   makeVersionRecoder = function(obj, key) {
     var func;
     func = function(pro, act, newv, oldv) {
+      console.log('version change ', key);
       return obj[key] += 1;
     };
     return func;
