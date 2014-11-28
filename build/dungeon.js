@@ -2447,13 +2447,14 @@
         } else {
           rangeEff = [];
         }
-        if (env.variable('hit')) {
-          flag = HP_RESULT_TYPE_HIT;
-          if (env.variable('critical')) {
-            flag = HP_RESULT_TYPE_CRITICAL;
-          }
+        if (env.variable('critical')) {
+          flag = HP_RESULT_TYPE_CRITICAL;
         } else {
-          flag = HP_RESULT_TYPE_MISS;
+          if (env.variable('hit')) {
+            flag = HP_RESULT_TYPE_HIT;
+          } else {
+            flag = HP_RESULT_TYPE_MISS;
+          }
         }
         return [
           {
@@ -3098,7 +3099,7 @@
     },
     Damage: {
       callback: function(env) {
-        var damageType, isRange, _ref5, _ref6, _ref7;
+        var damageType, isRange, _ref5;
         damageType = env.variable('damageType');
         isRange = env.variable('isRange');
         if (!((_ref5 = env.variable('tar')) != null ? _ref5.isAlive() : void 0)) {
@@ -3123,14 +3124,13 @@
           onEvent('CriticalDamage', this, env.variable('src'), env.variable('tar'));
         }
         if (!env.variable('tar').isAlive()) {
-          this.next({
+          return this.next({
             id: 'Dead',
             tar: env.variable('tar'),
             killer: env.variable('src'),
             damage: env.variable('damage')
           });
         }
-        return (_ref6 = this.getPrevCommand('Attack')) != null ? (_ref7 = _ref6.cmd) != null ? _ref7.critical = env.variable('critical') : void 0 : void 0;
       },
       output: function(env) {
         var damage, delay, flag, ret;

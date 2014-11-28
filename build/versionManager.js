@@ -32,18 +32,27 @@
   };
 
   VersionManager = (function() {
-    function VersionManager() {
+    function VersionManager(branchConfig) {
+      var config, name, _ref;
+      this.branchConfig = branchConfig;
+      this.baseConfig = {};
       this.fileListDB = {};
       this.versionDB = {};
       this.rootPath = "";
       this.searchPath = "";
       this.fileUtil = {};
+      _ref = this.branchConfig;
+      for (name in _ref) {
+        config = _ref[name];
+        this.fileListDB[name] = {};
+        this.versionDB[name] = {};
+      }
     }
 
-    VersionManager.prototype.init = function(version, cb) {
-      return this.initVersion(this.rootPath, null, (function(_this) {
+    VersionManager.prototype.init = function(branch, cb) {
+      return this.initMasterBranch((function(_this) {
         return function() {
-          return _this.initVersion(_this.searchPath, version, cb);
+          return _this.initBranch(_this.searchPath + branch + '/', branch, _this.branchConfig[branch].version, cb);
         };
       })(this));
     };
@@ -60,57 +69,54 @@
             return cb(err);
           }
           config.path = path;
-          _this.versionDB[config.version] = config;
-          if (config.prevVersion != null) {
-            return _this.initVersion(basePath, config.prevVersion, cb);
-          } else {
-            return cb(err);
+          _this.versionDB[config.branch][config.version] = config;
+          if (config.prevVersion == null) {
+            return cb(err, _this.versionDB[config.branch]);
           }
+          if (_this.versionDB[config.branch][config.prevVersion] != null) {
+            return cb(err, _this.versionDB[config.branch]);
+          }
+          return _this.loadVersionConfig(basePath, config.prevVersion, cb);
         };
       })(this);
       return fileUtil.loadJSON(path + 'project.manifest', ccb);
     };
 
-    VersionManager.prototype.getChangeList = function(fromVersion, toVersion) {
-      var res, version, versionConfig;
-      version = toVersion;
-      res = [];
-      while (version !== fromVersion) {
-        versionConfig = this.versionDB[version];
-        if (!(versionConfig != null ? versionConfig.prevVersion : void 0)) {
-          return [];
-        }
-        res = res.concat(versionConfig.files);
-        version = versionConfig.prevVersion;
-      }
-      return res;
-    };
-
-    VersionManager.prototype.initVersion = function(basePath, version, cb) {
-      if (this.getVersion(version, false) != null) {
+    VersionManager.prototype.initBranch = function(path, branch, version, cb) {
+      var parentBranch;
+      if (this.getVersion(branch, version) != null) {
         return cb();
       }
-      return this.loadVersionConfig(basePath, version, cb);
+      parentBranch = this.branchConfig[branch].parentBranch;
+      if (parentBranch && (this.getVersion(parentBranch, this.branchConfig[parentBranch].version) == null)) {
+        return this.initBranch(path, parentBranch, this.branchConfig[parentBranch].version, (function(_this) {
+          return function() {
+            return _this.loadVersionConfig(path, version, cb);
+          };
+        })(this));
+      } else {
+        return this.loadVersionConfig(path, version, cb);
+      }
     };
 
-    VersionManager.prototype.isParentVersion = function(thisVersion, parentVersion) {
-      var version;
-      version = thisVersion;
-      while (version !== parentVersion) {
-        if (!this.versionDB[version].prevVersion) {
-          return false;
-        }
-        version = this.versionDB[version].prevVersion;
-      }
-      return true;
+    VersionManager.prototype.initMasterBranch = function(cb) {
+      return this.initBranch(this.rootPath, 'master', null, (function(_this) {
+        return function(err, _) {
+          return _this.initBranch(_this.searchPath + 'master/', 'master', _this.branchConfig.master.version, cb);
+        };
+      })(this));
     };
 
-    VersionManager.prototype.getVersion = function(version, flag) {
-      var path, result, versionConfig;
-      if (this.fileListDB[version] != null) {
-        return this.fileListDB[version];
+    VersionManager.prototype.getVersion = function(branch, version) {
+      var config, parentBranch, parentVersion, path, result, temp, versionConfig;
+      if (this.fileListDB[branch][version] != null) {
+        return this.fileListDB[branch][version];
       }
-      versionConfig = this.versionDB[version];
+      config = this.versionDB[branch];
+      if (config == null) {
+        return null;
+      }
+      versionConfig = config[version];
       if (versionConfig == null) {
         return null;
       }
@@ -120,13 +126,23 @@
         return r;
       }), {});
       if (versionConfig.prevVersion) {
-        result = mergeFileList(this.getVersion(versionConfig.prevVersion), result);
+        result = mergeFileList(this.getVersion(branch, versionConfig.prevVersion), result);
       }
-      this.fileListDB[version] = clone(result);
-      if ((typeof addSearchPath !== "undefined" && addSearchPath !== null) && !flag) {
+      if (versionConfig.parentVersion) {
+        parentBranch = this.branchConfig[branch].parentBranch;
+        parentVersion = versionConfig.parentVersion;
+        temp = this.getVersion(parentBranch, parentVersion);
+        result = mergeFileList(temp, result);
+      }
+      this.fileListDB[branch][version] = clone(result);
+      if (addSearchPath) {
         addSearchPath(path, true);
       }
       return result;
+    };
+
+    VersionManager.prototype.setBaseConfig = function(baseConfig) {
+      this.baseConfig = baseConfig;
     };
 
     VersionManager.prototype.setRootPath = function(rootPath) {
