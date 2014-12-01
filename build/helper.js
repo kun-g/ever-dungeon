@@ -70,6 +70,9 @@
           return _results;
         })();
       },
+      "delete": function(name) {
+        return delete target[name];
+      },
       get: function(receiver, name) {
         var prop;
         prop = target[name];
