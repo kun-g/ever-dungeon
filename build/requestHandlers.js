@@ -1017,6 +1017,57 @@
       },
       args: {},
       needPid: true
+    },
+    RPC_CommentGameInfo: {
+      id: 37,
+      func: function(arg, player, handler, rpcID, socket) {
+        var mailContent, ret, _ref1, _ref2;
+        if (arg.cmt != null) {
+          if ((_ref1 = player.flags.cmt) != null ? _ref1.cmted : void 0) {
+            player.flags.cmt.auto = arg.cmt.auto;
+          } else {
+            if (((_ref2 = player.flags.cmt) != null ? _ref2.cmted : void 0) === false && arg.cmt.cmted === true) {
+              mailContent = {
+                type: MESSAGE_TYPE_SystemReward,
+                src: MESSAGE_REWARD_TYPE_SYSTEM,
+                prize: [
+                  {
+                    type: 2,
+                    count: 100
+                  }
+                ],
+                tit: "Bonus!",
+                txt: "评分奖励"
+              };
+              libs.db.deliverMessage(player.name, mailContent);
+            }
+            player.flags['cmt'] = arg.cmt;
+          }
+        } else {
+          if (player.flags.cmt == null) {
+            player.flags.cmt = {
+              cmted: false,
+              auto: true
+            };
+          }
+        }
+        player.save();
+        ret = {
+          REQ: rpcID,
+          RET: RET_OK
+        };
+        ret.arg = {
+          cmt: player.flags.cmt
+        };
+        return handler(ret);
+      },
+      args: {
+        'cmt': {
+          'cmted': 'boolean',
+          'auto': 'boolean'
+        }
+      },
+      needPid: true
     }
   };
 

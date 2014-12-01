@@ -2235,7 +2235,7 @@
       return async.series([
         function(cb) {
           if (id != null) {
-            return dbLib.getPlayerNameByID(id, function(err, theName) {
+            return dbLib.getPlayerNameByID(id, gServerName, function(err, theName) {
               if (theName) {
                 name = theName;
               }

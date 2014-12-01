@@ -135,6 +135,8 @@ echo $SED -i 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $Co
 $SED -i 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
 echo $SED -i 's/"ServerID": .*,/"ServerID": "'$ServerID'",/g' $ConfigFile
 
+$SED -i 's/"needed_version":.*,/"needed_version": "1.1.3",/g' $ConfigFile
+$SED -i 's/"last_version":.*,/"last_version": "1.1.3",/g' $ConfigFile
 # Commit
 echo '===== Commit the changes ====='
 echo 'Commit changes branch:'$CurrentBranch @ $CurrentVersion  Server: $SubModuleServer Table: $SubModuleData

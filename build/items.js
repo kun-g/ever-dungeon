@@ -28009,7 +28009,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 1,
-		"upgradeId": 11,
         "upgradeTarget": 880,
         "basic_properties": {
             "health": 300,
@@ -28056,7 +28055,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 881,
         "basic_properties": {
             "health": 306,
@@ -28069,7 +28067,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 45,
+        "forgeID": 17,
         "forgeTarget": 885,
         "iconf": "f-w-foot5.png",
         "iconm": "m-w-foot5.png"
@@ -28105,7 +28103,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 882,
         "basic_properties": {
             "health": 312,
@@ -28118,7 +28115,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 45,
+        "forgeID": 17,
         "forgeTarget": 886,
         "iconf": "f-w-foot5.png",
         "iconm": "m-w-foot5.png"
@@ -28154,7 +28151,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 883,
         "basic_properties": {
             "health": 318,
@@ -28167,7 +28163,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 45,
+        "forgeID": 17,
         "forgeTarget": 887,
         "iconf": "f-w-foot5.png",
         "iconm": "m-w-foot5.png"
@@ -28203,7 +28199,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 884,
         "basic_properties": {
             "health": 324,
@@ -28216,7 +28211,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 45,
+        "forgeID": 17,
         "forgeTarget": 888,
         "iconf": "f-w-foot5.png",
         "iconm": "m-w-foot5.png"
@@ -28252,7 +28247,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 6,
-		"upgradeId": 16,
         "basic_properties": {
             "health": 330,
             "attack": 45,
@@ -28264,7 +28258,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 45,
+        "forgeID": 17,
         "forgeTarget": 889,
         "iconf": "f-w-foot5.png",
         "iconm": "m-w-foot5.png"
@@ -28300,7 +28294,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 886,
         "basic_properties": {
             "health": 312,
@@ -28347,7 +28340,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 887,
         "basic_properties": {
             "health": 318,
@@ -28360,7 +28352,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 51,
+        "forgeID": 23,
         "forgeTarget": 891,
         "iconf": "f-w-foot4.png",
         "iconm": "m-w-foot4.png"
@@ -28396,7 +28388,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 888,
         "basic_properties": {
             "health": 324,
@@ -28409,7 +28400,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 51,
+        "forgeID": 23,
         "forgeTarget": 892,
         "iconf": "f-w-foot4.png",
         "iconm": "m-w-foot4.png"
@@ -28445,7 +28436,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 889,
         "basic_properties": {
             "health": 330,
@@ -28458,7 +28448,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 51,
+        "forgeID": 23,
         "forgeTarget": 893,
         "iconf": "f-w-foot4.png",
         "iconm": "m-w-foot4.png"
@@ -28494,7 +28484,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 890,
         "basic_properties": {
             "health": 336,
@@ -28507,7 +28496,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 51,
+        "forgeID": 23,
         "forgeTarget": 894,
         "iconf": "f-w-foot4.png",
         "iconm": "m-w-foot4.png"
@@ -28543,7 +28532,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 7,
-		"upgradeId": 17,
         "basic_properties": {
             "health": 342,
             "attack": 47,
@@ -28555,7 +28543,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 51,
+        "forgeID": 23,
         "forgeTarget": 895,
         "iconf": "f-w-foot4.png",
         "iconm": "m-w-foot4.png"
@@ -28591,7 +28579,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 892,
         "basic_properties": {
             "health": 324,
@@ -28638,7 +28625,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 893,
         "basic_properties": {
             "health": 330,
@@ -28651,7 +28637,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 57,
+        "forgeID": 29,
         "forgeTarget": 897,
         "iconf": "f-w-foot3.png",
         "iconm": "m-w-foot3.png"
@@ -28687,7 +28673,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 894,
         "basic_properties": {
             "health": 336,
@@ -28700,7 +28685,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 57,
+        "forgeID": 29,
         "forgeTarget": 898,
         "iconf": "f-w-foot3.png",
         "iconm": "m-w-foot3.png"
@@ -28736,7 +28721,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 895,
         "basic_properties": {
             "health": 342,
@@ -28749,7 +28733,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 57,
+        "forgeID": 29,
         "forgeTarget": 899,
         "iconf": "f-w-foot3.png",
         "iconm": "m-w-foot3.png"
@@ -28785,7 +28769,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 896,
         "basic_properties": {
             "health": 348,
@@ -28798,7 +28781,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 57,
+        "forgeID": 29,
         "forgeTarget": 900,
         "iconf": "f-w-foot3.png",
         "iconm": "m-w-foot3.png"
@@ -28834,7 +28817,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 8,
-		"upgradeId": 18,
         "basic_properties": {
             "health": 354,
             "attack": 49,
@@ -28846,7 +28828,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 57,
+        "forgeID": 29,
         "forgeTarget": 901,
         "iconf": "f-w-foot3.png",
         "iconm": "m-w-foot3.png"
@@ -28882,7 +28864,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 898,
         "basic_properties": {
             "health": 336,
@@ -28929,7 +28910,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 899,
         "basic_properties": {
             "health": 342,
@@ -28942,7 +28922,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 63,
+        "forgeID": 35,
         "forgeTarget": 903,
         "iconf": "f-w-foot2.png",
         "iconm": "m-w-foot2.png"
@@ -28978,7 +28958,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 900,
         "basic_properties": {
             "health": 348,
@@ -28991,7 +28970,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 63,
+        "forgeID": 35,
         "forgeTarget": 904,
         "iconf": "f-w-foot2.png",
         "iconm": "m-w-foot2.png"
@@ -29027,7 +29006,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 901,
         "basic_properties": {
             "health": 354,
@@ -29040,7 +29018,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 63,
+        "forgeID": 35,
         "forgeTarget": 905,
         "iconf": "f-w-foot2.png",
         "iconm": "m-w-foot2.png"
@@ -29076,7 +29054,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 902,
         "basic_properties": {
             "health": 360,
@@ -29089,7 +29066,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 63,
+        "forgeID": 35,
         "forgeTarget": 906,
         "iconf": "f-w-foot2.png",
         "iconm": "m-w-foot2.png"
@@ -29125,7 +29102,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 9,
-		"upgradeId": 19,
         "basic_properties": {
             "health": 366,
             "attack": 51,
@@ -29137,7 +29113,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 63,
+        "forgeID": 35,
         "forgeTarget": 907,
         "iconf": "f-w-foot2.png",
         "iconm": "m-w-foot2.png"
@@ -29173,7 +29149,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 904,
         "basic_properties": {
             "health": 348,
@@ -29220,7 +29195,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 905,
         "basic_properties": {
             "health": 354,
@@ -29267,7 +29241,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 906,
         "basic_properties": {
             "health": 360,
@@ -29314,7 +29287,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 907,
         "basic_properties": {
             "health": 366,
@@ -29361,7 +29333,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 9,
-		"upgradeId": 19,
         "upgradeTarget": 908,
         "basic_properties": {
             "health": 372,
@@ -29485,7 +29456,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 1,
-		"upgradeId": 11,
         "upgradeTarget": 910,
         "basic_properties": {
             "health": 500,
@@ -29564,7 +29534,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 911,
         "basic_properties": {
             "health": 508,
@@ -29577,7 +29546,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 46,
+        "forgeID": 18,
         "forgeTarget": 915,
         "iconf": "f-w-chest5.png",
         "iconm": "m-w-chest5.png"
@@ -29645,7 +29614,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 912,
         "basic_properties": {
             "health": 516,
@@ -29658,7 +29626,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 46,
+        "forgeID": 18,
         "forgeTarget": 916,
         "iconf": "f-w-chest5.png",
         "iconm": "m-w-chest5.png"
@@ -29726,7 +29694,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 913,
         "basic_properties": {
             "health": 524,
@@ -29739,7 +29706,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 46,
+        "forgeID": 18,
         "forgeTarget": 917,
         "iconf": "f-w-chest5.png",
         "iconm": "m-w-chest5.png"
@@ -29807,7 +29774,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 914,
         "basic_properties": {
             "health": 532,
@@ -29820,7 +29786,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 46,
+        "forgeID": 18,
         "forgeTarget": 918,
         "iconf": "f-w-chest5.png",
         "iconm": "m-w-chest5.png"
@@ -29888,7 +29854,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 6,
-		"upgradeId": 16,
         "basic_properties": {
             "health": 540,
             "attack": 35,
@@ -29900,7 +29865,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 46,
+        "forgeID": 18,
         "forgeTarget": 919,
         "iconf": "f-w-chest5.png",
         "iconm": "m-w-chest5.png"
@@ -29968,7 +29933,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 916,
         "basic_properties": {
             "health": 516,
@@ -30047,7 +30011,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 917,
         "basic_properties": {
             "health": 524,
@@ -30060,7 +30023,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 52,
+        "forgeID": 24,
         "forgeTarget": 921,
         "iconf": "f-w-chest4.png",
         "iconm": "m-w-chest4.png"
@@ -30128,7 +30091,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 918,
         "basic_properties": {
             "health": 532,
@@ -30141,7 +30103,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 52,
+        "forgeID": 24,
         "forgeTarget": 922,
         "iconf": "f-w-chest4.png",
         "iconm": "m-w-chest4.png"
@@ -30209,7 +30171,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 919,
         "basic_properties": {
             "health": 540,
@@ -30222,7 +30183,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 52,
+        "forgeID": 24,
         "forgeTarget": 923,
         "iconf": "f-w-chest4.png",
         "iconm": "m-w-chest4.png"
@@ -30290,7 +30251,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 920,
         "basic_properties": {
             "health": 548,
@@ -30303,7 +30263,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 52,
+        "forgeID": 24,
         "forgeTarget": 924,
         "iconf": "f-w-chest4.png",
         "iconm": "m-w-chest4.png"
@@ -30371,7 +30331,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 7,
-		"upgradeId": 17,
         "basic_properties": {
             "health": 556,
             "attack": 36,
@@ -30383,7 +30342,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 52,
+        "forgeID": 24,
         "forgeTarget": 925,
         "iconf": "f-w-chest4.png",
         "iconm": "m-w-chest4.png"
@@ -30451,7 +30410,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 922,
         "basic_properties": {
             "health": 532,
@@ -30464,6 +30422,8 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
+        "forgeID": 24,
+        "forgeTarget": 921,
         "iconf": "f-w-chest3.png",
         "iconm": "m-w-chest3.png"
     },
@@ -30530,7 +30490,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 923,
         "basic_properties": {
             "health": 540,
@@ -30543,7 +30502,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 58,
+        "forgeID": 30,
         "forgeTarget": 927,
         "iconf": "f-w-chest3.png",
         "iconm": "m-w-chest3.png"
@@ -30611,7 +30570,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 924,
         "basic_properties": {
             "health": 548,
@@ -30624,7 +30582,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 58,
+        "forgeID": 30,
         "forgeTarget": 928,
         "iconf": "f-w-chest3.png",
         "iconm": "m-w-chest3.png"
@@ -30692,7 +30650,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 925,
         "basic_properties": {
             "health": 556,
@@ -30705,7 +30662,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 58,
+        "forgeID": 30,
         "forgeTarget": 929,
         "iconf": "f-w-chest3.png",
         "iconm": "m-w-chest3.png"
@@ -30773,7 +30730,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 926,
         "basic_properties": {
             "health": 564,
@@ -30786,7 +30742,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 58,
+        "forgeID": 30,
         "forgeTarget": 930,
         "iconf": "f-w-chest3.png",
         "iconm": "m-w-chest3.png"
@@ -30854,7 +30810,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 8,
-		"upgradeId": 18,
         "basic_properties": {
             "health": 572,
             "attack": 37,
@@ -30866,7 +30821,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 58,
+        "forgeID": 30,
         "forgeTarget": 931,
         "iconf": "f-w-chest3.png",
         "iconm": "m-w-chest3.png"
@@ -30934,7 +30889,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 928,
         "basic_properties": {
             "health": 548,
@@ -31013,7 +30967,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 929,
         "basic_properties": {
             "health": 556,
@@ -31026,7 +30979,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 64,
+        "forgeID": 36,
         "forgeTarget": 933,
         "iconf": "f-w-chest2.png",
         "iconm": "m-w-chest2.png"
@@ -31094,7 +31047,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 930,
         "basic_properties": {
             "health": 564,
@@ -31107,7 +31059,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 64,
+        "forgeID": 36,
         "forgeTarget": 934,
         "iconf": "f-w-chest2.png",
         "iconm": "m-w-chest2.png"
@@ -31175,7 +31127,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 931,
         "basic_properties": {
             "health": 572,
@@ -31188,7 +31139,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 64,
+        "forgeID": 36,
         "forgeTarget": 935,
         "iconf": "f-w-chest2.png",
         "iconm": "m-w-chest2.png"
@@ -31256,7 +31207,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 932,
         "basic_properties": {
             "health": 580,
@@ -31269,7 +31219,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 64,
+        "forgeID": 36,
         "forgeTarget": 936,
         "iconf": "f-w-chest2.png",
         "iconm": "m-w-chest2.png"
@@ -31337,7 +31287,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 9,
-		"upgradeId": 19,
         "basic_properties": {
             "health": 588,
             "attack": 39,
@@ -31349,7 +31298,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 64,
+        "forgeID": 36,
         "forgeTarget": 937,
         "iconf": "f-w-chest2.png",
         "iconm": "m-w-chest2.png"
@@ -31417,7 +31366,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 934,
         "basic_properties": {
             "health": 564,
@@ -31496,7 +31444,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 935,
         "basic_properties": {
             "health": 572,
@@ -31575,7 +31522,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 936,
         "basic_properties": {
             "health": 580,
@@ -31654,7 +31600,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 937,
         "basic_properties": {
             "health": 588,
@@ -31733,7 +31678,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 9,
-		"upgradeId": 19,
         "upgradeTarget": 938,
         "basic_properties": {
             "health": 596,
@@ -31857,7 +31801,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 1,
-		"upgradeId": 11,
         "upgradeTarget": 940,
         "basic_properties": {
             "health": 300,
@@ -31902,7 +31845,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 941,
         "basic_properties": {
             "health": 306,
@@ -31913,7 +31855,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 47,
+        "forgeID": 19,
         "forgeTarget": 945,
         "iconf": "f-w-mainweapon2-5.png",
         "iconm": "m-w-mainweapon2-5.png"
@@ -31949,7 +31891,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 942,
         "basic_properties": {
             "health": 312,
@@ -31960,7 +31901,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 47,
+        "forgeID": 19,
         "forgeTarget": 946,
         "iconf": "f-w-mainweapon2-5.png",
         "iconm": "m-w-mainweapon2-5.png"
@@ -31996,7 +31937,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 943,
         "basic_properties": {
             "health": 318,
@@ -32007,7 +31947,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 47,
+        "forgeID": 19,
         "forgeTarget": 947,
         "iconf": "f-w-mainweapon2-5.png",
         "iconm": "m-w-mainweapon2-5.png"
@@ -32043,7 +31983,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 944,
         "basic_properties": {
             "health": 324,
@@ -32054,7 +31993,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 47,
+        "forgeID": 19,
         "forgeTarget": 948,
         "iconf": "f-w-mainweapon2-5.png",
         "iconm": "m-w-mainweapon2-5.png"
@@ -32090,7 +32029,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 6,
-		"upgradeId": 16,
         "basic_properties": {
             "health": 330,
             "attack": 68,
@@ -32100,7 +32038,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 47,
+        "forgeID": 19,
         "forgeTarget": 949,
         "iconf": "f-w-mainweapon2-5.png",
         "iconm": "m-w-mainweapon2-5.png"
@@ -32136,7 +32074,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 946,
         "basic_properties": {
             "health": 312,
@@ -32181,7 +32118,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 947,
         "basic_properties": {
             "health": 318,
@@ -32192,7 +32128,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 53,
+        "forgeID": 25,
         "forgeTarget": 951,
         "iconf": "f-w-mainweapon2-4.png",
         "iconm": "m-w-mainweapon2-4.png"
@@ -32228,7 +32164,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 948,
         "basic_properties": {
             "health": 324,
@@ -32239,7 +32174,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 53,
+        "forgeID": 25,
         "forgeTarget": 952,
         "iconf": "f-w-mainweapon2-4.png",
         "iconm": "m-w-mainweapon2-4.png"
@@ -32275,7 +32210,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 949,
         "basic_properties": {
             "health": 330,
@@ -32286,7 +32220,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 53,
+        "forgeID": 25,
         "forgeTarget": 953,
         "iconf": "f-w-mainweapon2-4.png",
         "iconm": "m-w-mainweapon2-4.png"
@@ -32322,7 +32256,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 950,
         "basic_properties": {
             "health": 336,
@@ -32333,7 +32266,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 53,
+        "forgeID": 25,
         "forgeTarget": 954,
         "iconf": "f-w-mainweapon2-4.png",
         "iconm": "m-w-mainweapon2-4.png"
@@ -32369,7 +32302,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 7,
-		"upgradeId": 17,
         "basic_properties": {
             "health": 342,
             "attack": 71,
@@ -32379,7 +32311,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 53,
+        "forgeID": 25,
         "forgeTarget": 955,
         "iconf": "f-w-mainweapon2-4.png",
         "iconm": "m-w-mainweapon2-4.png"
@@ -32415,7 +32347,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 952,
         "basic_properties": {
             "health": 324,
@@ -32460,7 +32391,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 953,
         "basic_properties": {
             "health": 330,
@@ -32471,7 +32401,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 59,
+        "forgeID": 31,
         "forgeTarget": 957,
         "iconf": "f-w-mainweapon2-3.png",
         "iconm": "m-w-mainweapon2-3.png"
@@ -32507,7 +32437,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 954,
         "basic_properties": {
             "health": 336,
@@ -32518,7 +32447,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 59,
+        "forgeID": 31,
         "forgeTarget": 958,
         "iconf": "f-w-mainweapon2-3.png",
         "iconm": "m-w-mainweapon2-3.png"
@@ -32554,7 +32483,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 955,
         "basic_properties": {
             "health": 342,
@@ -32565,7 +32493,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 59,
+        "forgeID": 31,
         "forgeTarget": 959,
         "iconf": "f-w-mainweapon2-3.png",
         "iconm": "m-w-mainweapon2-3.png"
@@ -32601,7 +32529,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 956,
         "basic_properties": {
             "health": 348,
@@ -32612,7 +32539,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 59,
+        "forgeID": 31,
         "forgeTarget": 960,
         "iconf": "f-w-mainweapon2-3.png",
         "iconm": "m-w-mainweapon2-3.png"
@@ -32648,7 +32575,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 8,
-		"upgradeId": 18,
         "basic_properties": {
             "health": 354,
             "attack": 75,
@@ -32658,7 +32584,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 59,
+        "forgeID": 31,
         "forgeTarget": 961,
         "iconf": "f-w-mainweapon2-3.png",
         "iconm": "m-w-mainweapon2-3.png"
@@ -32694,7 +32620,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 958,
         "basic_properties": {
             "health": 336,
@@ -32739,7 +32664,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 959,
         "basic_properties": {
             "health": 342,
@@ -32750,7 +32674,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 65,
+        "forgeID": 37,
         "forgeTarget": 963,
         "iconf": "f-w-mainweapon2-2.png",
         "iconm": "m-w-mainweapon2-2.png"
@@ -32786,7 +32710,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 960,
         "basic_properties": {
             "health": 348,
@@ -32797,7 +32720,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 65,
+        "forgeID": 37,
         "forgeTarget": 964,
         "iconf": "f-w-mainweapon2-2.png",
         "iconm": "m-w-mainweapon2-2.png"
@@ -32833,7 +32756,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 961,
         "basic_properties": {
             "health": 354,
@@ -32844,7 +32766,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 65,
+        "forgeID": 37,
         "forgeTarget": 965,
         "iconf": "f-w-mainweapon2-2.png",
         "iconm": "m-w-mainweapon2-2.png"
@@ -32880,7 +32802,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 962,
         "basic_properties": {
             "health": 360,
@@ -32891,7 +32812,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 65,
+        "forgeID": 37,
         "forgeTarget": 966,
         "iconf": "f-w-mainweapon2-2.png",
         "iconm": "m-w-mainweapon2-2.png"
@@ -32927,7 +32848,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 9,
-		"upgradeId": 19,
         "basic_properties": {
             "health": 366,
             "attack": 78,
@@ -32937,7 +32857,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 65,
+        "forgeID": 37,
         "forgeTarget": 967,
         "iconf": "f-w-mainweapon2-2.png",
         "iconm": "m-w-mainweapon2-2.png"
@@ -32973,7 +32893,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 964,
         "basic_properties": {
             "health": 348,
@@ -33018,7 +32937,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 965,
         "basic_properties": {
             "health": 354,
@@ -33063,7 +32981,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 966,
         "basic_properties": {
             "health": 360,
@@ -33108,7 +33025,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 967,
         "basic_properties": {
             "health": 366,
@@ -33153,7 +33069,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 9,
-		"upgradeId": 19,
         "upgradeTarget": 968,
         "basic_properties": {
             "health": 372,
@@ -33235,7 +33150,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 1,
-		"upgradeId": 11,
         "upgradeTarget": 970,
         "basic_properties": {
             "health": 300,
@@ -33275,7 +33189,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 971,
         "basic_properties": {
             "health": 306,
@@ -33287,7 +33200,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 48,
+        "forgeID": 20,
         "forgeTarget": 975,
         "iconf": "f-w-mainweapon1-5.png",
         "iconm": "m-w-mainweapon1-5.png"
@@ -33317,7 +33230,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 972,
         "basic_properties": {
             "health": 312,
@@ -33329,7 +33241,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 48,
+        "forgeID": 20,
         "forgeTarget": 976,
         "iconf": "f-w-mainweapon1-5.png",
         "iconm": "m-w-mainweapon1-5.png"
@@ -33359,7 +33271,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 973,
         "basic_properties": {
             "health": 318,
@@ -33371,7 +33282,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 48,
+        "forgeID": 20,
         "forgeTarget": 977,
         "iconf": "f-w-mainweapon1-5.png",
         "iconm": "m-w-mainweapon1-5.png"
@@ -33401,7 +33312,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 974,
         "basic_properties": {
             "health": 324,
@@ -33413,7 +33323,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 48,
+        "forgeID": 20,
         "forgeTarget": 978,
         "iconf": "f-w-mainweapon1-5.png",
         "iconm": "m-w-mainweapon1-5.png"
@@ -33443,7 +33353,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 6,
-		"upgradeId": 16,
         "basic_properties": {
             "health": 330,
             "attack": 90,
@@ -33454,7 +33363,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 48,
+        "forgeID": 20,
         "forgeTarget": 979,
         "iconf": "f-w-mainweapon1-5.png",
         "iconm": "m-w-mainweapon1-5.png"
@@ -33484,7 +33393,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 976,
         "basic_properties": {
             "health": 312,
@@ -33524,7 +33432,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 977,
         "basic_properties": {
             "health": 318,
@@ -33536,7 +33443,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 54,
+        "forgeID": 26,
         "forgeTarget": 981,
         "iconf": "f-w-mainweapon1-4.png",
         "iconm": "m-w-mainweapon1-4.png"
@@ -33566,7 +33473,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 978,
         "basic_properties": {
             "health": 324,
@@ -33578,7 +33484,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 54,
+        "forgeID": 26,
         "forgeTarget": 982,
         "iconf": "f-w-mainweapon1-4.png",
         "iconm": "m-w-mainweapon1-4.png"
@@ -33608,7 +33514,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 979,
         "basic_properties": {
             "health": 330,
@@ -33620,7 +33525,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 54,
+        "forgeID": 26,
         "forgeTarget": 983,
         "iconf": "f-w-mainweapon1-4.png",
         "iconm": "m-w-mainweapon1-4.png"
@@ -33650,7 +33555,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 980,
         "basic_properties": {
             "health": 336,
@@ -33662,7 +33566,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 54,
+        "forgeID": 26,
         "forgeTarget": 984,
         "iconf": "f-w-mainweapon1-4.png",
         "iconm": "m-w-mainweapon1-4.png"
@@ -33692,7 +33596,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 7,
-		"upgradeId": 17,
         "basic_properties": {
             "health": 342,
             "attack": 94,
@@ -33703,7 +33606,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 54,
+        "forgeID": 26,
         "forgeTarget": 985,
         "iconf": "f-w-mainweapon1-4.png",
         "iconm": "m-w-mainweapon1-4.png"
@@ -33733,7 +33636,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 982,
         "basic_properties": {
             "health": 324,
@@ -33773,7 +33675,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 983,
         "basic_properties": {
             "health": 330,
@@ -33785,7 +33686,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 60,
+        "forgeID": 32,
         "forgeTarget": 987,
         "iconf": "f-w-mainweapon1-3.png",
         "iconm": "m-w-mainweapon1-3.png"
@@ -33815,7 +33716,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 984,
         "basic_properties": {
             "health": 336,
@@ -33827,7 +33727,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 60,
+        "forgeID": 32,
         "forgeTarget": 988,
         "iconf": "f-w-mainweapon1-3.png",
         "iconm": "m-w-mainweapon1-3.png"
@@ -33857,7 +33757,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 985,
         "basic_properties": {
             "health": 342,
@@ -33869,7 +33768,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 60,
+        "forgeID": 32,
         "forgeTarget": 989,
         "iconf": "f-w-mainweapon1-3.png",
         "iconm": "m-w-mainweapon1-3.png"
@@ -33899,7 +33798,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 986,
         "basic_properties": {
             "health": 348,
@@ -33911,7 +33809,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 60,
+        "forgeID": 32,
         "forgeTarget": 990,
         "iconf": "f-w-mainweapon1-3.png",
         "iconm": "m-w-mainweapon1-3.png"
@@ -33941,7 +33839,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 8,
-		"upgradeId": 18,
         "basic_properties": {
             "health": 354,
             "attack": 98,
@@ -33952,7 +33849,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 60,
+        "forgeID": 32,
         "forgeTarget": 991,
         "iconf": "f-w-mainweapon1-3.png",
         "iconm": "m-w-mainweapon1-3.png"
@@ -33982,7 +33879,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 988,
         "basic_properties": {
             "health": 336,
@@ -34022,7 +33918,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 989,
         "basic_properties": {
             "health": 342,
@@ -34034,7 +33929,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 66,
+        "forgeID": 38,
         "forgeTarget": 993,
         "iconf": "f-w-mainweapon1-2.png",
         "iconm": "m-w-mainweapon1-2.png"
@@ -34064,7 +33959,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 990,
         "basic_properties": {
             "health": 348,
@@ -34076,7 +33970,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 66,
+        "forgeID": 38,
         "forgeTarget": 994,
         "iconf": "f-w-mainweapon1-2.png",
         "iconm": "m-w-mainweapon1-2.png"
@@ -34106,7 +34000,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 991,
         "basic_properties": {
             "health": 354,
@@ -34118,7 +34011,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 66,
+        "forgeID": 38,
         "forgeTarget": 995,
         "iconf": "f-w-mainweapon1-2.png",
         "iconm": "m-w-mainweapon1-2.png"
@@ -34148,7 +34041,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 992,
         "basic_properties": {
             "health": 360,
@@ -34160,7 +34052,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 66,
+        "forgeID": 38,
         "forgeTarget": 996,
         "iconf": "f-w-mainweapon1-2.png",
         "iconm": "m-w-mainweapon1-2.png"
@@ -34190,7 +34082,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 9,
-		"upgradeId": 19,
         "basic_properties": {
             "health": 366,
             "attack": 102,
@@ -34201,7 +34092,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 66,
+        "forgeID": 38,
         "forgeTarget": 997,
         "iconf": "f-w-mainweapon1-2.png",
         "iconm": "m-w-mainweapon1-2.png"
@@ -34231,7 +34122,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 994,
         "basic_properties": {
             "health": 348,
@@ -34271,7 +34161,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 995,
         "basic_properties": {
             "health": 354,
@@ -34311,7 +34200,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 996,
         "basic_properties": {
             "health": 360,
@@ -34351,7 +34239,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 997,
         "basic_properties": {
             "health": 366,
@@ -34391,7 +34278,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 9,
-		"upgradeId": 19,
         "upgradeTarget": 998,
         "basic_properties": {
             "health": 372,
@@ -34456,7 +34342,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 1,
-		"upgradeId": 11,
         "upgradeTarget": 1000,
         "basic_properties": {
             "health": 300,
@@ -34483,7 +34368,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1001,
         "basic_properties": {
             "health": 306,
@@ -34497,7 +34381,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 50,
+        "forgeID": 22,
         "forgeTarget": 1005
     },
     {
@@ -34512,7 +34396,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1002,
         "basic_properties": {
             "health": 312,
@@ -34526,7 +34409,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 50,
+        "forgeID": 22,
         "forgeTarget": 1006
     },
     {
@@ -34541,7 +34424,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1003,
         "basic_properties": {
             "health": 318,
@@ -34555,7 +34437,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 50,
+        "forgeID": 22,
         "forgeTarget": 1007
     },
     {
@@ -34570,7 +34452,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1004,
         "basic_properties": {
             "health": 324,
@@ -34584,7 +34465,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 50,
+        "forgeID": 22,
         "forgeTarget": 1008
     },
     {
@@ -34599,7 +34480,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 6,
-		"upgradeId": 16,
         "basic_properties": {
             "health": 330,
             "attack": 35,
@@ -34612,7 +34492,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 50,
+        "forgeID": 22,
         "forgeTarget": 1009
     },
     {
@@ -34627,7 +34507,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1006,
         "basic_properties": {
             "health": 312,
@@ -34654,7 +34533,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1007,
         "basic_properties": {
             "health": 318,
@@ -34668,7 +34546,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 56,
+        "forgeID": 28,
         "forgeTarget": 1011
     },
     {
@@ -34683,7 +34561,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1008,
         "basic_properties": {
             "health": 324,
@@ -34697,7 +34574,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 56,
+        "forgeID": 28,
         "forgeTarget": 1012
     },
     {
@@ -34712,7 +34589,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1009,
         "basic_properties": {
             "health": 330,
@@ -34726,7 +34602,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 56,
+        "forgeID": 28,
         "forgeTarget": 1013
     },
     {
@@ -34741,7 +34617,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1010,
         "basic_properties": {
             "health": 336,
@@ -34755,7 +34630,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 56,
+        "forgeID": 28,
         "forgeTarget": 1014
     },
     {
@@ -34770,7 +34645,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 7,
-		"upgradeId": 17,
         "basic_properties": {
             "health": 342,
             "attack": 37,
@@ -34783,7 +34657,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 56,
+        "forgeID": 28,
         "forgeTarget": 1015
     },
     {
@@ -34798,7 +34672,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1012,
         "basic_properties": {
             "health": 324,
@@ -34825,7 +34698,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1013,
         "basic_properties": {
             "health": 330,
@@ -34839,7 +34711,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 62,
+        "forgeID": 34,
         "forgeTarget": 1017
     },
     {
@@ -34854,7 +34726,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1014,
         "basic_properties": {
             "health": 336,
@@ -34868,7 +34739,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 62,
+        "forgeID": 34,
         "forgeTarget": 1018
     },
     {
@@ -34883,7 +34754,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1015,
         "basic_properties": {
             "health": 342,
@@ -34897,7 +34767,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 62,
+        "forgeID": 34,
         "forgeTarget": 1019
     },
     {
@@ -34912,7 +34782,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1016,
         "basic_properties": {
             "health": 348,
@@ -34926,7 +34795,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 62,
+        "forgeID": 34,
         "forgeTarget": 1020
     },
     {
@@ -34941,7 +34810,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 8,
-		"upgradeId": 18,
         "basic_properties": {
             "health": 354,
             "attack": 39,
@@ -34954,7 +34822,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 62,
+        "forgeID": 34,
         "forgeTarget": 1021
     },
     {
@@ -34969,7 +34837,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1018,
         "basic_properties": {
             "health": 336,
@@ -34996,7 +34863,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1019,
         "basic_properties": {
             "health": 342,
@@ -35010,7 +34876,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 68,
+        "forgeID": 40,
         "forgeTarget": 1023
     },
     {
@@ -35025,7 +34891,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1020,
         "basic_properties": {
             "health": 348,
@@ -35039,7 +34904,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 68,
+        "forgeID": 40,
         "forgeTarget": 1024
     },
     {
@@ -35054,7 +34919,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1021,
         "basic_properties": {
             "health": 354,
@@ -35068,7 +34932,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 68,
+        "forgeID": 40,
         "forgeTarget": 1025
     },
     {
@@ -35083,7 +34947,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1022,
         "basic_properties": {
             "health": 360,
@@ -35097,7 +34960,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 68,
+        "forgeID": 40,
         "forgeTarget": 1026
     },
     {
@@ -35112,7 +34975,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 9,
-		"upgradeId": 19,
         "basic_properties": {
             "health": 366,
             "attack": 40,
@@ -35125,7 +34987,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 68,
+        "forgeID": 40,
         "forgeTarget": 1027
     },
     {
@@ -35140,7 +35002,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1024,
         "basic_properties": {
             "health": 348,
@@ -35167,7 +35028,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1025,
         "basic_properties": {
             "health": 354,
@@ -35194,7 +35054,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1026,
         "basic_properties": {
             "health": 360,
@@ -35221,7 +35080,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1027,
         "basic_properties": {
             "health": 366,
@@ -35248,7 +35106,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 9,
-		"upgradeId": 19,
         "upgradeTarget": 1028,
         "basic_properties": {
             "health": 372,
@@ -35300,7 +35157,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 1,
-		"upgradeId": 11,
         "upgradeTarget": 1030,
         "basic_properties": {
             "health": 300,
@@ -35328,7 +35184,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1031,
         "basic_properties": {
             "health": 306,
@@ -35343,7 +35198,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 49,
+        "forgeID": 21,
         "forgeTarget": 1035
     },
     {
@@ -35358,7 +35213,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1032,
         "basic_properties": {
             "health": 312,
@@ -35373,7 +35227,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 49,
+        "forgeID": 21,
         "forgeTarget": 1036
     },
     {
@@ -35388,7 +35242,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1033,
         "basic_properties": {
             "health": 318,
@@ -35403,7 +35256,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 49,
+        "forgeID": 21,
         "forgeTarget": 1037
     },
     {
@@ -35418,7 +35271,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1034,
         "basic_properties": {
             "health": 324,
@@ -35433,7 +35285,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 49,
+        "forgeID": 21,
         "forgeTarget": 1038
     },
     {
@@ -35448,7 +35300,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 6,
-		"upgradeId": 16,
         "basic_properties": {
             "health": 330,
             "attack": 32,
@@ -35462,7 +35313,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 49,
+        "forgeID": 21,
         "forgeTarget": 1039
     },
     {
@@ -35477,7 +35328,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1036,
         "basic_properties": {
             "health": 312,
@@ -35505,7 +35355,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1037,
         "basic_properties": {
             "health": 318,
@@ -35520,7 +35369,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 55,
+        "forgeID": 27,
         "forgeTarget": 1041
     },
     {
@@ -35535,7 +35384,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1038,
         "basic_properties": {
             "health": 324,
@@ -35550,7 +35398,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 55,
+        "forgeID": 27,
         "forgeTarget": 1042
     },
     {
@@ -35565,7 +35413,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1039,
         "basic_properties": {
             "health": 330,
@@ -35580,7 +35427,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 55,
+        "forgeID": 27,
         "forgeTarget": 1043
     },
     {
@@ -35595,7 +35442,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1040,
         "basic_properties": {
             "health": 336,
@@ -35610,7 +35456,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 55,
+        "forgeID": 27,
         "forgeTarget": 1044
     },
     {
@@ -35625,7 +35471,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 7,
-		"upgradeId": 17,
         "basic_properties": {
             "health": 342,
             "attack": 34,
@@ -35639,7 +35484,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 55,
+        "forgeID": 27,
         "forgeTarget": 1045
     },
     {
@@ -35654,7 +35499,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1042,
         "basic_properties": {
             "health": 324,
@@ -35682,7 +35526,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1043,
         "basic_properties": {
             "health": 330,
@@ -35697,7 +35540,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 61,
+        "forgeID": 33,
         "forgeTarget": 1047
     },
     {
@@ -35712,7 +35555,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1044,
         "basic_properties": {
             "health": 336,
@@ -35727,7 +35569,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 61,
+        "forgeID": 33,
         "forgeTarget": 1048
     },
     {
@@ -35742,7 +35584,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1045,
         "basic_properties": {
             "health": 342,
@@ -35757,7 +35598,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 61,
+        "forgeID": 33,
         "forgeTarget": 1049
     },
     {
@@ -35772,7 +35613,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1046,
         "basic_properties": {
             "health": 348,
@@ -35787,7 +35627,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 61,
+        "forgeID": 33,
         "forgeTarget": 1050
     },
     {
@@ -35802,7 +35642,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 8,
-		"upgradeId": 18,
         "basic_properties": {
             "health": 354,
             "attack": 35,
@@ -35816,7 +35655,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 61,
+        "forgeID": 33,
         "forgeTarget": 1051
     },
     {
@@ -35831,7 +35670,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1048,
         "basic_properties": {
             "health": 336,
@@ -35859,7 +35697,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1049,
         "basic_properties": {
             "health": 342,
@@ -35874,7 +35711,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 67,
+        "forgeID": 39,
         "forgeTarget": 1053
     },
     {
@@ -35889,7 +35726,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1050,
         "basic_properties": {
             "health": 348,
@@ -35904,7 +35740,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 67,
+        "forgeID": 39,
         "forgeTarget": 1054
     },
     {
@@ -35919,7 +35755,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1051,
         "basic_properties": {
             "health": 354,
@@ -35934,7 +35769,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 67,
+        "forgeID": 39,
         "forgeTarget": 1055
     },
     {
@@ -35949,7 +35784,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1052,
         "basic_properties": {
             "health": 360,
@@ -35964,7 +35798,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 67,
+        "forgeID": 39,
         "forgeTarget": 1056
     },
     {
@@ -35979,7 +35813,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 9,
-		"upgradeId": 19,
         "basic_properties": {
             "health": 366,
             "attack": 37,
@@ -35993,7 +35826,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 3,
         "hide": true,
-        "forgeID": 67,
+        "forgeID": 39,
         "forgeTarget": 1057
     },
     {
@@ -36008,7 +35841,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1054,
         "basic_properties": {
             "health": 348,
@@ -36036,7 +35868,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1055,
         "basic_properties": {
             "health": 354,
@@ -36064,7 +35895,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1056,
         "basic_properties": {
             "health": 360,
@@ -36092,7 +35922,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1057,
         "basic_properties": {
             "health": 366,
@@ -36120,7 +35949,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 9,
-		"upgradeId": 19,
         "upgradeTarget": 1058,
         "basic_properties": {
             "health": 372,
@@ -36193,7 +36021,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 1,
-		"upgradeId": 11,
         "upgradeTarget": 1060,
         "basic_properties": {
             "health": 250,
@@ -36241,7 +36068,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1061,
         "basic_properties": {
             "health": 255,
@@ -36255,7 +36081,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 45,
+        "forgeID": 17,
         "forgeTarget": 1065,
         "iconf": "f-m-foot5.png",
         "iconm": "m-m-foot5.png"
@@ -36291,7 +36117,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1062,
         "basic_properties": {
             "health": 260,
@@ -36305,7 +36130,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 45,
+        "forgeID": 17,
         "forgeTarget": 1066,
         "iconf": "f-m-foot5.png",
         "iconm": "m-m-foot5.png"
@@ -36341,7 +36166,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1063,
         "basic_properties": {
             "health": 265,
@@ -36355,7 +36179,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 45,
+        "forgeID": 17,
         "forgeTarget": 1067,
         "iconf": "f-m-foot5.png",
         "iconm": "m-m-foot5.png"
@@ -36391,7 +36215,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1064,
         "basic_properties": {
             "health": 270,
@@ -36405,7 +36228,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 45,
+        "forgeID": 17,
         "forgeTarget": 1068,
         "iconf": "f-m-foot5.png",
         "iconm": "m-m-foot5.png"
@@ -36441,7 +36264,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 6,
-		"upgradeId": 16,
         "basic_properties": {
             "health": 275,
             "attack": 56,
@@ -36454,7 +36276,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 45,
+        "forgeID": 17,
         "forgeTarget": 1069,
         "iconf": "f-m-foot5.png",
         "iconm": "m-m-foot5.png"
@@ -36490,7 +36312,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1066,
         "basic_properties": {
             "health": 260,
@@ -36538,7 +36359,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1067,
         "basic_properties": {
             "health": 265,
@@ -36552,7 +36372,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 51,
+        "forgeID": 23,
         "forgeTarget": 1071,
         "iconf": "f-m-foot4.png",
         "iconm": "m-m-foot4.png"
@@ -36588,7 +36408,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1068,
         "basic_properties": {
             "health": 270,
@@ -36602,7 +36421,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 51,
+        "forgeID": 23,
         "forgeTarget": 1072,
         "iconf": "f-m-foot4.png",
         "iconm": "m-m-foot4.png"
@@ -36638,7 +36457,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1069,
         "basic_properties": {
             "health": 275,
@@ -36652,7 +36470,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 51,
+        "forgeID": 23,
         "forgeTarget": 1073,
         "iconf": "f-m-foot4.png",
         "iconm": "m-m-foot4.png"
@@ -36688,7 +36506,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1070,
         "basic_properties": {
             "health": 280,
@@ -36702,7 +36519,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 51,
+        "forgeID": 23,
         "forgeTarget": 1074,
         "iconf": "f-m-foot4.png",
         "iconm": "m-m-foot4.png"
@@ -36738,7 +36555,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 7,
-		"upgradeId": 17,
         "basic_properties": {
             "health": 285,
             "attack": 59,
@@ -36751,7 +36567,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 51,
+        "forgeID": 23,
         "forgeTarget": 1075,
         "iconf": "f-m-foot4.png",
         "iconm": "m-m-foot4.png"
@@ -36787,7 +36603,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1072,
         "basic_properties": {
             "health": 270,
@@ -36835,7 +36650,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1073,
         "basic_properties": {
             "health": 275,
@@ -36849,7 +36663,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 57,
+        "forgeID": 29,
         "forgeTarget": 1077,
         "iconf": "f-m-foot3.png",
         "iconm": "m-m-foot3.png"
@@ -36885,7 +36699,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1074,
         "basic_properties": {
             "health": 280,
@@ -36899,7 +36712,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 57,
+        "forgeID": 29,
         "forgeTarget": 1078,
         "iconf": "f-m-foot3.png",
         "iconm": "m-m-foot3.png"
@@ -36935,7 +36748,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1075,
         "basic_properties": {
             "health": 285,
@@ -36949,7 +36761,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 57,
+        "forgeID": 29,
         "forgeTarget": 1079,
         "iconf": "f-m-foot3.png",
         "iconm": "m-m-foot3.png"
@@ -36985,7 +36797,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1076,
         "basic_properties": {
             "health": 290,
@@ -36999,7 +36810,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 57,
+        "forgeID": 29,
         "forgeTarget": 1080,
         "iconf": "f-m-foot3.png",
         "iconm": "m-m-foot3.png"
@@ -37035,7 +36846,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 8,
-		"upgradeId": 18,
         "basic_properties": {
             "health": 295,
             "attack": 61,
@@ -37048,7 +36858,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 57,
+        "forgeID": 29,
         "forgeTarget": 1081,
         "iconf": "f-m-foot3.png",
         "iconm": "m-m-foot3.png"
@@ -37084,7 +36894,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1078,
         "basic_properties": {
             "health": 280,
@@ -37132,7 +36941,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1079,
         "basic_properties": {
             "health": 285,
@@ -37146,7 +36954,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 63,
+        "forgeID": 35,
         "forgeTarget": 1083,
         "iconf": "f-m-foot2.png",
         "iconm": "m-m-foot2.png"
@@ -37182,7 +36990,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1080,
         "basic_properties": {
             "health": 290,
@@ -37196,7 +37003,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 63,
+        "forgeID": 35,
         "forgeTarget": 1084,
         "iconf": "f-m-foot2.png",
         "iconm": "m-m-foot2.png"
@@ -37232,7 +37039,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1081,
         "basic_properties": {
             "health": 295,
@@ -37246,7 +37052,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 63,
+        "forgeID": 35,
         "forgeTarget": 1085,
         "iconf": "f-m-foot2.png",
         "iconm": "m-m-foot2.png"
@@ -37282,7 +37088,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1082,
         "basic_properties": {
             "health": 300,
@@ -37296,7 +37101,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 63,
+        "forgeID": 35,
         "forgeTarget": 1086,
         "iconf": "f-m-foot2.png",
         "iconm": "m-m-foot2.png"
@@ -37332,7 +37137,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 9,
-		"upgradeId": 19,
         "basic_properties": {
             "health": 305,
             "attack": 64,
@@ -37345,7 +37149,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 63,
+        "forgeID": 35,
         "forgeTarget": 1087,
         "iconf": "f-m-foot2.png",
         "iconm": "m-m-foot2.png"
@@ -37381,7 +37185,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1084,
         "basic_properties": {
             "health": 290,
@@ -37429,7 +37232,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1085,
         "basic_properties": {
             "health": 295,
@@ -37477,7 +37279,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1086,
         "basic_properties": {
             "health": 300,
@@ -37525,7 +37326,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1087,
         "basic_properties": {
             "health": 305,
@@ -37573,7 +37373,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 9,
-		"upgradeId": 19,
         "upgradeTarget": 1088,
         "basic_properties": {
             "health": 310,
@@ -37699,7 +37498,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 1,
-		"upgradeId": 11,
         "upgradeTarget": 1090,
         "basic_properties": {
             "health": 320,
@@ -37778,7 +37576,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1091,
         "basic_properties": {
             "health": 325,
@@ -37791,7 +37588,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 46,
+        "forgeID": 18,
         "forgeTarget": 1095,
         "iconf": "f-m-chest5.png",
         "iconm": "m-m-chest5.png"
@@ -37859,7 +37656,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1092,
         "basic_properties": {
             "health": 330,
@@ -37872,7 +37668,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 46,
+        "forgeID": 18,
         "forgeTarget": 1096,
         "iconf": "f-m-chest5.png",
         "iconm": "m-m-chest5.png"
@@ -37940,7 +37736,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1093,
         "basic_properties": {
             "health": 335,
@@ -37953,7 +37748,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 46,
+        "forgeID": 18,
         "forgeTarget": 1097,
         "iconf": "f-m-chest5.png",
         "iconm": "m-m-chest5.png"
@@ -38021,7 +37816,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1094,
         "basic_properties": {
             "health": 340,
@@ -38034,7 +37828,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 46,
+        "forgeID": 18,
         "forgeTarget": 1098,
         "iconf": "f-m-chest5.png",
         "iconm": "m-m-chest5.png"
@@ -38102,7 +37896,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 6,
-		"upgradeId": 16,
         "basic_properties": {
             "health": 345,
             "attack": 57,
@@ -38114,7 +37907,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 46,
+        "forgeID": 18,
         "forgeTarget": 1099,
         "iconf": "f-m-chest5.png",
         "iconm": "m-m-chest5.png"
@@ -38182,7 +37975,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1096,
         "basic_properties": {
             "health": 330,
@@ -38261,7 +38053,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1097,
         "basic_properties": {
             "health": 335,
@@ -38274,7 +38065,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 52,
+        "forgeID": 24,
         "forgeTarget": 1101,
         "iconf": "f-m-chest4.png",
         "iconm": "m-m-chest4.png"
@@ -38342,7 +38133,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1098,
         "basic_properties": {
             "health": 340,
@@ -38355,7 +38145,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 52,
+        "forgeID": 24,
         "forgeTarget": 1102,
         "iconf": "f-m-chest4.png",
         "iconm": "m-m-chest4.png"
@@ -38423,7 +38213,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1099,
         "basic_properties": {
             "health": 345,
@@ -38436,7 +38225,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 52,
+        "forgeID": 24,
         "forgeTarget": 1103,
         "iconf": "f-m-chest4.png",
         "iconm": "m-m-chest4.png"
@@ -38504,7 +38293,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1100,
         "basic_properties": {
             "health": 350,
@@ -38517,7 +38305,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 52,
+        "forgeID": 24,
         "forgeTarget": 1104,
         "iconf": "f-m-chest4.png",
         "iconm": "m-m-chest4.png"
@@ -38585,7 +38373,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 7,
-		"upgradeId": 17,
         "basic_properties": {
             "health": 355,
             "attack": 59,
@@ -38597,7 +38384,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 52,
+        "forgeID": 24,
         "forgeTarget": 1105,
         "iconf": "f-m-chest4.png",
         "iconm": "m-m-chest4.png"
@@ -38665,7 +38452,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1102,
         "basic_properties": {
             "health": 340,
@@ -38744,7 +38530,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1103,
         "basic_properties": {
             "health": 345,
@@ -38757,7 +38542,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 58,
+        "forgeID": 30,
         "forgeTarget": 1107,
         "iconf": "f-m-chest3.png",
         "iconm": "m-m-chest3.png"
@@ -38825,7 +38610,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1104,
         "basic_properties": {
             "health": 350,
@@ -38838,7 +38622,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 58,
+        "forgeID": 30,
         "forgeTarget": 1108,
         "iconf": "f-m-chest3.png",
         "iconm": "m-m-chest3.png"
@@ -38906,7 +38690,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1105,
         "basic_properties": {
             "health": 355,
@@ -38919,7 +38702,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 58,
+        "forgeID": 30,
         "forgeTarget": 1109,
         "iconf": "f-m-chest3.png",
         "iconm": "m-m-chest3.png"
@@ -38987,7 +38770,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1106,
         "basic_properties": {
             "health": 360,
@@ -39000,7 +38782,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 58,
+        "forgeID": 30,
         "forgeTarget": 1110,
         "iconf": "f-m-chest3.png",
         "iconm": "m-m-chest3.png"
@@ -39068,7 +38850,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 8,
-		"upgradeId": 18,
         "basic_properties": {
             "health": 365,
             "attack": 62,
@@ -39080,7 +38861,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 58,
+        "forgeID": 30,
         "forgeTarget": 1111,
         "iconf": "f-m-chest3.png",
         "iconm": "m-m-chest3.png"
@@ -39148,7 +38929,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1108,
         "basic_properties": {
             "health": 350,
@@ -39227,7 +39007,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1109,
         "basic_properties": {
             "health": 355,
@@ -39240,7 +39019,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 64,
+        "forgeID": 36,
         "forgeTarget": 1113,
         "iconf": "f-m-chest2.png",
         "iconm": "m-m-chest2.png"
@@ -39308,7 +39087,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1110,
         "basic_properties": {
             "health": 360,
@@ -39321,7 +39099,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 64,
+        "forgeID": 36,
         "forgeTarget": 1114,
         "iconf": "f-m-chest2.png",
         "iconm": "m-m-chest2.png"
@@ -39389,7 +39167,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1111,
         "basic_properties": {
             "health": 365,
@@ -39402,7 +39179,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 64,
+        "forgeID": 36,
         "forgeTarget": 1115,
         "iconf": "f-m-chest2.png",
         "iconm": "m-m-chest2.png"
@@ -39470,7 +39247,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1112,
         "basic_properties": {
             "health": 370,
@@ -39483,7 +39259,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 64,
+        "forgeID": 36,
         "forgeTarget": 1116,
         "iconf": "f-m-chest2.png",
         "iconm": "m-m-chest2.png"
@@ -39551,7 +39327,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 9,
-		"upgradeId": 19,
         "basic_properties": {
             "health": 375,
             "attack": 64,
@@ -39563,7 +39338,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 64,
+        "forgeID": 36,
         "forgeTarget": 1117,
         "iconf": "f-m-chest2.png",
         "iconm": "m-m-chest2.png"
@@ -39631,7 +39406,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1114,
         "basic_properties": {
             "health": 360,
@@ -39710,7 +39484,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1115,
         "basic_properties": {
             "health": 365,
@@ -39789,7 +39562,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1116,
         "basic_properties": {
             "health": 370,
@@ -39868,7 +39640,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1117,
         "basic_properties": {
             "health": 375,
@@ -39947,7 +39718,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 9,
-		"upgradeId": 19,
         "upgradeTarget": 1118,
         "basic_properties": {
             "health": 380,
@@ -40063,7 +39833,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 1,
-		"upgradeId": 11,
         "upgradeTarget": 1120,
         "basic_properties": {
             "health": 180,
@@ -40101,7 +39870,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1121,
         "basic_properties": {
             "health": 184,
@@ -40113,7 +39881,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 47,
+        "forgeID": 19,
         "forgeTarget": 1125,
         "iconf": "f-m-mainweapon2-5.png",
         "iconm": "m-m-mainweapon2-5.png"
@@ -40141,7 +39909,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1122,
         "basic_properties": {
             "health": 188,
@@ -40153,7 +39920,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 47,
+        "forgeID": 19,
         "forgeTarget": 1126,
         "iconf": "f-m-mainweapon2-5.png",
         "iconm": "m-m-mainweapon2-5.png"
@@ -40181,7 +39948,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1123,
         "basic_properties": {
             "health": 192,
@@ -40193,7 +39959,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 47,
+        "forgeID": 19,
         "forgeTarget": 1127,
         "iconf": "f-m-mainweapon2-5.png",
         "iconm": "m-m-mainweapon2-5.png"
@@ -40221,7 +39987,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1124,
         "basic_properties": {
             "health": 196,
@@ -40233,7 +39998,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 47,
+        "forgeID": 19,
         "forgeTarget": 1128,
         "iconf": "f-m-mainweapon2-5.png",
         "iconm": "m-m-mainweapon2-5.png"
@@ -40261,7 +40026,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 6,
-		"upgradeId": 16,
         "basic_properties": {
             "health": 200,
             "attack": 70,
@@ -40272,7 +40036,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 47,
+        "forgeID": 19,
         "forgeTarget": 1129,
         "iconf": "f-m-mainweapon2-5.png",
         "iconm": "m-m-mainweapon2-5.png"
@@ -40300,7 +40064,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1126,
         "basic_properties": {
             "health": 188,
@@ -40338,7 +40101,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1127,
         "basic_properties": {
             "health": 192,
@@ -40350,7 +40112,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 53,
+        "forgeID": 25,
         "forgeTarget": 1131,
         "iconf": "f-m-mainweapon2-4.png",
         "iconm": "m-m-mainweapon2-4.png"
@@ -40378,7 +40140,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1128,
         "basic_properties": {
             "health": 196,
@@ -40390,7 +40151,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 53,
+        "forgeID": 25,
         "forgeTarget": 1132,
         "iconf": "f-m-mainweapon2-4.png",
         "iconm": "m-m-mainweapon2-4.png"
@@ -40418,7 +40179,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1129,
         "basic_properties": {
             "health": 200,
@@ -40430,7 +40190,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 53,
+        "forgeID": 25,
         "forgeTarget": 1133,
         "iconf": "f-m-mainweapon2-4.png",
         "iconm": "m-m-mainweapon2-4.png"
@@ -40458,7 +40218,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1130,
         "basic_properties": {
             "health": 204,
@@ -40470,7 +40229,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 53,
+        "forgeID": 25,
         "forgeTarget": 1134,
         "iconf": "f-m-mainweapon2-4.png",
         "iconm": "m-m-mainweapon2-4.png"
@@ -40498,7 +40257,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 7,
-		"upgradeId": 17,
         "basic_properties": {
             "health": 208,
             "attack": 74,
@@ -40509,7 +40267,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 53,
+        "forgeID": 25,
         "forgeTarget": 1135,
         "iconf": "f-m-mainweapon2-4.png",
         "iconm": "m-m-mainweapon2-4.png"
@@ -40537,7 +40295,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1132,
         "basic_properties": {
             "health": 196,
@@ -40575,7 +40332,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1133,
         "basic_properties": {
             "health": 200,
@@ -40587,7 +40343,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 59,
+        "forgeID": 31,
         "forgeTarget": 1137,
         "iconf": "f-m-mainweapon2-3.png",
         "iconm": "m-m-mainweapon2-3.png"
@@ -40615,7 +40371,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1134,
         "basic_properties": {
             "health": 204,
@@ -40627,7 +40382,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 59,
+        "forgeID": 31,
         "forgeTarget": 1138,
         "iconf": "f-m-mainweapon2-3.png",
         "iconm": "m-m-mainweapon2-3.png"
@@ -40655,7 +40410,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1135,
         "basic_properties": {
             "health": 208,
@@ -40667,7 +40421,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 59,
+        "forgeID": 31,
         "forgeTarget": 1139,
         "iconf": "f-m-mainweapon2-3.png",
         "iconm": "m-m-mainweapon2-3.png"
@@ -40695,7 +40449,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1136,
         "basic_properties": {
             "health": 212,
@@ -40707,7 +40460,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 59,
+        "forgeID": 31,
         "forgeTarget": 1140,
         "iconf": "f-m-mainweapon2-3.png",
         "iconm": "m-m-mainweapon2-3.png"
@@ -40735,7 +40488,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 8,
-		"upgradeId": 18,
         "basic_properties": {
             "health": 216,
             "attack": 78,
@@ -40746,7 +40498,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 59,
+        "forgeID": 31,
         "forgeTarget": 1141,
         "iconf": "f-m-mainweapon2-3.png",
         "iconm": "m-m-mainweapon2-3.png"
@@ -40774,7 +40526,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1138,
         "basic_properties": {
             "health": 204,
@@ -40812,7 +40563,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1139,
         "basic_properties": {
             "health": 208,
@@ -40824,7 +40574,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 65,
+        "forgeID": 37,
         "forgeTarget": 1143,
         "iconf": "f-m-mainweapon2-2.png",
         "iconm": "m-m-mainweapon2-2.png"
@@ -40852,7 +40602,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1140,
         "basic_properties": {
             "health": 212,
@@ -40864,7 +40613,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 65,
+        "forgeID": 37,
         "forgeTarget": 1144,
         "iconf": "f-m-mainweapon2-2.png",
         "iconm": "m-m-mainweapon2-2.png"
@@ -40892,7 +40641,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1141,
         "basic_properties": {
             "health": 216,
@@ -40904,7 +40652,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 65,
+        "forgeID": 37,
         "forgeTarget": 1145,
         "iconf": "f-m-mainweapon2-2.png",
         "iconm": "m-m-mainweapon2-2.png"
@@ -40932,7 +40680,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1142,
         "basic_properties": {
             "health": 220,
@@ -40944,7 +40691,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 65,
+        "forgeID": 37,
         "forgeTarget": 1146,
         "iconf": "f-m-mainweapon2-2.png",
         "iconm": "m-m-mainweapon2-2.png"
@@ -40972,7 +40719,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 9,
-		"upgradeId": 19,
         "basic_properties": {
             "health": 224,
             "attack": 82,
@@ -40983,7 +40729,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 65,
+        "forgeID": 37,
         "forgeTarget": 1147,
         "iconf": "f-m-mainweapon2-2.png",
         "iconm": "m-m-mainweapon2-2.png"
@@ -41011,7 +40757,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1144,
         "basic_properties": {
             "health": 212,
@@ -41049,7 +40794,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1145,
         "basic_properties": {
             "health": 216,
@@ -41087,7 +40831,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1146,
         "basic_properties": {
             "health": 220,
@@ -41125,7 +40868,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1147,
         "basic_properties": {
             "health": 224,
@@ -41163,7 +40905,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 9,
-		"upgradeId": 19,
         "upgradeTarget": 1148,
         "basic_properties": {
             "health": 228,
@@ -41239,7 +40980,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 0,
         "rank": 1,
-		"upgradeId": 11,
         "upgradeTarget": 1150,
         "basic_properties": {
             "attack": 120,
@@ -41278,7 +41018,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 0,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1151,
         "basic_properties": {
             "attack": 123,
@@ -41289,7 +41028,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 48,
+        "forgeID": 20,
         "forgeTarget": 1155,
         "iconf": "f-m-mainweapon1-5.png",
         "iconm": "m-m-mainweapon1-5.png"
@@ -41319,7 +41058,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 0,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1152,
         "basic_properties": {
             "attack": 126,
@@ -41330,7 +41068,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 48,
+        "forgeID": 20,
         "forgeTarget": 1156,
         "iconf": "f-m-mainweapon1-5.png",
         "iconm": "m-m-mainweapon1-5.png"
@@ -41360,7 +41098,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 0,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1153,
         "basic_properties": {
             "attack": 129,
@@ -41371,7 +41108,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 48,
+        "forgeID": 20,
         "forgeTarget": 1157,
         "iconf": "f-m-mainweapon1-5.png",
         "iconm": "m-m-mainweapon1-5.png"
@@ -41401,7 +41138,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 0,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1154,
         "basic_properties": {
             "attack": 132,
@@ -41412,7 +41148,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 48,
+        "forgeID": 20,
         "forgeTarget": 1158,
         "iconf": "f-m-mainweapon1-5.png",
         "iconm": "m-m-mainweapon1-5.png"
@@ -41442,7 +41178,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 0,
         "rank": 6,
-		"upgradeId": 16,
         "basic_properties": {
             "attack": 135,
             "accuracy": 130,
@@ -41452,7 +41187,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 48,
+        "forgeID": 20,
         "forgeTarget": 1159,
         "iconf": "f-m-mainweapon1-5.png",
         "iconm": "m-m-mainweapon1-5.png"
@@ -41482,7 +41217,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 1,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1156,
         "basic_properties": {
             "attack": 126,
@@ -41521,7 +41255,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 1,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1157,
         "basic_properties": {
             "attack": 129,
@@ -41532,7 +41265,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 54,
+        "forgeID": 26,
         "forgeTarget": 1161,
         "iconf": "f-m-mainweapon1-4.png",
         "iconm": "m-m-mainweapon1-4.png"
@@ -41559,7 +41292,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 1,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1158,
         "basic_properties": {
             "attack": 132,
@@ -41573,7 +41305,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 54,
+        "forgeID": 26,
         "forgeTarget": 1162,
         "iconf": "f-m-mainweapon1-4.png",
         "iconm": "m-m-mainweapon1-4.png"
@@ -41603,7 +41335,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 1,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1159,
         "basic_properties": {
             "attack": 135,
@@ -41614,7 +41345,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 54,
+        "forgeID": 26,
         "forgeTarget": 1163,
         "iconf": "f-m-mainweapon1-4.png",
         "iconm": "m-m-mainweapon1-4.png"
@@ -41644,7 +41375,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 1,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1160,
         "basic_properties": {
             "attack": 138,
@@ -41655,7 +41385,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 54,
+        "forgeID": 26,
         "forgeTarget": 1164,
         "iconf": "f-m-mainweapon1-4.png",
         "iconm": "m-m-mainweapon1-4.png"
@@ -41685,7 +41415,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 1,
         "rank": 7,
-		"upgradeId": 17,
         "basic_properties": {
             "attack": 141,
             "accuracy": 134,
@@ -41695,7 +41424,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 54,
+        "forgeID": 26,
         "forgeTarget": 1165,
         "iconf": "f-m-mainweapon1-4.png",
         "iconm": "m-m-mainweapon1-4.png"
@@ -41725,7 +41454,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 2,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1162,
         "basic_properties": {
             "attack": 132,
@@ -41764,7 +41492,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 2,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1163,
         "basic_properties": {
             "attack": 135,
@@ -41775,7 +41502,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 60,
+        "forgeID": 32,
         "forgeTarget": 1167,
         "iconf": "f-m-mainweapon1-3.png",
         "iconm": "m-m-mainweapon1-3.png"
@@ -41805,7 +41532,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 2,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1164,
         "basic_properties": {
             "attack": 138,
@@ -41816,7 +41542,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 60,
+        "forgeID": 32,
         "forgeTarget": 1168,
         "iconf": "f-m-mainweapon1-3.png",
         "iconm": "m-m-mainweapon1-3.png"
@@ -41846,7 +41572,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 2,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1165,
         "basic_properties": {
             "attack": 141,
@@ -41857,7 +41582,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 60,
+        "forgeID": 32,
         "forgeTarget": 1169,
         "iconf": "f-m-mainweapon1-3.png",
         "iconm": "m-m-mainweapon1-3.png"
@@ -41887,7 +41612,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 2,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1166,
         "basic_properties": {
             "attack": 144,
@@ -41898,7 +41622,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 60,
+        "forgeID": 32,
         "forgeTarget": 1170,
         "iconf": "f-m-mainweapon1-3.png",
         "iconm": "m-m-mainweapon1-3.png"
@@ -41928,7 +41652,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 2,
         "rank": 8,
-		"upgradeId": 18,
         "basic_properties": {
             "attack": 147,
             "accuracy": 138,
@@ -41938,7 +41661,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 60,
+        "forgeID": 32,
         "forgeTarget": 1171,
         "iconf": "f-m-mainweapon1-3.png",
         "iconm": "m-m-mainweapon1-3.png"
@@ -41968,7 +41691,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 3,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1168,
         "basic_properties": {
             "attack": 138,
@@ -42007,7 +41729,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 3,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1169,
         "basic_properties": {
             "attack": 141,
@@ -42018,7 +41739,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 66,
+        "forgeID": 38,
         "forgeTarget": 1173,
         "iconf": "f-m-mainweapon1-2.png",
         "iconm": "m-m-mainweapon1-2.png"
@@ -42048,7 +41769,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 3,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1170,
         "basic_properties": {
             "attack": 144,
@@ -42059,7 +41779,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 66,
+        "forgeID": 38,
         "forgeTarget": 1174,
         "iconf": "f-m-mainweapon1-2.png",
         "iconm": "m-m-mainweapon1-2.png"
@@ -42089,7 +41809,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 3,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1171,
         "basic_properties": {
             "attack": 147,
@@ -42100,7 +41819,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 66,
+        "forgeID": 38,
         "forgeTarget": 1175,
         "iconf": "f-m-mainweapon1-2.png",
         "iconm": "m-m-mainweapon1-2.png"
@@ -42130,7 +41849,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 3,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1172,
         "basic_properties": {
             "attack": 150,
@@ -42141,7 +41859,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 66,
+        "forgeID": 38,
         "forgeTarget": 1176,
         "iconf": "f-m-mainweapon1-2.png",
         "iconm": "m-m-mainweapon1-2.png"
@@ -42171,7 +41889,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 3,
         "rank": 9,
-		"upgradeId": 19,
         "basic_properties": {
             "attack": 153,
             "accuracy": 142,
@@ -42181,7 +41898,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 66,
+        "forgeID": 38,
         "forgeTarget": 1177,
         "iconf": "f-m-mainweapon1-2.png",
         "iconm": "m-m-mainweapon1-2.png"
@@ -42211,7 +41928,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 4,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1174,
         "basic_properties": {
             "attack": 144,
@@ -42250,7 +41966,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 4,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1175,
         "basic_properties": {
             "attack": 147,
@@ -42289,7 +42004,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 4,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1176,
         "basic_properties": {
             "attack": 150,
@@ -42328,7 +42042,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 4,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1177,
         "basic_properties": {
             "attack": 153,
@@ -42367,7 +42080,6 @@ exports.data = [
         "soundAttack": "attackzhanshi.mp3",
         "quality": 4,
         "rank": 9,
-		"upgradeId": 19,
         "upgradeTarget": 1178,
         "basic_properties": {
             "attack": 156,
@@ -42430,7 +42142,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 1,
-		"upgradeId": 11,
         "upgradeTarget": 1180,
         "basic_properties": {
             "health": 220,
@@ -42456,7 +42167,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1181,
         "basic_properties": {
             "health": 225,
@@ -42469,7 +42179,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 50,
+        "forgeID": 22,
         "forgeTarget": 1185
     },
     {
@@ -42484,7 +42194,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1182,
         "basic_properties": {
             "health": 230,
@@ -42497,7 +42206,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 50,
+        "forgeID": 22,
         "forgeTarget": 1186
     },
     {
@@ -42512,7 +42221,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1183,
         "basic_properties": {
             "health": 235,
@@ -42525,7 +42233,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 50,
+        "forgeID": 22,
         "forgeTarget": 1187
     },
     {
@@ -42540,7 +42248,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1184,
         "basic_properties": {
             "health": 240,
@@ -42553,7 +42260,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 50,
+        "forgeID": 22,
         "forgeTarget": 1188
     },
     {
@@ -42568,7 +42275,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 6,
-		"upgradeId": 16,
         "basic_properties": {
             "health": 245,
             "attack": 56,
@@ -42580,7 +42286,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 50,
+        "forgeID": 22,
         "forgeTarget": 1189
     },
     {
@@ -42595,7 +42301,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1186,
         "basic_properties": {
             "health": 230,
@@ -42621,7 +42326,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1187,
         "basic_properties": {
             "health": 235,
@@ -42634,7 +42338,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 56,
+        "forgeID": 28,
         "forgeTarget": 1191
     },
     {
@@ -42649,7 +42353,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1188,
         "basic_properties": {
             "health": 240,
@@ -42662,7 +42365,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 56,
+        "forgeID": 28,
         "forgeTarget": 1192
     },
     {
@@ -42677,7 +42380,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1189,
         "basic_properties": {
             "health": 245,
@@ -42690,7 +42392,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 56,
+        "forgeID": 28,
         "forgeTarget": 1193
     },
     {
@@ -42705,7 +42407,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1190,
         "basic_properties": {
             "health": 250,
@@ -42718,7 +42419,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 56,
+        "forgeID": 28,
         "forgeTarget": 1194
     },
     {
@@ -42733,7 +42434,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 7,
-		"upgradeId": 17,
         "basic_properties": {
             "health": 255,
             "attack": 58,
@@ -42745,7 +42445,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 56,
+        "forgeID": 28,
         "forgeTarget": 1195
     },
     {
@@ -42760,7 +42460,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1192,
         "basic_properties": {
             "health": 240,
@@ -42786,7 +42485,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1193,
         "basic_properties": {
             "health": 245,
@@ -42799,7 +42497,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 62,
+        "forgeID": 34,
         "forgeTarget": 1197
     },
     {
@@ -42814,7 +42512,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1194,
         "basic_properties": {
             "health": 250,
@@ -42827,7 +42524,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 62,
+        "forgeID": 34,
         "forgeTarget": 1198
     },
     {
@@ -42842,7 +42539,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1195,
         "basic_properties": {
             "health": 255,
@@ -42855,7 +42551,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 62,
+        "forgeID": 34,
         "forgeTarget": 1199
     },
     {
@@ -42870,7 +42566,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1196,
         "basic_properties": {
             "health": 260,
@@ -42883,7 +42578,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 62,
+        "forgeID": 34,
         "forgeTarget": 1200
     },
     {
@@ -42898,7 +42593,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 8,
-		"upgradeId": 18,
         "basic_properties": {
             "health": 265,
             "attack": 61,
@@ -42910,7 +42604,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 62,
+        "forgeID": 34,
         "forgeTarget": 1201
     },
     {
@@ -42925,7 +42619,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1198,
         "basic_properties": {
             "health": 250,
@@ -42951,7 +42644,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1199,
         "basic_properties": {
             "health": 255,
@@ -42964,7 +42656,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 68,
+        "forgeID": 40,
         "forgeTarget": 1203
     },
     {
@@ -42979,7 +42671,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1200,
         "basic_properties": {
             "health": 260,
@@ -42992,7 +42683,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 68,
+        "forgeID": 40,
         "forgeTarget": 1204
     },
     {
@@ -43007,7 +42698,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1201,
         "basic_properties": {
             "health": 265,
@@ -43020,7 +42710,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 68,
+        "forgeID": 40,
         "forgeTarget": 1205
     },
     {
@@ -43035,7 +42725,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1202,
         "basic_properties": {
             "health": 270,
@@ -43048,7 +42737,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 68,
+        "forgeID": 40,
         "forgeTarget": 1206
     },
     {
@@ -43063,7 +42752,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 9,
-		"upgradeId": 19,
         "basic_properties": {
             "health": 275,
             "attack": 63,
@@ -43075,7 +42763,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 68,
+        "forgeID": 40,
         "forgeTarget": 1207
     },
     {
@@ -43090,7 +42778,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1204,
         "basic_properties": {
             "health": 260,
@@ -43116,7 +42803,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1205,
         "basic_properties": {
             "health": 265,
@@ -43142,7 +42828,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1206,
         "basic_properties": {
             "health": 270,
@@ -43168,7 +42853,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1207,
         "basic_properties": {
             "health": 275,
@@ -43194,7 +42878,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 9,
-		"upgradeId": 19,
         "upgradeTarget": 1208,
         "basic_properties": {
             "health": 280,
@@ -43244,7 +42927,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 1,
-		"upgradeId": 11,
         "upgradeTarget": 1210,
         "basic_properties": {
             "health": 250,
@@ -43271,7 +42953,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1211,
         "basic_properties": {
             "health": 255,
@@ -43285,7 +42966,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 49,
+        "forgeID": 21,
         "forgeTarget": 1215
     },
     {
@@ -43300,7 +42981,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1212,
         "basic_properties": {
             "health": 260,
@@ -43314,7 +42994,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 49,
+        "forgeID": 21,
         "forgeTarget": 1216
     },
     {
@@ -43329,7 +43009,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1213,
         "basic_properties": {
             "health": 265,
@@ -43343,7 +43022,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 49,
+        "forgeID": 21,
         "forgeTarget": 1217
     },
     {
@@ -43358,7 +43037,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1214,
         "basic_properties": {
             "health": 270,
@@ -43372,7 +43050,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 49,
+        "forgeID": 21,
         "forgeTarget": 1218
     },
     {
@@ -43387,7 +43065,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 6,
-		"upgradeId": 16,
         "basic_properties": {
             "health": 275,
             "attack": 56,
@@ -43400,7 +43077,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 49,
+        "forgeID": 21,
         "forgeTarget": 1219
     },
     {
@@ -43415,7 +43092,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1216,
         "basic_properties": {
             "health": 260,
@@ -43442,7 +43118,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1217,
         "basic_properties": {
             "health": 265,
@@ -43456,7 +43131,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 55,
+        "forgeID": 27,
         "forgeTarget": 1221
     },
     {
@@ -43471,7 +43146,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1218,
         "basic_properties": {
             "health": 270,
@@ -43485,7 +43159,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 55,
+        "forgeID": 27,
         "forgeTarget": 1222
     },
     {
@@ -43500,7 +43174,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1219,
         "basic_properties": {
             "health": 275,
@@ -43514,7 +43187,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 55,
+        "forgeID": 27,
         "forgeTarget": 1223
     },
     {
@@ -43529,7 +43202,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1220,
         "basic_properties": {
             "health": 280,
@@ -43543,7 +43215,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 55,
+        "forgeID": 27,
         "forgeTarget": 1224
     },
     {
@@ -43558,7 +43230,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 7,
-		"upgradeId": 17,
         "basic_properties": {
             "health": 285,
             "attack": 59,
@@ -43571,7 +43242,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 55,
+        "forgeID": 27,
         "forgeTarget": 1225
     },
     {
@@ -43586,7 +43257,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1222,
         "basic_properties": {
             "health": 270,
@@ -43613,7 +43283,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1223,
         "basic_properties": {
             "health": 275,
@@ -43627,7 +43296,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 61,
+        "forgeID": 33,
         "forgeTarget": 1227
     },
     {
@@ -43642,7 +43311,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1224,
         "basic_properties": {
             "health": 280,
@@ -43656,7 +43324,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 61,
+        "forgeID": 33,
         "forgeTarget": 1228
     },
     {
@@ -43671,7 +43339,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1225,
         "basic_properties": {
             "health": 285,
@@ -43685,7 +43352,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 61,
+        "forgeID": 33,
         "forgeTarget": 1229
     },
     {
@@ -43700,7 +43367,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1226,
         "basic_properties": {
             "health": 290,
@@ -43714,7 +43380,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 61,
+        "forgeID": 33,
         "forgeTarget": 1230
     },
     {
@@ -43729,7 +43395,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 8,
-		"upgradeId": 18,
         "basic_properties": {
             "health": 295,
             "attack": 61,
@@ -43742,7 +43407,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 61,
+        "forgeID": 33,
         "forgeTarget": 1231
     },
     {
@@ -43757,7 +43422,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1228,
         "basic_properties": {
             "health": 280,
@@ -43784,7 +43448,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1229,
         "basic_properties": {
             "health": 285,
@@ -43798,7 +43461,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 67,
+        "forgeID": 39,
         "forgeTarget": 1233
     },
     {
@@ -43813,7 +43476,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1230,
         "basic_properties": {
             "health": 290,
@@ -43827,7 +43489,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 67,
+        "forgeID": 39,
         "forgeTarget": 1234
     },
     {
@@ -43842,7 +43504,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1231,
         "basic_properties": {
             "health": 295,
@@ -43856,7 +43517,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 67,
+        "forgeID": 39,
         "forgeTarget": 1235
     },
     {
@@ -43871,7 +43532,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1232,
         "basic_properties": {
             "health": 300,
@@ -43885,7 +43545,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 67,
+        "forgeID": 39,
         "forgeTarget": 1236
     },
     {
@@ -43900,7 +43560,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 9,
-		"upgradeId": 19,
         "basic_properties": {
             "health": 305,
             "attack": 64,
@@ -43913,7 +43572,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 4,
         "hide": true,
-        "forgeID": 67,
+        "forgeID": 39,
         "forgeTarget": 1237
     },
     {
@@ -43928,7 +43587,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1234,
         "basic_properties": {
             "health": 290,
@@ -43955,7 +43613,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1235,
         "basic_properties": {
             "health": 295,
@@ -43982,7 +43639,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1236,
         "basic_properties": {
             "health": 300,
@@ -44009,7 +43665,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1237,
         "basic_properties": {
             "health": 305,
@@ -44036,7 +43691,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 9,
-		"upgradeId": 19,
         "upgradeTarget": 1238,
         "basic_properties": {
             "health": 310,
@@ -44107,7 +43761,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 1,
-		"upgradeId": 11,
         "upgradeTarget": 1240,
         "basic_properties": {
             "health": 260,
@@ -44153,7 +43806,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1241,
         "basic_properties": {
             "health": 265,
@@ -44165,7 +43817,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 45,
+        "forgeID": 17,
         "forgeTarget": 1245,
         "iconf": "f-p-foot5.png",
         "iconm": "m-p-foot5.png"
@@ -44201,7 +43853,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1242,
         "basic_properties": {
             "health": 270,
@@ -44213,7 +43864,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 45,
+        "forgeID": 17,
         "forgeTarget": 1246,
         "iconf": "f-p-foot5.png",
         "iconm": "m-p-foot5.png"
@@ -44249,7 +43900,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1243,
         "basic_properties": {
             "health": 275,
@@ -44261,7 +43911,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 45,
+        "forgeID": 17,
         "forgeTarget": 1247,
         "iconf": "f-p-foot5.png",
         "iconm": "m-p-foot5.png"
@@ -44297,7 +43947,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1244,
         "basic_properties": {
             "health": 280,
@@ -44309,7 +43958,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 45,
+        "forgeID": 17,
         "forgeTarget": 1248,
         "iconf": "f-p-foot5.png",
         "iconm": "m-p-foot5.png"
@@ -44345,7 +43994,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 6,
-		"upgradeId": 16,
         "basic_properties": {
             "health": 285,
             "attack": 53,
@@ -44356,7 +44004,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 45,
+        "forgeID": 17,
         "forgeTarget": 1249,
         "iconf": "f-p-foot5.png",
         "iconm": "m-p-foot5.png"
@@ -44392,7 +44040,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1246,
         "basic_properties": {
             "health": 270,
@@ -44438,7 +44085,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1247,
         "basic_properties": {
             "health": 275,
@@ -44450,7 +44096,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 51,
+        "forgeID": 23,
         "forgeTarget": 1251,
         "iconf": "f-p-foot4.png",
         "iconm": "m-p-foot4.png"
@@ -44486,7 +44132,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1248,
         "basic_properties": {
             "health": 280,
@@ -44498,7 +44143,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 51,
+        "forgeID": 23,
         "forgeTarget": 1252,
         "iconf": "f-p-foot4.png",
         "iconm": "m-p-foot4.png"
@@ -44534,7 +44179,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1249,
         "basic_properties": {
             "health": 285,
@@ -44546,7 +44190,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 51,
+        "forgeID": 23,
         "forgeTarget": 1253,
         "iconf": "f-p-foot4.png",
         "iconm": "m-p-foot4.png"
@@ -44582,7 +44226,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1250,
         "basic_properties": {
             "health": 290,
@@ -44594,7 +44237,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 51,
+        "forgeID": 23,
         "forgeTarget": 1254,
         "iconf": "f-p-foot4.png",
         "iconm": "m-p-foot4.png"
@@ -44630,7 +44273,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 7,
-		"upgradeId": 17,
         "basic_properties": {
             "health": 295,
             "attack": 56,
@@ -44641,7 +44283,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 51,
+        "forgeID": 23,
         "forgeTarget": 1255,
         "iconf": "f-p-foot4.png",
         "iconm": "m-p-foot4.png"
@@ -44677,7 +44319,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1252,
         "basic_properties": {
             "health": 280,
@@ -44723,7 +44364,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1253,
         "basic_properties": {
             "health": 285,
@@ -44735,7 +44375,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 57,
+        "forgeID": 29,
         "forgeTarget": 1257,
         "iconf": "f-p-foot3.png",
         "iconm": "m-p-foot3.png"
@@ -44771,7 +44411,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1254,
         "basic_properties": {
             "health": 290,
@@ -44783,7 +44422,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 57,
+        "forgeID": 29,
         "forgeTarget": 1258,
         "iconf": "f-p-foot3.png",
         "iconm": "m-p-foot3.png"
@@ -44819,7 +44458,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1255,
         "basic_properties": {
             "health": 295,
@@ -44831,7 +44469,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 57,
+        "forgeID": 29,
         "forgeTarget": 1259,
         "iconf": "f-p-foot3.png",
         "iconm": "m-p-foot3.png"
@@ -44867,7 +44505,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1256,
         "basic_properties": {
             "health": 300,
@@ -44879,7 +44516,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 57,
+        "forgeID": 29,
         "forgeTarget": 1260,
         "iconf": "f-p-foot3.png",
         "iconm": "m-p-foot3.png"
@@ -44915,7 +44552,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 8,
-		"upgradeId": 18,
         "basic_properties": {
             "health": 305,
             "attack": 59,
@@ -44926,7 +44562,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 57,
+        "forgeID": 29,
         "forgeTarget": 1261,
         "iconf": "f-p-foot3.png",
         "iconm": "m-p-foot3.png"
@@ -44962,7 +44598,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1258,
         "basic_properties": {
             "health": 290,
@@ -45008,7 +44643,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1259,
         "basic_properties": {
             "health": 295,
@@ -45020,7 +44654,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 63,
+        "forgeID": 35,
         "forgeTarget": 1263,
         "iconf": "f-p-foot2.png",
         "iconm": "m-p-foot2.png"
@@ -45056,7 +44690,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1260,
         "basic_properties": {
             "health": 300,
@@ -45068,7 +44701,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 63,
+        "forgeID": 35,
         "forgeTarget": 1264,
         "iconf": "f-p-foot2.png",
         "iconm": "m-p-foot2.png"
@@ -45104,7 +44737,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1261,
         "basic_properties": {
             "health": 305,
@@ -45116,7 +44748,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 63,
+        "forgeID": 35,
         "forgeTarget": 1265,
         "iconf": "f-p-foot2.png",
         "iconm": "m-p-foot2.png"
@@ -45152,7 +44784,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1262,
         "basic_properties": {
             "health": 310,
@@ -45164,7 +44795,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 63,
+        "forgeID": 35,
         "forgeTarget": 1266,
         "iconf": "f-p-foot2.png",
         "iconm": "m-p-foot2.png"
@@ -45200,7 +44831,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 9,
-		"upgradeId": 19,
         "basic_properties": {
             "health": 315,
             "attack": 62,
@@ -45211,7 +44841,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 63,
+        "forgeID": 35,
         "forgeTarget": 1267,
         "iconf": "f-p-foot2.png",
         "iconm": "m-p-foot2.png"
@@ -45247,7 +44877,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1264,
         "basic_properties": {
             "health": 300,
@@ -45293,7 +44922,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1265,
         "basic_properties": {
             "health": 305,
@@ -45339,7 +44967,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1266,
         "basic_properties": {
             "health": 310,
@@ -45385,7 +45012,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1267,
         "basic_properties": {
             "health": 315,
@@ -45431,7 +45057,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 9,
-		"upgradeId": 19,
         "upgradeTarget": 1268,
         "basic_properties": {
             "health": 320,
@@ -45545,7 +45170,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 1,
-		"upgradeId": 11,
         "upgradeTarget": 1270,
         "basic_properties": {
             "health": 380,
@@ -45616,7 +45240,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1271,
         "basic_properties": {
             "health": 387,
@@ -45629,7 +45252,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 46,
+        "forgeID": 18,
         "forgeTarget": 1275,
         "iconf": "f-p-chest5.png",
         "iconm": "m-p-chest5.png"
@@ -45689,7 +45312,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1272,
         "basic_properties": {
             "health": 394,
@@ -45702,7 +45324,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 46,
+        "forgeID": 18,
         "forgeTarget": 1276,
         "iconf": "f-p-chest5.png",
         "iconm": "m-p-chest5.png"
@@ -45762,7 +45384,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1273,
         "basic_properties": {
             "health": 401,
@@ -45775,7 +45396,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 46,
+        "forgeID": 18,
         "forgeTarget": 1277,
         "iconf": "f-p-chest5.png",
         "iconm": "m-p-chest5.png"
@@ -45835,7 +45456,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1274,
         "basic_properties": {
             "health": 408,
@@ -45848,7 +45468,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 46,
+        "forgeID": 18,
         "forgeTarget": 1278,
         "iconf": "f-p-chest5.png",
         "iconm": "m-p-chest5.png"
@@ -45908,7 +45528,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 6,
-		"upgradeId": 16,
         "basic_properties": {
             "health": 415,
             "attack": 45,
@@ -45920,7 +45539,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 46,
+        "forgeID": 18,
         "forgeTarget": 1279,
         "iconf": "f-p-chest5.png",
         "iconm": "m-p-chest5.png"
@@ -45980,7 +45599,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1276,
         "basic_properties": {
             "health": 394,
@@ -46051,7 +45669,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1277,
         "basic_properties": {
             "health": 401,
@@ -46064,7 +45681,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 52,
+        "forgeID": 24,
         "forgeTarget": 1281,
         "iconf": "f-p-chest4.png",
         "iconm": "m-p-chest4.png"
@@ -46124,7 +45741,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1278,
         "basic_properties": {
             "health": 408,
@@ -46137,7 +45753,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 52,
+        "forgeID": 24,
         "forgeTarget": 1282,
         "iconf": "f-p-chest4.png",
         "iconm": "m-p-chest4.png"
@@ -46197,7 +45813,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1279,
         "basic_properties": {
             "health": 415,
@@ -46210,7 +45825,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 52,
+        "forgeID": 24,
         "forgeTarget": 1283,
         "iconf": "f-p-chest4.png",
         "iconm": "m-p-chest4.png"
@@ -46270,7 +45885,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1280,
         "basic_properties": {
             "health": 422,
@@ -46283,7 +45897,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 52,
+        "forgeID": 24,
         "forgeTarget": 1284,
         "iconf": "f-p-chest4.png",
         "iconm": "m-p-chest4.png"
@@ -46343,7 +45957,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 7,
-		"upgradeId": 17,
         "basic_properties": {
             "health": 429,
             "attack": 47,
@@ -46355,7 +45968,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 52,
+        "forgeID": 24,
         "forgeTarget": 1285,
         "iconf": "f-p-chest4.png",
         "iconm": "m-p-chest4.png"
@@ -46415,7 +46028,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1282,
         "basic_properties": {
             "health": 408,
@@ -46486,7 +46098,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1283,
         "basic_properties": {
             "health": 415,
@@ -46499,7 +46110,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 58,
+        "forgeID": 30,
         "forgeTarget": 1287,
         "iconf": "f-p-chest3.png",
         "iconm": "m-p-chest3.png"
@@ -46559,7 +46170,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1284,
         "basic_properties": {
             "health": 422,
@@ -46572,7 +46182,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 58,
+        "forgeID": 30,
         "forgeTarget": 1288,
         "iconf": "f-p-chest3.png",
         "iconm": "m-p-chest3.png"
@@ -46632,7 +46242,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1285,
         "basic_properties": {
             "health": 429,
@@ -46645,7 +46254,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 58,
+        "forgeID": 30,
         "forgeTarget": 1289,
         "iconf": "f-p-chest3.png",
         "iconm": "m-p-chest3.png"
@@ -46705,7 +46314,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1286,
         "basic_properties": {
             "health": 436,
@@ -46718,7 +46326,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 58,
+        "forgeID": 30,
         "forgeTarget": 1290,
         "iconf": "f-p-chest3.png",
         "iconm": "m-p-chest3.png"
@@ -46778,7 +46386,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 8,
-		"upgradeId": 18,
         "basic_properties": {
             "health": 443,
             "attack": 49,
@@ -46790,7 +46397,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 58,
+        "forgeID": 30,
         "forgeTarget": 1291,
         "iconf": "f-p-chest3.png",
         "iconm": "m-p-chest3.png"
@@ -46850,7 +46457,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1288,
         "basic_properties": {
             "health": 422,
@@ -46921,7 +46527,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1289,
         "basic_properties": {
             "health": 429,
@@ -46934,7 +46539,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 64,
+        "forgeID": 36,
         "forgeTarget": 1293,
         "iconf": "f-p-chest2.png",
         "iconm": "m-p-chest2.png"
@@ -46994,7 +46599,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1290,
         "basic_properties": {
             "health": 436,
@@ -47007,7 +46611,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 64,
+        "forgeID": 36,
         "forgeTarget": 1294,
         "iconf": "f-p-chest2.png",
         "iconm": "m-p-chest2.png"
@@ -47067,7 +46671,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1291,
         "basic_properties": {
             "health": 443,
@@ -47080,7 +46683,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 64,
+        "forgeID": 36,
         "forgeTarget": 1295,
         "iconf": "f-p-chest2.png",
         "iconm": "m-p-chest2.png"
@@ -47140,7 +46743,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1292,
         "basic_properties": {
             "health": 450,
@@ -47153,7 +46755,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 64,
+        "forgeID": 36,
         "forgeTarget": 1296,
         "iconf": "f-p-chest2.png",
         "iconm": "m-p-chest2.png"
@@ -47213,7 +46815,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 9,
-		"upgradeId": 19,
         "basic_properties": {
             "health": 457,
             "attack": 51,
@@ -47225,7 +46826,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 64,
+        "forgeID": 36,
         "forgeTarget": 1297,
         "iconf": "f-p-chest2.png",
         "iconm": "m-p-chest2.png"
@@ -47285,7 +46886,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1294,
         "basic_properties": {
             "health": 436,
@@ -47356,7 +46956,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1295,
         "basic_properties": {
             "health": 443,
@@ -47427,7 +47026,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1296,
         "basic_properties": {
             "health": 450,
@@ -47498,7 +47096,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1297,
         "basic_properties": {
             "health": 457,
@@ -47569,7 +47166,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 9,
-		"upgradeId": 19,
         "upgradeTarget": 1298,
         "basic_properties": {
             "health": 464,
@@ -47685,7 +47281,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 1,
-		"upgradeId": 11,
         "upgradeTarget": 1300,
         "basic_properties": {
             "health": 250,
@@ -47733,7 +47328,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1301,
         "basic_properties": {
             "health": 255,
@@ -47747,7 +47341,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 47,
+        "forgeID": 19,
         "forgeTarget": 1305,
         "iconf": "f-p-mainweapon2-5.png",
         "iconm": "m-p-mainweapon2-5.png"
@@ -47783,7 +47377,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1302,
         "basic_properties": {
             "health": 260,
@@ -47797,7 +47390,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 47,
+        "forgeID": 19,
         "forgeTarget": 1306,
         "iconf": "f-p-mainweapon2-5.png",
         "iconm": "m-p-mainweapon2-5.png"
@@ -47833,7 +47426,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1303,
         "basic_properties": {
             "health": 265,
@@ -47847,7 +47439,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 47,
+        "forgeID": 19,
         "forgeTarget": 1307,
         "iconf": "f-p-mainweapon2-5.png",
         "iconm": "m-p-mainweapon2-5.png"
@@ -47883,7 +47475,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1304,
         "basic_properties": {
             "health": 270,
@@ -47897,7 +47488,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 47,
+        "forgeID": 19,
         "forgeTarget": 1308,
         "iconf": "f-p-mainweapon2-5.png",
         "iconm": "m-p-mainweapon2-5.png"
@@ -47933,7 +47524,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 6,
-		"upgradeId": 16,
         "basic_properties": {
             "health": 275,
             "attack": 45,
@@ -47946,7 +47536,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 47,
+        "forgeID": 19,
         "forgeTarget": 1309,
         "iconf": "f-p-mainweapon2-5.png",
         "iconm": "m-p-mainweapon2-5.png"
@@ -47982,7 +47572,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1306,
         "basic_properties": {
             "health": 260,
@@ -48030,7 +47619,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1307,
         "basic_properties": {
             "health": 265,
@@ -48044,7 +47632,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 53,
+        "forgeID": 25,
         "forgeTarget": 1311,
         "iconf": "f-p-mainweapon2-4.png",
         "iconm": "m-p-mainweapon2-4.png"
@@ -48080,7 +47668,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1308,
         "basic_properties": {
             "health": 270,
@@ -48094,7 +47681,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 53,
+        "forgeID": 25,
         "forgeTarget": 1312,
         "iconf": "f-p-mainweapon2-4.png",
         "iconm": "m-p-mainweapon2-4.png"
@@ -48130,7 +47717,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1309,
         "basic_properties": {
             "health": 275,
@@ -48144,7 +47730,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 53,
+        "forgeID": 25,
         "forgeTarget": 1313,
         "iconf": "f-p-mainweapon2-4.png",
         "iconm": "m-p-mainweapon2-4.png"
@@ -48180,7 +47766,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1310,
         "basic_properties": {
             "health": 280,
@@ -48194,7 +47779,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 53,
+        "forgeID": 25,
         "forgeTarget": 1314,
         "iconf": "f-p-mainweapon2-4.png",
         "iconm": "m-p-mainweapon2-4.png"
@@ -48230,7 +47815,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 7,
-		"upgradeId": 17,
         "basic_properties": {
             "health": 285,
             "attack": 47,
@@ -48243,7 +47827,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 53,
+        "forgeID": 25,
         "forgeTarget": 1315,
         "iconf": "f-p-mainweapon2-4.png",
         "iconm": "m-p-mainweapon2-4.png"
@@ -48279,7 +47863,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1312,
         "basic_properties": {
             "health": 270,
@@ -48327,7 +47910,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1313,
         "basic_properties": {
             "health": 275,
@@ -48341,7 +47923,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 59,
+        "forgeID": 31,
         "forgeTarget": 1317,
         "iconf": "f-p-mainweapon2-3.png",
         "iconm": "m-p-mainweapon2-3.png"
@@ -48377,7 +47959,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1314,
         "basic_properties": {
             "health": 280,
@@ -48391,7 +47972,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 59,
+        "forgeID": 31,
         "forgeTarget": 1318,
         "iconf": "f-p-mainweapon2-3.png",
         "iconm": "m-p-mainweapon2-3.png"
@@ -48427,7 +48008,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1315,
         "basic_properties": {
             "health": 285,
@@ -48441,7 +48021,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 59,
+        "forgeID": 31,
         "forgeTarget": 1319,
         "iconf": "f-p-mainweapon2-3.png",
         "iconm": "m-p-mainweapon2-3.png"
@@ -48477,7 +48057,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1316,
         "basic_properties": {
             "health": 290,
@@ -48491,7 +48070,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 59,
+        "forgeID": 31,
         "forgeTarget": 1320,
         "iconf": "f-p-mainweapon2-3.png",
         "iconm": "m-p-mainweapon2-3.png"
@@ -48527,7 +48106,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 8,
-		"upgradeId": 18,
         "basic_properties": {
             "health": 295,
             "attack": 49,
@@ -48540,7 +48118,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 59,
+        "forgeID": 31,
         "forgeTarget": 1321,
         "iconf": "f-p-mainweapon2-3.png",
         "iconm": "m-p-mainweapon2-3.png"
@@ -48576,7 +48154,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1318,
         "basic_properties": {
             "health": 280,
@@ -48624,7 +48201,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1319,
         "basic_properties": {
             "health": 285,
@@ -48638,7 +48214,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 65,
+        "forgeID": 37,
         "forgeTarget": 1323,
         "iconf": "f-p-mainweapon2-2.png",
         "iconm": "m-p-mainweapon2-2.png"
@@ -48674,7 +48250,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1320,
         "basic_properties": {
             "health": 290,
@@ -48688,7 +48263,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 65,
+        "forgeID": 37,
         "forgeTarget": 1324,
         "iconf": "f-p-mainweapon2-2.png",
         "iconm": "m-p-mainweapon2-2.png"
@@ -48724,7 +48299,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1321,
         "basic_properties": {
             "health": 295,
@@ -48738,7 +48312,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 65,
+        "forgeID": 37,
         "forgeTarget": 1325,
         "iconf": "f-p-mainweapon2-2.png",
         "iconm": "m-p-mainweapon2-2.png"
@@ -48774,7 +48348,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1322,
         "basic_properties": {
             "health": 300,
@@ -48788,7 +48361,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 65,
+        "forgeID": 37,
         "forgeTarget": 1326,
         "iconf": "f-p-mainweapon2-2.png",
         "iconm": "m-p-mainweapon2-2.png"
@@ -48824,7 +48397,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 9,
-		"upgradeId": 19,
         "basic_properties": {
             "health": 305,
             "attack": 51,
@@ -48837,7 +48409,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 65,
+        "forgeID": 37,
         "forgeTarget": 1327,
         "iconf": "f-p-mainweapon2-2.png",
         "iconm": "m-p-mainweapon2-2.png"
@@ -48873,7 +48445,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1324,
         "basic_properties": {
             "health": 290,
@@ -48921,7 +48492,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1325,
         "basic_properties": {
             "health": 295,
@@ -48969,7 +48539,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1326,
         "basic_properties": {
             "health": 300,
@@ -49017,7 +48586,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1327,
         "basic_properties": {
             "health": 305,
@@ -49065,7 +48633,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 9,
-		"upgradeId": 19,
         "upgradeTarget": 1328,
         "basic_properties": {
             "health": 310,
@@ -49153,7 +48720,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 1,
-		"upgradeId": 11,
         "upgradeTarget": 1330,
         "basic_properties": {
             "health": 200,
@@ -49192,7 +48758,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1331,
         "basic_properties": {
             "health": 205,
@@ -49203,7 +48768,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 48,
+        "forgeID": 20,
         "forgeTarget": 1335,
         "iconf": "f-p-mainweapon1-5.png",
         "iconm": "m-p-mainweapon1-5.png"
@@ -49233,7 +48798,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1332,
         "basic_properties": {
             "health": 210,
@@ -49244,7 +48808,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 48,
+        "forgeID": 20,
         "forgeTarget": 1336,
         "iconf": "f-p-mainweapon1-5.png",
         "iconm": "m-p-mainweapon1-5.png"
@@ -49274,7 +48838,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1333,
         "basic_properties": {
             "health": 215,
@@ -49285,7 +48848,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 48,
+        "forgeID": 20,
         "forgeTarget": 1337,
         "iconf": "f-p-mainweapon1-5.png",
         "iconm": "m-p-mainweapon1-5.png"
@@ -49315,7 +48878,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1334,
         "basic_properties": {
             "health": 220,
@@ -49326,7 +48888,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 48,
+        "forgeID": 20,
         "forgeTarget": 1338,
         "iconf": "f-p-mainweapon1-5.png",
         "iconm": "m-p-mainweapon1-5.png"
@@ -49356,7 +48918,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 6,
-		"upgradeId": 16,
         "basic_properties": {
             "health": 225,
             "attack": 92,
@@ -49366,7 +48927,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 48,
+        "forgeID": 20,
         "forgeTarget": 1339,
         "iconf": "f-p-mainweapon1-5.png",
         "iconm": "m-p-mainweapon1-5.png"
@@ -49396,7 +48957,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1336,
         "basic_properties": {
             "health": 210,
@@ -49435,7 +48995,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1337,
         "basic_properties": {
             "health": 215,
@@ -49446,7 +49005,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 54,
+        "forgeID": 26,
         "forgeTarget": 1341,
         "iconf": "f-p-mainweapon1-4.png",
         "iconm": "m-p-mainweapon1-4.png"
@@ -49476,7 +49035,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1338,
         "basic_properties": {
             "health": 220,
@@ -49487,7 +49045,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 54,
+        "forgeID": 26,
         "forgeTarget": 1342,
         "iconf": "f-p-mainweapon1-4.png",
         "iconm": "m-p-mainweapon1-4.png"
@@ -49517,7 +49075,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1339,
         "basic_properties": {
             "health": 225,
@@ -49528,7 +49085,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 54,
+        "forgeID": 26,
         "forgeTarget": 1343,
         "iconf": "f-p-mainweapon1-4.png",
         "iconm": "m-p-mainweapon1-4.png"
@@ -49558,7 +49115,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1340,
         "basic_properties": {
             "health": 230,
@@ -49569,7 +49125,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 54,
+        "forgeID": 26,
         "forgeTarget": 1344,
         "iconf": "f-p-mainweapon1-4.png",
         "iconm": "m-p-mainweapon1-4.png"
@@ -49599,7 +49155,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 7,
-		"upgradeId": 17,
         "basic_properties": {
             "health": 235,
             "attack": 97,
@@ -49609,7 +49164,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 54,
+        "forgeID": 26,
         "forgeTarget": 1345,
         "iconf": "f-p-mainweapon1-4.png",
         "iconm": "m-p-mainweapon1-4.png"
@@ -49639,7 +49194,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1342,
         "basic_properties": {
             "health": 220,
@@ -49678,7 +49232,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1343,
         "basic_properties": {
             "health": 225,
@@ -49689,7 +49242,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 60,
+        "forgeID": 32,
         "forgeTarget": 1347,
         "iconf": "f-p-mainweapon1-3.png",
         "iconm": "m-p-mainweapon1-3.png"
@@ -49719,7 +49272,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1344,
         "basic_properties": {
             "health": 230,
@@ -49730,7 +49282,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 60,
+        "forgeID": 32,
         "forgeTarget": 1348,
         "iconf": "f-p-mainweapon1-3.png",
         "iconm": "m-p-mainweapon1-3.png"
@@ -49760,7 +49312,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1345,
         "basic_properties": {
             "health": 235,
@@ -49771,7 +49322,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 60,
+        "forgeID": 32,
         "forgeTarget": 1349,
         "iconf": "f-p-mainweapon1-3.png",
         "iconm": "m-p-mainweapon1-3.png"
@@ -49801,7 +49352,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1346,
         "basic_properties": {
             "health": 240,
@@ -49812,7 +49362,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 60,
+        "forgeID": 32,
         "forgeTarget": 1350,
         "iconf": "f-p-mainweapon1-3.png",
         "iconm": "m-p-mainweapon1-3.png"
@@ -49842,7 +49392,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 8,
-		"upgradeId": 18,
         "basic_properties": {
             "health": 245,
             "attack": 102,
@@ -49852,7 +49401,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 60,
+        "forgeID": 32,
         "forgeTarget": 1351,
         "iconf": "f-p-mainweapon1-3.png",
         "iconm": "m-p-mainweapon1-3.png"
@@ -49882,7 +49431,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1348,
         "basic_properties": {
             "health": 230,
@@ -49921,7 +49469,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1349,
         "basic_properties": {
             "health": 235,
@@ -49932,7 +49479,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 66,
+        "forgeID": 38,
         "forgeTarget": 1353,
         "iconf": "f-p-mainweapon1-2.png",
         "iconm": "m-p-mainweapon1-2.png"
@@ -49962,7 +49509,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1350,
         "basic_properties": {
             "health": 240,
@@ -49973,7 +49519,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 66,
+        "forgeID": 38,
         "forgeTarget": 1354,
         "iconf": "f-p-mainweapon1-2.png",
         "iconm": "m-p-mainweapon1-2.png"
@@ -50003,7 +49549,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1351,
         "basic_properties": {
             "health": 245,
@@ -50014,7 +49559,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 66,
+        "forgeID": 38,
         "forgeTarget": 1355,
         "iconf": "f-p-mainweapon1-2.png",
         "iconm": "m-p-mainweapon1-2.png"
@@ -50044,7 +49589,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1352,
         "basic_properties": {
             "health": 250,
@@ -50055,7 +49599,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 66,
+        "forgeID": 38,
         "forgeTarget": 1356,
         "iconf": "f-p-mainweapon1-2.png",
         "iconm": "m-p-mainweapon1-2.png"
@@ -50085,7 +49629,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 9,
-		"upgradeId": 19,
         "basic_properties": {
             "health": 255,
             "attack": 107,
@@ -50095,7 +49638,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 66,
+        "forgeID": 38,
         "forgeTarget": 1357,
         "iconf": "f-p-mainweapon1-2.png",
         "iconm": "m-p-mainweapon1-2.png"
@@ -50125,7 +49668,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1354,
         "basic_properties": {
             "health": 240,
@@ -50164,7 +49706,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1355,
         "basic_properties": {
             "health": 245,
@@ -50203,7 +49744,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1356,
         "basic_properties": {
             "health": 250,
@@ -50242,7 +49782,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1357,
         "basic_properties": {
             "health": 255,
@@ -50281,7 +49820,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 9,
-		"upgradeId": 19,
         "upgradeTarget": 1358,
         "basic_properties": {
             "health": 260,
@@ -50344,7 +49882,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 1,
-		"upgradeId": 11,
         "upgradeTarget": 1360,
         "basic_properties": {
             "health": 240,
@@ -50371,7 +49908,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1361,
         "basic_properties": {
             "health": 245,
@@ -50385,7 +49921,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 50,
+        "forgeID": 22,
         "forgeTarget": 1365
     },
     {
@@ -50400,7 +49936,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1362,
         "basic_properties": {
             "health": 250,
@@ -50414,7 +49949,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 50,
+        "forgeID": 22,
         "forgeTarget": 1366
     },
     {
@@ -50429,7 +49964,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1363,
         "basic_properties": {
             "health": 255,
@@ -50443,7 +49977,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 50,
+        "forgeID": 22,
         "forgeTarget": 1367
     },
     {
@@ -50458,7 +49992,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1364,
         "basic_properties": {
             "health": 260,
@@ -50472,7 +50005,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 50,
+        "forgeID": 22,
         "forgeTarget": 1368
     },
     {
@@ -50487,7 +50020,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 6,
-		"upgradeId": 16,
         "basic_properties": {
             "health": 265,
             "attack": 45,
@@ -50500,7 +50032,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 50,
+        "forgeID": 22,
         "forgeTarget": 1369
     },
     {
@@ -50515,7 +50047,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1366,
         "basic_properties": {
             "health": 250,
@@ -50542,7 +50073,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1367,
         "basic_properties": {
             "health": 255,
@@ -50556,7 +50086,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 56,
+        "forgeID": 28,
         "forgeTarget": 1371
     },
     {
@@ -50571,7 +50101,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1368,
         "basic_properties": {
             "health": 260,
@@ -50585,7 +50114,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 56,
+        "forgeID": 28,
         "forgeTarget": 1372
     },
     {
@@ -50600,7 +50129,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1369,
         "basic_properties": {
             "health": 265,
@@ -50614,7 +50142,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 56,
+        "forgeID": 28,
         "forgeTarget": 1373
     },
     {
@@ -50629,7 +50157,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1370,
         "basic_properties": {
             "health": 270,
@@ -50643,7 +50170,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 56,
+        "forgeID": 28,
         "forgeTarget": 1374
     },
     {
@@ -50658,7 +50185,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 7,
-		"upgradeId": 17,
         "basic_properties": {
             "health": 275,
             "attack": 47,
@@ -50671,7 +50197,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 56,
+        "forgeID": 28,
         "forgeTarget": 1375
     },
     {
@@ -50686,7 +50212,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1372,
         "basic_properties": {
             "health": 260,
@@ -50713,7 +50238,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1373,
         "basic_properties": {
             "health": 265,
@@ -50727,7 +50251,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 62,
+        "forgeID": 34,
         "forgeTarget": 1377
     },
     {
@@ -50742,7 +50266,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1374,
         "basic_properties": {
             "health": 270,
@@ -50756,7 +50279,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 62,
+        "forgeID": 34,
         "forgeTarget": 1378
     },
     {
@@ -50771,7 +50294,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1375,
         "basic_properties": {
             "health": 275,
@@ -50785,7 +50307,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 62,
+        "forgeID": 34,
         "forgeTarget": 1379
     },
     {
@@ -50800,7 +50322,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1376,
         "basic_properties": {
             "health": 280,
@@ -50814,7 +50335,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 62,
+        "forgeID": 34,
         "forgeTarget": 1380
     },
     {
@@ -50829,7 +50350,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 8,
-		"upgradeId": 18,
         "basic_properties": {
             "health": 285,
             "attack": 49,
@@ -50842,7 +50362,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 62,
+        "forgeID": 34,
         "forgeTarget": 1381
     },
     {
@@ -50857,7 +50377,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1378,
         "basic_properties": {
             "health": 270,
@@ -50884,7 +50403,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1379,
         "basic_properties": {
             "health": 275,
@@ -50898,7 +50416,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 68,
+        "forgeID": 40,
         "forgeTarget": 1383
     },
     {
@@ -50913,7 +50431,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1380,
         "basic_properties": {
             "health": 280,
@@ -50927,7 +50444,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 68,
+        "forgeID": 40,
         "forgeTarget": 1384
     },
     {
@@ -50942,7 +50459,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1381,
         "basic_properties": {
             "health": 285,
@@ -50956,7 +50472,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 68,
+        "forgeID": 40,
         "forgeTarget": 1385
     },
     {
@@ -50971,7 +50487,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1382,
         "basic_properties": {
             "health": 290,
@@ -50985,7 +50500,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 68,
+        "forgeID": 40,
         "forgeTarget": 1386
     },
     {
@@ -51000,7 +50515,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 9,
-		"upgradeId": 19,
         "basic_properties": {
             "health": 295,
             "attack": 51,
@@ -51013,7 +50527,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 68,
+        "forgeID": 40,
         "forgeTarget": 1387
     },
     {
@@ -51028,7 +50542,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1384,
         "basic_properties": {
             "health": 280,
@@ -51055,7 +50568,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1385,
         "basic_properties": {
             "health": 285,
@@ -51082,7 +50594,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1386,
         "basic_properties": {
             "health": 290,
@@ -51109,7 +50620,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1387,
         "basic_properties": {
             "health": 295,
@@ -51136,7 +50646,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 9,
-		"upgradeId": 19,
         "upgradeTarget": 1388,
         "basic_properties": {
             "health": 300,
@@ -51188,7 +50697,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 1,
-		"upgradeId": 11,
         "upgradeTarget": 1390,
         "basic_properties": {
             "health": 280,
@@ -51215,7 +50723,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1391,
         "basic_properties": {
             "health": 285,
@@ -51229,7 +50736,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 49,
+        "forgeID": 21,
         "forgeTarget": 1395
     },
     {
@@ -51244,7 +50751,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1392,
         "basic_properties": {
             "health": 290,
@@ -51258,7 +50764,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 49,
+        "forgeID": 21,
         "forgeTarget": 1396
     },
     {
@@ -51273,7 +50779,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1393,
         "basic_properties": {
             "health": 295,
@@ -51287,7 +50792,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 49,
+        "forgeID": 21,
         "forgeTarget": 1397
     },
     {
@@ -51302,7 +50807,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1394,
         "basic_properties": {
             "health": 300,
@@ -51316,7 +50820,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 49,
+        "forgeID": 21,
         "forgeTarget": 1398
     },
     {
@@ -51331,7 +50835,6 @@ exports.data = [
         ],
         "quality": 0,
         "rank": 6,
-		"upgradeId": 16,
         "basic_properties": {
             "health": 305,
             "attack": 45,
@@ -51344,7 +50847,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 49,
+        "forgeID": 21,
         "forgeTarget": 1399
     },
     {
@@ -51359,7 +50862,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 2,
-		"upgradeId": 12,
         "upgradeTarget": 1396,
         "basic_properties": {
             "health": 290,
@@ -51386,7 +50888,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1397,
         "basic_properties": {
             "health": 295,
@@ -51400,7 +50901,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 55,
+        "forgeID": 27,
         "forgeTarget": 1401
     },
     {
@@ -51415,7 +50916,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1398,
         "basic_properties": {
             "health": 300,
@@ -51429,7 +50929,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 55,
+        "forgeID": 27,
         "forgeTarget": 1402
     },
     {
@@ -51444,7 +50944,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1399,
         "basic_properties": {
             "health": 305,
@@ -51458,7 +50957,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 55,
+        "forgeID": 27,
         "forgeTarget": 1403
     },
     {
@@ -51473,7 +50972,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1400,
         "basic_properties": {
             "health": 310,
@@ -51487,7 +50985,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 55,
+        "forgeID": 27,
         "forgeTarget": 1404
     },
     {
@@ -51502,7 +51000,6 @@ exports.data = [
         ],
         "quality": 1,
         "rank": 7,
-		"upgradeId": 17,
         "basic_properties": {
             "health": 315,
             "attack": 47,
@@ -51515,7 +51012,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 55,
+        "forgeID": 27,
         "forgeTarget": 1405
     },
     {
@@ -51530,7 +51027,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 3,
-		"upgradeId": 13,
         "upgradeTarget": 1402,
         "basic_properties": {
             "health": 300,
@@ -51557,7 +51053,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1403,
         "basic_properties": {
             "health": 305,
@@ -51571,7 +51066,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 61,
+        "forgeID": 33,
         "forgeTarget": 1407
     },
     {
@@ -51586,7 +51081,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1404,
         "basic_properties": {
             "health": 310,
@@ -51600,7 +51094,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 61,
+        "forgeID": 33,
         "forgeTarget": 1408
     },
     {
@@ -51615,7 +51109,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1405,
         "basic_properties": {
             "health": 315,
@@ -51629,7 +51122,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 61,
+        "forgeID": 33,
         "forgeTarget": 1409
     },
     {
@@ -51644,7 +51137,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1406,
         "basic_properties": {
             "health": 320,
@@ -51658,7 +51150,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 61,
+        "forgeID": 33,
         "forgeTarget": 1410
     },
     {
@@ -51673,7 +51165,6 @@ exports.data = [
         ],
         "quality": 2,
         "rank": 8,
-		"upgradeId": 18,
         "basic_properties": {
             "health": 325,
             "attack": 49,
@@ -51686,7 +51177,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 61,
+        "forgeID": 33,
         "forgeTarget": 1411
     },
     {
@@ -51701,7 +51192,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 4,
-		"upgradeId": 14,
         "upgradeTarget": 1408,
         "basic_properties": {
             "health": 310,
@@ -51728,7 +51218,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1409,
         "basic_properties": {
             "health": 315,
@@ -51742,7 +51231,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 67,
+        "forgeID": 39,
         "forgeTarget": 1413
     },
     {
@@ -51757,7 +51246,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1410,
         "basic_properties": {
             "health": 320,
@@ -51771,7 +51259,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 67,
+        "forgeID": 39,
         "forgeTarget": 1414
     },
     {
@@ -51786,7 +51274,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1411,
         "basic_properties": {
             "health": 325,
@@ -51800,7 +51287,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 67,
+        "forgeID": 39,
         "forgeTarget": 1415
     },
     {
@@ -51815,7 +51302,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1412,
         "basic_properties": {
             "health": 330,
@@ -51829,7 +51315,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 67,
+        "forgeID": 39,
         "forgeTarget": 1416
     },
     {
@@ -51844,7 +51330,6 @@ exports.data = [
         ],
         "quality": 3,
         "rank": 9,
-		"upgradeId": 19,
         "basic_properties": {
             "health": 335,
             "attack": 51,
@@ -51857,7 +51342,7 @@ exports.data = [
         "autoUse": true,
         "enhanceID": 5,
         "hide": true,
-        "forgeID": 67,
+        "forgeID": 39,
         "forgeTarget": 1417
     },
     {
@@ -51872,7 +51357,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 5,
-		"upgradeId": 15,
         "upgradeTarget": 1414,
         "basic_properties": {
             "health": 320,
@@ -51899,7 +51383,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 6,
-		"upgradeId": 16,
         "upgradeTarget": 1415,
         "basic_properties": {
             "health": 325,
@@ -51926,7 +51409,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 7,
-		"upgradeId": 17,
         "upgradeTarget": 1416,
         "basic_properties": {
             "health": 330,
@@ -51953,7 +51435,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 8,
-		"upgradeId": 18,
         "upgradeTarget": 1417,
         "basic_properties": {
             "health": 335,
@@ -51980,7 +51461,6 @@ exports.data = [
         ],
         "quality": 4,
         "rank": 9,
-		"upgradeId": 19,
         "upgradeTarget": 1418,
         "basic_properties": {
             "health": 340,
@@ -52028,7 +51508,7 @@ exports.data = [
         "subcategory": 0,
         "description": "土狼牙齿碾碎后的粉末",
         "stack": 99,
-        "sellprice": 500,
+        "sellprice": 50,
         "quality": 0
     },
     {
@@ -52039,7 +51519,7 @@ exports.data = [
         "subcategory": 0,
         "description": "一整块黄铜，可以用来锻造装备",
         "stack": 99,
-        "sellprice": 500,
+        "sellprice": 50,
         "quality": 0
     },
     {
@@ -52050,7 +51530,7 @@ exports.data = [
         "subcategory": 0,
         "description": "土狼被杀死后剥下来的皮，似乎记录些什么",
         "stack": 99,
-        "sellprice": 500,
+        "sellprice": 50,
         "quality": 0
     },
     {
@@ -52061,7 +51541,7 @@ exports.data = [
         "subcategory": 0,
         "description": "一块比较好的锻造原料",
         "stack": 99,
-        "sellprice": 500,
+        "sellprice": 50,
         "quality": 0
     },
     {
@@ -52072,7 +51552,7 @@ exports.data = [
         "subcategory": 0,
         "description": "蕴含特殊力量的粉末",
         "stack": 99,
-        "sellprice": 500,
+        "sellprice": 50,
         "quality": 0
     },
     {
@@ -52083,7 +51563,7 @@ exports.data = [
         "subcategory": 0,
         "description": "不知道被谁掉落在地下城的麻布",
         "stack": 99,
-        "sellprice": 500,
+        "sellprice": 50,
         "quality": 0
     },
     {
@@ -52094,7 +51574,7 @@ exports.data = [
         "subcategory": 0,
         "description": "非常结实、坚韧的绳子",
         "stack": 99,
-        "sellprice": 500,
+        "sellprice": 50,
         "quality": 0
     },
     {
@@ -52105,7 +51585,7 @@ exports.data = [
         "subcategory": 0,
         "description": "一种生长在土狼窝附近的植物",
         "stack": 99,
-        "sellprice": 500,
+        "sellprice": 50,
         "quality": 0
     },
     {
@@ -52116,7 +51596,7 @@ exports.data = [
         "subcategory": 0,
         "description": "一枚古老的黄铜戒指，已经可以看到上面的锈迹",
         "stack": 99,
-        "sellprice": 500,
+        "sellprice": 50,
         "quality": 0
     },
     {
@@ -52127,7 +51607,7 @@ exports.data = [
         "subcategory": 0,
         "description": "蕴含少量魔力的蓝水晶",
         "stack": 99,
-        "sellprice": 500,
+        "sellprice": 50,
         "quality": 0
     },
     {
@@ -52138,7 +51618,7 @@ exports.data = [
         "subcategory": 0,
         "description": "被鲜血染红的旗子",
         "stack": 99,
-        "sellprice": 500,
+        "sellprice": 50,
         "quality": 0
     },
     {
@@ -52149,7 +51629,7 @@ exports.data = [
         "subcategory": 0,
         "description": "具有特殊用途的宝石",
         "stack": 99,
-        "sellprice": 650,
+        "sellprice": 100,
         "quality": 1
     },
     {
@@ -52160,7 +51640,7 @@ exports.data = [
         "subcategory": 0,
         "description": "散发着清新的草木气息的晶石",
         "stack": 99,
-        "sellprice": 650,
+        "sellprice": 100,
         "quality": 1
     },
     {
@@ -52171,7 +51651,7 @@ exports.data = [
         "subcategory": 0,
         "description": "蕴含较多魔力的水晶",
         "stack": 99,
-        "sellprice": 650,
+        "sellprice": 100,
         "quality": 1
     },
     {
@@ -52182,7 +51662,7 @@ exports.data = [
         "subcategory": 0,
         "description": "可以对装备进行强化的卷轴",
         "stack": 99,
-        "sellprice": 650,
+        "sellprice": 100,
         "quality": 1
     },
     {
@@ -52193,7 +51673,7 @@ exports.data = [
         "subcategory": 0,
         "description": "附加了魔法的绳子，可以用来捕捉强大的野兽",
         "stack": 99,
-        "sellprice": 650,
+        "sellprice": 100,
         "quality": 1
     },
     {
@@ -52204,7 +51684,7 @@ exports.data = [
         "subcategory": 0,
         "description": "较好的锻造原料",
         "stack": 99,
-        "sellprice": 650,
+        "sellprice": 100,
         "quality": 1
     },
     {
@@ -52215,7 +51695,7 @@ exports.data = [
         "subcategory": 0,
         "description": "强大的法师从魔兽上剥下来的皮毛，并在上面描绘了魔纹",
         "stack": 99,
-        "sellprice": 650,
+        "sellprice": 100,
         "quality": 1
     },
     {
@@ -52226,7 +51706,7 @@ exports.data = [
         "subcategory": 0,
         "description": "精铁打造的戒指，有很大的利用价值",
         "stack": 99,
-        "sellprice": 650,
+        "sellprice": 100,
         "quality": 1
     },
     {
@@ -52237,7 +51717,7 @@ exports.data = [
         "subcategory": 0,
         "description": "记录着魔法心得的日记残页",
         "stack": 99,
-        "sellprice": 650,
+        "sellprice": 100,
         "quality": 1
     },
     {
@@ -52248,7 +51728,7 @@ exports.data = [
         "subcategory": 0,
         "description": "装有魔法师实验药剂的瓶子",
         "stack": 99,
-        "sellprice": 650,
+        "sellprice": 100,
         "quality": 1
     },
     {
@@ -52259,7 +51739,7 @@ exports.data = [
         "subcategory": 0,
         "description": "负载魔力的银质吊坠",
         "stack": 99,
-        "sellprice": 850,
+        "sellprice": 100,
         "quality": 1
     },
     {
@@ -52270,7 +51750,7 @@ exports.data = [
         "subcategory": 0,
         "description": "非常昂贵的胸针，应该是古老贵族的物品",
         "stack": 99,
-        "sellprice": 850,
+        "sellprice": 200,
         "quality": 2
     },
     {
@@ -52281,7 +51761,7 @@ exports.data = [
         "subcategory": 0,
         "description": "来自遥远东方的布料，异常珍贵",
         "stack": 99,
-        "sellprice": 850,
+        "sellprice": 200,
         "quality": 2
     },
     {
@@ -52292,7 +51772,7 @@ exports.data = [
         "subcategory": 0,
         "description": "经过千锤百炼后的金属块，十分优良的锻造材料",
         "stack": 99,
-        "sellprice": 850,
+        "sellprice": 200,
         "quality": 2
     },
     {
@@ -52303,7 +51783,7 @@ exports.data = [
         "subcategory": 0,
         "description": "邪恶法师的笔记，记录着邪恶法师所有的魔法",
         "stack": 99,
-        "sellprice": 850,
+        "sellprice": 200,
         "quality": 2
     },
     {
@@ -52314,7 +51794,7 @@ exports.data = [
         "subcategory": 0,
         "description": "深海里的结晶，可以感受得到里面汹涌澎湃的水元素",
         "stack": 99,
-        "sellprice": 850,
+        "sellprice": 200,
         "quality": 2
     },
     {
@@ -52325,7 +51805,7 @@ exports.data = [
         "subcategory": 0,
         "description": "可怕的双头怪物的眼睛",
         "stack": 99,
-        "sellprice": 850,
+        "sellprice": 200,
         "quality": 2
     },
     {
@@ -52336,7 +51816,7 @@ exports.data = [
         "subcategory": 0,
         "description": "从远古时代就存在的老树上掉落的树枝",
         "stack": 99,
-        "sellprice": 850,
+        "sellprice": 200,
         "quality": 2
     },
     {
@@ -52347,7 +51827,7 @@ exports.data = [
         "subcategory": 0,
         "description": "生命之树的种子",
         "stack": 99,
-        "sellprice": 850,
+        "sellprice": 200,
         "quality": 2
     },
     {
@@ -52358,7 +51838,7 @@ exports.data = [
         "subcategory": 0,
         "description": "绽放时会燃起火焰的花朵",
         "stack": 99,
-        "sellprice": 850,
+        "sellprice": 200,
         "quality": 2
     },
     {
@@ -52369,7 +51849,7 @@ exports.data = [
         "subcategory": 0,
         "description": "非常稀少的锻造材料，本身就价值连城",
         "stack": 99,
-        "sellprice": 850,
+        "sellprice": 200,
         "quality": 2
     },
     {
@@ -52380,7 +51860,7 @@ exports.data = [
         "subcategory": 0,
         "description": "拥有邪恶气息的宝珠",
         "stack": 99,
-        "sellprice": 850,
+        "sellprice": 200,
         "quality": 2
     },
     {
@@ -52391,7 +51871,7 @@ exports.data = [
         "subcategory": 0,
         "description": "能给人们带来温暖的宝书，象征着希望",
         "stack": 99,
-        "sellprice": 850,
+        "sellprice": 200,
         "quality": 2
     },
     {
@@ -52402,7 +51882,7 @@ exports.data = [
         "subcategory": 0,
         "description": "传说中不死鸟掉落的羽毛，蕴含强大的力量",
         "stack": 99,
-        "sellprice": 850,
+        "sellprice": 200,
         "quality": 2
     },
     {
@@ -52413,7 +51893,7 @@ exports.data = [
         "subcategory": 0,
         "description": "蕴含着大地之力的晶体，能感受到一股厚重的气息",
         "stack": 99,
-        "sellprice": 1050,
+        "sellprice": 400,
         "quality": 3
     },
     {
@@ -52424,7 +51904,7 @@ exports.data = [
         "subcategory": 0,
         "description": "能力的证明，象征着拥有战胜龙的力量",
         "stack": 99,
-        "sellprice": 1050,
+        "sellprice": 400,
         "quality": 3
     },
     {
@@ -52435,7 +51915,7 @@ exports.data = [
         "subcategory": 0,
         "description": "军事家们梦寐以求的圣书，象征着胜利和荣耀",
         "stack": 99,
-        "sellprice": 1050,
+        "sellprice": 400,
         "quality": 3
     },
     {
@@ -52446,7 +51926,7 @@ exports.data = [
         "subcategory": 0,
         "description": "历史上唯一一位女皇的皇冠",
         "stack": 99,
-        "sellprice": 1050,
+        "sellprice": 400,
         "quality": 3
     },
     {
@@ -52457,7 +51937,7 @@ exports.data = [
         "subcategory": 0,
         "description": "传说中打开后能释放人世间所有的邪恶的盒子",
         "stack": 99,
-        "sellprice": 1050,
+        "sellprice": 400,
         "quality": 3
     },
     {
@@ -52468,7 +51948,7 @@ exports.data = [
         "subcategory": 0,
         "description": "据说是强大恶魔的心脏，拥有强大的力量",
         "stack": 99,
-        "sellprice": 1050,
+        "sellprice": 400,
         "quality": 3
     },
     {
@@ -52479,7 +51959,7 @@ exports.data = [
         "subcategory": 0,
         "description": "能统帅千军万马的腰牌，拥有无上权威",
         "stack": 99,
-        "sellprice": 1050,
+        "sellprice": 400,
         "quality": 3
     },
     {
@@ -52490,7 +51970,7 @@ exports.data = [
         "subcategory": 0,
         "description": "蕴含着火焰的晶体，具有毁灭一切的力量",
         "stack": 99,
-        "sellprice": 1050,
+        "sellprice": 400,
         "quality": 3
     },
     {
@@ -52501,7 +51981,7 @@ exports.data = [
         "subcategory": 0,
         "description": "远古时期邪恶的法师为了获得强大力量而用来在战场上收集灵魂的珠子",
         "stack": 99,
-        "sellprice": 1050,
+        "sellprice": 400,
         "quality": 3
     },
     {
@@ -52512,7 +51992,7 @@ exports.data = [
         "subcategory": 0,
         "description": "可以吸收月光的神奇宝石，具有神秘的力量",
         "stack": 99,
-        "sellprice": 1050,
+        "sellprice": 400,
         "quality": 3
     },
     {
@@ -52523,7 +52003,7 @@ exports.data = [
         "subcategory": 0,
         "description": "连强大的龙都能束缚的缎带",
         "stack": 99,
-        "sellprice": 1050,
+        "sellprice": 400,
         "quality": 3
     },
     {
@@ -52534,7 +52014,7 @@ exports.data = [
         "subcategory": 0,
         "description": "胜利女神的皇冠,象征着智慧与胜利",
         "stack": 99,
-        "sellprice": 1050,
+        "sellprice": 400,
         "quality": 3
     },
     {
@@ -52545,7 +52025,7 @@ exports.data = [
         "subcategory": 0,
         "description": "消灭恶龙后获得的牙齿，依旧拥有令人心悸的气息",
         "stack": 99,
-        "sellprice": 1050,
+        "sellprice": 400,
         "quality": 3
     },
     {
@@ -52556,7 +52036,7 @@ exports.data = [
         "subcategory": 0,
         "description": "据说是恶魔所使用的武器，不知为何遗留在地下城",
         "stack": 99,
-        "sellprice": 1050,
+        "sellprice": 400,
         "quality": 3
     },
     {
@@ -52567,7 +52047,7 @@ exports.data = [
         "subcategory": 0,
         "description": "散发着可怕气息的珠子，据说是恶魔的眼珠",
         "stack": 99,
-        "sellprice": 1050,
+        "sellprice": 400,
         "quality": 3
     },
     {
@@ -52578,66 +52058,7 @@ exports.data = [
         "subcategory": 0,
         "description": "装有龙的精血的瓶子",
         "stack": 99,
-        "sellprice": 1050,
+        "sellprice": 400,
         "quality": 3
-    },
-    {
-        "classId": 1470,
-        "label": "强化宝石",
-        "icon": "stone1.png",
-        "category": 2,
-        "subcategory": 1,
-        "description": "能够强化白色普通装备的石头",
-        "stack": 99,
-        "sellprice": 50,
-        "quality": 0
-    },
-    {
-        "classId": 1471,
-        "label": "进阶强化石",
-        "icon": "stone2.png",
-        "category": 2,
-        "subcategory": 1,
-        "description": "能够强化绿色优质装备的石头",
-        "stack": 99,
-        "sellprice": 100,
-        "quality": 1,
-        "synthesizeID": 41
-    },
-    {
-        "classId": 1472,
-        "label": "强化结晶",
-        "icon": "stone3.png",
-        "category": 2,
-        "subcategory": 1,
-        "description": "能够强化蓝色稀有装备的结晶",
-        "stack": 99,
-        "sellprice": 150,
-        "quality": 2,
-        "synthesizeID": 42
-    },
-    {
-        "classId": 1473,
-        "label": "进阶强化结晶",
-        "icon": "stone4.png",
-        "category": 2,
-        "subcategory": 1,
-        "description": "能够强化紫色史诗装备的结晶",
-        "stack": 99,
-        "sellprice": 200,
-        "quality": 3,
-        "synthesizeID": 43
-    },
-    {
-        "classId": 1474,
-        "label": "强化宝珠",
-        "icon": "stone5.png",
-        "category": 2,
-        "subcategory": 1,
-        "description": "能够强化橙色传奇装备的宝珠",
-        "stack": 99,
-        "sellprice": 250,
-        "quality": 4,
-        "synthesizeID": 44
     }
 ]
