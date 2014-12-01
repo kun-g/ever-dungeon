@@ -1,5 +1,5 @@
 (function() {
-  var Bag, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Player, PlayerEnvironment, Serializer, addMercenaryMember, async, createItem, createUnit, currentTime, dbLib, diffDate, genUtil, getMercenaryMember, getPlayerHero, getVip, helperLib, itemLib, moment, playerCSConfig, playerCommandStream, playerMessageFilter, registerConstructor, updateMercenaryMember, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6,
+  var Bag, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Player, PlayerEnvironment, Serializer, addMercenaryMember, addVersionControl, async, createItem, createUnit, currentTime, dbLib, diffDate, genUtil, getMercenaryMember, getPlayerHero, getVip, helperLib, itemLib, libItem, moment, playerCSConfig, playerCommandStream, playerMessageFilter, registerConstructor, setupVersionControl, updateMercenaryMember, versionCfg, _ref, _ref1, _ref2, _ref3, _ref4, _ref5,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -15,15 +15,15 @@
 
   _ref2 = require('./unit'), createUnit = _ref2.createUnit, Hero = _ref2.Hero;
 
-  _ref3 = require('./item'), Item = _ref3.Item, Card = _ref3.Card;
+  libItem = require('./item');
 
-  _ref4 = require('./commandStream'), CommandStream = _ref4.CommandStream, Environment = _ref4.Environment, DungeonEnvironment = _ref4.DungeonEnvironment, DungeonCommandStream = _ref4.DungeonCommandStream;
+  _ref3 = require('./commandStream'), CommandStream = _ref3.CommandStream, Environment = _ref3.Environment, DungeonEnvironment = _ref3.DungeonEnvironment, DungeonCommandStream = _ref3.DungeonCommandStream;
 
   Dungeon = require('./dungeon').Dungeon;
 
-  _ref5 = require('./container'), Bag = _ref5.Bag, CardStack = _ref5.CardStack;
+  _ref4 = require('./container'), Bag = _ref4.Bag, CardStack = _ref4.CardStack;
 
-  _ref6 = require('./helper'), diffDate = _ref6.diffDate, currentTime = _ref6.currentTime, genUtil = _ref6.genUtil;
+  _ref5 = require('./helper'), diffDate = _ref5.diffDate, currentTime = _ref5.currentTime, genUtil = _ref5.genUtil, addVersionControl = _ref5.addVersionControl;
 
   helperLib = require('./helper');
 
@@ -35,7 +35,7 @@
     __extends(Player, _super);
 
     function Player(data) {
-      var cfg, now, versionCfg;
+      var cfg, now;
       this.type = 'player';
       now = new Date();
       cfg = {
@@ -76,21 +76,9 @@
         accountID: -1,
         campaignState: {},
         infiniteTimer: currentTime(),
-        inventoryVersion: 1,
-        heroVersion: 1,
-        stageVersion: 1,
-        questVersion: 1,
-        energyVersion: 1,
         abIndex: rand()
       };
-      versionCfg = {
-        inventoryVersion: ['gold', 'diamond', 'inventory', 'equipment'],
-        heroVersion: ['heroIndex', 'hero', 'heroBase'],
-        stageVersion: 'stage',
-        questVersion: 'quests',
-        energyVersion: ['energy', 'energyTime']
-      };
-      Player.__super__.constructor.call(this, data, cfg, versionCfg);
+      Player.__super__.constructor.call(this, data, cfg);
     }
 
     Player.prototype.setName = function(name) {
@@ -138,11 +126,11 @@
     Player.prototype.isEquiped = function(slot) {
       var e, equipment, i;
       equipment = (function() {
-        var _ref7, _results;
-        _ref7 = this.equipment;
+        var _ref6, _results;
+        _ref6 = this.equipment;
         _results = [];
-        for (i in _ref7) {
-          e = _ref7[i];
+        for (i in _ref6) {
+          e = _ref6[i];
           _results.push(e);
         }
         return _results;
@@ -151,11 +139,11 @@
     };
 
     Player.prototype.migrate = function() {
-      var cfg, enhanceID, flag, item, lv, p, prize, slot, _i, _ref7;
+      var cfg, enhanceID, flag, item, lv, p, prize, slot, _i, _ref6, _ref7;
       flag = false;
-      _ref7 = this.inventory.container;
-      for (slot in _ref7) {
-        item = _ref7[slot];
+      _ref6 = this.inventory.container;
+      for (slot in _ref6) {
+        item = _ref6[slot];
         if (item != null) {
           if (item.transPrize != null) {
             if (this.isEquiped(slot)) {
@@ -190,17 +178,15 @@
           }
         }
       }
-      prize = queryTable(TABLE_CONFIG, 'InitialEquipment');
+      prize = (_ref7 = queryTable(TABLE_ROLE, this.hero["class"])) != null ? _ref7.initialEquipment : void 0;
       for (slot = _i = 0; _i <= 5; slot = ++_i) {
         if (!(this.equipment[slot] == null)) {
           continue;
         }
         flag = true;
-        this.claimPrize(prize[slot].filter((function(_this) {
-          return function(e) {
-            return isClassMatch(_this.hero["class"], e.classLimit);
-          };
-        })(this)));
+        if (prize != null) {
+          this.claimPrize(prize[slot]);
+        }
       }
       return flag;
     };
@@ -252,7 +238,7 @@
     };
 
     Player.prototype.onLogin = function() {
-      var flag, itemsNeedRemove, key, prize, ret, s, _i, _len, _ref7;
+      var flag, itemsNeedRemove, key, prize, ret, s, _i, _len, _ref6;
       if (!this.lastLogin) {
         return [];
       }
@@ -272,9 +258,9 @@
       }
       if (!moment().isSame(this.infiniteTimer, 'week')) {
         this.infiniteTimer = currentTime();
-        _ref7 = this.stage;
-        for (_i = 0, _len = _ref7.length; _i < _len; _i++) {
-          s = _ref7[_i];
+        _ref6 = this.stage;
+        for (_i = 0, _len = _ref6.length; _i < _len; _i++) {
+          s = _ref6[_i];
           if (s && (s.level != null)) {
             s.level = 0;
           }
@@ -613,22 +599,22 @@
     };
 
     Player.prototype.updateStageStatus = function() {
-      var ret, s, _i, _len, _ref7;
+      var ret, s, _i, _len, _ref6;
       ret = [];
-      _ref7 = updateStageStatus(this.stage, this, this.abIndex);
-      for (_i = 0, _len = _ref7.length; _i < _len; _i++) {
-        s = _ref7[_i];
+      _ref6 = updateStageStatus(this.stage, this, this.abIndex);
+      for (_i = 0, _len = _ref6.length; _i < _len; _i++) {
+        s = _ref6[_i];
         ret = ret.concat(this.changeStage(s, STAGE_STATE_ACTIVE));
       }
       return ret;
     };
 
     Player.prototype.updateQuestStatus = function() {
-      var q, _i, _len, _ref7, _results;
-      _ref7 = updateQuestStatus(this.quests, this, this.abIndex);
+      var q, _i, _len, _ref6, _results;
+      _ref6 = updateQuestStatus(this.quests, this, this.abIndex);
       _results = [];
-      for (_i = 0, _len = _ref7.length; _i < _len; _i++) {
-        q = _ref7[_i];
+      for (_i = 0, _len = _ref6.length; _i < _len; _i++) {
+        q = _ref6[_i];
         _results.push(this.acceptQuest(q));
       }
       return _results;
@@ -647,8 +633,8 @@
     };
 
     Player.prototype.getPurchasedCount = function(id) {
-      var _ref7;
-      return (_ref7 = this.purchasedCount[id]) != null ? _ref7 : 0;
+      var _ref6;
+      return (_ref6 = this.purchasedCount[id]) != null ? _ref6 : 0;
     };
 
     Player.prototype.addPurchasedCount = function(id, count) {
@@ -658,23 +644,89 @@
       return this.purchasedCount[id] += count;
     };
 
-    Player.prototype.createHero = function(heroData) {
-      var bag, bf, e, equip, hero, i, _ref7;
+    Player.prototype.createPlayer = function(arg, account, cb) {
+      var p, prize, _i, _len, _ref6, _ref7;
+      if (!((0 <= (_ref6 = arg.cid) && _ref6 <= 2))) {
+        cb({
+          message: 'big brother is watching ya'
+        });
+      }
+      this.setName(arg.nam);
+      this.accountID = account;
+      this.initialize();
+      this.createHero({
+        name: arg.nam,
+        "class": arg.cid,
+        gender: arg.gen,
+        hairStyle: arg.hst,
+        hairColor: arg.hcl
+      });
+      prize = (_ref7 = queryTable(TABLE_ROLE, arg.cid)) != null ? _ref7.initialEquipment : void 0;
+      for (_i = 0, _len = prize.length; _i < _len; _i++) {
+        p = prize[_i];
+        this.claimPrize(p);
+      }
+      logUser({
+        name: arg.nam,
+        action: 'register',
+        "class": arg.cid,
+        gender: arg.gen,
+        hairStyle: arg.hst,
+        hairColor: arg.hcl
+      });
+      return this.saveDB(cb);
+    };
+
+    Player.prototype.putOnEquipmentAfterSwitched = function(heroClass) {
+      var equipmentList, p, prize, ret, _i, _len, _ref6, _ref7, _results;
+      equipmentList = this.inventory.reduce(function(acc, item, index) {
+        var _ref6;
+        if ((item != null) && item.category === ITEM_EQUIPMENT && ((_ref6 = item.classLimit) != null ? _ref6.indexOf(heroClass) : void 0) !== -1) {
+          acc.push(index);
+        }
+        return acc;
+      }, []);
+      if (equipmentList.length === 0) {
+        prize = (_ref6 = queryTable(TABLE_ROLE, heroClass)) != null ? _ref6.initialEquipment : void 0;
+        _results = [];
+        for (_i = 0, _len = prize.length; _i < _len; _i++) {
+          p = prize[_i];
+          ret = this.claimPrize(p);
+          _results.push((_ref7 = ret.itm) != null ? _ref7.forEach(function(item) {
+            return this.useItem(item.sid);
+          }) : void 0);
+        }
+        return _results;
+      } else {
+        return this.equipment = equipmentList;
+      }
+    };
+
+    Player.prototype.createHero = function(heroData, isSwitch) {
+      var bag, bf, e, equip, hero, i, _ref6;
       if (heroData != null) {
-        if (this.heroBase[heroData["class"]] != null) {
+        if ((this.heroBase[heroData["class"]] != null) && heroData["class"] === this.hero["class"]) {
           return null;
         }
-        heroData.xp = 0;
-        heroData.equipment = [];
-        this.heroBase[heroData["class"]] = heroData;
-        this.switchHero(heroData["class"]);
+        if (isSwitch) {
+          heroData.xp = this.hero.xp;
+          heroData.equipment = [];
+          this.heroBase[heroData["class"]] = heroData;
+          this.switchHero(heroData["class"]);
+          this.putOnEquipmentAfterSwitched(heroData["class"]);
+        } else {
+          heroData.xp = 0;
+          heroData.equipment = [];
+          this.heroBase[heroData["class"]] = heroData;
+          this.switchHero(heroData["class"]);
+        }
         return this.createHero();
       } else if (this.hero) {
         bag = this.inventory;
         equip = [];
-        _ref7 = this.equipment;
-        for (i in _ref7) {
-          e = _ref7[i];
+        _ref6 = this.equipment;
+        for (i in _ref6) {
+          e = _ref6[i];
           if (bag.get(e) != null) {
             equip.push({
               cid: bag.get(e).classId,
@@ -682,50 +734,45 @@
             });
           }
         }
-        if (this.hero.wSpellDB) {
-          this.hero = {
-            xp: this.hero.xp,
-            name: this.name,
-            "class": this.hero["class"],
-            gender: this.hero.gender,
-            hairStyle: this.hero.hairStyle,
-            hairColor: this.hero.hairColor,
-            equipment: equip,
-            equipSlot: this.equipment
-          };
-          this.save();
-        } else {
-          this.hero['equipment'] = equip;
-        }
+        this.hero['equipment'] = equip;
         hero = new Hero(this.hero);
         bf = hero.calculatePower();
         if (bf !== this.battleForce) {
           this.battleForce = bf;
           this.notify('battleForceChanged');
         }
+        this.save();
         return hero;
       } else {
         throw 'NoHero';
       }
     };
 
+    Player.prototype.switchHeroType = function(classId) {
+      if (Math.abs(classId - this.hero["class"]) > 100) {
+        return 'verticalChange';
+      } else {
+        return 'horizonChange';
+      }
+    };
+
     Player.prototype.switchHero = function(hClass) {
-      var k, v, _ref7, _ref8, _results;
+      var k, v, _ref6, _ref7, _results;
       if (this.heroBase[hClass] == null) {
         return false;
       }
       if (this.hero != null) {
         this.heroBase[this.hero["class"]] = {};
-        _ref7 = this.hero;
-        for (k in _ref7) {
-          v = _ref7[k];
+        _ref6 = this.hero;
+        for (k in _ref6) {
+          v = _ref6[k];
           this.heroBase[this.hero["class"]][k] = JSON.parse(JSON.stringify(v));
         }
       }
-      _ref8 = this.heroBase[hClass];
+      _ref7 = this.heroBase[hClass];
       _results = [];
-      for (k in _ref8) {
-        v = _ref8[k];
+      for (k in _ref7) {
+        v = _ref7[k];
         _results.push(this.hero[k] = JSON.parse(JSON.stringify(v)));
       }
       return _results;
@@ -823,7 +870,6 @@
     Player.prototype.changeStage = function(stage, state) {
       var arg, chapter, flag, operation, ret, stg;
       stg = queryTable(TABLE_STAGE, stage);
-      this.stageVersion++;
       if (stg) {
         chapter = stg.chapter;
         if (this.stage[stage] == null) {
@@ -956,8 +1002,8 @@
           };
         })(this), (function(_this) {
           return function(mercenary, cb) {
-            var level, team, teamCount, _ref7;
-            teamCount = (_ref7 = stageConfig.team) != null ? _ref7 : 3;
+            var level, team, teamCount, _ref6;
+            teamCount = (_ref6 = stageConfig.team) != null ? _ref6 : 3;
             if ((_this.stage[stage] != null) && (_this.stage[stage].level != null)) {
               level = _this.stage[stage].level;
               if (level % 10 === 0) {
@@ -1003,11 +1049,11 @@
           };
         })(this), (function(_this) {
           return function(team, level, blueStar, cb) {
-            var qid, qst, quest, _ref7;
+            var qid, qst, quest, _ref6;
             quest = {};
-            _ref7 = _this.quests;
-            for (qid in _ref7) {
-              qst = _ref7[qid];
+            _ref6 = _this.quests;
+            for (qid in _ref6) {
+              qst = _ref6[qid];
               if (!qst.complete) {
                 quest[qid] = qst;
               }
@@ -1092,11 +1138,11 @@
       quest = queryTable(TABLE_QUEST, qid, this.abIndex);
       this.quests[qid] = {
         counters: (function() {
-          var _i, _len, _ref7, _results;
-          _ref7 = quest.objects;
+          var _i, _len, _ref6, _results;
+          _ref6 = quest.objects;
           _results = [];
-          for (_i = 0, _len = _ref7.length; _i < _len; _i++) {
-            i = _ref7[_i];
+          for (_i = 0, _len = _ref6.length; _i < _len; _i++) {
+            i = _ref6[_i];
             _results.push(0);
           }
           return _results;
@@ -1105,7 +1151,6 @@
       this.onEvent('gold');
       this.onEvent('diamond');
       this.onEvent('item');
-      this.questVersion++;
       return packQuestEvent(this.quests, qid, this.questVersion);
     };
 
@@ -1184,46 +1229,44 @@
       ret = [];
       for (_i = 0, _len = prize.length; _i < _len; _i++) {
         p = prize[_i];
-        if (!(p != null)) {
-          continue;
-        }
-        this.inventoryVersion++;
-        switch (p.type) {
-          case PRIZETYPE_ITEM:
-            retRM = this.inventory.remove(p.value, p.count * count, null, true);
-            if (!(retRM && retRM.length > 0)) {
-              return null;
-            }
-            ret = this.doAction({
-              id: 'ItemChange',
-              ret: retRM,
-              version: this.inventoryVersion
-            });
-            break;
-          case PRIZETYPE_GOLD:
-            ret.push({
-              NTF: Event_InventoryUpdateItem,
-              arg: {
-                syn: this.inventoryVersion,
-                god: this.addGold(-p.count * count)
+        if (p != null) {
+          switch (p.type) {
+            case PRIZETYPE_ITEM:
+              retRM = this.inventory.remove(p.value, p.count * count, null, true);
+              if (!(retRM && retRM.length > 0)) {
+                return null;
               }
-            });
-            break;
-          case PRIZETYPE_DIAMOND:
-            ret.push({
-              NTF: Event_InventoryUpdateItem,
-              arg: {
-                syn: this.inventoryVersion,
-                dim: this.addDiamond(-p.count * count)
-              }
-            });
+              ret = this.doAction({
+                id: 'ItemChange',
+                ret: retRM,
+                version: this.inventoryVersion
+              });
+              break;
+            case PRIZETYPE_GOLD:
+              ret.push({
+                NTF: Event_InventoryUpdateItem,
+                arg: {
+                  syn: this.inventoryVersion,
+                  god: this.addGold(-p.count * count)
+                }
+              });
+              break;
+            case PRIZETYPE_DIAMOND:
+              ret.push({
+                NTF: Event_InventoryUpdateItem,
+                arg: {
+                  syn: this.inventoryVersion,
+                  dim: this.addDiamond(-p.count * count)
+                }
+              });
+          }
         }
       }
       return ret;
     };
 
     Player.prototype.claimPrize = function(prize, allOrFail) {
-      var e, equipUpdate, i, k, p, ret, _i, _len, _ref7;
+      var e, equipUpdate, i, k, p, ret, _i, _len, _ref6;
       if (allOrFail == null) {
         allOrFail = true;
       }
@@ -1234,133 +1277,131 @@
       ret = [];
       for (_i = 0, _len = prize.length; _i < _len; _i++) {
         p = prize[_i];
-        if (!(p != null)) {
-          continue;
-        }
-        this.inventoryVersion++;
-        switch (p.type) {
-          case PRIZETYPE_ITEM:
-            ret = this.aquireItem(p.value, p.count, allOrFail);
-            if (!(ret && ret.length > 0)) {
-              return [];
-            }
-            break;
-          case PRIZETYPE_GOLD:
-            if (p.count > 0) {
-              ret.push({
-                NTF: Event_InventoryUpdateItem,
-                arg: {
-                  syn: this.inventoryVersion,
-                  god: this.addGold(p.count)
-                }
-              });
-            }
-            break;
-          case PRIZETYPE_DIAMOND:
-            if (p.count > 0) {
-              ret.push({
-                NTF: Event_InventoryUpdateItem,
-                arg: {
-                  syn: this.inventoryVersion,
-                  dim: this.addDiamond(p.count)
-                }
-              });
-            }
-            break;
-          case PRIZETYPE_EXP:
-            if (p.count > 0) {
-              ret.push({
-                NTF: Event_RoleUpdate,
-                arg: {
-                  syn: this.heroVersion,
-                  act: {
-                    exp: this.addHeroExp(p.count)
+        if (p != null) {
+          switch (p.type) {
+            case PRIZETYPE_ITEM:
+              ret = this.aquireItem(p.value, p.count, allOrFail);
+              if (!(ret && ret.length > 0)) {
+                return [];
+              }
+              break;
+            case PRIZETYPE_GOLD:
+              if (p.count > 0) {
+                ret.push({
+                  NTF: Event_InventoryUpdateItem,
+                  arg: {
+                    syn: this.inventoryVersion,
+                    god: this.addGold(p.count)
                   }
-                }
-              });
-            }
-            break;
-          case PRIZETYPE_WXP:
-            if (!p.count) {
-              continue;
-            }
-            equipUpdate = [];
-            _ref7 = this.equipment;
-            for (i in _ref7) {
-              k = _ref7[i];
-              e = this.getItemAt(k);
-              if (e == null) {
-                logError({
-                  action: 'claimPrize',
-                  reason: 'equipmentNotExist',
-                  name: this.name,
-                  equipSlot: k,
-                  index: i
                 });
-                delete this.equipment[k];
+              }
+              break;
+            case PRIZETYPE_DIAMOND:
+              if (p.count > 0) {
+                ret.push({
+                  NTF: Event_InventoryUpdateItem,
+                  arg: {
+                    syn: this.inventoryVersion,
+                    dim: this.addDiamond(p.count)
+                  }
+                });
+              }
+              break;
+            case PRIZETYPE_EXP:
+              if (p.count > 0) {
+                ret.push({
+                  NTF: Event_RoleUpdate,
+                  arg: {
+                    syn: this.heroVersion,
+                    act: {
+                      exp: this.addHeroExp(p.count)
+                    }
+                  }
+                });
+              }
+              break;
+            case PRIZETYPE_WXP:
+              if (!p.count) {
                 continue;
               }
-              e.xp = e.xp + p.count;
-              equipUpdate.push({
-                sid: k,
-                xp: e.xp
-              });
-            }
-            if (equipUpdate.length > 0) {
-              ret.push({
-                NTF: Event_InventoryUpdateItem,
-                arg: {
-                  syn: this.inventoryVersion,
-                  itm: equipUpdate
+              equipUpdate = [];
+              _ref6 = this.equipment;
+              for (i in _ref6) {
+                k = _ref6[i];
+                e = this.getItemAt(k);
+                if (e == null) {
+                  logError({
+                    action: 'claimPrize',
+                    reason: 'equipmentNotExist',
+                    name: this.name,
+                    equipSlot: k,
+                    index: i
+                  });
+                  delete this.equipment[k];
+                  continue;
                 }
-              });
-            }
-            break;
-          case PRIZETYPE_FUNCTION:
-            switch (p.func) {
-              case "setFlag":
-                this.flags[p.flag] = p.value;
-                ret = ret.concat(this.syncFlags(true)).concat(this.syncEvent());
-                break;
-              case "countUp":
-                if (p.target === 'server') {
-                  if (gServerObject.counters[p.counter] == null) {
-                    gServerObject.counters[p.counter] = 0;
+                e.xp = e.xp + p.count;
+                equipUpdate.push({
+                  sid: k,
+                  xp: e.xp
+                });
+              }
+              if (equipUpdate.length > 0) {
+                ret.push({
+                  NTF: Event_InventoryUpdateItem,
+                  arg: {
+                    syn: this.inventoryVersion,
+                    itm: equipUpdate
                   }
-                  gServerObject.counters[p.counter]++;
-                  gServerObject.notify('countersChanged', {
-                    type: p.counter,
-                    delta: 1
-                  });
-                } else {
-                  this.counters[p.counter]++;
-                  this.notify('countersChanged', {
-                    type: p.counter
-                  });
-                  ret = ret.concat(this.syncCounters(true)).concat(this.syncEvent());
-                }
-                break;
-              case "updateLeaderboard":
-                if (this.counters['worldBoss'][p.counter] == null) {
-                  this.counters['worldBoss'][p.counter] = 0;
-                }
-                this.counters['worldBoss'][p.counter] += p.delta;
-                helperLib.assignLeaderboard(this, p.boardId);
-            }
+                });
+              }
+              break;
+            case PRIZETYPE_FUNCTION:
+              switch (p.func) {
+                case "setFlag":
+                  this.flags[p.flag] = p.value;
+                  ret = ret.concat(this.syncFlags(true)).concat(this.syncEvent());
+                  break;
+                case "countUp":
+                  if (p.target === 'server') {
+                    if (gServerObject.counters[p.counter] == null) {
+                      gServerObject.counters[p.counter] = 0;
+                    }
+                    gServerObject.counters[p.counter]++;
+                    gServerObject.notify('countersChanged', {
+                      type: p.counter,
+                      delta: 1
+                    });
+                  } else {
+                    this.counters[p.counter]++;
+                    this.notify('countersChanged', {
+                      type: p.counter
+                    });
+                    ret = ret.concat(this.syncCounters(true)).concat(this.syncEvent());
+                  }
+                  break;
+                case "updateLeaderboard":
+                  if (this.counters['worldBoss'][p.counter] == null) {
+                    this.counters['worldBoss'][p.counter] = 0;
+                  }
+                  this.counters['worldBoss'][p.counter] += p.delta;
+                  helperLib.assignLeaderboard(this, p.boardId);
+              }
+          }
         }
       }
       return ret;
     };
 
     Player.prototype.isQuestAchieved = function(qid) {
-      var c, i, quest, _ref7;
+      var c, i, quest, _ref6;
       if (this.quests[qid] == null) {
         return false;
       }
       quest = queryTable(TABLE_QUEST, qid, this.abIndex);
-      _ref7 = this.quests[qid].counters;
-      for (i in _ref7) {
-        c = _ref7[i];
+      _ref6 = this.quests[qid].counters;
+      for (i in _ref6) {
+        c = _ref6[i];
         if (quest.objects[i].count > c) {
           return false;
         }
@@ -1369,7 +1410,7 @@
     };
 
     Player.prototype.claimQuest = function(qid) {
-      var obj, prize, quest, ret, _i, _len, _ref7;
+      var obj, prize, quest, ret, _i, _len, _ref6;
       quest = queryTable(TABLE_QUEST, qid, this.abIndex);
       ret = [];
       if (!((quest != null) && (this.quests[qid] != null) && !this.quests[qid].complete)) {
@@ -1388,10 +1429,9 @@
         return RET_InventoryFull;
       }
       ret = ret.concat(prize);
-      this.questVersion++;
-      _ref7 = quest.objects;
-      for (_i = 0, _len = _ref7.length; _i < _len; _i++) {
-        obj = _ref7[_i];
+      _ref6 = quest.objects;
+      for (_i = 0, _len = _ref6.length; _i < _len; _i++) {
+        obj = _ref6[_i];
         if (obj.consume) {
           switch (obj.type) {
             case QUEST_TYPE_GOLD:
@@ -1427,15 +1467,15 @@
     };
 
     Player.prototype.checkQuestStatues = function(qid) {
-      var i, objective, quest, _ref7, _results;
+      var i, objective, quest, _ref6, _results;
       quest = queryTable(TABLE_QUEST, qid, this.abIndex);
       if (!((this.quests[qid] != null) && quest)) {
         return false;
       }
-      _ref7 = quest.objects;
+      _ref6 = quest.objects;
       _results = [];
-      for (i in _ref7) {
-        objective = _ref7[i];
+      for (i in _ref6) {
+        objective = _ref6[i];
         switch (objective.type) {
           case QUEST_TYPE_GOLD:
             this.quests[qid].counters[i] = this.gold;
@@ -1664,7 +1704,7 @@
     };
 
     Player.prototype.levelUpItem = function(slot) {
-      var cost, eh, exp, item, k, newItem, ret, s, upConfig, _ref7;
+      var cost, eh, exp, item, k, newItem, ret, s, upConfig, _ref6;
       item = this.getItemAt(slot);
       if (item == null) {
         return {
@@ -1676,11 +1716,7 @@
           ret: RET_EquipCantUpgrade
         };
       }
-      if (item.getConfig().upgradeId != null) {
-        upConfig = queryTable(TABLE_UPGRADE, item.getConfig().upgradeId, this.abIndex);
-      } else {
-        upConfig = queryTable(TABLE_UPGRADE, item.rank, this.abIndex);
-      }
+      upConfig = queryTable(TABLE_UPGRADE, item.rank, this.abIndex);
       if (!upConfig) {
         return {
           ret: RET_EquipCantUpgrade
@@ -1703,16 +1739,16 @@
           ret: RET_NotEnoughGold
         };
       }
-      _ref7 = this.equipment;
-      for (k in _ref7) {
-        s = _ref7[k];
+      _ref6 = this.equipment;
+      for (k in _ref6) {
+        s = _ref6[k];
         if (s === slot) {
           delete this.equipment[k];
         }
       }
       this.addGold(-cost);
       ret = this.removeItem(null, 1, slot);
-      newItem = new Item(item.upgradeTarget);
+      newItem = libItem.createItem(item.upgradeTarget);
       newItem.enhancement = item.enhancement;
       ret = ret.concat(this.aquireItem(newItem));
       eh = newItem.enhancement.map(function(e) {
@@ -1812,7 +1848,7 @@
           ret: RET_Unknown
         };
       }
-      newItem = new Item(recipe.forgeTarget);
+      newItem = libItem.createItem(recipe.forgeTarget);
       ret = ret.concat(this.aquireItem(newItem));
       ret = ret.concat({
         NTF: Event_InventoryUpdateItem,
@@ -1978,7 +2014,7 @@
     };
 
     Player.prototype.generateDungeonAward = function(dungeon) {
-      var cfg, dropInfo, gr, iPrize, infiniteLevel, p, percentage, prize, result, wr, xr, _i, _len, _ref10, _ref7, _ref8, _ref9;
+      var cfg, dropInfo, gr, iPrize, infiniteLevel, p, percentage, prize, result, wr, xr, _i, _len, _ref6, _ref7, _ref8, _ref9;
       result = dungeon.result;
       cfg = dungeon.getConfig();
       if (result === DUNGEON_RESULT_DONE || (cfg == null)) {
@@ -2000,9 +2036,9 @@
       } else {
         percentage = (dungeon.currentLevel / cfg.levelCount) * 0.5;
       }
-      gr = ((_ref7 = cfg.goldRate) != null ? _ref7 : 1) * percentage;
-      xr = ((_ref8 = cfg.xpRate) != null ? _ref8 : 1) * percentage;
-      wr = ((_ref9 = cfg.wxpRate) != null ? _ref9 : 1) * percentage;
+      gr = ((_ref6 = cfg.goldRate) != null ? _ref6 : 1) * percentage;
+      xr = ((_ref7 = cfg.xpRate) != null ? _ref7 : 1) * percentage;
+      wr = ((_ref8 = cfg.wxpRate) != null ? _ref8 : 1) * percentage;
       prize = generatePrize(queryTable(TABLE_DROP), dropInfo);
       prize = prize.concat(dungeon.prizeInfo);
       if (!dungeon.isSweep) {
@@ -2027,9 +2063,9 @@
       }
       infiniteLevel = dungeon.infiniteLevel;
       if ((infiniteLevel != null) && cfg.infinityPrize && result === DUNGEON_RESULT_WIN) {
-        _ref10 = cfg.infinityPrize;
-        for (_i = 0, _len = _ref10.length; _i < _len; _i++) {
-          p = _ref10[_i];
+        _ref9 = cfg.infinityPrize;
+        for (_i = 0, _len = _ref9.length; _i < _len; _i++) {
+          p = _ref9[_i];
           if (p.level === infiniteLevel) {
             iPrize = p;
           }
@@ -2063,11 +2099,11 @@
         }
         quest = queryTable(TABLE_QUEST, qid, this.abIndex);
         _results.push((function() {
-          var _ref7, _results1;
-          _ref7 = quest.objects;
+          var _ref6, _results1;
+          _ref6 = quest.objects;
           _results1 = [];
-          for (k in _ref7) {
-            objective = _ref7[k];
+          for (k in _ref6) {
+            objective = _ref6[k];
             if (objective.type === QUEST_TYPE_NPC && (qst.counters[k] != null) && (this.quests[qid].counters != null)) {
               _results1.push(this.quests[qid].counters[k] = qst.counters[k]);
             }
@@ -2079,7 +2115,7 @@
     };
 
     Player.prototype.claimDungeonAward = function(dungeon, isSweep) {
-      var goldPrize, otherPrize, prize, quests, result, ret, rewardMessage, wxPrize, xpPrize, _ref7;
+      var goldPrize, otherPrize, prize, quests, result, ret, rewardMessage, wxPrize, xpPrize, _ref6;
       if (dungeon == null) {
         return [];
       }
@@ -2087,7 +2123,6 @@
       if (dungeon.revive > 0) {
         ret = this.inventory.removeById(ItemId_RevivePotion, dungeon.revive, true);
         if (!ret || ret.length === 0) {
-          this.inventoryVersion++;
           return {
             NTF: Event_DungeonReward,
             arg: {
@@ -2102,11 +2137,10 @@
         });
       }
       quests = dungeon.quests;
-      if (quests) {
+      if (quests && dungeon.result !== DUNGEON_RESULT_FAIL) {
         this.updateQuest(quests);
-        this.questVersion++;
       }
-      _ref7 = this.generateDungeonAward(dungeon), goldPrize = _ref7.goldPrize, xpPrize = _ref7.xpPrize, wxPrize = _ref7.wxPrize, otherPrize = _ref7.otherPrize;
+      _ref6 = this.generateDungeonAward(dungeon), goldPrize = _ref6.goldPrize, xpPrize = _ref6.xpPrize, wxPrize = _ref6.wxPrize, otherPrize = _ref6.otherPrize;
       rewardMessage = {
         NTF: Event_DungeonReward,
         arg: {
@@ -2242,33 +2276,33 @@
     };
 
     Player.prototype.vipOperation = function(op) {
-      var cfg, level, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref20, _ref21, _ref22, _ref23, _ref24, _ref7, _ref8, _ref9;
-      _ref7 = getVip(this.rmb), level = _ref7.level, cfg = _ref7.cfg;
+      var cfg, level, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref20, _ref21, _ref22, _ref23, _ref6, _ref7, _ref8, _ref9;
+      _ref6 = getVip(this.rmb), level = _ref6.level, cfg = _ref6.cfg;
       switch (op) {
         case 'vipLevel':
           return level;
         case 'chest_vip':
-          return (_ref8 = cfg != null ? (_ref9 = cfg.privilege) != null ? _ref9.chest_vip : void 0 : void 0) != null ? _ref8 : 0;
+          return (_ref7 = cfg != null ? (_ref8 = cfg.privilege) != null ? _ref8.chest_vip : void 0 : void 0) != null ? _ref7 : 0;
         case 'ContinuousRaids':
-          return (_ref10 = cfg != null ? (_ref11 = cfg.privilege) != null ? _ref11.ContinuousRaids : void 0 : void 0) != null ? _ref10 : false;
+          return (_ref9 = cfg != null ? (_ref10 = cfg.privilege) != null ? _ref10.ContinuousRaids : void 0 : void 0) != null ? _ref9 : false;
         case 'pkCount':
-          return (_ref12 = cfg != null ? (_ref13 = cfg.privilege) != null ? _ref13.pkCount : void 0 : void 0) != null ? _ref12 : 5;
+          return (_ref11 = cfg != null ? (_ref12 = cfg.privilege) != null ? _ref12.pkCount : void 0 : void 0) != null ? _ref11 : 5;
         case 'tuHaoCount':
-          return (_ref14 = cfg != null ? (_ref15 = cfg.privilege) != null ? _ref15.tuHaoCount : void 0 : void 0) != null ? _ref14 : 3;
+          return (_ref13 = cfg != null ? (_ref14 = cfg.privilege) != null ? _ref14.tuHaoCount : void 0 : void 0) != null ? _ref13 : 3;
         case 'EquipmentRobbers':
-          return (_ref16 = cfg != null ? (_ref17 = cfg.privilege) != null ? _ref17.EquipmentRobbers : void 0 : void 0) != null ? _ref16 : 3;
+          return (_ref15 = cfg != null ? (_ref16 = cfg.privilege) != null ? _ref16.EquipmentRobbers : void 0 : void 0) != null ? _ref15 : 3;
         case 'EvilChieftains':
-          return (_ref18 = cfg != null ? (_ref19 = cfg.privilege) != null ? _ref19.EvilChieftains : void 0 : void 0) != null ? _ref18 : 3;
+          return (_ref17 = cfg != null ? (_ref18 = cfg.privilege) != null ? _ref18.EvilChieftains : void 0 : void 0) != null ? _ref17 : 3;
         case 'blueStarCost':
-          return (_ref20 = cfg != null ? cfg.blueStarCost : void 0) != null ? _ref20 : 0;
+          return (_ref19 = cfg != null ? cfg.blueStarCost : void 0) != null ? _ref19 : 0;
         case 'goldAdjust':
-          return (_ref21 = cfg != null ? cfg.goldAdjust : void 0) != null ? _ref21 : 0;
+          return (_ref20 = cfg != null ? cfg.goldAdjust : void 0) != null ? _ref20 : 0;
         case 'expAdjust':
-          return (_ref22 = cfg != null ? cfg.expAdjust : void 0) != null ? _ref22 : 0;
+          return (_ref21 = cfg != null ? cfg.expAdjust : void 0) != null ? _ref21 : 0;
         case 'wxpAdjust':
-          return (_ref23 = cfg != null ? cfg.wxpAdjust : void 0) != null ? _ref23 : 0;
+          return (_ref22 = cfg != null ? cfg.wxpAdjust : void 0) != null ? _ref22 : 0;
         case 'energyLimit':
-          return ((_ref24 = cfg != null ? cfg.energyLimit : void 0) != null ? _ref24 : 0) + ENERGY_MAX;
+          return ((_ref23 = cfg != null ? cfg.energyLimit : void 0) != null ? _ref23 : 0) + ENERGY_MAX;
       }
     };
 
@@ -2397,11 +2431,11 @@
     };
 
     Player.prototype.onCampaign = function(state, data) {
-      var config, level, o, r, reward, rmb, _i, _len, _ref10, _ref11, _ref12, _ref13, _ref14, _ref7, _ref8, _ref9, _results;
+      var config, level, o, r, reward, rmb, _i, _len, _ref10, _ref11, _ref12, _ref13, _ref6, _ref7, _ref8, _ref9, _results;
       reward = [];
       switch (state) {
         case 'Friend':
-          _ref7 = this.getCampaignConfig('Friend'), config = _ref7.config, level = _ref7.level;
+          _ref6 = this.getCampaignConfig('Friend'), config = _ref6.config, level = _ref6.level;
           if ((config != null) && (level != null) && this.contactBook.book.length >= level.count) {
             reward.push({
               cfg: config,
@@ -2411,7 +2445,7 @@
           }
           break;
         case 'RMB':
-          _ref8 = this.getCampaignConfig('Charge'), config = _ref8.config, level = _ref8.level;
+          _ref7 = this.getCampaignConfig('Charge'), config = _ref7.config, level = _ref7.level;
           if ((config != null) && (level != null)) {
             rmb = data;
             state = this.getCampaignState('Charge');
@@ -2425,7 +2459,7 @@
               this.setCampaignState('Charge', state);
             }
           }
-          _ref9 = this.getCampaignConfig('DuanwuCharge'), config = _ref9.config, level = _ref9.level;
+          _ref8 = this.getCampaignConfig('DuanwuCharge'), config = _ref8.config, level = _ref8.level;
           if ((config != null) && (level != null)) {
             rmb = data;
             state = this.getCampaignState('DuanwuCharge');
@@ -2439,7 +2473,7 @@
               this.setCampaignState('DuanwuCharge', state);
             }
           }
-          _ref10 = this.getCampaignConfig('TotalCharge'), config = _ref10.config, level = _ref10.level;
+          _ref9 = this.getCampaignConfig('TotalCharge'), config = _ref9.config, level = _ref9.level;
           if ((config != null) && (level != null) && this.rmb >= level.count) {
             if (this.getCampaignState('TotalCharge') != null) {
               this.setCampaignState('TotalCharge', this.getCampaignState('TotalCharge') + 1);
@@ -2451,7 +2485,7 @@
               lv: level
             });
           }
-          _ref11 = this.getCampaignConfig('FirstCharge'), config = _ref11.config, level = _ref11.level;
+          _ref10 = this.getCampaignConfig('FirstCharge'), config = _ref10.config, level = _ref10.level;
           if ((config != null) && (level != null)) {
             rmb = String(data);
             if (level[rmb] != null) {
@@ -2464,7 +2498,7 @@
           }
           break;
         case 'Level':
-          _ref12 = this.getCampaignConfig('LevelUp'), config = _ref12.config, level = _ref12.level;
+          _ref11 = this.getCampaignConfig('LevelUp'), config = _ref11.config, level = _ref11.level;
           if ((config != null) && (level != null) && this.createHero().level >= level.count) {
             if (this.getCampaignState('LevelUp') != null) {
               this.setCampaignState('LevelUp', this.getCampaignState('LevelUp') + 1);
@@ -2478,7 +2512,7 @@
           }
           break;
         case 'Stage':
-          _ref13 = this.getCampaignConfig('Stage'), config = _ref13.config, level = _ref13.level;
+          _ref12 = this.getCampaignConfig('Stage'), config = _ref12.config, level = _ref12.level;
           if ((config != null) && (level != null) && data === level.count) {
             this.setCampaignState('Stage', this.getCampaignState('Stage') + 1);
             reward.push({
@@ -2488,7 +2522,7 @@
           }
           break;
         case 'BattleForce':
-          _ref14 = this.getCampaignConfig('BattleForce'), config = _ref14.config, level = _ref14.level;
+          _ref13 = this.getCampaignConfig('BattleForce'), config = _ref13.config, level = _ref13.level;
           if ((config != null) && (level != null) && this.createHero().calculatePower() >= level.count) {
             this.setCampaignState('BattleForce', this.getCampaignState('BattleForce') + 1);
             reward.push({
@@ -2751,13 +2785,13 @@
     };
 
     Player.prototype.recycleItem = function(slot) {
-      var equip, err, item, k, recyclableEnhance, recycleConfig, ret, reward, rewardEvt, xp, _ref7;
+      var equip, err, item, k, recyclableEnhance, recycleConfig, ret, reward, rewardEvt, xp, _ref6;
       recyclableEnhance = queryTable(TABLE_CONFIG, 'Global_Recyclable_Enhancement', this.abIndex);
       recycleConfig = queryTable(TABLE_CONFIG, 'Global_Recycle_Config', this.abIndex);
       item = this.getItemAt(slot);
-      _ref7 = this.equipment;
-      for (k in _ref7) {
-        equip = _ref7[k];
+      _ref6 = this.equipment;
+      for (k in _ref6) {
+        equip = _ref6[k];
         if (!(equip === slot)) {
           continue;
         }
@@ -2806,6 +2840,28 @@
       };
     };
 
+    Player.prototype.combineItem = function(slot, gemSlot) {
+      var equip, gem, retRM;
+      equip = this.getItemAt(slot);
+      gem = this.getItemAt(gemSlot);
+      if (!(gem && equip)) {
+        return {
+          ret: RET_ItemNotExist
+        };
+      }
+      retRM = this.inventory.removeItemAt(gemSlot, 1, true);
+      if (retRM) {
+        equip.installEnhancement(gem);
+        return {
+          res: []
+        };
+      } else {
+        return {
+          ret: RET_NoEnhanceStone
+        };
+      }
+    };
+
     Player.prototype.injectWXP = function(slot, bookSlot) {
       var book, equip, ev, ret, retRM;
       equip = this.getItemAt(slot);
@@ -2848,14 +2904,14 @@
     };
 
     Player.prototype.replaceMercenary = function(id, handler) {
-      var filtedName, me, myName, _ref7;
+      var filtedName, me, myName, _ref6;
       me = this;
       myName = this.name;
       filtedName = [this.name];
       filtedName = filtedName.concat(this.mercenary.map(function(m) {
         return m.name;
       }));
-      if (((_ref7 = this.contactBook) != null ? _ref7.book : void 0) != null) {
+      if (((_ref6 = this.contactBook) != null ? _ref6.book : void 0) != null) {
         filtedName = filtedName.concat(this.contactBook.book);
       }
       return getMercenaryMember(myName, 1, 30, 1, filtedName, function(err, heroData) {
@@ -2887,7 +2943,7 @@
       bag = this.inventory;
       items = bag.container.map(wrapCallback(this, (function(_this) {
         return function(e, index) {
-          var equip, i, ret, _ref7;
+          var equip, i, ret, _ref6;
           if (!((e != null) && (bag.queryItemSlot(e) != null))) {
             return null;
           }
@@ -2899,9 +2955,9 @@
           if (e.xp != null) {
             ret.xp = e.xp;
           }
-          _ref7 = _this.equipment;
-          for (i in _ref7) {
-            equip = _ref7[i];
+          _ref6 = _this.equipment;
+          for (i in _ref6) {
+            equip = _ref6[i];
             if (equip === index) {
               ret.sta = 1;
             }
@@ -2939,11 +2995,11 @@
     };
 
     Player.prototype.syncStage = function(forceUpdate) {
-      var cfg, chapter, ev, k, stg, v, _ref7;
+      var cfg, chapter, ev, k, stg, v, _ref6;
       stg = [];
-      _ref7 = this.stage;
-      for (k in _ref7) {
-        v = _ref7[k];
+      _ref6 = this.stage;
+      for (k in _ref6) {
+        v = _ref6[k];
         if (this.stage[k]) {
           cfg = queryTable(TABLE_STAGE, k, this.abIndex);
           if (cfg == null) {
@@ -3026,7 +3082,7 @@
     };
 
     Player.prototype.syncCampaign = function(forceUpdate) {
-      var all, campaign, cfg, config, level, r, ret, _ref7;
+      var all, campaign, cfg, config, level, r, ret, _ref6;
       all = queryTable(TABLE_CAMPAIGN);
       ret = {
         NTF: Event_CampaignUpdate,
@@ -3040,7 +3096,7 @@
         if (!cfg.show) {
           continue;
         }
-        _ref7 = this.getCampaignConfig(campaign), config = _ref7.config, level = _ref7.level;
+        _ref6 = this.getCampaignConfig(campaign), config = _ref6.config, level = _ref6.level;
         if (config == null) {
           continue;
         }
@@ -3061,13 +3117,13 @@
     };
 
     Player.prototype.syncFlags = function(forceUpdate) {
-      var arg, key, val, _ref7;
+      var arg, key, val, _ref6;
       arg = {
         clr: true
       };
-      _ref7 = this.flags;
-      for (key in _ref7) {
-        val = _ref7[key];
+      _ref6 = this.flags;
+      for (key in _ref6) {
+        val = _ref6[key];
         arg[key] = val;
       }
       return {
@@ -3161,7 +3217,7 @@
         return _results;
       })();
     } else if (typeof item === 'number') {
-      return new itemLib.Item(item);
+      return libItem.createItem(item);
     } else {
       return item;
     }
@@ -3177,15 +3233,15 @@
     }
 
     PlayerEnvironment.prototype.removeItem = function(item, count, slot, allorfail) {
-      var k, result, s, _ref7, _ref8;
+      var k, result, s, _ref6, _ref7;
       result = {
-        ret: (_ref7 = this.player) != null ? _ref7.inventory.remove(item, count, slot, allorfail) : void 0,
+        ret: (_ref6 = this.player) != null ? _ref6.inventory.remove(item, count, slot, allorfail) : void 0,
         version: this.player.inventoryVersion
       };
       if (result.ret !== []) {
-        _ref8 = this.player.equipment;
-        for (k in _ref8) {
-          s = _ref8[k];
+        _ref7 = this.player.equipment;
+        for (k in _ref7) {
+          s = _ref7[k];
           if (s === slot) {
             delete this.player.equipment[k];
           }
@@ -3195,7 +3251,7 @@
     };
 
     PlayerEnvironment.prototype.translateAction = function(cmd) {
-      var i, out, ret, routine, _ref7;
+      var i, out, ret, routine, _ref6;
       if (cmd == null) {
         return [];
       }
@@ -3204,9 +3260,9 @@
       if (out) {
         ret = out;
       }
-      _ref7 = cmd.cmdRoutine;
-      for (i in _ref7) {
-        routine = _ref7[i];
+      _ref6 = cmd.cmdRoutine;
+      for (i in _ref6) {
+        routine = _ref6[i];
         out = routine != null ? routine.output() : void 0;
         if (out != null) {
           ret = ret.concat(out);
@@ -3273,8 +3329,8 @@
     },
     AquireItem: {
       callback: function(env) {
-        var count, e, item, ret, _i, _len, _ref7, _results;
-        count = (_ref7 = env.variable('count')) != null ? _ref7 : 1;
+        var count, e, item, ret, _i, _len, _ref6, _results;
+        count = (_ref6 = env.variable('count')) != null ? _ref6 : 1;
         item = createItem(env.variable('item'));
         if (item == null) {
           return showMeTheStack();
@@ -3306,8 +3362,8 @@
     },
     RemoveItem: {
       callback: function(env) {
-        var ret, version, _ref7;
-        _ref7 = env.removeItem(env.variable('item'), env.variable('count'), env.variable('slot'), true), ret = _ref7.ret, version = _ref7.version;
+        var ret, version, _ref6;
+        _ref6 = env.removeItem(env.variable('item'), env.variable('count'), env.variable('slot'), true), ret = _ref6.ret, version = _ref6.version;
         return this.routine({
           id: 'ItemChange',
           ret: ret,
@@ -3318,7 +3374,7 @@
   };
 
   getVip = function(rmb) {
-    var i, level, levelCfg, lv, tbl, _ref7;
+    var i, level, levelCfg, lv, tbl, _ref6;
     tbl = queryTable(TABLE_VIP, "VIP", this.abIndex);
     if (tbl == null) {
       return {
@@ -3327,9 +3383,9 @@
       };
     }
     level = -1;
-    _ref7 = tbl.requirement;
-    for (i in _ref7) {
-      lv = _ref7[i];
+    _ref6 = tbl.requirement;
+    for (i in _ref6) {
+      lv = _ref6[i];
       if (lv.rmb <= rmb) {
         level = i;
       }
@@ -3342,9 +3398,23 @@
     };
   };
 
+  versionCfg = {
+    'player': {
+      inventoryVersion: ['gold', 'diamond', 'inventory', 'equipment'],
+      heroVersion: ['heroIndex', 'hero', 'heroBase'],
+      stageVersion: 'stage',
+      questVersion: 'quests',
+      energyVersion: ['energy', 'energyTime']
+    }
+  };
+
+  setupVersionControl = addVersionControl(versionCfg);
+
   registerConstructor(Player);
 
-  exports.Player = Player;
+  exports.newPlayer = function(attributes) {
+    return setupVersionControl(new Player(attributes), 'player');
+  };
 
   exports.playerMessageFilter = playerMessageFilter;
 
