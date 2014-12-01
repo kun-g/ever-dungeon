@@ -714,6 +714,111 @@ exports.data = [
             { "type":0,"value":1468,"count":8},
             { "type":0,"value":1469,"count":8}
         ]
+    },
+    {
+        "costId":69,
+        "material":[
+            { "type": 1, "count":200},
+            { "type":0,"value":1470,"count":5}
+        ]
+    } ,
+    {
+        "costId":70,
+        "material":[
+            { "type": 1, "count":200},
+            { "type":0,"value":1471,"count":5}
+        ]
+    },
+    {
+        "costId":71,
+        "material":[
+            { "type": 1, "count":200},
+            { "type":0,"value":1472,"count":5}
+        ]
+    },
+    {
+        "costId":72,
+        "material":[
+            { "type": 1, "count":200},
+            { "type":0,"value":1473,"count":5}
+        ]
+    },
+    {
+        "costId":73,
+        "material":[
+            { "type": 1, "count":200},
+            { "type":0,"value":857,"count":5}
+        ]
+    },
+    {
+        "costId":74,
+        "material":[
+            { "type": 1, "count":20000},
+            { "type":0,"value":1470,"count":1}
+        ]
+    },
+    {
+        "costId":75,
+        "material":[
+            { "type": 1, "count":20000},
+            { "type":0,"value":1470,"count":2}
+        ]
+    },
+    {
+        "costId":76,
+        "material":[
+            { "type": 1, "count":30000},
+            { "type":0,"value":1471,"count":2}
+        ]
+    },
+    {
+        "costId":77,
+        "material":[
+            { "type": 1, "count":30000},
+            { "type":0,"value":1471,"count":3}
+        ]
+    },
+    {
+        "costId":78,
+        "material":[
+            { "type": 1, "count":40000},
+            { "type":0,"value":1472,"count":2}
+        ]
+    },
+    {
+        "costId":79,
+        "material":[
+            { "type": 1, "count":40000},
+            { "type":0,"value":1472,"count":4}
+        ]
+    },
+    {
+        "costId":80,
+        "material":[
+            { "type": 1, "count":50000},
+            { "type":0,"value":1473,"count":3}
+        ]
+    },
+    {
+        "costId":81,
+        "material":[
+            { "type": 1, "count":50000},
+            { "type":0,"value":1473,"count":4}
+        ]
+    },
+    {
+        "costId":82,
+        "material":[
+            { "type": 1, "count":62000},
+            { "type":0,"value":1474,"count":3}
+        ]
+    },
+    {
+        "costId":83,
+        "material":[
+            { "type": 1, "count":62000},
+            { "type":0,"value":1474,"count":5}
+        ]
     }
 ]
 

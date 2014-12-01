@@ -49,8 +49,7 @@ exports.data = [
         { "and": [
             { "==": [ { "type": "getProperty", "key": "quests.0.complete"}, true ] }
         ]
-        }
-        ,
+        },
         "endDialogue":11
     },{
             "questId":1,
@@ -74,9 +73,7 @@ exports.data = [
             { "and": [
                 { "==": [ { "type": "getProperty", "key": "quests.0.complete"}, true ] }
             ]
-            }
-            ,
-
+            },
             "endDialogue":30
         }]},
     {
@@ -101,8 +98,7 @@ exports.data = [
         { "and": [
             { "==": [ { "type": "getProperty", "key": "quests.1.complete"}, true ] }
         ]
-        }
-        ,
+        },
         "endDialogue":17
     },
     {
@@ -153,8 +149,7 @@ exports.data = [
         { "and": [
             { "==": [ { "type": "getProperty", "key": "quests.2.complete"}, true ] }
         ]
-        }
-        ,
+        },
         "endDialogue":12
     },
     {
@@ -383,8 +378,7 @@ exports.data = [
         { "and": [
             { "==": [ { "type": "getProperty", "key": "quests.12.complete"}, true ] }
         ]
-        }
-        ,
+        },
         "startDialogue":13
     },
     {
@@ -5024,5 +5018,366 @@ exports.data = [
             { "==": [ { "type": "getProperty", "key": "quests.164.complete"}, true ] }
         ]
         }
+    },
+    {
+        "questId":184,
+        "questStage":64,
+        "title":"探索死灵洞穴I",
+        "desc":"对死灵洞穴I进行探索",
+        "objects":[
+            {
+                "type":0,
+                "label":"探索死灵洞穴I",
+                "collect":184001,
+                "count":1
+            }
+        ],
+        "prize":[
+            {
+                "type":1,
+                "count":2500
+            }
+        ],
+        "cond":
+        { "and": [
+            { "==": [ { "type": "getProperty", "key": "quests.124.complete"}, true ] }
+        ]
+        }
+    },
+    {
+        "questId":185,
+        "questStage":65,
+        "title":"探索死灵洞穴II",
+        "desc":"对死灵洞穴II进行探索",
+        "objects":[
+            {
+                "type":0,
+                "label":"探索死灵洞穴II",
+                "collect":185001,
+                "count":1
+            }
+        ],
+        "prize":[
+            {
+                "type":1,
+                "count":2500
+            }
+        ],
+        "cond":
+        { "and": [
+            { "==": [ { "type": "getProperty", "key": "quests.184.complete"}, true ] }
+        ]
+        }
+    },
+    {
+        "questId":186,
+        "questStage":66,
+        "title":"探索死灵洞穴III",
+        "desc":"对死灵洞穴III进行探索",
+        "objects":[
+            {
+                "type":0,
+                "label":"探索死灵洞穴III",
+                "collect":186001,
+                "count":1
+            }
+        ],
+        "prize":[
+            {
+                "type":1,
+                "count":2500
+            }
+        ],
+        "cond":
+        { "and": [
+            { "==": [ { "type": "getProperty", "key": "quests.185.complete"}, true ] }
+        ]
+        }
+    },
+    {
+        "questId":187,
+        "questStage":67,
+        "title":"探索死灵洞穴IV",
+        "desc":"对死灵洞穴IV进行探索",
+        "objects":[
+            {
+                "type":0,
+                "label":"探索死灵洞穴IV",
+                "collect":187001,
+                "count":1
+            }
+        ],
+        "prize":[
+            {
+                "type":1,
+                "count":2500
+            }
+        ],
+        "cond":
+        { "and": [
+            { "==": [ { "type": "getProperty", "key": "quests.186.complete"}, true ] }
+        ]
+        }
+    },
+    {
+        "questId":188,
+        "questStage":68,
+        "title":"探索死灵洞穴V",
+        "desc":"对死灵洞穴V进行探索",
+        "objects":[
+            {
+                "type":0,
+                "label":"探索死灵洞穴V",
+                "collect":188001,
+                "count":1
+            }
+        ],
+        "prize":[
+            {
+                "type":1,
+                "count":2500
+            }
+        ],
+        "cond":
+        { "and": [
+            { "==": [ { "type": "getProperty", "key": "quests.187.complete"}, true ] }
+        ]
+        }
+    },
+    {
+        "questId":189,
+        "questStage":69,
+        "title":"探索死灵洞穴VI",
+        "desc":"对死灵洞穴VI进行探索",
+        "objects":[
+            {
+                "type":0,
+                "label":"探索死灵洞穴VI",
+                "collect":189001,
+                "count":1
+            }
+        ],
+        "prize":[
+            {
+                "type":1,
+                "count":2500
+            }
+        ],
+        "cond":
+        { "and": [
+            { "==": [ { "type": "getProperty", "key": "quests.188.complete"}, true ] }
+        ]
+        }
+    },
+    {
+        "questId":190,
+        "questStage":70,
+        "title":"宗师的试炼",
+        "desc":"死灵洞穴深处出现神秘人，前往调查",
+        "objects":[
+            {
+                "type":0,
+                "label":"调查神秘人",
+                "collect":190001,
+                "count":1
+            }
+        ],
+        "prize":[
+            {
+                "type":1,
+                "count":2500
+            },
+            {
+                "type":2,
+                "count":100
+            }
+        ],
+        "cond":
+        { "and": [
+            { "==": [ { "type": "getProperty", "key": "quests.189.complete"}, true ] }
+        ]
+        },
+        "startDialogue":70,
+        "endDialogue":72
+    },
+    {
+        "questId":191,
+        "questStage":71,
+        "title":"探索塔卡宫殿I",
+        "desc":"对塔卡宫殿I进行探索",
+        "objects":[
+            {
+                "type":0,
+                "label":"探索塔卡宫殿I",
+                "collect":191001,
+                "count":1
+            }
+        ],
+        "prize":[
+            {
+                "type":1,
+                "count":3000
+            }
+        ],
+        "cond":
+        { "and": [
+            { "==": [ { "type": "getProperty", "key": "quests.190.complete"}, true ] }
+        ]
+        }
+    },
+    {
+        "questId":192,
+        "questStage":72,
+        "title":"探索塔卡宫殿II",
+        "desc":"对塔卡宫殿II进行探索",
+        "objects":[
+            {
+                "type":0,
+                "label":"探索塔卡宫殿II",
+                "collect":192001,
+                "count":1
+            }
+        ],
+        "prize":[
+            {
+                "type":1,
+                "count":3000
+            }
+        ],
+        "cond":
+        { "and": [
+            { "==": [ { "type": "getProperty", "key": "quests.191.complete"}, true ] }
+        ]
+        }
+    },
+    {
+        "questId":193,
+        "questStage":73,
+        "title":"探索塔卡宫殿III",
+        "desc":"对塔卡宫殿III进行探索",
+        "objects":[
+            {
+                "type":0,
+                "label":"探索塔卡宫殿III",
+                "collect":193001,
+                "count":1
+            }
+        ],
+        "prize":[
+            {
+                "type":1,
+                "count":3000
+            }
+        ],
+        "cond":
+        { "and": [
+            { "==": [ { "type": "getProperty", "key": "quests.192.complete"}, true ] }
+        ]
+        }
+    },
+    {
+        "questId":194,
+        "questStage":74,
+        "title":"探索塔卡宫殿IV",
+        "desc":"对塔卡宫殿IV进行探索",
+        "objects":[
+            {
+                "type":0,
+                "label":"探索塔卡宫殿IV",
+                "collect":194001,
+                "count":1
+            }
+        ],
+        "prize":[
+            {
+                "type":1,
+                "count":3000
+            }
+        ],
+        "cond":
+        { "and": [
+            { "==": [ { "type": "getProperty", "key": "quests.193.complete"}, true ] }
+        ]
+        }
+    },
+    {
+        "questId":195,
+        "questStage":75,
+        "title":"探索塔卡宫殿V",
+        "desc":"对塔卡宫殿V进行探索",
+        "objects":[
+            {
+                "type":0,
+                "label":"探索塔卡宫殿V",
+                "collect":195001,
+                "count":1
+            }
+        ],
+        "prize":[
+            {
+                "type":1,
+                "count":3000
+            }
+        ],
+        "cond":
+        { "and": [
+            { "==": [ { "type": "getProperty", "key": "quests.194.complete"}, true ] }
+        ]
+        }
+    },
+    {
+        "questId":196,
+        "questStage":76,
+        "title":"探索塔卡宫殿VI",
+        "desc":"对塔卡宫殿VI进行探索",
+        "objects":[
+            {
+                "type":0,
+                "label":"探索塔卡宫殿VI",
+                "collect":196001,
+                "count":1
+            }
+        ],
+        "prize":[
+            {
+                "type":1,
+                "count":3000
+            }
+        ],
+        "cond":
+        { "and": [
+            { "==": [ { "type": "getProperty", "key": "quests.195.complete"}, true ] }
+        ]
+        }
+    },
+    {
+        "questId":197,
+        "questStage":77,
+        "title":"卡塔讨伐",
+        "desc":"将领主卡塔击败，给大陆带来和平",
+        "objects":[
+            {
+                "type":0,
+                "label":"击败卡塔",
+                "collect":197001,
+                "count":1
+            }
+        ],
+        "prize":[
+            {
+                "type":1,
+                "count":3000
+            },
+            {
+                "type":2,
+                "count":100
+            }
+        ],
+        "cond":
+        { "and": [
+            { "==": [ { "type": "getProperty", "key": "quests.196.complete"}, true ] }
+        ]
+        },
+        "endDialogue":75
     }
 ]

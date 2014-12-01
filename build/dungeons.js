@@ -38735,79 +38735,83 @@ exports.data = [
                 {"id":100,"weight":2},
                 {"id":111,"weight":2},
                 {"id":76,"weight":2},
+                {"id":237,"weight":2},
                 {"id":196,"weight":2}]},
             "PoolS9R":{"objects":[
-                {"id":129,"weight":2}]}
+                {"id":129,"weight":2},
+                {"id":236,"weight":2}]},
+            "bossPool":{"objects":[
+                {
+                    "id":117,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":240,
+                    "weight":2 ,
+                    "keyed":true
+                } ,
+                {
+                    "id":241,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2 ,
+                    "keyed":true
+                }
+            ]}
         },
-        "collectId":123001,
+        "collectId":184001,
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:146}],
+            {id: 211,from: 0, to: 2,dropPrize:141}],
         "levels" :[
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:141},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:141},
+                    {"pool":"bossPool","count":1},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 156,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 157,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 152,
-                        "count":2,
-                        "collectId":125003,
-                        "keyed":true
-                    },
-                    {
-                        "id": 127,
-                        "count":1,
-                        "keyed":true
                     }
                 ]
             },
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
-                    {
-                        "id": 130,
-                        "count":2,
-                        property:{
-                            "keyed":true,
-                            skill:[{id:153}],
-                            dropPrize:146}
-                    },
-                    {
-                        "id": 153,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:141},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:141},
+                    {"pool":"bossPool","count":1,skill:[{id:153}],dropPrize:141},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 97,
-                        "count":3,
-                        "keyed":true
                     }
                 ]
             }
         ],
         "dropID":[
-            69
+            64
         ],
         "prizeWxp":250,"prizeGold":1600,
         "prizeXp":1500,
@@ -38867,79 +38871,83 @@ exports.data = [
                 {"id":100,"weight":2},
                 {"id":111,"weight":2},
                 {"id":76,"weight":2},
+                {"id":237,"weight":2},
                 {"id":196,"weight":2}]},
             "PoolS9R":{"objects":[
-                {"id":129,"weight":2}]}
+                {"id":129,"weight":2},
+                {"id":236,"weight":2}]},
+            "bossPool":{"objects":[
+                {
+                    "id":117,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":240,
+                    "weight":2 ,
+                    "keyed":true
+                } ,
+                {
+                    "id":241,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2 ,
+                    "keyed":true
+                }
+            ]}
         },
-        "collectId":123001,
+        "collectId":185001,
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:146}],
+            {id: 211,from: 0, to: 2,dropPrize:142}],
         "levels" :[
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:142},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:142},
+                    {"pool":"bossPool","count":1},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 156,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 157,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 152,
-                        "count":2,
-                        "collectId":125003,
-                        "keyed":true
-                    },
-                    {
-                        "id": 127,
-                        "count":1,
-                        "keyed":true
                     }
                 ]
             },
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
-                    {
-                        "id": 130,
-                        "count":2,
-                        property:{
-                            "keyed":true,
-                            skill:[{id:153}],
-                            dropPrize:146}
-                    },
-                    {
-                        "id": 153,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:142},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:142},
+                    {"pool":"bossPool","count":1,skill:[{id:153}],dropPrize:142},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 97,
-                        "count":3,
-                        "keyed":true
                     }
                 ]
             }
         ],
         "dropID":[
-            69
+            65
         ],
         "prizeWxp":250,"prizeGold":1600,
         "prizeXp":1500,
@@ -38999,79 +39007,83 @@ exports.data = [
                 {"id":100,"weight":2},
                 {"id":111,"weight":2},
                 {"id":76,"weight":2},
+                {"id":237,"weight":2},
                 {"id":196,"weight":2}]},
             "PoolS9R":{"objects":[
-                {"id":129,"weight":2}]}
+                {"id":129,"weight":2},
+                {"id":236,"weight":2}]},
+            "bossPool":{"objects":[
+                {
+                    "id":117,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":240,
+                    "weight":2 ,
+                    "keyed":true
+                } ,
+                {
+                    "id":241,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2 ,
+                    "keyed":true
+                }
+            ]}
         },
-        "collectId":123001,
+        "collectId":186001,
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:146}],
+            {id: 211,from: 0, to: 2,dropPrize:143}],
         "levels" :[
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:143},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:143},
+                    {"pool":"bossPool","count":1},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 156,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 157,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 152,
-                        "count":2,
-                        "collectId":125003,
-                        "keyed":true
-                    },
-                    {
-                        "id": 127,
-                        "count":1,
-                        "keyed":true
                     }
                 ]
             },
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
-                    {
-                        "id": 130,
-                        "count":2,
-                        property:{
-                            "keyed":true,
-                            skill:[{id:153}],
-                            dropPrize:146}
-                    },
-                    {
-                        "id": 153,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:143},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:143},
+                    {"pool":"bossPool","count":1,skill:[{id:153}],dropPrize:143},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 97,
-                        "count":3,
-                        "keyed":true
                     }
                 ]
             }
         ],
         "dropID":[
-            69
+            66
         ],
         "prizeWxp":250,"prizeGold":1600,
         "prizeXp":1500,
@@ -39131,79 +39143,83 @@ exports.data = [
                 {"id":100,"weight":2},
                 {"id":111,"weight":2},
                 {"id":76,"weight":2},
+                {"id":237,"weight":2},
                 {"id":196,"weight":2}]},
             "PoolS9R":{"objects":[
-                {"id":129,"weight":2}]}
+                {"id":129,"weight":2},
+                {"id":236,"weight":2}]},
+            "bossPool":{"objects":[
+                {
+                    "id":117,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":240,
+                    "weight":2 ,
+                    "keyed":true
+                } ,
+                {
+                    "id":241,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2 ,
+                    "keyed":true
+                }
+            ]}
         },
-        "collectId":123001,
+        "collectId":187001,
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:146}],
+            {id: 211,from: 0, to: 2,dropPrize:144}],
         "levels" :[
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:144},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:144},
+                    {"pool":"bossPool","count":1},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 156,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 157,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 152,
-                        "count":2,
-                        "collectId":125003,
-                        "keyed":true
-                    },
-                    {
-                        "id": 127,
-                        "count":1,
-                        "keyed":true
                     }
                 ]
             },
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
-                    {
-                        "id": 130,
-                        "count":2,
-                        property:{
-                            "keyed":true,
-                            skill:[{id:153}],
-                            dropPrize:146}
-                    },
-                    {
-                        "id": 153,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:144},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:144},
+                    {"pool":"bossPool","count":1,skill:[{id:153}],dropPrize:144},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 97,
-                        "count":3,
-                        "keyed":true
                     }
                 ]
             }
         ],
         "dropID":[
-            69
+            67
         ],
         "prizeWxp":250,"prizeGold":1600,
         "prizeXp":1500,
@@ -39263,79 +39279,83 @@ exports.data = [
                 {"id":100,"weight":2},
                 {"id":111,"weight":2},
                 {"id":76,"weight":2},
+                {"id":237,"weight":2},
                 {"id":196,"weight":2}]},
             "PoolS9R":{"objects":[
-                {"id":129,"weight":2}]}
+                {"id":129,"weight":2},
+                {"id":236,"weight":2}]},
+            "bossPool":{"objects":[
+                {
+                    "id":117,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":240,
+                    "weight":2 ,
+                    "keyed":true
+                } ,
+                {
+                    "id":241,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2 ,
+                    "keyed":true
+                }
+            ]}
         },
-        "collectId":123001,
+        "collectId":188001,
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:146}],
+            {id: 211,from: 0, to: 2,dropPrize:145}],
         "levels" :[
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:145},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:145},
+                    {"pool":"bossPool","count":1},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 156,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 157,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 152,
-                        "count":2,
-                        "collectId":125003,
-                        "keyed":true
-                    },
-                    {
-                        "id": 127,
-                        "count":1,
-                        "keyed":true
                     }
                 ]
             },
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
-                    {
-                        "id": 130,
-                        "count":2,
-                        property:{
-                            "keyed":true,
-                            skill:[{id:153}],
-                            dropPrize:146}
-                    },
-                    {
-                        "id": 153,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:145},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:145},
+                    {"pool":"bossPool","count":1,skill:[{id:153}],dropPrize:145},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 97,
-                        "count":3,
-                        "keyed":true
                     }
                 ]
             }
         ],
         "dropID":[
-            69
+            68
         ],
         "prizeWxp":250,"prizeGold":1600,
         "prizeXp":1500,
@@ -39395,11 +39415,55 @@ exports.data = [
                 {"id":100,"weight":2},
                 {"id":111,"weight":2},
                 {"id":76,"weight":2},
+                {"id":237,"weight":2},
                 {"id":196,"weight":2}]},
             "PoolS9R":{"objects":[
-                {"id":129,"weight":2}]}
+                {"id":129,"weight":2},
+                {"id":236,"weight":2}]},
+            "bossPool":{"objects":[
+                {
+                    "id":117,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":240,
+                    "weight":2 ,
+                    "keyed":true
+                } ,
+                {
+                    "id":241,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2 ,
+                    "keyed":true
+                }
+            ]}
         },
-        "collectId":123001,
+        "collectId":189001,
         "global": [
             {id: 211,from: 0, to: 2,dropPrize:146}],
         "levels" :[
@@ -39407,32 +39471,10 @@ exports.data = [
                 "objects" :[{"pool":"normalPool","from":0,to:4},
                     {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
                     {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {"pool":"bossPool","count":1},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 156,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 157,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 152,
-                        "count":2,
-                        "collectId":125003,
-                        "keyed":true
-                    },
-                    {
-                        "id": 127,
-                        "count":1,
-                        "keyed":true
                     }
                 ]
             },
@@ -39440,28 +39482,10 @@ exports.data = [
                 "objects" :[{"pool":"normalPool","from":0,to:4},
                     {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
                     {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
-                    {
-                        "id": 130,
-                        "count":2,
-                        property:{
-                            "keyed":true,
-                            skill:[{id:153}],
-                            dropPrize:146}
-                    },
-                    {
-                        "id": 153,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
+                    {"pool":"bossPool","count":1,skill:[{id:153}],dropPrize:146},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 97,
-                        "count":3,
-                        "keyed":true
                     }
                 ]
             }
@@ -39527,79 +39551,91 @@ exports.data = [
                 {"id":100,"weight":2},
                 {"id":111,"weight":2},
                 {"id":76,"weight":2},
+                {"id":237,"weight":2},
                 {"id":196,"weight":2}]},
             "PoolS9R":{"objects":[
-                {"id":129,"weight":2}]}
+                {"id":129,"weight":2},
+                {"id":236,"weight":2}]},
+            "bossPool":{"objects":[
+                {
+                    "id":117,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":116,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":128,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":129,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":93,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":240,
+                    "weight":2 ,
+                    "keyed":true
+                } ,
+                {
+                    "id":241,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":130,
+                    "weight":2 ,
+                    "keyed":true
+                }
+            ]}
         },
-        "collectId":123001,
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:146}],
+            {id: 211,from: 0, to: 2,dropPrize:147}],
         "levels" :[
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:147},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:147},
+                    {"pool":"bossPool","count":1},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 156,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 157,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 152,
-                        "count":2,
-                        "collectId":125003,
-                        "keyed":true
-                    },
-                    {
-                        "id": 127,
-                        "count":1,
-                        "keyed":true
                     }
                 ]
             },
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
-                    {
-                        "id": 130,
-                        "count":2,
-                        property:{
-                            "keyed":true,
-                            skill:[{id:153}],
-                            dropPrize:146}
-                    },
-                    {
-                        "id": 153,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:147},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:147},
+                    {"pool":"bossPool","count":1,skill:[{id:153}],dropPrize:147},
                     {
                         "id": 149,
                         "count":2
                     },
                     {
-                        "id": 97,
-                        "count":3,
-                        "keyed":true
+                        "id": 215 ,
+                        "count":1,
+                        "collectId":190001,
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:149}
                     }
                 ]
             }
         ],
         "dropID":[
-            69
+            70
         ],
         "prizeWxp":250,"prizeGold":1600,
         "prizeXp":1500,
@@ -39918,80 +39954,90 @@ exports.data = [
                 {"id":106,"weight":2},
                 {"id":105,"weight":2},
                 {"id":232,"weight":2},
-                {"id":108,"weight":2}]},
+                {"id":108,"weight":2},
+                {"id":237,"weight":2},
+                {"id":238,"weight":2},
+                {"id":239,"weight":2}]},
             "PoolS9R":{"objects":[
                 {"id":109,"weight":2},
-                {"id":226,"weight":2}]}
+                {"id":226,"weight":2}]},
+            "bossPool":{"objects":[
+                {
+                    "id":123,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":122,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":241,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":242,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":243,
+                    "weight":2 ,
+                    "keyed":true
+                } ,
+                {
+                    "id":244,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":245,
+                    "weight":2 ,
+                    "keyed":true
+                }
+            ]}
         },
-        "collectId":123001,
+        "collectId":191001,
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:146}],
+            {id: 211,from: 0, to: 2,dropPrize:158}],
         "levels" :[
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:158},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:158},
+                    {"pool":"bossPool","count":1},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 156,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 157,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 152,
-                        "count":2,
-                        "collectId":125003,
-                        "keyed":true
-                    },
-                    {
-                        "id": 127,
-                        "count":1,
-                        "keyed":true
                     }
                 ]
             },
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
-                    {
-                        "id": 130,
-                        "count":2,
-                        property:{
-                            "keyed":true,
-                            skill:[{id:153}],
-                            dropPrize:146}
-                    },
-                    {
-                        "id": 153,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:158},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:158},
+                    {"pool":"bossPool","count":1,skill:[{id:153}],dropPrize:158},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 97,
-                        "count":3,
-                        "keyed":true
                     }
                 ]
             }
         ],
         "dropID":[
-            69
+            151
         ],
         "prizeWxp":250,"prizeGold":1800,
         "prizeXp":1600,
@@ -40049,80 +40095,90 @@ exports.data = [
                 {"id":106,"weight":2},
                 {"id":105,"weight":2},
                 {"id":232,"weight":2},
-                {"id":108,"weight":2}]},
+                {"id":108,"weight":2},
+                {"id":237,"weight":2},
+                {"id":238,"weight":2},
+                {"id":239,"weight":2}]},
             "PoolS9R":{"objects":[
                 {"id":109,"weight":2},
-                {"id":226,"weight":2}]}
+                {"id":226,"weight":2}]},
+            "bossPool":{"objects":[
+                {
+                    "id":123,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":122,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":241,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":242,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":243,
+                    "weight":2 ,
+                    "keyed":true
+                } ,
+                {
+                    "id":244,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":245,
+                    "weight":2 ,
+                    "keyed":true
+                }
+            ]}
         },
-        "collectId":123001,
+        "collectId":192001,
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:146}],
+            {id: 211,from: 0, to: 2,dropPrize:159}],
         "levels" :[
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:159},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:159},
+                    {"pool":"bossPool","count":1},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 156,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 157,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 152,
-                        "count":2,
-                        "collectId":125003,
-                        "keyed":true
-                    },
-                    {
-                        "id": 127,
-                        "count":1,
-                        "keyed":true
                     }
                 ]
             },
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
-                    {
-                        "id": 130,
-                        "count":2,
-                        property:{
-                            "keyed":true,
-                            skill:[{id:153}],
-                            dropPrize:146}
-                    },
-                    {
-                        "id": 153,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:159},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:159},
+                    {"pool":"bossPool","count":1,skill:[{id:153}],dropPrize:159},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 97,
-                        "count":3,
-                        "keyed":true
                     }
                 ]
             }
         ],
         "dropID":[
-            69
+            152
         ],
         "prizeWxp":250,"prizeGold":1800,
         "prizeXp":1600,
@@ -40180,80 +40236,90 @@ exports.data = [
                 {"id":106,"weight":2},
                 {"id":105,"weight":2},
                 {"id":232,"weight":2},
-                {"id":108,"weight":2}]},
+                {"id":108,"weight":2},
+                {"id":237,"weight":2},
+                {"id":238,"weight":2},
+                {"id":239,"weight":2}]},
             "PoolS9R":{"objects":[
                 {"id":109,"weight":2},
-                {"id":226,"weight":2}]}
+                {"id":226,"weight":2}]},
+            "bossPool":{"objects":[
+                {
+                    "id":123,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":122,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":241,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":242,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":243,
+                    "weight":2 ,
+                    "keyed":true
+                } ,
+                {
+                    "id":244,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":245,
+                    "weight":2 ,
+                    "keyed":true
+                }
+            ]}
         },
-        "collectId":123001,
+        "collectId":193001,
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:146}],
+            {id: 211,from: 0, to: 2,dropPrize:160}],
         "levels" :[
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:160},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:160},
+                    {"pool":"bossPool","count":1},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 156,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 157,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 152,
-                        "count":2,
-                        "collectId":125003,
-                        "keyed":true
-                    },
-                    {
-                        "id": 127,
-                        "count":1,
-                        "keyed":true
                     }
                 ]
             },
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
-                    {
-                        "id": 130,
-                        "count":2,
-                        property:{
-                            "keyed":true,
-                            skill:[{id:153}],
-                            dropPrize:146}
-                    },
-                    {
-                        "id": 153,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:160},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:160},
+                    {"pool":"bossPool","count":1,skill:[{id:153}],dropPrize:160},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 97,
-                        "count":3,
-                        "keyed":true
                     }
                 ]
             }
         ],
         "dropID":[
-            69
+            153
         ],
         "prizeWxp":250,"prizeGold":1800,
         "prizeXp":1600,
@@ -40311,80 +40377,90 @@ exports.data = [
                 {"id":106,"weight":2},
                 {"id":105,"weight":2},
                 {"id":232,"weight":2},
-                {"id":108,"weight":2}]},
+                {"id":108,"weight":2},
+                {"id":237,"weight":2},
+                {"id":238,"weight":2},
+                {"id":239,"weight":2}]},
             "PoolS9R":{"objects":[
                 {"id":109,"weight":2},
-                {"id":226,"weight":2}]}
+                {"id":226,"weight":2}]},
+            "bossPool":{"objects":[
+                {
+                    "id":123,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":122,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":241,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":242,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":243,
+                    "weight":2 ,
+                    "keyed":true
+                } ,
+                {
+                    "id":244,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":245,
+                    "weight":2 ,
+                    "keyed":true
+                }
+            ]}
         },
-        "collectId":123001,
+        "collectId":194001,
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:146}],
+            {id: 211,from: 0, to: 2,dropPrize:161}],
         "levels" :[
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:161},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:161},
+                    {"pool":"bossPool","count":1},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 156,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 157,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 152,
-                        "count":2,
-                        "collectId":125003,
-                        "keyed":true
-                    },
-                    {
-                        "id": 127,
-                        "count":1,
-                        "keyed":true
                     }
                 ]
             },
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
-                    {
-                        "id": 130,
-                        "count":2,
-                        property:{
-                            "keyed":true,
-                            skill:[{id:153}],
-                            dropPrize:146}
-                    },
-                    {
-                        "id": 153,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:161},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:161},
+                    {"pool":"bossPool","count":1,skill:[{id:153}],dropPrize:161},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 97,
-                        "count":3,
-                        "keyed":true
                     }
                 ]
             }
         ],
         "dropID":[
-            69
+            154
         ],
         "prizeWxp":250,"prizeGold":1800,
         "prizeXp":1600,
@@ -40442,80 +40518,90 @@ exports.data = [
                 {"id":106,"weight":2},
                 {"id":105,"weight":2},
                 {"id":232,"weight":2},
-                {"id":108,"weight":2}]},
+                {"id":108,"weight":2},
+                {"id":237,"weight":2},
+                {"id":238,"weight":2},
+                {"id":239,"weight":2}]},
             "PoolS9R":{"objects":[
                 {"id":109,"weight":2},
-                {"id":226,"weight":2}]}
+                {"id":226,"weight":2}]},
+            "bossPool":{"objects":[
+                {
+                    "id":123,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":122,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":241,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":242,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":243,
+                    "weight":2 ,
+                    "keyed":true
+                } ,
+                {
+                    "id":244,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":245,
+                    "weight":2 ,
+                    "keyed":true
+                }
+            ]}
         },
-        "collectId":123001,
+        "collectId":195001,
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:146}],
+            {id: 211,from: 0, to: 2,dropPrize:162}],
         "levels" :[
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:162},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:162},
+                    {"pool":"bossPool","count":1},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 156,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 157,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 152,
-                        "count":2,
-                        "collectId":125003,
-                        "keyed":true
-                    },
-                    {
-                        "id": 127,
-                        "count":1,
-                        "keyed":true
                     }
                 ]
             },
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
-                    {
-                        "id": 130,
-                        "count":2,
-                        property:{
-                            "keyed":true,
-                            skill:[{id:153}],
-                            dropPrize:146}
-                    },
-                    {
-                        "id": 153,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:162},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:162},
+                    {"pool":"bossPool","count":1,skill:[{id:153}],dropPrize:162},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 97,
-                        "count":3,
-                        "keyed":true
                     }
                 ]
             }
         ],
         "dropID":[
-            69
+            155
         ],
         "prizeWxp":250,"prizeGold":1800,
         "prizeXp":1600,
@@ -40573,80 +40659,90 @@ exports.data = [
                 {"id":106,"weight":2},
                 {"id":105,"weight":2},
                 {"id":232,"weight":2},
-                {"id":108,"weight":2}]},
+                {"id":108,"weight":2},
+                {"id":237,"weight":2},
+                {"id":238,"weight":2},
+                {"id":239,"weight":2}]},
             "PoolS9R":{"objects":[
                 {"id":109,"weight":2},
-                {"id":226,"weight":2}]}
+                {"id":226,"weight":2}]},
+            "bossPool":{"objects":[
+                {
+                    "id":123,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":122,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":241,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":242,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":243,
+                    "weight":2 ,
+                    "keyed":true
+                } ,
+                {
+                    "id":244,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":245,
+                    "weight":2 ,
+                    "keyed":true
+                }
+            ]}
         },
-        "collectId":123001,
+        "collectId":196001,
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:146}],
+            {id: 211,from: 0, to: 2,dropPrize:163}],
         "levels" :[
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:163},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:163},
+                    {"pool":"bossPool","count":1},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 156,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 157,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 152,
-                        "count":2,
-                        "collectId":125003,
-                        "keyed":true
-                    },
-                    {
-                        "id": 127,
-                        "count":1,
-                        "keyed":true
                     }
                 ]
             },
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
-                    {
-                        "id": 130,
-                        "count":2,
-                        property:{
-                            "keyed":true,
-                            skill:[{id:153}],
-                            dropPrize:146}
-                    },
-                    {
-                        "id": 153,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:163},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:163},
+                    {"pool":"bossPool","count":1,skill:[{id:153}],dropPrize:163},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 97,
-                        "count":3,
-                        "keyed":true
                     }
                 ]
             }
         ],
         "dropID":[
-            69
+            156
         ],
         "prizeWxp":250,"prizeGold":1800,
         "prizeXp":1600,
@@ -40704,80 +40800,98 @@ exports.data = [
                 {"id":106,"weight":2},
                 {"id":105,"weight":2},
                 {"id":232,"weight":2},
-                {"id":108,"weight":2}]},
+                {"id":108,"weight":2},
+                {"id":237,"weight":2},
+                {"id":238,"weight":2},
+                {"id":239,"weight":2}]},
             "PoolS9R":{"objects":[
                 {"id":109,"weight":2},
-                {"id":226,"weight":2}]}
+                {"id":226,"weight":2}]},
+            "bossPool":{"objects":[
+                {
+                    "id":123,
+                    "weight":2,
+                    "keyed":true
+                },
+                {
+                    "id":122,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":126,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":241,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":242,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":243,
+                    "weight":2 ,
+                    "keyed":true
+                } ,
+                {
+                    "id":244,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":125,
+                    "weight":2 ,
+                    "keyed":true
+                },
+                {
+                    "id":245,
+                    "weight":2 ,
+                    "keyed":true
+                }
+            ]}
         },
-        "collectId":123001,
         "global": [
-            {id: 211,from: 0, to: 2,dropPrize:146}],
+            {id: 211,from: 0, to: 2,dropPrize:164}],
         "levels" :[
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:164},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:164},
+                    {"pool":"bossPool","count":1},
                     {
                         "id": 149,
                         "count":2
-                    },
-                    {
-                        "id": 156,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 157,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
-                    {
-                        "id": 152,
-                        "count":2,
-                        "collectId":125003,
-                        "keyed":true
-                    },
-                    {
-                        "id": 127,
-                        "count":1,
-                        "keyed":true
                     }
                 ]
             },
             {
                 "objects" :[{"pool":"normalPool","from":0,to:4},
-                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:146},
-                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:146},
-                    {
-                        "id": 130,
-                        "count":2,
-                        property:{
-                            "keyed":true,
-                            skill:[{id:153}],
-                            dropPrize:146}
-                    },
-                    {
-                        "id": 153,
-                        "count":1,
-                        "questOnly":true,
-                        "collectId":127001
-                    },
+                    {"pool":"PoolS9","from":10,to:13,skill:[{id:154}],dropPrize:164},
+                    {"pool":"PoolS9R","from":0,to:2,skill:[{id:154}],dropPrize:164},
+                    {"pool":"bossPool","count":1,skill:[{id:153}],dropPrize:164},
                     {
                         "id": 149,
                         "count":2
                     },
                     {
-                        "id": 97,
-                        "count":3,
-                        "keyed":true
+                        "id": 246 ,
+                        "count":1,
+                        "collectId":197001,
+                        property:{
+                            "keyed":true,
+                            skill:[{id:153}],
+                            dropPrize:150}
                     }
                 ]
             }
         ],
         "dropID":[
-            69
+            157
         ],
         "prizeWxp":250,"prizeGold":1800,
         "prizeXp":1600,
