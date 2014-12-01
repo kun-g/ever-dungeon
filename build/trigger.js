@@ -1,5 +1,5 @@
 (function() {
-  var TriggerManager, bindVariable, branch, calculate, conditionCheck, doAction, doGetProperty, doLoop, filterObject, getTypeof, getVar, parse;
+  var Action, ActionDB, Condition, PredicateDB, Query, SequalDB, Trigger, TriggerManager, bindVariable, branch, calculate, conditionCheck, condition_and, condition_or, doAction, doGetProperty, doLoop, evaluateParameter, executeSequal, filterObject, getTypeof, getVar, isSequal, parameter_config, parse, parseVariable;
 
   filterObject = function(me, objects, filters, env) {
     var a, f, o, p, result, srcFaction, t, tmp, x, y, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2, _ref3;
@@ -210,7 +210,11 @@
 
   doGetProperty = function(obj, key) {
     var k, properties, _i, _len;
-    properties = key.split('.');
+    if (typeof key === 'string') {
+      properties = key.split('.');
+    } else {
+      properties = [key];
+    }
     for (_i = 0, _len = properties.length; _i < _len; _i++) {
       k = properties[_i];
       if (obj != null) {
@@ -575,5 +579,351 @@
   exports.TriggerManager = TriggerManager;
 
   exports.fileVersion = -1;
+
+  evaluateParameter = function(expression) {
+    if (typeof expression === 'string') {
+      if (expression[0] === '$') {
+        return false;
+      }
+    } else if (typeof expression === 'object') {
+      throw 'NNNN';
+    }
+    return expression;
+  };
+
+  condition_and = function(config, parameter) {
+    var cond, condition, result, _i, _len;
+    result = true;
+    for (_i = 0, _len = config.length; _i < _len; _i++) {
+      cond = config[_i];
+      condition = new Condition(cond);
+      result = result && condition.evaluate.apply(condition, parameter);
+      if (!result) {
+        return false;
+      }
+    }
+    return result;
+  };
+
+  condition_or = function(config, parameter) {
+    var cond, condition, result, _i, _len;
+    result = false;
+    for (_i = 0, _len = config.length; _i < _len; _i++) {
+      cond = config[_i];
+      condition = new Condition(cond);
+      result = result || condition.evaluate.apply(condition, parameter);
+      if (result) {
+        return true;
+      }
+    }
+    return result;
+  };
+
+  Condition = (function() {
+    function Condition(config) {
+      this.config = config;
+      this.variable = {};
+    }
+
+    Condition.prototype.addVariable = function(key, value) {
+      this.variable[key] = value;
+      return this;
+    };
+
+    Condition.prototype.fillUpParamter = function(parameters) {
+      var k, parameter_config, result, v;
+      parameter_config = PredicateDB[this.config.predicate].parameter;
+      if (!parameter_config) {
+        return parameters;
+      }
+      result = [];
+      for (k in parameter_config) {
+        v = parameter_config[k];
+        if (parameters != null ? parameters[v] : void 0) {
+          result[k] = parameters[v];
+        } else {
+          result[k] = this.config[v];
+        }
+      }
+      result = result.map((function(_this) {
+        return function(e) {
+          if (isSequal(e)) {
+            return executeSequal(e, _this.variable);
+          } else {
+            return e;
+          }
+        };
+      })(this));
+      return result;
+    };
+
+    Condition.prototype.executePredicator = function(name, parameters) {
+      return PredicateDB[name].func.apply(this, this.fillUpParamter.apply(this, parameters));
+    };
+
+    Condition.prototype.evaluate = function() {
+      var condition, result;
+      if (!this.config) {
+        return true;
+      }
+      if (typeof this.config === 'string') {
+        result = this.executePredicator(this.config, arguments);
+      } else if (Array.isArray(this.config)) {
+        result = condition_and(this.config, arguments);
+      } else if (typeof this.config === 'object') {
+        if (this.config.or) {
+          result = condition_or(this.config.or, arguments);
+        } else if (this.config.not) {
+          condition = new Condition(this.config.not);
+          result = !condition.evaluate.apply(condition, arguments);
+        } else if (this.config.and) {
+          result = condition_and(this.config.and, arguments);
+        } else {
+          result = this.executePredicator(this.config.predicate, arguments);
+        }
+      } else {
+        result = false;
+      }
+      this.varialbe = {};
+      return result;
+    };
+
+    return Condition;
+
+  })();
+
+  exports.Condition = Condition;
+
+  Action = (function() {
+    function Action(config) {
+      this.config = config;
+      this.variable = {};
+    }
+
+    Action.prototype.addVariable = function(key, value) {
+      this.variable[key] = value;
+      return this;
+    };
+
+    Action.prototype.fillUpParamter = function(parameters) {
+      var k, parameter_config, result, v;
+      parameter_config = ActionDB[this.config.action].parameter;
+      if (!parameter_config) {
+        return parameters;
+      }
+      result = [];
+      for (k in parameter_config) {
+        v = parameter_config[k];
+        if (parameters != null ? parameters[v] : void 0) {
+          result[k] = parameters[v];
+        } else {
+          result[k] = this.config[v];
+        }
+      }
+      result = result.map((function(_this) {
+        return function(e) {
+          if (isSequal(e)) {
+            return executeSequal(e, _this.variable);
+          } else {
+            return e;
+          }
+        };
+      })(this));
+      return result;
+    };
+
+    Action.prototype.execute = function(parameters) {
+      return ActionDB[this.config.action].func.apply(this, this.fillUpParamter(parameters));
+    };
+
+    return Action;
+
+  })();
+
+  exports.Action = Action;
+
+  Trigger = (function() {
+    function Trigger(config, creator) {
+      this.config = config;
+      this.creator = creator;
+    }
+
+    Trigger.prototype.conditionIsPassed = function(parameters) {
+      if (!this.config.condition) {
+        return true;
+      }
+      return (new Condition(this.config.condition)).evaluate(parameters);
+    };
+
+    Trigger.prototype.executeAction = function(parameters) {
+      var action;
+      action = new Action(this.config.action);
+      return action.execute(parameters);
+    };
+
+    Trigger.prototype.execute = function(parameters) {
+      if (this.conditionIsPassed(parameters)) {
+        return this.executeAction(parameters);
+      }
+    };
+
+    return Trigger;
+
+  })();
+
+  exports.Trigger = Trigger;
+
+  ActionDB = {};
+
+  ActionDB.modify_property = {
+    parameter: ['object', 'key', 'value'],
+    func: function(object, key, value) {
+      return object[key] = value;
+    }
+  };
+
+  PredicateDB = {};
+
+  PredicateDB.alive = {
+    parameter: ['object'],
+    func: function(object) {
+      if (object.isAlive) {
+        return object.isAlive();
+      } else {
+        return false;
+      }
+    }
+  };
+
+  parameter_config = ['value1', 'value2'];
+
+  PredicateDB['>'] = {
+    parameter: parameter_config,
+    func: function(a, b) {
+      return a > b;
+    }
+  };
+
+  PredicateDB['<'] = {
+    parameter: parameter_config,
+    func: function(a, b) {
+      return a < b;
+    }
+  };
+
+  PredicateDB['='] = {
+    parameter: parameter_config,
+    func: function(a, b) {
+      return a === b;
+    }
+  };
+
+  PredicateDB['>='] = {
+    parameter: parameter_config,
+    func: function(a, b) {
+      return a >= b;
+    }
+  };
+
+  PredicateDB['<='] = {
+    parameter: parameter_config,
+    func: function(a, b) {
+      return a <= b;
+    }
+  };
+
+  PredicateDB['!='] = {
+    parameter: parameter_config,
+    func: function(a, b) {
+      return a !== b;
+    }
+  };
+
+  PredicateDB.same = {
+    parameter: ['parameters'],
+    func: function(parameters) {
+      var k, mask, v;
+      mask = {};
+      for (k in parameters) {
+        v = parameters[k];
+        mask[v] = 1;
+      }
+      return Object.keys(mask).length === 1;
+    }
+  };
+
+  parseVariable = function(expr, variables) {
+    var keys, obj;
+    if (!(variables && typeof expr === 'string')) {
+      return expr;
+    }
+    if (expr[0] !== '$') {
+      return expr;
+    }
+    expr = expr.slice(1);
+    keys = expr.split('.');
+    obj = variables[keys.shift()];
+    while (keys.length) {
+      if (!obj) {
+        return null;
+      }
+      obj = obj[keys.shift()];
+    }
+    return obj;
+  };
+
+  isSequal = function(expr) {
+    return (expr != null ? expr.query : void 0) != null;
+  };
+
+  executeSequal = function(expr, variables) {
+    var key, obj, query;
+    query = new Query(expr.query);
+    obj = parseVariable(expr.object, variables);
+    if (isSequal(obj)) {
+      obj = executeSequal(obj, variables);
+    }
+    key = parseVariable(expr.key, variables);
+    if (isSequal(key)) {
+      key = executeSequal(key, variables);
+    }
+    return query.evaluate(obj, key);
+  };
+
+  exports.executeSequal = executeSequal;
+
+  Query = (function() {
+    function Query(config, creator) {
+      this.config = config;
+      this.creator = creator;
+      this.func = SequalDB[this.config];
+    }
+
+    Query.prototype.evaluate = function() {
+      return this.func.apply(this, arguments);
+    };
+
+    return Query;
+
+  })();
+
+  exports.Query = Query;
+
+  SequalDB = {
+    get_property: function() {
+      return doGetProperty(arguments[0], arguments[1]);
+    },
+    select_target: function() {
+      var pool, predicator, _i, _len;
+      pool = getPool();
+      for (_i = 0, _len = conditions.length; _i < _len; _i++) {
+        predicator = conditions[_i];
+        pool = pool.filter(function(e) {
+          return predicator(e);
+        });
+      }
+      return pool;
+    }
+  };
 
 }).call(this);

@@ -48,10 +48,12 @@
       c.server.pipe(c);
       return c.decoder.on('request', function(request) {
         if (request) {
-          request.address = {
-            ip: c.remoteAddress,
-            port: c.remotePort
-          };
+          if (request.CMD === 101) {
+            console.log({
+              request: request,
+              ip: c.remoteAddress
+            });
+          }
           return c.encoder.writeObject(request);
         } else {
           c.destroy();
