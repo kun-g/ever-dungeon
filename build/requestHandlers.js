@@ -22,7 +22,7 @@
   Player = require('./player').Player;
 
   loginBy = function(arg, token, callback) {
-    var AppSecret, appID, appKey, options, passport, passportType, path, req, requestObj, sign, teebikURL;
+    var AppSecret, appID, appKey, options, passport, passportType, path, postBody, req, requestObj, sign, strBody, teebikURL;
     passportType = arg.tp;
     passport = arg.id;
     switch (passportType) {
@@ -160,27 +160,44 @@
           });
         });
       case LOGIN_ACCOUNT_TYPE_PP:
+        appID = 2739;
+        appKey = '01aee5718a33bcbbe790bc0ca7cfb7ee';
+        postBody = {
+          'id': Math.round((new Date()).getTime() / 1000),
+          'service': 'account.verifySession',
+          'game': {
+            'gameId': appID
+          },
+          'data': {
+            'sid': token
+          },
+          'encrypt': 'MD5',
+          'sign': md5Hash('sid=' + token + appKey)
+        };
+        strBody = JSON.stringify(postBody);
         options = {
           host: 'passport_i.25pp.com',
           port: 8080,
           method: 'POST',
-          path: '/index?tunnel-command=2852126756',
+          path: '/account?tunnel-command=2852126760',
           headers: {
-            'Content-Length': 32
+            'Content-Type': 'application/json',
+            'Content-Length': strBody.length
           }
         };
         req = http.request(options, function(res) {
           res.setEncoding('utf8');
           return res.on('data', function(chunk) {
-            var result;
-            result = JSON.parse('{' + chunk + '}');
+            var identifier, result;
+            result = JSON.parse(chunk);
             logInfo({
               action: 'login',
               type: LOGIN_ACCOUNT_TYPE_PP,
-              code: result.status
+              code: result.state
             });
-            if (result.status === 0) {
-              return callback(null);
+            if (result.state.code === 1) {
+              identifier = result.data.creator + result.data.accountId;
+              return callback(null, identifier);
             } else {
               return callback(Error(RET_LoginFailed));
             }
@@ -193,7 +210,7 @@
             error: e
           });
         });
-        req.write(token);
+        req.write(strBody);
         return req.end();
       case LOGIN_ACCOUNT_TYPE_AD:
       case LOGIN_ACCOUNT_TYPE_GAMECENTER:
@@ -231,13 +248,20 @@
             } else {
               return loginBy(arg, arg.tk, cb);
             }
-          }, function(cb) {
-            var tp;
+          }, function(identifier, cb) {
+            var id, tp;
             tp = arg.tp;
             if (arg.atp != null) {
               tp = arg.atp;
             }
-            return loadPlayer(tp, arg.id, cb);
+            id = arg.id;
+            if (typeof identifier === 'function') {
+              return loadPlayer(tp, id, identifier);
+            } else {
+              id = identifier;
+              arg.id = id;
+              return loadPlayer(tp, id, cb);
+            }
           }, function(player, cb) {
             var ev, msg, time;
             if (player) {
@@ -436,7 +460,7 @@
       func: function(arg, player, handler, rpcID, socket) {
         var oldHero, ret, type;
         type = player.switchHeroType(arg.cid);
-        if (player.flags[type] || true) {
+        if (player.flags[type]) {
           player.flags[type] = false;
           oldHero = player.createHero();
           player.createHero({
@@ -713,7 +737,7 @@
               ]);
             });
             req.write(JSON.stringify({
-              "receipt-data": arg.rep
+              "receipt-data": JSON.parse(arg.rep).receipt
             }));
             return req.end();
         }
@@ -1029,6 +1053,57 @@
         });
       },
       args: {},
+      needPid: true
+    },
+    RPC_CommentGameInfo: {
+      id: 37,
+      func: function(arg, player, handler, rpcID, socket) {
+        var mailContent, ret, _ref1, _ref2;
+        if (arg.cmt != null) {
+          if ((_ref1 = player.flags.cmt) != null ? _ref1.cmted : void 0) {
+            player.flags.cmt.auto = arg.cmt.auto;
+          } else {
+            if (((_ref2 = player.flags.cmt) != null ? _ref2.cmted : void 0) === false && arg.cmt.cmted === true) {
+              mailContent = {
+                type: MESSAGE_TYPE_SystemReward,
+                src: MESSAGE_REWARD_TYPE_SYSTEM,
+                prize: [
+                  {
+                    type: 2,
+                    count: 100
+                  }
+                ],
+                tit: "Bonus!",
+                txt: "Thank you for your comment!"
+              };
+              libs.db.deliverMessage(player.name, mailContent);
+            }
+            player.flags['cmt'] = arg.cmt;
+          }
+        } else {
+          if (player.flags.cmt == null) {
+            player.flags.cmt = {
+              cmted: false,
+              auto: true
+            };
+          }
+        }
+        player.save();
+        ret = {
+          REQ: rpcID,
+          RET: RET_OK
+        };
+        ret.arg = {
+          cmt: player.flags.cmt
+        };
+        return handler(ret);
+      },
+      args: {
+        'cmt': {
+          'cmted': 'boolean',
+          'auto': 'boolean'
+        }
+      },
       needPid: true
     }
   };

@@ -141,11 +141,12 @@
   };
 
   initGlobalConfig(null, function() {
-    var gServerConfig, gServerID;
+    var gServerConfig, gServerID, port, _ref1;
     gServerID = queryTable(TABLE_CONFIG, 'ServerID');
     gServerConfig = queryTable(TABLE_CONFIG, 'ServerConfig')[gServerID];
     backendManager.init(gServerConfig.Gate);
-    return startTcpServer(7757, backendManager);
+    port = (_ref1 = gServerConfig.gateListenPort) != null ? _ref1 : 7757;
+    return startTcpServer(port, backendManager);
   });
 
 }).call(this);

@@ -9119,8 +9119,8 @@ exports.data = [
       },
       "action": [
         {
-          "type": "playEffect",
-          "effect": 20,
+          "type": "playAction",
+          "motion": "sb",
           "pos": "self"
         }
       ]
@@ -17804,6 +17804,52 @@ exports.data = [
                     "type": "event",
                     "event": "onTurnEnd",
                     "eventCount": 1
+                }
+            ]
+        }
+    },
+    {
+        "skillId": 332,
+        "label": "吸血鬼吸血",
+        "config": {
+            "basic": {
+                "targetEffect": 74,
+                "targetDelay": 0.3
+            },
+            "triggerCondition": [
+                {
+                    "type": "event",
+                    "event": "onPhysicalDamage"
+                },
+                {
+                    "type": "chance",
+                    "chance": 0.5
+                }
+            ],
+            "targetSelection": {
+                "pool": "self",
+                "filter": [
+                    {
+                        "type": "alive"
+                    },
+                    {
+                        "type": "visible"
+                    }
+                ]
+            },
+            "action": [
+                {
+                    "type": "playAction",
+                    "motion": "xx",
+                    "pos": "self"
+                },
+                {
+                    "type": "heal",
+                    "formular": {
+                        "environment": {
+                            "damage": 1
+                        }
+                    }
                 }
             ]
         }
