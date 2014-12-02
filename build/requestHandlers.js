@@ -429,36 +429,9 @@
           }, function(account, cb) {
             return dbLib.createNewPlayer(account, gServerName, name, cb);
           }, function(account, cb) {
-            var k, p, player, prize;
+            var player;
             player = new Player();
-            player.setName(name);
-            player.accountID = account;
-            player.initialize();
-            player.createHero({
-              name: name,
-              "class": arg.cid,
-              gender: arg.gen,
-              hairStyle: arg.hst,
-              hairColor: arg.hcl
-            });
-            prize = queryTable(TABLE_CONFIG, 'InitialEquipment');
-            for (k in prize) {
-              p = prize[k];
-              player.claimPrize(p.filter((function(_this) {
-                return function(e) {
-                  return isClassMatch(arg.cid, e.classLimit);
-                };
-              })(this)));
-            }
-            logUser({
-              name: name,
-              action: 'register',
-              "class": arg.cid,
-              gender: arg.gen,
-              hairStyle: arg.hst,
-              hairColor: arg.hcl
-            });
-            return player.saveDB(cb);
+            return player.createPlayer(arg, account, cb);
           }
         ], function(err, result) {
           if (err) {
@@ -480,6 +453,42 @@
         'gen': 'number',
         'hst': 'number',
         'hcl': 'number'
+      }
+    },
+    RPC_SwitchHero: {
+      id: 106,
+      func: function(arg, player, handler, rpcID, socket) {
+        var oldHero, ret, type;
+        type = player.switchHeroType(arg.cid);
+        if (player.flags[type]) {
+          player.flags[type] = false;
+          oldHero = player.createHero();
+          player.createHero({
+            name: oldHero.name,
+            "class": arg.cid,
+            gender: oldHero.gender,
+            hairStyle: oldHero.hairStyle,
+            hairColor: oldHero.hairColor
+          }, true);
+          ret = [
+            {
+              REQ: rpcID,
+              RET: RET_OK
+            }
+          ];
+          ret.concat(player.syncFlags(true));
+        } else {
+          ret = [
+            {
+              REQ: rpcID,
+              RET: RET_NotEnoughItem
+            }
+          ];
+        }
+        return handler(ret);
+      },
+      args: {
+        'cid': 'number'
       }
     },
     RPC_ValidateName: {

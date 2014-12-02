@@ -151,7 +151,7 @@
     };
 
     Player.prototype.migrate = function() {
-      var cfg, enhanceID, flag, item, lv, p, prize, slot, _i, _ref7;
+      var cfg, enhanceID, flag, item, lv, p, prize, slot, _i, _ref7, _ref8;
       flag = false;
       _ref7 = this.inventory.container;
       for (slot in _ref7) {
@@ -190,17 +190,15 @@
           }
         }
       }
-      prize = queryTable(TABLE_CONFIG, 'InitialEquipment');
+      prize = (_ref8 = queryTable(TABLE_ROLE, this.hero["class"])) != null ? _ref8.initialEquipment : void 0;
       for (slot = _i = 0; _i <= 5; slot = ++_i) {
         if (!(this.equipment[slot] == null)) {
           continue;
         }
         flag = true;
-        this.claimPrize(prize[slot].filter((function(_this) {
-          return function(e) {
-            return isClassMatch(_this.hero["class"], e.classLimit);
-          };
-        })(this)));
+        if (prize != null) {
+          this.claimPrize(prize[slot]);
+        }
       }
       return flag;
     };
@@ -658,16 +656,82 @@
       return this.purchasedCount[id] += count;
     };
 
-    Player.prototype.createHero = function(heroData) {
+    Player.prototype.createPlayer = function(arg, account, cb) {
+      var p, prize, _i, _len, _ref7, _ref8;
+      if (!((0 <= (_ref7 = arg.cid) && _ref7 <= 2))) {
+        cb({
+          message: 'big brother is watching ya'
+        });
+      }
+      this.setName(arg.nam);
+      this.accountID = account;
+      this.initialize();
+      this.createHero({
+        name: arg.nam,
+        "class": arg.cid,
+        gender: arg.gen,
+        hairStyle: arg.hst,
+        hairColor: arg.hcl
+      });
+      prize = (_ref8 = queryTable(TABLE_ROLE, arg.cid)) != null ? _ref8.initialEquipment : void 0;
+      for (_i = 0, _len = prize.length; _i < _len; _i++) {
+        p = prize[_i];
+        this.claimPrize(p);
+      }
+      logUser({
+        name: arg.nam,
+        action: 'register',
+        "class": arg.cid,
+        gender: arg.gen,
+        hairStyle: arg.hst,
+        hairColor: arg.hcl
+      });
+      return this.saveDB(cb);
+    };
+
+    Player.prototype.putOnEquipmentAfterSwitched = function(heroClass) {
+      var equipmentList, p, prize, ret, _i, _len, _ref7, _ref8, _results;
+      equipmentList = this.inventory.reduce(function(acc, item, index) {
+        var _ref7;
+        if ((item != null) && item.category === ITEM_EQUIPMENT && ((_ref7 = item.classLimit) != null ? _ref7.indexOf(heroClass) : void 0) !== -1) {
+          acc.push(index);
+        }
+        return acc;
+      }, []);
+      if (equipmentList.length === 0) {
+        prize = (_ref7 = queryTable(TABLE_ROLE, heroClass)) != null ? _ref7.initialEquipment : void 0;
+        _results = [];
+        for (_i = 0, _len = prize.length; _i < _len; _i++) {
+          p = prize[_i];
+          ret = this.claimPrize(p);
+          _results.push((_ref8 = ret.itm) != null ? _ref8.forEach(function(item) {
+            return this.useItem(item.sid);
+          }) : void 0);
+        }
+        return _results;
+      } else {
+        return this.equipment = equipmentList;
+      }
+    };
+
+    Player.prototype.createHero = function(heroData, isSwitch) {
       var bag, bf, e, equip, hero, i, _ref7;
       if (heroData != null) {
-        if (this.heroBase[heroData["class"]] != null) {
+        if ((this.heroBase[heroData["class"]] != null) && heroData["class"] === this.hero["class"]) {
           return null;
         }
-        heroData.xp = 0;
-        heroData.equipment = [];
-        this.heroBase[heroData["class"]] = heroData;
-        this.switchHero(heroData["class"]);
+        if (isSwitch) {
+          heroData.xp = this.hero.xp;
+          heroData.equipment = [];
+          this.heroBase[heroData["class"]] = heroData;
+          this.switchHero(heroData["class"]);
+          this.putOnEquipmentAfterSwitched(heroData["class"]);
+        } else {
+          heroData.xp = 0;
+          heroData.equipment = [];
+          this.heroBase[heroData["class"]] = heroData;
+          this.switchHero(heroData["class"]);
+        }
         return this.createHero();
       } else if (this.hero) {
         bag = this.inventory;
@@ -682,30 +746,25 @@
             });
           }
         }
-        if (this.hero.wSpellDB) {
-          this.hero = {
-            xp: this.hero.xp,
-            name: this.name,
-            "class": this.hero["class"],
-            gender: this.hero.gender,
-            hairStyle: this.hero.hairStyle,
-            hairColor: this.hero.hairColor,
-            equipment: equip,
-            equipSlot: this.equipment
-          };
-          this.save();
-        } else {
-          this.hero['equipment'] = equip;
-        }
+        this.hero['equipment'] = equip;
         hero = new Hero(this.hero);
         bf = hero.calculatePower();
         if (bf !== this.battleForce) {
           this.battleForce = bf;
           this.notify('battleForceChanged');
         }
+        this.save();
         return hero;
       } else {
         throw 'NoHero';
+      }
+    };
+
+    Player.prototype.switchHeroType = function(classId) {
+      if (Math.abs(classId - this.hero["class"]) > 100) {
+        return 'verticalChange';
+      } else {
+        return 'horizonChange';
       }
     };
 
@@ -1241,7 +1300,7 @@
         switch (p.type) {
           case PRIZETYPE_ITEM:
             ret = this.aquireItem(p.value, p.count, allOrFail);
-            if (!(ret && ret.length > 0 && !allOrFail)) {
+            if (!(ret && ret.length > 0)) {
               return [];
             }
             break;
@@ -1676,11 +1735,7 @@
           ret: RET_EquipCantUpgrade
         };
       }
-      if (item.getConfig().upgradeId != null) {
-        upConfig = queryTable(TABLE_UPGRADE, item.getConfig().upgradeId, this.abIndex);
-      } else {
-        upConfig = queryTable(TABLE_UPGRADE, item.rank, this.abIndex);
-      }
+      upConfig = queryTable(TABLE_UPGRADE, item.rank, this.abIndex);
       if (!upConfig) {
         return {
           ret: RET_EquipCantUpgrade
