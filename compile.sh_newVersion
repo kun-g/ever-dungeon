@@ -65,6 +65,8 @@ DST_BOX="blackbox/"
 for itm in ${SOURCES[*]}
 do
   cp -f build/${itm} ${DST_BOX}${itm}
+  echo cp -f build/${itm} ${DST_BOX}${itm}
+
 
   f=$DST_BOX$itm
   LibName=`echo "$itm" | $SED -e 's/\(\w\+\).js/lib\u\1/'`
