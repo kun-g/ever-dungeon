@@ -434,21 +434,34 @@
     RPC_SwitchHero: {
       id: 106,
       func: function(arg, player, handler, rpcID, socket) {
-        var oldHero;
-        oldHero = player.createHero();
-        player.createHero({
-          name: oldHero.name,
-          "class": arg.cid,
-          gender: oldHero.gender,
-          hairStyle: oldHero.hairStyle,
-          hairColor: oldHero.hairColor
-        }, true);
-        return handler([
-          {
-            REQ: rpcID,
-            RET: RET_OK
-          }
-        ]);
+        var oldHero, ret, type;
+        type = player.switchHeroType(arg.cid);
+        if (player.flags[type] || true) {
+          player.flags[type] = false;
+          oldHero = player.createHero();
+          player.createHero({
+            name: oldHero.name,
+            "class": arg.cid,
+            gender: oldHero.gender,
+            hairStyle: oldHero.hairStyle,
+            hairColor: oldHero.hairColor
+          }, true);
+          ret = [
+            {
+              REQ: rpcID,
+              RET: RET_OK
+            }
+          ];
+          ret.concat(player.syncFlags(true));
+        } else {
+          ret = [
+            {
+              REQ: rpcID,
+              RET: RET_NotEnoughItem
+            }
+          ];
+        }
+        return handler(ret);
       },
       args: {
         'cid': 'number'

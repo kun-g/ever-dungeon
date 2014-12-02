@@ -657,7 +657,12 @@
     };
 
     Player.prototype.createPlayer = function(arg, account, cb) {
-      var p, prize, _i, _len, _ref7;
+      var p, prize, _i, _len, _ref7, _ref8;
+      if (!((0 <= (_ref7 = arg.cid) && _ref7 <= 2))) {
+        cb({
+          message: 'big brother is watching ya'
+        });
+      }
       this.setName(arg.nam);
       this.accountID = account;
       this.initialize();
@@ -668,7 +673,7 @@
         hairStyle: arg.hst,
         hairColor: arg.hcl
       });
-      prize = (_ref7 = queryTable(TABLE_ROLE, arg.cid)) != null ? _ref7.initialEquipment : void 0;
+      prize = (_ref8 = queryTable(TABLE_ROLE, arg.cid)) != null ? _ref8.initialEquipment : void 0;
       for (_i = 0, _len = prize.length; _i < _len; _i++) {
         p = prize[_i];
         this.claimPrize(p);
@@ -752,6 +757,14 @@
         return hero;
       } else {
         throw 'NoHero';
+      }
+    };
+
+    Player.prototype.switchHeroType = function(classId) {
+      if (Math.abs(classId - this.hero["class"]) > 100) {
+        return 'verticalChange';
+      } else {
+        return 'horizonChange';
       }
     };
 
