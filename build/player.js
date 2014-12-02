@@ -1676,7 +1676,11 @@
           ret: RET_EquipCantUpgrade
         };
       }
-      upConfig = queryTable(TABLE_UPGRADE, item.rank, this.abIndex);
+      if (item.getConfig().upgradeId != null) {
+        upConfig = queryTable(TABLE_UPGRADE, item.getConfig().upgradeId, this.abIndex);
+      } else {
+        upConfig = queryTable(TABLE_UPGRADE, item.rank, this.abIndex);
+      }
       if (!upConfig) {
         return {
           ret: RET_EquipCantUpgrade
@@ -2189,7 +2193,7 @@
       return async.series([
         function(cb) {
           if (id != null) {
-            return dbLib.getPlayerNameByID(id, function(err, theName) {
+            return dbLib.getPlayerNameByID(id, gServerName, function(err, theName) {
               if (theName) {
                 name = theName;
               }
