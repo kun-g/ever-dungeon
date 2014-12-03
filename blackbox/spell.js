@@ -1,6 +1,6 @@
 libSpell = {};
 (function() {
-  var Wizard, calcFormular, getLevelConfig, getProperty, getSpellConfig, plusThemAll, triggerLib;
+  var Wizard, calcFormular, getSpellConfig, getSpellProperty, plusThemAll, triggerLib;
 
   
 
@@ -15,20 +15,12 @@ libSpell = {};
     return cfg.config;
   };
 
-  getProperty = function(origin, backup) {
-    if (backup != null) {
-      return backup;
-    } else {
-      return origin;
-    }
-  };
-
-  getLevelConfig = function(cfg, level) {
+  getSpellProperty = function(config, key, level) {
     level -= 1;
-    if (cfg.levelConfig && (cfg.levelConfig[level] != null)) {
-      return cfg.levelConfig[level];
+    if (config['#' + key]) {
+      return config['#' + key][level];
     } else {
-      return {};
+      return config[key];
     }
   };
 
@@ -55,7 +47,7 @@ libSpell = {};
     return sum;
   };
 
-  calcFormular = function(e, s, t, config) {
+  calcFormular = function(e, s, t, config, level) {
     var c;
     if (config.func) {
       c = config.c ? config.c : {};
@@ -82,7 +74,7 @@ libSpell = {};
     };
 
     Wizard.prototype.installSpell = function(spellID, level, cmd, delay) {
-      var cfg, levelConfig;
+      var cfg;
       if (delay == null) {
         delay = 0;
       }
@@ -93,7 +85,6 @@ libSpell = {};
       if (cfg == null) {
         return false;
       }
-      levelConfig = getLevelConfig(cfg, level);
       if (this.wSpellDB[spellID]) {
         this.removeSpell(spellID, cmd);
       }
@@ -101,13 +92,13 @@ libSpell = {};
         level: level,
         delay: delay
       };
-      this.setupTriggerCondition(spellID, cfg.triggerCondition, levelConfig, cmd);
-      this.setupAvailableCondition(spellID, cfg.availableCondition, levelConfig, cmd);
-      this.doAction(this.wSpellDB[spellID], cfg.installAction, levelConfig, this.selectTarget(cfg, cmd), cmd);
+      this.setupTriggerCondition(spellID, cfg.triggerCondition, cmd);
+      this.setupAvailableCondition(spellID, cfg.availableCondition, cmd);
+      this.doAction(this.wSpellDB[spellID], cfg.installAction, this.selectTarget(cfg, cmd), cmd);
       return this.spellStateChanged(spellID, cmd);
     };
 
-    Wizard.prototype.setupAvailableCondition = function(spellID, conditions, level, cmd) {
+    Wizard.prototype.setupAvailableCondition = function(spellID, conditions, cmd) {
       var limit, thisSpell, _i, _len, _results;
       if (!conditions) {
         return false;
@@ -136,7 +127,7 @@ libSpell = {};
       return _results;
     };
 
-    Wizard.prototype.setupTriggerCondition = function(spellID, conditions, level, cmd) {
+    Wizard.prototype.setupTriggerCondition = function(spellID, conditions, cmd) {
       var limit, thisSpell, _i, _len, _results;
       if (conditions == null) {
         return false;
@@ -191,6 +182,9 @@ libSpell = {};
 
     Wizard.prototype.removeSpell = function(spellID, cmd) {
       var c, cfg, _i, _j, _len, _len1, _ref, _ref1;
+      if (!this.wSpellDB[spellID]) {
+        return false;
+      }
       cfg = getSpellConfig(spellID);
       if (cfg.triggerCondition != null) {
         _ref = cfg.triggerCondition;
@@ -211,7 +205,7 @@ libSpell = {};
         }
       }
       if (cfg.uninstallAction != null) {
-        this.doAction(this.wSpellDB[spellID], cfg.uninstallAction, {}, this.selectTarget(cfg, cmd), cmd);
+        this.doAction(this.wSpellDB[spellID], cfg.uninstallAction, this.selectTarget(cfg, cmd), cmd);
       }
       delete this.wSpellDB[spellID];
       return this.spellStateChanged(spellID, cmd);
@@ -257,23 +251,16 @@ libSpell = {};
       }
     };
 
-    Wizard.prototype.castSpell = function(spellID, level, cmd) {
+    Wizard.prototype.castSpell = function(spellID, cmd) {
       var canTrigger, cfg, delay, reason, target, thisSpell, _ref;
       cfg = getSpellConfig(spellID);
       thisSpell = this.wSpellDB[spellID];
-      if (thisSpell != null) {
-        level = thisSpell.level;
-      }
-      if (level == null) {
-        return 'InvalidLevel';
-      }
-      level = getLevelConfig(cfg, level);
       target = this.selectTarget(cfg, cmd);
-      _ref = this.triggerCheck(thisSpell, cfg.triggerCondition, level, target, cmd), canTrigger = _ref[0], reason = _ref[1];
+      _ref = this.triggerCheck(thisSpell, cfg.triggerCondition, target, cmd), canTrigger = _ref[0], reason = _ref[1];
       if (!canTrigger) {
         return reason;
       }
-      this.doAction(thisSpell, cfg.action, level, target, cmd);
+      this.doAction(thisSpell, cfg.action, target, cmd);
       this.updateCDOfSpell(spellID, true, cmd);
       if (!this.availableCheck(spellID, cfg, cmd)) {
         this.removeSpell(spellID, cmd);
@@ -309,7 +296,7 @@ libSpell = {};
         if (thisSpell != null) {
           thisSpell.eventCounters[event]++;
         }
-        _results.push(this.castSpell(id, null, cmd));
+        _results.push(this.castSpell(id, cmd));
       }
       return _results;
     };
@@ -332,7 +319,7 @@ libSpell = {};
     };
 
     Wizard.prototype.updateCDOfSpell = function(spellID, isReset, cmd) {
-      var c, cd, cdConfig, cfg, level, preCD, thisSpell;
+      var c, cd, cdConfig, cfg, preCD, thisSpell;
       cfg = getSpellConfig(spellID);
       thisSpell = this.wSpellDB[spellID];
       if (!thisSpell) {
@@ -359,9 +346,7 @@ libSpell = {};
       if (!(cdConfig.length > 0)) {
         return [true, 'NoCD'];
       }
-      cdConfig = cdConfig[0];
-      level = getLevelConfig(cfg, thisSpell.level);
-      cd = getProperty(cdConfig.cd, level.cd);
+      cd = getSpellProperty(cdConfig[0], 'cd', thisSpell.level);
       preCD = thisSpell.cd;
       if (isReset) {
         thisSpell.cd = cd;
@@ -426,7 +411,7 @@ libSpell = {};
     };
 
     Wizard.prototype.availableCheck = function(spellID, cfg, cmd) {
-      var conditions, count, level, limit, thisSpell, _i, _len, _ref;
+      var conditions, count, limit, thisSpell, _i, _len, _ref;
       thisSpell = this.wSpellDB[spellID];
       if (!thisSpell) {
         return false;
@@ -435,22 +420,21 @@ libSpell = {};
       if (!conditions) {
         return true;
       }
-      level = getLevelConfig(cfg, thisSpell.level);
       for (_i = 0, _len = conditions.length; _i < _len; _i++) {
         limit = conditions[_i];
         switch (limit.type) {
           case 'effectCount':
-            if (!(thisSpell.effectCount < getProperty(limit.count, level.count))) {
+            if (!(thisSpell.effectCount < getSpellProperty(limit, 'count', thisSpell.level))) {
               return false;
             }
             break;
           case 'tick':
-            if (!(thisSpell.tick[limit.tickType] < getProperty(limit.ticks, level.ticks))) {
+            if (!(thisSpell.tick[limit.tickType] < getSpellProperty(limit, 'ticks', thisSpell.level))) {
               return false;
             }
             break;
           case 'event':
-            count = (_ref = getProperty(limit.eventCount, level.eventCount)) != null ? _ref : 1;
+            count = (_ref = getSpellProperty(limit, 'eventCount', thisSpell.level)) != null ? _ref : 1;
             if (!(thisSpell.eventCounters[limit.event] < count)) {
               return false;
             }
@@ -565,7 +549,7 @@ libSpell = {};
       return pool;
     };
 
-    Wizard.prototype.triggerCheck = function(thisSpell, conditions, level, target, cmd) {
+    Wizard.prototype.triggerCheck = function(thisSpell, conditions, target, cmd) {
       var env, from, limit, to, _i, _len, _ref, _ref1, _ref2;
       if (conditions == null) {
         return [true];
@@ -575,7 +559,7 @@ libSpell = {};
         limit = conditions[_i];
         switch (limit.type) {
           case 'chance':
-            if (!env.chanceCheck(getProperty(limit.chance, level.chance))) {
+            if (!env.chanceCheck(getSpellProperty(limit, 'chance', thisSpell.level))) {
               return [false, 'NotFortunate'];
             }
             break;
@@ -648,8 +632,8 @@ libSpell = {};
       return -1;
     };
 
-    Wizard.prototype.doAction = function(thisSpell, actions, level, target, cmd) {
-      var a, c, cfg, delay, effect, env, formular, formularResult, h, modifications, pos, property, spellID, src, t, val, variables, _aa, _ab, _ac, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len16, _len17, _len18, _len19, _len2, _len20, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _ref3, _s, _t, _u, _v, _w, _x, _y, _z;
+    Wizard.prototype.doAction = function(thisSpell, actions, target, cmd) {
+      var a, c, cfg, delay, effect, env, formular, formularResult, h, modifications, pos, property, spellID, src, t, val, variables, _aa, _ab, _ac, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len16, _len17, _len18, _len19, _len2, _len20, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _s, _t, _u, _v, _w, _x, _y, _z;
       if (actions == null) {
         return false;
       }
@@ -665,8 +649,8 @@ libSpell = {};
             return m.isVisible;
           }).length;
         }
-        if (getProperty(a.formular, level.formular) != null) {
-          formularResult = calcFormular(variables, this, target, getProperty(a.formular, level.formular));
+        if (getSpellProperty(a, 'formular', thisSpell.level) != null) {
+          formularResult = calcFormular(variables, this, target, getSpellProperty(a, 'formular', thisSpell.level));
         }
         delay = 0;
         if (thisSpell != null) {
@@ -688,11 +672,11 @@ libSpell = {};
           case 'setTargetMutex':
             for (_j = 0, _len1 = target.length; _j < _len1; _j++) {
               t = target[_j];
-              t.setMutex(getProperty(a.mutex, level.mutex), getProperty(a.count, level.count));
+              t.setMutex(getSpellProperty(a, 'mutex', thisSpell.level), getSpellProperty(a, 'count', thisSpell.level));
             }
             break;
           case 'setMyMutex':
-            this.setMutex(getProperty(a.mutex, level.mutex), getProperty(a.count, level.count));
+            this.setMutex(getSpellProperty(a, 'mutex', thisSpell.level), getSpellProperty(a, 'count', thisSpell.level));
             break;
           case 'resetSpellCD':
             for (_k = 0, _len2 = target.length; _k < _len2; _k++) {
@@ -907,7 +891,7 @@ libSpell = {};
             }
             break;
           case 'castSpell':
-            this.castSpell(a.spell, (_ref1 = a.level) != null ? _ref1 : 1, cmd);
+            this.castSpell(a.spell, cmd);
             break;
           case 'newFaction':
             env.newFaction(a.name);
@@ -966,7 +950,7 @@ libSpell = {};
               if (a.delay != null) {
                 delay += typeof a.delay === 'number' ? a.delay : a.delay.base + env.rand() * a.delay.range;
               }
-              t.installSpell(getProperty(a.spell, level.spell), getProperty(a.level, level.level), cmd, delay);
+              t.installSpell(getSpellProperty(a, 'spell', thisSpell.level), getSpellProperty(a, 'level', thisSpell.level), cmd, delay);
             }
             break;
           case 'damage':
@@ -1019,8 +1003,8 @@ libSpell = {};
             if (env == null) {
               continue;
             }
-            effect = getProperty(a.effect, level.effect);
-            pos = getProperty(a.pos, level.pos);
+            effect = getSpellProperty(a, 'effect', thisSpell.level);
+            pos = getSpellProperty(a, 'pos', thisSpell.level);
             if (pos != null) {
               if (pos === 'self') {
                 if (typeof cmd.routine === "function") {
@@ -1102,7 +1086,7 @@ libSpell = {};
             cmd = cmd.next(c);
             break;
           case 'setProperty':
-            modifications = getProperty(a.modifications, level.modifications);
+            modifications = getSpellProperty(a, 'modifications', thisSpell.level);
             if (thisSpell.modifications == null) {
               thisSpell.modifications = {};
             }
@@ -1120,9 +1104,9 @@ libSpell = {};
             if (!thisSpell) {
               continue;
             }
-            _ref2 = thisSpell.modifications;
-            for (property in _ref2) {
-              val = _ref2[property];
+            _ref1 = thisSpell.modifications;
+            for (property in _ref1) {
+              val = _ref1[property];
               this[property] -= val;
             }
             delete thisSpell.modifications;
@@ -1136,9 +1120,9 @@ libSpell = {};
             }
             for (_z = 0, _len17 = target.length; _z < _len17; _z++) {
               h = target[_z];
-              _ref3 = h.wSpellDB;
-              for (spellID in _ref3) {
-                thisSpell = _ref3[spellID];
+              _ref2 = h.wSpellDB;
+              for (spellID in _ref2) {
+                thisSpell = _ref2[spellID];
                 cfg = getSpellConfig(spellID);
                 if (_buffType.indexOf(cfg.buffType) !== -1) {
                   h.removeSpell(spellID, cmd);
@@ -1155,11 +1139,11 @@ libSpell = {};
           case 'createMonster':
             c = {
               id: 'CreateObject',
-              classID: getProperty(a.monsterID, level.monsterID),
-              count: getProperty(a.objectCount, level.objectCount),
-              withKey: getProperty(a.withKey, level.withKey),
-              collectID: getProperty(a.collectID, level.collectID),
-              effect: getProperty(a.effect, level.effect)
+              classID: getSpellProperty(a, 'monsterID', thisSpell.level),
+              count: getSpellProperty(a, 'objectCount', thisSpell.level),
+              withKey: getSpellProperty(a, 'withKey', thisSpell.level),
+              collectID: getSpellProperty(a, 'collectID', thisSpell.level),
+              effect: getSpellProperty(a, 'effect', thisSpell.level)
             };
             if (!a.randomPos) {
               c.pos = this.pos;
@@ -1194,7 +1178,7 @@ libSpell = {};
             }
             break;
           case 'showBubble':
-            pos = getProperty(a.pos, level.pos);
+            pos = getSpellProperty(a, 'pos', thisSpell.level);
             if (pos != null) {
               if (pos === 'self') {
                 if (typeof cmd.routine === "function") {
