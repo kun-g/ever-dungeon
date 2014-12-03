@@ -1715,7 +1715,7 @@ libDungeon = {};
     };
 
     DungeonEnvironment.prototype.useItem = function(spell, level, cmd) {
-      return this.dungeon.getDummyHero().castSpell(spell, cmd);
+      return this.dungeon.getDummyHero().castSpell(spell, level, cmd);
     };
 
     DungeonEnvironment.prototype.getReviveCount = function() {
@@ -2917,7 +2917,7 @@ libDungeon = {};
     },
     CastSpell: {
       callback: function(env) {
-        return env.variable('me').castSpell(env.variable('spell'), this);
+        return env.variable('me').castSpell(env.variable('spell'), null, this);
       }
     },
     UseItem: {

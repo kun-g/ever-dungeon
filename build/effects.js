@@ -304,6 +304,17 @@ exports.data = [
     },
     {
         "effectId": 73,
-        "file": "effect-xx.ccbi"
+        "skeleton": "effect-xx2.json",
+        "atlas": "effect-xx2.atlas"
+    },
+    {
+        "effectId": 74,
+        "skeleton": "effect-xx.json",
+        "atlas": "effect-xx.atlas"
+    },
+    {
+        "effectId": 75,
+        "skeleton": "effect-invincible.json",
+        "atlas": "effect-invincible.atlas"
     }
 ]

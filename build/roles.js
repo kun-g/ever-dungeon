@@ -131,7 +131,8 @@ exports.data = [
 		"className": "蝙蝠",
 		"faction": "monster",
 		"classType": 1,
-		"avatar": "enemy-bat1.ccbi",
+        "skeleton": "bat1.json",
+        "atlas": "bat1.atlas",
 		"property": {
 			"health": 0.2,
 			"attack": 0.18,
@@ -158,7 +159,13 @@ exports.data = [
 		"soundWound": "bianfuwound.mp3",
 		"soundAttack": "bianfuattack.mp3",
 		"soundDie": "bianfudie.mp3",
-		"effectAttack": 9
+		"effectAttack": 9,
+        "skill": [
+            {
+                "id": 163,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 4,
@@ -348,6 +355,10 @@ exports.data = [
 				"id": 26,
 				"level": 2
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 27,
 				"level": 1
@@ -538,6 +549,10 @@ exports.data = [
 				"id": 26,
 				"level": 1
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 27,
 				"level": 1
@@ -656,6 +671,10 @@ exports.data = [
 				"id": 27,
 				"level": 1
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 26,
 				"level": 3
@@ -776,7 +795,8 @@ exports.data = [
 		"className": "Boss蝙蝠",
 		"faction": "monster",
 		"classType": 1,
-		"avatar": "enemy-bat1.ccbi",
+        "skeleton": "bat1.json",
+        "atlas": "bat1.atlas",
 		"property": {
 			"health": 1.5,
 			"attack": 0.27,
@@ -1003,6 +1023,10 @@ exports.data = [
 				"id": 26,
 				"level": 2
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 27,
 				"level": 1
@@ -1203,6 +1227,10 @@ exports.data = [
 				"id": 26,
 				"level": 1
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 27,
 				"level": 1
@@ -1323,6 +1351,10 @@ exports.data = [
 				"id": 26,
 				"level": 3
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 27,
 				"level": 1
@@ -1371,7 +1403,8 @@ exports.data = [
 		"className": "蝙蝠2",
 		"faction": "monster",
 		"classType": 1,
-		"avatar": "enemy-bat12.ccbi",
+        "skeleton": "bat2.json",
+        "atlas": "bat2.atlas",
 		"property": {
 			"health": 0.2,
 			"attack": 0.18,
@@ -1398,7 +1431,13 @@ exports.data = [
 		"soundWound": "bianfuwound.mp3",
 		"soundAttack": "bianfuattack.mp3",
 		"soundDie": "bianfudie.mp3",
-		"effectAttack": 9
+		"effectAttack": 9,
+        "skill": [
+            {
+                "id": 163,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 36,
@@ -1595,6 +1634,10 @@ exports.data = [
 				"id": 26,
 				"level": 2
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 27,
 				"level": 1
@@ -1791,6 +1834,10 @@ exports.data = [
 				"id": 26,
 				"level": 1
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 27,
 				"level": 1
@@ -1908,6 +1955,10 @@ exports.data = [
 				"id": 26,
 				"level": 3
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 27,
 				"level": 1
@@ -2027,7 +2078,8 @@ exports.data = [
 		"className": "Boss蝙蝠2",
 		"faction": "monster",
 		"classType": 1,
-		"avatar": "enemy-bat12.ccbi",
+        "skeleton": "bat2.json",
+        "atlas": "bat2.atlas",
 		"property": {
 			"health": 1.5,
 			"attack": 0.27,
@@ -2254,6 +2306,10 @@ exports.data = [
 				"id": 26,
 				"level": 2
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 27,
 				"level": 1
@@ -2454,6 +2510,10 @@ exports.data = [
 				"id": 26,
 				"level": 1
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 27,
 				"level": 1
@@ -2574,6 +2634,10 @@ exports.data = [
 				"id": 26,
 				"level": 3
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 27,
 				"level": 1
@@ -2622,7 +2686,8 @@ exports.data = [
 		"className": "蝙蝠3",
 		"faction": "monster",
 		"classType": 1,
-		"avatar": "enemy-bat13.ccbi",
+        "skeleton": "bat3.json",
+        "atlas": "bat3.atlas",
 		"property": {
 			"health": 0.2,
 			"attack": 0.18,
@@ -2649,7 +2714,13 @@ exports.data = [
 		"soundWound": "bianfuwound.mp3",
 		"soundAttack": "bianfuattack.mp3",
 		"soundDie": "bianfudie.mp3",
-		"effectAttack": 9
+		"effectAttack": 9,
+        "skill": [
+            {
+                "id": 163,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 68,
@@ -2845,6 +2916,10 @@ exports.data = [
 				"id": 26,
 				"level": 2
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 27,
 				"level": 1
@@ -3040,6 +3115,10 @@ exports.data = [
 				"id": 26,
 				"level": 1
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 27,
 				"level": 1
@@ -3158,6 +3237,10 @@ exports.data = [
 				"id": 26,
 				"level": 3
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 27,
 				"level": 1
@@ -3276,7 +3359,8 @@ exports.data = [
 		"className": "Boss蝙蝠3",
 		"faction": "monster",
 		"classType": 1,
-		"avatar": "enemy-bat13.ccbi",
+        "skeleton": "bat3.json",
+        "atlas": "bat3.atlas",
 		"property": {
 			"health": 1.5,
 			"attack": 0.27,
@@ -3503,6 +3587,10 @@ exports.data = [
 				"id": 26,
 				"level": 2
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 27,
 				"level": 1
@@ -3703,6 +3791,10 @@ exports.data = [
 				"id": 26,
 				"level": 1
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 27,
 				"level": 1
@@ -3823,6 +3915,10 @@ exports.data = [
 				"id": 26,
 				"level": 3
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 27,
 				"level": 1
@@ -3871,7 +3967,8 @@ exports.data = [
 		"className": "蝙蝠4",
 		"faction": "monster",
 		"classType": 1,
-		"avatar": "enemy-bat14.ccbi",
+        "skeleton": "bat4.json",
+        "atlas": "bat4.atlas",
 		"property": {
 			"health": 0.2,
 			"attack": 0.18,
@@ -3898,7 +3995,13 @@ exports.data = [
 		"soundWound": "bianfuwound.mp3",
 		"soundAttack": "bianfuattack.mp3",
 		"soundDie": "bianfudie.mp3",
-		"effectAttack": 9
+		"effectAttack": 9,
+        "skill": [
+            {
+                "id": 163,
+                "level": 1
+            }
+        ]
 	},
 	{
 		"classId": 100,
@@ -4094,6 +4197,10 @@ exports.data = [
 				"id": 26,
 				"level": 2
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 27,
 				"level": 1
@@ -4289,6 +4396,10 @@ exports.data = [
 				"id": 26,
 				"level": 1
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 27,
 				"level": 1
@@ -4407,6 +4518,10 @@ exports.data = [
 				"id": 26,
 				"level": 3
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 27,
 				"level": 1
@@ -4525,7 +4640,8 @@ exports.data = [
 		"className": "Boss蝙蝠4",
 		"faction": "monster",
 		"classType": 1,
-		"avatar": "enemy-bat14.ccbi",
+        "skeleton": "bat4.json",
+        "atlas": "bat4.atlas",
 		"property": {
 			"health": 1.5,
 			"attack": 0.27,
@@ -4752,6 +4868,10 @@ exports.data = [
 				"id": 26,
 				"level":2
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 27,
 				"level": 1
@@ -4952,6 +5072,10 @@ exports.data = [
 				"id": 26,
 				"level": 1
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 27,
 				"level": 1
@@ -5072,6 +5196,10 @@ exports.data = [
 				"id": 26,
 				"level": 3
 			},
+            {
+                "id": 272,
+                "level": 1
+            },
 			{
 				"id": 27,
 				"level": 1
@@ -5231,6 +5359,18 @@ exports.data = [
 						"id": 39,
 						"level": 1
 					},
+                    {
+                        "id": 40,
+                        "level": 1
+                    },
+                    {
+                        "id": 41,
+                        "level": 1
+                    },
+                    {
+                        "id": 42,
+                        "level": 1
+                    },
 					{
 						"id": 35,
 						"level": 1
@@ -5276,6 +5416,18 @@ exports.data = [
 						"id": 39,
 						"level": 1
 					},
+                    {
+                        "id": 40,
+                        "level": 1
+                    },
+                    {
+                        "id": 41,
+                        "level": 1
+                    },
+                    {
+                        "id": 42,
+                        "level": 1
+                    },
 					{
 						"id": 35,
 						"level": 1
@@ -6137,6 +6289,14 @@ exports.data = [
 				"id": 79,
 				"level": 1
 			},
+            {
+                "id": 40,
+                "level": 1
+            },
+            {
+                "id": 80,
+                "level": 1
+            },
 			{
 				"id": 35,
 				"level": 1
@@ -7322,7 +7482,8 @@ exports.data = [
         "className": "蝙蝠3",
         "faction": "monster",
         "classType": 1,
-        "avatar": "enemy-bat13.ccbi",
+        "skeleton": "bat3.json",
+        "atlas": "bat3.atlas",
         "property": {
             "health": 0.2,
             "attack": 0.18,
@@ -7350,6 +7511,12 @@ exports.data = [
         "soundAttack": "bianfuattack.mp3",
         "soundDie": "bianfudie.mp3",
         "effectAttack": 9,
+        "skill": [
+            {
+                "id": 163,
+                "level": 1
+            }
+        ],
         "dropInfo": [
             90
         ]
@@ -7745,6 +7912,10 @@ exports.data = [
                 "level": 1
             },
             {
+                "id": 214,
+                "level": 1
+            },
+            {
                 "id": 27,
                 "level": 1
             },
@@ -7869,6 +8040,10 @@ exports.data = [
             },
             {
                 "id": 55,
+                "level": 1
+            },
+            {
+                "id": 333,
                 "level": 1
             }
         ]
@@ -8205,6 +8380,10 @@ exports.data = [
                 "level": 1
             },
             {
+                "id": 272,
+                "level": 1
+            },
+            {
                 "id": 27,
                 "level": 1
             },
@@ -8301,6 +8480,10 @@ exports.data = [
         "skill": [
             {
                 "id": 304,
+                "level": 1
+            },
+            {
+                "id": 305,
                 "level": 1
             },
             {
@@ -8735,6 +8918,10 @@ exports.data = [
                 "level": 1
             },
             {
+                "id": 305,
+                "level": 1
+            },
+            {
                 "id": 27,
                 "level": 1
             }
@@ -8745,8 +8932,8 @@ exports.data = [
         "className": "吸血鬼",
         "faction": "monster",
         "classType": 1,
-        "skeleton": "newboss5.json",
-        "atlas": "newboss5.atlas",
+        "skeleton": "vamp1.json",
+        "atlas": "vamp1.atlas",
         "property": {
             "health": 0.45,
             "attack": 0.3,
@@ -8776,7 +8963,7 @@ exports.data = [
         "effectAttack": 9,
         "skill": [
             {
-                "id": 163,
+                "id": 332,
                 "level": 1
             }
         ]
@@ -8810,10 +8997,10 @@ exports.data = [
             "reactivity": 1,
             "speed": 1
         },
-        "soundSpawn": "tulang.mp3",
-        "soundWound": "tulangwound.mp3",
-        "soundAttack": "tulangattack.mp3",
-        "soundDie": "tulangdie.mp3",
+        "soundSpawn": "shilaimu.mp3",
+        "soundWound": "shilaimuwound.mp3",
+        "soundAttack": "shilaimuattack.mp3",
+        "soundDie": "shilaimudie.mp3",
         "effectAttack": 9,
         "skill": [
             {
@@ -8827,8 +9014,8 @@ exports.data = [
         "className": "盾兵",
         "faction": "monster",
         "classType": 1,
-        "skeleton": "shield.json",
-        "atlas": "shield.atlas",
+        "skeleton": "shield1.json",
+        "atlas": "shield1.atlas",
         "property": {
             "health": 0.7,
             "attack": 0.25,
@@ -8901,6 +9088,10 @@ exports.data = [
                 "level": 1
             },
             {
+                "id": 305,
+                "level": 1
+            },
+            {
                 "id": 27,
                 "level": 1
             }
@@ -8912,8 +9103,8 @@ exports.data = [
         "className": "吸血鬼BOSS",
         "faction": "monster",
         "classType": 1,
-        "skeleton": "newboss5.json",
-        "atlas": "newboss5.atlas",
+        "skeleton": "vamp1.json",
+        "atlas": "vamp1.atlas",
         "property": {
             "health": 2.5,
             "attack": 0.5,
@@ -8943,7 +9134,7 @@ exports.data = [
         "effectAttack": 9,
         "skill": [
             {
-                "id": 163,
+                "id": 332,
                 "level": 1
             }
         ],
@@ -8984,6 +9175,10 @@ exports.data = [
         "skill": [
             {
                 "id": 304,
+                "level": 1
+            },
+            {
+                "id": 305,
                 "level": 1
             },
             {
@@ -9062,10 +9257,10 @@ exports.data = [
             "reactivity": 1,
             "speed": 1
         },
-        "soundSpawn": "tulang.mp3",
-        "soundWound": "tulangwound.mp3",
-        "soundAttack": "tulangattack.mp3",
-        "soundDie": "tulangdie.mp3",
+        "soundSpawn": "shilaimu.mp3",
+        "soundWound": "shilaimuwound.mp3",
+        "soundAttack": "shilaimuattack.mp3",
+        "soundDie": "shilaimudie.mp3",
         "effectAttack": 9,
         "skill": [
             {
@@ -9080,8 +9275,8 @@ exports.data = [
         "className": "盾兵BOSS",
         "faction": "monster",
         "classType": 1,
-        "skeleton": "newboss5.json",
-        "atlas": "newboss5.atlas",
+        "skeleton": "shield1.json",
+        "atlas": "shield1.atlas",
         "property": {
             "health": 3.5,
             "attack": 0.45,
@@ -9159,6 +9354,10 @@ exports.data = [
                 "level": 1
             },
             {
+                "id": 214,
+                "level": 1
+            },
+            {
                 "id": 27,
                 "level": 1
             },
@@ -9168,6 +9367,10 @@ exports.data = [
             },
             {
                 "id": 329,
+                "level": 1
+            },
+            {
+                "id": 334,
                 "level": 1
             }
         ]

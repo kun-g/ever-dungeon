@@ -52590,7 +52590,7 @@ exports.data = [
         "description": "能够强化白色普通进阶装备的宝珠",
         "stack": 99,
         "sellprice": 400,
-        "quality": 5,
+        "quality": 0,
         "synthesizeID": 73
     },
     {
@@ -52602,7 +52602,7 @@ exports.data = [
         "description": "能够强化绿色优质进阶装备的宝石",
         "stack": 99,
         "sellprice": 500,
-        "quality": 6,
+        "quality": 1,
         "synthesizeID": 69
     },
     {
@@ -52614,7 +52614,7 @@ exports.data = [
         "description": "能够强化蓝色稀有进阶装备的宝石",
         "stack": 99,
         "sellprice": 600,
-        "quality": 7,
+        "quality": 2,
         "synthesizeID": 70
     },
     {
@@ -52626,7 +52626,7 @@ exports.data = [
         "description": "能够强化紫色史诗进阶装备的宝晶",
         "stack": 99,
         "sellprice": 700,
-        "quality": 8,
+        "quality": 3,
         "synthesizeID": 71
     },
     {
@@ -52638,7 +52638,7 @@ exports.data = [
         "description": "能够强化橙色传奇进阶装备的宝晶",
         "stack": 99,
         "sellprice": 800,
-        "quality": 9,
+        "quality": 4,
         "synthesizeID": 72
     }
 ]
