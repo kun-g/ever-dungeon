@@ -460,7 +460,7 @@
       func: function(arg, player, handler, rpcID, socket) {
         var oldHero, ret, type;
         type = player.switchHeroType(arg.cid);
-        if (player.flags[type]) {
+        if (player.flags[type] || true) {
           player.flags[type] = false;
           oldHero = player.createHero();
           player.createHero({
@@ -1058,17 +1058,25 @@
     RPC_CommentGameInfo: {
       id: 37,
       func: function(arg, player, handler, rpcID, socket) {
-        var ret, _ref1, _ref2, _ref3, _ref4;
+        var mailContent, ret, _ref1, _ref2;
         if (arg.cmt != null) {
           if ((_ref1 = player.flags.cmt) != null ? _ref1.cmted : void 0) {
             player.flags.cmt.auto = arg.cmt.auto;
           } else {
             if (((_ref2 = player.flags.cmt) != null ? _ref2.cmted : void 0) === false && arg.cmt.cmted === true) {
-              if ((_ref3 = player.quests) != null) {
-                if ((_ref4 = _ref3['183']) != null) {
-                  _ref4[counters] = [1];
-                }
-              }
+              mailContent = {
+                type: MESSAGE_TYPE_SystemReward,
+                src: MESSAGE_REWARD_TYPE_SYSTEM,
+                prize: [
+                  {
+                    type: 2,
+                    count: 100
+                  }
+                ],
+                tit: "Bonus!",
+                txt: "Thank you for your comment!"
+              };
+              libs.db.deliverMessage(player.name, mailContent);
             }
             player.flags['cmt'] = arg.cmt;
           }

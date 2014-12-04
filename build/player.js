@@ -1,5 +1,5 @@
 (function() {
-  var Bag, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Player, PlayerEnvironment, Serializer, addMercenaryMember, async, createItem, createUnit, currentTime, dbLib, diffDate, genUtil, getMercenaryMember, getPlayerHero, getVip, helperLib, itemLib, moment, playerCSConfig, playerCommandStream, playerMessageFilter, registerConstructor, updateMercenaryMember, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6,
+  var Bag, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Player, PlayerEnvironment, Serializer, addMercenaryMember, async, createItem, createUnit, currentTime, dbLib, diffDate, genUtil, getMercenaryMember, getPlayerHero, getVip, helperLib, itemLib, moment, playerCSConfig, playerCommandStream, playerMessageFilter, registerConstructor, underscore, updateMercenaryMember, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -26,6 +26,8 @@
   _ref6 = require('./helper'), diffDate = _ref6.diffDate, currentTime = _ref6.currentTime, genUtil = _ref6.genUtil;
 
   helperLib = require('./helper');
+
+  underscore = require('./underscore');
 
   dbLib = require('./db');
 
@@ -690,39 +692,29 @@
     };
 
     Player.prototype.putOnEquipmentAfterSwitched = function(heroClass) {
-      var equipmentList, p, prize, ret, _i, _len, _ref7, _ref8, _results;
-      equipmentList = this.inventory.reduce(function(acc, item, index) {
-        var _ref7;
-        if ((item != null) && item.category === ITEM_EQUIPMENT && ((_ref7 = item.classLimit) != null ? _ref7.indexOf(heroClass) : void 0) !== -1) {
-          acc.push(index);
-        }
-        return acc;
-      }, []);
-      if (equipmentList.length === 0) {
-        prize = (_ref7 = queryTable(TABLE_ROLE, heroClass)) != null ? _ref7.initialEquipment : void 0;
-        _results = [];
-        for (_i = 0, _len = prize.length; _i < _len; _i++) {
-          p = prize[_i];
-          ret = this.claimPrize(p);
-          _results.push((_ref8 = ret.itm) != null ? _ref8.forEach(function(item) {
-            return this.useItem(item.sid);
-          }) : void 0);
-        }
-        return _results;
-      } else {
-        return this.equipment = equipmentList;
+      var p, prize, ret, _i, _len, _ref7, _results;
+      if (!underscore.isEmpty(this.heroBase[heroClass].equipment)) {
+        return;
       }
+      prize = (_ref7 = queryTable(TABLE_ROLE, heroClass)) != null ? _ref7.initialEquipment : void 0;
+      _results = [];
+      for (_i = 0, _len = prize.length; _i < _len; _i++) {
+        p = prize[_i];
+        _results.push(ret = this.claimPrize(p));
+      }
+      return _results;
     };
 
     Player.prototype.createHero = function(heroData, isSwitch) {
-      var bag, bf, e, equip, hero, i, _ref7;
+      var bag, bf, e, equip, hero, i, _ref7, _ref8;
       if (heroData != null) {
         if ((this.heroBase[heroData["class"]] != null) && heroData["class"] === this.hero["class"]) {
           return null;
         }
         if (isSwitch) {
           heroData.xp = this.hero.xp;
-          heroData.equipment = [];
+          heroData.equipment = ((_ref7 = this.heroBase[heroData["class"]]) != null ? _ref7.equipment : void 0) || {};
+          console.log(' =======newHero', this.equipment, '-----', heroData.equipment);
           this.heroBase[heroData["class"]] = heroData;
           this.switchHero(heroData["class"]);
           this.putOnEquipmentAfterSwitched(heroData["class"]);
@@ -736,9 +728,9 @@
       } else if (this.hero) {
         bag = this.inventory;
         equip = [];
-        _ref7 = this.equipment;
-        for (i in _ref7) {
-          e = _ref7[i];
+        _ref8 = this.equipment;
+        for (i in _ref8) {
+          e = _ref8[i];
           if (bag.get(e) != null) {
             equip.push({
               cid: bag.get(e).classId,
@@ -769,7 +761,7 @@
     };
 
     Player.prototype.switchHero = function(hClass) {
-      var k, v, _ref7, _ref8, _results;
+      var k, v, _ref7, _ref8;
       if (this.heroBase[hClass] == null) {
         return false;
       }
@@ -778,16 +770,19 @@
         _ref7 = this.hero;
         for (k in _ref7) {
           v = _ref7[k];
-          this.heroBase[this.hero["class"]][k] = JSON.parse(JSON.stringify(v));
+          if (k !== 'equipment') {
+            this.heroBase[this.hero["class"]][k] = JSON.parse(JSON.stringify(v));
+          }
         }
+        this.heroBase[this.hero["class"]].equipment = this.equipment;
+        console.log(typeof this.equipment, '1 ========');
       }
       _ref8 = this.heroBase[hClass];
-      _results = [];
       for (k in _ref8) {
         v = _ref8[k];
-        _results.push(this.hero[k] = JSON.parse(JSON.stringify(v)));
+        this.hero[k] = JSON.parse(JSON.stringify(v));
       }
-      return _results;
+      return console.log(typeof this.heroBase.equipment, '2 ========');
     };
 
     Player.prototype.addMoney = function(type, point) {
@@ -1300,10 +1295,8 @@
         switch (p.type) {
           case PRIZETYPE_ITEM:
             ret = this.aquireItem(p.value, p.count, allOrFail);
-            if (!((ret != null) && ret.length > 0)) {
-              if (allOrFail) {
-                return [];
-              }
+            if (!(ret && ret.length > 0)) {
+              return [];
             }
             break;
           case PRIZETYPE_GOLD:
@@ -1551,6 +1544,7 @@
       var equip, item, myClass, prize, prz, ret, tmp;
       item = this.getItemAt(slot);
       myClass = this.hero["class"];
+      console.log('before useItem', this.hero["class"], item.classLimit);
       if (item == null) {
         return {
           ret: RET_ItemNotExist
@@ -1621,6 +1615,7 @@
           }
           break;
         case ITEM_EQUIPMENT:
+          console.log('useItem eq');
           if ((item.rank != null) && this.createHero().level < item.rank) {
             return {
               ret: RET_RoleLevelNotMatch
