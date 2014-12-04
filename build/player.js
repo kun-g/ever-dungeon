@@ -714,9 +714,9 @@
           return null;
         }
         if (isSwitch) {
-          console.log(' =======newHero', this.equipment);
           heroData.xp = this.hero.xp;
           heroData.equipment = ((_ref7 = this.heroBase[heroData["class"]]) != null ? _ref7.equipment : void 0) || [];
+          console.log(' =======newHero', this.equipment, '-----', heroData.equipment);
           this.heroBase[heroData["class"]] = heroData;
           this.switchHero(heroData["class"]);
           this.putOnEquipmentAfterSwitched(heroData["class"]);
