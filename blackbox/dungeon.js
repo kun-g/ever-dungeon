@@ -2456,19 +2456,15 @@ libDungeon = {};
         } else {
           flag = HP_RESULT_TYPE_MISS;
         }
-        if (env.variable('ignoreAttack')) {
-          return [].concat(rangeEff);
-        } else {
-          return [
-            {
-              act: env.variable('src').ref,
-              id: ACT_ATTACK,
-              ref: env.variable('tar').ref,
-              res: flag,
-              rng: env.variable('isRange')
-            }
-          ].concat(rangeEff);
-        }
+        return [
+          {
+            act: env.variable('src').ref,
+            id: ACT_ATTACK,
+            ref: env.variable('tar').ref,
+            res: flag,
+            rng: env.variable('isRange')
+          }
+        ].concat(rangeEff);
       }
     },
     ShiftOrder: {
@@ -3103,7 +3099,7 @@ libDungeon = {};
     },
     Damage: {
       callback: function(env) {
-        var damageType, isRange, _ref5, _ref6, _ref7, _ref8, _ref9;
+        var damageType, isRange, _ref5, _ref6, _ref7;
         damageType = env.variable('damageType');
         isRange = env.variable('isRange');
         if (!((_ref5 = env.variable('tar')) != null ? _ref5.isAlive() : void 0)) {
@@ -3135,12 +3131,7 @@ libDungeon = {};
             damage: env.variable('damage')
           });
         }
-        if ((_ref6 = this.getPrevCommand('Attack')) != null) {
-          if ((_ref7 = _ref6.cmd) != null) {
-            _ref7.critical = env.variable('critical');
-          }
-        }
-        return (_ref8 = this.getPrevCommand('Attack')) != null ? (_ref9 = _ref8.cmd) != null ? _ref9.ignoreAttack = env.variable('ignoreAttack') : void 0 : void 0;
+        return (_ref6 = this.getPrevCommand('Attack')) != null ? (_ref7 = _ref6.cmd) != null ? _ref7.critical = env.variable('critical') : void 0 : void 0;
       },
       output: function(env) {
         var damage, delay, flag, ret;

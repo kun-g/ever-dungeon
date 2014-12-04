@@ -633,12 +633,11 @@ libSpell = {};
     };
 
     Wizard.prototype.doAction = function(thisSpell, actions, target, cmd) {
-      var a, adelay, aeffect, bakTarget, c, cfg, delay, effect, env, formular, formularResult, h, modifications, pos, property, spellID, src, t, val, variables, _aa, _ab, _ac, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len16, _len17, _len18, _len19, _len2, _len20, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _s, _t, _u, _v, _w, _x, _y, _z;
+      var a, c, cfg, delay, effect, env, formular, formularResult, h, modifications, pos, property, spellID, src, t, val, variables, _aa, _ab, _ac, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len16, _len17, _len18, _len19, _len2, _len20, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _s, _t, _u, _v, _w, _x, _y, _z;
       if (actions == null) {
         return false;
       }
       env = cmd != null ? cmd.getEnvironment() : void 0;
-      bakTarget = target;
       for (_i = 0, _len = actions.length; _i < _len; _i++) {
         a = actions[_i];
         variables = {};
@@ -660,21 +659,12 @@ libSpell = {};
         if (a.delay) {
           delay += typeof a.delay === 'number' ? a.delay : env.rand() * a.delay.base + env.rand() * a.delay.range;
         }
-        target = bakTarget;
-        if (a.target) {
-          target = this.selectTarget({
-            targetSelection: a.target
-          }, cmd);
-        }
         switch (a.type) {
           case 'modifyVar':
             env.variable(a.x, formularResult);
             break;
           case 'ignoreHurt':
             env.variable('ignoreHurt', true);
-            break;
-          case 'ignoreAttack':
-            env.variable('ignoreAttack', true);
             break;
           case 'replaceTar':
             env.variable('tar', this);
@@ -721,8 +711,12 @@ libSpell = {};
             break;
           case 'rangeAttack':
           case 'attack':
-            aeffect = getSpellProperty(a, 'effect', thisSpell.level);
-            adelay = getSpellProperty(a, 'delay', thisSpell.level);
+            if (level.effect != null) {
+              a.effect = level.effect;
+            }
+            if (level.delay != null) {
+              a.delay = level.delay;
+            }
             for (_l = 0, _len3 = target.length; _l < _len3; _l++) {
               t = target[_l];
               if (typeof cmd.routine === "function") {
@@ -732,7 +726,7 @@ libSpell = {};
                   tar: t,
                   isRange: true,
                   hurtDelay: a.hurtDelay,
-                  eff: aeffect,
+                  eff: a.effect,
                   effDelay: a.effDelay
                 });
               }
