@@ -6022,14 +6022,19 @@ exports.data = [
     "skillId": 103,
     "config": {
       "installAction": [
+         {
+           "type": "playEffect",
+           "effect": 73,
+           "act": "self",
+           "delay": 0.6
+         },
         {
           "type": "setProperty",
           "modifications": {
             "accuracy": {
               "src": {
-                "accuracy": 1
-              },
-              "c": 40
+                "accuracy": -0.5
+              }
             }
           }
         }
@@ -10091,7 +10096,7 @@ exports.data = [
     "label": "溅射",
     "config": {
       "basic": {
-        "targetEffect": 7,
+        "targetEffect": 8,
         "spellDelay": 0.3,
         "targetDelay": 0.3
       },
@@ -10099,6 +10104,10 @@ exports.data = [
         {
           "type": "event",
           "event": "onPhysicalDamage"
+        },
+        {
+          "type": "chance",
+          "chance": 0.3
         }
       ],
       "targetSelection": {
@@ -10867,10 +10876,9 @@ exports.data = [
     "config": {
       "basic": {
         "spellAction": 4,
-        "spellEffect": 9,
-        "targetEffect": 1,
-        "spellDelay": 0,
-        "targetDelay": 0
+        "targetEffect": 7,
+        "spellDelay": 0.3,
+        "targetDelay": 0.3
       },
       "targetSelection": {
         "pool": "source",
@@ -10910,6 +10918,15 @@ exports.data = [
       ],
       "action": [
         {
+          "type": "playEffect",
+          "effect": 4,
+          "act": "self"
+        },
+        {
+          "type": "delay",
+          "delay": 0.4
+        },
+        {
           "type": "damage",
           "damageType": "Spell",
           "isRange": true,
@@ -10931,17 +10948,6 @@ exports.data = [
               }
             }
           ]
-        },
-        {
-          "type": "playEffect",
-          "effect": 44,
-          "act": "self"
-        },
-        {
-          "type": "playEffect",
-          "effect": 0,
-          "act": "target",
-          "delay": 0.6
         },
         {
           "type": "setTargetMutex",
@@ -14683,7 +14689,7 @@ exports.data = [
       "installAction": [
         {
           "type": "playEffect",
-          "effect": 17,
+          "effect": 73,
           "act": "self",
           "delay": 0.6
         },
@@ -14972,7 +14978,7 @@ exports.data = [
       "installAction": [
         {
           "type": "playEffect",
-          "effect": 17,
+          "effect": 73,
           "act": "self",
           "delay": 0.6
         },
@@ -15011,10 +15017,9 @@ exports.data = [
     "config": {
       "basic": {
         "spellAction": 4,
-        "spellEffect": 9,
-        "targetEffect": 1,
-        "spellDelay": 0,
-        "targetDelay": 0
+        "targetEffect": 7,
+        "spellDelay": 0.3,
+        "targetDelay": 0.3
       },
       "targetSelection": {
         "pool": "source",
@@ -15053,6 +15058,15 @@ exports.data = [
       ],
       "action": [
         {
+          "type": "playEffect",
+          "effect": 4,
+          "act": "self"
+        },
+        {
+          "type": "delay",
+          "delay": 0.4
+        },
+        {
           "type": "damage",
           "damageType": "Spell",
           "isRange": true,
@@ -15069,17 +15083,6 @@ exports.data = [
               }
             }
           ]
-        },
-        {
-          "type": "playEffect",
-          "effect": 44,
-          "act": "self"
-        },
-        {
-          "type": "playEffect",
-          "effect": 0,
-          "act": "target",
-          "delay": 0.6
         },
         {
           "type": "setTargetMutex",
@@ -17835,7 +17838,7 @@ exports.data = [
                 }
             ],
             "targetSelection": {
-                "pool": "self",
+                "pool": "target",
                 "filter": [
                     {
                         "type": "alive"
@@ -17860,6 +17863,17 @@ exports.data = [
                         "environment": {
                             "damage": 1
                         }
+                    },
+                    "target": {
+                        "pool": "self",
+                        "filter": [
+                            {
+                                "type": "alive"
+                            },
+                            {
+                                "type": "visible"
+                            }
+                        ]
                     }
                 }
             ]
@@ -17885,14 +17899,6 @@ exports.data = [
                 {
                     "type": "dialog",
                     "dialogId": 71
-                },
-                {
-                    "type": "delay",
-                    "delay": 0.3
-                },
-                {
-                    "type": "endDungeon",
-                    "result": 2
                 }
             ]
         }

@@ -1313,7 +1313,7 @@ var data = [
 				"dungeon": 128,
                 "cond":
                 { "and": [
-                    { "==": [ { "type": "getProperty", "key": "stage.97.state"}, 2 ] }
+                    { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
                 ]
                 }
 
@@ -1326,7 +1326,7 @@ var data = [
 				"dungeon": 129,
                 "cond":
                 { "and": [
-                    { "==": [ { "type": "getProperty", "key": "stage.97.state"}, 2 ] }
+                    { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
                 ]
                 }
 
@@ -1339,7 +1339,7 @@ var data = [
 				"dungeon": 130,
                 "cond":
                 { "and": [
-                    { "==": [ { "type": "getProperty", "key": "stage.97.state"}, 2 ] }
+                    { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
                 ]
                 }
 
@@ -1352,7 +1352,7 @@ var data = [
 				"dungeon": 131,
                 "cond":
                 { "and": [
-                    { "==": [ { "type": "getProperty", "key": "stage.97.state"}, 2 ] }
+                    { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
                 ]
                 }
 
@@ -1365,7 +1365,7 @@ var data = [
 				"dungeon": 132,
                 "cond":
                 { "and": [
-                    { "==": [ { "type": "getProperty", "key": "stage.97.state"}, 2 ] }
+                    { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
                 ]
                 }
 
@@ -1378,7 +1378,7 @@ var data = [
                 "dungeon":133,
                 "cond":
                 { "and": [
-                    { "==": [ { "type": "getProperty", "key": "stage.97.state"}, 2 ] }
+                    { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
                 ]
                 }
 
@@ -1391,7 +1391,7 @@ var data = [
                 "dungeon": 134,
                 "cond":
                 { "and": [
-                    { "==": [ { "type": "getProperty", "key": "stage.97.state"}, 2 ] }
+                    { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
                 ]
                 }
 
@@ -1403,7 +1403,7 @@ var data = [
                 "isInfinite":true,
                 "cond":
                 { "and": [
-                    { "==": [ { "type": "getProperty", "key": "stage.70.state"}, 2 ] }
+                    { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
                 ]
                 }
 
@@ -1427,7 +1427,7 @@ var data = [
 				"dungeon": 136,
                 "cond":
                 { "and": [
-                    { "==": [ { "type": "getProperty", "key": "stage.97.state"}, 2 ] }
+                    { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
                 ]
                 }
 
@@ -1440,7 +1440,7 @@ var data = [
 				"dungeon": 137,
                 "cond":
                 { "and": [
-                    { "==": [ { "type": "getProperty", "key": "stage.97.state"}, 2 ] }
+                    { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
                 ]
                 }
 
@@ -1453,7 +1453,7 @@ var data = [
 				"dungeon": 138,
                 "cond":
                 { "and": [
-                    { "==": [ { "type": "getProperty", "key": "stage.97.state"}, 2 ] }
+                    { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
                 ]
                 }
 
@@ -1466,7 +1466,7 @@ var data = [
 				"dungeon": 139,
                 "cond":
                 { "and": [
-                    { "==": [ { "type": "getProperty", "key": "stage.97.state"}, 2 ] }
+                    { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
                 ]
                 }
 
@@ -1479,7 +1479,7 @@ var data = [
 			    "dungeon": 140,
                 "cond":
                 { "and": [
-                    { "==": [ { "type": "getProperty", "key": "stage.97.state"}, 2 ] }
+                    { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
                 ]
                 }
 
@@ -1492,7 +1492,7 @@ var data = [
                 "dungeon": 141,
                 "cond":
                 { "and": [
-                    { "==": [ { "type": "getProperty", "key": "stage.97.state"}, 2 ] }
+                    { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
                 ]
                 }
 
@@ -1505,7 +1505,7 @@ var data = [
                 "dungeon": 142,
                 "cond":
                 { "and": [
-                    { "==": [ { "type": "getProperty", "key": "stage.97.state"}, 2 ] }
+                    { "==": [ { "type": "getProperty", "key": "stage.1000.state"}, 2 ] }
                 ]
                 }
 

@@ -284,7 +284,8 @@ exports.data = [
     },
     {
         "effectId": 68,
-        "file": "effect-paoxiao.ccbi"
+        "skeleton": "effect-paoxiao.json",
+        "atlas": "effect-paoxiao.atlas"
     },
     {
         "effectId": 69,
@@ -304,8 +305,8 @@ exports.data = [
     },
     {
         "effectId": 73,
-        "skeleton": "effect-xx2.json",
-        "atlas": "effect-xx2.atlas"
+        "skeleton": "effect-mzxj.json",
+        "atlas": "effect-mzxj.atlas"
     },
     {
         "effectId": 74,
