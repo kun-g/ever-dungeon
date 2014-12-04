@@ -1545,6 +1545,7 @@
       var equip, item, myClass, prize, prz, ret, tmp;
       item = this.getItemAt(slot);
       myClass = this.hero["class"];
+      console.log('before useItem', this.hero["class"], item.classLimit);
       if (item == null) {
         return {
           ret: RET_ItemNotExist
@@ -1615,6 +1616,7 @@
           }
           break;
         case ITEM_EQUIPMENT:
+          console.log('useItem eq');
           if ((item.rank != null) && this.createHero().level < item.rank) {
             return {
               ret: RET_RoleLevelNotMatch
