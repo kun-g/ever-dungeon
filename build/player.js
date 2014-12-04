@@ -775,7 +775,7 @@
           }
         }
         this.heroBase[this.hero["class"]].equipment = this.equipment;
-        console.log(typeof this.equipment, '1 ========');
+        console.log(this.equipment, '1 ========');
       }
       _ref8 = this.heroBase[hClass];
       for (k in _ref8) {
