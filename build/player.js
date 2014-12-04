@@ -717,6 +717,7 @@
           return null;
         }
         if (isSwitch) {
+          this.heroBase[this.hero["class"]].equipment = this.equipment;
           heroData.xp = this.hero.xp;
           heroData.equipment = [];
           this.heroBase[heroData["class"]] = heroData;
