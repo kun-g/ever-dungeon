@@ -691,8 +691,7 @@
 
     Player.prototype.putOnEquipmentAfterSwitched = function(heroClass) {
       var p, prize, ret, _i, _len, _ref7, _ref8, _results;
-      console.log(this.heroBase[heroClass].equipment, '-------------');
-      if (this.heroBase[heroClass].equipment.length > 0) {
+      if (this.heroBase[heroClass].equipment.keys() > 0) {
         return;
       }
       prize = (_ref7 = queryTable(TABLE_ROLE, heroClass)) != null ? _ref7.initialEquipment : void 0;
@@ -715,7 +714,7 @@
         }
         if (isSwitch) {
           heroData.xp = this.hero.xp;
-          heroData.equipment = ((_ref7 = this.heroBase[heroData["class"]]) != null ? _ref7.equipment : void 0) || [];
+          heroData.equipment = ((_ref7 = this.heroBase[heroData["class"]]) != null ? _ref7.equipment : void 0) || {};
           console.log(' =======newHero', this.equipment, '-----', heroData.equipment);
           this.heroBase[heroData["class"]] = heroData;
           this.switchHero(heroData["class"]);
@@ -763,7 +762,7 @@
     };
 
     Player.prototype.switchHero = function(hClass) {
-      var k, v, _ref7, _ref8, _results;
+      var k, v, _ref7, _ref8;
       if (this.heroBase[hClass] == null) {
         return false;
       }
@@ -777,14 +776,14 @@
           }
         }
         this.heroBase[this.hero["class"]].equipment = this.equipment;
+        console.log(typeof this.equipment, '1 ========');
       }
       _ref8 = this.heroBase[hClass];
-      _results = [];
       for (k in _ref8) {
         v = _ref8[k];
-        _results.push(this.hero[k] = JSON.parse(JSON.stringify(v)));
+        this.hero[k] = JSON.parse(JSON.stringify(v));
       }
-      return _results;
+      return console.log(typeof this.heroBase.equipment, '2 ========');
     };
 
     Player.prototype.addMoney = function(type, point) {
