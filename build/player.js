@@ -690,28 +690,23 @@
     };
 
     Player.prototype.putOnEquipmentAfterSwitched = function(heroClass) {
-      var equipmentList, p, prize, ret, _i, _len, _ref7, _ref8, _results;
-      equipmentList = this.inventory.reduce(function(acc, item, index) {
-        var _ref7;
-        if ((item != null) && item.category === ITEM_EQUIPMENT && ((_ref7 = item.classLimit) != null ? _ref7.indexOf(heroClass) : void 0) !== -1) {
-          acc.push(index);
-        }
-        return acc;
-      }, []);
-      if (equipmentList.length === 0) {
-        prize = (_ref7 = queryTable(TABLE_ROLE, heroClass)) != null ? _ref7.initialEquipment : void 0;
-        _results = [];
-        for (_i = 0, _len = prize.length; _i < _len; _i++) {
-          p = prize[_i];
-          ret = this.claimPrize(p);
-          _results.push((_ref8 = ret.itm) != null ? _ref8.forEach(function(item) {
-            return this.useItem(item.sid);
-          }) : void 0);
-        }
-        return _results;
-      } else {
-        return this.equipment = equipmentList;
+      var equipmentList, originEquip, p, prize, ret, _i, _len, _ref7, _ref8, _ref9;
+      originEquip = (_ref7 = this.heroBase[heroClass]) != null ? _ref7.equipment : void 0;
+      if ((originEquip != null ? originEquip.length : void 0) > 0) {
+        return originEquip;
       }
+      equipmentList = [];
+      prize = (_ref8 = queryTable(TABLE_ROLE, heroClass)) != null ? _ref8.initialEquipment : void 0;
+      for (_i = 0, _len = prize.length; _i < _len; _i++) {
+        p = prize[_i];
+        ret = this.claimPrize(p);
+        if ((_ref9 = ret.itm) != null) {
+          _ref9.forEach(function(item) {
+            return equipmentList.push(item.sid);
+          });
+        }
+      }
+      return equipmentList;
     };
 
     Player.prototype.createHero = function(heroData, isSwitch) {
@@ -722,10 +717,9 @@
         }
         if (isSwitch) {
           heroData.xp = this.hero.xp;
-          heroData.equipment = [];
+          heroData.equipment = this.putOnEquipmentAfterSwitched(heroData["class"]);
           this.heroBase[heroData["class"]] = heroData;
           this.switchHero(heroData["class"]);
-          this.putOnEquipmentAfterSwitched(heroData["class"]);
         } else {
           heroData.xp = 0;
           heroData.equipment = [];
