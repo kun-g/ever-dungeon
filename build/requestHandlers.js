@@ -460,7 +460,7 @@
       func: function(arg, player, handler, rpcID, socket) {
         var oldHero, ret, type;
         type = player.switchHeroType(arg.cid);
-        if (player.flags[type] || true) {
+        if (player.flags[type]) {
           player.flags[type] = false;
           oldHero = player.createHero();
           player.createHero({
@@ -699,7 +699,7 @@
                   return handler([
                     {
                       REQ: rpcID,
-                      RET: RET_Unknown
+                      RET: RET_InvalidPaymentInfo
                     }
                   ]);
                 }
@@ -1046,7 +1046,7 @@
             return handler([
               {
                 REQ: rpcID,
-                RET: RET_Unknown
+                RET: RET_GetLeaderboardInfoFailed
               }
             ]);
           }

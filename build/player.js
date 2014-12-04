@@ -413,7 +413,7 @@
             today: currentTime()
           });
           return {
-            ret: RET_Unknown
+            ret: RET_RewardAlreadyReceived
           };
         }
       }
@@ -1132,8 +1132,8 @@
                 dungeon: _this.dungeon
               });
               _this.releaseDungeon();
-              err = new Error(RET_Unknown);
-              ret = RET_Unknown;
+              err = new Error(RET_DungeonNotExist);
+              ret = RET_DungeonNotExist;
             }
           }
           if (handler != null) {
@@ -1431,12 +1431,18 @@
       var obj, prize, quest, ret, _i, _len, _ref7;
       quest = queryTable(TABLE_QUEST, qid, this.abIndex);
       ret = [];
-      if (!((quest != null) && (this.quests[qid] != null) && !this.quests[qid].complete)) {
-        return RET_Unknown;
+      if (quest == null) {
+        return RET_QuestNotExists;
+      }
+      if (this.quests[qid] == null) {
+        return RET_QuestNotAccepted;
+      }
+      if (this.quests[qid].complete) {
+        return RET_QuestCompleted;
       }
       this.checkQuestStatues(qid);
       if (!this.isQuestAchieved(qid)) {
-        return RET_Unknown;
+        return RET_QuestNotCompleted;
       }
       prize = this.claimPrize(quest.prize.filter((function(_this) {
         return function(e) {
@@ -1660,7 +1666,7 @@
         id: item.id
       });
       return {
-        ret: RET_Unknown
+        ret: RET_UseItemFailed
       };
     };
 
@@ -1707,7 +1713,7 @@
       cfg = queryTable(TABLE_ITEM, tarID);
       if (cfg == null) {
         return {
-          ret: RET_Unknown
+          ret: RET_TargetNotExists
         };
       }
       ret = this.claimCost(cfg.synthesizeID, count);
@@ -1735,7 +1741,11 @@
           ret: RET_EquipCantUpgrade
         };
       }
-      upConfig = queryTable(TABLE_UPGRADE, item.rank, this.abIndex);
+      if (item.getConfig().upgradeId != null) {
+        upConfig = queryTable(TABLE_UPGRADE, item.getConfig().upgradeId, this.abIndex);
+      } else {
+        upConfig = queryTable(TABLE_UPGRADE, item.rank, this.abIndex);
+      }
       if (!upConfig) {
         return {
           ret: RET_EquipCantUpgrade
@@ -1864,7 +1874,7 @@
       }
       if (recipe.forgeTarget == null) {
         return {
-          ret: RET_Unknown
+          ret: RET_TargetNotExists
         };
       }
       newItem = new Item(recipe.forgeTarget);
@@ -1921,7 +1931,7 @@
       ret = this.claimCost(enhance.costList[level]);
       if (ret == null) {
         return {
-          ret: RET_Unknown
+          ret: RET_ClaimCostFailed
         };
       }
       equip.enhancement[0].level = level;
@@ -1972,13 +1982,13 @@
       var count, item, ret;
       if (this.isEquiped(slot)) {
         return {
-          ret: RET_Unknown
+          ret: RET_EquipedItemCannotBeSold
         };
       }
       item = this.getItemAt(slot);
       if (item == null) {
         return {
-          ret: RET_Unknown
+          ret: RET_ItemNotExist
         };
       }
       count = item.count;
@@ -2009,7 +2019,7 @@
         };
       } else {
         return {
-          ret: RET_Unknown
+          ret: RET_ItemSoldFailed
         };
       }
     };
@@ -2361,7 +2371,7 @@
         return false;
       }
       if (this.contactBook.book.indexOf(name) === -1) {
-        return handler(RET_Unknown);
+        return handler(RET_FriendNotExists);
       }
       myIndex = this.mercenary.reduce(function(r, e, index) {
         if (e.name === name) {
