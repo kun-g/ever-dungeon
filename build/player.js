@@ -691,6 +691,7 @@
 
     Player.prototype.putOnEquipmentAfterSwitched = function(heroClass) {
       var p, prize, ret, _i, _len, _ref7, _ref8, _results;
+      console.log(this.heroBase[heroClass].equipment, '-------------');
       if (this.heroBase[heroClass].equipment.length > 0) {
         return;
       }
