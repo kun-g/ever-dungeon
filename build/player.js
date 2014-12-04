@@ -702,7 +702,8 @@
         ret = this.claimPrize(p);
         if ((_ref9 = ret.itm) != null) {
           _ref9.forEach(function(item) {
-            return equipmentList.push(item.sid);
+            equipmentList.push(item.sid);
+            return this.useItem(item.sid);
           });
         }
       }
