@@ -690,28 +690,24 @@
     };
 
     Player.prototype.putOnEquipmentAfterSwitched = function(heroClass) {
-      var equipmentList, originEquip, p, prize, ret, _i, _len, _ref7, _ref8, _ref9;
-      originEquip = (_ref7 = this.heroBase[heroClass]) != null ? _ref7.equipment : void 0;
-      if ((originEquip != null ? originEquip.length : void 0) > 0) {
+      var p, prize, ret, _i, _len, _ref7, _ref8, _results;
+      if (this.heroBase[heroClass].equipment.length > 0) {
         return;
       }
-      equipmentList = [];
-      prize = (_ref8 = queryTable(TABLE_ROLE, heroClass)) != null ? _ref8.initialEquipment : void 0;
+      prize = (_ref7 = queryTable(TABLE_ROLE, heroClass)) != null ? _ref7.initialEquipment : void 0;
+      _results = [];
       for (_i = 0, _len = prize.length; _i < _len; _i++) {
         p = prize[_i];
         ret = this.claimPrize(p);
-        if ((_ref9 = ret.itm) != null) {
-          _ref9.forEach(function(item) {
-            equipmentList.push(item.sid);
-            return this.useItem(item.sid);
-          });
-        }
+        _results.push((_ref8 = ret.itm) != null ? _ref8.forEach(function(item) {
+          return this.useItem(item.sid);
+        }) : void 0);
       }
-      return equipmentList;
+      return _results;
     };
 
     Player.prototype.createHero = function(heroData, isSwitch) {
-      var bag, bf, e, equip, hero, i, _ref7;
+      var bag, bf, e, equip, hero, i, _ref7, _ref8;
       if (heroData != null) {
         if ((this.heroBase[heroData["class"]] != null) && heroData["class"] === this.hero["class"]) {
           return null;
@@ -720,7 +716,7 @@
           this.heroBase[this.hero["class"]].equipment = this.equipment;
           console.log(' =======newHero', this.equipment);
           heroData.xp = this.hero.xp;
-          heroData.equipment = [];
+          heroData.equipment = ((_ref7 = this.heroBase[this.hero["class"]]) != null ? _ref7.equipment : void 0) || [];
           this.heroBase[heroData["class"]] = heroData;
           this.switchHero(heroData["class"]);
           this.putOnEquipmentAfterSwitched(heroData["class"]);
@@ -734,9 +730,9 @@
       } else if (this.hero) {
         bag = this.inventory;
         equip = [];
-        _ref7 = this.equipment;
-        for (i in _ref7) {
-          e = _ref7[i];
+        _ref8 = this.equipment;
+        for (i in _ref8) {
+          e = _ref8[i];
           if (bag.get(e) != null) {
             equip.push({
               cid: bag.get(e).classId,
