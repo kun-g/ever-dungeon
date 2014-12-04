@@ -692,20 +692,15 @@
     };
 
     Player.prototype.putOnEquipmentAfterSwitched = function(heroClass) {
-      var fuck, p, prize, ret, _i, _len, _ref7, _ref8, _results;
+      var p, prize, ret, _i, _len, _ref7, _results;
       if (!underscore.isEmpty(this.heroBase[heroClass].equipment)) {
         return;
       }
-      fuck = this.heroBase[heroClass].equipment;
-      console.log('go ------', fuck, underscore.keys(fuck), fuck === {});
       prize = (_ref7 = queryTable(TABLE_ROLE, heroClass)) != null ? _ref7.initialEquipment : void 0;
       _results = [];
       for (_i = 0, _len = prize.length; _i < _len; _i++) {
         p = prize[_i];
-        ret = this.claimPrize(p);
-        _results.push((_ref8 = ret.itm) != null ? _ref8.forEach(function(item) {
-          return this.useItem(item.sid);
-        }) : void 0);
+        _results.push(ret = this.claimPrize(p));
       }
       return _results;
     };
