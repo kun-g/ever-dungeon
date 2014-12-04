@@ -718,6 +718,7 @@
         }
         if (isSwitch) {
           this.heroBase[this.hero["class"]].equipment = this.equipment;
+          console.log(' =======newHero', this.equipment);
           heroData.xp = this.hero.xp;
           heroData.equipment = [];
           this.heroBase[heroData["class"]] = heroData;
