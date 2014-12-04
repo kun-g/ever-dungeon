@@ -714,7 +714,6 @@
           return null;
         }
         if (isSwitch) {
-          this.heroBase[this.hero["class"]].equipment = this.equipment;
           console.log(' =======newHero', this.equipment);
           heroData.xp = this.hero.xp;
           heroData.equipment = ((_ref7 = this.heroBase[heroData["class"]]) != null ? _ref7.equipment : void 0) || [];
@@ -773,8 +772,11 @@
         _ref7 = this.hero;
         for (k in _ref7) {
           v = _ref7[k];
-          this.heroBase[this.hero["class"]][k] = JSON.parse(JSON.stringify(v));
+          if (k !== 'equipment') {
+            this.heroBase[this.hero["class"]][k] = JSON.parse(JSON.stringify(v));
+          }
         }
+        this.heroBase[this.hero["class"]].equipment = this.equipment;
       }
       _ref8 = this.heroBase[hClass];
       _results = [];
