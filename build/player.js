@@ -693,7 +693,7 @@
 
     Player.prototype.putOnEquipmentAfterSwitched = function(heroClass) {
       var fuck, p, prize, ret, _i, _len, _ref7, _ref8, _results;
-      if (underscore.keys(this.heroBase[heroClass].equipment) > 0) {
+      if (!underscore.isEmpty(this.heroBase[heroClass].equipment)) {
         return;
       }
       fuck = this.heroBase[heroClass].equipment;
