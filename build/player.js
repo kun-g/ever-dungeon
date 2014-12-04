@@ -693,7 +693,7 @@
       var equipmentList, originEquip, p, prize, ret, _i, _len, _ref7, _ref8, _ref9;
       originEquip = (_ref7 = this.heroBase[heroClass]) != null ? _ref7.equipment : void 0;
       if ((originEquip != null ? originEquip.length : void 0) > 0) {
-        return originEquip;
+        return;
       }
       equipmentList = [];
       prize = (_ref8 = queryTable(TABLE_ROLE, heroClass)) != null ? _ref8.initialEquipment : void 0;
@@ -718,9 +718,10 @@
         }
         if (isSwitch) {
           heroData.xp = this.hero.xp;
-          heroData.equipment = this.putOnEquipmentAfterSwitched(heroData["class"]);
+          heroData.equipment = [];
           this.heroBase[heroData["class"]] = heroData;
           this.switchHero(heroData["class"]);
+          this.putOnEquipmentAfterSwitched(heroData["class"]);
         } else {
           heroData.xp = 0;
           heroData.equipment = [];
