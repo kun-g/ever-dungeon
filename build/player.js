@@ -2962,12 +2962,15 @@
           if (e.xp != null) {
             ret.xp = e.xp;
           }
+          console.log('syncBag', _this.equipment);
           _ref7 = _this.equipment;
           for (i in _ref7) {
             equip = _ref7[i];
-            if (equip === index) {
-              ret.sta = 1;
+            if (!(equip === index)) {
+              continue;
             }
+            console.log('put on', index);
+            ret.sta = 1;
           }
           if (e.enhancement) {
             ret.eh = e.enhancement.map(function(e) {
