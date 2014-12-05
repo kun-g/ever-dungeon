@@ -783,6 +783,7 @@
         v = _ref8[k];
         this.hero[k] = JSON.parse(JSON.stringify(v));
       }
+      this.equipment = JSON.parse(JSON.stringify(heroBase[hClass].equipment));
       return console.log(this.heroBase[hClass].equipment, '2 ========');
     };
 
