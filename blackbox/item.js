@@ -18,10 +18,6 @@ libItem = {};
           id: data
         };
       }
-      if (data.id === 907) {
-        debug("The 907 is comming");
-        showMeTheStack();
-      }
       cfg = {
         slot: [],
         count: 1,
