@@ -33,7 +33,7 @@
 
   async = require('async');
 
-  G_PRIZE_MODIFIER = 1000;
+  G_PRIZE_MODIFIER = 1;
 
   Player = (function(_super) {
     __extends(Player, _super);
