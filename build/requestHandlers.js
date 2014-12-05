@@ -429,36 +429,9 @@
           }, function(account, cb) {
             return dbLib.createNewPlayer(account, gServerName, name, cb);
           }, function(account, cb) {
-            var k, p, player, prize;
+            var player;
             player = new Player();
-            player.setName(name);
-            player.accountID = account;
-            player.initialize();
-            player.createHero({
-              name: name,
-              "class": arg.cid,
-              gender: arg.gen,
-              hairStyle: arg.hst,
-              hairColor: arg.hcl
-            });
-            prize = queryTable(TABLE_CONFIG, 'InitialEquipment');
-            for (k in prize) {
-              p = prize[k];
-              player.claimPrize(p.filter((function(_this) {
-                return function(e) {
-                  return isClassMatch(arg.cid, e.classLimit);
-                };
-              })(this)));
-            }
-            logUser({
-              name: name,
-              action: 'register',
-              "class": arg.cid,
-              gender: arg.gen,
-              hairStyle: arg.hst,
-              hairColor: arg.hcl
-            });
-            return player.saveDB(cb);
+            return player.createPlayer(arg, account, cb);
           }
         ], function(err, result) {
           if (err) {
@@ -480,6 +453,42 @@
         'gen': 'number',
         'hst': 'number',
         'hcl': 'number'
+      }
+    },
+    RPC_SwitchHero: {
+      id: 106,
+      func: function(arg, player, handler, rpcID, socket) {
+        var oldHero, ret, type;
+        type = player.switchHeroType(arg.cid);
+        if (player.flags[type]) {
+          player.flags[type] = false;
+          oldHero = player.createHero();
+          player.createHero({
+            name: oldHero.name,
+            "class": arg.cid,
+            gender: oldHero.gender,
+            hairStyle: oldHero.hairStyle,
+            hairColor: oldHero.hairColor
+          }, true);
+          ret = [
+            {
+              REQ: rpcID,
+              RET: RET_OK
+            }
+          ];
+          ret.concat(player.syncFlags(true));
+        } else {
+          ret = [
+            {
+              REQ: rpcID,
+              RET: RET_NotEnoughItem
+            }
+          ];
+        }
+        return handler(ret);
+      },
+      args: {
+        'cid': 'number'
       }
     },
     RPC_ValidateName: {
@@ -690,7 +699,7 @@
                   return handler([
                     {
                       REQ: rpcID,
-                      RET: RET_Unknown
+                      RET: RET_InvalidPaymentInfo
                     }
                   ]);
                 }
@@ -1037,7 +1046,7 @@
             return handler([
               {
                 REQ: rpcID,
-                RET: RET_Unknown
+                RET: RET_GetLeaderboardInfoFailed
               }
             ]);
           }
@@ -1049,25 +1058,17 @@
     RPC_CommentGameInfo: {
       id: 37,
       func: function(arg, player, handler, rpcID, socket) {
-        var mailContent, ret, _ref1, _ref2;
+        var ret, _ref1, _ref2, _ref3, _ref4;
         if (arg.cmt != null) {
           if ((_ref1 = player.flags.cmt) != null ? _ref1.cmted : void 0) {
             player.flags.cmt.auto = arg.cmt.auto;
           } else {
             if (((_ref2 = player.flags.cmt) != null ? _ref2.cmted : void 0) === false && arg.cmt.cmted === true) {
-              mailContent = {
-                type: MESSAGE_TYPE_SystemReward,
-                src: MESSAGE_REWARD_TYPE_SYSTEM,
-                prize: [
-                  {
-                    type: 2,
-                    count: 100
-                  }
-                ],
-                tit: "Bonus!",
-                txt: "Thank you for your comment!"
-              };
-              libs.db.deliverMessage(player.name, mailContent);
+              if ((_ref3 = player.quests) != null) {
+                if ((_ref4 = _ref3['183']) != null) {
+                  _ref4['counters'] = [1];
+                }
+              }
             }
             player.flags['cmt'] = arg.cmt;
           }

@@ -5646,5 +5646,642 @@ exports.data = [
                 }
             ]
         }
+    ],
+    [ //149
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 10,
+                    "type": 5,
+                    "func": "setFlag",
+                    "flag": "horizonChange",
+                    "value": true
+                }
+            ]
+        }
+    ],
+    [ //150
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 10,
+                    "type": 5,
+                    "func": "setFlag",
+                    "flag": "verticalChange",
+                    "value": true
+                }
+            ]
+        }
+    ],
+    [ //151
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 1,
+                    "type": 1,
+                    "count": 1400
+                }
+            ]
+        },
+        {
+            "rate": 0.4,
+            "prize": [
+                {
+                    "weight": 2,
+                    "type": 0,
+                    "value": 837,
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "rate": 0.1,
+            "prize": [
+                {
+                    "weight": 2,
+                    "type": 0,
+                    "value": 849,
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "rate": 0.4,
+            "prize": [
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 1
+                },
+                {
+                    "weight": 3,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 3
+                },
+                {
+                    "weight": 1,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 5
+                }
+            ]
+        }
+    ],
+    [ //152
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 1,
+                    "type": 1,
+                    "count": 1400
+                }
+            ]
+        },
+        {
+            "rate": 0.4,
+            "prize": [
+                {
+                    "weight": 2,
+                    "type": 0,
+                    "value": 838,
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "rate": 0.1,
+            "prize": [
+                {
+                    "weight": 2,
+                    "type": 0,
+                    "value": 849,
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "rate": 0.4,
+            "prize": [
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 1
+                },
+                {
+                    "weight": 3,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 3
+                },
+                {
+                    "weight": 1,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 5
+                }
+            ]
+        }
+    ],
+    [ //153
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 1,
+                    "type": 1,
+                    "count": 1400
+                }
+            ]
+        },
+        {
+            "rate": 0.4,
+            "prize": [
+                {
+                    "weight": 2,
+                    "type": 0,
+                    "value": 839,
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "rate": 0.1,
+            "prize": [
+                {
+                    "weight": 2,
+                    "type": 0,
+                    "value": 850,
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "rate": 0.4,
+            "prize": [
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 1
+                },
+                {
+                    "weight": 3,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 3
+                },
+                {
+                    "weight": 1,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 5
+                }
+            ]
+        }
+    ],
+    [ //154
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 1,
+                    "type": 1,
+                    "count": 1400
+                }
+            ]
+        },
+        {
+            "rate": 0.4,
+            "prize": [
+                {
+                    "weight": 2,
+                    "type": 0,
+                    "value": 840,
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "rate": 0.1,
+            "prize": [
+                {
+                    "weight": 2,
+                    "type": 0,
+                    "value": 850,
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "rate": 0.4,
+            "prize": [
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 1
+                },
+                {
+                    "weight": 3,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 3
+                },
+                {
+                    "weight": 1,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 5
+                }
+            ]
+        }
+    ],
+    [//155
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 1,
+                    "type": 1,
+                    "count": 1400
+                }
+            ]
+        },
+        {
+            "rate": 0.4,
+            "prize": [
+                {
+                    "weight": 2,
+                    "type": 0,
+                    "value": 841,
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "rate": 0.1,
+            "prize": [
+                {
+                    "weight": 2,
+                    "type": 0,
+                    "value": 851,
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "rate": 0.4,
+            "prize": [
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 1
+                },
+                {
+                    "weight": 3,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 3
+                },
+                {
+                    "weight": 1,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 5
+                }
+            ]
+        }
+    ],
+    [ //156
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 1,
+                    "type": 1,
+                    "count": 1400
+                }
+            ]
+        },
+        {
+            "rate": 0.4,
+            "prize": [
+                {
+                    "weight": 2,
+                    "type": 0,
+                    "value": 842,
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "rate": 0.1,
+            "prize": [
+                {
+                    "weight": 2,
+                    "type": 0,
+                    "value": 851,
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "rate": 0.4,
+            "prize": [
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 1
+                },
+                {
+                    "weight": 3,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 3
+                },
+                {
+                    "weight": 1,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 5
+                }
+            ]
+        }
+    ],
+    [ //157
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 1,
+                    "type": 1,
+                    "count": 1400
+                }
+            ]
+        },
+        {
+            "rate": 0.4,
+            "prize": [
+                {
+                    "weight": 2,
+                    "type": 0,
+                    "value": 843,
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "rate": 0.1,
+            "prize": [
+                {
+                    "weight": 2,
+                    "type": 0,
+                    "value": 852,
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "rate": 0.4,
+            "prize": [
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 1
+                },
+                {
+                    "weight": 3,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 3
+                },
+                {
+                    "weight": 1,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 5
+                }
+            ]
+        }
+    ],
+    [ //158
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 20,
+                    "type": 1,
+                    "count": 350
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 837,
+                    "count": 1
+                },
+                {
+                    "weight": 5,
+                    "type": 0,
+                    "value": 849,
+                    "count": 1
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    [ //159
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 20,
+                    "type": 1,
+                    "count": 350
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 838,
+                    "count": 1
+                },
+                {
+                    "weight": 5,
+                    "type": 0,
+                    "value": 849,
+                    "count": 1
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    [ //160
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 20,
+                    "type": 1,
+                    "count": 350
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 839,
+                    "count": 1
+                },
+                {
+                    "weight": 5,
+                    "type": 0,
+                    "value": 850,
+                    "count": 1
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    [ //161
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 20,
+                    "type": 1,
+                    "count": 350
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 840,
+                    "count": 1
+                },
+                {
+                    "weight": 5,
+                    "type": 0,
+                    "value": 850,
+                    "count": 1
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    [//162
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 20,
+                    "type": 1,
+                    "count": 350
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 841,
+                    "count": 1
+                },
+                {
+                    "weight": 5,
+                    "type": 0,
+                    "value": 851,
+                    "count": 1
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    [ //163
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 20,
+                    "type": 1,
+                    "count": 350
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 842,
+                    "count": 1
+                },
+                {
+                    "weight": 5,
+                    "type": 0,
+                    "value": 851,
+                    "count": 1
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    [ //164
+        {
+            "rate": 1,
+            "prize": [
+                {
+                    "weight": 20,
+                    "type": 1,
+                    "count": 350
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 843,
+                    "count": 1
+                },
+                {
+                    "weight": 5,
+                    "type": 0,
+                    "value": 852,
+                    "count": 1
+                },
+                {
+                    "weight": 10,
+                    "type": 0,
+                    "value": 1470,
+                    "count": 1
+                }
+            ]
+        }
     ]
 ]
