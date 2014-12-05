@@ -775,7 +775,7 @@
             this.heroBase[this.hero["class"]][k] = JSON.parse(JSON.stringify(v));
           }
         }
-        this.heroBase[this.hero["class"]].equipment = this.equipment;
+        this.heroBase[this.hero["class"]].equipment = JSON.parse(JSON.stringify(this.equipment));
         console.log(this.equipment, '1 ========');
       }
       _ref8 = this.heroBase[hClass];
