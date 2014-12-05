@@ -783,7 +783,7 @@
         v = _ref8[k];
         this.hero[k] = JSON.parse(JSON.stringify(v));
       }
-      return console.log(typeof this.heroBase.equipment, '2 ========');
+      return console.log(this.heroBase[hClass].equipment, '2 ========');
     };
 
     Player.prototype.addMoney = function(type, point) {
