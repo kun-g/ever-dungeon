@@ -1969,6 +1969,9 @@
               });
             }
           }
+          this.routine({
+            id: 'SpellCD'
+          });
         } else {
           env.levelInitialized();
           if (Array.isArray(entrance)) {
@@ -2017,10 +2020,10 @@
             o = _ref8[_m];
             o.onEvent('onEnterLevel', this);
           }
+          this.routine({
+            id: 'TickSpell'
+          });
         }
-        this.routine({
-          id: 'TickSpell'
-        });
         heroInfo = env.getAliveHeroes().filter(function(e) {
           return (e != null ? e.ref : void 0) != null;
         }).sort(function(a, b) {

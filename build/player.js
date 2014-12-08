@@ -1,5 +1,5 @@
 (function() {
-  var Bag, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Player, PlayerEnvironment, Serializer, addMercenaryMember, async, createItem, createUnit, currentTime, dbLib, diffDate, genUtil, getMercenaryMember, getPlayerHero, getVip, helperLib, itemLib, moment, playerCSConfig, playerCommandStream, playerMessageFilter, registerConstructor, underscore, updateMercenaryMember, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6,
+  var Bag, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, G_PRIZE_MODIFIER, Hero, Item, Player, PlayerEnvironment, Serializer, addMercenaryMember, async, createItem, createUnit, currentTime, dbLib, diffDate, genUtil, getMercenaryMember, getPlayerHero, getVip, helperLib, itemLib, moment, playerCSConfig, playerCommandStream, playerMessageFilter, registerConstructor, underscore, updateMercenaryMember, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -32,6 +32,8 @@
   dbLib = require('./db');
 
   async = require('async');
+
+  G_PRIZE_MODIFIER = 1000;
 
   Player = (function(_super) {
     __extends(Player, _super);
@@ -714,7 +716,6 @@
         if (isSwitch) {
           heroData.xp = this.hero.xp;
           heroData.equipment = ((_ref7 = this.heroBase[heroData["class"]]) != null ? _ref7.equipment : void 0) || {};
-          console.log(' =======newHero', this.equipment, '-----', heroData.equipment, heroData["class"]);
           this.heroBase[heroData["class"]] = heroData;
           this.switchHero(heroData["class"]);
           this.putOnEquipmentAfterSwitched(heroData["class"]);
@@ -722,7 +723,6 @@
           heroData.xp = 0;
           heroData.equipment = [];
           this.heroBase[heroData["class"]] = heroData;
-          console.log(heroData["class"], heroData);
           this.switchHero(heroData["class"]);
         }
         return this.createHero();
@@ -776,15 +776,13 @@
           }
         }
         this.heroBase[this.hero["class"]].equipment = JSON.parse(JSON.stringify(this.equipment));
-        console.log(this.equipment, '1 ========');
       }
       _ref8 = this.heroBase[hClass];
       for (k in _ref8) {
         v = _ref8[k];
         this.hero[k] = JSON.parse(JSON.stringify(v));
       }
-      this.equipment = JSON.parse(JSON.stringify(this.heroBase[hClass].equipment));
-      return console.log(this.heroBase[hClass].equipment, '2 ========');
+      return this.equipment = JSON.parse(JSON.stringify(this.heroBase[hClass].equipment));
     };
 
     Player.prototype.addMoney = function(type, point) {
@@ -1307,7 +1305,7 @@
                 NTF: Event_InventoryUpdateItem,
                 arg: {
                   syn: this.inventoryVersion,
-                  god: this.addGold(p.count)
+                  god: this.addGold(p.count * G_PRIZE_MODIFIER)
                 }
               });
             }
@@ -1318,7 +1316,7 @@
                 NTF: Event_InventoryUpdateItem,
                 arg: {
                   syn: this.inventoryVersion,
-                  dim: this.addDiamond(p.count)
+                  dim: this.addDiamond(p.count * G_PRIZE_MODIFIER)
                 }
               });
             }
@@ -1330,7 +1328,7 @@
                 arg: {
                   syn: this.heroVersion,
                   act: {
-                    exp: this.addHeroExp(p.count)
+                    exp: this.addHeroExp(p.count * G_PRIZE_MODIFIER)
                   }
                 }
               });
@@ -1356,7 +1354,7 @@
                 delete this.equipment[k];
                 continue;
               }
-              e.xp = e.xp + p.count;
+              e.xp = e.xp + p.count * G_PRIZE_MODIFIER;
               equipUpdate.push({
                 sid: k,
                 xp: e.xp
@@ -1546,7 +1544,6 @@
       var equip, item, myClass, prize, prz, ret, tmp;
       item = this.getItemAt(slot);
       myClass = this.hero["class"];
-      console.log('before useItem', this.hero["class"], item.classLimit);
       if (item == null) {
         return {
           ret: RET_ItemNotExist
@@ -1617,7 +1614,6 @@
           }
           break;
         case ITEM_EQUIPMENT:
-          console.log('useItem eq');
           if ((item.rank != null) && this.createHero().level < item.rank) {
             return {
               ret: RET_RoleLevelNotMatch
@@ -1858,7 +1854,7 @@
     };
 
     Player.prototype.craftItem = function(slot) {
-      var newItem, recipe, ret;
+      var item, newItem, recipe, ret;
       recipe = this.getItemAt(slot);
       if (recipe == null) {
         return {
@@ -1876,11 +1872,18 @@
           ret: RET_TargetNotExists
         };
       }
-      newItem = new Item(recipe.forgeTarget);
-      ret = ret.concat(this.aquireItem(newItem));
+      item = recipe;
+      item.id = recipe.forgeTarget;
+      newItem = item;
       ret = ret.concat({
         NTF: Event_InventoryUpdateItem,
         arg: {
+          itm: [
+            {
+              sid: slot,
+              cid: item.id
+            }
+          ],
           syn: this.inventoryVersion,
           god: this.gold
         }
@@ -2963,15 +2966,12 @@
           if (e.xp != null) {
             ret.xp = e.xp;
           }
-          console.log('syncBag', _this.equipment);
           _ref7 = _this.equipment;
           for (i in _ref7) {
             equip = _ref7[i];
-            if (!(equip === index)) {
-              continue;
+            if (equip === index) {
+              ret.sta = 1;
             }
-            console.log('put on', index);
-            ret.sta = 1;
           }
           if (e.enhancement) {
             ret.eh = e.enhancement.map(function(e) {

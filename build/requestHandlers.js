@@ -460,7 +460,7 @@
       func: function(arg, player, handler, rpcID, socket) {
         var oldHero, ret, type;
         type = player.switchHeroType(arg.cid);
-        if (player.flags[type] || true) {
+        if (player.flags[type]) {
           player.flags[type] = false;
           oldHero = player.hero;
           player.createHero({
@@ -550,14 +550,8 @@
         status = 'OK';
         fileList = ["define", "serializer", "spell", "unit", "container", "item", "seed_random", "commandStream", "dungeon", "trigger"];
         doVerify = function() {
-          var dungeon, err, f, _i, _len;
+          var dungeon, err;
           if (player.dungeon) {
-            for (_i = 0, _len = fileList.length; _i < _len; _i++) {
-              f = fileList[_i];
-              if (require('./' + f).fileVersion !== arg.fileVersion[f]) {
-                status = 'FileVersionConflict';
-              }
-            }
             logInfo(player.dungeonData);
             initialData = player.dungeonData;
             if (result.RET === RET_OK && (initialData != null)) {

@@ -6157,22 +6157,32 @@ exports.data = [
       "action": [
         {
           "type": "modifyVar",
-          "x": "damage",
+          "x": "attack",
           "#formular": [
             {
               "environment": {
-                "damage": 0.8
+                "damage": 0.8,
+              }
+              func:function(env, source, target, const){
+                  return env.visibleMonsterCount* source.attack * const.environment.damage 
               }
             },
             {
-              "environment": {
-                "damage": 0.7
+             // "environment": {
+             //   "damage": 0.7
+             // }
+              func:function(env, source, target, const){
+                return env.visibleMonsterCount* source.attack * 0.7
               }
+
             },
             {
-              "environment": {
-                "damage": 0.5
+              
+              func:function(env, source, target, const){
+                return env.visibleMonsterCount* source.attack * 0.5
               }
+
+
             }
           ]
         },
