@@ -1958,7 +1958,7 @@ libDungeon = {};
     },
     EnterLevel: {
       callback: function(env) {
-        var e, entrance, heroInfo, i, newPosition, o, _i, _j, _k, _l, _len, _len1, _len2, _m, _ref5, _ref6, _ref7, _ref8;
+        var e, entrance, h, heroInfo, i, newPosition, o, _i, _j, _k, _l, _len, _len1, _len2, _len3, _m, _n, _ref5, _ref6, _ref7, _ref8, _ref9;
         entrance = env.getEntrance();
         env.onEvent('onEnterLevel', this);
         if (env.isLevelInitialized()) {
@@ -1970,15 +1970,22 @@ libDungeon = {};
               });
             }
           }
-          this.routine({
-            id: 'SpellCD'
-          });
+          _ref6 = env.getObjects();
+          for (_j = 0, _len = _ref6.length; _j < _len; _j++) {
+            h = _ref6[_j];
+            if (h.isHero()) {
+              this.routine({
+                id: 'SpellCD',
+                cdInfo: h.getSpellCD()
+              });
+            }
+          }
         } else {
           env.levelInitialized();
           if (Array.isArray(entrance)) {
             if (!env.isEntranceExplored()) {
-              for (_j = 0, _len = entrance.length; _j < _len; _j++) {
-                e = entrance[_j];
+              for (_k = 0, _len1 = entrance.length; _k < _len1; _k++) {
+                e = entrance[_k];
                 this.routine({
                   id: 'ExploreBlock',
                   block: e,
@@ -1986,8 +1993,8 @@ libDungeon = {};
                 });
               }
             } else {
-              for (_k = 0, _len1 = entrance.length; _k < _len1; _k++) {
-                e = entrance[_k];
+              for (_l = 0, _len2 = entrance.length; _l < _len2; _l++) {
+                e = entrance[_l];
                 this.routine({
                   id: 'OpenBlock',
                   block: e
@@ -2009,16 +2016,16 @@ libDungeon = {};
           }
           if (Array.isArray(entrance)) {
             newPosition = entrance;
-            for (i = _l = _ref6 = newPosition.length, _ref7 = env.getHeroes().length - 1; _ref6 <= _ref7 ? _l <= _ref7 : _l >= _ref7; i = _ref6 <= _ref7 ? ++_l : --_l) {
+            for (i = _m = _ref7 = newPosition.length, _ref8 = env.getHeroes().length - 1; _ref7 <= _ref8 ? _m <= _ref8 : _m >= _ref8; i = _ref7 <= _ref8 ? ++_m : --_m) {
               newPosition.push(entrance[0]);
             }
           } else {
             newPosition = [entrance, entrance, entrance];
           }
           env.moveHeroes(newPosition);
-          _ref8 = env.getObjects();
-          for (_m = 0, _len2 = _ref8.length; _m < _len2; _m++) {
-            o = _ref8[_m];
+          _ref9 = env.getObjects();
+          for (_n = 0, _len3 = _ref9.length; _n < _len3; _n++) {
+            o = _ref9[_n];
             o.onEvent('onEnterLevel', this);
           }
           this.routine({
