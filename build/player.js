@@ -708,14 +708,16 @@
     };
 
     Player.prototype.createHero = function(heroData, isSwitch) {
-      var bag, bf, e, equip, hero, i, _ref7, _ref8;
+      var bag, bf, e, equip, hero, i, prize, _ref7, _ref8, _ref9;
+      prize = (_ref7 = queryTable(TABLE_ROLE, heroData["class"])) != null ? _ref7.initialEquipment : void 0;
+      prize[0].type = 3;
       if (heroData != null) {
         if ((this.heroBase[heroData["class"]] != null) && heroData["class"] === this.hero["class"]) {
           return null;
         }
         if (isSwitch) {
           heroData.xp = this.hero.xp;
-          heroData.equipment = ((_ref7 = this.heroBase[heroData["class"]]) != null ? _ref7.equipment : void 0) || {};
+          heroData.equipment = ((_ref8 = this.heroBase[heroData["class"]]) != null ? _ref8.equipment : void 0) || {};
           this.heroBase[heroData["class"]] = heroData;
           this.switchHero(heroData["class"]);
           this.putOnEquipmentAfterSwitched(heroData["class"]);
@@ -729,9 +731,9 @@
       } else if (this.hero) {
         bag = this.inventory;
         equip = [];
-        _ref8 = this.equipment;
-        for (i in _ref8) {
-          e = _ref8[i];
+        _ref9 = this.equipment;
+        for (i in _ref9) {
+          e = _ref9[i];
           if (bag.get(e) != null) {
             equip.push({
               cid: bag.get(e).classId,
