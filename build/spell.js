@@ -317,6 +317,17 @@
       }
     };
 
+    Wizard.prototype.getSpellCD = function() {
+      var spellID, thisSpell, _ref;
+      _ref = this.wSpellDB;
+      for (spellID in _ref) {
+        thisSpell = _ref[spellID];
+        if (thisSpell.cd != null) {
+          return thisSpell.cd;
+        }
+      }
+    };
+
     Wizard.prototype.updateCDOfSpell = function(spellID, isReset, cmd) {
       var c, cd, cdConfig, cfg, preCD, thisSpell;
       cfg = getSpellConfig(spellID);
