@@ -36464,7 +36464,7 @@ exports.data = [
         "label": "燃灵长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "燃灵长靴lv2",
+        "description": "拥有燃烧之力的精致长靴",
         "effectf": [
             {
                 "part": "leftleg",
@@ -36512,7 +36512,7 @@ exports.data = [
         "label": "燃灵长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "燃灵长靴lv3",
+        "description": "拥有燃烧之力的精致长靴",
         "effectf": [
             {
                 "part": "leftleg",
@@ -36562,7 +36562,7 @@ exports.data = [
         "label": "燃灵长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "燃灵长靴lv4",
+        "description": "拥有燃烧之力的精致长靴",
         "effectf": [
             {
                 "part": "leftleg",
@@ -36612,7 +36612,7 @@ exports.data = [
         "label": "燃灵长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "燃灵长靴lv5",
+        "description": "拥有燃烧之力的精致长靴",
         "effectf": [
             {
                 "part": "leftleg",
@@ -36662,7 +36662,7 @@ exports.data = [
         "label": "燃灵长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "燃灵长靴lv6",
+        "description": "拥有燃烧之力的精致长靴",
         "effectf": [
             {
                 "part": "leftleg",
@@ -36712,7 +36712,7 @@ exports.data = [
         "label": "燃灵长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "燃灵长靴lv7",
+        "description": "拥有燃烧之力的精致长靴",
         "effectf": [
             {
                 "part": "leftleg",
@@ -36761,7 +36761,7 @@ exports.data = [
         "label": "湮灭长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "湮灭长靴lv3",
+        "description": "毁灭的象征，魔力暴增",
         "effectf": [
             {
                 "part": "leftleg",
@@ -36809,7 +36809,7 @@ exports.data = [
         "label": "湮灭长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "湮灭长靴lv4",
+        "description": "毁灭的象征，魔力暴增",
         "effectf": [
             {
                 "part": "leftleg",
@@ -36859,7 +36859,7 @@ exports.data = [
         "label": "湮灭长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "湮灭长靴lv5",
+        "description": "毁灭的象征，魔力暴增",
         "effectf": [
             {
                 "part": "leftleg",
@@ -36909,7 +36909,7 @@ exports.data = [
         "label": "湮灭长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "湮灭长靴lv6",
+        "description": "毁灭的象征，魔力暴增",
         "effectf": [
             {
                 "part": "leftleg",
@@ -36959,7 +36959,7 @@ exports.data = [
         "label": "湮灭长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "湮灭长靴lv7",
+        "description": "毁灭的象征，魔力暴增",
         "effectf": [
             {
                 "part": "leftleg",
@@ -37009,7 +37009,7 @@ exports.data = [
         "label": "湮灭长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "湮灭长靴lv8",
+        "description": "毁灭的象征，魔力暴增",
         "effectf": [
             {
                 "part": "leftleg",
@@ -37058,7 +37058,7 @@ exports.data = [
         "label": "落日长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "落日长靴lv4",
+        "description": "散发着令人绝望气息的尊贵长靴",
         "effectf": [
             {
                 "part": "leftleg",
@@ -37106,7 +37106,7 @@ exports.data = [
         "label": "落日长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "落日长靴lv5",
+        "description": "散发着令人绝望气息的尊贵长靴",
         "effectf": [
             {
                 "part": "leftleg",
@@ -37156,7 +37156,7 @@ exports.data = [
         "label": "落日长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "落日长靴lv6",
+        "description": "散发着令人绝望气息的尊贵长靴",
         "effectf": [
             {
                 "part": "leftleg",
@@ -37206,7 +37206,7 @@ exports.data = [
         "label": "落日长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "落日长靴lv7",
+        "description": "散发着令人绝望气息的尊贵长靴",
         "effectf": [
             {
                 "part": "leftleg",
@@ -37256,7 +37256,7 @@ exports.data = [
         "label": "落日长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "落日长靴lv8",
+        "description": "散发着令人绝望气息的尊贵长靴",
         "effectf": [
             {
                 "part": "leftleg",
@@ -37306,7 +37306,7 @@ exports.data = [
         "label": "落日长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "落日长靴lv9",
+        "description": "散发着令人绝望气息的尊贵长靴",
         "effectf": [
             {
                 "part": "leftleg",
@@ -37355,7 +37355,7 @@ exports.data = [
         "label": "缚龙长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "缚龙长靴lv5",
+        "description": "巨龙环绕着这双长靴，汹涌磅礴的魔力令人目不能视",
         "effectf": [
             {
                 "part": "leftleg",
@@ -37403,7 +37403,7 @@ exports.data = [
         "label": "缚龙长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "缚龙长靴lv6",
+        "description": "巨龙环绕着这双长靴，汹涌磅礴的魔力令人目不能视",
         "effectf": [
             {
                 "part": "leftleg",
@@ -37451,7 +37451,7 @@ exports.data = [
         "label": "缚龙长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "缚龙长靴lv7",
+        "description": "巨龙环绕着这双长靴，汹涌磅礴的魔力令人目不能视",
         "effectf": [
             {
                 "part": "leftleg",
@@ -37499,7 +37499,7 @@ exports.data = [
         "label": "缚龙长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "缚龙长靴lv8",
+        "description": "巨龙环绕着这双长靴，汹涌磅礴的魔力令人目不能视",
         "effectf": [
             {
                 "part": "leftleg",
@@ -37547,7 +37547,7 @@ exports.data = [
         "label": "缚龙长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "缚龙长靴lv9",
+        "description": "巨龙环绕着这双长靴，汹涌磅礴的魔力令人目不能视",
         "effectf": [
             {
                 "part": "leftleg",
@@ -37595,7 +37595,7 @@ exports.data = [
         "label": "缚龙长靴",
         "category": 1,
         "subcategory": 4,
-        "description": "缚龙长靴lv10",
+        "description": "巨龙环绕着这双长靴，汹涌磅礴的魔力令人目不能视",
         "effectf": [
             {
                 "part": "leftleg",
@@ -38124,7 +38124,7 @@ exports.data = [
         "label": "燃灵法袍",
         "category": 1,
         "subcategory": 2,
-        "description": "燃灵法袍lv2",
+        "description": "能让人感受到炽热气息的法袍",
         "effectf": [
             {
                 "part": "chest",
@@ -38203,7 +38203,7 @@ exports.data = [
         "label": "燃灵法袍",
         "category": 1,
         "subcategory": 2,
-        "description": "燃灵法袍lv3",
+        "description": "能让人感受到炽热气息的法袍",
         "effectf": [
             {
                 "part": "chest",
@@ -38284,7 +38284,7 @@ exports.data = [
         "label": "燃灵法袍",
         "category": 1,
         "subcategory": 2,
-        "description": "燃灵法袍lv4",
+        "description": "能让人感受到炽热气息的法袍",
         "effectf": [
             {
                 "part": "chest",
@@ -38365,7 +38365,7 @@ exports.data = [
         "label": "燃灵法袍",
         "category": 1,
         "subcategory": 2,
-        "description": "燃灵法袍lv5",
+        "description": "能让人感受到炽热气息的法袍",
         "effectf": [
             {
                 "part": "chest",
@@ -38446,7 +38446,7 @@ exports.data = [
         "label": "燃灵法袍",
         "category": 1,
         "subcategory": 2,
-        "description": "燃灵法袍lv6",
+        "description": "能让人感受到炽热气息的法袍",
         "effectf": [
             {
                 "part": "chest",
@@ -38527,7 +38527,7 @@ exports.data = [
         "label": "燃灵法袍",
         "category": 1,
         "subcategory": 2,
-        "description": "燃灵法袍lv7",
+        "description": "能让人感受到炽热气息的法袍",
         "effectf": [
             {
                 "part": "chest",
@@ -38607,7 +38607,7 @@ exports.data = [
         "label": "湮灭法袍",
         "category": 1,
         "subcategory": 2,
-        "description": "湮灭法袍lv3",
+        "description": "采用冥界材料制造而成的法袍,毁灭是它的主题",
         "effectf": [
             {
                 "part": "chest",
@@ -38686,7 +38686,7 @@ exports.data = [
         "label": "湮灭法袍",
         "category": 1,
         "subcategory": 2,
-        "description": "湮灭法袍lv4",
+        "description": "采用冥界材料制造而成的法袍,毁灭是它的主题",
         "effectf": [
             {
                 "part": "chest",
@@ -38767,7 +38767,7 @@ exports.data = [
         "label": "湮灭法袍",
         "category": 1,
         "subcategory": 2,
-        "description": "湮灭法袍lv5",
+        "description": "采用冥界材料制造而成的法袍,毁灭是它的主题",
         "effectf": [
             {
                 "part": "chest",
@@ -38848,7 +38848,7 @@ exports.data = [
         "label": "湮灭法袍",
         "category": 1,
         "subcategory": 2,
-        "description": "湮灭法袍lv6",
+        "description": "采用冥界材料制造而成的法袍,毁灭是它的主题",
         "effectf": [
             {
                 "part": "chest",
@@ -38929,7 +38929,7 @@ exports.data = [
         "label": "湮灭法袍",
         "category": 1,
         "subcategory": 2,
-        "description": "湮灭法袍lv7",
+        "description": "采用冥界材料制造而成的法袍,毁灭是它的主题",
         "effectf": [
             {
                 "part": "chest",
@@ -39010,7 +39010,7 @@ exports.data = [
         "label": "湮灭法袍",
         "category": 1,
         "subcategory": 2,
-        "description": "湮灭法袍lv8",
+        "description": "采用冥界材料制造而成的法袍,毁灭是它的主题",
         "effectf": [
             {
                 "part": "chest",
@@ -39090,7 +39090,7 @@ exports.data = [
         "label": "落日法袍",
         "category": 1,
         "subcategory": 2,
-        "description": "落日法袍lv4",
+        "description": "神秘的布料制作，带着落日熔金般的夺目光辉",
         "effectf": [
             {
                 "part": "chest",
@@ -39169,7 +39169,7 @@ exports.data = [
         "label": "落日法袍",
         "category": 1,
         "subcategory": 2,
-        "description": "落日法袍lv5",
+        "description": "神秘的布料制作，带着落日熔金般的夺目光辉",
         "effectf": [
             {
                 "part": "chest",
@@ -39250,7 +39250,7 @@ exports.data = [
         "label": "落日法袍",
         "category": 1,
         "subcategory": 2,
-        "description": "落日法袍lv6",
+        "description": "神秘的布料制作，带着落日熔金般的夺目光辉",
         "effectf": [
             {
                 "part": "chest",
@@ -39331,7 +39331,7 @@ exports.data = [
         "label": "落日法袍",
         "category": 1,
         "subcategory": 2,
-        "description": "落日法袍lv7",
+        "description": "神秘的布料制作，带着落日熔金般的夺目光辉",
         "effectf": [
             {
                 "part": "chest",
@@ -39412,7 +39412,7 @@ exports.data = [
         "label": "落日法袍",
         "category": 1,
         "subcategory": 2,
-        "description": "落日法袍lv8",
+        "description": "神秘的布料制作，带着落日熔金般的夺目光辉",
         "effectf": [
             {
                 "part": "chest",
@@ -39493,7 +39493,7 @@ exports.data = [
         "label": "落日法袍",
         "category": 1,
         "subcategory": 2,
-        "description": "落日法袍lv9",
+        "description": "神秘的布料制作，带着落日熔金般的夺目光辉",
         "effectf": [
             {
                 "part": "chest",
@@ -39573,7 +39573,7 @@ exports.data = [
         "label": "龙炎守护",
         "category": 1,
         "subcategory": 2,
-        "description": "龙炎守护lv5",
+        "description": "穿戴者有如龙炎绕体，震慑人心",
         "effectf": [
             {
                 "part": "chest",
@@ -39652,7 +39652,7 @@ exports.data = [
         "label": "龙炎守护",
         "category": 1,
         "subcategory": 2,
-        "description": "龙炎守护lv6",
+        "description": "穿戴者有如龙炎绕体，震慑人心",
         "effectf": [
             {
                 "part": "chest",
@@ -39731,7 +39731,7 @@ exports.data = [
         "label": "龙炎守护",
         "category": 1,
         "subcategory": 2,
-        "description": "龙炎守护lv7",
+        "description": "穿戴者有如龙炎绕体，震慑人心",
         "effectf": [
             {
                 "part": "chest",
@@ -39810,7 +39810,7 @@ exports.data = [
         "label": "龙炎守护",
         "category": 1,
         "subcategory": 2,
-        "description": "龙炎守护lv8",
+        "description": "穿戴者有如龙炎绕体，震慑人心",
         "effectf": [
             {
                 "part": "chest",
@@ -39889,7 +39889,7 @@ exports.data = [
         "label": "龙炎守护",
         "category": 1,
         "subcategory": 2,
-        "description": "龙炎守护lv9",
+        "description": "穿戴者有如龙炎绕体，震慑人心",
         "effectf": [
             {
                 "part": "chest",
@@ -39968,7 +39968,7 @@ exports.data = [
         "label": "龙炎守护",
         "category": 1,
         "subcategory": 2,
-        "description": "龙炎守护lv10",
+        "description": "穿戴者有如龙炎绕体，震慑人心",
         "effectf": [
             {
                 "part": "chest",
@@ -40282,7 +40282,7 @@ exports.data = [
         "label": "燃灵之魂",
         "category": 1,
         "subcategory": 1,
-        "description": "燃灵之魂lv2",
+        "description": "炽热火焰凝聚而成的精灵",
         "effectf": [
             {
                 "part": "weapon4",
@@ -40320,7 +40320,7 @@ exports.data = [
         "label": "燃灵之魂",
         "category": 1,
         "subcategory": 1,
-        "description": "燃灵之魂lv3",
+        "description": "炽热火焰凝聚而成的精灵",
         "effectf": [
             {
                 "part": "weapon4",
@@ -40360,7 +40360,7 @@ exports.data = [
         "label": "燃灵之魂",
         "category": 1,
         "subcategory": 1,
-        "description": "燃灵之魂lv4",
+        "description": "炽热火焰凝聚而成的精灵",
         "effectf": [
             {
                 "part": "weapon4",
@@ -40400,7 +40400,7 @@ exports.data = [
         "label": "燃灵之魂",
         "category": 1,
         "subcategory": 1,
-        "description": "燃灵之魂lv5",
+        "description": "炽热火焰凝聚而成的精灵",
         "effectf": [
             {
                 "part": "weapon4",
@@ -40440,7 +40440,7 @@ exports.data = [
         "label": "燃灵之魂",
         "category": 1,
         "subcategory": 1,
-        "description": "燃灵之魂lv6",
+        "description": "炽热火焰凝聚而成的精灵",
         "effectf": [
             {
                 "part": "weapon4",
@@ -40480,7 +40480,7 @@ exports.data = [
         "label": "燃灵之魂",
         "category": 1,
         "subcategory": 1,
-        "description": "燃灵之魂lv7",
+        "description": "炽热火焰凝聚而成的精灵",
         "effectf": [
             {
                 "part": "weapon4",
@@ -40519,7 +40519,7 @@ exports.data = [
         "label": "湮灭之魂",
         "category": 1,
         "subcategory": 1,
-        "description": "湮灭之魂lv3",
+        "description": "破坏力惊人的毁灭之灵",
         "effectf": [
             {
                 "part": "weapon4",
@@ -40557,7 +40557,7 @@ exports.data = [
         "label": "湮灭之魂",
         "category": 1,
         "subcategory": 1,
-        "description": "湮灭之魂lv4",
+        "description": "破坏力惊人的毁灭之灵",
         "effectf": [
             {
                 "part": "weapon4",
@@ -40597,7 +40597,7 @@ exports.data = [
         "label": "湮灭之魂",
         "category": 1,
         "subcategory": 1,
-        "description": "湮灭之魂lv5",
+        "description": "破坏力惊人的毁灭之灵",
         "effectf": [
             {
                 "part": "weapon4",
@@ -40637,7 +40637,7 @@ exports.data = [
         "label": "湮灭之魂",
         "category": 1,
         "subcategory": 1,
-        "description": "湮灭之魂lv6",
+        "description": "破坏力惊人的毁灭之灵",
         "effectf": [
             {
                 "part": "weapon4",
@@ -40677,7 +40677,7 @@ exports.data = [
         "label": "湮灭之魂",
         "category": 1,
         "subcategory": 1,
-        "description": "湮灭之魂lv7",
+        "description": "破坏力惊人的毁灭之灵",
         "effectf": [
             {
                 "part": "weapon4",
@@ -40717,7 +40717,7 @@ exports.data = [
         "label": "湮灭之魂",
         "category": 1,
         "subcategory": 1,
-        "description": "湮灭之魂lv8",
+        "description": "破坏力惊人的毁灭之灵",
         "effectf": [
             {
                 "part": "weapon4",
@@ -40756,7 +40756,7 @@ exports.data = [
         "label": "落日之魂",
         "category": 1,
         "subcategory": 1,
-        "description": "落日之魂lv4",
+        "description": "吟唱着恐怖禁咒的陨日之灵",
         "effectf": [
             {
                 "part": "weapon4",
@@ -40794,7 +40794,7 @@ exports.data = [
         "label": "落日之魂",
         "category": 1,
         "subcategory": 1,
-        "description": "落日之魂lv5",
+        "description": "吟唱着恐怖禁咒的陨日之灵",
         "effectf": [
             {
                 "part": "weapon4",
@@ -40834,7 +40834,7 @@ exports.data = [
         "label": "落日之魂",
         "category": 1,
         "subcategory": 1,
-        "description": "落日之魂lv6",
+        "description": "吟唱着恐怖禁咒的陨日之灵",
         "effectf": [
             {
                 "part": "weapon4",
@@ -40874,7 +40874,7 @@ exports.data = [
         "label": "落日之魂",
         "category": 1,
         "subcategory": 1,
-        "description": "落日之魂lv7",
+        "description": "吟唱着恐怖禁咒的陨日之灵",
         "effectf": [
             {
                 "part": "weapon4",
@@ -40914,7 +40914,7 @@ exports.data = [
         "label": "落日之魂",
         "category": 1,
         "subcategory": 1,
-        "description": "落日之魂lv8",
+        "description": "吟唱着恐怖禁咒的陨日之灵",
         "effectf": [
             {
                 "part": "weapon4",
@@ -40954,7 +40954,7 @@ exports.data = [
         "label": "落日之魂",
         "category": 1,
         "subcategory": 1,
-        "description": "落日之魂lv9",
+        "description": "吟唱着恐怖禁咒的陨日之灵",
         "effectf": [
             {
                 "part": "weapon4",
@@ -40993,7 +40993,7 @@ exports.data = [
         "label": "龙灵战魂",
         "category": 1,
         "subcategory": 1,
-        "description": "龙灵战魂lv5",
+        "description": "巨龙亡灵所化，你甚至能听见愤怒的咆哮",
         "effectf": [
             {
                 "part": "weapon4",
@@ -41031,7 +41031,7 @@ exports.data = [
         "label": "龙灵战魂",
         "category": 1,
         "subcategory": 1,
-        "description": "龙灵战魂lv6",
+        "description": "巨龙亡灵所化，你甚至能听见愤怒的咆哮",
         "effectf": [
             {
                 "part": "weapon4",
@@ -41069,7 +41069,7 @@ exports.data = [
         "label": "龙灵战魂",
         "category": 1,
         "subcategory": 1,
-        "description": "龙灵战魂lv7",
+        "description": "巨龙亡灵所化，你甚至能听见愤怒的咆哮",
         "effectf": [
             {
                 "part": "weapon4",
@@ -41107,7 +41107,7 @@ exports.data = [
         "label": "龙灵战魂",
         "category": 1,
         "subcategory": 1,
-        "description": "龙灵战魂lv8",
+        "description": "巨龙亡灵所化，你甚至能听见愤怒的咆哮",
         "effectf": [
             {
                 "part": "weapon4",
@@ -41145,7 +41145,7 @@ exports.data = [
         "label": "龙灵战魂",
         "category": 1,
         "subcategory": 1,
-        "description": "龙灵战魂lv9",
+        "description": "巨龙亡灵所化，你甚至能听见愤怒的咆哮",
         "effectf": [
             {
                 "part": "weapon4",
@@ -41183,7 +41183,7 @@ exports.data = [
         "label": "龙灵战魂",
         "category": 1,
         "subcategory": 1,
-        "description": "龙灵战魂lv10",
+        "description": "巨龙亡灵所化，你甚至能听见愤怒的咆哮",
         "effectf": [
             {
                 "part": "weapon4",
@@ -41219,7 +41219,7 @@ exports.data = [
         "label": "奥术法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "蕴含魔法奥义的精致法杖",
+        "description": "蕴含魔法奥义的精巧法杖",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -41258,7 +41258,7 @@ exports.data = [
         "label": "奥术法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "蕴含魔法奥义的精致法杖",
+        "description": "蕴含魔法奥义的精巧法杖",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -41299,7 +41299,7 @@ exports.data = [
         "label": "奥术法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "蕴含魔法奥义的精致法杖",
+        "description": "蕴含魔法奥义的精巧法杖",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -41340,7 +41340,7 @@ exports.data = [
         "label": "奥术法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "蕴含魔法奥义的精致法杖",
+        "description": "蕴含魔法奥义的精巧法杖",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -41381,7 +41381,7 @@ exports.data = [
         "label": "奥术法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "蕴含魔法奥义的精致法杖",
+        "description": "蕴含魔法奥义的精巧法杖",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -41422,7 +41422,7 @@ exports.data = [
         "label": "奥术法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "蕴含魔法奥义的精致法杖",
+        "description": "蕴含魔法奥义的精巧法杖",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -41462,7 +41462,7 @@ exports.data = [
         "label": "燃灵法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "燃灵法杖lv2",
+        "description": "能将魔力燃烧的精致法杖",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -41501,7 +41501,7 @@ exports.data = [
         "label": "燃灵法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "燃灵法杖lv3",
+        "description": "能将魔力燃烧的精致法杖",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -41542,7 +41542,7 @@ exports.data = [
         "label": "燃灵法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "燃灵法杖lv4",
+        "description": "能将魔力燃烧的精致法杖",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -41583,7 +41583,7 @@ exports.data = [
         "label": "燃灵法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "燃灵法杖lv5",
+        "description": "能将魔力燃烧的精致法杖",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -41624,7 +41624,7 @@ exports.data = [
         "label": "燃灵法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "燃灵法杖lv6",
+        "description": "能将魔力燃烧的精致法杖",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -41665,7 +41665,7 @@ exports.data = [
         "label": "燃灵法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "燃灵法杖lv7",
+        "description": "能将魔力燃烧的精致法杖",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -41705,7 +41705,7 @@ exports.data = [
         "label": "湮灭法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "湮灭法杖lv3",
+        "description": "附有冥界之力的魔杖，能释放毁灭之光",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -41744,7 +41744,7 @@ exports.data = [
         "label": "湮灭法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "湮灭法杖lv4",
+        "description": "附有冥界之力的魔杖，能释放毁灭之光",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -41785,7 +41785,7 @@ exports.data = [
         "label": "湮灭法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "湮灭法杖lv5",
+        "description": "附有冥界之力的魔杖，能释放毁灭之光",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -41826,7 +41826,7 @@ exports.data = [
         "label": "湮灭法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "湮灭法杖lv6",
+        "description": "附有冥界之力的魔杖，能释放毁灭之光",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -41867,7 +41867,7 @@ exports.data = [
         "label": "湮灭法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "湮灭法杖lv7",
+        "description": "附有冥界之力的魔杖，能释放毁灭之光",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -41908,7 +41908,7 @@ exports.data = [
         "label": "湮灭法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "湮灭法杖lv8",
+        "description": "附有冥界之力的魔杖，能释放毁灭之光",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -41948,7 +41948,7 @@ exports.data = [
         "label": "落日法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "落日法杖lv4",
+        "description": "罕见的传世古杖，蕴含深不可测的魔力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -41987,7 +41987,7 @@ exports.data = [
         "label": "落日法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "落日法杖lv5",
+        "description": "罕见的传世古杖，蕴含深不可测的魔力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -42028,7 +42028,7 @@ exports.data = [
         "label": "落日法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "落日法杖lv6",
+        "description": "罕见的传世古杖，蕴含深不可测的魔力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -42069,7 +42069,7 @@ exports.data = [
         "label": "落日法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "落日法杖lv7",
+        "description": "罕见的传世古杖，蕴含深不可测的魔力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -42110,7 +42110,7 @@ exports.data = [
         "label": "落日法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "落日法杖lv8",
+        "description": "罕见的传世古杖，蕴含深不可测的魔力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -42151,7 +42151,7 @@ exports.data = [
         "label": "落日法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "落日法杖lv9",
+        "description": "罕见的传世古杖，蕴含深不可测的魔力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -42191,7 +42191,7 @@ exports.data = [
         "label": "缚龙法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "缚龙法杖lv5",
+        "description": "封印着巨龙之力的法杖，拥有神秘的外观和极致的魔力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -42230,7 +42230,7 @@ exports.data = [
         "label": "缚龙法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "缚龙法杖lv6",
+        "description": "封印着巨龙之力的法杖，拥有神秘的外观和极致的魔力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -42269,7 +42269,7 @@ exports.data = [
         "label": "缚龙法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "缚龙法杖lv7",
+        "description": "封印着巨龙之力的法杖，拥有神秘的外观和极致的魔力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -42308,7 +42308,7 @@ exports.data = [
         "label": "缚龙法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "缚龙法杖lv8",
+        "description": "封印着巨龙之力的法杖，拥有神秘的外观和极致的魔力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -42347,7 +42347,7 @@ exports.data = [
         "label": "缚龙法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "缚龙法杖lv9",
+        "description": "封印着巨龙之力的法杖，拥有神秘的外观和极致的魔力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -42386,7 +42386,7 @@ exports.data = [
         "label": "缚龙法杖",
         "category": 1,
         "subcategory": 0,
-        "description": "缚龙法杖lv10",
+        "description": "封印着巨龙之力的法杖，拥有神秘的外观和极致的魔力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -42589,7 +42589,7 @@ exports.data = [
         "icon": "er022.png",
         "category": 1,
         "subcategory": 3,
-        "description": "燃灵戒指lv2",
+        "description": "凝聚了庞大魔力的戒指",
         "classLimit": [
             217
         ],
@@ -42615,7 +42615,7 @@ exports.data = [
         "icon": "er022.png",
         "category": 1,
         "subcategory": 3,
-        "description": "燃灵戒指lv3",
+        "description": "凝聚了庞大魔力的戒指",
         "classLimit": [
             217
         ],
@@ -42643,7 +42643,7 @@ exports.data = [
         "icon": "er022.png",
         "category": 1,
         "subcategory": 3,
-        "description": "燃灵戒指lv4",
+        "description": "凝聚了庞大魔力的戒指",
         "classLimit": [
             217
         ],
@@ -42671,7 +42671,7 @@ exports.data = [
         "icon": "er022.png",
         "category": 1,
         "subcategory": 3,
-        "description": "燃灵戒指lv5",
+        "description": "凝聚了庞大魔力的戒指",
         "classLimit": [
             217
         ],
@@ -42699,7 +42699,7 @@ exports.data = [
         "icon": "er022.png",
         "category": 1,
         "subcategory": 3,
-        "description": "燃灵戒指lv6",
+        "description": "凝聚了庞大魔力的戒指",
         "classLimit": [
             217
         ],
@@ -42727,7 +42727,7 @@ exports.data = [
         "icon": "er022.png",
         "category": 1,
         "subcategory": 3,
-        "description": "燃灵戒指lv7",
+        "description": "凝聚了庞大魔力的戒指",
         "classLimit": [
             217
         ],
@@ -42754,7 +42754,7 @@ exports.data = [
         "icon": "er032.png",
         "category": 1,
         "subcategory": 3,
-        "description": "湮灭戒指lv3",
+        "description": "能大幅度提升破坏力的魔戒",
         "classLimit": [
             217
         ],
@@ -42780,7 +42780,7 @@ exports.data = [
         "icon": "er032.png",
         "category": 1,
         "subcategory": 3,
-        "description": "湮灭戒指lv4",
+        "description": "能大幅度提升破坏力的魔戒",
         "classLimit": [
             217
         ],
@@ -42808,7 +42808,7 @@ exports.data = [
         "icon": "er032.png",
         "category": 1,
         "subcategory": 3,
-        "description": "湮灭戒指lv5",
+        "description": "能大幅度提升破坏力的魔戒",
         "classLimit": [
             217
         ],
@@ -42836,7 +42836,7 @@ exports.data = [
         "icon": "er032.png",
         "category": 1,
         "subcategory": 3,
-        "description": "湮灭戒指lv6",
+        "description": "能大幅度提升破坏力的魔戒",
         "classLimit": [
             217
         ],
@@ -42864,7 +42864,7 @@ exports.data = [
         "icon": "er032.png",
         "category": 1,
         "subcategory": 3,
-        "description": "湮灭戒指lv4",
+        "description": "能大幅度提升破坏力的魔戒",
         "classLimit": [
             217
         ],
@@ -42892,7 +42892,7 @@ exports.data = [
         "icon": "er032.png",
         "category": 1,
         "subcategory": 3,
-        "description": "湮灭戒指lv4",
+        "description": "能大幅度提升破坏力的魔戒",
         "classLimit": [
             217
         ],
@@ -42919,7 +42919,7 @@ exports.data = [
         "icon": "er042.png",
         "category": 1,
         "subcategory": 3,
-        "description": "落日戒指lv4",
+        "description": "凝聚落日绝望之力的法戒",
         "classLimit": [
             217
         ],
@@ -42945,7 +42945,7 @@ exports.data = [
         "icon": "er042.png",
         "category": 1,
         "subcategory": 3,
-        "description": "落日戒指lv5",
+        "description": "凝聚落日绝望之力的法戒",
         "classLimit": [
             217
         ],
@@ -42973,7 +42973,7 @@ exports.data = [
         "icon": "er042.png",
         "category": 1,
         "subcategory": 3,
-        "description": "落日戒指lv6",
+        "description": "凝聚落日绝望之力的法戒",
         "classLimit": [
             217
         ],
@@ -43001,7 +43001,7 @@ exports.data = [
         "icon": "er042.png",
         "category": 1,
         "subcategory": 3,
-        "description": "落日戒指lv7",
+        "description": "凝聚落日绝望之力的法戒",
         "classLimit": [
             217
         ],
@@ -43029,7 +43029,7 @@ exports.data = [
         "icon": "er042.png",
         "category": 1,
         "subcategory": 3,
-        "description": "落日戒指lv8",
+        "description": "凝聚落日绝望之力的法戒",
         "classLimit": [
             217
         ],
@@ -43057,7 +43057,7 @@ exports.data = [
         "icon": "er042.png",
         "category": 1,
         "subcategory": 3,
-        "description": "落日戒指lv9",
+        "description": "凝聚落日绝望之力的法戒",
         "classLimit": [
             217
         ],
@@ -43084,7 +43084,7 @@ exports.data = [
         "icon": "er042.png",
         "category": 1,
         "subcategory": 3,
-        "description": "龙灵法戒lv5",
+        "description": "神秘莫测的光晕环绕着，透射出永恒梦境般深邃的魔力",
         "classLimit": [
             217
         ],
@@ -43110,7 +43110,7 @@ exports.data = [
         "icon": "er042.png",
         "category": 1,
         "subcategory": 3,
-        "description": "龙灵法戒lv6",
+        "description": "神秘莫测的光晕环绕着，透射出永恒梦境般深邃的魔力",
         "classLimit": [
             217
         ],
@@ -43136,7 +43136,7 @@ exports.data = [
         "icon": "er042.png",
         "category": 1,
         "subcategory": 3,
-        "description": "龙灵法戒lv7",
+        "description": "神秘莫测的光晕环绕着，透射出永恒梦境般深邃的魔力",
         "classLimit": [
             217
         ],
@@ -43162,7 +43162,7 @@ exports.data = [
         "icon": "er042.png",
         "category": 1,
         "subcategory": 3,
-        "description": "龙灵法戒lv8",
+        "description": "神秘莫测的光晕环绕着，透射出永恒梦境般深邃的魔力",
         "classLimit": [
             217
         ],
@@ -43188,7 +43188,7 @@ exports.data = [
         "icon": "er042.png",
         "category": 1,
         "subcategory": 3,
-        "description": "龙灵法戒lv9",
+        "description": "神秘莫测的光晕环绕着，透射出永恒梦境般深邃的魔力",
         "classLimit": [
             217
         ],
@@ -43214,7 +43214,7 @@ exports.data = [
         "icon": "er042.png",
         "category": 1,
         "subcategory": 3,
-        "description": "龙灵法戒lv10",
+        "description": "神秘莫测的光晕环绕着，透射出永恒梦境般深邃的魔力",
         "classLimit": [
             217
         ],
@@ -43409,7 +43409,7 @@ exports.data = [
         "icon": "ewn021.png",
         "category": 1,
         "subcategory": 5,
-        "description": "燃灵护符lv2",
+        "description": "蕴含火焰力量的护符",
         "classLimit": [
             217
         ],
@@ -43436,7 +43436,7 @@ exports.data = [
         "icon": "ewn021.png",
         "category": 1,
         "subcategory": 5,
-        "description": "燃灵护符lv3",
+        "description": "蕴含火焰力量的护符",
         "classLimit": [
             217
         ],
@@ -43465,7 +43465,7 @@ exports.data = [
         "icon": "ewn021.png",
         "category": 1,
         "subcategory": 5,
-        "description": "燃灵护符lv4",
+        "description": "蕴含火焰力量的护符",
         "classLimit": [
             217
         ],
@@ -43494,7 +43494,7 @@ exports.data = [
         "icon": "ewn021.png",
         "category": 1,
         "subcategory": 5,
-        "description": "燃灵护符lv5",
+        "description": "蕴含火焰力量的护符",
         "classLimit": [
             217
         ],
@@ -43523,7 +43523,7 @@ exports.data = [
         "icon": "ewn021.png",
         "category": 1,
         "subcategory": 5,
-        "description": "燃灵护符lv6",
+        "description": "蕴含火焰力量的护符",
         "classLimit": [
             217
         ],
@@ -43552,7 +43552,7 @@ exports.data = [
         "icon": "ewn021.png",
         "category": 1,
         "subcategory": 5,
-        "description": "燃灵护符lv7",
+        "description": "蕴含火焰力量的护符",
         "classLimit": [
             217
         ],
@@ -43580,7 +43580,7 @@ exports.data = [
         "icon": "ewn031.png",
         "category": 1,
         "subcategory": 5,
-        "description": "湮灭护符lv3",
+        "description": "刻画了神秘的符文，似乎来自冥界",
         "classLimit": [
             217
         ],
@@ -43607,7 +43607,7 @@ exports.data = [
         "icon": "ewn031.png",
         "category": 1,
         "subcategory": 5,
-        "description": "湮灭护符lv4",
+        "description": "刻画了神秘的符文，似乎来自冥界",
         "classLimit": [
             217
         ],
@@ -43636,7 +43636,7 @@ exports.data = [
         "icon": "ewn031.png",
         "category": 1,
         "subcategory": 5,
-        "description": "湮灭护符lv5",
+        "description": "刻画了神秘的符文，似乎来自冥界",
         "classLimit": [
             217
         ],
@@ -43665,7 +43665,7 @@ exports.data = [
         "icon": "ewn031.png",
         "category": 1,
         "subcategory": 5,
-        "description": "湮灭护符lv6",
+        "description": "刻画了神秘的符文，似乎来自冥界",
         "classLimit": [
             217
         ],
@@ -43694,7 +43694,7 @@ exports.data = [
         "icon": "ewn031.png",
         "category": 1,
         "subcategory": 5,
-        "description": "湮灭护符lv7",
+        "description": "刻画了神秘的符文，似乎来自冥界",
         "classLimit": [
             217
         ],
@@ -43723,7 +43723,7 @@ exports.data = [
         "icon": "ewn031.png",
         "category": 1,
         "subcategory": 5,
-        "description": "湮灭护符lv8",
+        "description": "刻画了神秘的符文，似乎来自冥界",
         "classLimit": [
             217
         ],
@@ -43751,7 +43751,7 @@ exports.data = [
         "icon": "ewn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "落日护符lv4",
+        "description": "泛着诡异波纹，能让人堕入噩梦漩涡",
         "classLimit": [
             217
         ],
@@ -43778,7 +43778,7 @@ exports.data = [
         "icon": "ewn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "落日护符lv5",
+        "description": "泛着诡异波纹，能让人堕入噩梦漩涡",
         "classLimit": [
             217
         ],
@@ -43807,7 +43807,7 @@ exports.data = [
         "icon": "ewn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "落日护符lv6",
+        "description": "泛着诡异波纹，能让人堕入噩梦漩涡",
         "classLimit": [
             217
         ],
@@ -43836,7 +43836,7 @@ exports.data = [
         "icon": "ewn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "落日护符lv7",
+        "description": "泛着诡异波纹，能让人堕入噩梦漩涡",
         "classLimit": [
             217
         ],
@@ -43865,7 +43865,7 @@ exports.data = [
         "icon": "ewn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "落日护符lv8",
+        "description": "泛着诡异波纹，能让人堕入噩梦漩涡",
         "classLimit": [
             217
         ],
@@ -43894,7 +43894,7 @@ exports.data = [
         "icon": "ewn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "落日护符lv9",
+        "description": "泛着诡异波纹，能让人堕入噩梦漩涡",
         "classLimit": [
             217
         ],
@@ -43922,7 +43922,7 @@ exports.data = [
         "icon": "ewn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "龙灵护符lv5",
+        "description": "华美的纹理勾勒出永恒的绚烂，给予佩戴者龙之祝福",
         "classLimit": [
             217
         ],
@@ -43949,7 +43949,7 @@ exports.data = [
         "icon": "ewn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "龙灵护符lv6",
+        "description": "华美的纹理勾勒出永恒的绚烂，给予佩戴者龙之祝福",
         "classLimit": [
             217
         ],
@@ -43976,7 +43976,7 @@ exports.data = [
         "icon": "ewn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "龙灵护符lv7",
+        "description": "华美的纹理勾勒出永恒的绚烂，给予佩戴者龙之祝福",
         "classLimit": [
             217
         ],
@@ -44003,7 +44003,7 @@ exports.data = [
         "icon": "ewn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "龙灵护符lv8",
+        "description": "华美的纹理勾勒出永恒的绚烂，给予佩戴者龙之祝福",
         "classLimit": [
             217
         ],
@@ -44030,7 +44030,7 @@ exports.data = [
         "icon": "ewn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "龙灵护符lv9",
+        "description": "华美的纹理勾勒出永恒的绚烂，给予佩戴者龙之祝福",
         "classLimit": [
             217
         ],
@@ -44057,7 +44057,7 @@ exports.data = [
         "icon": "ewn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "龙灵护符lv10",
+        "description": "华美的纹理勾勒出永恒的绚烂，给予佩戴者龙之祝福",
         "classLimit": [
             217
         ],
@@ -44081,7 +44081,7 @@ exports.data = [
         "label": "圣徒之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "圣徒之鞋lv1",
+        "description": "由裁缝精心制作的鞋子，看上去很舒适",
         "effectf": [
             {
                 "part": "leftleg",
@@ -44127,7 +44127,7 @@ exports.data = [
         "label": "圣徒之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "圣徒之鞋lv2",
+        "description": "由裁缝精心制作的鞋子，看上去很舒适",
         "effectf": [
             {
                 "part": "leftleg",
@@ -44175,7 +44175,7 @@ exports.data = [
         "label": "圣徒之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "圣徒之鞋lv3",
+        "description": "由裁缝精心制作的鞋子，看上去很舒适",
         "effectf": [
             {
                 "part": "leftleg",
@@ -44223,7 +44223,7 @@ exports.data = [
         "label": "圣徒之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "圣徒之鞋lv4",
+        "description": "由裁缝精心制作的鞋子，看上去很舒适",
         "effectf": [
             {
                 "part": "leftleg",
@@ -44271,7 +44271,7 @@ exports.data = [
         "label": "圣徒之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "圣徒之鞋lv5",
+        "description": "由裁缝精心制作的鞋子，看上去很舒适",
         "effectf": [
             {
                 "part": "leftleg",
@@ -44319,7 +44319,7 @@ exports.data = [
         "label": "圣徒之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "圣徒之鞋lv6",
+        "description": "由裁缝精心制作的鞋子，看上去很舒适",
         "effectf": [
             {
                 "part": "leftleg",
@@ -44366,7 +44366,7 @@ exports.data = [
         "label": "祈求者之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "祈求者之鞋lv2",
+        "description": "款式精美的鞋子，轻便耐用",
         "effectf": [
             {
                 "part": "leftleg",
@@ -44412,7 +44412,7 @@ exports.data = [
         "label": "祈求者之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "祈求者之鞋lv3",
+        "description": "款式精美的鞋子，轻便耐用",
         "effectf": [
             {
                 "part": "leftleg",
@@ -44460,7 +44460,7 @@ exports.data = [
         "label": "祈求者之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "祈求者之鞋lv4",
+        "description": "款式精美的鞋子，轻便耐用",
         "effectf": [
             {
                 "part": "leftleg",
@@ -44508,7 +44508,7 @@ exports.data = [
         "label": "祈求者之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "祈求者之鞋lv5",
+        "description": "款式精美的鞋子，轻便耐用",
         "effectf": [
             {
                 "part": "leftleg",
@@ -44556,7 +44556,7 @@ exports.data = [
         "label": "祈求者之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "祈求者之鞋lv6",
+        "description": "款式精美的鞋子，轻便耐用",
         "effectf": [
             {
                 "part": "leftleg",
@@ -44604,7 +44604,7 @@ exports.data = [
         "label": "祈求者之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "祈求者之鞋lv7",
+        "description": "款式精美的鞋子，轻便耐用",
         "effectf": [
             {
                 "part": "leftleg",
@@ -44651,7 +44651,7 @@ exports.data = [
         "label": "神谕者之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "神谕者之鞋lv3",
+        "description": "珍贵的鞋子，似乎是天神赏赐的",
         "effectf": [
             {
                 "part": "leftleg",
@@ -44697,7 +44697,7 @@ exports.data = [
         "label": "神谕者之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "神谕者之鞋lv4",
+        "description": "珍贵的鞋子，似乎是天神赏赐的",
         "effectf": [
             {
                 "part": "leftleg",
@@ -44745,7 +44745,7 @@ exports.data = [
         "label": "神谕者之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "神谕者之鞋lv5",
+        "description": "珍贵的鞋子，似乎是天神赏赐的",
         "effectf": [
             {
                 "part": "leftleg",
@@ -44793,7 +44793,7 @@ exports.data = [
         "label": "神谕者之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "神谕者之鞋lv6",
+        "description": "珍贵的鞋子，似乎是天神赏赐的",
         "effectf": [
             {
                 "part": "leftleg",
@@ -44841,7 +44841,7 @@ exports.data = [
         "label": "神谕者之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "神谕者之鞋lv7",
+        "description": "珍贵的鞋子，似乎是天神赏赐的",
         "effectf": [
             {
                 "part": "leftleg",
@@ -44889,7 +44889,7 @@ exports.data = [
         "label": "神谕者之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "神谕者之鞋lv8",
+        "description": "珍贵的鞋子，似乎是天神赏赐的",
         "effectf": [
             {
                 "part": "leftleg",
@@ -44936,7 +44936,7 @@ exports.data = [
         "label": "神圣之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "神圣之鞋lv4",
+        "description": "特殊材料所制作，鞋身隐隐泛出神圣的气息",
         "effectf": [
             {
                 "part": "leftleg",
@@ -44982,7 +44982,7 @@ exports.data = [
         "label": "神圣之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "神圣之鞋lv5",
+        "description": "特殊材料所制作，鞋身隐隐泛出神圣的气息",
         "effectf": [
             {
                 "part": "leftleg",
@@ -45030,7 +45030,7 @@ exports.data = [
         "label": "神圣之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "神圣之鞋lv6",
+        "description": "特殊材料所制作，鞋身隐隐泛出神圣的气息",
         "effectf": [
             {
                 "part": "leftleg",
@@ -45078,7 +45078,7 @@ exports.data = [
         "label": "神圣之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "神圣之鞋lv7",
+        "description": "特殊材料所制作，鞋身隐隐泛出神圣的气息",
         "effectf": [
             {
                 "part": "leftleg",
@@ -45126,7 +45126,7 @@ exports.data = [
         "label": "神圣之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "神圣之鞋lv8",
+        "description": "特殊材料所制作，鞋身隐隐泛出神圣的气息",
         "effectf": [
             {
                 "part": "leftleg",
@@ -45174,7 +45174,7 @@ exports.data = [
         "label": "神圣之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "神圣之鞋lv9",
+        "description": "特殊材料所制作，鞋身隐隐泛出神圣的气息",
         "effectf": [
             {
                 "part": "leftleg",
@@ -45221,7 +45221,7 @@ exports.data = [
         "label": "光辉之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "光辉之鞋lv5",
+        "description": "洒下璀璨的光辉，带领我们通往光明之路",
         "effectf": [
             {
                 "part": "leftleg",
@@ -45267,7 +45267,7 @@ exports.data = [
         "label": "光辉之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "光辉之鞋lv6",
+        "description": "洒下璀璨的光辉，带领我们通往光明之路",
         "effectf": [
             {
                 "part": "leftleg",
@@ -45313,7 +45313,7 @@ exports.data = [
         "label": "光辉之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "光辉之鞋lv7",
+        "description": "洒下璀璨的光辉，带领我们通往光明之路",
         "effectf": [
             {
                 "part": "leftleg",
@@ -45359,7 +45359,7 @@ exports.data = [
         "label": "光辉之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "光辉之鞋lv8",
+        "description": "洒下璀璨的光辉，带领我们通往光明之路",
         "effectf": [
             {
                 "part": "leftleg",
@@ -45405,7 +45405,7 @@ exports.data = [
         "label": "光辉之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "光辉之鞋lv9",
+        "description": "洒下璀璨的光辉，带领我们通往光明之路",
         "effectf": [
             {
                 "part": "leftleg",
@@ -45451,7 +45451,7 @@ exports.data = [
         "label": "光辉之鞋",
         "category": 1,
         "subcategory": 4,
-        "description": "光辉之鞋lv10",
+        "description": "洒下璀璨的光辉，带领我们通往光明之路",
         "effectf": [
             {
                 "part": "leftleg",
@@ -45495,7 +45495,7 @@ exports.data = [
         "label": "圣徒长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "圣徒长袍lv1",
+        "description": "圣洁的白色外衣",
         "effectf": [
             {
                 "part": "chest",
@@ -45566,7 +45566,7 @@ exports.data = [
         "label": "圣徒长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "圣徒长袍lv2",
+        "description": "圣洁的白色外衣",
         "effectf": [
             {
                 "part": "chest",
@@ -45639,7 +45639,7 @@ exports.data = [
         "label": "圣徒长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "圣徒长袍lv3",
+        "description": "圣洁的白色外衣",
         "effectf": [
             {
                 "part": "chest",
@@ -45712,7 +45712,7 @@ exports.data = [
         "label": "圣徒长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "圣徒长袍lv4",
+        "description": "圣洁的白色外衣",
         "effectf": [
             {
                 "part": "chest",
@@ -45785,7 +45785,7 @@ exports.data = [
         "label": "圣徒长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "圣徒长袍lv5",
+        "description": "圣洁的白色外衣",
         "effectf": [
             {
                 "part": "chest",
@@ -45858,7 +45858,7 @@ exports.data = [
         "label": "圣徒长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "圣徒长袍lv6",
+        "description": "圣洁的白色外衣",
         "effectf": [
             {
                 "part": "chest",
@@ -45930,7 +45930,7 @@ exports.data = [
         "label": "祈求者长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "祈求者长袍lv2",
+        "description": "昂贵的真丝所织成的华美长袍",
         "effectf": [
             {
                 "part": "chest",
@@ -46001,7 +46001,7 @@ exports.data = [
         "label": "祈求者长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "祈求者长袍lv3",
+        "description": "昂贵的真丝所织成的华美长袍",
         "effectf": [
             {
                 "part": "chest",
@@ -46074,7 +46074,7 @@ exports.data = [
         "label": "祈求者长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "祈求者长袍lv4",
+        "description": "昂贵的真丝所织成的华美长袍",
         "effectf": [
             {
                 "part": "chest",
@@ -46147,7 +46147,7 @@ exports.data = [
         "label": "祈求者长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "祈求者长袍lv5",
+        "description": "昂贵的真丝所织成的华美长袍",
         "effectf": [
             {
                 "part": "chest",
@@ -46220,7 +46220,7 @@ exports.data = [
         "label": "祈求者长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "祈求者长袍lv6",
+        "description": "昂贵的真丝所织成的华美长袍",
         "effectf": [
             {
                 "part": "chest",
@@ -46293,7 +46293,7 @@ exports.data = [
         "label": "祈求者长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "祈求者长袍lv7",
+        "description": "昂贵的真丝所织成的华美长袍",
         "effectf": [
             {
                 "part": "chest",
@@ -46365,7 +46365,7 @@ exports.data = [
         "label": "神谕者长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "神谕者长袍lv3",
+        "description": "穿上它，你就是神的代言人",
         "effectf": [
             {
                 "part": "chest",
@@ -46436,7 +46436,7 @@ exports.data = [
         "label": "神谕者长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "神谕者长袍lv4",
+        "description": "穿上它，你就是神的代言人",
         "effectf": [
             {
                 "part": "chest",
@@ -46509,7 +46509,7 @@ exports.data = [
         "label": "神谕者长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "神谕者长袍lv5",
+        "description": "穿上它，你就是神的代言人",
         "effectf": [
             {
                 "part": "chest",
@@ -46582,7 +46582,7 @@ exports.data = [
         "label": "神谕者长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "神谕者长袍lv6",
+        "description": "穿上它，你就是神的代言人",
         "effectf": [
             {
                 "part": "chest",
@@ -46655,7 +46655,7 @@ exports.data = [
         "label": "神谕者长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "神谕者长袍lv7",
+        "description": "穿上它，你就是神的代言人",
         "effectf": [
             {
                 "part": "chest",
@@ -46728,7 +46728,7 @@ exports.data = [
         "label": "神谕者长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "神谕者长袍lv8",
+        "description": "穿上它，你就是神的代言人",
         "effectf": [
             {
                 "part": "chest",
@@ -46800,7 +46800,7 @@ exports.data = [
         "label": "神圣长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "神圣长袍lv4",
+        "description": "高贵的长袍，神圣不可侵犯",
         "effectf": [
             {
                 "part": "chest",
@@ -46871,7 +46871,7 @@ exports.data = [
         "label": "神圣长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "神圣长袍lv5",
+        "description": "高贵的长袍，神圣不可侵犯",
         "effectf": [
             {
                 "part": "chest",
@@ -46944,7 +46944,7 @@ exports.data = [
         "label": "神圣长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "神圣长袍lv6",
+        "description": "高贵的长袍，神圣不可侵犯",
         "effectf": [
             {
                 "part": "chest",
@@ -47017,7 +47017,7 @@ exports.data = [
         "label": "神圣长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "神圣长袍lv7",
+        "description": "高贵的长袍，神圣不可侵犯",
         "effectf": [
             {
                 "part": "chest",
@@ -47090,7 +47090,7 @@ exports.data = [
         "label": "神圣长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "神圣长袍lv8",
+        "description": "高贵的长袍，神圣不可侵犯",
         "effectf": [
             {
                 "part": "chest",
@@ -47163,7 +47163,7 @@ exports.data = [
         "label": "神圣长袍",
         "category": 1,
         "subcategory": 2,
-        "description": "神圣长袍lv9",
+        "description": "高贵的长袍，神圣不可侵犯",
         "effectf": [
             {
                 "part": "chest",
@@ -47235,7 +47235,7 @@ exports.data = [
         "label": "光辉圣衣",
         "category": 1,
         "subcategory": 2,
-        "description": "光辉圣衣lv5",
+        "description": "永恒不朽的圣衣，受到星辰之光的加持",
         "effectf": [
             {
                 "part": "chest",
@@ -47306,7 +47306,7 @@ exports.data = [
         "label": "光辉圣衣",
         "category": 1,
         "subcategory": 2,
-        "description": "光辉圣衣lv6",
+        "description": "永恒不朽的圣衣，受到星辰之光的加持",
         "effectf": [
             {
                 "part": "chest",
@@ -47377,7 +47377,7 @@ exports.data = [
         "label": "光辉圣衣",
         "category": 1,
         "subcategory": 2,
-        "description": "光辉圣衣lv7",
+        "description": "永恒不朽的圣衣，受到星辰之光的加持",
         "effectf": [
             {
                 "part": "chest",
@@ -47448,7 +47448,7 @@ exports.data = [
         "label": "光辉圣衣",
         "category": 1,
         "subcategory": 2,
-        "description": "光辉圣衣lv8",
+        "description": "永恒不朽的圣衣，受到星辰之光的加持",
         "effectf": [
             {
                 "part": "chest",
@@ -47519,7 +47519,7 @@ exports.data = [
         "label": "光辉圣衣",
         "category": 1,
         "subcategory": 2,
-        "description": "光辉圣衣lv9",
+        "description": "永恒不朽的圣衣，受到星辰之光的加持",
         "effectf": [
             {
                 "part": "chest",
@@ -47590,7 +47590,7 @@ exports.data = [
         "label": "光辉圣衣",
         "category": 1,
         "subcategory": 2,
-        "description": "光辉圣衣lv10",
+        "description": "永恒不朽的圣衣，受到星辰之光的加持",
         "effectf": [
             {
                 "part": "chest",
@@ -47659,7 +47659,7 @@ exports.data = [
         "label": "圣徒宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "圣徒宝典lv1",
+        "description": "能够治愈伤痛的宝典",
         "effectf": [
             {
                 "part": "weapon4",
@@ -47707,7 +47707,7 @@ exports.data = [
         "label": "圣徒宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "圣徒宝典lv2",
+        "description": "能够治愈伤痛的宝典",
         "effectf": [
             {
                 "part": "weapon4",
@@ -47757,7 +47757,7 @@ exports.data = [
         "label": "圣徒宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "圣徒宝典lv3",
+        "description": "能够治愈伤痛的宝典",
         "effectf": [
             {
                 "part": "weapon4",
@@ -47807,7 +47807,7 @@ exports.data = [
         "label": "圣徒宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "圣徒宝典lv4",
+        "description": "能够治愈伤痛的宝典",
         "effectf": [
             {
                 "part": "weapon4",
@@ -47857,7 +47857,7 @@ exports.data = [
         "label": "圣徒宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "圣徒宝典lv5",
+        "description": "能够治愈伤痛的宝典",
         "effectf": [
             {
                 "part": "weapon4",
@@ -47907,7 +47907,7 @@ exports.data = [
         "label": "圣徒宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "圣徒宝典lv6",
+        "description": "能够治愈伤痛的宝典",
         "effectf": [
             {
                 "part": "weapon4",
@@ -47956,7 +47956,7 @@ exports.data = [
         "label": "祈求者宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "祈求者宝典lv2",
+        "description": "获得祝福的宝典，让人远离灾难与恐惧",
         "effectf": [
             {
                 "part": "weapon4",
@@ -48004,7 +48004,7 @@ exports.data = [
         "label": "祈求者宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "祈求者宝典lv3",
+        "description": "获得祝福的宝典，让人远离灾难与恐惧",
         "effectf": [
             {
                 "part": "weapon4",
@@ -48054,7 +48054,7 @@ exports.data = [
         "label": "祈求者宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "祈求者宝典lv4",
+        "description": "获得祝福的宝典，让人远离灾难与恐惧",
         "effectf": [
             {
                 "part": "weapon4",
@@ -48104,7 +48104,7 @@ exports.data = [
         "label": "祈求者宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "祈求者宝典lv5",
+        "description": "获得祝福的宝典，让人远离灾难与恐惧",
         "effectf": [
             {
                 "part": "weapon4",
@@ -48154,7 +48154,7 @@ exports.data = [
         "label": "祈求者宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "祈求者宝典lv6",
+        "description": "获得祝福的宝典，让人远离灾难与恐惧",
         "effectf": [
             {
                 "part": "weapon4",
@@ -48204,7 +48204,7 @@ exports.data = [
         "label": "祈求者宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "祈求者宝典lv7",
+        "description": "获得祝福的宝典，让人远离灾难与恐惧",
         "effectf": [
             {
                 "part": "weapon4",
@@ -48253,7 +48253,7 @@ exports.data = [
         "label": "神谕者宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "神谕者宝典lv3",
+        "description": "凝聚着先知无穷智慧的宝典",
         "effectf": [
             {
                 "part": "weapon4",
@@ -48301,7 +48301,7 @@ exports.data = [
         "label": "神谕者宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "神谕者宝典lv4",
+        "description": "凝聚着先知无穷智慧的宝典",
         "effectf": [
             {
                 "part": "weapon4",
@@ -48351,7 +48351,7 @@ exports.data = [
         "label": "神谕者宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "神谕者宝典lv5",
+        "description": "凝聚着先知无穷智慧的宝典",
         "effectf": [
             {
                 "part": "weapon4",
@@ -48401,7 +48401,7 @@ exports.data = [
         "label": "神谕者宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "神谕者宝典lv6",
+        "description": "凝聚着先知无穷智慧的宝典",
         "effectf": [
             {
                 "part": "weapon4",
@@ -48451,7 +48451,7 @@ exports.data = [
         "label": "神谕者宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "神谕者宝典lv7",
+        "description": "凝聚着先知无穷智慧的宝典",
         "effectf": [
             {
                 "part": "weapon4",
@@ -48501,7 +48501,7 @@ exports.data = [
         "label": "神谕者宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "神谕者宝典lv8",
+        "description": "凝聚着先知无穷智慧的宝典",
         "effectf": [
             {
                 "part": "weapon4",
@@ -48550,7 +48550,7 @@ exports.data = [
         "label": "神圣宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "神圣宝典lv4",
+        "description": "神圣的宝典，指引世人向善",
         "effectf": [
             {
                 "part": "weapon4",
@@ -48598,7 +48598,7 @@ exports.data = [
         "label": "神圣宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "神圣宝典lv5",
+        "description": "神圣的宝典，指引世人向善",
         "effectf": [
             {
                 "part": "weapon4",
@@ -48648,7 +48648,7 @@ exports.data = [
         "label": "神圣宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "神圣宝典lv6",
+        "description": "神圣的宝典，指引世人向善",
         "effectf": [
             {
                 "part": "weapon4",
@@ -48698,7 +48698,7 @@ exports.data = [
         "label": "神圣宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "神圣宝典lv7",
+        "description": "神圣的宝典，指引世人向善",
         "effectf": [
             {
                 "part": "weapon4",
@@ -48748,7 +48748,7 @@ exports.data = [
         "label": "神圣宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "神圣宝典lv8",
+        "description": "神圣的宝典，指引世人向善",
         "effectf": [
             {
                 "part": "weapon4",
@@ -48798,7 +48798,7 @@ exports.data = [
         "label": "神圣宝典",
         "category": 1,
         "subcategory": 1,
-        "description": "神圣宝典lv9",
+        "description": "神圣的宝典，指引世人向善",
         "effectf": [
             {
                 "part": "weapon4",
@@ -48847,7 +48847,7 @@ exports.data = [
         "label": "命运圣典",
         "category": 1,
         "subcategory": 1,
-        "description": "命运圣典lv5",
+        "description": "传说它的光芒能够为世人指出命运的方向",
         "effectf": [
             {
                 "part": "weapon4",
@@ -48895,7 +48895,7 @@ exports.data = [
         "label": "命运圣典",
         "category": 1,
         "subcategory": 1,
-        "description": "命运圣典lv6",
+        "description": "传说它的光芒能够为世人指出命运的方向",
         "effectf": [
             {
                 "part": "weapon4",
@@ -48943,7 +48943,7 @@ exports.data = [
         "label": "命运圣典",
         "category": 1,
         "subcategory": 1,
-        "description": "命运圣典lv7",
+        "description": "传说它的光芒能够为世人指出命运的方向",
         "effectf": [
             {
                 "part": "weapon4",
@@ -48991,7 +48991,7 @@ exports.data = [
         "label": "命运圣典",
         "category": 1,
         "subcategory": 1,
-        "description": "命运圣典lv8",
+        "description": "传说它的光芒能够为世人指出命运的方向",
         "effectf": [
             {
                 "part": "weapon4",
@@ -49039,7 +49039,7 @@ exports.data = [
         "label": "命运圣典",
         "category": 1,
         "subcategory": 1,
-        "description": "命运圣典lv9",
+        "description": "传说它的光芒能够为世人指出命运的方向",
         "effectf": [
             {
                 "part": "weapon4",
@@ -49087,7 +49087,7 @@ exports.data = [
         "label": "命运圣典",
         "category": 1,
         "subcategory": 1,
-        "description": "命运圣典lv10",
+        "description": "传说它的光芒能够为世人指出命运的方向",
         "effectf": [
             {
                 "part": "weapon4",
@@ -49133,7 +49133,7 @@ exports.data = [
         "label": "圣徒权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "圣徒权杖lv1",
+        "description": "造型简单的权杖，拥有温暖人心的力量",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -49172,7 +49172,7 @@ exports.data = [
         "label": "圣徒权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "圣徒权杖lv2",
+        "description": "造型简单的权杖，拥有温暖人心的力量",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -49213,7 +49213,7 @@ exports.data = [
         "label": "圣徒权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "圣徒权杖lv3",
+        "description": "造型简单的权杖，拥有温暖人心的力量",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -49254,7 +49254,7 @@ exports.data = [
         "label": "圣徒权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "圣徒权杖lv4",
+        "description": "造型简单的权杖，拥有温暖人心的力量",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -49295,7 +49295,7 @@ exports.data = [
         "label": "圣徒权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "圣徒权杖lv5",
+        "description": "造型简单的权杖，拥有温暖人心的力量",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -49336,7 +49336,7 @@ exports.data = [
         "label": "圣徒权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "圣徒权杖lv6",
+        "description": "造型简单的权杖，拥有温暖人心的力量",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -49376,7 +49376,7 @@ exports.data = [
         "label": "祈求者权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "祈求者权杖lv2",
+        "description": "造型别致的权杖，能激发世人对光明的向往",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -49415,7 +49415,7 @@ exports.data = [
         "label": "祈求者权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "祈求者权杖lv3",
+        "description": "造型别致的权杖，能激发世人对光明的向往",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -49456,7 +49456,7 @@ exports.data = [
         "label": "祈求者权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "祈求者权杖lv4",
+        "description": "造型别致的权杖，能激发世人对光明的向往",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -49497,7 +49497,7 @@ exports.data = [
         "label": "祈求者权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "祈求者权杖lv5",
+        "description": "造型别致的权杖，能激发世人对光明的向往",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -49538,7 +49538,7 @@ exports.data = [
         "label": "祈求者权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "祈求者权杖lv6",
+        "description": "造型别致的权杖，能激发世人对光明的向往",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -49579,7 +49579,7 @@ exports.data = [
         "label": "祈求者权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "祈求者权杖lv7",
+        "description": "造型别致的权杖，能激发世人对光明的向往",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -49619,7 +49619,7 @@ exports.data = [
         "label": "神谕者权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "神谕者权杖lv3",
+        "description": "异常华贵的权杖，象征着权力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -49658,7 +49658,7 @@ exports.data = [
         "label": "神谕者权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "神谕者权杖lv4",
+        "description": "异常华贵的权杖，象征着权力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -49699,7 +49699,7 @@ exports.data = [
         "label": "神谕者权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "神谕者权杖lv5",
+        "description": "异常华贵的权杖，象征着权力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -49740,7 +49740,7 @@ exports.data = [
         "label": "神谕者权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "神谕者权杖lv6",
+        "description": "异常华贵的权杖，象征着权力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -49781,7 +49781,7 @@ exports.data = [
         "label": "神谕者权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "神谕者权杖lv7",
+        "description": "异常华贵的权杖，象征着权力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -49822,7 +49822,7 @@ exports.data = [
         "label": "神谕者权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "神谕者权杖lv8",
+        "description": "异常华贵的权杖，象征着权力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -49862,7 +49862,7 @@ exports.data = [
         "label": "神圣权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "神圣权杖lv4",
+        "description": "能使亡魂得到救赎的神圣权杖",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -49901,7 +49901,7 @@ exports.data = [
         "label": "神圣权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "神圣权杖lv5",
+        "description": "能使亡魂得到救赎的神圣权杖",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -49942,7 +49942,7 @@ exports.data = [
         "label": "神圣权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "神圣权杖lv6",
+        "description": "能使亡魂得到救赎的神圣权杖",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -49983,7 +49983,7 @@ exports.data = [
         "label": "神圣权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "神圣权杖lv7",
+        "description": "能使亡魂得到救赎的神圣权杖",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -50024,7 +50024,7 @@ exports.data = [
         "label": "神圣权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "神圣权杖lv8",
+        "description": "能使亡魂得到救赎的神圣权杖",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -50065,7 +50065,7 @@ exports.data = [
         "label": "神圣权杖",
         "category": 1,
         "subcategory": 0,
-        "description": "神圣权杖lv9",
+        "description": "能使亡魂得到救赎的神圣权杖",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -50105,7 +50105,7 @@ exports.data = [
         "label": "生命之树",
         "category": 1,
         "subcategory": 0,
-        "description": "生命之树lv5",
+        "description": "饱含着生命的气息，凝聚着强大的自然之力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -50144,7 +50144,7 @@ exports.data = [
         "label": "生命之树",
         "category": 1,
         "subcategory": 0,
-        "description": "生命之树lv6",
+        "description": "饱含着生命的气息，凝聚着强大的自然之力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -50183,7 +50183,7 @@ exports.data = [
         "label": "生命之树",
         "category": 1,
         "subcategory": 0,
-        "description": "生命之树lv7",
+        "description": "饱含着生命的气息，凝聚着强大的自然之力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -50222,7 +50222,7 @@ exports.data = [
         "label": "生命之树",
         "category": 1,
         "subcategory": 0,
-        "description": "生命之树lv8",
+        "description": "饱含着生命的气息，凝聚着强大的自然之力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -50261,7 +50261,7 @@ exports.data = [
         "label": "生命之树",
         "category": 1,
         "subcategory": 0,
-        "description": "生命之树lv9",
+        "description": "饱含着生命的气息，凝聚着强大的自然之力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -50300,7 +50300,7 @@ exports.data = [
         "label": "生命之树",
         "category": 1,
         "subcategory": 0,
-        "description": "生命之树lv10",
+        "description": "饱含着生命的气息，凝聚着强大的自然之力",
         "effectf": [
             {
                 "part": "mainweapon",
@@ -50338,7 +50338,7 @@ exports.data = [
         "icon": "er013.png",
         "category": 1,
         "subcategory": 3,
-        "description": "圣徒之戒lv1",
+        "description": "虔诚的教徒才能佩戴的戒指",
         "classLimit": [
             218
         ],
@@ -50365,7 +50365,7 @@ exports.data = [
         "icon": "er013.png",
         "category": 1,
         "subcategory": 3,
-        "description": "圣徒之戒lv2",
+        "description": "虔诚的教徒才能佩戴的戒指",
         "classLimit": [
             218
         ],
@@ -50394,7 +50394,7 @@ exports.data = [
         "icon": "er013.png",
         "category": 1,
         "subcategory": 3,
-        "description": "圣徒之戒lv3",
+        "description": "虔诚的教徒才能佩戴的戒指",
         "classLimit": [
             218
         ],
@@ -50423,7 +50423,7 @@ exports.data = [
         "icon": "er013.png",
         "category": 1,
         "subcategory": 3,
-        "description": "圣徒之戒lv4",
+        "description": "虔诚的教徒才能佩戴的戒指",
         "classLimit": [
             218
         ],
@@ -50452,7 +50452,7 @@ exports.data = [
         "icon": "er013.png",
         "category": 1,
         "subcategory": 3,
-        "description": "圣徒之戒lv5",
+        "description": "虔诚的教徒才能佩戴的戒指",
         "classLimit": [
             218
         ],
@@ -50481,7 +50481,7 @@ exports.data = [
         "icon": "er013.png",
         "category": 1,
         "subcategory": 3,
-        "description": "圣徒之戒lv6",
+        "description": "虔诚的教徒才能佩戴的戒指",
         "classLimit": [
             218
         ],
@@ -50509,7 +50509,7 @@ exports.data = [
         "icon": "er023.png",
         "category": 1,
         "subcategory": 3,
-        "description": "祈求者之戒lv2",
+        "description": "凝聚了虔诚之力的戒指，散发出柔和的光芒",
         "classLimit": [
             218
         ],
@@ -50536,7 +50536,7 @@ exports.data = [
         "icon": "er023.png",
         "category": 1,
         "subcategory": 3,
-        "description": "祈求者之戒lv3",
+        "description": "凝聚了虔诚之力的戒指，散发出柔和的光芒",
         "classLimit": [
             218
         ],
@@ -50565,7 +50565,7 @@ exports.data = [
         "icon": "er023.png",
         "category": 1,
         "subcategory": 3,
-        "description": "祈求者之戒lv4",
+        "description": "凝聚了虔诚之力的戒指，散发出柔和的光芒",
         "classLimit": [
             218
         ],
@@ -50594,7 +50594,7 @@ exports.data = [
         "icon": "er023.png",
         "category": 1,
         "subcategory": 3,
-        "description": "祈求者之戒lv5",
+        "description": "凝聚了虔诚之力的戒指，散发出柔和的光芒",
         "classLimit": [
             218
         ],
@@ -50623,7 +50623,7 @@ exports.data = [
         "icon": "er023.png",
         "category": 1,
         "subcategory": 3,
-        "description": "祈求者之戒lv6",
+        "description": "凝聚了虔诚之力的戒指，散发出柔和的光芒",
         "classLimit": [
             218
         ],
@@ -50652,7 +50652,7 @@ exports.data = [
         "icon": "er023.png",
         "category": 1,
         "subcategory": 3,
-        "description": "祈求者之戒lv7",
+        "description": "凝聚了虔诚之力的戒指，散发出柔和的光芒",
         "classLimit": [
             218
         ],
@@ -50680,7 +50680,7 @@ exports.data = [
         "icon": "er033.png",
         "category": 1,
         "subcategory": 3,
-        "description": "祈求者之戒lv3",
+        "description": "得到诸神祝福的戒指，佩戴者拥有绝对单纯的内心与思想",
         "classLimit": [
             218
         ],
@@ -50707,7 +50707,7 @@ exports.data = [
         "icon": "er033.png",
         "category": 1,
         "subcategory": 3,
-        "description": "祈求者之戒lv4",
+        "description": "得到诸神祝福的戒指，佩戴者拥有绝对单纯的内心与思想",
         "classLimit": [
             218
         ],
@@ -50736,7 +50736,7 @@ exports.data = [
         "icon": "er033.png",
         "category": 1,
         "subcategory": 3,
-        "description": "祈求者之戒lv5",
+        "description": "得到诸神祝福的戒指，佩戴者拥有绝对单纯的内心与思想",
         "classLimit": [
             218
         ],
@@ -50765,7 +50765,7 @@ exports.data = [
         "icon": "er033.png",
         "category": 1,
         "subcategory": 3,
-        "description": "祈求者之戒lv6",
+        "description": "得到诸神祝福的戒指，佩戴者拥有绝对单纯的内心与思想",
         "classLimit": [
             218
         ],
@@ -50794,7 +50794,7 @@ exports.data = [
         "icon": "er033.png",
         "category": 1,
         "subcategory": 3,
-        "description": "祈求者之戒lv7",
+        "description": "得到诸神祝福的戒指，佩戴者拥有绝对单纯的内心与思想",
         "classLimit": [
             218
         ],
@@ -50823,7 +50823,7 @@ exports.data = [
         "icon": "er033.png",
         "category": 1,
         "subcategory": 3,
-        "description": "祈求者之戒lv8",
+        "description": "得到诸神祝福的戒指，佩戴者拥有绝对单纯的内心与思想",
         "classLimit": [
             218
         ],
@@ -50851,7 +50851,7 @@ exports.data = [
         "icon": "er043.png",
         "category": 1,
         "subcategory": 3,
-        "description": "神圣之戒lv4",
+        "description": "远古圣灵将神力的碎片熔铸而成，凝聚着信仰之力",
         "classLimit": [
             218
         ],
@@ -50878,7 +50878,7 @@ exports.data = [
         "icon": "er043.png",
         "category": 1,
         "subcategory": 3,
-        "description": "神圣之戒lv5",
+        "description": "远古圣灵将神力的碎片熔铸而成，凝聚着信仰之力",
         "classLimit": [
             218
         ],
@@ -50907,7 +50907,7 @@ exports.data = [
         "icon": "er043.png",
         "category": 1,
         "subcategory": 3,
-        "description": "神圣之戒lv6",
+        "description": "远古圣灵将神力的碎片熔铸而成，凝聚着信仰之力",
         "classLimit": [
             218
         ],
@@ -50936,7 +50936,7 @@ exports.data = [
         "icon": "er043.png",
         "category": 1,
         "subcategory": 3,
-        "description": "神圣之戒lv7",
+        "description": "远古圣灵将神力的碎片熔铸而成，凝聚着信仰之力",
         "classLimit": [
             218
         ],
@@ -50965,7 +50965,7 @@ exports.data = [
         "icon": "er043.png",
         "category": 1,
         "subcategory": 3,
-        "description": "神圣之戒lv8",
+        "description": "远古圣灵将神力的碎片熔铸而成，凝聚着信仰之力",
         "classLimit": [
             218
         ],
@@ -50994,7 +50994,7 @@ exports.data = [
         "icon": "er043.png",
         "category": 1,
         "subcategory": 3,
-        "description": "神圣之戒lv9",
+        "description": "远古圣灵将神力的碎片熔铸而成，凝聚着信仰之力",
         "classLimit": [
             218
         ],
@@ -51022,7 +51022,7 @@ exports.data = [
         "icon": "er043.png",
         "category": 1,
         "subcategory": 3,
-        "description": "生命指轮lv5",
+        "description": "镌刻着神秘的纹章，无尽的生命之力喷涌而出",
         "classLimit": [
             218
         ],
@@ -51049,7 +51049,7 @@ exports.data = [
         "icon": "er043.png",
         "category": 1,
         "subcategory": 3,
-        "description": "生命指轮lv6",
+        "description": "镌刻着神秘的纹章，无尽的生命之力喷涌而出",
         "classLimit": [
             218
         ],
@@ -51076,7 +51076,7 @@ exports.data = [
         "icon": "er043.png",
         "category": 1,
         "subcategory": 3,
-        "description": "生命指轮lv7",
+        "description": "镌刻着神秘的纹章，无尽的生命之力喷涌而出",
         "classLimit": [
             218
         ],
@@ -51103,7 +51103,7 @@ exports.data = [
         "icon": "er043.png",
         "category": 1,
         "subcategory": 3,
-        "description": "生命指轮lv8",
+        "description": "镌刻着神秘的纹章，无尽的生命之力喷涌而出",
         "classLimit": [
             218
         ],
@@ -51130,7 +51130,7 @@ exports.data = [
         "icon": "er043.png",
         "category": 1,
         "subcategory": 3,
-        "description": "生命指轮lv9",
+        "description": "镌刻着神秘的纹章，无尽的生命之力喷涌而出",
         "classLimit": [
             218
         ],
@@ -51157,7 +51157,7 @@ exports.data = [
         "icon": "er043.png",
         "category": 1,
         "subcategory": 3,
-        "description": "生命指轮lv10",
+        "description": "镌刻着神秘的纹章，无尽的生命之力喷涌而出",
         "classLimit": [
             218
         ],
@@ -51182,7 +51182,7 @@ exports.data = [
         "icon": "epn011.png",
         "category": 1,
         "subcategory": 5,
-        "description": "圣徒之证lv1",
+        "description": "赋予佩戴者专注之力",
         "classLimit": [
             218
         ],
@@ -51209,7 +51209,7 @@ exports.data = [
         "icon": "epn011.png",
         "category": 1,
         "subcategory": 5,
-        "description": "圣徒之证lv2",
+        "description": "赋予佩戴者专注之力",
         "classLimit": [
             218
         ],
@@ -51238,7 +51238,7 @@ exports.data = [
         "icon": "epn011.png",
         "category": 1,
         "subcategory": 5,
-        "description": "圣徒之证lv3",
+        "description": "赋予佩戴者专注之力",
         "classLimit": [
             218
         ],
@@ -51267,7 +51267,7 @@ exports.data = [
         "icon": "epn011.png",
         "category": 1,
         "subcategory": 5,
-        "description": "圣徒之证lv4",
+        "description": "赋予佩戴者专注之力",
         "classLimit": [
             218
         ],
@@ -51296,7 +51296,7 @@ exports.data = [
         "icon": "epn011.png",
         "category": 1,
         "subcategory": 5,
-        "description": "圣徒之证lv5",
+        "description": "赋予佩戴者专注之力",
         "classLimit": [
             218
         ],
@@ -51325,7 +51325,7 @@ exports.data = [
         "icon": "epn011.png",
         "category": 1,
         "subcategory": 5,
-        "description": "圣徒之证lv6",
+        "description": "赋予佩戴者专注之力",
         "classLimit": [
             218
         ],
@@ -51353,7 +51353,7 @@ exports.data = [
         "icon": "epn021.png",
         "category": 1,
         "subcategory": 5,
-        "description": "祈求者之证lv2",
+        "description": "精致的项链，能带来好运",
         "classLimit": [
             218
         ],
@@ -51380,7 +51380,7 @@ exports.data = [
         "icon": "epn021.png",
         "category": 1,
         "subcategory": 5,
-        "description": "祈求者之证lv3",
+        "description": "精致的项链，能带来好运",
         "classLimit": [
             218
         ],
@@ -51409,7 +51409,7 @@ exports.data = [
         "icon": "epn021.png",
         "category": 1,
         "subcategory": 5,
-        "description": "祈求者之证lv4",
+        "description": "精致的项链，能带来好运",
         "classLimit": [
             218
         ],
@@ -51438,7 +51438,7 @@ exports.data = [
         "icon": "epn021.png",
         "category": 1,
         "subcategory": 5,
-        "description": "祈求者之证lv5",
+        "description": "精致的项链，能带来好运",
         "classLimit": [
             218
         ],
@@ -51467,7 +51467,7 @@ exports.data = [
         "icon": "epn021.png",
         "category": 1,
         "subcategory": 5,
-        "description": "祈求者之证lv6",
+        "description": "精致的项链，能带来好运",
         "classLimit": [
             218
         ],
@@ -51496,7 +51496,7 @@ exports.data = [
         "icon": "epn021.png",
         "category": 1,
         "subcategory": 5,
-        "description": "祈求者之证lv7",
+        "description": "精致的项链，能带来好运",
         "classLimit": [
             218
         ],
@@ -51524,7 +51524,7 @@ exports.data = [
         "icon": "epn031.png",
         "category": 1,
         "subcategory": 5,
-        "description": "神谕者之证lv3",
+        "description": "获得神力庇护的项链，代表着圣洁与光明",
         "classLimit": [
             218
         ],
@@ -51551,7 +51551,7 @@ exports.data = [
         "icon": "epn031.png",
         "category": 1,
         "subcategory": 5,
-        "description": "神谕者之证lv4",
+        "description": "获得神力庇护的项链，代表着圣洁与光明",
         "classLimit": [
             218
         ],
@@ -51580,7 +51580,7 @@ exports.data = [
         "icon": "epn031.png",
         "category": 1,
         "subcategory": 5,
-        "description": "神谕者之证lv5",
+        "description": "获得神力庇护的项链，代表着圣洁与光明",
         "classLimit": [
             218
         ],
@@ -51609,7 +51609,7 @@ exports.data = [
         "icon": "epn031.png",
         "category": 1,
         "subcategory": 5,
-        "description": "神谕者之证lv6",
+        "description": "获得神力庇护的项链，代表着圣洁与光明",
         "classLimit": [
             218
         ],
@@ -51638,7 +51638,7 @@ exports.data = [
         "icon": "epn031.png",
         "category": 1,
         "subcategory": 5,
-        "description": "神谕者之证lv7",
+        "description": "获得神力庇护的项链，代表着圣洁与光明",
         "classLimit": [
             218
         ],
@@ -51667,7 +51667,7 @@ exports.data = [
         "icon": "epn031.png",
         "category": 1,
         "subcategory": 5,
-        "description": "神谕者之证lv8",
+        "description": "获得神力庇护的项链，代表着圣洁与光明",
         "classLimit": [
             218
         ],
@@ -51695,7 +51695,7 @@ exports.data = [
         "icon": "epn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "神圣之证lv4",
+        "description": "散发着圣洁的光辉，能驱散一切邪恶的力量",
         "classLimit": [
             218
         ],
@@ -51722,7 +51722,7 @@ exports.data = [
         "icon": "epn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "神圣之证lv5",
+        "description": "散发着圣洁的光辉，能驱散一切邪恶的力量",
         "classLimit": [
             218
         ],
@@ -51751,7 +51751,7 @@ exports.data = [
         "icon": "epn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "神圣之证lv6",
+        "description": "散发着圣洁的光辉，能驱散一切邪恶的力量",
         "classLimit": [
             218
         ],
@@ -51780,7 +51780,7 @@ exports.data = [
         "icon": "epn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "神圣之证lv7",
+        "description": "散发着圣洁的光辉，能驱散一切邪恶的力量",
         "classLimit": [
             218
         ],
@@ -51809,7 +51809,7 @@ exports.data = [
         "icon": "epn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "神圣之证lv8",
+        "description": "散发着圣洁的光辉，能驱散一切邪恶的力量",
         "classLimit": [
             218
         ],
@@ -51838,7 +51838,7 @@ exports.data = [
         "icon": "epn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "神圣之证lv9",
+        "description": "散发着圣洁的光辉，能驱散一切邪恶的力量",
         "classLimit": [
             218
         ],
@@ -51866,7 +51866,7 @@ exports.data = [
         "icon": "epn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "黎明的曙光lv5",
+        "description": "晶莹的印记，指引我们搜寻黎明里第一道曙光",
         "classLimit": [
             218
         ],
@@ -51893,7 +51893,7 @@ exports.data = [
         "icon": "epn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "黎明的曙光lv6",
+        "description": "晶莹的印记，指引我们搜寻黎明里第一道曙光",
         "classLimit": [
             218
         ],
@@ -51920,7 +51920,7 @@ exports.data = [
         "icon": "epn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "黎明的曙光lv7",
+        "description": "晶莹的印记，指引我们搜寻黎明里第一道曙光",
         "classLimit": [
             218
         ],
@@ -51947,7 +51947,7 @@ exports.data = [
         "icon": "epn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "黎明的曙光lv8",
+        "description": "晶莹的印记，指引我们搜寻黎明里第一道曙光",
         "classLimit": [
             218
         ],
@@ -51974,7 +51974,7 @@ exports.data = [
         "icon": "epn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "黎明的曙光lv9",
+        "description": "晶莹的印记，指引我们搜寻黎明里第一道曙光",
         "classLimit": [
             218
         ],
@@ -52001,7 +52001,7 @@ exports.data = [
         "icon": "epn041.png",
         "category": 1,
         "subcategory": 5,
-        "description": "黎明的曙光lv10",
+        "description": "晶莹的印记，指引我们搜寻黎明里第一道曙光",
         "classLimit": [
             218
         ],
@@ -52023,7 +52023,7 @@ exports.data = [
     {
         "classId": 1419,
         "label": "狼牙粉末",
-        "icon": "item-sjw1.png",
+        "icon": "item-sc1.png",
         "category": 2,
         "subcategory": 0,
         "description": "土狼牙齿碾碎后的粉末",
@@ -52033,11 +52033,11 @@ exports.data = [
     },
     {
         "classId": 1420,
-        "label": "黄铜块",
-        "icon": "item-sjw2.png",
+        "label": "铜块",
+        "icon": "item-sc2.png",
         "category": 2,
         "subcategory": 0,
-        "description": "一整块黄铜，可以用来锻造装备",
+        "description": "一整块铜，可以用来锻造装备",
         "stack": 99,
         "sellprice": 500,
         "quality": 0
@@ -52045,7 +52045,7 @@ exports.data = [
     {
         "classId": 1421,
         "label": "土狼皮",
-        "icon": "item-sjw3.png",
+        "icon": "item-sc3.png",
         "category": 2,
         "subcategory": 0,
         "description": "土狼被杀死后剥下来的皮，似乎记录些什么",
@@ -52056,7 +52056,7 @@ exports.data = [
     {
         "classId": 1422,
         "label": "普通木块",
-        "icon": "item-sjw4.png",
+        "icon": "item-sc4.png",
         "category": 2,
         "subcategory": 0,
         "description": "一块比较好的锻造原料",
@@ -52066,8 +52066,8 @@ exports.data = [
     },
     {
         "classId": 1423,
-        "label": "紫色粉末",
-        "icon": "item-sjw5.png",
+        "label": "绿色粉末",
+        "icon": "item-sc5.png",
         "category": 2,
         "subcategory": 0,
         "description": "蕴含特殊力量的粉末",
@@ -52078,7 +52078,7 @@ exports.data = [
     {
         "classId": 1424,
         "label": "麻布",
-        "icon": "item-sjw6.png",
+        "icon": "item-sc6.png",
         "category": 2,
         "subcategory": 0,
         "description": "不知道被谁掉落在地下城的麻布",
@@ -52089,7 +52089,7 @@ exports.data = [
     {
         "classId": 1425,
         "label": "结实的绳子",
-        "icon": "item-sjw7.png",
+        "icon": "item-sc7.png",
         "category": 2,
         "subcategory": 0,
         "description": "非常结实、坚韧的绳子",
@@ -52100,7 +52100,7 @@ exports.data = [
     {
         "classId": 1426,
         "label": "狼尾草",
-        "icon": "item-sjw8.png",
+        "icon": "item-sc8.png",
         "category": 2,
         "subcategory": 0,
         "description": "一种生长在土狼窝附近的植物",
@@ -52110,41 +52110,41 @@ exports.data = [
     },
     {
         "classId": 1427,
-        "label": "生锈黄铜戒",
-        "icon": "item-sjw9.png",
+        "label": "生锈铜戒",
+        "icon": "item-sc9.png",
         "category": 2,
         "subcategory": 0,
-        "description": "一枚古老的黄铜戒指，已经可以看到上面的锈迹",
+        "description": "一枚古老的铜戒，已经可以看到上面的锈迹",
         "stack": 99,
         "sellprice": 500,
         "quality": 0
     },
     {
         "classId": 1428,
-        "label": "斑驳蓝水晶",
-        "icon": "item-sjw10.png",
+        "label": "斑驳红水晶",
+        "icon": "item-sc10.png",
         "category": 2,
         "subcategory": 0,
-        "description": "蕴含少量魔力的蓝水晶",
+        "description": "蕴含少量魔力的红水晶",
         "stack": 99,
         "sellprice": 500,
         "quality": 0
     },
     {
         "classId": 1429,
-        "label": "血色战旗",
-        "icon": "item-sjw11.png",
+        "label": "胜利战旗",
+        "icon": "item-sc11.png",
         "category": 2,
         "subcategory": 0,
-        "description": "被鲜血染红的旗子",
+        "description": "象征胜利的战旗",
         "stack": 99,
         "sellprice": 500,
         "quality": 0
     },
     {
         "classId": 1430,
-        "label": "黑曜石",
-        "icon": "item-sjg1.png",
+        "label": "石榴石",
+        "icon": "item-sc12.png",
         "category": 2,
         "subcategory": 0,
         "description": "具有特殊用途的宝石",
@@ -52155,7 +52155,7 @@ exports.data = [
     {
         "classId": 1431,
         "label": "草木之晶",
-        "icon": "item-sjg2.png",
+        "icon": "item-sc13.png",
         "category": 2,
         "subcategory": 0,
         "description": "散发着清新的草木气息的晶石",
@@ -52166,7 +52166,7 @@ exports.data = [
     {
         "classId": 1432,
         "label": "魔力水晶",
-        "icon": "item-sjg3.png",
+        "icon": "item-sc14.png",
         "category": 2,
         "subcategory": 0,
         "description": "蕴含较多魔力的水晶",
@@ -52177,7 +52177,7 @@ exports.data = [
     {
         "classId": 1433,
         "label": "强化卷轴",
-        "icon": "item-sjg4.png",
+        "icon": "item-sc15.png",
         "category": 2,
         "subcategory": 0,
         "description": "可以对装备进行强化的卷轴",
@@ -52188,7 +52188,7 @@ exports.data = [
     {
         "classId": 1434,
         "label": "捆兽绳",
-        "icon": "item-sjg5.png",
+        "icon": "item-sc16.png",
         "category": 2,
         "subcategory": 0,
         "description": "附加了魔法的绳子，可以用来捕捉强大的野兽",
@@ -52199,7 +52199,7 @@ exports.data = [
     {
         "classId": 1435,
         "label": "梧桐木",
-        "icon": "item-sjg6.png",
+        "icon": "item-sc17.png",
         "category": 2,
         "subcategory": 0,
         "description": "较好的锻造原料",
@@ -52210,7 +52210,7 @@ exports.data = [
     {
         "classId": 1436,
         "label": "魔纹兽皮",
-        "icon": "item-sjg7.png",
+        "icon": "item-sc18.png",
         "category": 2,
         "subcategory": 0,
         "description": "强大的法师从魔兽上剥下来的皮毛，并在上面描绘了魔纹",
@@ -52221,7 +52221,7 @@ exports.data = [
     {
         "classId": 1437,
         "label": "精铁戒指",
-        "icon": "item-sjg8.png",
+        "icon": "item-sc19.png",
         "category": 2,
         "subcategory": 0,
         "description": "精铁打造的戒指，有很大的利用价值",
@@ -52232,7 +52232,7 @@ exports.data = [
     {
         "classId": 1438,
         "label": "魔法师日记",
-        "icon": "item-sjg9.png",
+        "icon": "item-sc20.png",
         "category": 2,
         "subcategory": 0,
         "description": "记录着魔法心得的日记残页",
@@ -52243,7 +52243,7 @@ exports.data = [
     {
         "classId": 1439,
         "label": "药剂瓶",
-        "icon": "item-sjg10.png",
+        "icon": "item-sc21.png",
         "category": 2,
         "subcategory": 0,
         "description": "装有魔法师实验药剂的瓶子",
@@ -52254,7 +52254,7 @@ exports.data = [
     {
         "classId": 1440,
         "label": "魔法吊坠",
-        "icon": "item-sjg11.png",
+        "icon": "item-sc22.png",
         "category": 2,
         "subcategory": 0,
         "description": "负载魔力的银质吊坠",
@@ -52265,7 +52265,7 @@ exports.data = [
     {
         "classId": 1441,
         "label": "华贵胸针",
-        "icon": "item-sjb1.png",
+        "icon": "item-sc23.png",
         "category": 2,
         "subcategory": 0,
         "description": "非常昂贵的胸针，应该是古老贵族的物品",
@@ -52276,7 +52276,7 @@ exports.data = [
     {
         "classId": 1442,
         "label": "精美丝绸",
-        "icon": "item-sjb2.png",
+        "icon": "item-sc24.png",
         "category": 2,
         "subcategory": 0,
         "description": "来自遥远东方的布料，异常珍贵",
@@ -52287,7 +52287,7 @@ exports.data = [
     {
         "classId": 1443,
         "label": "真钢锭",
-        "icon": "item-sjb3.png",
+        "icon": "item-sc25.png",
         "category": 2,
         "subcategory": 0,
         "description": "经过千锤百炼后的金属块，十分优良的锻造材料",
@@ -52298,7 +52298,7 @@ exports.data = [
     {
         "classId": 1444,
         "label": "邪恶笔记",
-        "icon": "item-sjb4.png",
+        "icon": "item-sc26.png",
         "category": 2,
         "subcategory": 0,
         "description": "邪恶法师的笔记，记录着邪恶法师所有的魔法",
@@ -52308,11 +52308,11 @@ exports.data = [
     },
     {
         "classId": 1445,
-        "label": "深海之晶",
-        "icon": "item-sjb5.png",
+        "label": "火焰之晶",
+        "icon": "item-sc27.png",
         "category": 2,
         "subcategory": 0,
-        "description": "深海里的结晶，可以感受得到里面汹涌澎湃的水元素",
+        "description": "蕴含着火焰的晶体，可以感受得到里面澎湃的火元素",
         "stack": 99,
         "sellprice": 850,
         "quality": 2
@@ -52320,7 +52320,7 @@ exports.data = [
     {
         "classId": 1446,
         "label": "奇美拉之眼",
-        "icon": "item-sjb6.png",
+        "icon": "item-sc28.png",
         "category": 2,
         "subcategory": 0,
         "description": "可怕的双头怪物的眼睛",
@@ -52331,7 +52331,7 @@ exports.data = [
     {
         "classId": 1447,
         "label": "万年古木",
-        "icon": "item-sjb7.png",
+        "icon": "item-sc29.png",
         "category": 2,
         "subcategory": 0,
         "description": "从远古时代就存在的老树上掉落的树枝",
@@ -52342,7 +52342,7 @@ exports.data = [
     {
         "classId": 1448,
         "label": "生命之种",
-        "icon": "item-sjb8.png",
+        "icon": "item-sc30.png",
         "category": 2,
         "subcategory": 0,
         "description": "生命之树的种子",
@@ -52353,7 +52353,7 @@ exports.data = [
     {
         "classId": 1449,
         "label": "烈焰花",
-        "icon": "item-sjb9.png",
+        "icon": "item-sc31.png",
         "category": 2,
         "subcategory": 0,
         "description": "绽放时会燃起火焰的花朵",
@@ -52363,8 +52363,8 @@ exports.data = [
     },
     {
         "classId": 1450,
-        "label": "精金块",
-        "icon": "item-sjb10.png",
+        "label": "魔金块",
+        "icon": "item-sc32.png",
         "category": 2,
         "subcategory": 0,
         "description": "非常稀少的锻造材料，本身就价值连城",
@@ -52375,7 +52375,7 @@ exports.data = [
     {
         "classId": 1451,
         "label": "邪恶之珠",
-        "icon": "item-sjb11.png",
+        "icon": "item-sc33.png",
         "category": 2,
         "subcategory": 0,
         "description": "拥有邪恶气息的宝珠",
@@ -52385,11 +52385,11 @@ exports.data = [
     },
     {
         "classId": 1452,
-        "label": "光明宝典",
-        "icon": "item-sjb12.png",
+        "label": "战争宝典",
+        "icon": "item-sc34.png",
         "category": 2,
         "subcategory": 0,
-        "description": "能给人们带来温暖的宝书，象征着希望",
+        "description": "军事家们梦寐以求的宝典，象征着胜利和荣耀",
         "stack": 99,
         "sellprice": 850,
         "quality": 2
@@ -52397,7 +52397,7 @@ exports.data = [
     {
         "classId": 1453,
         "label": "不死鸟羽毛",
-        "icon": "item-sjb13.png",
+        "icon": "item-sc35.png",
         "category": 2,
         "subcategory": 0,
         "description": "传说中不死鸟掉落的羽毛，蕴含强大的力量",
@@ -52407,11 +52407,11 @@ exports.data = [
     },
     {
         "classId": 1454,
-        "label": "大地之晶",
-        "icon": "item-sjp1.png",
+        "label": "夜之石",
+        "icon": "item-sc36.png",
         "category": 2,
         "subcategory": 0,
-        "description": "蕴含着大地之力的晶体，能感受到一股厚重的气息",
+        "description": "能吸收月光力量的神秘宝石",
         "stack": 99,
         "sellprice": 1050,
         "quality": 3
@@ -52419,7 +52419,7 @@ exports.data = [
     {
         "classId": 1455,
         "label": "屠龙勋章",
-        "icon": "item-sjp2.png",
+        "icon": "item-sc37.png",
         "category": 2,
         "subcategory": 0,
         "description": "能力的证明，象征着拥有战胜龙的力量",
@@ -52429,11 +52429,11 @@ exports.data = [
     },
     {
         "classId": 1456,
-        "label": "战争圣典",
-        "icon": "item-sjp3.png",
+        "label": "光明圣典",
+        "icon": "item-sc38.png",
         "category": 2,
         "subcategory": 0,
-        "description": "军事家们梦寐以求的圣书，象征着胜利和荣耀",
+        "description": "能给人们带来温暖的圣书，象征着希望",
         "stack": 99,
         "sellprice": 1050,
         "quality": 3
@@ -52441,7 +52441,7 @@ exports.data = [
     {
         "classId": 1457,
         "label": "女皇头冠",
-        "icon": "item-sjp4.png",
+        "icon": "item-sc39.png",
         "category": 2,
         "subcategory": 0,
         "description": "历史上唯一一位女皇的皇冠",
@@ -52452,7 +52452,7 @@ exports.data = [
     {
         "classId": 1458,
         "label": "潘多拉魔盒",
-        "icon": "item-sjp5.png",
+        "icon": "item-sc40.png",
         "category": 2,
         "subcategory": 0,
         "description": "传说中打开后能释放人世间所有的邪恶的盒子",
@@ -52463,7 +52463,7 @@ exports.data = [
     {
         "classId": 1459,
         "label": "撒旦之心",
-        "icon": "item-sjp6.png",
+        "icon": "item-sc41.png",
         "category": 2,
         "subcategory": 0,
         "description": "据说是强大恶魔的心脏，拥有强大的力量",
@@ -52474,7 +52474,7 @@ exports.data = [
     {
         "classId": 1460,
         "label": "君主腰牌",
-        "icon": "item-sjp7.png",
+        "icon": "item-sc42.png",
         "category": 2,
         "subcategory": 0,
         "description": "能统帅千军万马的腰牌，拥有无上权威",
@@ -52484,11 +52484,11 @@ exports.data = [
     },
     {
         "classId": 1461,
-        "label": "火焰之晶",
-        "icon": "item-sjp8.png",
+        "label": "幽冥石",
+        "icon": "item-sc43.png",
         "category": 2,
         "subcategory": 0,
-        "description": "蕴含着火焰的晶体，具有毁灭一切的力量",
+        "description": "蕴含着诡异气息的宝石，具有毁灭一切的力量",
         "stack": 99,
         "sellprice": 1050,
         "quality": 3
@@ -52496,7 +52496,7 @@ exports.data = [
     {
         "classId": 1462,
         "label": "怨灵魔珠",
-        "icon": "item-sjp9.png",
+        "icon": "item-sc44.png",
         "category": 2,
         "subcategory": 0,
         "description": "远古时期邪恶的法师为了获得强大力量而用来在战场上收集灵魂的珠子",
@@ -52506,11 +52506,11 @@ exports.data = [
     },
     {
         "classId": 1463,
-        "label": "永恒夜之石",
-        "icon": "item-sjp10.png",
+        "label": "永恒日之石",
+        "icon": "item-sc45.png",
         "category": 2,
         "subcategory": 0,
-        "description": "可以吸收月光的神奇宝石，具有神秘的力量",
+        "description": "可以吸收日光的神奇宝石，能折射出耀眼的光芒",
         "stack": 99,
         "sellprice": 1050,
         "quality": 3
@@ -52518,7 +52518,7 @@ exports.data = [
     {
         "classId": 1464,
         "label": "缚龙索",
-        "icon": "item-sjp11.png",
+        "icon": "item-sc46.png",
         "category": 2,
         "subcategory": 0,
         "description": "连强大的龙都能束缚的缎带",
@@ -52529,7 +52529,7 @@ exports.data = [
     {
         "classId": 1465,
         "label": "胜利皇冠",
-        "icon": "item-sjp12.png",
+        "icon": "item-sc47.png",
         "category": 2,
         "subcategory": 0,
         "description": "胜利女神的皇冠,象征着智慧与胜利",
@@ -52540,7 +52540,7 @@ exports.data = [
     {
         "classId": 1466,
         "label": "恶龙之齿",
-        "icon": "item-sjp13.png",
+        "icon": "item-sc48.png",
         "category": 2,
         "subcategory": 0,
         "description": "消灭恶龙后获得的牙齿，依旧拥有令人心悸的气息",
@@ -52551,7 +52551,7 @@ exports.data = [
     {
         "classId": 1467,
         "label": "恐怖利刃",
-        "icon": "item-sjp14.png",
+        "icon": "item-sc49.png",
         "category": 2,
         "subcategory": 0,
         "description": "据说是恶魔所使用的武器，不知为何遗留在地下城",
@@ -52562,7 +52562,7 @@ exports.data = [
     {
         "classId": 1468,
         "label": "恶魔之眼",
-        "icon": "item-sjp15.png",
+        "icon": "item-sc50.png",
         "category": 2,
         "subcategory": 0,
         "description": "散发着可怕气息的珠子，据说是恶魔的眼珠",
@@ -52573,7 +52573,7 @@ exports.data = [
     {
         "classId": 1469,
         "label": "龙血之瓶",
-        "icon": "item-sjp16.png",
+        "icon": "item-sc51.png",
         "category": 2,
         "subcategory": 0,
         "description": "装有龙的精血的瓶子",
@@ -52584,7 +52584,7 @@ exports.data = [
     {
         "classId": 1470,
         "label": "进阶强化宝珠",
-        "icon": "stone1.png",
+        "icon": "stone6.png",
         "category": 2,
         "subcategory": 1,
         "description": "能够强化白色普通进阶装备的宝珠",
@@ -52596,7 +52596,7 @@ exports.data = [
     {
         "classId": 1471,
         "label": "强化宝石",
-        "icon": "stone2.png",
+        "icon": "stone7.png",
         "category": 2,
         "subcategory": 1,
         "description": "能够强化绿色优质进阶装备的宝石",
@@ -52608,7 +52608,7 @@ exports.data = [
     {
         "classId": 1472,
         "label": "进阶强化宝石",
-        "icon": "stone3.png",
+        "icon": "stone8.png",
         "category": 2,
         "subcategory": 1,
         "description": "能够强化蓝色稀有进阶装备的宝石",
@@ -52620,7 +52620,7 @@ exports.data = [
     {
         "classId": 1473,
         "label": "强化宝晶",
-        "icon": "stone4.png",
+        "icon": "stone9.png",
         "category": 2,
         "subcategory": 1,
         "description": "能够强化紫色史诗进阶装备的宝晶",
@@ -52632,7 +52632,7 @@ exports.data = [
     {
         "classId": 1474,
         "label": "进阶强化宝晶",
-        "icon": "stone5.png",
+        "icon": "stone10.png",
         "category": 2,
         "subcategory": 1,
         "description": "能够强化橙色传奇进阶装备的宝晶",

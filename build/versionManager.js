@@ -1,4 +1,5 @@
 (function() {
+  "use strict";
   var VersionManager, clone, fileUtil, mergeFileList;
 
   clone = function(obj) {

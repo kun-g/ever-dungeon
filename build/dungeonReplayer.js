@@ -1,4 +1,5 @@
 (function() {
+  "use strict";
   var Dungeon, dbLib, loadDungeon, util;
 
   util = require('util');

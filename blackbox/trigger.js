@@ -1,5 +1,6 @@
 libTrigger = {};
 (function() {
+  "use strict";
   var Action, ActionDB, Condition, PredicateDB, Query, SequalDB, Trigger, TriggerManager, bindVariable, branch, calculate, conditionCheck, condition_and, condition_or, doAction, doGetProperty, doLoop, evaluateParameter, executeSequal, filterObject, getTypeof, getVar, isSequal, parameter_config, parse, parseVariable;
 
   filterObject = function(me, objects, filters, env) {

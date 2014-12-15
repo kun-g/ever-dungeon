@@ -1,4 +1,5 @@
 libSeed_random = {};
+"use strict"
 var width = 256;// each RC4 output is 0 <= x < 256
 var chunks = 6;// at least six RC4 outputs for each double
 var significance = 52;// there are 52 significant digits in a double

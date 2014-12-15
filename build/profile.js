@@ -1,4 +1,5 @@
 (function() {
+  "use strict";
   var async, createTest, dbLib, host, ids, net, parseLib, start, totalCount, _i, _j, _results, _results1;
 
   require('./define');

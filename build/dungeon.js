@@ -1,4 +1,5 @@
 (function() {
+  "use strict";
   var Bag, Block, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Level, TriggerManager, Wizard, calcInfiniteRank, calcInfiniteX, changeSeed, compete, createUnit, createUnits, criticalFormula, dungeonCSConfig, flagShowRand, genUnitInfo, hitFormula, mapDiff, onEvent, parse, privateRand, seed_random, speedFormula, _ref, _ref1, _ref2, _ref3, _ref4,
     __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; },
     __hasProp = {}.hasOwnProperty,
@@ -471,6 +472,7 @@
         }
       }
       if (this.PVP_Pool) {
+        cfg = JSON.parse(JSON.stringify(cfg));
         cfg.pool.PVP = {};
         cfg.pool.PVP.objects = this.PVP_Pool.map(function(e) {
           e.weight = 10;
@@ -2430,7 +2432,8 @@
         } else {
           return this.routine({
             id: 'Evade',
-            src: tar
+            src: tar,
+            tar: src
           });
         }
       },
@@ -3288,6 +3291,9 @@
       }
     },
     Evade: {
+      callback: function(env) {
+        return onEvent('Dodge', this, env.variable('src'), env.variable('tar'));
+      },
       output: function(env) {
         return [
           {

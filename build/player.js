@@ -1,4 +1,5 @@
 (function() {
+  "use strict";
   var Bag, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, G_PRIZE_MODIFIER, Hero, Item, Player, PlayerEnvironment, Serializer, addMercenaryMember, async, createItem, createUnit, currentTime, dbLib, diffDate, genUtil, getMercenaryMember, getPlayerHero, getVip, helperLib, itemLib, moment, playerCSConfig, playerCommandStream, playerMessageFilter, registerConstructor, underscore, updateMercenaryMember, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
@@ -33,7 +34,7 @@
 
   async = require('async');
 
-  G_PRIZE_MODIFIER = 1000;
+  G_PRIZE_MODIFIER = 1;
 
   Player = (function(_super) {
     __extends(Player, _super);
@@ -52,7 +53,6 @@
         timestamp: {},
         counters: {},
         flags: {},
-        globalPrizeFlag: {},
         inventory: Bag(InitialBagSize),
         gold: 0,
         diamond: 0,
@@ -708,16 +708,14 @@
     };
 
     Player.prototype.createHero = function(heroData, isSwitch) {
-      var bag, bf, e, equip, hero, i, prize, _ref7, _ref8, _ref9;
-      prize = (_ref7 = queryTable(TABLE_ROLE, heroData["class"])) != null ? _ref7.initialEquipment : void 0;
-      prize[0].type = 3;
+      var bag, bf, e, equip, hero, i, _ref7, _ref8;
       if (heroData != null) {
         if ((this.heroBase[heroData["class"]] != null) && heroData["class"] === this.hero["class"]) {
           return null;
         }
         if (isSwitch) {
           heroData.xp = this.hero.xp;
-          heroData.equipment = ((_ref8 = this.heroBase[heroData["class"]]) != null ? _ref8.equipment : void 0) || {};
+          heroData.equipment = ((_ref7 = this.heroBase[heroData["class"]]) != null ? _ref7.equipment : void 0) || {};
           this.heroBase[heroData["class"]] = heroData;
           this.switchHero(heroData["class"]);
           this.putOnEquipmentAfterSwitched(heroData["class"]);
@@ -731,9 +729,9 @@
       } else if (this.hero) {
         bag = this.inventory;
         equip = [];
-        _ref9 = this.equipment;
-        for (i in _ref9) {
-          e = _ref9[i];
+        _ref8 = this.equipment;
+        for (i in _ref8) {
+          e = _ref8[i];
           if (bag.get(e) != null) {
             equip.push({
               cid: bag.get(e).classId,
@@ -1091,7 +1089,14 @@
             if ((stageConfig.pvp != null) && (pkr != null)) {
               return getPlayerHero(pkr, wrapCallback(_this, function(err, heroData) {
                 this.dungeonData.PVP_Pool = heroData != null ? [getBasicInfo(heroData)] : void 0;
-                return cb('OK');
+                return dbLib.diffPKRank(this.name, pkr, wrapCallback(this, function(err, result) {
+                  if (!Array.isArray(result)) {
+                    result = [0, 0];
+                  }
+                  this.dungeonData.PVP_Score_diff = result[0];
+                  this.dungeonData.PVP_Score_origin = result[1];
+                  return cb('OK');
+                }));
               }));
             } else {
               return cb('OK');
@@ -1297,8 +1302,10 @@
         switch (p.type) {
           case PRIZETYPE_ITEM:
             ret = this.aquireItem(p.value, p.count, allOrFail);
-            if (!(ret && ret.length > 0)) {
-              return [];
+            if (!((ret != null) && ret.length > 0)) {
+              if (allOrFail) {
+                return [];
+              }
             }
             break;
           case PRIZETYPE_GOLD:
@@ -1307,7 +1314,7 @@
                 NTF: Event_InventoryUpdateItem,
                 arg: {
                   syn: this.inventoryVersion,
-                  god: this.addGold(p.count * G_PRIZE_MODIFIER)
+                  god: this.addGold(p.count)
                 }
               });
             }
@@ -1318,7 +1325,7 @@
                 NTF: Event_InventoryUpdateItem,
                 arg: {
                   syn: this.inventoryVersion,
-                  dim: this.addDiamond(p.count * G_PRIZE_MODIFIER)
+                  dim: this.addDiamond(p.count)
                 }
               });
             }
@@ -1330,7 +1337,7 @@
                 arg: {
                   syn: this.heroVersion,
                   act: {
-                    exp: this.addHeroExp(p.count * G_PRIZE_MODIFIER)
+                    exp: this.addHeroExp(p.count)
                   }
                 }
               });
@@ -1356,7 +1363,7 @@
                 delete this.equipment[k];
                 continue;
               }
-              e.xp = e.xp + p.count * G_PRIZE_MODIFIER;
+              e.xp = e.xp + p.count;
               equipUpdate.push({
                 sid: k,
                 xp: e.xp
@@ -1830,14 +1837,16 @@
       ret = this.craftItem(slot);
       newItem = ret.newItem;
       if (newItem) {
-        ret.newItem.enhancement = enhance;
-        ret.newItem.xp = item.xp;
+        newItem.enhancement = enhance;
+        newItem.xp = item.xp;
+        newItem.slot = item.slot;
         eh = newItem.enhancement.map(function(e) {
           return {
             id: e.id,
             lv: e.level
           };
         });
+        this.inventory.container[slot] = newItem;
         ret.res.push({
           NTF: Event_InventoryUpdateItem,
           arg: {
@@ -1845,6 +1854,7 @@
             itm: [
               {
                 sid: this.queryItemSlot(newItem),
+                cid: newItem.id,
                 eh: eh,
                 xp: newItem.xp
               }
@@ -1856,7 +1866,7 @@
     };
 
     Player.prototype.craftItem = function(slot) {
-      var item, newItem, recipe, ret;
+      var newItem, recipe, ret;
       recipe = this.getItemAt(slot);
       if (recipe == null) {
         return {
@@ -1874,18 +1884,10 @@
           ret: RET_TargetNotExists
         };
       }
-      item = recipe;
-      item.id = recipe.forgeTarget;
-      newItem = item;
+      newItem = new Item(recipe.forgeTarget);
       ret = ret.concat({
         NTF: Event_InventoryUpdateItem,
         arg: {
-          itm: [
-            {
-              sid: slot,
-              cid: item.id
-            }
-          ],
           syn: this.inventoryVersion,
           god: this.gold
         }
@@ -1927,6 +1929,11 @@
       }
       level = equip.enhancement[0].level + 1;
       if (!(level < 40 && (equip.enhanceID != null))) {
+        return {
+          ret: RET_EquipCantUpgrade
+        };
+      }
+      if (!((equip.quality != null) && level < 8 * (equip.quality + 1))) {
         return {
           ret: RET_EquipCantUpgrade
         };
@@ -2059,7 +2066,7 @@
         }
         return r;
       }), []);
-      percentage = 1;
+      percentage = 1 * G_PRIZE_MODIFIER;
       if (result === DUNGEON_RESULT_WIN) {
         if (dungeon.isSweep != null) {
           if (cfg.dropID) {
@@ -2118,6 +2125,10 @@
             prize.push(iPrize);
           }
         }
+      }
+      if ((dungeon.PVP_Pool != null) && dungeon.result === DUNGEON_RESULT_WIN) {
+        this.updatePkInof(dungeon);
+        prize = prize.concat(this.getPKReward(dungeon));
       }
       return helperLib.splicePrize(prize);
     };
@@ -2202,7 +2213,6 @@
         });
       }
       ret = ret.concat(this.claimPrize(prize, false));
-      this.updatePkInof(dungeon);
       if (isSweep) {
 
       } else {
@@ -2216,15 +2226,15 @@
       return ret;
     };
 
+    Player.prototype.getPKReward = function(dungeon) {
+      return getPKRewardByDiff(dungeon.PVP_Score_diff, dungeon.PVP_Score_origin);
+    };
+
     Player.prototype.updatePkInof = function(dungeon) {
       var myName, rivalName;
-      if (dungeon.PVP_Pool != null) {
-        myName = this.name;
-        rivalName = dungeon.PVP_Pool[0].nam;
-        if (dungeon.result === DUNGEON_RESULT_WIN) {
-          return dbLib.saveSocre(myName, rivalName, function(err, result) {});
-        }
-      }
+      myName = this.name;
+      rivalName = dungeon.PVP_Pool[0].nam;
+      return dbLib.saveSocre(myName, rivalName, function(err, result) {});
     };
 
     Player.prototype.whisper = function(name, message, callback) {
@@ -3388,7 +3398,7 @@
 
   getVip = function(rmb) {
     var i, level, levelCfg, lv, tbl, _ref7;
-    tbl = queryTable(TABLE_VIP, "VIP", this.abIndex);
+    tbl = queryTable(TABLE_VIP, "VIP");
     if (tbl == null) {
       return {
         level: 0,
@@ -3403,11 +3413,11 @@
         level = i;
       }
     }
-    levelCfg = tbl.levels[level];
+    levelCfg = JSON.parse(JSON.stringify(tbl.levels[level]));
     levelCfg.privilege = tbl.requirement[level].privilege;
     return {
       level: level,
-      cfg: tbl.levels[level]
+      cfg: levelCfg
     };
   };
 

@@ -1,4 +1,5 @@
 (function() {
+  "use strict";
   var SimpleProtocolDecoder, SimpleProtocolEncoder, async, db, dbClient, net, redis, sqlite3, startTcpServer, _ref;
 
   _ref = require('./requestStream'), SimpleProtocolDecoder = _ref.SimpleProtocolDecoder, SimpleProtocolEncoder = _ref.SimpleProtocolEncoder;

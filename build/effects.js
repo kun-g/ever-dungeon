@@ -268,19 +268,23 @@ exports.data = [
     },
     {
         "effectId": 64,
-        "file": "effect-bihu.ccbi"
+        "skeleton": "effect-bihu.json",
+        "atlas": "effect-bihu.atlas"
     },
     {
         "effectId": 65,
-        "file": "effect-bingjian.ccbi"
+        "skeleton": "effect-bingjian.json",
+        "atlas": "effect-bingjian.atlas"
     },
     {
         "effectId": 66,
-        "file": "effect-fennuzhiyan.ccbi"
+        "skeleton": "effect-fennuzhiyan.json",
+        "atlas": "effect-fennuzhiyan.atlas"
     },
     {
         "effectId": 67,
-        "file": "effect-fangzhu.ccbi"
+        "skeleton": "effect-fangzhu.json",
+        "atlas": "effect-fangzhu.atlas"
     },
     {
         "effectId": 68,
@@ -289,15 +293,18 @@ exports.data = [
     },
     {
         "effectId": 69,
-        "file": "effect-xuli2.ccbi"
+        "skeleton": "effect-xuli.json",
+        "atlas": "effect-xuli.atlas"
     },
     {
         "effectId": 70,
-        "file": "effect-siwangzuzhou.ccbi"
+        "skeleton": "effect-siwangzuzhou.json",
+        "atlas": "effect-siwangzuzhou.atlas"
     },
     {
         "effectId": 71,
-        "file": "effect-kuangre.ccbi"
+        "skeleton": "effect-kuangre.json",
+        "atlas": "effect-kuangre.atlas"
     },
     {
         "effectId": 72,
@@ -315,7 +322,14 @@ exports.data = [
     },
     {
         "effectId": 75,
+        "loop": true,
         "skeleton": "effect-invincible.json",
         "atlas": "effect-invincible.atlas"
+    },
+    {
+        "effectId": 76,
+        "loop": true,
+        "skeleton": "effect-paoxiao2.json",
+        "atlas": "effect-paoxiao2.atlas"
     }
 ]

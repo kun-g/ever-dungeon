@@ -1,4 +1,5 @@
 (function() {
+  "use strict";
   var Wizard, calcFormular, getSpellConfig, getSpellProperty, plusThemAll, triggerLib;
 
   require('./define');
@@ -50,7 +51,7 @@
     var c;
     if (config.func) {
       c = config.c ? config.c : {};
-      return config.func.apply(null, [e, s, t, c]);
+      return Math.ceil(config.func.apply(null, [e, s, t, c]));
     }
     c = config.c ? config.c : 0;
     return Math.ceil(plusThemAll(config.environment, e) + plusThemAll(config.src, s) + plusThemAll(config.tar, t) + c);

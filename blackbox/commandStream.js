@@ -1,5 +1,6 @@
 libCommandStream = {};
 (function() {
+  "use strict";
   var CommandStream, Environment, isDebug, splLib;
 
   

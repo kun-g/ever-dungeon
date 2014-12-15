@@ -1,5 +1,6 @@
 (function() {
-  var DBWrapper, Player, async, dbLib, getPlayerHero, helperLib, http, https, loadPlayer, loginBy, moment, querystring, wrapReceipt, _ref;
+  "use strict";
+  var DBWrapper, Player, async, checkRequest, dbLib, getPlayerHero, helperLib, http, https, loadPlayer, loginBy, moment, querystring, wrapReceipt, _ref;
 
   require('./define');
 
@@ -20,6 +21,66 @@
   moment = require('moment');
 
   Player = require('./player').Player;
+
+  checkRequest = function(req, rpcID, cb) {
+    req = https.request(req, function(res) {
+      res.setEncoding('utf8');
+      return res.on('data', function(chunk) {
+        var receipt, result;
+        result = JSON.parse(chunk);
+        logInfo({
+          action: 'VerifyPayment',
+          type: 'Apple',
+          code: result,
+          receipt: arg.bill
+        });
+        if (result.status !== 0 || result.original_transaction_id) {
+          return cb([
+            {
+              REQ: rpcID,
+              RET: RET_InvalidPaymentInfo
+            }
+          ]);
+        } else {
+          receipt = arg.bill;
+          return player.handlePayment({
+            paymentType: 'AppStore',
+            productID: result.product_id,
+            receipt: receipt
+          }, function(err, result) {
+            var ret;
+            ret = RET_OK;
+            if (err != null) {
+              ret = err.message;
+            }
+            return cb([
+              {
+                REQ: rpcID,
+                RET: ret
+              }
+            ].concat(result));
+          });
+        }
+      }).on('error', function(e) {
+        logError({
+          action: 'VerifyPayment',
+          type: 'Apple',
+          error: e,
+          rep: arg.rep
+        });
+        return cb([
+          {
+            REQ: rpcID,
+            RET: RET_InvalidPaymentInfo
+          }
+        ]);
+      });
+    });
+    req.write(JSON.stringify({
+      "receipt-data": JSON.parse(arg.rep).receipt
+    }));
+    return req.end();
+  };
 
   loginBy = function(arg, token, callback) {
     var AppSecret, appID, appKey, options, passport, passportType, path, postBody, req, requestObj, sign, strBody, teebikURL;
@@ -461,7 +522,6 @@
         var oldHero, ret, type;
         type = player.switchHeroType(arg.cid);
         if (player.flags[type]) {
-          player.flags[type] = false;
           oldHero = player.hero;
           player.createHero({
             name: oldHero.name,
@@ -664,7 +724,7 @@
     RPC_VerifyPayment: {
       id: 15,
       func: function(arg, player, handler, rpcID, socket) {
-        var options, req;
+        var options;
         logInfo({
           action: 'VerifyPayment',
           type: 'Apple',
@@ -673,67 +733,25 @@
         switch (arg.stp) {
           case 'AppStore':
             options = {
-              hostname: 'buy.itunes.apple.com',
+              hostname: 'sandbox.itunes.apple.com',
               port: 443,
               path: '/verifyReceipt',
               method: 'POST'
             };
-            req = https.request(options, function(res) {
-              res.setEncoding('utf8');
-              return res.on('data', function(chunk) {
-                var receipt, result;
-                result = JSON.parse(chunk);
-                logInfo({
-                  action: 'VerifyPayment',
-                  type: 'Apple',
-                  code: result,
-                  receipt: arg.bill
-                });
-                if (result.status !== 0 || result.original_transaction_id) {
-                  return handler([
-                    {
-                      REQ: rpcID,
-                      RET: RET_InvalidPaymentInfo
-                    }
-                  ]);
-                }
-                receipt = arg.bill;
-                return player.handlePayment({
-                  paymentType: 'AppStore',
-                  productID: result.product_id,
-                  receipt: receipt
-                }, function(err, result) {
-                  var ret;
-                  ret = RET_OK;
-                  if (err != null) {
-                    ret = err.message;
-                  }
-                  return handler([
-                    {
-                      REQ: rpcID,
-                      RET: ret
-                    }
-                  ].concat(result));
-                });
-              });
-            }).on('error', function(e) {
-              logError({
-                action: 'VerifyPayment',
-                type: 'Apple',
-                error: e,
-                rep: arg.rep
-              });
-              return handler([
-                {
-                  REQ: rpcID,
-                  RET: RET_InvalidPaymentInfo
-                }
-              ]);
+            return checkRequest(options, rpcID, function(result) {
+              var _ref1;
+              if (((_ref1 = result[0]) != null ? _ref1.RET : void 0) === RET_InvalidPaymentInfo) {
+                options = {
+                  hostname: 'buy.itunes.apple.com',
+                  port: 443,
+                  path: '/verifyReceipt',
+                  method: 'POST'
+                };
+                return checksession(options, rpcID, handler);
+              } else {
+                return handler(result);
+              }
             });
-            req.write(JSON.stringify({
-              "receipt-data": JSON.parse(arg.rep).receipt
-            }));
-            return req.end();
         }
       },
       args: {},
@@ -925,9 +943,14 @@
           return async.map(rivalLst.name, getPlayerHero, function(err, result) {
             ret.arg = result.map(function(e, i) {
               var r;
+              if (e == null) {
+                return null;
+              }
               r = getBasicInfo(e);
               r.rnk = +rivalLst.rnk[i];
               return r;
+            }).filter(function(e) {
+              return e != null;
             });
             return handler([ret]);
           });
@@ -1052,25 +1075,17 @@
     RPC_CommentGameInfo: {
       id: 37,
       func: function(arg, player, handler, rpcID, socket) {
-        var mailContent, ret, _ref1, _ref2;
+        var ret, _ref1, _ref2, _ref3, _ref4;
         if (arg.cmt != null) {
           if ((_ref1 = player.flags.cmt) != null ? _ref1.cmted : void 0) {
             player.flags.cmt.auto = arg.cmt.auto;
           } else {
             if (((_ref2 = player.flags.cmt) != null ? _ref2.cmted : void 0) === false && arg.cmt.cmted === true) {
-              mailContent = {
-                type: MESSAGE_TYPE_SystemReward,
-                src: MESSAGE_REWARD_TYPE_SYSTEM,
-                prize: [
-                  {
-                    type: 2,
-                    count: 100
-                  }
-                ],
-                tit: "Bonus!",
-                txt: "Thank you for your comment!"
-              };
-              libs.db.deliverMessage(player.name, mailContent);
+              if ((_ref3 = player.quests) != null) {
+                if ((_ref4 = _ref3['183']) != null) {
+                  _ref4['counters'] = [1];
+                }
+              }
             }
             player.flags['cmt'] = arg.cmt;
           }
