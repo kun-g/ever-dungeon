@@ -5962,18 +5962,10 @@ exports.data = [
         }
       ],
       "targetSelection": {
-        "pool": "objects",
+        "pool": "Enemy",
         "filter": [
-          {
-            "type": "alive"
-          },
-          {
-            "type": "visible"
-          },
-          {
-            "type": "target-faction-with-flag",
-            "flag": "attackable"
-          }
+          "alive",
+          "visible"
         ]
       },
       "action": [
@@ -6007,18 +5999,10 @@ exports.data = [
         }
       ],
       "targetSelection": {
-        "pool": "objects",
+        "pool": "Enemy",
         "filter": [
-          {
-            "type": "alive"
-          },
-          {
-            "type": "visible"
-          },
-          {
-            "type": "target-faction-with-flag",
-            "flag": "attackable"
-          }
+          "alive",
+          "visible"
         ]
       },
       "action": [
@@ -6026,12 +6010,6 @@ exports.data = [
           "type": "playAction",
           "motion": "dead",
           "pos": "self"
-        },
-        {
-          "type": "playEffect",
-          "effect": 73,
-          "pos": "target",
-          "delay": 1
         },
         {
           "type": "installSpell",
@@ -6044,12 +6022,18 @@ exports.data = [
     "skillId": 103,
     "config": {
       "installAction": [
+         {
+           "type": "playEffect",
+           "effect": 73,
+           "act": "self",
+           "delay": 0.6
+         },
         {
           "type": "setProperty",
           "modifications": {
             "accuracy": {
               "src": {
-                "accuracy": -0.1
+                "accuracy": -0.5
               }
             }
           }
@@ -6060,7 +6044,7 @@ exports.data = [
           "type": "resetProperty"
         }
       ],
-      "buffType": "roleDeBuff",
+      "buffType": "DeBuff",
       "availableCondition": [
         {
           "type": "event",
@@ -9119,8 +9103,17 @@ exports.data = [
   },
   {
     "skillId": 162,
-    "label": "无用",
+    "label": "闪避特效",
     "config": {
+      "triggerCondition": [
+        {
+          "type": "event",
+          "event": "onDodge"
+        },
+        {
+          "type": "alive"
+        }
+      ],
       "targetSelection": {
         "pool": "self",
         "filter": [
@@ -9132,43 +9125,12 @@ exports.data = [
           }
         ]
       },
-      "installAction": [
+      "action": [
         {
-          "type": "damage",
-          "damageType": "Spell",
-          "isRange": true,
-          "delay": 0.8,
-          "#formular": [
-            {
-              "src": {
-                "attack": 0.3
-              }
-            },
-            {
-              "src": {
-                "attack": 0.45
-              }
-            },
-            {
-              "src": {
-                "attack": 0.6
-              }
-            }
-          ]
-        },
-        {
-          "type": "playEffect",
-          "effect": 65,
-          "act": "self",
-          "delay": 0.6
+          "type": "playAction",
+          "motion": "sb",
+          "pos": "self"
         }
-      ],
-      "availableCondition": [
-          {
-              "type": "event",
-              "event": "onTurnEnd",
-              "effectCount": 1
-          }
       ]
     }
   },
@@ -10665,7 +10627,7 @@ exports.data = [
   {
     "skillId": 195,
     "label": "怒之力",
-    "icon": "skill-kzs1.png",
+    "icon": "skill-warrior1.png",
     "desc": "降低命中1回合，提高攻击力2回合。",
     "slotId": 0,
     "config": {
@@ -10784,7 +10746,7 @@ exports.data = [
   {
     "skillId": 198,
     "label": "血之狂怒",
-    "icon": "skill-kzs2.png",
+    "icon": "skill-warrior2.png",
     "desc": "狂战士将累积受到的伤害在下一轮攻击中反馈给敌人。",
     "slotId": 1,
     "config": {
@@ -10852,7 +10814,7 @@ exports.data = [
   {
     "skillId": 199,
     "label": "咆哮",
-    "icon": "skill-kzs3.png",
+    "icon": "skill-warrior2.png",
     "desc": "几率降低怪物命中。",
     "slotId": 2,
     "config": {
@@ -10876,9 +10838,9 @@ exports.data = [
         {
           "type": "chance",
           "#chance": [
-            0.2,
-            0.2,
-            0.25
+            0.3,
+            0.4,
+            0.4
           ]
         },
         {
@@ -10911,7 +10873,7 @@ exports.data = [
   {
     "skillId": 200,
     "label": "复仇之力",
-    "icon": "skill-kzs4.png",
+    "icon": "skill-warrior2.png",
     "desc": "怪物攻击队友并造成伤害时，狂战士有几率立即报复攻击该生物。",
     "slotId": 3,
     "config": {
@@ -11012,7 +10974,7 @@ exports.data = [
   {
     "skillId": 201,
     "label": "寒冰箭",
-    "icon": "skill-mds1.png",
+    "icon": "skill-mage1.png",
     "desc": "对场上多个怪物造成伤害。",
     "slotId": 0,
     "config": {
@@ -11086,7 +11048,7 @@ exports.data = [
           "type": "shock",
           "delay": 0.6,
           "range": 5,
-          "time": 0.5
+          "time": 0.2
         }
       ]
     }
@@ -11094,7 +11056,7 @@ exports.data = [
   {
     "skillId": 202,
     "label": "魔力漩涡",
-    "icon": "skill-mds2.png",
+    "icon": "skill-warrior3.png",
     "desc": "场上敌人越多,魔导师的攻击力也随之增强。",
     "slotId": 1,
     "config": {
@@ -11193,7 +11155,7 @@ exports.data = [
   {
     "skillId": 204,
     "label": "死亡诅咒",
-    "icon": "skill-mds3.png",
+    "icon": "skill-warrior3.png",
     "desc": "被大法师攻击的目标，承受额外的伤害，一回合。",
     "slotId": 2,
     "config": {
@@ -11323,7 +11285,7 @@ exports.data = [
   {
     "skillId": 206,
     "label": "元素崩塌",
-    "icon": "skill-mds4.png",
+    "icon": "skill-mage2.png",
     "desc": "提升暴击伤害。",
     "slotId": 3,
     "config": {
@@ -11383,7 +11345,7 @@ exports.data = [
   {
     "skillId": 207,
     "label": "祈祷",
-    "icon": "skill-dzj1.png",
+    "icon": "skill-priest1.png",
     "desc": "群体治疗。",
     "slotId": 0,
     "config": {
@@ -11442,7 +11404,7 @@ exports.data = [
   {
     "skillId": 208,
     "label": "狂热",
-    "icon": "skill-dzj2.png",
+    "icon": "skill-priest3.png",
     "desc": "当主教击杀一个单位时,速度与攻击提升。",
     "slotId": 1,
     "config": {
@@ -11573,8 +11535,8 @@ exports.data = [
   {
     "skillId": 210,
     "label": "庇佑",
-    "icon": "skill-dzj3.png",
-    "desc": "发现怪物后给生命值最低的队友补血。",
+    "icon": "skill-priest1.png",
+    "desc": "发现怪物后给生命值最低的队友补XX点HP。",
     "slotId": 2,
     "config": {
       "basic": {
@@ -11596,9 +11558,9 @@ exports.data = [
         {
           "type": "chance",
           "#chance": [
-            0.2,
-            0.2,
-            0.2
+            0.4,
+            0.5,
+            0.6
           ]
         }
       ],
@@ -11657,8 +11619,8 @@ exports.data = [
   {
     "skillId": 211,
     "label": "放逐",
-    "icon": "skill-dzj4.png",
-    "desc": "攻击牧师的敌人有几率减少攻击力 持续一定回合。",
+    "icon": "skill-warrior2.png",
+    "desc": "攻击牧师的敌人有几率减少攻击力 持续X回合。",
     "slotId": 3,
     "config": {
       "basic": {
@@ -14729,7 +14691,7 @@ exports.data = [
       "installAction": [
         {
           "type": "playEffect",
-          "effect": 76,
+          "effect": 73,
           "act": "self",
           "delay": 0.6
         },
@@ -14738,17 +14700,17 @@ exports.data = [
           "#modifications": [
             {
               "accuracy": {
+                "c": -10
+              }
+            },
+            {
+              "accuracy": {
+                "c": -10
+              }
+            },
+            {
+              "accuracy": {
                 "c": -15
-              }
-            },
-            {
-              "accuracy": {
-                "c": -25
-              }
-            },
-            {
-              "accuracy": {
-                "c": -35
               }
             }
           ]
@@ -14831,7 +14793,7 @@ exports.data = [
   {
     "skillId": 273,
     "label": "pk怒之力",
-    "icon": "skill-kzs1.png",
+    "icon": "skill-warrior1.png",
     "desc": "降低命中1回合，提高攻击力2回合。",
     "slotId": 0,
     "config": {
@@ -14950,7 +14912,7 @@ exports.data = [
   {
     "skillId": 276,
     "label": "pk咆哮",
-    "icon": "skill-kzs3.png",
+    "icon": "skill-warrior2.png",
     "desc": "几率降低怪物命中。",
     "slotId": 2,
     "config": {
@@ -14960,18 +14922,10 @@ exports.data = [
         "targetDelay": 0
       },
       "targetSelection": {
-        "pool": "objects",
+        "pool": "Enemy",
         "filter": [
-          {
-            "type": "alive"
-          },
-          {
-            "type": "visible"
-          },
-          {
-            "type": "target-faction-with-flag",
-            "flag": "attackable"
-          }
+          "alive",
+          "visible"
         ]
       },
       "triggerCondition": [
@@ -14984,8 +14938,8 @@ exports.data = [
         {
           "type": "chance",
           "#chance": [
-            0.2,
-            0.2
+            0.3,
+            0.4
           ]
         },
         {
@@ -15026,7 +14980,7 @@ exports.data = [
       "installAction": [
         {
           "type": "playEffect",
-          "effect": 76,
+          "effect": 73,
           "act": "self",
           "delay": 0.6
         },
@@ -15035,12 +14989,12 @@ exports.data = [
           "#modifications": [
             {
               "accuracy": {
-                "c": -15
+                "c": -10
               }
             },
             {
               "accuracy": {
-                "c": -25
+                "c": -10
               }
             }
           ]
@@ -15059,7 +15013,7 @@ exports.data = [
   {
     "skillId": 278,
     "label": "pk复仇之力",
-    "icon": "skill-kz3.png",
+    "icon": "skill-warrior2.png",
     "desc": "怪物攻击队友并造成伤害时，狂战士有几率立即报复攻击该生物。",
     "slotId": 3,
     "config": {
@@ -15118,6 +15072,7 @@ exports.data = [
           "type": "damage",
           "damageType": "Spell",
           "isRange": true,
+          "delay": 0.8,
           "#formular": [
             {
               "src": {
@@ -15153,7 +15108,7 @@ exports.data = [
   {
     "skillId": 279,
     "label": "pk寒冰箭",
-    "icon": "skill-mds1.png",
+    "icon": "skill-mage1.png",
     "desc": "对场上多个怪物造成伤害。",
     "slotId": 0,
     "config": {
@@ -15236,7 +15191,7 @@ exports.data = [
           "type": "shock",
           "delay": 0.6,
           "range": 5,
-          "time": 0.5
+          "time": 0.2
         }
       ]
     }
@@ -15244,7 +15199,7 @@ exports.data = [
   {
     "skillId": 280,
     "label": "pk魔力漩涡",
-    "icon": "skill-mds2.png",
+    "icon": "skill-warrior3.png",
     "desc": "场上敌人越多,魔导师的攻击力也随之增强。",
     "slotId": 1,
     "config": {
@@ -15414,7 +15369,7 @@ exports.data = [
   {
     "skillId": 284,
     "label": "pk元素崩塌",
-    "icon": "skill-mds4.png",
+    "icon": "skill-mage2.png",
     "desc": "提升暴击伤害。",
     "slotId": 3,
     "config": {
@@ -15469,7 +15424,7 @@ exports.data = [
   {
     "skillId": 285,
     "label": "pk祈祷",
-    "icon": "skill-dzj1.png",
+    "icon": "skill-priest1.png",
     "desc": "群体治疗。",
     "slotId": 0,
     "config": {
@@ -15532,7 +15487,7 @@ exports.data = [
   {
     "skillId": 286,
     "label": "pk狂热",
-    "icon": "skill-dzj2.png",
+    "icon": "skill-priest3.png",
     "desc": "当主教击杀一个单位时,速度与攻击提升。",
     "slotId": 1,
     "config": {
@@ -15647,8 +15602,8 @@ exports.data = [
   {
     "skillId": 288,
     "label": "pk放逐",
-    "icon": "skill-dzj4.png",
-    "desc": "攻击牧师的敌人有几率减少攻击力 持续一定回合。",
+    "icon": "skill-warrior2.png",
+    "desc": "攻击牧师的敌人有几率减少攻击力 持续X回合。",
     "slotId": 3,
     "config": {
       "basic": {
@@ -16893,18 +16848,10 @@ exports.data = [
         }
       ],
       "targetSelection": {
-        "pool": "objects",
+        "pool": "Enemy",
         "filter": [
-          {
-            "type": "alive"
-          },
-          {
-            "type": "visible"
-          },
-          {
-            "type": "target-faction-with-flag",
-            "flag": "attackable"
-          }
+          "alive",
+          "visible"
         ]
       },
       "action": [
@@ -17831,13 +17778,17 @@ exports.data = [
         "skillId": 331,
         "config": {
             "basic": {
-                "buffEffect": 75,
-                "spellEffect": 46,
-                "spellDelay": 0.3
+                "buffEffect": 75
             },
             "action": [
                 {
                     "type": "ignoreHurt"
+                },
+                {
+                    "type": "playEffect",
+                    "delay": 0.3,
+                    "effect": 1,
+                    "pos": "self"
                 },
                 {
                     "type": "modifyVar",

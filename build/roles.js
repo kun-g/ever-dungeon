@@ -8914,11 +8914,11 @@ exports.data = [
         "effectAttack": 10,
         "skill": [
             {
-                "id": 160,
+                "id": 304,
                 "level": 1
             },
             {
-                "id": 214,
+                "id": 305,
                 "level": 1
             },
             {
@@ -9059,7 +9059,7 @@ exports.data = [
         "atlas": "necromancer.atlas",
         "property": {
             "health": 1.5,
-            "attack": 0.12,
+            "attack": 1.2,
             "critical": 20,
             "strong": -10,
             "accuracy": 60,
@@ -9084,11 +9084,11 @@ exports.data = [
         "effectAttack": 10,
         "skill": [
             {
-                "id": 160,
+                "id": 304,
                 "level": 1
             },
             {
-                "id": 214,
+                "id": 305,
                 "level": 1
             },
             {
@@ -9149,7 +9149,7 @@ exports.data = [
         "atlas": "newenemy2.atlas",
         "property": {
             "health": 1.5,
-            "attack": 0.09,
+            "attack": 0.9,
             "critical": 20,
             "strong": -20,
             "accuracy": 80,

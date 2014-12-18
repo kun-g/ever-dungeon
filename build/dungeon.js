@@ -511,7 +511,7 @@
     };
 
     Dungeon.prototype.initiateHeroes = function(team) {
-      var dummyHero, e, ref;
+      var dummyHero, e, ref, thiz;
       if (!team) {
         team = [];
       }
@@ -538,8 +538,14 @@
       dummyHero = new Hero({});
       dummyHero.health = 0;
       this.heroes.push(dummyHero);
-      return this.heroes.forEach(function(e) {
+      this.heroes.forEach(function(e) {
         return e.faction = 'hero';
+      });
+      thiz = this;
+      return this.cardStack.map(function(card) {
+        if ((card != null ? card.func : void 0) != null) {
+          return thiz.getDummyHero().installSpell(card.func, 1);
+        }
       });
     };
 

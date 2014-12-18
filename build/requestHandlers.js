@@ -22,7 +22,7 @@
 
   Player = require('./player').Player;
 
-  checkRequest = function(req, rpcID, cb) {
+  checkRequest = function(req, player, arg, rpcID, cb) {
     req = https.request(req, function(res) {
       res.setEncoding('utf8');
       return res.on('data', function(chunk) {
@@ -45,7 +45,7 @@
           receipt = arg.bill;
           return player.handlePayment({
             paymentType: 'AppStore',
-            productID: result.product_id,
+            productID: result.receipt.product_id,
             receipt: receipt
           }, function(err, result) {
             var ret;
@@ -738,7 +738,7 @@
               path: '/verifyReceipt',
               method: 'POST'
             };
-            return checkRequest(options, rpcID, function(result) {
+            return checkRequest(options, player, arg, rpcID, function(result) {
               var _ref1;
               if (((_ref1 = result[0]) != null ? _ref1.RET : void 0) === RET_InvalidPaymentInfo) {
                 options = {

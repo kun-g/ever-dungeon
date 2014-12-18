@@ -513,10 +513,18 @@
     };
 
     Player.prototype.handleReceipt = function(payment, tunnel, cb) {
-      var cfg, flag, myReceipt, productList, rec, ret;
+      var cfg, flag, idx, myReceipt, product, productList, rec, ret;
       productList = queryTable(TABLE_IAP, 'list');
       myReceipt = payment.receipt;
       rec = unwrapReceipt(myReceipt);
+      if (tunnel === 'AppStore') {
+        for (idx in productList) {
+          product = productList[idx];
+          if (product.productID === payment.productID) {
+            rec.productID = +idx;
+          }
+        }
+      }
       cfg = productList[rec.productID];
       flag = true;
       this.log('charge', {
