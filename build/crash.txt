@@ -1,0 +1,872 @@
+Security context: 0x1349cff06b71 <JS Object>#0#
+1: /* anonymous */ [/home/faruba/Work/ever-dungeon/build/helper.js:221] (this=0x1349cff06c91 <JS Global Object>#1#,obj=0x1e718395d6a1 <JS Object>#2#,cfgKey=0x1349cff04121 <undefined>)
+	2: arguments adaptor frame: 1->2
+3: /* anonymous */ [/home/faruba/Work/ever-dungeon/build/helper.js:223] (this=0x1349cff06c91 <JS Global Object>#1#,obj=0x1e7183a2d339 <an Object>#3#,cfgKey=0x1349cff04121 <undefined>)
+	4: arguments adaptor frame: 1->2
+5: /* anonymous */ [/home/faruba/Work/ever-dungeon/build/helper.js:223] (this=0x1349cff06c91 <JS Global Object>#1#,obj=0x1e7183923789 <an Equipment>#4#,cfgKey=0x1349cff04121 <undefined>)
+	6: arguments adaptor frame: 1->2
+7: /* anonymous */ [/home/faruba/Work/ever-dungeon/build/helper.js:223] (this=0x1349cff06c91 <JS Global Object>#1#,obj=0x1e7183917101 <JS Array[10]>#5#,cfgKey=0x1349cff04121 <undefined>)
+	8: arguments adaptor frame: 1->2
+	9: /* anonymous */ [/home/faruba/Work/ever-dungeon/build/helper.js:223] (this=0x1349cff06c91 <JS Global Object>#1#,obj=0x1e71839165a9 <a Bag>#6#,cfgKey=0x1349cff04101 <null>)
+	10: /* anonymous */ [/home/faruba/Work/ever-dungeon/build/helper.js:214] (this=0x1349cff06c91 <JS Global Object>#1#,obj=0x1e718390f8b9 <a Player>#7#,cfgKey=0x9a225a2fc89 <String[6]: player>)
+	11: newPlayer [/home/faruba/Work/ever-dungeon/build/player.js:3416] (this=0x1e7183b6a7b9 <an Object>#8#,attributes=0x1e7183afcd91 <an Object>#9#)
+	12: /* anonymous */ [/home/faruba/Work/ever-dungeon/build/db.js:265] (this=0x1349cff06c91 <JS Global Object>#1#,err=0x1349cff04101 <null>,result=0x1e7183afb659 <an Object>#10#)
+14: /* anonymous */ [domain.js:183] (this=0x1349cff06c91 <JS Global Object>#1#)
+	15: arguments adaptor frame: 2->0
+	16: try_callback [/home/faruba/Work/ever-dungeon/build/node_modules/redis/index.js:573] (this=0x1349cff06c91 <JS Global Object>#1#,client=0x1e7183d9d749 <a RedisClient>#11#,callback=0x1e7183af9209 <JS Function>#12#,reply=0x1e7183afb659 <an Object>#10#)
+	17: return_reply [/home/faruba/Work/ever-dungeon/build/node_modules/redis/index.js:661] (this=0x1e7183d9d749 <a RedisClient>#11#,reply=0x1e7183afb659 <an Object>#10#)
+	18: /* anonymous */ [/home/faruba/Work/ever-dungeon/build/node_modules/redis/index.js:309] (this=0x1e7183c4e759 <a HiredisReplyParser>#13#,reply=0x1e7183af9c79 <JS Array[70]>#14#)
+19: emit [events.js:95] (this=0x1e7183c4e759 <a HiredisReplyParser>#13#,type=0x82dd9d6b689 <String[5]: reply>)
+	20: arguments adaptor frame: 2->1
+	21: execute [/home/faruba/Work/ever-dungeon/build/node_modules/redis/lib/parser/hiredis.js:43] (this=0x1e7183c4e759 <a HiredisReplyParser>#13#,data=0x1e7183af99c9 <a Buffer>#15#)
+	22: on_data [/home/faruba/Work/ever-dungeon/build/node_modules/redis/index.js:534] (this=0x1e7183d9d749 <a RedisClient>#11#,data=0x1e7183af99c9 <a Buffer>#15#)
+	23: /* anonymous */ [/home/faruba/Work/ever-dungeon/build/node_modules/redis/index.js:91] (this=0x1e7183d9c889 <a Socket>#16#,buffer_from_socket=0x1e7183af99c9 <a Buffer>#15#)
+24: emit [events.js:95] (this=0x1e7183d9c889 <a Socket>#16#,type=0x9a225a0a071 <String[4]: data>)
+	25: arguments adaptor frame: 2->1
+	26: /* anonymous */ [_stream_readable.js:764] (this=0x1e7183d9c889 <a Socket>#16#)
+	27: emit [events.js:92] (this=0x1e7183d9c889 <a Socket>#16#,type=0x9a225a1c979 <String[8]: readable>)
+	28: emitReadable_ [_stream_readable.js:426] (this=0x1349cff06c91 <JS Global Object>#1#,stream=0x1e7183d9c889 <a Socket>#16#)
+	29: emitReadable [_stream_readable.js:422] (this=0x1349cff06c91 <JS Global Object>#1#,stream=0x1e7183d9c889 <a Socket>#16#)
+	30: readableAddChunk [_stream_readable.js:165] (this=0x1349cff06c91 <JS Global Object>#1#,stream=0x1e7183d9c889 <a Socket>#16#,state=0x1e7183d9c981 <a ReadableState>#17#,chunk=0x1e7183af99c9 <a Buffer>#15#,encoding=0x1349cff04121 <undefined>,addToFront=0x1349cff04161 <false>)
+31: push [_stream_readable.js:127] (this=0x1e7183d9c889 <a Socket>#16#,chunk=0x1e7183af99c9 <a Buffer>#15#,encoding=0x1349cff04121 <undefined>)
+	32: arguments adaptor frame: 1->2
+33: onread [net.js:528] (this=0x1e7183d9d2c9 <a TCP>#18#,buffer=0x1e7183c53849 <a SlowBuffer>#19#,offset=10672,length=4128)
+
+	==== Details ================================================
+
+	[1]: /* anonymous */ [/home/faruba/Work/ever-dungeon/build/helper.js:221] (this=0x1349cff06c91 <JS Global Object>#1#,obj=0x1e718395d6a1 <JS Object>#2#,cfgKey=0x1349cff04121 <undefined>) {
+		// stack-allocated locals
+		var cb = 0x1349cff04121 <undefined>
+			var keyLst = 0x1349cff04121 <undefined>
+			var propName = 0x1349cff04121 <undefined>
+			var subVer = 0x1349cff04121 <undefined>
+			var versionCBMap = 0x1349cff04101 <null>
+			var versionCfg = 0x1349cff04121 <undefined>
+			var versionStoreName = 0x1349cff04121 <undefined>
+			var _i = 0x1349cff04121 <undefined>
+			var _len = 0x1349cff04121 <undefined>
+			var _ref = 0x1349cff04121 <undefined>
+			// heap-allocated locals
+			var obj = 0x1e718395d6a1 <JS Object>#2#
+			// expression stack (top to bottom)
+			[11] : 0x1e718395d6a1 <JS Object>#2#
+			[10] : 0x1e718395d6a1 <JS Object>#2#
+			--------- s o u r c e   c o d e ---------
+			function (obj, cfgKey) {?      var cb, keyLst, propName, subVer, versionCBMap, versionCfg, versionStoreName, _i, _len, _ref;?      versionCfg = versionConfig[cfgKey];?      obj = obj || {};?      defineHideProperty(obj, '__parentCBLst', []);?      defineObjFunction(obj, 'addParent', function(parent, name) {?...
+
+					-----------------------------------------
+					}
+
+					[2]: arguments adaptor frame: 1->2 {
+					// actual arguments
+					[00] : 0x1e718395d6a1 <JS Object>#2#
+					}
+
+					[3]: /* anonymous */ [/home/faruba/Work/ever-dungeon/build/helper.js:223] (this=0x1349cff06c91 <JS Global Object>#1#,obj=0x1e7183a2d339 <an Object>#3#,cfgKey=0x1349cff04121 <undefined>) {
+					// stack-allocated locals
+					var cb = 0x1349cff04121 <undefined>
+					var keyLst = 0x1349cff04121 <undefined>
+					var propName = 0x82dd9d88959 <String[19]: install_enhancement>
+					var subVer = 0x1349cff04121 <undefined>
+					var versionCBMap = 0x1349cff04101 <null>
+					var versionCfg = 0x1349cff04121 <undefined>
+					var versionStoreName = 0x1349cff04121 <undefined>
+					var _i = 0x1349cff04121 <undefined>
+					var _len = 0x1349cff04121 <undefined>
+					var _ref = 0x1349cff04121 <undefined>
+					// heap-allocated locals
+					var obj = 0x1e7183a2d339 <an Object>#3#
+					// expression stack (top to bottom)
+					[19] : 0x1e718395d6a1 <JS Object>#2#
+					[18] : 0x1349cff06c91 <JS Global Object>#1#
+					[17] : 0x1e7183aa9139 <JS Function>#20#
+					[16] : 0x82dd9d88959 <String[19]: install_enhancement>
+					[15] : 0x1e7183a2d339 <an Object>#3#
+					[14] : 0
+					[13] : 5
+					[12] : 0x1e718395adf9 <FixedArray[5]>#21#
+					[11] : 0x29e9f41a0501 <Map(elements=3)>#22#
+					[10] : 0x1e7183a2d339 <an Object>#3#
+					--------- s o u r c e   c o d e ---------
+					function (obj, cfgKey) {?      var cb, keyLst, propName, subVer, versionCBMap, versionCfg, versionStoreName, _i, _len, _ref;?      versionCfg = versionConfig[cfgKey];?      obj = obj || {};?      defineHideProperty(obj, '__parentCBLst', []);?      defineObjFunction(obj, 'addParent', function(parent, name) {?...
+
+							-----------------------------------------
+							}
+
+							[4]: arguments adaptor frame: 1->2 {
+							// actual arguments
+							[00] : 0x1e7183a2d339 <an Object>#3#
+							}
+
+							[5]: /* anonymous */ [/home/faruba/Work/ever-dungeon/build/helper.js:223] (this=0x1349cff06c91 <JS Global Object>#1#,obj=0x1e7183923789 <an Equipment>#4#,cfgKey=0x1349cff04121 <undefined>) {
+							// stack-allocated locals
+							var cb = 0x1349cff04121 <undefined>
+							var keyLst = 0x1349cff04121 <undefined>
+							var propName = 0x82dd9d87a41 <String[14]: command_config>
+							var subVer = 0x1349cff04121 <undefined>
+							var versionCBMap = 0x1349cff04101 <null>
+							var versionCfg = 0x1349cff04121 <undefined>
+							var versionStoreName = 0x1349cff04121 <undefined>
+							var _i = 0x1349cff04121 <undefined>
+							var _len = 0x1349cff04121 <undefined>
+							var _ref = 0x1349cff04121 <undefined>
+							// heap-allocated locals
+							var obj = 0x1e7183923789 <an Equipment>#4#
+							// expression stack (top to bottom)
+							[19] : 0x1e7183a2d339 <an Object>#3#
+							[18] : 0x1349cff06c91 <JS Global Object>#1#
+							[17] : 0x1e7183aa9139 <JS Function>#20#
+							[16] : 0x82dd9d87a41 <String[14]: command_config>
+							[15] : 0x1e7183923789 <an Equipment>#4#
+							[14] : 28
+							[13] : 46
+							[12] : 0x1e7183967801 <FixedArray[46]>#23#
+							[11] : 1
+							[10] : 0x1e7183923789 <an Equipment>#4#
+							--------- s o u r c e   c o d e ---------
+							function (obj, cfgKey) {?      var cb, keyLst, propName, subVer, versionCBMap, versionCfg, versionStoreName, _i, _len, _ref;?      versionCfg = versionConfig[cfgKey];?      obj = obj || {};?      defineHideProperty(obj, '__parentCBLst', []);?      defineObjFunction(obj, 'addParent', function(parent, name) {?...
+
+									-----------------------------------------
+									}
+
+									[6]: arguments adaptor frame: 1->2 {
+									// actual arguments
+									[00] : 0x1e7183923789 <an Equipment>#4#
+									}
+
+									[7]: /* anonymous */ [/home/faruba/Work/ever-dungeon/build/helper.js:223] (this=0x1349cff06c91 <JS Global Object>#1#,obj=0x1e7183917101 <JS Array[10]>#5#,cfgKey=0x1349cff04121 <undefined>) {
+									// stack-allocated locals
+									var cb = 0x1349cff04121 <undefined>
+									var keyLst = 0x1349cff04121 <undefined>
+									var propName = 0x9a225a11da1 <String[1]: 1>
+									var subVer = 0x1349cff04121 <undefined>
+									var versionCBMap = 0x1349cff04101 <null>
+									var versionCfg = 0x1349cff04121 <undefined>
+									var versionStoreName = 0x1349cff04121 <undefined>
+									var _i = 0x1349cff04121 <undefined>
+									var _len = 0x1349cff04121 <undefined>
+									var _ref = 0x1349cff04121 <undefined>
+									// heap-allocated locals
+									var obj = 0x1e7183917101 <JS Array[10]>#5#
+									// expression stack (top to bottom)
+									[19] : 0x1e7183923789 <an Equipment>#4#
+									[18] : 0x1349cff06c91 <JS Global Object>#1#
+									[17] : 0x1e7183aa9139 <JS Function>#20#
+									[16] : 0x9a225a11da1 <String[1]: 1>
+									[15] : 0x1e7183917101 <JS Array[10]>#5#
+									[14] : 1
+									[13] : 10
+									[12] : 0x1e718394b0e1 <FixedArray[10]>#24#
+									[11] : 1
+									[10] : 0x1e7183917101 <JS Array[10]>#5#
+									--------- s o u r c e   c o d e ---------
+									function (obj, cfgKey) {?      var cb, keyLst, propName, subVer, versionCBMap, versionCfg, versionStoreName, _i, _len, _ref;?      versionCfg = versionConfig[cfgKey];?      obj = obj || {};?      defineHideProperty(obj, '__parentCBLst', []);?      defineObjFunction(obj, 'addParent', function(parent, name) {?...
+
+											-----------------------------------------
+											}
+
+											[8]: arguments adaptor frame: 1->2 {
+											// actual arguments
+											[00] : 0x1e7183917101 <JS Array[10]>#5#
+											}
+
+											[9]: /* anonymous */ [/home/faruba/Work/ever-dungeon/build/helper.js:223] (this=0x1349cff06c91 <JS Global Object>#1#,obj=0x1e71839165a9 <a Bag>#6#,cfgKey=0x1349cff04101 <null>) {
+											// stack-allocated locals
+											var cb = 0x1349cff04121 <undefined>
+											var keyLst = 0x1349cff04121 <undefined>
+											var propName = 0x82dd9d7c229 <String[9]: container>
+											var subVer = 0x1349cff04121 <undefined>
+											var versionCBMap = 0x1349cff04101 <null>
+											var versionCfg = 0x1349cff04121 <undefined>
+											var versionStoreName = 0x1349cff04121 <undefined>
+											var _i = 0x1349cff04121 <undefined>
+											var _len = 0x1349cff04121 <undefined>
+											var _ref = 0x1349cff04121 <undefined>
+											// heap-allocated locals
+											var obj = 0x1e71839165a9 <a Bag>#6#
+											// expression stack (top to bottom)
+											[19] : 0x1e7183917101 <JS Array[10]>#5#
+											[18] : 0x1349cff06c91 <JS Global Object>#1#
+											[17] : 0x1e7183aa9139 <JS Function>#20#
+											[16] : 0x82dd9d7c229 <String[9]: container>
+											[15] : 0x1e71839165a9 <a Bag>#6#
+											[14] : 0
+											[13] : 26
+											[12] : 0x1e718394a529 <FixedArray[26]>#25#
+											[11] : 1
+											[10] : 0x1e71839165a9 <a Bag>#6#
+											--------- s o u r c e   c o d e ---------
+											function (obj, cfgKey) {?      var cb, keyLst, propName, subVer, versionCBMap, versionCfg, versionStoreName, _i, _len, _ref;?      versionCfg = versionConfig[cfgKey];?      obj = obj || {};?      defineHideProperty(obj, '__parentCBLst', []);?      defineObjFunction(obj, 'addParent', function(parent, name) {?...
+
+													-----------------------------------------
+													}
+
+													[10]: /* anonymous */ [/home/faruba/Work/ever-dungeon/build/helper.js:214] (this=0x1349cff06c91 <JS Global Object>#1#,obj=0x1e718390f8b9 <a Player>#7#,cfgKey=0x9a225a2fc89 <String[6]: player>) {
+													// stack-allocated locals
+													var cb = 0x1e71839492f1 <JS Function>#26#
+													var keyLst = 0x1e7183aa9091 <JS Array[4]>#27#
+													var propName = 0x82dd9d7fb49 <String[9]: inventory>
+													var subVer = 0x1349cff04101 <null>
+													var versionCBMap = 0x1e71839491d1 <an Object>#28#
+													var versionCfg = 0x1e7183aa9051 <an Object>#29#
+													var versionStoreName = 0x82dd9d80f11 <String[16]: inventoryVersion>
+													var _i = 2
+													var _len = 4
+													var _ref = 0x1349cff04121 <undefined>
+													// heap-allocated locals
+													var obj = 0x1e718390f8b9 <a Player>#7#
+													// expression stack (top to bottom)
+													[20] : 0x1349cff04101 <null>
+													[19] : 0x1e71839165a9 <a Bag>#6#
+													[18] : 0x1349cff06c91 <JS Global Object>#1#
+													[17] : 0x1e7183aa9139 <JS Function>#20#
+													[16] : 0x82dd9d7fb49 <String[9]: inventory>
+													[15] : 0x1e718390f8b9 <a Player>#7#
+													[14] : 0
+													[13] : 5
+													[12] : 0x1e71839491e9 <FixedArray[5]>#30#
+													[11] : 0x29e9f4197181 <Map(elements=3)>#31#
+													[10] : 0x1e7183aa9051 <an Object>#29#
+													--------- s o u r c e   c o d e ---------
+													function (obj, cfgKey) {?      var cb, keyLst, propName, subVer, versionCBMap, versionCfg, versionStoreName, _i, _len, _ref;?      versionCfg = versionConfig[cfgKey];?      obj = obj || {};?      defineHideProperty(obj, '__parentCBLst', []);?      defineObjFunction(obj, 'addParent', function(parent, name) {?...
+
+															-----------------------------------------
+															}
+
+															[11]: newPlayer [/home/faruba/Work/ever-dungeon/build/player.js:3416] (this=0x1e7183b6a7b9 <an Object>#8#,attributes=0x1e7183afcd91 <an Object>#9#) {
+															// expression stack (top to bottom)
+															[03] : 0x9a225a2fc89 <String[6]: player>
+															[02] : 0x1e718390f8b9 <a Player>#7#
+															[01] : 0x1349cff06c91 <JS Global Object>#1#
+															[00] : 0x1e7183aa9139 <JS Function>#20#
+															--------- s o u r c e   c o d e ---------
+															function (attributes) {?    return setupVersionControl(new Player(attributes), 'player');?  }
+															-----------------------------------------
+															}
+
+															[12]: /* anonymous */ [/home/faruba/Work/ever-dungeon/build/db.js:265] (this=0x1349cff06c91 <JS Global Object>#1#,err=0x1349cff04101 <null>,result=0x1e7183afb659 <an Object>#10#) {
+															// stack-allocated locals
+															var p = 0x1349cff04101 <null>
+															var attributes = 0x1e7183afcd91 <an Object>#9#
+															var k = 0x1e7183afb439 <String[14]: purchasedCount>
+															var v = 0x1e7183afb461 <String[2]: {}>
+															var playerLib = 0x1e7183b6a7b9 <an Object>#8#
+															// expression stack (top to bottom)
+															[06] : 0x1e7183afcd91 <an Object>#9#
+															[05] : 0x1e7183b6a7b9 <an Object>#8#
+															--------- s o u r c e   c o d e ---------
+															function (err, result) {?    var p = null;?    if (result) {?      var attributes = {};?      for (var k in result) {?        var v = result[k];?        try {?          attributes[k] = JSON.parse(v);?        } catch (error) {?          attributes[k] = v;?        }?      }?      var playerLib = require('./pla...
+
+																	-----------------------------------------
+																	}
+
+																	[14]: /* anonymous */ [domain.js:183] (this=0x1349cff06c91 <JS Global Object>#1#) {
+																	// stack-allocated locals
+																	var arguments = 0x1e7183afcd31 <an Arguments>#32#
+																	var er = 0x1349cff04121 <undefined>
+																	var len = 0x1349cff04121 <undefined>
+																	var args = 0x1349cff04121 <undefined>
+																	var i = 0x1349cff04121 <undefined>
+																	var ret = 0x1349cff04121 <undefined>
+																	// expression stack (top to bottom)
+																	[08] : 0x1e7183afcd31 <an Arguments>#32#
+																	[07] : 0x1349cff06c91 <JS Global Object>#1#
+																	[06] : 0x1e7183af9041 <JS Function>#33#
+																	--------- s o u r c e   c o d e ---------
+																	function () {?    // disposing turns functions into no-ops?    if (self._disposed) return;??    if (this instanceof Domain) {?      return cb.apply(this, arguments);?    }??    // only intercept first-arg errors if explicitly requested.?    if (interceptError && arguments[0] &&?        (arguments[0] instance...
+
+																		-----------------------------------------
+																	}
+
+															[15]: arguments adaptor frame: 2->0 {
+																// actual arguments
+																[00] : 0x1349cff04101 <null>  // not passed to callee
+																	[01] : 0x1e7183afb659 <an Object>#10#  // not passed to callee
+															}
+
+															[16]: try_callback [/home/faruba/Work/ever-dungeon/build/node_modules/redis/index.js:573] (this=0x1349cff06c91 <JS Global Object>#1#,client=0x1e7183d9d749 <a RedisClient>#11#,callback=0x1e7183af9209 <JS Function>#12#,reply=0x1e7183afb659 <an Object>#10#) {
+																// expression stack (top to bottom)
+																[08] : 0x1e7183afb659 <an Object>#10#
+																	[07] : 0x1349cff04101 <null>
+																	[06] : 0x1349cff06c91 <JS Global Object>#1#
+																	[05] : 0x1e7183af9209 <JS Function>#12#
+																	--------- s o u r c e   c o d e ---------
+																	function try_callback(client, callback, reply) {?    try {?        callback(null, reply);?    } catch (err) {?        if (process.domain) {?            process.domain.emit('error', err);?            process.domain.exit();?        } else {?            client.emit("error", err);?        }?    }?}
+																-----------------------------------------
+															}
+
+															[17]: return_reply [/home/faruba/Work/ever-dungeon/build/node_modules/redis/index.js:661] (this=0x1e7183d9d749 <a RedisClient>#11#,reply=0x1e7183afb659 <an Object>#10#) {
+																// stack-allocated locals
+																var command_obj = 0x1e7183af92c9 <a Command>#34#
+																	var len = 0x1349cff04121 <undefined>
+																	var type = 0x1e7183af9ed9 <String[9]: timestamp>
+																	var timestamp = 0x1349cff04121 <undefined>
+																	var argindex = 0x1349cff04121 <undefined>
+																	var args = 0x1349cff04121 <undefined>
+																	var queue_len = 0
+																	var reply1String = 0x1349cff04121 <undefined>
+																	// expression stack (top to bottom)
+																	[12] : 0x1e7183afb659 <an Object>#10#
+																	[11] : 0x1e7183af9209 <JS Function>#12#
+																	[10] : 0x1e7183d9d749 <a RedisClient>#11#
+																	[09] : 0x1349cff06c91 <JS Global Object>#1#
+																	[08] : 0x2ecf81c751a9 <JS Function try_callback>#35#
+																	--------- s o u r c e   c o d e ---------
+																	function (reply) {?    var command_obj, len, type, timestamp, argindex, args, queue_len;??    // If the "reply" here is actually a message received asynchronously due to a?    // pubsub subscription, don't pop the command queue as we'll only be consuming?    // the head command prematurely.?    if (Array.isA...
+
+																		-----------------------------------------
+																	}
+
+																[18]: /* anonymous */ [/home/faruba/Work/ever-dungeon/build/node_modules/redis/index.js:309] (this=0x1e7183c4e759 <a HiredisReplyParser>#13#,reply=0x1e7183af9c79 <JS Array[70]>#14#) {
+																	// expression stack (top to bottom)
+																	[01] : 0x1e7183afb659 <an Object>#10#
+																		[00] : 0x1e7183d9d749 <a RedisClient>#11#
+																		--------- s o u r c e   c o d e ---------
+																		function (reply) {?        self.return_reply(reply);?    }
+																	-----------------------------------------
+																}
+
+																[19]: emit [events.js:95] (this=0x1e7183c4e759 <a HiredisReplyParser>#13#,type=0x82dd9d6b689 <String[5]: reply>) {
+																	// stack-allocated locals
+																	var arguments = 0x1e7183afb4b9 <an Arguments>#36#
+																		var er = 0x1349cff04121 <undefined>
+																		var handler = 0x1e7183c4eb99 <JS Function>#37#
+																		var len = 0x1349cff04121 <undefined>
+																		var args = 0x1349cff04121 <undefined>
+																		var i = 0x1349cff04121 <undefined>
+																		var listeners = 0x1349cff04121 <undefined>
+																		// heap-allocated locals
+																		var type = 0x82dd9d6b689 <String[5]: reply>
+																		// expression stack (top to bottom)
+																		[09] : 0x1e7183af9c79 <JS Array[70]>#14#
+																		[08] : 0x1e7183c4e759 <a HiredisReplyParser>#13#
+																		[07] : 0x1349cff35d51 <JS Function emit>#38#
+																		--------- s o u r c e   c o d e ---------
+																		function emit(type) {?  var er, handler, len, args, i, listeners;??  if (!this._events)?    this._events = {};??  // If there is no 'error' event listener then throw.?  if (type === 'error') {?    if (!this._events.error ||?        (typeof this._events.error === 'object' &&?         !this._events.error.length)) ...
+
+																			-----------------------------------------
+																		}
+
+																		[20]: arguments adaptor frame: 2->1 {
+																			// actual arguments
+																			[00] : 0x82dd9d6b689 <String[5]: reply>
+																				[01] : 0x1e7183af9c79 <JS Array[70]>#14#  // not passed to callee
+																		}
+
+																		[21]: execute [/home/faruba/Work/ever-dungeon/build/node_modules/redis/lib/parser/hiredis.js:43] (this=0x1e7183c4e759 <a HiredisReplyParser>#13#,data=0x1e7183af99c9 <a Buffer>#15#) {
+																			// stack-allocated locals
+																			var reply = 0x1e7183af9c79 <JS Array[70]>#14#
+																				// expression stack (top to bottom)
+																				[03] : 0x1e7183af9c79 <JS Array[70]>#14#
+																				[02] : 0x82dd9d6b689 <String[5]: reply>
+																				[01] : 0x1e7183c4e759 <a HiredisReplyParser>#13#
+																				--------- s o u r c e   c o d e ---------
+																				function (data) {?    var reply;?    this.reader.feed(data);?    while (true) {?        try {?            reply = this.reader.get();?        } catch (err) {?            this.emit("error", err);?            break;?        }??        if (reply === undefined) {?            break;?        }??        if (reply &&...
+
+																						-----------------------------------------
+																						}
+
+																						[22]: on_data [/home/faruba/Work/ever-dungeon/build/node_modules/redis/index.js:534] (this=0x1e7183d9d749 <a RedisClient>#11#,data=0x1e7183af99c9 <a Buffer>#15#) {
+																						// expression stack (top to bottom)
+																						[06] : 0x1e7183af99c9 <a Buffer>#15#
+																						[05] : 0x1e7183c4e759 <a HiredisReplyParser>#13#
+																						--------- s o u r c e   c o d e ---------
+																						function (data) {?    if (exports.debug_mode) {?        console.log("net read " + this.host + ":" + this.port + " id " + this.connection_id + ": " + data.toString());?    }??    try {?        this.reply_parser.execute(data);?    } catch (err) {?        // This is an unexpected parser problem, an exception th...
+
+																						-----------------------------------------
+																						}
+
+																						[23]: /* anonymous */ [/home/faruba/Work/ever-dungeon/build/node_modules/redis/index.js:91] (this=0x1e7183d9c889 <a Socket>#16#,buffer_from_socket=0x1e7183af99c9 <a Buffer>#15#) {
+																						// expression stack (top to bottom)
+																						[01] : 0x1e7183af99c9 <a Buffer>#15#
+																						[00] : 0x1e7183d9d749 <a RedisClient>#11#
+																						--------- s o u r c e   c o d e ---------
+																						function (buffer_from_socket) {?        self.on_data(buffer_from_socket);?    }
+																						-----------------------------------------
+																						}
+
+																						[24]: emit [events.js:95] (this=0x1e7183d9c889 <a Socket>#16#,type=0x9a225a0a071 <String[4]: data>) {
+																							// stack-allocated locals
+																							var arguments = 0x1e7183af9c09 <an Arguments>#39#
+																								var er = 0x1349cff04121 <undefined>
+																								var handler = 0x1e7183d9e0c1 <JS Function>#40#
+																								var len = 0x1349cff04121 <undefined>
+																								var args = 0x1349cff04121 <undefined>
+																								var i = 0x1349cff04121 <undefined>
+																								var listeners = 0x1349cff04121 <undefined>
+																								// heap-allocated locals
+																								var type = 0x9a225a0a071 <String[4]: data>
+																								// expression stack (top to bottom)
+																								[09] : 0x1e7183af99c9 <a Buffer>#15#
+																								[08] : 0x1e7183d9c889 <a Socket>#16#
+																								[07] : 0x1349cff35d51 <JS Function emit>#38#
+																								--------- s o u r c e   c o d e ---------
+																								function emit(type) {?  var er, handler, len, args, i, listeners;??  if (!this._events)?    this._events = {};??  // If there is no 'error' event listener then throw.?  if (type === 'error') {?    if (!this._events.error ||?        (typeof this._events.error === 'object' &&?         !this._events.error.length)) ...
+
+																									-----------------------------------------
+																								}
+
+																								[25]: arguments adaptor frame: 2->1 {
+																									// actual arguments
+																									[00] : 0x9a225a0a071 <String[4]: data>
+																										[01] : 0x1e7183af99c9 <a Buffer>#15#  // not passed to callee
+																								}
+
+																								[26]: /* anonymous */ [_stream_readable.js:764] (this=0x1e7183d9c889 <a Socket>#16#) {
+																									// stack-allocated locals
+																									var c = 0x1e7183af99c9 <a Buffer>#15#
+																										// expression stack (top to bottom)
+																										[03] : 0x1e7183af99c9 <a Buffer>#15#
+																										[02] : 0x9a225a0a071 <String[4]: data>
+																										[01] : 0x1e7183d9c889 <a Socket>#16#
+																										--------- s o u r c e   c o d e ---------
+																										function () {?    readable = true;??    var c;?    while (!paused && (null !== (c = stream.read())))?      stream.emit('data', c);??    if (c === null) {?      readable = false;?      stream._readableState.needReadable = true;?    }?  }
+																									-----------------------------------------
+																								}
+
+																								[27]: emit [events.js:92] (this=0x1e7183d9c889 <a Socket>#16#,type=0x9a225a1c979 <String[8]: readable>) {
+																									// stack-allocated locals
+																									var arguments = 0x1e7183af9b69 <an Arguments>#41#
+																										var er = 0x1349cff04121 <undefined>
+																										var handler = 0x1e7183d9e291 <JS Function>#42#
+																										var len = 0x1349cff04121 <undefined>
+																										var args = 0x1349cff04121 <undefined>
+																										var i = 0x1349cff04121 <undefined>
+																										var listeners = 0x1349cff04121 <undefined>
+																										// heap-allocated locals
+																										var type = 0x9a225a1c979 <String[8]: readable>
+																										// expression stack (top to bottom)
+																										[08] : 0x1e7183d9c889 <a Socket>#16#
+																										[07] : 0x1349cff35d51 <JS Function emit>#38#
+																										--------- s o u r c e   c o d e ---------
+																										function emit(type) {?  var er, handler, len, args, i, listeners;??  if (!this._events)?    this._events = {};??  // If there is no 'error' event listener then throw.?  if (type === 'error') {?    if (!this._events.error ||?        (typeof this._events.error === 'object' &&?         !this._events.error.length)) ...
+
+																											-----------------------------------------
+																										}
+
+																										[28]: emitReadable_ [_stream_readable.js:426] (this=0x1349cff06c91 <JS Global Object>#1#,stream=0x1e7183d9c889 <a Socket>#16#) {
+																											// expression stack (top to bottom)
+																											[01] : 0x9a225a1c979 <String[8]: readable>
+																												[00] : 0x1e7183d9c889 <a Socket>#16#
+																												--------- s o u r c e   c o d e ---------
+																												function emitReadable_(stream) {?  stream.emit('readable');?}
+																											-----------------------------------------
+																										}
+
+																										[29]: emitReadable [_stream_readable.js:422] (this=0x1349cff06c91 <JS Global Object>#1#,stream=0x1e7183d9c889 <a Socket>#16#) {
+																											// stack-allocated locals
+																											var state = 0x1e7183d9c981 <a ReadableState>#17#
+																												// heap-allocated locals
+																												var stream = 0x1e7183d9c889 <a Socket>#16#
+																												// expression stack (top to bottom)
+																												[03] : 0x1e7183d9c889 <a Socket>#16#
+																												[02] : 0x1349cff06c91 <JS Global Object>#1#
+																												[01] : 0x2ecf81c15459 <JS Function emitReadable_>#43#
+																												--------- s o u r c e   c o d e ---------
+																												function emitReadable(stream) {?  var state = stream._readableState;?  state.needReadable = false;?  if (state.emittedReadable)?    return;??  state.emittedReadable = true;?  if (state.sync)?    process.nextTick(function() {?      emitReadable_(stream);?    });?  else?    emitReadable_(stream);?}
+																											-----------------------------------------
+																										}
+
+																										[30]: readableAddChunk [_stream_readable.js:165] (this=0x1349cff06c91 <JS Global Object>#1#,stream=0x1e7183d9c889 <a Socket>#16#,state=0x1e7183d9c981 <a ReadableState>#17#,chunk=0x1e7183af99c9 <a Buffer>#15#,encoding=0x1349cff04121 <undefined>,addToFront=0x1349cff04161 <false>) {
+																											// stack-allocated locals
+																											var er = 0x1349cff04101 <null>
+																												var e = 0x1349cff04121 <undefined>
+																												// expression stack (top to bottom)
+																												[04] : 0x1e7183d9c889 <a Socket>#16#
+																												[03] : 0x1349cff06c91 <JS Global Object>#1#
+																												[02] : 0x2ecf81c15411 <JS Function emitReadable>#44#
+																												--------- s o u r c e   c o d e ---------
+																												function readableAddChunk(stream, state, chunk, encoding, addToFront) {?  var er = chunkInvalid(state, chunk);?  if (er) {?    stream.emit('error', er);?  } else if (chunk === null || chunk === undefined) {?    state.reading = false;?    if (!state.ended)?      onEofChunk(stream, state);?  } else if (state.objectMode || chu...
+
+																														-----------------------------------------
+																														}
+
+																														[31]: push [_stream_readable.js:127] (this=0x1e7183d9c889 <a Socket>#16#,chunk=0x1e7183af99c9 <a Buffer>#15#,encoding=0x1349cff04121 <undefined>) {
+																														// stack-allocated locals
+																														var state = 0x1e7183d9c981 <a ReadableState>#17#
+																														// expression stack (top to bottom)
+																														[07] : 0x1349cff04161 <false>
+																														[06] : 0x1349cff04121 <undefined>
+																														[05] : 0x1e7183af99c9 <a Buffer>#15#
+																														[04] : 0x1e7183d9c981 <a ReadableState>#17#
+																														[03] : 0x1e7183d9c889 <a Socket>#16#
+																														[02] : 0x1349cff06c91 <JS Global Object>#1#
+																														[01] : 0x2ecf81c15261 <JS Function readableAddChunk>#45#
+																														--------- s o u r c e   c o d e ---------
+																														function (chunk, encoding) {?  var state = this._readableState;??  if (typeof chunk === 'string' && !state.objectMode) {?    encoding = encoding || state.defaultEncoding;?    if (encoding !== state.encoding) {?      chunk = new Buffer(chunk, encoding);?      encoding = '';?    }?  }??  return readableAddChun...
+
+																														-----------------------------------------
+																														}
+
+																												[32]: arguments adaptor frame: 1->2 {
+																													// actual arguments
+																													[00] : 0x1e7183af99c9 <a Buffer>#15#
+																												}
+
+																												[33]: onread [net.js:528] (this=0x1e7183d9d2c9 <a TCP>#18#,buffer=0x1e7183c53849 <a SlowBuffer>#19#,offset=10672,length=4128) {
+																													// stack-allocated locals
+																													var handle = 0x1e7183d9d2c9 <a TCP>#18#
+																														var self = 0x1e7183d9c889 <a Socket>#16#
+																														var end = 14800
+																														var ret = 0x1349cff04141 <true>
+																														var r = 0x1349cff04121 <undefined>
+																														// expression stack (top to bottom)
+																														[06] : 0x1e7183af99c9 <a Buffer>#15#
+																														[05] : 0x1e7183d9c889 <a Socket>#16#
+																														--------- s o u r c e   c o d e ---------
+																														function onread(buffer, offset, length) {?  var handle = this;?  var self = handle.owner;?  assert(handle === self._handle, 'handle != self._handle');??  timers._unrefActive(self);??  var end = offset + length;?  debug('onread', process._errno, offset, length, end);??  if (buffer) {?    debug('got data');??    // ...
+
+																															-----------------------------------------
+																														}
+
+																														==== Key         ============================================
+
+#0# 0x1349cff06b71: 0x1349cff06b71 <JS Object>
+#1# 0x1349cff06c91: 0x1349cff06c91 <JS Global Object>
+#2# 0x1e718395d6a1: 0x1e718395d6a1 <JS Object>
+																															__parentCBLst: 0x1e7183974d89 <JS Array[0]>#46#
+#3# 0x1e7183a2d339: 0x1e7183a2d339 <an Object>
+																															install_enhancement: 0x1e718395d6a1 <JS Object>#2#
+																															incress_property: 0x1e7183960199 <JS Object>#47#
+																															install_skill: 0x1e7183962c79 <JS Object>#48#
+																															update_appearance: 0x1e71839640e1 <JS Object>#49#
+																															change_appearance: 0x1e71839657c9 <JS Object>#50#
+																															__parentCBLst: 0x1e7183974a29 <JS Array[0]>#51#
+																															__updateVersionMap: 0x1349cff04101 <null>
+#4# 0x1e7183923789: 0x1e7183923789 <an Equipment>
+#5# 0x1e7183917101: 0x1e7183917101 <JS Array[10]>
+																															__parentCBLst: 0x1e718394a641 <JS Array[0]>#52#
+																															0: 0x1e7183966a31 <JS Object>#53#
+																															1: 0x1e7183923789 <an Equipment>#4#
+																															2: 0x1e718392a2d1 <an Equipment>#54#
+																															3: 0x1e718392fc49 <an Equipment>#55#
+																															4: 0x1e7183936329 <an Equipment>#56#
+																															5: 0x1e718393b879 <an Equipment>#57#
+																															6: 0x1e718393fd19 <an Item>#58#
+																															7: 0x1e7183942731 <an Item>#59#
+																															8: 0x1e7183944db1 <an Item>#60#
+																															9: 0x1e7183946f59 <an Item>#61#
+																															...
+#6# 0x1e71839165a9: 0x1e71839165a9 <a Bag>
+#7# 0x1e718390f8b9: 0x1e718390f8b9 <a Player>
+#8# 0x1e7183b6a7b9: 0x1e7183b6a7b9 <an Object>
+#9# 0x1e7183afcd91: 0x1e7183afcd91 <an Object>
+#10# 0x1e7183afb659: 0x1e7183afb659 <an Object>
+#11# 0x1e7183d9d749: 0x1e7183d9d749 <a RedisClient>
+																															stream: 0x1e7183d9c889 <a Socket>#16#
+																															options: 0x1e7183d9d8e9 <an Object>#62#
+																															connection_id: 2
+																															connected: 0x1349cff04141 <true>
+																															ready: 0x1349cff04141 <true>
+																															connections: 1
+																															should_buffer: 0x1349cff04161 <false>
+																															command_queue_high_water: 1000
+																															command_queue_low_water: 0
+																															max_attempts: 0x1349cff04101 <null>
+																															command_queue: 0x1e7183afb529 <a Queue>#63#
+																															offline_queue: 0x1e7183c69721 <a Queue>#64#
+																															commands_sent: 18
+																															connect_timeout: 0x1349cff04161 <false>
+																															enable_offline_queue: 0x1349cff04141 <true>
+																															retry_max_delay: 0x1349cff04101 <null>
+																															retry_timer: 0x1349cff04101 <null>
+																															retry_totaltime: 0
+																															retry_delay: 150
+																															retry_backoff: 0x82dd9d584b1 <Number: 1.7>
+																															attempts: 1
+																															pub_sub_mode: 0x1349cff04161 <false>
+																															subscription_set: 0x1e7183d9dea9 <an Object>#65#
+																															monitoring: 0x1349cff04161 <false>
+																															closing: 0x1349cff04161 <false>
+																															server_info: 0x1e7183c5ddc1 <an Object>#66#
+																															auth_pass: 0x1349cff04101 <null>
+																															parser_module: 0x2acb1f025069 <an Object>#67#
+																															selected_db: 0x1349cff04101 <null>
+																															old_state: 0x1349cff04101 <null>
+																															domain: 0x1349cff04101 <null>
+																															_events: 0x1e7183d9fd19 <an Object>#68#
+																															_maxListeners: 10
+																															port: 6380
+																															host: 0x9a225a2f9a1 <String[9]: localhost>
+																															emitted_end: 0x1349cff04161 <false>
+																															reply_parser: 0x1e7183c4e759 <a HiredisReplyParser>#13#
+																															send_anyway: 0x1349cff04161 <false>
+#12# 0x1e7183af9209: 0x1e7183af9209 <JS Function>
+																															domain: 0x2acb1f010149 <a Domain>#69#
+#13# 0x1e7183c4e759: 0x1e7183c4e759 <a HiredisReplyParser>
+																															name: 0x273005f79201 <String[7]: hiredis>
+																															options: 0x1e7183c4e739 <an Object>#70#
+																															reader: 0x1e7183c4e911 <JS Object>#71#
+																															domain: 0x1349cff04101 <null>
+																															_events: 0x1e7183c4e9c9 <an Object>#72#
+																															_maxListeners: 10
+#14# 0x1e7183af9c79: 0x1e7183af9c79 <JS Array[70]>
+																															0: 0x1e7183af9ed9 <String[9]: timestamp>
+																															1: 0x1e7183af9f01 <String[102]: {"goblin":"2014-11-28T07:18:12","weapon":"2014-11-28T07:18:12","currentPKCount":"2014-11-28T07:18:12"}>
+																															2: 0x1e7183af9f81 <String[7]: diamond>
+																															3: 0x1e7183af9fa1 <String[7]: 7999710>
+																															4: 0x1e7183af9fc1 <String[13]: tutorialStage>
+																															5: 0x9a225a11dc1 <String[1]: 2>
+																															6: 0x1e7183af9fe9 <String[9]: dbKeyName>
+																															7: 0x1e7183afa011 <String[20]: Develop.player.zs_43>
+																															8: 0x1e7183afa041 <String[5]: stage>
+																															9: 0x1e7183afa061 <Very long string[1069]>#73#
+																															...
+#15# 0x1e7183af99c9: 0x1e7183af99c9 <a Buffer>
+																															length: 4128
+																															parent: 0x1e7183c53849 <a SlowBuffer>#19#
+																															offset: 10672
+#16# 0x1e7183d9c889: 0x1e7183d9c889 <a Socket>
+																															_connecting: 0x1349cff04161 <false>
+																															_handle: 0x1e7183d9d2c9 <a TCP>#18#
+																															_readableState: 0x1e7183d9c981 <a ReadableState>#17#
+																															readable: 0x1349cff04141 <true>
+																															domain: 0x1349cff04101 <null>
+																															_events: 0x1e7183d9cb39 <an Object>#74#
+																															_maxListeners: 10
+																															_writableState: 0x1e7183d9cbd1 <a WritableState>#75#
+																															writable: 0x1349cff04141 <true>
+																															allowHalfOpen: 0x1349cff04161 <false>
+																															onend: 0x1349cff04101 <null>
+																															destroyed: 0x1349cff04161 <false>
+																															bytesRead: 6739
+																															_bytesDispatched: 7292
+																															_pendingData: 0x1349cff04101 <null>
+																															_pendingEncoding: 0x9a225a04501 <String[0]: >
+																															pause: 0xf6a1ef2339 <JS Function>#76#
+																															_consuming: 0x1349cff04141 <true>
+																															_idleNext: 0x1349cff04101 <null>
+																															_idlePrev: 0x1349cff04101 <null>
+																															_idleTimeout: -1
+#17# 0x1e7183d9c981: 0x1e7183d9c981 <a ReadableState>
+																															highWaterMark: 16384
+																															buffer: 0x1e7183d9ca99 <JS Array[0]>#77#
+																															length: 0
+																															pipes: 0x1349cff04101 <null>
+																															pipesCount: 0
+																															flowing: 0x1349cff04161 <false>
+																															ended: 0x1349cff04161 <false>
+																															endEmitted: 0x1349cff04161 <false>
+																															reading: 0x1349cff04141 <true>
+																															calledRead: 0x1349cff04141 <true>
+																															sync: 0x1349cff04161 <false>
+																															needReadable: 0x1349cff04141 <true>
+																															emittedReadable: 0x1349cff04161 <false>
+																															readableListening: 0x1349cff04161 <false>
+																															objectMode: 0x1349cff04161 <false>
+																															defaultEncoding: 0x9a225a1b999 <String[4]: utf8>
+																															ranOut: 0x1349cff04161 <false>
+																															awaitDrain: 0
+																															readingMore: 0x1349cff04161 <false>
+																															decoder: 0x1349cff04101 <null>
+																															encoding: 0x1349cff04101 <null>
+#18# 0x1e7183d9d2c9: 0x1e7183d9d2c9 <a TCP>
+																															writeQueueSize: 0
+																															owner: 0x1e7183d9c889 <a Socket>#16#
+																															reading: 0x1349cff04141 <true>
+																															: 0x1e7183c5c9d9 <FixedArray[11]>#78#
+#19# 0x1e7183c53849: 0x1e7183c53849 <a SlowBuffer>
+																															length: 1048576
+#20# 0x1e7183aa9139: 0x1e7183aa9139 <JS Function>
+#21# 0x1e718395adf9: 0x1e718395adf9 <FixedArray[5]>
+																															0: 0x82dd9d88959 <String[19]: install_enhancement>
+																															1: 0x82dd9d87dd9 <String[16]: incress_property>
+																															2: 0x82dd9d88a99 <String[13]: install_skill>
+																															3: 0x82dd9d88b29 <String[17]: update_appearance>
+																															4: 0x82dd9d88ba9 <String[17]: change_appearance>
+#22# 0x29e9f41a0501: 0x29e9f41a0501 <Map(elements=3)>
+#23# 0x1e7183967801: 0x1e7183967801 <FixedArray[46]>
+																															0: 0x82dd9d7fe21 <String[4]: slot>
+																															1: 0x9a225a33941 <String[5]: count>
+																															2: 0x82dd9d888b9 <String[8]: serverId>
+																															3: 0x9a225a09fd1 <String[2]: id>
+																															4: 0x9a225a32f41 <String[2]: xp>
+																															5: 0x82dd9d7fe81 <String[11]: enhancement>
+																															6: 0x82dd9d56ff1 <String[6]: status>
+																															7: 0x273005ff1c31 <String[7]: classId>
+																															8: 0x273005f3e161 <String[5]: label>
+																															9: 0x8040354dc01 <String[4]: icon>
+																															...
+#24# 0x1e718394b0e1: 0x1e718394b0e1 <FixedArray[10]>
+																															0: 0
+																															1: 1
+																															2: 2
+																															3: 3
+																															4: 4
+																															5: 5
+																															6: 6
+																															7: 7
+																															8: 8
+																															9: 9
+																															...
+#25# 0x1e718394a529: 0x1e718394a529 <FixedArray[26]>
+																															0: 0x82dd9d7c229 <String[9]: container>
+																															1: 0x273005f44f31 <String[5]: limit>
+																															2: 0x9a225a0a0a1 <String[4]: type>
+																															3: 0x82dd9d8cc49 <String[9]: stackType>
+																															4: 0x9a225a04451 <String[11]: constructor>
+																															5: 0x82dd9d80339 <String[8]: validate>
+																															6: 0x82dd9d8ccd9 <String[12]: getMaxLength>
+																															7: 0x82dd9d8cd01 <String[10]: countSpace>
+																															8: 0x9a225a11329 <String[3]: add>
+																															9: 0x82dd9d81741 <String[10]: removeById>
+																															...
+#26# 0x1e71839492f1: 0x1e71839492f1 <JS Function>
+#27# 0x1e7183aa9091: 0x1e7183aa9091 <JS Array[4]>
+																															0: 0x273005fee9d1 <String[4]: gold>
+																															1: 0x273005fab8b1 <String[7]: diamond>
+																															2: 0x82dd9d7fb49 <String[9]: inventory>
+																															3: 0x82dd9d7fb71 <String[9]: equipment>
+#28# 0x1e71839491d1: 0x1e71839491d1 <an Object>
+#29# 0x1e7183aa9051: 0x1e7183aa9051 <an Object>
+																															inventoryVersion: 0x1e7183aa9091 <JS Array[4]>#27#
+																															heroVersion: 0x1e7183aa90b1 <JS Array[3]>#79#
+																															stageVersion: 0x9a225a334c9 <String[5]: stage>
+																															questVersion: 0x9a225a34059 <String[6]: quests>
+																															energyVersion: 0x1e7183aa90d1 <JS Array[2]>#80#
+#30# 0x1e71839491e9: 0x1e71839491e9 <FixedArray[5]>
+																															0: 0x82dd9d80f11 <String[16]: inventoryVersion>
+																															1: 0x82dd9d80fd1 <String[11]: heroVersion>
+																															2: 0x82dd9d80b29 <String[12]: stageVersion>
+																															3: 0x82dd9d80e29 <String[12]: questVersion>
+																															4: 0x82dd9d824a1 <String[13]: energyVersion>
+#31# 0x29e9f4197181: 0x29e9f4197181 <Map(elements=3)>
+#32# 0x1e7183afcd31: 0x1e7183afcd31 <an Arguments>
+																															length: 2
+																															callee: 0x1e7183af9209 <JS Function>#12#
+#33# 0x1e7183af9041: 0x1e7183af9041 <JS Function>
+#34# 0x1e7183af92c9: 0x1e7183af92c9 <a Command>
+																															command: 0x273005f43601 <String[7]: hgetall>
+																															args: 0x1e7183af9181 <JS Array[1]>#81#
+																															sub_command: 0x1349cff04161 <false>
+																															buffer_args: 0x1349cff04161 <false>
+																															callback: 0x1e7183af9209 <JS Function>#12#
+#35# 0x2ecf81c751a9: 0x2ecf81c751a9 <JS Function try_callback>
+#36# 0x1e7183afb4b9: 0x1e7183afb4b9 <an Arguments>
+																															length: 2
+																															callee: 0x1349cff35d51 <JS Function emit>#38#
+#37# 0x1e7183c4eb99: 0x1e7183c4eb99 <JS Function>
+#38# 0x1349cff35d51: 0x1349cff35d51 <JS Function emit>
+#39# 0x1e7183af9c09: 0x1e7183af9c09 <an Arguments>
+																															length: 2
+																															callee: 0x1349cff35d51 <JS Function emit>#38#
+#40# 0x1e7183d9e0c1: 0x1e7183d9e0c1 <JS Function>
+#41# 0x1e7183af9b69: 0x1e7183af9b69 <an Arguments>
+																															length: 1
+																															callee: 0x1349cff35d51 <JS Function emit>#38#
+#42# 0x1e7183d9e291: 0x1e7183d9e291 <JS Function>
+#43# 0x2ecf81c15459: 0x2ecf81c15459 <JS Function emitReadable_>
+#44# 0x2ecf81c15411: 0x2ecf81c15411 <JS Function emitReadable>
+#45# 0x2ecf81c15261: 0x2ecf81c15261 <JS Function readableAddChunk>
+#46# 0x1e7183974d89: 0x1e7183974d89 <JS Array[0]>
+#47# 0x1e7183960199: 0x1e7183960199 <JS Object>
+#48# 0x1e7183962c79: 0x1e7183962c79 <JS Object>
+#49# 0x1e71839640e1: 0x1e71839640e1 <JS Object>
+#50# 0x1e71839657c9: 0x1e71839657c9 <JS Object>
+#51# 0x1e7183974a29: 0x1e7183974a29 <JS Array[0]>
+#52# 0x1e718394a641: 0x1e718394a641 <JS Array[0]>
+#53# 0x1e7183966a31: 0x1e7183966a31 <JS Object>
+#54# 0x1e718392a2d1: 0x1e718392a2d1 <an Equipment>
+#55# 0x1e718392fc49: 0x1e718392fc49 <an Equipment>
+#56# 0x1e7183936329: 0x1e7183936329 <an Equipment>
+#57# 0x1e718393b879: 0x1e718393b879 <an Equipment>
+#58# 0x1e718393fd19: 0x1e718393fd19 <an Item>
+#59# 0x1e7183942731: 0x1e7183942731 <an Item>
+#60# 0x1e7183944db1: 0x1e7183944db1 <an Item>
+#61# 0x1e7183946f59: 0x1e7183946f59 <an Item>
+#62# 0x1e7183d9d8e9: 0x1e7183d9d8e9 <an Object>
+																															socket_nodelay: 0x1349cff04141 <true>
+#63# 0x1e7183afb529: 0x1e7183afb529 <a Queue>
+																															tail: 0x1e7183afb559 <JS Array[0]>#82#
+																															head: 0x1e7183afb579 <JS Array[0]>#83#
+																															offset: 0
+#64# 0x1e7183c69721: 0x1e7183c69721 <a Queue>
+																															tail: 0x1e7183c69751 <JS Array[0]>#84#
+																															head: 0x1e7183c69771 <JS Array[0]>#85#
+																															offset: 0
+#65# 0x1e7183d9dea9: 0x1e7183d9dea9 <an Object>
+#66# 0x1e7183c5ddc1: 0x1e7183c5ddc1 <an Object>
+#67# 0x2acb1f025069: 0x2acb1f025069 <an Object>
+																															debug_mode: 0x1349cff04161 <false>
+																															name: 0x273005f79201 <String[7]: hiredis>
+#68# 0x1e7183d9fd19: 0x1e7183d9fd19 <an Object>
+																															error: 0x1e7183da3561 <JS Function>#86#
+#69# 0x2acb1f010149: 0x2acb1f010149 <a Domain>
+																															domain: 0x1349cff04101 <null>
+																															_events: 0x2acb1f02c781 <an Object>#87#
+																															_maxListeners: 10
+																															members: 0x2acb1f02c799 <JS Array[0]>#88#
+#70# 0x1e7183c4e739: 0x1e7183c4e739 <an Object>
+																															return_buffers: 0x1349cff04161 <false>
+#71# 0x1e7183c4e911: 0x1e7183c4e911 <JS Object>
+#72# 0x1e7183c4e9c9: 0x1e7183c4e9c9 <an Object>
+																															reply error: 0x1e7183c4eac1 <JS Function>#89#
+#73# 0x1e7183afa061: 0x1e7183afa061 <Very long string[1069]>
+#74# 0x1e7183d9cb39: 0x1e7183d9cb39 <an Object>
+																															end: 0x1e7183d9fc01 <JS Array[2]>#90#
+																															connect: 0x1e7183d9f971 <JS Array[1]>#91#
+#75# 0x1e7183d9cbd1: 0x1e7183d9cbd1 <a WritableState>
+																															highWaterMark: 16384
+																															objectMode: 0x1349cff04161 <false>
+																															needDrain: 0x1349cff04161 <false>
+																															ending: 0x1349cff04161 <false>
+																															ended: 0x1349cff04161 <false>
+																															finished: 0x1349cff04161 <false>
+																															decodeStrings: 0x1349cff04161 <false>
+																															defaultEncoding: 0x9a225a1b999 <String[4]: utf8>
+																															length: 0
+																															writing: 0x1349cff04161 <false>
+																															sync: 0x1349cff04161 <false>
+																															bufferProcessing: 0x1349cff04161 <false>
+																															onwrite: 0xf6a1ef1ea1 <JS Function>#92#
+																															writecb: 0x1349cff04101 <null>
+																															writelen: 0
+																															buffer: 0x1e7183d9ccf1 <JS Array[0]>#93#
+																															errorEmitted: 0x1349cff04161 <false>
+#76# 0xf6a1ef2339: 0xf6a1ef2339 <JS Function>
+#77# 0x1e7183d9ca99: 0x1e7183d9ca99 <JS Array[0]>
+#78# 0x1e7183c5c9d9: 0x1e7183c5c9d9 <FixedArray[11]>
+																															0: 1
+																															1: 0
+																															2: 4
+																															3: 0x1349cff04121 <undefined>
+																															4: 0x1349cff04121 <undefined>
+																															5: 0x1349cff04121 <undefined>
+																															6: 0x1349cff04121 <undefined>
+																															7: 0x1349cff04121 <undefined>
+																															8: 0x1349cff04121 <undefined>
+																															9: 0x82dd9d6d0d1 <String[14]: slab_0x27ba400>
+																															...
+#79# 0x1e7183aa90b1: 0x1e7183aa90b1 <JS Array[3]>
+																															0: 0x82dd9d7fbb9 <String[9]: heroIndex>
+																															1: 0x9a225a32f21 <String[4]: hero>
+																															2: 0x82dd9d7fb99 <String[8]: heroBase>
+#80# 0x1e7183aa90d1: 0x1e7183aa90d1 <JS Array[2]>
+																															0: 0x82dd9d7fbe1 <String[6]: energy>
+																															1: 0x82dd9d7fc01 <String[10]: energyTime>
+#81# 0x1e7183af9181: 0x1e7183af9181 <JS Array[1]>
+																															0: 0x1e7183af9019 <String[20]: Develop.player.zs_43>
+#82# 0x1e7183afb559: 0x1e7183afb559 <JS Array[0]>
+#83# 0x1e7183afb579: 0x1e7183afb579 <JS Array[0]>
+#84# 0x1e7183c69751: 0x1e7183c69751 <JS Array[0]>
+#85# 0x1e7183c69771: 0x1e7183c69771 <JS Array[0]>
+#86# 0x1e7183da3561: 0x1e7183da3561 <JS Function>
+#87# 0x2acb1f02c781: 0x2acb1f02c781 <an Object>
+#88# 0x2acb1f02c799: 0x2acb1f02c799 <JS Array[0]>
+#89# 0x1e7183c4eac1: 0x1e7183c4eac1 <JS Function>
+#90# 0x1e7183d9fc01: 0x1e7183d9fc01 <JS Array[2]>
+																															0: 0x1e7183d9cdf1 <JS Function g>#94#
+																															1: 0x1e7183d9fb99 <JS Function>#95#
+#91# 0x1e7183d9f971: 0x1e7183d9f971 <JS Array[1]>
+																															0: 0x1e7183d9dff9 <JS Function>#96#
+#92# 0xf6a1ef1ea1: 0xf6a1ef1ea1 <JS Function>
+#93# 0x1e7183d9ccf1: 0x1e7183d9ccf1 <JS Array[0]>
+#94# 0x1e7183d9cdf1: 0x1e7183d9cdf1 <JS Function g>
+																															listener: 0x2ecf81c1db81 <JS Function onend>#97#
+#95# 0x1e7183d9fb99: 0x1e7183d9fb99 <JS Function>
+#96# 0x1e7183d9dff9: 0x1e7183d9dff9 <JS Function>
+#97# 0x2ecf81c1db81: 0x2ecf81c1db81 <JS Function onend>
+																															=====================
+
+																															[1]    4720 trace trap (core dumped)  node index.js
+																															➜
