@@ -665,7 +665,7 @@
     };
 
     Player.prototype.createPlayer = function(arg, account, cb) {
-      var p, prize, _i, _len, _ref7, _ref8;
+      var prize, _ref7, _ref8;
       if (!((0 <= (_ref7 = arg.cid) && _ref7 <= 2))) {
         cb({
           message: 'big brother is watching ya'
@@ -682,10 +682,7 @@
         hairColor: arg.hcl
       });
       prize = (_ref8 = queryTable(TABLE_ROLE, arg.cid)) != null ? _ref8.initialEquipment : void 0;
-      for (_i = 0, _len = prize.length; _i < _len; _i++) {
-        p = prize[_i];
-        this.claimPrize(p);
-      }
+      this.claimPrize(prize);
       logUser({
         name: arg.nam,
         action: 'register',
@@ -1294,6 +1291,9 @@
       }
       if (prize == null) {
         return [];
+      }
+      if (!Array.isArray(prize)) {
+        prize = [prize];
       }
       ret = [];
       for (_i = 0, _len = prize.length; _i < _len; _i++) {

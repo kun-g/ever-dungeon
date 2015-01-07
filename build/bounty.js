@@ -2,7 +2,7 @@ exports.data = [
     {
         "bountyId":0,
         "title":"捉拿土豪哥布林",
-        "desc":"哥布林中的土豪出現了！趁他們逃跑之前擊倒，獲得大量金幣！",
+        "desc":"哥布林中的土豪出现了！趁他们逃跑之前击倒，获得大量金币！",
         "count":3,
         "date":{
             "segment":[
@@ -16,10 +16,10 @@ exports.data = [
         "titlePic":"bounty-icon3.png",
         "timePic":"bounty-time3.png",
         "prizePic":"bounty-iconjb.png",
-        "notify":1,
+	"notify":1,
         "notifyButton":"拿下",
-        "notifyText":"報⋯⋯！發現一群哥布林土豪，請老大立刻拿下它們！",
-        "level":[
+        "notifyText":"报⋯⋯！发现一群哥布林土豪，请老大立刻拿下它们！",
+         "level":[
             {
                 "powerLimit":100,
                 "stage":114,
@@ -52,8 +52,8 @@ exports.data = [
     } ,
     {
         "bountyId":1,
-        "title":"邪惡頭領討伐令",
-        "desc":"邪惡頭領聚集起來，討伐它們獲得大量強化石！",
+        "title":"邪恶头领讨伐令",
+        "desc":"邪恶头领聚集起来，讨伐它们获得大量强化石！",
         "count":3,
         "date":{
             "day":[0,2,4,6],
@@ -69,8 +69,8 @@ exports.data = [
         "timePic":"bounty-time5.png",
         "prizePic":"bounty-iconqhs.png",
         "notify":1,
-        "notifyButton":"挑戰",
-        "notifyText":"邪惡頭領又出沒了，夠膽你就來！",
+        "notifyButton":"挑战",
+        "notifyText":"邪恶头领又出没了，够胆你就来！",
         "level":[
             {
                 "powerLimit":100,
@@ -127,8 +127,8 @@ exports.data = [
     },
     {
         "bountyId":2,
-        "title":"神秘的裝備劫匪",
-        "desc":"傳說中的裝備劫匪出現了，打到他獲得大量裝備熟練度！",
+        "title":"神秘的装备劫匪",
+        "desc":"传说中的装备劫匪出现了，打到他获得大量装备熟练度！",
         "count":3,
         "date":{
             "day":[0,1,3,5],
@@ -144,8 +144,8 @@ exports.data = [
         "timePic":"bounty-time4.png",
         "prizePic":"bounty-iconsld.png",
         "notify":1,
-        "notifyButton":"挑戰",
-        "notifyText":"裝備劫匪出現了，還不趕緊來擊倒他為裝備增添威力！",
+        "notifyButton":"挑战",
+        "notifyText":"装备劫匪出现了，还不赶紧来击倒他为装备增添威力！",
         "level":[
             {
                 "powerLimit":100,
@@ -182,8 +182,8 @@ exports.data = [
     },
     {
         "bountyId":3,
-        "title":"鐵人試煉狀",
-        "desc":"強大且變幻莫測的無盡地牢已經開啟，誰才能夠獲得地下城勇者鐵人的稱號？",
+        "title":"铁人试炼状",
+        "desc":"强大且变幻莫测的无尽地牢已经开启，谁才能够获得地下城勇者铁人的称号？",
         "date":{
             "segment":[
                 {
@@ -208,7 +208,7 @@ exports.data = [
         "prizePic":"bounty-iconbs.png",
         "notify":1,
         "notifyButton":"加入",
-        "notifyText":"鐵人試煉地牢開啟，立刻挑戰最強勇者鐵人稱號！",
+        "notifyText":"铁人试炼地牢开启，立刻挑战最强勇者铁人称号！",
         "level":[
             {
                 "powerLimit":1000,
@@ -236,8 +236,8 @@ exports.data = [
     },
     {
         "bountyId":4,
-        "title":"地牢狩獵",
-        "desc":"地牢狩獵活動開啟，捉拿懸賞怪物，成為最強地牢獵人！",
+        "title":"地牢狩猎",
+        "desc":"地牢狩猎活动开启，捉拿悬赏怪物，成为最强地牢猎人！",
         "date":{
             "segment":[
                 {
@@ -262,7 +262,7 @@ exports.data = [
         "prizePic":"bounty-iconbs.png",
         "notify":1,
         "notifyButton":"加入",
-        "notifyText":"地牢狩獵全面開啟，趕緊加入最強獵人排行！",
+        "notifyText":"地牢狩猎全面开启，赶紧加入最强猎人排行！",
         "level":[
             {
                 "powerLimit":1000,
