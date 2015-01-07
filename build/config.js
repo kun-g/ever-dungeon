@@ -1,5 +1,5 @@
 exports.data = {
-    "Auth_API_Server": "192.168.128.11"
+    "Auth_API_Server": "192.168.128.11",
 
     DB_Config: {
         "SEAsia": {
@@ -17,15 +17,18 @@ exports.data = {
             DB: "SEAsia",
             IP: "10.4.3.41",
             DB_Prefix: "Develop"
-         "Gate": [
-//           {"ip": "192.168.128.9", "port": 7756},
-           {"ip": "192.168.128.10", "port": 7756},
-//           {"ip": "192.168.128.11", "port": 7756}
-         ]
         }
     },
 
     IP_Config : {
         "192.168.128.9": [ { Server: "Develop", Port: 7757 } ],
-    }
+    },
+	Gate_Config:{
+		"192.168.128.10": [
+//           {"ip": "192.168.128.9", "port": 7756},
+           {"ip": "192.168.128.10", "port": 7756},
+ //          {"ip": "192.168.128.11", "port": 7756}
+		]
+	}
+
 }

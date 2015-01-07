@@ -1,6 +1,6 @@
 (function() {
   "use strict";
-  var SimpleProtocolDecoder, SimpleProtocolEncoder, async, backendManager, net, port, startSocketIOServer, startTcpServer, _ref;
+  var SimpleProtocolDecoder, SimpleProtocolEncoder, async, backendManager, net, startSocketIOServer, startTcpServer, _ref;
 
   _ref = require('./requestStream'), SimpleProtocolDecoder = _ref.SimpleProtocolDecoder, SimpleProtocolEncoder = _ref.SimpleProtocolEncoder;
 
@@ -138,19 +138,22 @@
   };
 
   initGlobalConfig(null, function() {
-    var gateConfig, ip, ips, k, networkInterfaces, v;
+    var gateConfig, ip, ips, k, networkInterfaces, port, v;
     gateConfig = queryTable(TABLE_CONFIG, 'Gate_Config');
     ips = [];
     networkInterfaces = require("os").networkInterfaces();
     for (k in networkInterfaces) {
       v = networkInterfaces[k];
-      ips = ipc.concat(v.map(function(e) {
+      ips = ips.concat(v.map(function(e) {
         return e.address;
       }));
     }
-    return ip = ips.filter(function(e) {
+    ip = ips.filter(function(e) {
       return gateConfig[e];
     })[0];
-  }, backendManager.init(gateConfig[ip]), port = 7757, startTcpServer(port, backendManager));
+    backendManager.init(gateConfig[ip]);
+    port = 7757;
+    return startTcpServer(port, backendManager);
+  });
 
 }).call(this);
