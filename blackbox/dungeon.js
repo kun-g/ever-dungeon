@@ -351,7 +351,8 @@ libDungeon = {};
       if (this.initialQuests != null) {
         this.quests = deepCopy(this.initialQuests);
       }
-      cfg = this.getConfig();
+      this.config = this.getConfig();
+      cfg = this.config;
       if (cfg.triggers) {
         _ref5 = cfg.triggers;
         for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
@@ -1205,7 +1206,7 @@ libDungeon = {};
     Level.prototype.setupEnterAndExit = function(config) {
       this.entrance = this.rand(DG_BLOCKCOUNT);
       if ((config != null ? config.entrance : void 0) != null) {
-        this.entrance = config.entrance;
+        this.entrance = JSON.parse(JSON.stringify(config.entrance));
       }
       this.exit = this.rand(DG_BLOCKCOUNT - 1);
       if (this.exit === this.entrance || ((this.entrance.indexOf != null) && this.entrance.indexOf(this.exit) !== -1)) {

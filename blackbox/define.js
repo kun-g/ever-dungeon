@@ -25,7 +25,6 @@ dprint = function(obj) { debug(libUtil.inspect(obj, true, 10));}
 logger = null;
 initServer = function () {
   var pid = process.pid;
-  
   print = function (type, log) {
     if (log == null) {
       log = type;
@@ -536,21 +535,15 @@ mapContact = function (target, source) {
 
 generatePrize = function (cfg, dropInfo,rand) {
   var reward;
-  if (rand == null || typeof rand == 'undefined') {
-    rand = Math.random;
-  }
-  if (cfg == null || typeof cfg == 'undefined') {
-    return [];
-  }
-  return reward = dropInfo.reduce((function(r, p) {
-    return r.concat(cfg[p]);
-  }), []).filter(function(p) {
-    return p && rand() < p.rate;
-  }).map(function(g) {
-    var e;
-    e = selectElementFromWeightArray(g.prize, rand());
-    return e;
-  });
+  if (rand == null || typeof rand == 'undefined') { rand = Math.random; }
+  if (cfg == null || typeof cfg == 'undefined') { return []; }
+  return dropInfo.reduce((function(r, p) { return r.concat(cfg[p]); }), [])
+                 .filter(function(p) { return p && rand() < p.rate; })
+                 .map(function(g) {
+                     var e;
+                     e = selectElementFromWeightArray(g.prize, rand());
+                     return e;
+                 });
 };
 
 
@@ -584,6 +577,21 @@ updateQuestStatus = function (questStatus, player, abindex) {
     if (unlockable && (typeof questStatus[qid] == 'undefined' || questStatus[qid] === null)) ret.push(qid);
   });
   return ret;
+};
+
+function swap(array, indexA, indexB) {
+    indexA = Math.floor(indexA);
+    indexB = Math.floor(indexB);
+    var tmp = array[indexA];
+    array[indexA] = array[indexB];
+    array[indexB] = tmp;
+}
+
+newShuffle = function (array, randFunc) {
+    for (var i = 0; i < array.length; i++) {
+        swap(array, i, randFunc()*(array.length-i)+i);
+    }
+    return array;
 };
 
 shuffle = function (array, mask) {

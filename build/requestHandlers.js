@@ -23,63 +23,75 @@
   Player = require('./player').Player;
 
   checkRequest = function(req, player, arg, rpcID, cb) {
-    req = https.request(req, function(res) {
-      res.setEncoding('utf8');
-      return res.on('data', function(chunk) {
-        var receipt, result;
-        result = JSON.parse(chunk);
-        logInfo({
-          action: 'VerifyPayment',
-          type: 'Apple',
-          code: result,
-          receipt: arg.bill
-        });
-        if (result.status !== 0 || result.original_transaction_id) {
-          return cb([
-            {
-              REQ: rpcID,
-              RET: RET_InvalidPaymentInfo
+    return dbLib.checkReceiptValidate(arg.rep, function(isValidate) {
+      if (isValidate) {
+        req = https.request(req, function(res) {
+          res.setEncoding('utf8');
+          return res.on('data', function(chunk) {
+            var receipt, result;
+            result = JSON.parse(chunk);
+            logInfo({
+              action: 'VerifyPayment',
+              type: 'Apple',
+              code: result,
+              receipt: arg.bill
+            });
+            if (result.status !== 0 || result.original_transaction_id) {
+              return cb([
+                {
+                  REQ: rpcID,
+                  RET: RET_InvalidPaymentInfo
+                }
+              ]);
+            } else {
+              receipt = arg.bill;
+              return player.handlePayment({
+                paymentType: 'AppStore',
+                productID: result.receipt.product_id,
+                receipt: receipt
+              }, function(err, result) {
+                var ret;
+                dbLib.markReceiptInvalidate(arg.rep);
+                ret = RET_OK;
+                if (err != null) {
+                  ret = err.message;
+                }
+                return cb([
+                  {
+                    REQ: rpcID,
+                    RET: ret
+                  }
+                ].concat(result));
+              });
             }
-          ]);
-        } else {
-          receipt = arg.bill;
-          return player.handlePayment({
-            paymentType: 'AppStore',
-            productID: result.receipt.product_id,
-            receipt: receipt
-          }, function(err, result) {
-            var ret;
-            ret = RET_OK;
-            if (err != null) {
-              ret = err.message;
-            }
+          }).on('error', function(e) {
+            logError({
+              action: 'VerifyPayment',
+              type: 'Apple',
+              error: e,
+              rep: arg.rep
+            });
             return cb([
               {
                 REQ: rpcID,
-                RET: ret
+                RET: RET_InvalidPaymentInfo
               }
-            ].concat(result));
+            ]);
           });
-        }
-      }).on('error', function(e) {
-        logError({
-          action: 'VerifyPayment',
-          type: 'Apple',
-          error: e,
-          rep: arg.rep
         });
+        req.write(JSON.stringify({
+          "receipt-data": JSON.parse(arg.rep).receipt
+        }));
+        return req.end();
+      } else {
         return cb([
           {
             REQ: rpcID,
             RET: RET_InvalidPaymentInfo
           }
         ]);
-      });
+      }
     });
-    req.write(JSON.stringify({
-      "receipt-data": JSON.parse(arg.rep).receipt
-    }));
-    return req.end();
   };
 
   loginBy = function(arg, token, callback) {
@@ -257,7 +269,7 @@
               code: result.state
             });
             if (result.state.code === 1) {
-              identifier = result.data.creator + result.data.accountId;
+              identifier = result.data.nickName;
               return callback(null, identifier);
             } else {
               return callback(Error(RET_LoginFailed));
@@ -629,7 +641,7 @@
                 dungeon.result = DUNGEON_RESULT_FAIL;
               } finally {
                 logInfo('Claim Dungeon Award');
-                evt = evt.concat(player.claimDungeonAward(dungeon));
+                evt = evt.concat(player.claimDungeonReward(dungeon));
                 logInfo('Releasing Dungeon');
                 player.releaseDungeon();
                 logInfo('Saving');
@@ -747,7 +759,7 @@
                   path: '/verifyReceipt',
                   method: 'POST'
                 };
-                return checksession(options, rpcID, handler);
+                return checkRequest(options, player, arg, rpcID, handler);
               } else {
                 return handler(result);
               }

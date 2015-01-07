@@ -61,10 +61,7 @@
       }
       duration = config.duration;
       if (duration) {
-        localDuration = moment.duration({
-          to: time,
-          from: range
-        });
+        localDuration = moment.duration(time - range);
         result = result && localDuration < moment.duration(duration);
       }
     }
@@ -149,14 +146,13 @@
   exports.verify = verify;
 
   exports.diff = function(to, from) {
-    return moment.duration({
-      from: from,
-      to: to
-    });
+    return moment.duration(moment(to) - moment(from));
   };
 
   exports.currentTime = function() {
     return moment().format();
   };
+
+  exports.moment = moment;
 
 }).call(this);

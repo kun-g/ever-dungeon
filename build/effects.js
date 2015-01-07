@@ -268,36 +268,50 @@ exports.data = [
     },
     {
         "effectId": 64,
-        "file": "effect-bihu.ccbi"
+        "skeleton": "effect-bihu.json",
+        "atlas": "effect-bihu.atlas",
+        "sound": "effectbihu.mp3"
     },
     {
         "effectId": 65,
-        "file": "effect-bingjian.ccbi"
+        "skeleton": "effect-bingjian.json",
+        "atlas": "effect-bingjian.atlas" ,
+        "sound": "effectbingjian.mp3"
     },
     {
         "effectId": 66,
-        "file": "effect-fennuzhiyan.ccbi"
+        "skeleton": "effect-fennuzhiyan.json",
+        "atlas": "effect-fennuzhiyan.atlas",
+        "sound": "effectkuangre.mp3"
     },
     {
         "effectId": 67,
-        "file": "effect-fangzhu.ccbi"
+        "skeleton": "effect-fangzhu.json",
+        "atlas": "effect-fangzhu.atlas"
     },
     {
         "effectId": 68,
         "skeleton": "effect-paoxiao.json",
-        "atlas": "effect-paoxiao.atlas"
+        "atlas": "effect-paoxiao.atlas",
+        "sound": "effectpaoxiao.mp3"
     },
     {
         "effectId": 69,
-        "file": "effect-xuli2.ccbi"
+        "skeleton": "effect-xuli.json",
+        "atlas": "effect-xuli.atlas",
+        "sound": "effectxuli.mp3"
     },
     {
         "effectId": 70,
-        "file": "effect-siwangzuzhou.ccbi"
+        "skeleton": "effect-siwangzuzhou.json",
+        "atlas": "effect-siwangzuzhou.atlas",
+        "sound": "effectsiwangzuzhou.mp3"
     },
     {
         "effectId": 71,
-        "file": "effect-kuangre.ccbi"
+        "skeleton": "effect-kuangre.json",
+        "atlas": "effect-kuangre.atlas",
+        "sound": "effectkuangre.mp3"
     },
     {
         "effectId": 72,
@@ -306,16 +320,66 @@ exports.data = [
     {
         "effectId": 73,
         "skeleton": "effect-mzxj.json",
-        "atlas": "effect-mzxj.atlas"
+        "atlas": "effect-mzxj.atlas",
+        "sound": "buff.mp3"
     },
     {
         "effectId": 74,
         "skeleton": "effect-xx.json",
-        "atlas": "effect-xx.atlas"
+        "atlas": "effect-xx.atlas",
+        "sound": "effectxixue.mp3"
     },
     {
         "effectId": 75,
+        "loop": true,
         "skeleton": "effect-invincible.json",
         "atlas": "effect-invincible.atlas"
+    },
+    {
+        "effectId": 76,
+        "skeleton": "effect-paoxiao2.json",
+        "atlas": "effect-paoxiao2.atlas"
+    },
+    {
+        "effectId": 77,
+        "skeleton": "effect-fangzhu2.json",
+        "atlas": "effect-fangzhu2.atlas",
+        "sound": "effectfangzhu.mp3"
+    },
+    {
+        "effectId": 78,
+        "loop": true,
+        "skeleton": "effect-xuanyun.json",
+        "atlas": "effect-xuanyun.atlas"
+    },
+    {
+        "effectId": 79,
+        "skeleton": "effect-lockbox.json",
+        "atlas": "effect-lockbox.atlas",
+        "onGround":true
+    },
+    {
+        "effectId": 80,
+        "skeleton": "effect-zdb.json",
+        "atlas": "effect-zdb.atlas",
+        "onGround":true
+    },
+    {
+        "effectId": 81,
+        "skeleton": "effect-kj.json",
+        "atlas": "effect-kj.atlas"
+    },
+    {
+        "effectId": 82,
+        "loop": true,
+        "skeleton": "effect-elht.json",
+        "atlas": "effect-elht.atlas",
+        "onBack":true
+    },
+    {
+        "effectId": 83,
+        "loop": true,
+        "skeleton": "effect-jsht.json",
+        "atlas": "effect-jsht.atlas"
     }
 ]

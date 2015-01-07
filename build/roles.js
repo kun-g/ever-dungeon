@@ -8134,7 +8134,7 @@ exports.data = [
     },
     {
         "classId": 218,
-        "className": "主教",
+        "className": "大主教",
         "faction": "hero",
         "classType": 0,
         "avatar": "avatar3.ccbi",
@@ -8230,7 +8230,7 @@ exports.data = [
     },
     {
         "classId": 221,
-        "className": "pk主教",
+        "className": "pk大主教",
         "faction": "monster",
         "classType": 4,
         "avatar": "avatar3.ccbi",
@@ -8307,14 +8307,15 @@ exports.data = [
         "classType": 1,
         "skeleton": "newboss5.json",
         "atlas": "newboss5.atlas",
+        "bossFlag": true,
         "property": {
-            "health": 3.5,
-            "attack": 0.1,
-            "critical": -20,
+            "health": 5,
+            "attack": 0.65,
+            "critical": 20,
             "strong": 0,
-            "accuracy": 100,
-            "reactivity": -70,
-            "speed": 20,
+            "accuracy": 60,
+            "reactivity": -40,
+            "speed": -20,
             "counterAttack": true,
             "exp": 0,
             "gold": 0
@@ -8338,24 +8339,36 @@ exports.data = [
             {
                 "id": 293,
                 "level": 1
+            },
+            {
+                "id": 27,
+                "level": 1
+            },
+            {
+                "id": 348,
+                "level": 1
+            },
+            {
+                "id": 350,
+                "level": 1
             }
         ]
     },
     {
         "classId": 224,
-        "className": "蜥蜴人弓箭手",
+        "className": "蜥蜴射手BOSS",
         "faction": "monster",
         "classType": 1,
         "skeleton": "newenemy1.json",
         "atlas": "newenemy1.atlas",
         "property": {
             "health": 2.5,
-            "attack": 0.1,
-            "critical": 10,
-            "strong": 20,
-            "accuracy": 40,
-            "reactivity": -80,
-            "speed": -40,
+            "attack": 0.11,
+            "critical": 0,
+            "strong": 0,
+            "accuracy": 50,
+            "reactivity": -40,
+            "speed": -20,
             "counterAttack": false,
             "exp": 0,
             "gold": 0
@@ -8395,7 +8408,8 @@ exports.data = [
                 "id": 298,
                 "level": 1
             }
-        ]
+        ],
+        "scale": 1.2
     },
     {
         "classId": 225,
@@ -8404,14 +8418,15 @@ exports.data = [
         "classType": 1,
         "skeleton": "newboss3.json",
         "atlas": "newboss3.atlas",
+        "bossFlag": true,
         "property": {
-            "health": 4,
-            "attack": 0.1,
-            "critical": 10,
-            "strong": -10,
-            "accuracy": 100,
-            "reactivity": -60,
-            "speed": -20,
+            "health": 7,
+            "attack": 0.6,
+            "critical": 0,
+            "strong": 30,
+            "accuracy": 50,
+            "reactivity": -90,
+            "speed": -80,
             "counterAttack": true,
             "exp": 0,
             "gold": 0
@@ -8440,7 +8455,15 @@ exports.data = [
                 "level": 1
             },
             {
+                "id": 27,
+                "level": 1
+            },
+            {
                 "id": 303,
+                "level": 1
+            },
+            {
+                "id": 346,
                 "level": 1
             }
         ]
@@ -8474,8 +8497,8 @@ exports.data = [
             "reactivity": 1,
             "speed": 1
         },
-        "soundWound": "shanzeiroumuwound.mp3",
-        "soundDie": "shanzeitoumudie.mp3",
+        "soundWound": "youxiawound.mp3",
+        "soundDie": "youxiadie.mp3",
         "effectAttack": 9,
         "skill": [
             {
@@ -8484,6 +8507,10 @@ exports.data = [
             },
             {
                 "id": 305,
+                "level": 1
+            },
+            {
+                "id": 272,
                 "level": 1
             },
             {
@@ -8914,11 +8941,15 @@ exports.data = [
         "effectAttack": 10,
         "skill": [
             {
-                "id": 304,
+                "id": 271,
                 "level": 1
             },
             {
-                "id": 305,
+                "id": 214,
+                "level": 1
+            },
+            {
+                "id": 272,
                 "level": 1
             },
             {
@@ -8956,10 +8987,9 @@ exports.data = [
             "reactivity": 1,
             "speed": 1
         },
-        "soundSpawn": "tulang.mp3",
-        "soundWound": "tulangwound.mp3",
-        "soundAttack": "tulangattack.mp3",
-        "soundDie": "tulangdie.mp3",
+        "soundWound": "liulangwound.mp3",
+        "soundAttack": "liulangattack.mp3",
+        "soundDie": "liulangdie.mp3",
         "effectAttack": 9,
         "skill": [
             {
@@ -9059,7 +9089,7 @@ exports.data = [
         "atlas": "necromancer.atlas",
         "property": {
             "health": 1.5,
-            "attack": 1.2,
+            "attack": 0.12,
             "critical": 20,
             "strong": -10,
             "accuracy": 60,
@@ -9084,11 +9114,15 @@ exports.data = [
         "effectAttack": 10,
         "skill": [
             {
-                "id": 304,
+                "id": 271,
                 "level": 1
             },
             {
-                "id": 305,
+                "id": 214,
+                "level": 1
+            },
+            {
+                "id": 272,
                 "level": 1
             },
             {
@@ -9127,10 +9161,9 @@ exports.data = [
             "reactivity": 1,
             "speed": 1
         },
-        "soundSpawn": "tulang.mp3",
-        "soundWound": "tulangwound.mp3",
-        "soundAttack": "tulangattack.mp3",
-        "soundDie": "tulangdie.mp3",
+        "soundWound": "liulangwound.mp3",
+        "soundAttack": "liulangattack.mp3",
+        "soundDie": "liulangdie.mp3",
         "effectAttack": 9,
         "skill": [
             {
@@ -9149,7 +9182,7 @@ exports.data = [
         "atlas": "newenemy2.atlas",
         "property": {
             "health": 1.5,
-            "attack": 0.9,
+            "attack": 0.09,
             "critical": 20,
             "strong": -20,
             "accuracy": 80,
@@ -9169,8 +9202,8 @@ exports.data = [
             "reactivity": 1,
             "speed": 1
         },
-        "soundWound": "shanzeiroumuwound.mp3",
-        "soundDie": "shanzeitoumudie.mp3",
+        "soundWound": "youxiawound.mp3",
+        "soundDie": "youxiadie.mp3",
         "effectAttack": 9,
         "skill": [
             {
@@ -9179,6 +9212,10 @@ exports.data = [
             },
             {
                 "id": 305,
+                "level": 1
+            },
+            {
+                "id": 272,
                 "level": 1
             },
             {
@@ -9418,6 +9455,7 @@ exports.data = [
             "reactivity": 1,
             "speed": 1
         },
+        "soundAttack": "attackcut.mp3",
         "skill": [
             {
                 "id": 273,
@@ -9480,6 +9518,7 @@ exports.data = [
             "reactivity": 1,
             "speed": 1
         },
+        "soundAttack": "attackfire.mp3",
         "skill": [
             {
                 "id": 279,
@@ -9542,6 +9581,7 @@ exports.data = [
             "reactivity": 1,
             "speed": 1
         },
+        "soundAttack": "attackhit.mp3",
         "skill": [
             {
                 "id": 285,
@@ -9560,5 +9600,275 @@ exports.data = [
                 "level": 1
             }
         ]
+    },
+    {
+        "classId": 250,
+        "className": "剑兵2BOSS",
+        "faction": "monster",
+        "classType": 1,
+        "avatar": "enemy-sword12.ccbi",
+        "property": {
+            "health": 3,
+            "attack": 0.45,
+            "critical": 20,
+            "strong": 0,
+            "accuracy": 50,
+            "reactivity": -50,
+            "speed": -20,
+            "counterAttack": true,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 1.5,
+            "attack": 0.4,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundWound": "liulangwound.mp3",
+        "soundAttack": "liulangattack.mp3",
+        "soundDie": "liulangdie.mp3",
+        "effectAttack": 8,
+        "skill": [
+            {
+                "id": 185,
+                "level": 1
+            }
+        ],
+        "scale": 1.2
+    },
+    {
+        "classId": 251,
+        "className": "蜥蜴射手",
+        "faction": "monster",
+        "classType": 1,
+        "skeleton": "newenemy1.json",
+        "atlas": "newenemy1.atlas",
+        "property": {
+            "health": 2.5,
+            "attack": 0.11,
+            "critical": 0,
+            "strong": 0,
+            "accuracy": 50,
+            "reactivity": -40,
+            "speed": -20,
+            "counterAttack": false,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 2,
+            "attack": 0.4,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundWound": "shourenwound.mp3",
+        "soundAttack": "shourenattack.mp3",
+        "soundDie": "shourendie.mp3",
+        "effectAttack": 9,
+        "skill": [
+            {
+                "id": 26,
+                "level": 1
+            },
+            {
+                "id": 272,
+                "level": 1
+            },
+            {
+                "id": 27,
+                "level": 1
+            },
+            {
+                "id": 296,
+                "level": 1
+            },
+            {
+                "id": 298,
+                "level": 1
+            }
+        ]
+    },
+    {
+        "classId": 252,
+        "className": "鳄鱼怪1",
+        "faction": "monster",
+        "classType": 1,
+        "skeleton": "crocodile1.json",
+        "atlas": "crocodile1.atlas",
+        "property": {
+            "health": 0.7,
+            "attack": 0.37,
+            "critical": 30,
+            "strong": -10,
+            "accuracy": 20,
+            "reactivity": -60,
+            "speed": -20,
+            "counterAttack": true,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 1.5,
+            "attack": 0.4,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundSpawn": "shouren.mp3",
+        "soundWound": "shourenwound.mp3",
+        "soundAttack": "shourenattack.mp3",
+        "soundDie": "shourendie.mp3",
+        "skill": [
+            {
+                "id": 335,
+                "level": 1
+            },
+            {
+                "id": 336,
+                "level": 1
+            }
+        ],
+        "effectAttack": 8
+    },
+    {
+        "classId": 253,
+        "className": "土元素",
+        "faction": "monster",
+        "classType": 1,
+        "skeleton": "earth.json",
+        "atlas": "earth.atlas",
+        "property": {
+            "health": 1,
+            "attack": 0.3,
+            "critical": -20,
+            "strong": 10,
+            "accuracy": 40,
+            "reactivity": -70,
+            "speed": -50,
+            "counterAttack": true,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 1.5,
+            "attack": 0.4,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundSpawn": "shilaimu.mp3",
+        "soundWound": "shilaimuwound.mp3",
+        "soundAttack": "shilaimuattack.mp3",
+        "soundDie": "shilaimudie.mp3",
+        "effectAttack": 9,
+        "skill": [
+            {
+                "id": 188,
+                "level": 1
+            }
+        ]
+    },
+    {
+        "classId": 254,
+        "className": "鳄鱼怪1BOSS",
+        "faction": "monster",
+        "classType": 1,
+        "skeleton": "crocodile1.json",
+        "atlas": "crocodile1.atlas",
+        "property": {
+            "health": 3.5,
+            "attack": 0.6,
+            "critical": 35,
+            "strong": -10,
+            "accuracy": 20,
+            "reactivity": -60,
+            "speed": -20,
+            "counterAttack": true,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 1.5,
+            "attack": 0.4,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundSpawn": "shouren.mp3",
+        "soundWound": "shourenwound.mp3",
+        "soundAttack": "shourenattack.mp3",
+        "soundDie": "shourendie.mp3",
+        "effectAttack": 8 ,
+        "skill": [
+            {
+                "id": 335,
+                "level": 1
+            },
+            {
+                "id": 336,
+                "level": 1
+            }
+        ],
+        "scale": 1.2
+    },
+    {
+        "classId": 255,
+        "className": "土元素BOSS",
+        "faction": "monster",
+        "classType": 1,
+        "skeleton": "earth.json",
+        "atlas": "earth.atlas",
+        "property": {
+            "health": 3,
+            "attack": 0.5,
+            "critical": -20,
+            "strong": 10,
+            "accuracy": 60,
+            "reactivity": -60,
+            "speed": -50,
+            "counterAttack": true,
+            "exp": 0,
+            "gold": 0
+        },
+        "xproperty": {
+            "balance": 0.1,
+            "health": 1.5,
+            "attack": 0.4,
+            "critical": 1,
+            "strong": 1,
+            "accuracy": 1,
+            "reactivity": 1,
+            "speed": 1
+        },
+        "soundSpawn": "shilaimu.mp3",
+        "soundWound": "shilaimuwound.mp3",
+        "soundAttack": "shilaimuattack.mp3",
+        "soundDie": "shilaimudie.mp3",
+        "effectAttack": 9,
+        "skill": [
+            {
+                "id": 188,
+                "level": 1
+            }
+        ],
+        "scale": 1.2
     }
 ]

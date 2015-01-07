@@ -1,6 +1,6 @@
 (function() {
   "use strict";
-  var SimpleProtocolDecoder, SimpleProtocolEncoder, async, backendManager, net, startSocketIOServer, startTcpServer, _ref;
+  var SimpleProtocolDecoder, SimpleProtocolEncoder, async, backendManager, net, port, startSocketIOServer, startTcpServer, _ref;
 
   _ref = require('./requestStream'), SimpleProtocolDecoder = _ref.SimpleProtocolDecoder, SimpleProtocolEncoder = _ref.SimpleProtocolEncoder;
 
@@ -14,7 +14,6 @@
     var io;
     io = require('socket.io');
     return io.listen(port).on('connection', function(socket) {
-      console.log('Connection');
       socket.encoder = new SimpleProtocolEncoder();
       socket.decoder = new SimpleProtocolDecoder();
       socket.encoder.setFlag('size');
@@ -28,7 +27,6 @@
         return socket.emit('response', request);
       });
       return socket.on('request', function(request) {
-        console.log('reqeust', request);
         return socket.encoder.writeObject(request);
       });
     }).set('log level', 0);
@@ -75,15 +73,13 @@
         if (!e.alive) {
           s = net.connect(e.port, e.ip);
           s.on('connect', function() {
-            e.alive = true;
-            return console.log('Connection On', e);
+            return e.alive = true;
           });
           s.on('error', function(err) {
             return e.alive = false;
           });
           s.on('end', function(err) {
-            e.alive = false;
-            return console.log('Connection Lost', e);
+            return e.alive = false;
           });
           return s = null;
         }
@@ -142,12 +138,19 @@
   };
 
   initGlobalConfig(null, function() {
-    var gServerConfig, gServerID, port, _ref1;
-    gServerID = queryTable(TABLE_CONFIG, 'ServerID');
-    gServerConfig = queryTable(TABLE_CONFIG, 'ServerConfig')[gServerID];
-    backendManager.init(gServerConfig.Gate);
-    port = (_ref1 = gServerConfig.gateListenPort) != null ? _ref1 : 7757;
-    return startTcpServer(port, backendManager);
-  });
+    var gateConfig, ip, ips, k, networkInterfaces, v;
+    gateConfig = queryTable(TABLE_CONFIG, 'Gate_Config');
+    ips = [];
+    networkInterfaces = require("os").networkInterfaces();
+    for (k in networkInterfaces) {
+      v = networkInterfaces[k];
+      ips = ipc.concat(v.map(function(e) {
+        return e.address;
+      }));
+    }
+    return ip = ips.filter(function(e) {
+      return gateConfig[e];
+    })[0];
+  }, backendManager.init(gateConfig[ip]), port = 7757, startTcpServer(port, backendManager));
 
 }).call(this);
