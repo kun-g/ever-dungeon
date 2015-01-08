@@ -28565,7 +28565,7 @@ exports.data = [
         "label": "深渊战靴",
         "category": 1,
         "subcategory": 4,
-            "description": "工艺精良，设计华丽，且不失实用",
+        "description": "工艺精良，设计华丽，且不失实用",
         "effectf": [
             {
                 "part": "leftleg",

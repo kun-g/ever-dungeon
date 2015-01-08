@@ -1,55 +1,29 @@
-exports.data = [
+exports.data = {
+    storeType: "player",
+    counter: {
+        key: 'check_in',
+        initial_value: 0,
+        uplimit: 31,
+        count_down: { time: 'time@ThisCounter', units: 'day' },
+        duration: { time: 'time@ThisCounter', units: 'month' }
+    },
+    available_condition: [ { type: 'counter', func: "notCounted" } ],
+    rewards: [
     {
         "prizeId": 0,
-        "prize": [
-            {
-                "type": 0,
-                "value":538,
-                "count":1
-            }
-        ]
+        "prize": [ { "type": 0, "value":538, "count":1 } ]
     },
     {
         "prizeId":1,
-        "prize": [
-            {
-                "type": 0,
-                "value":871,
-                "count":2
-            },
-            {
-                "type": 0,
-                "value":871,
-                "count":2,
-                "vip":1
-            }
-        ]
+        "prize": [ { "type": 0, "value":871, "count":2 }, { "type": 0, "value":871, "count":2, "vip":1 } ]
     },
     {
         "prizeId":2,
-        "prize": [
-            {
-                "type": 0,
-                "value":540,
-                "count":1
-            }
-        ]
+        "prize": [ { "type": 0, "value":540, "count":1 } ]
     },
     {
         "prizeId":3,
-        "prize": [
-            {
-                "type": 0,
-                "value":858,
-                "count":3
-            },
-            {
-                "type": 0,
-                "value":858,
-                "count":3,
-                "vip":1
-            }
-        ]
+        "prize": [ { "type": 0, "value":858, "count":3 }, { "type": 0, "value":858, "count":3, "vip":1 } ]
     },
     {
         "prizeId":4,
@@ -370,5 +344,5 @@ exports.data = [
                 "count":250
             }
         ]
-    }
-]
+    }]
+};
