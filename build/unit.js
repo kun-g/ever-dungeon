@@ -1,6 +1,6 @@
 (function() {
   "use strict";
-  var Hero, Mirror, Monster, Npc, Unit, Wizard, createUnit, flagCreation,
+  var Hero, Mirror, Monster, Npc, Unit, Wizard, canMirror, createUnit, flagCreation,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -34,7 +34,7 @@
         roleConfig = queryTable(TABLE_ROLE, this["class"]);
       }
       if ((roleConfig != null ? (_ref = roleConfig.property) != null ? _ref.activeSpell : void 0 : void 0) == null) {
-        return -1;
+        return [-1];
       }
       return roleConfig.property.activeSpell;
     };
@@ -255,19 +255,28 @@
   Mirror = (function(_super) {
     __extends(Mirror, _super);
 
-    function Mirror(heroData) {
+    function Mirror(heroData, type) {
+      var transId;
       Mirror.__super__.constructor.apply(this, arguments);
       if (heroData == null) {
         return false;
       }
       this.type = Unit_Mirror;
-      this.blockType = Block_Enemy;
-      this.isVisible = false;
-      this.keyed = true;
-      this.initialize(heroData);
+      if (type === 'pk') {
+        this.blockType = Block_Enemy;
+        this.isVisible = false;
+        this.keyed = true;
+        transId = 'pkTransId';
+      } else {
+        this.blockType = Unit_Hero;
+        this.isVisible = true;
+        this.keyed = false;
+        transId = 'teammateTransId';
+      }
+      this.initialize(heroData, transId);
     }
 
-    Mirror.prototype.initialize = function(heroData) {
+    Mirror.prototype.initialize = function(heroData, transId) {
       var battleForce, cfg, cid, hero;
       hero = new Hero({
         name: heroData.nam,
@@ -280,8 +289,8 @@
       });
       battleForce = hero.calculatePower();
       cfg = queryTable(TABLE_ROLE, heroData.cid);
-      cid = cfg.transId;
-      cfg = queryTable(TABLE_ROLE, cfg.transId);
+      cid = cfg[transId];
+      cfg = queryTable(TABLE_ROLE, cid);
       if (cfg != null) {
         this.initWithConfig(cfg);
       }
@@ -305,7 +314,10 @@
       this.hairColor = heroData.hcl;
       this.ref = heroData.ref;
       this.id = cid;
-      return this.originAttack = this.attack;
+      this.originAttack = this.attack;
+      if (heroData.order != null) {
+        return this.order = heroData.order;
+      }
     };
 
     return Mirror;
@@ -388,6 +400,13 @@
 
   })(Unit);
 
+  canMirror = function(cid, type) {
+    var cfg, transId;
+    transId = type === 'pk' ? 'pkTransId' : 'teammateTransId';
+    cfg = queryTable(TABLE_ROLE, cid);
+    return cfg[transId] != null;
+  };
+
   createUnit = function(config) {
     var cfg;
     if ((config != null ? config.id : void 0) != null) {
@@ -402,13 +421,24 @@
       case Unit_NPC:
         return new Npc(config);
       case Unit_Hero:
-        return new Mirror(config);
+        return new exports.Mirror(config);
+    }
+  };
+
+  exports.Hero = Hero;
+
+  exports.Mirror = function(config, type) {
+    if (type == null) {
+      type = 'pk';
+    }
+    if (canMirror(config.cid, type)) {
+      return new Mirror(config, type);
+    } else {
+      return new Hero(config);
     }
   };
 
   exports.createUnit = createUnit;
-
-  exports.Hero = Hero;
 
   exports.fileVersion = -1;
 

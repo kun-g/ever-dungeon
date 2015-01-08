@@ -7,16 +7,15 @@ exports.data = [
         "levels" :[
             {
                 "objects" : [
-                    {
-                        "id": 7,
-                        "count":5
-                    },
-                    {
-                        "id": 14,
-                        "count":2
-
-                    }
-                ],
+				{
+					"id": 7,
+					"count":5
+				},
+				{
+					"id": 14,
+					"count":2
+				}
+				],
                 "rank": 26
             },
             {

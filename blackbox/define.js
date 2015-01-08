@@ -145,7 +145,8 @@ getBasicInfo = function (hero) {
     hairColor : 'hcl',
     xp : 'exp',
     isFriend: 'ifn',
-    vipLevel: 'vip'
+    vipLevel: 'vip',
+    isMe: 'isMe',
   };
 
   var ret = grabAndTranslate(hero, translateTable);
@@ -390,6 +391,7 @@ initGlobalConfig = function (path, callback) {
       }
     }
   };
+  var libTableCompiler = libTableCompiler;
   var configTable = [{name:TABLE_LEADBOARD}, {name: TABLE_STORE, func:initShop},
     {name:TABLE_ROLE}, {name:TABLE_LEVEL}, {name:TABLE_VERSION}, {name:TABLE_FACTION},
     {name:TABLE_ITEM}, {name:TABLE_CARD}, {name:TABLE_DUNGEON, func:varifyDungeonConfig},
@@ -734,3 +736,4 @@ Event_Fail = 11;
 Event_UpdateQuest = 19;
 
 libDefine.fileVersion = -1;
+

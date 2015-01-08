@@ -1,6 +1,6 @@
 (function() {
   "use strict";
-  var Bag, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, G_PRIZE_MODIFIER, Hero, Item, Player, PlayerEnvironment, Serializer, addMercenaryMember, async, campaign_LoginStreak, createItem, createUnit, currentTime, dbLib, diffDate, genUtil, getMercenaryMember, getPlayerHero, getVip, helperLib, itemLib, libCampaign, libReward, moment, playerCSConfig, playerCommandStream, playerMessageFilter, registerConstructor, underscore, updateMercenaryMember, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6,
+  var Bag, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Player, PlayerEnvironment, Serializer, addMercenaryMember, async, campaign_LoginStreak, campaign_StartupClient, createItem, createUnit, currentTime, dbLib, diffDate, genUtil, getMercenaryMember, getPlayerHero, getVip, helperLib, itemLib, libCampaign, libReward, moment, playerCSConfig, playerCommandStream, playerMessageFilter, registerConstructor, underscore, updateMercenaryMember, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -40,7 +40,7 @@
 
   campaign_LoginStreak = new libCampaign.Campaign(queryTable(TABLE_DP));
 
-  G_PRIZE_MODIFIER = 1;
+  campaign_StartupClient = new libCampaign.Campaign(gNewCampainTable.startupPlayer);
 
   Player = (function(_super) {
     __extends(Player, _super);
@@ -112,6 +112,10 @@
     Player.prototype.setName = function(name) {
       this.name = name;
       return this.dbKeyName = playerPrefix + this.name;
+    };
+
+    Player.prototype.getServer = function() {
+      return gServerObject;
     };
 
     Player.prototype.generateReward = libReward.generateReward;
@@ -300,6 +304,9 @@
         streak: this.counters.check_in.counter,
         date: this.counters.check_in.time
       });
+      if (campaign_StartupClient.isActive(this, currentTime())) {
+        campaign_StartupClient.activate(this, 1, currentTime());
+      }
       itemsNeedRemove = this.inventory.filter(function(item) {
         if ((item != null ? item.expiration : void 0) == null) {
           return false;
@@ -1022,6 +1029,7 @@
               }
             }
             team = [_this.createHero()];
+            team[0].isMe = true;
             if (stageConfig.teammate != null) {
               team = team.concat(stageConfig.teammate.map(function(hd) {
                 return new Hero(hd);

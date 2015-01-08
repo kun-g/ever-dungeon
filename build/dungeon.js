@@ -1,6 +1,6 @@
 (function() {
   "use strict";
-  var Bag, Block, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Level, TriggerManager, Wizard, calcInfiniteRank, calcInfiniteX, changeSeed, compete, createUnit, createUnits, criticalFormula, dungeonCSConfig, flagShowRand, genUnitInfo, hitFormula, mapDiff, onEvent, parse, privateRand, seed_random, speedFormula, _ref, _ref1, _ref2, _ref3, _ref4,
+  var Bag, Block, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Level, Mirror, TriggerManager, Wizard, calcInfiniteRank, calcInfiniteX, changeSeed, compete, createUnit, createUnits, criticalFormula, dungeonCSConfig, flagShowRand, genUnitInfo, hitFormula, mapDiff, onEvent, parse, privateRand, seed_random, speedFormula, _ref, _ref1, _ref2, _ref3, _ref4,
     __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; },
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
@@ -13,7 +13,7 @@
 
   DBWrapper = require('./dbWrapper').DBWrapper;
 
-  _ref = require('./unit'), createUnit = _ref.createUnit, Hero = _ref.Hero;
+  _ref = require('./unit'), createUnit = _ref.createUnit, Hero = _ref.Hero, Mirror = _ref.Mirror;
 
   _ref1 = require('./item'), Item = _ref1.Item, Card = _ref1.Card;
 
@@ -512,17 +512,15 @@
     };
 
     Dungeon.prototype.initiateHeroes = function(team) {
-      var dummyHero, e, ref, thiz;
+      var dummyHero, ref, thiz;
       if (!team) {
         team = [];
       }
       ref = 0;
-      this.heroes = (function() {
-        var _i, _len, _results;
-        _results = [];
-        for (_i = 0, _len = team.length; _i < _len; _i++) {
-          e = team[_i];
-          _results.push(new Hero({
+      this.heroes = team.map(function(e) {
+        var data;
+        if (e.isMe) {
+          data = {
             name: e.nam,
             "class": e.cid,
             gender: e.gen,
@@ -532,10 +530,14 @@
             xp: e.exp,
             order: ref,
             ref: ref++
-          }));
+          };
+          return new Hero(data);
+        } else {
+          e.order = ref;
+          e.ref = ref++;
+          return new Mirror(e, 'teammate');
         }
-        return _results;
-      })();
+      });
       dummyHero = new Hero({});
       dummyHero.health = 0;
       this.heroes.push(dummyHero);
@@ -702,7 +704,7 @@
     };
 
     Dungeon.prototype.doAction = function(req) {
-      var action, arg, cmd, _ref5;
+      var action, arg, cmd, _base, _base1, _ref5;
       cmd = (_ref5 = req != null ? req.CMD : void 0) != null ? _ref5 : req != null ? req.CNF : void 0;
       switch (cmd) {
         case RPC_GameStartDungeon:
@@ -710,6 +712,19 @@
           break;
         case Request_DungeonSpell:
           action = DUNGEON_ACTION_CAST_SPELL;
+          if (req.arg == null) {
+            req.arg = {};
+          }
+          if ((_base = req.arg).idx == null) {
+            _base.idx = 0;
+          }
+          if ((_base1 = req.arg).pos == null) {
+            _base1.pos = -1;
+          }
+          arg = {
+            i: +req.arg.idx,
+            p: req.arg.pos
+          };
           break;
         case REQUEST_CancelDungeon:
           action = DUNGEON_ACTION_CANCEL_DUNGEON;
@@ -754,7 +769,7 @@
     };
 
     Dungeon.prototype.act = function(action, arg, replayMode, showResult, randNumber) {
-      var aliveHeroes, cmd, hero, r, ret;
+      var aliveHeroes, cmd, hero, r, ret, spellId;
       if (replayMode == null) {
         replayMode = false;
       }
@@ -838,10 +853,12 @@
               type: 'Spell',
               src: hero
             }, this);
+            spellId = hero.activeSpell[arg.i];
             cmd.next({
               id: 'CastSpell',
               me: hero,
-              spell: hero.activeSpell
+              spell: spellId,
+              playerChoice: arg.p
             }).next({
               id: 'EndTurn',
               type: 'Spell',
@@ -1764,6 +1781,9 @@
         } else {
           ev.act = actor.ref;
         }
+        if (spell.dir != null) {
+          ev.dir = spell.dir;
+        }
         ret.push(ev);
       }
       return ret;
@@ -2147,6 +2167,9 @@
       output: function(env) {
         var actor, bid, effect, ev, ret;
         ret = genUnitInfo(env.variable('wizard'), false, env.variable('state'));
+        if (ret == null) {
+          return [];
+        }
         if (env.variable('effect') != null) {
           effect = env.variable('effect');
           if (ret != null) {
@@ -2169,11 +2192,7 @@
           }
           ret.push(ev);
         }
-        if (ret != null) {
-          return ret;
-        } else {
-          return [];
-        }
+        return ret;
       }
     },
     TickSpell: {
@@ -2889,11 +2908,12 @@
     },
     Casting: {
       output: function(env) {
-        var delay, info, ret, spell, src, t, tar, _i, _len;
+        var delay, dir, idx, info, ret, spell, src, t, tar, _i, _len;
         src = env.variable('caster');
         tar = env.variable('castee');
         spell = env.variable('spell');
         delay = env.variable('delay');
+        dir = env.variable('effdirlst');
         if ((spell != null) && (src != null)) {
           ret = env.createSpellMsg(src, {
             motion: spell.spellAction,
@@ -2907,8 +2927,11 @@
             delay: spell.targetDelay,
             effect: spell.targetEffect
           };
-          for (_i = 0, _len = tar.length; _i < _len; _i++) {
-            t = tar[_i];
+          for (idx = _i = 0, _len = tar.length; _i < _len; idx = ++_i) {
+            t = tar[idx];
+            if ((tar != null ? tar[idx] : void 0) != null) {
+              info.dir = tar[idx];
+            }
             ret = ret.concat(env.createSpellMsg(t, info, delay));
           }
         }
@@ -2917,25 +2940,26 @@
     },
     Effect: {
       output: function(env) {
+        var result;
         if (env.variable('pos') != null) {
-          return [
-            {
-              id: ACT_EFFECT,
-              dey: env.variable('delay'),
-              eff: env.variable('effect'),
-              pos: env.variable('pos')
-            }
-          ];
+          result = {
+            id: ACT_EFFECT,
+            dey: env.variable('delay'),
+            eff: env.variable('effect'),
+            pos: env.variable('pos')
+          };
         } else {
-          return [
-            {
-              id: ACT_EFFECT,
-              dey: env.variable('delay'),
-              eff: env.variable('effect'),
-              act: env.variable('act')
-            }
-          ];
+          result = {
+            id: ACT_EFFECT,
+            dey: env.variable('delay'),
+            eff: env.variable('effect'),
+            act: env.variable('act')
+          };
         }
+        if (env.variable('effdir') != null) {
+          result.dir = env.variable('effdir');
+        }
+        return [result];
       }
     },
     CastSpell: {

@@ -362,7 +362,8 @@ exports.data = [
         "effectId": 80,
         "skeleton": "effect-zdb.json",
         "atlas": "effect-zdb.atlas",
-        "onGround":true
+        "onGround":true,
+        "isRotatable": true,
     },
     {
         "effectId": 81,

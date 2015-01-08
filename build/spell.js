@@ -94,7 +94,7 @@
       };
       this.setupTriggerCondition(spellID, cfg.triggerCondition, cmd);
       this.setupAvailableCondition(spellID, cfg.availableCondition, cmd);
-      this.doAction(this.wSpellDB[spellID], cfg.installAction, this.selectTarget(cfg, cmd), cmd);
+      this.doAction(this.wSpellDB[spellID], cfg.installAction, this.selectTarget(cfg, cmd != null ? cmd.getEnvironment() : void 0), cmd);
       return this.spellStateChanged(spellID, cmd);
     };
 
@@ -205,7 +205,7 @@
         }
       }
       if (cfg.uninstallAction != null) {
-        this.doAction(this.wSpellDB[spellID], cfg.uninstallAction, this.selectTarget(cfg, cmd), cmd);
+        this.doAction(this.wSpellDB[spellID], cfg.uninstallAction, this.selectTarget(cfg, cmd != null ? cmd.getEnvironment() : void 0), cmd);
       }
       delete this.wSpellDB[spellID];
       return this.spellStateChanged(spellID, cmd);
@@ -254,13 +254,19 @@
     Wizard.prototype.castSpell = function(spellID, cmd) {
       var canTrigger, cfg, delay, reason, target, thisSpell, _ref;
       cfg = getSpellConfig(spellID);
+      if (cfg == null) {
+        return false;
+      }
       thisSpell = this.wSpellDB[spellID];
-      target = this.selectTarget(cfg, cmd);
+      target = this.selectTarget(cfg, cmd != null ? cmd.getEnvironment() : void 0);
       _ref = this.triggerCheck(thisSpell, cfg.triggerCondition, target, cmd), canTrigger = _ref[0], reason = _ref[1];
       if (!canTrigger) {
         return reason;
       }
       this.doAction(thisSpell, cfg.action, target, cmd);
+      if (cfg == null) {
+        return false;
+      }
       this.updateCDOfSpell(spellID, true, cmd);
       if (!this.availableCheck(spellID, cfg, cmd)) {
         this.removeSpell(spellID, cmd);
@@ -301,21 +307,33 @@
       return _results;
     };
 
-    Wizard.prototype.clearSpellCD = function(spellID, cmd) {
-      var thisSpell;
-      if (!((spellID != null) && (this.wSpellDB[spellID] != null))) {
+    Wizard.prototype.clearSpellCD = function(spellIDList, cmd) {
+      var spellID, thisSpell, _i, _len, _results;
+      if (!Array.isArray(spellIDList)) {
         return false;
       }
-      thisSpell = this.wSpellDB[spellID];
-      if ((thisSpell.cd != null) && thisSpell.cd !== 0) {
-        thisSpell.cd = 0;
-        if (this.isHero()) {
-          return typeof cmd.routine === "function" ? cmd.routine({
-            id: 'SpellCD',
-            cdInfo: thisSpell.cd
-          }) : void 0;
+      _results = [];
+      for (_i = 0, _len = spellIDList.length; _i < _len; _i++) {
+        spellID = spellIDList[_i];
+        if (this.wSpellDB[spellID] == null) {
+          continue;
+        }
+        thisSpell = this.wSpellDB[spellID];
+        if ((thisSpell.cd != null) && thisSpell.cd !== 0) {
+          thisSpell.cd = 0;
+          if (this.isHero()) {
+            _results.push(typeof cmd.routine === "function" ? cmd.routine({
+              id: 'SpellCD',
+              cdInfo: thisSpell.cd
+            }) : void 0);
+          } else {
+            _results.push(void 0);
+          }
+        } else {
+          _results.push(void 0);
         }
       }
+      return _results;
     };
 
     Wizard.prototype.getSpellCD = function() {
@@ -506,16 +524,13 @@
       return res;
     };
 
-    Wizard.prototype.selectTarget = function(cfg, cmd) {
-      var b, blocks, env, pool;
+    Wizard.prototype.selectTarget = function(cfg, env) {
+      var b, blocks, playerChoice, pool;
       if (!((cfg.targetSelection != null) && cfg.targetSelection.pool)) {
         return [];
       }
-      if (!(cfg.targetSelection.pool === 'self' || (cmd != null))) {
+      if (!(cfg.targetSelection.pool === 'self' || (env != null))) {
         return [];
-      }
-      if (cmd != null) {
-        env = cmd.getEnvironment();
       }
       switch (cfg.targetSelection.pool) {
         case 'self':
@@ -529,6 +544,15 @@
           break;
         case 'objects':
           pool = env.getObjects();
+          break;
+        case 'select-object':
+          playerChoice = +env.variable('playerChoice');
+          pool = env.getObjects().filter(function(obj) {
+            return obj.pos === playerChoice;
+          });
+          break;
+        case 'select-block':
+          pool = env.getBlock(env.variable('playerChoice'));
           break;
         case 'blocks':
           blocks = cfg.targetSelection.blocks;
@@ -640,11 +664,11 @@
     };
 
     Wizard.prototype.getActiveSpell = function() {
-      return -1;
+      return [-1];
     };
 
     Wizard.prototype.doAction = function(thisSpell, actions, target, cmd) {
-      var a, adelay, aeffect, bakTarget, c, cfg, delay, effect, env, formular, formularResult, h, modifications, pos, property, spellID, src, t, val, variables, _aa, _ab, _ac, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len16, _len17, _len18, _len19, _len2, _len20, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _s, _t, _u, _v, _w, _x, _y, _z;
+      var a, adelay, aeffect, bakTarget, c, cfg, delay, dir, effect, env, formular, formularResult, h, idx, modifications, pos, property, spellID, src, t, val, variables, _aa, _ab, _ac, _buffType, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len16, _len17, _len18, _len19, _len2, _len20, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref2, _s, _t, _u, _v, _w, _x, _y, _z;
       if (actions == null) {
         return false;
       }
@@ -675,7 +699,7 @@
         if (a.target) {
           target = this.selectTarget({
             targetSelection: a.target
-          }, cmd);
+          }, cmd != null ? cmd.getEnvironment() : void 0);
         }
         switch (a.type) {
           case 'modifyVar':
@@ -1022,6 +1046,13 @@
             }
             effect = getSpellProperty(a, 'effect', thisSpell.level);
             pos = getSpellProperty(a, 'pos', thisSpell.level);
+            dir = getSpellProperty(a, 'dir', thisSpell.level);
+            if (dir == null) {
+              dir = env.variable('effdirlst');
+            }
+            if (dir == null) {
+              dir = [5];
+            }
             if (pos != null) {
               if (pos === 'self') {
                 if (typeof cmd.routine === "function") {
@@ -1029,17 +1060,19 @@
                     id: 'Effect',
                     delay: delay,
                     effect: effect,
+                    effdir: dir[0],
                     pos: this.pos
                   });
                 }
               } else if (pos === 'target') {
-                for (_w = 0, _len14 = target.length; _w < _len14; _w++) {
-                  t = target[_w];
+                for (idx = _w = 0, _len14 = target.length; _w < _len14; idx = ++_w) {
+                  t = target[idx];
                   if (typeof cmd.routine === "function") {
                     cmd.routine({
                       id: 'Effect',
                       delay: delay,
                       effect: effect,
+                      effdir: dir[idx],
                       pos: t.pos
                     });
                   }
@@ -1050,17 +1083,19 @@
                     id: 'Effect',
                     delay: delay,
                     effect: effect,
+                    effdir: dir[0],
                     pos: pos
                   });
                 }
               } else if (Array.isArray(pos)) {
-                for (_x = 0, _len15 = pos.length; _x < _len15; _x++) {
-                  pos = pos[_x];
+                for (idx = _x = 0, _len15 = pos.length; _x < _len15; idx = ++_x) {
+                  pos = pos[idx];
                   if (typeof cmd.routine === "function") {
                     cmd.routine({
                       id: 'Effect',
                       delay: delay,
                       effect: effect,
+                      effdir: dir[idx],
                       pos: pos
                     });
                   }
@@ -1074,18 +1109,20 @@
                       id: 'Effect',
                       delay: delay,
                       effect: effect,
+                      effdir: dir[0],
                       act: this.ref
                     });
                   }
                   break;
                 case 'target':
-                  for (_y = 0, _len16 = target.length; _y < _len16; _y++) {
-                    t = target[_y];
+                  for (idx = _y = 0, _len16 = target.length; _y < _len16; idx = ++_y) {
+                    t = target[idx];
                     if (typeof cmd.routine === "function") {
                       cmd.routine({
                         id: 'Effect',
                         delay: delay,
                         effect: effect,
+                        effdir: dir[idx],
                         act: t.ref
                       });
                     }

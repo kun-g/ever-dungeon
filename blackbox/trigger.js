@@ -1,10 +1,267 @@
 libTrigger = {};
 (function() {
   "use strict";
-  var Action, ActionDB, Condition, PredicateDB, Query, SequalDB, Trigger, TriggerManager, bindVariable, branch, calculate, conditionCheck, condition_and, condition_or, doAction, doGetProperty, doLoop, evaluateParameter, executeSequal, filterObject, getTypeof, getVar, isSequal, parameter_config, parse, parseVariable;
+  var Action, ActionDB, Condition, PredicateDB, Query, SequalDB, Trigger, TriggerManager, angle_dir_map, areaShape, bindVariable, branch, calcDirection, calculate, conditionCheck, condition_and, condition_or, direction, doAction, doGetProperty, doLoop, evaluateParameter, executeSequal, filterObject, getTypeof, getVar, handlers, initCalcDirFunc, isSequal, maskUnion, modifier, parameter_config, parse, parseVariable, printMask, selectCross, selectLine, selectSquare, selectTriangle, translatePos;
+
+  modifier = {
+    1: {
+      x: -1,
+      y: 1
+    },
+    2: {
+      x: 0,
+      y: 1
+    },
+    3: {
+      x: 1,
+      y: 1
+    },
+    4: {
+      x: -1,
+      y: 0
+    },
+    5: {
+      x: 0,
+      y: 0
+    },
+    6: {
+      x: 1,
+      y: 0
+    },
+    7: {
+      x: -1,
+      y: -1
+    },
+    8: {
+      x: 0,
+      y: -1
+    },
+    9: {
+      x: 1,
+      y: -1
+    }
+  };
+
+  direction = {
+    NorthWest: 7,
+    North: 8,
+    NorthEast: 9,
+    West: 4,
+    Center: 5,
+    East: 6,
+    SouthWest: 1,
+    South: 2,
+    SouthEast: 3
+  };
+
+  areaShape = {
+    Line: 0,
+    Cross: 1,
+    Square: 2,
+    Triangle: 3
+  };
+
+  translatePos = function(pos) {
+    var x, y;
+    x = pos % Dungeon_Width;
+    y = (pos - x) / Dungeon_Width;
+    return {
+      x: x,
+      y: y
+    };
+  };
+
+  libTrigger.translatePos = translatePos;
+
+  angle_dir_map = [];
+
+  angle_dir_map[direction.East] = [0, 1, 15, 16];
+
+  angle_dir_map[direction.NorthEast] = [1, 3];
+
+  angle_dir_map[direction.North] = [3, 5];
+
+  angle_dir_map[direction.NorthWest] = [5, 7];
+
+  angle_dir_map[direction.West] = [7, 9];
+
+  angle_dir_map[direction.SouthWest] = [9, 11];
+
+  angle_dir_map[direction.South] = [11, 13];
+
+  angle_dir_map[direction.SouthEast] = [13, 15];
+
+  initCalcDirFunc = function(cfg) {
+    var inRange;
+    cfg = cfg.map(function(elm) {
+      return elm.map(function(rd) {
+        return rd / 8 * Math.PI;
+      });
+    });
+    inRange = function(cfg, angle) {
+      var k, v, _i, _len;
+      for (k = _i = 0, _len = cfg.length; _i < _len; k = ++_i) {
+        v = cfg[k];
+        if (v != null) {
+          if ((v[0] <= angle && angle < v[1])) {
+            return k;
+          }
+          if ((v.length === 4) && ((v[0] <= angle && angle < v[1]) || (v[2] <= angle && angle < v[3]))) {
+            return k;
+          }
+        }
+      }
+      return direction.Center;
+    };
+    return function(src, tar) {
+      var angle, dx, dy;
+      dx = tar.x - src.x;
+      dy = src.y - tar.y;
+      if (dx === 0 && dy === 0) {
+        return direction.Center;
+      }
+      angle = Math.atan(dy / dx);
+      if (angle < 0) {
+        angle = Math.PI + angle;
+      }
+      if (dy < 0 || (dy === 0 && dx < 0)) {
+        angle += Math.PI;
+      }
+      return inRange(cfg, angle);
+    };
+  };
+
+  calcDirection = initCalcDirFunc(angle_dir_map);
+
+  libTrigger.calcDirection = calcDirection;
+
+  maskUnion = function(one, another) {
+    var arr, idx1, idx2, isMask, result, _i, _len;
+    result = [].concat(one);
+    for (idx1 in another) {
+      arr = another[idx1];
+      if (result[idx1] == null) {
+        result[idx1] = [];
+      }
+      for (idx2 = _i = 0, _len = arr.length; _i < _len; idx2 = ++_i) {
+        isMask = arr[idx2];
+        if (isMask) {
+          result[idx1][idx2] = true;
+        }
+      }
+    }
+    return result;
+  };
+
+  printMask = function(arr) {
+    var arr1, c, idx, strArr, _i, _j, _len, _ref, _results;
+    _results = [];
+    for (_i = 0, _len = arr.length; _i < _len; _i++) {
+      arr1 = arr[_i];
+      if (arr1 != null) {
+        strArr = [];
+        for (idx = _j = 0, _ref = Dungeon_Width - 1; 0 <= _ref ? _j <= _ref : _j >= _ref; idx = 0 <= _ref ? ++_j : --_j) {
+          c = arr1[idx] ? '@' : '*';
+          strArr.push(c);
+        }
+        _results.push(debug(strArr.join('|')));
+      } else {
+        _results.push(debug('*|*|*|*|*'));
+      }
+    }
+    return _results;
+  };
+
+  selectLine = function(x, y, direction, dFrom, length, result) {
+    var i, mod, _i, _ref, _ref1, _ref2;
+    mod = modifier[direction];
+    if (!result) {
+      result = [];
+    }
+    for (i = _i = dFrom, _ref = dFrom + length - 1; dFrom <= _ref ? _i <= _ref : _i >= _ref; i = dFrom <= _ref ? ++_i : --_i) {
+      if (!((0 <= (_ref1 = y + mod.y * i) && _ref1 < Dungeon_Height) && (0 <= (_ref2 = x + mod.x * i) && _ref2 < Dungeon_Width))) {
+        continue;
+      }
+      if (!result[y + mod.y * i]) {
+        result[y + mod.y * i] = [];
+      }
+      result[y + mod.y * i][x + mod.x * i] = true;
+    }
+    return result;
+  };
+
+  selectCross = function(x, y, direction, dFrom, length) {
+    var ret, sel, selector, _i, _len;
+    selector = [2, 4, 6, 8];
+    if (direction % 2) {
+      selector = [1, 3, 7, 9];
+    }
+    ret = [];
+    for (_i = 0, _len = selector.length; _i < _len; _i++) {
+      sel = selector[_i];
+      selectLine(x, y, sel, dFrom, length + 1, ret);
+    }
+    return ret;
+  };
+
+  selectSquare = function(x, y, direction, dFrom, length, ground) {
+    var adjust, i, mod, ret, sel, selector, _i, _j, _len, _ref;
+    if (direction % 2) {
+      selector = [[8, 3], [6, 1], [2, 7], [4, 9]];
+      adjust = 1;
+    } else {
+      selector = [[7, 6], [9, 2], [1, 8], [3, 4]];
+      adjust = 2;
+    }
+    ret = [];
+    for (i = _i = dFrom, _ref = dFrom + length; dFrom <= _ref ? _i <= _ref : _i >= _ref; i = dFrom <= _ref ? ++_i : --_i) {
+      for (_j = 0, _len = selector.length; _j < _len; _j++) {
+        sel = selector[_j];
+        mod = modifier[sel[0]];
+        selectLine(x + mod.x * i, y + mod.y * i, sel[1], 0, i * adjust + 1, ret);
+      }
+    }
+    return ret;
+  };
+
+  selectTriangle = function(x, y, direction, dFrom, length, ground) {
+    var i, localModifier, mod, ret, _i, _ref;
+    localModifier = {
+      7: [4, 9],
+      8: [7, 6],
+      9: [8, 3],
+      4: [1, 8],
+      5: [5, 5],
+      6: [9, 2],
+      1: [2, 7],
+      2: [3, 4],
+      3: [6, 1]
+    };
+    ret = [];
+    for (i = _i = dFrom, _ref = dFrom + length - 1; dFrom <= _ref ? _i <= _ref : _i >= _ref; i = dFrom <= _ref ? ++_i : --_i) {
+      mod = localModifier[direction][0];
+      mod = modifier[mod];
+      if (direction % 2) {
+        selectLine(x + mod.x * i, y + mod.y * i, localModifier[direction][1], 0, i + 1, ret);
+      } else {
+        selectLine(x + mod.x * i, y + mod.y * i, localModifier[direction][1], 0, 1 + 2 * i, ret);
+      }
+    }
+    return ret;
+  };
+
+  handlers = {};
+
+  handlers[areaShape.Line] = selectLine;
+
+  handlers[areaShape.Cross] = selectCross;
+
+  handlers[areaShape.Square] = selectSquare;
+
+  handlers[areaShape.Triangle] = selectTriangle;
 
   filterObject = function(me, objects, filters, env) {
-    var a, f, o, p, result, srcFaction, t, tmp, x, y, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2, _ref3;
+    var dirTarPos, effectDir, f, mask, o, p, result, srcFaction, tmp, _i, _len, _ref, _ref1, _ref2;
     if (!Array.isArray(filters)) {
       filters = [filters];
     }
@@ -186,22 +443,56 @@ libTrigger = {};
               break;
             case 'anchor':
               tmp = result;
-              result = [];
-              for (_j = 0, _len1 = tmp.length; _j < _len1; _j++) {
-                t = tmp[_j];
-                if (!t.isBlock) {
-                  t = env.getBlock(t.pos);
-                }
-                x = t.pos % Dungeon_Width;
-                y = (t.pos - x) / Dungeon_Width;
-                _ref1 = f.anchor;
-                for (_k = 0, _len2 = _ref1.length; _k < _len2; _k++) {
-                  a = _ref1[_k];
-                  if ((0 <= (_ref2 = a.x + x) && _ref2 < Dungeon_Width) && (0 <= (_ref3 = a.y + y) && _ref3 < Dungeon_Height)) {
-                    result.push(env.getBlock(a.x + x + (a.y + y) * Dungeon_Width));
-                  }
-                }
+              f = JSON.parse(JSON.stringify(f));
+              if (f.startDistance == null) {
+                f.startDistance = 0;
               }
+              if (f.offsetX == null) {
+                f.offsetX = 0;
+              }
+              if (f.offsetY == null) {
+                f.offsetY = 0;
+              }
+              if (f.anchorPos != null) {
+                if (Array.isArray(f.anchorPos)) {
+                  f.anchorPosList = f.anchorPos;
+                } else {
+                  f.anchorPosList = me.selectTarget({
+                    targetSelection: f.anchorPos
+                  }, env).map(function(e) {
+                    return e.pos;
+                  });
+                }
+              } else {
+                f.anchorPosList = [0];
+              }
+              if (f.anchorDirPos != null) {
+                dirTarPos = (_ref1 = me.selectTarget({
+                  targetSelection: f.anchorDirPos
+                }, env)) != null ? (_ref2 = _ref1[0]) != null ? _ref2.pos : void 0 : void 0;
+              }
+              effectDir = [];
+              mask = f.anchorPosList.reduce(function(acc, pos) {
+                var dir;
+                p = translatePos(pos);
+                if (f.direction != null) {
+                  dir = f.direction;
+                } else if (dirTarPos != null) {
+                  dir = calcDirection(p, translatePos(dirTarPos));
+                } else {
+                  dir = direction.East;
+                }
+                effectDir.push(dir);
+                mask = handlers[f.shape](p.x + f.offsetX, p.y + f.offsetY, dir, f.startDistance, f.length);
+                return maskUnion(acc, mask);
+              }, []);
+              debug('aP', f.anchorPosList, 'dirTarPos', dirTarPos);
+              env.variable('effdirlst', effectDir);
+              result = result.filter(function(e) {
+                var _ref3;
+                p = translatePos(e.pos);
+                return (_ref3 = mask[p.y]) != null ? _ref3[p.x] : void 0;
+              });
           }
       }
     }
@@ -927,5 +1218,9 @@ libTrigger = {};
       return pool;
     }
   };
+
+  libTrigger.direction = direction;
+
+  libTrigger.areaShape = areaShape;
 
 }).call(this);
