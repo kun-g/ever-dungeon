@@ -1,60 +1,44 @@
 exports.data = {
-    "channel": "Default-CH",
-    "currency": "CNY",
-    "symbol": "￥",
+    "channel": "Teebik",
+    "currency": "USD",
+    "symbol": "$",
     "list":[
         {
-            "productID":"com.tringame.pocketdungeon.pay6",
-            "price": 6,
-            "gem": 60
+            "price": 0.99,
+            "gem": 120
         },
         {
-            "productID":"com.tringame.pocketdungeon.pay12",
-            "price": 12,
-            "gem": 130
+            "price": 1.99,
+            "gem": 260
         },
         {
-            "productID":"com.tringame.pocketdungeon.pay30",
-            "price": 30,
-            "gem": 330
+            "price": 4.99,
+            "gem": 650
         },
         {
-            "productID":"com.tringame.pocketdungeon.pay68",
-            "price": 68,
-            "gem": 760
+            "price": 9.99,
+            "gem": 1310
         },
         {
-            "productID":"com.tringame.pocketdungeon.pay128",
-            "price": 128,
-            "gem": 1460
+            "price": 19.99,
+            "gem": 2650
         },
         {
-            "productID":"com.tringame.pocketdungeon.pay198",
-            "price": 198,
-            "gem": 328
+            "price": 29.99,
+            "gem": 4340
         },
         {
-            "productID":"com.tringame.pocketdungeon.pay328",
-            "price": 328,
-            "gem": 3760
+            "price": 49.99,
+            "gem": 7400
         },
         {
-            "productID":"com.tringame.pocketdungeon.pay648",
-            "price": 648,
-            "gem": 7480
+            "price": 99.99,
+            "gem": 15420
         },
         {
-            "productID":"com.tringame.pocketdungeon.pay25x",
-            "price": 25,
-            "gem": 0,
-            "enable": false
-        },
-        {
-            "productID":"com.tringame.pocketdungeon.pay25",
-            "price": 25,
+            "price": 3.99,
             "gem": 0,
             "enable": false
         }
- 
     ]
 };
