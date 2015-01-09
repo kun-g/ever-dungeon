@@ -520,7 +520,7 @@ libDungeon = {};
       ref = 0;
       this.heroes = team.map(function(e) {
         var data;
-        if (e.isMe) {
+        if (!e.needMirror) {
           data = {
             name: e.nam,
             "class": e.cid,

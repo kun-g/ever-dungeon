@@ -6310,6 +6310,7 @@ exports.data = [
 			}
 		],
 		"animSpawn": "open",
+		"zOrderOffset": 100,
 		"bossFlag": true
 	},
 	{

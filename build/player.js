@@ -80,9 +80,6 @@
         lastLogin: currentTime(),
         creationDate: now.valueOf(),
         isNewPlayer: true,
-        loginStreak: {
-          count: 0
-        },
         accountID: -1,
         campaignState: {},
         infiniteTimer: currentTime(),
@@ -332,7 +329,7 @@
           streak: this.counters.check_in.counter,
           date: this.counters.check_in.time
         });
-        reward = queryTable(TABLE_DP).rewards[this.loginStreak.count].prize;
+        reward = queryTable(TABLE_DP).rewards[this.counters.check_in.counter].prize;
         ret = this.claimPrize(reward.filter((function(_this) {
           return function(e) {
             return !e.vip || _this.vipLevel() >= e.vip;
@@ -373,9 +370,7 @@
         result: DUNGEON_RESULT_WIN,
         killingInfo: [],
         currentLevel: cfg.levelCount,
-        getConfig: function() {
-          return cfg;
-        },
+        config: cfg,
         isSweep: true
       };
       count = 1;
@@ -869,6 +864,9 @@
 
     Player.prototype.stageIsUnlockable = function(stage) {
       var stageConfig;
+      if (g_DEBUG_FLAG) {
+        return true;
+      }
       if (getPowerLimit(stage) > this.createHero().calculatePower()) {
         return false;
       }
@@ -1029,10 +1027,13 @@
               }
             }
             team = [_this.createHero()];
-            team[0].isMe = true;
+            team[0].needMirror = false;
             if (stageConfig.teammate != null) {
               team = team.concat(stageConfig.teammate.map(function(hd) {
-                return new Hero(hd);
+                var newHero;
+                newHero = new Hero(hd);
+                newHero.needMirror = false;
+                return newHero;
               }));
             }
             if (teamCount > team.length) {

@@ -4,9 +4,9 @@ exports.data = {
     "stage": "0.1.5",
     "bin_version": "1.0.10",
     "bin_version_need": "1.0.10",
-    "needed_version":"1.1.28",
-    "last_version":"1.1.28",
-    "suggest_version":"1.1.28",
+    "needed_version":"1.1.29",
+    "last_version":"1.1.29",
+    "suggest_version":"1.1.29",
 
     "url": "http://hotupdate.qiniudn.com/",
     "bin_url": ""

@@ -71,7 +71,7 @@
   };
 
   exports.generateDungeonReward = function(dungeon) {
-    var cfg, dropInfo, e, gr, iPrize, infiniteLevel, p, prize, result, wr, xr, _i, _j, _len, _len1, _ref, _ref1, _ref2, _ref3;
+    var cfg, dropInfo, e, gr, iPrize, infiniteLevel, p, prize, result, wr, xr, _i, _j, _len, _len1, _ref, _ref1, _ref2, _ref3, _ref4;
     result = dungeon.result;
     cfg = dungeon.config;
     if (result === DUNGEON_RESULT_DONE || (cfg == null)) {
@@ -92,7 +92,7 @@
     xr = result === DUNGEON_RESULT_WIN ? (_ref1 = cfg.xpRate) != null ? _ref1 : 1 : 0.5;
     wr = result === DUNGEON_RESULT_WIN ? (_ref2 = cfg.wxpRate) != null ? _ref2 : 1 : 0.5;
     prize = this.generateReward(queryTable(TABLE_DROP), dropInfo);
-    prize = prize.concat(dungeon.prizeInfo);
+    prize = prize.concat((_ref3 = dungeon.prizeInfo) != null ? _ref3 : []);
     if (!dungeon.isSweep) {
       if (cfg.prizeGold) {
         prize.push({
@@ -106,18 +106,18 @@
           count: Math.floor(xr * cfg.prizeXp)
         });
       }
-      if (cfg.prizeWxp) {
-        prize.push({
-          type: PRIZETYPE_WXP,
-          count: Math.floor(wr * cfg.prizeWxp)
-        });
-      }
+    }
+    if (cfg.prizeWxp) {
+      prize.push({
+        type: PRIZETYPE_WXP,
+        count: Math.floor(wr * cfg.prizeWxp)
+      });
     }
     infiniteLevel = dungeon.infiniteLevel;
     if ((infiniteLevel != null) && cfg.infinityPrize && result === DUNGEON_RESULT_WIN) {
-      _ref3 = cfg.infinityPrize;
-      for (_i = 0, _len = _ref3.length; _i < _len; _i++) {
-        p = _ref3[_i];
+      _ref4 = cfg.infinityPrize;
+      for (_i = 0, _len = _ref4.length; _i < _len; _i++) {
+        p = _ref4[_i];
         if (p.level === infiniteLevel) {
           iPrize = p;
         }

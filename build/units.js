@@ -8,6 +8,6 @@ exports.data = [
     },
     {//1
         'suitId':1,
-        '2':[{type: 'install_skill', id: 202, level: 1 }]
+        '2':[{type: 'install_skill', id: 352, level: 1 }]
     }
 ]
