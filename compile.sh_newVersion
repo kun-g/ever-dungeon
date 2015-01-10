@@ -97,21 +97,21 @@ if [ $CurrentBranch = develop ]
 then
   CDNVersionBucket='hotupdate'
   RemoteRepo='origin'
-  UpdateUrl='http://hotupdate.qiniudn.com/'
+  #UpdateUrl='http://hotupdate.qiniudn.com/'
   ServerConfiguration='Develop'
   ServerID=0
 elif [ $CurrentBranch = master ]
 then
   CDNVersionBucket='drhu'
   RemoteRepo='deploy0'
-  UpdateUrl='http://drhu.qiniudn.com/'
+  #UpdateUrl='http://drhu.qiniudn.com/'
   ServerConfiguration='Master'
   ServerID=1
 elif [[ $CurrentBranch = localWork ]]
 then
   CDNVersionBucket='hotupdate'
   RemoteRepo='deploy'
-  UpdateUrl='http://hotupdate.qiniudn.com/'
+  #UpdateUrl='http://hotupdate.qiniudn.com/'
   ServerConfiguration='Develop'
   ServerID=0
 else
@@ -128,8 +128,8 @@ ConfigFile="build/config.js"
 CurrentVersion=153
 #CurrentVersion=`curl -s $UpdateUrl/version`
 #echo 'Current version: '$CurrentVersion
-$SED -i 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
-echo $SED -i 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
+#$SED -i 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
+#echo $SED -i 's#"url":.*,#"url": "'$UpdateUrl'",#g' $VersionFile
 $SED -i 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
 echo $SED -i 's/"resource_version": .*,/"resource_version": '$CurrentVersion',/g' $VersionFile
 $SED -i 's/"ServerName": .*,/"ServerName": "'$ServerConfiguration'",/g' $ConfigFile
