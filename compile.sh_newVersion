@@ -64,6 +64,7 @@ SOURCES=(
 "commandStream.js"
 "dungeon.js"
 "trigger.js"
+"reward.js"
 )
 
 DST_BOX="blackbox/"
