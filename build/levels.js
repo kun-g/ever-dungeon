@@ -2965,5 +2965,186 @@ exports.data = [
                 "skill": [{"id":288, "level": 2}]
             }
         ]
+    },
+    {
+        "levelId": 10,
+        "levelData":[
+            {
+                "xp":0,
+                "skill": [
+                    {"id":337, "level": 1,"classLimit":256},
+                    {"id":339, "level": 1,"classLimit":257},
+                    {"id":340, "level": 1,"classLimit":258}
+                ]
+            },
+            {
+                "xp":250,
+                "skill": [
+                    {"id":2, "level": 1,"classLimit":256},
+                    {"id":12, "level": 1,"classLimit":257},
+                    {"id":9, "level": 1,"classLimit":258}
+                ]
+            },
+            {
+                "xp":1600,
+                "skill": [
+                    {"id":337, "level": 2,"classLimit":256},
+                    {"id":339, "level": 2,"classLimit":257},
+                    {"id":340, "level": 2,"classLimit":258}
+                ]
+            },
+            {
+                "xp":2900,
+                "skill": [
+                    {"id":3, "level": 1,"classLimit":256},
+                    {"id":7, "level": 1,"classLimit":257},
+                    {"id":10, "level": 1,"classLimit":258}
+                ]
+            },
+            {
+                "xp":4200,
+                "skill": [
+                    {"id":2, "level": 2,"classLimit":256},
+                    {"id":12, "level": 2,"classLimit":257},
+                    {"id":9, "level": 2,"classLimit":258}
+                ]
+            },
+            {
+                "xp":8000,
+                "skill": [
+                    {"id":4, "level": 1,"classLimit":256},
+                    {"id":6, "level": 1,"classLimit":257},
+                    {"id":11, "level": 1,"classLimit":258}
+                ]
+            },
+            {
+                "xp":12000,
+                "skill": [
+                    {"id":3, "level": 2,"classLimit":256},
+                    {"id":7, "level": 2,"classLimit":257},
+                    {"id":10, "level": 2,"classLimit":258}
+                ]
+            },
+            {
+                "xp":17000,
+                "skill": [
+                    {"id":337, "level": 3,"classLimit":256},
+                    {"id":339, "level": 3,"classLimit":257},
+                    {"id":340, "level": 3,"classLimit":258}
+                ]
+            },
+            {
+                "xp":25900,
+                "skill":[
+                    {"id":2, "level": 3,"classLimit":256},
+                    {"id":12, "level": 3,"classLimit":257},
+                    {"id":9, "level":3,"classLimit":258}
+                ]
+            },
+            {
+                "xp":40000,
+                "skill": [
+                    {"id":3, "level": 3,"classLimit":256},
+                    {"id":7, "level": 3,"classLimit":257},
+                    {"id":10, "level": 3,"classLimit":258}
+                ]
+            },
+            {
+                "xp":220000,
+                "skill": [
+                    {"id":341, "level": 1,"classLimit":259},
+                    {"id":344, "level": 1,"classLimit":260},
+                    {"id":345, "level": 1,"classLimit":261}
+                ]
+            },
+            {
+                "xp":240000,
+                "skill": [
+                    {"id":198, "level": 1,"classLimit":259},
+                    {"id":202, "level": 1,"classLimit":260},
+                    {"id":208, "level": 1,"classLimit":261}
+                ]
+            },
+            {
+                "xp":263000,
+                "skill": [
+                    {"id":199, "level": 1,"classLimit":259},
+                    {"id":204, "level": 1,"classLimit":260},
+                    {"id":210, "level": 1,"classLimit":261}
+                ]
+            },
+            {
+                "xp":289000,
+                "skill": [
+                    {"id":200, "level": 1,"classLimit":259},
+                    {"id":206, "level": 1,"classLimit":260},
+                    {"id":211, "level": 1,"classLimit":261}
+                ]
+            },
+            {
+                "xp":350000,
+                "skill": [
+                    {"id":341, "level": 2,"classLimit":259},
+                    {"id":344, "level": 2,"classLimit":260},
+                    {"id":345, "level": 2,"classLimit":261}
+                ]
+            },
+            {
+                "xp":423000,
+                "skill": [
+                    {"id":198, "level": 2,"classLimit":259},
+                    {"id":202, "level": 2,"classLimit":260},
+                    {"id":208, "level": 2,"classLimit":261}
+                ]
+            },
+            {
+                "xp":508000,
+                "skill": [
+                    {"id":199, "level": 2,"classLimit":259},
+                    {"id":204, "level": 2,"classLimit":260},
+                    {"id":210, "level": 2,"classLimit":261}
+                ]
+            },
+            {
+                "xp":605000,
+                "skill": [
+                    {"id":200, "level": 2,"classLimit":259},
+                    {"id":206, "level": 2,"classLimit":260},
+                    {"id":211, "level": 2,"classLimit":261}
+                ]
+            },
+            {
+                "xp":720000,
+                "skill": [
+                    {"id":341, "level": 3,"classLimit":259},
+                    {"id":344, "level": 3,"classLimit":260},
+                    {"id":345, "level": 3,"classLimit":261}
+                ]
+            },
+            {
+                "xp":855000,
+                "skill": [
+                    {"id":198, "level": 3,"classLimit":259},
+                    {"id":202, "level": 3,"classLimit":260},
+                    {"id":208, "level": 3,"classLimit":261}
+                ]
+            },
+            {
+                "xp":1010000,
+                "skill": [
+                    {"id":199, "level": 3,"classLimit":259},
+                    {"id":204, "level": 3,"classLimit":260},
+                    {"id":210, "level": 3,"classLimit":261}
+                ]
+            },
+            {
+                "xp":1280000,
+                "skill": [
+                    {"id":200, "level": 3,"classLimit":259},
+                    {"id":206, "level": 3,"classLimit":260},
+                    {"id":211, "level": 3,"classLimit":261}
+                ]
+            }
+        ]
     }
 ]

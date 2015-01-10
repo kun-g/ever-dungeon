@@ -1,12 +1,12 @@
 exports.data = [
     {
         "questId":0,
-        "title":"劫后逢生",
-        "desc":"传说中的魔龙再次出现，混沌的黑暗将再度降临，做好准备迎接挑战",
+        "title":"劫後逢生",
+        "desc":"傳說中的魔龍再次出現，混沌的黑暗將再度降臨，做好準備迎接挑戰",
         "objects":[
             {
                 "type":0,
-                "label":"与魔龙交战，并且死里逃生。",
+                "label":"與魔龍交戰，並且死裡逃生。",
                 "collect":1000,
                 "count":1
             }
@@ -26,64 +26,64 @@ exports.data = [
         "endDialogue":9
     },
     {
-    "abtest":[
-    {
-        "questId":1,
-        "title":"找到汤姆大叔",
-        "desc":"一直找不到汤姆大叔，听村民说见他去了【多姆洞穴I】，赶紧去看看吧。",
-        "objects":[
+        "abtest":[
             {
-                "type":0,
-                "label":"探索【多姆洞穴I】",
-                "collect":1001,
-                "count":1
-            }
-        ],
-        "prize":[
-            {
-                "type":1,
-                "count":250
-            }
-        ],
-        "cond":
-        { "and": [
-            { "==": [ { "type": "getProperty", "key": "quests.0.complete"}, true ] }
-        ]
-        },
-        "endDialogue":11
-    },{
-            "questId":1,
-            "title":"找到汤姆大叔的女儿",
-            "desc":"听说汤姆大叔的女儿去了【多姆洞穴I】，赶紧去看看吧。",
-            "objects":[
-                {
-                    "type":0,
-                    "label":"找到汤姆大叔的女儿",
-                    "collect":1001,
-                    "count":1
-                }
-            ],
-            "prize":[
-                {
-                    "type":1,
-                    "count":250
-                }
-            ],
-            "cond":
-            { "and": [
-                { "==": [ { "type": "getProperty", "key": "quests.0.complete"}, true ] }
-            ]
-            },
-            "endDialogue":30
-        }]},
+                "questId":1,
+                "title":"找到湯姆大叔",
+                "desc":"一直找不到湯姆大叔，聽村民說見他去了【多姆洞穴I】，趕緊去看看吧。",
+                "objects":[
+                    {
+                        "type":0,
+                        "label":"探索【多姆洞穴I】",
+                        "collect":1001,
+                        "count":1
+                    }
+                ],
+                "prize":[
+                    {
+                        "type":1,
+                        "count":250
+                    }
+                ],
+                "cond":
+                { "and": [
+                    { "==": [ { "type": "getProperty", "key": "quests.0.complete"}, true ] }
+                ]
+                },
+                "endDialogue":11
+            },{
+                "questId":1,
+                "title":"找到湯姆大叔的女兒",
+                "desc":"聽說湯姆大叔的女兒去了【多姆洞穴I】，趕緊去看看吧。",
+                "objects":[
+                    {
+                        "type":0,
+                        "label":"找到湯姆大叔的女兒",
+                        "collect":1001,
+                        "count":1
+                    }
+                ],
+                "prize":[
+                    {
+                        "type":1,
+                        "count":250
+                    }
+                ],
+                "cond":
+                { "and": [
+                    { "==": [ { "type": "getProperty", "key": "quests.0.complete"}, true ] }
+                ]
+                },
+                "endDialogue":30
+            }]},
     {
         "questId":2,
-        "title":"讨伐没节操史莱姆",
-        "desc":"黏糊糊史莱姆卷土重来，害的村里妹子们都不敢出门，实在太没节操了，赶紧去【多姆洞穴II】干掉它！",
+        "title":"討伐沒節操史萊姆",
+        "desc":"黏糊糊史萊姆捲土重來，害的村裡妹子們都不敢出門，實在太沒節操了，趕緊去【多姆洞穴II】幹掉它！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒黏糊糊史莱姆【BOSS】",
+                "label":"擊倒黏糊糊史萊姆【BOSS】",
                 "collect":2001,
                 "count":1
             }
@@ -103,12 +103,12 @@ exports.data = [
     },
     {
         "questId":3,
-        "title":"驱逐野狼",
-        "desc":"野狼又到发情期了，整晚叫唤让人怎么睡？！为村民们驱赶野狼吧！",
+        "title":"驅逐野狼",
+        "desc":"野狼又到發情期了，整晚叫喚讓人怎麼睡？！為村民們驅趕野狼吧！",
         "objects":[
             {
                 "type":0,
-                "label":"击杀10只野狼",
+                "label":"擊殺10只野狼",
                 "collect":3001,
                 "count":10
             }
@@ -128,12 +128,12 @@ exports.data = [
     },
     {
         "questId":4,
-        "title":"摊上大事了？！",
-        "desc":"还记得不经意间被你打跑的猥琐哥布林吗？他爸可是酋长哥布林！现在他们要带哥布林村管大队来报仇，目前正在【多姆洞穴III】集结同伴。",
+        "title":"攤上大事了？！",
+        "desc":"還記得不經意間被你打跑的猥瑣哥布林嗎？他爸可是酋長哥布林！現在他們要帶哥布林村管大隊來報仇，目前正在【多姆洞穴III】集結同伴。",
         "objects":[
             {
                 "type":0,
-                "label":"击败哥布林酋长【BOSS】",
+                "label":"擊敗哥布林酋長【BOSS】",
                 "collect":4001,
                 "count":1
             }
@@ -154,12 +154,12 @@ exports.data = [
     },
     {
         "questId":5,
-        "title":"寻找卡姆矿石",
-        "desc":"山姆大叔想要一些卡姆矿石，在【多姆洞穴III】储量比较丰富哦",
+        "title":"尋找卡姆礦石",
+        "desc":"山姆大叔想要一些卡姆礦石，在【多姆洞穴III】儲量比較豐富哦",
         "objects":[
             {
                 "type":0,
-                "label":"采集3枚卡姆矿石",
+                "label":"採集3枚卡姆礦石",
                 "collect":5001,
                 "count":3
             }
@@ -179,12 +179,12 @@ exports.data = [
     },
     {
         "questId":6,
-        "title":"清理残余哥布林部队",
-        "desc":"挫败了哥布林先锋部队，现在是扫荡残余部队的时候了！",
+        "title":"清理殘餘哥布林部隊",
+        "desc":"挫敗了哥布林先鋒部隊，現在是掃蕩殘餘部隊的時候了！",
         "objects":[
             {
                 "type":0,
-                "label":"击败哥布林15只",
+                "label":"擊敗哥布林15只",
                 "collect":6001,
                 "count":15
             }
@@ -203,23 +203,23 @@ exports.data = [
 
     },
     {
-    "questId":7,
-    "title":"寻找走失的村民",
-    "desc":"卡琳为了帮父亲采药去了【多姆洞穴IV】，一直没回来，赶紧去把她找回来吧！",
-    "objects":[
-        {
-            "type":0,
-            "label":"寻找村民卡琳",
-            "collect":7001,
-            "count":1
-        }
-    ],
-    "prize":[
-        {
-            "type":1,
-            "count":100
-        }
-    ],
+        "questId":7,
+        "title":"尋找走失的村民",
+        "desc":"卡琳為了幫父親采藥去了【多姆洞穴IV】，一直沒回來，趕緊去把她找回來吧！",
+        "objects":[
+            {
+                "type":0,
+                "label":"尋找村民卡琳",
+                "collect":7001,
+                "count":1
+            }
+        ],
+        "prize":[
+            {
+                "type":1,
+                "count":100
+            }
+        ],
         "cond":
         { "and": [
             { "==": [ { "type": "getProperty", "key": "quests.-1.complete"}, true ] }
@@ -229,12 +229,12 @@ exports.data = [
     },
     {
         "questId":8,
-        "title":"寻找神奇草药",
-        "desc":"答应卡琳帮她在【多姆洞穴IV】中，寻找到医治父亲的神奇草药。",
+        "title":"尋找神奇草藥",
+        "desc":"答應卡琳幫她在【多姆洞穴IV】中，尋找到醫治父親的神奇草藥。",
         "objects":[
             {
                 "type":0,
-                "label":"采集3株神奇草药",
+                "label":"採集3株神奇草藥",
                 "collect":8001,
                 "count":3
             }
@@ -254,12 +254,12 @@ exports.data = [
     },
     {
         "questId":9,
-        "title":"剿灭哥布林部落",
-        "desc":"是时候给他们致命一击了，立刻前往【多姆洞穴IV】击败他们吧",
+        "title":"剿滅哥布林部落",
+        "desc":"是時候給他們致命一擊了，立刻前往【多姆洞穴IV】擊敗他們吧",
         "objects":[
             {
                 "type":0,
-                "label":"击倒哥布林酋长【BOSS】",
+                "label":"擊倒哥布林酋長【BOSS】",
                 "collect":9001,
                 "count":1
             }
@@ -280,12 +280,12 @@ exports.data = [
     },
     {
         "questId":10,
-        "title":"寻找高阶卡姆矿石",
-        "desc":"通过对卡姆矿石的研究，山姆大叔觉得能够得到在【多姆洞穴IV】的高纯度矿石，就能制作出给力装备！",
+        "title":"尋找高階卡姆礦石",
+        "desc":"通過對卡姆礦石的研究，山姆大叔覺得能夠得到在【多姆洞穴IV】的高純度礦石，就能製作出給力裝備！",
         "objects":[
             {
                 "type":0,
-                "label":"采集5枚高阶卡姆矿石",
+                "label":"採集5枚高階卡姆礦石",
                 "collect":10001,
                 "count":5
             }
@@ -307,12 +307,12 @@ exports.data = [
     },
     {
         "questId":11,
-        "title":"找到卡姆结晶",
-        "desc":"在【多姆洞穴IV】发现卡姆矿石结晶，不过被黏糊糊史莱姆吞下去了，趁被它消化前，赶紧去夺过来！",
+        "title":"找到卡姆結晶",
+        "desc":"在【多姆洞穴IV】發現卡姆礦石結晶，不過被黏糊糊史萊姆吞下去了，趁被它消化前，趕緊去奪過來！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒黏糊糊史莱姆【BOSS】",
+                "label":"擊倒黏糊糊史萊姆【BOSS】",
                 "count":1 ,
                 "collect":11001
             }
@@ -333,12 +333,12 @@ exports.data = [
     },
     {
         "questId":12,
-        "title":"哥布林野狼联手？",
-        "desc":"哥布林和野狼勾结起来，似乎想对村子进行报复，赶紧去【多姆洞穴V】看看吧",
+        "title":"哥布林野狼聯手？",
+        "desc":"哥布林和野狼勾結起來，似乎想對村子進行報復，趕緊去【多姆洞穴V】看看吧",
         "objects":[
             {
                 "type":0,
-                "label":"击败哥布林狼骑手【BOSS】",
+                "label":"擊敗哥布林狼騎手【BOSS】",
                 "collect":12001,
                 "count":1
             }
@@ -358,12 +358,12 @@ exports.data = [
     },
     {
         "questId":13,
-        "title":"救出昔日的小伙伴们",
-        "desc":"村民看到狼骑手抓住了一个战士和一个法师，目前正在【多姆洞穴VI】，去救他们吧！",
+        "title":"救出昔日的小夥伴們",
+        "desc":"村民看到狼騎手抓住了一個戰士和一個法師，目前正在【多姆洞穴VI】，去救他們吧！",
         "objects":[
             {
                 "type":0,
-                "label":"找到受困的小伙伴",
+                "label":"找到受困的小夥伴",
                 "collect":13001,
                 "count":2
             }
@@ -383,12 +383,12 @@ exports.data = [
     },
     {
         "questId":14,
-        "title":"寻找小伙伴的牧师",
-        "desc":"被捉的小伙伴果然不是凯瑟琳和卡尔，不过他们一同组队的牧师目前还在【多姆洞穴VI】迷路中",
+        "title":"尋找小夥伴的牧師",
+        "desc":"被捉的小夥伴果然不是凱薩琳和卡爾，不過他們一同組隊的牧師目前還在【多姆洞穴VI】迷路中",
         "objects":[
             {
                 "type":0,
-                "label":"找到小伙伴的牧师",
+                "label":"找到小夥伴的牧師",
                 "collect":14001,
                 "count":1
             }
@@ -409,11 +409,11 @@ exports.data = [
     {
         "questId":15,
         "title":"多姆村英雄",
-        "desc":"将【多姆洞穴VII】中的史莱姆击倒，给村庄带来安宁。",
+        "desc":"將【多姆洞穴VII】中的史萊姆擊倒，給村莊帶來安寧。",
         "objects":[
             {
                 "type":0,
-                "label":"击倒巨型史莱姆【BOSS】",
+                "label":"擊倒巨型史萊姆【BOSS】",
                 "collect":15001,
                 "count":1
             }
@@ -439,17 +439,17 @@ exports.data = [
     },
     {
         "questId":16,
-        "title":"史莱姆清道夫",
-        "desc":"【多姆洞穴VII】史莱姆们又开始集结了，再次前往打败它们。",
+        "title":"史萊姆清道夫",
+        "desc":"【多姆洞穴VII】史萊姆們又開始集結了，再次前往打敗它們。",
         "objects":[
             {
                 "type":0,
-                "label":"击倒大史莱姆【BOSS】",
+                "label":"擊倒大史萊姆【BOSS】",
                 "collect":15001,
                 "count":1
             },{
                 "type":0,
-                "label":"击败史莱姆",
+                "label":"擊敗史萊姆",
                 "collect":16001,
                 "count":1
             }
@@ -475,12 +475,12 @@ exports.data = [
     {
         "questId":17,
         "questStage":8,
-        "title":"探索密谋森林",
-        "desc":"搜索【密谋森林I】寻找相关线索",
+        "title":"探索密謀森林",
+        "desc":"搜索【密謀森林I】尋找相關線索",
         "objects":[
             {
                 "type":0,
-                "label":"探索【密谋森林I】",
+                "label":"探索【密謀森林I】",
                 "collect":17001,
                 "count":1
             }
@@ -502,12 +502,12 @@ exports.data = [
     {
         "questId":18,
         "questStage":8,
-        "title":"走丢的雪莉",
-        "desc":"雪莉去【密谋森林I】就再也没人见过了，帮村民们去找找吧",
+        "title":"走丟的雪麗",
+        "desc":"雪麗去【密謀森林I】就再也沒人見過了，幫村民們去找找吧",
         "objects":[
             {
                 "type":0,
-                "label":"找到雪莉",
+                "label":"找到雪麗",
                 "collect":18001,
                 "count":1
             }
@@ -528,12 +528,12 @@ exports.data = [
     {
         "questId":19,
         "questStage":9,
-        "title":"狼骑的逆袭",
-        "desc":"没有得到教训的狼骑又想卷土重来，去【密谋森林II】击溃它们！",
+        "title":"狼騎的逆襲",
+        "desc":"沒有得到教訓的狼騎又想捲土重來，去【密謀森林II】擊潰它們！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒狼骑【BOSS】",
+                "label":"擊倒狼騎【BOSS】",
                 "collect":19001,
                 "count":2
             }
@@ -553,12 +553,12 @@ exports.data = [
     },
     {
         "questId":20,
-        "title":"不规矩的兽族兵",
-        "desc":"兽族兵越来越猖狂，阻止它们对村庄造成巨大的伤害！",
+        "title":"不規矩的獸族兵",
+        "desc":"獸族兵越來越倡狂，阻止它們對村莊造成巨大的傷害！",
         "objects":[
             {
                 "type":0,
-                "label":"讨伐兽族兵",
+                "label":"討伐獸族兵",
                 "collect":20001,
                 "count":25
             }
@@ -579,12 +579,12 @@ exports.data = [
     {
         "questId":21,
         "questStage":10,
-        "title":"兽族一锅端",
-        "desc":"【密谋森林III】中发现有兽族在建哨站，似乎在盘算着什么阴谋！",
+        "title":"獸族一鍋端",
+        "desc":"【密謀森林III】中發現有獸族在建哨站，似乎在盤算著什麼陰謀！",
         "objects":[
             {
                 "type":0,
-                "label":"击败兽族投斧手【BOSS】",
+                "label":"擊敗獸族投斧手【BOSS】",
                 "collect":21001,
                 "count":2
             }
@@ -605,12 +605,12 @@ exports.data = [
     {
         "questId":22,
         "questStage":10,
-        "title":"圣灵草",
-        "desc":"又到圣灵草生长的季节，这只在【密谋森林III】中生长的草药，是村庄中最常用的医疗用品。",
+        "title":"聖靈草",
+        "desc":"又到聖靈草生長的季節，這只在【密謀森林III】中生長的草藥，是村莊中最常用的醫療用品。",
         "objects":[
             {
                 "type":0,
-                "label":"收集圣灵草",
+                "label":"收集聖靈草",
                 "collect":22001,
                 "count":5
             }
@@ -632,12 +632,12 @@ exports.data = [
     {
         "questId":23,
         "questStage":11,
-        "title":"火焰史莱姆！？",
-        "desc":"凶猛的火焰史莱姆出现在【密谋森林IV】中，已经袭击了不少村民了，赶紧去击败它！",
+        "title":"火焰史萊姆！？",
+        "desc":"兇猛的火焰史萊姆出現在【密謀森林IV】中，已經襲擊了不少村民了，趕緊去擊敗它！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒火焰史莱姆【BOSS】",
+                "label":"擊倒火焰史萊姆【BOSS】",
                 "collect":23001,
                 "count":1
             }
@@ -658,12 +658,12 @@ exports.data = [
     {
         "questId":24,
         "questStage":11,
-        "title":"火焰魔法结晶",
-        "desc":"【密谋森林IV】中的火焰史莱姆的出现，产生了蕴含火焰力量的结晶，采集回来给汤姆大叔瞧瞧。",
+        "title":"火焰魔法結晶",
+        "desc":"【密謀森林IV】中的火焰史萊姆的出現，產生了蘊含火焰力量的結晶，採集回來給湯姆大叔瞧瞧。",
         "objects":[
             {
                 "type":0,
-                "label":"收集火焰魔法结晶",
+                "label":"收集火焰魔法結晶",
                 "collect":24001,
                 "count":5
             }
@@ -684,12 +684,12 @@ exports.data = [
     },
     {
         "questId":25,
-        "title":"灭虫大行动",
-        "desc":"紫毒狼蛛们开始躁动不安了，到处都是它们的蜘蛛网，赶紧为民除害吧！",
+        "title":"滅蟲大行動",
+        "desc":"紫毒狼蛛們開始躁動不安了，到處都是它們的蜘蛛網，趕緊為民除害吧！",
         "objects":[
             {
                 "type":0,
-                "label":"讨伐紫毒狼蛛群",
+                "label":"討伐紫毒狼蛛群",
                 "collect":25001,
                 "count":30
             }
@@ -710,12 +710,12 @@ exports.data = [
     {
         "questId":26,
         "questStage":12,
-        "title":"再战火焰史莱姆",
-        "desc":"上次的火焰史莱姆一役没有将它彻底清除，现在它又恢复了，就在【密谋森林V】！",
+        "title":"再戰火焰史萊姆",
+        "desc":"上次的火焰史萊姆一役沒有將它徹底清除，現在它又恢復了，就在【密謀森林V】！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒火焰史莱姆【BOSS】",
+                "label":"擊倒火焰史萊姆【BOSS】",
                 "collect":26001,
                 "count":1
             }
@@ -736,12 +736,12 @@ exports.data = [
     {
         "questId":27,
         "questStage":13,
-        "title":"寻找武器锻造学徒",
-        "desc":"汤姆大叔的学徒为了寻找锻造材料一个人去了【密谋森林VI】！情况可能非常危险，去把他找回来吧！",
+        "title":"尋找武器鍛造學徒",
+        "desc":"湯姆大叔的學徒為了尋找鍛造材料一個人去了【密謀森林VI】！情況可能非常危險，去把他找回來吧！",
         "objects":[
             {
                 "type":0,
-                "label":"找到汤姆大叔的学徒",
+                "label":"找到湯姆大叔的學徒",
                 "collect":27001,
                 "count":1
             }
@@ -761,12 +761,12 @@ exports.data = [
     },
     {
         "questId":28,
-        "title":"收集锻造素材",
-        "desc":"为汤姆大叔的学徒找到血狼的牙齿",
+        "title":"收集鍛造素材",
+        "desc":"為湯姆大叔的學徒找到血狼的牙齒",
         "objects":[
             {
                 "type":0,
-                "label":"收集40个血狼牙",
+                "label":"收集40個血狼牙",
                 "collect":28001,
                 "count":40
             }
@@ -787,12 +787,12 @@ exports.data = [
     {
         "questId":29,
         "questStage":13,
-        "title":"寻找密谋森林的最深层入口",
-        "desc":"成功通过【密谋森林VI】寻找到最深处的入口",
+        "title":"尋找密謀森林的最深層入口",
+        "desc":"成功通過【密謀森林VI】尋找到最深處的入口",
         "objects":[
             {
                 "type":0,
-                "label":"成功突破【密谋森林VI】",
+                "label":"成功突破【密謀森林VI】",
                 "collect":29001,
                 "count":1
             }
@@ -813,12 +813,12 @@ exports.data = [
     {
         "questId":30,
         "questStage":14,
-        "title":"解放密谋森林",
-        "desc":"将【密谋森林VII】深处的怪物击败，为森林带来宁静",
+        "title":"解放密謀森林",
+        "desc":"將【密謀森林VII】深處的怪物擊敗，為森林帶來寧靜",
         "objects":[
             {
                 "type":0,
-                "label":"击败食人魔怪【BOSS】",
+                "label":"擊敗食人魔怪【BOSS】",
                 "collect":30001,
                 "count":1
             }
@@ -843,18 +843,18 @@ exports.data = [
     {
         "questId":31,
         "questStage":14,
-        "title":"食人魔终结者",
-        "desc":"将【密谋森林VII】中的大小食人魔击倒！",
+        "title":"食人魔終結者",
+        "desc":"將【密謀森林VII】中的大小食人魔擊倒！",
         "objects":[
             {
                 "type":0,
-                "label":"击败食人魔怪【BOSS】",
+                "label":"擊敗食人魔怪【BOSS】",
                 "collect":30001,
                 "count":1
             },
             {
                 "type":0,
-                "label":"击败食人魔",
+                "label":"擊敗食人魔",
                 "collect":31001,
                 "count":1
             }
@@ -881,11 +881,11 @@ exports.data = [
         "questId":32,
         "questStage":15,
         "title":"打打打打劫！？",
-        "desc":"【湖滨大道I】出现了一伙山贼，找到并击倒他们！",
+        "desc":"【湖濱大道I】出現了一夥山賊，找到並擊倒他們！",
         "objects":[
             {
                 "type":0,
-                "label":"击败山贼【BOSS】",
+                "label":"擊敗山賊【BOSS】",
                 "collect":32001,
                 "count":1
             }
@@ -906,12 +906,12 @@ exports.data = [
     {
         "questId":33,
         "questStage":16,
-        "title":"救出商队成员",
-        "desc":"商队在途经【湖滨大道II】时受到山贼的袭击，其中一个成员被抓走了，帮商队救出他吧！",
+        "title":"救出商隊成員",
+        "desc":"商隊在途經【湖濱大道II】時受到山賊的襲擊，其中一個成員被抓走了，幫商隊救出他吧！",
         "objects":[
             {
                 "type":0,
-                "label":"救出商队成员",
+                "label":"救出商隊成員",
                 "collect":33001,
                 "count":1
             }
@@ -932,12 +932,12 @@ exports.data = [
     {
         "questId":34,
         "questStage":16,
-        "title":"商队守卫者I",
-        "desc":"【湖滨大道II】上也出现了不少佣兵打劫商团，商团们肃清道路吧！",
+        "title":"商隊守衛者I",
+        "desc":"【湖濱大道II】上也出現了不少傭兵打劫商團，商團們肅清道路吧！",
         "objects":[
             {
                 "type":0,
-                "label":"将【湖滨大道II】的佣兵扫清",
+                "label":"將【湖濱大道II】的傭兵掃清",
                 "collect":34001,
                 "count":1
             }
@@ -958,12 +958,12 @@ exports.data = [
     {
         "questId":35,
         "questStage":16,
-        "title":"找寻失踪的宝箱",
-        "desc":"商队成员救回了，不过一起的宝箱还没找到，前往【湖滨大道II】替他们找回宝箱。",
+        "title":"找尋失蹤的寶箱",
+        "desc":"商隊成員救回了，不過一起的寶箱還沒找到，前往【湖濱大道II】替他們找回寶箱。",
         "objects":[
             {
                 "type":0,
-                "label":"找回商队的宝箱",
+                "label":"找回商隊的寶箱",
                 "collect":35001,
                 "count":1
             }
@@ -984,11 +984,11 @@ exports.data = [
     {
         "questId":36,
         "title":"吃人的怪物",
-        "desc":"食人魔出没在湖滨大道附近袭击商队，将它们赶走！",
+        "desc":"食人魔出沒在湖濱大道附近襲擊商隊，將它們趕走！",
         "objects":[
             {
                 "type":0,
-                "label":"讨伐食人魔",
+                "label":"討伐食人魔",
                 "collect":36001,
                 "count":25
             }
@@ -1009,12 +1009,12 @@ exports.data = [
     {
         "questId":37,
         "questStage":17,
-        "title":"商队守卫者II",
-        "desc":"肃清【湖滨大道III】上掠夺商队的坏人们！",
+        "title":"商隊守衛者II",
+        "desc":"肅清【湖濱大道III】上掠奪商隊的壞人們！",
         "objects":[
             {
                 "type":0,
-                "label":"将【湖滨大道III】的佣兵扫清",
+                "label":"將【湖濱大道III】的傭兵掃清",
                 "collect":37001,
                 "count":1
             }
@@ -1036,11 +1036,11 @@ exports.data = [
         "questId":38,
         "title":"迷之怪物",
         "questStage":17,
-        "desc":"【湖滨大道III】出现了一只迷之怪物，袭击商队，并且抢走大量宝物。",
+        "desc":"【湖濱大道III】出現了一隻迷之怪物，襲擊商隊，並且搶走大量寶物。",
         "objects":[
             {
                 "type":0,
-                "label":"讨伐迷之怪物",
+                "label":"討伐迷之怪物",
                 "collect":38001,
                 "count":1
             }
@@ -1060,30 +1060,30 @@ exports.data = [
     },
     {
         "questId":39,
-        "title":"矿石收集者",
-        "desc":"商队带着数种神秘矿石来给汤姆大叔，不过在湖滨大道遇到山贼弄丢了，为汤姆大叔找回矿石。",
+        "title":"礦石收集者",
+        "desc":"商隊帶著數種神秘礦石來給湯姆大叔，不過在湖濱大道遇到山賊弄丟了，為湯姆大叔找回礦石。",
         "objects":[
             {
                 "type":0,
-                "label":"找到神秘矿石1",
+                "label":"找到神秘礦石1",
                 "collect":39001,
                 "count":1
             },
             {
                 "type":0,
-                "label":"找到神秘矿石2",
+                "label":"找到神秘礦石2",
                 "collect":39002,
                 "count":1
             },
             {
                 "type":0,
-                "label":"找到神秘矿石3",
+                "label":"找到神秘礦石3",
                 "collect":39003,
                 "count":1
             },
             {
                 "type":0,
-                "label":"找到神秘矿石4",
+                "label":"找到神秘礦石4",
                 "collect":39004,
                 "count":1
             }
@@ -1103,12 +1103,12 @@ exports.data = [
     },
     {
         "questId":40,
-        "title":"最讨厌弓箭！",
-        "desc":"使用弓箭的游侠成了湖滨大道上商队的最大威胁，为保护商队的安全，击溃他们！",
+        "title":"最討厭弓箭！",
+        "desc":"使用弓箭的遊俠成了湖濱大道上商隊的最大威脅，為保護商隊的安全，擊潰他們！",
         "objects":[
             {
                 "type":0,
-                "label":"击杀游侠",
+                "label":"擊殺遊俠",
                 "collect":40001,
                 "count":35
             }
@@ -1129,12 +1129,12 @@ exports.data = [
     {
         "questId":41,
         "questStage":18,
-        "title":"凑热闹的史莱姆",
-        "desc":"原本宁静的【湖滨大道IV】，现在连史莱姆也来凑热闹，一并清除它们！",
+        "title":"湊熱鬧的史萊姆",
+        "desc":"原本寧靜的【湖濱大道IV】，現在連史萊姆也來湊熱鬧，一併清除它們！",
         "objects":[
             {
                 "type":0,
-                "label":"击杀火焰史莱姆【BOSS】",
+                "label":"擊殺火焰史萊姆【BOSS】",
                 "collect":41001,
                 "count":2
             }
@@ -1156,11 +1156,11 @@ exports.data = [
         "questId":42,
         "title":"迷之怪物II",
         "questStage":18,
-        "desc":"迷之怪物这回出现在了【湖滨大道IV】，趁它还没跑走，速度去击败它！",
+        "desc":"迷之怪物這回出現在了【湖濱大道IV】，趁它還沒跑走，速度去擊敗它！",
         "objects":[
             {
                 "type":0,
-                "label":"击杀迷之怪物【BOSS】",
+                "label":"擊殺迷之怪物【BOSS】",
                 "collect":42001,
                 "count":1
             }
@@ -1181,12 +1181,12 @@ exports.data = [
     {
         "questId":43,
         "questStage":18,
-        "title":"找回商队宝箱",
-        "desc":"迷之怪物已经被击倒，但商队的宝箱还在【湖滨大道IV】，去帮他们找回来吧。",
+        "title":"找回商隊寶箱",
+        "desc":"迷之怪物已經被擊倒，但商隊的寶箱還在【湖濱大道IV】，去幫他們找回來吧。",
         "objects":[
             {
                 "type":0,
-                "label":"商队宝箱",
+                "label":"商隊寶箱",
                 "collect":43001,
                 "count":4
             }
@@ -1207,12 +1207,12 @@ exports.data = [
     {
         "questId":44,
         "questStage":19,
-        "title":"迎头痛击",
-        "desc":"山贼团伙出现在了【湖滨大道V】，前往那里给他们迎头一击！",
+        "title":"迎頭痛擊",
+        "desc":"山賊團夥出現在了【湖濱大道V】，前往那裡給他們迎頭一擊！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒山贼头目【BOSS】",
+                "label":"擊倒山賊頭目【BOSS】",
                 "collect":44001,
                 "count":1
             }
@@ -1233,12 +1233,12 @@ exports.data = [
     {
         "questId":45,
         "questStage":20,
-        "title":"救回雪莉",
-        "desc":"山贼们为了报仇，把雪莉抓走了，目前他们在【湖滨大道VI】集结，赶紧把她救回来！",
+        "title":"救回雪麗",
+        "desc":"山賊們為了報仇，把雪麗抓走了，目前他們在【湖濱大道VI】集結，趕緊把她救回來！",
         "objects":[
             {
                 "type":0,
-                "label":"救出雪莉",
+                "label":"救出雪麗",
                 "collect":45001,
                 "count":1
             }
@@ -1258,13 +1258,13 @@ exports.data = [
     },
     {
         "questId":46,
-        "title":"剿灭山贼",
+        "title":"剿滅山賊",
         "questStage":20,
-        "desc":"山贼头目和残党逃去了【湖滨大道VI】，将他们彻底赶走吧！",
+        "desc":"山賊頭目和殘党逃去了【湖濱大道VI】，將他們徹底趕走吧！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒山贼头目【BOSS】",
+                "label":"擊倒山賊頭目【BOSS】",
                 "collect":46001,
                 "count":1
             }
@@ -1285,12 +1285,12 @@ exports.data = [
     {
         "questId":47,
         "questStage":21,
-        "title":"肃清商旅道路",
-        "desc":"商旅道路上只剩下佣兵们在作乱了，把【湖滨大道VII】的佣兵们彻底肃清！",
+        "title":"肅清商旅道路",
+        "desc":"商旅道路上只剩下傭兵們在作亂了，把【湖濱大道VII】的傭兵們徹底肅清！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒游侠兵长【BOSS】",
+                "label":"擊倒遊俠兵長【BOSS】",
                 "collect":47001,
                 "count":1
             }
@@ -1315,18 +1315,18 @@ exports.data = [
     {
         "questId":48,
         "questStage":21,
-        "title":"佣兵双煞",
-        "desc":"游侠兵长与流浪剑士一起出现了，前往【湖滨大道VII】击倒佣兵双煞！",
+        "title":"傭兵雙煞",
+        "desc":"遊俠兵長與流浪劍士一起出現了，前往【湖濱大道VII】擊倒傭兵雙煞！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒游侠兵长【BOSS】",
+                "label":"擊倒遊俠兵長【BOSS】",
                 "collect":47001,
                 "count":1
             },
             {
                 "type":0,
-                "label":"击倒流浪剑士【BOSS】",
+                "label":"擊倒流浪劍士【BOSS】",
                 "collect":48001,
                 "count":1
             }
@@ -1352,12 +1352,12 @@ exports.data = [
     {
         "questId":49,
         "questStage":22,
-        "title":"探索断肠崖",
-        "desc":"前往【断肠崖I】探索，并击倒那里的怪物头领",
+        "title":"探索斷腸崖",
+        "desc":"前往【斷腸崖I】探索，並擊倒那裡的怪物頭領",
         "objects":[
             {
                 "type":0,
-                "label":"击倒死灰哥布林投矛手【BOSS】",
+                "label":"擊倒死灰哥布林投矛手【BOSS】",
                 "collect":49001,
                 "count":1
             }
@@ -1378,12 +1378,12 @@ exports.data = [
     {
         "questId":50,
         "questStage":23,
-        "title":"给人添麻烦的考古学家",
-        "desc":"顽固的考古学家去了【断肠崖II】考古，近期那边异常危险，去找到他并护送出来。",
+        "title":"給人添麻煩的考古學家",
+        "desc":"頑固的考古學家去了【斷腸崖II】考古，近期那邊異常危險，去找到他並護送出來。",
         "objects":[
             {
                 "type":0,
-                "label":"找到考古学家",
+                "label":"找到考古學家",
                 "collect":50001,
                 "count":1
             }
@@ -1403,12 +1403,12 @@ exports.data = [
     },
     {
         "questId":51,
-        "title":"考古学家的委托",
-        "desc":"断肠崖是曾经的古战场，因此有大量骷髅尸体，收集骷髅来做考古素材吧。",
+        "title":"考古學家的委託",
+        "desc":"斷腸崖是曾經的古戰場，因此有大量骷髏屍體，收集骷髏來做考古素材吧。",
         "objects":[
             {
                 "type":0,
-                "label":"收集骷髅",
+                "label":"收集骷髏",
                 "collect":51001,
                 "count":60
             }
@@ -1429,12 +1429,12 @@ exports.data = [
     {
         "questId":52,
         "questStage":23,
-        "title":"金色食人魔之谜",
-        "desc":"有人在【断肠崖II】目击了金色的食人魔，或许就是那边近期异常的根源，前去调查一下吧。",
+        "title":"金色食人魔之謎",
+        "desc":"有人在【斷腸崖II】目擊了金色的食人魔，或許就是那邊近期異常的根源，前去調查一下吧。",
         "objects":[
             {
                 "type":0,
-                "label":"击倒金色食人魔【BOSS】",
+                "label":"擊倒金色食人魔【BOSS】",
                 "collect":52001,
                 "count":1
             }
@@ -1455,12 +1455,12 @@ exports.data = [
     {
         "questId":53,
         "questStage":24,
-        "title":"金色食人魔之谜II",
-        "desc":"另一只金色食人魔目前正在【断肠崖III】徘徊，为保护大家安全，前去击倒它",
+        "title":"金色食人魔之謎II",
+        "desc":"另一隻金色食人魔目前正在【斷腸崖III】徘徊，為保護大家安全，前去擊倒它",
         "objects":[
             {
                 "type":0,
-                "label":"击倒金色食人魔【BOSS】",
+                "label":"擊倒金色食人魔【BOSS】",
                 "collect":53001,
                 "count":1
             }
@@ -1481,12 +1481,12 @@ exports.data = [
     {
         "questId":54,
         "questStage":24,
-        "title":"风之草",
-        "desc":"【断肠崖III】中生长着一种名叫风之草的草药，商队目前急缺这种草药，拜托你去帮忙采集。",
+        "title":"風之草",
+        "desc":"【斷腸崖III】中生長著一種名叫風之草的草藥，商隊目前急缺這種草藥，拜託你去幫忙採集。",
         "objects":[
             {
                 "type":0,
-                "label":"收集风之草",
+                "label":"收集風之草",
                 "collect":54001,
                 "count":5
             }
@@ -1507,12 +1507,12 @@ exports.data = [
     {
         "questId":55,
         "questStage":24,
-        "title":"风之秘宝",
-        "desc":"风之草的药效没有完全激发出来，需要配合【断肠崖III】中的风之秘宝，前往那里找到并带回给商队。",
+        "title":"風之秘寶",
+        "desc":"風之草的藥效沒有完全激發出來，需要配合【斷腸崖III】中的風之秘寶，前往那裡找到並帶回給商隊。",
         "objects":[
             {
                 "type":0,
-                "label":"收集风之秘宝",
+                "label":"收集風之秘寶",
                 "collect":55001,
                 "count":1
             }
@@ -1532,12 +1532,12 @@ exports.data = [
     },
     {
         "questId":56,
-        "title":"秘宝小偷",
-        "desc":"风之秘宝不在宝箱中，似乎被偷走了，继续搜寻秘宝的下落。",
+        "title":"秘寶小偷",
+        "desc":"風之秘寶不在寶箱中，似乎被偷走了，繼續搜尋秘寶的下落。",
         "objects":[
             {
                 "type":0,
-                "label":"找到风之秘宝",
+                "label":"找到風之秘寶",
                 "collect":56001,
                 "count":1
             }
@@ -1558,12 +1558,12 @@ exports.data = [
     {
         "questId":57,
         "questStage":25,
-        "title":"野兽集结I",
-        "desc":"哥布林们在【断肠崖IV】中集结，非常可疑，前去调查。",
+        "title":"野獸集結I",
+        "desc":"哥布林們在【斷腸崖IV】中集結，非常可疑，前去調查。",
         "objects":[
             {
                 "type":0,
-                "label":"调查断肠崖IV",
+                "label":"調查斷腸崖IV",
                 "collect":57001,
                 "count":1
             }
@@ -1584,12 +1584,12 @@ exports.data = [
     {
         "questId":58,
         "questStage":25,
-        "title":"采集风之结晶",
-        "desc":"汤姆大叔需要风之结晶可以在【断肠崖IV】中找到",
+        "title":"採集風之結晶",
+        "desc":"湯姆大叔需要風之結晶可以在【斷腸崖IV】中找到",
         "objects":[
             {
                 "type":0,
-                "label":"采集风之结晶",
+                "label":"採集風之結晶",
                 "collect":58001,
                 "count":5
             }
@@ -1610,8 +1610,8 @@ exports.data = [
     {
         "questId":59,
         "questStage":25,
-        "title":"狼骑的复仇",
-        "desc":"此前击溃了死灰狼骑的阴谋，这次它们为了报复把卡琳抓去了【断肠崖IV】。",
+        "title":"狼騎的復仇",
+        "desc":"此前擊潰了死灰狼騎的陰謀，這次它們為了報復把卡琳抓去了【斷腸崖IV】。",
         "objects":[
             {
                 "type":0,
@@ -1636,12 +1636,12 @@ exports.data = [
     {
         "questId":60,
         "questStage":26,
-        "title":"野兽集结II",
-        "desc":"死灰狼骑再度出现在【断肠崖V】，野兽们蠢蠢欲动，情况非常紧急。",
+        "title":"野獸集結II",
+        "desc":"死灰狼騎再度出現在【斷腸崖V】，野獸們蠢蠢欲動，情況非常緊急。",
         "objects":[
             {
                 "type":0,
-                "label":"击倒死灰狼骑【BOSS】",
+                "label":"擊倒死灰狼騎【BOSS】",
                 "collect":60001,
                 "count":1
             }
@@ -1662,11 +1662,11 @@ exports.data = [
     {
         "questId":61,
         "title":"死灰哥布林投矛手",
-        "desc":"断肠崖中出现大量哥布林，率先剿灭死灰哥布林投矛手，给它们造成打击。",
+        "desc":"斷腸崖中出現大量哥布林，率先剿滅死灰哥布林投矛手，給它們造成打擊。",
         "objects":[
             {
                 "type":0,
-                "label":"击倒死灰哥布林投矛手",
+                "label":"擊倒死灰哥布林投矛手",
                 "collect":61001,
                 "count":35
             }
@@ -1687,12 +1687,12 @@ exports.data = [
     {
         "questId":62,
         "questStage":27,
-        "title":"野兽集结III",
-        "desc":"野兽们在【断肠崖VI】做最后的抵抗，前去击倒它们。",
+        "title":"野獸集結III",
+        "desc":"野獸們在【斷腸崖VI】做最後的抵抗，前去擊倒它們。",
         "objects":[
             {
                 "type":0,
-                "label":"将断肠崖VI的野兽清除",
+                "label":"將斷腸崖VI的野獸清除",
                 "collect":62001,
                 "count":1
             }
@@ -1713,12 +1713,12 @@ exports.data = [
     {
         "questId":63,
         "questStage":28,
-        "title":"野兽们的幕后黑手",
-        "desc":"终于找到幕后黑手了，正是躲在【断肠崖VII】的狂暴哥布林，打败它平息这场混乱吧。",
+        "title":"野獸們的幕後黑手",
+        "desc":"終於找到幕後黑手了，正是躲在【斷腸崖VII】的狂暴哥布林，打敗它平息這場混亂吧。",
         "objects":[
             {
                 "type":0,
-                "label":"击倒狂暴哥布林投矛手【BOSS】",
+                "label":"擊倒狂暴哥布林投矛手【BOSS】",
                 "collect":63001,
                 "count":1
             }
@@ -1743,24 +1743,24 @@ exports.data = [
     {
         "questId":64,
         "questStage":28,
-        "title":"肃清残余部队",
-        "desc":"将【断肠崖VII】的残余部队全部剿灭",
+        "title":"肅清殘餘部隊",
+        "desc":"將【斷腸崖VII】的殘餘部隊全部剿滅",
         "objects":[
             {
                 "type":0,
-                "label":"击倒狂暴哥布林投矛手【BOSS】",
+                "label":"擊倒狂暴哥布林投矛手【BOSS】",
                 "collect":63001,
                 "count":1
             },
             {
                 "type":0,
-                "label":"击倒死灰哥布林投矛手【BOSS】",
+                "label":"擊倒死灰哥布林投矛手【BOSS】",
                 "collect":64001,
                 "count":1
             },
             {
                 "type":0,
-                "label":"击倒死灰狼骑【BOSS】",
+                "label":"擊倒死灰狼騎【BOSS】",
                 "collect":64002,
                 "count":2
             }
@@ -1786,7 +1786,7 @@ exports.data = [
     {
         "questId":65,
         "questStage":29,
-        "title":"欢迎来到大草原",
+        "title":"歡迎來到大草原",
         "desc":"探索【暮色平原I】",
         "objects":[
             {
@@ -1811,12 +1811,12 @@ exports.data = [
     },
     {
         "questId":66,
-        "title":"铲除在这些讨厌的佣兵",
-        "desc":"暮色平原出现了大量流浪的佣兵，将他们打倒。",
+        "title":"剷除在這些討厭的傭兵",
+        "desc":"暮色平原出現了大量流浪的傭兵，將他們打倒。",
         "objects":[
             {
                 "type":0,
-                "label":"击倒流浪剑士",
+                "label":"擊倒流浪劍士",
                 "collect":66001,
                 "count":35
             }
@@ -1837,12 +1837,12 @@ exports.data = [
     {
         "questId":67,
         "questStage":30,
-        "title":"霸气的蓝裤衩",
-        "desc":"【暮色平原II】出现了穿着蓝裤衩的山贼头目，到处打劫，赶紧去击倒这个蓝裤衩吧！",
+        "title":"霸氣的藍褲衩",
+        "desc":"【暮色平原II】出現了穿著藍褲衩的山賊頭目，到處打劫，趕緊去擊倒這個藍褲衩吧！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒蓝裤衩山贼头目【BOSS】",
+                "label":"擊倒藍褲衩山賊頭目【BOSS】",
                 "collect":67001,
                 "count":1
             }
@@ -1862,12 +1862,12 @@ exports.data = [
     },
     {
         "questId":68,
-        "title":"这次是小蓝帽哦！",
-        "desc":"蓝帽游侠包围了整个暮色平原，再下去情况将很危险。",
+        "title":"這次是小藍帽哦！",
+        "desc":"藍帽遊俠包圍了整個暮色平原，再下去情況將很危險。",
         "objects":[
             {
                 "type":0,
-                "label":"击倒蓝帽游侠",
+                "label":"擊倒藍帽遊俠",
                 "collect":68001,
                 "count":35
             }
@@ -1888,12 +1888,12 @@ exports.data = [
     {
         "questId":69,
         "questStage":31,
-        "title":"暮色前哨战",
-        "desc":"佣兵们在【暮色平原III】建立了前哨战，前去看看情况。",
+        "title":"暮色前哨戰",
+        "desc":"傭兵們在【暮色平原III】建立了前哨戰，前去看看情況。",
         "objects":[
             {
                 "type":0,
-                "label":"通过暮色平原III",
+                "label":"通過暮色平原III",
                 "collect":69001,
                 "count":1
             }
@@ -1915,7 +1915,7 @@ exports.data = [
         "questId":70,
         "questStage":31,
         "title":"拯救村民",
-        "desc":"佣兵抓走大量村民做人质，前去【暮色平原III】的前哨战搭救他们。",
+        "desc":"傭兵抓走大量村民做人質，前去【暮色平原III】的前哨戰搭救他們。",
         "objects":[
             {
                 "type":0,
@@ -1940,12 +1940,12 @@ exports.data = [
     {
         "questId":71,
         "questStage":32,
-        "title":"剿灭佣兵残党",
-        "desc":"前哨战的残党聚集在了【暮色平原IV】，将他们彻底铲除！",
+        "title":"剿滅傭兵殘黨",
+        "desc":"前哨戰的殘黨聚集在了【暮色平原IV】，將他們徹底剷除！",
         "objects":[
             {
                 "type":0,
-                "label":"剿灭佣兵残党",
+                "label":"剿滅傭兵殘黨",
                 "collect":71001,
                 "count":1
             }
@@ -1966,12 +1966,12 @@ exports.data = [
     {
         "questId":72,
         "questStage":33,
-        "title":"翡翠突击",
-        "desc":"【暮色平原V】上出现了翡翠史莱姆，专门躲在草丛中袭击村民。",
+        "title":"翡翠突擊",
+        "desc":"【暮色平原V】上出現了翡翠史萊姆，專門躲在草叢中襲擊村民。",
         "objects":[
             {
                 "type":0,
-                "label":"击倒翡翠史莱姆【BOSS】",
+                "label":"擊倒翡翠史萊姆【BOSS】",
                 "collect":72001,
                 "count":1
             }
@@ -1992,12 +1992,12 @@ exports.data = [
     {
         "questId":73,
         "questStage":33,
-        "title":"翠绿怪兽",
-        "desc":"【暮色平原V】出现了翠绿色的野兽，异常可怕。",
+        "title":"翠綠怪獸",
+        "desc":"【暮色平原V】出現了翠綠色的野獸，異常可怕。",
         "objects":[
             {
                 "type":0,
-                "label":"击倒翠绿怪兽【BOSS】",
+                "label":"擊倒翠綠怪獸【BOSS】",
                 "collect":73001,
                 "count":1
             }
@@ -2020,11 +2020,11 @@ exports.data = [
         "questId":74,
         "questStage":34,
         "title":"翡翠二重奏",
-        "desc":"【暮色平原VI】同时出现两只翡翠史莱姆，趁变更多之前消灭它们吧。",
+        "desc":"【暮色平原VI】同時出現兩隻翡翠史萊姆，趁變更多之前消滅它們吧。",
         "objects":[
             {
                 "type":0,
-                "label":"击倒翡翠史莱姆【BOSS】",
+                "label":"擊倒翡翠史萊姆【BOSS】",
                 "collect":74001,
                 "count":2
             }
@@ -2045,12 +2045,12 @@ exports.data = [
     {
         "questId":75,
         "questStage":35,
-        "title":"斗狼之魂",
-        "desc":"【暮色平原VII】聚集着大量斗狼，似乎传说中的斗狼之魂即将降临。",
+        "title":"鬥狼之魂",
+        "desc":"【暮色平原VII】聚集著大量鬥狼，似乎傳說中的鬥狼之魂即將降臨。",
         "objects":[
             {
                 "type":0,
-                "label":"击倒斗狼之魂【BOSS】",
+                "label":"擊倒鬥狼之魂【BOSS】",
                 "collect":75001,
                 "count":1
             }
@@ -2075,18 +2075,18 @@ exports.data = [
     {
         "questId":76,
         "questStage":35,
-        "title":"野兽共斗",
-        "desc":"将【暮色平原VII】上的两大怪物击倒。",
+        "title":"野獸共鬥",
+        "desc":"將【暮色平原VII】上的兩大怪物擊倒。",
         "objects":[
             {
                 "type":0,
-                "label":"击倒斗狼之魂【BOSS】",
+                "label":"擊倒鬥狼之魂【BOSS】",
                 "collect":75001,
                 "count":1
             },
             {
                 "type":0,
-                "label":"击倒翡翠野兽【BOSS】",
+                "label":"擊倒翡翠野獸【BOSS】",
                 "collect":76001,
                 "count":1
             }
@@ -2112,12 +2112,12 @@ exports.data = [
     {
         "questId":77,
         "questStage":36,
-        "title":"探索兽人营地",
-        "desc":"探索【野蛮哨站I】。",
+        "title":"探索獸人營地",
+        "desc":"探索【野蠻哨站I】。",
         "objects":[
             {
                 "type":0,
-                "label":"探索野蛮哨站I",
+                "label":"探索野蠻哨站I",
                 "collect":77001,
                 "count":1
             }
@@ -2137,12 +2137,12 @@ exports.data = [
     },
     {
         "questId":78,
-        "title":"扫清障碍",
-        "desc":"野蛮哨站中的侦察兵黄色哥布林，阻碍了探索的进程，先扫清一下障碍吧。",
+        "title":"掃清障礙",
+        "desc":"野蠻哨站中的偵察兵黃色哥布林，阻礙了探索的進程，先掃清一下障礙吧。",
         "objects":[
             {
                 "type":0,
-                "label":"击倒黄色哥布林",
+                "label":"擊倒黃色哥布林",
                 "collect":78001,
                 "count":50
             }
@@ -2163,12 +2163,12 @@ exports.data = [
     {
         "questId":79,
         "questStage":37,
-        "title":"击破部落哨岗",
-        "desc":"将【野蛮哨站II】的前哨岗给击破，保证探查工作的进行",
+        "title":"擊破部落哨崗",
+        "desc":"將【野蠻哨站II】的前哨崗給擊破，保證探查工作的進行",
         "objects":[
             {
                 "type":0,
-                "label":"击破野蛮哨站II",
+                "label":"擊破野蠻哨站II",
                 "collect":79001,
                 "count":1
             }
@@ -2189,12 +2189,12 @@ exports.data = [
     {
         "questId":80,
         "questStage":37,
-        "title":"找回走失的杰克",
-        "desc":"杰克一人去了【野蛮哨站II】找寻自己的父亲，至今没有音讯，前去看看。",
+        "title":"找回走失的傑克",
+        "desc":"傑克一人去了【野蠻哨站II】找尋自己的父親，至今沒有音訊，前去看看。",
         "objects":[
             {
                 "type":0,
-                "label":"找到杰克",
+                "label":"找到傑克",
                 "collect":80001,
                 "count":1
             }
@@ -2215,12 +2215,12 @@ exports.data = [
     {
         "questId":81,
         "questStage":38,
-        "title":"野蛮哨站的异动",
-        "desc":"兽族小队长银灵狼骑兵目前在【野蛮哨站III】，前去探查情况。",
+        "title":"野蠻哨站的異動",
+        "desc":"獸族小隊長銀靈狼騎兵目前在【野蠻哨站III】，前去探查情況。",
         "objects":[
             {
                 "type":0,
-                "label":"击倒银灵狼骑兵【BOSS】",
+                "label":"擊倒銀靈狼騎兵【BOSS】",
                 "collect":81001,
                 "count":1
             }
@@ -2241,12 +2241,12 @@ exports.data = [
     {
         "questId":82,
         "questStage":38,
-        "title":"神秘的佣兵",
-        "desc":"在【野蛮哨站III】出现神秘的佣兵剑士，难道和杰克的父亲有什么关系？",
+        "title":"神秘的傭兵",
+        "desc":"在【野蠻哨站III】出現神秘的傭兵劍士，難道和傑克的父親有什麼關係？",
         "objects":[
             {
                 "type":0,
-                "label":"击倒佣兵剑士【BOSS】",
+                "label":"擊倒傭兵劍士【BOSS】",
                 "collect":82001,
                 "count":1
             }
@@ -2267,12 +2267,12 @@ exports.data = [
     {
         "questId":83,
         "questStage":39,
-        "title":"野蛮哨站调查令I",
-        "desc":"前往【野蛮哨站IV】进行深入调查，寻找神秘的佣兵。",
+        "title":"野蠻哨站調查令I",
+        "desc":"前往【野蠻哨站IV】進行深入調查，尋找神秘的傭兵。",
         "objects":[
             {
                 "type":0,
-                "label":"通过野蛮哨站IV",
+                "label":"通過野蠻哨站IV",
                 "collect":83001,
                 "count":1
             }
@@ -2292,12 +2292,12 @@ exports.data = [
     },
     {
         "questId":84,
-        "title":"考古调查",
-        "desc":"野蛮哨站出现了大量不死骷髅，收集残骸来给考古学家吧。",
+        "title":"考古調查",
+        "desc":"野蠻哨站出現了大量不死骷髏，收集殘骸來給考古學家吧。",
         "objects":[
             {
                 "type":0,
-                "label":"收集大刀骷髅残骸",
+                "label":"收集大刀骷髏殘骸",
                 "collect":84001,
                 "count":100
             }
@@ -2318,12 +2318,12 @@ exports.data = [
     {
         "questId":85,
         "questStage":40,
-        "title":"哥布林酋长的威胁",
-        "desc":"哥布林们已经觉察到我们的探查，哥布林酋长正在【野蛮哨站V】集结部队对我们反击，前去击破它们！",
+        "title":"哥布林酋長的威脅",
+        "desc":"哥布林們已經覺察到我們的探查，哥布林酋長正在【野蠻哨站V】集結部隊對我們反擊，前去擊破它們！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒哥布林酋长【BOSS】",
+                "label":"擊倒哥布林酋長【BOSS】",
                 "collect":85001,
                 "count":1
             }
@@ -2344,12 +2344,12 @@ exports.data = [
     {
         "questId":86,
         "questStage":40,
-        "title":"还魂草传说I",
-        "desc":"杰克的父亲为了寻找传说中的还魂草，踏上了佣兵之路，听说这种草生长在【野蛮哨站V】附近。",
+        "title":"還魂草傳說I",
+        "desc":"傑克的父親為了尋找傳說中的還魂草，踏上了傭兵之路，聽說這種草生長在【野蠻哨站V】附近。",
         "objects":[
             {
                 "type":0,
-                "label":"收集还魂草",
+                "label":"收集還魂草",
                 "collect":86001,
                 "count":3
             }
@@ -2370,12 +2370,12 @@ exports.data = [
     {
         "questId":87,
         "questStage":41,
-        "title":"野蛮哨站调查令II",
-        "desc":"深入调查兽人大本营【野蛮哨站VI】",
+        "title":"野蠻哨站調查令II",
+        "desc":"深入調查獸人大本營【野蠻哨站VI】",
         "objects":[
             {
                 "type":0,
-                "label":"探索野蛮哨站VI",
+                "label":"探索野蠻哨站VI",
                 "collect":87001,
                 "count":1
             }
@@ -2396,12 +2396,12 @@ exports.data = [
     {
         "questId":88,
         "questStage":41,
-        "title":"还魂草传说II",
-        "desc":"杰克的父亲正是此前的佣兵剑士，但似乎失去了之前的记忆，赶紧去【野蛮哨站VI】把他带回来吧！",
+        "title":"還魂草傳說II",
+        "desc":"傑克的父親正是此前的傭兵劍士，但似乎失去了之前的記憶，趕緊去【野蠻哨站VI】把他帶回來吧！",
         "objects":[
             {
                 "type":0,
-                "label":"打倒佣兵剑士【BOSS】",
+                "label":"打倒傭兵劍士【BOSS】",
                 "collect":88001,
                 "count":1
             }
@@ -2422,12 +2422,12 @@ exports.data = [
     {
         "questId":89,
         "questStage":41,
-        "title":"还魂草传说III",
-        "desc":"杰克父亲已经恢复，据说是把迷魂草当成还魂草了，导致失去了理智，去【野蛮哨站VI】把这些害人的植物除尽吧。",
+        "title":"還魂草傳說III",
+        "desc":"傑克父親已經恢復，據說是把迷魂草當成還魂草了，導致失去了理智，去【野蠻哨站VI】把這些害人的植物除盡吧。",
         "objects":[
             {
                 "type":0,
-                "label":"销毁迷魂草",
+                "label":"銷毀迷魂草",
                 "collect":89001,
                 "count":2
             }
@@ -2454,12 +2454,12 @@ exports.data = [
     {
         "questId":90,
         "questStage":42,
-        "title":"野蛮哨站幕后黑手",
-        "desc":"找到了一直潜伏着的剑士，现在躲在【野蛮哨站VII】，前去击败他！",
+        "title":"野蠻哨站幕後黑手",
+        "desc":"找到了一直潛伏著的劍士，現在躲在【野蠻哨站VII】，前去擊敗他！",
         "objects":[
             {
                 "type":0,
-                "label":"击败剑圣",
+                "label":"擊敗劍聖",
                 "collect":90001,
                 "count":1
             }
@@ -2484,30 +2484,30 @@ exports.data = [
     {
         "questId":91,
         "questStage":42,
-        "title":"挑战野蛮哨站",
-        "desc":"【野蛮哨站VII】中的剑圣与兽族联手，你是否能够通过这个挑战？",
+        "title":"挑戰野蠻哨站",
+        "desc":"【野蠻哨站VII】中的劍聖與獸族聯手，你是否能夠通過這個挑戰？",
         "objects":[
             {
                 "type":0,
-                "label":"击败剑圣",
+                "label":"擊敗劍聖",
                 "collect":90001,
                 "count":1
             },
             {
                 "type":0,
-                "label":"击败银斧",
+                "label":"擊敗銀斧",
                 "collect":91001,
                 "count":2
             },
             {
                 "type":0,
-                "label":"击败金斧",
+                "label":"擊敗金斧",
                 "collect":91002,
                 "count":2
             },
             {
                 "type":0,
-                "label":"击败翠灵",
+                "label":"擊敗翠靈",
                 "collect":91003,
                 "count":2
             }
@@ -2533,12 +2533,12 @@ exports.data = [
     {
         "questId":92,
         "questStage":43,
-        "title":"山贼的节操？",
-        "desc":"号称只在山上抢劫的卡斯山贼头目，目前出现在了【旋风谷I】，去给他点教训吧。",
+        "title":"山賊的節操？",
+        "desc":"號稱只在山上搶劫的卡斯山賊頭目，目前出現在了【旋風穀I】，去給他點教訓吧。",
         "objects":[
             {
                 "type":0,
-                "label":"击败卡斯山贼头目【BOSS】",
+                "label":"擊敗卡斯山賊頭目【BOSS】",
                 "collect":92001,
                 "count":1
             }
@@ -2558,24 +2558,24 @@ exports.data = [
     },
     {
         "questId":93,
-        "title":"山崖矿石寻找之旅",
-        "desc":"旋风谷的独有矿石让汤姆大叔激动不已，收集齐3种矿石给他吧！",
+        "title":"山崖礦石尋找之旅",
+        "desc":"旋風穀的獨有礦石讓湯姆大叔激動不已，收集齊3種礦石給他吧！",
         "objects":[
             {
                 "type":0,
-                "label":"收集神秘矿石1",
+                "label":"收集神秘礦石1",
                 "collect":93001,
                 "count":4
             },
             {
                 "type":0,
-                "label":"收集神秘矿石2",
+                "label":"收集神秘礦石2",
                 "collect":93002,
                 "count":4
             },
             {
                 "type":0,
-                "label":"收集神秘矿石3",
+                "label":"收集神秘礦石3",
                 "collect":93003,
                 "count":4
             }
@@ -2596,12 +2596,12 @@ exports.data = [
     {
         "questId":94,
         "questStage":48,
-        "title":"矿石结晶",
-        "desc":"旋风谷的神秘矿石存在结晶，不过在【旋风谷VI】被强力的怪物守护着，去收集带给汤姆大叔吧！",
+        "title":"礦石結晶",
+        "desc":"旋風穀的神秘礦石存在結晶，不過在【旋風谷VI】被強力的怪物守護著，去收集帶給湯姆大叔吧！",
         "objects":[
             {
                 "type":0,
-                "label":"获得神秘矿石结晶",
+                "label":"獲得神秘礦石結晶",
                 "collect":94001,
                 "count":1
 
@@ -2623,12 +2623,12 @@ exports.data = [
     {
         "questId":95,
         "questStage":44,
-        "title":"山贼的教训！",
-        "desc":"卡斯山贼头目在【旋风谷II】招兵买马，看来上次没有尝到教训，再来给他们一记吧！",
+        "title":"山賊的教訓！",
+        "desc":"卡斯山賊頭目在【旋風穀II】招兵買馬，看來上次沒有嘗到教訓，再來給他們一記吧！",
         "objects":[
             {
                 "type":0,
-                "label":"击破旋风谷II",
+                "label":"擊破旋風穀II",
                 "collect":95001,
                 "count":1
             }
@@ -2648,12 +2648,12 @@ exports.data = [
     },
     {
         "questId":96,
-        "title":"小粉红大爱！",
-        "desc":"村子里突然流行起了粉红热，赶紧去抓几只粉红狼蛛来当宠物卖，大赚一笔的机会到了！",
+        "title":"小粉紅大愛！",
+        "desc":"村子裡突然流行起了粉紅熱，趕緊去抓幾隻粉紅狼蛛來當寵物賣，大賺一筆的機會到了！",
         "objects":[
             {
                 "type":0,
-                "label":"收集粉红狼蛛",
+                "label":"收集粉紅狼蛛",
                 "collect":96001,
                 "count":65
             }
@@ -2674,12 +2674,12 @@ exports.data = [
     {
         "questId":97,
         "questStage":45,
-        "title":"佣兵剑士的讨伐",
-        "desc":"【旋风谷III】上的佣兵剑士，专门抢夺过路行人，比山贼还恶劣，为村民们除害吧！",
+        "title":"傭兵劍士的討伐",
+        "desc":"【旋風穀III】上的傭兵劍士，專門搶奪過路行人，比山賊還惡劣，為村民們除害吧！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒佣兵剑士【BOSS】",
+                "label":"擊倒傭兵劍士【BOSS】",
                 "collect":97001,
                 "count":1
             }
@@ -2700,12 +2700,12 @@ exports.data = [
     {
         "questId":98,
         "questStage":45,
-        "title":"找回失踪的恋人",
-        "desc":"雪莉因为与恋人吵架而一个人去了【旋风谷III】，可能会出事情，赶紧帮忙找回她吧。",
+        "title":"找回失蹤的戀人",
+        "desc":"雪麗因為與戀人吵架而一個人去了【旋風穀III】，可能會出事情，趕緊幫忙找回她吧。",
         "objects":[
             {
                 "type":0,
-                "label":"找到雪莉",
+                "label":"找到雪麗",
                 "collect":98001,
                 "count":1
             }
@@ -2726,12 +2726,12 @@ exports.data = [
     {
         "questId":99,
         "questStage":46,
-        "title":"击破黄金史莱姆",
-        "desc":"浑身金色的史莱姆出现在了【旋风谷IV】，异常危险，前去击倒它吧！",
+        "title":"擊破黃金史萊姆",
+        "desc":"渾身金色的史萊姆出現在了【旋風穀IV】，異常危險，前去擊倒它吧！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒黄金史莱姆【BOSS】",
+                "label":"擊倒黃金史萊姆【BOSS】",
                 "collect":99001,
                 "count":1
             }
@@ -2752,18 +2752,18 @@ exports.data = [
     {
         "questId":100,
         "questStage":46,
-        "title":"黄金三连星",
-        "desc":"金色史莱姆找来小伙伴打算一雪前耻，目前正在【旋风谷IV】，前去击倒它们！",
+        "title":"黃金三連星",
+        "desc":"金色史萊姆找來小夥伴打算一雪前恥，目前正在【旋風穀IV】，前去擊倒它們！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒黄金史莱姆【BOSS】",
+                "label":"擊倒黃金史萊姆【BOSS】",
                 "collect":99001,
                 "count":1
             },
             {
                 "type":0,
-                "label":"击倒黄金史莱姆小伙伴【BOSS】",
+                "label":"擊倒黃金史萊姆小夥伴【BOSS】",
                 "collect":100001,
                 "count":2
             }
@@ -2785,12 +2785,12 @@ exports.data = [
     {
         "questId":101,
         "questStage":47,
-        "title":"旋风谷挑战任务I",
-        "desc":"前往【旋风谷V】击倒怪物通过关卡。",
+        "title":"旋風穀挑戰任務I",
+        "desc":"前往【旋風穀V】擊倒怪物通過關卡。",
         "objects":[
             {
                 "type":0,
-                "label":"通过旋风谷V",
+                "label":"通過旋風穀V",
                 "collect":101001,
                 "count":1
             }
@@ -2811,12 +2811,12 @@ exports.data = [
     {
         "questId":102,
         "questStage":48,
-        "title":"旋风谷挑战任务II",
-        "desc":"前往【旋风谷VI】击倒怪物通过关卡。",
+        "title":"旋風穀挑戰任務II",
+        "desc":"前往【旋風穀VI】擊倒怪物通過關卡。",
         "objects":[
             {
                 "type":0,
-                "label":"通过旋风谷VI",
+                "label":"通過旋風穀VI",
                 "collect":102001,
                 "count":1
             }
@@ -2837,12 +2837,12 @@ exports.data = [
     {
         "questId":103,
         "questStage":49,
-        "title":"旋风谷主人",
-        "desc":"旋风谷的主人凶恶山贼守在【旋风谷VII】击倒它向下一个地牢迈进吧！",
+        "title":"旋風谷主人",
+        "desc":"旋風谷的主人兇惡山賊守在【旋風穀VII】擊倒它向下一個地牢邁進吧！",
         "objects":[
             {
                 "type":0,
-                "label":"凶恶山贼【BOSS】",
+                "label":"兇惡山賊【BOSS】",
                 "collect":103001,
                 "count":1
             }
@@ -2868,11 +2868,11 @@ exports.data = [
         "questId":104,
         "questStage":50,
         "title":"密道上的不速之客",
-        "desc":"【丛林密道I】中出现了一群山贼，将他们的头目拿下！",
+        "desc":"【叢林密道I】中出現了一群山賊，將他們的頭目拿下！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒凶恶山贼【BOSS】",
+                "label":"擊倒兇惡山賊【BOSS】",
                 "collect":104001,
                 "count":1
             }
@@ -2892,12 +2892,12 @@ exports.data = [
     },
     {
         "questId":105,
-        "title":"黄金旋风",
-        "desc":"丛林密道中的黄金史莱姆严重泛滥，影响前进，前去驱散掉一部分！",
+        "title":"黃金旋風",
+        "desc":"叢林密道中的黃金史萊姆嚴重氾濫，影響前進，前去驅散掉一部分！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒黄金史莱姆",
+                "label":"擊倒黃金史萊姆",
                 "collect":105001,
                 "count":60
             }
@@ -2918,12 +2918,12 @@ exports.data = [
     {
         "questId":106,
         "questStage":51,
-        "title":"丛林游击队",
-        "desc":"通过【丛林密道II】打倒深处的丛林游击队。",
+        "title":"叢林遊擊隊",
+        "desc":"通過【叢林密道II】打倒深處的叢林遊擊隊。",
         "objects":[
             {
                 "type":0,
-                "label":"通过丛林密道II",
+                "label":"通過叢林密道II",
                 "collect":106001,
                 "count":1
             }
@@ -2943,8 +2943,8 @@ exports.data = [
     },
     {
         "questId":107,
-        "title":"密林深处的怪物I",
-        "desc":"村民在密林遇到了怪物，导致走散，去把他们救出来！",
+        "title":"密林深處的怪物I",
+        "desc":"村民在密林遇到了怪物，導致走散，去把他們救出來！",
         "objects":[
             {
                 "type":0,
@@ -2981,12 +2981,12 @@ exports.data = [
     {
         "questId":108,
         "questStage":54,
-        "title":"密林深处的怪物II",
-        "desc":"此前袭击村民的怪物已经锁定行踪，目前在【丛林密道V】，为村民们出口气！",
+        "title":"密林深處的怪物II",
+        "desc":"此前襲擊村民的怪物已經鎖定行蹤，目前在【叢林密道V】，為村民們出口氣！",
         "objects":[
             {
                 "type":0,
-                "label":"击杀密林怪物",
+                "label":"擊殺密林怪物",
                 "collect":108001,
                 "count":1
             }
@@ -3007,12 +3007,12 @@ exports.data = [
     {
         "questId":109,
         "questStage":52,
-        "title":"哥布林的决心I",
-        "desc":"最凶恶的地狱哥布林酋长目前在【丛林密道III】，前去击倒它。",
+        "title":"哥布林的決心I",
+        "desc":"最兇惡的地獄哥布林酋長目前在【叢林密道III】，前去擊倒它。",
         "objects":[
             {
                 "type":0,
-                "label":"击倒地狱哥布林酋长【BOSS】",
+                "label":"擊倒地獄哥布林酋長【BOSS】",
                 "collect":109001,
                 "count":1
             }
@@ -3033,12 +3033,12 @@ exports.data = [
     {
         "questId":110,
         "questStage":53,
-        "title":"哥布林的决心II",
-        "desc":"地狱哥布林酋长逃往了【丛林密道IV】，乘胜追击！",
+        "title":"哥布林的決心II",
+        "desc":"地獄哥布林酋長逃往了【叢林密道IV】，乘勝追擊！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒地狱哥布林酋长【BOSS】",
+                "label":"擊倒地獄哥布林酋長【BOSS】",
                 "collect":110001,
                 "count":1
             }
@@ -3059,12 +3059,12 @@ exports.data = [
     {
         "questId":111,
         "questStage":54,
-        "title":"来自丛林的挑战I",
-        "desc":"哥布林与山贼联手，在【丛林密道V】集结，要对你进行挑战！",
+        "title":"來自叢林的挑戰I",
+        "desc":"哥布林與山賊聯手，在【叢林密道V】集結，要對你進行挑戰！",
         "objects":[
             {
                 "type":0,
-                "label":"挑战丛林密道V",
+                "label":"挑戰叢林密道V",
                 "collect":111001,
                 "count":1
             }
@@ -3085,12 +3085,12 @@ exports.data = [
     {
         "questId":112,
         "questStage":55,
-        "title":"来自丛林的挑战II",
-        "desc":"哥布林与山贼联手，在【丛林密道VI】集结，要对你进行挑战！",
+        "title":"來自叢林的挑戰II",
+        "desc":"哥布林與山賊聯手，在【叢林密道VI】集結，要對你進行挑戰！",
         "objects":[
             {
                 "type":0,
-                "label":"挑战丛林密道VI",
+                "label":"挑戰叢林密道VI",
                 "collect":112001,
                 "count":1
             }
@@ -3111,8 +3111,8 @@ exports.data = [
     {
         "questId":113,
         "questStage":26,
-        "title":"找寻小小哥布林",
-        "desc":"汤姆大叔家的小小哥布林走丢了，听说混入【旋风谷V】",
+        "title":"找尋小小哥布林",
+        "desc":"湯姆大叔家的小小哥布林走丟了，聽說混入【旋風穀V】",
         "objects":[
             {
                 "type":0,
@@ -3136,12 +3136,12 @@ exports.data = [
     },
     {
         "questId":114,
-        "title":"地狱收割者",
-        "desc":"将地狱哥布林酋长一举歼灭，不给它们翻身的余地！",
+        "title":"地獄收割者",
+        "desc":"將地獄哥布林酋長一舉殲滅，不給它們翻身的餘地！",
         "objects":[
             {
                 "type":0,
-                "label":"击杀地狱哥布林酋长",
+                "label":"擊殺地獄哥布林酋長",
                 "collect":114001,
                 "count":35
             }
@@ -3163,11 +3163,11 @@ exports.data = [
         "questId":115,
         "questStage":56,
         "title":"密林征服者",
-        "desc":"将密林深处的食人魔守卫击倒就能到达巫师营地，前去征服密林吧！",
+        "desc":"將密林深處的食人魔守衛擊倒就能到達巫師營地，前去征服密林吧！",
         "objects":[
             {
                 "type":0,
-                "label":"击杀食人魔守卫【BOSS】",
+                "label":"擊殺食人魔守衛【BOSS】",
                 "collect":115001,
                 "count":1
             }
@@ -3192,12 +3192,12 @@ exports.data = [
     {
         "questId":116,
         "questStage":57,
-        "title":"寻找神秘草",
-        "desc":"【巫师营地I】中生长着神秘草，具有很大的药用价值。",
+        "title":"尋找神秘草",
+        "desc":"【巫師營地I】中生長著神秘草，具有很大的藥用價值。",
         "objects":[
             {
                 "type":0,
-                "label":"采集神秘草",
+                "label":"採集神秘草",
                 "collect":116001,
                 "count":3
             }
@@ -3218,12 +3218,12 @@ exports.data = [
     {
         "questId":117,
         "questStage":57,
-        "title":"邪恶巫师的助手",
-        "desc":"在【巫师营地I】中，巫师助手血色狼骑击倒！",
+        "title":"邪惡巫師的助手",
+        "desc":"在【巫師營地I】中，巫師助手血色狼騎擊倒！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒血色狼骑【BOSS】",
+                "label":"擊倒血色狼騎【BOSS】",
                 "collect":117001,
                 "count":1
             }
@@ -3243,12 +3243,12 @@ exports.data = [
     },
     {
         "questId":118,
-        "title":"兽人压制战",
-        "desc":"将巫师营地中的，兽人队长进行清理",
+        "title":"獸人壓制戰",
+        "desc":"將巫師營地中的，獸人隊長進行清理",
         "objects":[
             {
                 "type":0,
-                "label":"击倒兽人队长",
+                "label":"擊倒獸人隊長",
                 "collect":118001,
                 "count":75
             }
@@ -3269,12 +3269,12 @@ exports.data = [
     {
         "questId":119,
         "questStage":58,
-        "title":"巫师营地调查I",
-        "desc":"对【巫师营地II】进行调查",
+        "title":"巫師營地調查I",
+        "desc":"對【巫師營地II】進行調查",
         "objects":[
             {
                 "type":0,
-                "label":"调查巫师营地II",
+                "label":"調查巫師營地II",
                 "collect":119001,
                 "count":1
             }
@@ -3295,12 +3295,12 @@ exports.data = [
     {
         "questId":120,
         "questStage":59,
-        "title":"巫师营地调查II",
-        "desc":"对【巫师营地III】进行调查",
+        "title":"巫師營地調查II",
+        "desc":"對【巫師營地III】進行調查",
         "objects":[
             {
                 "type":0,
-                "label":"调查巫师营地III",
+                "label":"調查巫師營地III",
                 "collect":120001,
                 "count":1
             }
@@ -3321,12 +3321,12 @@ exports.data = [
     {
         "questId":121,
         "questStage":60,
-        "title":"巫师营地调查III",
-        "desc":"对【巫师营地IV】进行调查",
+        "title":"巫師營地調查III",
+        "desc":"對【巫師營地IV】進行調查",
         "objects":[
             {
                 "type":0,
-                "label":"调查巫师营地IV",
+                "label":"調查巫師營地IV",
                 "collect":121001,
                 "count":1
             }
@@ -3347,12 +3347,12 @@ exports.data = [
     {
         "questId":122,
         "questStage":61,
-        "title":"巫师营地调查IV",
-        "desc":"对【巫师营地V】进行调查",
+        "title":"巫師營地調查IV",
+        "desc":"對【巫師營地V】進行調查",
         "objects":[
             {
                 "type":0,
-                "label":"调查巫师营地V",
+                "label":"調查巫師營地V",
                 "collect":122001,
                 "count":1
             }
@@ -3373,12 +3373,12 @@ exports.data = [
     {
         "questId":123,
         "questStage":62,
-        "title":"巫师营地调查V",
-        "desc":"对【巫师营地VI】进行调查",
+        "title":"巫師營地調查V",
+        "desc":"對【巫師營地VI】進行調查",
         "objects":[
             {
                 "type":0,
-                "label":"调查巫师营地VI",
+                "label":"調查巫師營地VI",
                 "collect":123001,
                 "count":1
             }
@@ -3399,12 +3399,12 @@ exports.data = [
     {
         "questId":124,
         "questStage":63,
-        "title":"巫师贴身护卫",
-        "desc":"巫师的贴身护卫目前在【巫师营地VII】，击倒他将巫师营地询问巫师下落。",
+        "title":"巫師貼身護衛",
+        "desc":"巫師的貼身護衛目前在【巫師營地VII】，擊倒他將巫師營地詢問巫師下落。",
         "objects":[
             {
                 "type":0,
-                "label":"击倒巫师护卫【BOSS】",
+                "label":"擊倒巫師護衛【BOSS】",
                 "collect":124001,
                 "count":1
             }
@@ -3428,24 +3428,24 @@ exports.data = [
     },
     {
         "questId":125,
-        "title":"巫师的炼制结晶",
-        "desc":"巫师的炼金术残余魔力形成结晶，或许是锻造的最佳材料。",
+        "title":"巫師的煉製結晶",
+        "desc":"巫師的煉金術殘餘魔力形成結晶，或許是鍛造的最佳材料。",
         "objects":[
             {
                 "type":0,
-                "label":"收集炼制结晶I",
+                "label":"收集煉製結晶I",
                 "collect":125001,
                 "count":2
             },
             {
                 "type":0,
-                "label":"收集炼制结晶II",
+                "label":"收集煉製結晶II",
                 "collect":125002,
                 "count":2
             },
             {
                 "type":0,
-                "label":"收集炼制结晶III",
+                "label":"收集煉製結晶III",
                 "collect":125003,
                 "count":2
             }
@@ -3465,12 +3465,12 @@ exports.data = [
     },
     {
         "questId":126,
-        "title":"血色狼骑追杀令",
-        "desc":"将巫师的走狗血色狼骑彻底铲除！",
+        "title":"血色狼騎追殺令",
+        "desc":"將巫師的走狗血色狼騎徹底剷除！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒血色狼骑",
+                "label":"擊倒血色狼騎",
                 "collect":126001,
                 "count":60
             }
@@ -3491,12 +3491,12 @@ exports.data = [
     {
         "questId":127,
         "questStage":62,
-        "title":"被巫师捉走村民的下落",
-        "desc":"巫师捉走了大量村民，前去【巫师营地VI】搭救",
+        "title":"被巫師捉走村民的下落",
+        "desc":"巫師捉走了大量村民，前去【巫師營地VI】搭救",
         "objects":[
             {
                 "type":0,
-                "label":"营救村民",
+                "label":"營救村民",
                 "collect":127001,
                 "count":3
             }
@@ -3523,12 +3523,12 @@ exports.data = [
         }
         ,
         "hidden": true,
-        "title":"寻找小伙伴的牧师",
-        "desc":"新手牧师被困在地牢里，赶紧前去营救",
+        "title":"尋找小夥伴的牧師",
+        "desc":"新手牧師被困在地牢裡，趕緊前去營救",
         "objects":[
             {
                 "type":0,
-                "label":"找到小伙伴的牧师",
+                "label":"找到小夥伴的牧師",
                 "collect":128001,
                 "count":1
             }
@@ -3550,12 +3550,12 @@ exports.data = [
         }
         ,
         "hidden": true,
-        "title":"驱逐野狼",
-        "desc":"野狼又到发情期了，整晚叫唤让人怎么睡？！为村民们驱赶野狼吧！",
+        "title":"驅逐野狼",
+        "desc":"野狼又到發情期了，整晚叫喚讓人怎麼睡？！為村民們驅趕野狼吧！",
         "objects":[
             {
                 "type":0,
-                "label":"击杀10只野狼",
+                "label":"擊殺10只野狼",
                 "collect":129001,
                 "count":10
             }
@@ -3577,12 +3577,12 @@ exports.data = [
         }
         ,
         "hidden": true,
-        "title":"讨厌的哥布林",
-        "desc":"贱贱的哥布林们真让人讨厌，去把他们赶跑吧！",
+        "title":"討厭的哥布林",
+        "desc":"賤賤的哥布林們真讓人討厭，去把他們趕跑吧！",
         "objects":[
             {
                 "type":0,
-                "label":"击杀5只哥布林",
+                "label":"擊殺5只哥布林",
                 "collect":130001,
                 "count":5
             }
@@ -3604,12 +3604,12 @@ exports.data = [
         }
         ,
         "hidden": true,
-        "title":"寻找武器锻造学徒",
-        "desc":"汤姆大叔的学徒为了寻找锻造材料一个人去了地下城情况可能非常危险，去把他找回来吧！",
+        "title":"尋找武器鍛造學徒",
+        "desc":"湯姆大叔的學徒為了尋找鍛造材料一個人去了地下城情況可能非常危險，去把他找回來吧！",
         "objects":[
             {
                 "type":0,
-                "label":"找到汤姆大叔的学徒",
+                "label":"找到湯姆大叔的學徒",
                 "collect":131001,
                 "count":1
             }
@@ -3631,12 +3631,12 @@ exports.data = [
         }
         ,
         "hidden": true,
-        "title":"矿石收集之旅",
-        "desc":"汤姆大叔需要卡姆矿石，前往收集",
+        "title":"礦石收集之旅",
+        "desc":"湯姆大叔需要卡姆礦石，前往收集",
         "objects":[
             {
                 "type":0,
-                "label":"收集3枚卡姆矿石",
+                "label":"收集3枚卡姆礦石",
                 "collect":132001,
                 "count":3
             }
@@ -3658,12 +3658,12 @@ exports.data = [
         }
         ,
         "hidden": true,
-        "title":"闪灵草采集",
-        "desc":"前往地下城采集神奇的闪灵草",
+        "title":"閃靈草採集",
+        "desc":"前往地下城採集神奇的閃靈草",
         "objects":[
             {
                 "type":0,
-                "label":"采集5株闪灵草",
+                "label":"採集5株閃靈草",
                 "collect":133001,
                 "count":5
             }
@@ -3685,12 +3685,12 @@ exports.data = [
         }
         ,
         "hidden": true,
-        "title":"找寻失踪的村民",
-        "desc":"好几个村民都失踪了，去把她们找回来吧！",
+        "title":"找尋失蹤的村民",
+        "desc":"好幾個村民都失蹤了，去把她們找回來吧！",
         "objects":[
             {
                 "type":0,
-                "label":"找寻失踪的村民",
+                "label":"找尋失蹤的村民",
                 "collect":134001,
                 "count":3
             }
@@ -3711,8 +3711,8 @@ exports.data = [
         ]
         },
         "hidden": true,
-        "title":"寻找被山贼捉走的村民",
-        "desc":"寻找被山贼捉走的村民",
+        "title":"尋找被山賊捉走的村民",
+        "desc":"尋找被山賊捉走的村民",
         "objects":[
             {
                 "type":0,
@@ -3737,12 +3737,12 @@ exports.data = [
         ]
         },
         "hidden": true,
-        "title":"食人魔的困扰",
-        "desc":"地下城冒出一批食人魔，太恐怖了，帮大家击倒这些怪物！",
+        "title":"食人魔的困擾",
+        "desc":"地下城冒出一批食人魔，太恐怖了，幫大家擊倒這些怪物！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒食人魔",
+                "label":"擊倒食人魔",
                 "collect":136001,
                 "count":5
             }
@@ -3764,12 +3764,12 @@ exports.data = [
         }
         ,
         "hidden": true,
-        "title":"古老秘宝",
-        "desc":"找到失踪已久的古老秘宝！",
+        "title":"古老秘寶",
+        "desc":"找到失蹤已久的古老秘寶！",
         "objects":[
             {
                 "type":0,
-                "label":"找到古之秘宝",
+                "label":"找到古之秘寶",
                 "collect":137001,
                 "count":1
             }
@@ -3791,12 +3791,12 @@ exports.data = [
         }
         ,
         "hidden": true,
-        "title":"击败暗影狼骑",
-        "desc":"击杀暗影狼骑。",
+        "title":"擊敗暗影狼騎",
+        "desc":"擊殺暗影狼騎。",
         "objects":[
             {
                 "type":0,
-                "label":"打倒暗影狼骑",
+                "label":"打倒暗影狼騎",
                 "collect":138001,
                 "count":1
             }
@@ -3818,12 +3818,12 @@ exports.data = [
         }
         ,
         "hidden": true,
-        "title":"考古学家的委托",
-        "desc":"将地下城中上古战士骷髅兵击倒，把残骸带给考古学家研究",
+        "title":"考古學家的委託",
+        "desc":"將地下城中上古戰士骷髏兵擊倒，把殘骸帶給考古學家研究",
         "objects":[
             {
                 "type":0,
-                "label":"击倒骷髅兵",
+                "label":"擊倒骷髏兵",
                 "collect":139001,
                 "count":20
             }
@@ -3845,12 +3845,12 @@ exports.data = [
         }
         ,
         "hidden": true,
-        "title":"寻找古怪的考古学家",
-        "desc":"脾气古怪的考古学家一个人走失在地下城中，去救他出来吧",
+        "title":"尋找古怪的考古學家",
+        "desc":"脾氣古怪的考古學家一個人走失在地下城中，去救他出來吧",
         "objects":[
             {
                 "type":0,
-                "label":"找寻失踪的村民",
+                "label":"找尋失蹤的村民",
                 "collect":140001,
                 "count":1
             }
@@ -3872,12 +3872,12 @@ exports.data = [
         }
         ,
         "hidden": true,
-        "title":"翡翠史莱姆的逆袭",
-        "desc":"打倒两坨让人厌恶的翡翠史莱姆",
+        "title":"翡翠史萊姆的逆襲",
+        "desc":"打倒兩坨讓人厭惡的翡翠史萊姆",
         "objects":[
             {
                 "type":0,
-                "label":"打倒翡翠史莱姆",
+                "label":"打倒翡翠史萊姆",
                 "collect":141001,
                 "count":2
             }
@@ -3899,12 +3899,12 @@ exports.data = [
         }
         ,
         "hidden": true,
-        "title":"城管大队出击",
-        "desc":"跟随城管大队一同出击，对盗贼团伙进行扫荡突击！",
+        "title":"城管大隊出擊",
+        "desc":"跟隨城管大隊一同出擊，對盜賊團夥進行掃蕩突擊！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒蓝帽盗贼",
+                "label":"擊倒藍帽盜賊",
                 "collect":142001,
                 "count":6
             }
@@ -3926,8 +3926,8 @@ exports.data = [
         }
         ,
         "hidden": true,
-        "title":"除草行动",
-        "desc":"最近一种有毒的植物爆发式增长，趁未对人造成影响之前去清除部分。",
+        "title":"除草行動",
+        "desc":"最近一種有毒的植物爆發式增長，趁未對人造成影響之前去清除部分。",
         "objects":[
             {
                 "type":0,
@@ -3953,12 +3953,12 @@ exports.data = [
         }
         ,
         "hidden": true,
-        "title":"击败恐怖剑士",
-        "desc":"恐怖剑士四处为害，为村民铲除这个恶棍吧！",
+        "title":"擊敗恐怖劍士",
+        "desc":"恐怖劍士四處為害，為村民剷除這個惡棍吧！",
         "objects":[
             {
                 "type":0,
-                "label":"打倒恐怖剑士",
+                "label":"打倒恐怖劍士",
                 "collect":144001,
                 "count":1
             }
@@ -3980,12 +3980,12 @@ exports.data = [
         }
         ,
         "hidden": true,
-        "title":"死灰投斧怪的噩梦",
-        "desc":"一群死灰投斧怪出现了，非常烦人，击倒它们！",
+        "title":"死灰投斧怪的噩夢",
+        "desc":"一群死灰投斧怪出現了，非常煩人，擊倒它們！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒死灰投斧怪",
+                "label":"擊倒死灰投斧怪",
                 "collect":145001,
                 "count":3
             }
@@ -4007,12 +4007,12 @@ exports.data = [
         }
         ,
         "hidden": true,
-        "title":"采集迷之矿石",
-        "desc":"汤姆大叔探测到了一种迷之矿石，前去地下城把这种矿石给采集过来",
+        "title":"採集迷之礦石",
+        "desc":"湯姆大叔探測到了一種迷之礦石，前去地下城把這種礦石給採集過來",
         "objects":[
             {
                 "type":0,
-                "label":"找到迷之矿石",
+                "label":"找到迷之礦石",
                 "collect":146001,
                 "count":1
             }
@@ -4034,12 +4034,12 @@ exports.data = [
         }
         ,
         "hidden": true,
-        "title":"击败恶霸山贼",
-        "desc":"击杀大恶霸山贼。",
+        "title":"擊敗惡霸山賊",
+        "desc":"擊殺大惡霸山賊。",
         "objects":[
             {
                 "type":0,
-                "label":"打倒恶霸山贼",
+                "label":"打倒惡霸山賊",
                 "collect":147001,
                 "count":1
             }
@@ -4062,11 +4062,11 @@ exports.data = [
         ,
         "hidden": true,
         "title":"恐怖的血蜘蛛",
-        "desc":"不少村民被血蜘蛛给袭击，前去击倒血蜘蛛！",
+        "desc":"不少村民被血蜘蛛給襲擊，前去擊倒血蜘蛛！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒血蜘蛛",
+                "label":"擊倒血蜘蛛",
                 "collect":148001,
                 "count":8
             }
@@ -4088,12 +4088,12 @@ exports.data = [
         }
         ,
         "hidden": true,
-        "title":"来自商队的求救信号",
-        "desc":"商队遭到了袭击，部分商队成员失踪，帮忙去把他们找回来！",
+        "title":"來自商隊的求救信號",
+        "desc":"商隊遭到了襲擊，部分商隊成員失蹤，幫忙去把他們找回來！",
         "objects":[
             {
                 "type":0,
-                "label":"救出失踪的商队成员",
+                "label":"救出失蹤的商隊成員",
                 "collect":149001,
                 "count":3
             }
@@ -4115,12 +4115,12 @@ exports.data = [
         }
         ,
         "hidden": true,
-        "title":"击败地狱哥布林酋长",
-        "desc":"将地下城深处的地狱哥布林酋长一举击败",
+        "title":"擊敗地獄哥布林酋長",
+        "desc":"將地下城深處的地獄哥布林酋長一舉擊敗",
         "objects":[
             {
                 "type":0,
-                "label":"打倒地狱哥布林酋长",
+                "label":"打倒地獄哥布林酋長",
                 "collect":150001,
                 "count":1
             }
@@ -4142,12 +4142,12 @@ exports.data = [
         }
         ,
         "hidden": true,
-        "title":"黑色旋风",
-        "desc":"有黑色旋风之称的黑牙狼在地下城肆虐，击败它们！",
+        "title":"黑色旋風",
+        "desc":"有黑色旋風之稱的黑牙狼在地下城肆虐，擊敗它們！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒黑牙狼",
+                "label":"擊倒黑牙狼",
                 "collect":151001,
                 "count":9
             }
@@ -4162,12 +4162,12 @@ exports.data = [
     },
     {
         "questId":152,
-        "title":"多姆村村长的踪迹",
-        "desc":"失踪已久的村长大人被人在【多姆洞穴VII】发现，赶紧去把他救回来！",
+        "title":"多姆村村長的蹤跡",
+        "desc":"失蹤已久的村長大人被人在【多姆洞穴VII】發現，趕緊去把他救回來！",
         "objects":[
             {
                 "type":0,
-                "label":"救出多姆村村长",
+                "label":"救出多姆村村長",
                 "collect":152001,
                 "count":1
             }
@@ -4184,37 +4184,37 @@ exports.data = [
 
     },
     {
-    "questId":153,
-    "questStage":104,
-    "title":"踏上征程",
-    "desc":"击破首个地下城，踏出自己探险的第一步",
-    "objects":[
-        {
-            "type":0,
-            "label":"击破首个地下城",
-            "collect":153001,
-            "count":1
-        }
-    ],
-    "prize":[
-        {
-            "type":0,
-            "value":25,
-            "count":1
-        }
-    ],
+        "questId":153,
+        "questStage":104,
+        "title":"踏上征程",
+        "desc":"擊破首個地下城，踏出自己探險的第一步",
+        "objects":[
+            {
+                "type":0,
+                "label":"擊破首個地下城",
+                "collect":153001,
+                "count":1
+            }
+        ],
+        "prize":[
+            {
+                "type":0,
+                "value":25,
+                "count":1
+            }
+        ],
         "cond":
         { "and": [
             { "<": [ { "type": "getProperty", "key": "tutorialStage"}, 1000 ] }
         ]
         }
 
-},
+    },
     {
         "questId":154,
         "questStage":96,
-        "title":"营救阿雅",
-        "desc":"听说铁匠汤姆的女儿去【多姆洞穴I】几天没回来了，赶紧去看看吧。",
+        "title":"營救阿雅",
+        "desc":"聽說鐵匠湯姆的女兒去【多姆洞穴I】幾天沒回來了，趕緊去看看吧。",
         "objects":[
             {
                 "type":0,
@@ -4242,12 +4242,12 @@ exports.data = [
     {
         "questId":155,
         "questStage":105,
-        "title":"铁匠铺重新开业",
-        "desc":"帮助汤姆大叔寻找多姆矿石为铁匠铺重新开业做准备。",
+        "title":"鐵匠鋪重新開業",
+        "desc":"幫助湯姆大叔尋找多姆礦石為鐵匠鋪重新開業做準備。",
         "objects":[
             {
                 "type":0,
-                "label":"收集3块多姆矿石",
+                "label":"收集3塊多姆礦石",
                 "collect":155001,
                 "count":3
             }
@@ -4267,12 +4267,12 @@ exports.data = [
     {
         "questId":156,
         "questStage":97,
-        "title":"讨伐大型史莱姆",
-        "desc":"大型史莱姆是个麻烦，赶紧去【多姆洞穴II】干掉它！",
+        "title":"討伐大型史萊姆",
+        "desc":"大型史萊姆是個麻煩，趕緊去【多姆洞穴II】幹掉它！",
         "objects":[
             {
                 "type":0,
-                "label":"击倒大型史莱姆【BOSS】",
+                "label":"擊倒大型史萊姆【BOSS】",
                 "collect":156001,
                 "count":1
             }
@@ -4294,11 +4294,11 @@ exports.data = [
         "questId":157,
         "questStage":98,
         "title":"黑暗中的利刃",
-        "desc":"黑暗中的利刃——哥布林投矛手目前在【多姆洞穴III】胡作非为。",
+        "desc":"黑暗中的利刃——哥布林投矛手目前在【多姆洞穴III】胡作非為。",
         "objects":[
             {
                 "type":0,
-                "label":"击败哥布林投矛手【BOSS】",
+                "label":"擊敗哥布林投矛手【BOSS】",
                 "collect":157001,
                 "count":1
             }
@@ -4320,12 +4320,12 @@ exports.data = [
     {
         "questId":158,
         "questStage":106,
-        "title":"汤姆大叔的请求",
-        "desc":"寻找汤姆大叔的铁匠学徒，重振铁匠铺！",
+        "title":"湯姆大叔的請求",
+        "desc":"尋找湯姆大叔的鐵匠學徒，重振鐵匠鋪！",
         "objects":[
             {
                 "type":0,
-                "label":"找到汤姆大叔学徒",
+                "label":"找到湯姆大叔學徒",
                 "collect":158001,
                 "count":1
             }
@@ -4348,12 +4348,12 @@ exports.data = [
     {
         "questId":159,
         "questStage":99,
-        "title":"哥布林投矛手的决心",
-        "desc":"哥布林投矛手这次在【多姆洞穴IV】，带上你的小伙伴讨伐它吧！",
+        "title":"哥布林投矛手的決心",
+        "desc":"哥布林投矛手這次在【多姆洞穴IV】，帶上你的小夥伴討伐它吧！",
         "objects":[
             {
                 "type":0,
-                "label":"击败哥布林投矛手",
+                "label":"擊敗哥布林投矛手",
                 "collect":159001,
                 "count":1
             }
@@ -4374,12 +4374,12 @@ exports.data = [
     {
         "questId":160,
         "questStage":100,
-        "title":"暗中的邪恶联盟",
-        "desc":"有人发现哥布林与野狼携手，在【多姆洞穴V】伺机而动",
+        "title":"暗中的邪惡聯盟",
+        "desc":"有人發現哥布林與野狼攜手，在【多姆洞穴V】伺機而動",
         "objects":[
             {
                 "type":0,
-                "label":"消灭哥布林狼骑",
+                "label":"消滅哥布林狼騎",
                 "collect":160001,
                 "count":1
             }
@@ -4400,12 +4400,12 @@ exports.data = [
     {
         "questId":161,
         "questStage":107,
-        "title":"调查神秘的黑影",
-        "desc":"与卡尔和凯瑟琳一起调查怪物异动的根源",
+        "title":"調查神秘的黑影",
+        "desc":"與卡爾和凱薩琳一起調查怪物異動的根源",
         "objects":[
             {
                 "type":0,
-                "label":"调查神秘的黑影",
+                "label":"調查神秘的黑影",
                 "collect":161001,
                 "count":1
             }
@@ -4427,20 +4427,20 @@ exports.data = [
     {
         "questId":162,
         "questStage":101,
-        "title":"解救村长",
-        "desc":"村长去往了【多姆洞穴VI】，情况似乎不太妙，前去救出村长！",
+        "title":"解救村長",
+        "desc":"村長去往了【多姆洞穴VI】，情況似乎不太妙，前去救出村長！",
         "objects":[
             {
                 "type":0,
-                "label":"成功营救村长",
+                "label":"成功營救村長",
                 "collect":162001,
                 "count":1
             }
         ],
         "prize":[ {
-        "type":1,
-        "count":500
-    },{ "type":5, "func": "setFlag", "flag": "daily", "value": true } ],
+            "type":1,
+            "count":500
+        },{ "type":5, "func": "setFlag", "flag": "daily", "value": true } ],
         "cond":
         { "and": [
             { "==": [ { "type": "getProperty", "key": "quests.161.complete"}, true ] }
@@ -4454,11 +4454,11 @@ exports.data = [
         "questId":163,
         "questStage":102,
         "title":"多姆村英雄",
-        "desc":"将【多姆洞穴VII】中的史莱姆大王击倒，给村庄带来安宁。",
+        "desc":"將【多姆洞穴VII】中的史萊姆大王擊倒，給村莊帶來安寧。",
         "objects":[
             {
                 "type":0,
-                "label":"击倒巨型史莱姆【BOSS】",
+                "label":"擊倒巨型史萊姆【BOSS】",
                 "collect":163001,
                 "count":1
             }
@@ -4481,12 +4481,12 @@ exports.data = [
     },
     {
         "questId":164,
-        "title":"冒险征途的里程碑I",
-        "desc":"将角色升至4级",
+        "title":"冒險征途的里程碑I",
+        "desc":"將角色升至4級",
         "objects":[
             {
                 "type":4,
-                "label":"升级至4级",
+                "label":"升級至4級",
                 "count":4
             }
         ],
@@ -4504,12 +4504,12 @@ exports.data = [
     },
     {
         "questId":165,
-        "title":"冒险征途的里程碑II",
-        "desc":"将角色升至8级",
+        "title":"冒險征途的里程碑II",
+        "desc":"將角色升至8級",
         "objects":[
             {
                 "type":4,
-                "label":"升级至8级",
+                "label":"升級至8級",
                 "count":8
             }
         ],
@@ -4533,12 +4533,12 @@ exports.data = [
     },
     {
         "questId":166,
-        "title":"冒险征途的里程碑III",
-        "desc":"将角色升至12级",
+        "title":"冒險征途的里程碑III",
+        "desc":"將角色升至12級",
         "objects":[
             {
                 "type":4,
-                "label":"升级至12级",
+                "label":"升級至12級",
                 "count":12
             }
         ],
@@ -4562,12 +4562,12 @@ exports.data = [
     },
     {
         "questId":167,
-        "title":"冒险征途的里程碑IV",
-        "desc":"将角色升至15级",
+        "title":"冒險征途的里程碑IV",
+        "desc":"將角色升至15級",
         "objects":[
             {
                 "type":4,
-                "label":"升级至15级",
+                "label":"升級至15級",
                 "count":15
             }
         ],
@@ -4590,12 +4590,12 @@ exports.data = [
     },
     {
         "questId":168,
-        "title":"冒险征途的里程碑V",
-        "desc":"将角色升至20级",
+        "title":"冒險征途的里程碑V",
+        "desc":"將角色升至20級",
         "objects":[
             {
                 "type":4,
-                "label":"升级至20级",
+                "label":"升級至20級",
                 "count":20
             }
         ],
@@ -4618,12 +4618,12 @@ exports.data = [
     },
     {
         "questId":169,
-        "title":"突破天际的战斗力I",
-        "desc":"将角色战斗力提升至300以上",
+        "title":"突破天際的戰鬥力I",
+        "desc":"將角色戰鬥力提升至300以上",
         "objects":[
             {
                 "type":5,
-                "label":"战斗力突破300",
+                "label":"戰鬥力突破300",
                 "count":300
             }
         ],
@@ -4636,12 +4636,12 @@ exports.data = [
     },
     {
         "questId":170,
-        "title":"突破天际的战斗力II",
-        "desc":"将角色战斗力提升至500以上",
+        "title":"突破天際的戰鬥力II",
+        "desc":"將角色戰鬥力提升至500以上",
         "objects":[
             {
                 "type":5,
-                "label":"战斗力突破500",
+                "label":"戰鬥力突破500",
                 "count":500
             }
         ],
@@ -4659,12 +4659,12 @@ exports.data = [
     },
     {
         "questId":171,
-        "title":"突破天际的战斗力III",
-        "desc":"将角色战斗力提升至800以上",
+        "title":"突破天際的戰鬥力III",
+        "desc":"將角色戰鬥力提升至800以上",
         "objects":[
             {
                 "type":5,
-                "label":"战斗力突破800",
+                "label":"戰鬥力突破800",
                 "count":800
             }
         ],
@@ -4686,12 +4686,12 @@ exports.data = [
     },
     {
         "questId":172,
-        "title":"突破天际的战斗力IV",
-        "desc":"将角色战斗力提升至1300以上",
+        "title":"突破天際的戰鬥力IV",
+        "desc":"將角色戰鬥力提升至1300以上",
         "objects":[
             {
                 "type":5,
-                "label":"战斗力突破1300",
+                "label":"戰鬥力突破1300",
                 "count":1300
             }
         ],
@@ -4713,12 +4713,12 @@ exports.data = [
     },
     {
         "questId":173,
-        "title":"突破天际的战斗力V",
-        "desc":"将角色战斗力提升至1500以上",
+        "title":"突破天際的戰鬥力V",
+        "desc":"將角色戰鬥力提升至1500以上",
         "objects":[
             {
                 "type":5,
-                "label":"战斗力突破1500",
+                "label":"戰鬥力突破1500",
                 "count":1500
             }
         ],
@@ -4740,12 +4740,12 @@ exports.data = [
     },
     {
         "questId":174,
-        "title":"突破天际的战斗力VI",
-        "desc":"将角色战斗力提升至2000以上",
+        "title":"突破天際的戰鬥力VI",
+        "desc":"將角色戰鬥力提升至2000以上",
         "objects":[
             {
                 "type":5,
-                "label":"战斗力突破2000",
+                "label":"戰鬥力突破2000",
                 "count":2000
             }
         ],
@@ -4767,12 +4767,12 @@ exports.data = [
     },
     {
         "questId":175,
-        "title":"突破天际的战斗力VII",
-        "desc":"将角色战斗力提升至2500以上",
+        "title":"突破天際的戰鬥力VII",
+        "desc":"將角色戰鬥力提升至2500以上",
         "objects":[
             {
                 "type":5,
-                "label":"战斗力突破2500",
+                "label":"戰鬥力突破2500",
                 "count":2500
             }
         ],
@@ -4794,12 +4794,12 @@ exports.data = [
     },
     {
         "questId":176,
-        "title":"突破天际的战斗力VIII",
-        "desc":"将角色战斗力提升至3000以上",
+        "title":"突破天際的戰鬥力VIII",
+        "desc":"將角色戰鬥力提升至3000以上",
         "objects":[
             {
                 "type":5,
-                "label":"战斗力突破3000",
+                "label":"戰鬥力突破3000",
                 "count":3000
             }
         ],
@@ -4826,12 +4826,12 @@ exports.data = [
     },
     {
         "questId":177,
-        "title":"突破天际的战斗力IX",
-        "desc":"将角色战斗力提升至4000以上",
+        "title":"突破天際的戰鬥力IX",
+        "desc":"將角色戰鬥力提升至4000以上",
         "objects":[
             {
                 "type":5,
-                "label":"战斗力突破4000",
+                "label":"戰鬥力突破4000",
                 "count":4000
             }
         ],
@@ -4853,12 +4853,12 @@ exports.data = [
     },
     {
         "questId":178,
-        "title":"突破天际的战斗力X",
-        "desc":"将角色战斗力提升至5000以上",
+        "title":"突破天際的戰鬥力X",
+        "desc":"將角色戰鬥力提升至5000以上",
         "objects":[
             {
                 "type":5,
-                "label":"战斗力突破5000",
+                "label":"戰鬥力突破5000",
                 "count":5000
             }
         ],
@@ -4880,12 +4880,12 @@ exports.data = [
     },
     {
         "questId":179,
-        "title":"突破天际的战斗力XI",
-        "desc":"将角色战斗力提升至6000以上",
+        "title":"突破天際的戰鬥力XI",
+        "desc":"將角色戰鬥力提升至6000以上",
         "objects":[
             {
                 "type":5,
-                "label":"战斗力突破6000",
+                "label":"戰鬥力突破6000",
                 "count":6000
             }
         ],
@@ -4907,12 +4907,12 @@ exports.data = [
     },
     {
         "questId":180,
-        "title":"突破天际的战斗力XII",
-        "desc":"将角色战斗力提升至7000以上",
+        "title":"突破天際的戰鬥力XII",
+        "desc":"將角色戰鬥力提升至7000以上",
         "objects":[
             {
                 "type":5,
-                "label":"战斗力突破7000",
+                "label":"戰鬥力突破7000",
                 "count":7000
             }
         ],
@@ -4934,12 +4934,12 @@ exports.data = [
     },
     {
         "questId":181,
-        "title":"突破天际的战斗力XIII",
-        "desc":"将角色战斗力提升至9000以上",
+        "title":"突破天際的戰鬥力XIII",
+        "desc":"將角色戰鬥力提升至9000以上",
         "objects":[
             {
                 "type":5,
-                "label":"战斗力突破9000",
+                "label":"戰鬥力突破9000",
                 "count":9000
             }
         ],
@@ -4961,12 +4961,12 @@ exports.data = [
     },
     {
         "questId":182,
-        "title":"突破天际的战斗力XIV",
-        "desc":"将角色战斗力提升至10000以上",
+        "title":"突破天際的戰鬥力XIV",
+        "desc":"將角色戰鬥力提升至10000以上",
         "objects":[
             {
                 "type":5,
-                "label":"战斗力突破10000",
+                "label":"戰鬥力突破10000",
                 "count":10000
             }
         ],
@@ -4993,12 +4993,12 @@ exports.data = [
     },
     {
         "questId":183,
-        "title":"评分送宝石",
-        "desc":"跳转到商店页面对我们的游戏进行评价吧，评价完成之后可以免费获得100宝石哦！！\n(注：每个玩家只能获得一次)",
+        "title":"評分送寶石",
+        "desc":"跳轉到商店頁面對我們的遊戲進行評價吧，評價完成之後可以免費獲得100寶石哦！！\n(注：每個玩家只能獲得一次)",
         "objects":[
             {
                 "type":6,
-                "label":"给游戏评分",
+                "label":"給遊戲評分",
                 "count":1
             }
         ],
@@ -5017,12 +5017,12 @@ exports.data = [
     {
         "questId":184,
         "questStage":64,
-        "title":"探索死灵洞穴I",
-        "desc":"对死灵洞穴I进行探索",
+        "title":"探索死靈洞穴I",
+        "desc":"對死靈洞穴I進行探索",
         "objects":[
             {
                 "type":0,
-                "label":"探索死灵洞穴I",
+                "label":"探索死靈洞穴I",
                 "collect":184001,
                 "count":1
             }
@@ -5042,12 +5042,12 @@ exports.data = [
     {
         "questId":185,
         "questStage":65,
-        "title":"探索死灵洞穴II",
-        "desc":"对死灵洞穴II进行探索",
+        "title":"探索死靈洞穴II",
+        "desc":"對死靈洞穴II進行探索",
         "objects":[
             {
                 "type":0,
-                "label":"探索死灵洞穴II",
+                "label":"探索死靈洞穴II",
                 "collect":185001,
                 "count":1
             }
@@ -5067,12 +5067,12 @@ exports.data = [
     {
         "questId":186,
         "questStage":66,
-        "title":"探索死灵洞穴III",
-        "desc":"对死灵洞穴III进行探索",
+        "title":"探索死靈洞穴III",
+        "desc":"對死靈洞穴III進行探索",
         "objects":[
             {
                 "type":0,
-                "label":"探索死灵洞穴III",
+                "label":"探索死靈洞穴III",
                 "collect":186001,
                 "count":1
             }
@@ -5092,12 +5092,12 @@ exports.data = [
     {
         "questId":187,
         "questStage":67,
-        "title":"探索死灵洞穴IV",
-        "desc":"对死灵洞穴IV进行探索",
+        "title":"探索死靈洞穴IV",
+        "desc":"對死靈洞穴IV進行探索",
         "objects":[
             {
                 "type":0,
-                "label":"探索死灵洞穴IV",
+                "label":"探索死靈洞穴IV",
                 "collect":187001,
                 "count":1
             }
@@ -5117,12 +5117,12 @@ exports.data = [
     {
         "questId":188,
         "questStage":68,
-        "title":"探索死灵洞穴V",
-        "desc":"对死灵洞穴V进行探索",
+        "title":"探索死靈洞穴V",
+        "desc":"對死靈洞穴V進行探索",
         "objects":[
             {
                 "type":0,
-                "label":"探索死灵洞穴V",
+                "label":"探索死靈洞穴V",
                 "collect":188001,
                 "count":1
             }
@@ -5142,12 +5142,12 @@ exports.data = [
     {
         "questId":189,
         "questStage":69,
-        "title":"探索死灵洞穴VI",
-        "desc":"对死灵洞穴VI进行探索",
+        "title":"探索死靈洞穴VI",
+        "desc":"對死靈洞穴VI進行探索",
         "objects":[
             {
                 "type":0,
-                "label":"探索死灵洞穴VI",
+                "label":"探索死靈洞穴VI",
                 "collect":189001,
                 "count":1
             }
@@ -5167,12 +5167,12 @@ exports.data = [
     {
         "questId":190,
         "questStage":70,
-        "title":"宗师的试炼",
-        "desc":"死灵洞穴深处出现神秘人，前往调查",
+        "title":"宗師的試煉",
+        "desc":"死靈洞穴深處出現神秘人，前往調查",
         "objects":[
             {
                 "type":0,
-                "label":"调查神秘人",
+                "label":"調查神秘人",
                 "collect":190001,
                 "count":1
             }
@@ -5198,12 +5198,12 @@ exports.data = [
     {
         "questId":191,
         "questStage":71,
-        "title":"探索塔卡宫殿I",
-        "desc":"对塔卡宫殿I进行探索",
+        "title":"探索塔卡宮殿I",
+        "desc":"對塔卡宮殿I進行探索",
         "objects":[
             {
                 "type":0,
-                "label":"探索塔卡宫殿I",
+                "label":"探索塔卡宮殿I",
                 "collect":191001,
                 "count":1
             }
@@ -5223,12 +5223,12 @@ exports.data = [
     {
         "questId":192,
         "questStage":72,
-        "title":"探索塔卡宫殿II",
-        "desc":"对塔卡宫殿II进行探索",
+        "title":"探索塔卡宮殿II",
+        "desc":"對塔卡宮殿II進行探索",
         "objects":[
             {
                 "type":0,
-                "label":"探索塔卡宫殿II",
+                "label":"探索塔卡宮殿II",
                 "collect":192001,
                 "count":1
             }
@@ -5248,12 +5248,12 @@ exports.data = [
     {
         "questId":193,
         "questStage":73,
-        "title":"探索塔卡宫殿III",
-        "desc":"对塔卡宫殿III进行探索",
+        "title":"探索塔卡宮殿III",
+        "desc":"對塔卡宮殿III進行探索",
         "objects":[
             {
                 "type":0,
-                "label":"探索塔卡宫殿III",
+                "label":"探索塔卡宮殿III",
                 "collect":193001,
                 "count":1
             }
@@ -5273,12 +5273,12 @@ exports.data = [
     {
         "questId":194,
         "questStage":74,
-        "title":"探索塔卡宫殿IV",
-        "desc":"对塔卡宫殿IV进行探索",
+        "title":"探索塔卡宮殿IV",
+        "desc":"對塔卡宮殿IV進行探索",
         "objects":[
             {
                 "type":0,
-                "label":"探索塔卡宫殿IV",
+                "label":"探索塔卡宮殿IV",
                 "collect":194001,
                 "count":1
             }
@@ -5298,12 +5298,12 @@ exports.data = [
     {
         "questId":195,
         "questStage":75,
-        "title":"探索塔卡宫殿V",
-        "desc":"对塔卡宫殿V进行探索",
+        "title":"探索塔卡宮殿V",
+        "desc":"對塔卡宮殿V進行探索",
         "objects":[
             {
                 "type":0,
-                "label":"探索塔卡宫殿V",
+                "label":"探索塔卡宮殿V",
                 "collect":195001,
                 "count":1
             }
@@ -5323,12 +5323,12 @@ exports.data = [
     {
         "questId":196,
         "questStage":76,
-        "title":"探索塔卡宫殿VI",
-        "desc":"对塔卡宫殿VI进行探索",
+        "title":"探索塔卡宮殿VI",
+        "desc":"對塔卡宮殿VI進行探索",
         "objects":[
             {
                 "type":0,
-                "label":"探索塔卡宫殿VI",
+                "label":"探索塔卡宮殿VI",
                 "collect":196001,
                 "count":1
             }
@@ -5348,12 +5348,12 @@ exports.data = [
     {
         "questId":197,
         "questStage":77,
-        "title":"卡塔讨伐",
-        "desc":"将领主卡塔击败，给大陆带来和平",
+        "title":"卡塔討伐",
+        "desc":"將領主卡塔擊敗，給大陸帶來和平",
         "objects":[
             {
                 "type":0,
-                "label":"击败卡塔",
+                "label":"擊敗卡塔",
                 "collect":197001,
                 "count":1
             }
@@ -5377,12 +5377,12 @@ exports.data = [
     },
     {
         "questId":198,
-        "title":"冒险征途的里程碑VI",
-        "desc":"将角色升至25级",
+        "title":"冒險征途的里程碑VI",
+        "desc":"將角色升至25級",
         "objects":[
             {
                 "type":4,
-                "label":"升级至25级",
+                "label":"升級至25級",
                 "count":25
             }
         ],
@@ -5405,12 +5405,12 @@ exports.data = [
     },
     {
         "questId":199,
-        "title":"冒险征途的里程碑VII",
-        "desc":"将角色升至30级",
+        "title":"冒險征途的里程碑VII",
+        "desc":"將角色升至30級",
         "objects":[
             {
                 "type":4,
-                "label":"升级至30级",
+                "label":"升級至30級",
                 "count":30
             }
         ],
@@ -5433,12 +5433,12 @@ exports.data = [
     },
     {
         "questId":200,
-        "title":"冒险征途的里程碑VIII",
-        "desc":"将角色升至35级",
+        "title":"冒險征途的里程碑VIII",
+        "desc":"將角色升至35級",
         "objects":[
             {
                 "type":4,
-                "label":"升级至35级",
+                "label":"升級至35級",
                 "count":35
             }
         ],
@@ -5461,12 +5461,12 @@ exports.data = [
     },
     {
         "questId":201,
-        "title":"冒险征途的里程碑IX",
-        "desc":"将角色升至40级",
+        "title":"冒險征途的里程碑IX",
+        "desc":"將角色升至40級",
         "objects":[
             {
                 "type":4,
-                "label":"升级至40级",
+                "label":"升級至40級",
                 "count":40
             }
         ],
@@ -5489,12 +5489,12 @@ exports.data = [
     },
     {
         "questId":202,
-        "title":"冒险征途的里程碑X",
-        "desc":"将角色升至45级",
+        "title":"冒險征途的里程碑X",
+        "desc":"將角色升至45級",
         "objects":[
             {
                 "type":4,
-                "label":"升级至45级",
+                "label":"升級至45級",
                 "count":45
             }
         ],
@@ -5517,12 +5517,12 @@ exports.data = [
     },
     {
         "questId":203,
-        "title":"冒险征途的里程碑XI",
-        "desc":"将角色升至50级",
+        "title":"冒險征途的里程碑XI",
+        "desc":"將角色升至50級",
         "objects":[
             {
                 "type":4,
-                "label":"升级至50级",
+                "label":"升級至50級",
                 "count":50
             }
         ],
@@ -5545,12 +5545,12 @@ exports.data = [
     },
     {
         "questId":204,
-        "title":"冒险征途的里程碑XII",
-        "desc":"将角色升至55级",
+        "title":"冒險征途的里程碑XII",
+        "desc":"將角色升至55級",
         "objects":[
             {
                 "type":4,
-                "label":"升级至55级",
+                "label":"升級至55級",
                 "count":55
             }
         ],
@@ -5573,12 +5573,12 @@ exports.data = [
     },
     {
         "questId":205,
-        "title":"冒险征途的里程碑XIII",
-        "desc":"将角色升至60级",
+        "title":"冒險征途的里程碑XIII",
+        "desc":"將角色升至60級",
         "objects":[
             {
                 "type":4,
-                "label":"升级至60级",
+                "label":"升級至60級",
                 "count":60
             }
         ],
@@ -5601,12 +5601,12 @@ exports.data = [
     },
     {
         "questId":206,
-        "title":"冒险征途的里程碑XIV",
-        "desc":"将角色升至65级",
+        "title":"冒險征途的里程碑XIV",
+        "desc":"將角色升至65級",
         "objects":[
             {
                 "type":4,
-                "label":"升级至65级",
+                "label":"升級至65級",
                 "count":65
             }
         ],
@@ -5629,12 +5629,12 @@ exports.data = [
     },
     {
         "questId":207,
-        "title":"冒险征途的里程碑XV",
-        "desc":"将角色升至70级",
+        "title":"冒險征途的里程碑XV",
+        "desc":"將角色升至70級",
         "objects":[
             {
                 "type":4,
-                "label":"升级至70级",
+                "label":"升級至70級",
                 "count":70
             }
         ],
@@ -5657,12 +5657,12 @@ exports.data = [
     },
     {
         "questId":208,
-        "title":"冒险征途的里程碑XVI",
-        "desc":"将角色升至75级",
+        "title":"冒險征途的里程碑XVI",
+        "desc":"將角色升至75級",
         "objects":[
             {
                 "type":4,
-                "label":"升级至75级",
+                "label":"升級至75級",
                 "count":75
             }
         ],
@@ -5685,12 +5685,12 @@ exports.data = [
     },
     {
         "questId":209,
-        "title":"冒险征途的里程碑XVII",
-        "desc":"将角色升至80级",
+        "title":"冒險征途的里程碑XVII",
+        "desc":"將角色升至80級",
         "objects":[
             {
                 "type":4,
-                "label":"升级至80级",
+                "label":"升級至80級",
                 "count":80
             }
         ],
@@ -5713,12 +5713,12 @@ exports.data = [
     },
     {
         "questId":210,
-        "title":"冒险征途的里程碑XVIII",
-        "desc":"将角色升至85级",
+        "title":"冒險征途的里程碑XVIII",
+        "desc":"將角色升至85級",
         "objects":[
             {
                 "type":4,
-                "label":"升级至85级",
+                "label":"升級至85級",
                 "count":85
             }
         ],
@@ -5741,12 +5741,12 @@ exports.data = [
     },
     {
         "questId":211,
-        "title":"冒险征途的里程碑XIX",
-        "desc":"将角色升至90级",
+        "title":"冒險征途的里程碑XIX",
+        "desc":"將角色升至90級",
         "objects":[
             {
                 "type":4,
-                "label":"升级至90级",
+                "label":"升級至90級",
                 "count":90
             }
         ],
@@ -5769,12 +5769,12 @@ exports.data = [
     },
     {
         "questId":212,
-        "title":"冒险征途的里程碑XX",
-        "desc":"将角色升至95级",
+        "title":"冒險征途的里程碑XX",
+        "desc":"將角色升至95級",
         "objects":[
             {
                 "type":4,
-                "label":"升级至95级",
+                "label":"升級至95級",
                 "count":95
             }
         ],
@@ -5797,12 +5797,12 @@ exports.data = [
     },
     {
         "questId":213,
-        "title":"冒险征途的里程碑XXI",
-        "desc":"将角色升至100级",
+        "title":"冒險征途的里程碑XXI",
+        "desc":"將角色升至100級",
         "objects":[
             {
                 "type":4,
-                "label":"升级至100级",
+                "label":"升級至100級",
                 "count":100
             }
         ],

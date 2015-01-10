@@ -1,7 +1,7 @@
 libDungeon = {};
 (function() {
   "use strict";
-  var Bag, Block, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Level, Mirror, TriggerManager, Wizard, calcInfiniteRank, calcInfiniteX, changeSeed, compete, createUnit, createUnits, criticalFormula, dungeonCSConfig, flagShowRand, genUnitInfo, hitFormula, mapDiff, onEvent, parse, privateRand, seed_random, speedFormula, _ref, _ref1, _ref2, _ref3, _ref4,
+  var Bag, Block, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Level, Mirror, TriggerManager, Wizard, calcInfiniteRank, calcInfiniteX, changeSeed, compete, createUnit, createUnits, criticalFormula, dungeonCSConfig, flagShowRand, genUnitInfo, generateReward, hitFormula, mapDiff, onEvent, parse, privateRand, seed_random, speedFormula, _ref, _ref1, _ref2, _ref3, _ref4,
     __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; },
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
@@ -23,6 +23,8 @@ libDungeon = {};
   _ref3 = libContainer, Bag = _ref3.Bag, CardStack = _ref3.CardStack;
 
   _ref4 = libTrigger, parse = _ref4.parse, TriggerManager = _ref4.TriggerManager;
+
+  generateReward = libReward.generateReward;
 
   seed_random = libSeed_random;
 
@@ -2851,7 +2853,7 @@ libDungeon = {};
         showPrize = env.variable('showPrize');
         if (dropID != null) {
           if (showPrize) {
-            drop = generatePrize(queryTable(TABLE_DROP), [dropID], function() {
+            drop = generateReward(queryTable(TABLE_DROP), [dropID], function() {
               return env.rand();
             });
             if (drop[0].type === 1) {

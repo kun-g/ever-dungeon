@@ -1,5 +1,5 @@
 (function() {
-  var rearragenPrize;
+  var rearrangePrize;
 
   require('./define');
 
@@ -9,7 +9,7 @@
     return modifier + ((_ref1 = this.reward_modifier[type]) != null ? _ref1 : 0);
   };
 
-  rearragenPrize = function(prize) {
+  rearrangePrize = function(prize) {
     var k, lastElem, res, v;
     if (!Array.isArray(prize)) {
       prize = [prize];
@@ -67,7 +67,7 @@
         return e;
       };
     })(this));
-    return rearragenPrize(res);
+    return rearrangePrize(res);
   };
 
   exports.generateDungeonReward = function(dungeon) {
@@ -161,7 +161,7 @@
         e.count = Math.floor(e.count);
       }
     }
-    return rearragenPrize(prize);
+    return rearrangePrize(prize);
   };
 
   exports.claimDungeonReward = function(dungeon, isSweep) {

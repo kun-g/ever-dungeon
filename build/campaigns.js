@@ -278,5 +278,42 @@ exports.data = {
         "dateDescription": "截止日期2016年12月25日24时",
         // iaplist.list will modify by initCampaignTable =>{award:[{type:2,count:60}}
         "objective" : iaplist
+    },
+    "serviceOpening": {
+        "show": true,
+        "title": "王者角逐",
+        "banner":"event-banner-wzjz.png",
+        "description": [
+            "开服第一个月内每周登上战斗力和PK排行榜的前20名都将获得奖励，活动截止时间的双榜榜首将获得特殊的道具",
+            "***奖励内容：",
+            "** \n每周战斗力排行榜第一，即可获得",
+            "##[{\"type\":2,\"count\":400},{\"type\":1,\"count\":6000},{\"type\":0,\"value\":871,\"count\":60}]",
+            "** \n每周战斗力排行榜第二，即可获得",
+            "##[{\"type\":2,\"count\":150},{\"type\":1,\"count\":3000},{\"type\":0,\"value\":871,\"count\":30}]",
+            "** \n每周战斗力排行榜第三，即可获得",
+            "##[{\"type\":2,\"count\":50},{\"type\":1,\"count\":2000},{\"type\":0,\"value\":871,\"count\":15}]",
+            "** \n每周战斗力排行榜第四到第十，即可获得",
+            "##[{\"type\":1,\"count\":2000},{\"type\":0,\"value\":871,\"count\":5}]",
+            "** \n每周战斗力排行榜第十一到二十，即可获得",
+            "##[{\"type\":0,\"value\":871,\"count\":5}]",
+            "** \n每周PK排行榜第一，即可获得",
+            "##[{\"type\":2,\"count\":500},{\"type\":1,\"count\":8000},{\"type\":0,\"value\":871,\"count\":70}]",
+            "** \n每周PK排行榜第二，即可获得",
+            "##[{\"type\":2,\"count\":200},{\"type\":1,\"count\":4000},{\"type\":0,\"value\":871,\"count\":50}]",
+            "** \n每周PK排行榜第三，即可获得",
+            "##[{\"type\":2,\"count\":100},{\"type\":1,\"count\":2500},{\"type\":0,\"value\":871,\"count\":20}]",
+            "** \n每周PK排行榜第四到第十，即可获得",
+            "##[{\"type\":1,\"count\":2000},{\"type\":0,\"value\":871,\"count\":5}]",
+            "** \n每周PK排行榜第十一到二十，即可获得",
+            "##[{\"type\":0,\"value\":871,\"count\":5}]",
+            "** \n活动截止时间的战斗力排行榜榜首，即可获得",
+            "##[{\"type\":2,\"count\":800},{\"type\":0,\"value\":871,\"count\":100},{\"type\":0,\"value\":0,\"count\":1}]",
+            "** \n活动截止时间的PK排行榜榜首，即可获得",
+            "##[{\"type\":2,\"count\":800},{\"type\":0,\"value\":871,\"count\":100},{\"type\":0,\"value\":1,\"count\":1}]"
+        ],
+        "mailTitle": "《王者角逐》活动奖励",
+        "mailBody": "恭喜你完成活动，点击领取活动奖励！",
+        "date": "2015/02/12",
+        "dateDescription": "截止日期2015年2月12日24时"
     }
 };

@@ -1,6 +1,6 @@
 (function() {
   "use strict";
-  var Bag, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Player, PlayerEnvironment, Serializer, addMercenaryMember, async, campaign_LoginStreak, campaign_StartupClient, createItem, createUnit, currentTime, dbLib, diffDate, genUtil, getMercenaryMember, getPlayerHero, getVip, helperLib, itemLib, libCampaign, libReward, moment, playerCSConfig, playerCommandStream, playerMessageFilter, registerConstructor, underscore, updateMercenaryMember, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6,
+  var Bag, Card, CardStack, CommandStream, DBWrapper, Dungeon, DungeonCommandStream, DungeonEnvironment, Environment, Hero, Item, Player, PlayerEnvironment, Serializer, addMercenaryMember, async, campaign_LoginStreak, campaign_StartupClient, createItem, createUnit, currentTime, dbLib, diffDate, event_cfg, genUtil, getMercenaryMember, getPlayerHero, getVip, helperLib, itemLib, libCampaign, libReward, moment, playerCSConfig, playerCommandStream, playerMessageFilter, registerConstructor, underscore, updateMercenaryMember, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -27,6 +27,8 @@
   _ref6 = require('./helper'), diffDate = _ref6.diffDate, currentTime = _ref6.currentTime, genUtil = _ref6.genUtil;
 
   helperLib = require('./helper');
+
+  event_cfg = require('./event_cfg');
 
   underscore = require('./underscore');
 
@@ -242,7 +244,7 @@
       var event;
       event = this[campaign];
       if (event != null) {
-        helperLib.proceedCampaign(this, campaign, helperLib.events, handler);
+        helperLib.proceedCampaign(this, campaign, event_cfg.events, handler);
         return this.log('submitCampaign', {
           event: campaign,
           data: event
@@ -256,7 +258,7 @@
     };
 
     Player.prototype.syncEvent = function() {
-      return helperLib.initCampaign(this, helperLib.events);
+      return helperLib.initCampaign(this, event_cfg.events);
     };
 
     Player.prototype.onLogin = function() {
@@ -1294,7 +1296,7 @@
     };
 
     Player.prototype.claimPrize = function(prize, allOrFail) {
-      var e, equipUpdate, i, k, p, ret, _i, _len, _ref7;
+      var e, equipUpdate, i, k, p, res, ret, _i, _len, _ref7;
       if (allOrFail == null) {
         allOrFail = true;
       }
@@ -1313,12 +1315,13 @@
         this.inventoryVersion++;
         switch (p.type) {
           case PRIZETYPE_ITEM:
-            ret = this.aquireItem(p.value, p.count, allOrFail);
-            if (!((ret != null) && ret.length > 0)) {
+            res = this.aquireItem(p.value, p.count, allOrFail);
+            if (!((res != null) && res.length > 0)) {
               if (allOrFail) {
                 return [];
               }
             }
+            ret = ret.concat(res);
             break;
           case PRIZETYPE_GOLD:
             if (p.count > 0) {
@@ -3010,7 +3013,7 @@
         if (config.dateDescription != null) {
           r.date = config.dateDescription;
         }
-        if (level.award) {
+        if (level != null ? level.award : void 0) {
           r.prz = level.award;
         }
         ret.arg.act.push(r);

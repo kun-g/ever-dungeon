@@ -1,99 +1,49 @@
 exports.data = {
-    Auth_API_Server: "10.4.2.185",
+    "Auth_API_Server": "192.168.128.11",
 
     DB_Config: {
-        "local": {
-            Account: { IP: "localhost", PORT: 6379 },
-            Role: { IP: "localhost", PORT: 6379 },
-            Publisher: { IP: "localhost", PORT: 6379 },
-            Subscriber: { IP: "localhost", PORT: 6379 }
-        },
-        "10.4.3.41": {
-            Account: { IP: "10.4.3.41", PORT: 6380 },
-            Role: { IP: "10.4.3.41", PORT: 6380 },
-            Publisher: { IP: "10.4.3.41", PORT: 6380 },
-            Subscriber: { IP: "10.4.3.41", PORT: 6380 }
-        },
-        "192.168.1.16": {
-            Account: { IP: "localhost", PORT: 6379 },
-            Role: { IP: "localhost", PORT: 6379 },
-            Publisher: { IP: "localhost", PORT: 6379 },
-            Subscriber: { IP: "localhost", PORT: 6379 }
-        },
-        "10.4.4.188": {
-            Account: { IP: "10.4.4.188", PORT: 6380 },
-            Role: { IP: "10.4.4.188", PORT: 6381 },
-            Publisher: { IP: "10.4.4.188", PORT: 6380 },
-            Subscriber: { IP: "10.4.4.188", PORT: 6380 }
-        },
-        "192.168.199.153": {
-            Account: { IP: "192.168.199.153", PORT: 6380 },
-            Role: { IP: "192.168.199.153", PORT: 6380 },
-            Publisher: { IP: "192.168.199.153", PORT: 6380 },
-            Subscriber: { IP: "192.168.199.153", PORT: 6380 }
+        "SEAsia": {
+            "Account": { "IP": "192.168.128.9", "PORT": 6380 },
+            "Role": { "IP": "192.168.128.10", "PORT": 6380 },
+            "Publisher": { "IP": "192.168.128.9", "PORT": 6380 },
+            "Subscriber": { "IP": "192.168.128.9", "PORT": 6380 }
         }
     },
 
     Server_Config: {
-        "测试:本地数据库": {
-            ID: -1,
-            Name: "Develop",
-            DB: "local",
-            DB_Prefix: "Develop"
-        },
-        "测试:188数据库": {
-            ID: -1,
-            Name: "Develop",
-            DB: "192.168.1.16",
-            DB_Prefix: "Develop"
-        },
-        "Develop": {
+        "Develop.9": {
             ID: 0,
             Name: "Develop",
-            DB: "10.4.3.41",
+            DB: "SEAsia",
             DB_Prefix: "Develop"
         },
-        "Master": {
-            ID: 1,
-            Name: "Master",
-            DB: "10.4.4.188",
-            DB_Prefix: "Master",
-        },
-        "Dh-local": {
+ 
+        "Develop.10": {
             ID: 0,
             Name: "Develop",
-            DB: "192.168.199.153",
-            DB_Prefix: "Develop",
+            DB: "SEAsia",
+            DB_Prefix: "Develop"
+        },
+		"Develop.11": {
+            ID: 0,
+            Name: "Develop",
+            DB: "SEAsia",
+            DB_Prefix: "Develop"
         }
+ 
     },
 
     IP_Config : {
-        "192.168.1.4": [ {
-            Server: "测试:本地数据库",
-            Port: 7756
-        }, {
-            Server: "测试:188数据库",
-            Port: 7757
-        } ],
-        "10.4.4.188": [ {
-            Server: "Master",
-            Port: 7756
-        } ],
-        "10.4.3.41": [ {
-            Server: "Develop",
-            Port: 7756
-        } ],
-        "192.168.199.205": [ {
-            Server: "Dh-local",
-            Port: 7756
-        } ],
+        "192.168.128.9": [ { Server: "Develop.9", Port: 7756 } ],
+        "192.168.128.10": [ { Server: "Develop.10", Port: 7756 } ],
+        "192.168.128.11": [ { Server: "Develop.11", Port: 7756 } ],
     },
-    Gate_Config:{
-        "10.4.3.41":[
-            {ip:"10.4.3.41", port:7756},
-        ],
-        "192.168.199.205":[
-            {ip:"192.168.199.205", port:7756},
-        ],
-    }
+	Gate_Config:{
+		"192.168.128.10": [
+//           {"ip": "192.168.128.9", "port": 7756},
+           {"ip": "192.168.128.10", "port": 7756},
+ //          {"ip": "192.168.128.11", "port": 7756}
+		]
+	}
+
 }
