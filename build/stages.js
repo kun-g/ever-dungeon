@@ -444,6 +444,7 @@ var data = [
     },
     {
         "chapterId": 3,
+        "powerLimit": 300,
         "idx": 2,
         "style": "map-dungeon3",
         "title":"dungeonname3.png",
@@ -566,6 +567,7 @@ var data = [
     },
     {
         "chapterId":4,
+        "powerLimit": 800,
         "idx": 3,
         "style": "map-dungeon4",
         "title":"dungeonname4.png",
@@ -688,6 +690,7 @@ var data = [
     },
     {
         "chapterId": 5,
+        "powerLimit": 1300,
         "idx": 4,
         "style": "map-dungeon5",
         "title":"dungeonname5.png",
@@ -810,6 +813,7 @@ var data = [
     },
     {
         "chapterId": 6,
+        "powerLimit": 2300,
         "idx": 5,
         "style": "map-dungeon6",
         "title":"dungeonname6.png",
@@ -932,6 +936,7 @@ var data = [
     },
     {
         "chapterId": 7,
+        "powerLimit": 3200,
         "idx": 6,
         "style": "map-dungeon7",
         "title":"dungeonname7.png",
@@ -1054,6 +1059,7 @@ var data = [
     },
     {
         "chapterId": 8,
+        "powerLimit": 3800,
         "idx": 7,
         "style": "map-dungeon8",
         "title":"dungeonname8.png",
@@ -1176,6 +1182,7 @@ var data = [
     },
     {
         "chapterId": 9,
+        "powerLimit": 4400,
         "idx": 8,
         "style": "map-dungeon9",
         "title":"dungeonname9.png",
@@ -1298,6 +1305,7 @@ var data = [
     },
     {
         "chapterId": 10,
+        "powerLimit": 5000,
         "idx": 9,
         "style": "map-dungeon10",
         "title":"dungeonname10.png",
@@ -1419,6 +1427,7 @@ var data = [
     },
     {
         "chapterId": 11,
+        "powerLimit": 5500,
         "idx": 10,
         "style": "map-dungeon11",
         "title":"dungeonname11.png",
